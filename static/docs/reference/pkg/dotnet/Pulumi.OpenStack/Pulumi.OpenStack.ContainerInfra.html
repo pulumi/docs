@@ -1,0 +1,384 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace Pulumi.OpenStack.ContainerInfra
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace Pulumi.OpenStack.ContainerInfra
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.OpenStack.ContainerInfra">
+  
+  <h1 id="Pulumi_OpenStack_ContainerInfra" data-uid="Pulumi.OpenStack.ContainerInfra" class="text-break">Namespace Pulumi.OpenStack.ContainerInfra
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">Classes
+  </h3>
+      <h4><a class="xref" href="Pulumi.OpenStack.ContainerInfra.Cluster.html">Cluster</a></h4>
+      <section><p>Manages a V1 Magnum cluster resource within OpenStack.</p>
+<h2 id="argument-reference">Argument reference</h2>
+<p>The following arguments are supported:</p>
+<ul>
+<li><p><code>region</code> - (Optional) The region in which to obtain the V1 Container Infra
+client. A Container Infra client is needed to create a cluster. If omitted,
+the <code>region</code> argument of the provider is used. Changing this creates a new
+cluster.</p>
+</li>
+<li><p><code>name</code> - (Required) The name of the cluster. Changing this updates the name
+of the existing cluster template.</p>
+</li>
+<li><p><code>project_id</code> - (Optional) The project of the cluster. Required if admin wants
+to create a cluster in another project. Changing this creates a new
+cluster.</p>
+</li>
+<li><p><code>user_id</code> - (Optional) The user of the cluster. Required if admin wants to
+create a cluster template for another user. Changing this creates a new
+cluster.</p>
+</li>
+<li><p><code>cluster_template_id</code> - (Required) The UUID of the V1 Container Infra cluster
+template. Changing this creates a new cluster.</p>
+</li>
+<li><p><code>create_timeout</code> - (Optional) The timeout (in minutes) for creating the
+cluster. Changing this creates a new cluster.</p>
+</li>
+<li><p><code>discovery_url</code> - (Optional) The URL used for cluster node discovery.
+Changing this creates a new cluster.</p>
+</li>
+<li><p><code>docker_volume_size</code> - (Optional) The size (in GB) of the Docker volume.
+Changing this creates a new cluster.</p>
+</li>
+<li><p><code>flavor</code> - (Optional) The flavor for the nodes of the cluster. Can be set via
+the <code>OS_MAGNUM_FLAVOR</code> environment variable. Changing this creates a new
+cluster.</p>
+</li>
+<li><p><code>master_flavor</code> - (Optional) The flavor for the master nodes. Can be set via
+the <code>OS_MAGNUM_MASTER_FLAVOR</code> environment variable. Changing this creates a
+new cluster.</p>
+</li>
+<li><p><code>keypair</code> - (Optional) The name of the Compute service SSH keypair. Changing
+this creates a new cluster.</p>
+</li>
+<li><p><code>labels</code> - (Optional) The list of key value pairs representing additional
+properties of the cluster. Changing this creates a new cluster.</p>
+</li>
+<li><p><code>master_count</code> - (Optional) The number of master nodes for the cluster.
+Changing this creates a new cluster.</p>
+</li>
+<li><p><code>node_count</code> - (Optional) The number of nodes for the cluster. Changing this
+creates a new cluster.</p>
+</li>
+<li><p><code>fixed_network</code> - (Optional) The fixed network that will be attached to the
+cluster. Changing this creates a new cluster.</p>
+</li>
+<li><p><code>fixed_subnet</code> - (Optional) The fixed subnet that will be attached to the
+cluster. Changing this creates a new cluster.</p>
+</li>
+</ul>
+<h2 id="attributes-reference">Attributes reference</h2>
+<p>The following attributes are exported:</p>
+<ul>
+<li><code>region</code> - See Argument Reference above.</li>
+<li><code>name</code> - See Argument Reference above.</li>
+<li><code>project_id</code> - See Argument Reference above.</li>
+<li><code>created_at</code> - The time at which cluster was created.</li>
+<li><code>updated_at</code> - The time at which cluster was created.</li>
+<li><code>api_address</code> - COE API address.</li>
+<li><code>coe_version</code> - COE software version.</li>
+<li><code>cluster_template_id</code> - See Argument Reference above.</li>
+<li><code>container_version</code> - Container software version.</li>
+<li><code>create_timeout</code> - See Argument Reference above.</li>
+<li><code>discovery_url</code> - See Argument Reference above.</li>
+<li><code>docker_volume_size</code> - See Argument Reference above.</li>
+<li><code>flavor</code> - See Argument Reference above.</li>
+<li><code>master_flavor</code> - See Argument Reference above.</li>
+<li><code>keypair</code> - See Argument Reference above.</li>
+<li><code>labels</code> - See Argument Reference above.</li>
+<li><code>master_count</code> - See Argument Reference above.</li>
+<li><code>node_count</code> - See Argument Reference above.</li>
+<li><code>fixed_network</code> - See Argument Reference above.</li>
+<li><code>fixed_subnet</code> - See Argument Reference above.</li>
+<li><code>master_addresses</code> - IP addresses of the master node of the cluster.</li>
+<li><code>node_addresses</code> - IP addresses of the node of the cluster.</li>
+<li><code>stack_id</code> - UUID of the Orchestration service stack.</li>
+</ul>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/containerinfra_cluster_v1.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/containerinfra_cluster_v1.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.OpenStack.ContainerInfra.ClusterArgs.html">ClusterArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.OpenStack.ContainerInfra.ClusterState.html">ClusterState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.html">ClusterTemplate</a></h4>
+      <section><p>Manages a V1 Magnum cluster template resource within OpenStack.</p>
+<h2 id="argument-reference">Argument reference</h2>
+<p>The following arguments are supported:</p>
+<ul>
+<li><p><code>region</code> - (Optional) The region in which to obtain the V1 Container Infra
+client. A Container Infra client is needed to create a cluster template. If
+omitted,the <code>region</code> argument of the provider is used. Changing this
+creates a new cluster template.</p>
+</li>
+<li><p><code>name</code> - (Required) The name of the cluster template. Changing this updates
+the name of the existing cluster template.</p>
+</li>
+<li><p><code>project_id</code> - (Optional) The project of the cluster template. Required if
+admin wants to create a cluster template in another project. Changing this
+creates a new cluster template.</p>
+</li>
+<li><p><code>user_id</code> - (Optional) The user of the cluster template. Required if admin
+wants to create a cluster template for another user. Changing this creates
+a new cluster template.</p>
+</li>
+<li><p><code>apiserver_port</code> - (Optional) The API server port for the Container
+Orchestration Engine for this cluster template. Changing this updates the
+API server port of the existing cluster template.</p>
+</li>
+<li><p><code>coe</code> - (Required) The Container Orchestration Engine for this cluster
+template. Changing this updates the engine of the existing cluster
+template.</p>
+</li>
+<li><p><code>cluster_distro</code> - (Optional) The distro for the cluster (fedora-atomic,
+coreos, etc.). Changing this updates the cluster distro of the existing
+cluster template.</p>
+</li>
+<li><p><code>dns_nameserver</code> - (Optional) Address of the DNS nameserver that is used in
+nodes of the cluster. Changing this updates the DNS nameserver of the
+existing cluster template.</p>
+</li>
+<li><p><code>docker_storage_driver</code> - (Optional) Docker storage driver. Changing this
+updates the Docker storage driver of the existing cluster template.</p>
+</li>
+<li><p><code>docker_volume_size</code> - (Optional) The size (in GB) of the Docker volume.
+Changing this updates the Docker volume size of the existing cluster
+template.</p>
+</li>
+<li><p><code>external_network_id</code> - (Optional) The ID of the external network that will
+be used for the cluster. Changing this updates the external network ID of
+the existing cluster template.</p>
+</li>
+<li><p><code>fixed_network</code> - (Optional) The fixed network that will be attached to the
+cluster. Changing this updates the fixed network of the existing cluster
+template.</p>
+</li>
+<li><p><code>fixed_subnet</code> - (Optional) The fixed subnet that will be attached to the
+cluster. Changing this updates the fixed subnet of the existing cluster
+template.</p>
+</li>
+<li><p><code>flavor</code> - (Optional) The flavor for the nodes of the cluster. Can be set via
+the <code>OS_MAGNUM_FLAVOR</code> environment variable. Changing this updates the
+flavor of the existing cluster template.</p>
+</li>
+<li><p><code>master_flavor</code> - (Optional) The flavor for the master nodes. Can be set via
+the <code>OS_MAGNUM_MASTER_FLAVOR</code> environment variable. Changing this updates
+the master flavor of the existing cluster template.</p>
+</li>
+<li><p><code>floating_ip_enabled</code> - (Optional) Indicates whether created cluster should
+create floating IP for every node or not. Changing this updates the
+floating IP enabled attribute of the existing cluster template.</p>
+</li>
+<li><p><code>http_proxy</code> - (Optional) The address of a proxy for receiving all HTTP
+requests and relay them. Changing this updates the HTTP proxy address of
+the existing cluster template.</p>
+</li>
+<li><p><code>https_proxy</code> - (Optional) The address of a proxy for receiving all HTTPS
+requests and relay them. Changing this updates the HTTPS proxy address of
+the existing cluster template.</p>
+</li>
+<li><p><code>image</code> - (Required) The reference to an image that is used for nodes of the
+cluster. Can be set via the <code>OS_MAGNUM_IMAGE</code> environment variable.
+Changing this updates the image attribute of the existing cluster template.</p>
+</li>
+<li><p><code>insecure_registry</code> - (Optional) The insecure registry URL for the cluster
+template. Changing this updates the insecure registry attribute of the
+existing cluster template.</p>
+</li>
+<li><p><code>keypair_id</code> - (Optional) The name of the Compute service SSH keypair.
+Changing this updates the keypair of the existing cluster template.</p>
+</li>
+<li><p><code>labels</code> - (Optional) The list of key value pairs representing additional
+properties of the cluster template. Changing this updates the labels of the
+existing cluster template.</p>
+</li>
+<li><p><code>master_lb_enabled</code> - (Optional) Indicates whether created cluster should
+has a loadbalancer for master nodes or not. Changing this updates the
+attribute of the existing cluster template.</p>
+</li>
+<li><p><code>network_driver</code> - (Optional) The name of the driver for the container
+network. Changing this updates the network driver of the existing cluster
+template.</p>
+</li>
+<li><p><code>no_proxy</code> - (Optional) A comma-separated list of IP addresses that shouldn't
+be used in the cluster. Changing this updates the no proxy list of the
+existing cluster template.</p>
+</li>
+<li><p><code>public</code> - (Optional) Indicates whether cluster template should be public.
+Changing this updates the public attribute of the existing cluster
+template.</p>
+</li>
+<li><p><code>registry_enabled</code> - (Optional) Indicates whether Docker registry is enabled
+in the cluster. Changing this updates the registry enabled attribute of the
+existing cluster template.</p>
+</li>
+<li><p><code>server_type</code> - (Optional) The server type for the cluster template. Changing
+this updates the server type of the existing cluster template.</p>
+</li>
+<li><p><code>tls_disabled</code> - (Optional) Indicates whether the TLS should be disabled in
+the cluster. Changing this updates the attribute of the existing cluster.</p>
+</li>
+<li><p><code>volume_driver</code> - (Optional) The name of the driver that is used for the
+volumes of the cluster nodes. Changing this updates the volume driver of
+the existing cluster template.</p>
+</li>
+</ul>
+<h2 id="attributes-reference">Attributes reference</h2>
+<p>The following attributes are exported:</p>
+<ul>
+<li><code>region</code> - See Argument Reference above.</li>
+<li><code>name</code> - See Argument Reference above.</li>
+<li><code>project_id</code> - See Argument Reference above.</li>
+<li><code>created_at</code> - The time at which cluster template was created.</li>
+<li><code>updated_at</code> - The time at which cluster template was created.</li>
+<li><code>apiserver_port</code> - See Argument Reference above.</li>
+<li><code>coe</code> - See Argument Reference above.</li>
+<li><code>cluster_distro</code> - See Argument Reference above.</li>
+<li><code>dns_nameserver</code> - See Argument Reference above.</li>
+<li><code>docker_storage_driver</code> - See Argument Reference above.</li>
+<li><code>docker_volume_size</code> - See Argument Reference above.</li>
+<li><code>external_network_id</code> - See Argument Reference above.</li>
+<li><code>fixed_network</code> - See Argument Reference above.</li>
+<li><code>fixed_subnet</code> - See Argument Reference above.</li>
+<li><code>flavor</code> - See Argument Reference above.</li>
+<li><code>master_flavor</code> - See Argument Reference above.</li>
+<li><code>floating_ip_enabled</code> - See Argument Reference above.</li>
+<li><code>http_proxy</code> - See Argument Reference above.</li>
+<li><code>https_proxy</code> - See Argument Reference above.</li>
+<li><code>image</code> - See Argument Reference above.</li>
+<li><code>insecure_registry</code> - See Argument Reference above.</li>
+<li><code>keypair_id</code> - See Argument Reference above.</li>
+<li><code>labels</code> - See Argument Reference above.</li>
+<li><code>links</code> - A list containing associated cluster template links.</li>
+<li><code>master_lb_enabled</code> - See Argument Reference above.</li>
+<li><code>network_driver</code> - See Argument Reference above.</li>
+<li><code>no_proxy</code> - See Argument Reference above.</li>
+<li><code>public</code> - See Argument Reference above.</li>
+<li><code>registry_enabled</code> - See Argument Reference above.</li>
+<li><code>server_type</code> - See Argument Reference above.</li>
+<li><code>tls_disabled</code> - See Argument Reference above.</li>
+<li><code>volume_driver</code> - See Argument Reference above.</li>
+</ul>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/containerinfra_clustertemplate_v1.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/containerinfra_clustertemplate_v1.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.OpenStack.ContainerInfra.ClusterTemplateArgs.html">ClusterTemplateArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.OpenStack.ContainerInfra.ClusterTemplateState.html">ClusterTemplateState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.OpenStack.ContainerInfra.GetClusterArgs.html">GetClusterArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.OpenStack.ContainerInfra.GetClusterResult.html">GetClusterResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.OpenStack.ContainerInfra.GetClusterTemplateArgs.html">GetClusterTemplateArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.OpenStack.ContainerInfra.GetClusterTemplateResult.html">GetClusterTemplateResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.OpenStack.ContainerInfra.Invokes.html">Invokes</a></h4>
+      <section></section>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

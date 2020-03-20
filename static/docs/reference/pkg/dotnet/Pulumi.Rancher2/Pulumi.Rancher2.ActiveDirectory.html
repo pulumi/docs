@@ -1,0 +1,1105 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ActiveDirectory
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ActiveDirectory
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Rancher2.ActiveDirectory">
+  
+  <h1 id="Pulumi_Rancher2_ActiveDirectory" data-uid="Pulumi.Rancher2.ActiveDirectory" class="text-break">Class ActiveDirectory
+  </h1>
+  <div class="markdown level0 summary"><p>Provides a Rancher v2 Auth Config ActiveDirectory resource. This can be used to configure and enable Auth Config ActiveDirectory for Rancher v2 RKE clusters and retrieve their information.</p>
+<p>In addition to the built-in local auth, only one external auth config provider can be enabled at a time.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/auth_config_activedirectory.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/auth_config_activedirectory.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">ActiveDirectory</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Rancher2.html">Pulumi.Rancher2</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Rancher2.dll</h6>
+  <h5 id="Pulumi_Rancher2_ActiveDirectory_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ActiveDirectory : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/ActiveDirectory.cs/#L220">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_ActiveDirectory__ctor_" data-uid="Pulumi.Rancher2.ActiveDirectory.#ctor*"></a>
+  <h4 id="Pulumi_Rancher2_ActiveDirectory__ctor_System_String_Pulumi_Rancher2_ActiveDirectoryArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Rancher2.ActiveDirectory.#ctor(System.String,Pulumi.Rancher2.ActiveDirectoryArgs,System.Nullable{CustomResourceOptions})">ActiveDirectory(String, ActiveDirectoryArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Create a ActiveDirectory resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ActiveDirectory(string name, ActiveDirectoryArgs args, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Rancher2.ActiveDirectoryArgs.html">ActiveDirectoryArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/ActiveDirectory.cs/#L23">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_ActiveDirectory_AccessMode_" data-uid="Pulumi.Rancher2.ActiveDirectory.AccessMode*"></a>
+  <h4 id="Pulumi_Rancher2_ActiveDirectory_AccessMode" data-uid="Pulumi.Rancher2.ActiveDirectory.AccessMode">AccessMode</h4>
+  <div class="markdown level1 summary"><p>Access mode for auth. <code>required</code>, <code>restricted</code>, <code>unrestricted</code> are supported. Default <code>unrestricted</code> (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; AccessMode { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/ActiveDirectory.cs/#L29">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_ActiveDirectory_AllowedPrincipalIds_" data-uid="Pulumi.Rancher2.ActiveDirectory.AllowedPrincipalIds*"></a>
+  <h4 id="Pulumi_Rancher2_ActiveDirectory_AllowedPrincipalIds" data-uid="Pulumi.Rancher2.ActiveDirectory.AllowedPrincipalIds">AllowedPrincipalIds</h4>
+  <div class="markdown level1 summary"><p>Allowed principal ids for auth. Required if <code>access_mode</code> is <code>required</code> or <code>restricted</code>. Ex: <code>activedirectory_user://&amp;lt;DN&gt;</code>  <code>activedirectory_group://&amp;lt;DN&gt;</code> (list)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; AllowedPrincipalIds { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/ActiveDirectory.cs/#L35">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_ActiveDirectory_Annotations_" data-uid="Pulumi.Rancher2.ActiveDirectory.Annotations*"></a>
+  <h4 id="Pulumi_Rancher2_ActiveDirectory_Annotations" data-uid="Pulumi.Rancher2.ActiveDirectory.Annotations">Annotations</h4>
+  <div class="markdown level1 summary"><p>Annotations of the resource (map)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Annotations { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/ActiveDirectory.cs/#L41">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_ActiveDirectory_Certificate_" data-uid="Pulumi.Rancher2.ActiveDirectory.Certificate*"></a>
+  <h4 id="Pulumi_Rancher2_ActiveDirectory_Certificate" data-uid="Pulumi.Rancher2.ActiveDirectory.Certificate">Certificate</h4>
+  <div class="markdown level1 summary"><p>CA certificate for TLS if selfsigned (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Certificate { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/ActiveDirectory.cs/#L47">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_ActiveDirectory_ConnectionTimeout_" data-uid="Pulumi.Rancher2.ActiveDirectory.ConnectionTimeout*"></a>
+  <h4 id="Pulumi_Rancher2_ActiveDirectory_ConnectionTimeout" data-uid="Pulumi.Rancher2.ActiveDirectory.ConnectionTimeout">ConnectionTimeout</h4>
+  <div class="markdown level1 summary"><p>ActiveDirectory connection timeout. Default <code>5000</code> (int)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; ConnectionTimeout { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/ActiveDirectory.cs/#L53">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_ActiveDirectory_DefaultLoginDomain_" data-uid="Pulumi.Rancher2.ActiveDirectory.DefaultLoginDomain*"></a>
+  <h4 id="Pulumi_Rancher2_ActiveDirectory_DefaultLoginDomain" data-uid="Pulumi.Rancher2.ActiveDirectory.DefaultLoginDomain">DefaultLoginDomain</h4>
+  <div class="markdown level1 summary"><p>ActiveDirectory defult lgoin domain (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; DefaultLoginDomain { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/ActiveDirectory.cs/#L59">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_ActiveDirectory_Enabled_" data-uid="Pulumi.Rancher2.ActiveDirectory.Enabled*"></a>
+  <h4 id="Pulumi_Rancher2_ActiveDirectory_Enabled" data-uid="Pulumi.Rancher2.ActiveDirectory.Enabled">Enabled</h4>
+  <div class="markdown level1 summary"><p>Enable auth config provider. Default <code>true</code> (bool)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; Enabled { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/ActiveDirectory.cs/#L65">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_ActiveDirectory_GroupDnAttribute_" data-uid="Pulumi.Rancher2.ActiveDirectory.GroupDnAttribute*"></a>
+  <h4 id="Pulumi_Rancher2_ActiveDirectory_GroupDnAttribute" data-uid="Pulumi.Rancher2.ActiveDirectory.GroupDnAttribute">GroupDnAttribute</h4>
+  <div class="markdown level1 summary"><p>Group DN attribute. Default <code>distinguishedName</code> (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; GroupDnAttribute { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/ActiveDirectory.cs/#L71">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_ActiveDirectory_GroupMemberMappingAttribute_" data-uid="Pulumi.Rancher2.ActiveDirectory.GroupMemberMappingAttribute*"></a>
+  <h4 id="Pulumi_Rancher2_ActiveDirectory_GroupMemberMappingAttribute" data-uid="Pulumi.Rancher2.ActiveDirectory.GroupMemberMappingAttribute">GroupMemberMappingAttribute</h4>
+  <div class="markdown level1 summary"><p>Group member mapping attribute. Default <code>member</code> (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; GroupMemberMappingAttribute { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/ActiveDirectory.cs/#L77">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_ActiveDirectory_GroupMemberUserAttribute_" data-uid="Pulumi.Rancher2.ActiveDirectory.GroupMemberUserAttribute*"></a>
+  <h4 id="Pulumi_Rancher2_ActiveDirectory_GroupMemberUserAttribute" data-uid="Pulumi.Rancher2.ActiveDirectory.GroupMemberUserAttribute">GroupMemberUserAttribute</h4>
+  <div class="markdown level1 summary"><p>Group member user attribute. Default <code>distinguishedName</code> (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; GroupMemberUserAttribute { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/ActiveDirectory.cs/#L83">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_ActiveDirectory_GroupNameAttribute_" data-uid="Pulumi.Rancher2.ActiveDirectory.GroupNameAttribute*"></a>
+  <h4 id="Pulumi_Rancher2_ActiveDirectory_GroupNameAttribute" data-uid="Pulumi.Rancher2.ActiveDirectory.GroupNameAttribute">GroupNameAttribute</h4>
+  <div class="markdown level1 summary"><p>Group name attribute. Default <code>name</code> (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; GroupNameAttribute { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/ActiveDirectory.cs/#L89">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_ActiveDirectory_GroupObjectClass_" data-uid="Pulumi.Rancher2.ActiveDirectory.GroupObjectClass*"></a>
+  <h4 id="Pulumi_Rancher2_ActiveDirectory_GroupObjectClass" data-uid="Pulumi.Rancher2.ActiveDirectory.GroupObjectClass">GroupObjectClass</h4>
+  <div class="markdown level1 summary"><p>Group object class. Default <code>group</code> (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; GroupObjectClass { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/ActiveDirectory.cs/#L95">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_ActiveDirectory_GroupSearchAttribute_" data-uid="Pulumi.Rancher2.ActiveDirectory.GroupSearchAttribute*"></a>
+  <h4 id="Pulumi_Rancher2_ActiveDirectory_GroupSearchAttribute" data-uid="Pulumi.Rancher2.ActiveDirectory.GroupSearchAttribute">GroupSearchAttribute</h4>
+  <div class="markdown level1 summary"><p>Group search attribute. Default <code>sAMAccountName</code> (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; GroupSearchAttribute { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/ActiveDirectory.cs/#L101">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_ActiveDirectory_GroupSearchBase_" data-uid="Pulumi.Rancher2.ActiveDirectory.GroupSearchBase*"></a>
+  <h4 id="Pulumi_Rancher2_ActiveDirectory_GroupSearchBase" data-uid="Pulumi.Rancher2.ActiveDirectory.GroupSearchBase">GroupSearchBase</h4>
+  <div class="markdown level1 summary"><p>Group search base (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; GroupSearchBase { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/ActiveDirectory.cs/#L107">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_ActiveDirectory_GroupSearchFilter_" data-uid="Pulumi.Rancher2.ActiveDirectory.GroupSearchFilter*"></a>
+  <h4 id="Pulumi_Rancher2_ActiveDirectory_GroupSearchFilter" data-uid="Pulumi.Rancher2.ActiveDirectory.GroupSearchFilter">GroupSearchFilter</h4>
+  <div class="markdown level1 summary"><p>Group search filter (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; GroupSearchFilter { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/ActiveDirectory.cs/#L113">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_ActiveDirectory_Labels_" data-uid="Pulumi.Rancher2.ActiveDirectory.Labels*"></a>
+  <h4 id="Pulumi_Rancher2_ActiveDirectory_Labels" data-uid="Pulumi.Rancher2.ActiveDirectory.Labels">Labels</h4>
+  <div class="markdown level1 summary"><p>Labels of the resource (map)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Labels { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/ActiveDirectory.cs/#L119">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_ActiveDirectory_Name_" data-uid="Pulumi.Rancher2.ActiveDirectory.Name*"></a>
+  <h4 id="Pulumi_Rancher2_ActiveDirectory_Name" data-uid="Pulumi.Rancher2.ActiveDirectory.Name">Name</h4>
+  <div class="markdown level1 summary"><p>(Computed) The name of the resource (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/ActiveDirectory.cs/#L125">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_ActiveDirectory_NestedGroupMembershipEnabled_" data-uid="Pulumi.Rancher2.ActiveDirectory.NestedGroupMembershipEnabled*"></a>
+  <h4 id="Pulumi_Rancher2_ActiveDirectory_NestedGroupMembershipEnabled" data-uid="Pulumi.Rancher2.ActiveDirectory.NestedGroupMembershipEnabled">NestedGroupMembershipEnabled</h4>
+  <div class="markdown level1 summary"><p>Nested group membership enable. Default <code>false</code> (bool)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; NestedGroupMembershipEnabled { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/ActiveDirectory.cs/#L131">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_ActiveDirectory_Port_" data-uid="Pulumi.Rancher2.ActiveDirectory.Port*"></a>
+  <h4 id="Pulumi_Rancher2_ActiveDirectory_Port" data-uid="Pulumi.Rancher2.ActiveDirectory.Port">Port</h4>
+  <div class="markdown level1 summary"><p>ActiveDirectory port. Default <code>389</code> (int)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; Port { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/ActiveDirectory.cs/#L137">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_ActiveDirectory_Servers_" data-uid="Pulumi.Rancher2.ActiveDirectory.Servers*"></a>
+  <h4 id="Pulumi_Rancher2_ActiveDirectory_Servers" data-uid="Pulumi.Rancher2.ActiveDirectory.Servers">Servers</h4>
+  <div class="markdown level1 summary"><p>ActiveDirectory servers list (list)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; Servers { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/ActiveDirectory.cs/#L143">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_ActiveDirectory_ServiceAccountPassword_" data-uid="Pulumi.Rancher2.ActiveDirectory.ServiceAccountPassword*"></a>
+  <h4 id="Pulumi_Rancher2_ActiveDirectory_ServiceAccountPassword" data-uid="Pulumi.Rancher2.ActiveDirectory.ServiceAccountPassword">ServiceAccountPassword</h4>
+  <div class="markdown level1 summary"><p>Service account password for access ActiveDirectory service (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ServiceAccountPassword { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/ActiveDirectory.cs/#L149">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_ActiveDirectory_ServiceAccountUsername_" data-uid="Pulumi.Rancher2.ActiveDirectory.ServiceAccountUsername*"></a>
+  <h4 id="Pulumi_Rancher2_ActiveDirectory_ServiceAccountUsername" data-uid="Pulumi.Rancher2.ActiveDirectory.ServiceAccountUsername">ServiceAccountUsername</h4>
+  <div class="markdown level1 summary"><p>Service account DN for access ActiveDirectory service (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ServiceAccountUsername { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/ActiveDirectory.cs/#L155">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_ActiveDirectory_Tls_" data-uid="Pulumi.Rancher2.ActiveDirectory.Tls*"></a>
+  <h4 id="Pulumi_Rancher2_ActiveDirectory_Tls" data-uid="Pulumi.Rancher2.ActiveDirectory.Tls">Tls</h4>
+  <div class="markdown level1 summary"><p>Enable TLS connection (bool)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; Tls { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/ActiveDirectory.cs/#L161">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_ActiveDirectory_Type_" data-uid="Pulumi.Rancher2.ActiveDirectory.Type*"></a>
+  <h4 id="Pulumi_Rancher2_ActiveDirectory_Type" data-uid="Pulumi.Rancher2.ActiveDirectory.Type">Type</h4>
+  <div class="markdown level1 summary"><p>(Computed) The type of the resource (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Type { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/ActiveDirectory.cs/#L167">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_ActiveDirectory_UserDisabledBitMask_" data-uid="Pulumi.Rancher2.ActiveDirectory.UserDisabledBitMask*"></a>
+  <h4 id="Pulumi_Rancher2_ActiveDirectory_UserDisabledBitMask" data-uid="Pulumi.Rancher2.ActiveDirectory.UserDisabledBitMask">UserDisabledBitMask</h4>
+  <div class="markdown level1 summary"><p>User disabled bit mask. Default <code>2</code> (int)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; UserDisabledBitMask { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/ActiveDirectory.cs/#L173">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_ActiveDirectory_UserEnabledAttribute_" data-uid="Pulumi.Rancher2.ActiveDirectory.UserEnabledAttribute*"></a>
+  <h4 id="Pulumi_Rancher2_ActiveDirectory_UserEnabledAttribute" data-uid="Pulumi.Rancher2.ActiveDirectory.UserEnabledAttribute">UserEnabledAttribute</h4>
+  <div class="markdown level1 summary"><p>User enable attribute (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; UserEnabledAttribute { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/ActiveDirectory.cs/#L179">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_ActiveDirectory_UserLoginAttribute_" data-uid="Pulumi.Rancher2.ActiveDirectory.UserLoginAttribute*"></a>
+  <h4 id="Pulumi_Rancher2_ActiveDirectory_UserLoginAttribute" data-uid="Pulumi.Rancher2.ActiveDirectory.UserLoginAttribute">UserLoginAttribute</h4>
+  <div class="markdown level1 summary"><p>User login attribute. Default <code>sAMAccountName</code> (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; UserLoginAttribute { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/ActiveDirectory.cs/#L185">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_ActiveDirectory_UserNameAttribute_" data-uid="Pulumi.Rancher2.ActiveDirectory.UserNameAttribute*"></a>
+  <h4 id="Pulumi_Rancher2_ActiveDirectory_UserNameAttribute" data-uid="Pulumi.Rancher2.ActiveDirectory.UserNameAttribute">UserNameAttribute</h4>
+  <div class="markdown level1 summary"><p>User name attribute. Default <code>name</code> (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; UserNameAttribute { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/ActiveDirectory.cs/#L191">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_ActiveDirectory_UserObjectClass_" data-uid="Pulumi.Rancher2.ActiveDirectory.UserObjectClass*"></a>
+  <h4 id="Pulumi_Rancher2_ActiveDirectory_UserObjectClass" data-uid="Pulumi.Rancher2.ActiveDirectory.UserObjectClass">UserObjectClass</h4>
+  <div class="markdown level1 summary"><p>User object class. Default <code>person</code> (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; UserObjectClass { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/ActiveDirectory.cs/#L197">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_ActiveDirectory_UserSearchAttribute_" data-uid="Pulumi.Rancher2.ActiveDirectory.UserSearchAttribute*"></a>
+  <h4 id="Pulumi_Rancher2_ActiveDirectory_UserSearchAttribute" data-uid="Pulumi.Rancher2.ActiveDirectory.UserSearchAttribute">UserSearchAttribute</h4>
+  <div class="markdown level1 summary"><p>User search attribute. Default <code>sAMAccountName|sn|givenName</code> (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; UserSearchAttribute { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/ActiveDirectory.cs/#L203">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_ActiveDirectory_UserSearchBase_" data-uid="Pulumi.Rancher2.ActiveDirectory.UserSearchBase*"></a>
+  <h4 id="Pulumi_Rancher2_ActiveDirectory_UserSearchBase" data-uid="Pulumi.Rancher2.ActiveDirectory.UserSearchBase">UserSearchBase</h4>
+  <div class="markdown level1 summary"><p>User search base DN (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; UserSearchBase { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/ActiveDirectory.cs/#L209">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_ActiveDirectory_UserSearchFilter_" data-uid="Pulumi.Rancher2.ActiveDirectory.UserSearchFilter*"></a>
+  <h4 id="Pulumi_Rancher2_ActiveDirectory_UserSearchFilter" data-uid="Pulumi.Rancher2.ActiveDirectory.UserSearchFilter">UserSearchFilter</h4>
+  <div class="markdown level1 summary"><p>User search filter (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; UserSearchFilter { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/ActiveDirectory.cs/#L250">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_ActiveDirectory_Get_" data-uid="Pulumi.Rancher2.ActiveDirectory.Get*"></a>
+  <h4 id="Pulumi_Rancher2_ActiveDirectory_Get_System_String_Input_System_String__Pulumi_Rancher2_ActiveDirectoryState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Rancher2.ActiveDirectory.Get(System.String,Input{System.String},Pulumi.Rancher2.ActiveDirectoryState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, ActiveDirectoryState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Get an existing ActiveDirectory resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ActiveDirectory Get(string name, Input&lt;string&gt; id, ActiveDirectoryState state = null, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Rancher2.ActiveDirectoryState.html">ActiveDirectoryState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Rancher2.ActiveDirectory.html">ActiveDirectory</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/ActiveDirectory.cs/#L18" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

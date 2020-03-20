@@ -1,0 +1,1120 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Device
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Device
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Packet.Device">
+  
+  <h1 id="Pulumi_Packet_Device" data-uid="Pulumi.Packet.Device" class="text-break">Class Device
+  </h1>
+  <div class="markdown level0 summary"><p>Provides a Packet device resource. This can be used to create,
+modify, and delete devices.</p>
+<blockquote>
+<p><strong>Note:</strong> All arguments including the <code>root_password</code> and <code>user_data</code> will be stored in
+the raw state as plain-text.
+<a href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/device.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/device.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Device</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Packet.html">Pulumi.Packet</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Packet.dll</h6>
+  <h5 id="Pulumi_Packet_Device_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Device : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/Device.cs/#L225">View Source</a>
+  </span>
+  <a id="Pulumi_Packet_Device__ctor_" data-uid="Pulumi.Packet.Device.#ctor*"></a>
+  <h4 id="Pulumi_Packet_Device__ctor_System_String_Pulumi_Packet_DeviceArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Packet.Device.#ctor(System.String,Pulumi.Packet.DeviceArgs,System.Nullable{CustomResourceOptions})">Device(String, DeviceArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Create a Device resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Device(string name, DeviceArgs args, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Packet.DeviceArgs.html">DeviceArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/Device.cs/#L26">View Source</a>
+  </span>
+  <a id="Pulumi_Packet_Device_AccessPrivateIpv4_" data-uid="Pulumi.Packet.Device.AccessPrivateIpv4*"></a>
+  <h4 id="Pulumi_Packet_Device_AccessPrivateIpv4" data-uid="Pulumi.Packet.Device.AccessPrivateIpv4">AccessPrivateIpv4</h4>
+  <div class="markdown level1 summary"><p>The ipv4 private IP assigned to the device</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AccessPrivateIpv4 { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/Device.cs/#L32">View Source</a>
+  </span>
+  <a id="Pulumi_Packet_Device_AccessPublicIpv4_" data-uid="Pulumi.Packet.Device.AccessPublicIpv4*"></a>
+  <h4 id="Pulumi_Packet_Device_AccessPublicIpv4" data-uid="Pulumi.Packet.Device.AccessPublicIpv4">AccessPublicIpv4</h4>
+  <div class="markdown level1 summary"><p>The ipv4 maintenance IP assigned to the device</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AccessPublicIpv4 { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/Device.cs/#L38">View Source</a>
+  </span>
+  <a id="Pulumi_Packet_Device_AccessPublicIpv6_" data-uid="Pulumi.Packet.Device.AccessPublicIpv6*"></a>
+  <h4 id="Pulumi_Packet_Device_AccessPublicIpv6" data-uid="Pulumi.Packet.Device.AccessPublicIpv6">AccessPublicIpv6</h4>
+  <div class="markdown level1 summary"><p>The ipv6 maintenance IP assigned to the device</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AccessPublicIpv6 { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/Device.cs/#L45">View Source</a>
+  </span>
+  <a id="Pulumi_Packet_Device_AlwaysPxe_" data-uid="Pulumi.Packet.Device.AlwaysPxe*"></a>
+  <h4 id="Pulumi_Packet_Device_AlwaysPxe" data-uid="Pulumi.Packet.Device.AlwaysPxe">AlwaysPxe</h4>
+  <div class="markdown level1 summary"><p>If true, a device with OS <code>custom_ipxe</code> will
+continue to boot via iPXE on reboots.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; AlwaysPxe { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/Device.cs/#L51">View Source</a>
+  </span>
+  <a id="Pulumi_Packet_Device_BillingCycle_" data-uid="Pulumi.Packet.Device.BillingCycle*"></a>
+  <h4 id="Pulumi_Packet_Device_BillingCycle" data-uid="Pulumi.Packet.Device.BillingCycle">BillingCycle</h4>
+  <div class="markdown level1 summary"><p>monthly or hourly</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; BillingCycle { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/Device.cs/#L57">View Source</a>
+  </span>
+  <a id="Pulumi_Packet_Device_Created_" data-uid="Pulumi.Packet.Device.Created*"></a>
+  <h4 id="Pulumi_Packet_Device_Created" data-uid="Pulumi.Packet.Device.Created">Created</h4>
+  <div class="markdown level1 summary"><p>The timestamp for when the device was created</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Created { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/Device.cs/#L63">View Source</a>
+  </span>
+  <a id="Pulumi_Packet_Device_DeployedFacility_" data-uid="Pulumi.Packet.Device.DeployedFacility*"></a>
+  <h4 id="Pulumi_Packet_Device_DeployedFacility" data-uid="Pulumi.Packet.Device.DeployedFacility">DeployedFacility</h4>
+  <div class="markdown level1 summary"><p>The facility where the device is deployed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DeployedFacility { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/Device.cs/#L69">View Source</a>
+  </span>
+  <a id="Pulumi_Packet_Device_Description_" data-uid="Pulumi.Packet.Device.Description*"></a>
+  <h4 id="Pulumi_Packet_Device_Description" data-uid="Pulumi.Packet.Device.Description">Description</h4>
+  <div class="markdown level1 summary"><p>Description string for the device</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/Device.cs/#L75">View Source</a>
+  </span>
+  <a id="Pulumi_Packet_Device_Facilities_" data-uid="Pulumi.Packet.Device.Facilities*"></a>
+  <h4 id="Pulumi_Packet_Device_Facilities" data-uid="Pulumi.Packet.Device.Facilities">Facilities</h4>
+  <div class="markdown level1 summary"><p>List of facility codes with deployment preferences. Packet API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or <code>any</code> (a wildcard). To find the facility code, visit <a href="https://www.packet.com/developers/api/facilities">Facilities API docs</a>, set your API auth token in the top of the page and see JSON from the API response.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; Facilities { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/Device.cs/#L81">View Source</a>
+  </span>
+  <a id="Pulumi_Packet_Device_ForceDetachVolumes_" data-uid="Pulumi.Packet.Device.ForceDetachVolumes*"></a>
+  <h4 id="Pulumi_Packet_Device_ForceDetachVolumes" data-uid="Pulumi.Packet.Device.ForceDetachVolumes">ForceDetachVolumes</h4>
+  <div class="markdown level1 summary"><p>Delete device even if it has volumes attached. Only applies for destroy action.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; ForceDetachVolumes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/Device.cs/#L84">View Source</a>
+  </span>
+  <a id="Pulumi_Packet_Device_HardwareReservationId_" data-uid="Pulumi.Packet.Device.HardwareReservationId*"></a>
+  <h4 id="Pulumi_Packet_Device_HardwareReservationId" data-uid="Pulumi.Packet.Device.HardwareReservationId">HardwareReservationId</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; HardwareReservationId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/Device.cs/#L90">View Source</a>
+  </span>
+  <a id="Pulumi_Packet_Device_Hostname_" data-uid="Pulumi.Packet.Device.Hostname*"></a>
+  <h4 id="Pulumi_Packet_Device_Hostname" data-uid="Pulumi.Packet.Device.Hostname">Hostname</h4>
+  <div class="markdown level1 summary"><p>The device name</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Hostname { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/Device.cs/#L96">View Source</a>
+  </span>
+  <a id="Pulumi_Packet_Device_IpAddresses_" data-uid="Pulumi.Packet.Device.IpAddresses*"></a>
+  <h4 id="Pulumi_Packet_Device_IpAddresses" data-uid="Pulumi.Packet.Device.IpAddresses">IpAddresses</h4>
+  <div class="markdown level1 summary"><p>A list of IP address types for the device (structure is documented below).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;DeviceIpAddresses&gt;&gt; IpAddresses { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Packet.Outputs.DeviceIpAddresses.html">DeviceIpAddresses</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/Device.cs/#L102">View Source</a>
+  </span>
+  <a id="Pulumi_Packet_Device_IpAddressTypes_" data-uid="Pulumi.Packet.Device.IpAddressTypes*"></a>
+  <h4 id="Pulumi_Packet_Device_IpAddressTypes" data-uid="Pulumi.Packet.Device.IpAddressTypes">IpAddressTypes</h4>
+  <div class="markdown level1 summary"><p>A set containing one or more of [<code>private_ipv4</code>, <code>public_ipv4</code>, <code>public_ipv6</code>]. It specifies which IP address types a new device should obtain. If omitted, a created device will obtain all 3 addresses. If you only want private IPv4 address for the new device, pass [<code>private_ipv4</code>].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; IpAddressTypes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/Device.cs/#L111">View Source</a>
+  </span>
+  <a id="Pulumi_Packet_Device_IpxeScriptUrl_" data-uid="Pulumi.Packet.Device.IpxeScriptUrl*"></a>
+  <h4 id="Pulumi_Packet_Device_IpxeScriptUrl" data-uid="Pulumi.Packet.Device.IpxeScriptUrl">IpxeScriptUrl</h4>
+  <div class="markdown level1 summary"><p>URL pointing to a hosted iPXE script. More
+information is in the
+<a href="https://www.packet.com/developers/docs/servers/operating-systems/custom-ipxe/">Custom iPXE</a>
+doc.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; IpxeScriptUrl { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/Device.cs/#L117">View Source</a>
+  </span>
+  <a id="Pulumi_Packet_Device_Locked_" data-uid="Pulumi.Packet.Device.Locked*"></a>
+  <h4 id="Pulumi_Packet_Device_Locked" data-uid="Pulumi.Packet.Device.Locked">Locked</h4>
+  <div class="markdown level1 summary"><p>Whether the device is locked</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; Locked { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/Device.cs/#L128">View Source</a>
+  </span>
+  <a id="Pulumi_Packet_Device_Networks_" data-uid="Pulumi.Packet.Device.Networks*"></a>
+  <h4 id="Pulumi_Packet_Device_Networks" data-uid="Pulumi.Packet.Device.Networks">Networks</h4>
+  <div class="markdown level1 summary"><p>The device's private and public IP (v4 and v6) network details. When a device is run without any special network configuration, it will have 3 networks:</p>
+<ul>
+<li>Public IPv4 at <code>packet_device.name.network.0</code></li>
+<li>IPv6 at <code>packet_device.name.network.1</code></li>
+<li>Private IPv4 at <code>packet_device.name.network.2</code>
+Elastic addresses then stack by type - an assigned public IPv4 will go after the management public IPv4 (to index 1), and will then shift the indices of the IPv6 and private IPv4. Assigned private IPv4 will go after the management private IPv4 (to the end of the network list).
+The fields of the network attributes are:</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;DeviceNetworks&gt;&gt; Networks { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Packet.Outputs.DeviceNetworks.html">DeviceNetworks</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/Device.cs/#L131">View Source</a>
+  </span>
+  <a id="Pulumi_Packet_Device_NetworkType_" data-uid="Pulumi.Packet.Device.NetworkType*"></a>
+  <h4 id="Pulumi_Packet_Device_NetworkType" data-uid="Pulumi.Packet.Device.NetworkType">NetworkType</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; NetworkType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/Device.cs/#L137">View Source</a>
+  </span>
+  <a id="Pulumi_Packet_Device_OperatingSystem_" data-uid="Pulumi.Packet.Device.OperatingSystem*"></a>
+  <h4 id="Pulumi_Packet_Device_OperatingSystem" data-uid="Pulumi.Packet.Device.OperatingSystem">OperatingSystem</h4>
+  <div class="markdown level1 summary"><p>The operating system slug. To find the slug, or visit <a href="https://www.packet.com/developers/api/operatingsystems">Operating Systems API docs</a>, set your API auth token in the top of the page and see JSON from the API response.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; OperatingSystem { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/Device.cs/#L143">View Source</a>
+  </span>
+  <a id="Pulumi_Packet_Device_Plan_" data-uid="Pulumi.Packet.Device.Plan*"></a>
+  <h4 id="Pulumi_Packet_Device_Plan" data-uid="Pulumi.Packet.Device.Plan">Plan</h4>
+  <div class="markdown level1 summary"><p>The device plan slug. To find the plan slug, visit <a href="https://www.packet.com/developers/api/plans">Device plans API docs</a>, set your auth token in the top of the page and see JSON from the API response.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Plan { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/Device.cs/#L149">View Source</a>
+  </span>
+  <a id="Pulumi_Packet_Device_Ports_" data-uid="Pulumi.Packet.Device.Ports*"></a>
+  <h4 id="Pulumi_Packet_Device_Ports" data-uid="Pulumi.Packet.Device.Ports">Ports</h4>
+  <div class="markdown level1 summary"><p>Ports assigned to the device</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;DevicePorts&gt;&gt; Ports { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Packet.Outputs.DevicePorts.html">DevicePorts</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/Device.cs/#L155">View Source</a>
+  </span>
+  <a id="Pulumi_Packet_Device_ProjectId_" data-uid="Pulumi.Packet.Device.ProjectId*"></a>
+  <h4 id="Pulumi_Packet_Device_ProjectId" data-uid="Pulumi.Packet.Device.ProjectId">ProjectId</h4>
+  <div class="markdown level1 summary"><p>The ID of the project in which to create the device</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ProjectId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/Device.cs/#L158">View Source</a>
+  </span>
+  <a id="Pulumi_Packet_Device_ProjectSshKeyIds_" data-uid="Pulumi.Packet.Device.ProjectSshKeyIds*"></a>
+  <h4 id="Pulumi_Packet_Device_ProjectSshKeyIds" data-uid="Pulumi.Packet.Device.ProjectSshKeyIds">ProjectSshKeyIds</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; ProjectSshKeyIds { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/Device.cs/#L166">View Source</a>
+  </span>
+  <a id="Pulumi_Packet_Device_PublicIpv4SubnetSize_" data-uid="Pulumi.Packet.Device.PublicIpv4SubnetSize*"></a>
+  <h4 id="Pulumi_Packet_Device_PublicIpv4SubnetSize" data-uid="Pulumi.Packet.Device.PublicIpv4SubnetSize">PublicIpv4SubnetSize</h4>
+  <div class="markdown level1 summary"><p>Size of allocated subnet, more
+information is in the
+<a href="https://www.packet.com/developers/docs/servers/key-features/custom-subnet-size/">Custom Subnet Size</a> doc.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; PublicIpv4SubnetSize { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/Device.cs/#L172">View Source</a>
+  </span>
+  <a id="Pulumi_Packet_Device_RootPassword_" data-uid="Pulumi.Packet.Device.RootPassword*"></a>
+  <h4 id="Pulumi_Packet_Device_RootPassword" data-uid="Pulumi.Packet.Device.RootPassword">RootPassword</h4>
+  <div class="markdown level1 summary"><p>Root password to the server (disabled after 24 hours)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; RootPassword { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/Device.cs/#L178">View Source</a>
+  </span>
+  <a id="Pulumi_Packet_Device_SshKeyIds_" data-uid="Pulumi.Packet.Device.SshKeyIds*"></a>
+  <h4 id="Pulumi_Packet_Device_SshKeyIds" data-uid="Pulumi.Packet.Device.SshKeyIds">SshKeyIds</h4>
+  <div class="markdown level1 summary"><p>List of IDs of SSH keys deployed in the device, can be both user and project SSH keys</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; SshKeyIds { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/Device.cs/#L184">View Source</a>
+  </span>
+  <a id="Pulumi_Packet_Device_State_" data-uid="Pulumi.Packet.Device.State*"></a>
+  <h4 id="Pulumi_Packet_Device_State" data-uid="Pulumi.Packet.Device.State">State</h4>
+  <div class="markdown level1 summary"><p>The status of the device</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; State { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/Device.cs/#L190">View Source</a>
+  </span>
+  <a id="Pulumi_Packet_Device_Storage_" data-uid="Pulumi.Packet.Device.Storage*"></a>
+  <h4 id="Pulumi_Packet_Device_Storage" data-uid="Pulumi.Packet.Device.Storage">Storage</h4>
+  <div class="markdown level1 summary"><p>JSON for custom partitioning. Only usable on reserved hardware. More information in in the <a href="https://www.packet.com/developers/docs/servers/key-features/cpr/">Custom Partitioning and RAID</a> doc.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Storage { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/Device.cs/#L196">View Source</a>
+  </span>
+  <a id="Pulumi_Packet_Device_Tags_" data-uid="Pulumi.Packet.Device.Tags*"></a>
+  <h4 id="Pulumi_Packet_Device_Tags" data-uid="Pulumi.Packet.Device.Tags">Tags</h4>
+  <div class="markdown level1 summary"><p>Tags attached to the device</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; Tags { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/Device.cs/#L202">View Source</a>
+  </span>
+  <a id="Pulumi_Packet_Device_Updated_" data-uid="Pulumi.Packet.Device.Updated*"></a>
+  <h4 id="Pulumi_Packet_Device_Updated" data-uid="Pulumi.Packet.Device.Updated">Updated</h4>
+  <div class="markdown level1 summary"><p>The timestamp for the last time the device was updated</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Updated { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/Device.cs/#L208">View Source</a>
+  </span>
+  <a id="Pulumi_Packet_Device_UserData_" data-uid="Pulumi.Packet.Device.UserData*"></a>
+  <h4 id="Pulumi_Packet_Device_UserData" data-uid="Pulumi.Packet.Device.UserData">UserData</h4>
+  <div class="markdown level1 summary"><p>A string of the desired User Data for the device.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; UserData { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/Device.cs/#L214">View Source</a>
+  </span>
+  <a id="Pulumi_Packet_Device_WaitForReservationDeprovision_" data-uid="Pulumi.Packet.Device.WaitForReservationDeprovision*"></a>
+  <h4 id="Pulumi_Packet_Device_WaitForReservationDeprovision" data-uid="Pulumi.Packet.Device.WaitForReservationDeprovision">WaitForReservationDeprovision</h4>
+  <div class="markdown level1 summary"><p>Only used for devices in reserved hardware. If set, the deletion of this device will block until the hardware reservation is marked provisionable (about 4 minutes in August 2019).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; WaitForReservationDeprovision { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/Device.cs/#L255">View Source</a>
+  </span>
+  <a id="Pulumi_Packet_Device_Get_" data-uid="Pulumi.Packet.Device.Get*"></a>
+  <h4 id="Pulumi_Packet_Device_Get_System_String_Input_System_String__Pulumi_Packet_DeviceState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Packet.Device.Get(System.String,Input{System.String},Pulumi.Packet.DeviceState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, DeviceState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Get an existing Device resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Device Get(string name, Input&lt;string&gt; id, DeviceState state = null, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Packet.DeviceState.html">DeviceState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Packet.Device.html">Device</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/Device.cs/#L21" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

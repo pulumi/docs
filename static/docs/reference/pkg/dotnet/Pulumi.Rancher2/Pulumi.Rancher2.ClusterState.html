@@ -1,0 +1,868 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ClusterState
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ClusterState
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Rancher2.ClusterState">
+  
+  <h1 id="Pulumi_Rancher2_ClusterState" data-uid="Pulumi.Rancher2.ClusterState" class="text-break">Class ClusterState
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">ClusterState</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Rancher2.html">Pulumi.Rancher2</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Rancher2.dll</h6>
+  <h5 id="Pulumi_Rancher2_ClusterState_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class ClusterState : ResourceArgs</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L569">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_ClusterState__ctor_" data-uid="Pulumi.Rancher2.ClusterState.#ctor*"></a>
+  <h4 id="Pulumi_Rancher2_ClusterState__ctor" data-uid="Pulumi.Rancher2.ClusterState.#ctor">ClusterState()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ClusterState()</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L392">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_ClusterState_AksConfig_" data-uid="Pulumi.Rancher2.ClusterState.AksConfig*"></a>
+  <h4 id="Pulumi_Rancher2_ClusterState_AksConfig" data-uid="Pulumi.Rancher2.ClusterState.AksConfig">AksConfig</h4>
+  <div class="markdown level1 summary"><p>The Azure AKS configuration for <code>aks</code> Clusters. Conflicts with <code>eks_config</code>, <code>gke_config</code> and <code>rke_config</code> (list maxitems:1)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;ClusterAksConfigGetArgs&gt;? AksConfig { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Rancher2.Inputs.ClusterAksConfigGetArgs.html">ClusterAksConfigGetArgs</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L401">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_ClusterState_Annotations_" data-uid="Pulumi.Rancher2.ClusterState.Annotations*"></a>
+  <h4 id="Pulumi_Rancher2_ClusterState_Annotations" data-uid="Pulumi.Rancher2.ClusterState.Annotations">Annotations</h4>
+  <div class="markdown level1 summary"><p>Annotations for cluster registration token object (map)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputMap&lt;object&gt; Annotations { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L410">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_ClusterState_ClusterAuthEndpoint_" data-uid="Pulumi.Rancher2.ClusterState.ClusterAuthEndpoint*"></a>
+  <h4 id="Pulumi_Rancher2_ClusterState_ClusterAuthEndpoint" data-uid="Pulumi.Rancher2.ClusterState.ClusterAuthEndpoint">ClusterAuthEndpoint</h4>
+  <div class="markdown level1 summary"><p>Enabling the <a href="https://rancher.com/docs/rancher/v2.x/en/cluster-provisioning/rke-clusters/options/#local-cluster-auth-endpoint">local cluster authorized endpoint</a> allows direct communication with the cluster, bypassing the Rancher API proxy. (list maxitems:1)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;ClusterClusterAuthEndpointGetArgs&gt;? ClusterAuthEndpoint { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Rancher2.Inputs.ClusterClusterAuthEndpointGetArgs.html">ClusterClusterAuthEndpointGetArgs</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L416">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_ClusterState_ClusterMonitoringInput_" data-uid="Pulumi.Rancher2.ClusterState.ClusterMonitoringInput*"></a>
+  <h4 id="Pulumi_Rancher2_ClusterState_ClusterMonitoringInput" data-uid="Pulumi.Rancher2.ClusterState.ClusterMonitoringInput">ClusterMonitoringInput</h4>
+  <div class="markdown level1 summary"><p>Cluster monitoring config. Any parameter defined in <a href="https://github.com/rancher/system-charts/tree/dev/charts/rancher-monitoring">rancher-monitoring charts</a> could be configured  (list maxitems:1)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;ClusterClusterMonitoringInputGetArgs&gt;? ClusterMonitoringInput { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Rancher2.Inputs.ClusterClusterMonitoringInputGetArgs.html">ClusterClusterMonitoringInputGetArgs</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L422">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_ClusterState_ClusterRegistrationToken_" data-uid="Pulumi.Rancher2.ClusterState.ClusterRegistrationToken*"></a>
+  <h4 id="Pulumi_Rancher2_ClusterState_ClusterRegistrationToken" data-uid="Pulumi.Rancher2.ClusterState.ClusterRegistrationToken">ClusterRegistrationToken</h4>
+  <div class="markdown level1 summary"><p>(Computed) Cluster Registration Token generated for the cluster (list maxitems:1)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;ClusterClusterRegistrationTokenGetArgs&gt;? ClusterRegistrationToken { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Rancher2.Inputs.ClusterClusterRegistrationTokenGetArgs.html">ClusterClusterRegistrationTokenGetArgs</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L428">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_ClusterState_ClusterTemplateAnswers_" data-uid="Pulumi.Rancher2.ClusterState.ClusterTemplateAnswers*"></a>
+  <h4 id="Pulumi_Rancher2_ClusterState_ClusterTemplateAnswers" data-uid="Pulumi.Rancher2.ClusterState.ClusterTemplateAnswers">ClusterTemplateAnswers</h4>
+  <div class="markdown level1 summary"><p>Cluster template answers. Just for Rancher v2.3.x and above (list maxitems:1)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;ClusterClusterTemplateAnswersGetArgs&gt;? ClusterTemplateAnswers { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Rancher2.Inputs.ClusterClusterTemplateAnswersGetArgs.html">ClusterClusterTemplateAnswersGetArgs</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L434">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_ClusterState_ClusterTemplateId_" data-uid="Pulumi.Rancher2.ClusterState.ClusterTemplateId*"></a>
+  <h4 id="Pulumi_Rancher2_ClusterState_ClusterTemplateId" data-uid="Pulumi.Rancher2.ClusterState.ClusterTemplateId">ClusterTemplateId</h4>
+  <div class="markdown level1 summary"><p>Cluster template ID. Just for Rancher v2.3.x and above (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ClusterTemplateId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L443">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_ClusterState_ClusterTemplateQuestions_" data-uid="Pulumi.Rancher2.ClusterState.ClusterTemplateQuestions*"></a>
+  <h4 id="Pulumi_Rancher2_ClusterState_ClusterTemplateQuestions" data-uid="Pulumi.Rancher2.ClusterState.ClusterTemplateQuestions">ClusterTemplateQuestions</h4>
+  <div class="markdown level1 summary"><p>Cluster template questions. Just for Rancher v2.3.x and above (list)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputList&lt;ClusterClusterTemplateQuestionsGetArgs&gt; ClusterTemplateQuestions { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Rancher2.Inputs.ClusterClusterTemplateQuestionsGetArgs.html">ClusterClusterTemplateQuestionsGetArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L452">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_ClusterState_ClusterTemplateRevisionId_" data-uid="Pulumi.Rancher2.ClusterState.ClusterTemplateRevisionId*"></a>
+  <h4 id="Pulumi_Rancher2_ClusterState_ClusterTemplateRevisionId" data-uid="Pulumi.Rancher2.ClusterState.ClusterTemplateRevisionId">ClusterTemplateRevisionId</h4>
+  <div class="markdown level1 summary"><p>Cluster template revision ID. Just for Rancher v2.3.x and above (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ClusterTemplateRevisionId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L458">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_ClusterState_DefaultPodSecurityPolicyTemplateId_" data-uid="Pulumi.Rancher2.ClusterState.DefaultPodSecurityPolicyTemplateId*"></a>
+  <h4 id="Pulumi_Rancher2_ClusterState_DefaultPodSecurityPolicyTemplateId" data-uid="Pulumi.Rancher2.ClusterState.DefaultPodSecurityPolicyTemplateId">DefaultPodSecurityPolicyTemplateId</h4>
+  <div class="markdown level1 summary"><p><a href="https://rancher.com/docs/rancher/v2.x/en/cluster-provisioning/rke-clusters/options/#pod-security-policy-support">Default pod security policy template id</a> (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? DefaultPodSecurityPolicyTemplateId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L464">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_ClusterState_DefaultProjectId_" data-uid="Pulumi.Rancher2.ClusterState.DefaultProjectId*"></a>
+  <h4 id="Pulumi_Rancher2_ClusterState_DefaultProjectId" data-uid="Pulumi.Rancher2.ClusterState.DefaultProjectId">DefaultProjectId</h4>
+  <div class="markdown level1 summary"><p>(Computed) Default project ID for the cluster (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? DefaultProjectId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L470">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_ClusterState_Description_" data-uid="Pulumi.Rancher2.ClusterState.Description*"></a>
+  <h4 id="Pulumi_Rancher2_ClusterState_Description" data-uid="Pulumi.Rancher2.ClusterState.Description">Description</h4>
+  <div class="markdown level1 summary"><p>An optional description of this cluster (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Description { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L476">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_ClusterState_DesiredAgentImage_" data-uid="Pulumi.Rancher2.ClusterState.DesiredAgentImage*"></a>
+  <h4 id="Pulumi_Rancher2_ClusterState_DesiredAgentImage" data-uid="Pulumi.Rancher2.ClusterState.DesiredAgentImage">DesiredAgentImage</h4>
+  <div class="markdown level1 summary"><p>Desired agent image. Just for Rancher v2.3.x and above (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? DesiredAgentImage { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L482">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_ClusterState_DesiredAuthImage_" data-uid="Pulumi.Rancher2.ClusterState.DesiredAuthImage*"></a>
+  <h4 id="Pulumi_Rancher2_ClusterState_DesiredAuthImage" data-uid="Pulumi.Rancher2.ClusterState.DesiredAuthImage">DesiredAuthImage</h4>
+  <div class="markdown level1 summary"><p>Desired auth image. Just for Rancher v2.3.x and above (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? DesiredAuthImage { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L488">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_ClusterState_DockerRootDir_" data-uid="Pulumi.Rancher2.ClusterState.DockerRootDir*"></a>
+  <h4 id="Pulumi_Rancher2_ClusterState_DockerRootDir" data-uid="Pulumi.Rancher2.ClusterState.DockerRootDir">DockerRootDir</h4>
+  <div class="markdown level1 summary"><p>Desired auth image. Just for Rancher v2.3.x and above (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? DockerRootDir { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L494">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_ClusterState_Driver_" data-uid="Pulumi.Rancher2.ClusterState.Driver*"></a>
+  <h4 id="Pulumi_Rancher2_ClusterState_Driver" data-uid="Pulumi.Rancher2.ClusterState.Driver">Driver</h4>
+  <div class="markdown level1 summary"><p>(Computed) The driver used for the Cluster. <code>imported</code>, <code>azurekubernetesservice</code>, <code>amazonelasticcontainerservice</code>, <code>googlekubernetesengine</code> and <code>rancherKubernetesEngine</code> are supported (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Driver { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L500">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_ClusterState_EksConfig_" data-uid="Pulumi.Rancher2.ClusterState.EksConfig*"></a>
+  <h4 id="Pulumi_Rancher2_ClusterState_EksConfig" data-uid="Pulumi.Rancher2.ClusterState.EksConfig">EksConfig</h4>
+  <div class="markdown level1 summary"><p>The Amazon EKS configuration for <code>eks</code> Clusters. Conflicts with <code>aks_config</code>, <code>gke_config</code> and <code>rke_config</code> (list maxitems:1)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;ClusterEksConfigGetArgs&gt;? EksConfig { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Rancher2.Inputs.ClusterEksConfigGetArgs.html">ClusterEksConfigGetArgs</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L506">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_ClusterState_EnableClusterAlerting_" data-uid="Pulumi.Rancher2.ClusterState.EnableClusterAlerting*"></a>
+  <h4 id="Pulumi_Rancher2_ClusterState_EnableClusterAlerting" data-uid="Pulumi.Rancher2.ClusterState.EnableClusterAlerting">EnableClusterAlerting</h4>
+  <div class="markdown level1 summary"><p>Enable built-in cluster alerting. Default <code>false</code> (bool)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? EnableClusterAlerting { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L512">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_ClusterState_EnableClusterIstio_" data-uid="Pulumi.Rancher2.ClusterState.EnableClusterIstio*"></a>
+  <h4 id="Pulumi_Rancher2_ClusterState_EnableClusterIstio" data-uid="Pulumi.Rancher2.ClusterState.EnableClusterIstio">EnableClusterIstio</h4>
+  <div class="markdown level1 summary"><p>Enable built-in cluster istio. Default <code>false</code>. Just for Rancher v2.3.x and above (bool)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? EnableClusterIstio { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L518">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_ClusterState_EnableClusterMonitoring_" data-uid="Pulumi.Rancher2.ClusterState.EnableClusterMonitoring*"></a>
+  <h4 id="Pulumi_Rancher2_ClusterState_EnableClusterMonitoring" data-uid="Pulumi.Rancher2.ClusterState.EnableClusterMonitoring">EnableClusterMonitoring</h4>
+  <div class="markdown level1 summary"><p>Enable built-in cluster monitoring. Default <code>false</code> (bool)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? EnableClusterMonitoring { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L524">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_ClusterState_EnableNetworkPolicy_" data-uid="Pulumi.Rancher2.ClusterState.EnableNetworkPolicy*"></a>
+  <h4 id="Pulumi_Rancher2_ClusterState_EnableNetworkPolicy" data-uid="Pulumi.Rancher2.ClusterState.EnableNetworkPolicy">EnableNetworkPolicy</h4>
+  <div class="markdown level1 summary"><p>Enable project network isolation. Default <code>false</code> (bool)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? EnableNetworkPolicy { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L530">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_ClusterState_GkeConfig_" data-uid="Pulumi.Rancher2.ClusterState.GkeConfig*"></a>
+  <h4 id="Pulumi_Rancher2_ClusterState_GkeConfig" data-uid="Pulumi.Rancher2.ClusterState.GkeConfig">GkeConfig</h4>
+  <div class="markdown level1 summary"><p>The Google GKE configuration for <code>gke</code> Clusters. Conflicts with <code>aks_config</code>, <code>eks_config</code> and <code>rke_config</code> (list maxitems:1)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;ClusterGkeConfigGetArgs&gt;? GkeConfig { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Rancher2.Inputs.ClusterGkeConfigGetArgs.html">ClusterGkeConfigGetArgs</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L536">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_ClusterState_KubeConfig_" data-uid="Pulumi.Rancher2.ClusterState.KubeConfig*"></a>
+  <h4 id="Pulumi_Rancher2_ClusterState_KubeConfig" data-uid="Pulumi.Rancher2.ClusterState.KubeConfig">KubeConfig</h4>
+  <div class="markdown level1 summary"><p>(Computed) Kube Config generated for the cluster (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? KubeConfig { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L545">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_ClusterState_Labels_" data-uid="Pulumi.Rancher2.ClusterState.Labels*"></a>
+  <h4 id="Pulumi_Rancher2_ClusterState_Labels" data-uid="Pulumi.Rancher2.ClusterState.Labels">Labels</h4>
+  <div class="markdown level1 summary"><p>Labels for cluster registration token object (map)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputMap&lt;object&gt; Labels { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L554">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_ClusterState_Name_" data-uid="Pulumi.Rancher2.ClusterState.Name*"></a>
+  <h4 id="Pulumi_Rancher2_ClusterState_Name" data-uid="Pulumi.Rancher2.ClusterState.Name">Name</h4>
+  <div class="markdown level1 summary"><p>Name of cluster registration token (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L560">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_ClusterState_RkeConfig_" data-uid="Pulumi.Rancher2.ClusterState.RkeConfig*"></a>
+  <h4 id="Pulumi_Rancher2_ClusterState_RkeConfig" data-uid="Pulumi.Rancher2.ClusterState.RkeConfig">RkeConfig</h4>
+  <div class="markdown level1 summary"><p>The RKE configuration for <code>rke</code> Clusters. Conflicts with <code>aks_config</code>, <code>eks_config</code> and <code>gke_config</code> (list maxitems:1)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;ClusterRkeConfigGetArgs&gt;? RkeConfig { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Rancher2.Inputs.ClusterRkeConfigGetArgs.html">ClusterRkeConfigGetArgs</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L566">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_ClusterState_SystemProjectId_" data-uid="Pulumi.Rancher2.ClusterState.SystemProjectId*"></a>
+  <h4 id="Pulumi_Rancher2_ClusterState_SystemProjectId" data-uid="Pulumi.Rancher2.ClusterState.SystemProjectId">SystemProjectId</h4>
+  <div class="markdown level1 summary"><p>(Computed) System project ID for the cluster (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? SystemProjectId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L387" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

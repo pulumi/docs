@@ -1,0 +1,455 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ComputeClusterVmHostRule
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ComputeClusterVmHostRule
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.VSphere.ComputeClusterVmHostRule">
+  
+  <h1 id="Pulumi_VSphere_ComputeClusterVmHostRule" data-uid="Pulumi.VSphere.ComputeClusterVmHostRule" class="text-break">Class ComputeClusterVmHostRule
+  </h1>
+  <div class="markdown level0 summary"><p>The <code>vsphere..ComputeClusterVmHostRule</code> resource can be used to manage
+VM-to-host rules in a cluster, either created by the
+<a href="/docs/providers/vsphere/r/compute_cluster.html"><code>vsphere..ComputeCluster</code></a> resource or looked up
+by the <a href="/docs/providers/vsphere/d/compute_cluster.html"><code>vsphere..ComputeCluster</code></a> data source.</p>
+<p>This resource can create both <em>affinity rules</em>, where virtual machines run on
+specified hosts, or <em>anti-affinity</em> rules, where virtual machines run on hosts
+outside of the ones specified in the rule. Virtual machines and hosts are
+supplied via groups, which can be managed via the
+<a href="/docs/providers/vsphere/r/compute_cluster_vm_group.html"><code>vsphere..ComputeClusterVmGroup</code></a> and
+<a href="/docs/providers/vsphere/r/compute_cluster_host_group.html"><code>vsphere..ComputeClusterHostGroup</code></a>
+resources.</p>
+<blockquote>
+<p><strong>NOTE:</strong> This resource requires vCenter and is not available on direct ESXi
+connections.</p>
+</blockquote>
+<blockquote>
+<p><strong>NOTE:</strong> vSphere DRS requires a vSphere Enterprise Plus license.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_vm_host_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_vm_host_rule.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">ComputeClusterVmHostRule</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.VSphere.html">Pulumi.VSphere</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.VSphere.dll</h6>
+  <h5 id="Pulumi_VSphere_ComputeClusterVmHostRule_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ComputeClusterVmHostRule : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/ComputeClusterVmHostRule.cs/#L99">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_ComputeClusterVmHostRule__ctor_" data-uid="Pulumi.VSphere.ComputeClusterVmHostRule.#ctor*"></a>
+  <h4 id="Pulumi_VSphere_ComputeClusterVmHostRule__ctor_System_String_Pulumi_VSphere_ComputeClusterVmHostRuleArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.VSphere.ComputeClusterVmHostRule.#ctor(System.String,Pulumi.VSphere.ComputeClusterVmHostRuleArgs,System.Nullable{CustomResourceOptions})">ComputeClusterVmHostRule(String, ComputeClusterVmHostRuleArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Create a ComputeClusterVmHostRule resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ComputeClusterVmHostRule(string name, ComputeClusterVmHostRuleArgs args, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.VSphere.ComputeClusterVmHostRuleArgs.html">ComputeClusterVmHostRuleArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/ComputeClusterVmHostRule.cs/#L45">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_ComputeClusterVmHostRule_AffinityHostGroupName_" data-uid="Pulumi.VSphere.ComputeClusterVmHostRule.AffinityHostGroupName*"></a>
+  <h4 id="Pulumi_VSphere_ComputeClusterVmHostRule_AffinityHostGroupName" data-uid="Pulumi.VSphere.ComputeClusterVmHostRule.AffinityHostGroupName">AffinityHostGroupName</h4>
+  <div class="markdown level1 summary"><p>When this field is used, the virtual
+machines defined in <code>vm_group_name</code> will be run on the
+hosts defined in this host group.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; AffinityHostGroupName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/ComputeClusterVmHostRule.cs/#L53">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_ComputeClusterVmHostRule_AntiAffinityHostGroupName_" data-uid="Pulumi.VSphere.ComputeClusterVmHostRule.AntiAffinityHostGroupName*"></a>
+  <h4 id="Pulumi_VSphere_ComputeClusterVmHostRule_AntiAffinityHostGroupName" data-uid="Pulumi.VSphere.ComputeClusterVmHostRule.AntiAffinityHostGroupName">AntiAffinityHostGroupName</h4>
+  <div class="markdown level1 summary"><p>When this field is used, the
+virtual machines defined in <code>vm_group_name</code> will <em>not</em> be
+run on the hosts defined in this host group.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; AntiAffinityHostGroupName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/ComputeClusterVmHostRule.cs/#L61">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_ComputeClusterVmHostRule_ComputeClusterId_" data-uid="Pulumi.VSphere.ComputeClusterVmHostRule.ComputeClusterId*"></a>
+  <h4 id="Pulumi_VSphere_ComputeClusterVmHostRule_ComputeClusterId" data-uid="Pulumi.VSphere.ComputeClusterVmHostRule.ComputeClusterId">ComputeClusterId</h4>
+  <div class="markdown level1 summary"><p>The [managed object reference
+ID][docs-about-morefs] of the cluster to put the group in.  Forces a new
+resource if changed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ComputeClusterId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/ComputeClusterVmHostRule.cs/#L67">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_ComputeClusterVmHostRule_Enabled_" data-uid="Pulumi.VSphere.ComputeClusterVmHostRule.Enabled*"></a>
+  <h4 id="Pulumi_VSphere_ComputeClusterVmHostRule_Enabled" data-uid="Pulumi.VSphere.ComputeClusterVmHostRule.Enabled">Enabled</h4>
+  <div class="markdown level1 summary"><p>Enable this rule in the cluster. Default: <code>true</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; Enabled { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/ComputeClusterVmHostRule.cs/#L74">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_ComputeClusterVmHostRule_Mandatory_" data-uid="Pulumi.VSphere.ComputeClusterVmHostRule.Mandatory*"></a>
+  <h4 id="Pulumi_VSphere_ComputeClusterVmHostRule_Mandatory" data-uid="Pulumi.VSphere.ComputeClusterVmHostRule.Mandatory">Mandatory</h4>
+  <div class="markdown level1 summary"><p>When this value is <code>true</code>, prevents any virtual
+machine operations that may violate this rule. Default: <code>false</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; Mandatory { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/ComputeClusterVmHostRule.cs/#L81">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_ComputeClusterVmHostRule_Name_" data-uid="Pulumi.VSphere.ComputeClusterVmHostRule.Name*"></a>
+  <h4 id="Pulumi_VSphere_ComputeClusterVmHostRule_Name" data-uid="Pulumi.VSphere.ComputeClusterVmHostRule.Name">Name</h4>
+  <div class="markdown level1 summary"><p>The name of the rule. This must be unique in the
+cluster.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/ComputeClusterVmHostRule.cs/#L88">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_ComputeClusterVmHostRule_VmGroupName_" data-uid="Pulumi.VSphere.ComputeClusterVmHostRule.VmGroupName*"></a>
+  <h4 id="Pulumi_VSphere_ComputeClusterVmHostRule_VmGroupName" data-uid="Pulumi.VSphere.ComputeClusterVmHostRule.VmGroupName">VmGroupName</h4>
+  <div class="markdown level1 summary"><p>The name of the virtual machine group to use
+with this rule.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; VmGroupName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/ComputeClusterVmHostRule.cs/#L129">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_ComputeClusterVmHostRule_Get_" data-uid="Pulumi.VSphere.ComputeClusterVmHostRule.Get*"></a>
+  <h4 id="Pulumi_VSphere_ComputeClusterVmHostRule_Get_System_String_Input_System_String__Pulumi_VSphere_ComputeClusterVmHostRuleState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.VSphere.ComputeClusterVmHostRule.Get(System.String,Input{System.String},Pulumi.VSphere.ComputeClusterVmHostRuleState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, ComputeClusterVmHostRuleState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Get an existing ComputeClusterVmHostRule resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ComputeClusterVmHostRule Get(string name, Input&lt;string&gt; id, ComputeClusterVmHostRuleState state = null, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.VSphere.ComputeClusterVmHostRuleState.html">ComputeClusterVmHostRuleState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.VSphere.ComputeClusterVmHostRule.html">ComputeClusterVmHostRule</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/ComputeClusterVmHostRule.cs/#L38" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

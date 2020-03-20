@@ -1,0 +1,412 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class MantaRemoteStateReferenceArgs
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class MantaRemoteStateReferenceArgs
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Terraform.State.MantaRemoteStateReferenceArgs">
+  
+  <h1 id="Pulumi_Terraform_State_MantaRemoteStateReferenceArgs" data-uid="Pulumi.Terraform.State.MantaRemoteStateReferenceArgs" class="text-break">Class MantaRemoteStateReferenceArgs
+  </h1>
+  <div class="markdown level0 summary"><p>The configuration options for a Terraform Remote State stored in the Manta backend.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
+    <div class="level3"><a class="xref" href="Pulumi.Terraform.State.RemoteStateReferenceArgs.html">RemoteStateReferenceArgs</a></div>
+    <div class="level4"><span class="xref">MantaRemoteStateReferenceArgs</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Terraform.State.html">Pulumi.Terraform.State</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Terraform.dll</h6>
+  <h5 id="Pulumi_Terraform_State_MantaRemoteStateReferenceArgs_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class MantaRemoteStateReferenceArgs : RemoteStateReferenceArgs</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-terraform/blob/master/sdk/dotnet/State/MantaRemoteStateReferenceArgs.cs/#L23">View Source</a>
+  </span>
+  <a id="Pulumi_Terraform_State_MantaRemoteStateReferenceArgs_Account_" data-uid="Pulumi.Terraform.State.MantaRemoteStateReferenceArgs.Account*"></a>
+  <h4 id="Pulumi_Terraform_State_MantaRemoteStateReferenceArgs_Account" data-uid="Pulumi.Terraform.State.MantaRemoteStateReferenceArgs.Account">Account</h4>
+  <div class="markdown level1 summary"><p>The name of the Manta account. Sourced from <code>SDC_ACCOUNT</code> or <code>_ACCOUNT</code> in the
+environment, if unset.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Account { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-terraform/blob/master/sdk/dotnet/State/MantaRemoteStateReferenceArgs.cs/#L16">View Source</a>
+  </span>
+  <a id="Pulumi_Terraform_State_MantaRemoteStateReferenceArgs_BackendType_" data-uid="Pulumi.Terraform.State.MantaRemoteStateReferenceArgs.BackendType*"></a>
+  <h4 id="Pulumi_Terraform_State_MantaRemoteStateReferenceArgs_BackendType" data-uid="Pulumi.Terraform.State.MantaRemoteStateReferenceArgs.BackendType">BackendType</h4>
+  <div class="markdown level1 summary"><p>A constant describing the name of the Terraform backend, used as the discriminant
+for the union of backend configurations.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Input&lt;string&gt; BackendType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Pulumi.Terraform.State.RemoteStateReferenceArgs.html#Pulumi_Terraform_State_RemoteStateReferenceArgs_BackendType">RemoteStateReferenceArgs.BackendType</a></div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-terraform/blob/master/sdk/dotnet/State/MantaRemoteStateReferenceArgs.cs/#L67">View Source</a>
+  </span>
+  <a id="Pulumi_Terraform_State_MantaRemoteStateReferenceArgs_InsecureSkipTlsVerify_" data-uid="Pulumi.Terraform.State.MantaRemoteStateReferenceArgs.InsecureSkipTlsVerify*"></a>
+  <h4 id="Pulumi_Terraform_State_MantaRemoteStateReferenceArgs_InsecureSkipTlsVerify" data-uid="Pulumi.Terraform.State.MantaRemoteStateReferenceArgs.InsecureSkipTlsVerify">InsecureSkipTlsVerify</h4>
+  <div class="markdown level1 summary"><p>Skip verifying the TLS certificate presented by the Manta endpoint. This can
+be useful for installations which do not have a certificate signed by a trusted
+root CA. Defaults to false.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; InsecureSkipTlsVerify { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-terraform/blob/master/sdk/dotnet/State/MantaRemoteStateReferenceArgs.cs/#L52">View Source</a>
+  </span>
+  <a id="Pulumi_Terraform_State_MantaRemoteStateReferenceArgs_KeyId_" data-uid="Pulumi.Terraform.State.MantaRemoteStateReferenceArgs.KeyId*"></a>
+  <h4 id="Pulumi_Terraform_State_MantaRemoteStateReferenceArgs_KeyId" data-uid="Pulumi.Terraform.State.MantaRemoteStateReferenceArgs.KeyId">KeyId</h4>
+  <div class="markdown level1 summary"><p>The fingerprint of the public key matching the key material specified in
+keyMaterial, or in the local SSH agent.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; KeyId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-terraform/blob/master/sdk/dotnet/State/MantaRemoteStateReferenceArgs.cs/#L45">View Source</a>
+  </span>
+  <a id="Pulumi_Terraform_State_MantaRemoteStateReferenceArgs_KeyMaterial_" data-uid="Pulumi.Terraform.State.MantaRemoteStateReferenceArgs.KeyMaterial*"></a>
+  <h4 id="Pulumi_Terraform_State_MantaRemoteStateReferenceArgs_KeyMaterial" data-uid="Pulumi.Terraform.State.MantaRemoteStateReferenceArgs.KeyMaterial">KeyMaterial</h4>
+  <div class="markdown level1 summary"><p>The private key material corresponding with the SSH key whose fingerprint is
+specified in keyId. Sourced from <code>SDC_KEY_MATERIAL</code> or <code>TRITON_KEY_MATERIAL</code>
+in the environment, if unset. If no value is specified, the local SSH agent
+is used for signing requests.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; KeyMaterial { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-terraform/blob/master/sdk/dotnet/State/MantaRemoteStateReferenceArgs.cs/#L59">View Source</a>
+  </span>
+  <a id="Pulumi_Terraform_State_MantaRemoteStateReferenceArgs_Path_" data-uid="Pulumi.Terraform.State.MantaRemoteStateReferenceArgs.Path*"></a>
+  <h4 id="Pulumi_Terraform_State_MantaRemoteStateReferenceArgs_Path" data-uid="Pulumi.Terraform.State.MantaRemoteStateReferenceArgs.Path">Path</h4>
+  <div class="markdown level1 summary"><p>The path relative to your private storage directory (<code>/$MANTA_USER/stor</code>)
+where the state file will be stored.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Path { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-terraform/blob/master/sdk/dotnet/State/MantaRemoteStateReferenceArgs.cs/#L36">View Source</a>
+  </span>
+  <a id="Pulumi_Terraform_State_MantaRemoteStateReferenceArgs_Url_" data-uid="Pulumi.Terraform.State.MantaRemoteStateReferenceArgs.Url*"></a>
+  <h4 id="Pulumi_Terraform_State_MantaRemoteStateReferenceArgs_Url" data-uid="Pulumi.Terraform.State.MantaRemoteStateReferenceArgs.Url">Url</h4>
+  <div class="markdown level1 summary"><p>The Manta API Endpoint. Sourced from <code>MANTA_URL</code> in the environment, if unset.
+Defaults to <code>https://us-east.manta.joyent.com</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Url { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-terraform/blob/master/sdk/dotnet/State/MantaRemoteStateReferenceArgs.cs/#L29">View Source</a>
+  </span>
+  <a id="Pulumi_Terraform_State_MantaRemoteStateReferenceArgs_User_" data-uid="Pulumi.Terraform.State.MantaRemoteStateReferenceArgs.User*"></a>
+  <h4 id="Pulumi_Terraform_State_MantaRemoteStateReferenceArgs_User" data-uid="Pulumi.Terraform.State.MantaRemoteStateReferenceArgs.User">User</h4>
+  <div class="markdown level1 summary"><p>The username of the Manta account with which to authenticate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; User { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-terraform/blob/master/sdk/dotnet/State/MantaRemoteStateReferenceArgs.cs/#L73">View Source</a>
+  </span>
+  <a id="Pulumi_Terraform_State_MantaRemoteStateReferenceArgs_Workspace_" data-uid="Pulumi.Terraform.State.MantaRemoteStateReferenceArgs.Workspace*"></a>
+  <h4 id="Pulumi_Terraform_State_MantaRemoteStateReferenceArgs_Workspace" data-uid="Pulumi.Terraform.State.MantaRemoteStateReferenceArgs.Workspace">Workspace</h4>
+  <div class="markdown level1 summary"><p>The Terraform workspace from which to read state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Workspace { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-terraform/blob/master/sdk/dotnet/State/MantaRemoteStateReferenceArgs.cs/#L10" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

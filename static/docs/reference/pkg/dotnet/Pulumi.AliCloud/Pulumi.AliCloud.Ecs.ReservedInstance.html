@@ -1,0 +1,577 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ReservedInstance
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ReservedInstance
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.AliCloud.Ecs.ReservedInstance">
+  
+  <h1 id="Pulumi_AliCloud_Ecs_ReservedInstance" data-uid="Pulumi.AliCloud.Ecs.ReservedInstance" class="text-break">Class ReservedInstance
+  </h1>
+  <div class="markdown level0 summary"><p>Provides an Reserved Instance resource.</p>
+<blockquote>
+<p><strong>NOTE:</strong> Available in 1.65.0+</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/reserved_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/reserved_instance.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">ReservedInstance</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.AliCloud.Ecs.html">Pulumi.AliCloud.Ecs</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.AliCloud.dll</h6>
+  <h5 id="Pulumi_AliCloud_Ecs_ReservedInstance_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ReservedInstance : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/ReservedInstance.cs/#L92">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Ecs_ReservedInstance__ctor_" data-uid="Pulumi.AliCloud.Ecs.ReservedInstance.#ctor*"></a>
+  <h4 id="Pulumi_AliCloud_Ecs_ReservedInstance__ctor_System_String_Pulumi_AliCloud_Ecs_ReservedInstanceArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.AliCloud.Ecs.ReservedInstance.#ctor(System.String,Pulumi.AliCloud.Ecs.ReservedInstanceArgs,Pulumi.CustomResourceOptions)">ReservedInstance(String, ReservedInstanceArgs, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Create a ReservedInstance resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ReservedInstance(string name, ReservedInstanceArgs args, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.AliCloud.Ecs.ReservedInstanceArgs.html">ReservedInstanceArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/ReservedInstance.cs/#L24">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Ecs_ReservedInstance_Description_" data-uid="Pulumi.AliCloud.Ecs.ReservedInstance.Description*"></a>
+  <h4 id="Pulumi_AliCloud_Ecs_ReservedInstance_Description" data-uid="Pulumi.AliCloud.Ecs.ReservedInstance.Description">Description</h4>
+  <div class="markdown level1 summary"><p>Description of the RI. 2 to 256 English or Chinese characters. It cannot start with http:// or https://.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/ReservedInstance.cs/#L30">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Ecs_ReservedInstance_InstanceAmount_" data-uid="Pulumi.AliCloud.Ecs.ReservedInstance.InstanceAmount*"></a>
+  <h4 id="Pulumi_AliCloud_Ecs_ReservedInstance_InstanceAmount" data-uid="Pulumi.AliCloud.Ecs.ReservedInstance.InstanceAmount">InstanceAmount</h4>
+  <div class="markdown level1 summary"><p>Number of instances allocated to an RI (An RI is a coupon that includes one or more allocated instances.).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; InstanceAmount { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/ReservedInstance.cs/#L36">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Ecs_ReservedInstance_InstanceType_" data-uid="Pulumi.AliCloud.Ecs.ReservedInstance.InstanceType*"></a>
+  <h4 id="Pulumi_AliCloud_Ecs_ReservedInstance_InstanceType" data-uid="Pulumi.AliCloud.Ecs.ReservedInstance.InstanceType">InstanceType</h4>
+  <div class="markdown level1 summary"><p>Instance type of the RI. For more information, see <a href="https://www.alibabacloud.com/help/doc-detail/25378.html">Instance type families</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; InstanceType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/ReservedInstance.cs/#L42">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Ecs_ReservedInstance_Name_" data-uid="Pulumi.AliCloud.Ecs.ReservedInstance.Name*"></a>
+  <h4 id="Pulumi_AliCloud_Ecs_ReservedInstance_Name" data-uid="Pulumi.AliCloud.Ecs.ReservedInstance.Name">Name</h4>
+  <div class="markdown level1 summary"><p>Name of the RI. The name must be a string of 2 to 128 characters in length and can contain letters, numbers, colons (:), underscores (_), and hyphens. It must start with a letter. It cannot start with http:// or https://.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/ReservedInstance.cs/#L48">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Ecs_ReservedInstance_OfferingType_" data-uid="Pulumi.AliCloud.Ecs.ReservedInstance.OfferingType*"></a>
+  <h4 id="Pulumi_AliCloud_Ecs_ReservedInstance_OfferingType" data-uid="Pulumi.AliCloud.Ecs.ReservedInstance.OfferingType">OfferingType</h4>
+  <div class="markdown level1 summary"><p>Payment type of the RI. Optional values: <code>No Upfront</code>: No upfront payment is required., <code>Partial Upfront</code>: A portion of upfront payment is required.<code>All Upfront</code>: Full upfront payment is required.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; OfferingType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/ReservedInstance.cs/#L51">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Ecs_ReservedInstance_Period_" data-uid="Pulumi.AliCloud.Ecs.ReservedInstance.Period*"></a>
+  <h4 id="Pulumi_AliCloud_Ecs_ReservedInstance_Period" data-uid="Pulumi.AliCloud.Ecs.ReservedInstance.Period">Period</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; Period { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/ReservedInstance.cs/#L57">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Ecs_ReservedInstance_PeriodUnit_" data-uid="Pulumi.AliCloud.Ecs.ReservedInstance.PeriodUnit*"></a>
+  <h4 id="Pulumi_AliCloud_Ecs_ReservedInstance_PeriodUnit" data-uid="Pulumi.AliCloud.Ecs.ReservedInstance.PeriodUnit">PeriodUnit</h4>
+  <div class="markdown level1 summary"><p>Term unit. Optional value: Year.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; PeriodUnit { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/ReservedInstance.cs/#L63">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Ecs_ReservedInstance_Platform_" data-uid="Pulumi.AliCloud.Ecs.ReservedInstance.Platform*"></a>
+  <h4 id="Pulumi_AliCloud_Ecs_ReservedInstance_Platform" data-uid="Pulumi.AliCloud.Ecs.ReservedInstance.Platform">Platform</h4>
+  <div class="markdown level1 summary"><p>The operating system type of the image used by the instance. Optional values: <code>Windows</code>, <code>Linux</code>. Default is <code>Linux</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Platform { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/ReservedInstance.cs/#L69">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Ecs_ReservedInstance_ResourceGroupId_" data-uid="Pulumi.AliCloud.Ecs.ReservedInstance.ResourceGroupId*"></a>
+  <h4 id="Pulumi_AliCloud_Ecs_ReservedInstance_ResourceGroupId" data-uid="Pulumi.AliCloud.Ecs.ReservedInstance.ResourceGroupId">ResourceGroupId</h4>
+  <div class="markdown level1 summary"><p>Resource group ID.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ResourceGroupId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/ReservedInstance.cs/#L75">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Ecs_ReservedInstance_Scope_" data-uid="Pulumi.AliCloud.Ecs.ReservedInstance.Scope*"></a>
+  <h4 id="Pulumi_AliCloud_Ecs_ReservedInstance_Scope" data-uid="Pulumi.AliCloud.Ecs.ReservedInstance.Scope">Scope</h4>
+  <div class="markdown level1 summary"><p>Scope of the RI. Optional values: <code>Region</code>: region-level, <code>Zone</code>: zone-level. Default is <code>Region</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Scope { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/ReservedInstance.cs/#L81">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Ecs_ReservedInstance_ZoneId_" data-uid="Pulumi.AliCloud.Ecs.ReservedInstance.ZoneId*"></a>
+  <h4 id="Pulumi_AliCloud_Ecs_ReservedInstance_ZoneId" data-uid="Pulumi.AliCloud.Ecs.ReservedInstance.ZoneId">ZoneId</h4>
+  <div class="markdown level1 summary"><p>ID of the zone to which the RI belongs. When Scope is set to Zone, this parameter is required. For information about the zone list, see <a href="https://www.alibabacloud.com/help/doc-detail/25610.html">DescribeZones</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ZoneId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/ReservedInstance.cs/#L122">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Ecs_ReservedInstance_Get_" data-uid="Pulumi.AliCloud.Ecs.ReservedInstance.Get*"></a>
+  <h4 id="Pulumi_AliCloud_Ecs_ReservedInstance_Get_System_String_Pulumi_Input_System_String__Pulumi_AliCloud_Ecs_ReservedInstanceState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.AliCloud.Ecs.ReservedInstance.Get(System.String,Pulumi.Input{System.String},Pulumi.AliCloud.Ecs.ReservedInstanceState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, ReservedInstanceState, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Get an existing ReservedInstance resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ReservedInstance Get(string name, Input&lt;string&gt; id, ReservedInstanceState state = null, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.AliCloud.Ecs.ReservedInstanceState.html">ReservedInstanceState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.AliCloud.Ecs.ReservedInstance.html">ReservedInstance</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/ReservedInstance.cs/#L19" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

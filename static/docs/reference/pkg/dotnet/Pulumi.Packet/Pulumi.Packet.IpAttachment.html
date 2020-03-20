@@ -1,0 +1,567 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class IpAttachment
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class IpAttachment
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Packet.IpAttachment">
+  
+  <h1 id="Pulumi_Packet_IpAttachment" data-uid="Pulumi.Packet.IpAttachment" class="text-break">Class IpAttachment
+  </h1>
+  <div class="markdown level0 summary"><p>Provides a resource to attach elastic IP subnets to devices.</p>
+<p>To attach an IP subnet from a reserved block to a provisioned device, you must derive a subnet CIDR belonging to
+one of your reserved blocks in the same project and facility as the target device.</p>
+<p>For example, you have reserved IPv4 address block 147.229.10.152/30, you can choose to assign either the whole
+block as one subnet to a device; or 2 subnets with CIDRs 147.229.10.152/31' and 147.229.10.154/31; or 4 subnets
+with mask prefix length 32. More about the elastic IP subnets is <a href="https://www.packet.com/developers/docs/network/basic/elastic-ips/">here</a>.</p>
+<p>Device and reserved block must be in the same facility.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/ip_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/ip_attachment.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">IpAttachment</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Packet.html">Pulumi.Packet</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Packet.dll</h6>
+  <h5 id="Pulumi_Packet_IpAttachment_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class IpAttachment : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/IpAttachment.cs/#L96">View Source</a>
+  </span>
+  <a id="Pulumi_Packet_IpAttachment__ctor_" data-uid="Pulumi.Packet.IpAttachment.#ctor*"></a>
+  <h4 id="Pulumi_Packet_IpAttachment__ctor_System_String_Pulumi_Packet_IpAttachmentArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Packet.IpAttachment.#ctor(System.String,Pulumi.Packet.IpAttachmentArgs,System.Nullable{CustomResourceOptions})">IpAttachment(String, IpAttachmentArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Create a IpAttachment resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IpAttachment(string name, IpAttachmentArgs args, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Packet.IpAttachmentArgs.html">IpAttachmentArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/IpAttachment.cs/#L27">View Source</a>
+  </span>
+  <a id="Pulumi_Packet_IpAttachment_Address_" data-uid="Pulumi.Packet.IpAttachment.Address*"></a>
+  <h4 id="Pulumi_Packet_IpAttachment_Address" data-uid="Pulumi.Packet.IpAttachment.Address">Address</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Address { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/IpAttachment.cs/#L33">View Source</a>
+  </span>
+  <a id="Pulumi_Packet_IpAttachment_AddressFamily_" data-uid="Pulumi.Packet.IpAttachment.AddressFamily*"></a>
+  <h4 id="Pulumi_Packet_IpAttachment_AddressFamily" data-uid="Pulumi.Packet.IpAttachment.AddressFamily">AddressFamily</h4>
+  <div class="markdown level1 summary"><p>Address family as integer (4 or 6)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; AddressFamily { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/IpAttachment.cs/#L39">View Source</a>
+  </span>
+  <a id="Pulumi_Packet_IpAttachment_Cidr_" data-uid="Pulumi.Packet.IpAttachment.Cidr*"></a>
+  <h4 id="Pulumi_Packet_IpAttachment_Cidr" data-uid="Pulumi.Packet.IpAttachment.Cidr">Cidr</h4>
+  <div class="markdown level1 summary"><p>length of CIDR prefix of the subnet as integer</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; Cidr { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/IpAttachment.cs/#L46">View Source</a>
+  </span>
+  <a id="Pulumi_Packet_IpAttachment_CidrNotation_" data-uid="Pulumi.Packet.IpAttachment.CidrNotation*"></a>
+  <h4 id="Pulumi_Packet_IpAttachment_CidrNotation" data-uid="Pulumi.Packet.IpAttachment.CidrNotation">CidrNotation</h4>
+  <div class="markdown level1 summary"><p>CIDR notation of subnet from block reserved in the same
+project and facility as the device</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; CidrNotation { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/IpAttachment.cs/#L52">View Source</a>
+  </span>
+  <a id="Pulumi_Packet_IpAttachment_DeviceId_" data-uid="Pulumi.Packet.IpAttachment.DeviceId*"></a>
+  <h4 id="Pulumi_Packet_IpAttachment_DeviceId" data-uid="Pulumi.Packet.IpAttachment.DeviceId">DeviceId</h4>
+  <div class="markdown level1 summary"><p>ID of device to which to assign the subnet</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DeviceId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/IpAttachment.cs/#L58">View Source</a>
+  </span>
+  <a id="Pulumi_Packet_IpAttachment_Gateway_" data-uid="Pulumi.Packet.IpAttachment.Gateway*"></a>
+  <h4 id="Pulumi_Packet_IpAttachment_Gateway" data-uid="Pulumi.Packet.IpAttachment.Gateway">Gateway</h4>
+  <div class="markdown level1 summary"><p>IP address of gateway for the subnet</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Gateway { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/IpAttachment.cs/#L61">View Source</a>
+  </span>
+  <a id="Pulumi_Packet_IpAttachment_Global_" data-uid="Pulumi.Packet.IpAttachment.Global*"></a>
+  <h4 id="Pulumi_Packet_IpAttachment_Global" data-uid="Pulumi.Packet.IpAttachment.Global">Global</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; Global { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/IpAttachment.cs/#L64">View Source</a>
+  </span>
+  <a id="Pulumi_Packet_IpAttachment_Manageable_" data-uid="Pulumi.Packet.IpAttachment.Manageable*"></a>
+  <h4 id="Pulumi_Packet_IpAttachment_Manageable" data-uid="Pulumi.Packet.IpAttachment.Manageable">Manageable</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; Manageable { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/IpAttachment.cs/#L67">View Source</a>
+  </span>
+  <a id="Pulumi_Packet_IpAttachment_Management_" data-uid="Pulumi.Packet.IpAttachment.Management*"></a>
+  <h4 id="Pulumi_Packet_IpAttachment_Management" data-uid="Pulumi.Packet.IpAttachment.Management">Management</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; Management { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/IpAttachment.cs/#L73">View Source</a>
+  </span>
+  <a id="Pulumi_Packet_IpAttachment_Netmask_" data-uid="Pulumi.Packet.IpAttachment.Netmask*"></a>
+  <h4 id="Pulumi_Packet_IpAttachment_Netmask" data-uid="Pulumi.Packet.IpAttachment.Netmask">Netmask</h4>
+  <div class="markdown level1 summary"><p>Subnet mask in decimal notation, e.g. &quot;255.255.255.0&quot;</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Netmask { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/IpAttachment.cs/#L79">View Source</a>
+  </span>
+  <a id="Pulumi_Packet_IpAttachment_Network_" data-uid="Pulumi.Packet.IpAttachment.Network*"></a>
+  <h4 id="Pulumi_Packet_IpAttachment_Network" data-uid="Pulumi.Packet.IpAttachment.Network">Network</h4>
+  <div class="markdown level1 summary"><p>Subnet network address</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Network { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/IpAttachment.cs/#L85">View Source</a>
+  </span>
+  <a id="Pulumi_Packet_IpAttachment_Public_" data-uid="Pulumi.Packet.IpAttachment.Public*"></a>
+  <h4 id="Pulumi_Packet_IpAttachment_Public" data-uid="Pulumi.Packet.IpAttachment.Public">Public</h4>
+  <div class="markdown level1 summary"><p>boolean flag whether subnet is reachable from the Internet</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; Public { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/IpAttachment.cs/#L126">View Source</a>
+  </span>
+  <a id="Pulumi_Packet_IpAttachment_Get_" data-uid="Pulumi.Packet.IpAttachment.Get*"></a>
+  <h4 id="Pulumi_Packet_IpAttachment_Get_System_String_Input_System_String__Pulumi_Packet_IpAttachmentState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Packet.IpAttachment.Get(System.String,Input{System.String},Pulumi.Packet.IpAttachmentState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, IpAttachmentState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Get an existing IpAttachment resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IpAttachment Get(string name, Input&lt;string&gt; id, IpAttachmentState state = null, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Packet.IpAttachmentState.html">IpAttachmentState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Packet.IpAttachment.html">IpAttachment</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/IpAttachment.cs/#L25" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

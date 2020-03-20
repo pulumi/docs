@@ -1,0 +1,1012 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class IdentityProvider
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class IdentityProvider
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Keycloak.Saml.IdentityProvider">
+  
+  <h1 id="Pulumi_Keycloak_Saml_IdentityProvider" data-uid="Pulumi.Keycloak.Saml.IdentityProvider" class="text-break">Class IdentityProvider
+  </h1>
+  <div class="markdown level0 summary"><h2 id="-keycloaksamlidentityprovider"># keycloak.saml.IdentityProvider</h2>
+<p>Allows to create and manage SAML Identity Providers within Keycloak.</p>
+<p>SAML (Security Assertion Markup Language) identity providers allows to authenticate through a third-party system, using SAML standard.</p>
+<h3 id="argument-reference">Argument Reference</h3>
+<p>The following arguments are supported:</p>
+<ul>
+<li><code>realm</code> - (Required) The name of the realm. This is unique across Keycloak.</li>
+<li><code>alias</code> - (Optional) The uniq name of identity provider.</li>
+<li><code>enabled</code> - (Optional) When false, users and clients will not be able to access this realm. Defaults to <code>true</code>.</li>
+<li><code>display_name</code> - (Optional) The display name for the realm that is shown when logging in to the admin console.</li>
+<li><code>store_token</code> - (Optional) Enable/disable if tokens must be stored after authenticating users. Defaults to <code>true</code>.</li>
+<li><code>add_read_token_role_on_create</code> - (Optional) Enable/disable if new users can read any stored tokens. This assigns the broker.read-token role. Defaults to <code>false</code>.</li>
+<li><code>trust_email</code> - (Optional) If enabled then email provided by this provider is not verified even if verification is enabled for the realm. Defaults to <code>false</code>.</li>
+<li><code>link_only</code> - (Optional) If true, users cannot log in through this provider. They can only link to this provider. This is useful if you don't want to allow login from the provider, but want to integrate with a provider. Defaults to <code>false</code>.</li>
+<li><code>hide_on_login_page</code> - (Optional) If hidden, then login with this provider is possible only if requested explicitly, e.g. using the 'kc_idp_hint' parameter.</li>
+<li><code>first_broker_login_flow_alias</code> - (Optional) Alias of authentication flow, which is triggered after first login with this identity provider. Term 'First Login' means that there is not yet existing Keycloak account linked with the authenticated identity provider account. Defaults to <code>first broker login</code>.</li>
+<li><code>post_broker_login_flow_alias</code> - (Optional) Alias of authentication flow, which is triggered after each login with this identity provider. Useful if you want additional verification of each user authenticated with this identity provider (for example OTP). Leave this empty if you don't want any additional authenticators to be triggered after login with this identity provider. Also note, that authenticator implementations must assume that user is already set in ClientSession as identity provider already set it. Defaults to empty.</li>
+<li><code>authenticate_by_default</code> - (Optional) Authenticate users by default. Defaults to <code>false</code>.</li>
+</ul>
+<h4 id="saml-configuration">SAML Configuration</h4>
+<ul>
+<li><code>single_sign_on_service_url</code> - (Optional) The Url that must be used to send authentication requests (SAML AuthnRequest).</li>
+<li><code>single_logout_service_url</code> - (Optional) The Url that must be used to send logout requests.</li>
+<li><code>backchannel_supported</code> - (Optional) Does the external IDP support back-channel logout ?.</li>
+<li><code>name_id_policy_format</code> - (Optional) Specifies the URI reference corresponding to a name identifier format. Defaults to empty.</li>
+<li><code>post_binding_response</code> - (Optional) Indicates whether to respond to requests using HTTP-POST binding. If false, HTTP-REDIRECT binding will be used..</li>
+<li><code>post_binding_authn_request</code> - (Optional) Indicates whether the AuthnRequest must be sent using HTTP-POST binding. If false, HTTP-REDIRECT binding will be used.</li>
+<li><code>post_binding_logout</code> - (Optional) Indicates whether to respond to requests using HTTP-POST binding. If false, HTTP-REDIRECT binding will be used.</li>
+<li><code>want_assertions_signed</code> - (Optional) Indicates whether this service provider expects a signed Assertion.</li>
+<li><code>want_assertions_encrypted</code> - (Optional) Indicates whether this service provider expects an encrypted Assertion.</li>
+<li><code>force_authn</code> - (Optional) Indicates whether the identity provider must authenticate the presenter directly rather than rely on a previous security context.</li>
+<li><code>validate_signature</code> - (Optional) Enable/disable signature validation of SAML responses.</li>
+<li><code>signing_certificate</code> - (Optional) Signing Certificate.</li>
+<li><code>signature_algorithm</code> - (Optional) Signing Algorithm. Defaults to empty.</li>
+<li><code>xml_sign_key_info_key_name_transformer</code> - (Optional) Sign Key Transformer. Defaults to empty.</li>
+</ul>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/saml_identity_provider.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/saml_identity_provider.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">IdentityProvider</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Keycloak.Saml.html">Pulumi.Keycloak.Saml</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Keycloak.dll</h6>
+  <h5 id="Pulumi_Keycloak_Saml_IdentityProvider_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class IdentityProvider : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Saml/IdentityProvider.cs/#L234">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Saml_IdentityProvider__ctor_" data-uid="Pulumi.Keycloak.Saml.IdentityProvider.#ctor*"></a>
+  <h4 id="Pulumi_Keycloak_Saml_IdentityProvider__ctor_System_String_Pulumi_Keycloak_Saml_IdentityProviderArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Keycloak.Saml.IdentityProvider.#ctor(System.String,Pulumi.Keycloak.Saml.IdentityProviderArgs,System.Nullable{CustomResourceOptions})">IdentityProvider(String, IdentityProviderArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Create a IdentityProvider resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IdentityProvider(string name, IdentityProviderArgs args, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Keycloak.Saml.IdentityProviderArgs.html">IdentityProviderArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Saml/IdentityProvider.cs/#L59">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Saml_IdentityProvider_AddReadTokenRoleOnCreate_" data-uid="Pulumi.Keycloak.Saml.IdentityProvider.AddReadTokenRoleOnCreate*"></a>
+  <h4 id="Pulumi_Keycloak_Saml_IdentityProvider_AddReadTokenRoleOnCreate" data-uid="Pulumi.Keycloak.Saml.IdentityProvider.AddReadTokenRoleOnCreate">AddReadTokenRoleOnCreate</h4>
+  <div class="markdown level1 summary"><p>Enable/disable if new users can read any stored tokens. This assigns the broker.read-token role.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; AddReadTokenRoleOnCreate { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Saml/IdentityProvider.cs/#L65">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Saml_IdentityProvider_Alias_" data-uid="Pulumi.Keycloak.Saml.IdentityProvider.Alias*"></a>
+  <h4 id="Pulumi_Keycloak_Saml_IdentityProvider_Alias" data-uid="Pulumi.Keycloak.Saml.IdentityProvider.Alias">Alias</h4>
+  <div class="markdown level1 summary"><p>The alias uniquely identifies an identity provider and it is also used to build the redirect uri.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Alias { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Saml/IdentityProvider.cs/#L71">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Saml_IdentityProvider_AuthenticateByDefault_" data-uid="Pulumi.Keycloak.Saml.IdentityProvider.AuthenticateByDefault*"></a>
+  <h4 id="Pulumi_Keycloak_Saml_IdentityProvider_AuthenticateByDefault" data-uid="Pulumi.Keycloak.Saml.IdentityProvider.AuthenticateByDefault">AuthenticateByDefault</h4>
+  <div class="markdown level1 summary"><p>Enable/disable authenticate users by default.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; AuthenticateByDefault { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Saml/IdentityProvider.cs/#L77">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Saml_IdentityProvider_BackchannelSupported_" data-uid="Pulumi.Keycloak.Saml.IdentityProvider.BackchannelSupported*"></a>
+  <h4 id="Pulumi_Keycloak_Saml_IdentityProvider_BackchannelSupported" data-uid="Pulumi.Keycloak.Saml.IdentityProvider.BackchannelSupported">BackchannelSupported</h4>
+  <div class="markdown level1 summary"><p>Does the external IDP support backchannel logout?</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; BackchannelSupported { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Saml/IdentityProvider.cs/#L83">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Saml_IdentityProvider_DisplayName_" data-uid="Pulumi.Keycloak.Saml.IdentityProvider.DisplayName*"></a>
+  <h4 id="Pulumi_Keycloak_Saml_IdentityProvider_DisplayName" data-uid="Pulumi.Keycloak.Saml.IdentityProvider.DisplayName">DisplayName</h4>
+  <div class="markdown level1 summary"><p>Friendly name for Identity Providers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; DisplayName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Saml/IdentityProvider.cs/#L89">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Saml_IdentityProvider_Enabled_" data-uid="Pulumi.Keycloak.Saml.IdentityProvider.Enabled*"></a>
+  <h4 id="Pulumi_Keycloak_Saml_IdentityProvider_Enabled" data-uid="Pulumi.Keycloak.Saml.IdentityProvider.Enabled">Enabled</h4>
+  <div class="markdown level1 summary"><p>Enable/disable this identity provider.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; Enabled { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Saml/IdentityProvider.cs/#L97">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Saml_IdentityProvider_FirstBrokerLoginFlowAlias_" data-uid="Pulumi.Keycloak.Saml.IdentityProvider.FirstBrokerLoginFlowAlias*"></a>
+  <h4 id="Pulumi_Keycloak_Saml_IdentityProvider_FirstBrokerLoginFlowAlias" data-uid="Pulumi.Keycloak.Saml.IdentityProvider.FirstBrokerLoginFlowAlias">FirstBrokerLoginFlowAlias</h4>
+  <div class="markdown level1 summary"><p>Alias of authentication flow, which is triggered after first login with this identity provider. Term 'First
+Login' means that there is not yet existing Keycloak account linked with the authenticated identity provider
+account.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; FirstBrokerLoginFlowAlias { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Saml/IdentityProvider.cs/#L103">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Saml_IdentityProvider_ForceAuthn_" data-uid="Pulumi.Keycloak.Saml.IdentityProvider.ForceAuthn*"></a>
+  <h4 id="Pulumi_Keycloak_Saml_IdentityProvider_ForceAuthn" data-uid="Pulumi.Keycloak.Saml.IdentityProvider.ForceAuthn">ForceAuthn</h4>
+  <div class="markdown level1 summary"><p>Require Force Authn.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; ForceAuthn { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Saml/IdentityProvider.cs/#L109">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Saml_IdentityProvider_HideOnLoginPage_" data-uid="Pulumi.Keycloak.Saml.IdentityProvider.HideOnLoginPage*"></a>
+  <h4 id="Pulumi_Keycloak_Saml_IdentityProvider_HideOnLoginPage" data-uid="Pulumi.Keycloak.Saml.IdentityProvider.HideOnLoginPage">HideOnLoginPage</h4>
+  <div class="markdown level1 summary"><p>Hide On Login Page.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; HideOnLoginPage { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Saml/IdentityProvider.cs/#L115">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Saml_IdentityProvider_InternalId_" data-uid="Pulumi.Keycloak.Saml.IdentityProvider.InternalId*"></a>
+  <h4 id="Pulumi_Keycloak_Saml_IdentityProvider_InternalId" data-uid="Pulumi.Keycloak.Saml.IdentityProvider.InternalId">InternalId</h4>
+  <div class="markdown level1 summary"><p>Internal Identity Provider Id</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; InternalId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Saml/IdentityProvider.cs/#L122">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Saml_IdentityProvider_LinkOnly_" data-uid="Pulumi.Keycloak.Saml.IdentityProvider.LinkOnly*"></a>
+  <h4 id="Pulumi_Keycloak_Saml_IdentityProvider_LinkOnly" data-uid="Pulumi.Keycloak.Saml.IdentityProvider.LinkOnly">LinkOnly</h4>
+  <div class="markdown level1 summary"><p>If true, users cannot log in through this provider. They can only link to this provider. This is useful if
+you don't want to allow login from the provider, but want to integrate with a provider</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; LinkOnly { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Saml/IdentityProvider.cs/#L128">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Saml_IdentityProvider_NameIdPolicyFormat_" data-uid="Pulumi.Keycloak.Saml.IdentityProvider.NameIdPolicyFormat*"></a>
+  <h4 id="Pulumi_Keycloak_Saml_IdentityProvider_NameIdPolicyFormat" data-uid="Pulumi.Keycloak.Saml.IdentityProvider.NameIdPolicyFormat">NameIdPolicyFormat</h4>
+  <div class="markdown level1 summary"><p>Name ID Policy Format.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; NameIdPolicyFormat { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Saml/IdentityProvider.cs/#L134">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Saml_IdentityProvider_PostBindingAuthnRequest_" data-uid="Pulumi.Keycloak.Saml.IdentityProvider.PostBindingAuthnRequest*"></a>
+  <h4 id="Pulumi_Keycloak_Saml_IdentityProvider_PostBindingAuthnRequest" data-uid="Pulumi.Keycloak.Saml.IdentityProvider.PostBindingAuthnRequest">PostBindingAuthnRequest</h4>
+  <div class="markdown level1 summary"><p>Post Binding Authn Request.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; PostBindingAuthnRequest { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Saml/IdentityProvider.cs/#L140">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Saml_IdentityProvider_PostBindingLogout_" data-uid="Pulumi.Keycloak.Saml.IdentityProvider.PostBindingLogout*"></a>
+  <h4 id="Pulumi_Keycloak_Saml_IdentityProvider_PostBindingLogout" data-uid="Pulumi.Keycloak.Saml.IdentityProvider.PostBindingLogout">PostBindingLogout</h4>
+  <div class="markdown level1 summary"><p>Post Binding Logout.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; PostBindingLogout { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Saml/IdentityProvider.cs/#L146">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Saml_IdentityProvider_PostBindingResponse_" data-uid="Pulumi.Keycloak.Saml.IdentityProvider.PostBindingResponse*"></a>
+  <h4 id="Pulumi_Keycloak_Saml_IdentityProvider_PostBindingResponse" data-uid="Pulumi.Keycloak.Saml.IdentityProvider.PostBindingResponse">PostBindingResponse</h4>
+  <div class="markdown level1 summary"><p>Post Binding Response.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; PostBindingResponse { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Saml/IdentityProvider.cs/#L156">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Saml_IdentityProvider_PostBrokerLoginFlowAlias_" data-uid="Pulumi.Keycloak.Saml.IdentityProvider.PostBrokerLoginFlowAlias*"></a>
+  <h4 id="Pulumi_Keycloak_Saml_IdentityProvider_PostBrokerLoginFlowAlias" data-uid="Pulumi.Keycloak.Saml.IdentityProvider.PostBrokerLoginFlowAlias">PostBrokerLoginFlowAlias</h4>
+  <div class="markdown level1 summary"><p>Alias of authentication flow, which is triggered after each login with this identity provider. Useful if you
+want additional verification of each user authenticated with this identity provider (for example OTP). Leave
+this empty if you don't want any additional authenticators to be triggered after login with this identity
+provider. Also note, that authenticator implementations must assume that user is already set in
+ClientSession as identity provider already set it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; PostBrokerLoginFlowAlias { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Saml/IdentityProvider.cs/#L162">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Saml_IdentityProvider_Realm_" data-uid="Pulumi.Keycloak.Saml.IdentityProvider.Realm*"></a>
+  <h4 id="Pulumi_Keycloak_Saml_IdentityProvider_Realm" data-uid="Pulumi.Keycloak.Saml.IdentityProvider.Realm">Realm</h4>
+  <div class="markdown level1 summary"><p>Realm Name</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Realm { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Saml/IdentityProvider.cs/#L168">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Saml_IdentityProvider_SignatureAlgorithm_" data-uid="Pulumi.Keycloak.Saml.IdentityProvider.SignatureAlgorithm*"></a>
+  <h4 id="Pulumi_Keycloak_Saml_IdentityProvider_SignatureAlgorithm" data-uid="Pulumi.Keycloak.Saml.IdentityProvider.SignatureAlgorithm">SignatureAlgorithm</h4>
+  <div class="markdown level1 summary"><p>Signing Algorithm.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SignatureAlgorithm { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Saml/IdentityProvider.cs/#L174">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Saml_IdentityProvider_SigningCertificate_" data-uid="Pulumi.Keycloak.Saml.IdentityProvider.SigningCertificate*"></a>
+  <h4 id="Pulumi_Keycloak_Saml_IdentityProvider_SigningCertificate" data-uid="Pulumi.Keycloak.Saml.IdentityProvider.SigningCertificate">SigningCertificate</h4>
+  <div class="markdown level1 summary"><p>Signing Certificate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SigningCertificate { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Saml/IdentityProvider.cs/#L180">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Saml_IdentityProvider_SingleLogoutServiceUrl_" data-uid="Pulumi.Keycloak.Saml.IdentityProvider.SingleLogoutServiceUrl*"></a>
+  <h4 id="Pulumi_Keycloak_Saml_IdentityProvider_SingleLogoutServiceUrl" data-uid="Pulumi.Keycloak.Saml.IdentityProvider.SingleLogoutServiceUrl">SingleLogoutServiceUrl</h4>
+  <div class="markdown level1 summary"><p>Logout URL.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SingleLogoutServiceUrl { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Saml/IdentityProvider.cs/#L186">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Saml_IdentityProvider_SingleSignOnServiceUrl_" data-uid="Pulumi.Keycloak.Saml.IdentityProvider.SingleSignOnServiceUrl*"></a>
+  <h4 id="Pulumi_Keycloak_Saml_IdentityProvider_SingleSignOnServiceUrl" data-uid="Pulumi.Keycloak.Saml.IdentityProvider.SingleSignOnServiceUrl">SingleSignOnServiceUrl</h4>
+  <div class="markdown level1 summary"><p>SSO Logout URL.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SingleSignOnServiceUrl { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Saml/IdentityProvider.cs/#L192">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Saml_IdentityProvider_StoreToken_" data-uid="Pulumi.Keycloak.Saml.IdentityProvider.StoreToken*"></a>
+  <h4 id="Pulumi_Keycloak_Saml_IdentityProvider_StoreToken" data-uid="Pulumi.Keycloak.Saml.IdentityProvider.StoreToken">StoreToken</h4>
+  <div class="markdown level1 summary"><p>Enable/disable if tokens must be stored after authenticating users.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; StoreToken { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Saml/IdentityProvider.cs/#L199">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Saml_IdentityProvider_TrustEmail_" data-uid="Pulumi.Keycloak.Saml.IdentityProvider.TrustEmail*"></a>
+  <h4 id="Pulumi_Keycloak_Saml_IdentityProvider_TrustEmail" data-uid="Pulumi.Keycloak.Saml.IdentityProvider.TrustEmail">TrustEmail</h4>
+  <div class="markdown level1 summary"><p>If enabled then email provided by this provider is not verified even if verification is enabled for the
+realm.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; TrustEmail { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Saml/IdentityProvider.cs/#L205">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Saml_IdentityProvider_ValidateSignature_" data-uid="Pulumi.Keycloak.Saml.IdentityProvider.ValidateSignature*"></a>
+  <h4 id="Pulumi_Keycloak_Saml_IdentityProvider_ValidateSignature" data-uid="Pulumi.Keycloak.Saml.IdentityProvider.ValidateSignature">ValidateSignature</h4>
+  <div class="markdown level1 summary"><p>Enable/disable signature validation of SAML responses.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; ValidateSignature { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Saml/IdentityProvider.cs/#L211">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Saml_IdentityProvider_WantAssertionsEncrypted_" data-uid="Pulumi.Keycloak.Saml.IdentityProvider.WantAssertionsEncrypted*"></a>
+  <h4 id="Pulumi_Keycloak_Saml_IdentityProvider_WantAssertionsEncrypted" data-uid="Pulumi.Keycloak.Saml.IdentityProvider.WantAssertionsEncrypted">WantAssertionsEncrypted</h4>
+  <div class="markdown level1 summary"><p>Want Assertions Encrypted.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; WantAssertionsEncrypted { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Saml/IdentityProvider.cs/#L217">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Saml_IdentityProvider_WantAssertionsSigned_" data-uid="Pulumi.Keycloak.Saml.IdentityProvider.WantAssertionsSigned*"></a>
+  <h4 id="Pulumi_Keycloak_Saml_IdentityProvider_WantAssertionsSigned" data-uid="Pulumi.Keycloak.Saml.IdentityProvider.WantAssertionsSigned">WantAssertionsSigned</h4>
+  <div class="markdown level1 summary"><p>Want Assertions Signed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; WantAssertionsSigned { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Saml/IdentityProvider.cs/#L223">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Saml_IdentityProvider_XmlSignKeyInfoKeyNameTransformer_" data-uid="Pulumi.Keycloak.Saml.IdentityProvider.XmlSignKeyInfoKeyNameTransformer*"></a>
+  <h4 id="Pulumi_Keycloak_Saml_IdentityProvider_XmlSignKeyInfoKeyNameTransformer" data-uid="Pulumi.Keycloak.Saml.IdentityProvider.XmlSignKeyInfoKeyNameTransformer">XmlSignKeyInfoKeyNameTransformer</h4>
+  <div class="markdown level1 summary"><p>Sign Key Transformer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; XmlSignKeyInfoKeyNameTransformer { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Saml/IdentityProvider.cs/#L264">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Saml_IdentityProvider_Get_" data-uid="Pulumi.Keycloak.Saml.IdentityProvider.Get*"></a>
+  <h4 id="Pulumi_Keycloak_Saml_IdentityProvider_Get_System_String_Input_System_String__Pulumi_Keycloak_Saml_IdentityProviderState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Keycloak.Saml.IdentityProvider.Get(System.String,Input{System.String},Pulumi.Keycloak.Saml.IdentityProviderState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, IdentityProviderState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Get an existing IdentityProvider resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IdentityProvider Get(string name, Input&lt;string&gt; id, IdentityProviderState state = null, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Keycloak.Saml.IdentityProviderState.html">IdentityProviderState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Keycloak.Saml.IdentityProvider.html">IdentityProvider</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Saml/IdentityProvider.cs/#L54" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

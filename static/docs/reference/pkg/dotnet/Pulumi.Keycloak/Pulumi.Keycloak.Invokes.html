@@ -1,0 +1,388 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Invokes
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Invokes
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Keycloak.Invokes">
+  
+  <h1 id="Pulumi_Keycloak_Invokes" data-uid="Pulumi.Keycloak.Invokes" class="text-break">Class Invokes
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Invokes</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Keycloak.html">Pulumi.Keycloak</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Keycloak.dll</h6>
+  <h5 id="Pulumi_Keycloak_Invokes_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class Invokes : object</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/GetGroup.cs/#L35">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Invokes_GetGroup_" data-uid="Pulumi.Keycloak.Invokes.GetGroup*"></a>
+  <h4 id="Pulumi_Keycloak_Invokes_GetGroup_Pulumi_Keycloak_GetGroupArgs_System_Nullable_InvokeOptions__" data-uid="Pulumi.Keycloak.Invokes.GetGroup(Pulumi.Keycloak.GetGroupArgs,System.Nullable{InvokeOptions})">GetGroup(GetGroupArgs, Nullable&lt;InvokeOptions&gt;)</h4>
+  <div class="markdown level1 summary"><h2 id="-keycloakgroup-data-source"># keycloak..Group data source</h2>
+<p>This data source can be used to fetch properties of a Keycloak group for
+usage with other resources, such as <code>keycloak..GroupRoles</code>.</p>
+<h3 id="argument-reference">Argument Reference</h3>
+<p>The following arguments are supported:</p>
+<ul>
+<li><code>realm_id</code> - (Required) The realm this group exists within.</li>
+<li><code>name</code> - (Required) The name of the group</li>
+</ul>
+<h3 id="attributes-reference">Attributes Reference</h3>
+<p>In addition to the arguments listed above, the following computed attributes are exported:</p>
+<ul>
+<li><code>id</code> - The unique ID of the group, which can be used as an argument to
+other resources supported by this provider.</li>
+</ul>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/d/group.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/d/group.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;GetGroupResult&gt; GetGroup(GetGroupArgs args, InvokeOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Keycloak.GetGroupArgs.html">GetGroupArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">InvokeOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Pulumi.Keycloak.GetGroupResult.html">GetGroupResult</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/GetRealm.cs/#L31">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Invokes_GetRealm_" data-uid="Pulumi.Keycloak.Invokes.GetRealm*"></a>
+  <h4 id="Pulumi_Keycloak_Invokes_GetRealm_Pulumi_Keycloak_GetRealmArgs_System_Nullable_InvokeOptions__" data-uid="Pulumi.Keycloak.Invokes.GetRealm(Pulumi.Keycloak.GetRealmArgs,System.Nullable{InvokeOptions})">GetRealm(GetRealmArgs, Nullable&lt;InvokeOptions&gt;)</h4>
+  <div class="markdown level1 summary"><h2 id="-keycloakrealm-data-source"># keycloak..Realm data source</h2>
+<p>This data source can be used to fetch properties of a Keycloak realm for
+usage with other resources.</p>
+<h3 id="argument-reference">Argument Reference</h3>
+<p>The following arguments are supported:</p>
+<ul>
+<li><code>realm</code> - (Required) The realm name.</li>
+</ul>
+<h3 id="attributes-reference">Attributes Reference</h3>
+<p>See the docs for the <code>keycloak..Realm</code> resource for details on the exported attributes.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/d/realm.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/d/realm.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;GetRealmResult&gt; GetRealm(GetRealmArgs args, InvokeOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Keycloak.GetRealmArgs.html">GetRealmArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">InvokeOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Pulumi.Keycloak.GetRealmResult.html">GetRealmResult</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/GetRealmKeys.cs/#L34">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Invokes_GetRealmKeys_" data-uid="Pulumi.Keycloak.Invokes.GetRealmKeys*"></a>
+  <h4 id="Pulumi_Keycloak_Invokes_GetRealmKeys_Pulumi_Keycloak_GetRealmKeysArgs_System_Nullable_InvokeOptions__" data-uid="Pulumi.Keycloak.Invokes.GetRealmKeys(Pulumi.Keycloak.GetRealmKeysArgs,System.Nullable{InvokeOptions})">GetRealmKeys(GetRealmKeysArgs, Nullable&lt;InvokeOptions&gt;)</h4>
+  <div class="markdown level1 summary"><h2 id="-keycloakgetrealmkeys-data-source"># keycloak..getRealmKeys data source</h2>
+<p>Use this data source to get the keys of a realm. Keys can be filtered by algorithm and status.</p>
+<p>Remarks:</p>
+<ul>
+<li>A key must meet all filter criteria</li>
+<li>This datasource may return more than one value.</li>
+<li>If no key matches the filter criteria, then an error is returned.</li>
+</ul>
+<h3 id="argument-reference">Argument Reference</h3>
+<p>The following arguments are supported:</p>
+<ul>
+<li><code>realm_id</code> - (Required) The realm of which the keys are retrieved.</li>
+<li><code>algorithms</code> - (Optional) When specified, keys are filtered by algorithm (values for algorithm: <code>HS256</code>, <code>RS256</code>,<code>AES</code>, ...)</li>
+<li><code>status</code> - (Optional) When specified, keys are filtered by status (values for status: <code>ACTIVE</code>, <code>DISABLED</code> and <code>PASSIVE</code>)</li>
+</ul>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/d/realm_keys.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/d/realm_keys.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;GetRealmKeysResult&gt; GetRealmKeys(GetRealmKeysArgs args, InvokeOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Keycloak.GetRealmKeysArgs.html">GetRealmKeysArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">InvokeOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Pulumi.Keycloak.GetRealmKeysResult.html">GetRealmKeysResult</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/GetRole.cs/#L38">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Invokes_GetRole_" data-uid="Pulumi.Keycloak.Invokes.GetRole*"></a>
+  <h4 id="Pulumi_Keycloak_Invokes_GetRole_Pulumi_Keycloak_GetRoleArgs_System_Nullable_InvokeOptions__" data-uid="Pulumi.Keycloak.Invokes.GetRole(Pulumi.Keycloak.GetRoleArgs,System.Nullable{InvokeOptions})">GetRole(GetRoleArgs, Nullable&lt;InvokeOptions&gt;)</h4>
+  <div class="markdown level1 summary"><h2 id="-keycloakrole-data-source"># keycloak..Role data source</h2>
+<p>This data source can be used to fetch properties of a Keycloak role for
+usage with other resources, such as <code>keycloak..GroupRoles</code>.</p>
+<h3 id="argument-reference">Argument Reference</h3>
+<p>The following arguments are supported:</p>
+<ul>
+<li><code>realm_id</code> - (Required) The realm this role exists within.</li>
+<li><code>client_id</code> - (Optional) When specified, this role is assumed to be a
+client role belonging to the client with the provided ID</li>
+<li><code>name</code> - (Required) The name of the role</li>
+</ul>
+<h3 id="attributes-reference">Attributes Reference</h3>
+<p>In addition to the arguments listed above, the following computed attributes are exported:</p>
+<ul>
+<li><code>id</code> - The unique ID of the role, which can be used as an argument to
+other resources supported by this provider.</li>
+<li><code>description</code> - The description of the role.</li>
+</ul>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/d/role.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/d/role.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;GetRoleResult&gt; GetRole(GetRoleArgs args, InvokeOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Keycloak.GetRoleArgs.html">GetRoleArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">InvokeOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Pulumi.Keycloak.GetRoleResult.html">GetRoleResult</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/GetRole.cs/#L11" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

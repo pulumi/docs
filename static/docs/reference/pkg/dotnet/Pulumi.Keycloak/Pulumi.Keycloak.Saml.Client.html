@@ -1,0 +1,923 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Client
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Client
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Keycloak.Saml.Client">
+  
+  <h1 id="Pulumi_Keycloak_Saml_Client" data-uid="Pulumi.Keycloak.Saml.Client" class="text-break">Class Client
+  </h1>
+  <div class="markdown level0 summary"><h2 id="-keycloaksamlclient"># keycloak.saml.Client</h2>
+<p>Allows for creating and managing Keycloak clients that use the SAML protocol.</p>
+<p>Clients are entities that can use Keycloak for user authentication. Typically,
+clients are applications that redirect users to Keycloak for authentication
+in order to take advantage of Keycloak's user sessions for SSO.</p>
+<h3 id="argument-reference">Argument Reference</h3>
+<p>The following arguments are supported:</p>
+<ul>
+<li><code>realm_id</code> - (Required) The realm this client is attached to.</li>
+<li><code>client_id</code> - (Required) The unique ID of this client, referenced in the URI during authentication and in issued tokens.</li>
+<li><code>name</code> - (Optional) The display name of this client in the GUI.</li>
+<li><code>enabled</code> - (Optional) When false, this client will not be able to initiate a login or obtain access tokens. Defaults to <code>true</code>.</li>
+<li><code>description</code> - (Optional) The description of this client in the GUI.</li>
+<li><code>include_authn_statement</code> - (Optional) When <code>true</code>, an <code>AuthnStatement</code> will be included in the SAML response.</li>
+<li><code>sign_documents</code> - (Optional) When <code>true</code>, the SAML document will be signed by Keycloak using the realm's private key.</li>
+<li><code>sign_assertions</code> - (Optional) When <code>true</code>, the SAML assertions will be signed by Keycloak using the realm's private key, and embedded within the SAML XML Auth response.</li>
+<li><code>client_signature_required</code> - (Optional) When <code>true</code>, Keycloak will expect that documents originating from a client will be signed using the certificate and/or key configured via <code>signing_certificate</code> and <code>signing_private_key</code>.</li>
+<li><code>force_post_binding</code> - (Optional) When <code>true</code>, Keycloak will always respond to an authentication request via the SAML POST Binding.</li>
+<li><code>front_channel_logout</code> - (Optional) When <code>true</code>, this client will require a browser redirect in order to perform a logout.</li>
+<li><code>name_id_format</code> - (Optional) Sets the Name ID format for the subject.</li>
+<li><code>root_url</code> - (Optional) When specified, this value is prepended to all relative URLs.</li>
+<li><code>valid_redirect_uris</code> - (Optional) When specified, Keycloak will use this list to validate given Assertion Consumer URLs specified in the authentication request.</li>
+<li><code>base_url</code> - (Optional) When specified, this URL will be used whenever Keycloak needs to link to this client.</li>
+<li><code>master_saml_processing_url</code> - (Optional) When specified, this URL will be used for all SAML requests.</li>
+<li><code>signing_certificate</code> - (Optional) If documents or assertions from the client are signed, this certificate will be used to verify the signature.</li>
+<li><code>signing_private_key</code> - (Optional) If documents or assertions from the client are signed, this private key will be used to verify the signature.</li>
+<li><code>idp_initiated_sso_url_name</code> - (Optional) URL fragment name to reference client when you want to do IDP Initiated SSO.</li>
+<li><code>idp_initiated_sso_relay_state</code> - (Optional) Relay state you want to send with SAML request when you want to do IDP Initiated SSO.</li>
+<li><code>assertion_consumer_post_url</code> - (Optional) SAML POST Binding URL for the client's assertion consumer service (login responses).</li>
+<li><code>assertion_consumer_redirect_url</code> - (Optional) SAML Redirect Binding URL for the client's assertion consumer service (login responses).</li>
+<li><code>logout_service_post_binding_url</code> - (Optional) SAML POST Binding URL for the client's single logout service.</li>
+<li><code>logout_service_redirect_binding_url</code> - (Optional) SAML Redirect Binding URL for the client's single logout service.</li>
+<li><code>full_scope_allowed</code> - (Optional) - Allow to include all roles mappings in the access token</li>
+</ul>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/saml_client.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/saml_client.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Client</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Keycloak.Saml.html">Pulumi.Keycloak.Saml</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Keycloak.dll</h6>
+  <h5 id="Pulumi_Keycloak_Saml_Client_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Client : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Saml/Client.cs/#L137">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Saml_Client__ctor_" data-uid="Pulumi.Keycloak.Saml.Client.#ctor*"></a>
+  <h4 id="Pulumi_Keycloak_Saml_Client__ctor_System_String_Pulumi_Keycloak_Saml_ClientArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Keycloak.Saml.Client.#ctor(System.String,Pulumi.Keycloak.Saml.ClientArgs,System.Nullable{CustomResourceOptions})">Client(String, ClientArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Create a Client resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Client(string name, ClientArgs args, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Keycloak.Saml.ClientArgs.html">ClientArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Saml/Client.cs/#L54">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Saml_Client_AssertionConsumerPostUrl_" data-uid="Pulumi.Keycloak.Saml.Client.AssertionConsumerPostUrl*"></a>
+  <h4 id="Pulumi_Keycloak_Saml_Client_AssertionConsumerPostUrl" data-uid="Pulumi.Keycloak.Saml.Client.AssertionConsumerPostUrl">AssertionConsumerPostUrl</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; AssertionConsumerPostUrl { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Saml/Client.cs/#L57">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Saml_Client_AssertionConsumerRedirectUrl_" data-uid="Pulumi.Keycloak.Saml.Client.AssertionConsumerRedirectUrl*"></a>
+  <h4 id="Pulumi_Keycloak_Saml_Client_AssertionConsumerRedirectUrl" data-uid="Pulumi.Keycloak.Saml.Client.AssertionConsumerRedirectUrl">AssertionConsumerRedirectUrl</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; AssertionConsumerRedirectUrl { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Saml/Client.cs/#L60">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Saml_Client_BaseUrl_" data-uid="Pulumi.Keycloak.Saml.Client.BaseUrl*"></a>
+  <h4 id="Pulumi_Keycloak_Saml_Client_BaseUrl" data-uid="Pulumi.Keycloak.Saml.Client.BaseUrl">BaseUrl</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; BaseUrl { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Saml/Client.cs/#L63">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Saml_Client_ClientId_" data-uid="Pulumi.Keycloak.Saml.Client.ClientId*"></a>
+  <h4 id="Pulumi_Keycloak_Saml_Client_ClientId" data-uid="Pulumi.Keycloak.Saml.Client.ClientId">ClientId</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ClientId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Saml/Client.cs/#L66">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Saml_Client_ClientSignatureRequired_" data-uid="Pulumi.Keycloak.Saml.Client.ClientSignatureRequired*"></a>
+  <h4 id="Pulumi_Keycloak_Saml_Client_ClientSignatureRequired" data-uid="Pulumi.Keycloak.Saml.Client.ClientSignatureRequired">ClientSignatureRequired</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; ClientSignatureRequired { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Saml/Client.cs/#L69">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Saml_Client_Description_" data-uid="Pulumi.Keycloak.Saml.Client.Description*"></a>
+  <h4 id="Pulumi_Keycloak_Saml_Client_Description" data-uid="Pulumi.Keycloak.Saml.Client.Description">Description</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Saml/Client.cs/#L72">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Saml_Client_Enabled_" data-uid="Pulumi.Keycloak.Saml.Client.Enabled*"></a>
+  <h4 id="Pulumi_Keycloak_Saml_Client_Enabled" data-uid="Pulumi.Keycloak.Saml.Client.Enabled">Enabled</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; Enabled { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Saml/Client.cs/#L75">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Saml_Client_ForcePostBinding_" data-uid="Pulumi.Keycloak.Saml.Client.ForcePostBinding*"></a>
+  <h4 id="Pulumi_Keycloak_Saml_Client_ForcePostBinding" data-uid="Pulumi.Keycloak.Saml.Client.ForcePostBinding">ForcePostBinding</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; ForcePostBinding { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Saml/Client.cs/#L78">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Saml_Client_FrontChannelLogout_" data-uid="Pulumi.Keycloak.Saml.Client.FrontChannelLogout*"></a>
+  <h4 id="Pulumi_Keycloak_Saml_Client_FrontChannelLogout" data-uid="Pulumi.Keycloak.Saml.Client.FrontChannelLogout">FrontChannelLogout</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; FrontChannelLogout { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Saml/Client.cs/#L81">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Saml_Client_FullScopeAllowed_" data-uid="Pulumi.Keycloak.Saml.Client.FullScopeAllowed*"></a>
+  <h4 id="Pulumi_Keycloak_Saml_Client_FullScopeAllowed" data-uid="Pulumi.Keycloak.Saml.Client.FullScopeAllowed">FullScopeAllowed</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; FullScopeAllowed { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Saml/Client.cs/#L84">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Saml_Client_IdpInitiatedSsoRelayState_" data-uid="Pulumi.Keycloak.Saml.Client.IdpInitiatedSsoRelayState*"></a>
+  <h4 id="Pulumi_Keycloak_Saml_Client_IdpInitiatedSsoRelayState" data-uid="Pulumi.Keycloak.Saml.Client.IdpInitiatedSsoRelayState">IdpInitiatedSsoRelayState</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; IdpInitiatedSsoRelayState { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Saml/Client.cs/#L87">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Saml_Client_IdpInitiatedSsoUrlName_" data-uid="Pulumi.Keycloak.Saml.Client.IdpInitiatedSsoUrlName*"></a>
+  <h4 id="Pulumi_Keycloak_Saml_Client_IdpInitiatedSsoUrlName" data-uid="Pulumi.Keycloak.Saml.Client.IdpInitiatedSsoUrlName">IdpInitiatedSsoUrlName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; IdpInitiatedSsoUrlName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Saml/Client.cs/#L90">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Saml_Client_IncludeAuthnStatement_" data-uid="Pulumi.Keycloak.Saml.Client.IncludeAuthnStatement*"></a>
+  <h4 id="Pulumi_Keycloak_Saml_Client_IncludeAuthnStatement" data-uid="Pulumi.Keycloak.Saml.Client.IncludeAuthnStatement">IncludeAuthnStatement</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; IncludeAuthnStatement { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Saml/Client.cs/#L93">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Saml_Client_LogoutServicePostBindingUrl_" data-uid="Pulumi.Keycloak.Saml.Client.LogoutServicePostBindingUrl*"></a>
+  <h4 id="Pulumi_Keycloak_Saml_Client_LogoutServicePostBindingUrl" data-uid="Pulumi.Keycloak.Saml.Client.LogoutServicePostBindingUrl">LogoutServicePostBindingUrl</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; LogoutServicePostBindingUrl { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Saml/Client.cs/#L96">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Saml_Client_LogoutServiceRedirectBindingUrl_" data-uid="Pulumi.Keycloak.Saml.Client.LogoutServiceRedirectBindingUrl*"></a>
+  <h4 id="Pulumi_Keycloak_Saml_Client_LogoutServiceRedirectBindingUrl" data-uid="Pulumi.Keycloak.Saml.Client.LogoutServiceRedirectBindingUrl">LogoutServiceRedirectBindingUrl</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; LogoutServiceRedirectBindingUrl { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Saml/Client.cs/#L99">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Saml_Client_MasterSamlProcessingUrl_" data-uid="Pulumi.Keycloak.Saml.Client.MasterSamlProcessingUrl*"></a>
+  <h4 id="Pulumi_Keycloak_Saml_Client_MasterSamlProcessingUrl" data-uid="Pulumi.Keycloak.Saml.Client.MasterSamlProcessingUrl">MasterSamlProcessingUrl</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; MasterSamlProcessingUrl { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Saml/Client.cs/#L102">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Saml_Client_Name_" data-uid="Pulumi.Keycloak.Saml.Client.Name*"></a>
+  <h4 id="Pulumi_Keycloak_Saml_Client_Name" data-uid="Pulumi.Keycloak.Saml.Client.Name">Name</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Saml/Client.cs/#L105">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Saml_Client_NameIdFormat_" data-uid="Pulumi.Keycloak.Saml.Client.NameIdFormat*"></a>
+  <h4 id="Pulumi_Keycloak_Saml_Client_NameIdFormat" data-uid="Pulumi.Keycloak.Saml.Client.NameIdFormat">NameIdFormat</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; NameIdFormat { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Saml/Client.cs/#L108">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Saml_Client_RealmId_" data-uid="Pulumi.Keycloak.Saml.Client.RealmId*"></a>
+  <h4 id="Pulumi_Keycloak_Saml_Client_RealmId" data-uid="Pulumi.Keycloak.Saml.Client.RealmId">RealmId</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; RealmId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Saml/Client.cs/#L111">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Saml_Client_RootUrl_" data-uid="Pulumi.Keycloak.Saml.Client.RootUrl*"></a>
+  <h4 id="Pulumi_Keycloak_Saml_Client_RootUrl" data-uid="Pulumi.Keycloak.Saml.Client.RootUrl">RootUrl</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; RootUrl { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Saml/Client.cs/#L114">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Saml_Client_SignAssertions_" data-uid="Pulumi.Keycloak.Saml.Client.SignAssertions*"></a>
+  <h4 id="Pulumi_Keycloak_Saml_Client_SignAssertions" data-uid="Pulumi.Keycloak.Saml.Client.SignAssertions">SignAssertions</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; SignAssertions { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Saml/Client.cs/#L117">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Saml_Client_SignDocuments_" data-uid="Pulumi.Keycloak.Saml.Client.SignDocuments*"></a>
+  <h4 id="Pulumi_Keycloak_Saml_Client_SignDocuments" data-uid="Pulumi.Keycloak.Saml.Client.SignDocuments">SignDocuments</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; SignDocuments { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Saml/Client.cs/#L120">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Saml_Client_SigningCertificate_" data-uid="Pulumi.Keycloak.Saml.Client.SigningCertificate*"></a>
+  <h4 id="Pulumi_Keycloak_Saml_Client_SigningCertificate" data-uid="Pulumi.Keycloak.Saml.Client.SigningCertificate">SigningCertificate</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SigningCertificate { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Saml/Client.cs/#L123">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Saml_Client_SigningPrivateKey_" data-uid="Pulumi.Keycloak.Saml.Client.SigningPrivateKey*"></a>
+  <h4 id="Pulumi_Keycloak_Saml_Client_SigningPrivateKey" data-uid="Pulumi.Keycloak.Saml.Client.SigningPrivateKey">SigningPrivateKey</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SigningPrivateKey { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Saml/Client.cs/#L126">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Saml_Client_ValidRedirectUris_" data-uid="Pulumi.Keycloak.Saml.Client.ValidRedirectUris*"></a>
+  <h4 id="Pulumi_Keycloak_Saml_Client_ValidRedirectUris" data-uid="Pulumi.Keycloak.Saml.Client.ValidRedirectUris">ValidRedirectUris</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; ValidRedirectUris { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Saml/Client.cs/#L167">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Saml_Client_Get_" data-uid="Pulumi.Keycloak.Saml.Client.Get*"></a>
+  <h4 id="Pulumi_Keycloak_Saml_Client_Get_System_String_Input_System_String__Pulumi_Keycloak_Saml_ClientState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Keycloak.Saml.Client.Get(System.String,Input{System.String},Pulumi.Keycloak.Saml.ClientState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, ClientState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Get an existing Client resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Client Get(string name, Input&lt;string&gt; id, ClientState state = null, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Keycloak.Saml.ClientState.html">ClientState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Keycloak.Saml.Client.html">Client</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Saml/Client.cs/#L52" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1051 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class AuthConfigFreeIpa
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class AuthConfigFreeIpa
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Rancher2.AuthConfigFreeIpa">
+  
+  <h1 id="Pulumi_Rancher2_AuthConfigFreeIpa" data-uid="Pulumi.Rancher2.AuthConfigFreeIpa" class="text-break">Class AuthConfigFreeIpa
+  </h1>
+  <div class="markdown level0 summary"><p>Provides a Rancher v2 Auth Config FreeIpa resource. This can be used to configure and enable Auth Config FreeIpa for Rancher v2 RKE clusters and retrieve their information.</p>
+<p>In addition to the built-in local auth, only one external auth config provider can be enabled at a time.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/auth_config_freeipa.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/auth_config_freeipa.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">AuthConfigFreeIpa</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Rancher2.html">Pulumi.Rancher2</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Rancher2.dll</h6>
+  <h5 id="Pulumi_Rancher2_AuthConfigFreeIpa_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class AuthConfigFreeIpa : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigFreeIpa.cs/#L208">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_AuthConfigFreeIpa__ctor_" data-uid="Pulumi.Rancher2.AuthConfigFreeIpa.#ctor*"></a>
+  <h4 id="Pulumi_Rancher2_AuthConfigFreeIpa__ctor_System_String_Pulumi_Rancher2_AuthConfigFreeIpaArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Rancher2.AuthConfigFreeIpa.#ctor(System.String,Pulumi.Rancher2.AuthConfigFreeIpaArgs,System.Nullable{CustomResourceOptions})">AuthConfigFreeIpa(String, AuthConfigFreeIpaArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Create a AuthConfigFreeIpa resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AuthConfigFreeIpa(string name, AuthConfigFreeIpaArgs args, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Rancher2.AuthConfigFreeIpaArgs.html">AuthConfigFreeIpaArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigFreeIpa.cs/#L23">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_AuthConfigFreeIpa_AccessMode_" data-uid="Pulumi.Rancher2.AuthConfigFreeIpa.AccessMode*"></a>
+  <h4 id="Pulumi_Rancher2_AuthConfigFreeIpa_AccessMode" data-uid="Pulumi.Rancher2.AuthConfigFreeIpa.AccessMode">AccessMode</h4>
+  <div class="markdown level1 summary"><p>Access mode for auth. <code>required</code>, <code>restricted</code>, <code>unrestricted</code> are supported. Default <code>unrestricted</code> (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; AccessMode { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigFreeIpa.cs/#L29">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_AuthConfigFreeIpa_AllowedPrincipalIds_" data-uid="Pulumi.Rancher2.AuthConfigFreeIpa.AllowedPrincipalIds*"></a>
+  <h4 id="Pulumi_Rancher2_AuthConfigFreeIpa_AllowedPrincipalIds" data-uid="Pulumi.Rancher2.AuthConfigFreeIpa.AllowedPrincipalIds">AllowedPrincipalIds</h4>
+  <div class="markdown level1 summary"><p>Allowed principal ids for auth. Required if <code>access_mode</code> is <code>required</code> or <code>restricted</code>. Ex: <code>freeipa_user://&amp;lt;DN&gt;</code>  <code>freeipa_group://&amp;lt;DN&gt;</code> (list)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; AllowedPrincipalIds { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigFreeIpa.cs/#L35">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_AuthConfigFreeIpa_Annotations_" data-uid="Pulumi.Rancher2.AuthConfigFreeIpa.Annotations*"></a>
+  <h4 id="Pulumi_Rancher2_AuthConfigFreeIpa_Annotations" data-uid="Pulumi.Rancher2.AuthConfigFreeIpa.Annotations">Annotations</h4>
+  <div class="markdown level1 summary"><p>Annotations of the resource (map)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Annotations { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigFreeIpa.cs/#L41">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_AuthConfigFreeIpa_Certificate_" data-uid="Pulumi.Rancher2.AuthConfigFreeIpa.Certificate*"></a>
+  <h4 id="Pulumi_Rancher2_AuthConfigFreeIpa_Certificate" data-uid="Pulumi.Rancher2.AuthConfigFreeIpa.Certificate">Certificate</h4>
+  <div class="markdown level1 summary"><p>Base64 encoded CA certificate for TLS if self-signed. Use filebase64(&lt;FILE&gt;) for encoding file (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Certificate { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigFreeIpa.cs/#L47">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_AuthConfigFreeIpa_ConnectionTimeout_" data-uid="Pulumi.Rancher2.AuthConfigFreeIpa.ConnectionTimeout*"></a>
+  <h4 id="Pulumi_Rancher2_AuthConfigFreeIpa_ConnectionTimeout" data-uid="Pulumi.Rancher2.AuthConfigFreeIpa.ConnectionTimeout">ConnectionTimeout</h4>
+  <div class="markdown level1 summary"><p>FreeIpa connection timeout. Default <code>5000</code> (int)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; ConnectionTimeout { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigFreeIpa.cs/#L53">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_AuthConfigFreeIpa_Enabled_" data-uid="Pulumi.Rancher2.AuthConfigFreeIpa.Enabled*"></a>
+  <h4 id="Pulumi_Rancher2_AuthConfigFreeIpa_Enabled" data-uid="Pulumi.Rancher2.AuthConfigFreeIpa.Enabled">Enabled</h4>
+  <div class="markdown level1 summary"><p>Enable auth config provider. Default <code>true</code> (bool)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; Enabled { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigFreeIpa.cs/#L59">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_AuthConfigFreeIpa_GroupDnAttribute_" data-uid="Pulumi.Rancher2.AuthConfigFreeIpa.GroupDnAttribute*"></a>
+  <h4 id="Pulumi_Rancher2_AuthConfigFreeIpa_GroupDnAttribute" data-uid="Pulumi.Rancher2.AuthConfigFreeIpa.GroupDnAttribute">GroupDnAttribute</h4>
+  <div class="markdown level1 summary"><p>Group DN attribute. Default <code>entryDN</code> (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; GroupDnAttribute { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigFreeIpa.cs/#L65">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_AuthConfigFreeIpa_GroupMemberMappingAttribute_" data-uid="Pulumi.Rancher2.AuthConfigFreeIpa.GroupMemberMappingAttribute*"></a>
+  <h4 id="Pulumi_Rancher2_AuthConfigFreeIpa_GroupMemberMappingAttribute" data-uid="Pulumi.Rancher2.AuthConfigFreeIpa.GroupMemberMappingAttribute">GroupMemberMappingAttribute</h4>
+  <div class="markdown level1 summary"><p>Group member mapping attribute. Default <code>member</code> (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; GroupMemberMappingAttribute { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigFreeIpa.cs/#L71">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_AuthConfigFreeIpa_GroupMemberUserAttribute_" data-uid="Pulumi.Rancher2.AuthConfigFreeIpa.GroupMemberUserAttribute*"></a>
+  <h4 id="Pulumi_Rancher2_AuthConfigFreeIpa_GroupMemberUserAttribute" data-uid="Pulumi.Rancher2.AuthConfigFreeIpa.GroupMemberUserAttribute">GroupMemberUserAttribute</h4>
+  <div class="markdown level1 summary"><p>Group member user attribute. Default <code>entryDN</code> (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; GroupMemberUserAttribute { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigFreeIpa.cs/#L77">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_AuthConfigFreeIpa_GroupNameAttribute_" data-uid="Pulumi.Rancher2.AuthConfigFreeIpa.GroupNameAttribute*"></a>
+  <h4 id="Pulumi_Rancher2_AuthConfigFreeIpa_GroupNameAttribute" data-uid="Pulumi.Rancher2.AuthConfigFreeIpa.GroupNameAttribute">GroupNameAttribute</h4>
+  <div class="markdown level1 summary"><p>Group name attribute. Default <code>cn</code> (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; GroupNameAttribute { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigFreeIpa.cs/#L83">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_AuthConfigFreeIpa_GroupObjectClass_" data-uid="Pulumi.Rancher2.AuthConfigFreeIpa.GroupObjectClass*"></a>
+  <h4 id="Pulumi_Rancher2_AuthConfigFreeIpa_GroupObjectClass" data-uid="Pulumi.Rancher2.AuthConfigFreeIpa.GroupObjectClass">GroupObjectClass</h4>
+  <div class="markdown level1 summary"><p>Group object class. Default <code>groupOfNames</code> (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; GroupObjectClass { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigFreeIpa.cs/#L89">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_AuthConfigFreeIpa_GroupSearchAttribute_" data-uid="Pulumi.Rancher2.AuthConfigFreeIpa.GroupSearchAttribute*"></a>
+  <h4 id="Pulumi_Rancher2_AuthConfigFreeIpa_GroupSearchAttribute" data-uid="Pulumi.Rancher2.AuthConfigFreeIpa.GroupSearchAttribute">GroupSearchAttribute</h4>
+  <div class="markdown level1 summary"><p>Group search attribute. Default <code>cn</code> (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; GroupSearchAttribute { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigFreeIpa.cs/#L95">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_AuthConfigFreeIpa_GroupSearchBase_" data-uid="Pulumi.Rancher2.AuthConfigFreeIpa.GroupSearchBase*"></a>
+  <h4 id="Pulumi_Rancher2_AuthConfigFreeIpa_GroupSearchBase" data-uid="Pulumi.Rancher2.AuthConfigFreeIpa.GroupSearchBase">GroupSearchBase</h4>
+  <div class="markdown level1 summary"><p>Group search base (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; GroupSearchBase { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigFreeIpa.cs/#L101">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_AuthConfigFreeIpa_Labels_" data-uid="Pulumi.Rancher2.AuthConfigFreeIpa.Labels*"></a>
+  <h4 id="Pulumi_Rancher2_AuthConfigFreeIpa_Labels" data-uid="Pulumi.Rancher2.AuthConfigFreeIpa.Labels">Labels</h4>
+  <div class="markdown level1 summary"><p>Labels of the resource (map)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Labels { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigFreeIpa.cs/#L107">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_AuthConfigFreeIpa_Name_" data-uid="Pulumi.Rancher2.AuthConfigFreeIpa.Name*"></a>
+  <h4 id="Pulumi_Rancher2_AuthConfigFreeIpa_Name" data-uid="Pulumi.Rancher2.AuthConfigFreeIpa.Name">Name</h4>
+  <div class="markdown level1 summary"><p>(Computed) The name of the resource (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigFreeIpa.cs/#L113">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_AuthConfigFreeIpa_NestedGroupMembershipEnabled_" data-uid="Pulumi.Rancher2.AuthConfigFreeIpa.NestedGroupMembershipEnabled*"></a>
+  <h4 id="Pulumi_Rancher2_AuthConfigFreeIpa_NestedGroupMembershipEnabled" data-uid="Pulumi.Rancher2.AuthConfigFreeIpa.NestedGroupMembershipEnabled">NestedGroupMembershipEnabled</h4>
+  <div class="markdown level1 summary"><p>Nested group membership enable. Default <code>false</code> (bool)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; NestedGroupMembershipEnabled { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigFreeIpa.cs/#L119">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_AuthConfigFreeIpa_Port_" data-uid="Pulumi.Rancher2.AuthConfigFreeIpa.Port*"></a>
+  <h4 id="Pulumi_Rancher2_AuthConfigFreeIpa_Port" data-uid="Pulumi.Rancher2.AuthConfigFreeIpa.Port">Port</h4>
+  <div class="markdown level1 summary"><p>FreeIpa port. Default <code>389</code> (int)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; Port { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigFreeIpa.cs/#L125">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_AuthConfigFreeIpa_Servers_" data-uid="Pulumi.Rancher2.AuthConfigFreeIpa.Servers*"></a>
+  <h4 id="Pulumi_Rancher2_AuthConfigFreeIpa_Servers" data-uid="Pulumi.Rancher2.AuthConfigFreeIpa.Servers">Servers</h4>
+  <div class="markdown level1 summary"><p>FreeIpa servers list (list)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; Servers { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigFreeIpa.cs/#L131">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_AuthConfigFreeIpa_ServiceAccountDistinguishedName_" data-uid="Pulumi.Rancher2.AuthConfigFreeIpa.ServiceAccountDistinguishedName*"></a>
+  <h4 id="Pulumi_Rancher2_AuthConfigFreeIpa_ServiceAccountDistinguishedName" data-uid="Pulumi.Rancher2.AuthConfigFreeIpa.ServiceAccountDistinguishedName">ServiceAccountDistinguishedName</h4>
+  <div class="markdown level1 summary"><p>Service account DN for access FreeIpa service (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ServiceAccountDistinguishedName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigFreeIpa.cs/#L137">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_AuthConfigFreeIpa_ServiceAccountPassword_" data-uid="Pulumi.Rancher2.AuthConfigFreeIpa.ServiceAccountPassword*"></a>
+  <h4 id="Pulumi_Rancher2_AuthConfigFreeIpa_ServiceAccountPassword" data-uid="Pulumi.Rancher2.AuthConfigFreeIpa.ServiceAccountPassword">ServiceAccountPassword</h4>
+  <div class="markdown level1 summary"><p>Service account password for access FreeIpa service (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ServiceAccountPassword { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigFreeIpa.cs/#L143">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_AuthConfigFreeIpa_Tls_" data-uid="Pulumi.Rancher2.AuthConfigFreeIpa.Tls*"></a>
+  <h4 id="Pulumi_Rancher2_AuthConfigFreeIpa_Tls" data-uid="Pulumi.Rancher2.AuthConfigFreeIpa.Tls">Tls</h4>
+  <div class="markdown level1 summary"><p>Enable TLS connection (bool)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; Tls { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigFreeIpa.cs/#L149">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_AuthConfigFreeIpa_Type_" data-uid="Pulumi.Rancher2.AuthConfigFreeIpa.Type*"></a>
+  <h4 id="Pulumi_Rancher2_AuthConfigFreeIpa_Type" data-uid="Pulumi.Rancher2.AuthConfigFreeIpa.Type">Type</h4>
+  <div class="markdown level1 summary"><p>(Computed) The type of the resource (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Type { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigFreeIpa.cs/#L155">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_AuthConfigFreeIpa_UserDisabledBitMask_" data-uid="Pulumi.Rancher2.AuthConfigFreeIpa.UserDisabledBitMask*"></a>
+  <h4 id="Pulumi_Rancher2_AuthConfigFreeIpa_UserDisabledBitMask" data-uid="Pulumi.Rancher2.AuthConfigFreeIpa.UserDisabledBitMask">UserDisabledBitMask</h4>
+  <div class="markdown level1 summary"><p>User disabled bit mask (int)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; UserDisabledBitMask { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigFreeIpa.cs/#L161">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_AuthConfigFreeIpa_UserEnabledAttribute_" data-uid="Pulumi.Rancher2.AuthConfigFreeIpa.UserEnabledAttribute*"></a>
+  <h4 id="Pulumi_Rancher2_AuthConfigFreeIpa_UserEnabledAttribute" data-uid="Pulumi.Rancher2.AuthConfigFreeIpa.UserEnabledAttribute">UserEnabledAttribute</h4>
+  <div class="markdown level1 summary"><p>User enable attribute (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; UserEnabledAttribute { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigFreeIpa.cs/#L167">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_AuthConfigFreeIpa_UserLoginAttribute_" data-uid="Pulumi.Rancher2.AuthConfigFreeIpa.UserLoginAttribute*"></a>
+  <h4 id="Pulumi_Rancher2_AuthConfigFreeIpa_UserLoginAttribute" data-uid="Pulumi.Rancher2.AuthConfigFreeIpa.UserLoginAttribute">UserLoginAttribute</h4>
+  <div class="markdown level1 summary"><p>User login attribute. Default <code>uid</code> (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; UserLoginAttribute { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigFreeIpa.cs/#L173">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_AuthConfigFreeIpa_UserMemberAttribute_" data-uid="Pulumi.Rancher2.AuthConfigFreeIpa.UserMemberAttribute*"></a>
+  <h4 id="Pulumi_Rancher2_AuthConfigFreeIpa_UserMemberAttribute" data-uid="Pulumi.Rancher2.AuthConfigFreeIpa.UserMemberAttribute">UserMemberAttribute</h4>
+  <div class="markdown level1 summary"><p>User member attribute. Default <code>memberOf</code> (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; UserMemberAttribute { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigFreeIpa.cs/#L179">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_AuthConfigFreeIpa_UserNameAttribute_" data-uid="Pulumi.Rancher2.AuthConfigFreeIpa.UserNameAttribute*"></a>
+  <h4 id="Pulumi_Rancher2_AuthConfigFreeIpa_UserNameAttribute" data-uid="Pulumi.Rancher2.AuthConfigFreeIpa.UserNameAttribute">UserNameAttribute</h4>
+  <div class="markdown level1 summary"><p>User name attribute. Default <code>givenName</code> (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; UserNameAttribute { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigFreeIpa.cs/#L185">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_AuthConfigFreeIpa_UserObjectClass_" data-uid="Pulumi.Rancher2.AuthConfigFreeIpa.UserObjectClass*"></a>
+  <h4 id="Pulumi_Rancher2_AuthConfigFreeIpa_UserObjectClass" data-uid="Pulumi.Rancher2.AuthConfigFreeIpa.UserObjectClass">UserObjectClass</h4>
+  <div class="markdown level1 summary"><p>User object class. Default <code>inetorgperson</code> (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; UserObjectClass { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigFreeIpa.cs/#L191">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_AuthConfigFreeIpa_UserSearchAttribute_" data-uid="Pulumi.Rancher2.AuthConfigFreeIpa.UserSearchAttribute*"></a>
+  <h4 id="Pulumi_Rancher2_AuthConfigFreeIpa_UserSearchAttribute" data-uid="Pulumi.Rancher2.AuthConfigFreeIpa.UserSearchAttribute">UserSearchAttribute</h4>
+  <div class="markdown level1 summary"><p>User search attribute. Default <code>uid|sn|givenName</code> (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; UserSearchAttribute { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigFreeIpa.cs/#L197">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_AuthConfigFreeIpa_UserSearchBase_" data-uid="Pulumi.Rancher2.AuthConfigFreeIpa.UserSearchBase*"></a>
+  <h4 id="Pulumi_Rancher2_AuthConfigFreeIpa_UserSearchBase" data-uid="Pulumi.Rancher2.AuthConfigFreeIpa.UserSearchBase">UserSearchBase</h4>
+  <div class="markdown level1 summary"><p>User search base DN (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; UserSearchBase { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigFreeIpa.cs/#L238">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_AuthConfigFreeIpa_Get_" data-uid="Pulumi.Rancher2.AuthConfigFreeIpa.Get*"></a>
+  <h4 id="Pulumi_Rancher2_AuthConfigFreeIpa_Get_System_String_Input_System_String__Pulumi_Rancher2_AuthConfigFreeIpaState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Rancher2.AuthConfigFreeIpa.Get(System.String,Input{System.String},Pulumi.Rancher2.AuthConfigFreeIpaState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, AuthConfigFreeIpaState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Get an existing AuthConfigFreeIpa resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AuthConfigFreeIpa Get(string name, Input&lt;string&gt; id, AuthConfigFreeIpaState state = null, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Rancher2.AuthConfigFreeIpaState.html">AuthConfigFreeIpaState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Rancher2.AuthConfigFreeIpa.html">AuthConfigFreeIpa</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigFreeIpa.cs/#L18" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

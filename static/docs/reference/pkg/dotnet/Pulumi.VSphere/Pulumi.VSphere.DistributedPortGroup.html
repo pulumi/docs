@@ -1,0 +1,1578 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class DistributedPortGroup
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class DistributedPortGroup
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.VSphere.DistributedPortGroup">
+  
+  <h1 id="Pulumi_VSphere_DistributedPortGroup" data-uid="Pulumi.VSphere.DistributedPortGroup" class="text-break">Class DistributedPortGroup
+  </h1>
+  <div class="markdown level0 summary"><p>The <code>vsphere..DistributedPortGroup</code> resource can be used to manage vSphere
+distributed virtual port groups. These port groups are connected to distributed
+virtual switches, which can be managed by the
+<a href="/docs/providers/vsphere/r/distributed_virtual_switch.html"><code>vsphere..DistributedVirtualSwitch</code></a> resource.</p>
+<p>Distributed port groups can be used as networks for virtual machines, allowing
+VMs to use the networking supplied by a distributed virtual switch (DVS), with
+a set of policies that apply to that individual newtork, if desired.</p>
+<p>For an overview on vSphere networking concepts, see <a href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.networking.doc/GUID-2B11DBB8-CB3C-4AFF-8885-EFEA0FC562F4.html">this
+page</a>. For more information on vSphere DVS
+portgroups, see <a href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.networking.doc/GUID-69933F6E-2442-46CF-AA17-1196CB9A0A09.html">this page</a>.</p>
+<blockquote>
+<p><strong>NOTE:</strong> This resource requires vCenter and is not available on direct ESXi
+connections.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/distributed_port_group.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/distributed_port_group.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">DistributedPortGroup</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.VSphere.html">Pulumi.VSphere</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.VSphere.dll</h6>
+  <h5 id="Pulumi_VSphere_DistributedPortGroup_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class DistributedPortGroup : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DistributedPortGroup.cs/#L361">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DistributedPortGroup__ctor_" data-uid="Pulumi.VSphere.DistributedPortGroup.#ctor*"></a>
+  <h4 id="Pulumi_VSphere_DistributedPortGroup__ctor_System_String_Pulumi_VSphere_DistributedPortGroupArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.VSphere.DistributedPortGroup.#ctor(System.String,Pulumi.VSphere.DistributedPortGroupArgs,System.Nullable{CustomResourceOptions})">DistributedPortGroup(String, DistributedPortGroupArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Create a DistributedPortGroup resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DistributedPortGroup(string name, DistributedPortGroupArgs args, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.VSphere.DistributedPortGroupArgs.html">DistributedPortGroupArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DistributedPortGroup.cs/#L39">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DistributedPortGroup_ActiveUplinks_" data-uid="Pulumi.VSphere.DistributedPortGroup.ActiveUplinks*"></a>
+  <h4 id="Pulumi_VSphere_DistributedPortGroup_ActiveUplinks" data-uid="Pulumi.VSphere.DistributedPortGroup.ActiveUplinks">ActiveUplinks</h4>
+  <div class="markdown level1 summary"><p>List of active uplinks used for load balancing, matching the names of the uplinks assigned in the DVS.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; ActiveUplinks { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DistributedPortGroup.cs/#L46">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DistributedPortGroup_AllowForgedTransmits_" data-uid="Pulumi.VSphere.DistributedPortGroup.AllowForgedTransmits*"></a>
+  <h4 id="Pulumi_VSphere_DistributedPortGroup_AllowForgedTransmits" data-uid="Pulumi.VSphere.DistributedPortGroup.AllowForgedTransmits">AllowForgedTransmits</h4>
+  <div class="markdown level1 summary"><p>Controls whether or not the virtual network adapter is allowed to send network traffic with a different MAC
+address than that of its own.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; AllowForgedTransmits { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DistributedPortGroup.cs/#L52">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DistributedPortGroup_AllowMacChanges_" data-uid="Pulumi.VSphere.DistributedPortGroup.AllowMacChanges*"></a>
+  <h4 id="Pulumi_VSphere_DistributedPortGroup_AllowMacChanges" data-uid="Pulumi.VSphere.DistributedPortGroup.AllowMacChanges">AllowMacChanges</h4>
+  <div class="markdown level1 summary"><p>Controls whether or not the Media Access Control (MAC) address can be changed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; AllowMacChanges { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DistributedPortGroup.cs/#L59">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DistributedPortGroup_AllowPromiscuous_" data-uid="Pulumi.VSphere.DistributedPortGroup.AllowPromiscuous*"></a>
+  <h4 id="Pulumi_VSphere_DistributedPortGroup_AllowPromiscuous" data-uid="Pulumi.VSphere.DistributedPortGroup.AllowPromiscuous">AllowPromiscuous</h4>
+  <div class="markdown level1 summary"><p>Enable promiscuous mode on the network. This flag indicates whether or not all traffic is seen on a given
+port.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; AllowPromiscuous { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DistributedPortGroup.cs/#L66">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DistributedPortGroup_AutoExpand_" data-uid="Pulumi.VSphere.DistributedPortGroup.AutoExpand*"></a>
+  <h4 id="Pulumi_VSphere_DistributedPortGroup_AutoExpand" data-uid="Pulumi.VSphere.DistributedPortGroup.AutoExpand">AutoExpand</h4>
+  <div class="markdown level1 summary"><p>Allows the port group to create additional ports
+past the limit specified in <code>number_of_ports</code> if necessary. Default: <code>true</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; AutoExpand { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DistributedPortGroup.cs/#L72">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DistributedPortGroup_BlockAllPorts_" data-uid="Pulumi.VSphere.DistributedPortGroup.BlockAllPorts*"></a>
+  <h4 id="Pulumi_VSphere_DistributedPortGroup_BlockAllPorts" data-uid="Pulumi.VSphere.DistributedPortGroup.BlockAllPorts">BlockAllPorts</h4>
+  <div class="markdown level1 summary"><p>Indicates whether to block all ports by default.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; BlockAllPorts { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DistributedPortGroup.cs/#L79">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DistributedPortGroup_BlockOverrideAllowed_" data-uid="Pulumi.VSphere.DistributedPortGroup.BlockOverrideAllowed*"></a>
+  <h4 id="Pulumi_VSphere_DistributedPortGroup_BlockOverrideAllowed" data-uid="Pulumi.VSphere.DistributedPortGroup.BlockOverrideAllowed">BlockOverrideAllowed</h4>
+  <div class="markdown level1 summary"><p>Allow the [port shutdown
+policy][port-shutdown-policy] to be overridden on an individual port.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; BlockOverrideAllowed { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DistributedPortGroup.cs/#L85">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DistributedPortGroup_CheckBeacon_" data-uid="Pulumi.VSphere.DistributedPortGroup.CheckBeacon*"></a>
+  <h4 id="Pulumi_VSphere_DistributedPortGroup_CheckBeacon" data-uid="Pulumi.VSphere.DistributedPortGroup.CheckBeacon">CheckBeacon</h4>
+  <div class="markdown level1 summary"><p>Enable beacon probing on the ports this policy applies to.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; CheckBeacon { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DistributedPortGroup.cs/#L91">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DistributedPortGroup_ConfigVersion_" data-uid="Pulumi.VSphere.DistributedPortGroup.ConfigVersion*"></a>
+  <h4 id="Pulumi_VSphere_DistributedPortGroup_ConfigVersion" data-uid="Pulumi.VSphere.DistributedPortGroup.ConfigVersion">ConfigVersion</h4>
+  <div class="markdown level1 summary"><p>Version string of the configuration that this spec is trying to change.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ConfigVersion { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DistributedPortGroup.cs/#L99">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DistributedPortGroup_CustomAttributes_" data-uid="Pulumi.VSphere.DistributedPortGroup.CustomAttributes*"></a>
+  <h4 id="Pulumi_VSphere_DistributedPortGroup_CustomAttributes" data-uid="Pulumi.VSphere.DistributedPortGroup.CustomAttributes">CustomAttributes</h4>
+  <div class="markdown level1 summary"><p>Map of custom attribute ids to attribute
+value string to set for port group. See [here][docs-setting-custom-attributes]
+for a reference on how to set values for custom attributes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;?&gt; CustomAttributes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DistributedPortGroup.cs/#L105">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DistributedPortGroup_Description_" data-uid="Pulumi.VSphere.DistributedPortGroup.Description*"></a>
+  <h4 id="Pulumi_VSphere_DistributedPortGroup_Description" data-uid="Pulumi.VSphere.DistributedPortGroup.Description">Description</h4>
+  <div class="markdown level1 summary"><p>An optional description for the port group.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DistributedPortGroup.cs/#L111">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DistributedPortGroup_DirectpathGen2Allowed_" data-uid="Pulumi.VSphere.DistributedPortGroup.DirectpathGen2Allowed*"></a>
+  <h4 id="Pulumi_VSphere_DistributedPortGroup_DirectpathGen2Allowed" data-uid="Pulumi.VSphere.DistributedPortGroup.DirectpathGen2Allowed">DirectpathGen2Allowed</h4>
+  <div class="markdown level1 summary"><p>Allow VMDirectPath Gen2 on the ports this policy applies to.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; DirectpathGen2Allowed { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DistributedPortGroup.cs/#L118">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DistributedPortGroup_DistributedVirtualSwitchUuid_" data-uid="Pulumi.VSphere.DistributedPortGroup.DistributedVirtualSwitchUuid*"></a>
+  <h4 id="Pulumi_VSphere_DistributedPortGroup_DistributedVirtualSwitchUuid" data-uid="Pulumi.VSphere.DistributedPortGroup.DistributedVirtualSwitchUuid">DistributedVirtualSwitchUuid</h4>
+  <div class="markdown level1 summary"><p>The ID of the DVS to add the
+port group to. Forces a new resource if changed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DistributedVirtualSwitchUuid { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DistributedPortGroup.cs/#L124">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DistributedPortGroup_EgressShapingAverageBandwidth_" data-uid="Pulumi.VSphere.DistributedPortGroup.EgressShapingAverageBandwidth*"></a>
+  <h4 id="Pulumi_VSphere_DistributedPortGroup_EgressShapingAverageBandwidth" data-uid="Pulumi.VSphere.DistributedPortGroup.EgressShapingAverageBandwidth">EgressShapingAverageBandwidth</h4>
+  <div class="markdown level1 summary"><p>The average egress bandwidth in bits per second if egress shaping is enabled on the port.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; EgressShapingAverageBandwidth { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DistributedPortGroup.cs/#L130">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DistributedPortGroup_EgressShapingBurstSize_" data-uid="Pulumi.VSphere.DistributedPortGroup.EgressShapingBurstSize*"></a>
+  <h4 id="Pulumi_VSphere_DistributedPortGroup_EgressShapingBurstSize" data-uid="Pulumi.VSphere.DistributedPortGroup.EgressShapingBurstSize">EgressShapingBurstSize</h4>
+  <div class="markdown level1 summary"><p>The maximum egress burst size allowed in bytes if egress shaping is enabled on the port.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; EgressShapingBurstSize { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DistributedPortGroup.cs/#L136">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DistributedPortGroup_EgressShapingEnabled_" data-uid="Pulumi.VSphere.DistributedPortGroup.EgressShapingEnabled*"></a>
+  <h4 id="Pulumi_VSphere_DistributedPortGroup_EgressShapingEnabled" data-uid="Pulumi.VSphere.DistributedPortGroup.EgressShapingEnabled">EgressShapingEnabled</h4>
+  <div class="markdown level1 summary"><p>True if the traffic shaper is enabled for egress traffic on the port.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; EgressShapingEnabled { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DistributedPortGroup.cs/#L142">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DistributedPortGroup_EgressShapingPeakBandwidth_" data-uid="Pulumi.VSphere.DistributedPortGroup.EgressShapingPeakBandwidth*"></a>
+  <h4 id="Pulumi_VSphere_DistributedPortGroup_EgressShapingPeakBandwidth" data-uid="Pulumi.VSphere.DistributedPortGroup.EgressShapingPeakBandwidth">EgressShapingPeakBandwidth</h4>
+  <div class="markdown level1 summary"><p>The peak egress bandwidth during bursts in bits per second if egress traffic shaping is enabled on the port.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; EgressShapingPeakBandwidth { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DistributedPortGroup.cs/#L148">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DistributedPortGroup_Failback_" data-uid="Pulumi.VSphere.DistributedPortGroup.Failback*"></a>
+  <h4 id="Pulumi_VSphere_DistributedPortGroup_Failback" data-uid="Pulumi.VSphere.DistributedPortGroup.Failback">Failback</h4>
+  <div class="markdown level1 summary"><p>If true, the teaming policy will re-activate failed interfaces higher in precedence when they come back up.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; Failback { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DistributedPortGroup.cs/#L154">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DistributedPortGroup_IngressShapingAverageBandwidth_" data-uid="Pulumi.VSphere.DistributedPortGroup.IngressShapingAverageBandwidth*"></a>
+  <h4 id="Pulumi_VSphere_DistributedPortGroup_IngressShapingAverageBandwidth" data-uid="Pulumi.VSphere.DistributedPortGroup.IngressShapingAverageBandwidth">IngressShapingAverageBandwidth</h4>
+  <div class="markdown level1 summary"><p>The average ingress bandwidth in bits per second if ingress shaping is enabled on the port.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; IngressShapingAverageBandwidth { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DistributedPortGroup.cs/#L160">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DistributedPortGroup_IngressShapingBurstSize_" data-uid="Pulumi.VSphere.DistributedPortGroup.IngressShapingBurstSize*"></a>
+  <h4 id="Pulumi_VSphere_DistributedPortGroup_IngressShapingBurstSize" data-uid="Pulumi.VSphere.DistributedPortGroup.IngressShapingBurstSize">IngressShapingBurstSize</h4>
+  <div class="markdown level1 summary"><p>The maximum ingress burst size allowed in bytes if ingress shaping is enabled on the port.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; IngressShapingBurstSize { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DistributedPortGroup.cs/#L166">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DistributedPortGroup_IngressShapingEnabled_" data-uid="Pulumi.VSphere.DistributedPortGroup.IngressShapingEnabled*"></a>
+  <h4 id="Pulumi_VSphere_DistributedPortGroup_IngressShapingEnabled" data-uid="Pulumi.VSphere.DistributedPortGroup.IngressShapingEnabled">IngressShapingEnabled</h4>
+  <div class="markdown level1 summary"><p>True if the traffic shaper is enabled for ingress traffic on the port.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; IngressShapingEnabled { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DistributedPortGroup.cs/#L173">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DistributedPortGroup_IngressShapingPeakBandwidth_" data-uid="Pulumi.VSphere.DistributedPortGroup.IngressShapingPeakBandwidth*"></a>
+  <h4 id="Pulumi_VSphere_DistributedPortGroup_IngressShapingPeakBandwidth" data-uid="Pulumi.VSphere.DistributedPortGroup.IngressShapingPeakBandwidth">IngressShapingPeakBandwidth</h4>
+  <div class="markdown level1 summary"><p>The peak ingress bandwidth during bursts in bits per second if ingress traffic shaping is enabled on the
+port.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; IngressShapingPeakBandwidth { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DistributedPortGroup.cs/#L179">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DistributedPortGroup_Key_" data-uid="Pulumi.VSphere.DistributedPortGroup.Key*"></a>
+  <h4 id="Pulumi_VSphere_DistributedPortGroup_Key" data-uid="Pulumi.VSphere.DistributedPortGroup.Key">Key</h4>
+  <div class="markdown level1 summary"><p>The generated UUID of the portgroup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Key { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DistributedPortGroup.cs/#L185">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DistributedPortGroup_LacpEnabled_" data-uid="Pulumi.VSphere.DistributedPortGroup.LacpEnabled*"></a>
+  <h4 id="Pulumi_VSphere_DistributedPortGroup_LacpEnabled" data-uid="Pulumi.VSphere.DistributedPortGroup.LacpEnabled">LacpEnabled</h4>
+  <div class="markdown level1 summary"><p>Whether or not to enable LACP on all uplink ports.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; LacpEnabled { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DistributedPortGroup.cs/#L191">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DistributedPortGroup_LacpMode_" data-uid="Pulumi.VSphere.DistributedPortGroup.LacpMode*"></a>
+  <h4 id="Pulumi_VSphere_DistributedPortGroup_LacpMode" data-uid="Pulumi.VSphere.DistributedPortGroup.LacpMode">LacpMode</h4>
+  <div class="markdown level1 summary"><p>The uplink LACP mode to use. Can be one of active or passive.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; LacpMode { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DistributedPortGroup.cs/#L198">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DistributedPortGroup_LivePortMovingAllowed_" data-uid="Pulumi.VSphere.DistributedPortGroup.LivePortMovingAllowed*"></a>
+  <h4 id="Pulumi_VSphere_DistributedPortGroup_LivePortMovingAllowed" data-uid="Pulumi.VSphere.DistributedPortGroup.LivePortMovingAllowed">LivePortMovingAllowed</h4>
+  <div class="markdown level1 summary"><p>Allow a port in this port group to be
+moved to another port group while it is connected.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; LivePortMovingAllowed { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DistributedPortGroup.cs/#L204">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DistributedPortGroup_Name_" data-uid="Pulumi.VSphere.DistributedPortGroup.Name*"></a>
+  <h4 id="Pulumi_VSphere_DistributedPortGroup_Name" data-uid="Pulumi.VSphere.DistributedPortGroup.Name">Name</h4>
+  <div class="markdown level1 summary"><p>The name of the port group.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DistributedPortGroup.cs/#L210">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DistributedPortGroup_NetflowEnabled_" data-uid="Pulumi.VSphere.DistributedPortGroup.NetflowEnabled*"></a>
+  <h4 id="Pulumi_VSphere_DistributedPortGroup_NetflowEnabled" data-uid="Pulumi.VSphere.DistributedPortGroup.NetflowEnabled">NetflowEnabled</h4>
+  <div class="markdown level1 summary"><p>Indicates whether to enable netflow on all ports.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; NetflowEnabled { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DistributedPortGroup.cs/#L218">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DistributedPortGroup_NetflowOverrideAllowed_" data-uid="Pulumi.VSphere.DistributedPortGroup.NetflowOverrideAllowed*"></a>
+  <h4 id="Pulumi_VSphere_DistributedPortGroup_NetflowOverrideAllowed" data-uid="Pulumi.VSphere.DistributedPortGroup.NetflowOverrideAllowed">NetflowOverrideAllowed</h4>
+  <div class="markdown level1 summary"><p>Allow the [Netflow
+policy][netflow-policy] on this port group to be overridden on an individual
+port.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; NetflowOverrideAllowed { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DistributedPortGroup.cs/#L226">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DistributedPortGroup_NetworkResourcePoolKey_" data-uid="Pulumi.VSphere.DistributedPortGroup.NetworkResourcePoolKey*"></a>
+  <h4 id="Pulumi_VSphere_DistributedPortGroup_NetworkResourcePoolKey" data-uid="Pulumi.VSphere.DistributedPortGroup.NetworkResourcePoolKey">NetworkResourcePoolKey</h4>
+  <div class="markdown level1 summary"><p>The key of a network resource pool
+to associate with this port group. The default is <code>-1</code>, which implies no
+association.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; NetworkResourcePoolKey { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DistributedPortGroup.cs/#L233">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DistributedPortGroup_NetworkResourcePoolOverrideAllowed_" data-uid="Pulumi.VSphere.DistributedPortGroup.NetworkResourcePoolOverrideAllowed*"></a>
+  <h4 id="Pulumi_VSphere_DistributedPortGroup_NetworkResourcePoolOverrideAllowed" data-uid="Pulumi.VSphere.DistributedPortGroup.NetworkResourcePoolOverrideAllowed">NetworkResourcePoolOverrideAllowed</h4>
+  <div class="markdown level1 summary"><p>Allow the network
+resource pool set on this port group to be overridden on an individual port.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; NetworkResourcePoolOverrideAllowed { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DistributedPortGroup.cs/#L239">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DistributedPortGroup_NotifySwitches_" data-uid="Pulumi.VSphere.DistributedPortGroup.NotifySwitches*"></a>
+  <h4 id="Pulumi_VSphere_DistributedPortGroup_NotifySwitches" data-uid="Pulumi.VSphere.DistributedPortGroup.NotifySwitches">NotifySwitches</h4>
+  <div class="markdown level1 summary"><p>If true, the teaming policy will notify the broadcast network of a NIC failover, triggering cache updates.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; NotifySwitches { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DistributedPortGroup.cs/#L246">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DistributedPortGroup_NumberOfPorts_" data-uid="Pulumi.VSphere.DistributedPortGroup.NumberOfPorts*"></a>
+  <h4 id="Pulumi_VSphere_DistributedPortGroup_NumberOfPorts" data-uid="Pulumi.VSphere.DistributedPortGroup.NumberOfPorts">NumberOfPorts</h4>
+  <div class="markdown level1 summary"><p>The number of ports available on this port
+group. Cannot be decreased below the amount of used ports on the port group.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; NumberOfPorts { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DistributedPortGroup.cs/#L253">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DistributedPortGroup_PortConfigResetAtDisconnect_" data-uid="Pulumi.VSphere.DistributedPortGroup.PortConfigResetAtDisconnect*"></a>
+  <h4 id="Pulumi_VSphere_DistributedPortGroup_PortConfigResetAtDisconnect" data-uid="Pulumi.VSphere.DistributedPortGroup.PortConfigResetAtDisconnect">PortConfigResetAtDisconnect</h4>
+  <div class="markdown level1 summary"><p>Reset a port's settings to the
+settings defined on this port group policy when the port disconnects.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; PortConfigResetAtDisconnect { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DistributedPortGroup.cs/#L261">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DistributedPortGroup_PortNameFormat_" data-uid="Pulumi.VSphere.DistributedPortGroup.PortNameFormat*"></a>
+  <h4 id="Pulumi_VSphere_DistributedPortGroup_PortNameFormat" data-uid="Pulumi.VSphere.DistributedPortGroup.PortNameFormat">PortNameFormat</h4>
+  <div class="markdown level1 summary"><p>An optional formatting policy for naming of
+the ports in this port group. See the <code>portNameFormat</code> attribute listed
+[here][ext-vsphere-portname-format] for details on the format syntax.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; PortNameFormat { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DistributedPortGroup.cs/#L267">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DistributedPortGroup_PortPrivateSecondaryVlanId_" data-uid="Pulumi.VSphere.DistributedPortGroup.PortPrivateSecondaryVlanId*"></a>
+  <h4 id="Pulumi_VSphere_DistributedPortGroup_PortPrivateSecondaryVlanId" data-uid="Pulumi.VSphere.DistributedPortGroup.PortPrivateSecondaryVlanId">PortPrivateSecondaryVlanId</h4>
+  <div class="markdown level1 summary"><p>The secondary VLAN ID for this port.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; PortPrivateSecondaryVlanId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DistributedPortGroup.cs/#L275">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DistributedPortGroup_SecurityPolicyOverrideAllowed_" data-uid="Pulumi.VSphere.DistributedPortGroup.SecurityPolicyOverrideAllowed*"></a>
+  <h4 id="Pulumi_VSphere_DistributedPortGroup_SecurityPolicyOverrideAllowed" data-uid="Pulumi.VSphere.DistributedPortGroup.SecurityPolicyOverrideAllowed">SecurityPolicyOverrideAllowed</h4>
+  <div class="markdown level1 summary"><p>Allow the [security policy
+settings][sec-policy-settings] defined in this port group policy to be
+overridden on an individual port.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; SecurityPolicyOverrideAllowed { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DistributedPortGroup.cs/#L283">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DistributedPortGroup_ShapingOverrideAllowed_" data-uid="Pulumi.VSphere.DistributedPortGroup.ShapingOverrideAllowed*"></a>
+  <h4 id="Pulumi_VSphere_DistributedPortGroup_ShapingOverrideAllowed" data-uid="Pulumi.VSphere.DistributedPortGroup.ShapingOverrideAllowed">ShapingOverrideAllowed</h4>
+  <div class="markdown level1 summary"><p>Allow the [traffic shaping
+options][traffic-shaping-settings] on this port group policy to be overridden
+on an individual port.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; ShapingOverrideAllowed { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DistributedPortGroup.cs/#L289">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DistributedPortGroup_StandbyUplinks_" data-uid="Pulumi.VSphere.DistributedPortGroup.StandbyUplinks*"></a>
+  <h4 id="Pulumi_VSphere_DistributedPortGroup_StandbyUplinks" data-uid="Pulumi.VSphere.DistributedPortGroup.StandbyUplinks">StandbyUplinks</h4>
+  <div class="markdown level1 summary"><p>List of active uplinks used for load balancing, matching the names of the uplinks assigned in the DVS.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; StandbyUplinks { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DistributedPortGroup.cs/#L295">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DistributedPortGroup_Tags_" data-uid="Pulumi.VSphere.DistributedPortGroup.Tags*"></a>
+  <h4 id="Pulumi_VSphere_DistributedPortGroup_Tags" data-uid="Pulumi.VSphere.DistributedPortGroup.Tags">Tags</h4>
+  <div class="markdown level1 summary"><p>A list of tag IDs to apply to this object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; Tags { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DistributedPortGroup.cs/#L302">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DistributedPortGroup_TeamingPolicy_" data-uid="Pulumi.VSphere.DistributedPortGroup.TeamingPolicy*"></a>
+  <h4 id="Pulumi_VSphere_DistributedPortGroup_TeamingPolicy" data-uid="Pulumi.VSphere.DistributedPortGroup.TeamingPolicy">TeamingPolicy</h4>
+  <div class="markdown level1 summary"><p>The network adapter teaming policy. Can be one of loadbalance_ip, loadbalance_srcmac, loadbalance_srcid,
+failover_explicit, or loadbalance_loadbased.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; TeamingPolicy { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DistributedPortGroup.cs/#L309">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DistributedPortGroup_TrafficFilterOverrideAllowed_" data-uid="Pulumi.VSphere.DistributedPortGroup.TrafficFilterOverrideAllowed*"></a>
+  <h4 id="Pulumi_VSphere_DistributedPortGroup_TrafficFilterOverrideAllowed" data-uid="Pulumi.VSphere.DistributedPortGroup.TrafficFilterOverrideAllowed">TrafficFilterOverrideAllowed</h4>
+  <div class="markdown level1 summary"><p>Allow any traffic filters on
+this port group to be overridden on an individual port.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; TrafficFilterOverrideAllowed { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DistributedPortGroup.cs/#L316">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DistributedPortGroup_TxUplink_" data-uid="Pulumi.VSphere.DistributedPortGroup.TxUplink*"></a>
+  <h4 id="Pulumi_VSphere_DistributedPortGroup_TxUplink" data-uid="Pulumi.VSphere.DistributedPortGroup.TxUplink">TxUplink</h4>
+  <div class="markdown level1 summary"><p>If true, a copy of packets sent to the switch will always be forwarded to an uplink in addition to the
+regular packet forwarded done by the switch.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; TxUplink { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DistributedPortGroup.cs/#L323">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DistributedPortGroup_Type_" data-uid="Pulumi.VSphere.DistributedPortGroup.Type*"></a>
+  <h4 id="Pulumi_VSphere_DistributedPortGroup_Type" data-uid="Pulumi.VSphere.DistributedPortGroup.Type">Type</h4>
+  <div class="markdown level1 summary"><p>The port group type. Can be one of <code>earlyBinding</code> (static
+binding) or <code>ephemeral</code>. Default: <code>earlyBinding</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Type { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DistributedPortGroup.cs/#L331">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DistributedPortGroup_UplinkTeamingOverrideAllowed_" data-uid="Pulumi.VSphere.DistributedPortGroup.UplinkTeamingOverrideAllowed*"></a>
+  <h4 id="Pulumi_VSphere_DistributedPortGroup_UplinkTeamingOverrideAllowed" data-uid="Pulumi.VSphere.DistributedPortGroup.UplinkTeamingOverrideAllowed">UplinkTeamingOverrideAllowed</h4>
+  <div class="markdown level1 summary"><p>Allow the [uplink teaming
+options][uplink-teaming-settings] on this port group to be overridden on an
+individual port.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; UplinkTeamingOverrideAllowed { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DistributedPortGroup.cs/#L337">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DistributedPortGroup_VlanId_" data-uid="Pulumi.VSphere.DistributedPortGroup.VlanId*"></a>
+  <h4 id="Pulumi_VSphere_DistributedPortGroup_VlanId" data-uid="Pulumi.VSphere.DistributedPortGroup.VlanId">VlanId</h4>
+  <div class="markdown level1 summary"><p>The VLAN ID for single VLAN mode. 0 denotes no VLAN.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; VlanId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DistributedPortGroup.cs/#L344">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DistributedPortGroup_VlanOverrideAllowed_" data-uid="Pulumi.VSphere.DistributedPortGroup.VlanOverrideAllowed*"></a>
+  <h4 id="Pulumi_VSphere_DistributedPortGroup_VlanOverrideAllowed" data-uid="Pulumi.VSphere.DistributedPortGroup.VlanOverrideAllowed">VlanOverrideAllowed</h4>
+  <div class="markdown level1 summary"><p>Allow the [VLAN settings][vlan-settings]
+on this port group to be overridden on an individual port.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; VlanOverrideAllowed { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DistributedPortGroup.cs/#L350">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DistributedPortGroup_VlanRanges_" data-uid="Pulumi.VSphere.DistributedPortGroup.VlanRanges*"></a>
+  <h4 id="Pulumi_VSphere_DistributedPortGroup_VlanRanges" data-uid="Pulumi.VSphere.DistributedPortGroup.VlanRanges">VlanRanges</h4>
+  <div class="markdown level1 summary"><p>The VLAN ID for single VLAN mode. 0 denotes no VLAN.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;DistributedPortGroupVlanRanges&gt;&gt; VlanRanges { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.VSphere.Outputs.DistributedPortGroupVlanRanges.html">DistributedPortGroupVlanRanges</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DistributedPortGroup.cs/#L391">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DistributedPortGroup_Get_" data-uid="Pulumi.VSphere.DistributedPortGroup.Get*"></a>
+  <h4 id="Pulumi_VSphere_DistributedPortGroup_Get_System_String_Input_System_String__Pulumi_VSphere_DistributedPortGroupState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.VSphere.DistributedPortGroup.Get(System.String,Input{System.String},Pulumi.VSphere.DistributedPortGroupState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, DistributedPortGroupState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Get an existing DistributedPortGroup resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static DistributedPortGroup Get(string name, Input&lt;string&gt; id, DistributedPortGroupState state = null, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.VSphere.DistributedPortGroupState.html">DistributedPortGroupState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.VSphere.DistributedPortGroup.html">DistributedPortGroup</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DistributedPortGroup.cs/#L34" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1228 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ClusterTemplate
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ClusterTemplate
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate">
+  
+  <h1 id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate" class="text-break">Class ClusterTemplate
+  </h1>
+  <div class="markdown level0 summary"><p>Manages a V1 Magnum cluster template resource within OpenStack.</p>
+<h2 id="argument-reference">Argument reference</h2>
+<p>The following arguments are supported:</p>
+<ul>
+<li><p><code>region</code> - (Optional) The region in which to obtain the V1 Container Infra
+client. A Container Infra client is needed to create a cluster template. If
+omitted,the <code>region</code> argument of the provider is used. Changing this
+creates a new cluster template.</p>
+</li>
+<li><p><code>name</code> - (Required) The name of the cluster template. Changing this updates
+the name of the existing cluster template.</p>
+</li>
+<li><p><code>project_id</code> - (Optional) The project of the cluster template. Required if
+admin wants to create a cluster template in another project. Changing this
+creates a new cluster template.</p>
+</li>
+<li><p><code>user_id</code> - (Optional) The user of the cluster template. Required if admin
+wants to create a cluster template for another user. Changing this creates
+a new cluster template.</p>
+</li>
+<li><p><code>apiserver_port</code> - (Optional) The API server port for the Container
+Orchestration Engine for this cluster template. Changing this updates the
+API server port of the existing cluster template.</p>
+</li>
+<li><p><code>coe</code> - (Required) The Container Orchestration Engine for this cluster
+template. Changing this updates the engine of the existing cluster
+template.</p>
+</li>
+<li><p><code>cluster_distro</code> - (Optional) The distro for the cluster (fedora-atomic,
+coreos, etc.). Changing this updates the cluster distro of the existing
+cluster template.</p>
+</li>
+<li><p><code>dns_nameserver</code> - (Optional) Address of the DNS nameserver that is used in
+nodes of the cluster. Changing this updates the DNS nameserver of the
+existing cluster template.</p>
+</li>
+<li><p><code>docker_storage_driver</code> - (Optional) Docker storage driver. Changing this
+updates the Docker storage driver of the existing cluster template.</p>
+</li>
+<li><p><code>docker_volume_size</code> - (Optional) The size (in GB) of the Docker volume.
+Changing this updates the Docker volume size of the existing cluster
+template.</p>
+</li>
+<li><p><code>external_network_id</code> - (Optional) The ID of the external network that will
+be used for the cluster. Changing this updates the external network ID of
+the existing cluster template.</p>
+</li>
+<li><p><code>fixed_network</code> - (Optional) The fixed network that will be attached to the
+cluster. Changing this updates the fixed network of the existing cluster
+template.</p>
+</li>
+<li><p><code>fixed_subnet</code> - (Optional) The fixed subnet that will be attached to the
+cluster. Changing this updates the fixed subnet of the existing cluster
+template.</p>
+</li>
+<li><p><code>flavor</code> - (Optional) The flavor for the nodes of the cluster. Can be set via
+the <code>OS_MAGNUM_FLAVOR</code> environment variable. Changing this updates the
+flavor of the existing cluster template.</p>
+</li>
+<li><p><code>master_flavor</code> - (Optional) The flavor for the master nodes. Can be set via
+the <code>OS_MAGNUM_MASTER_FLAVOR</code> environment variable. Changing this updates
+the master flavor of the existing cluster template.</p>
+</li>
+<li><p><code>floating_ip_enabled</code> - (Optional) Indicates whether created cluster should
+create floating IP for every node or not. Changing this updates the
+floating IP enabled attribute of the existing cluster template.</p>
+</li>
+<li><p><code>http_proxy</code> - (Optional) The address of a proxy for receiving all HTTP
+requests and relay them. Changing this updates the HTTP proxy address of
+the existing cluster template.</p>
+</li>
+<li><p><code>https_proxy</code> - (Optional) The address of a proxy for receiving all HTTPS
+requests and relay them. Changing this updates the HTTPS proxy address of
+the existing cluster template.</p>
+</li>
+<li><p><code>image</code> - (Required) The reference to an image that is used for nodes of the
+cluster. Can be set via the <code>OS_MAGNUM_IMAGE</code> environment variable.
+Changing this updates the image attribute of the existing cluster template.</p>
+</li>
+<li><p><code>insecure_registry</code> - (Optional) The insecure registry URL for the cluster
+template. Changing this updates the insecure registry attribute of the
+existing cluster template.</p>
+</li>
+<li><p><code>keypair_id</code> - (Optional) The name of the Compute service SSH keypair.
+Changing this updates the keypair of the existing cluster template.</p>
+</li>
+<li><p><code>labels</code> - (Optional) The list of key value pairs representing additional
+properties of the cluster template. Changing this updates the labels of the
+existing cluster template.</p>
+</li>
+<li><p><code>master_lb_enabled</code> - (Optional) Indicates whether created cluster should
+has a loadbalancer for master nodes or not. Changing this updates the
+attribute of the existing cluster template.</p>
+</li>
+<li><p><code>network_driver</code> - (Optional) The name of the driver for the container
+network. Changing this updates the network driver of the existing cluster
+template.</p>
+</li>
+<li><p><code>no_proxy</code> - (Optional) A comma-separated list of IP addresses that shouldn't
+be used in the cluster. Changing this updates the no proxy list of the
+existing cluster template.</p>
+</li>
+<li><p><code>public</code> - (Optional) Indicates whether cluster template should be public.
+Changing this updates the public attribute of the existing cluster
+template.</p>
+</li>
+<li><p><code>registry_enabled</code> - (Optional) Indicates whether Docker registry is enabled
+in the cluster. Changing this updates the registry enabled attribute of the
+existing cluster template.</p>
+</li>
+<li><p><code>server_type</code> - (Optional) The server type for the cluster template. Changing
+this updates the server type of the existing cluster template.</p>
+</li>
+<li><p><code>tls_disabled</code> - (Optional) Indicates whether the TLS should be disabled in
+the cluster. Changing this updates the attribute of the existing cluster.</p>
+</li>
+<li><p><code>volume_driver</code> - (Optional) The name of the driver that is used for the
+volumes of the cluster nodes. Changing this updates the volume driver of
+the existing cluster template.</p>
+</li>
+</ul>
+<h2 id="attributes-reference">Attributes reference</h2>
+<p>The following attributes are exported:</p>
+<ul>
+<li><code>region</code> - See Argument Reference above.</li>
+<li><code>name</code> - See Argument Reference above.</li>
+<li><code>project_id</code> - See Argument Reference above.</li>
+<li><code>created_at</code> - The time at which cluster template was created.</li>
+<li><code>updated_at</code> - The time at which cluster template was created.</li>
+<li><code>apiserver_port</code> - See Argument Reference above.</li>
+<li><code>coe</code> - See Argument Reference above.</li>
+<li><code>cluster_distro</code> - See Argument Reference above.</li>
+<li><code>dns_nameserver</code> - See Argument Reference above.</li>
+<li><code>docker_storage_driver</code> - See Argument Reference above.</li>
+<li><code>docker_volume_size</code> - See Argument Reference above.</li>
+<li><code>external_network_id</code> - See Argument Reference above.</li>
+<li><code>fixed_network</code> - See Argument Reference above.</li>
+<li><code>fixed_subnet</code> - See Argument Reference above.</li>
+<li><code>flavor</code> - See Argument Reference above.</li>
+<li><code>master_flavor</code> - See Argument Reference above.</li>
+<li><code>floating_ip_enabled</code> - See Argument Reference above.</li>
+<li><code>http_proxy</code> - See Argument Reference above.</li>
+<li><code>https_proxy</code> - See Argument Reference above.</li>
+<li><code>image</code> - See Argument Reference above.</li>
+<li><code>insecure_registry</code> - See Argument Reference above.</li>
+<li><code>keypair_id</code> - See Argument Reference above.</li>
+<li><code>labels</code> - See Argument Reference above.</li>
+<li><code>links</code> - A list containing associated cluster template links.</li>
+<li><code>master_lb_enabled</code> - See Argument Reference above.</li>
+<li><code>network_driver</code> - See Argument Reference above.</li>
+<li><code>no_proxy</code> - See Argument Reference above.</li>
+<li><code>public</code> - See Argument Reference above.</li>
+<li><code>registry_enabled</code> - See Argument Reference above.</li>
+<li><code>server_type</code> - See Argument Reference above.</li>
+<li><code>tls_disabled</code> - See Argument Reference above.</li>
+<li><code>volume_driver</code> - See Argument Reference above.</li>
+</ul>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/containerinfra_clustertemplate_v1.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/containerinfra_clustertemplate_v1.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">ClusterTemplate</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.OpenStack.ContainerInfra.html">Pulumi.OpenStack.ContainerInfra</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.OpenStack.dll</h6>
+  <h5 id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ClusterTemplate : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Containerinfra/ClusterTemplate.cs/#L279">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate__ctor_" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.#ctor*"></a>
+  <h4 id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate__ctor_System_String_Pulumi_OpenStack_ContainerInfra_ClusterTemplateArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.#ctor(System.String,Pulumi.OpenStack.ContainerInfra.ClusterTemplateArgs,System.Nullable{CustomResourceOptions})">ClusterTemplate(String, ClusterTemplateArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Create a ClusterTemplate resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ClusterTemplate(string name, ClusterTemplateArgs args, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.OpenStack.ContainerInfra.ClusterTemplateArgs.html">ClusterTemplateArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Containerinfra/ClusterTemplate.cs/#L175">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate_ApiserverPort_" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.ApiserverPort*"></a>
+  <h4 id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate_ApiserverPort" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.ApiserverPort">ApiserverPort</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; ApiserverPort { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Containerinfra/ClusterTemplate.cs/#L178">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate_ClusterDistro_" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.ClusterDistro*"></a>
+  <h4 id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate_ClusterDistro" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.ClusterDistro">ClusterDistro</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ClusterDistro { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Containerinfra/ClusterTemplate.cs/#L181">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate_Coe_" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.Coe*"></a>
+  <h4 id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate_Coe" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.Coe">Coe</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Coe { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Containerinfra/ClusterTemplate.cs/#L184">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate_CreatedAt_" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.CreatedAt*"></a>
+  <h4 id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate_CreatedAt" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.CreatedAt">CreatedAt</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; CreatedAt { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Containerinfra/ClusterTemplate.cs/#L187">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate_DnsNameserver_" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.DnsNameserver*"></a>
+  <h4 id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate_DnsNameserver" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.DnsNameserver">DnsNameserver</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; DnsNameserver { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Containerinfra/ClusterTemplate.cs/#L190">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate_DockerStorageDriver_" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.DockerStorageDriver*"></a>
+  <h4 id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate_DockerStorageDriver" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.DockerStorageDriver">DockerStorageDriver</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; DockerStorageDriver { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Containerinfra/ClusterTemplate.cs/#L193">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate_DockerVolumeSize_" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.DockerVolumeSize*"></a>
+  <h4 id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate_DockerVolumeSize" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.DockerVolumeSize">DockerVolumeSize</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; DockerVolumeSize { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Containerinfra/ClusterTemplate.cs/#L196">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate_ExternalNetworkId_" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.ExternalNetworkId*"></a>
+  <h4 id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate_ExternalNetworkId" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.ExternalNetworkId">ExternalNetworkId</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ExternalNetworkId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Containerinfra/ClusterTemplate.cs/#L199">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate_FixedNetwork_" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.FixedNetwork*"></a>
+  <h4 id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate_FixedNetwork" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.FixedNetwork">FixedNetwork</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; FixedNetwork { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Containerinfra/ClusterTemplate.cs/#L202">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate_FixedSubnet_" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.FixedSubnet*"></a>
+  <h4 id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate_FixedSubnet" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.FixedSubnet">FixedSubnet</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; FixedSubnet { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Containerinfra/ClusterTemplate.cs/#L205">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate_Flavor_" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.Flavor*"></a>
+  <h4 id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate_Flavor" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.Flavor">Flavor</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Flavor { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Containerinfra/ClusterTemplate.cs/#L208">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate_FloatingIpEnabled_" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.FloatingIpEnabled*"></a>
+  <h4 id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate_FloatingIpEnabled" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.FloatingIpEnabled">FloatingIpEnabled</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; FloatingIpEnabled { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Containerinfra/ClusterTemplate.cs/#L211">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate_HttpProxy_" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.HttpProxy*"></a>
+  <h4 id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate_HttpProxy" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.HttpProxy">HttpProxy</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; HttpProxy { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Containerinfra/ClusterTemplate.cs/#L214">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate_HttpsProxy_" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.HttpsProxy*"></a>
+  <h4 id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate_HttpsProxy" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.HttpsProxy">HttpsProxy</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; HttpsProxy { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Containerinfra/ClusterTemplate.cs/#L217">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate_Image_" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.Image*"></a>
+  <h4 id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate_Image" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.Image">Image</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Image { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Containerinfra/ClusterTemplate.cs/#L220">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate_InsecureRegistry_" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.InsecureRegistry*"></a>
+  <h4 id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate_InsecureRegistry" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.InsecureRegistry">InsecureRegistry</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; InsecureRegistry { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Containerinfra/ClusterTemplate.cs/#L223">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate_KeypairId_" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.KeypairId*"></a>
+  <h4 id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate_KeypairId" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.KeypairId">KeypairId</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; KeypairId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Containerinfra/ClusterTemplate.cs/#L226">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate_Labels_" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.Labels*"></a>
+  <h4 id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate_Labels" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.Labels">Labels</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; Labels { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Containerinfra/ClusterTemplate.cs/#L229">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate_MasterFlavor_" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.MasterFlavor*"></a>
+  <h4 id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate_MasterFlavor" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.MasterFlavor">MasterFlavor</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; MasterFlavor { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Containerinfra/ClusterTemplate.cs/#L232">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate_MasterLbEnabled_" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.MasterLbEnabled*"></a>
+  <h4 id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate_MasterLbEnabled" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.MasterLbEnabled">MasterLbEnabled</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; MasterLbEnabled { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Containerinfra/ClusterTemplate.cs/#L235">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate_Name_" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.Name*"></a>
+  <h4 id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate_Name" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.Name">Name</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Containerinfra/ClusterTemplate.cs/#L238">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate_NetworkDriver_" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.NetworkDriver*"></a>
+  <h4 id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate_NetworkDriver" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.NetworkDriver">NetworkDriver</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; NetworkDriver { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Containerinfra/ClusterTemplate.cs/#L241">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate_NoProxy_" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.NoProxy*"></a>
+  <h4 id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate_NoProxy" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.NoProxy">NoProxy</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; NoProxy { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Containerinfra/ClusterTemplate.cs/#L244">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate_ProjectId_" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.ProjectId*"></a>
+  <h4 id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate_ProjectId" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.ProjectId">ProjectId</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ProjectId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Containerinfra/ClusterTemplate.cs/#L247">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate_Public_" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.Public*"></a>
+  <h4 id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate_Public" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.Public">Public</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; Public { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Containerinfra/ClusterTemplate.cs/#L250">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate_Region_" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.Region*"></a>
+  <h4 id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate_Region" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.Region">Region</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Region { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Containerinfra/ClusterTemplate.cs/#L253">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate_RegistryEnabled_" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.RegistryEnabled*"></a>
+  <h4 id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate_RegistryEnabled" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.RegistryEnabled">RegistryEnabled</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; RegistryEnabled { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Containerinfra/ClusterTemplate.cs/#L256">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate_ServerType_" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.ServerType*"></a>
+  <h4 id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate_ServerType" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.ServerType">ServerType</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ServerType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Containerinfra/ClusterTemplate.cs/#L259">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate_TlsDisabled_" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.TlsDisabled*"></a>
+  <h4 id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate_TlsDisabled" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.TlsDisabled">TlsDisabled</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; TlsDisabled { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Containerinfra/ClusterTemplate.cs/#L262">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate_UpdatedAt_" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.UpdatedAt*"></a>
+  <h4 id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate_UpdatedAt" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.UpdatedAt">UpdatedAt</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; UpdatedAt { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Containerinfra/ClusterTemplate.cs/#L265">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate_UserId_" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.UserId*"></a>
+  <h4 id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate_UserId" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.UserId">UserId</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; UserId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Containerinfra/ClusterTemplate.cs/#L268">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate_VolumeDriver_" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.VolumeDriver*"></a>
+  <h4 id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate_VolumeDriver" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.VolumeDriver">VolumeDriver</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; VolumeDriver { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Containerinfra/ClusterTemplate.cs/#L309">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate_Get_" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.Get*"></a>
+  <h4 id="Pulumi_OpenStack_ContainerInfra_ClusterTemplate_Get_System_String_Input_System_String__Pulumi_OpenStack_ContainerInfra_ClusterTemplateState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.Get(System.String,Input{System.String},Pulumi.OpenStack.ContainerInfra.ClusterTemplateState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, ClusterTemplateState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Get an existing ClusterTemplate resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ClusterTemplate Get(string name, Input&lt;string&gt; id, ClusterTemplateState state = null, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.OpenStack.ContainerInfra.ClusterTemplateState.html">ClusterTemplateState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.OpenStack.ContainerInfra.ClusterTemplate.html">ClusterTemplate</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Containerinfra/ClusterTemplate.cs/#L173" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

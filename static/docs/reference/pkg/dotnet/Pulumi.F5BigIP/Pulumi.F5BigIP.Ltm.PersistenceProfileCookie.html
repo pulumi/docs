@@ -1,0 +1,717 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class PersistenceProfileCookie
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class PersistenceProfileCookie
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileCookie">
+  
+  <h1 id="Pulumi_F5BigIP_Ltm_PersistenceProfileCookie" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileCookie" class="text-break">Class PersistenceProfileCookie
+  </h1>
+  <div class="markdown level0 summary"><p>Configures a cookie persistence profile</p>
+<h2 id="reference">Reference</h2>
+<p><code>name</code> - (Required) Name of the virtual address</p>
+<p><code>defaults_from</code> - (Required) Parent cookie persistence profile</p>
+<p><code>match_across_pools</code> (Optional) (enabled or disabled) match across pools with given persistence record</p>
+<p><code>match_across_services</code> (Optional) (enabled or disabled) match across services with given persistence record</p>
+<p><code>match_across_virtuals</code> (Optional) (enabled or disabled) match across virtual servers with given persistence record</p>
+<p><code>mirror</code> (Optional) (enabled or disabled) mirror persistence record</p>
+<p><code>timeout</code> (Optional) (enabled or disabled) Timeout for persistence of the session in seconds</p>
+<p><code>override_conn_limit</code> (Optional) (enabled or disabled) Enable or dissable pool member connection limits are overridden for persisted clients. Per-virtual connection limits remain hard limits and are not overridden.</p>
+<p><code>always_send</code> (Optional) (enabled or disabled) always send cookies</p>
+<p><code>cookie_encryption</code> (Optional) (required, preferred, or disabled) To required, preferred, or disabled policy for cookie encryption</p>
+<p><code>cookie_encryption_passphrase</code> (Optional) (required, preferred, or disabled) Passphrase for encrypted cookies. The field is encrypted on the server and will always return differently then set.
+If this is configured specify <code>ignore_changes</code> under the <code>lifecycle</code> block to ignore returned encrypted value.</p>
+<p><code>cookie_name</code> (Optional) Name of the cookie to track persistence</p>
+<p><code>expiration</code> (Optional) Expiration TTL for cookie specified in DAY:HOUR:MIN:SECONDS (Examples: 1:0:0:0 one day, 1:0:0 one hour, 30:0 thirty minutes)</p>
+<p><code>hash_length</code> (Optional) (Integer) Length of hash to apply to cookie</p>
+<p><code>hash_offset</code> (Optional) (Integer) Number of characters to skip in the cookie for the hash</p>
+<p><code>httponly</code> (Optional) (enabled or disabled) Sending only over http</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/ltm_persistence_profile_cookie.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/ltm_persistence_profile_cookie.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">PersistenceProfileCookie</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.F5BigIP.Ltm.html">Pulumi.F5BigIP.Ltm</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.F5BigIP.dll</h6>
+  <h5 id="Pulumi_F5BigIP_Ltm_PersistenceProfileCookie_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class PersistenceProfileCookie : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/PersistenceProfileCookie.cs/#L161">View Source</a>
+  </span>
+  <a id="Pulumi_F5BigIP_Ltm_PersistenceProfileCookie__ctor_" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileCookie.#ctor*"></a>
+  <h4 id="Pulumi_F5BigIP_Ltm_PersistenceProfileCookie__ctor_System_String_Pulumi_F5BigIP_Ltm_PersistenceProfileCookieArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileCookie.#ctor(System.String,Pulumi.F5BigIP.Ltm.PersistenceProfileCookieArgs,System.Nullable{CustomResourceOptions})">PersistenceProfileCookie(String, PersistenceProfileCookieArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Create a PersistenceProfileCookie resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PersistenceProfileCookie(string name, PersistenceProfileCookieArgs args, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.F5BigIP.Ltm.PersistenceProfileCookieArgs.html">PersistenceProfileCookieArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/PersistenceProfileCookie.cs/#L56">View Source</a>
+  </span>
+  <a id="Pulumi_F5BigIP_Ltm_PersistenceProfileCookie_AlwaysSend_" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileCookie.AlwaysSend*"></a>
+  <h4 id="Pulumi_F5BigIP_Ltm_PersistenceProfileCookie_AlwaysSend" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileCookie.AlwaysSend">AlwaysSend</h4>
+  <div class="markdown level1 summary"><p>To enable _ disable always sending cookies</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; AlwaysSend { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/PersistenceProfileCookie.cs/#L59">View Source</a>
+  </span>
+  <a id="Pulumi_F5BigIP_Ltm_PersistenceProfileCookie_AppService_" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileCookie.AppService*"></a>
+  <h4 id="Pulumi_F5BigIP_Ltm_PersistenceProfileCookie_AppService" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileCookie.AppService">AppService</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; AppService { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/PersistenceProfileCookie.cs/#L65">View Source</a>
+  </span>
+  <a id="Pulumi_F5BigIP_Ltm_PersistenceProfileCookie_CookieEncryption_" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileCookie.CookieEncryption*"></a>
+  <h4 id="Pulumi_F5BigIP_Ltm_PersistenceProfileCookie_CookieEncryption" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileCookie.CookieEncryption">CookieEncryption</h4>
+  <div class="markdown level1 summary"><p>To required, preferred, or disabled policy for cookie encryption</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; CookieEncryption { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/PersistenceProfileCookie.cs/#L71">View Source</a>
+  </span>
+  <a id="Pulumi_F5BigIP_Ltm_PersistenceProfileCookie_CookieEncryptionPassphrase_" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileCookie.CookieEncryptionPassphrase*"></a>
+  <h4 id="Pulumi_F5BigIP_Ltm_PersistenceProfileCookie_CookieEncryptionPassphrase" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileCookie.CookieEncryptionPassphrase">CookieEncryptionPassphrase</h4>
+  <div class="markdown level1 summary"><p>Passphrase for encrypted cookies</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; CookieEncryptionPassphrase { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/PersistenceProfileCookie.cs/#L77">View Source</a>
+  </span>
+  <a id="Pulumi_F5BigIP_Ltm_PersistenceProfileCookie_CookieName_" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileCookie.CookieName*"></a>
+  <h4 id="Pulumi_F5BigIP_Ltm_PersistenceProfileCookie_CookieName" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileCookie.CookieName">CookieName</h4>
+  <div class="markdown level1 summary"><p>Name of the cookie to track persistence</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; CookieName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/PersistenceProfileCookie.cs/#L83">View Source</a>
+  </span>
+  <a id="Pulumi_F5BigIP_Ltm_PersistenceProfileCookie_DefaultsFrom_" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileCookie.DefaultsFrom*"></a>
+  <h4 id="Pulumi_F5BigIP_Ltm_PersistenceProfileCookie_DefaultsFrom" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileCookie.DefaultsFrom">DefaultsFrom</h4>
+  <div class="markdown level1 summary"><p>Inherit defaults from parent profile</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DefaultsFrom { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/PersistenceProfileCookie.cs/#L89">View Source</a>
+  </span>
+  <a id="Pulumi_F5BigIP_Ltm_PersistenceProfileCookie_Expiration_" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileCookie.Expiration*"></a>
+  <h4 id="Pulumi_F5BigIP_Ltm_PersistenceProfileCookie_Expiration" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileCookie.Expiration">Expiration</h4>
+  <div class="markdown level1 summary"><p>Expiration TTL for cookie specified in D:H:M:S or in seconds</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Expiration { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/PersistenceProfileCookie.cs/#L95">View Source</a>
+  </span>
+  <a id="Pulumi_F5BigIP_Ltm_PersistenceProfileCookie_HashLength_" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileCookie.HashLength*"></a>
+  <h4 id="Pulumi_F5BigIP_Ltm_PersistenceProfileCookie_HashLength" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileCookie.HashLength">HashLength</h4>
+  <div class="markdown level1 summary"><p>Length of hash to apply to cookie</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; HashLength { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/PersistenceProfileCookie.cs/#L101">View Source</a>
+  </span>
+  <a id="Pulumi_F5BigIP_Ltm_PersistenceProfileCookie_HashOffset_" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileCookie.HashOffset*"></a>
+  <h4 id="Pulumi_F5BigIP_Ltm_PersistenceProfileCookie_HashOffset" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileCookie.HashOffset">HashOffset</h4>
+  <div class="markdown level1 summary"><p>Number of characters to skip in the cookie for the hash</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; HashOffset { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/PersistenceProfileCookie.cs/#L107">View Source</a>
+  </span>
+  <a id="Pulumi_F5BigIP_Ltm_PersistenceProfileCookie_Httponly_" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileCookie.Httponly*"></a>
+  <h4 id="Pulumi_F5BigIP_Ltm_PersistenceProfileCookie_Httponly" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileCookie.Httponly">Httponly</h4>
+  <div class="markdown level1 summary"><p>To enable _ disable sending only over http</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Httponly { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/PersistenceProfileCookie.cs/#L113">View Source</a>
+  </span>
+  <a id="Pulumi_F5BigIP_Ltm_PersistenceProfileCookie_MatchAcrossPools_" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileCookie.MatchAcrossPools*"></a>
+  <h4 id="Pulumi_F5BigIP_Ltm_PersistenceProfileCookie_MatchAcrossPools" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileCookie.MatchAcrossPools">MatchAcrossPools</h4>
+  <div class="markdown level1 summary"><p>To enable _ disable match across pools with given persistence record</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; MatchAcrossPools { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/PersistenceProfileCookie.cs/#L119">View Source</a>
+  </span>
+  <a id="Pulumi_F5BigIP_Ltm_PersistenceProfileCookie_MatchAcrossServices_" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileCookie.MatchAcrossServices*"></a>
+  <h4 id="Pulumi_F5BigIP_Ltm_PersistenceProfileCookie_MatchAcrossServices" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileCookie.MatchAcrossServices">MatchAcrossServices</h4>
+  <div class="markdown level1 summary"><p>To enable _ disable match across services with given persistence record</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; MatchAcrossServices { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/PersistenceProfileCookie.cs/#L125">View Source</a>
+  </span>
+  <a id="Pulumi_F5BigIP_Ltm_PersistenceProfileCookie_MatchAcrossVirtuals_" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileCookie.MatchAcrossVirtuals*"></a>
+  <h4 id="Pulumi_F5BigIP_Ltm_PersistenceProfileCookie_MatchAcrossVirtuals" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileCookie.MatchAcrossVirtuals">MatchAcrossVirtuals</h4>
+  <div class="markdown level1 summary"><p>To enable _ disable match across virtual servers with given persistence record</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; MatchAcrossVirtuals { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/PersistenceProfileCookie.cs/#L131">View Source</a>
+  </span>
+  <a id="Pulumi_F5BigIP_Ltm_PersistenceProfileCookie_Mirror_" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileCookie.Mirror*"></a>
+  <h4 id="Pulumi_F5BigIP_Ltm_PersistenceProfileCookie_Mirror" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileCookie.Mirror">Mirror</h4>
+  <div class="markdown level1 summary"><p>To enable _ disable</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Mirror { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/PersistenceProfileCookie.cs/#L137">View Source</a>
+  </span>
+  <a id="Pulumi_F5BigIP_Ltm_PersistenceProfileCookie_Name_" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileCookie.Name*"></a>
+  <h4 id="Pulumi_F5BigIP_Ltm_PersistenceProfileCookie_Name" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileCookie.Name">Name</h4>
+  <div class="markdown level1 summary"><p>Name of the persistence profile</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/PersistenceProfileCookie.cs/#L144">View Source</a>
+  </span>
+  <a id="Pulumi_F5BigIP_Ltm_PersistenceProfileCookie_OverrideConnLimit_" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileCookie.OverrideConnLimit*"></a>
+  <h4 id="Pulumi_F5BigIP_Ltm_PersistenceProfileCookie_OverrideConnLimit" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileCookie.OverrideConnLimit">OverrideConnLimit</h4>
+  <div class="markdown level1 summary"><p>To enable _ disable that pool member connection limits are overridden for persisted clients. Per-virtual
+connection limits remain hard limits and are not overridden.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; OverrideConnLimit { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/PersistenceProfileCookie.cs/#L150">View Source</a>
+  </span>
+  <a id="Pulumi_F5BigIP_Ltm_PersistenceProfileCookie_Timeout_" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileCookie.Timeout*"></a>
+  <h4 id="Pulumi_F5BigIP_Ltm_PersistenceProfileCookie_Timeout" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileCookie.Timeout">Timeout</h4>
+  <div class="markdown level1 summary"><p>Timeout for persistence of the session</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; Timeout { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/PersistenceProfileCookie.cs/#L191">View Source</a>
+  </span>
+  <a id="Pulumi_F5BigIP_Ltm_PersistenceProfileCookie_Get_" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileCookie.Get*"></a>
+  <h4 id="Pulumi_F5BigIP_Ltm_PersistenceProfileCookie_Get_System_String_Input_System_String__Pulumi_F5BigIP_Ltm_PersistenceProfileCookieState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileCookie.Get(System.String,Input{System.String},Pulumi.F5BigIP.Ltm.PersistenceProfileCookieState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, PersistenceProfileCookieState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Get an existing PersistenceProfileCookie resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PersistenceProfileCookie Get(string name, Input&lt;string&gt; id, PersistenceProfileCookieState state = null, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.F5BigIP.Ltm.PersistenceProfileCookieState.html">PersistenceProfileCookieState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.F5BigIP.Ltm.PersistenceProfileCookie.html">PersistenceProfileCookie</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/PersistenceProfileCookie.cs/#L51" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

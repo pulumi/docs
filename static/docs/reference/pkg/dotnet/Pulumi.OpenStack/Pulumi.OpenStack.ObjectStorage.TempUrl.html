@@ -1,0 +1,464 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class TempUrl
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class TempUrl
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.OpenStack.ObjectStorage.TempUrl">
+  
+  <h1 id="Pulumi_OpenStack_ObjectStorage_TempUrl" data-uid="Pulumi.OpenStack.ObjectStorage.TempUrl" class="text-break">Class TempUrl
+  </h1>
+  <div class="markdown level0 summary"><p>Use this resource to generate an OpenStack Object Storage temporary URL.</p>
+<p>The temporary URL will be valid for as long as TTL is set to (in seconds).
+Once the URL has expired, it will no longer be valid, but the resource
+will remain in place. If you wish to automatically regenerate a URL, set
+the <code>regenerate</code> argument to <code>true</code>. This will create a new resource with
+a new ID and URL.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/objectstorage_tempurl_v1.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/objectstorage_tempurl_v1.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">TempUrl</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.OpenStack.ObjectStorage.html">Pulumi.OpenStack.ObjectStorage</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.OpenStack.dll</h6>
+  <h5 id="Pulumi_OpenStack_ObjectStorage_TempUrl_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class TempUrl : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Objectstorage/TempUrl.cs/#L81">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ObjectStorage_TempUrl__ctor_" data-uid="Pulumi.OpenStack.ObjectStorage.TempUrl.#ctor*"></a>
+  <h4 id="Pulumi_OpenStack_ObjectStorage_TempUrl__ctor_System_String_Pulumi_OpenStack_ObjectStorage_TempUrlArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.OpenStack.ObjectStorage.TempUrl.#ctor(System.String,Pulumi.OpenStack.ObjectStorage.TempUrlArgs,System.Nullable{CustomResourceOptions})">TempUrl(String, TempUrlArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Create a TempUrl resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TempUrl(string name, TempUrlArgs args, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.OpenStack.ObjectStorage.TempUrlArgs.html">TempUrlArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Objectstorage/TempUrl.cs/#L27">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ObjectStorage_TempUrl_Container_" data-uid="Pulumi.OpenStack.ObjectStorage.TempUrl.Container*"></a>
+  <h4 id="Pulumi_OpenStack_ObjectStorage_TempUrl_Container" data-uid="Pulumi.OpenStack.ObjectStorage.TempUrl.Container">Container</h4>
+  <div class="markdown level1 summary"><p>The container name the object belongs to.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Container { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Objectstorage/TempUrl.cs/#L34">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ObjectStorage_TempUrl_Method_" data-uid="Pulumi.OpenStack.ObjectStorage.TempUrl.Method*"></a>
+  <h4 id="Pulumi_OpenStack_ObjectStorage_TempUrl_Method" data-uid="Pulumi.OpenStack.ObjectStorage.TempUrl.Method">Method</h4>
+  <div class="markdown level1 summary"><p>The method allowed when accessing this URL.
+Valid values are <code>GET</code>, and <code>POST</code>. Default is <code>GET</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Method { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Objectstorage/TempUrl.cs/#L40">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ObjectStorage_TempUrl_Object_" data-uid="Pulumi.OpenStack.ObjectStorage.TempUrl.Object*"></a>
+  <h4 id="Pulumi_OpenStack_ObjectStorage_TempUrl_Object" data-uid="Pulumi.OpenStack.ObjectStorage.TempUrl.Object">Object</h4>
+  <div class="markdown level1 summary"><p>The object name the tempurl is for.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Object { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Objectstorage/TempUrl.cs/#L48">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ObjectStorage_TempUrl_Regenerate_" data-uid="Pulumi.OpenStack.ObjectStorage.TempUrl.Regenerate*"></a>
+  <h4 id="Pulumi_OpenStack_ObjectStorage_TempUrl_Regenerate" data-uid="Pulumi.OpenStack.ObjectStorage.TempUrl.Regenerate">Regenerate</h4>
+  <div class="markdown level1 summary"><p>Whether to automatically regenerate the URL when
+it has expired. If set to true, this will create a new resource with a new
+ID and new URL. Defaults to false.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; Regenerate { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Objectstorage/TempUrl.cs/#L54">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ObjectStorage_TempUrl_Region_" data-uid="Pulumi.OpenStack.ObjectStorage.TempUrl.Region*"></a>
+  <h4 id="Pulumi_OpenStack_ObjectStorage_TempUrl_Region" data-uid="Pulumi.OpenStack.ObjectStorage.TempUrl.Region">Region</h4>
+  <div class="markdown level1 summary"><p>The region the tempurl is located in.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Region { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Objectstorage/TempUrl.cs/#L57">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ObjectStorage_TempUrl_Split_" data-uid="Pulumi.OpenStack.ObjectStorage.TempUrl.Split*"></a>
+  <h4 id="Pulumi_OpenStack_ObjectStorage_TempUrl_Split" data-uid="Pulumi.OpenStack.ObjectStorage.TempUrl.Split">Split</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Split { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Objectstorage/TempUrl.cs/#L64">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ObjectStorage_TempUrl_Ttl_" data-uid="Pulumi.OpenStack.ObjectStorage.TempUrl.Ttl*"></a>
+  <h4 id="Pulumi_OpenStack_ObjectStorage_TempUrl_Ttl" data-uid="Pulumi.OpenStack.ObjectStorage.TempUrl.Ttl">Ttl</h4>
+  <div class="markdown level1 summary"><p>The TTL, in seconds, for the URL. For how long it should
+be valid.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; Ttl { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Objectstorage/TempUrl.cs/#L70">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ObjectStorage_TempUrl_Url_" data-uid="Pulumi.OpenStack.ObjectStorage.TempUrl.Url*"></a>
+  <h4 id="Pulumi_OpenStack_ObjectStorage_TempUrl_Url" data-uid="Pulumi.OpenStack.ObjectStorage.TempUrl.Url">Url</h4>
+  <div class="markdown level1 summary"><p>The URL</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Url { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Objectstorage/TempUrl.cs/#L111">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ObjectStorage_TempUrl_Get_" data-uid="Pulumi.OpenStack.ObjectStorage.TempUrl.Get*"></a>
+  <h4 id="Pulumi_OpenStack_ObjectStorage_TempUrl_Get_System_String_Input_System_String__Pulumi_OpenStack_ObjectStorage_TempUrlState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.OpenStack.ObjectStorage.TempUrl.Get(System.String,Input{System.String},Pulumi.OpenStack.ObjectStorage.TempUrlState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, TempUrlState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Get an existing TempUrl resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TempUrl Get(string name, Input&lt;string&gt; id, TempUrlState state = null, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.OpenStack.ObjectStorage.TempUrlState.html">TempUrlState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.OpenStack.ObjectStorage.TempUrl.html">TempUrl</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Objectstorage/TempUrl.cs/#L22" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

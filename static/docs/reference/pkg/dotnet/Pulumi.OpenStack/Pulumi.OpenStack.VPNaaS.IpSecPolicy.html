@@ -1,0 +1,554 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class IpSecPolicy
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class IpSecPolicy
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.OpenStack.VPNaaS.IpSecPolicy">
+  
+  <h1 id="Pulumi_OpenStack_VPNaaS_IpSecPolicy" data-uid="Pulumi.OpenStack.VPNaaS.IpSecPolicy" class="text-break">Class IpSecPolicy
+  </h1>
+  <div class="markdown level0 summary"><p>Manages a V2 Neutron IPSec policy resource within OpenStack.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/vpnaas_ipsec_policy_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/vpnaas_ipsec_policy_v2.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">IpSecPolicy</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.OpenStack.VPNaaS.html">Pulumi.OpenStack.VPNaaS</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.OpenStack.dll</h6>
+  <h5 id="Pulumi_OpenStack_VPNaaS_IpSecPolicy_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class IpSecPolicy : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Vpnaas/IpSecPolicy.cs/#L107">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_VPNaaS_IpSecPolicy__ctor_" data-uid="Pulumi.OpenStack.VPNaaS.IpSecPolicy.#ctor*"></a>
+  <h4 id="Pulumi_OpenStack_VPNaaS_IpSecPolicy__ctor_System_String_Pulumi_OpenStack_VPNaaS_IpSecPolicyArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.OpenStack.VPNaaS.IpSecPolicy.#ctor(System.String,Pulumi.OpenStack.VPNaaS.IpSecPolicyArgs,System.Nullable{CustomResourceOptions})">IpSecPolicy(String, IpSecPolicyArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Create a IpSecPolicy resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IpSecPolicy(string name, IpSecPolicyArgs args = null, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.OpenStack.VPNaaS.IpSecPolicyArgs.html">IpSecPolicyArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Vpnaas/IpSecPolicy.cs/#L22">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_VPNaaS_IpSecPolicy_AuthAlgorithm_" data-uid="Pulumi.OpenStack.VPNaaS.IpSecPolicy.AuthAlgorithm*"></a>
+  <h4 id="Pulumi_OpenStack_VPNaaS_IpSecPolicy_AuthAlgorithm" data-uid="Pulumi.OpenStack.VPNaaS.IpSecPolicy.AuthAlgorithm">AuthAlgorithm</h4>
+  <div class="markdown level1 summary"><p>The authentication hash algorithm. Valid values are sha1, sha256, sha384, sha512.
+Default is sha1. Changing this updates the algorithm of the existing policy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AuthAlgorithm { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Vpnaas/IpSecPolicy.cs/#L29">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_VPNaaS_IpSecPolicy_Description_" data-uid="Pulumi.OpenStack.VPNaaS.IpSecPolicy.Description*"></a>
+  <h4 id="Pulumi_OpenStack_VPNaaS_IpSecPolicy_Description" data-uid="Pulumi.OpenStack.VPNaaS.IpSecPolicy.Description">Description</h4>
+  <div class="markdown level1 summary"><p>The human-readable description for the policy.
+Changing this updates the description of the existing policy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Vpnaas/IpSecPolicy.cs/#L36">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_VPNaaS_IpSecPolicy_EncapsulationMode_" data-uid="Pulumi.OpenStack.VPNaaS.IpSecPolicy.EncapsulationMode*"></a>
+  <h4 id="Pulumi_OpenStack_VPNaaS_IpSecPolicy_EncapsulationMode" data-uid="Pulumi.OpenStack.VPNaaS.IpSecPolicy.EncapsulationMode">EncapsulationMode</h4>
+  <div class="markdown level1 summary"><p>The encapsulation mode. Valid values are tunnel and transport. Default is tunnel.
+Changing this updates the existing policy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; EncapsulationMode { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Vpnaas/IpSecPolicy.cs/#L43">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_VPNaaS_IpSecPolicy_EncryptionAlgorithm_" data-uid="Pulumi.OpenStack.VPNaaS.IpSecPolicy.EncryptionAlgorithm*"></a>
+  <h4 id="Pulumi_OpenStack_VPNaaS_IpSecPolicy_EncryptionAlgorithm" data-uid="Pulumi.OpenStack.VPNaaS.IpSecPolicy.EncryptionAlgorithm">EncryptionAlgorithm</h4>
+  <div class="markdown level1 summary"><p>The encryption algorithm. Valid values are 3des, aes-128, aes-192 and so on.
+The default value is aes-128. Changing this updates the existing policy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; EncryptionAlgorithm { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Vpnaas/IpSecPolicy.cs/#L53">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_VPNaaS_IpSecPolicy_Lifetimes_" data-uid="Pulumi.OpenStack.VPNaaS.IpSecPolicy.Lifetimes*"></a>
+  <h4 id="Pulumi_OpenStack_VPNaaS_IpSecPolicy_Lifetimes" data-uid="Pulumi.OpenStack.VPNaaS.IpSecPolicy.Lifetimes">Lifetimes</h4>
+  <div class="markdown level1 summary"><p>The lifetime of the security association. Consists of Unit and Value.</p>
+<ul>
+<li><code>unit</code> - (Optional) The units for the lifetime of the security association. Can be either seconds or kilobytes.
+Default is seconds.</li>
+<li><code>value</code> - (Optional) The value for the lifetime of the security association. Must be a positive integer.
+Default is 3600.</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;IpSecPolicyLifetimes&gt;&gt; Lifetimes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.OpenStack.VPNaaS.Outputs.IpSecPolicyLifetimes.html">IpSecPolicyLifetimes</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Vpnaas/IpSecPolicy.cs/#L60">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_VPNaaS_IpSecPolicy_Name_" data-uid="Pulumi.OpenStack.VPNaaS.IpSecPolicy.Name*"></a>
+  <h4 id="Pulumi_OpenStack_VPNaaS_IpSecPolicy_Name" data-uid="Pulumi.OpenStack.VPNaaS.IpSecPolicy.Name">Name</h4>
+  <div class="markdown level1 summary"><p>The name of the policy. Changing this updates the name of
+the existing policy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Vpnaas/IpSecPolicy.cs/#L67">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_VPNaaS_IpSecPolicy_Pfs_" data-uid="Pulumi.OpenStack.VPNaaS.IpSecPolicy.Pfs*"></a>
+  <h4 id="Pulumi_OpenStack_VPNaaS_IpSecPolicy_Pfs" data-uid="Pulumi.OpenStack.VPNaaS.IpSecPolicy.Pfs">Pfs</h4>
+  <div class="markdown level1 summary"><p>The perfect forward secrecy mode. Valid values are Group2, Group5 and Group14. Default is Group5.
+Changing this updates the existing policy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Pfs { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Vpnaas/IpSecPolicy.cs/#L76">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_VPNaaS_IpSecPolicy_Region_" data-uid="Pulumi.OpenStack.VPNaaS.IpSecPolicy.Region*"></a>
+  <h4 id="Pulumi_OpenStack_VPNaaS_IpSecPolicy_Region" data-uid="Pulumi.OpenStack.VPNaaS.IpSecPolicy.Region">Region</h4>
+  <div class="markdown level1 summary"><p>The region in which to obtain the V2 Networking client.
+A Networking client is needed to create an IPSec policy. If omitted, the
+<code>region</code> argument of the provider is used. Changing this creates a new
+policy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Region { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Vpnaas/IpSecPolicy.cs/#L83">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_VPNaaS_IpSecPolicy_TenantId_" data-uid="Pulumi.OpenStack.VPNaaS.IpSecPolicy.TenantId*"></a>
+  <h4 id="Pulumi_OpenStack_VPNaaS_IpSecPolicy_TenantId" data-uid="Pulumi.OpenStack.VPNaaS.IpSecPolicy.TenantId">TenantId</h4>
+  <div class="markdown level1 summary"><p>The owner of the policy. Required if admin wants to
+create a policy for another project. Changing this creates a new policy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; TenantId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Vpnaas/IpSecPolicy.cs/#L90">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_VPNaaS_IpSecPolicy_TransformProtocol_" data-uid="Pulumi.OpenStack.VPNaaS.IpSecPolicy.TransformProtocol*"></a>
+  <h4 id="Pulumi_OpenStack_VPNaaS_IpSecPolicy_TransformProtocol" data-uid="Pulumi.OpenStack.VPNaaS.IpSecPolicy.TransformProtocol">TransformProtocol</h4>
+  <div class="markdown level1 summary"><p>The transform protocol. Valid values are ESP, AH and AH-ESP.
+Changing this updates the existing policy. Default is ESP.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; TransformProtocol { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Vpnaas/IpSecPolicy.cs/#L96">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_VPNaaS_IpSecPolicy_ValueSpecs_" data-uid="Pulumi.OpenStack.VPNaaS.IpSecPolicy.ValueSpecs*"></a>
+  <h4 id="Pulumi_OpenStack_VPNaaS_IpSecPolicy_ValueSpecs" data-uid="Pulumi.OpenStack.VPNaaS.IpSecPolicy.ValueSpecs">ValueSpecs</h4>
+  <div class="markdown level1 summary"><p>Map of additional options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; ValueSpecs { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Vpnaas/IpSecPolicy.cs/#L137">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_VPNaaS_IpSecPolicy_Get_" data-uid="Pulumi.OpenStack.VPNaaS.IpSecPolicy.Get*"></a>
+  <h4 id="Pulumi_OpenStack_VPNaaS_IpSecPolicy_Get_System_String_Input_System_String__Pulumi_OpenStack_VPNaaS_IpSecPolicyState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.OpenStack.VPNaaS.IpSecPolicy.Get(System.String,Input{System.String},Pulumi.OpenStack.VPNaaS.IpSecPolicyState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, IpSecPolicyState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Get an existing IpSecPolicy resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IpSecPolicy Get(string name, Input&lt;string&gt; id, IpSecPolicyState state = null, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.OpenStack.VPNaaS.IpSecPolicyState.html">IpSecPolicyState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.OpenStack.VPNaaS.IpSecPolicy.html">IpSecPolicy</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Vpnaas/IpSecPolicy.cs/#L16" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

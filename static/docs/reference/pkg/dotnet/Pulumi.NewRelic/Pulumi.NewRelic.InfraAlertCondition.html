@@ -1,0 +1,676 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class InfraAlertCondition
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class InfraAlertCondition
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.NewRelic.InfraAlertCondition">
+  
+  <h1 id="Pulumi_NewRelic_InfraAlertCondition" data-uid="Pulumi.NewRelic.InfraAlertCondition" class="text-break">Class InfraAlertCondition
+  </h1>
+  <div class="markdown level0 summary"><p>Use this resource to create and manage Infrastructure alert conditions in New Relic.</p>
+<h2 id="thresholds">Thresholds</h2>
+<p>The <code>critical</code> and <code>warning</code> threshold mapping supports the following arguments:</p>
+<ul>
+<li><code>duration</code> - (Required) Identifies the number of minutes the threshold must be passed or met for the alert to trigger. Threshold durations must be between 1 and 60 minutes (inclusive).</li>
+<li><code>value</code> - (Optional) Threshold value, computed against the <code>comparison</code> operator. Supported by <code>infra_metric</code> and <code>infra_process_running</code> alert condition types.</li>
+<li><code>time_function</code> - (Optional) Indicates if the condition needs to be sustained or to just break the threshold once; <code>all</code> or <code>any</code>. Supported by the <code>infra_metric</code> alert condition type.</li>
+</ul>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/infra_alert_condition.html.markdown">https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/infra_alert_condition.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">InfraAlertCondition</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.NewRelic.html">Pulumi.NewRelic</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.NewRelic.dll</h6>
+  <h5 id="Pulumi_NewRelic_InfraAlertCondition_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class InfraAlertCondition : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/master/sdk/dotnet/InfraAlertCondition.cs/#L121">View Source</a>
+  </span>
+  <a id="Pulumi_NewRelic_InfraAlertCondition__ctor_" data-uid="Pulumi.NewRelic.InfraAlertCondition.#ctor*"></a>
+  <h4 id="Pulumi_NewRelic_InfraAlertCondition__ctor_System_String_Pulumi_NewRelic_InfraAlertConditionArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.NewRelic.InfraAlertCondition.#ctor(System.String,Pulumi.NewRelic.InfraAlertConditionArgs,System.Nullable{CustomResourceOptions})">InfraAlertCondition(String, InfraAlertConditionArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Create a InfraAlertCondition resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InfraAlertCondition(string name, InfraAlertConditionArgs args, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.NewRelic.InfraAlertConditionArgs.html">InfraAlertConditionArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/master/sdk/dotnet/InfraAlertCondition.cs/#L29">View Source</a>
+  </span>
+  <a id="Pulumi_NewRelic_InfraAlertCondition_Comparison_" data-uid="Pulumi.NewRelic.InfraAlertCondition.Comparison*"></a>
+  <h4 id="Pulumi_NewRelic_InfraAlertCondition_Comparison" data-uid="Pulumi.NewRelic.InfraAlertCondition.Comparison">Comparison</h4>
+  <div class="markdown level1 summary"><p>The operator used to evaluate the threshold value.  Valid values are <code>above</code>, <code>below</code>, and <code>equal</code>.  Supported by the <code>infra_metric</code> and <code>infra_process_running</code> condition types.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Comparison { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/master/sdk/dotnet/InfraAlertCondition.cs/#L32">View Source</a>
+  </span>
+  <a id="Pulumi_NewRelic_InfraAlertCondition_CreatedAt_" data-uid="Pulumi.NewRelic.InfraAlertCondition.CreatedAt*"></a>
+  <h4 id="Pulumi_NewRelic_InfraAlertCondition_CreatedAt" data-uid="Pulumi.NewRelic.InfraAlertCondition.CreatedAt">CreatedAt</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; CreatedAt { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/master/sdk/dotnet/InfraAlertCondition.cs/#L38">View Source</a>
+  </span>
+  <a id="Pulumi_NewRelic_InfraAlertCondition_Critical_" data-uid="Pulumi.NewRelic.InfraAlertCondition.Critical*"></a>
+  <h4 id="Pulumi_NewRelic_InfraAlertCondition_Critical" data-uid="Pulumi.NewRelic.InfraAlertCondition.Critical">Critical</h4>
+  <div class="markdown level1 summary"><p>Identifies the threshold parameters for opening a critial alert violation. See Thresholds below for details.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;InfraAlertConditionCritical&gt; Critical { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.NewRelic.Outputs.InfraAlertConditionCritical.html">InfraAlertConditionCritical</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/master/sdk/dotnet/InfraAlertCondition.cs/#L44">View Source</a>
+  </span>
+  <a id="Pulumi_NewRelic_InfraAlertCondition_Enabled_" data-uid="Pulumi.NewRelic.InfraAlertCondition.Enabled*"></a>
+  <h4 id="Pulumi_NewRelic_InfraAlertCondition_Enabled" data-uid="Pulumi.NewRelic.InfraAlertCondition.Enabled">Enabled</h4>
+  <div class="markdown level1 summary"><p>Whether the condition is turned on or off.  Valid values are <code>true</code> and <code>false</code>.  Defaults to <code>true</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; Enabled { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/master/sdk/dotnet/InfraAlertCondition.cs/#L50">View Source</a>
+  </span>
+  <a id="Pulumi_NewRelic_InfraAlertCondition_Event_" data-uid="Pulumi.NewRelic.InfraAlertCondition.Event*"></a>
+  <h4 id="Pulumi_NewRelic_InfraAlertCondition_Event" data-uid="Pulumi.NewRelic.InfraAlertCondition.Event">Event</h4>
+  <div class="markdown level1 summary"><p>The metric event; for example, <code>SystemSample</code> or <code>StorageSample</code>.  Supported by the <code>infra_metric</code> condition type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Event { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/master/sdk/dotnet/InfraAlertCondition.cs/#L56">View Source</a>
+  </span>
+  <a id="Pulumi_NewRelic_InfraAlertCondition_IntegrationProvider_" data-uid="Pulumi.NewRelic.InfraAlertCondition.IntegrationProvider*"></a>
+  <h4 id="Pulumi_NewRelic_InfraAlertCondition_IntegrationProvider" data-uid="Pulumi.NewRelic.InfraAlertCondition.IntegrationProvider">IntegrationProvider</h4>
+  <div class="markdown level1 summary"><p>For alerts on integrations, use this instead of <code>event</code>.  Supported by the <code>infra_metric</code> condition type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; IntegrationProvider { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/master/sdk/dotnet/InfraAlertCondition.cs/#L62">View Source</a>
+  </span>
+  <a id="Pulumi_NewRelic_InfraAlertCondition_Name_" data-uid="Pulumi.NewRelic.InfraAlertCondition.Name*"></a>
+  <h4 id="Pulumi_NewRelic_InfraAlertCondition_Name" data-uid="Pulumi.NewRelic.InfraAlertCondition.Name">Name</h4>
+  <div class="markdown level1 summary"><p>The Infrastructure alert condition's name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/master/sdk/dotnet/InfraAlertCondition.cs/#L68">View Source</a>
+  </span>
+  <a id="Pulumi_NewRelic_InfraAlertCondition_PolicyId_" data-uid="Pulumi.NewRelic.InfraAlertCondition.PolicyId*"></a>
+  <h4 id="Pulumi_NewRelic_InfraAlertCondition_PolicyId" data-uid="Pulumi.NewRelic.InfraAlertCondition.PolicyId">PolicyId</h4>
+  <div class="markdown level1 summary"><p>The ID of the alert policy where this condition should be used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; PolicyId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/master/sdk/dotnet/InfraAlertCondition.cs/#L74">View Source</a>
+  </span>
+  <a id="Pulumi_NewRelic_InfraAlertCondition_ProcessWhere_" data-uid="Pulumi.NewRelic.InfraAlertCondition.ProcessWhere*"></a>
+  <h4 id="Pulumi_NewRelic_InfraAlertCondition_ProcessWhere" data-uid="Pulumi.NewRelic.InfraAlertCondition.ProcessWhere">ProcessWhere</h4>
+  <div class="markdown level1 summary"><p>Any filters applied to processes; for example: <code>commandName = &amp;apos;java&amp;apos;</code>.  Supported by the <code>infra_process_running</code> condition type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ProcessWhere { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/master/sdk/dotnet/InfraAlertCondition.cs/#L80">View Source</a>
+  </span>
+  <a id="Pulumi_NewRelic_InfraAlertCondition_RunbookUrl_" data-uid="Pulumi.NewRelic.InfraAlertCondition.RunbookUrl*"></a>
+  <h4 id="Pulumi_NewRelic_InfraAlertCondition_RunbookUrl" data-uid="Pulumi.NewRelic.InfraAlertCondition.RunbookUrl">RunbookUrl</h4>
+  <div class="markdown level1 summary"><p>Runbook URL to display in notifications.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; RunbookUrl { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/master/sdk/dotnet/InfraAlertCondition.cs/#L86">View Source</a>
+  </span>
+  <a id="Pulumi_NewRelic_InfraAlertCondition_Select_" data-uid="Pulumi.NewRelic.InfraAlertCondition.Select*"></a>
+  <h4 id="Pulumi_NewRelic_InfraAlertCondition_Select" data-uid="Pulumi.NewRelic.InfraAlertCondition.Select">Select</h4>
+  <div class="markdown level1 summary"><p>The attribute name to identify the metric being targeted; for example, <code>cpuPercent</code>, <code>diskFreePercent</code>, or <code>memoryResidentSizeBytes</code>.  The underlying API will automatically populate this value for Infrastructure integrations (for example <code>diskFreePercent</code>), so make sure to explicitly include this value to avoid diff issues.  Supported by the <code>infra_metric</code> condition type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Select { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/master/sdk/dotnet/InfraAlertCondition.cs/#L92">View Source</a>
+  </span>
+  <a id="Pulumi_NewRelic_InfraAlertCondition_Type_" data-uid="Pulumi.NewRelic.InfraAlertCondition.Type*"></a>
+  <h4 id="Pulumi_NewRelic_InfraAlertCondition_Type" data-uid="Pulumi.NewRelic.InfraAlertCondition.Type">Type</h4>
+  <div class="markdown level1 summary"><p>The type of Infrastructure alert condition.  Valid values are  <code>infra_process_running</code>, <code>infra_metric</code>, and <code>infra_host_not_reporting</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Type { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/master/sdk/dotnet/InfraAlertCondition.cs/#L95">View Source</a>
+  </span>
+  <a id="Pulumi_NewRelic_InfraAlertCondition_UpdatedAt_" data-uid="Pulumi.NewRelic.InfraAlertCondition.UpdatedAt*"></a>
+  <h4 id="Pulumi_NewRelic_InfraAlertCondition_UpdatedAt" data-uid="Pulumi.NewRelic.InfraAlertCondition.UpdatedAt">UpdatedAt</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; UpdatedAt { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/master/sdk/dotnet/InfraAlertCondition.cs/#L98">View Source</a>
+  </span>
+  <a id="Pulumi_NewRelic_InfraAlertCondition_ViolationCloseTimer_" data-uid="Pulumi.NewRelic.InfraAlertCondition.ViolationCloseTimer*"></a>
+  <h4 id="Pulumi_NewRelic_InfraAlertCondition_ViolationCloseTimer" data-uid="Pulumi.NewRelic.InfraAlertCondition.ViolationCloseTimer">ViolationCloseTimer</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; ViolationCloseTimer { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/master/sdk/dotnet/InfraAlertCondition.cs/#L104">View Source</a>
+  </span>
+  <a id="Pulumi_NewRelic_InfraAlertCondition_Warning_" data-uid="Pulumi.NewRelic.InfraAlertCondition.Warning*"></a>
+  <h4 id="Pulumi_NewRelic_InfraAlertCondition_Warning" data-uid="Pulumi.NewRelic.InfraAlertCondition.Warning">Warning</h4>
+  <div class="markdown level1 summary"><p>Identifies the threshold parameters for opening a warning alert violation. See Thresholds below for details.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;InfraAlertConditionWarning&gt; Warning { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.NewRelic.Outputs.InfraAlertConditionWarning.html">InfraAlertConditionWarning</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/master/sdk/dotnet/InfraAlertCondition.cs/#L110">View Source</a>
+  </span>
+  <a id="Pulumi_NewRelic_InfraAlertCondition_Where_" data-uid="Pulumi.NewRelic.InfraAlertCondition.Where*"></a>
+  <h4 id="Pulumi_NewRelic_InfraAlertCondition_Where" data-uid="Pulumi.NewRelic.InfraAlertCondition.Where">Where</h4>
+  <div class="markdown level1 summary"><p>If applicable, this identifies any Infrastructure host filters used; for example: <code>hostname LIKE &amp;apos;%cassandra%&amp;apos;</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Where { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/master/sdk/dotnet/InfraAlertCondition.cs/#L151">View Source</a>
+  </span>
+  <a id="Pulumi_NewRelic_InfraAlertCondition_Get_" data-uid="Pulumi.NewRelic.InfraAlertCondition.Get*"></a>
+  <h4 id="Pulumi_NewRelic_InfraAlertCondition_Get_System_String_Input_System_String__Pulumi_NewRelic_InfraAlertConditionState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.NewRelic.InfraAlertCondition.Get(System.String,Input{System.String},Pulumi.NewRelic.InfraAlertConditionState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, InfraAlertConditionState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Get an existing InfraAlertCondition resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static InfraAlertCondition Get(string name, Input&lt;string&gt; id, InfraAlertConditionState state = null, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.NewRelic.InfraAlertConditionState.html">InfraAlertConditionState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.NewRelic.InfraAlertCondition.html">InfraAlertCondition</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-newrelic/blob/master/sdk/dotnet/InfraAlertCondition.cs/#L24" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

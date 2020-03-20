@@ -1,0 +1,327 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class CustomAttribute
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class CustomAttribute
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.VSphere.CustomAttribute">
+  
+  <h1 id="Pulumi_VSphere_CustomAttribute" data-uid="Pulumi.VSphere.CustomAttribute" class="text-break">Class CustomAttribute
+  </h1>
+  <div class="markdown level0 summary"><p>The <code>vsphere..CustomAttribute</code> resource can be used to create and manage custom
+attributes, which allow users to associate user-specific meta-information with
+vSphere managed objects. Custom attribute values must be strings and are stored
+on the vCenter Server and not the managed object.</p>
+<p>For more information about custom attributes, click <a href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.vcenterhost.doc/GUID-73606C4C-763C-4E27-A1DA-032E4C46219D.html">here</a>.</p>
+<blockquote>
+<p><strong>NOTE:</strong> Custom attributes are unsupported on direct ESXi connections
+and require vCenter.</p>
+</blockquote>
+<h2 id="managed-object-types">Managed Object Types</h2>
+<p>The following table will help you determine what value you need to enter for
+the managed object type you want the attribute to apply to.</p>
+<p>Note that if you want a attribute to apply to all objects, leave the type
+unspecified.</p>
+<p>&lt;table&gt;
+&lt;tr&gt;&lt;th&gt;Type&lt;/th&gt;&lt;th&gt;Value&lt;/th&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Folders&lt;/td&gt;&lt;td&gt;<code>Folder</code>&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Clusters&lt;/td&gt;&lt;td&gt;<code>ClusterComputeResource</code>&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Datacenters&lt;/td&gt;&lt;td&gt;<code>Datacenter</code>&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Datastores&lt;/td&gt;&lt;td&gt;<code>Datastore</code>&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Datastore Clusters&lt;/td&gt;&lt;td&gt;<code>StoragePod</code>&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;DVS Portgroups&lt;/td&gt;&lt;td&gt;<code>DistributedVirtualPortgroup</code>&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Distributed vSwitches&lt;/td&gt;&lt;td&gt;<code>DistributedVirtualSwitch</code>&lt;br&gt;<code>VmwareDistributedVirtualSwitch</code>&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Hosts&lt;/td&gt;&lt;td&gt;<code>HostSystem</code>&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Content Libraries&lt;/td&gt;&lt;td&gt;<code>com.vmware.content.Library</code>&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Content Library Items&lt;/td&gt;&lt;td&gt;<code>com.vmware.content.library.Item</code>&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Networks&lt;/td&gt;&lt;td&gt;<code>HostNetwork</code>&lt;br&gt;<code>Network</code>&lt;br&gt;<code>OpaqueNetwork</code>&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Resource Pools&lt;/td&gt;&lt;td&gt;<code>ResourcePool</code>&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;vApps&lt;/td&gt;&lt;td&gt;<code>VirtualApp</code>&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Virtual Machines&lt;/td&gt;&lt;td&gt;<code>VirtualMachine</code>&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/custom_attribute.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/custom_attribute.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">CustomAttribute</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.VSphere.html">Pulumi.VSphere</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.VSphere.dll</h6>
+  <h5 id="Pulumi_VSphere_CustomAttribute_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class CustomAttribute : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/CustomAttribute.cs/#L77">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_CustomAttribute__ctor_" data-uid="Pulumi.VSphere.CustomAttribute.#ctor*"></a>
+  <h4 id="Pulumi_VSphere_CustomAttribute__ctor_System_String_Pulumi_VSphere_CustomAttributeArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.VSphere.CustomAttribute.#ctor(System.String,Pulumi.VSphere.CustomAttributeArgs,System.Nullable{CustomResourceOptions})">CustomAttribute(String, CustomAttributeArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Create a CustomAttribute resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CustomAttribute(string name, CustomAttributeArgs args = null, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.VSphere.CustomAttributeArgs.html">CustomAttributeArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/CustomAttribute.cs/#L60">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_CustomAttribute_ManagedObjectType_" data-uid="Pulumi.VSphere.CustomAttribute.ManagedObjectType*"></a>
+  <h4 id="Pulumi_VSphere_CustomAttribute_ManagedObjectType" data-uid="Pulumi.VSphere.CustomAttribute.ManagedObjectType">ManagedObjectType</h4>
+  <div class="markdown level1 summary"><p>The object type that this attribute may be
+applied to. If not set, the custom attribute may be applied to any object
+type. For a full list, click here. Forces a new
+resource if changed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ManagedObjectType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/CustomAttribute.cs/#L66">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_CustomAttribute_Name_" data-uid="Pulumi.VSphere.CustomAttribute.Name*"></a>
+  <h4 id="Pulumi_VSphere_CustomAttribute_Name" data-uid="Pulumi.VSphere.CustomAttribute.Name">Name</h4>
+  <div class="markdown level1 summary"><p>The name of the custom attribute.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/CustomAttribute.cs/#L107">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_CustomAttribute_Get_" data-uid="Pulumi.VSphere.CustomAttribute.Get*"></a>
+  <h4 id="Pulumi_VSphere_CustomAttribute_Get_System_String_Input_System_String__Pulumi_VSphere_CustomAttributeState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.VSphere.CustomAttribute.Get(System.String,Input{System.String},Pulumi.VSphere.CustomAttributeState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, CustomAttributeState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Get an existing CustomAttribute resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static CustomAttribute Get(string name, Input&lt;string&gt; id, CustomAttributeState state = null, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.VSphere.CustomAttributeState.html">CustomAttributeState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.VSphere.CustomAttribute.html">CustomAttribute</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/CustomAttribute.cs/#L52" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

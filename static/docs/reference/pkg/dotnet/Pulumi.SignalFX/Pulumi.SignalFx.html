@@ -1,0 +1,277 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace Pulumi.SignalFx
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace Pulumi.SignalFx
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.SignalFx">
+  
+  <h1 id="Pulumi_SignalFx" data-uid="Pulumi.SignalFx" class="text-break">Namespace Pulumi.SignalFx
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">Classes
+  </h3>
+      <h4><a class="xref" href="Pulumi.SignalFx.AlertMutingRule.html">AlertMutingRule</a></h4>
+      <section><p>Provides a SignalFx resource for managing alert muting rules. See <a href="https://docs.signalfx.com/en/latest/detect-alert/mute-notifications.html">Mute Notifications</a> for more information.</p>
+<blockquote>
+<p><strong>WARNING</strong> SignalFx does not allow the start time of a <strong>currently active</strong> muting rule to be modified. As such, attempting to modify a currently active rule will destroy the existing rule and create a new rule. This may result in the emission of notifications.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/alert_muting_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/alert_muting_rule.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.SignalFx.AlertMutingRuleArgs.html">AlertMutingRuleArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.SignalFx.AlertMutingRuleState.html">AlertMutingRuleState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.SignalFx.Config.html">Config</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.SignalFx.Dashboard.html">Dashboard</a></h4>
+      <section><blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/dashboard.html.markdown">https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/dashboard.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.SignalFx.DashboardArgs.html">DashboardArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.SignalFx.DashboardGroup.html">DashboardGroup</a></h4>
+      <section><p>In the SignalFx web UI, a <a href="https://developers.signalfx.com/v2/docs/dashboard-group-model">dashboard group</a> is a collection of dashboards.</p>
+<p><strong>NOTE:</strong> Dashboard groups cannot be accessed directly, but just via a dashboard contained in them. This is the reason why make show won't show any of yours dashboard groups.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/dashboard_group.html.markdown">https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/dashboard_group.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.SignalFx.DashboardGroupArgs.html">DashboardGroupArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.SignalFx.DashboardGroupState.html">DashboardGroupState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.SignalFx.DashboardState.html">DashboardState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.SignalFx.DataLink.html">DataLink</a></h4>
+      <section><p>Manage SignalFx <a href="https://docs.signalfx.com/en/latest/managing/data-links.html">Data Links</a>.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/data_link.html.markdown">https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/data_link.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.SignalFx.DataLinkArgs.html">DataLinkArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.SignalFx.DataLinkState.html">DataLinkState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.SignalFx.Detector.html">Detector</a></h4>
+      <section><p>Provides a SignalFx detector resource. This can be used to create and manage detectors.</p>
+<blockquote>
+<p><strong>NOTE</strong> If you're interested in using SignalFx detector features such as Historical Anomaly, Resource Running Out, or others then consider building them in the UI first then using the &quot;Show SignalFlow&quot; feature to extract the value for <code>program_text</code>. You may also consult the <a href="https://github.com/signalfx/signalflow-library/tree/master/library/signalfx/detectors">documentation for detector functions in signalflow-library</a>.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/detector.html.markdown">https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/detector.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.SignalFx.DetectorArgs.html">DetectorArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.SignalFx.DetectorState.html">DetectorState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.SignalFx.EventFeedChart.html">EventFeedChart</a></h4>
+      <section><p>Displays a listing of events as a widget in a dashboard.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/event_feed_chart.html.markdown">https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/event_feed_chart.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.SignalFx.EventFeedChartArgs.html">EventFeedChartArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.SignalFx.EventFeedChartState.html">EventFeedChartState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.SignalFx.HeatmapChart.html">HeatmapChart</a></h4>
+      <section><p>This chart type displays the specified plot in a heatmap fashion. This format is similar to the <a href="https://signalfx-product-docs.readthedocs-hosted.com/en/latest/built-in-content/infra-nav.html#infra">Infrastructure Navigator</a>, with squares representing each source for the selected metric, and the color of each square representing the value range of the metric.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/heatmap_chart.html.markdown">https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/heatmap_chart.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.SignalFx.HeatmapChartArgs.html">HeatmapChartArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.SignalFx.HeatmapChartState.html">HeatmapChartState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.SignalFx.ListChart.html">ListChart</a></h4>
+      <section><p>This chart type displays current data values in a list format.</p>
+<p>The name of each value in the chart reflects the name of the plot and any associated dimensions. We recommend you click the Pencil icon and give the plot a meaningful name, as in plot B below. Otherwise, just the raw metric name will be displayed on the chart, as in plot A below.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/list_chart.html.markdown">https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/list_chart.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.SignalFx.ListChartArgs.html">ListChartArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.SignalFx.ListChartState.html">ListChartState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.SignalFx.OrgToken.html">OrgToken</a></h4>
+      <section><p>Manage SignalFx org tokens.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/org_token.html.markdown">https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/org_token.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.SignalFx.OrgTokenArgs.html">OrgTokenArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.SignalFx.OrgTokenState.html">OrgTokenState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.SignalFx.Provider.html">Provider</a></h4>
+      <section><p>The provider type for the signalfx package. By default, resources use package-wide configuration
+settings, however an explicit <code>Provider</code> instance may be created and passed during resource
+construction to achieve fine-grained programmatic control over provider settings. See the
+<a href="https://www.pulumi.com/docs/reference/programming-model/#providers">documentation</a> for more information.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/index.html.markdown">https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/index.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.SignalFx.ProviderArgs.html">ProviderArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.SignalFx.SingleValueChart.html">SingleValueChart</a></h4>
+      <section><p>This chart type displays a single number in a large font, representing the current value of a single metric on a plot line.</p>
+<p>If the time period is in the past, the number represents the value of the metric near the end of the time period.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/single_value_chart.html.markdown">https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/single_value_chart.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.SignalFx.SingleValueChartArgs.html">SingleValueChartArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.SignalFx.SingleValueChartState.html">SingleValueChartState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.SignalFx.Team.html">Team</a></h4>
+      <section><p>Handles management of SignalFx teams.</p>
+<p>You can configure <a href="https://docs.signalfx.com/en/latest/managing/teams/team-notifications.html">team notification policies</a> using this resource and the various <code>notifications_*</code> properties.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/team.html.markdown">https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/team.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.SignalFx.TeamArgs.html">TeamArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.SignalFx.TeamState.html">TeamState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.SignalFx.TextChart.html">TextChart</a></h4>
+      <section><p>This special type of chart doesn’t display any metric data. Rather, it lets you place a text note on the dashboard.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/text_chart.html.markdown">https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/text_chart.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.SignalFx.TextChartArgs.html">TextChartArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.SignalFx.TextChartState.html">TextChartState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.SignalFx.TimeChart.html">TimeChart</a></h4>
+      <section><p>Provides a SignalFx time chart resource. This can be used to create and manage the different types of time charts.</p>
+<p>Time charts display data points over a period of time.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/time_chart.html.markdown">https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/time_chart.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.SignalFx.TimeChartArgs.html">TimeChartArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.SignalFx.TimeChartState.html">TimeChartState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.SignalFx.WebhookIntegration.html">WebhookIntegration</a></h4>
+      <section><p>SignalFx Webhook integration.</p>
+<p><strong>Note:</strong> When managing integrations you'll need to use an admin token to authenticate the SignalFx provider. Otherwise you'll receive a 4xx error.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/webhook_integration.html.markdown">https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/webhook_integration.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.SignalFx.WebhookIntegrationArgs.html">WebhookIntegrationArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.SignalFx.WebhookIntegrationState.html">WebhookIntegrationState</a></h4>
+      <section></section>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

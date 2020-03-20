@@ -1,0 +1,979 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ProviderArgs
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ProviderArgs
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.OpenStack.ProviderArgs">
+  
+  <h1 id="Pulumi_OpenStack_ProviderArgs" data-uid="Pulumi.OpenStack.ProviderArgs" class="text-break">Class ProviderArgs
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">ProviderArgs</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.OpenStack.html">Pulumi.OpenStack</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.OpenStack.dll</h6>
+  <h5 id="Pulumi_OpenStack_ProviderArgs_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class ProviderArgs : ResourceArgs</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Provider.cs/#L241">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ProviderArgs__ctor_" data-uid="Pulumi.OpenStack.ProviderArgs.#ctor*"></a>
+  <h4 id="Pulumi_OpenStack_ProviderArgs__ctor" data-uid="Pulumi.OpenStack.ProviderArgs.#ctor">ProviderArgs()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ProviderArgs()</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Provider.cs/#L53">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ProviderArgs_AllowReauth_" data-uid="Pulumi.OpenStack.ProviderArgs.AllowReauth*"></a>
+  <h4 id="Pulumi_OpenStack_ProviderArgs_AllowReauth" data-uid="Pulumi.OpenStack.ProviderArgs.AllowReauth">AllowReauth</h4>
+  <div class="markdown level1 summary"><p>If set to <code>true</code>, OpenStack authorization will be perfomed automatically, if the initial auth token get
+expired. This is useful, when the token TTL is low or the overall Terraform provider execution time expected
+to be greater than the initial token TTL.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? AllowReauth { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Provider.cs/#L59">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ProviderArgs_ApplicationCredentialId_" data-uid="Pulumi.OpenStack.ProviderArgs.ApplicationCredentialId*"></a>
+  <h4 id="Pulumi_OpenStack_ProviderArgs_ApplicationCredentialId" data-uid="Pulumi.OpenStack.ProviderArgs.ApplicationCredentialId">ApplicationCredentialId</h4>
+  <div class="markdown level1 summary"><p>Application Credential ID to login with.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ApplicationCredentialId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Provider.cs/#L65">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ProviderArgs_ApplicationCredentialName_" data-uid="Pulumi.OpenStack.ProviderArgs.ApplicationCredentialName*"></a>
+  <h4 id="Pulumi_OpenStack_ProviderArgs_ApplicationCredentialName" data-uid="Pulumi.OpenStack.ProviderArgs.ApplicationCredentialName">ApplicationCredentialName</h4>
+  <div class="markdown level1 summary"><p>Application Credential name to login with.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ApplicationCredentialName { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Provider.cs/#L71">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ProviderArgs_ApplicationCredentialSecret_" data-uid="Pulumi.OpenStack.ProviderArgs.ApplicationCredentialSecret*"></a>
+  <h4 id="Pulumi_OpenStack_ProviderArgs_ApplicationCredentialSecret" data-uid="Pulumi.OpenStack.ProviderArgs.ApplicationCredentialSecret">ApplicationCredentialSecret</h4>
+  <div class="markdown level1 summary"><p>Application Credential secret to login with.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ApplicationCredentialSecret { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Provider.cs/#L77">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ProviderArgs_AuthUrl_" data-uid="Pulumi.OpenStack.ProviderArgs.AuthUrl*"></a>
+  <h4 id="Pulumi_OpenStack_ProviderArgs_AuthUrl" data-uid="Pulumi.OpenStack.ProviderArgs.AuthUrl">AuthUrl</h4>
+  <div class="markdown level1 summary"><p>The Identity authentication URL.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? AuthUrl { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Provider.cs/#L83">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ProviderArgs_CacertFile_" data-uid="Pulumi.OpenStack.ProviderArgs.CacertFile*"></a>
+  <h4 id="Pulumi_OpenStack_ProviderArgs_CacertFile" data-uid="Pulumi.OpenStack.ProviderArgs.CacertFile">CacertFile</h4>
+  <div class="markdown level1 summary"><p>A Custom CA certificate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? CacertFile { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Provider.cs/#L89">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ProviderArgs_Cert_" data-uid="Pulumi.OpenStack.ProviderArgs.Cert*"></a>
+  <h4 id="Pulumi_OpenStack_ProviderArgs_Cert" data-uid="Pulumi.OpenStack.ProviderArgs.Cert">Cert</h4>
+  <div class="markdown level1 summary"><p>A client certificate to authenticate with.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Cert { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Provider.cs/#L95">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ProviderArgs_Cloud_" data-uid="Pulumi.OpenStack.ProviderArgs.Cloud*"></a>
+  <h4 id="Pulumi_OpenStack_ProviderArgs_Cloud" data-uid="Pulumi.OpenStack.ProviderArgs.Cloud">Cloud</h4>
+  <div class="markdown level1 summary"><p>An entry in a <code>clouds.yaml</code> file to use.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Cloud { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Provider.cs/#L101">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ProviderArgs_DefaultDomain_" data-uid="Pulumi.OpenStack.ProviderArgs.DefaultDomain*"></a>
+  <h4 id="Pulumi_OpenStack_ProviderArgs_DefaultDomain" data-uid="Pulumi.OpenStack.ProviderArgs.DefaultDomain">DefaultDomain</h4>
+  <div class="markdown level1 summary"><p>The name of the Domain ID to scope to if no other domain is specified. Defaults to <code>default</code> (Identity v3).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? DefaultDomain { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Provider.cs/#L107">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ProviderArgs_DelayedAuth_" data-uid="Pulumi.OpenStack.ProviderArgs.DelayedAuth*"></a>
+  <h4 id="Pulumi_OpenStack_ProviderArgs_DelayedAuth" data-uid="Pulumi.OpenStack.ProviderArgs.DelayedAuth">DelayedAuth</h4>
+  <div class="markdown level1 summary"><p>If set to <code>true</code>, OpenStack authorization will be perfomed, when the service provider client is called.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? DelayedAuth { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Provider.cs/#L114">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ProviderArgs_DisableNoCacheHeader_" data-uid="Pulumi.OpenStack.ProviderArgs.DisableNoCacheHeader*"></a>
+  <h4 id="Pulumi_OpenStack_ProviderArgs_DisableNoCacheHeader" data-uid="Pulumi.OpenStack.ProviderArgs.DisableNoCacheHeader">DisableNoCacheHeader</h4>
+  <div class="markdown level1 summary"><p>If set to <code>true</code>, the HTTP <code>Cache-Control: no-cache</code> header will not be added by default to all API
+requests.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? DisableNoCacheHeader { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Provider.cs/#L120">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ProviderArgs_DomainId_" data-uid="Pulumi.OpenStack.ProviderArgs.DomainId*"></a>
+  <h4 id="Pulumi_OpenStack_ProviderArgs_DomainId" data-uid="Pulumi.OpenStack.ProviderArgs.DomainId">DomainId</h4>
+  <div class="markdown level1 summary"><p>The ID of the Domain to scope to (Identity v3).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? DomainId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Provider.cs/#L126">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ProviderArgs_DomainName_" data-uid="Pulumi.OpenStack.ProviderArgs.DomainName*"></a>
+  <h4 id="Pulumi_OpenStack_ProviderArgs_DomainName" data-uid="Pulumi.OpenStack.ProviderArgs.DomainName">DomainName</h4>
+  <div class="markdown level1 summary"><p>The name of the Domain to scope to (Identity v3).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? DomainName { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Provider.cs/#L135">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ProviderArgs_EndpointOverrides_" data-uid="Pulumi.OpenStack.ProviderArgs.EndpointOverrides*"></a>
+  <h4 id="Pulumi_OpenStack_ProviderArgs_EndpointOverrides" data-uid="Pulumi.OpenStack.ProviderArgs.EndpointOverrides">EndpointOverrides</h4>
+  <div class="markdown level1 summary"><p>A map of services with an endpoint to override what was from the Keystone catalog</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputMap&lt;object&gt; EndpointOverrides { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Provider.cs/#L141">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ProviderArgs_EndpointType_" data-uid="Pulumi.OpenStack.ProviderArgs.EndpointType*"></a>
+  <h4 id="Pulumi_OpenStack_ProviderArgs_EndpointType" data-uid="Pulumi.OpenStack.ProviderArgs.EndpointType">EndpointType</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? EndpointType { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Provider.cs/#L147">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ProviderArgs_Insecure_" data-uid="Pulumi.OpenStack.ProviderArgs.Insecure*"></a>
+  <h4 id="Pulumi_OpenStack_ProviderArgs_Insecure" data-uid="Pulumi.OpenStack.ProviderArgs.Insecure">Insecure</h4>
+  <div class="markdown level1 summary"><p>Trust self-signed certificates.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? Insecure { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Provider.cs/#L153">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ProviderArgs_Key_" data-uid="Pulumi.OpenStack.ProviderArgs.Key*"></a>
+  <h4 id="Pulumi_OpenStack_ProviderArgs_Key" data-uid="Pulumi.OpenStack.ProviderArgs.Key">Key</h4>
+  <div class="markdown level1 summary"><p>A client private key to authenticate with.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Key { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Provider.cs/#L159">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ProviderArgs_MaxRetries_" data-uid="Pulumi.OpenStack.ProviderArgs.MaxRetries*"></a>
+  <h4 id="Pulumi_OpenStack_ProviderArgs_MaxRetries" data-uid="Pulumi.OpenStack.ProviderArgs.MaxRetries">MaxRetries</h4>
+  <div class="markdown level1 summary"><p>How many times HTTP connection should be retried until giving up.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? MaxRetries { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Provider.cs/#L165">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ProviderArgs_Password_" data-uid="Pulumi.OpenStack.ProviderArgs.Password*"></a>
+  <h4 id="Pulumi_OpenStack_ProviderArgs_Password" data-uid="Pulumi.OpenStack.ProviderArgs.Password">Password</h4>
+  <div class="markdown level1 summary"><p>Password to login with.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Password { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Provider.cs/#L171">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ProviderArgs_ProjectDomainId_" data-uid="Pulumi.OpenStack.ProviderArgs.ProjectDomainId*"></a>
+  <h4 id="Pulumi_OpenStack_ProviderArgs_ProjectDomainId" data-uid="Pulumi.OpenStack.ProviderArgs.ProjectDomainId">ProjectDomainId</h4>
+  <div class="markdown level1 summary"><p>The ID of the domain where the proejct resides (Identity v3).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ProjectDomainId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Provider.cs/#L177">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ProviderArgs_ProjectDomainName_" data-uid="Pulumi.OpenStack.ProviderArgs.ProjectDomainName*"></a>
+  <h4 id="Pulumi_OpenStack_ProviderArgs_ProjectDomainName" data-uid="Pulumi.OpenStack.ProviderArgs.ProjectDomainName">ProjectDomainName</h4>
+  <div class="markdown level1 summary"><p>The name of the domain where the project resides (Identity v3).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ProjectDomainName { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Provider.cs/#L183">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ProviderArgs_Region_" data-uid="Pulumi.OpenStack.ProviderArgs.Region*"></a>
+  <h4 id="Pulumi_OpenStack_ProviderArgs_Region" data-uid="Pulumi.OpenStack.ProviderArgs.Region">Region</h4>
+  <div class="markdown level1 summary"><p>The OpenStack region to connect to.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Region { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Provider.cs/#L189">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ProviderArgs_Swauth_" data-uid="Pulumi.OpenStack.ProviderArgs.Swauth*"></a>
+  <h4 id="Pulumi_OpenStack_ProviderArgs_Swauth" data-uid="Pulumi.OpenStack.ProviderArgs.Swauth">Swauth</h4>
+  <div class="markdown level1 summary"><p>Use Swift's authentication system instead of Keystone. Only used for interaction with Swift.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? Swauth { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Provider.cs/#L195">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ProviderArgs_TenantId_" data-uid="Pulumi.OpenStack.ProviderArgs.TenantId*"></a>
+  <h4 id="Pulumi_OpenStack_ProviderArgs_TenantId" data-uid="Pulumi.OpenStack.ProviderArgs.TenantId">TenantId</h4>
+  <div class="markdown level1 summary"><p>The ID of the Tenant (Identity v2) or Project (Identity v3) to login with.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? TenantId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Provider.cs/#L201">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ProviderArgs_TenantName_" data-uid="Pulumi.OpenStack.ProviderArgs.TenantName*"></a>
+  <h4 id="Pulumi_OpenStack_ProviderArgs_TenantName" data-uid="Pulumi.OpenStack.ProviderArgs.TenantName">TenantName</h4>
+  <div class="markdown level1 summary"><p>The name of the Tenant (Identity v2) or Project (Identity v3) to login with.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? TenantName { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Provider.cs/#L207">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ProviderArgs_Token_" data-uid="Pulumi.OpenStack.ProviderArgs.Token*"></a>
+  <h4 id="Pulumi_OpenStack_ProviderArgs_Token" data-uid="Pulumi.OpenStack.ProviderArgs.Token">Token</h4>
+  <div class="markdown level1 summary"><p>Authentication token to use as an alternative to username/password.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Token { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Provider.cs/#L214">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ProviderArgs_UseOctavia_" data-uid="Pulumi.OpenStack.ProviderArgs.UseOctavia*"></a>
+  <h4 id="Pulumi_OpenStack_ProviderArgs_UseOctavia" data-uid="Pulumi.OpenStack.ProviderArgs.UseOctavia">UseOctavia</h4>
+  <div class="markdown level1 summary"><p>If set to <code>true</code>, API requests will go the Load Balancer service (Octavia) instead of the Networking service
+(Neutron).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? UseOctavia { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Provider.cs/#L220">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ProviderArgs_UserDomainId_" data-uid="Pulumi.OpenStack.ProviderArgs.UserDomainId*"></a>
+  <h4 id="Pulumi_OpenStack_ProviderArgs_UserDomainId" data-uid="Pulumi.OpenStack.ProviderArgs.UserDomainId">UserDomainId</h4>
+  <div class="markdown level1 summary"><p>The ID of the domain where the user resides (Identity v3).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? UserDomainId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Provider.cs/#L226">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ProviderArgs_UserDomainName_" data-uid="Pulumi.OpenStack.ProviderArgs.UserDomainName*"></a>
+  <h4 id="Pulumi_OpenStack_ProviderArgs_UserDomainName" data-uid="Pulumi.OpenStack.ProviderArgs.UserDomainName">UserDomainName</h4>
+  <div class="markdown level1 summary"><p>The name of the domain where the user resides (Identity v3).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? UserDomainName { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Provider.cs/#L232">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ProviderArgs_UserId_" data-uid="Pulumi.OpenStack.ProviderArgs.UserId*"></a>
+  <h4 id="Pulumi_OpenStack_ProviderArgs_UserId" data-uid="Pulumi.OpenStack.ProviderArgs.UserId">UserId</h4>
+  <div class="markdown level1 summary"><p>Username to login with.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? UserId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Provider.cs/#L238">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ProviderArgs_UserName_" data-uid="Pulumi.OpenStack.ProviderArgs.UserName*"></a>
+  <h4 id="Pulumi_OpenStack_ProviderArgs_UserName" data-uid="Pulumi.OpenStack.ProviderArgs.UserName">UserName</h4>
+  <div class="markdown level1 summary"><p>Username to login with.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? UserName { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Provider.cs/#L46" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

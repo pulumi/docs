@@ -1,0 +1,696 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class QuotaSetV2
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class QuotaSetV2
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2">
+  
+  <h1 id="Pulumi_OpenStack_Compute_QuotaSetV2" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2" class="text-break">Class QuotaSetV2
+  </h1>
+  <div class="markdown level0 summary"><p>Manages a V2 compute quotaset resource within OpenStack.</p>
+<blockquote>
+<p><strong>Note:</strong> This usually requires admin privileges.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> This resource has a no-op deletion so no actual actions will be done against the OpenStack API
+in case of delete call.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_quotaset_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_quotaset_v2.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">QuotaSetV2</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.OpenStack.Compute.html">Pulumi.OpenStack.Compute</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.OpenStack.dll</h6>
+  <h5 id="Pulumi_OpenStack_Compute_QuotaSetV2_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class QuotaSetV2 : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/QuotaSetV2.cs/#L144">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Compute_QuotaSetV2__ctor_" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.#ctor*"></a>
+  <h4 id="Pulumi_OpenStack_Compute_QuotaSetV2__ctor_System_String_Pulumi_OpenStack_Compute_QuotaSetV2Args_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.#ctor(System.String,Pulumi.OpenStack.Compute.QuotaSetV2Args,System.Nullable{CustomResourceOptions})">QuotaSetV2(String, QuotaSetV2Args, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Create a QuotaSetV2 resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public QuotaSetV2(string name, QuotaSetV2Args args, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.OpenStack.Compute.QuotaSetV2Args.html">QuotaSetV2Args</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/QuotaSetV2.cs/#L27">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Compute_QuotaSetV2_Cores_" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.Cores*"></a>
+  <h4 id="Pulumi_OpenStack_Compute_QuotaSetV2_Cores" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.Cores">Cores</h4>
+  <div class="markdown level1 summary"><p>Quota value for cores.
+Changing this updates the existing quotaset.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; Cores { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/QuotaSetV2.cs/#L34">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Compute_QuotaSetV2_FixedIps_" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.FixedIps*"></a>
+  <h4 id="Pulumi_OpenStack_Compute_QuotaSetV2_FixedIps" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.FixedIps">FixedIps</h4>
+  <div class="markdown level1 summary"><p>Quota value for fixed IPs.
+Changing this updates the existing quotaset.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; FixedIps { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/QuotaSetV2.cs/#L41">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Compute_QuotaSetV2_FloatingIps_" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.FloatingIps*"></a>
+  <h4 id="Pulumi_OpenStack_Compute_QuotaSetV2_FloatingIps" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.FloatingIps">FloatingIps</h4>
+  <div class="markdown level1 summary"><p>Quota value for floating IPs.
+Changing this updates the existing quotaset.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; FloatingIps { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/QuotaSetV2.cs/#L48">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Compute_QuotaSetV2_InjectedFileContentBytes_" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.InjectedFileContentBytes*"></a>
+  <h4 id="Pulumi_OpenStack_Compute_QuotaSetV2_InjectedFileContentBytes" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.InjectedFileContentBytes">InjectedFileContentBytes</h4>
+  <div class="markdown level1 summary"><p>Quota value for content bytes
+of injected files. Changing this updates the existing quotaset.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; InjectedFileContentBytes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/QuotaSetV2.cs/#L55">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Compute_QuotaSetV2_InjectedFilePathBytes_" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.InjectedFilePathBytes*"></a>
+  <h4 id="Pulumi_OpenStack_Compute_QuotaSetV2_InjectedFilePathBytes" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.InjectedFilePathBytes">InjectedFilePathBytes</h4>
+  <div class="markdown level1 summary"><p>Quota value for path bytes of
+injected files. Changing this updates the existing quotaset.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; InjectedFilePathBytes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/QuotaSetV2.cs/#L62">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Compute_QuotaSetV2_InjectedFiles_" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.InjectedFiles*"></a>
+  <h4 id="Pulumi_OpenStack_Compute_QuotaSetV2_InjectedFiles" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.InjectedFiles">InjectedFiles</h4>
+  <div class="markdown level1 summary"><p>Quota value for injected files.
+Changing this updates the existing quotaset.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; InjectedFiles { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/QuotaSetV2.cs/#L69">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Compute_QuotaSetV2_Instances_" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.Instances*"></a>
+  <h4 id="Pulumi_OpenStack_Compute_QuotaSetV2_Instances" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.Instances">Instances</h4>
+  <div class="markdown level1 summary"><p>Quota value for instances.
+Changing this updates the existing quotaset.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; Instances { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/QuotaSetV2.cs/#L76">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Compute_QuotaSetV2_KeyPairs_" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.KeyPairs*"></a>
+  <h4 id="Pulumi_OpenStack_Compute_QuotaSetV2_KeyPairs" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.KeyPairs">KeyPairs</h4>
+  <div class="markdown level1 summary"><p>Quota value for key pairs.
+Changing this updates the existing quotaset.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; KeyPairs { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/QuotaSetV2.cs/#L83">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Compute_QuotaSetV2_MetadataItems_" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.MetadataItems*"></a>
+  <h4 id="Pulumi_OpenStack_Compute_QuotaSetV2_MetadataItems" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.MetadataItems">MetadataItems</h4>
+  <div class="markdown level1 summary"><p>Quota value for metadata items.
+Changing this updates the existing quotaset.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; MetadataItems { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/QuotaSetV2.cs/#L90">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Compute_QuotaSetV2_ProjectId_" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.ProjectId*"></a>
+  <h4 id="Pulumi_OpenStack_Compute_QuotaSetV2_ProjectId" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.ProjectId">ProjectId</h4>
+  <div class="markdown level1 summary"><p>ID of the project to manage quotas.
+Changing this creates a new quotaset.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ProjectId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/QuotaSetV2.cs/#L97">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Compute_QuotaSetV2_Ram_" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.Ram*"></a>
+  <h4 id="Pulumi_OpenStack_Compute_QuotaSetV2_Ram" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.Ram">Ram</h4>
+  <div class="markdown level1 summary"><p>Quota value for RAM.
+Changing this updates the existing quotaset.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; Ram { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/QuotaSetV2.cs/#L105">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Compute_QuotaSetV2_Region_" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.Region*"></a>
+  <h4 id="Pulumi_OpenStack_Compute_QuotaSetV2_Region" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.Region">Region</h4>
+  <div class="markdown level1 summary"><p>The region in which to create the volume. If
+omitted, the <code>region</code> argument of the provider is used. Changing this
+creates a new quotaset.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Region { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/QuotaSetV2.cs/#L112">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Compute_QuotaSetV2_SecurityGroupRules_" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.SecurityGroupRules*"></a>
+  <h4 id="Pulumi_OpenStack_Compute_QuotaSetV2_SecurityGroupRules" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.SecurityGroupRules">SecurityGroupRules</h4>
+  <div class="markdown level1 summary"><p>Quota value for security group rules.
+Changing this updates the existing quotaset.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; SecurityGroupRules { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/QuotaSetV2.cs/#L119">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Compute_QuotaSetV2_SecurityGroups_" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.SecurityGroups*"></a>
+  <h4 id="Pulumi_OpenStack_Compute_QuotaSetV2_SecurityGroups" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.SecurityGroups">SecurityGroups</h4>
+  <div class="markdown level1 summary"><p>Quota value for security groups.
+Changing this updates the existing quotaset.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; SecurityGroups { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/QuotaSetV2.cs/#L126">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Compute_QuotaSetV2_ServerGroupMembers_" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.ServerGroupMembers*"></a>
+  <h4 id="Pulumi_OpenStack_Compute_QuotaSetV2_ServerGroupMembers" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.ServerGroupMembers">ServerGroupMembers</h4>
+  <div class="markdown level1 summary"><p>Quota value for server groups members.
+Changing this updates the existing quotaset.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; ServerGroupMembers { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/QuotaSetV2.cs/#L133">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Compute_QuotaSetV2_ServerGroups_" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.ServerGroups*"></a>
+  <h4 id="Pulumi_OpenStack_Compute_QuotaSetV2_ServerGroups" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.ServerGroups">ServerGroups</h4>
+  <div class="markdown level1 summary"><p>Quota value for server groups.
+Changing this updates the existing quotaset.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; ServerGroups { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/QuotaSetV2.cs/#L174">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Compute_QuotaSetV2_Get_" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.Get*"></a>
+  <h4 id="Pulumi_OpenStack_Compute_QuotaSetV2_Get_System_String_Input_System_String__Pulumi_OpenStack_Compute_QuotaSetV2State_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.OpenStack.Compute.QuotaSetV2.Get(System.String,Input{System.String},Pulumi.OpenStack.Compute.QuotaSetV2State,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, QuotaSetV2State, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Get an existing QuotaSetV2 resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static QuotaSetV2 Get(string name, Input&lt;string&gt; id, QuotaSetV2State state = null, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.OpenStack.Compute.QuotaSetV2State.html">QuotaSetV2State</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.OpenStack.Compute.QuotaSetV2.html">QuotaSetV2</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/QuotaSetV2.cs/#L21" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

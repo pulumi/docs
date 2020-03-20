@@ -1,0 +1,616 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class GroupCluster
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class GroupCluster
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.GitLab.GroupCluster">
+  
+  <h1 id="Pulumi_GitLab_GroupCluster" data-uid="Pulumi.GitLab.GroupCluster" class="text-break">Class GroupCluster
+  </h1>
+  <div class="markdown level0 summary"><p>This resource allows you to create and manage group clusters for your GitLab groups.
+For further information on clusters, consult the <a href="https://docs.gitlab.com/ce/user/group/clusters/index.html">gitlab
+documentation</a>.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/r/group_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/r/group_cluster.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">GroupCluster</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.GitLab.html">Pulumi.GitLab</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.GitLab.dll</h6>
+  <h5 id="Pulumi_GitLab_GroupCluster_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class GroupCluster : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/GroupCluster.cs/#L100">View Source</a>
+  </span>
+  <a id="Pulumi_GitLab_GroupCluster__ctor_" data-uid="Pulumi.GitLab.GroupCluster.#ctor*"></a>
+  <h4 id="Pulumi_GitLab_GroupCluster__ctor_System_String_Pulumi_GitLab_GroupClusterArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.GitLab.GroupCluster.#ctor(System.String,Pulumi.GitLab.GroupClusterArgs,System.Nullable{CustomResourceOptions})">GroupCluster(String, GroupClusterArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Create a GroupCluster resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GroupCluster(string name, GroupClusterArgs args, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.GitLab.GroupClusterArgs.html">GroupClusterArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/GroupCluster.cs/#L20">View Source</a>
+  </span>
+  <a id="Pulumi_GitLab_GroupCluster_ClusterType_" data-uid="Pulumi.GitLab.GroupCluster.ClusterType*"></a>
+  <h4 id="Pulumi_GitLab_GroupCluster_ClusterType" data-uid="Pulumi.GitLab.GroupCluster.ClusterType">ClusterType</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ClusterType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/GroupCluster.cs/#L23">View Source</a>
+  </span>
+  <a id="Pulumi_GitLab_GroupCluster_CreatedAt_" data-uid="Pulumi.GitLab.GroupCluster.CreatedAt*"></a>
+  <h4 id="Pulumi_GitLab_GroupCluster_CreatedAt" data-uid="Pulumi.GitLab.GroupCluster.CreatedAt">CreatedAt</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; CreatedAt { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/GroupCluster.cs/#L29">View Source</a>
+  </span>
+  <a id="Pulumi_GitLab_GroupCluster_Domain_" data-uid="Pulumi.GitLab.GroupCluster.Domain*"></a>
+  <h4 id="Pulumi_GitLab_GroupCluster_Domain" data-uid="Pulumi.GitLab.GroupCluster.Domain">Domain</h4>
+  <div class="markdown level1 summary"><p>The base domain of the cluster.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Domain { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/GroupCluster.cs/#L35">View Source</a>
+  </span>
+  <a id="Pulumi_GitLab_GroupCluster_Enabled_" data-uid="Pulumi.GitLab.GroupCluster.Enabled*"></a>
+  <h4 id="Pulumi_GitLab_GroupCluster_Enabled" data-uid="Pulumi.GitLab.GroupCluster.Enabled">Enabled</h4>
+  <div class="markdown level1 summary"><p>Determines if cluster is active or not. Defaults to <code>true</code>. This attribute cannot be read.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; Enabled { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/GroupCluster.cs/#L41">View Source</a>
+  </span>
+  <a id="Pulumi_GitLab_GroupCluster_EnvironmentScope_" data-uid="Pulumi.GitLab.GroupCluster.EnvironmentScope*"></a>
+  <h4 id="Pulumi_GitLab_GroupCluster_EnvironmentScope" data-uid="Pulumi.GitLab.GroupCluster.EnvironmentScope">EnvironmentScope</h4>
+  <div class="markdown level1 summary"><p>The associated environment to the cluster. Defaults to <code>*</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; EnvironmentScope { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/GroupCluster.cs/#L47">View Source</a>
+  </span>
+  <a id="Pulumi_GitLab_GroupCluster_Group_" data-uid="Pulumi.GitLab.GroupCluster.Group*"></a>
+  <h4 id="Pulumi_GitLab_GroupCluster_Group" data-uid="Pulumi.GitLab.GroupCluster.Group">Group</h4>
+  <div class="markdown level1 summary"><p>The id of the group to add the cluster to.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Group { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/GroupCluster.cs/#L53">View Source</a>
+  </span>
+  <a id="Pulumi_GitLab_GroupCluster_KubernetesApiUrl_" data-uid="Pulumi.GitLab.GroupCluster.KubernetesApiUrl*"></a>
+  <h4 id="Pulumi_GitLab_GroupCluster_KubernetesApiUrl" data-uid="Pulumi.GitLab.GroupCluster.KubernetesApiUrl">KubernetesApiUrl</h4>
+  <div class="markdown level1 summary"><p>The URL to access the Kubernetes API.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; KubernetesApiUrl { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/GroupCluster.cs/#L59">View Source</a>
+  </span>
+  <a id="Pulumi_GitLab_GroupCluster_KubernetesAuthorizationType_" data-uid="Pulumi.GitLab.GroupCluster.KubernetesAuthorizationType*"></a>
+  <h4 id="Pulumi_GitLab_GroupCluster_KubernetesAuthorizationType" data-uid="Pulumi.GitLab.GroupCluster.KubernetesAuthorizationType">KubernetesAuthorizationType</h4>
+  <div class="markdown level1 summary"><p>The cluster authorization type. Valid values are <code>rbac</code>, <code>abac</code>, <code>unknown_authorization</code>. Defaults to <code>rbac</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; KubernetesAuthorizationType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/GroupCluster.cs/#L65">View Source</a>
+  </span>
+  <a id="Pulumi_GitLab_GroupCluster_KubernetesCaCert_" data-uid="Pulumi.GitLab.GroupCluster.KubernetesCaCert*"></a>
+  <h4 id="Pulumi_GitLab_GroupCluster_KubernetesCaCert" data-uid="Pulumi.GitLab.GroupCluster.KubernetesCaCert">KubernetesCaCert</h4>
+  <div class="markdown level1 summary"><p>TLS certificate (needed if API is using a self-signed TLS certificate).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; KubernetesCaCert { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/GroupCluster.cs/#L71">View Source</a>
+  </span>
+  <a id="Pulumi_GitLab_GroupCluster_KubernetesToken_" data-uid="Pulumi.GitLab.GroupCluster.KubernetesToken*"></a>
+  <h4 id="Pulumi_GitLab_GroupCluster_KubernetesToken" data-uid="Pulumi.GitLab.GroupCluster.KubernetesToken">KubernetesToken</h4>
+  <div class="markdown level1 summary"><p>The token to authenticate against Kubernetes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; KubernetesToken { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/GroupCluster.cs/#L77">View Source</a>
+  </span>
+  <a id="Pulumi_GitLab_GroupCluster_Managed_" data-uid="Pulumi.GitLab.GroupCluster.Managed*"></a>
+  <h4 id="Pulumi_GitLab_GroupCluster_Managed" data-uid="Pulumi.GitLab.GroupCluster.Managed">Managed</h4>
+  <div class="markdown level1 summary"><p>Determines if cluster is managed by gitlab or not. Defaults to <code>true</code>. This attribute cannot be read.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; Managed { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/GroupCluster.cs/#L83">View Source</a>
+  </span>
+  <a id="Pulumi_GitLab_GroupCluster_Name_" data-uid="Pulumi.GitLab.GroupCluster.Name*"></a>
+  <h4 id="Pulumi_GitLab_GroupCluster_Name" data-uid="Pulumi.GitLab.GroupCluster.Name">Name</h4>
+  <div class="markdown level1 summary"><p>The name of cluster.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/GroupCluster.cs/#L86">View Source</a>
+  </span>
+  <a id="Pulumi_GitLab_GroupCluster_PlatformType_" data-uid="Pulumi.GitLab.GroupCluster.PlatformType*"></a>
+  <h4 id="Pulumi_GitLab_GroupCluster_PlatformType" data-uid="Pulumi.GitLab.GroupCluster.PlatformType">PlatformType</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; PlatformType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/GroupCluster.cs/#L89">View Source</a>
+  </span>
+  <a id="Pulumi_GitLab_GroupCluster_ProviderType_" data-uid="Pulumi.GitLab.GroupCluster.ProviderType*"></a>
+  <h4 id="Pulumi_GitLab_GroupCluster_ProviderType" data-uid="Pulumi.GitLab.GroupCluster.ProviderType">ProviderType</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ProviderType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/GroupCluster.cs/#L130">View Source</a>
+  </span>
+  <a id="Pulumi_GitLab_GroupCluster_Get_" data-uid="Pulumi.GitLab.GroupCluster.Get*"></a>
+  <h4 id="Pulumi_GitLab_GroupCluster_Get_System_String_Input_System_String__Pulumi_GitLab_GroupClusterState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.GitLab.GroupCluster.Get(System.String,Input{System.String},Pulumi.GitLab.GroupClusterState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, GroupClusterState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Get an existing GroupCluster resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static GroupCluster Get(string name, Input&lt;string&gt; id, GroupClusterState state = null, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.GitLab.GroupClusterState.html">GroupClusterState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.GitLab.GroupCluster.html">GroupCluster</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/GroupCluster.cs/#L18" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

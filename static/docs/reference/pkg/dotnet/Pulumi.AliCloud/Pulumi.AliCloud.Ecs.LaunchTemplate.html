@@ -1,0 +1,1167 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class LaunchTemplate
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class LaunchTemplate
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate">
+  
+  <h1 id="Pulumi_AliCloud_Ecs_LaunchTemplate" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate" class="text-break">Class LaunchTemplate
+  </h1>
+  <div class="markdown level0 summary"><p>Provides an ECS Launch Template resource.</p>
+<p>For information about Launch Template and how to use it, see <a href="https://www.alibabacloud.com/help/doc-detail/73916.html">Launch Template</a>.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/launch_template.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/launch_template.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">LaunchTemplate</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.AliCloud.Ecs.html">Pulumi.AliCloud.Ecs</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.AliCloud.dll</h6>
+  <h5 id="Pulumi_AliCloud_Ecs_LaunchTemplate_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class LaunchTemplate : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/LaunchTemplate.cs/#L225">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Ecs_LaunchTemplate__ctor_" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate.#ctor*"></a>
+  <h4 id="Pulumi_AliCloud_Ecs_LaunchTemplate__ctor_System_String_Pulumi_AliCloud_Ecs_LaunchTemplateArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate.#ctor(System.String,Pulumi.AliCloud.Ecs.LaunchTemplateArgs,Pulumi.CustomResourceOptions)">LaunchTemplate(String, LaunchTemplateArgs, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Create a LaunchTemplate resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LaunchTemplate(string name, LaunchTemplateArgs args = null, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.AliCloud.Ecs.LaunchTemplateArgs.html">LaunchTemplateArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/LaunchTemplate.cs/#L24">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Ecs_LaunchTemplate_AutoReleaseTime_" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate.AutoReleaseTime*"></a>
+  <h4 id="Pulumi_AliCloud_Ecs_LaunchTemplate_AutoReleaseTime" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate.AutoReleaseTime">AutoReleaseTime</h4>
+  <div class="markdown level1 summary"><p>Instance auto release time. The time is presented using the ISO8601 standard and in UTC time. The format is  YYYY-MM-DDTHH:MM:SSZ.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AutoReleaseTime { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/LaunchTemplate.cs/#L30">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Ecs_LaunchTemplate_DataDisks_" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate.DataDisks*"></a>
+  <h4 id="Pulumi_AliCloud_Ecs_LaunchTemplate_DataDisks" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate.DataDisks">DataDisks</h4>
+  <div class="markdown level1 summary"><p>The list of data disks created with instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;LaunchTemplateDataDisks&gt;&gt; DataDisks { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.AliCloud.Ecs.Outputs.LaunchTemplateDataDisks.html">LaunchTemplateDataDisks</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/LaunchTemplate.cs/#L36">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Ecs_LaunchTemplate_Description_" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate.Description*"></a>
+  <h4 id="Pulumi_AliCloud_Ecs_LaunchTemplate_Description" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate.Description">Description</h4>
+  <div class="markdown level1 summary"><p>The description of the data disk.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/LaunchTemplate.cs/#L42">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Ecs_LaunchTemplate_HostName_" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate.HostName*"></a>
+  <h4 id="Pulumi_AliCloud_Ecs_LaunchTemplate_HostName" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate.HostName">HostName</h4>
+  <div class="markdown level1 summary"><p>Instance host name.It cannot start or end with a period (.) or a hyphen (-) and it cannot have two or more consecutive periods (.) or hyphens (-).For Windows: The host name can be [2, 15] characters in length. It can contain A-Z, a-z, numbers, periods (.), and hyphens (-). It cannot only contain numbers. For other operating systems: The host name can be [2, 64] characters in length. It can be segments separated by periods (.). It can contain A-Z, a-z, numbers, and hyphens (-).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; HostName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/LaunchTemplate.cs/#L48">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Ecs_LaunchTemplate_ImageId_" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate.ImageId*"></a>
+  <h4 id="Pulumi_AliCloud_Ecs_LaunchTemplate_ImageId" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate.ImageId">ImageId</h4>
+  <div class="markdown level1 summary"><p>Image ID.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ImageId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/LaunchTemplate.cs/#L51">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Ecs_LaunchTemplate_ImageOwnerAlias_" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate.ImageOwnerAlias*"></a>
+  <h4 id="Pulumi_AliCloud_Ecs_LaunchTemplate_ImageOwnerAlias" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate.ImageOwnerAlias">ImageOwnerAlias</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ImageOwnerAlias { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/LaunchTemplate.cs/#L59">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Ecs_LaunchTemplate_InstanceChargeType_" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate.InstanceChargeType*"></a>
+  <h4 id="Pulumi_AliCloud_Ecs_LaunchTemplate_InstanceChargeType" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate.InstanceChargeType">InstanceChargeType</h4>
+  <div class="markdown level1 summary"><p>Billing methods. Optional values:</p>
+<ul>
+<li>PrePaid: Monthly, or annual subscription. Make sure that your registered credit card is invalid or you have insufficient balance in your PayPal account. Otherwise, InvalidPayMethod error may occur.</li>
+<li>PostPaid: Pay-As-You-Go.</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; InstanceChargeType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/LaunchTemplate.cs/#L65">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Ecs_LaunchTemplate_InstanceName_" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate.InstanceName*"></a>
+  <h4 id="Pulumi_AliCloud_Ecs_LaunchTemplate_InstanceName" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate.InstanceName">InstanceName</h4>
+  <div class="markdown level1 summary"><p>The name of the instance. The name is a string of 2 to 128 characters. It must begin with an English or a Chinese character. It can contain A-Z, a-z, Chinese characters, numbers, periods (.), colons (:), underscores (_), and hyphens (-).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; InstanceName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/LaunchTemplate.cs/#L71">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Ecs_LaunchTemplate_InstanceType_" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate.InstanceType*"></a>
+  <h4 id="Pulumi_AliCloud_Ecs_LaunchTemplate_InstanceType" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate.InstanceType">InstanceType</h4>
+  <div class="markdown level1 summary"><p>Instance type. For more information, call resource_alicloud_instances to obtain the latest instance type list.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; InstanceType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/LaunchTemplate.cs/#L77">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Ecs_LaunchTemplate_InternetChargeType_" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate.InternetChargeType*"></a>
+  <h4 id="Pulumi_AliCloud_Ecs_LaunchTemplate_InternetChargeType" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate.InternetChargeType">InternetChargeType</h4>
+  <div class="markdown level1 summary"><p>Internet bandwidth billing method. Optional values: PayByTraffic.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; InternetChargeType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/LaunchTemplate.cs/#L83">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Ecs_LaunchTemplate_InternetMaxBandwidthIn_" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate.InternetMaxBandwidthIn*"></a>
+  <h4 id="Pulumi_AliCloud_Ecs_LaunchTemplate_InternetMaxBandwidthIn" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate.InternetMaxBandwidthIn">InternetMaxBandwidthIn</h4>
+  <div class="markdown level1 summary"><p>The maximum inbound bandwidth from the Internet network, measured in Mbit/s. Value range: [1, 200].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; InternetMaxBandwidthIn { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/LaunchTemplate.cs/#L89">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Ecs_LaunchTemplate_InternetMaxBandwidthOut_" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate.InternetMaxBandwidthOut*"></a>
+  <h4 id="Pulumi_AliCloud_Ecs_LaunchTemplate_InternetMaxBandwidthOut" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate.InternetMaxBandwidthOut">InternetMaxBandwidthOut</h4>
+  <div class="markdown level1 summary"><p>Maximum outbound bandwidth from the Internet, its unit of measurement is Mbit/s. Value range: [0, 100].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; InternetMaxBandwidthOut { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/LaunchTemplate.cs/#L97">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Ecs_LaunchTemplate_IoOptimized_" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate.IoOptimized*"></a>
+  <h4 id="Pulumi_AliCloud_Ecs_LaunchTemplate_IoOptimized" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate.IoOptimized">IoOptimized</h4>
+  <div class="markdown level1 summary"><p>Whether it is an I/O-optimized instance or not. Optional values:</p>
+<ul>
+<li>none</li>
+<li>optimized</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; IoOptimized { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/LaunchTemplate.cs/#L105">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Ecs_LaunchTemplate_KeyPairName_" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate.KeyPairName*"></a>
+  <h4 id="Pulumi_AliCloud_Ecs_LaunchTemplate_KeyPairName" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate.KeyPairName">KeyPairName</h4>
+  <div class="markdown level1 summary"><p>The name of the key pair.</p>
+<ul>
+<li>Ignore this parameter for Windows instances. It is null by default. Even if you enter this parameter, only the  Password content is used.</li>
+<li>The password logon method for Linux instances is set to forbidden upon initialization.</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; KeyPairName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/LaunchTemplate.cs/#L111">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Ecs_LaunchTemplate_Name_" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate.Name*"></a>
+  <h4 id="Pulumi_AliCloud_Ecs_LaunchTemplate_Name" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate.Name">Name</h4>
+  <div class="markdown level1 summary"><p>The name of the data disk.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/LaunchTemplate.cs/#L117">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Ecs_LaunchTemplate_NetworkInterfaces_" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate.NetworkInterfaces*"></a>
+  <h4 id="Pulumi_AliCloud_Ecs_LaunchTemplate_NetworkInterfaces" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate.NetworkInterfaces">NetworkInterfaces</h4>
+  <div class="markdown level1 summary"><p>The list of network interfaces created with instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;LaunchTemplateNetworkInterfaces&gt; NetworkInterfaces { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.AliCloud.Ecs.Outputs.LaunchTemplateNetworkInterfaces.html">LaunchTemplateNetworkInterfaces</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/LaunchTemplate.cs/#L123">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Ecs_LaunchTemplate_NetworkType_" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate.NetworkType*"></a>
+  <h4 id="Pulumi_AliCloud_Ecs_LaunchTemplate_NetworkType" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate.NetworkType">NetworkType</h4>
+  <div class="markdown level1 summary"><p>Network type of the instance. Value options: Classic | VPC.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; NetworkType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/LaunchTemplate.cs/#L129">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Ecs_LaunchTemplate_RamRoleName_" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate.RamRoleName*"></a>
+  <h4 id="Pulumi_AliCloud_Ecs_LaunchTemplate_RamRoleName" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate.RamRoleName">RamRoleName</h4>
+  <div class="markdown level1 summary"><p>The RAM role name of the instance. You can use the RAM API ListRoles to query instance RAM role names.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; RamRoleName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/LaunchTemplate.cs/#L132">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Ecs_LaunchTemplate_ResourceGroupId_" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate.ResourceGroupId*"></a>
+  <h4 id="Pulumi_AliCloud_Ecs_LaunchTemplate_ResourceGroupId" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate.ResourceGroupId">ResourceGroupId</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ResourceGroupId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/LaunchTemplate.cs/#L138">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Ecs_LaunchTemplate_SecurityEnhancementStrategy_" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate.SecurityEnhancementStrategy*"></a>
+  <h4 id="Pulumi_AliCloud_Ecs_LaunchTemplate_SecurityEnhancementStrategy" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate.SecurityEnhancementStrategy">SecurityEnhancementStrategy</h4>
+  <div class="markdown level1 summary"><p>Whether or not to activate the security enhancement feature and install network security software free of charge. Optional values: Active | Deactive.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SecurityEnhancementStrategy { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/LaunchTemplate.cs/#L144">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Ecs_LaunchTemplate_SecurityGroupId_" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate.SecurityGroupId*"></a>
+  <h4 id="Pulumi_AliCloud_Ecs_LaunchTemplate_SecurityGroupId" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate.SecurityGroupId">SecurityGroupId</h4>
+  <div class="markdown level1 summary"><p>The security group ID must be one in the same VPC.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SecurityGroupId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/LaunchTemplate.cs/#L147">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Ecs_LaunchTemplate_SpotPriceLimit_" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate.SpotPriceLimit*"></a>
+  <h4 id="Pulumi_AliCloud_Ecs_LaunchTemplate_SpotPriceLimit" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate.SpotPriceLimit">SpotPriceLimit</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;double?&gt; SpotPriceLimit { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Double</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/LaunchTemplate.cs/#L156">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Ecs_LaunchTemplate_SpotStrategy_" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate.SpotStrategy*"></a>
+  <h4 id="Pulumi_AliCloud_Ecs_LaunchTemplate_SpotStrategy" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate.SpotStrategy">SpotStrategy</h4>
+  <div class="markdown level1 summary"><p>The spot strategy for a Pay-As-You-Go instance. This parameter is valid and required only when InstanceChargeType is set to PostPaid. Value range:</p>
+<ul>
+<li>NoSpot: Normal Pay-As-You-Go instance.</li>
+<li>SpotWithPriceLimit: Sets the maximum price for a spot instance.</li>
+<li>SpotAsPriceGo: The system automatically calculates the price. The maximum value is the Pay-As-You-Go price.</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SpotStrategy { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/LaunchTemplate.cs/#L167">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Ecs_LaunchTemplate_SystemDiskCategory_" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate.SystemDiskCategory*"></a>
+  <h4 id="Pulumi_AliCloud_Ecs_LaunchTemplate_SystemDiskCategory" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate.SystemDiskCategory">SystemDiskCategory</h4>
+  <div class="markdown level1 summary"><p>The category of the system disk. System disk type. Optional values:</p>
+<ul>
+<li>cloud: Basic cloud disk.</li>
+<li>cloud_efficiency: Ultra cloud disk.</li>
+<li>cloud_ssd: SSD cloud Disks.</li>
+<li>ephemeral_ssd: local SSD Disks</li>
+<li>cloud_essd: ESSD cloud Disks.</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SystemDiskCategory { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/LaunchTemplate.cs/#L173">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Ecs_LaunchTemplate_SystemDiskDescription_" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate.SystemDiskDescription*"></a>
+  <h4 id="Pulumi_AliCloud_Ecs_LaunchTemplate_SystemDiskDescription" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate.SystemDiskDescription">SystemDiskDescription</h4>
+  <div class="markdown level1 summary"><p>System disk description. It cannot begin with http:// or https://.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SystemDiskDescription { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/LaunchTemplate.cs/#L179">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Ecs_LaunchTemplate_SystemDiskName_" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate.SystemDiskName*"></a>
+  <h4 id="Pulumi_AliCloud_Ecs_LaunchTemplate_SystemDiskName" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate.SystemDiskName">SystemDiskName</h4>
+  <div class="markdown level1 summary"><p>System disk name. The name is a string of 2 to 128 characters. It must begin with an English or a Chinese character. It can contain A-Z, a-z, Chinese characters, numbers, periods (.), colons (:), underscores (_), and hyphens (-).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SystemDiskName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/LaunchTemplate.cs/#L185">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Ecs_LaunchTemplate_SystemDiskSize_" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate.SystemDiskSize*"></a>
+  <h4 id="Pulumi_AliCloud_Ecs_LaunchTemplate_SystemDiskSize" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate.SystemDiskSize">SystemDiskSize</h4>
+  <div class="markdown level1 summary"><p>Size of the system disk, measured in GB. Value range: [20, 500].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; SystemDiskSize { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/LaunchTemplate.cs/#L193">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Ecs_LaunchTemplate_Tags_" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate.Tags*"></a>
+  <h4 id="Pulumi_AliCloud_Ecs_LaunchTemplate_Tags" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate.Tags">Tags</h4>
+  <div class="markdown level1 summary"><p>A mapping of tags to assign to the resource.</p>
+<ul>
+<li>Key: It can be up to 64 characters in length. It cannot begin with &quot;aliyun&quot;, &quot;acs:&quot;, &quot;http://&quot;, or &quot;https://&quot;. It cannot be a null string.</li>
+<li>Value: It can be up to 128 characters in length. It cannot begin with &quot;aliyun&quot;, &quot;acs:&quot;, &quot;http://&quot;, or &quot;https://&quot;. It can be a null string.</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Tags { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/LaunchTemplate.cs/#L199">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Ecs_LaunchTemplate_Userdata_" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate.Userdata*"></a>
+  <h4 id="Pulumi_AliCloud_Ecs_LaunchTemplate_Userdata" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate.Userdata">Userdata</h4>
+  <div class="markdown level1 summary"><p>User data of the instance, which is Base64-encoded. Size of the raw data cannot exceed 16 KB.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Userdata { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/LaunchTemplate.cs/#L202">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Ecs_LaunchTemplate_VpcId_" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate.VpcId*"></a>
+  <h4 id="Pulumi_AliCloud_Ecs_LaunchTemplate_VpcId" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate.VpcId">VpcId</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; VpcId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/LaunchTemplate.cs/#L208">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Ecs_LaunchTemplate_VswitchId_" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate.VswitchId*"></a>
+  <h4 id="Pulumi_AliCloud_Ecs_LaunchTemplate_VswitchId" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate.VswitchId">VswitchId</h4>
+  <div class="markdown level1 summary"><p>The VSwitch ID for ENI. The instance must be in the same zone of the same VPC network as the ENI, but they may belong to different VSwitches.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; VswitchId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/LaunchTemplate.cs/#L214">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Ecs_LaunchTemplate_ZoneId_" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate.ZoneId*"></a>
+  <h4 id="Pulumi_AliCloud_Ecs_LaunchTemplate_ZoneId" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate.ZoneId">ZoneId</h4>
+  <div class="markdown level1 summary"><p>The zone ID of the instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ZoneId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/LaunchTemplate.cs/#L255">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Ecs_LaunchTemplate_Get_" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate.Get*"></a>
+  <h4 id="Pulumi_AliCloud_Ecs_LaunchTemplate_Get_System_String_Pulumi_Input_System_String__Pulumi_AliCloud_Ecs_LaunchTemplateState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.AliCloud.Ecs.LaunchTemplate.Get(System.String,Pulumi.Input{System.String},Pulumi.AliCloud.Ecs.LaunchTemplateState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, LaunchTemplateState, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Get an existing LaunchTemplate resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static LaunchTemplate Get(string name, Input&lt;string&gt; id, LaunchTemplateState state = null, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.AliCloud.Ecs.LaunchTemplateState.html">LaunchTemplateState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.AliCloud.Ecs.LaunchTemplate.html">LaunchTemplate</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/LaunchTemplate.cs/#L19" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

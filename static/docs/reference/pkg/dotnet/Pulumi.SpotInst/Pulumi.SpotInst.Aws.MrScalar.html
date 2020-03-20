@@ -1,0 +1,1882 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class MrScalar
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class MrScalar
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.SpotInst.Aws.MrScalar">
+  
+  <h1 id="Pulumi_SpotInst_Aws_MrScalar" data-uid="Pulumi.SpotInst.Aws.MrScalar" class="text-break">Class MrScalar
+  </h1>
+  <div class="markdown level0 summary"><p>Provides a Spotinst AWS MrScaler resource.</p>
+<h2 id="provisioning-timeout-clone-new-strategies">Provisioning Timeout (Clone, New strategies)</h2>
+<ul>
+<li><code>timeout</code> - (Optional) The amount of time (minutes) after which the cluster is automatically terminated if it's still in provisioning status. Minimum: '15'.</li>
+<li><code>timeout_action</code> - (Optional) The action to take if the timeout is exceeded. Valid values: <code>terminate</code>, <code>terminateAndRetry</code>.</li>
+</ul>
+<p>&lt;a id=&quot;cluster-config&quot;&gt;&lt;/a&gt;</p>
+<h2 id="cluster-configuration-new-strategy-only">Cluster Configuration (New strategy only)</h2>
+<ul>
+<li><code>log_uri</code> - (Optional) The path to the Amazon S3 location where logs for this cluster are stored.</li>
+<li><code>additional_info</code> - (Optional) This is meta information about third-party applications that third-party vendors use for testing purposes.</li>
+<li><code>security_config</code> - (Optional) The name of the security configuration applied to the cluster.</li>
+<li><code>service_role</code> - (Optional) The IAM role that will be assumed by the Amazon EMR service to access AWS resources on your behalf.</li>
+<li><code>job_flow_role</code> - (Optional) The IAM role that was specified when the job flow was launched. The EC2 instances of the job flow assume this role.</li>
+<li><code>termination_protected</code> - (Optional) Specifies whether the Amazon EC2 instances in the cluster are protected from termination by API calls, user intervention, or in the event of a job-flow error.</li>
+<li><code>keep_job_flow_alive</code> - (Optional) Specifies whether the cluster should remain available after completing all steps.</li>
+</ul>
+<p>&lt;a id=&quot;task-group&quot;&gt;&lt;/a&gt;</p>
+<h2 id="task-group-wrap-clone-and-new-strategies">Task Group (Wrap, Clone, and New strategies)</h2>
+<ul>
+<li><code>task_instance_types</code> - (Required) The MrScaler instance types for the task nodes.</li>
+<li><code>task_target</code> - (Required) amount of instances in task group.</li>
+<li><code>task_maximum</code> - (Optional) maximal amount of instances in task group.</li>
+<li><code>task_minimum</code> - (Optional) The minimal amount of instances in task group.</li>
+<li><code>task_lifecycle</code> - (Required) The MrScaler lifecycle for instances in task group. Allowed values are 'SPOT' and 'ON_DEMAND'.</li>
+<li><code>task_ebs_optimized</code> - (Optional) EBS Optimization setting for instances in group.</li>
+<li><code>task_ebs_block_device</code> - (Required) This determines the ebs configuration for your task group instances. Only a single block is allowed.</li>
+<li><code>volumes_per_instance</code> - (Optional; Default 1) Amount of volumes per instance in the task group.</li>
+<li><code>volume_type</code> - (Required) volume type. Allowed values are 'gp2', 'io1' and others.</li>
+<li><code>size_in_gb</code> - (Required) Size of the volume, in GBs.</li>
+<li><code>iops</code> - (Optional) IOPS for the volume. Required in some volume types, such as io1.</li>
+</ul>
+<p>&lt;a id=&quot;core-group&quot;&gt;&lt;/a&gt;</p>
+<h2 id="core-group-clone-new-strategies">Core Group (Clone, New strategies)</h2>
+<ul>
+<li><code>core_instance_types</code> - (Required) The MrScaler instance types for the core nodes.</li>
+<li><code>core_target</code> - (Required) amount of instances in core group.</li>
+<li><code>core_maximum</code> - (Optional) maximal amount of instances in core group.</li>
+<li><code>core_minimum</code> - (Optional) The minimal amount of instances in core group.</li>
+<li><code>core_lifecycle</code> - (Required) The MrScaler lifecycle for instances in core group. Allowed values are 'SPOT' and 'ON_DEMAND'.</li>
+<li><code>core_ebs_optimized</code> - (Optional) EBS Optimization setting for instances in group.</li>
+<li><code>core_ebs_block_device</code> - (Required) This determines the ebs configuration for your core group instances. Only a single block is allowed.</li>
+<li><code>volumes_per_instance</code> - (Optional; Default 1) Amount of volumes per instance in the core group.</li>
+<li><code>volume_type</code> - (Required) volume type. Allowed values are 'gp2', 'io1' and others.</li>
+<li><code>size_in_gb</code> - (Required) Size of the volume, in GBs.</li>
+<li><code>iops</code> - (Optional) IOPS for the volume. Required in some volume types, such as io1.</li>
+</ul>
+<p>&lt;a id=&quot;master-group&quot;&gt;&lt;/a&gt;</p>
+<h2 id="master-group-clone-new-strategies">Master Group (Clone, New strategies)</h2>
+<ul>
+<li><code>master_instance_types</code> - (Required) The MrScaler instance types for the master nodes.</li>
+<li><code>master_lifecycle</code> - (Required) The MrScaler lifecycle for instances in master group. Allowed values are 'SPOT' and 'ON_DEMAND'.</li>
+<li><code>master_ebs_optimized</code> - (Optional) EBS Optimization setting for instances in group.</li>
+<li><code>master_ebs_block_device</code> - (Required) This determines the ebs configuration for your master group instances. Only a single block is allowed.</li>
+<li><code>volumes_per_instance</code> - (Optional; Default 1) Amount of volumes per instance in the master group.</li>
+<li><code>volume_type</code> - (Required) volume type. Allowed values are 'gp2', 'io1' and others.</li>
+<li><code>size_in_gb</code> - (Required) Size of the volume, in GBs.</li>
+<li><code>iops</code> - (Optional) IOPS for the volume. Required in some volume types, such as io1.</li>
+</ul>
+<p>&lt;a id=&quot;tags&quot;&gt;&lt;/a&gt;</p>
+<h2 id="tags-clone-new-strategies">Tags (Clone, New strategies)</h2>
+<ul>
+<li><code>tags</code> - (Optional) A list of tags to assign to the resource. You may define multiple tags.</li>
+<li><code>key</code> - (Required) Tag key.</li>
+<li><code>value</code> - (Required) Tag value.</li>
+</ul>
+<p>&lt;a id=&quot;Optional Compute Parameters&quot;&gt;&lt;/a&gt;</p>
+<h2 id="optional-compute-parameters-new-strategy">Optional Compute Parameters (New strategy)</h2>
+<ul>
+<li><code>managed_primary_security_group</code> - (Optional) EMR Managed Security group that will be set to the primary instance group.</li>
+<li><code>managed_replica_security_group</code> - (Optional) EMR Managed Security group that will be set to the replica instance group.</li>
+<li><code>service_access_security_group</code> - (Optional) The identifier of the Amazon EC2 security group for the Amazon EMR service to access clusters in VPC private subnets.</li>
+<li><code>additional_primary_security_groups</code> - (Optional) A list of additional Amazon EC2 security group IDs for the master node.</li>
+<li><code>additional_replica_security_groups</code> - (Optional) A list of additional Amazon EC2 security group IDs for the core and task nodes.</li>
+<li><code>custom_ami_id</code> - (Optional) The ID of a custom Amazon EBS-backed Linux AMI if the cluster uses a custom AMI.</li>
+<li><code>repo_upgrade_on_boot</code> - (Optional) Applies only when <code>custom_ami_id</code> is used. Specifies the type of updates that are applied from the Amazon Linux AMI package repositories when an instance boots using the AMI. Possible values include: <code>SECURITY</code>, <code>NONE</code>.</li>
+<li><code>ec2_key_name</code> - (Optional) The name of an Amazon EC2 key pair that can be used to ssh to the master node.</li>
+<li><code>applications</code> - (Optional) A case-insensitive list of applications for Amazon EMR to install and configure when launching the cluster</li>
+<li><code>args</code> - (Optional) Arguments for EMR to pass to the application.</li>
+<li><code>name</code> - (Required) The application name.</li>
+<li><code>version</code>- (Optional)T he version of the application.</li>
+<li><code>instance_weights</code> - (Optional) Describes the instance and weights. Check out <a href="https://api.spotinst.com/elastigroup-for-aws/concepts/general-concepts/elastigroup-capacity-instances-or-weighted">Elastigroup Weighted Instances</a> for more info.</li>
+<li><code>instance_type</code> - (Required) The type of the instance.</li>
+<li><code>weighted_capacity</code> - (Required) The weight given to the associated instance type.</li>
+</ul>
+<p>&lt;a id=&quot;availability-zone&quot;&gt;&lt;/a&gt;</p>
+<h2 id="availability-zones-clone-new-strategies">Availability Zones (Clone, New strategies)</h2>
+<ul>
+<li><code>availability_zones</code> - (Required in Clone) List of AZs and their subnet Ids. See example above for usage.</li>
+</ul>
+<p>&lt;a id=&quot;configurations&quot;&gt;&lt;/a&gt;</p>
+<h2 id="configurations-clone-new-strategies">Configurations (Clone, New strategies)</h2>
+<ul>
+<li><code>configurations_file</code> - (Optional) Describes path to S3 file containing description of configurations. <a href="https://api.spotinst.com/elastigroup-for-aws/services-integrations/elastic-mapreduce/import-an-emr-cluster/advanced/">More Information</a></li>
+<li><code>bucket</code> - (Required) S3 Bucket name for configurations.</li>
+<li><code>key</code>- (Required) S3 key for configurations.</li>
+</ul>
+<p>&lt;a id=&quot;steps&quot;&gt;&lt;/a&gt;</p>
+<h2 id="steps-clone-new-strategies">Steps (Clone, New strategies)</h2>
+<ul>
+<li><code>steps_file</code> - (Optional) Steps from S3.</li>
+<li><code>bucket</code> - (Required) S3 Bucket name for steps.</li>
+<li><code>key</code>- (Required) S3 key for steps.</li>
+</ul>
+<p>&lt;a id=&quot;boostrap-actions&quot;&gt;&lt;/a&gt;</p>
+<h2 id="bootstrap-actions-clone-new-strategies">Bootstrap Actions (Clone, New strategies)</h2>
+<ul>
+<li><code>bootstrap_actions_file</code> - (Optional) Describes path to S3 file containing description of bootstrap actions. <a href="https://api.spotinst.com/elastigroup-for-aws/services-integrations/elastic-mapreduce/import-an-emr-cluster/advanced/">More Information</a></li>
+<li><code>bucket</code> - (Required) S3 Bucket name for bootstrap actions.</li>
+<li><code>key</code>- (Required) S3 key for bootstrap actions.</li>
+</ul>
+<p>&lt;a id=&quot;scaling-policy&quot;&gt;&lt;/a&gt;</p>
+<h2 id="scaling-policies">Scaling Policies</h2>
+<p>Possible task group scaling policies (Wrap, Clone, and New strategies):</p>
+<ul>
+<li><code>task_scaling_up_policy</code></li>
+<li><code>task_scaling_down_policy</code></li>
+</ul>
+<p>Possible core group scaling policies (Clone, New strategies):</p>
+<ul>
+<li><code>core_scaling_up_policy</code></li>
+<li><code>core_scaling_down_policy</code></li>
+</ul>
+<p>Each <code>*_scaling_*_policy</code> supports the following:</p>
+<ul>
+<li><code>policy_name</code> - (Required) The name of the policy.</li>
+<li><code>metric_name</code> - (Required) The name of the metric, with or without spaces.</li>
+<li><code>statistic</code> - (Required) The metric statistics to return. For information about specific statistics go to <a href="http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/index.html?CHAP_TerminologyandKeyConcepts.html#Statistic">Statistics</a> in the Amazon CloudWatch Developer Guide.</li>
+<li><code>unit</code> - (Required) The unit for the metric.</li>
+<li><code>threshold</code> - (Required) The value against which the specified statistic is compared.</li>
+<li><code>adjustment</code> - (Optional) The number of instances to add/remove to/from the target capacity when scale is needed.</li>
+<li><code>min_target_capacity</code> - (Optional) Min target capacity for scale up.</li>
+<li><code>max_target_capacity</code> - (Optional) Max target capacity for scale down.</li>
+<li><code>namespace</code> - (Required) The namespace for the metric.</li>
+<li><code>operator</code> - (Required) The operator to use. Allowed values are : 'gt', 'gte', 'lt' , 'lte'.</li>
+<li><code>evaluation_periods</code> - (Required) The number of periods over which data is compared to the specified threshold.</li>
+<li><code>period</code> - (Required) The granularity, in seconds, of the returned datapoints. Period must be at least 60 seconds and must be a multiple of 60.</li>
+<li><code>cooldown</code> - (Required) The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start.</li>
+<li><code>dimensions</code> - (Optional) A mapping of dimensions describing qualities of the metric.</li>
+<li><code>minimum</code> - (Optional) The minimum to set when scale is needed.</li>
+<li><code>maximum</code> - (Optional) The maximum to set when scale is needed.</li>
+<li><code>target</code> - (Optional) The number of instances to set when scale is needed.</li>
+<li><code>action_type</code> - (Required) The type of action to perform. Allowed values are : 'adjustment', 'setMinTarget', 'setMaxTarget', 'updateCapacity', 'percentageAdjustment'</li>
+</ul>
+<p>&lt;a id=&quot;scheduled-task&quot;&gt;&lt;/a&gt;</p>
+<h2 id="scheduled-tasks">Scheduled Tasks</h2>
+<ul>
+<li><code>scheduled_task</code> - (Optional) An array of scheduled tasks.</li>
+<li><code>is_enabled</code> - (Optional) Enable/Disable the specified scheduling task.</li>
+<li><code>task_type</code> - (Required) The type of task to be scheduled. Valid values: <code>setCapacity</code>.</li>
+<li><code>instance_group_type</code> - (Required) Select the EMR instance groups to execute the scheduled task on. Valid values: <code>task</code>.</li>
+<li><code>cron</code> - (Required) A cron expression representing the schedule for the task.</li>
+<li><code>desired_capacity</code> - (Optional) New desired capacity for the elastigroup.</li>
+<li><code>min_capacity</code> - (Optional) New min capacity for the elastigroup.</li>
+<li><code>max_capacity</code> - (Optional) New max capacity for the elastigroup.</li>
+</ul>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/mrscaler_aws.html.markdown">https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/mrscaler_aws.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">MrScalar</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.SpotInst.Aws.html">Pulumi.SpotInst.Aws</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.SpotInst.dll</h6>
+  <h5 id="Pulumi_SpotInst_Aws_MrScalar_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class MrScalar : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/MrScalar.cs/#L366">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_MrScalar__ctor_" data-uid="Pulumi.SpotInst.Aws.MrScalar.#ctor*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_MrScalar__ctor_System_String_Pulumi_SpotInst_Aws_MrScalarArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.SpotInst.Aws.MrScalar.#ctor(System.String,Pulumi.SpotInst.Aws.MrScalarArgs,System.Nullable{CustomResourceOptions})">MrScalar(String, MrScalarArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Create a MrScalar resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MrScalar(string name, MrScalarArgs args, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.SpotInst.Aws.MrScalarArgs.html">MrScalarArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/MrScalar.cs/#L172">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_MrScalar_AdditionalInfo_" data-uid="Pulumi.SpotInst.Aws.MrScalar.AdditionalInfo*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_MrScalar_AdditionalInfo" data-uid="Pulumi.SpotInst.Aws.MrScalar.AdditionalInfo">AdditionalInfo</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; AdditionalInfo { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/MrScalar.cs/#L175">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_MrScalar_AdditionalPrimarySecurityGroups_" data-uid="Pulumi.SpotInst.Aws.MrScalar.AdditionalPrimarySecurityGroups*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_MrScalar_AdditionalPrimarySecurityGroups" data-uid="Pulumi.SpotInst.Aws.MrScalar.AdditionalPrimarySecurityGroups">AdditionalPrimarySecurityGroups</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; AdditionalPrimarySecurityGroups { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/MrScalar.cs/#L178">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_MrScalar_AdditionalReplicaSecurityGroups_" data-uid="Pulumi.SpotInst.Aws.MrScalar.AdditionalReplicaSecurityGroups*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_MrScalar_AdditionalReplicaSecurityGroups" data-uid="Pulumi.SpotInst.Aws.MrScalar.AdditionalReplicaSecurityGroups">AdditionalReplicaSecurityGroups</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; AdditionalReplicaSecurityGroups { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/MrScalar.cs/#L181">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_MrScalar_Applications_" data-uid="Pulumi.SpotInst.Aws.MrScalar.Applications*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_MrScalar_Applications" data-uid="Pulumi.SpotInst.Aws.MrScalar.Applications">Applications</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;MrScalarApplications&gt;&gt; Applications { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.SpotInst.Aws.Outputs.MrScalarApplications.html">MrScalarApplications</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/MrScalar.cs/#L184">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_MrScalar_AvailabilityZones_" data-uid="Pulumi.SpotInst.Aws.MrScalar.AvailabilityZones*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_MrScalar_AvailabilityZones" data-uid="Pulumi.SpotInst.Aws.MrScalar.AvailabilityZones">AvailabilityZones</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; AvailabilityZones { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/MrScalar.cs/#L187">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_MrScalar_BootstrapActionsFiles_" data-uid="Pulumi.SpotInst.Aws.MrScalar.BootstrapActionsFiles*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_MrScalar_BootstrapActionsFiles" data-uid="Pulumi.SpotInst.Aws.MrScalar.BootstrapActionsFiles">BootstrapActionsFiles</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;MrScalarBootstrapActionsFiles&gt;&gt; BootstrapActionsFiles { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.SpotInst.Aws.Outputs.MrScalarBootstrapActionsFiles.html">MrScalarBootstrapActionsFiles</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/MrScalar.cs/#L193">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_MrScalar_ClusterId_" data-uid="Pulumi.SpotInst.Aws.MrScalar.ClusterId*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_MrScalar_ClusterId" data-uid="Pulumi.SpotInst.Aws.MrScalar.ClusterId">ClusterId</h4>
+  <div class="markdown level1 summary"><p>The MrScaler cluster id.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ClusterId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/MrScalar.cs/#L196">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_MrScalar_ConfigurationsFiles_" data-uid="Pulumi.SpotInst.Aws.MrScalar.ConfigurationsFiles*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_MrScalar_ConfigurationsFiles" data-uid="Pulumi.SpotInst.Aws.MrScalar.ConfigurationsFiles">ConfigurationsFiles</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;MrScalarConfigurationsFiles&gt;&gt; ConfigurationsFiles { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.SpotInst.Aws.Outputs.MrScalarConfigurationsFiles.html">MrScalarConfigurationsFiles</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/MrScalar.cs/#L199">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_MrScalar_CoreDesiredCapacity_" data-uid="Pulumi.SpotInst.Aws.MrScalar.CoreDesiredCapacity*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_MrScalar_CoreDesiredCapacity" data-uid="Pulumi.SpotInst.Aws.MrScalar.CoreDesiredCapacity">CoreDesiredCapacity</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; CoreDesiredCapacity { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/MrScalar.cs/#L202">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_MrScalar_CoreEbsBlockDevices_" data-uid="Pulumi.SpotInst.Aws.MrScalar.CoreEbsBlockDevices*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_MrScalar_CoreEbsBlockDevices" data-uid="Pulumi.SpotInst.Aws.MrScalar.CoreEbsBlockDevices">CoreEbsBlockDevices</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;MrScalarCoreEbsBlockDevices&gt;&gt; CoreEbsBlockDevices { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.SpotInst.Aws.Outputs.MrScalarCoreEbsBlockDevices.html">MrScalarCoreEbsBlockDevices</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/MrScalar.cs/#L205">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_MrScalar_CoreEbsOptimized_" data-uid="Pulumi.SpotInst.Aws.MrScalar.CoreEbsOptimized*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_MrScalar_CoreEbsOptimized" data-uid="Pulumi.SpotInst.Aws.MrScalar.CoreEbsOptimized">CoreEbsOptimized</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; CoreEbsOptimized { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/MrScalar.cs/#L208">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_MrScalar_CoreInstanceTypes_" data-uid="Pulumi.SpotInst.Aws.MrScalar.CoreInstanceTypes*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_MrScalar_CoreInstanceTypes" data-uid="Pulumi.SpotInst.Aws.MrScalar.CoreInstanceTypes">CoreInstanceTypes</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; CoreInstanceTypes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/MrScalar.cs/#L211">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_MrScalar_CoreLifecycle_" data-uid="Pulumi.SpotInst.Aws.MrScalar.CoreLifecycle*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_MrScalar_CoreLifecycle" data-uid="Pulumi.SpotInst.Aws.MrScalar.CoreLifecycle">CoreLifecycle</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; CoreLifecycle { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/MrScalar.cs/#L214">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_MrScalar_CoreMaxSize_" data-uid="Pulumi.SpotInst.Aws.MrScalar.CoreMaxSize*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_MrScalar_CoreMaxSize" data-uid="Pulumi.SpotInst.Aws.MrScalar.CoreMaxSize">CoreMaxSize</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; CoreMaxSize { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/MrScalar.cs/#L217">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_MrScalar_CoreMinSize_" data-uid="Pulumi.SpotInst.Aws.MrScalar.CoreMinSize*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_MrScalar_CoreMinSize" data-uid="Pulumi.SpotInst.Aws.MrScalar.CoreMinSize">CoreMinSize</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; CoreMinSize { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/MrScalar.cs/#L220">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_MrScalar_CoreScalingDownPolicies_" data-uid="Pulumi.SpotInst.Aws.MrScalar.CoreScalingDownPolicies*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_MrScalar_CoreScalingDownPolicies" data-uid="Pulumi.SpotInst.Aws.MrScalar.CoreScalingDownPolicies">CoreScalingDownPolicies</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;MrScalarCoreScalingDownPolicies&gt;&gt; CoreScalingDownPolicies { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.SpotInst.Aws.Outputs.MrScalarCoreScalingDownPolicies.html">MrScalarCoreScalingDownPolicies</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/MrScalar.cs/#L223">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_MrScalar_CoreScalingUpPolicies_" data-uid="Pulumi.SpotInst.Aws.MrScalar.CoreScalingUpPolicies*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_MrScalar_CoreScalingUpPolicies" data-uid="Pulumi.SpotInst.Aws.MrScalar.CoreScalingUpPolicies">CoreScalingUpPolicies</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;MrScalarCoreScalingUpPolicies&gt;&gt; CoreScalingUpPolicies { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.SpotInst.Aws.Outputs.MrScalarCoreScalingUpPolicies.html">MrScalarCoreScalingUpPolicies</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/MrScalar.cs/#L226">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_MrScalar_CustomAmiId_" data-uid="Pulumi.SpotInst.Aws.MrScalar.CustomAmiId*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_MrScalar_CustomAmiId" data-uid="Pulumi.SpotInst.Aws.MrScalar.CustomAmiId">CustomAmiId</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; CustomAmiId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/MrScalar.cs/#L232">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_MrScalar_Description_" data-uid="Pulumi.SpotInst.Aws.MrScalar.Description*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_MrScalar_Description" data-uid="Pulumi.SpotInst.Aws.MrScalar.Description">Description</h4>
+  <div class="markdown level1 summary"><p>The MrScaler description.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/MrScalar.cs/#L235">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_MrScalar_EbsRootVolumeSize_" data-uid="Pulumi.SpotInst.Aws.MrScalar.EbsRootVolumeSize*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_MrScalar_EbsRootVolumeSize" data-uid="Pulumi.SpotInst.Aws.MrScalar.EbsRootVolumeSize">EbsRootVolumeSize</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; EbsRootVolumeSize { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/MrScalar.cs/#L238">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_MrScalar_Ec2KeyName_" data-uid="Pulumi.SpotInst.Aws.MrScalar.Ec2KeyName*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_MrScalar_Ec2KeyName" data-uid="Pulumi.SpotInst.Aws.MrScalar.Ec2KeyName">Ec2KeyName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Ec2KeyName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/MrScalar.cs/#L241">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_MrScalar_ExposeClusterId_" data-uid="Pulumi.SpotInst.Aws.MrScalar.ExposeClusterId*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_MrScalar_ExposeClusterId" data-uid="Pulumi.SpotInst.Aws.MrScalar.ExposeClusterId">ExposeClusterId</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; ExposeClusterId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/MrScalar.cs/#L244">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_MrScalar_InstanceWeights_" data-uid="Pulumi.SpotInst.Aws.MrScalar.InstanceWeights*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_MrScalar_InstanceWeights" data-uid="Pulumi.SpotInst.Aws.MrScalar.InstanceWeights">InstanceWeights</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;MrScalarInstanceWeights&gt;&gt; InstanceWeights { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.SpotInst.Aws.Outputs.MrScalarInstanceWeights.html">MrScalarInstanceWeights</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/MrScalar.cs/#L247">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_MrScalar_JobFlowRole_" data-uid="Pulumi.SpotInst.Aws.MrScalar.JobFlowRole*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_MrScalar_JobFlowRole" data-uid="Pulumi.SpotInst.Aws.MrScalar.JobFlowRole">JobFlowRole</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; JobFlowRole { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/MrScalar.cs/#L250">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_MrScalar_KeepJobFlowAlive_" data-uid="Pulumi.SpotInst.Aws.MrScalar.KeepJobFlowAlive*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_MrScalar_KeepJobFlowAlive" data-uid="Pulumi.SpotInst.Aws.MrScalar.KeepJobFlowAlive">KeepJobFlowAlive</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; KeepJobFlowAlive { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/MrScalar.cs/#L253">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_MrScalar_LogUri_" data-uid="Pulumi.SpotInst.Aws.MrScalar.LogUri*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_MrScalar_LogUri" data-uid="Pulumi.SpotInst.Aws.MrScalar.LogUri">LogUri</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; LogUri { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/MrScalar.cs/#L256">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_MrScalar_ManagedPrimarySecurityGroup_" data-uid="Pulumi.SpotInst.Aws.MrScalar.ManagedPrimarySecurityGroup*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_MrScalar_ManagedPrimarySecurityGroup" data-uid="Pulumi.SpotInst.Aws.MrScalar.ManagedPrimarySecurityGroup">ManagedPrimarySecurityGroup</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ManagedPrimarySecurityGroup { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/MrScalar.cs/#L259">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_MrScalar_ManagedReplicaSecurityGroup_" data-uid="Pulumi.SpotInst.Aws.MrScalar.ManagedReplicaSecurityGroup*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_MrScalar_ManagedReplicaSecurityGroup" data-uid="Pulumi.SpotInst.Aws.MrScalar.ManagedReplicaSecurityGroup">ManagedReplicaSecurityGroup</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ManagedReplicaSecurityGroup { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/MrScalar.cs/#L262">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_MrScalar_MasterEbsBlockDevices_" data-uid="Pulumi.SpotInst.Aws.MrScalar.MasterEbsBlockDevices*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_MrScalar_MasterEbsBlockDevices" data-uid="Pulumi.SpotInst.Aws.MrScalar.MasterEbsBlockDevices">MasterEbsBlockDevices</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;MrScalarMasterEbsBlockDevices&gt;&gt; MasterEbsBlockDevices { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.SpotInst.Aws.Outputs.MrScalarMasterEbsBlockDevices.html">MrScalarMasterEbsBlockDevices</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/MrScalar.cs/#L265">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_MrScalar_MasterEbsOptimized_" data-uid="Pulumi.SpotInst.Aws.MrScalar.MasterEbsOptimized*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_MrScalar_MasterEbsOptimized" data-uid="Pulumi.SpotInst.Aws.MrScalar.MasterEbsOptimized">MasterEbsOptimized</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; MasterEbsOptimized { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/MrScalar.cs/#L268">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_MrScalar_MasterInstanceTypes_" data-uid="Pulumi.SpotInst.Aws.MrScalar.MasterInstanceTypes*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_MrScalar_MasterInstanceTypes" data-uid="Pulumi.SpotInst.Aws.MrScalar.MasterInstanceTypes">MasterInstanceTypes</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; MasterInstanceTypes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/MrScalar.cs/#L271">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_MrScalar_MasterLifecycle_" data-uid="Pulumi.SpotInst.Aws.MrScalar.MasterLifecycle*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_MrScalar_MasterLifecycle" data-uid="Pulumi.SpotInst.Aws.MrScalar.MasterLifecycle">MasterLifecycle</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; MasterLifecycle { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/MrScalar.cs/#L277">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_MrScalar_Name_" data-uid="Pulumi.SpotInst.Aws.MrScalar.Name*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_MrScalar_Name" data-uid="Pulumi.SpotInst.Aws.MrScalar.Name">Name</h4>
+  <div class="markdown level1 summary"><p>The MrScaler name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/MrScalar.cs/#L280">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_MrScalar_OutputClusterId_" data-uid="Pulumi.SpotInst.Aws.MrScalar.OutputClusterId*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_MrScalar_OutputClusterId" data-uid="Pulumi.SpotInst.Aws.MrScalar.OutputClusterId">OutputClusterId</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; OutputClusterId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/MrScalar.cs/#L283">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_MrScalar_ProvisioningTimeout_" data-uid="Pulumi.SpotInst.Aws.MrScalar.ProvisioningTimeout*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_MrScalar_ProvisioningTimeout" data-uid="Pulumi.SpotInst.Aws.MrScalar.ProvisioningTimeout">ProvisioningTimeout</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;MrScalarProvisioningTimeout&gt; ProvisioningTimeout { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.SpotInst.Aws.Outputs.MrScalarProvisioningTimeout.html">MrScalarProvisioningTimeout</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/MrScalar.cs/#L289">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_MrScalar_Region_" data-uid="Pulumi.SpotInst.Aws.MrScalar.Region*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_MrScalar_Region" data-uid="Pulumi.SpotInst.Aws.MrScalar.Region">Region</h4>
+  <div class="markdown level1 summary"><p>The MrScaler region.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Region { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/MrScalar.cs/#L292">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_MrScalar_ReleaseLabel_" data-uid="Pulumi.SpotInst.Aws.MrScalar.ReleaseLabel*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_MrScalar_ReleaseLabel" data-uid="Pulumi.SpotInst.Aws.MrScalar.ReleaseLabel">ReleaseLabel</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ReleaseLabel { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/MrScalar.cs/#L295">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_MrScalar_RepoUpgradeOnBoot_" data-uid="Pulumi.SpotInst.Aws.MrScalar.RepoUpgradeOnBoot*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_MrScalar_RepoUpgradeOnBoot" data-uid="Pulumi.SpotInst.Aws.MrScalar.RepoUpgradeOnBoot">RepoUpgradeOnBoot</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; RepoUpgradeOnBoot { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/MrScalar.cs/#L298">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_MrScalar_Retries_" data-uid="Pulumi.SpotInst.Aws.MrScalar.Retries*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_MrScalar_Retries" data-uid="Pulumi.SpotInst.Aws.MrScalar.Retries">Retries</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; Retries { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/MrScalar.cs/#L301">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_MrScalar_ScheduledTasks_" data-uid="Pulumi.SpotInst.Aws.MrScalar.ScheduledTasks*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_MrScalar_ScheduledTasks" data-uid="Pulumi.SpotInst.Aws.MrScalar.ScheduledTasks">ScheduledTasks</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;MrScalarScheduledTasks&gt;&gt; ScheduledTasks { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.SpotInst.Aws.Outputs.MrScalarScheduledTasks.html">MrScalarScheduledTasks</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/MrScalar.cs/#L304">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_MrScalar_SecurityConfig_" data-uid="Pulumi.SpotInst.Aws.MrScalar.SecurityConfig*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_MrScalar_SecurityConfig" data-uid="Pulumi.SpotInst.Aws.MrScalar.SecurityConfig">SecurityConfig</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SecurityConfig { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/MrScalar.cs/#L307">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_MrScalar_ServiceAccessSecurityGroup_" data-uid="Pulumi.SpotInst.Aws.MrScalar.ServiceAccessSecurityGroup*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_MrScalar_ServiceAccessSecurityGroup" data-uid="Pulumi.SpotInst.Aws.MrScalar.ServiceAccessSecurityGroup">ServiceAccessSecurityGroup</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ServiceAccessSecurityGroup { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/MrScalar.cs/#L310">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_MrScalar_ServiceRole_" data-uid="Pulumi.SpotInst.Aws.MrScalar.ServiceRole*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_MrScalar_ServiceRole" data-uid="Pulumi.SpotInst.Aws.MrScalar.ServiceRole">ServiceRole</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ServiceRole { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/MrScalar.cs/#L313">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_MrScalar_StepsFiles_" data-uid="Pulumi.SpotInst.Aws.MrScalar.StepsFiles*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_MrScalar_StepsFiles" data-uid="Pulumi.SpotInst.Aws.MrScalar.StepsFiles">StepsFiles</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;MrScalarStepsFiles&gt;&gt; StepsFiles { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.SpotInst.Aws.Outputs.MrScalarStepsFiles.html">MrScalarStepsFiles</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/MrScalar.cs/#L319">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_MrScalar_Strategy_" data-uid="Pulumi.SpotInst.Aws.MrScalar.Strategy*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_MrScalar_Strategy" data-uid="Pulumi.SpotInst.Aws.MrScalar.Strategy">Strategy</h4>
+  <div class="markdown level1 summary"><p>The MrScaler strategy. Allowed values are <code>new</code> <code>clone</code> and <code>wrap</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Strategy { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/MrScalar.cs/#L322">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_MrScalar_Tags_" data-uid="Pulumi.SpotInst.Aws.MrScalar.Tags*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_MrScalar_Tags" data-uid="Pulumi.SpotInst.Aws.MrScalar.Tags">Tags</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;MrScalarTags&gt;&gt; Tags { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.SpotInst.Aws.Outputs.MrScalarTags.html">MrScalarTags</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/MrScalar.cs/#L325">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_MrScalar_TaskDesiredCapacity_" data-uid="Pulumi.SpotInst.Aws.MrScalar.TaskDesiredCapacity*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_MrScalar_TaskDesiredCapacity" data-uid="Pulumi.SpotInst.Aws.MrScalar.TaskDesiredCapacity">TaskDesiredCapacity</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; TaskDesiredCapacity { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/MrScalar.cs/#L328">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_MrScalar_TaskEbsBlockDevices_" data-uid="Pulumi.SpotInst.Aws.MrScalar.TaskEbsBlockDevices*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_MrScalar_TaskEbsBlockDevices" data-uid="Pulumi.SpotInst.Aws.MrScalar.TaskEbsBlockDevices">TaskEbsBlockDevices</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;MrScalarTaskEbsBlockDevices&gt;&gt; TaskEbsBlockDevices { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.SpotInst.Aws.Outputs.MrScalarTaskEbsBlockDevices.html">MrScalarTaskEbsBlockDevices</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/MrScalar.cs/#L331">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_MrScalar_TaskEbsOptimized_" data-uid="Pulumi.SpotInst.Aws.MrScalar.TaskEbsOptimized*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_MrScalar_TaskEbsOptimized" data-uid="Pulumi.SpotInst.Aws.MrScalar.TaskEbsOptimized">TaskEbsOptimized</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; TaskEbsOptimized { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/MrScalar.cs/#L334">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_MrScalar_TaskInstanceTypes_" data-uid="Pulumi.SpotInst.Aws.MrScalar.TaskInstanceTypes*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_MrScalar_TaskInstanceTypes" data-uid="Pulumi.SpotInst.Aws.MrScalar.TaskInstanceTypes">TaskInstanceTypes</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; TaskInstanceTypes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/MrScalar.cs/#L337">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_MrScalar_TaskLifecycle_" data-uid="Pulumi.SpotInst.Aws.MrScalar.TaskLifecycle*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_MrScalar_TaskLifecycle" data-uid="Pulumi.SpotInst.Aws.MrScalar.TaskLifecycle">TaskLifecycle</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; TaskLifecycle { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/MrScalar.cs/#L340">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_MrScalar_TaskMaxSize_" data-uid="Pulumi.SpotInst.Aws.MrScalar.TaskMaxSize*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_MrScalar_TaskMaxSize" data-uid="Pulumi.SpotInst.Aws.MrScalar.TaskMaxSize">TaskMaxSize</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; TaskMaxSize { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/MrScalar.cs/#L343">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_MrScalar_TaskMinSize_" data-uid="Pulumi.SpotInst.Aws.MrScalar.TaskMinSize*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_MrScalar_TaskMinSize" data-uid="Pulumi.SpotInst.Aws.MrScalar.TaskMinSize">TaskMinSize</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; TaskMinSize { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/MrScalar.cs/#L346">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_MrScalar_TaskScalingDownPolicies_" data-uid="Pulumi.SpotInst.Aws.MrScalar.TaskScalingDownPolicies*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_MrScalar_TaskScalingDownPolicies" data-uid="Pulumi.SpotInst.Aws.MrScalar.TaskScalingDownPolicies">TaskScalingDownPolicies</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;MrScalarTaskScalingDownPolicies&gt;&gt; TaskScalingDownPolicies { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.SpotInst.Aws.Outputs.MrScalarTaskScalingDownPolicies.html">MrScalarTaskScalingDownPolicies</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/MrScalar.cs/#L349">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_MrScalar_TaskScalingUpPolicies_" data-uid="Pulumi.SpotInst.Aws.MrScalar.TaskScalingUpPolicies*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_MrScalar_TaskScalingUpPolicies" data-uid="Pulumi.SpotInst.Aws.MrScalar.TaskScalingUpPolicies">TaskScalingUpPolicies</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;MrScalarTaskScalingUpPolicies&gt;&gt; TaskScalingUpPolicies { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.SpotInst.Aws.Outputs.MrScalarTaskScalingUpPolicies.html">MrScalarTaskScalingUpPolicies</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/MrScalar.cs/#L352">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_MrScalar_TerminationProtected_" data-uid="Pulumi.SpotInst.Aws.MrScalar.TerminationProtected*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_MrScalar_TerminationProtected" data-uid="Pulumi.SpotInst.Aws.MrScalar.TerminationProtected">TerminationProtected</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; TerminationProtected { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/MrScalar.cs/#L355">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_MrScalar_VisibleToAllUsers_" data-uid="Pulumi.SpotInst.Aws.MrScalar.VisibleToAllUsers*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_MrScalar_VisibleToAllUsers" data-uid="Pulumi.SpotInst.Aws.MrScalar.VisibleToAllUsers">VisibleToAllUsers</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; VisibleToAllUsers { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/MrScalar.cs/#L396">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_MrScalar_Get_" data-uid="Pulumi.SpotInst.Aws.MrScalar.Get*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_MrScalar_Get_System_String_Input_System_String__Pulumi_SpotInst_Aws_MrScalarState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.SpotInst.Aws.MrScalar.Get(System.String,Input{System.String},Pulumi.SpotInst.Aws.MrScalarState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, MrScalarState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Get an existing MrScalar resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static MrScalar Get(string name, Input&lt;string&gt; id, MrScalarState state = null, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.SpotInst.Aws.MrScalarState.html">MrScalarState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.SpotInst.Aws.MrScalar.html">MrScalar</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/MrScalar.cs/#L170" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

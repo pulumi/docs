@@ -1,0 +1,650 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class AlertCondition
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class AlertCondition
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.NewRelic.AlertCondition">
+  
+  <h1 id="Pulumi_NewRelic_AlertCondition" data-uid="Pulumi.NewRelic.AlertCondition" class="text-break">Class AlertCondition
+  </h1>
+  <div class="markdown level0 summary"><p>Use this resource to create and manage alert conditions for APM, Browser, and Mobile in New Relic.</p>
+<h2 id="terms">Terms</h2>
+<p>The <code>term</code> mapping supports the following arguments:</p>
+<ul>
+<li><code>duration</code> - (Required) In minutes, must be in the range of <code>5</code> to <code>120</code>, inclusive.</li>
+<li><code>operator</code> - (Optional) <code>above</code>, <code>below</code>, or <code>equal</code>.  Defaults to <code>equal</code>.</li>
+<li><code>priority</code> - (Optional) <code>critical</code> or <code>warning</code>.  Defaults to <code>critical</code>.</li>
+<li><code>threshold</code> - (Required) Must be 0 or greater.</li>
+<li><code>time_function</code> - (Required) <code>all</code> or <code>any</code>.</li>
+</ul>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/alert_condition.html.markdown">https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/alert_condition.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">AlertCondition</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.NewRelic.html">Pulumi.NewRelic</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.NewRelic.dll</h6>
+  <h5 id="Pulumi_NewRelic_AlertCondition_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class AlertCondition : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/master/sdk/dotnet/AlertCondition.cs/#L160">View Source</a>
+  </span>
+  <a id="Pulumi_NewRelic_AlertCondition__ctor_" data-uid="Pulumi.NewRelic.AlertCondition.#ctor*"></a>
+  <h4 id="Pulumi_NewRelic_AlertCondition__ctor_System_String_Pulumi_NewRelic_AlertConditionArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.NewRelic.AlertCondition.#ctor(System.String,Pulumi.NewRelic.AlertConditionArgs,System.Nullable{CustomResourceOptions})">AlertCondition(String, AlertConditionArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Create a AlertCondition resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlertCondition(string name, AlertConditionArgs args, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.NewRelic.AlertConditionArgs.html">AlertConditionArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/master/sdk/dotnet/AlertCondition.cs/#L31">View Source</a>
+  </span>
+  <a id="Pulumi_NewRelic_AlertCondition_ConditionScope_" data-uid="Pulumi.NewRelic.AlertCondition.ConditionScope*"></a>
+  <h4 id="Pulumi_NewRelic_AlertCondition_ConditionScope" data-uid="Pulumi.NewRelic.AlertCondition.ConditionScope">ConditionScope</h4>
+  <div class="markdown level1 summary"><p><code>application</code> or <code>instance</code>.  Choose <code>application</code> for most scenarios.  If you are using the JVM plugin in New Relic, the <code>instance</code> setting allows your condition to trigger <a href="https://docs.newrelic.com/docs/alerts/new-relic-alerts/defining-conditions/scope-alert-thresholds-specific-instances">for specific app instances</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ConditionScope { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/master/sdk/dotnet/AlertCondition.cs/#L34">View Source</a>
+  </span>
+  <a id="Pulumi_NewRelic_AlertCondition_Enabled_" data-uid="Pulumi.NewRelic.AlertCondition.Enabled*"></a>
+  <h4 id="Pulumi_NewRelic_AlertCondition_Enabled" data-uid="Pulumi.NewRelic.AlertCondition.Enabled">Enabled</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; Enabled { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/master/sdk/dotnet/AlertCondition.cs/#L40">View Source</a>
+  </span>
+  <a id="Pulumi_NewRelic_AlertCondition_Entities_" data-uid="Pulumi.NewRelic.AlertCondition.Entities*"></a>
+  <h4 id="Pulumi_NewRelic_AlertCondition_Entities" data-uid="Pulumi.NewRelic.AlertCondition.Entities">Entities</h4>
+  <div class="markdown level1 summary"><p>The instance IDS associated with this condition.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;int&gt;&gt; Entities { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/master/sdk/dotnet/AlertCondition.cs/#L46">View Source</a>
+  </span>
+  <a id="Pulumi_NewRelic_AlertCondition_GcMetric_" data-uid="Pulumi.NewRelic.AlertCondition.GcMetric*"></a>
+  <h4 id="Pulumi_NewRelic_AlertCondition_GcMetric" data-uid="Pulumi.NewRelic.AlertCondition.GcMetric">GcMetric</h4>
+  <div class="markdown level1 summary"><p>A valid Garbage Collection metric e.g. <code>GC/G1 Young Generation</code>. This is required if you are using <code>apm_jvm_metric</code> with <code>gc_cpu_time</code> condition type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; GcMetric { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/master/sdk/dotnet/AlertCondition.cs/#L101">View Source</a>
+  </span>
+  <a id="Pulumi_NewRelic_AlertCondition_Metric_" data-uid="Pulumi.NewRelic.AlertCondition.Metric*"></a>
+  <h4 id="Pulumi_NewRelic_AlertCondition_Metric" data-uid="Pulumi.NewRelic.AlertCondition.Metric">Metric</h4>
+  <div class="markdown level1 summary"><p>The metric field accepts parameters based on the <code>type</code> set. One of these metrics based on <code>type</code>:</p>
+<ul>
+<li><code>apm_app_metric</code></li>
+<li><code>apdex</code></li>
+<li><code>error_percentage</code></li>
+<li><code>response_time_background</code></li>
+<li><code>response_time_web</code></li>
+<li><code>throughput_background</code></li>
+<li><code>throughput_web</code></li>
+<li><code>user_defined</code></li>
+<li><code>apm_jvm_metric</code></li>
+<li><code>cpu_utilization_time</code></li>
+<li><code>deadlocked_threads</code></li>
+<li><code>gc_cpu_time</code></li>
+<li><code>heap_memory_usage</code></li>
+<li><code>apm_kt_metric</code></li>
+<li><code>apdex</code></li>
+<li><code>error_count</code></li>
+<li><code>error_percentage</code></li>
+<li><code>response_time</code></li>
+<li><code>throughput</code></li>
+<li><code>browser_metric</code></li>
+<li><code>ajax_response_time</code></li>
+<li><code>ajax_throughput</code></li>
+<li><code>dom_processing</code></li>
+<li><code>end_user_apdex</code></li>
+<li><code>network</code></li>
+<li><code>page_rendering</code></li>
+<li><code>page_view_throughput</code></li>
+<li><code>page_views_with_js_errors</code></li>
+<li><code>request_queuing</code></li>
+<li><code>total_page_load</code></li>
+<li><code>user_defined</code></li>
+<li><code>web_application</code></li>
+<li><code>mobile_metric</code></li>
+<li><code>database</code></li>
+<li><code>images</code></li>
+<li><code>json</code></li>
+<li><code>mobile_crash_rate</code></li>
+<li><code>network_error_percentage</code></li>
+<li><code>network</code></li>
+<li><code>status_error_percentage</code></li>
+<li><code>user_defined</code></li>
+<li><code>view_loading</code></li>
+<li><code>servers_metric</code></li>
+<li><code>cpu_percentage</code></li>
+<li><code>disk_io_percentage</code></li>
+<li><code>fullest_disk_percentage</code></li>
+<li><code>load_average_one_minute</code></li>
+<li><code>memory_percentage</code></li>
+<li><code>user_defined</code></li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Metric { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/master/sdk/dotnet/AlertCondition.cs/#L107">View Source</a>
+  </span>
+  <a id="Pulumi_NewRelic_AlertCondition_Name_" data-uid="Pulumi.NewRelic.AlertCondition.Name*"></a>
+  <h4 id="Pulumi_NewRelic_AlertCondition_Name" data-uid="Pulumi.NewRelic.AlertCondition.Name">Name</h4>
+  <div class="markdown level1 summary"><p>The title of the condition. Must be between 1 and 64 characters, inclusive.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/master/sdk/dotnet/AlertCondition.cs/#L113">View Source</a>
+  </span>
+  <a id="Pulumi_NewRelic_AlertCondition_PolicyId_" data-uid="Pulumi.NewRelic.AlertCondition.PolicyId*"></a>
+  <h4 id="Pulumi_NewRelic_AlertCondition_PolicyId" data-uid="Pulumi.NewRelic.AlertCondition.PolicyId">PolicyId</h4>
+  <div class="markdown level1 summary"><p>The ID of the policy where this condition should be used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; PolicyId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/master/sdk/dotnet/AlertCondition.cs/#L119">View Source</a>
+  </span>
+  <a id="Pulumi_NewRelic_AlertCondition_RunbookUrl_" data-uid="Pulumi.NewRelic.AlertCondition.RunbookUrl*"></a>
+  <h4 id="Pulumi_NewRelic_AlertCondition_RunbookUrl" data-uid="Pulumi.NewRelic.AlertCondition.RunbookUrl">RunbookUrl</h4>
+  <div class="markdown level1 summary"><p>Runbook URL to display in notifications.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; RunbookUrl { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/master/sdk/dotnet/AlertCondition.cs/#L125">View Source</a>
+  </span>
+  <a id="Pulumi_NewRelic_AlertCondition_Terms_" data-uid="Pulumi.NewRelic.AlertCondition.Terms*"></a>
+  <h4 id="Pulumi_NewRelic_AlertCondition_Terms" data-uid="Pulumi.NewRelic.AlertCondition.Terms">Terms</h4>
+  <div class="markdown level1 summary"><p>A list of terms for this condition. See Terms below for details.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;AlertConditionTerms&gt;&gt; Terms { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.NewRelic.Outputs.AlertConditionTerms.html">AlertConditionTerms</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/master/sdk/dotnet/AlertCondition.cs/#L131">View Source</a>
+  </span>
+  <a id="Pulumi_NewRelic_AlertCondition_Type_" data-uid="Pulumi.NewRelic.AlertCondition.Type*"></a>
+  <h4 id="Pulumi_NewRelic_AlertCondition_Type" data-uid="Pulumi.NewRelic.AlertCondition.Type">Type</h4>
+  <div class="markdown level1 summary"><p>The type of condition. One of: <code>apm_app_metric</code>, <code>apm_jvm_metric</code>, <code>apm_kt_metric</code>, <code>servers_metric</code>, <code>browser_metric</code>, <code>mobile_metric</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Type { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/master/sdk/dotnet/AlertCondition.cs/#L137">View Source</a>
+  </span>
+  <a id="Pulumi_NewRelic_AlertCondition_UserDefinedMetric_" data-uid="Pulumi.NewRelic.AlertCondition.UserDefinedMetric*"></a>
+  <h4 id="Pulumi_NewRelic_AlertCondition_UserDefinedMetric" data-uid="Pulumi.NewRelic.AlertCondition.UserDefinedMetric">UserDefinedMetric</h4>
+  <div class="markdown level1 summary"><p>A custom metric to be evaluated.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; UserDefinedMetric { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/master/sdk/dotnet/AlertCondition.cs/#L143">View Source</a>
+  </span>
+  <a id="Pulumi_NewRelic_AlertCondition_UserDefinedValueFunction_" data-uid="Pulumi.NewRelic.AlertCondition.UserDefinedValueFunction*"></a>
+  <h4 id="Pulumi_NewRelic_AlertCondition_UserDefinedValueFunction" data-uid="Pulumi.NewRelic.AlertCondition.UserDefinedValueFunction">UserDefinedValueFunction</h4>
+  <div class="markdown level1 summary"><p>One of: <code>average</code>, <code>min</code>, <code>max</code>, <code>total</code>, or <code>sample_size</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; UserDefinedValueFunction { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/master/sdk/dotnet/AlertCondition.cs/#L149">View Source</a>
+  </span>
+  <a id="Pulumi_NewRelic_AlertCondition_ViolationCloseTimer_" data-uid="Pulumi.NewRelic.AlertCondition.ViolationCloseTimer*"></a>
+  <h4 id="Pulumi_NewRelic_AlertCondition_ViolationCloseTimer" data-uid="Pulumi.NewRelic.AlertCondition.ViolationCloseTimer">ViolationCloseTimer</h4>
+  <div class="markdown level1 summary"><p>Automatically close instance-based violations, including JVM health metric violations, after the number of hours specified. Must be: <code>1</code>, <code>2</code>, <code>4</code>, <code>8</code>, <code>12</code> or <code>24</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; ViolationCloseTimer { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/master/sdk/dotnet/AlertCondition.cs/#L190">View Source</a>
+  </span>
+  <a id="Pulumi_NewRelic_AlertCondition_Get_" data-uid="Pulumi.NewRelic.AlertCondition.Get*"></a>
+  <h4 id="Pulumi_NewRelic_AlertCondition_Get_System_String_Input_System_String__Pulumi_NewRelic_AlertConditionState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.NewRelic.AlertCondition.Get(System.String,Input{System.String},Pulumi.NewRelic.AlertConditionState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, AlertConditionState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Get an existing AlertCondition resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AlertCondition Get(string name, Input&lt;string&gt; id, AlertConditionState state = null, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.NewRelic.AlertConditionState.html">AlertConditionState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.NewRelic.AlertCondition.html">AlertCondition</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-newrelic/blob/master/sdk/dotnet/AlertCondition.cs/#L26" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
