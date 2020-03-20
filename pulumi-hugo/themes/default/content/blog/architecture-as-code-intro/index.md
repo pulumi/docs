@@ -247,7 +247,7 @@ Microservices are based on the idea that components encapsulate a business capab
 - Establish continuous deployment by keeping development, testing, and production stages similar.
 - Use platforms with the ability to scale without significant changes to architecture, development, or tooling.
 
-In addition to Kubernetes, there are other platforms for deploying container-based applications. AWS Elastic Container Service, Google Cloud Run, and Azure Container Service provide alternatives to Kubernetes for container orchestration. The following code snippet demonstrates deploying a container with a Ruby application in Google Cloud Run. Note that the image is built using a local Docker engine and pushed to the Google Cloud Repository. The code shows that you can also set memory limits and concurrency for the container. The [full example](https://github.com/pulumi/examples/tree/master/gcp-ts-cloudrun) is available on Github.
+In addition to Kubernetes, there are other platforms for deploying container-based applications. AWS Elastic Container Service, Google Cloud Run, and Azure Container Service provide alternatives to Kubernetes for container orchestration. The following code snippet demonstrates deploying a container with a Ruby application in Google Cloud Run. Note that the image is built using a local Docker engine and pushed to the Google Cloud Repository. The code shows that you can also set memory limits and concurrency for the container. The [full example](https://github.com/pulumi/examples/tree/master/gcp-ts-cloudrun) is available on GitHub.
 
 ```ts
 import * as docker from "@pulumi/docker";
