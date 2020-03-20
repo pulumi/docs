@@ -1,0 +1,1575 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Account
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Account
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Azure.Storage.Account">
+  
+  <h1 id="Pulumi_Azure_Storage_Account" data-uid="Pulumi.Azure.Storage.Account" class="text-break">Class Account
+  </h1>
+  <div class="markdown level0 summary"><p>Manages an Azure Storage Account.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/storage_account.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/storage_account.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Account</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.Storage.html">Pulumi.Azure.Storage</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
+  <h5 id="Pulumi_Azure_Storage_Account_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Account : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L316">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Storage_Account__ctor_" data-uid="Pulumi.Azure.Storage.Account.#ctor*"></a>
+  <h4 id="Pulumi_Azure_Storage_Account__ctor_System_String_Pulumi_Azure_Storage_AccountArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.Storage.Account.#ctor(System.String,Pulumi.Azure.Storage.AccountArgs,Pulumi.CustomResourceOptions)">Account(String, AccountArgs, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Create a Account resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Account(string name, AccountArgs args, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Azure.Storage.AccountArgs.html">AccountArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L22">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Storage_Account_AccessTier_" data-uid="Pulumi.Azure.Storage.Account.AccessTier*"></a>
+  <h4 id="Pulumi_Azure_Storage_Account_AccessTier" data-uid="Pulumi.Azure.Storage.Account.AccessTier">AccessTier</h4>
+  <div class="markdown level1 summary"><p>Defines the access tier for <code>BlobStorage</code>, <code>FileStorage</code> and <code>StorageV2</code> accounts. Valid options are <code>Hot</code> and <code>Cool</code>, defaults to <code>Hot</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AccessTier { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L28">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Storage_Account_AccountKind_" data-uid="Pulumi.Azure.Storage.Account.AccountKind*"></a>
+  <h4 id="Pulumi_Azure_Storage_Account_AccountKind" data-uid="Pulumi.Azure.Storage.Account.AccountKind">AccountKind</h4>
+  <div class="markdown level1 summary"><p>Defines the Kind of account. Valid options are <code>BlobStorage</code>, <code>BlockBlobStorage</code>, <code>FileStorage</code>, <code>Storage</code> and <code>StorageV2</code>. Changing this forces a new resource to be created. Defaults to <code>StorageV2</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AccountKind { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L34">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Storage_Account_AccountReplicationType_" data-uid="Pulumi.Azure.Storage.Account.AccountReplicationType*"></a>
+  <h4 id="Pulumi_Azure_Storage_Account_AccountReplicationType" data-uid="Pulumi.Azure.Storage.Account.AccountReplicationType">AccountReplicationType</h4>
+  <div class="markdown level1 summary"><p>Defines the type of replication to use for this storage account. Valid options are <code>LRS</code>, <code>GRS</code>, <code>RAGRS</code> and <code>ZRS</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AccountReplicationType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L40">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Storage_Account_AccountTier_" data-uid="Pulumi.Azure.Storage.Account.AccountTier*"></a>
+  <h4 id="Pulumi_Azure_Storage_Account_AccountTier" data-uid="Pulumi.Azure.Storage.Account.AccountTier">AccountTier</h4>
+  <div class="markdown level1 summary"><p>Defines the Tier to use for this storage account. Valid options are <code>Standard</code> and <code>Premium</code>. For <code>FileStorage</code> accounts only <code>Premium</code> is valid. Changing this forces a new resource to be created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AccountTier { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L46">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Storage_Account_BlobProperties_" data-uid="Pulumi.Azure.Storage.Account.BlobProperties*"></a>
+  <h4 id="Pulumi_Azure_Storage_Account_BlobProperties" data-uid="Pulumi.Azure.Storage.Account.BlobProperties">BlobProperties</h4>
+  <div class="markdown level1 summary"><p>A <code>blob_properties</code> block as defined below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;AccountBlobProperties&gt; BlobProperties { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Azure.Storage.Outputs.AccountBlobProperties.html">AccountBlobProperties</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L52">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Storage_Account_CustomDomain_" data-uid="Pulumi.Azure.Storage.Account.CustomDomain*"></a>
+  <h4 id="Pulumi_Azure_Storage_Account_CustomDomain" data-uid="Pulumi.Azure.Storage.Account.CustomDomain">CustomDomain</h4>
+  <div class="markdown level1 summary"><p>A <code>custom_domain</code> block as documented below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;AccountCustomDomain&gt; CustomDomain { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Azure.Storage.Outputs.AccountCustomDomain.html">AccountCustomDomain</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L59">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Storage_Account_EnableHttpsTrafficOnly_" data-uid="Pulumi.Azure.Storage.Account.EnableHttpsTrafficOnly*"></a>
+  <h4 id="Pulumi_Azure_Storage_Account_EnableHttpsTrafficOnly" data-uid="Pulumi.Azure.Storage.Account.EnableHttpsTrafficOnly">EnableHttpsTrafficOnly</h4>
+  <div class="markdown level1 summary"><p>Boolean flag which forces HTTPS if enabled, see <a href="https://docs.microsoft.com/en-us/azure/storage/storage-require-secure-transfer/">here</a>
+for more information. Defaults to <code>true</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; EnableHttpsTrafficOnly { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L65">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Storage_Account_Identity_" data-uid="Pulumi.Azure.Storage.Account.Identity*"></a>
+  <h4 id="Pulumi_Azure_Storage_Account_Identity" data-uid="Pulumi.Azure.Storage.Account.Identity">Identity</h4>
+  <div class="markdown level1 summary"><p>A <code>identity</code> block as defined below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;AccountIdentity&gt; Identity { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Azure.Storage.Outputs.AccountIdentity.html">AccountIdentity</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L71">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Storage_Account_IsHnsEnabled_" data-uid="Pulumi.Azure.Storage.Account.IsHnsEnabled*"></a>
+  <h4 id="Pulumi_Azure_Storage_Account_IsHnsEnabled" data-uid="Pulumi.Azure.Storage.Account.IsHnsEnabled">IsHnsEnabled</h4>
+  <div class="markdown level1 summary"><p>Is Hierarchical Namespace enabled? This can be used with Azure Data Lake Storage Gen 2 (<a href="https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-quickstart-create-account/">see here for more information</a>). Changing this forces a new resource to be created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; IsHnsEnabled { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L77">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Storage_Account_Location_" data-uid="Pulumi.Azure.Storage.Account.Location*"></a>
+  <h4 id="Pulumi_Azure_Storage_Account_Location" data-uid="Pulumi.Azure.Storage.Account.Location">Location</h4>
+  <div class="markdown level1 summary"><p>Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Location { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L83">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Storage_Account_Name_" data-uid="Pulumi.Azure.Storage.Account.Name*"></a>
+  <h4 id="Pulumi_Azure_Storage_Account_Name" data-uid="Pulumi.Azure.Storage.Account.Name">Name</h4>
+  <div class="markdown level1 summary"><p>Specifies the name of the storage account. Changing this forces a new resource to be created. This must be unique across the entire Azure service, not just within the resource group.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L89">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Storage_Account_NetworkRules_" data-uid="Pulumi.Azure.Storage.Account.NetworkRules*"></a>
+  <h4 id="Pulumi_Azure_Storage_Account_NetworkRules" data-uid="Pulumi.Azure.Storage.Account.NetworkRules">NetworkRules</h4>
+  <div class="markdown level1 summary"><p>A <code>network_rules</code> block as documented below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;AccountNetworkRules&gt; NetworkRules { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Azure.Storage.Outputs.AccountNetworkRules.html">AccountNetworkRules</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L95">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Storage_Account_PrimaryAccessKey_" data-uid="Pulumi.Azure.Storage.Account.PrimaryAccessKey*"></a>
+  <h4 id="Pulumi_Azure_Storage_Account_PrimaryAccessKey" data-uid="Pulumi.Azure.Storage.Account.PrimaryAccessKey">PrimaryAccessKey</h4>
+  <div class="markdown level1 summary"><p>The primary access key for the storage account.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; PrimaryAccessKey { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L101">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Storage_Account_PrimaryBlobConnectionString_" data-uid="Pulumi.Azure.Storage.Account.PrimaryBlobConnectionString*"></a>
+  <h4 id="Pulumi_Azure_Storage_Account_PrimaryBlobConnectionString" data-uid="Pulumi.Azure.Storage.Account.PrimaryBlobConnectionString">PrimaryBlobConnectionString</h4>
+  <div class="markdown level1 summary"><p>The connection string associated with the primary blob location.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; PrimaryBlobConnectionString { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L107">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Storage_Account_PrimaryBlobEndpoint_" data-uid="Pulumi.Azure.Storage.Account.PrimaryBlobEndpoint*"></a>
+  <h4 id="Pulumi_Azure_Storage_Account_PrimaryBlobEndpoint" data-uid="Pulumi.Azure.Storage.Account.PrimaryBlobEndpoint">PrimaryBlobEndpoint</h4>
+  <div class="markdown level1 summary"><p>The endpoint URL for blob storage in the primary location.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; PrimaryBlobEndpoint { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L113">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Storage_Account_PrimaryBlobHost_" data-uid="Pulumi.Azure.Storage.Account.PrimaryBlobHost*"></a>
+  <h4 id="Pulumi_Azure_Storage_Account_PrimaryBlobHost" data-uid="Pulumi.Azure.Storage.Account.PrimaryBlobHost">PrimaryBlobHost</h4>
+  <div class="markdown level1 summary"><p>The hostname with port if applicable for blob storage in the primary location.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; PrimaryBlobHost { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L119">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Storage_Account_PrimaryConnectionString_" data-uid="Pulumi.Azure.Storage.Account.PrimaryConnectionString*"></a>
+  <h4 id="Pulumi_Azure_Storage_Account_PrimaryConnectionString" data-uid="Pulumi.Azure.Storage.Account.PrimaryConnectionString">PrimaryConnectionString</h4>
+  <div class="markdown level1 summary"><p>The connection string associated with the primary location.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; PrimaryConnectionString { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L125">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Storage_Account_PrimaryDfsEndpoint_" data-uid="Pulumi.Azure.Storage.Account.PrimaryDfsEndpoint*"></a>
+  <h4 id="Pulumi_Azure_Storage_Account_PrimaryDfsEndpoint" data-uid="Pulumi.Azure.Storage.Account.PrimaryDfsEndpoint">PrimaryDfsEndpoint</h4>
+  <div class="markdown level1 summary"><p>The endpoint URL for DFS storage in the primary location.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; PrimaryDfsEndpoint { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L131">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Storage_Account_PrimaryDfsHost_" data-uid="Pulumi.Azure.Storage.Account.PrimaryDfsHost*"></a>
+  <h4 id="Pulumi_Azure_Storage_Account_PrimaryDfsHost" data-uid="Pulumi.Azure.Storage.Account.PrimaryDfsHost">PrimaryDfsHost</h4>
+  <div class="markdown level1 summary"><p>The hostname with port if applicable for DFS storage in the primary location.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; PrimaryDfsHost { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L137">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Storage_Account_PrimaryFileEndpoint_" data-uid="Pulumi.Azure.Storage.Account.PrimaryFileEndpoint*"></a>
+  <h4 id="Pulumi_Azure_Storage_Account_PrimaryFileEndpoint" data-uid="Pulumi.Azure.Storage.Account.PrimaryFileEndpoint">PrimaryFileEndpoint</h4>
+  <div class="markdown level1 summary"><p>The endpoint URL for file storage in the primary location.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; PrimaryFileEndpoint { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L143">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Storage_Account_PrimaryFileHost_" data-uid="Pulumi.Azure.Storage.Account.PrimaryFileHost*"></a>
+  <h4 id="Pulumi_Azure_Storage_Account_PrimaryFileHost" data-uid="Pulumi.Azure.Storage.Account.PrimaryFileHost">PrimaryFileHost</h4>
+  <div class="markdown level1 summary"><p>The hostname with port if applicable for file storage in the primary location.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; PrimaryFileHost { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L149">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Storage_Account_PrimaryLocation_" data-uid="Pulumi.Azure.Storage.Account.PrimaryLocation*"></a>
+  <h4 id="Pulumi_Azure_Storage_Account_PrimaryLocation" data-uid="Pulumi.Azure.Storage.Account.PrimaryLocation">PrimaryLocation</h4>
+  <div class="markdown level1 summary"><p>The primary location of the storage account.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; PrimaryLocation { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L155">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Storage_Account_PrimaryQueueEndpoint_" data-uid="Pulumi.Azure.Storage.Account.PrimaryQueueEndpoint*"></a>
+  <h4 id="Pulumi_Azure_Storage_Account_PrimaryQueueEndpoint" data-uid="Pulumi.Azure.Storage.Account.PrimaryQueueEndpoint">PrimaryQueueEndpoint</h4>
+  <div class="markdown level1 summary"><p>The endpoint URL for queue storage in the primary location.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; PrimaryQueueEndpoint { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L161">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Storage_Account_PrimaryQueueHost_" data-uid="Pulumi.Azure.Storage.Account.PrimaryQueueHost*"></a>
+  <h4 id="Pulumi_Azure_Storage_Account_PrimaryQueueHost" data-uid="Pulumi.Azure.Storage.Account.PrimaryQueueHost">PrimaryQueueHost</h4>
+  <div class="markdown level1 summary"><p>The hostname with port if applicable for queue storage in the primary location.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; PrimaryQueueHost { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L167">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Storage_Account_PrimaryTableEndpoint_" data-uid="Pulumi.Azure.Storage.Account.PrimaryTableEndpoint*"></a>
+  <h4 id="Pulumi_Azure_Storage_Account_PrimaryTableEndpoint" data-uid="Pulumi.Azure.Storage.Account.PrimaryTableEndpoint">PrimaryTableEndpoint</h4>
+  <div class="markdown level1 summary"><p>The endpoint URL for table storage in the primary location.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; PrimaryTableEndpoint { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L173">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Storage_Account_PrimaryTableHost_" data-uid="Pulumi.Azure.Storage.Account.PrimaryTableHost*"></a>
+  <h4 id="Pulumi_Azure_Storage_Account_PrimaryTableHost" data-uid="Pulumi.Azure.Storage.Account.PrimaryTableHost">PrimaryTableHost</h4>
+  <div class="markdown level1 summary"><p>The hostname with port if applicable for table storage in the primary location.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; PrimaryTableHost { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L179">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Storage_Account_PrimaryWebEndpoint_" data-uid="Pulumi.Azure.Storage.Account.PrimaryWebEndpoint*"></a>
+  <h4 id="Pulumi_Azure_Storage_Account_PrimaryWebEndpoint" data-uid="Pulumi.Azure.Storage.Account.PrimaryWebEndpoint">PrimaryWebEndpoint</h4>
+  <div class="markdown level1 summary"><p>The endpoint URL for web storage in the primary location.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; PrimaryWebEndpoint { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L185">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Storage_Account_PrimaryWebHost_" data-uid="Pulumi.Azure.Storage.Account.PrimaryWebHost*"></a>
+  <h4 id="Pulumi_Azure_Storage_Account_PrimaryWebHost" data-uid="Pulumi.Azure.Storage.Account.PrimaryWebHost">PrimaryWebHost</h4>
+  <div class="markdown level1 summary"><p>The hostname with port if applicable for web storage in the primary location.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; PrimaryWebHost { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L191">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Storage_Account_QueueProperties_" data-uid="Pulumi.Azure.Storage.Account.QueueProperties*"></a>
+  <h4 id="Pulumi_Azure_Storage_Account_QueueProperties" data-uid="Pulumi.Azure.Storage.Account.QueueProperties">QueueProperties</h4>
+  <div class="markdown level1 summary"><p>A <code>queue_properties</code> block as defined below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;AccountQueueProperties&gt; QueueProperties { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Azure.Storage.Outputs.AccountQueueProperties.html">AccountQueueProperties</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L197">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Storage_Account_ResourceGroupName_" data-uid="Pulumi.Azure.Storage.Account.ResourceGroupName*"></a>
+  <h4 id="Pulumi_Azure_Storage_Account_ResourceGroupName" data-uid="Pulumi.Azure.Storage.Account.ResourceGroupName">ResourceGroupName</h4>
+  <div class="markdown level1 summary"><p>The name of the resource group in which to create the storage account. Changing this forces a new resource to be created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ResourceGroupName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L203">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Storage_Account_SecondaryAccessKey_" data-uid="Pulumi.Azure.Storage.Account.SecondaryAccessKey*"></a>
+  <h4 id="Pulumi_Azure_Storage_Account_SecondaryAccessKey" data-uid="Pulumi.Azure.Storage.Account.SecondaryAccessKey">SecondaryAccessKey</h4>
+  <div class="markdown level1 summary"><p>The secondary access key for the storage account.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SecondaryAccessKey { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L209">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Storage_Account_SecondaryBlobConnectionString_" data-uid="Pulumi.Azure.Storage.Account.SecondaryBlobConnectionString*"></a>
+  <h4 id="Pulumi_Azure_Storage_Account_SecondaryBlobConnectionString" data-uid="Pulumi.Azure.Storage.Account.SecondaryBlobConnectionString">SecondaryBlobConnectionString</h4>
+  <div class="markdown level1 summary"><p>The connection string associated with the secondary blob location.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SecondaryBlobConnectionString { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L215">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Storage_Account_SecondaryBlobEndpoint_" data-uid="Pulumi.Azure.Storage.Account.SecondaryBlobEndpoint*"></a>
+  <h4 id="Pulumi_Azure_Storage_Account_SecondaryBlobEndpoint" data-uid="Pulumi.Azure.Storage.Account.SecondaryBlobEndpoint">SecondaryBlobEndpoint</h4>
+  <div class="markdown level1 summary"><p>The endpoint URL for blob storage in the secondary location.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SecondaryBlobEndpoint { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L221">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Storage_Account_SecondaryBlobHost_" data-uid="Pulumi.Azure.Storage.Account.SecondaryBlobHost*"></a>
+  <h4 id="Pulumi_Azure_Storage_Account_SecondaryBlobHost" data-uid="Pulumi.Azure.Storage.Account.SecondaryBlobHost">SecondaryBlobHost</h4>
+  <div class="markdown level1 summary"><p>The hostname with port if applicable for blob storage in the secondary location.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SecondaryBlobHost { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L227">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Storage_Account_SecondaryConnectionString_" data-uid="Pulumi.Azure.Storage.Account.SecondaryConnectionString*"></a>
+  <h4 id="Pulumi_Azure_Storage_Account_SecondaryConnectionString" data-uid="Pulumi.Azure.Storage.Account.SecondaryConnectionString">SecondaryConnectionString</h4>
+  <div class="markdown level1 summary"><p>The connection string associated with the secondary location.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SecondaryConnectionString { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L233">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Storage_Account_SecondaryDfsEndpoint_" data-uid="Pulumi.Azure.Storage.Account.SecondaryDfsEndpoint*"></a>
+  <h4 id="Pulumi_Azure_Storage_Account_SecondaryDfsEndpoint" data-uid="Pulumi.Azure.Storage.Account.SecondaryDfsEndpoint">SecondaryDfsEndpoint</h4>
+  <div class="markdown level1 summary"><p>The endpoint URL for DFS storage in the secondary location.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SecondaryDfsEndpoint { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L239">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Storage_Account_SecondaryDfsHost_" data-uid="Pulumi.Azure.Storage.Account.SecondaryDfsHost*"></a>
+  <h4 id="Pulumi_Azure_Storage_Account_SecondaryDfsHost" data-uid="Pulumi.Azure.Storage.Account.SecondaryDfsHost">SecondaryDfsHost</h4>
+  <div class="markdown level1 summary"><p>The hostname with port if applicable for DFS storage in the secondary location.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SecondaryDfsHost { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L245">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Storage_Account_SecondaryFileEndpoint_" data-uid="Pulumi.Azure.Storage.Account.SecondaryFileEndpoint*"></a>
+  <h4 id="Pulumi_Azure_Storage_Account_SecondaryFileEndpoint" data-uid="Pulumi.Azure.Storage.Account.SecondaryFileEndpoint">SecondaryFileEndpoint</h4>
+  <div class="markdown level1 summary"><p>The endpoint URL for file storage in the secondary location.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SecondaryFileEndpoint { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L251">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Storage_Account_SecondaryFileHost_" data-uid="Pulumi.Azure.Storage.Account.SecondaryFileHost*"></a>
+  <h4 id="Pulumi_Azure_Storage_Account_SecondaryFileHost" data-uid="Pulumi.Azure.Storage.Account.SecondaryFileHost">SecondaryFileHost</h4>
+  <div class="markdown level1 summary"><p>The hostname with port if applicable for file storage in the secondary location.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SecondaryFileHost { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L257">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Storage_Account_SecondaryLocation_" data-uid="Pulumi.Azure.Storage.Account.SecondaryLocation*"></a>
+  <h4 id="Pulumi_Azure_Storage_Account_SecondaryLocation" data-uid="Pulumi.Azure.Storage.Account.SecondaryLocation">SecondaryLocation</h4>
+  <div class="markdown level1 summary"><p>The secondary location of the storage account.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SecondaryLocation { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L263">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Storage_Account_SecondaryQueueEndpoint_" data-uid="Pulumi.Azure.Storage.Account.SecondaryQueueEndpoint*"></a>
+  <h4 id="Pulumi_Azure_Storage_Account_SecondaryQueueEndpoint" data-uid="Pulumi.Azure.Storage.Account.SecondaryQueueEndpoint">SecondaryQueueEndpoint</h4>
+  <div class="markdown level1 summary"><p>The endpoint URL for queue storage in the secondary location.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SecondaryQueueEndpoint { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L269">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Storage_Account_SecondaryQueueHost_" data-uid="Pulumi.Azure.Storage.Account.SecondaryQueueHost*"></a>
+  <h4 id="Pulumi_Azure_Storage_Account_SecondaryQueueHost" data-uid="Pulumi.Azure.Storage.Account.SecondaryQueueHost">SecondaryQueueHost</h4>
+  <div class="markdown level1 summary"><p>The hostname with port if applicable for queue storage in the secondary location.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SecondaryQueueHost { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L275">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Storage_Account_SecondaryTableEndpoint_" data-uid="Pulumi.Azure.Storage.Account.SecondaryTableEndpoint*"></a>
+  <h4 id="Pulumi_Azure_Storage_Account_SecondaryTableEndpoint" data-uid="Pulumi.Azure.Storage.Account.SecondaryTableEndpoint">SecondaryTableEndpoint</h4>
+  <div class="markdown level1 summary"><p>The endpoint URL for table storage in the secondary location.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SecondaryTableEndpoint { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L281">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Storage_Account_SecondaryTableHost_" data-uid="Pulumi.Azure.Storage.Account.SecondaryTableHost*"></a>
+  <h4 id="Pulumi_Azure_Storage_Account_SecondaryTableHost" data-uid="Pulumi.Azure.Storage.Account.SecondaryTableHost">SecondaryTableHost</h4>
+  <div class="markdown level1 summary"><p>The hostname with port if applicable for table storage in the secondary location.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SecondaryTableHost { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L287">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Storage_Account_SecondaryWebEndpoint_" data-uid="Pulumi.Azure.Storage.Account.SecondaryWebEndpoint*"></a>
+  <h4 id="Pulumi_Azure_Storage_Account_SecondaryWebEndpoint" data-uid="Pulumi.Azure.Storage.Account.SecondaryWebEndpoint">SecondaryWebEndpoint</h4>
+  <div class="markdown level1 summary"><p>The endpoint URL for web storage in the secondary location.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SecondaryWebEndpoint { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L293">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Storage_Account_SecondaryWebHost_" data-uid="Pulumi.Azure.Storage.Account.SecondaryWebHost*"></a>
+  <h4 id="Pulumi_Azure_Storage_Account_SecondaryWebHost" data-uid="Pulumi.Azure.Storage.Account.SecondaryWebHost">SecondaryWebHost</h4>
+  <div class="markdown level1 summary"><p>The hostname with port if applicable for web storage in the secondary location.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SecondaryWebHost { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L299">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Storage_Account_StaticWebsite_" data-uid="Pulumi.Azure.Storage.Account.StaticWebsite*"></a>
+  <h4 id="Pulumi_Azure_Storage_Account_StaticWebsite" data-uid="Pulumi.Azure.Storage.Account.StaticWebsite">StaticWebsite</h4>
+  <div class="markdown level1 summary"><p>A <code>static_website</code> block as defined below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;AccountStaticWebsite&gt; StaticWebsite { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Azure.Storage.Outputs.AccountStaticWebsite.html">AccountStaticWebsite</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L305">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Storage_Account_Tags_" data-uid="Pulumi.Azure.Storage.Account.Tags*"></a>
+  <h4 id="Pulumi_Azure_Storage_Account_Tags" data-uid="Pulumi.Azure.Storage.Account.Tags">Tags</h4>
+  <div class="markdown level1 summary"><p>A mapping of tags to assign to the resource.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; Tags { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L346">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Storage_Account_Get_" data-uid="Pulumi.Azure.Storage.Account.Get*"></a>
+  <h4 id="Pulumi_Azure_Storage_Account_Get_System_String_Pulumi_Input_System_String__Pulumi_Azure_Storage_AccountState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.Storage.Account.Get(System.String,Pulumi.Input{System.String},Pulumi.Azure.Storage.AccountState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, AccountState, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Get an existing Account resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Account Get(string name, Input&lt;string&gt; id, AccountState state = null, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Azure.Storage.AccountState.html">AccountState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Azure.Storage.Account.html">Account</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L17" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,925 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class InstanceTemplate
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class InstanceTemplate
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Gcp.Compute.InstanceTemplate">
+  
+  <h1 id="Pulumi_Gcp_Compute_InstanceTemplate" data-uid="Pulumi.Gcp.Compute.InstanceTemplate" class="text-break">Class InstanceTemplate
+  </h1>
+  <div class="markdown level0 summary"><p>Manages a VM instance template resource within GCE. For more information see
+<a href="https://cloud.google.com/compute/docs/instance-templates">the official documentation</a>
+and
+<a href="https://cloud.google.com/compute/docs/reference/latest/instanceTemplates">API</a>.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_instance_template.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_instance_template.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">InstanceTemplate</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Compute.html">Pulumi.Gcp.Compute</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
+  <h5 id="Pulumi_Gcp_Compute_InstanceTemplate_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class InstanceTemplate : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/InstanceTemplate.cs/#L191">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_Compute_InstanceTemplate__ctor_" data-uid="Pulumi.Gcp.Compute.InstanceTemplate.#ctor*"></a>
+  <h4 id="Pulumi_Gcp_Compute_InstanceTemplate__ctor_System_String_Pulumi_Gcp_Compute_InstanceTemplateArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Compute.InstanceTemplate.#ctor(System.String,Pulumi.Gcp.Compute.InstanceTemplateArgs,Pulumi.CustomResourceOptions)">InstanceTemplate(String, InstanceTemplateArgs, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Create a InstanceTemplate resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InstanceTemplate(string name, InstanceTemplateArgs args, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Gcp.Compute.InstanceTemplateArgs.html">InstanceTemplateArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/InstanceTemplate.cs/#L26">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_Compute_InstanceTemplate_CanIpForward_" data-uid="Pulumi.Gcp.Compute.InstanceTemplate.CanIpForward*"></a>
+  <h4 id="Pulumi_Gcp_Compute_InstanceTemplate_CanIpForward" data-uid="Pulumi.Gcp.Compute.InstanceTemplate.CanIpForward">CanIpForward</h4>
+  <div class="markdown level1 summary"><p>Whether to allow sending and receiving of
+packets with non-matching source or destination IPs. This defaults to false.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; CanIpForward { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/InstanceTemplate.cs/#L32">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_Compute_InstanceTemplate_Description_" data-uid="Pulumi.Gcp.Compute.InstanceTemplate.Description*"></a>
+  <h4 id="Pulumi_Gcp_Compute_InstanceTemplate_Description" data-uid="Pulumi.Gcp.Compute.InstanceTemplate.Description">Description</h4>
+  <div class="markdown level1 summary"><p>A brief description of this resource.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/InstanceTemplate.cs/#L40">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_Compute_InstanceTemplate_Disks_" data-uid="Pulumi.Gcp.Compute.InstanceTemplate.Disks*"></a>
+  <h4 id="Pulumi_Gcp_Compute_InstanceTemplate_Disks" data-uid="Pulumi.Gcp.Compute.InstanceTemplate.Disks">Disks</h4>
+  <div class="markdown level1 summary"><p>Disks to attach to instances created from this template.
+This can be specified multiple times for multiple disks. Structure is
+documented below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;InstanceTemplateDisks&gt;&gt; Disks { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.InstanceTemplateDisks.html">InstanceTemplateDisks</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/InstanceTemplate.cs/#L47">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_Compute_InstanceTemplate_EnableDisplay_" data-uid="Pulumi.Gcp.Compute.InstanceTemplate.EnableDisplay*"></a>
+  <h4 id="Pulumi_Gcp_Compute_InstanceTemplate_EnableDisplay" data-uid="Pulumi.Gcp.Compute.InstanceTemplate.EnableDisplay">EnableDisplay</h4>
+  <div class="markdown level1 summary"><p>Enable <a href="https://cloud.google.com/compute/docs/instances/enable-instance-virtual-display#verify_display_driver">Virtual Displays</a> on this instance.
+<strong>Note</strong>: <code>allow_stopping_for_update</code> must be set to true in order to update this field.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; EnableDisplay { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/InstanceTemplate.cs/#L53">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_Compute_InstanceTemplate_GuestAccelerators_" data-uid="Pulumi.Gcp.Compute.InstanceTemplate.GuestAccelerators*"></a>
+  <h4 id="Pulumi_Gcp_Compute_InstanceTemplate_GuestAccelerators" data-uid="Pulumi.Gcp.Compute.InstanceTemplate.GuestAccelerators">GuestAccelerators</h4>
+  <div class="markdown level1 summary"><p>List of the type and count of accelerator cards attached to the instance. Structure documented below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;InstanceTemplateGuestAccelerators&gt;&gt; GuestAccelerators { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.InstanceTemplateGuestAccelerators.html">InstanceTemplateGuestAccelerators</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/InstanceTemplate.cs/#L60">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_Compute_InstanceTemplate_InstanceDescription_" data-uid="Pulumi.Gcp.Compute.InstanceTemplate.InstanceDescription*"></a>
+  <h4 id="Pulumi_Gcp_Compute_InstanceTemplate_InstanceDescription" data-uid="Pulumi.Gcp.Compute.InstanceTemplate.InstanceDescription">InstanceDescription</h4>
+  <div class="markdown level1 summary"><p>A brief description to use for instances
+created from this template.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; InstanceDescription { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/InstanceTemplate.cs/#L67">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_Compute_InstanceTemplate_Labels_" data-uid="Pulumi.Gcp.Compute.InstanceTemplate.Labels*"></a>
+  <h4 id="Pulumi_Gcp_Compute_InstanceTemplate_Labels" data-uid="Pulumi.Gcp.Compute.InstanceTemplate.Labels">Labels</h4>
+  <div class="markdown level1 summary"><p>A set of key/value label pairs to assign to instances
+created from this template,</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; Labels { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/InstanceTemplate.cs/#L73">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_Compute_InstanceTemplate_MachineType_" data-uid="Pulumi.Gcp.Compute.InstanceTemplate.MachineType*"></a>
+  <h4 id="Pulumi_Gcp_Compute_InstanceTemplate_MachineType" data-uid="Pulumi.Gcp.Compute.InstanceTemplate.MachineType">MachineType</h4>
+  <div class="markdown level1 summary"><p>The machine type to create.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; MachineType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/InstanceTemplate.cs/#L80">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_Compute_InstanceTemplate_Metadata_" data-uid="Pulumi.Gcp.Compute.InstanceTemplate.Metadata*"></a>
+  <h4 id="Pulumi_Gcp_Compute_InstanceTemplate_Metadata" data-uid="Pulumi.Gcp.Compute.InstanceTemplate.Metadata">Metadata</h4>
+  <div class="markdown level1 summary"><p>Metadata key/value pairs to make available from
+within instances created from this template.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Metadata { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/InstanceTemplate.cs/#L86">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_Compute_InstanceTemplate_MetadataFingerprint_" data-uid="Pulumi.Gcp.Compute.InstanceTemplate.MetadataFingerprint*"></a>
+  <h4 id="Pulumi_Gcp_Compute_InstanceTemplate_MetadataFingerprint" data-uid="Pulumi.Gcp.Compute.InstanceTemplate.MetadataFingerprint">MetadataFingerprint</h4>
+  <div class="markdown level1 summary"><p>The unique fingerprint of the metadata.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; MetadataFingerprint { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/InstanceTemplate.cs/#L95">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_Compute_InstanceTemplate_MetadataStartupScript_" data-uid="Pulumi.Gcp.Compute.InstanceTemplate.MetadataStartupScript*"></a>
+  <h4 id="Pulumi_Gcp_Compute_InstanceTemplate_MetadataStartupScript" data-uid="Pulumi.Gcp.Compute.InstanceTemplate.MetadataStartupScript">MetadataStartupScript</h4>
+  <div class="markdown level1 summary"><p>An alternative to using the
+startup-script metadata key, mostly to match the compute_instance resource.
+This replaces the startup-script metadata key on the created instance and
+thus the two mechanisms are not allowed to be used simultaneously.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; MetadataStartupScript { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/InstanceTemplate.cs/#L102">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_Compute_InstanceTemplate_MinCpuPlatform_" data-uid="Pulumi.Gcp.Compute.InstanceTemplate.MinCpuPlatform*"></a>
+  <h4 id="Pulumi_Gcp_Compute_InstanceTemplate_MinCpuPlatform" data-uid="Pulumi.Gcp.Compute.InstanceTemplate.MinCpuPlatform">MinCpuPlatform</h4>
+  <div class="markdown level1 summary"><p>Specifies a minimum CPU platform. Applicable values are the friendly names of CPU platforms, such as
+<code>Intel Haswell</code> or <code>Intel Skylake</code>. See the complete list <a href="https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform">here</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; MinCpuPlatform { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/InstanceTemplate.cs/#L109">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_Compute_InstanceTemplate_Name_" data-uid="Pulumi.Gcp.Compute.InstanceTemplate.Name*"></a>
+  <h4 id="Pulumi_Gcp_Compute_InstanceTemplate_Name" data-uid="Pulumi.Gcp.Compute.InstanceTemplate.Name">Name</h4>
+  <div class="markdown level1 summary"><p>The name of the instance template. If you leave
+this blank, this provider will auto-generate a unique name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/InstanceTemplate.cs/#L116">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_Compute_InstanceTemplate_NamePrefix_" data-uid="Pulumi.Gcp.Compute.InstanceTemplate.NamePrefix*"></a>
+  <h4 id="Pulumi_Gcp_Compute_InstanceTemplate_NamePrefix" data-uid="Pulumi.Gcp.Compute.InstanceTemplate.NamePrefix">NamePrefix</h4>
+  <div class="markdown level1 summary"><p>Creates a unique name beginning with the specified
+prefix. Conflicts with <code>name</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; NamePrefix { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/InstanceTemplate.cs/#L124">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_Compute_InstanceTemplate_NetworkInterfaces_" data-uid="Pulumi.Gcp.Compute.InstanceTemplate.NetworkInterfaces*"></a>
+  <h4 id="Pulumi_Gcp_Compute_InstanceTemplate_NetworkInterfaces" data-uid="Pulumi.Gcp.Compute.InstanceTemplate.NetworkInterfaces">NetworkInterfaces</h4>
+  <div class="markdown level1 summary"><p>Networks to attach to instances created from
+this template. This can be specified multiple times for multiple networks.
+Structure is documented below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;InstanceTemplateNetworkInterfaces&gt;&gt; NetworkInterfaces { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.InstanceTemplateNetworkInterfaces.html">InstanceTemplateNetworkInterfaces</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/InstanceTemplate.cs/#L131">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_Compute_InstanceTemplate_Project_" data-uid="Pulumi.Gcp.Compute.InstanceTemplate.Project*"></a>
+  <h4 id="Pulumi_Gcp_Compute_InstanceTemplate_Project" data-uid="Pulumi.Gcp.Compute.InstanceTemplate.Project">Project</h4>
+  <div class="markdown level1 summary"><p>The ID of the project in which the resource belongs. If it
+is not provided, the provider project is used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Project { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/InstanceTemplate.cs/#L142">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_Compute_InstanceTemplate_Region_" data-uid="Pulumi.Gcp.Compute.InstanceTemplate.Region*"></a>
+  <h4 id="Pulumi_Gcp_Compute_InstanceTemplate_Region" data-uid="Pulumi.Gcp.Compute.InstanceTemplate.Region">Region</h4>
+  <div class="markdown level1 summary"><p>An instance template is a global resource that is not
+bound to a zone or a region. However, you can still specify some regional
+resources in an instance template, which restricts the template to the
+region where that resource resides. For example, a custom <code>subnetwork</code>
+resource is tied to a specific region. Defaults to the region of the
+Provider if no value is given.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Region { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/InstanceTemplate.cs/#L149">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_Compute_InstanceTemplate_Scheduling_" data-uid="Pulumi.Gcp.Compute.InstanceTemplate.Scheduling*"></a>
+  <h4 id="Pulumi_Gcp_Compute_InstanceTemplate_Scheduling" data-uid="Pulumi.Gcp.Compute.InstanceTemplate.Scheduling">Scheduling</h4>
+  <div class="markdown level1 summary"><p>The scheduling strategy to use. More details about
+this configuration option are detailed below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;InstanceTemplateScheduling&gt; Scheduling { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.InstanceTemplateScheduling.html">InstanceTemplateScheduling</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/InstanceTemplate.cs/#L155">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_Compute_InstanceTemplate_SelfLink_" data-uid="Pulumi.Gcp.Compute.InstanceTemplate.SelfLink*"></a>
+  <h4 id="Pulumi_Gcp_Compute_InstanceTemplate_SelfLink" data-uid="Pulumi.Gcp.Compute.InstanceTemplate.SelfLink">SelfLink</h4>
+  <div class="markdown level1 summary"><p>The URI of the created resource.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SelfLink { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/InstanceTemplate.cs/#L161">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_Compute_InstanceTemplate_ServiceAccount_" data-uid="Pulumi.Gcp.Compute.InstanceTemplate.ServiceAccount*"></a>
+  <h4 id="Pulumi_Gcp_Compute_InstanceTemplate_ServiceAccount" data-uid="Pulumi.Gcp.Compute.InstanceTemplate.ServiceAccount">ServiceAccount</h4>
+  <div class="markdown level1 summary"><p>Service account to attach to the instance. Structure is documented below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;InstanceTemplateServiceAccount&gt; ServiceAccount { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.InstanceTemplateServiceAccount.html">InstanceTemplateServiceAccount</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/InstanceTemplate.cs/#L168">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_Compute_InstanceTemplate_ShieldedInstanceConfig_" data-uid="Pulumi.Gcp.Compute.InstanceTemplate.ShieldedInstanceConfig*"></a>
+  <h4 id="Pulumi_Gcp_Compute_InstanceTemplate_ShieldedInstanceConfig" data-uid="Pulumi.Gcp.Compute.InstanceTemplate.ShieldedInstanceConfig">ShieldedInstanceConfig</h4>
+  <div class="markdown level1 summary"><p>Enable <a href="https://cloud.google.com/security/shielded-cloud/shielded-vm">Shielded VM</a> on this instance. Shielded VM provides verifiable integrity to prevent against malware and rootkits. Defaults to disabled. Structure is documented below.
+<strong>Note</strong>: <code>shielded_instance_config</code> can only be used with boot images with shielded vm support. See the complete list <a href="https://cloud.google.com/compute/docs/images#shielded-images">here</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;InstanceTemplateShieldedInstanceConfig&gt; ShieldedInstanceConfig { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.InstanceTemplateShieldedInstanceConfig.html">InstanceTemplateShieldedInstanceConfig</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/InstanceTemplate.cs/#L174">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_Compute_InstanceTemplate_Tags_" data-uid="Pulumi.Gcp.Compute.InstanceTemplate.Tags*"></a>
+  <h4 id="Pulumi_Gcp_Compute_InstanceTemplate_Tags" data-uid="Pulumi.Gcp.Compute.InstanceTemplate.Tags">Tags</h4>
+  <div class="markdown level1 summary"><p>Tags to attach to the instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; Tags { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/InstanceTemplate.cs/#L180">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_Compute_InstanceTemplate_TagsFingerprint_" data-uid="Pulumi.Gcp.Compute.InstanceTemplate.TagsFingerprint*"></a>
+  <h4 id="Pulumi_Gcp_Compute_InstanceTemplate_TagsFingerprint" data-uid="Pulumi.Gcp.Compute.InstanceTemplate.TagsFingerprint">TagsFingerprint</h4>
+  <div class="markdown level1 summary"><p>The unique fingerprint of the tags.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; TagsFingerprint { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/InstanceTemplate.cs/#L221">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_Compute_InstanceTemplate_Get_" data-uid="Pulumi.Gcp.Compute.InstanceTemplate.Get*"></a>
+  <h4 id="Pulumi_Gcp_Compute_InstanceTemplate_Get_System_String_Pulumi_Input_System_String__Pulumi_Gcp_Compute_InstanceTemplateState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Compute.InstanceTemplate.Get(System.String,Pulumi.Input{System.String},Pulumi.Gcp.Compute.InstanceTemplateState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, InstanceTemplateState, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Get an existing InstanceTemplate resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static InstanceTemplate Get(string name, Input&lt;string&gt; id, InstanceTemplateState state = null, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Gcp.Compute.InstanceTemplateState.html">InstanceTemplateState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Gcp.Compute.InstanceTemplate.html">InstanceTemplate</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/InstanceTemplate.cs/#L20" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

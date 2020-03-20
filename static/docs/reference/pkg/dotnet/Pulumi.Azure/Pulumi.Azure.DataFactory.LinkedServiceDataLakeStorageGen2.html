@@ -1,0 +1,605 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class LinkedServiceDataLakeStorageGen2
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class LinkedServiceDataLakeStorageGen2
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Azure.DataFactory.LinkedServiceDataLakeStorageGen2">
+  
+  <h1 id="Pulumi_Azure_DataFactory_LinkedServiceDataLakeStorageGen2" data-uid="Pulumi.Azure.DataFactory.LinkedServiceDataLakeStorageGen2" class="text-break">Class LinkedServiceDataLakeStorageGen2
+  </h1>
+  <div class="markdown level0 summary"><p>Manages a Linked Service (connection) between Data Lake Storage Gen2 and Azure Data Factory.</p>
+<blockquote>
+<p><strong>Note:</strong> All arguments including the <code>service_principal_key</code> will be stored in the raw state as plain-text. <a href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/data_factory_linked_service_data_lake_storage_gen2.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/data_factory_linked_service_data_lake_storage_gen2.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">LinkedServiceDataLakeStorageGen2</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.DataFactory.html">Pulumi.Azure.DataFactory</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
+  <h5 id="Pulumi_Azure_DataFactory_LinkedServiceDataLakeStorageGen2_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class LinkedServiceDataLakeStorageGen2 : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Datafactory/LinkedServiceDataLakeStorageGen2.cs/#L101">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_DataFactory_LinkedServiceDataLakeStorageGen2__ctor_" data-uid="Pulumi.Azure.DataFactory.LinkedServiceDataLakeStorageGen2.#ctor*"></a>
+  <h4 id="Pulumi_Azure_DataFactory_LinkedServiceDataLakeStorageGen2__ctor_System_String_Pulumi_Azure_DataFactory_LinkedServiceDataLakeStorageGen2Args_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.DataFactory.LinkedServiceDataLakeStorageGen2.#ctor(System.String,Pulumi.Azure.DataFactory.LinkedServiceDataLakeStorageGen2Args,Pulumi.CustomResourceOptions)">LinkedServiceDataLakeStorageGen2(String, LinkedServiceDataLakeStorageGen2Args, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Create a LinkedServiceDataLakeStorageGen2 resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LinkedServiceDataLakeStorageGen2(string name, LinkedServiceDataLakeStorageGen2Args args, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Azure.DataFactory.LinkedServiceDataLakeStorageGen2Args.html">LinkedServiceDataLakeStorageGen2Args</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Datafactory/LinkedServiceDataLakeStorageGen2.cs/#L24">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_DataFactory_LinkedServiceDataLakeStorageGen2_AdditionalProperties_" data-uid="Pulumi.Azure.DataFactory.LinkedServiceDataLakeStorageGen2.AdditionalProperties*"></a>
+  <h4 id="Pulumi_Azure_DataFactory_LinkedServiceDataLakeStorageGen2_AdditionalProperties" data-uid="Pulumi.Azure.DataFactory.LinkedServiceDataLakeStorageGen2.AdditionalProperties">AdditionalProperties</h4>
+  <div class="markdown level1 summary"><p>A map of additional properties to associate with the Data Factory Linked Service MySQL.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; AdditionalProperties { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Datafactory/LinkedServiceDataLakeStorageGen2.cs/#L30">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_DataFactory_LinkedServiceDataLakeStorageGen2_Annotations_" data-uid="Pulumi.Azure.DataFactory.LinkedServiceDataLakeStorageGen2.Annotations*"></a>
+  <h4 id="Pulumi_Azure_DataFactory_LinkedServiceDataLakeStorageGen2_Annotations" data-uid="Pulumi.Azure.DataFactory.LinkedServiceDataLakeStorageGen2.Annotations">Annotations</h4>
+  <div class="markdown level1 summary"><p>List of tags that can be used for describing the Data Factory Linked Service MySQL.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; Annotations { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Datafactory/LinkedServiceDataLakeStorageGen2.cs/#L36">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_DataFactory_LinkedServiceDataLakeStorageGen2_DataFactoryName_" data-uid="Pulumi.Azure.DataFactory.LinkedServiceDataLakeStorageGen2.DataFactoryName*"></a>
+  <h4 id="Pulumi_Azure_DataFactory_LinkedServiceDataLakeStorageGen2_DataFactoryName" data-uid="Pulumi.Azure.DataFactory.LinkedServiceDataLakeStorageGen2.DataFactoryName">DataFactoryName</h4>
+  <div class="markdown level1 summary"><p>The Data Factory name in which to associate the Linked Service with. Changing this forces a new resource.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DataFactoryName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Datafactory/LinkedServiceDataLakeStorageGen2.cs/#L42">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_DataFactory_LinkedServiceDataLakeStorageGen2_Description_" data-uid="Pulumi.Azure.DataFactory.LinkedServiceDataLakeStorageGen2.Description*"></a>
+  <h4 id="Pulumi_Azure_DataFactory_LinkedServiceDataLakeStorageGen2_Description" data-uid="Pulumi.Azure.DataFactory.LinkedServiceDataLakeStorageGen2.Description">Description</h4>
+  <div class="markdown level1 summary"><p>The description for the Data Factory Linked Service MySQL.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Datafactory/LinkedServiceDataLakeStorageGen2.cs/#L48">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_DataFactory_LinkedServiceDataLakeStorageGen2_IntegrationRuntimeName_" data-uid="Pulumi.Azure.DataFactory.LinkedServiceDataLakeStorageGen2.IntegrationRuntimeName*"></a>
+  <h4 id="Pulumi_Azure_DataFactory_LinkedServiceDataLakeStorageGen2_IntegrationRuntimeName" data-uid="Pulumi.Azure.DataFactory.LinkedServiceDataLakeStorageGen2.IntegrationRuntimeName">IntegrationRuntimeName</h4>
+  <div class="markdown level1 summary"><p>The integration runtime reference to associate with the Data Factory Linked Service MySQL.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; IntegrationRuntimeName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Datafactory/LinkedServiceDataLakeStorageGen2.cs/#L54">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_DataFactory_LinkedServiceDataLakeStorageGen2_Name_" data-uid="Pulumi.Azure.DataFactory.LinkedServiceDataLakeStorageGen2.Name*"></a>
+  <h4 id="Pulumi_Azure_DataFactory_LinkedServiceDataLakeStorageGen2_Name" data-uid="Pulumi.Azure.DataFactory.LinkedServiceDataLakeStorageGen2.Name">Name</h4>
+  <div class="markdown level1 summary"><p>Specifies the name of the Data Factory Linked Service MySQL. Changing this forces a new resource to be created. Must be globally unique. See the <a href="https://docs.microsoft.com/en-us/azure/data-factory/naming-rules">Microsoft documentation</a> for all restrictions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Datafactory/LinkedServiceDataLakeStorageGen2.cs/#L60">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_DataFactory_LinkedServiceDataLakeStorageGen2_Parameters_" data-uid="Pulumi.Azure.DataFactory.LinkedServiceDataLakeStorageGen2.Parameters*"></a>
+  <h4 id="Pulumi_Azure_DataFactory_LinkedServiceDataLakeStorageGen2_Parameters" data-uid="Pulumi.Azure.DataFactory.LinkedServiceDataLakeStorageGen2.Parameters">Parameters</h4>
+  <div class="markdown level1 summary"><p>A map of parameters to associate with the Data Factory Linked Service MySQL.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; Parameters { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Datafactory/LinkedServiceDataLakeStorageGen2.cs/#L66">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_DataFactory_LinkedServiceDataLakeStorageGen2_ResourceGroupName_" data-uid="Pulumi.Azure.DataFactory.LinkedServiceDataLakeStorageGen2.ResourceGroupName*"></a>
+  <h4 id="Pulumi_Azure_DataFactory_LinkedServiceDataLakeStorageGen2_ResourceGroupName" data-uid="Pulumi.Azure.DataFactory.LinkedServiceDataLakeStorageGen2.ResourceGroupName">ResourceGroupName</h4>
+  <div class="markdown level1 summary"><p>The name of the resource group in which to create the Data Factory Linked Service MySQL. Changing this forces a new resource</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ResourceGroupName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Datafactory/LinkedServiceDataLakeStorageGen2.cs/#L72">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_DataFactory_LinkedServiceDataLakeStorageGen2_ServicePrincipalId_" data-uid="Pulumi.Azure.DataFactory.LinkedServiceDataLakeStorageGen2.ServicePrincipalId*"></a>
+  <h4 id="Pulumi_Azure_DataFactory_LinkedServiceDataLakeStorageGen2_ServicePrincipalId" data-uid="Pulumi.Azure.DataFactory.LinkedServiceDataLakeStorageGen2.ServicePrincipalId">ServicePrincipalId</h4>
+  <div class="markdown level1 summary"><p>The service principal id in which to authenticate against the Azure Data Lake Storage Gen2 account.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ServicePrincipalId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Datafactory/LinkedServiceDataLakeStorageGen2.cs/#L78">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_DataFactory_LinkedServiceDataLakeStorageGen2_ServicePrincipalKey_" data-uid="Pulumi.Azure.DataFactory.LinkedServiceDataLakeStorageGen2.ServicePrincipalKey*"></a>
+  <h4 id="Pulumi_Azure_DataFactory_LinkedServiceDataLakeStorageGen2_ServicePrincipalKey" data-uid="Pulumi.Azure.DataFactory.LinkedServiceDataLakeStorageGen2.ServicePrincipalKey">ServicePrincipalKey</h4>
+  <div class="markdown level1 summary"><p>The service principal key in which to authenticate against the Azure Data Lake Storage Gen2 account.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ServicePrincipalKey { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Datafactory/LinkedServiceDataLakeStorageGen2.cs/#L84">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_DataFactory_LinkedServiceDataLakeStorageGen2_Tenant_" data-uid="Pulumi.Azure.DataFactory.LinkedServiceDataLakeStorageGen2.Tenant*"></a>
+  <h4 id="Pulumi_Azure_DataFactory_LinkedServiceDataLakeStorageGen2_Tenant" data-uid="Pulumi.Azure.DataFactory.LinkedServiceDataLakeStorageGen2.Tenant">Tenant</h4>
+  <div class="markdown level1 summary"><p>The tenant id or name in which to authenticate against the Azure Data Lake Storage Gen2 account.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Tenant { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Datafactory/LinkedServiceDataLakeStorageGen2.cs/#L90">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_DataFactory_LinkedServiceDataLakeStorageGen2_Url_" data-uid="Pulumi.Azure.DataFactory.LinkedServiceDataLakeStorageGen2.Url*"></a>
+  <h4 id="Pulumi_Azure_DataFactory_LinkedServiceDataLakeStorageGen2_Url" data-uid="Pulumi.Azure.DataFactory.LinkedServiceDataLakeStorageGen2.Url">Url</h4>
+  <div class="markdown level1 summary"><p>The endpoint for the Azure Data Lake Storage Gen2 service.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Url { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Datafactory/LinkedServiceDataLakeStorageGen2.cs/#L131">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_DataFactory_LinkedServiceDataLakeStorageGen2_Get_" data-uid="Pulumi.Azure.DataFactory.LinkedServiceDataLakeStorageGen2.Get*"></a>
+  <h4 id="Pulumi_Azure_DataFactory_LinkedServiceDataLakeStorageGen2_Get_System_String_Pulumi_Input_System_String__Pulumi_Azure_DataFactory_LinkedServiceDataLakeStorageGen2State_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.DataFactory.LinkedServiceDataLakeStorageGen2.Get(System.String,Pulumi.Input{System.String},Pulumi.Azure.DataFactory.LinkedServiceDataLakeStorageGen2State,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, LinkedServiceDataLakeStorageGen2State, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Get an existing LinkedServiceDataLakeStorageGen2 resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static LinkedServiceDataLakeStorageGen2 Get(string name, Input&lt;string&gt; id, LinkedServiceDataLakeStorageGen2State state = null, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Azure.DataFactory.LinkedServiceDataLakeStorageGen2State.html">LinkedServiceDataLakeStorageGen2State</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Azure.DataFactory.LinkedServiceDataLakeStorageGen2.html">LinkedServiceDataLakeStorageGen2</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Datafactory/LinkedServiceDataLakeStorageGen2.cs/#L19" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

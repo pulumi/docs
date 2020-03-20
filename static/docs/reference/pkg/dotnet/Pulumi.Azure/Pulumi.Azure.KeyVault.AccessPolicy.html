@@ -1,0 +1,511 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class AccessPolicy
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class AccessPolicy
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Azure.KeyVault.AccessPolicy">
+  
+  <h1 id="Pulumi_Azure_KeyVault_AccessPolicy" data-uid="Pulumi.Azure.KeyVault.AccessPolicy" class="text-break">Class AccessPolicy
+  </h1>
+  <div class="markdown level0 summary"><p>Manages a Key Vault Access Policy.</p>
+<blockquote>
+<p><strong>NOTE:</strong> It's possible to define Key Vault Access Policies both within the <code>azure.keyvault.KeyVault</code> resource via the <code>access_policy</code> block and by using the <code>azure.keyvault.AccessPolicy</code> resource. However it's not possible to use both methods to manage Access Policies within a KeyVault, since there'll be conflicts.</p>
+</blockquote>
+<blockquote>
+<p><strong>NOTE:</strong> Azure permits a maximum of 1024 Access Policies per Key Vault - <a href="https://docs.microsoft.com/en-us/azure/key-vault/key-vault-secure-your-key-vault#data-plane-access-control">more information can be found in this document</a>.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/key_vault_access_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/key_vault_access_policy.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">AccessPolicy</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.KeyVault.html">Pulumi.Azure.KeyVault</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
+  <h5 id="Pulumi_Azure_KeyVault_AccessPolicy_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class AccessPolicy : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Keyvault/AccessPolicy.cs/#L90">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_KeyVault_AccessPolicy__ctor_" data-uid="Pulumi.Azure.KeyVault.AccessPolicy.#ctor*"></a>
+  <h4 id="Pulumi_Azure_KeyVault_AccessPolicy__ctor_System_String_Pulumi_Azure_KeyVault_AccessPolicyArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.KeyVault.AccessPolicy.#ctor(System.String,Pulumi.Azure.KeyVault.AccessPolicyArgs,Pulumi.CustomResourceOptions)">AccessPolicy(String, AccessPolicyArgs, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Create a AccessPolicy resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AccessPolicy(string name, AccessPolicyArgs args, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Azure.KeyVault.AccessPolicyArgs.html">AccessPolicyArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Keyvault/AccessPolicy.cs/#L26">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_KeyVault_AccessPolicy_ApplicationId_" data-uid="Pulumi.Azure.KeyVault.AccessPolicy.ApplicationId*"></a>
+  <h4 id="Pulumi_Azure_KeyVault_AccessPolicy_ApplicationId" data-uid="Pulumi.Azure.KeyVault.AccessPolicy.ApplicationId">ApplicationId</h4>
+  <div class="markdown level1 summary"><p>The object ID of an Application in Azure Active Directory.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ApplicationId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Keyvault/AccessPolicy.cs/#L34">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_KeyVault_AccessPolicy_CertificatePermissions_" data-uid="Pulumi.Azure.KeyVault.AccessPolicy.CertificatePermissions*"></a>
+  <h4 id="Pulumi_Azure_KeyVault_AccessPolicy_CertificatePermissions" data-uid="Pulumi.Azure.KeyVault.AccessPolicy.CertificatePermissions">CertificatePermissions</h4>
+  <div class="markdown level1 summary"><p>List of certificate permissions, must be one or more from
+the following: <code>backup</code>, <code>create</code>, <code>delete</code>, <code>deleteissuers</code>, <code>get</code>, <code>getissuers</code>, <code>import</code>, <code>list</code>, <code>listissuers</code>,
+<code>managecontacts</code>, <code>manageissuers</code>, <code>purge</code>, <code>recover</code>, <code>restore</code>, <code>setissuers</code> and <code>update</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; CertificatePermissions { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Keyvault/AccessPolicy.cs/#L42">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_KeyVault_AccessPolicy_KeyPermissions_" data-uid="Pulumi.Azure.KeyVault.AccessPolicy.KeyPermissions*"></a>
+  <h4 id="Pulumi_Azure_KeyVault_AccessPolicy_KeyPermissions" data-uid="Pulumi.Azure.KeyVault.AccessPolicy.KeyPermissions">KeyPermissions</h4>
+  <div class="markdown level1 summary"><p>List of key permissions, must be one or more from
+the following: <code>backup</code>, <code>create</code>, <code>decrypt</code>, <code>delete</code>, <code>encrypt</code>, <code>get</code>, <code>import</code>, <code>list</code>, <code>purge</code>,
+<code>recover</code>, <code>restore</code>, <code>sign</code>, <code>unwrapKey</code>, <code>update</code>, <code>verify</code> and <code>wrapKey</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; KeyPermissions { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Keyvault/AccessPolicy.cs/#L49">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_KeyVault_AccessPolicy_KeyVaultId_" data-uid="Pulumi.Azure.KeyVault.AccessPolicy.KeyVaultId*"></a>
+  <h4 id="Pulumi_Azure_KeyVault_AccessPolicy_KeyVaultId" data-uid="Pulumi.Azure.KeyVault.AccessPolicy.KeyVaultId">KeyVaultId</h4>
+  <div class="markdown level1 summary"><p>Specifies the id of the Key Vault resource. Changing this
+forces a new resource to be created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; KeyVaultId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Keyvault/AccessPolicy.cs/#L58">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_KeyVault_AccessPolicy_ObjectId_" data-uid="Pulumi.Azure.KeyVault.AccessPolicy.ObjectId*"></a>
+  <h4 id="Pulumi_Azure_KeyVault_AccessPolicy_ObjectId" data-uid="Pulumi.Azure.KeyVault.AccessPolicy.ObjectId">ObjectId</h4>
+  <div class="markdown level1 summary"><p>The object ID of a user, service principal or security
+group in the Azure Active Directory tenant for the vault. The object ID must
+be unique for the list of access policies. Changing this forces a new resource
+to be created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ObjectId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Keyvault/AccessPolicy.cs/#L65">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_KeyVault_AccessPolicy_SecretPermissions_" data-uid="Pulumi.Azure.KeyVault.AccessPolicy.SecretPermissions*"></a>
+  <h4 id="Pulumi_Azure_KeyVault_AccessPolicy_SecretPermissions" data-uid="Pulumi.Azure.KeyVault.AccessPolicy.SecretPermissions">SecretPermissions</h4>
+  <div class="markdown level1 summary"><p>List of secret permissions, must be one or more
+from the following: <code>backup</code>, <code>delete</code>, <code>get</code>, <code>list</code>, <code>purge</code>, <code>recover</code>, <code>restore</code> and <code>set</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; SecretPermissions { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Keyvault/AccessPolicy.cs/#L71">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_KeyVault_AccessPolicy_StoragePermissions_" data-uid="Pulumi.Azure.KeyVault.AccessPolicy.StoragePermissions*"></a>
+  <h4 id="Pulumi_Azure_KeyVault_AccessPolicy_StoragePermissions" data-uid="Pulumi.Azure.KeyVault.AccessPolicy.StoragePermissions">StoragePermissions</h4>
+  <div class="markdown level1 summary"><p>List of storage permissions, must be one or more from the following: <code>backup</code>, <code>delete</code>, <code>deletesas</code>, <code>get</code>, <code>getsas</code>, <code>list</code>, <code>listsas</code>, <code>purge</code>, <code>recover</code>, <code>regeneratekey</code>, <code>restore</code>, <code>set</code>, <code>setsas</code> and <code>update</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; StoragePermissions { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Keyvault/AccessPolicy.cs/#L79">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_KeyVault_AccessPolicy_TenantId_" data-uid="Pulumi.Azure.KeyVault.AccessPolicy.TenantId*"></a>
+  <h4 id="Pulumi_Azure_KeyVault_AccessPolicy_TenantId" data-uid="Pulumi.Azure.KeyVault.AccessPolicy.TenantId">TenantId</h4>
+  <div class="markdown level1 summary"><p>The Azure Active Directory tenant ID that should be used
+for authenticating requests to the key vault. Changing this forces a new resource
+to be created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; TenantId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Keyvault/AccessPolicy.cs/#L120">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_KeyVault_AccessPolicy_Get_" data-uid="Pulumi.Azure.KeyVault.AccessPolicy.Get*"></a>
+  <h4 id="Pulumi_Azure_KeyVault_AccessPolicy_Get_System_String_Pulumi_Input_System_String__Pulumi_Azure_KeyVault_AccessPolicyState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.KeyVault.AccessPolicy.Get(System.String,Pulumi.Input{System.String},Pulumi.Azure.KeyVault.AccessPolicyState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, AccessPolicyState, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Get an existing AccessPolicy resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AccessPolicy Get(string name, Input&lt;string&gt; id, AccessPolicyState state = null, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Azure.KeyVault.AccessPolicyState.html">AccessPolicyState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Azure.KeyVault.AccessPolicy.html">AccessPolicy</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Keyvault/AccessPolicy.cs/#L21" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

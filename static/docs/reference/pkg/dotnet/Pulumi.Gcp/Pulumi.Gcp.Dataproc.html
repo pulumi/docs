@@ -1,0 +1,271 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace Pulumi.Gcp.Dataproc
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace Pulumi.Gcp.Dataproc
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Gcp.Dataproc">
+  
+  <h1 id="Pulumi_Gcp_Dataproc" data-uid="Pulumi.Gcp.Dataproc" class="text-break">Namespace Pulumi.Gcp.Dataproc
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">Classes
+  </h3>
+      <h4><a class="xref" href="Pulumi.Gcp.Dataproc.AutoscalingPolicy.html">AutoscalingPolicy</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Dataproc.AutoscalingPolicyArgs.html">AutoscalingPolicyArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Dataproc.AutoscalingPolicyState.html">AutoscalingPolicyState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Dataproc.Cluster.html">Cluster</a></h4>
+      <section><p>Manages a Cloud Dataproc cluster resource within GCP. For more information see
+<a href="https://cloud.google.com/dataproc/">the official dataproc documentation</a>.</p>
+<p>!&gt; <strong>Warning:</strong> Due to limitations of the API, all arguments except
+<code>labels</code>,<code>cluster_config.worker_config.num_instances</code> and <code>cluster_config.preemptible_worker_config.num_instances</code> are non-updatable. Changing others will cause recreation of the
+whole cluster!</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/dataproc_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/dataproc_cluster.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Gcp.Dataproc.ClusterArgs.html">ClusterArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Dataproc.ClusterIAMBinding.html">ClusterIAMBinding</a></h4>
+      <section><p>Three different resources help you manage IAM policies on dataproc clusters. Each of these resources serves a different use case:</p>
+<ul>
+<li><code>gcp.dataproc.ClusterIAMPolicy</code>: Authoritative. Sets the IAM policy for the cluster and replaces any existing policy already attached.</li>
+<li><code>gcp.dataproc.ClusterIAMBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the cluster are preserved.</li>
+<li><code>gcp.dataproc.ClusterIAMMember</code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the cluster are preserved.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.dataproc.ClusterIAMPolicy</code> <strong>cannot</strong> be used in conjunction with <code>gcp.dataproc.ClusterIAMBinding</code> and <code>gcp.dataproc.ClusterIAMMember</code> or they will fight over what your policy should be. In addition, be careful not to accidentally unset ownership of the cluster as <code>gcp.dataproc.ClusterIAMPolicy</code> replaces the entire policy.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.dataproc.ClusterIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.dataproc.ClusterIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/dataproc_cluster_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/dataproc_cluster_iam.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Gcp.Dataproc.ClusterIAMBindingArgs.html">ClusterIAMBindingArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Dataproc.ClusterIAMBindingState.html">ClusterIAMBindingState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Dataproc.ClusterIAMMember.html">ClusterIAMMember</a></h4>
+      <section><p>Three different resources help you manage IAM policies on dataproc clusters. Each of these resources serves a different use case:</p>
+<ul>
+<li><code>gcp.dataproc.ClusterIAMPolicy</code>: Authoritative. Sets the IAM policy for the cluster and replaces any existing policy already attached.</li>
+<li><code>gcp.dataproc.ClusterIAMBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the cluster are preserved.</li>
+<li><code>gcp.dataproc.ClusterIAMMember</code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the cluster are preserved.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.dataproc.ClusterIAMPolicy</code> <strong>cannot</strong> be used in conjunction with <code>gcp.dataproc.ClusterIAMBinding</code> and <code>gcp.dataproc.ClusterIAMMember</code> or they will fight over what your policy should be. In addition, be careful not to accidentally unset ownership of the cluster as <code>gcp.dataproc.ClusterIAMPolicy</code> replaces the entire policy.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.dataproc.ClusterIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.dataproc.ClusterIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/dataproc_cluster_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/dataproc_cluster_iam.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Gcp.Dataproc.ClusterIAMMemberArgs.html">ClusterIAMMemberArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Dataproc.ClusterIAMMemberState.html">ClusterIAMMemberState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Dataproc.ClusterIAMPolicy.html">ClusterIAMPolicy</a></h4>
+      <section><p>Three different resources help you manage IAM policies on dataproc clusters. Each of these resources serves a different use case:</p>
+<ul>
+<li><code>gcp.dataproc.ClusterIAMPolicy</code>: Authoritative. Sets the IAM policy for the cluster and replaces any existing policy already attached.</li>
+<li><code>gcp.dataproc.ClusterIAMBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the cluster are preserved.</li>
+<li><code>gcp.dataproc.ClusterIAMMember</code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the cluster are preserved.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.dataproc.ClusterIAMPolicy</code> <strong>cannot</strong> be used in conjunction with <code>gcp.dataproc.ClusterIAMBinding</code> and <code>gcp.dataproc.ClusterIAMMember</code> or they will fight over what your policy should be. In addition, be careful not to accidentally unset ownership of the cluster as <code>gcp.dataproc.ClusterIAMPolicy</code> replaces the entire policy.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.dataproc.ClusterIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.dataproc.ClusterIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/dataproc_cluster_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/dataproc_cluster_iam.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Gcp.Dataproc.ClusterIAMPolicyArgs.html">ClusterIAMPolicyArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Dataproc.ClusterIAMPolicyState.html">ClusterIAMPolicyState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Dataproc.ClusterState.html">ClusterState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Dataproc.Job.html">Job</a></h4>
+      <section><p>Manages a job resource within a Dataproc cluster within GCE. For more information see
+<a href="https://cloud.google.com/dataproc/">the official dataproc documentation</a>.</p>
+<p>!&gt; <strong>Note:</strong> This resource does not support 'update' and changing any attributes will cause the resource to be recreated.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/dataproc_job.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/dataproc_job.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Gcp.Dataproc.JobArgs.html">JobArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Dataproc.JobIAMBinding.html">JobIAMBinding</a></h4>
+      <section><p>Three different resources help you manage IAM policies on dataproc jobs. Each of these resources serves a different use case:</p>
+<ul>
+<li><code>gcp.dataproc.JobIAMPolicy</code>: Authoritative. Sets the IAM policy for the job and replaces any existing policy already attached.</li>
+<li><code>gcp.dataproc.JobIAMBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the job are preserved.</li>
+<li><code>gcp.dataproc.JobIAMMember</code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the job are preserved.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.dataproc.JobIAMPolicy</code> <strong>cannot</strong> be used in conjunction with <code>gcp.dataproc.JobIAMBinding</code> and <code>gcp.dataproc.JobIAMMember</code> or they will fight over what your policy should be. In addition, be careful not to accidentally unset ownership of the job as <code>gcp.dataproc.JobIAMPolicy</code> replaces the entire policy.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.dataproc.JobIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.dataproc.JobIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/dataproc_job_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/dataproc_job_iam.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Gcp.Dataproc.JobIAMBindingArgs.html">JobIAMBindingArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Dataproc.JobIAMBindingState.html">JobIAMBindingState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Dataproc.JobIAMMember.html">JobIAMMember</a></h4>
+      <section><p>Three different resources help you manage IAM policies on dataproc jobs. Each of these resources serves a different use case:</p>
+<ul>
+<li><code>gcp.dataproc.JobIAMPolicy</code>: Authoritative. Sets the IAM policy for the job and replaces any existing policy already attached.</li>
+<li><code>gcp.dataproc.JobIAMBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the job are preserved.</li>
+<li><code>gcp.dataproc.JobIAMMember</code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the job are preserved.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.dataproc.JobIAMPolicy</code> <strong>cannot</strong> be used in conjunction with <code>gcp.dataproc.JobIAMBinding</code> and <code>gcp.dataproc.JobIAMMember</code> or they will fight over what your policy should be. In addition, be careful not to accidentally unset ownership of the job as <code>gcp.dataproc.JobIAMPolicy</code> replaces the entire policy.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.dataproc.JobIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.dataproc.JobIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/dataproc_job_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/dataproc_job_iam.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Gcp.Dataproc.JobIAMMemberArgs.html">JobIAMMemberArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Dataproc.JobIAMMemberState.html">JobIAMMemberState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Dataproc.JobIAMPolicy.html">JobIAMPolicy</a></h4>
+      <section><p>Three different resources help you manage IAM policies on dataproc jobs. Each of these resources serves a different use case:</p>
+<ul>
+<li><code>gcp.dataproc.JobIAMPolicy</code>: Authoritative. Sets the IAM policy for the job and replaces any existing policy already attached.</li>
+<li><code>gcp.dataproc.JobIAMBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the job are preserved.</li>
+<li><code>gcp.dataproc.JobIAMMember</code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the job are preserved.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.dataproc.JobIAMPolicy</code> <strong>cannot</strong> be used in conjunction with <code>gcp.dataproc.JobIAMBinding</code> and <code>gcp.dataproc.JobIAMMember</code> or they will fight over what your policy should be. In addition, be careful not to accidentally unset ownership of the job as <code>gcp.dataproc.JobIAMPolicy</code> replaces the entire policy.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.dataproc.JobIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.dataproc.JobIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/dataproc_job_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/dataproc_job_iam.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Gcp.Dataproc.JobIAMPolicyArgs.html">JobIAMPolicyArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Dataproc.JobIAMPolicyState.html">JobIAMPolicyState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Dataproc.JobState.html">JobState</a></h4>
+      <section></section>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

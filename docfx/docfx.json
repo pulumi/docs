@@ -27,6 +27,33 @@
         }
       ],
       "dest": "metadata/Pulumi.Aws"
+    },
+    {
+      "src": [
+        {
+          "src": "../../pulumi-azure/sdk/dotnet",
+          "files": ["Pulumi.*.csproj"]
+        }
+      ],
+      "dest": "metadata/Pulumi.Azure"
+    },
+    {
+      "src": [
+        {
+          "src": "../../pulumi-gcp/sdk/dotnet",
+          "files": ["Pulumi.*.csproj"]
+        }
+      ],
+      "dest": "metadata/Pulumi.Gcp"
+    },
+    {
+      "src": [
+        {
+          "src": "../../pulumi-kubernetes/sdk/dotnet",
+          "files": ["Pulumi.*.csproj"]
+        }
+      ],
+      "dest": "metadata/Pulumi.Kubernetes"
     }
   ],
   "build": {

@@ -1,0 +1,463 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class NodeStatusArgs
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class NodeStatusArgs
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.NodeStatusArgs">
+  
+  <h1 id="Pulumi_Kubernetes_Types_Inputs_Core_V1_NodeStatusArgs" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.NodeStatusArgs" class="text-break">Class NodeStatusArgs
+  </h1>
+  <div class="markdown level0 summary"><p>NodeStatus is information about the current status of a node.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
+    <div class="level3"><span class="xref">NodeStatusArgs</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Kubernetes.Types.Inputs.Core.V1.html">Pulumi.Kubernetes.Types.Inputs.Core.V1</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Kubernetes.dll</h6>
+  <h5 id="Pulumi_Kubernetes_Types_Inputs_Core_V1_NodeStatusArgs_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class NodeStatusArgs : ResourceArgs</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Input.cs/#L15533">View Source</a>
+  </span>
+  <a id="Pulumi_Kubernetes_Types_Inputs_Core_V1_NodeStatusArgs_Addresses_" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.NodeStatusArgs.Addresses*"></a>
+  <h4 id="Pulumi_Kubernetes_Types_Inputs_Core_V1_NodeStatusArgs_Addresses" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.NodeStatusArgs.Addresses">Addresses</h4>
+  <div class="markdown level1 summary"><p>List of addresses reachable to the node. Queried from cloud provider, if available. More
+info: <a href="https://kubernetes.io/docs/concepts/nodes/node/#addresses">https://kubernetes.io/docs/concepts/nodes/node/#addresses</a> Note: This field is
+declared as mergeable, but the merge key is not sufficiently unique, which can cause
+data corruption when it is merged. Callers should instead use a full-replacement patch.
+See <a href="http://pr.k8s.io/79391">http://pr.k8s.io/79391</a> for an example.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputList&lt;NodeAddressArgs&gt; Addresses { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Inputs.Core.V1.NodeAddressArgs.html">NodeAddressArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Input.cs/#L15546">View Source</a>
+  </span>
+  <a id="Pulumi_Kubernetes_Types_Inputs_Core_V1_NodeStatusArgs_Allocatable_" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.NodeStatusArgs.Allocatable*"></a>
+  <h4 id="Pulumi_Kubernetes_Types_Inputs_Core_V1_NodeStatusArgs_Allocatable" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.NodeStatusArgs.Allocatable">Allocatable</h4>
+  <div class="markdown level1 summary"><p>Allocatable represents the resources of a node that are available for scheduling.
+Defaults to Capacity.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputMap&lt;string&gt; Allocatable { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputMap-1.html">InputMap</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Input.cs/#L15559">View Source</a>
+  </span>
+  <a id="Pulumi_Kubernetes_Types_Inputs_Core_V1_NodeStatusArgs_Capacity_" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.NodeStatusArgs.Capacity*"></a>
+  <h4 id="Pulumi_Kubernetes_Types_Inputs_Core_V1_NodeStatusArgs_Capacity" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.NodeStatusArgs.Capacity">Capacity</h4>
+  <div class="markdown level1 summary"><p>Capacity represents the total resources of a node. More info:
+<a href="https://kubernetes.io/docs/concepts/storage/persistent-volumes#capacity">https://kubernetes.io/docs/concepts/storage/persistent-volumes#capacity</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputMap&lt;string&gt; Capacity { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputMap-1.html">InputMap</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Input.cs/#L15572">View Source</a>
+  </span>
+  <a id="Pulumi_Kubernetes_Types_Inputs_Core_V1_NodeStatusArgs_Conditions_" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.NodeStatusArgs.Conditions*"></a>
+  <h4 id="Pulumi_Kubernetes_Types_Inputs_Core_V1_NodeStatusArgs_Conditions" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.NodeStatusArgs.Conditions">Conditions</h4>
+  <div class="markdown level1 summary"><p>Conditions is an array of current observed node conditions. More info:
+<a href="https://kubernetes.io/docs/concepts/nodes/node/#condition">https://kubernetes.io/docs/concepts/nodes/node/#condition</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputList&lt;NodeConditionArgs&gt; Conditions { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Inputs.Core.V1.NodeConditionArgs.html">NodeConditionArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Input.cs/#L15581">View Source</a>
+  </span>
+  <a id="Pulumi_Kubernetes_Types_Inputs_Core_V1_NodeStatusArgs_Config_" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.NodeStatusArgs.Config*"></a>
+  <h4 id="Pulumi_Kubernetes_Types_Inputs_Core_V1_NodeStatusArgs_Config" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.NodeStatusArgs.Config">Config</h4>
+  <div class="markdown level1 summary"><p>Status of the config assigned to the node via the dynamic Kubelet config feature.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;NodeConfigStatusArgs&gt; Config { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Inputs.Core.V1.NodeConfigStatusArgs.html">NodeConfigStatusArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Input.cs/#L15587">View Source</a>
+  </span>
+  <a id="Pulumi_Kubernetes_Types_Inputs_Core_V1_NodeStatusArgs_DaemonEndpoints_" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.NodeStatusArgs.DaemonEndpoints*"></a>
+  <h4 id="Pulumi_Kubernetes_Types_Inputs_Core_V1_NodeStatusArgs_DaemonEndpoints" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.NodeStatusArgs.DaemonEndpoints">DaemonEndpoints</h4>
+  <div class="markdown level1 summary"><p>Endpoints of daemons running on the Node.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;NodeDaemonEndpointsArgs&gt; DaemonEndpoints { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Inputs.Core.V1.NodeDaemonEndpointsArgs.html">NodeDaemonEndpointsArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Input.cs/#L15596">View Source</a>
+  </span>
+  <a id="Pulumi_Kubernetes_Types_Inputs_Core_V1_NodeStatusArgs_Images_" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.NodeStatusArgs.Images*"></a>
+  <h4 id="Pulumi_Kubernetes_Types_Inputs_Core_V1_NodeStatusArgs_Images" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.NodeStatusArgs.Images">Images</h4>
+  <div class="markdown level1 summary"><p>List of container images on this node</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputList&lt;ContainerImageArgs&gt; Images { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Inputs.Core.V1.ContainerImageArgs.html">ContainerImageArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Input.cs/#L15606">View Source</a>
+  </span>
+  <a id="Pulumi_Kubernetes_Types_Inputs_Core_V1_NodeStatusArgs_NodeInfo_" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.NodeStatusArgs.NodeInfo*"></a>
+  <h4 id="Pulumi_Kubernetes_Types_Inputs_Core_V1_NodeStatusArgs_NodeInfo" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.NodeStatusArgs.NodeInfo">NodeInfo</h4>
+  <div class="markdown level1 summary"><p>Set of ids/uuids to uniquely identify the node. More info:
+<a href="https://kubernetes.io/docs/concepts/nodes/node/#info">https://kubernetes.io/docs/concepts/nodes/node/#info</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;NodeSystemInfoArgs&gt; NodeInfo { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Inputs.Core.V1.NodeSystemInfoArgs.html">NodeSystemInfoArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Input.cs/#L15614">View Source</a>
+  </span>
+  <a id="Pulumi_Kubernetes_Types_Inputs_Core_V1_NodeStatusArgs_Phase_" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.NodeStatusArgs.Phase*"></a>
+  <h4 id="Pulumi_Kubernetes_Types_Inputs_Core_V1_NodeStatusArgs_Phase" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.NodeStatusArgs.Phase">Phase</h4>
+  <div class="markdown level1 summary"><p>NodePhase is the recently observed lifecycle phase of the node. More info:
+<a href="https://kubernetes.io/docs/concepts/nodes/node/#phase">https://kubernetes.io/docs/concepts/nodes/node/#phase</a> The field is never populated, and
+now is deprecated.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Phase { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Input.cs/#L15623">View Source</a>
+  </span>
+  <a id="Pulumi_Kubernetes_Types_Inputs_Core_V1_NodeStatusArgs_VolumesAttached_" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.NodeStatusArgs.VolumesAttached*"></a>
+  <h4 id="Pulumi_Kubernetes_Types_Inputs_Core_V1_NodeStatusArgs_VolumesAttached" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.NodeStatusArgs.VolumesAttached">VolumesAttached</h4>
+  <div class="markdown level1 summary"><p>List of volumes that are attached to the node.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputList&lt;AttachedVolumeArgs&gt; VolumesAttached { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Inputs.Core.V1.AttachedVolumeArgs.html">AttachedVolumeArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Input.cs/#L15635">View Source</a>
+  </span>
+  <a id="Pulumi_Kubernetes_Types_Inputs_Core_V1_NodeStatusArgs_VolumesInUse_" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.NodeStatusArgs.VolumesInUse*"></a>
+  <h4 id="Pulumi_Kubernetes_Types_Inputs_Core_V1_NodeStatusArgs_VolumesInUse" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.NodeStatusArgs.VolumesInUse">VolumesInUse</h4>
+  <div class="markdown level1 summary"><p>List of attachable volumes in use (mounted) by the node.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputList&lt;string&gt; VolumesInUse { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Input.cs/#L15521" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

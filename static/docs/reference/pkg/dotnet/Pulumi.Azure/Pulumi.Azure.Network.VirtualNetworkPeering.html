@@ -1,0 +1,511 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class VirtualNetworkPeering
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class VirtualNetworkPeering
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Azure.Network.VirtualNetworkPeering">
+  
+  <h1 id="Pulumi_Azure_Network_VirtualNetworkPeering" data-uid="Pulumi.Azure.Network.VirtualNetworkPeering" class="text-break">Class VirtualNetworkPeering
+  </h1>
+  <div class="markdown level0 summary"><p>Manages a virtual network peering which allows resources to access other
+resources in the linked virtual network.</p>
+<h2 id="note">Note</h2>
+<p>Virtual Network peerings cannot be created, updated or deleted concurrently.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/virtual_network_peering.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/virtual_network_peering.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">VirtualNetworkPeering</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.Network.html">Pulumi.Azure.Network</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
+  <h5 id="Pulumi_Azure_Network_VirtualNetworkPeering_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class VirtualNetworkPeering : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/VirtualNetworkPeering.cs/#L94">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Network_VirtualNetworkPeering__ctor_" data-uid="Pulumi.Azure.Network.VirtualNetworkPeering.#ctor*"></a>
+  <h4 id="Pulumi_Azure_Network_VirtualNetworkPeering__ctor_System_String_Pulumi_Azure_Network_VirtualNetworkPeeringArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.Network.VirtualNetworkPeering.#ctor(System.String,Pulumi.Azure.Network.VirtualNetworkPeeringArgs,Pulumi.CustomResourceOptions)">VirtualNetworkPeering(String, VirtualNetworkPeeringArgs, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Create a VirtualNetworkPeering resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VirtualNetworkPeering(string name, VirtualNetworkPeeringArgs args, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Azure.Network.VirtualNetworkPeeringArgs.html">VirtualNetworkPeeringArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/VirtualNetworkPeering.cs/#L28">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Network_VirtualNetworkPeering_AllowForwardedTraffic_" data-uid="Pulumi.Azure.Network.VirtualNetworkPeering.AllowForwardedTraffic*"></a>
+  <h4 id="Pulumi_Azure_Network_VirtualNetworkPeering_AllowForwardedTraffic" data-uid="Pulumi.Azure.Network.VirtualNetworkPeering.AllowForwardedTraffic">AllowForwardedTraffic</h4>
+  <div class="markdown level1 summary"><p>Controls if forwarded traffic from  VMs
+in the remote virtual network is allowed. Defaults to false.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; AllowForwardedTraffic { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/VirtualNetworkPeering.cs/#L35">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Network_VirtualNetworkPeering_AllowGatewayTransit_" data-uid="Pulumi.Azure.Network.VirtualNetworkPeering.AllowGatewayTransit*"></a>
+  <h4 id="Pulumi_Azure_Network_VirtualNetworkPeering_AllowGatewayTransit" data-uid="Pulumi.Azure.Network.VirtualNetworkPeering.AllowGatewayTransit">AllowGatewayTransit</h4>
+  <div class="markdown level1 summary"><p>Controls gatewayLinks can be used in the
+remote virtual network’s link to the local virtual network.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; AllowGatewayTransit { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/VirtualNetworkPeering.cs/#L43">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Network_VirtualNetworkPeering_AllowVirtualNetworkAccess_" data-uid="Pulumi.Azure.Network.VirtualNetworkPeering.AllowVirtualNetworkAccess*"></a>
+  <h4 id="Pulumi_Azure_Network_VirtualNetworkPeering_AllowVirtualNetworkAccess" data-uid="Pulumi.Azure.Network.VirtualNetworkPeering.AllowVirtualNetworkAccess">AllowVirtualNetworkAccess</h4>
+  <div class="markdown level1 summary"><p>Controls if the VMs in the remote
+virtual network can access VMs in the local virtual network. Defaults to
+true.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; AllowVirtualNetworkAccess { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/VirtualNetworkPeering.cs/#L50">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Network_VirtualNetworkPeering_Name_" data-uid="Pulumi.Azure.Network.VirtualNetworkPeering.Name*"></a>
+  <h4 id="Pulumi_Azure_Network_VirtualNetworkPeering_Name" data-uid="Pulumi.Azure.Network.VirtualNetworkPeering.Name">Name</h4>
+  <div class="markdown level1 summary"><p>The name of the virtual network peering. Changing this
+forces a new resource to be created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/VirtualNetworkPeering.cs/#L57">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Network_VirtualNetworkPeering_RemoteVirtualNetworkId_" data-uid="Pulumi.Azure.Network.VirtualNetworkPeering.RemoteVirtualNetworkId*"></a>
+  <h4 id="Pulumi_Azure_Network_VirtualNetworkPeering_RemoteVirtualNetworkId" data-uid="Pulumi.Azure.Network.VirtualNetworkPeering.RemoteVirtualNetworkId">RemoteVirtualNetworkId</h4>
+  <div class="markdown level1 summary"><p>The full Azure resource ID of the
+remote virtual network.  Changing this forces a new resource to be created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; RemoteVirtualNetworkId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/VirtualNetworkPeering.cs/#L65">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Network_VirtualNetworkPeering_ResourceGroupName_" data-uid="Pulumi.Azure.Network.VirtualNetworkPeering.ResourceGroupName*"></a>
+  <h4 id="Pulumi_Azure_Network_VirtualNetworkPeering_ResourceGroupName" data-uid="Pulumi.Azure.Network.VirtualNetworkPeering.ResourceGroupName">ResourceGroupName</h4>
+  <div class="markdown level1 summary"><p>The name of the resource group in which to
+create the virtual network. Changing this forces a new resource to be
+created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ResourceGroupName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/VirtualNetworkPeering.cs/#L76">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Network_VirtualNetworkPeering_UseRemoteGateways_" data-uid="Pulumi.Azure.Network.VirtualNetworkPeering.UseRemoteGateways*"></a>
+  <h4 id="Pulumi_Azure_Network_VirtualNetworkPeering_UseRemoteGateways" data-uid="Pulumi.Azure.Network.VirtualNetworkPeering.UseRemoteGateways">UseRemoteGateways</h4>
+  <div class="markdown level1 summary"><p>Controls if remote gateways can be used on
+the local virtual network. If the flag is set to <code>true</code>, and
+<code>allow_gateway_transit</code> on the remote peering is also <code>true</code>, virtual network will
+use gateways of remote virtual network for transit. Only one peering can
+have this flag set to <code>true</code>. This flag cannot be set if virtual network
+already has a gateway. Defaults to <code>false</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; UseRemoteGateways { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/VirtualNetworkPeering.cs/#L83">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Network_VirtualNetworkPeering_VirtualNetworkName_" data-uid="Pulumi.Azure.Network.VirtualNetworkPeering.VirtualNetworkName*"></a>
+  <h4 id="Pulumi_Azure_Network_VirtualNetworkPeering_VirtualNetworkName" data-uid="Pulumi.Azure.Network.VirtualNetworkPeering.VirtualNetworkName">VirtualNetworkName</h4>
+  <div class="markdown level1 summary"><p>The name of the virtual network. Changing
+this forces a new resource to be created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; VirtualNetworkName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/VirtualNetworkPeering.cs/#L124">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Network_VirtualNetworkPeering_Get_" data-uid="Pulumi.Azure.Network.VirtualNetworkPeering.Get*"></a>
+  <h4 id="Pulumi_Azure_Network_VirtualNetworkPeering_Get_System_String_Pulumi_Input_System_String__Pulumi_Azure_Network_VirtualNetworkPeeringState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.Network.VirtualNetworkPeering.Get(System.String,Pulumi.Input{System.String},Pulumi.Azure.Network.VirtualNetworkPeeringState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, VirtualNetworkPeeringState, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Get an existing VirtualNetworkPeering resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static VirtualNetworkPeering Get(string name, Input&lt;string&gt; id, VirtualNetworkPeeringState state = null, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Azure.Network.VirtualNetworkPeeringState.html">VirtualNetworkPeeringState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Azure.Network.VirtualNetworkPeering.html">VirtualNetworkPeering</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/VirtualNetworkPeering.cs/#L22" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

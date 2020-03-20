@@ -1,0 +1,357 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class APIServiceSpec
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class APIServiceSpec
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Kubernetes.Types.Outputs.ApiRegistration.V1Beta1.APIServiceSpec">
+  
+  <h1 id="Pulumi_Kubernetes_Types_Outputs_ApiRegistration_V1Beta1_APIServiceSpec" data-uid="Pulumi.Kubernetes.Types.Outputs.ApiRegistration.V1Beta1.APIServiceSpec" class="text-break">Class APIServiceSpec
+  </h1>
+  <div class="markdown level0 summary"><p>APIServiceSpec contains information for locating and communicating with a server. Only https
+is supported, though you are able to disable certificate verification.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">APIServiceSpec</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Kubernetes.Types.Outputs.ApiRegistration.V1Beta1.html">Pulumi.Kubernetes.Types.Outputs.ApiRegistration.V1Beta1</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Kubernetes.dll</h6>
+  <h5 id="Pulumi_Kubernetes_Types_Outputs_ApiRegistration_V1Beta1_APIServiceSpec_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class APIServiceSpec</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L3979">View Source</a>
+  </span>
+  <h4 id="Pulumi_Kubernetes_Types_Outputs_ApiRegistration_V1Beta1_APIServiceSpec_CaBundle" data-uid="Pulumi.Kubernetes.Types.Outputs.ApiRegistration.V1Beta1.APIServiceSpec.CaBundle">CaBundle</h4>
+  <div class="markdown level1 summary"><p>CABundle is a PEM encoded CA bundle which will be used to validate an API server's
+serving certificate. If unspecified, system trust roots on the apiserver are used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly string CaBundle</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L3984">View Source</a>
+  </span>
+  <h4 id="Pulumi_Kubernetes_Types_Outputs_ApiRegistration_V1Beta1_APIServiceSpec_Group" data-uid="Pulumi.Kubernetes.Types.Outputs.ApiRegistration.V1Beta1.APIServiceSpec.Group">Group</h4>
+  <div class="markdown level1 summary"><p>Group is the API group name this server hosts</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly string Group</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L3996">View Source</a>
+  </span>
+  <h4 id="Pulumi_Kubernetes_Types_Outputs_ApiRegistration_V1Beta1_APIServiceSpec_GroupPriorityMinimum" data-uid="Pulumi.Kubernetes.Types.Outputs.ApiRegistration.V1Beta1.APIServiceSpec.GroupPriorityMinimum">GroupPriorityMinimum</h4>
+  <div class="markdown level1 summary"><p>GroupPriorityMininum is the priority this group should have at least. Higher priority
+means that the group is preferred by clients over lower priority ones. Note that other
+versions of this group might specify even higher GroupPriorityMininum values such that
+the whole group gets a higher priority. The primary sort is based on
+GroupPriorityMinimum, ordered highest number to lowest (20 before 10). The secondary
+sort is based on the alphabetical comparison of the name of the object.  (v1.bar before
+v1.foo) We'd recommend something like: *.k8s.io (except extensions) at 18000 and PaaSes
+(OpenShift, Deis) are recommended to be in the 2000s</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly int GroupPriorityMinimum</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L4002">View Source</a>
+  </span>
+  <h4 id="Pulumi_Kubernetes_Types_Outputs_ApiRegistration_V1Beta1_APIServiceSpec_InsecureSkipTLSVerify" data-uid="Pulumi.Kubernetes.Types.Outputs.ApiRegistration.V1Beta1.APIServiceSpec.InsecureSkipTLSVerify">InsecureSkipTLSVerify</h4>
+  <div class="markdown level1 summary"><p>InsecureSkipTLSVerify disables TLS certificate verification when communicating with this
+server. This is strongly discouraged.  You should use the CABundle instead.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly bool InsecureSkipTLSVerify</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L4010">View Source</a>
+  </span>
+  <h4 id="Pulumi_Kubernetes_Types_Outputs_ApiRegistration_V1Beta1_APIServiceSpec_Service" data-uid="Pulumi.Kubernetes.Types.Outputs.ApiRegistration.V1Beta1.APIServiceSpec.Service">Service</h4>
+  <div class="markdown level1 summary"><p>Service is a reference to the service for this API server.  It must communicate on port
+443 If the Service is nil, that means the handling for the API groupversion is handled
+locally on this server. The call will simply delegate to the normal handler chain to be
+fulfilled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly ServiceReference Service</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Kubernetes.Types.Outputs.ApiRegistration.V1Beta1.ServiceReference.html">ServiceReference</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L4015">View Source</a>
+  </span>
+  <h4 id="Pulumi_Kubernetes_Types_Outputs_ApiRegistration_V1Beta1_APIServiceSpec_Version" data-uid="Pulumi.Kubernetes.Types.Outputs.ApiRegistration.V1Beta1.APIServiceSpec.Version">Version</h4>
+  <div class="markdown level1 summary"><p>Version is the API version this server hosts.  For example, &quot;v1&quot;</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly string Version</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L4031">View Source</a>
+  </span>
+  <h4 id="Pulumi_Kubernetes_Types_Outputs_ApiRegistration_V1Beta1_APIServiceSpec_VersionPriority" data-uid="Pulumi.Kubernetes.Types.Outputs.ApiRegistration.V1Beta1.APIServiceSpec.VersionPriority">VersionPriority</h4>
+  <div class="markdown level1 summary"><p>VersionPriority controls the ordering of this API version inside of its group.  Must be
+greater than zero. The primary sort is based on VersionPriority, ordered highest to
+lowest (20 before 10). Since it's inside of a group, the number can be small, probably
+in the 10s. In case of equal version priorities, the version string will be used to
+compute the order inside a group. If the version string is &quot;kube-like&quot;, it will sort
+above non &quot;kube-like&quot; version strings, which are ordered lexicographically. &quot;Kube-like&quot;
+versions start with a &quot;v&quot;, then are followed by a number (the major version), then
+optionally the string &quot;alpha&quot; or &quot;beta&quot; and another number (the minor version). These
+are sorted first by GA &amp;gt; beta &amp;gt; alpha (where GA is a version with no
+suffix such as beta or alpha), and then by comparing major version, then minor version.
+An example sorted list of versions: v10, v2, v1, v11beta2, v10beta3, v3beta1, v12alpha1,
+v11alpha2, foo1, foo10.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly int VersionPriority</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L3972" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

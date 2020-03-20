@@ -15,3 +15,7 @@ directly. Additional general purpose packages can be used across all cloud platf
 Each cloud vendor has a dedicated package for deploying resources to it:
                       
 * [**AWS** (`Pulumi.Aws`)](/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.html)
+* [**Microsoft Azure** (`Pulumi.Azure`)](/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.html)
+* [**Google Cloud** (`Pulumi.Gcp`)](/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.html)
+* [**Kubernetes** (`Pulumi.Kubernetes`)](/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.html)
+
