@@ -7,7 +7,7 @@ tags: ["pulumi", "intern"]
 date: "2020-04-02"
 ---
 
-👋I'm Tasia, a Computer Science student at the University of Washington, and Pulumi's first very first intern! Read on to learn about some of my thoughts and experiences from these past few months.
+👋I'm Tasia, a Computer Science student at the University of Washington and Pulumi's first very first intern! This post delves into some of my thoughts and experiences from these past few months.
 
 ## Why Pulumi?
 
@@ -31,11 +31,21 @@ Pulumi engineering is currently split up into two teams: the *Service* Team and 
 
 Within the Service Team, I added [support for tags](https://www.pulumi.com/blog/pulumi-service-improvements_02-2020/#first-class-support-for-tags) within the Pulumi Console and created new pages to [view a member's specific stack permissions](https://www.pulumi.com/blog/pulumi-service-improvements_02-2020/#first-class-support-for-tags). Within the Platform Team, I added support for both [transformations](https://www.pulumi.com/docs/intro/concepts/programming-model/#transformations) and [Docker images](https://github.com/pulumi/pulumi-docker) in Go. Lastly, in a cross-team effort, I've been helping out with updating our [docs](https://www.pulumi.com/docs/) for Pulumi 2.0!
 
-Simply put, I took on the work of a full-time engineer, only with slightly more flexibility and a lot less experience. Prior to working at Pulumi, I had basically zero knowledge on Angular, cloud providers, and code generation. Now, I'm still nowhere near an expert, but I feel like I have a stronger grasp on where the software engineering industry is headed, thanks to the help of everyone I worked with!
+Simply put, I took on the work of a full-time engineer, only with slightly more flexibility and a lot less experience. Prior to working at Pulumi, I had basically zero knowledge on Angular, cloud providers, and code generation. Now, I'm still nowhere near an expert, but I feel like I have a stronger grasp on where the software engineering industry is headed, thanks to the support of everyone I worked with!
+
+## Things I've Learned
+
+Earlier I mentioned that one of my main goals for any internship is to learn as much as possible. Here are just three key things I've learned about myself and software engineering during this one:
+
+- Remote life is not the life for me. Due to [unforseen circumstances](https://www.pulumi.com/blog/coronavirus-plan/), I spent the last month of my internship in my apartment. I always thought I was a bit of a homebody, but it turns out that staying in one place for more than one day makes me stir crazy, and I'm nowhere near as productive in my room as I think I am. On the upside, Pulumi already had several remote engineers, so all the infrastructure was already in place to continue the actual work side of things fairly smoothly.
+
+- Writing tests before writing code is actually a good strategy. I remember learning this in one of my classes and thinking "Yeah that seems like a good idea, but what person would actually do that?". Apparently, that person would be me. Often times, I would find myself starting to code something without really knowing what possible use cases. Making myself write tests beforehand clears that up pretty quickly.
+
+- Using "the cloud" is confusing. To be completely fair, I already knew this. My previous experience with cloud providers involved reading through multi-page documents just to set everything up and clicking a handful of buttons on the console, without really understanding why. Pulumi hugely streamlines that process, but even still there's so much that goes into doing a single thing on a cloud. In other words, I have a newfound appreciation for people working in cloud infrastructure and I feel lucky to be entering the industry when things like Pulumi already exist.
 
 ## Final Thoughts
 
-Overall, my time at Pulumi wasn't quite the chaotic startup experience I was expecting. I had a wide range of meaningful projects, a lot of support from other engineers, and more flexibility than I would have expected as an intern. Looking back, the only major differences I felt while working at Pulumi (both engineering-related and otherwise) compared to my previous companies were the lack of free meals (which as a college student, I'm very partial to) and intern events (which as the only intern, I didn't expect any of), which I think really speaks to the maturity of their engineering and leadership teams. Granted, this quarter was a little weird due to some [unforseen circumstances](https://www.pulumi.com/blog/coronavirus-plan/), but even still, my internship went by pretty smoothly and I'm proud seeing how much I've accomplished.
+Overall, my time at Pulumi wasn't quite the chaotic startup experience I was expecting. I came into Pulumi with this idea that startups consisted of stressed-out people, working around the clock, and disorganization across the board. My time here at Pulumi, however, was anything but. Looking back, the only major differences I felt while working at Pulumi (both engineering-related and otherwise) compared to my previous companies were the lack of free meals (which as a college student, I'm very partial to) and intern events (which as the only intern, I didn't expect any of), which I think really speaks to the maturity of their engineering and leadership teams. I'm proud seeing what I've accomplished, and excited to see the future of Pulumi!
 
 ## Conclusion
 
