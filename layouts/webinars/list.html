@@ -42,7 +42,7 @@
                 <h2 id="onDemand" class="mb-8">On Demand Webinars</h2>
                 <ul class="list-none md:flex md:flex-wrap pl-0">
                     {{ $recorded_webinars := (where $non_pulumi_tv_webinars ".Params.pre_recorded" true)}}
-                    {{ range (sort $recorded_webinars ".Params.main.sortable_date", "desc") }}
+                    {{ range (sort $recorded_webinars ".Params.main.sortable_date" "desc") }}
                         {{ partial "webinar-list-item" . }}
                     {{ end }}
                 </ul>
