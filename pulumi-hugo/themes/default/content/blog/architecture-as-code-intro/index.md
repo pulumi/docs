@@ -57,7 +57,7 @@ exports.instanceName = computeInstance.name;
 exports.instanceIP = computeInstance.networkInterfaces.apply(ni => ni[0].accessConfigs[0].natIp);
 ```
 
-This is the configuration script.
+This is the configuration script, `config.sh`, referenced in the code:
 
 ```bash
 #!/bin/bash
