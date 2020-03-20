@@ -24,7 +24,7 @@ If virtual machines are part of your infrastructure, Pulumi lets you create virt
 
 ```js
 const gcp = require("@pulumi/gcp");
-const fs = require(‘fs’);
+const fs = require("fs");
 
 // Create a network
 const network = new gcp.compute.Network("network");
