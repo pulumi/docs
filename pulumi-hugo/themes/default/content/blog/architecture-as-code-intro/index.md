@@ -75,7 +75,7 @@ A significant benefit of serverless is that it's a polyglot platform that allows
 
 A key part of serverless architecture is an API Gateway that provides logical routes for mapping standard HTTP operations such as GET, PUT, POST, and DELETE to functions. The gateway makes development easier since these are standard and well-known interfaces. In addition to an API Gateway, the serverless platform should provide REST endpoints that allow you to manage the deploy with a CLI, portal, or an automation script. Finally, serverless architecture is extensible and supports integration with event sources and resources from the cloud provider through webhooks and other mechanisms.
 
-The following example illustrates how to deploy two functions, one written in Python and the other written in Go. You can find the [full example](https://github.com/pulumi/examples/tree/master/gcp-ts-serverless-raw) in the Pulumi Github repository.
+The following example illustrates how to deploy two functions using TypeScript, one written in Python and the other written in Go. You can find the [full example](https://github.com/pulumi/examples/tree/master/gcp-ts-serverless-raw) in the Pulumi GitHub repository.
 
 ```ts
 import * as gcp from "@pulumi/gcp";
