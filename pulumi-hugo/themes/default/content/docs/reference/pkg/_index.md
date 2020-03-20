@@ -46,7 +46,7 @@ directly. Additional general purpose packages can be used across all cloud platf
 {{% /lang %}}
 
 {{% lang csharp %}}
-* [**Pulumi SDK** (`pulumi`)]({{< relref "dotnet/pulumi" >}})
+* [**Pulumi SDK** (`pulumi`)](/docs/reference/pkg/dotnet/Pulumi/Pulumi.html)
 {{% /lang %}}
 
 ### Cloud Providers
