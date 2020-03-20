@@ -235,7 +235,7 @@ const frontend = new k8sjs.ServiceDeployment("frontend", {
 export let frontendIp = frontend.ipAddress;
 ```
 
-The [original example](https://github.com/kubernetes/examples/tree/master/guestbook) defines the Service and Deployment in YAML. In the example above, the YAML is abstracted in a reusable component written in a modern programming language. The [complete example](https://github.com/pulumi/examples/tree/master/kubernetes-ts-guestbook) is available on Github. As you can see, the ability to reuse components gets us closer to implementing architecture as code.
+The [original example](https://github.com/kubernetes/examples/tree/master/guestbook) defines the Service and Deployment in YAML. In the example above, the YAML is abstracted in a reusable component written in a modern programming language. The [complete example](https://github.com/pulumi/examples/tree/master/kubernetes-ts-guestbook) is available on GitHub. As you can see, the ability to reuse components gets us closer to implementing architecture as code.
 
 ## Microservices
 
