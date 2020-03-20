@@ -693,7 +693,7 @@ A list of EC2 availability zones in which the replication group&#39;s cache clus
             <td class="align-top">Cluster<wbr>Mode</td>
             <td class="align-top">
                 
-                <code><a href="#replicationgroupclustermode">*elasticache.<wbr>Replication<wbr>Group<wbr>Cluster<wbr>Mode</a></code>
+                <code><a href="#replicationgroupclustermode">*Replication<wbr>Group<wbr>Cluster<wbr>Mode</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2424,7 +2424,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
             <td class="align-top">Cluster<wbr>Mode</td>
             <td class="align-top">
                 
-                <code><a href="#replicationgroupclustermode">elasticache.<wbr>Replication<wbr>Group<wbr>Cluster<wbr>Mode</a></code>
+                <code><a href="#replicationgroupclustermode">Replication<wbr>Group<wbr>Cluster<wbr>Mode</a></code>
             </td>
             <td class="align-top">{{% md %}} Create a native redis cluster. `automatic_failover_enabled` must be set to true. Cluster Mode documented below. Only 1 `cluster_mode` block is allowed.
  {{% /md %}}
@@ -4239,7 +4239,7 @@ A list of EC2 availability zones in which the replication group&#39;s cache clus
             <td class="align-top">Cluster<wbr>Mode</td>
             <td class="align-top">
                 
-                <code><a href="#replicationgroupclustermode">*elasticache.<wbr>Replication<wbr>Group<wbr>Cluster<wbr>Mode</a></code>
+                <code><a href="#replicationgroupclustermode">*Replication<wbr>Group<wbr>Cluster<wbr>Mode</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

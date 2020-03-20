@@ -293,7 +293,7 @@ A name for the HTTP header in the client request that will be matched on.
             <td class="align-top">Spec</td>
             <td class="align-top">
                 
-                <code><a href="#routespec">appmesh.<wbr>Route<wbr>Spec</a></code>
+                <code><a href="#routespec">Route<wbr>Spec</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -751,7 +751,7 @@ The following output properties are available:
             <td class="align-top">Spec</td>
             <td class="align-top">
                 
-                <code><a href="#routespec">appmesh.<wbr>Route<wbr>Spec</a></code>
+                <code><a href="#routespec">Route<wbr>Spec</a></code>
             </td>
             <td class="align-top">{{% md %}} The route specification to apply.
  {{% /md %}}
@@ -1332,7 +1332,7 @@ A name for the HTTP header in the client request that will be matched on.
             <td class="align-top">Spec</td>
             <td class="align-top">
                 
-                <code><a href="#routespec">*appmesh.<wbr>Route<wbr>Spec</a></code>
+                <code><a href="#routespec">*Route<wbr>Spec</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1771,7 +1771,7 @@ The TCP routing information for the route.
             <td class="align-top">Http<wbr>Route</td>
             <td class="align-top">
                 
-                <code><a href="#routespechttproute">*appmesh.<wbr>Route<wbr>Spec<wbr>Http<wbr>Route</a></code>
+                <code><a href="#routespechttproute">*Route<wbr>Spec<wbr>Http<wbr>Route</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1802,7 +1802,7 @@ Routes are matched based on the specified value, where `0` is the highest priori
             <td class="align-top">Tcp<wbr>Route</td>
             <td class="align-top">
                 
-                <code><a href="#routespectcproute">*appmesh.<wbr>Route<wbr>Spec<wbr>Tcp<wbr>Route</a></code>
+                <code><a href="#routespectcproute">*Route<wbr>Spec<wbr>Tcp<wbr>Route</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2040,7 +2040,7 @@ The method and value to match the header value sent with a request. Specify one 
             <td class="align-top">Action</td>
             <td class="align-top">
                 
-                <code><a href="#routespechttprouteaction">appmesh.<wbr>Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Action</a></code>
+                <code><a href="#routespechttprouteaction">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Action</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2055,7 +2055,7 @@ The action to take if a match is determined.
             <td class="align-top">Match</td>
             <td class="align-top">
                 
-                <code><a href="#routespechttproutematch">appmesh.<wbr>Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match</a></code>
+                <code><a href="#routespechttproutematch">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2247,7 +2247,7 @@ You can specify one or more targets and their relative weights with which to dis
             <td class="align-top">Weighted<wbr>Targets</td>
             <td class="align-top">
                 
-                <code><a href="#routespechttprouteactionweightedtarget">[]appmesh.<wbr>Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Action<wbr>Weighted<wbr>Target</a></code>
+                <code><a href="#routespechttprouteactionweightedtarget">[]Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Action<wbr>Weighted<wbr>Target</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2678,7 +2678,7 @@ The client request header scheme to match on. Valid values: `http`, `https`.
             <td class="align-top">Headers</td>
             <td class="align-top">
                 
-                <code><a href="#routespechttproutematchheader">[]appmesh.<wbr>Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header</a></code>
+                <code><a href="#routespechttproutematchheader">[]Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3022,7 +3022,7 @@ If `true`, the match is on the opposite of the `match` method and value. Default
             <td class="align-top">Match</td>
             <td class="align-top">
                 
-                <code><a href="#routespechttproutematchheadermatch">*appmesh.<wbr>Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Match</a></code>
+                <code><a href="#routespechttproutematchheadermatch">*Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Match</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3349,7 +3349,7 @@ The header value sent by the client must begin with the specified characters.
             <td class="align-top">Range</td>
             <td class="align-top">
                 
-                <code><a href="#routespechttproutematchheadermatchrange">*appmesh.<wbr>Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Match<wbr>Range</a></code>
+                <code><a href="#routespechttproutematchheadermatchrange">*Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Match<wbr>Range</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3880,7 +3880,7 @@ The action to take if a match is determined.
             <td class="align-top">Action</td>
             <td class="align-top">
                 
-                <code><a href="#routespectcprouteaction">appmesh.<wbr>Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Action</a></code>
+                <code><a href="#routespectcprouteaction">Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Action</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -4042,7 +4042,7 @@ You can specify one or more targets and their relative weights with which to dis
             <td class="align-top">Weighted<wbr>Targets</td>
             <td class="align-top">
                 
-                <code><a href="#routespectcprouteactionweightedtarget">[]appmesh.<wbr>Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Action<wbr>Weighted<wbr>Target</a></code>
+                <code><a href="#routespectcprouteactionweightedtarget">[]Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Action<wbr>Weighted<wbr>Target</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

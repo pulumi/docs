@@ -415,7 +415,7 @@ Hosted zone ID for a CloudFront distribution, S3 bucket, ELB, or Route 53 hosted
             <td class="align-top">Aliases</td>
             <td class="align-top">
                 
-                <code><a href="#recordalias">[]route53.<wbr>Record<wbr>Alias</a></code>
+                <code><a href="#recordalias">[]Record<wbr>Alias</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -446,7 +446,7 @@ Allow creation of this record to overwrite an existing record, if any. This does
             <td class="align-top">Failover<wbr>Routing<wbr>Policies</td>
             <td class="align-top">
                 
-                <code><a href="#recordfailoverroutingpolicy">[]route53.<wbr>Record<wbr>Failover<wbr>Routing<wbr>Policy</a></code>
+                <code><a href="#recordfailoverroutingpolicy">[]Record<wbr>Failover<wbr>Routing<wbr>Policy</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -461,7 +461,7 @@ A block indicating the routing behavior when associated health check fails. Conf
             <td class="align-top">Geolocation<wbr>Routing<wbr>Policies</td>
             <td class="align-top">
                 
-                <code><a href="#recordgeolocationroutingpolicy">[]route53.<wbr>Record<wbr>Geolocation<wbr>Routing<wbr>Policy</a></code>
+                <code><a href="#recordgeolocationroutingpolicy">[]Record<wbr>Geolocation<wbr>Routing<wbr>Policy</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -491,7 +491,7 @@ The health check the record should be associated with.
             <td class="align-top">Latency<wbr>Routing<wbr>Policies</td>
             <td class="align-top">
                 
-                <code><a href="#recordlatencyroutingpolicy">[]route53.<wbr>Record<wbr>Latency<wbr>Routing<wbr>Policy</a></code>
+                <code><a href="#recordlatencyroutingpolicy">[]Record<wbr>Latency<wbr>Routing<wbr>Policy</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -596,7 +596,7 @@ The TTL of the record.
             <td class="align-top">Weighted<wbr>Routing<wbr>Policies</td>
             <td class="align-top">
                 
-                <code><a href="#recordweightedroutingpolicy">[]route53.<wbr>Record<wbr>Weighted<wbr>Routing<wbr>Policy</a></code>
+                <code><a href="#recordweightedroutingpolicy">[]Record<wbr>Weighted<wbr>Routing<wbr>Policy</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1338,7 +1338,7 @@ Alias record documented below.
             <td class="align-top">Aliases</td>
             <td class="align-top">
                 
-                <code><a href="#recordalias">[]route53.<wbr>Record<wbr>Alias</a></code>
+                <code><a href="#recordalias">[]Record<wbr>Alias</a></code>
             </td>
             <td class="align-top">{{% md %}} An alias block. Conflicts with `ttl` &amp; `records`.
 Alias record documented below.
@@ -1365,7 +1365,7 @@ Alias record documented below.
             <td class="align-top">Failover<wbr>Routing<wbr>Policies</td>
             <td class="align-top">
                 
-                <code><a href="#recordfailoverroutingpolicy">[]route53.<wbr>Record<wbr>Failover<wbr>Routing<wbr>Policy</a></code>
+                <code><a href="#recordfailoverroutingpolicy">[]Record<wbr>Failover<wbr>Routing<wbr>Policy</a></code>
             </td>
             <td class="align-top">{{% md %}} A block indicating the routing behavior when associated health check fails. Conflicts with any other routing policy. Documented below.
  {{% /md %}}
@@ -1391,7 +1391,7 @@ Alias record documented below.
             <td class="align-top">Geolocation<wbr>Routing<wbr>Policies</td>
             <td class="align-top">
                 
-                <code><a href="#recordgeolocationroutingpolicy">[]route53.<wbr>Record<wbr>Geolocation<wbr>Routing<wbr>Policy</a></code>
+                <code><a href="#recordgeolocationroutingpolicy">[]Record<wbr>Geolocation<wbr>Routing<wbr>Policy</a></code>
             </td>
             <td class="align-top">{{% md %}} A block indicating a routing policy based on the geolocation of the requestor. Conflicts with any other routing policy. Documented below.
  {{% /md %}}
@@ -1417,7 +1417,7 @@ Alias record documented below.
             <td class="align-top">Latency<wbr>Routing<wbr>Policies</td>
             <td class="align-top">
                 
-                <code><a href="#recordlatencyroutingpolicy">[]route53.<wbr>Record<wbr>Latency<wbr>Routing<wbr>Policy</a></code>
+                <code><a href="#recordlatencyroutingpolicy">[]Record<wbr>Latency<wbr>Routing<wbr>Policy</a></code>
             </td>
             <td class="align-top">{{% md %}} A block indicating a routing policy based on the latency between the requestor and an AWS region. Conflicts with any other routing policy. Documented below.
  {{% /md %}}
@@ -1508,7 +1508,7 @@ Alias record documented below.
             <td class="align-top">Weighted<wbr>Routing<wbr>Policies</td>
             <td class="align-top">
                 
-                <code><a href="#recordweightedroutingpolicy">[]route53.<wbr>Record<wbr>Weighted<wbr>Routing<wbr>Policy</a></code>
+                <code><a href="#recordweightedroutingpolicy">[]Record<wbr>Weighted<wbr>Routing<wbr>Policy</a></code>
             </td>
             <td class="align-top">{{% md %}} A block indicating a weighted routing policy. Conflicts with any other routing policy. Documented below.
  {{% /md %}}
@@ -2291,7 +2291,7 @@ Hosted zone ID for a CloudFront distribution, S3 bucket, ELB, or Route 53 hosted
             <td class="align-top">Aliases</td>
             <td class="align-top">
                 
-                <code><a href="#recordalias">[]route53.<wbr>Record<wbr>Alias</a></code>
+                <code><a href="#recordalias">[]Record<wbr>Alias</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2322,7 +2322,7 @@ Allow creation of this record to overwrite an existing record, if any. This does
             <td class="align-top">Failover<wbr>Routing<wbr>Policies</td>
             <td class="align-top">
                 
-                <code><a href="#recordfailoverroutingpolicy">[]route53.<wbr>Record<wbr>Failover<wbr>Routing<wbr>Policy</a></code>
+                <code><a href="#recordfailoverroutingpolicy">[]Record<wbr>Failover<wbr>Routing<wbr>Policy</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2352,7 +2352,7 @@ A block indicating the routing behavior when associated health check fails. Conf
             <td class="align-top">Geolocation<wbr>Routing<wbr>Policies</td>
             <td class="align-top">
                 
-                <code><a href="#recordgeolocationroutingpolicy">[]route53.<wbr>Record<wbr>Geolocation<wbr>Routing<wbr>Policy</a></code>
+                <code><a href="#recordgeolocationroutingpolicy">[]Record<wbr>Geolocation<wbr>Routing<wbr>Policy</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2382,7 +2382,7 @@ The health check the record should be associated with.
             <td class="align-top">Latency<wbr>Routing<wbr>Policies</td>
             <td class="align-top">
                 
-                <code><a href="#recordlatencyroutingpolicy">[]route53.<wbr>Record<wbr>Latency<wbr>Routing<wbr>Policy</a></code>
+                <code><a href="#recordlatencyroutingpolicy">[]Record<wbr>Latency<wbr>Routing<wbr>Policy</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2487,7 +2487,7 @@ The TTL of the record.
             <td class="align-top">Weighted<wbr>Routing<wbr>Policies</td>
             <td class="align-top">
                 
-                <code><a href="#recordweightedroutingpolicy">[]route53.<wbr>Record<wbr>Weighted<wbr>Routing<wbr>Policy</a></code>
+                <code><a href="#recordweightedroutingpolicy">[]Record<wbr>Weighted<wbr>Routing<wbr>Policy</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

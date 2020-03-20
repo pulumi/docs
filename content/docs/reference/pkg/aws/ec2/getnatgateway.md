@@ -195,7 +195,7 @@ The id of the VPC that the Nat Gateway resides in.
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getnatgatewayfilter">[]ec2.<wbr>Get<wbr>Nat<wbr>Gateway<wbr>Filter</a></code>
+                <code><a href="#getnatgatewayfilter">[]Get<wbr>Nat<wbr>Gateway<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -700,7 +700,7 @@ The following output properties are available:
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getnatgatewayfilter">[]ec2.<wbr>Get<wbr>Nat<wbr>Gateway<wbr>Filter</a></code>
+                <code><a href="#getnatgatewayfilter">[]Get<wbr>Nat<wbr>Gateway<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 

@@ -397,7 +397,7 @@ The number of available cluster certificates may vary depending on state of the 
             <td class="align-top">Cluster<wbr>Certificates</td>
             <td class="align-top">
                 
-                <code><a href="#getclusterclustercertificates">cloudhsmv2.<wbr>Get<wbr>Cluster<wbr>Cluster<wbr>Certificates</a></code>
+                <code><a href="#getclusterclustercertificates">Get<wbr>Cluster<wbr>Cluster<wbr>Certificates</a></code>
             </td>
             <td class="align-top">{{% md %}} The list of cluster certificates.
 * `cluster_certificates.0.cluster_certificate` - The cluster certificate issued (signed) by the issuing certificate authority (CA) of the cluster&#39;s owner.

@@ -378,7 +378,7 @@ The amount time for Elastic Load Balancing to wait before changing the state of 
             <td class="align-top">Health<wbr>Check</td>
             <td class="align-top">
                 
-                <code><a href="#targetgrouphealthcheck">*elasticloadbalancingv2.<wbr>Target<wbr>Group<wbr>Health<wbr>Check</a></code>
+                <code><a href="#targetgrouphealthcheck">*Target<wbr>Group<wbr>Health<wbr>Check</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -513,7 +513,7 @@ The amount time for targets to warm up before the load balancer sends them a ful
             <td class="align-top">Stickiness</td>
             <td class="align-top">
                 
-                <code><a href="#targetgroupstickiness">*elasticloadbalancingv2.<wbr>Target<wbr>Group<wbr>Stickiness</a></code>
+                <code><a href="#targetgroupstickiness">*Target<wbr>Group<wbr>Stickiness</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1354,7 +1354,7 @@ You can&#39;t specify publicly routable IP addresses.
             <td class="align-top">Health<wbr>Check</td>
             <td class="align-top">
                 
-                <code><a href="#targetgrouphealthcheck">elasticloadbalancingv2.<wbr>Target<wbr>Group<wbr>Health<wbr>Check</a></code>
+                <code><a href="#targetgrouphealthcheck">Target<wbr>Group<wbr>Health<wbr>Check</a></code>
             </td>
             <td class="align-top">{{% md %}} A Health Check block. Health Check blocks are documented below.
  {{% /md %}}
@@ -1471,7 +1471,7 @@ You can&#39;t specify publicly routable IP addresses.
             <td class="align-top">Stickiness</td>
             <td class="align-top">
                 
-                <code><a href="#targetgroupstickiness">elasticloadbalancingv2.<wbr>Target<wbr>Group<wbr>Stickiness</a></code>
+                <code><a href="#targetgroupstickiness">Target<wbr>Group<wbr>Stickiness</a></code>
             </td>
             <td class="align-top">{{% md %}} A Stickiness block. Stickiness blocks are documented below. `stickiness` is only valid if used with Load Balancers of type `Application`
  {{% /md %}}
@@ -2383,7 +2383,7 @@ The amount time for Elastic Load Balancing to wait before changing the state of 
             <td class="align-top">Health<wbr>Check</td>
             <td class="align-top">
                 
-                <code><a href="#targetgrouphealthcheck">*elasticloadbalancingv2.<wbr>Target<wbr>Group<wbr>Health<wbr>Check</a></code>
+                <code><a href="#targetgrouphealthcheck">*Target<wbr>Group<wbr>Health<wbr>Check</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2518,7 +2518,7 @@ The amount time for targets to warm up before the load balancer sends them a ful
             <td class="align-top">Stickiness</td>
             <td class="align-top">
                 
-                <code><a href="#targetgroupstickiness">*elasticloadbalancingv2.<wbr>Target<wbr>Group<wbr>Stickiness</a></code>
+                <code><a href="#targetgroupstickiness">*Target<wbr>Group<wbr>Stickiness</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

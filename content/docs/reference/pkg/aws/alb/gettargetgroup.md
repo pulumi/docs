@@ -586,7 +586,7 @@ The following output properties are available:
             <td class="align-top">Health<wbr>Check</td>
             <td class="align-top">
                 
-                <code><a href="#gettargetgrouphealthcheck">alb.<wbr>Get<wbr>Target<wbr>Group<wbr>Health<wbr>Check</a></code>
+                <code><a href="#gettargetgrouphealthcheck">Get<wbr>Target<wbr>Group<wbr>Health<wbr>Check</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -683,7 +683,7 @@ The following output properties are available:
             <td class="align-top">Stickiness</td>
             <td class="align-top">
                 
-                <code><a href="#gettargetgroupstickiness">alb.<wbr>Get<wbr>Target<wbr>Group<wbr>Stickiness</a></code>
+                <code><a href="#gettargetgroupstickiness">Get<wbr>Target<wbr>Group<wbr>Stickiness</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 

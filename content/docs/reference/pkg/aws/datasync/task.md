@@ -250,7 +250,7 @@ Name of the DataSync Task.
             <td class="align-top">Options</td>
             <td class="align-top">
                 
-                <code><a href="#taskoptions">*datasync.<wbr>Task<wbr>Options</a></code>
+                <code><a href="#taskoptions">*Task<wbr>Options</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -712,7 +712,7 @@ The following output properties are available:
             <td class="align-top">Options</td>
             <td class="align-top">
                 
-                <code><a href="#taskoptions">*datasync.<wbr>Task<wbr>Options</a></code>
+                <code><a href="#taskoptions">*Task<wbr>Options</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block containing option that controls the default behavior when you start an execution of this DataSync Task. For each individual task execution, you can override these options by specifying an overriding configuration in those executions.
  {{% /md %}}
@@ -1237,7 +1237,7 @@ Name of the DataSync Task.
             <td class="align-top">Options</td>
             <td class="align-top">
                 
-                <code><a href="#taskoptions">*datasync.<wbr>Task<wbr>Options</a></code>
+                <code><a href="#taskoptions">*Task<wbr>Options</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

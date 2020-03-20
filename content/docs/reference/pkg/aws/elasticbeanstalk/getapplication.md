@@ -308,7 +308,7 @@ The following output properties are available:
             <td class="align-top">Appversion<wbr>Lifecycle</td>
             <td class="align-top">
                 
-                <code><a href="#getapplicationappversionlifecycle">elasticbeanstalk.<wbr>Get<wbr>Application<wbr>Appversion<wbr>Lifecycle</a></code>
+                <code><a href="#getapplicationappversionlifecycle">Get<wbr>Application<wbr>Appversion<wbr>Lifecycle</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 

@@ -500,7 +500,7 @@ Setting this to `false` will pause logging.
             <td class="align-top">Event<wbr>Selectors</td>
             <td class="align-top">
                 
-                <code><a href="#traileventselector">[]cloudtrail.<wbr>Trail<wbr>Event<wbr>Selector</a></code>
+                <code><a href="#traileventselector">[]Trail<wbr>Event<wbr>Selector</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1469,7 +1469,7 @@ Setting this to `false` will pause logging.
             <td class="align-top">Event<wbr>Selectors</td>
             <td class="align-top">
                 
-                <code><a href="#traileventselector">[]cloudtrail.<wbr>Trail<wbr>Event<wbr>Selector</a></code>
+                <code><a href="#traileventselector">[]Trail<wbr>Event<wbr>Selector</a></code>
             </td>
             <td class="align-top">{{% md %}} Specifies an event selector for enabling data event logging. Fields documented below. Please note the [CloudTrail limits](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html) when configuring these.
  {{% /md %}}
@@ -2514,7 +2514,7 @@ Setting this to `false` will pause logging.
             <td class="align-top">Event<wbr>Selectors</td>
             <td class="align-top">
                 
-                <code><a href="#traileventselector">[]cloudtrail.<wbr>Trail<wbr>Event<wbr>Selector</a></code>
+                <code><a href="#traileventselector">[]Trail<wbr>Event<wbr>Selector</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3332,7 +3332,7 @@ Specify if you want your trail to log read-only events, write-only events, or al
             <td class="align-top">Data<wbr>Resources</td>
             <td class="align-top">
                 
-                <code><a href="#traileventselectordataresource">[]cloudtrail.<wbr>Trail<wbr>Event<wbr>Selector<wbr>Data<wbr>Resource</a></code>
+                <code><a href="#traileventselectordataresource">[]Trail<wbr>Event<wbr>Selector<wbr>Data<wbr>Resource</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

@@ -1182,7 +1182,7 @@ The following output properties are available:
             <td class="align-top">Routes</td>
             <td class="align-top">
                 
-                <code><a href="#vpnconnectionroute">[]ec2.<wbr>Vpn<wbr>Connection<wbr>Route</a></code>
+                <code><a href="#vpnconnectionroute">[]Vpn<wbr>Connection<wbr>Route<wbr>Type</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1441,7 +1441,7 @@ The following output properties are available:
             <td class="align-top">Vgw<wbr>Telemetries</td>
             <td class="align-top">
                 
-                <code><a href="#vpnconnectionvgwtelemetry">[]ec2.<wbr>Vpn<wbr>Connection<wbr>Vgw<wbr>Telemetry</a></code>
+                <code><a href="#vpnconnectionvgwtelemetry">[]Vpn<wbr>Connection<wbr>Vgw<wbr>Telemetry</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -2613,7 +2613,7 @@ The ID of the customer gateway.
             <td class="align-top">Routes</td>
             <td class="align-top">
                 
-                <code><a href="#vpnconnectionroute">[]ec2.<wbr>Vpn<wbr>Connection<wbr>Route</a></code>
+                <code><a href="#vpnconnectionroute">[]Vpn<wbr>Connection<wbr>Route<wbr>Type</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2912,7 +2912,7 @@ The type of VPN connection. The only type AWS supports at this time is &#34;ipse
             <td class="align-top">Vgw<wbr>Telemetries</td>
             <td class="align-top">
                 
-                <code><a href="#vpnconnectionvgwtelemetry">[]ec2.<wbr>Vpn<wbr>Connection<wbr>Vgw<wbr>Telemetry</a></code>
+                <code><a href="#vpnconnectionvgwtelemetry">[]Vpn<wbr>Connection<wbr>Vgw<wbr>Telemetry</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3716,7 +3716,7 @@ The ID of the Virtual Private Gateway.
 {{% /lang %}}
 
 {{% lang go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#VpnConnectionRouteOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#VpnConnectionRouteTypeOutput">output</a> API doc for this type.
 {{% /lang %}}
 
 {{% lang csharp %}}

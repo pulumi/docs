@@ -190,7 +190,7 @@ Amazon Resource Name (ARN) of the S3 Bucket.
             <td class="align-top">S3Config</td>
             <td class="align-top">
                 
-                <code><a href="#s3locations3config">datasync.<wbr>S3Location<wbr>S3Config</a></code>
+                <code><a href="#s3locations3config">S3Location<wbr>S3Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -552,7 +552,7 @@ The following output properties are available:
             <td class="align-top">S3Config</td>
             <td class="align-top">
                 
-                <code><a href="#s3locations3config">datasync.<wbr>S3Location<wbr>S3Config</a></code>
+                <code><a href="#s3locations3config">S3Location<wbr>S3Config</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block containing information for connecting to S3.
  {{% /md %}}
@@ -1015,7 +1015,7 @@ Amazon Resource Name (ARN) of the S3 Bucket.
             <td class="align-top">S3Config</td>
             <td class="align-top">
                 
-                <code><a href="#s3locations3config">*datasync.<wbr>S3Location<wbr>S3Config</a></code>
+                <code><a href="#s3locations3config">*S3Location<wbr>S3Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

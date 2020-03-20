@@ -669,7 +669,7 @@ Interfaces below for more details.
             <td class="align-top">Block<wbr>Device<wbr>Mappings</td>
             <td class="align-top">
                 
-                <code><a href="#getlaunchtemplateblockdevicemapping">[]ec2.<wbr>Get<wbr>Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping</a></code>
+                <code><a href="#getlaunchtemplateblockdevicemapping">[]Get<wbr>Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping</a></code>
             </td>
             <td class="align-top">{{% md %}} Specify volumes to attach to the instance besides the volumes specified by the AMI.
  {{% /md %}}
@@ -682,7 +682,7 @@ Interfaces below for more details.
             <td class="align-top">Credit<wbr>Specifications</td>
             <td class="align-top">
                 
-                <code><a href="#getlaunchtemplatecreditspecification">[]ec2.<wbr>Get<wbr>Launch<wbr>Template<wbr>Credit<wbr>Specification</a></code>
+                <code><a href="#getlaunchtemplatecreditspecification">[]Get<wbr>Launch<wbr>Template<wbr>Credit<wbr>Specification</a></code>
             </td>
             <td class="align-top">{{% md %}} Customize the credit specification of the instance. See Credit
 Specification below for more details.
@@ -749,7 +749,7 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
             <td class="align-top">Elastic<wbr>Gpu<wbr>Specifications</td>
             <td class="align-top">
                 
-                <code><a href="#getlaunchtemplateelasticgpuspecification">[]ec2.<wbr>Get<wbr>Launch<wbr>Template<wbr>Elastic<wbr>Gpu<wbr>Specification</a></code>
+                <code><a href="#getlaunchtemplateelasticgpuspecification">[]Get<wbr>Launch<wbr>Template<wbr>Elastic<wbr>Gpu<wbr>Specification</a></code>
             </td>
             <td class="align-top">{{% md %}} The elastic GPU to attach to the instance. See Elastic GPU
 below for more details.
@@ -763,7 +763,7 @@ below for more details.
             <td class="align-top">Iam<wbr>Instance<wbr>Profiles</td>
             <td class="align-top">
                 
-                <code><a href="#getlaunchtemplateiaminstanceprofile">[]ec2.<wbr>Get<wbr>Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile</a></code>
+                <code><a href="#getlaunchtemplateiaminstanceprofile">[]Get<wbr>Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile</a></code>
             </td>
             <td class="align-top">{{% md %}} The IAM Instance Profile to launch the instance with. See Instance Profile
 below for more details.
@@ -817,7 +817,7 @@ below for more details.
             <td class="align-top">Instance<wbr>Market<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#getlaunchtemplateinstancemarketoption">[]ec2.<wbr>Get<wbr>Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Option</a></code>
+                <code><a href="#getlaunchtemplateinstancemarketoption">[]Get<wbr>Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Option</a></code>
             </td>
             <td class="align-top">{{% md %}} The market (purchasing) option for the instance.
 below for details.
@@ -883,7 +883,7 @@ below for details.
             <td class="align-top">Monitorings</td>
             <td class="align-top">
                 
-                <code><a href="#getlaunchtemplatemonitoring">[]ec2.<wbr>Get<wbr>Launch<wbr>Template<wbr>Monitoring</a></code>
+                <code><a href="#getlaunchtemplatemonitoring">[]Get<wbr>Launch<wbr>Template<wbr>Monitoring</a></code>
             </td>
             <td class="align-top">{{% md %}} The monitoring option for the instance.
  {{% /md %}}
@@ -908,7 +908,7 @@ below for details.
             <td class="align-top">Network<wbr>Interfaces</td>
             <td class="align-top">
                 
-                <code><a href="#getlaunchtemplatenetworkinterface">[]ec2.<wbr>Get<wbr>Launch<wbr>Template<wbr>Network<wbr>Interface</a></code>
+                <code><a href="#getlaunchtemplatenetworkinterface">[]Get<wbr>Launch<wbr>Template<wbr>Network<wbr>Interface</a></code>
             </td>
             <td class="align-top">{{% md %}} Customize network interfaces to be attached at instance boot time. See Network
 Interfaces below for more details.
@@ -922,7 +922,7 @@ Interfaces below for more details.
             <td class="align-top">Placements</td>
             <td class="align-top">
                 
-                <code><a href="#getlaunchtemplateplacement">[]ec2.<wbr>Get<wbr>Launch<wbr>Template<wbr>Placement</a></code>
+                <code><a href="#getlaunchtemplateplacement">[]Get<wbr>Launch<wbr>Template<wbr>Placement</a></code>
             </td>
             <td class="align-top">{{% md %}} The placement of the instance.
  {{% /md %}}
@@ -962,7 +962,7 @@ Interfaces below for more details.
             <td class="align-top">Tag<wbr>Specifications</td>
             <td class="align-top">
                 
-                <code><a href="#getlaunchtemplatetagspecification">[]ec2.<wbr>Get<wbr>Launch<wbr>Template<wbr>Tag<wbr>Specification</a></code>
+                <code><a href="#getlaunchtemplatetagspecification">[]Get<wbr>Launch<wbr>Template<wbr>Tag<wbr>Specification</a></code>
             </td>
             <td class="align-top">{{% md %}} The tags to apply to the resources during launch.
  {{% /md %}}
@@ -1906,7 +1906,7 @@ Interfaces below for more details.
             <td class="align-top">Ebs</td>
             <td class="align-top">
                 
-                <code><a href="#getlaunchtemplateblockdevicemappingeb">[]ec2.<wbr>Get<wbr>Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping<wbr>Eb</a></code>
+                <code><a href="#getlaunchtemplateblockdevicemappingeb">[]Get<wbr>Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping<wbr>Eb</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -3231,7 +3231,7 @@ The name of the launch template.
             <td class="align-top">Spot<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#getlaunchtemplateinstancemarketoptionspotoption">[]ec2.<wbr>Get<wbr>Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Option<wbr>Spot<wbr>Option</a></code>
+                <code><a href="#getlaunchtemplateinstancemarketoptionspotoption">[]Get<wbr>Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Option<wbr>Spot<wbr>Option</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

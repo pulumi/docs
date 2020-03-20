@@ -251,7 +251,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">Attachments</td>
             <td class="align-top">
                 
-                <code><a href="#networkinterfaceattachment">[]ec2.<wbr>Network<wbr>Interface<wbr>Attachment</a></code>
+                <code><a href="#networkinterfaceattachment">[]Network<wbr>Interface<wbr>Attachment<wbr>Type</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -889,7 +889,7 @@ The following output properties are available:
             <td class="align-top">Attachments</td>
             <td class="align-top">
                 
-                <code><a href="#networkinterfaceattachment">[]ec2.<wbr>Network<wbr>Interface<wbr>Attachment</a></code>
+                <code><a href="#networkinterfaceattachment">[]Network<wbr>Interface<wbr>Attachment<wbr>Type</a></code>
             </td>
             <td class="align-top">{{% md %}} Block to define the attachment of the ENI. Documented below.
  {{% /md %}}
@@ -1618,7 +1618,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">Attachments</td>
             <td class="align-top">
                 
-                <code><a href="#networkinterfaceattachment">[]ec2.<wbr>Network<wbr>Interface<wbr>Attachment</a></code>
+                <code><a href="#networkinterfaceattachment">[]Network<wbr>Interface<wbr>Attachment<wbr>Type</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2169,7 +2169,7 @@ A mapping of tags to assign to the resource.
 {{% /lang %}}
 
 {{% lang go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#NetworkInterfaceAttachmentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#NetworkInterfaceAttachmentOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#NetworkInterfaceAttachmentTypeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#NetworkInterfaceAttachmentTypeOutput">output</a> API doc for this type.
 {{% /lang %}}
 
 {{% lang csharp %}}

@@ -614,7 +614,7 @@ Whether to enable Elastic Load Balancing connection draining.
             <td class="align-top">Ebs<wbr>Volumes</td>
             <td class="align-top">
                 
-                <code><a href="#mysqllayerebsvolume">[]opsworks.<wbr>Mysql<wbr>Layer<wbr>Ebs<wbr>Volume</a></code>
+                <code><a href="#mysqllayerebsvolume">[]Mysql<wbr>Layer<wbr>Ebs<wbr>Volume</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1940,7 +1940,7 @@ The following output properties are available:
             <td class="align-top">Ebs<wbr>Volumes</td>
             <td class="align-top">
                 
-                <code><a href="#mysqllayerebsvolume">[]opsworks.<wbr>Mysql<wbr>Layer<wbr>Ebs<wbr>Volume</a></code>
+                <code><a href="#mysqllayerebsvolume">[]Mysql<wbr>Layer<wbr>Ebs<wbr>Volume</a></code>
             </td>
             <td class="align-top">{{% md %}} `ebs_volume` blocks, as described below, will each create an EBS volume and connect it to the layer&#39;s instances.
  {{% /md %}}
@@ -3271,7 +3271,7 @@ Whether to enable Elastic Load Balancing connection draining.
             <td class="align-top">Ebs<wbr>Volumes</td>
             <td class="align-top">
                 
-                <code><a href="#mysqllayerebsvolume">[]opsworks.<wbr>Mysql<wbr>Layer<wbr>Ebs<wbr>Volume</a></code>
+                <code><a href="#mysqllayerebsvolume">[]Mysql<wbr>Layer<wbr>Ebs<wbr>Volume</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

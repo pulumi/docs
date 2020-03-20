@@ -562,7 +562,7 @@ The following output properties are available:
             <td class="align-top">Access<wbr>Logs</td>
             <td class="align-top">
                 
-                <code><a href="#getloadbalanceraccesslogs">alb.<wbr>Get<wbr>Load<wbr>Balancer<wbr>Access<wbr>Logs</a></code>
+                <code><a href="#getloadbalanceraccesslogs">Get<wbr>Load<wbr>Balancer<wbr>Access<wbr>Logs</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -695,7 +695,7 @@ The following output properties are available:
             <td class="align-top">Subnet<wbr>Mappings</td>
             <td class="align-top">
                 
-                <code><a href="#getloadbalancersubnetmapping">[]alb.<wbr>Get<wbr>Load<wbr>Balancer<wbr>Subnet<wbr>Mapping</a></code>
+                <code><a href="#getloadbalancersubnetmapping">[]Get<wbr>Load<wbr>Balancer<wbr>Subnet<wbr>Mapping</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 

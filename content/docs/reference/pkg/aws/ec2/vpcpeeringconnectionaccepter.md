@@ -221,7 +221,7 @@ The VPC Peering Connection ID to manage.
             <td class="align-top">Accepter</td>
             <td class="align-top">
                 
-                <code><a href="#vpcpeeringconnectionaccepteraccepter">*ec2.<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Accepter<wbr>Accepter</a></code>
+                <code><a href="#vpcpeeringconnectionaccepteraccepter">*Vpc<wbr>Peering<wbr>Connection<wbr>Accepter<wbr>Accepter</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -252,7 +252,7 @@ Whether or not to accept the peering request. Defaults to `false`.
             <td class="align-top">Requester</td>
             <td class="align-top">
                 
-                <code><a href="#vpcpeeringconnectionaccepterrequester">*ec2.<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Accepter<wbr>Requester</a></code>
+                <code><a href="#vpcpeeringconnectionaccepterrequester">*Vpc<wbr>Peering<wbr>Connection<wbr>Accepter<wbr>Requester</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -691,7 +691,7 @@ The following output properties are available:
             <td class="align-top">Accepter</td>
             <td class="align-top">
                 
-                <code><a href="#vpcpeeringconnectionaccepteraccepter">ec2.<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Accepter<wbr>Accepter</a></code>
+                <code><a href="#vpcpeeringconnectionaccepteraccepter">Vpc<wbr>Peering<wbr>Connection<wbr>Accepter<wbr>Accepter</a></code>
             </td>
             <td class="align-top">{{% md %}} A configuration block that describes [VPC Peering Connection]
 (http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide) options set for the accepter VPC.
@@ -757,7 +757,7 @@ The following output properties are available:
             <td class="align-top">Requester</td>
             <td class="align-top">
                 
-                <code><a href="#vpcpeeringconnectionaccepterrequester">ec2.<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Accepter<wbr>Requester</a></code>
+                <code><a href="#vpcpeeringconnectionaccepterrequester">Vpc<wbr>Peering<wbr>Connection<wbr>Accepter<wbr>Requester</a></code>
             </td>
             <td class="align-top">{{% md %}} A configuration block that describes [VPC Peering Connection]
 (http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide) options set for the requester VPC.
@@ -1380,7 +1380,7 @@ The status of the VPC Peering Connection request.
             <td class="align-top">Accepter</td>
             <td class="align-top">
                 
-                <code><a href="#vpcpeeringconnectionaccepteraccepter">*ec2.<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Accepter<wbr>Accepter</a></code>
+                <code><a href="#vpcpeeringconnectionaccepteraccepter">*Vpc<wbr>Peering<wbr>Connection<wbr>Accepter<wbr>Accepter</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1456,7 +1456,7 @@ The ID of the requester VPC.
             <td class="align-top">Requester</td>
             <td class="align-top">
                 
-                <code><a href="#vpcpeeringconnectionaccepterrequester">*ec2.<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Accepter<wbr>Requester</a></code>
+                <code><a href="#vpcpeeringconnectionaccepterrequester">*Vpc<wbr>Peering<wbr>Connection<wbr>Accepter<wbr>Requester</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

@@ -145,7 +145,7 @@ The name of the DynamoDB table.
             <td class="align-top">Server<wbr>Side<wbr>Encryption</td>
             <td class="align-top">
                 
-                <code><a href="#gettableserversideencryption">*dynamodb.<wbr>Get<wbr>Table<wbr>Server<wbr>Side<wbr>Encryption</a></code>
+                <code><a href="#gettableserversideencryption">*Get<wbr>Table<wbr>Server<wbr>Side<wbr>Encryption</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -595,7 +595,7 @@ The following output properties are available:
             <td class="align-top">Attributes</td>
             <td class="align-top">
                 
-                <code><a href="#gettableattribute">[]dynamodb.<wbr>Get<wbr>Table<wbr>Attribute</a></code>
+                <code><a href="#gettableattribute">[]Get<wbr>Table<wbr>Attribute</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -619,7 +619,7 @@ The following output properties are available:
             <td class="align-top">Global<wbr>Secondary<wbr>Indexes</td>
             <td class="align-top">
                 
-                <code><a href="#gettableglobalsecondaryindex">[]dynamodb.<wbr>Get<wbr>Table<wbr>Global<wbr>Secondary<wbr>Index</a></code>
+                <code><a href="#gettableglobalsecondaryindex">[]Get<wbr>Table<wbr>Global<wbr>Secondary<wbr>Index</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -656,7 +656,7 @@ The following output properties are available:
             <td class="align-top">Local<wbr>Secondary<wbr>Indexes</td>
             <td class="align-top">
                 
-                <code><a href="#gettablelocalsecondaryindex">[]dynamodb.<wbr>Get<wbr>Table<wbr>Local<wbr>Secondary<wbr>Index</a></code>
+                <code><a href="#gettablelocalsecondaryindex">[]Get<wbr>Table<wbr>Local<wbr>Secondary<wbr>Index</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -680,7 +680,7 @@ The following output properties are available:
             <td class="align-top">Point<wbr>In<wbr>Time<wbr>Recovery</td>
             <td class="align-top">
                 
-                <code><a href="#gettablepointintimerecovery">dynamodb.<wbr>Get<wbr>Table<wbr>Point<wbr>In<wbr>Time<wbr>Recovery</a></code>
+                <code><a href="#gettablepointintimerecovery">Get<wbr>Table<wbr>Point<wbr>In<wbr>Time<wbr>Recovery</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -716,7 +716,7 @@ The following output properties are available:
             <td class="align-top">Server<wbr>Side<wbr>Encryption</td>
             <td class="align-top">
                 
-                <code><a href="#gettableserversideencryption">dynamodb.<wbr>Get<wbr>Table<wbr>Server<wbr>Side<wbr>Encryption</a></code>
+                <code><a href="#gettableserversideencryption">Get<wbr>Table<wbr>Server<wbr>Side<wbr>Encryption</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -788,7 +788,7 @@ The following output properties are available:
             <td class="align-top">Ttl</td>
             <td class="align-top">
                 
-                <code><a href="#gettablettl">dynamodb.<wbr>Get<wbr>Table<wbr>Ttl</a></code>
+                <code><a href="#gettablettl">Get<wbr>Table<wbr>Ttl</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 

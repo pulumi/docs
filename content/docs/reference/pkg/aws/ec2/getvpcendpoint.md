@@ -185,7 +185,7 @@ The ID of the VPC in which the specific VPC Endpoint is used.
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getvpcendpointfilter">[]ec2.<wbr>Get<wbr>Vpc<wbr>Endpoint<wbr>Filter</a></code>
+                <code><a href="#getvpcendpointfilter">[]Get<wbr>Vpc<wbr>Endpoint<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -794,7 +794,7 @@ The following output properties are available:
             <td class="align-top">Dns<wbr>Entries</td>
             <td class="align-top">
                 
-                <code><a href="#getvpcendpointdnsentry">[]ec2.<wbr>Get<wbr>Vpc<wbr>Endpoint<wbr>Dns<wbr>Entry</a></code>
+                <code><a href="#getvpcendpointdnsentry">[]Get<wbr>Vpc<wbr>Endpoint<wbr>Dns<wbr>Entry</a></code>
             </td>
             <td class="align-top">{{% md %}} The DNS entries for the VPC Endpoint. Applicable for endpoints of type `Interface`. DNS blocks are documented below.
  {{% /md %}}
@@ -807,7 +807,7 @@ The following output properties are available:
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getvpcendpointfilter">[]ec2.<wbr>Get<wbr>Vpc<wbr>Endpoint<wbr>Filter</a></code>
+                <code><a href="#getvpcendpointfilter">[]Get<wbr>Vpc<wbr>Endpoint<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 

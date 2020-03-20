@@ -512,7 +512,7 @@ The fully-qualified domain name to register
             <td class="align-top">Endpoint<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#domainnameendpointconfiguration">*apigateway.<wbr>Domain<wbr>Name<wbr>Endpoint<wbr>Configuration</a></code>
+                <code><a href="#domainnameendpointconfiguration">*Domain<wbr>Name<wbr>Endpoint<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1402,7 +1402,7 @@ that can be used to create a Route53 alias record for the distribution.
             <td class="align-top">Endpoint<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#domainnameendpointconfiguration">apigateway.<wbr>Domain<wbr>Name<wbr>Endpoint<wbr>Configuration</a></code>
+                <code><a href="#domainnameendpointconfiguration">Domain<wbr>Name<wbr>Endpoint<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block defining API endpoint information including type. Defined below.
  {{% /md %}}
@@ -2523,7 +2523,7 @@ The fully-qualified domain name to register
             <td class="align-top">Endpoint<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#domainnameendpointconfiguration">*apigateway.<wbr>Domain<wbr>Name<wbr>Endpoint<wbr>Configuration</a></code>
+                <code><a href="#domainnameendpointconfiguration">*Domain<wbr>Name<wbr>Endpoint<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

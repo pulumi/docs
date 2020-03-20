@@ -234,7 +234,7 @@ The DHCP options id of the desired VPC.
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getvpcfilter">[]ec2.<wbr>Get<wbr>Vpc<wbr>Filter</a></code>
+                <code><a href="#getvpcfilter">[]Get<wbr>Vpc<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -836,7 +836,7 @@ selected VPC. May be any of `&#34;default&#34;`, `&#34;dedicated&#34;`, or `&#34
             <td class="align-top">Cidr<wbr>Block<wbr>Associations</td>
             <td class="align-top">
                 
-                <code><a href="#getvpccidrblockassociation">[]ec2.<wbr>Get<wbr>Vpc<wbr>Cidr<wbr>Block<wbr>Association</a></code>
+                <code><a href="#getvpccidrblockassociation">[]Get<wbr>Vpc<wbr>Cidr<wbr>Block<wbr>Association</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -898,7 +898,7 @@ selected VPC. May be any of `&#34;default&#34;`, `&#34;dedicated&#34;`, or `&#34
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getvpcfilter">[]ec2.<wbr>Get<wbr>Vpc<wbr>Filter</a></code>
+                <code><a href="#getvpcfilter">[]Get<wbr>Vpc<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 

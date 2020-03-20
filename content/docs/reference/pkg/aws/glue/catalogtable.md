@@ -438,7 +438,7 @@ A map of initialization parameters for the SerDe, in key-value form.
             <td class="align-top">Partition<wbr>Keys</td>
             <td class="align-top">
                 
-                <code><a href="#catalogtablepartitionkey">[]glue.<wbr>Catalog<wbr>Table<wbr>Partition<wbr>Key</a></code>
+                <code><a href="#catalogtablepartitionkey">[]Catalog<wbr>Table<wbr>Partition<wbr>Key</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -468,7 +468,7 @@ Retention time for this table.
             <td class="align-top">Storage<wbr>Descriptor</td>
             <td class="align-top">
                 
-                <code><a href="#catalogtablestoragedescriptor">*glue.<wbr>Catalog<wbr>Table<wbr>Storage<wbr>Descriptor</a></code>
+                <code><a href="#catalogtablestoragedescriptor">*Catalog<wbr>Table<wbr>Storage<wbr>Descriptor</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1216,7 +1216,7 @@ The following output properties are available:
             <td class="align-top">Partition<wbr>Keys</td>
             <td class="align-top">
                 
-                <code><a href="#catalogtablepartitionkey">[]glue.<wbr>Catalog<wbr>Table<wbr>Partition<wbr>Key</a></code>
+                <code><a href="#catalogtablepartitionkey">[]Catalog<wbr>Table<wbr>Partition<wbr>Key</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of columns by which the table is partitioned. Only primitive types are supported as partition keys.
  {{% /md %}}
@@ -1242,7 +1242,7 @@ The following output properties are available:
             <td class="align-top">Storage<wbr>Descriptor</td>
             <td class="align-top">
                 
-                <code><a href="#catalogtablestoragedescriptor">*glue.<wbr>Catalog<wbr>Table<wbr>Storage<wbr>Descriptor</a></code>
+                <code><a href="#catalogtablestoragedescriptor">*Catalog<wbr>Table<wbr>Storage<wbr>Descriptor</a></code>
             </td>
             <td class="align-top">{{% md %}} A storage descriptor object containing information about the physical storage of this table. You can refer to the [Glue Developer Guide](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-StorageDescriptor) for a full explanation of this object.
  {{% /md %}}
@@ -2015,7 +2015,7 @@ A map of initialization parameters for the SerDe, in key-value form.
             <td class="align-top">Partition<wbr>Keys</td>
             <td class="align-top">
                 
-                <code><a href="#catalogtablepartitionkey">[]glue.<wbr>Catalog<wbr>Table<wbr>Partition<wbr>Key</a></code>
+                <code><a href="#catalogtablepartitionkey">[]Catalog<wbr>Table<wbr>Partition<wbr>Key</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2045,7 +2045,7 @@ Retention time for this table.
             <td class="align-top">Storage<wbr>Descriptor</td>
             <td class="align-top">
                 
-                <code><a href="#catalogtablestoragedescriptor">*glue.<wbr>Catalog<wbr>Table<wbr>Storage<wbr>Descriptor</a></code>
+                <code><a href="#catalogtablestoragedescriptor">*Catalog<wbr>Table<wbr>Storage<wbr>Descriptor</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3049,7 +3049,7 @@ A list of reducer grouping columns, clustering columns, and bucketing columns in
             <td class="align-top">Columns</td>
             <td class="align-top">
                 
-                <code><a href="#catalogtablestoragedescriptorcolumn">[]glue.<wbr>Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Column</a></code>
+                <code><a href="#catalogtablestoragedescriptorcolumn">[]Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Column</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3154,7 +3154,7 @@ A map of initialization parameters for the SerDe, in key-value form.
             <td class="align-top">Ser<wbr>De<wbr>Info</td>
             <td class="align-top">
                 
-                <code><a href="#catalogtablestoragedescriptorserdeinfo">*glue.<wbr>Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Ser<wbr>De<wbr>Info</a></code>
+                <code><a href="#catalogtablestoragedescriptorserdeinfo">*Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Ser<wbr>De<wbr>Info</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3169,7 +3169,7 @@ Serialization/deserialization (SerDe) information.
             <td class="align-top">Skewed<wbr>Info</td>
             <td class="align-top">
                 
-                <code><a href="#catalogtablestoragedescriptorskewedinfo">*glue.<wbr>Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Skewed<wbr>Info</a></code>
+                <code><a href="#catalogtablestoragedescriptorskewedinfo">*Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Skewed<wbr>Info</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3184,7 +3184,7 @@ Information about values that appear very frequently in a column (skewed values)
             <td class="align-top">Sort<wbr>Columns</td>
             <td class="align-top">
                 
-                <code><a href="#catalogtablestoragedescriptorsortcolumn">[]glue.<wbr>Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Sort<wbr>Column</a></code>
+                <code><a href="#catalogtablestoragedescriptorsortcolumn">[]Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Sort<wbr>Column</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

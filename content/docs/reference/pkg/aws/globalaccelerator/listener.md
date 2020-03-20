@@ -216,7 +216,7 @@ Direct all requests from a user to the same endpoint. Valid values are `NONE`, `
             <td class="align-top">Port<wbr>Ranges</td>
             <td class="align-top">
                 
-                <code><a href="#listenerportrange">[]globalaccelerator.<wbr>Listener<wbr>Port<wbr>Range</a></code>
+                <code><a href="#listenerportrange">[]Listener<wbr>Port<wbr>Range</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -538,7 +538,7 @@ The following output properties are available:
             <td class="align-top">Port<wbr>Ranges</td>
             <td class="align-top">
                 
-                <code><a href="#listenerportrange">[]globalaccelerator.<wbr>Listener<wbr>Port<wbr>Range</a></code>
+                <code><a href="#listenerportrange">[]Listener<wbr>Port<wbr>Range</a></code>
             </td>
             <td class="align-top">{{% md %}} The list of port ranges for the connections from clients to the accelerator. Fields documented below.
  {{% /md %}}
@@ -897,7 +897,7 @@ Direct all requests from a user to the same endpoint. Valid values are `NONE`, `
             <td class="align-top">Port<wbr>Ranges</td>
             <td class="align-top">
                 
-                <code><a href="#listenerportrange">[]globalaccelerator.<wbr>Listener<wbr>Port<wbr>Range</a></code>
+                <code><a href="#listenerportrange">[]Listener<wbr>Port<wbr>Range</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

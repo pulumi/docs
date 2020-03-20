@@ -296,7 +296,7 @@ The CIDR block of the requester VPC of the specific VPC Peering Connection to re
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getvpcpeeringconnectionfilter">[]ec2.<wbr>Get<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Filter</a></code>
+                <code><a href="#getvpcpeeringconnectionfilter">[]Get<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1117,7 +1117,7 @@ The following output properties are available:
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getvpcpeeringconnectionfilter">[]ec2.<wbr>Get<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Filter</a></code>
+                <code><a href="#getvpcpeeringconnectionfilter">[]Get<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 

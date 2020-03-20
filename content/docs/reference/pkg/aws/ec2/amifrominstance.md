@@ -252,7 +252,7 @@ A longer, human-readable description for the AMI.
             <td class="align-top">Ebs<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#amifrominstanceebsblockdevice">[]ec2.<wbr>Ami<wbr>From<wbr>Instance<wbr>Ebs<wbr>Block<wbr>Device</a></code>
+                <code><a href="#amifrominstanceebsblockdevice">[]Ami<wbr>From<wbr>Instance<wbr>Ebs<wbr>Block<wbr>Device</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -268,7 +268,7 @@ attached to created instances. The structure of this block is described below.
             <td class="align-top">Ephemeral<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#amifrominstanceephemeralblockdevice">[]ec2.<wbr>Ami<wbr>From<wbr>Instance<wbr>Ephemeral<wbr>Block<wbr>Device</a></code>
+                <code><a href="#amifrominstanceephemeralblockdevice">[]Ami<wbr>From<wbr>Instance<wbr>Ephemeral<wbr>Block<wbr>Device</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -917,7 +917,7 @@ changes the set of further arguments that are required, as described below.
             <td class="align-top">Ebs<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#amifrominstanceebsblockdevice">[]ec2.<wbr>Ami<wbr>From<wbr>Instance<wbr>Ebs<wbr>Block<wbr>Device</a></code>
+                <code><a href="#amifrominstanceebsblockdevice">[]Ami<wbr>From<wbr>Instance<wbr>Ebs<wbr>Block<wbr>Device</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested block describing an EBS block device that should be
 attached to created instances. The structure of this block is described below.
@@ -944,7 +944,7 @@ attached to created instances. The structure of this block is described below.
             <td class="align-top">Ephemeral<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#amifrominstanceephemeralblockdevice">[]ec2.<wbr>Ami<wbr>From<wbr>Instance<wbr>Ephemeral<wbr>Block<wbr>Device</a></code>
+                <code><a href="#amifrominstanceephemeralblockdevice">[]Ami<wbr>From<wbr>Instance<wbr>Ephemeral<wbr>Block<wbr>Device</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested block describing an ephemeral block device that
 should be attached to created instances. The structure of this block is described below.
@@ -2014,7 +2014,7 @@ A longer, human-readable description for the AMI.
             <td class="align-top">Ebs<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#amifrominstanceebsblockdevice">[]ec2.<wbr>Ami<wbr>From<wbr>Instance<wbr>Ebs<wbr>Block<wbr>Device</a></code>
+                <code><a href="#amifrominstanceebsblockdevice">[]Ami<wbr>From<wbr>Instance<wbr>Ebs<wbr>Block<wbr>Device</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2045,7 +2045,7 @@ Specifies whether enhanced networking with ENA is enabled. Defaults to `false`.
             <td class="align-top">Ephemeral<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#amifrominstanceephemeralblockdevice">[]ec2.<wbr>Ami<wbr>From<wbr>Instance<wbr>Ephemeral<wbr>Block<wbr>Device</a></code>
+                <code><a href="#amifrominstanceephemeralblockdevice">[]Ami<wbr>From<wbr>Instance<wbr>Ephemeral<wbr>Block<wbr>Device</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

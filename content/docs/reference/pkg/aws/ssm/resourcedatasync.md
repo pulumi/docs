@@ -204,7 +204,7 @@ Name for the configuration.
             <td class="align-top">S3Destination</td>
             <td class="align-top">
                 
-                <code><a href="#resourcedatasyncs3destination">ssm.<wbr>Resource<wbr>Data<wbr>Sync<wbr>S3Destination</a></code>
+                <code><a href="#resourcedatasyncs3destination">Resource<wbr>Data<wbr>Sync<wbr>S3Destination</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -412,7 +412,7 @@ The following output properties are available:
             <td class="align-top">S3Destination</td>
             <td class="align-top">
                 
-                <code><a href="#resourcedatasyncs3destination">ssm.<wbr>Resource<wbr>Data<wbr>Sync<wbr>S3Destination</a></code>
+                <code><a href="#resourcedatasyncs3destination">Resource<wbr>Data<wbr>Sync<wbr>S3Destination</a></code>
             </td>
             <td class="align-top">{{% md %}} Amazon S3 configuration details for the sync.
  {{% /md %}}
@@ -661,7 +661,7 @@ Name for the configuration.
             <td class="align-top">S3Destination</td>
             <td class="align-top">
                 
-                <code><a href="#resourcedatasyncs3destination">*ssm.<wbr>Resource<wbr>Data<wbr>Sync<wbr>S3Destination</a></code>
+                <code><a href="#resourcedatasyncs3destination">*Resource<wbr>Data<wbr>Sync<wbr>S3Destination</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

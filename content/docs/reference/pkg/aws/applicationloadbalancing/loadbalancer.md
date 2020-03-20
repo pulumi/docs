@@ -381,7 +381,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">Access<wbr>Logs</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalanceraccesslogs">*applicationloadbalancing.<wbr>Load<wbr>Balancer<wbr>Access<wbr>Logs</a></code>
+                <code><a href="#loadbalanceraccesslogs">*Load<wbr>Balancer<wbr>Access<wbr>Logs</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -550,7 +550,7 @@ A list of security group IDs to assign to the LB. Only valid for Load Balancers 
             <td class="align-top">Subnet<wbr>Mappings</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalancersubnetmapping">[]applicationloadbalancing.<wbr>Load<wbr>Balancer<wbr>Subnet<wbr>Mapping</a></code>
+                <code><a href="#loadbalancersubnetmapping">[]Load<wbr>Balancer<wbr>Subnet<wbr>Mapping</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1375,7 +1375,7 @@ for load balancers of type `network` will force a recreation of the resource.
             <td class="align-top">Access<wbr>Logs</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalanceraccesslogs">*applicationloadbalancing.<wbr>Load<wbr>Balancer<wbr>Access<wbr>Logs</a></code>
+                <code><a href="#loadbalanceraccesslogs">*Load<wbr>Balancer<wbr>Access<wbr>Logs</a></code>
             </td>
             <td class="align-top">{{% md %}} An Access Logs block. Access Logs documented below.
  {{% /md %}}
@@ -1561,7 +1561,7 @@ this provider will autogenerate a name beginning with `tf-lb`.
             <td class="align-top">Subnet<wbr>Mappings</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalancersubnetmapping">[]applicationloadbalancing.<wbr>Load<wbr>Balancer<wbr>Subnet<wbr>Mapping</a></code>
+                <code><a href="#loadbalancersubnetmapping">[]Load<wbr>Balancer<wbr>Subnet<wbr>Mapping</a></code>
             </td>
             <td class="align-top">{{% md %}} A subnet mapping block as documented below.
  {{% /md %}}
@@ -2560,7 +2560,7 @@ The canonical hosted zone ID of the load balancer (to be used in a Route 53 Alia
             <td class="align-top">Access<wbr>Logs</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalanceraccesslogs">*applicationloadbalancing.<wbr>Load<wbr>Balancer<wbr>Access<wbr>Logs</a></code>
+                <code><a href="#loadbalanceraccesslogs">*Load<wbr>Balancer<wbr>Access<wbr>Logs</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2774,7 +2774,7 @@ A list of security group IDs to assign to the LB. Only valid for Load Balancers 
             <td class="align-top">Subnet<wbr>Mappings</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalancersubnetmapping">[]applicationloadbalancing.<wbr>Load<wbr>Balancer<wbr>Subnet<wbr>Mapping</a></code>
+                <code><a href="#loadbalancersubnetmapping">[]Load<wbr>Balancer<wbr>Subnet<wbr>Mapping</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

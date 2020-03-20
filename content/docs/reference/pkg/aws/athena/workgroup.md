@@ -196,7 +196,7 @@ Key-value mapping of resource tags for the workgroup.
             <td class="align-top">Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#workgroupconfiguration">*athena.<wbr>Workgroup<wbr>Configuration</a></code>
+                <code><a href="#workgroupconfiguration">*Workgroup<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -606,7 +606,7 @@ The following output properties are available:
             <td class="align-top">Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#workgroupconfiguration">*athena.<wbr>Workgroup<wbr>Configuration</a></code>
+                <code><a href="#workgroupconfiguration">*Workgroup<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block with various settings for the workgroup. Documented below.
  {{% /md %}}
@@ -1071,7 +1071,7 @@ Amazon Resource Name (ARN) of the workgroup
             <td class="align-top">Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#workgroupconfiguration">*athena.<wbr>Workgroup<wbr>Configuration</a></code>
+                <code><a href="#workgroupconfiguration">*Workgroup<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1539,7 +1539,7 @@ Boolean whether Amazon CloudWatch metrics are enabled for the workgroup. Default
             <td class="align-top">Result<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#workgroupconfigurationresultconfiguration">*athena.<wbr>Workgroup<wbr>Configuration<wbr>Result<wbr>Configuration</a></code>
+                <code><a href="#workgroupconfigurationresultconfiguration">*Workgroup<wbr>Configuration<wbr>Result<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1805,7 +1805,7 @@ The location in Amazon S3 where your query results are stored, such as `s3://pat
             <td class="align-top">Encryption<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#workgroupconfigurationresultconfigurationencryptionconfiguration">*athena.<wbr>Workgroup<wbr>Configuration<wbr>Result<wbr>Configuration<wbr>Encryption<wbr>Configuration</a></code>
+                <code><a href="#workgroupconfigurationresultconfigurationencryptionconfiguration">*Workgroup<wbr>Configuration<wbr>Result<wbr>Configuration<wbr>Encryption<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

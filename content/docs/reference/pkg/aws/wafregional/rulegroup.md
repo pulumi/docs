@@ -181,7 +181,7 @@ Key-value mapping of resource tags
             <td class="align-top">Activated<wbr>Rules</td>
             <td class="align-top">
                 
-                <code><a href="#rulegroupactivatedrule">[]wafregional.<wbr>Rule<wbr>Group<wbr>Activated<wbr>Rule</a></code>
+                <code><a href="#rulegroupactivatedrule">[]Rule<wbr>Group<wbr>Activated<wbr>Rule</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -520,7 +520,7 @@ The following output properties are available:
             <td class="align-top">Activated<wbr>Rules</td>
             <td class="align-top">
                 
-                <code><a href="#rulegroupactivatedrule">[]wafregional.<wbr>Rule<wbr>Group<wbr>Activated<wbr>Rule</a></code>
+                <code><a href="#rulegroupactivatedrule">[]Rule<wbr>Group<wbr>Activated<wbr>Rule</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of activated rules, see below
  {{% /md %}}
@@ -929,7 +929,7 @@ Key-value mapping of resource tags
             <td class="align-top">Activated<wbr>Rules</td>
             <td class="align-top">
                 
-                <code><a href="#rulegroupactivatedrule">[]wafregional.<wbr>Rule<wbr>Group<wbr>Activated<wbr>Rule</a></code>
+                <code><a href="#rulegroupactivatedrule">[]Rule<wbr>Group<wbr>Activated<wbr>Rule</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1322,7 +1322,7 @@ The rule type, either [`REGULAR`](https://www.terraform.io/docs/providers/aws/r/
             <td class="align-top">Action</td>
             <td class="align-top">
                 
-                <code><a href="#rulegroupactivatedruleaction">wafregional.<wbr>Rule<wbr>Group<wbr>Activated<wbr>Rule<wbr>Action</a></code>
+                <code><a href="#rulegroupactivatedruleaction">Rule<wbr>Group<wbr>Activated<wbr>Rule<wbr>Action</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

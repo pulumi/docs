@@ -537,7 +537,7 @@ the number of Spot pools that you specify.
             <td class="align-top">Launch<wbr>Specifications</td>
             <td class="align-top">
                 
-                <code><a href="#spotfleetrequestlaunchspecification">[]ec2.<wbr>Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification</a></code>
+                <code><a href="#spotfleetrequestlaunchspecification">[]Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1668,7 +1668,7 @@ the number of Spot pools that you specify.
             <td class="align-top">Launch<wbr>Specifications</td>
             <td class="align-top">
                 
-                <code><a href="#spotfleetrequestlaunchspecification">[]ec2.<wbr>Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification</a></code>
+                <code><a href="#spotfleetrequestlaunchspecification">[]Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification</a></code>
             </td>
             <td class="align-top">{{% md %}} Used to define the launch configuration of the
 spot-fleet request. Can be specified multiple times to define different bids
@@ -2873,7 +2873,7 @@ the number of Spot pools that you specify.
             <td class="align-top">Launch<wbr>Specifications</td>
             <td class="align-top">
                 
-                <code><a href="#spotfleetrequestlaunchspecification">[]ec2.<wbr>Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification</a></code>
+                <code><a href="#spotfleetrequestlaunchspecification">[]Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4057,7 +4057,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">Ebs<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#spotfleetrequestlaunchspecificationebsblockdevice">[]ec2.<wbr>Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Ebs<wbr>Block<wbr>Device</a></code>
+                <code><a href="#spotfleetrequestlaunchspecificationebsblockdevice">[]Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Ebs<wbr>Block<wbr>Device</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4085,7 +4085,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">Ephemeral<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#spotfleetrequestlaunchspecificationephemeralblockdevice">[]ec2.<wbr>Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Ephemeral<wbr>Block<wbr>Device</a></code>
+                <code><a href="#spotfleetrequestlaunchspecificationephemeralblockdevice">[]Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Ephemeral<wbr>Block<wbr>Device</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4197,7 +4197,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">Root<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#spotfleetrequestlaunchspecificationrootblockdevice">[]ec2.<wbr>Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Root<wbr>Block<wbr>Device</a></code>
+                <code><a href="#spotfleetrequestlaunchspecificationrootblockdevice">[]Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Root<wbr>Block<wbr>Device</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

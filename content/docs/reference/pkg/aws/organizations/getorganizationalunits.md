@@ -269,7 +269,7 @@ The following output properties are available:
             <td class="align-top">Childrens</td>
             <td class="align-top">
                 
-                <code><a href="#getorganizationalunitschildren">[]organizations.<wbr>Get<wbr>Organizational<wbr>Units<wbr>Children</a></code>
+                <code><a href="#getorganizationalunitschildren">[]Get<wbr>Organizational<wbr>Units<wbr>Children</a></code>
             </td>
             <td class="align-top">{{% md %}} List of child organizational units, which have the following attributes:
  {{% /md %}}

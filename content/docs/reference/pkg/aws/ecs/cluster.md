@@ -214,7 +214,7 @@ List of short names of one or more capacity providers to associate with the clus
             <td class="align-top">Default<wbr>Capacity<wbr>Provider<wbr>Strategies</td>
             <td class="align-top">
                 
-                <code><a href="#clusterdefaultcapacityproviderstrategy">[]ecs.<wbr>Cluster<wbr>Default<wbr>Capacity<wbr>Provider<wbr>Strategy</a></code>
+                <code><a href="#clusterdefaultcapacityproviderstrategy">[]Cluster<wbr>Default<wbr>Capacity<wbr>Provider<wbr>Strategy</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -244,7 +244,7 @@ The name of the cluster (up to 255 letters, numbers, hyphens, and underscores)
             <td class="align-top">Settings</td>
             <td class="align-top">
                 
-                <code><a href="#clustersetting">[]ecs.<wbr>Cluster<wbr>Setting</a></code>
+                <code><a href="#clustersetting">[]Cluster<wbr>Setting</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -622,7 +622,7 @@ The following output properties are available:
             <td class="align-top">Default<wbr>Capacity<wbr>Provider<wbr>Strategies</td>
             <td class="align-top">
                 
-                <code><a href="#clusterdefaultcapacityproviderstrategy">[]ecs.<wbr>Cluster<wbr>Default<wbr>Capacity<wbr>Provider<wbr>Strategy</a></code>
+                <code><a href="#clusterdefaultcapacityproviderstrategy">[]Cluster<wbr>Default<wbr>Capacity<wbr>Provider<wbr>Strategy</a></code>
             </td>
             <td class="align-top">{{% md %}} The capacity provider strategy to use by default for the cluster. Can be one or more.  Defined below.
  {{% /md %}}
@@ -648,7 +648,7 @@ The following output properties are available:
             <td class="align-top">Settings</td>
             <td class="align-top">
                 
-                <code><a href="#clustersetting">[]ecs.<wbr>Cluster<wbr>Setting</a></code>
+                <code><a href="#clustersetting">[]Cluster<wbr>Setting</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block(s) with cluster settings. For example, this can be used to enable CloudWatch Container Insights for a cluster. Defined below.
  {{% /md %}}
@@ -1089,7 +1089,7 @@ List of short names of one or more capacity providers to associate with the clus
             <td class="align-top">Default<wbr>Capacity<wbr>Provider<wbr>Strategies</td>
             <td class="align-top">
                 
-                <code><a href="#clusterdefaultcapacityproviderstrategy">[]ecs.<wbr>Cluster<wbr>Default<wbr>Capacity<wbr>Provider<wbr>Strategy</a></code>
+                <code><a href="#clusterdefaultcapacityproviderstrategy">[]Cluster<wbr>Default<wbr>Capacity<wbr>Provider<wbr>Strategy</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1119,7 +1119,7 @@ The name of the cluster (up to 255 letters, numbers, hyphens, and underscores)
             <td class="align-top">Settings</td>
             <td class="align-top">
                 
-                <code><a href="#clustersetting">[]ecs.<wbr>Cluster<wbr>Setting</a></code>
+                <code><a href="#clustersetting">[]Cluster<wbr>Setting</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

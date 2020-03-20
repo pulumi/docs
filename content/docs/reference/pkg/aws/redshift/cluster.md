@@ -924,7 +924,7 @@ The ARN for the KMS encryption key. When specifying `kms_key_id`, `encrypted` ne
             <td class="align-top">Logging</td>
             <td class="align-top">
                 
-                <code><a href="#clusterlogging">*redshift.<wbr>Cluster<wbr>Logging</a></code>
+                <code><a href="#clusterlogging">*Cluster<wbr>Logging</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1093,7 +1093,7 @@ The name of the cluster the source snapshot was created from.
             <td class="align-top">Snapshot<wbr>Copy</td>
             <td class="align-top">
                 
-                <code><a href="#clustersnapshotcopy">*redshift.<wbr>Cluster<wbr>Snapshot<wbr>Copy</a></code>
+                <code><a href="#clustersnapshotcopy">*Cluster<wbr>Snapshot<wbr>Copy</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3032,7 +3032,7 @@ If you do not provide a name, Amazon Redshift will create a default database cal
             <td class="align-top">Logging</td>
             <td class="align-top">
                 
-                <code><a href="#clusterlogging">*redshift.<wbr>Cluster<wbr>Logging</a></code>
+                <code><a href="#clusterlogging">*Cluster<wbr>Logging</a></code>
             </td>
             <td class="align-top">{{% md %}} Logging, documented below.
  {{% /md %}}
@@ -3179,7 +3179,7 @@ Format: ddd:hh24:mi-ddd:hh24:mi
             <td class="align-top">Snapshot<wbr>Copy</td>
             <td class="align-top">
                 
-                <code><a href="#clustersnapshotcopy">*redshift.<wbr>Cluster<wbr>Snapshot<wbr>Copy</a></code>
+                <code><a href="#clustersnapshotcopy">*Cluster<wbr>Snapshot<wbr>Copy</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration of automatic copy of snapshots from one region to another. Documented below.
  {{% /md %}}
@@ -5185,7 +5185,7 @@ The ARN for the KMS encryption key. When specifying `kms_key_id`, `encrypted` ne
             <td class="align-top">Logging</td>
             <td class="align-top">
                 
-                <code><a href="#clusterlogging">*redshift.<wbr>Cluster<wbr>Logging</a></code>
+                <code><a href="#clusterlogging">*Cluster<wbr>Logging</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5354,7 +5354,7 @@ The name of the cluster the source snapshot was created from.
             <td class="align-top">Snapshot<wbr>Copy</td>
             <td class="align-top">
                 
-                <code><a href="#clustersnapshotcopy">*redshift.<wbr>Cluster<wbr>Snapshot<wbr>Copy</a></code>
+                <code><a href="#clustersnapshotcopy">*Cluster<wbr>Snapshot<wbr>Copy</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

@@ -205,7 +205,7 @@ Operating system that the game server binaries are built to run on. e.g. `WINDOW
             <td class="align-top">Storage<wbr>Location</td>
             <td class="align-top">
                 
-                <code><a href="#buildstoragelocation">gamelift.<wbr>Build<wbr>Storage<wbr>Location</a></code>
+                <code><a href="#buildstoragelocation">Build<wbr>Storage<wbr>Location</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -611,7 +611,7 @@ The following output properties are available:
             <td class="align-top">Storage<wbr>Location</td>
             <td class="align-top">
                 
-                <code><a href="#buildstoragelocation">gamelift.<wbr>Build<wbr>Storage<wbr>Location</a></code>
+                <code><a href="#buildstoragelocation">Build<wbr>Storage<wbr>Location</a></code>
             </td>
             <td class="align-top">{{% md %}} Information indicating where your game build files are stored. See below.
  {{% /md %}}
@@ -1080,7 +1080,7 @@ Operating system that the game server binaries are built to run on. e.g. `WINDOW
             <td class="align-top">Storage<wbr>Location</td>
             <td class="align-top">
                 
-                <code><a href="#buildstoragelocation">*gamelift.<wbr>Build<wbr>Storage<wbr>Location</a></code>
+                <code><a href="#buildstoragelocation">*Build<wbr>Storage<wbr>Location</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

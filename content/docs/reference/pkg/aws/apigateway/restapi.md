@@ -320,7 +320,7 @@ The description of the REST API
             <td class="align-top">Endpoint<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#restapiendpointconfiguration">*apigateway.<wbr>Rest<wbr>Api<wbr>Endpoint<wbr>Configuration</a></code>
+                <code><a href="#restapiendpointconfiguration">*Rest<wbr>Api<wbr>Endpoint<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1004,7 +1004,7 @@ e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j`, which can be conca
             <td class="align-top">Endpoint<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#restapiendpointconfiguration">apigateway.<wbr>Rest<wbr>Api<wbr>Endpoint<wbr>Configuration</a></code>
+                <code><a href="#restapiendpointconfiguration">Rest<wbr>Api<wbr>Endpoint<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested argument defining API endpoint configuration including endpoint type. Defined below.
  {{% /md %}}
@@ -1861,7 +1861,7 @@ The description of the REST API
             <td class="align-top">Endpoint<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#restapiendpointconfiguration">*apigateway.<wbr>Rest<wbr>Api<wbr>Endpoint<wbr>Configuration</a></code>
+                <code><a href="#restapiendpointconfiguration">*Rest<wbr>Api<wbr>Endpoint<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

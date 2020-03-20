@@ -508,7 +508,7 @@ The following output properties are available:
             <td class="align-top">Endpoint<wbr>Configurations</td>
             <td class="align-top">
                 
-                <code><a href="#getrestapiendpointconfiguration">[]apigateway.<wbr>Get<wbr>Rest<wbr>Api<wbr>Endpoint<wbr>Configuration</a></code>
+                <code><a href="#getrestapiendpointconfiguration">[]Get<wbr>Rest<wbr>Api<wbr>Endpoint<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} The endpoint configuration of this RestApi showing the endpoint types of the API.
  {{% /md %}}

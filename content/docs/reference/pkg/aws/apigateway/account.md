@@ -356,7 +356,7 @@ Logging &amp; monitoring can be enabled/disabled and otherwise tuned on the API 
             <td class="align-top">Throttle<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#accountthrottlesettings">apigateway.<wbr>Account<wbr>Throttle<wbr>Settings</a></code>
+                <code><a href="#accountthrottlesettings">Account<wbr>Throttle<wbr>Settings</a></code>
             </td>
             <td class="align-top">{{% md %}} Account-Level throttle settings. See exported fields below.
  {{% /md %}}
@@ -613,7 +613,7 @@ Logging &amp; monitoring can be enabled/disabled and otherwise tuned on the API 
             <td class="align-top">Throttle<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#accountthrottlesettings">*apigateway.<wbr>Account<wbr>Throttle<wbr>Settings</a></code>
+                <code><a href="#accountthrottlesettings">*Account<wbr>Throttle<wbr>Settings</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

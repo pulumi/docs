@@ -497,7 +497,7 @@ The following output properties are available:
             <td class="align-top">Certificate<wbr>Authority</td>
             <td class="align-top">
                 
-                <code><a href="#getclustercertificateauthority">eks.<wbr>Get<wbr>Cluster<wbr>Certificate<wbr>Authority</a></code>
+                <code><a href="#getclustercertificateauthority">Get<wbr>Cluster<wbr>Certificate<wbr>Authority</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested attribute containing `certificate-authority-data` for your cluster.
  {{% /md %}}
@@ -562,7 +562,7 @@ The following output properties are available:
             <td class="align-top">Identities</td>
             <td class="align-top">
                 
-                <code><a href="#getclusteridentity">[]eks.<wbr>Get<wbr>Cluster<wbr>Identity</a></code>
+                <code><a href="#getclusteridentity">[]Get<wbr>Cluster<wbr>Identity</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested attribute containing identity provider information for your cluster. Only available on Kubernetes version 1.13 and 1.14 clusters created or upgraded on or after September 3, 2019. For an example using this information to enable IAM Roles for Service Accounts, see the [`aws.eks.Cluster` resource documentation](https://www.terraform.io/docs/providers/aws/r/eks_cluster.html).
  {{% /md %}}
@@ -652,7 +652,7 @@ The following output properties are available:
             <td class="align-top">Vpc<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#getclustervpcconfig">eks.<wbr>Get<wbr>Cluster<wbr>Vpc<wbr>Config</a></code>
+                <code><a href="#getclustervpcconfig">Get<wbr>Cluster<wbr>Vpc<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested list containing VPC configuration for the cluster.
  {{% /md %}}
@@ -1309,7 +1309,7 @@ Nested attribute containing [OpenID Connect](https://openid.net/connect/) identi
             <td class="align-top">Oidcs</td>
             <td class="align-top">
                 
-                <code><a href="#getclusteridentityoidc">[]eks.<wbr>Get<wbr>Cluster<wbr>Identity<wbr>Oidc</a></code>
+                <code><a href="#getclusteridentityoidc">[]Get<wbr>Cluster<wbr>Identity<wbr>Oidc</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

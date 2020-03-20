@@ -313,7 +313,7 @@ The programming language of the resulting code from the DAG. Defaults to `PYTHON
             <td class="align-top">Dag<wbr>Edges</td>
             <td class="align-top">
                 
-                <code><a href="#getscriptdagedge">[]glue.<wbr>Get<wbr>Script<wbr>Dag<wbr>Edge</a></code>
+                <code><a href="#getscriptdagedge">[]Get<wbr>Script<wbr>Dag<wbr>Edge</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -328,7 +328,7 @@ A list of the edges in the DAG. Defined below.
             <td class="align-top">Dag<wbr>Nodes</td>
             <td class="align-top">
                 
-                <code><a href="#getscriptdagnode">[]glue.<wbr>Get<wbr>Script<wbr>Dag<wbr>Node</a></code>
+                <code><a href="#getscriptdagnode">[]Get<wbr>Script<wbr>Dag<wbr>Node</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -618,7 +618,7 @@ The following output properties are available:
             <td class="align-top">Dag<wbr>Edges</td>
             <td class="align-top">
                 
-                <code><a href="#getscriptdagedge">[]glue.<wbr>Get<wbr>Script<wbr>Dag<wbr>Edge</a></code>
+                <code><a href="#getscriptdagedge">[]Get<wbr>Script<wbr>Dag<wbr>Edge</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -630,7 +630,7 @@ The following output properties are available:
             <td class="align-top">Dag<wbr>Nodes</td>
             <td class="align-top">
                 
-                <code><a href="#getscriptdagnode">[]glue.<wbr>Get<wbr>Script<wbr>Dag<wbr>Node</a></code>
+                <code><a href="#getscriptdagnode">[]Get<wbr>Script<wbr>Dag<wbr>Node</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1290,7 +1290,7 @@ The type of node this is.
             <td class="align-top">Args</td>
             <td class="align-top">
                 
-                <code><a href="#getscriptdagnodearg">[]glue.<wbr>Get<wbr>Script<wbr>Dag<wbr>Node<wbr>Arg</a></code>
+                <code><a href="#getscriptdagnodearg">[]Get<wbr>Script<wbr>Dag<wbr>Node<wbr>Arg</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

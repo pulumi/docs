@@ -302,7 +302,7 @@ Creates a unique compute environment name beginning with the specified prefix. C
             <td class="align-top">Compute<wbr>Resources</td>
             <td class="align-top">
                 
-                <code><a href="#computeenvironmentcomputeresources">*batch.<wbr>Compute<wbr>Environment<wbr>Compute<wbr>Resources</a></code>
+                <code><a href="#computeenvironmentcomputeresources">*Compute<wbr>Environment<wbr>Compute<wbr>Resources</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -801,7 +801,7 @@ The following output properties are available:
             <td class="align-top">Compute<wbr>Resources</td>
             <td class="align-top">
                 
-                <code><a href="#computeenvironmentcomputeresources">*batch.<wbr>Compute<wbr>Environment<wbr>Compute<wbr>Resources</a></code>
+                <code><a href="#computeenvironmentcomputeresources">*Compute<wbr>Environment<wbr>Compute<wbr>Resources</a></code>
             </td>
             <td class="align-top">{{% md %}} Details of the compute resources managed by the compute environment. This parameter is required for managed compute environments. See details below.
  {{% /md %}}
@@ -1482,7 +1482,7 @@ Creates a unique compute environment name beginning with the specified prefix. C
             <td class="align-top">Compute<wbr>Resources</td>
             <td class="align-top">
                 
-                <code><a href="#computeenvironmentcomputeresources">*batch.<wbr>Compute<wbr>Environment<wbr>Compute<wbr>Resources</a></code>
+                <code><a href="#computeenvironmentcomputeresources">*Compute<wbr>Environment<wbr>Compute<wbr>Resources</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2323,7 +2323,7 @@ A list of instance types that may be launched.
             <td class="align-top">Launch<wbr>Template</td>
             <td class="align-top">
                 
-                <code><a href="#computeenvironmentcomputeresourceslaunchtemplate">*batch.<wbr>Compute<wbr>Environment<wbr>Compute<wbr>Resources<wbr>Launch<wbr>Template</a></code>
+                <code><a href="#computeenvironmentcomputeresourceslaunchtemplate">*Compute<wbr>Environment<wbr>Compute<wbr>Resources<wbr>Launch<wbr>Template</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

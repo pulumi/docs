@@ -378,7 +378,7 @@ The version of the SQL rules engine to use when evaluating the rule.
             <td class="align-top">Cloudwatch<wbr>Alarm</td>
             <td class="align-top">
                 
-                <code><a href="#topicrulecloudwatchalarm">*iot.<wbr>Topic<wbr>Rule<wbr>Cloudwatch<wbr>Alarm</a></code>
+                <code><a href="#topicrulecloudwatchalarm">*Topic<wbr>Rule<wbr>Cloudwatch<wbr>Alarm</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -392,7 +392,7 @@ The version of the SQL rules engine to use when evaluating the rule.
             <td class="align-top">Cloudwatch<wbr>Metric</td>
             <td class="align-top">
                 
-                <code><a href="#topicrulecloudwatchmetric">*iot.<wbr>Topic<wbr>Rule<wbr>Cloudwatch<wbr>Metric</a></code>
+                <code><a href="#topicrulecloudwatchmetric">*Topic<wbr>Rule<wbr>Cloudwatch<wbr>Metric</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -421,7 +421,7 @@ The description of the rule.
             <td class="align-top">Dynamodb</td>
             <td class="align-top">
                 
-                <code><a href="#topicruledynamodb">*iot.<wbr>Topic<wbr>Rule<wbr>Dynamodb</a></code>
+                <code><a href="#topicruledynamodb">*Topic<wbr>Rule<wbr>Dynamodb</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -435,7 +435,7 @@ The description of the rule.
             <td class="align-top">Elasticsearch</td>
             <td class="align-top">
                 
-                <code><a href="#topicruleelasticsearch">*iot.<wbr>Topic<wbr>Rule<wbr>Elasticsearch</a></code>
+                <code><a href="#topicruleelasticsearch">*Topic<wbr>Rule<wbr>Elasticsearch</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -464,7 +464,7 @@ Specifies whether the rule is enabled.
             <td class="align-top">Firehose</td>
             <td class="align-top">
                 
-                <code><a href="#topicrulefirehose">*iot.<wbr>Topic<wbr>Rule<wbr>Firehose</a></code>
+                <code><a href="#topicrulefirehose">*Topic<wbr>Rule<wbr>Firehose</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -478,7 +478,7 @@ Specifies whether the rule is enabled.
             <td class="align-top">Kinesis</td>
             <td class="align-top">
                 
-                <code><a href="#topicrulekinesis">*iot.<wbr>Topic<wbr>Rule<wbr>Kinesis</a></code>
+                <code><a href="#topicrulekinesis">*Topic<wbr>Rule<wbr>Kinesis</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -492,7 +492,7 @@ Specifies whether the rule is enabled.
             <td class="align-top">Lambda</td>
             <td class="align-top">
                 
-                <code><a href="#topicrulelambda">*iot.<wbr>Topic<wbr>Rule<wbr>Lambda</a></code>
+                <code><a href="#topicrulelambda">*Topic<wbr>Rule<wbr>Lambda</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -521,7 +521,7 @@ The name of the rule.
             <td class="align-top">Republish</td>
             <td class="align-top">
                 
-                <code><a href="#topicrulerepublish">*iot.<wbr>Topic<wbr>Rule<wbr>Republish</a></code>
+                <code><a href="#topicrulerepublish">*Topic<wbr>Rule<wbr>Republish</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -535,7 +535,7 @@ The name of the rule.
             <td class="align-top">S3</td>
             <td class="align-top">
                 
-                <code><a href="#topicrules3">*iot.<wbr>Topic<wbr>Rule<wbr>S3</a></code>
+                <code><a href="#topicrules3">*Topic<wbr>Rule<wbr>S3</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -549,7 +549,7 @@ The name of the rule.
             <td class="align-top">Sns</td>
             <td class="align-top">
                 
-                <code><a href="#topicrulesns">*iot.<wbr>Topic<wbr>Rule<wbr>Sns</a></code>
+                <code><a href="#topicrulesns">*Topic<wbr>Rule<wbr>Sns</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -593,7 +593,7 @@ The version of the SQL rules engine to use when evaluating the rule.
             <td class="align-top">Sqs</td>
             <td class="align-top">
                 
-                <code><a href="#topicrulesqs">*iot.<wbr>Topic<wbr>Rule<wbr>Sqs</a></code>
+                <code><a href="#topicrulesqs">*Topic<wbr>Rule<wbr>Sqs</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1382,7 +1382,7 @@ The following output properties are available:
             <td class="align-top">Cloudwatch<wbr>Alarm</td>
             <td class="align-top">
                 
-                <code><a href="#topicrulecloudwatchalarm">*iot.<wbr>Topic<wbr>Rule<wbr>Cloudwatch<wbr>Alarm</a></code>
+                <code><a href="#topicrulecloudwatchalarm">*Topic<wbr>Rule<wbr>Cloudwatch<wbr>Alarm</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1394,7 +1394,7 @@ The following output properties are available:
             <td class="align-top">Cloudwatch<wbr>Metric</td>
             <td class="align-top">
                 
-                <code><a href="#topicrulecloudwatchmetric">*iot.<wbr>Topic<wbr>Rule<wbr>Cloudwatch<wbr>Metric</a></code>
+                <code><a href="#topicrulecloudwatchmetric">*Topic<wbr>Rule<wbr>Cloudwatch<wbr>Metric</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1419,7 +1419,7 @@ The following output properties are available:
             <td class="align-top">Dynamodb</td>
             <td class="align-top">
                 
-                <code><a href="#topicruledynamodb">*iot.<wbr>Topic<wbr>Rule<wbr>Dynamodb</a></code>
+                <code><a href="#topicruledynamodb">*Topic<wbr>Rule<wbr>Dynamodb</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1431,7 +1431,7 @@ The following output properties are available:
             <td class="align-top">Elasticsearch</td>
             <td class="align-top">
                 
-                <code><a href="#topicruleelasticsearch">*iot.<wbr>Topic<wbr>Rule<wbr>Elasticsearch</a></code>
+                <code><a href="#topicruleelasticsearch">*Topic<wbr>Rule<wbr>Elasticsearch</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1456,7 +1456,7 @@ The following output properties are available:
             <td class="align-top">Firehose</td>
             <td class="align-top">
                 
-                <code><a href="#topicrulefirehose">*iot.<wbr>Topic<wbr>Rule<wbr>Firehose</a></code>
+                <code><a href="#topicrulefirehose">*Topic<wbr>Rule<wbr>Firehose</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1468,7 +1468,7 @@ The following output properties are available:
             <td class="align-top">Kinesis</td>
             <td class="align-top">
                 
-                <code><a href="#topicrulekinesis">*iot.<wbr>Topic<wbr>Rule<wbr>Kinesis</a></code>
+                <code><a href="#topicrulekinesis">*Topic<wbr>Rule<wbr>Kinesis</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1480,7 +1480,7 @@ The following output properties are available:
             <td class="align-top">Lambda</td>
             <td class="align-top">
                 
-                <code><a href="#topicrulelambda">*iot.<wbr>Topic<wbr>Rule<wbr>Lambda</a></code>
+                <code><a href="#topicrulelambda">*Topic<wbr>Rule<wbr>Lambda</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1505,7 +1505,7 @@ The following output properties are available:
             <td class="align-top">Republish</td>
             <td class="align-top">
                 
-                <code><a href="#topicrulerepublish">*iot.<wbr>Topic<wbr>Rule<wbr>Republish</a></code>
+                <code><a href="#topicrulerepublish">*Topic<wbr>Rule<wbr>Republish</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1517,7 +1517,7 @@ The following output properties are available:
             <td class="align-top">S3</td>
             <td class="align-top">
                 
-                <code><a href="#topicrules3">*iot.<wbr>Topic<wbr>Rule<wbr>S3</a></code>
+                <code><a href="#topicrules3">*Topic<wbr>Rule<wbr>S3</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1529,7 +1529,7 @@ The following output properties are available:
             <td class="align-top">Sns</td>
             <td class="align-top">
                 
-                <code><a href="#topicrulesns">*iot.<wbr>Topic<wbr>Rule<wbr>Sns</a></code>
+                <code><a href="#topicrulesns">*Topic<wbr>Rule<wbr>Sns</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1567,7 +1567,7 @@ The following output properties are available:
             <td class="align-top">Sqs</td>
             <td class="align-top">
                 
-                <code><a href="#topicrulesqs">*iot.<wbr>Topic<wbr>Rule<wbr>Sqs</a></code>
+                <code><a href="#topicrulesqs">*Topic<wbr>Rule<wbr>Sqs</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -2397,7 +2397,7 @@ The ARN of the topic rule
             <td class="align-top">Cloudwatch<wbr>Alarm</td>
             <td class="align-top">
                 
-                <code><a href="#topicrulecloudwatchalarm">*iot.<wbr>Topic<wbr>Rule<wbr>Cloudwatch<wbr>Alarm</a></code>
+                <code><a href="#topicrulecloudwatchalarm">*Topic<wbr>Rule<wbr>Cloudwatch<wbr>Alarm</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2411,7 +2411,7 @@ The ARN of the topic rule
             <td class="align-top">Cloudwatch<wbr>Metric</td>
             <td class="align-top">
                 
-                <code><a href="#topicrulecloudwatchmetric">*iot.<wbr>Topic<wbr>Rule<wbr>Cloudwatch<wbr>Metric</a></code>
+                <code><a href="#topicrulecloudwatchmetric">*Topic<wbr>Rule<wbr>Cloudwatch<wbr>Metric</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2440,7 +2440,7 @@ The description of the rule.
             <td class="align-top">Dynamodb</td>
             <td class="align-top">
                 
-                <code><a href="#topicruledynamodb">*iot.<wbr>Topic<wbr>Rule<wbr>Dynamodb</a></code>
+                <code><a href="#topicruledynamodb">*Topic<wbr>Rule<wbr>Dynamodb</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2454,7 +2454,7 @@ The description of the rule.
             <td class="align-top">Elasticsearch</td>
             <td class="align-top">
                 
-                <code><a href="#topicruleelasticsearch">*iot.<wbr>Topic<wbr>Rule<wbr>Elasticsearch</a></code>
+                <code><a href="#topicruleelasticsearch">*Topic<wbr>Rule<wbr>Elasticsearch</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2483,7 +2483,7 @@ Specifies whether the rule is enabled.
             <td class="align-top">Firehose</td>
             <td class="align-top">
                 
-                <code><a href="#topicrulefirehose">*iot.<wbr>Topic<wbr>Rule<wbr>Firehose</a></code>
+                <code><a href="#topicrulefirehose">*Topic<wbr>Rule<wbr>Firehose</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2497,7 +2497,7 @@ Specifies whether the rule is enabled.
             <td class="align-top">Kinesis</td>
             <td class="align-top">
                 
-                <code><a href="#topicrulekinesis">*iot.<wbr>Topic<wbr>Rule<wbr>Kinesis</a></code>
+                <code><a href="#topicrulekinesis">*Topic<wbr>Rule<wbr>Kinesis</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2511,7 +2511,7 @@ Specifies whether the rule is enabled.
             <td class="align-top">Lambda</td>
             <td class="align-top">
                 
-                <code><a href="#topicrulelambda">*iot.<wbr>Topic<wbr>Rule<wbr>Lambda</a></code>
+                <code><a href="#topicrulelambda">*Topic<wbr>Rule<wbr>Lambda</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2540,7 +2540,7 @@ The name of the rule.
             <td class="align-top">Republish</td>
             <td class="align-top">
                 
-                <code><a href="#topicrulerepublish">*iot.<wbr>Topic<wbr>Rule<wbr>Republish</a></code>
+                <code><a href="#topicrulerepublish">*Topic<wbr>Rule<wbr>Republish</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2554,7 +2554,7 @@ The name of the rule.
             <td class="align-top">S3</td>
             <td class="align-top">
                 
-                <code><a href="#topicrules3">*iot.<wbr>Topic<wbr>Rule<wbr>S3</a></code>
+                <code><a href="#topicrules3">*Topic<wbr>Rule<wbr>S3</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2568,7 +2568,7 @@ The name of the rule.
             <td class="align-top">Sns</td>
             <td class="align-top">
                 
-                <code><a href="#topicrulesns">*iot.<wbr>Topic<wbr>Rule<wbr>Sns</a></code>
+                <code><a href="#topicrulesns">*Topic<wbr>Rule<wbr>Sns</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2612,7 +2612,7 @@ The version of the SQL rules engine to use when evaluating the rule.
             <td class="align-top">Sqs</td>
             <td class="align-top">
                 
-                <code><a href="#topicrulesqs">*iot.<wbr>Topic<wbr>Rule<wbr>Sqs</a></code>
+                <code><a href="#topicrulesqs">*Topic<wbr>Rule<wbr>Sqs</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

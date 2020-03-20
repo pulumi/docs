@@ -334,7 +334,7 @@ The name of the connection.
             <td class="align-top">Physical<wbr>Connection<wbr>Requirements</td>
             <td class="align-top">
                 
-                <code><a href="#connectionphysicalconnectionrequirements">*glue.<wbr>Connection<wbr>Physical<wbr>Connection<wbr>Requirements</a></code>
+                <code><a href="#connectionphysicalconnectionrequirements">*Connection<wbr>Physical<wbr>Connection<wbr>Requirements</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -822,7 +822,7 @@ The following output properties are available:
             <td class="align-top">Physical<wbr>Connection<wbr>Requirements</td>
             <td class="align-top">
                 
-                <code><a href="#connectionphysicalconnectionrequirements">*glue.<wbr>Connection<wbr>Physical<wbr>Connection<wbr>Requirements</a></code>
+                <code><a href="#connectionphysicalconnectionrequirements">*Connection<wbr>Physical<wbr>Connection<wbr>Requirements</a></code>
             </td>
             <td class="align-top">{{% md %}} A map of physical connection requirements, such as VPC and SecurityGroup. Defined below.
  {{% /md %}}
@@ -1351,7 +1351,7 @@ The name of the connection.
             <td class="align-top">Physical<wbr>Connection<wbr>Requirements</td>
             <td class="align-top">
                 
-                <code><a href="#connectionphysicalconnectionrequirements">*glue.<wbr>Connection<wbr>Physical<wbr>Connection<wbr>Requirements</a></code>
+                <code><a href="#connectionphysicalconnectionrequirements">*Connection<wbr>Physical<wbr>Connection<wbr>Requirements</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

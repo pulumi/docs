@@ -91,7 +91,7 @@ One or more encrypted payload definitions from the KMS service. See the Secret D
             <td class="align-top">Secrets</td>
             <td class="align-top">
                 
-                <code><a href="#getsecretssecret">[]kms.<wbr>Get<wbr>Secrets<wbr>Secret</a></code>
+                <code><a href="#getsecretssecret">[]Get<wbr>Secrets<wbr>Secret</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -295,7 +295,7 @@ The following output properties are available:
             <td class="align-top">Secrets</td>
             <td class="align-top">
                 
-                <code><a href="#getsecretssecret">[]kms.<wbr>Get<wbr>Secrets<wbr>Secret</a></code>
+                <code><a href="#getsecretssecret">[]Get<wbr>Secrets<wbr>Secret</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 

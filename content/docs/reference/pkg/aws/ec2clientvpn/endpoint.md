@@ -258,7 +258,7 @@ The transport protocol to be used by the VPN session. Default value is `udp`.
             <td class="align-top">Authentication<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#endpointauthenticationoptions">ec2clientvpn.<wbr>Endpoint<wbr>Authentication<wbr>Options</a></code>
+                <code><a href="#endpointauthenticationoptions">Endpoint<wbr>Authentication<wbr>Options</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -288,7 +288,7 @@ The IPv4 address range, in CIDR notation, from which to assign client IP address
             <td class="align-top">Connection<wbr>Log<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#endpointconnectionlogoptions">ec2clientvpn.<wbr>Endpoint<wbr>Connection<wbr>Log<wbr>Options</a></code>
+                <code><a href="#endpointconnectionlogoptions">Endpoint<wbr>Connection<wbr>Log<wbr>Options</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -900,7 +900,7 @@ The following output properties are available:
             <td class="align-top">Authentication<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#endpointauthenticationoptions">ec2clientvpn.<wbr>Endpoint<wbr>Authentication<wbr>Options</a></code>
+                <code><a href="#endpointauthenticationoptions">Endpoint<wbr>Authentication<wbr>Options</a></code>
             </td>
             <td class="align-top">{{% md %}} Information about the authentication method to be used to authenticate clients.
  {{% /md %}}
@@ -926,7 +926,7 @@ The following output properties are available:
             <td class="align-top">Connection<wbr>Log<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#endpointconnectionlogoptions">ec2clientvpn.<wbr>Endpoint<wbr>Connection<wbr>Log<wbr>Options</a></code>
+                <code><a href="#endpointconnectionlogoptions">Endpoint<wbr>Connection<wbr>Log<wbr>Options</a></code>
             </td>
             <td class="align-top">{{% md %}} Information about the client connection logging options.
  {{% /md %}}
@@ -1633,7 +1633,7 @@ The transport protocol to be used by the VPN session. Default value is `udp`.
             <td class="align-top">Authentication<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#endpointauthenticationoptions">*ec2clientvpn.<wbr>Endpoint<wbr>Authentication<wbr>Options</a></code>
+                <code><a href="#endpointauthenticationoptions">*Endpoint<wbr>Authentication<wbr>Options</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1663,7 +1663,7 @@ The IPv4 address range, in CIDR notation, from which to assign client IP address
             <td class="align-top">Connection<wbr>Log<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#endpointconnectionlogoptions">*ec2clientvpn.<wbr>Endpoint<wbr>Connection<wbr>Log<wbr>Options</a></code>
+                <code><a href="#endpointconnectionlogoptions">*Endpoint<wbr>Connection<wbr>Log<wbr>Options</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

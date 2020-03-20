@@ -139,7 +139,7 @@ a pair on the desired Internet Gateway.
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getinternetgatewayfilter">[]ec2.<wbr>Get<wbr>Internet<wbr>Gateway<wbr>Filter</a></code>
+                <code><a href="#getinternetgatewayfilter">[]Get<wbr>Internet<wbr>Gateway<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -446,7 +446,7 @@ The following output properties are available:
             <td class="align-top">Attachments</td>
             <td class="align-top">
                 
-                <code><a href="#getinternetgatewayattachment">[]ec2.<wbr>Get<wbr>Internet<wbr>Gateway<wbr>Attachment</a></code>
+                <code><a href="#getinternetgatewayattachment">[]Get<wbr>Internet<wbr>Gateway<wbr>Attachment</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -458,7 +458,7 @@ The following output properties are available:
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getinternetgatewayfilter">[]ec2.<wbr>Get<wbr>Internet<wbr>Gateway<wbr>Filter</a></code>
+                <code><a href="#getinternetgatewayfilter">[]Get<wbr>Internet<wbr>Gateway<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 

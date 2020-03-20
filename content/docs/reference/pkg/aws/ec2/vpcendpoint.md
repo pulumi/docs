@@ -1122,7 +1122,7 @@ Defaults to `false`.
             <td class="align-top">Dns<wbr>Entries</td>
             <td class="align-top">
                 
-                <code><a href="#vpcendpointdnsentry">[]ec2.<wbr>Vpc<wbr>Endpoint<wbr>Dns<wbr>Entry</a></code>
+                <code><a href="#vpcendpointdnsentry">[]Vpc<wbr>Endpoint<wbr>Dns<wbr>Entry</a></code>
             </td>
             <td class="align-top">{{% md %}} The DNS entries for the VPC Endpoint. Applicable for endpoints of type `Interface`. DNS blocks are documented below.
  {{% /md %}}
@@ -2183,7 +2183,7 @@ The list of CIDR blocks for the exposed AWS service. Applicable for endpoints of
             <td class="align-top">Dns<wbr>Entries</td>
             <td class="align-top">
                 
-                <code><a href="#vpcendpointdnsentry">[]ec2.<wbr>Vpc<wbr>Endpoint<wbr>Dns<wbr>Entry</a></code>
+                <code><a href="#vpcendpointdnsentry">[]Vpc<wbr>Endpoint<wbr>Dns<wbr>Entry</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

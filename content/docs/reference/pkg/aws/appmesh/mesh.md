@@ -186,7 +186,7 @@ The name to use for the service mesh.
             <td class="align-top">Spec</td>
             <td class="align-top">
                 
-                <code><a href="#meshspec">*appmesh.<wbr>Mesh<wbr>Spec</a></code>
+                <code><a href="#meshspec">*Mesh<wbr>Spec</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -530,7 +530,7 @@ The following output properties are available:
             <td class="align-top">Spec</td>
             <td class="align-top">
                 
-                <code><a href="#meshspec">*appmesh.<wbr>Mesh<wbr>Spec</a></code>
+                <code><a href="#meshspec">*Mesh<wbr>Spec</a></code>
             </td>
             <td class="align-top">{{% md %}} The service mesh specification to apply.
  {{% /md %}}
@@ -1001,7 +1001,7 @@ The name to use for the service mesh.
             <td class="align-top">Spec</td>
             <td class="align-top">
                 
-                <code><a href="#meshspec">*appmesh.<wbr>Mesh<wbr>Spec</a></code>
+                <code><a href="#meshspec">*Mesh<wbr>Spec</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1333,7 +1333,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">Egress<wbr>Filter</td>
             <td class="align-top">
                 
-                <code><a href="#meshspecegressfilter">*appmesh.<wbr>Mesh<wbr>Spec<wbr>Egress<wbr>Filter</a></code>
+                <code><a href="#meshspecegressfilter">*Mesh<wbr>Spec<wbr>Egress<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

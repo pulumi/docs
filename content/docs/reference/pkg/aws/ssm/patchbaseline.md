@@ -366,7 +366,7 @@ A list of rejected patches.
             <td class="align-top">Approval<wbr>Rules</td>
             <td class="align-top">
                 
-                <code><a href="#patchbaselineapprovalrule">[]ssm.<wbr>Patch<wbr>Baseline<wbr>Approval<wbr>Rule</a></code>
+                <code><a href="#patchbaselineapprovalrule">[]Patch<wbr>Baseline<wbr>Approval<wbr>Rule</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -426,7 +426,7 @@ The description of the patch baseline.
             <td class="align-top">Global<wbr>Filters</td>
             <td class="align-top">
                 
-                <code><a href="#patchbaselineglobalfilter">[]ssm.<wbr>Patch<wbr>Baseline<wbr>Global<wbr>Filter</a></code>
+                <code><a href="#patchbaselineglobalfilter">[]Patch<wbr>Baseline<wbr>Global<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -978,7 +978,7 @@ The following output properties are available:
             <td class="align-top">Approval<wbr>Rules</td>
             <td class="align-top">
                 
-                <code><a href="#patchbaselineapprovalrule">[]ssm.<wbr>Patch<wbr>Baseline<wbr>Approval<wbr>Rule</a></code>
+                <code><a href="#patchbaselineapprovalrule">[]Patch<wbr>Baseline<wbr>Approval<wbr>Rule</a></code>
             </td>
             <td class="align-top">{{% md %}} A set of rules used to include patches in the baseline. up to 10 approval rules can be specified. Each approval_rule block requires the fields documented below.
  {{% /md %}}
@@ -1030,7 +1030,7 @@ The following output properties are available:
             <td class="align-top">Global<wbr>Filters</td>
             <td class="align-top">
                 
-                <code><a href="#patchbaselineglobalfilter">[]ssm.<wbr>Patch<wbr>Baseline<wbr>Global<wbr>Filter</a></code>
+                <code><a href="#patchbaselineglobalfilter">[]Patch<wbr>Baseline<wbr>Global<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}} A set of global filters used to exclude patches from the baseline. Up to 4 global filters can be specified using Key/Value pairs. Valid Keys are `PRODUCT | CLASSIFICATION | MSRC_SEVERITY | PATCH_ID`.
  {{% /md %}}
@@ -1599,7 +1599,7 @@ A list of rejected patches.
             <td class="align-top">Approval<wbr>Rules</td>
             <td class="align-top">
                 
-                <code><a href="#patchbaselineapprovalrule">[]ssm.<wbr>Patch<wbr>Baseline<wbr>Approval<wbr>Rule</a></code>
+                <code><a href="#patchbaselineapprovalrule">[]Patch<wbr>Baseline<wbr>Approval<wbr>Rule</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1659,7 +1659,7 @@ The description of the patch baseline.
             <td class="align-top">Global<wbr>Filters</td>
             <td class="align-top">
                 
-                <code><a href="#patchbaselineglobalfilter">[]ssm.<wbr>Patch<wbr>Baseline<wbr>Global<wbr>Filter</a></code>
+                <code><a href="#patchbaselineglobalfilter">[]Patch<wbr>Baseline<wbr>Global<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2207,7 +2207,7 @@ A list of rejected patches.
             <td class="align-top">Patch<wbr>Filters</td>
             <td class="align-top">
                 
-                <code><a href="#patchbaselineapprovalrulepatchfilter">[]ssm.<wbr>Patch<wbr>Baseline<wbr>Approval<wbr>Rule<wbr>Patch<wbr>Filter</a></code>
+                <code><a href="#patchbaselineapprovalrulepatchfilter">[]Patch<wbr>Baseline<wbr>Approval<wbr>Rule<wbr>Patch<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

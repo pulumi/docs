@@ -234,7 +234,7 @@ attribute is exported from `aws.ec2.Vpc`, or manually found via the AWS Console.
             <td class="align-top">Egress</td>
             <td class="align-top">
                 
-                <code><a href="#defaultnetworkaclegress">[]ec2.<wbr>Default<wbr>Network<wbr>Acl<wbr>Egress</a></code>
+                <code><a href="#defaultnetworkaclegress">[]Default<wbr>Network<wbr>Acl<wbr>Egress</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -249,7 +249,7 @@ Specifies an egress rule. Parameters defined below.
             <td class="align-top">Ingress</td>
             <td class="align-top">
                 
-                <code><a href="#defaultnetworkaclingress">[]ec2.<wbr>Default<wbr>Network<wbr>Acl<wbr>Ingress</a></code>
+                <code><a href="#defaultnetworkaclingress">[]Default<wbr>Network<wbr>Acl<wbr>Ingress</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -650,7 +650,7 @@ attribute is exported from `aws.ec2.Vpc`, or manually found via the AWS Console.
             <td class="align-top">Egress</td>
             <td class="align-top">
                 
-                <code><a href="#defaultnetworkaclegress">[]ec2.<wbr>Default<wbr>Network<wbr>Acl<wbr>Egress</a></code>
+                <code><a href="#defaultnetworkaclegress">[]Default<wbr>Network<wbr>Acl<wbr>Egress</a></code>
             </td>
             <td class="align-top">{{% md %}} Specifies an egress rule. Parameters defined below.
  {{% /md %}}
@@ -663,7 +663,7 @@ attribute is exported from `aws.ec2.Vpc`, or manually found via the AWS Console.
             <td class="align-top">Ingress</td>
             <td class="align-top">
                 
-                <code><a href="#defaultnetworkaclingress">[]ec2.<wbr>Default<wbr>Network<wbr>Acl<wbr>Ingress</a></code>
+                <code><a href="#defaultnetworkaclingress">[]Default<wbr>Network<wbr>Acl<wbr>Ingress</a></code>
             </td>
             <td class="align-top">{{% md %}} Specifies an ingress rule. Parameters defined below.
  {{% /md %}}
@@ -1177,7 +1177,7 @@ attribute is exported from `aws.ec2.Vpc`, or manually found via the AWS Console.
             <td class="align-top">Egress</td>
             <td class="align-top">
                 
-                <code><a href="#defaultnetworkaclegress">[]ec2.<wbr>Default<wbr>Network<wbr>Acl<wbr>Egress</a></code>
+                <code><a href="#defaultnetworkaclegress">[]Default<wbr>Network<wbr>Acl<wbr>Egress</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1192,7 +1192,7 @@ Specifies an egress rule. Parameters defined below.
             <td class="align-top">Ingress</td>
             <td class="align-top">
                 
-                <code><a href="#defaultnetworkaclingress">[]ec2.<wbr>Default<wbr>Network<wbr>Acl<wbr>Ingress</a></code>
+                <code><a href="#defaultnetworkaclingress">[]Default<wbr>Network<wbr>Acl<wbr>Ingress</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

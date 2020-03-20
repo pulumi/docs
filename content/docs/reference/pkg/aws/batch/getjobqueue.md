@@ -364,7 +364,7 @@ of the job queue.
             <td class="align-top">Compute<wbr>Environment<wbr>Orders</td>
             <td class="align-top">
                 
-                <code><a href="#getjobqueuecomputeenvironmentorder">[]batch.<wbr>Get<wbr>Job<wbr>Queue<wbr>Compute<wbr>Environment<wbr>Order</a></code>
+                <code><a href="#getjobqueuecomputeenvironmentorder">[]Get<wbr>Job<wbr>Queue<wbr>Compute<wbr>Environment<wbr>Order</a></code>
             </td>
             <td class="align-top">{{% md %}} The compute environments that are attached to the job queue and the order in
 which job placement is preferred. Compute environments are selected for job placement in ascending order.

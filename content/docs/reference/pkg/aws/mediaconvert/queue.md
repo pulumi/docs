@@ -244,7 +244,7 @@ Specifies whether the pricing plan for the queue is on-demand or reserved. Valid
             <td class="align-top">Reservation<wbr>Plan<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#queuereservationplansettings">*mediaconvert.<wbr>Queue<wbr>Reservation<wbr>Plan<wbr>Settings</a></code>
+                <code><a href="#queuereservationplansettings">*Queue<wbr>Reservation<wbr>Plan<wbr>Settings</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -706,7 +706,7 @@ The following output properties are available:
             <td class="align-top">Reservation<wbr>Plan<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#queuereservationplansettings">mediaconvert.<wbr>Queue<wbr>Reservation<wbr>Plan<wbr>Settings</a></code>
+                <code><a href="#queuereservationplansettings">Queue<wbr>Reservation<wbr>Plan<wbr>Settings</a></code>
             </td>
             <td class="align-top">{{% md %}} A detail pricing plan of the  reserved queue. See below.
  {{% /md %}}
@@ -1231,7 +1231,7 @@ Specifies whether the pricing plan for the queue is on-demand or reserved. Valid
             <td class="align-top">Reservation<wbr>Plan<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#queuereservationplansettings">*mediaconvert.<wbr>Queue<wbr>Reservation<wbr>Plan<wbr>Settings</a></code>
+                <code><a href="#queuereservationplansettings">*Queue<wbr>Reservation<wbr>Plan<wbr>Settings</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

@@ -267,7 +267,7 @@ The name of the Windows domain the SMB server belongs to.
             <td class="align-top">Mount<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#locationsmbmountoptions">*datasync.<wbr>Location<wbr>Smb<wbr>Mount<wbr>Options</a></code>
+                <code><a href="#locationsmbmountoptions">*Location<wbr>Smb<wbr>Mount<wbr>Options</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -859,7 +859,7 @@ The following output properties are available:
             <td class="align-top">Mount<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#locationsmbmountoptions">*datasync.<wbr>Location<wbr>Smb<wbr>Mount<wbr>Options</a></code>
+                <code><a href="#locationsmbmountoptions">*Location<wbr>Smb<wbr>Mount<wbr>Options</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block containing mount options used by DataSync to access the SMB Server. Can be `AUTOMATIC`, `SMB2`, or `SMB3`.
  {{% /md %}}
@@ -1540,7 +1540,7 @@ The name of the Windows domain the SMB server belongs to.
             <td class="align-top">Mount<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#locationsmbmountoptions">*datasync.<wbr>Location<wbr>Smb<wbr>Mount<wbr>Options</a></code>
+                <code><a href="#locationsmbmountoptions">*Location<wbr>Smb<wbr>Mount<wbr>Options</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

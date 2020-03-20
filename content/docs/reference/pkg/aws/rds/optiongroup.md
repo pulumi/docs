@@ -319,7 +319,7 @@ The description of the option group. Defaults to &#34;Managed by Pulumi&#34;.
             <td class="align-top">Options</td>
             <td class="align-top">
                 
-                <code><a href="#optiongroupoption">[]rds.<wbr>Option<wbr>Group<wbr>Option</a></code>
+                <code><a href="#optiongroupoption">[]Option<wbr>Group<wbr>Option</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -835,7 +835,7 @@ The following output properties are available:
             <td class="align-top">Options</td>
             <td class="align-top">
                 
-                <code><a href="#optiongroupoption">[]rds.<wbr>Option<wbr>Group<wbr>Option</a></code>
+                <code><a href="#optiongroupoption">[]Option<wbr>Group<wbr>Option</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of Options to apply.
  {{% /md %}}
@@ -1418,7 +1418,7 @@ The description of the option group. Defaults to &#34;Managed by Pulumi&#34;.
             <td class="align-top">Options</td>
             <td class="align-top">
                 
-                <code><a href="#optiongroupoption">[]rds.<wbr>Option<wbr>Group<wbr>Option</a></code>
+                <code><a href="#optiongroupoption">[]Option<wbr>Group<wbr>Option</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1916,7 +1916,7 @@ The Name of the Option (e.g. MEMCACHED).
             <td class="align-top">Option<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#optiongroupoptionoptionsetting">[]rds.<wbr>Option<wbr>Group<wbr>Option<wbr>Option<wbr>Setting</a></code>
+                <code><a href="#optiongroupoptionoptionsetting">[]Option<wbr>Group<wbr>Option<wbr>Option<wbr>Setting</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

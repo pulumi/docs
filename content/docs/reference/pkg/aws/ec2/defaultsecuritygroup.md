@@ -270,7 +270,7 @@ modified, added, or removed.** It will be left in its current state
             <td class="align-top">Egress</td>
             <td class="align-top">
                 
-                <code><a href="#defaultsecuritygroupegress">[]ec2.<wbr>Default<wbr>Security<wbr>Group<wbr>Egress</a></code>
+                <code><a href="#defaultsecuritygroupegress">[]Default<wbr>Security<wbr>Group<wbr>Egress</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -286,7 +286,7 @@ egress rule. Each egress block supports fields documented below.
             <td class="align-top">Ingress</td>
             <td class="align-top">
                 
-                <code><a href="#defaultsecuritygroupingress">[]ec2.<wbr>Default<wbr>Security<wbr>Group<wbr>Ingress</a></code>
+                <code><a href="#defaultsecuritygroupingress">[]Default<wbr>Security<wbr>Group<wbr>Ingress</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -742,7 +742,7 @@ modified, added, or removed.** It will be left in its current state
             <td class="align-top">Egress</td>
             <td class="align-top">
                 
-                <code><a href="#defaultsecuritygroupegress">[]ec2.<wbr>Default<wbr>Security<wbr>Group<wbr>Egress</a></code>
+                <code><a href="#defaultsecuritygroupegress">[]Default<wbr>Security<wbr>Group<wbr>Egress</a></code>
             </td>
             <td class="align-top">{{% md %}} Can be specified multiple times for each
 egress rule. Each egress block supports fields documented below.
@@ -756,7 +756,7 @@ egress rule. Each egress block supports fields documented below.
             <td class="align-top">Ingress</td>
             <td class="align-top">
                 
-                <code><a href="#defaultsecuritygroupingress">[]ec2.<wbr>Default<wbr>Security<wbr>Group<wbr>Ingress</a></code>
+                <code><a href="#defaultsecuritygroupingress">[]Default<wbr>Security<wbr>Group<wbr>Ingress</a></code>
             </td>
             <td class="align-top">{{% md %}} Can be specified multiple times for each
 ingress rule. Each ingress block supports fields documented below.
@@ -1379,7 +1379,7 @@ The description of the security group
             <td class="align-top">Egress</td>
             <td class="align-top">
                 
-                <code><a href="#defaultsecuritygroupegress">[]ec2.<wbr>Default<wbr>Security<wbr>Group<wbr>Egress</a></code>
+                <code><a href="#defaultsecuritygroupegress">[]Default<wbr>Security<wbr>Group<wbr>Egress</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1395,7 +1395,7 @@ egress rule. Each egress block supports fields documented below.
             <td class="align-top">Ingress</td>
             <td class="align-top">
                 
-                <code><a href="#defaultsecuritygroupingress">[]ec2.<wbr>Default<wbr>Security<wbr>Group<wbr>Ingress</a></code>
+                <code><a href="#defaultsecuritygroupingress">[]Default<wbr>Security<wbr>Group<wbr>Ingress</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

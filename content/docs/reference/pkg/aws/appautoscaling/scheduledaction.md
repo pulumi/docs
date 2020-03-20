@@ -334,7 +334,7 @@ The scalable dimension. Documentation can be found in the parameter at: [AWS App
             <td class="align-top">Scalable<wbr>Target<wbr>Action</td>
             <td class="align-top">
                 
-                <code><a href="#scheduledactionscalabletargetaction">*appautoscaling.<wbr>Scheduled<wbr>Action<wbr>Scalable<wbr>Target<wbr>Action</a></code>
+                <code><a href="#scheduledactionscalabletargetaction">*Scheduled<wbr>Action<wbr>Scalable<wbr>Target<wbr>Action</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -910,7 +910,7 @@ The following output properties are available:
             <td class="align-top">Scalable<wbr>Target<wbr>Action</td>
             <td class="align-top">
                 
-                <code><a href="#scheduledactionscalabletargetaction">*appautoscaling.<wbr>Scheduled<wbr>Action<wbr>Scalable<wbr>Target<wbr>Action</a></code>
+                <code><a href="#scheduledactionscalabletargetaction">*Scheduled<wbr>Action<wbr>Scalable<wbr>Target<wbr>Action</a></code>
             </td>
             <td class="align-top">{{% md %}} The new minimum and maximum capacity. You can set both values or just one. See below
  {{% /md %}}
@@ -1545,7 +1545,7 @@ The scalable dimension. Documentation can be found in the parameter at: [AWS App
             <td class="align-top">Scalable<wbr>Target<wbr>Action</td>
             <td class="align-top">
                 
-                <code><a href="#scheduledactionscalabletargetaction">*appautoscaling.<wbr>Scheduled<wbr>Action<wbr>Scalable<wbr>Target<wbr>Action</a></code>
+                <code><a href="#scheduledactionscalabletargetaction">*Scheduled<wbr>Action<wbr>Scalable<wbr>Target<wbr>Action</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

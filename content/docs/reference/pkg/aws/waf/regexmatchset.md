@@ -170,7 +170,7 @@ The name or description of the Regex Match Set.
             <td class="align-top">Regex<wbr>Match<wbr>Tuples</td>
             <td class="align-top">
                 
-                <code><a href="#regexmatchsetregexmatchtuple">[]waf.<wbr>Regex<wbr>Match<wbr>Set<wbr>Regex<wbr>Match<wbr>Tuple</a></code>
+                <code><a href="#regexmatchsetregexmatchtuple">[]Regex<wbr>Match<wbr>Set<wbr>Regex<wbr>Match<wbr>Tuple</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -408,7 +408,7 @@ the location in requests that you want AWS WAF to search, and other settings. Se
             <td class="align-top">Regex<wbr>Match<wbr>Tuples</td>
             <td class="align-top">
                 
-                <code><a href="#regexmatchsetregexmatchtuple">[]waf.<wbr>Regex<wbr>Match<wbr>Set<wbr>Regex<wbr>Match<wbr>Tuple</a></code>
+                <code><a href="#regexmatchsetregexmatchtuple">[]Regex<wbr>Match<wbr>Set<wbr>Regex<wbr>Match<wbr>Tuple</a></code>
             </td>
             <td class="align-top">{{% md %}} The regular expression pattern that you want AWS WAF to search for in web requests,
 the location in requests that you want AWS WAF to search, and other settings. See below.
@@ -717,7 +717,7 @@ The name or description of the Regex Match Set.
             <td class="align-top">Regex<wbr>Match<wbr>Tuples</td>
             <td class="align-top">
                 
-                <code><a href="#regexmatchsetregexmatchtuple">[]waf.<wbr>Regex<wbr>Match<wbr>Set<wbr>Regex<wbr>Match<wbr>Tuple</a></code>
+                <code><a href="#regexmatchsetregexmatchtuple">[]Regex<wbr>Match<wbr>Set<wbr>Regex<wbr>Match<wbr>Tuple</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -981,7 +981,7 @@ for all supported values.
             <td class="align-top">Field<wbr>To<wbr>Match</td>
             <td class="align-top">
                 
-                <code><a href="#regexmatchsetregexmatchtuplefieldtomatch">waf.<wbr>Regex<wbr>Match<wbr>Set<wbr>Regex<wbr>Match<wbr>Tuple<wbr>Field<wbr>To<wbr>Match</a></code>
+                <code><a href="#regexmatchsetregexmatchtuplefieldtomatch">Regex<wbr>Match<wbr>Set<wbr>Regex<wbr>Match<wbr>Tuple<wbr>Field<wbr>To<wbr>Match</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

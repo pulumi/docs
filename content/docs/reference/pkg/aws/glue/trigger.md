@@ -330,7 +330,7 @@ A workflow to which the trigger should be associated to. Every workflow graph (D
             <td class="align-top">Actions</td>
             <td class="align-top">
                 
-                <code><a href="#triggeraction">[]glue.<wbr>Trigger<wbr>Action</a></code>
+                <code><a href="#triggeraction">[]Trigger<wbr>Action</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -390,7 +390,7 @@ The name of the trigger.
             <td class="align-top">Predicate</td>
             <td class="align-top">
                 
-                <code><a href="#triggerpredicate">*glue.<wbr>Trigger<wbr>Predicate</a></code>
+                <code><a href="#triggerpredicate">*Trigger<wbr>Predicate</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -959,7 +959,7 @@ The following output properties are available:
             <td class="align-top">Actions</td>
             <td class="align-top">
                 
-                <code><a href="#triggeraction">[]glue.<wbr>Trigger<wbr>Action</a></code>
+                <code><a href="#triggeraction">[]Trigger<wbr>Action</a></code>
             </td>
             <td class="align-top">{{% md %}} List of actions initiated by this trigger when it fires. Defined below.
  {{% /md %}}
@@ -1024,7 +1024,7 @@ The following output properties are available:
             <td class="align-top">Predicate</td>
             <td class="align-top">
                 
-                <code><a href="#triggerpredicate">*glue.<wbr>Trigger<wbr>Predicate</a></code>
+                <code><a href="#triggerpredicate">*Trigger<wbr>Predicate</a></code>
             </td>
             <td class="align-top">{{% md %}} A predicate to specify when the new trigger should fire. Required when trigger type is `CONDITIONAL`. Defined below.
  {{% /md %}}
@@ -1638,7 +1638,7 @@ A workflow to which the trigger should be associated to. Every workflow graph (D
             <td class="align-top">Actions</td>
             <td class="align-top">
                 
-                <code><a href="#triggeraction">[]glue.<wbr>Trigger<wbr>Action</a></code>
+                <code><a href="#triggeraction">[]Trigger<wbr>Action</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1713,7 +1713,7 @@ The name of the trigger.
             <td class="align-top">Predicate</td>
             <td class="align-top">
                 
-                <code><a href="#triggerpredicate">*glue.<wbr>Trigger<wbr>Predicate</a></code>
+                <code><a href="#triggerpredicate">*Trigger<wbr>Predicate</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2567,7 +2567,7 @@ How to handle multiple conditions. Defaults to `AND`. Valid values are `AND` or 
             <td class="align-top">Conditions</td>
             <td class="align-top">
                 
-                <code><a href="#triggerpredicatecondition">[]glue.<wbr>Trigger<wbr>Predicate<wbr>Condition</a></code>
+                <code><a href="#triggerpredicatecondition">[]Trigger<wbr>Predicate<wbr>Condition</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

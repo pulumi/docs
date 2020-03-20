@@ -467,7 +467,7 @@ use the default behavior, which is an exponential backoff
             <td class="align-top">Settings</td>
             <td class="align-top">
                 
-                <code><a href="#environmentsetting">[]elasticbeanstalk.<wbr>Environment<wbr>Setting</a></code>
+                <code><a href="#environmentsetting">[]Environment<wbr>Setting</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1413,7 +1413,7 @@ out.
             <td class="align-top">All<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#environmentallsetting">[]elasticbeanstalk.<wbr>Environment<wbr>All<wbr>Setting</a></code>
+                <code><a href="#environmentallsetting">[]Environment<wbr>All<wbr>Setting</a></code>
             </td>
             <td class="align-top">{{% md %}} List of all option settings configured in this Environment. These
 are a combination of default settings and their overrides from `setting` in
@@ -1616,7 +1616,7 @@ use the default behavior, which is an exponential backoff
             <td class="align-top">Settings</td>
             <td class="align-top">
                 
-                <code><a href="#environmentsetting">[]elasticbeanstalk.<wbr>Environment<wbr>Setting</a></code>
+                <code><a href="#environmentsetting">[]Environment<wbr>Setting</a></code>
             </td>
             <td class="align-top">{{% md %}} Option settings to configure the new Environment. These
 override specific values that are set as defaults. The format is detailed
@@ -2862,7 +2862,7 @@ out.
             <td class="align-top">All<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#environmentallsetting">[]elasticbeanstalk.<wbr>Environment<wbr>All<wbr>Setting</a></code>
+                <code><a href="#environmentallsetting">[]Environment<wbr>All<wbr>Setting</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3095,7 +3095,7 @@ SQS queues in use by this Environment.
             <td class="align-top">Settings</td>
             <td class="align-top">
                 
-                <code><a href="#environmentsetting">[]elasticbeanstalk.<wbr>Environment<wbr>Setting</a></code>
+                <code><a href="#environmentsetting">[]Environment<wbr>Setting</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

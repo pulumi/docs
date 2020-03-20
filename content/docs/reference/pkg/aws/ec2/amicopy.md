@@ -280,7 +280,7 @@ A longer, human-readable description for the AMI.
             <td class="align-top">Ebs<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#amicopyebsblockdevice">[]ec2.<wbr>Ami<wbr>Copy<wbr>Ebs<wbr>Block<wbr>Device</a></code>
+                <code><a href="#amicopyebsblockdevice">[]Ami<wbr>Copy<wbr>Ebs<wbr>Block<wbr>Device</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -311,7 +311,7 @@ Specifies whether the destination snapshots of the copied image should be encryp
             <td class="align-top">Ephemeral<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#amicopyephemeralblockdevice">[]ec2.<wbr>Ami<wbr>Copy<wbr>Ephemeral<wbr>Block<wbr>Device</a></code>
+                <code><a href="#amicopyephemeralblockdevice">[]Ami<wbr>Copy<wbr>Ephemeral<wbr>Block<wbr>Device</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1057,7 +1057,7 @@ changes the set of further arguments that are required, as described below.
             <td class="align-top">Ebs<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#amicopyebsblockdevice">[]ec2.<wbr>Ami<wbr>Copy<wbr>Ebs<wbr>Block<wbr>Device</a></code>
+                <code><a href="#amicopyebsblockdevice">[]Ami<wbr>Copy<wbr>Ebs<wbr>Block<wbr>Device</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested block describing an EBS block device that should be
 attached to created instances. The structure of this block is described below.
@@ -1097,7 +1097,7 @@ attached to created instances. The structure of this block is described below.
             <td class="align-top">Ephemeral<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#amicopyephemeralblockdevice">[]ec2.<wbr>Ami<wbr>Copy<wbr>Ephemeral<wbr>Block<wbr>Device</a></code>
+                <code><a href="#amicopyephemeralblockdevice">[]Ami<wbr>Copy<wbr>Ephemeral<wbr>Block<wbr>Device</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested block describing an ephemeral block device that
 should be attached to created instances. The structure of this block is described below.
@@ -2258,7 +2258,7 @@ A longer, human-readable description for the AMI.
             <td class="align-top">Ebs<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#amicopyebsblockdevice">[]ec2.<wbr>Ami<wbr>Copy<wbr>Ebs<wbr>Block<wbr>Device</a></code>
+                <code><a href="#amicopyebsblockdevice">[]Ami<wbr>Copy<wbr>Ebs<wbr>Block<wbr>Device</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2304,7 +2304,7 @@ Specifies whether the destination snapshots of the copied image should be encryp
             <td class="align-top">Ephemeral<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#amicopyephemeralblockdevice">[]ec2.<wbr>Ami<wbr>Copy<wbr>Ephemeral<wbr>Block<wbr>Device</a></code>
+                <code><a href="#amicopyephemeralblockdevice">[]Ami<wbr>Copy<wbr>Ephemeral<wbr>Block<wbr>Device</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

@@ -215,7 +215,7 @@ The name of the attribute
             <td class="align-top">Attributes</td>
             <td class="align-top">
                 
-                <code><a href="#sslnegotiationpolicyattribute">[]elasticloadbalancing.<wbr>Ssl<wbr>Negotiation<wbr>Policy<wbr>Attribute</a></code>
+                <code><a href="#sslnegotiationpolicyattribute">[]Ssl<wbr>Negotiation<wbr>Policy<wbr>Attribute</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -553,7 +553,7 @@ should be attached.
             <td class="align-top">Attributes</td>
             <td class="align-top">
                 
-                <code><a href="#sslnegotiationpolicyattribute">[]elasticloadbalancing.<wbr>Ssl<wbr>Negotiation<wbr>Policy<wbr>Attribute</a></code>
+                <code><a href="#sslnegotiationpolicyattribute">[]Ssl<wbr>Negotiation<wbr>Policy<wbr>Attribute</a></code>
             </td>
             <td class="align-top">{{% md %}} An SSL Negotiation policy attribute. Each has two properties:
  {{% /md %}}
@@ -920,7 +920,7 @@ The name of the attribute
             <td class="align-top">Attributes</td>
             <td class="align-top">
                 
-                <code><a href="#sslnegotiationpolicyattribute">[]elasticloadbalancing.<wbr>Ssl<wbr>Negotiation<wbr>Policy<wbr>Attribute</a></code>
+                <code><a href="#sslnegotiationpolicyattribute">[]Ssl<wbr>Negotiation<wbr>Policy<wbr>Attribute</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

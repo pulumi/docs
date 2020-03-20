@@ -175,7 +175,7 @@ Lambda Function published version, `$LATEST`, or Lambda Alias name.
             <td class="align-top">Destination<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#functioneventinvokeconfigdestinationconfig">*lambda.<wbr>Function<wbr>Event<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config</a></code>
+                <code><a href="#functioneventinvokeconfigdestinationconfig">*Function<wbr>Event<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -559,7 +559,7 @@ The following output properties are available:
             <td class="align-top">Destination<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#functioneventinvokeconfigdestinationconfig">*lambda.<wbr>Function<wbr>Event<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config</a></code>
+                <code><a href="#functioneventinvokeconfigdestinationconfig">*Function<wbr>Event<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block with destination configuration. See below for details.
  {{% /md %}}
@@ -968,7 +968,7 @@ Lambda Function published version, `$LATEST`, or Lambda Alias name.
             <td class="align-top">Destination<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#functioneventinvokeconfigdestinationconfig">*lambda.<wbr>Function<wbr>Event<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config</a></code>
+                <code><a href="#functioneventinvokeconfigdestinationconfig">*Function<wbr>Event<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1331,7 +1331,7 @@ Configuration block with destination configuration for successful asynchronous i
             <td class="align-top">On<wbr>Failure</td>
             <td class="align-top">
                 
-                <code><a href="#functioneventinvokeconfigdestinationconfigonfailure">*lambda.<wbr>Function<wbr>Event<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config<wbr>On<wbr>Failure</a></code>
+                <code><a href="#functioneventinvokeconfigdestinationconfigonfailure">*Function<wbr>Event<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config<wbr>On<wbr>Failure</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1346,7 +1346,7 @@ Configuration block with destination configuration for failed asynchronous invoc
             <td class="align-top">On<wbr>Success</td>
             <td class="align-top">
                 
-                <code><a href="#functioneventinvokeconfigdestinationconfigonsuccess">*lambda.<wbr>Function<wbr>Event<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config<wbr>On<wbr>Success</a></code>
+                <code><a href="#functioneventinvokeconfigdestinationconfigonsuccess">*Function<wbr>Event<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config<wbr>On<wbr>Success</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

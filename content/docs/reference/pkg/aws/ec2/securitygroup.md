@@ -250,7 +250,7 @@ to classify your security groups in a way that can be updated, use `tags`.
             <td class="align-top">Egress</td>
             <td class="align-top">
                 
-                <code><a href="#securitygroupegress">[]ec2.<wbr>Security<wbr>Group<wbr>Egress</a></code>
+                <code><a href="#securitygroupegress">[]Security<wbr>Group<wbr>Egress</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -267,7 +267,7 @@ This argument is processed in [attribute-as-blocks mode](https://www.terraform.i
             <td class="align-top">Ingress</td>
             <td class="align-top">
                 
-                <code><a href="#securitygroupingress">[]ec2.<wbr>Security<wbr>Group<wbr>Ingress</a></code>
+                <code><a href="#securitygroupingress">[]Security<wbr>Group<wbr>Ingress</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -905,7 +905,7 @@ to classify your security groups in a way that can be updated, use `tags`.
             <td class="align-top">Egress</td>
             <td class="align-top">
                 
-                <code><a href="#securitygroupegress">[]ec2.<wbr>Security<wbr>Group<wbr>Egress</a></code>
+                <code><a href="#securitygroupegress">[]Security<wbr>Group<wbr>Egress</a></code>
             </td>
             <td class="align-top">{{% md %}} Can be specified multiple times for each
 egress rule. Each egress block supports fields documented below.
@@ -920,7 +920,7 @@ This argument is processed in [attribute-as-blocks mode](https://www.terraform.i
             <td class="align-top">Ingress</td>
             <td class="align-top">
                 
-                <code><a href="#securitygroupingress">[]ec2.<wbr>Security<wbr>Group<wbr>Ingress</a></code>
+                <code><a href="#securitygroupingress">[]Security<wbr>Group<wbr>Ingress</a></code>
             </td>
             <td class="align-top">{{% md %}} Can be specified multiple times for each
 ingress rule. Each ingress block supports fields documented below.
@@ -1648,7 +1648,7 @@ to classify your security groups in a way that can be updated, use `tags`.
             <td class="align-top">Egress</td>
             <td class="align-top">
                 
-                <code><a href="#securitygroupegress">[]ec2.<wbr>Security<wbr>Group<wbr>Egress</a></code>
+                <code><a href="#securitygroupegress">[]Security<wbr>Group<wbr>Egress</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1665,7 +1665,7 @@ This argument is processed in [attribute-as-blocks mode](https://www.terraform.i
             <td class="align-top">Ingress</td>
             <td class="align-top">
                 
-                <code><a href="#securitygroupingress">[]ec2.<wbr>Security<wbr>Group<wbr>Ingress</a></code>
+                <code><a href="#securitygroupingress">[]Security<wbr>Group<wbr>Ingress</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

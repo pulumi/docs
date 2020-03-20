@@ -179,7 +179,7 @@ Key-value pairs of resource tags to assign to the DataSync Location.
             <td class="align-top">Ec2Config</td>
             <td class="align-top">
                 
-                <code><a href="#efslocationec2config">datasync.<wbr>Efs<wbr>Location<wbr>Ec2Config</a></code>
+                <code><a href="#efslocationec2config">Efs<wbr>Location<wbr>Ec2Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -543,7 +543,7 @@ The following output properties are available:
             <td class="align-top">Ec2Config</td>
             <td class="align-top">
                 
-                <code><a href="#efslocationec2config">datasync.<wbr>Efs<wbr>Location<wbr>Ec2Config</a></code>
+                <code><a href="#efslocationec2config">Efs<wbr>Location<wbr>Ec2Config</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block containing EC2 configurations for connecting to the EFS File System.
  {{% /md %}}
@@ -1004,7 +1004,7 @@ Amazon Resource Name (ARN) of the DataSync Location.
             <td class="align-top">Ec2Config</td>
             <td class="align-top">
                 
-                <code><a href="#efslocationec2config">*datasync.<wbr>Efs<wbr>Location<wbr>Ec2Config</a></code>
+                <code><a href="#efslocationec2config">*Efs<wbr>Location<wbr>Ec2Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

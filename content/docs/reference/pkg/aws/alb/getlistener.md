@@ -499,7 +499,7 @@ The following output properties are available:
             <td class="align-top">Default<wbr>Actions</td>
             <td class="align-top">
                 
-                <code><a href="#getlistenerdefaultaction">[]alb.<wbr>Get<wbr>Listener<wbr>Default<wbr>Action</a></code>
+                <code><a href="#getlistenerdefaultaction">[]Get<wbr>Listener<wbr>Default<wbr>Action</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -970,7 +970,7 @@ The following output properties are available:
             <td class="align-top">Authenticate<wbr>Cognitos</td>
             <td class="align-top">
                 
-                <code><a href="#getlistenerdefaultactionauthenticatecognito">[]alb.<wbr>Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Cognito</a></code>
+                <code><a href="#getlistenerdefaultactionauthenticatecognito">[]Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Cognito</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -984,7 +984,7 @@ The following output properties are available:
             <td class="align-top">Authenticate<wbr>Oidcs</td>
             <td class="align-top">
                 
-                <code><a href="#getlistenerdefaultactionauthenticateoidc">[]alb.<wbr>Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Oidc</a></code>
+                <code><a href="#getlistenerdefaultactionauthenticateoidc">[]Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Oidc</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -998,7 +998,7 @@ The following output properties are available:
             <td class="align-top">Fixed<wbr>Responses</td>
             <td class="align-top">
                 
-                <code><a href="#getlistenerdefaultactionfixedresponse">[]alb.<wbr>Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Fixed<wbr>Response</a></code>
+                <code><a href="#getlistenerdefaultactionfixedresponse">[]Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Fixed<wbr>Response</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1026,7 +1026,7 @@ The following output properties are available:
             <td class="align-top">Redirects</td>
             <td class="align-top">
                 
-                <code><a href="#getlistenerdefaultactionredirect">[]alb.<wbr>Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Redirect</a></code>
+                <code><a href="#getlistenerdefaultactionredirect">[]Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Redirect</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

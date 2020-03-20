@@ -613,7 +613,7 @@ begin taking a daily snapshot of the cache cluster.
             <td class="align-top">Cache<wbr>Nodes</td>
             <td class="align-top">
                 
-                <code><a href="#getclustercachenode">[]elasticache.<wbr>Get<wbr>Cluster<wbr>Cache<wbr>Node</a></code>
+                <code><a href="#getclustercachenode">[]Get<wbr>Cluster<wbr>Cache<wbr>Node</a></code>
             </td>
             <td class="align-top">{{% md %}} List of node objects including `id`, `address`, `port` and `availability_zone`.
 Referenceable e.g. as `${data.aws_elasticache_cluster.bar.cache_nodes.0.address}`

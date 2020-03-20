@@ -474,7 +474,7 @@ The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the 
             <td class="align-top">Mongodb<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#endpointmongodbsettings">*dms.<wbr>Endpoint<wbr>Mongodb<wbr>Settings</a></code>
+                <code><a href="#endpointmongodbsettings">*Endpoint<wbr>Mongodb<wbr>Settings</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -519,7 +519,7 @@ The port used by the endpoint database.
             <td class="align-top">S3Settings</td>
             <td class="align-top">
                 
-                <code><a href="#endpoints3settings">*dms.<wbr>Endpoint<wbr>S3Settings</a></code>
+                <code><a href="#endpoints3settings">*Endpoint<wbr>S3Settings</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1508,7 +1508,7 @@ The following output properties are available:
             <td class="align-top">Mongodb<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#endpointmongodbsettings">*dms.<wbr>Endpoint<wbr>Mongodb<wbr>Settings</a></code>
+                <code><a href="#endpointmongodbsettings">*Endpoint<wbr>Mongodb<wbr>Settings</a></code>
             </td>
             <td class="align-top">{{% md %}} Settings for the source MongoDB endpoint. Available settings are `auth_type` (default: `password`), `auth_mechanism` (default: `default`), `nesting_level` (default: `none`), `extract_doc_id` (default: `false`), `docs_to_investigate` (default: `1000`) and `auth_source` (default: `admin`). For more details, see [Using MongoDB as a Source for AWS DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MongoDB.html).
  {{% /md %}}
@@ -1547,7 +1547,7 @@ The following output properties are available:
             <td class="align-top">S3Settings</td>
             <td class="align-top">
                 
-                <code><a href="#endpoints3settings">*dms.<wbr>Endpoint<wbr>S3Settings</a></code>
+                <code><a href="#endpoints3settings">*Endpoint<wbr>S3Settings</a></code>
             </td>
             <td class="align-top">{{% md %}} Settings for the target S3 endpoint. Available settings are `service_access_role_arn`, `external_table_definition`, `csv_row_delimiter` (default: `\\n`), `csv_delimiter` (default: `,`), `bucket_folder`, `bucket_name` and `compression_type` (default: `NONE`). For more details, see [Using Amazon S3 as a Target for AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.S3.html).
  {{% /md %}}
@@ -2581,7 +2581,7 @@ The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the 
             <td class="align-top">Mongodb<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#endpointmongodbsettings">*dms.<wbr>Endpoint<wbr>Mongodb<wbr>Settings</a></code>
+                <code><a href="#endpointmongodbsettings">*Endpoint<wbr>Mongodb<wbr>Settings</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2626,7 +2626,7 @@ The port used by the endpoint database.
             <td class="align-top">S3Settings</td>
             <td class="align-top">
                 
-                <code><a href="#endpoints3settings">*dms.<wbr>Endpoint<wbr>S3Settings</a></code>
+                <code><a href="#endpoints3settings">*Endpoint<wbr>S3Settings</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

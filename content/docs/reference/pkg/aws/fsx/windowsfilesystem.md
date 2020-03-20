@@ -431,7 +431,7 @@ A list of IDs for the security groups that apply to the specified network interf
             <td class="align-top">Self<wbr>Managed<wbr>Active<wbr>Directory</td>
             <td class="align-top">
                 
-                <code><a href="#windowsfilesystemselfmanagedactivedirectory">*fsx.<wbr>Windows<wbr>File<wbr>System<wbr>Self<wbr>Managed<wbr>Active<wbr>Directory</a></code>
+                <code><a href="#windowsfilesystemselfmanagedactivedirectory">*Windows<wbr>File<wbr>System<wbr>Self<wbr>Managed<wbr>Active<wbr>Directory</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1384,7 +1384,7 @@ The following output properties are available:
             <td class="align-top">Self<wbr>Managed<wbr>Active<wbr>Directory</td>
             <td class="align-top">
                 
-                <code><a href="#windowsfilesystemselfmanagedactivedirectory">*fsx.<wbr>Windows<wbr>File<wbr>System<wbr>Self<wbr>Managed<wbr>Active<wbr>Directory</a></code>
+                <code><a href="#windowsfilesystemselfmanagedactivedirectory">*Windows<wbr>File<wbr>System<wbr>Self<wbr>Managed<wbr>Active<wbr>Directory</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block that Amazon FSx uses to join the Windows File Server instance to your self-managed (including on-premises) Microsoft Active Directory (AD) directory. Cannot be specified with `active_directory_id`. Detailed below.
  {{% /md %}}
@@ -2515,7 +2515,7 @@ A list of IDs for the security groups that apply to the specified network interf
             <td class="align-top">Self<wbr>Managed<wbr>Active<wbr>Directory</td>
             <td class="align-top">
                 
-                <code><a href="#windowsfilesystemselfmanagedactivedirectory">*fsx.<wbr>Windows<wbr>File<wbr>System<wbr>Self<wbr>Managed<wbr>Active<wbr>Directory</a></code>
+                <code><a href="#windowsfilesystemselfmanagedactivedirectory">*Windows<wbr>File<wbr>System<wbr>Self<wbr>Managed<wbr>Active<wbr>Directory</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

@@ -245,7 +245,7 @@ The throttling limits of the usage plan.
             <td class="align-top">Api<wbr>Stages</td>
             <td class="align-top">
                 
-                <code><a href="#usageplanapistage">[]apigateway.<wbr>Usage<wbr>Plan<wbr>Api<wbr>Stage</a></code>
+                <code><a href="#usageplanapistage">[]Usage<wbr>Plan<wbr>Api<wbr>Stage</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -305,7 +305,7 @@ The AWS Markeplace product identifier to associate with the usage plan as a SaaS
             <td class="align-top">Quota<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#usageplanquotasettings">*apigateway.<wbr>Usage<wbr>Plan<wbr>Quota<wbr>Settings</a></code>
+                <code><a href="#usageplanquotasettings">*Usage<wbr>Plan<wbr>Quota<wbr>Settings</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -335,7 +335,7 @@ Key-value mapping of resource tags
             <td class="align-top">Throttle<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#usageplanthrottlesettings">*apigateway.<wbr>Usage<wbr>Plan<wbr>Throttle<wbr>Settings</a></code>
+                <code><a href="#usageplanthrottlesettings">*Usage<wbr>Plan<wbr>Throttle<wbr>Settings</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -758,7 +758,7 @@ The following output properties are available:
             <td class="align-top">Api<wbr>Stages</td>
             <td class="align-top">
                 
-                <code><a href="#usageplanapistage">[]apigateway.<wbr>Usage<wbr>Plan<wbr>Api<wbr>Stage</a></code>
+                <code><a href="#usageplanapistage">[]Usage<wbr>Plan<wbr>Api<wbr>Stage</a></code>
             </td>
             <td class="align-top">{{% md %}} The associated API stages of the usage plan.
  {{% /md %}}
@@ -823,7 +823,7 @@ The following output properties are available:
             <td class="align-top">Quota<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#usageplanquotasettings">*apigateway.<wbr>Usage<wbr>Plan<wbr>Quota<wbr>Settings</a></code>
+                <code><a href="#usageplanquotasettings">*Usage<wbr>Plan<wbr>Quota<wbr>Settings</a></code>
             </td>
             <td class="align-top">{{% md %}} The quota settings of the usage plan.
  {{% /md %}}
@@ -849,7 +849,7 @@ The following output properties are available:
             <td class="align-top">Throttle<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#usageplanthrottlesettings">*apigateway.<wbr>Usage<wbr>Plan<wbr>Throttle<wbr>Settings</a></code>
+                <code><a href="#usageplanthrottlesettings">*Usage<wbr>Plan<wbr>Throttle<wbr>Settings</a></code>
             </td>
             <td class="align-top">{{% md %}} The throttling limits of the usage plan.
  {{% /md %}}
@@ -1329,7 +1329,7 @@ The throttling limits of the usage plan.
             <td class="align-top">Api<wbr>Stages</td>
             <td class="align-top">
                 
-                <code><a href="#usageplanapistage">[]apigateway.<wbr>Usage<wbr>Plan<wbr>Api<wbr>Stage</a></code>
+                <code><a href="#usageplanapistage">[]Usage<wbr>Plan<wbr>Api<wbr>Stage</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1404,7 +1404,7 @@ The AWS Markeplace product identifier to associate with the usage plan as a SaaS
             <td class="align-top">Quota<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#usageplanquotasettings">*apigateway.<wbr>Usage<wbr>Plan<wbr>Quota<wbr>Settings</a></code>
+                <code><a href="#usageplanquotasettings">*Usage<wbr>Plan<wbr>Quota<wbr>Settings</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1434,7 +1434,7 @@ Key-value mapping of resource tags
             <td class="align-top">Throttle<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#usageplanthrottlesettings">*apigateway.<wbr>Usage<wbr>Plan<wbr>Throttle<wbr>Settings</a></code>
+                <code><a href="#usageplanthrottlesettings">*Usage<wbr>Plan<wbr>Throttle<wbr>Settings</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

@@ -231,7 +231,7 @@ The name of the Vault. Names can be between 1 and 255 characters long and the va
             <td class="align-top">Notifications</td>
             <td class="align-top">
                 
-                <code><a href="#vaultnotification">[]glacier.<wbr>Vault<wbr>Notification</a></code>
+                <code><a href="#vaultnotification">[]Vault<wbr>Notification</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -609,7 +609,7 @@ The heredoc syntax or `file` function is helpful here. Use the [Glacier Develope
             <td class="align-top">Notifications</td>
             <td class="align-top">
                 
-                <code><a href="#vaultnotification">[]glacier.<wbr>Vault<wbr>Notification</a></code>
+                <code><a href="#vaultnotification">[]Vault<wbr>Notification</a></code>
             </td>
             <td class="align-top">{{% md %}} The notifications for the Vault. Fields documented below.
  {{% /md %}}
@@ -1084,7 +1084,7 @@ The name of the Vault. Names can be between 1 and 255 characters long and the va
             <td class="align-top">Notifications</td>
             <td class="align-top">
                 
-                <code><a href="#vaultnotification">[]glacier.<wbr>Vault<wbr>Notification</a></code>
+                <code><a href="#vaultnotification">[]Vault<wbr>Notification</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

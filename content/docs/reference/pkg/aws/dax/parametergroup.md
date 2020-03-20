@@ -202,7 +202,7 @@ The name of the parameter group.
             <td class="align-top">Parameters</td>
             <td class="align-top">
                 
-                <code><a href="#parametergroupparameter">[]dax.<wbr>Parameter<wbr>Group<wbr>Parameter</a></code>
+                <code><a href="#parametergroupparameter">[]Parameter<wbr>Group<wbr>Parameter</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -466,7 +466,7 @@ The following output properties are available:
             <td class="align-top">Parameters</td>
             <td class="align-top">
                 
-                <code><a href="#parametergroupparameter">[]dax.<wbr>Parameter<wbr>Group<wbr>Parameter</a></code>
+                <code><a href="#parametergroupparameter">[]Parameter<wbr>Group<wbr>Parameter</a></code>
             </td>
             <td class="align-top">{{% md %}} The parameters of the parameter group.
  {{% /md %}}
@@ -771,7 +771,7 @@ The name of the parameter group.
             <td class="align-top">Parameters</td>
             <td class="align-top">
                 
-                <code><a href="#parametergroupparameter">[]dax.<wbr>Parameter<wbr>Group<wbr>Parameter</a></code>
+                <code><a href="#parametergroupparameter">[]Parameter<wbr>Group<wbr>Parameter</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

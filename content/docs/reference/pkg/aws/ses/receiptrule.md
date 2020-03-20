@@ -334,7 +334,7 @@ A list of WorkMail Action blocks. Documented below.
             <td class="align-top">Add<wbr>Header<wbr>Actions</td>
             <td class="align-top">
                 
-                <code><a href="#receiptruleaddheaderaction">[]ses.<wbr>Receipt<wbr>Rule<wbr>Add<wbr>Header<wbr>Action</a></code>
+                <code><a href="#receiptruleaddheaderaction">[]Receipt<wbr>Rule<wbr>Add<wbr>Header<wbr>Action</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -364,7 +364,7 @@ The name of the rule to place this rule after
             <td class="align-top">Bounce<wbr>Actions</td>
             <td class="align-top">
                 
-                <code><a href="#receiptrulebounceaction">[]ses.<wbr>Receipt<wbr>Rule<wbr>Bounce<wbr>Action</a></code>
+                <code><a href="#receiptrulebounceaction">[]Receipt<wbr>Rule<wbr>Bounce<wbr>Action</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -394,7 +394,7 @@ If true, the rule will be enabled
             <td class="align-top">Lambda<wbr>Actions</td>
             <td class="align-top">
                 
-                <code><a href="#receiptrulelambdaaction">[]ses.<wbr>Receipt<wbr>Rule<wbr>Lambda<wbr>Action</a></code>
+                <code><a href="#receiptrulelambdaaction">[]Receipt<wbr>Rule<wbr>Lambda<wbr>Action</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -454,7 +454,7 @@ The name of the rule set
             <td class="align-top">S3Actions</td>
             <td class="align-top">
                 
-                <code><a href="#receiptrules3action">[]ses.<wbr>Receipt<wbr>Rule<wbr>S3Action</a></code>
+                <code><a href="#receiptrules3action">[]Receipt<wbr>Rule<wbr>S3Action</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -484,7 +484,7 @@ If true, incoming emails will be scanned for spam and viruses
             <td class="align-top">Sns<wbr>Actions</td>
             <td class="align-top">
                 
-                <code><a href="#receiptrulesnsaction">[]ses.<wbr>Receipt<wbr>Rule<wbr>Sns<wbr>Action</a></code>
+                <code><a href="#receiptrulesnsaction">[]Receipt<wbr>Rule<wbr>Sns<wbr>Action</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -499,7 +499,7 @@ A list of SNS Action blocks. Documented below.
             <td class="align-top">Stop<wbr>Actions</td>
             <td class="align-top">
                 
-                <code><a href="#receiptrulestopaction">[]ses.<wbr>Receipt<wbr>Rule<wbr>Stop<wbr>Action</a></code>
+                <code><a href="#receiptrulestopaction">[]Receipt<wbr>Rule<wbr>Stop<wbr>Action</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -529,7 +529,7 @@ Require or Optional
             <td class="align-top">Workmail<wbr>Actions</td>
             <td class="align-top">
                 
-                <code><a href="#receiptruleworkmailaction">[]ses.<wbr>Receipt<wbr>Rule<wbr>Workmail<wbr>Action</a></code>
+                <code><a href="#receiptruleworkmailaction">[]Receipt<wbr>Rule<wbr>Workmail<wbr>Action</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1240,7 +1240,7 @@ The following output properties are available:
             <td class="align-top">Add<wbr>Header<wbr>Actions</td>
             <td class="align-top">
                 
-                <code><a href="#receiptruleaddheaderaction">[]ses.<wbr>Receipt<wbr>Rule<wbr>Add<wbr>Header<wbr>Action</a></code>
+                <code><a href="#receiptruleaddheaderaction">[]Receipt<wbr>Rule<wbr>Add<wbr>Header<wbr>Action</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of Add Header Action blocks. Documented below.
  {{% /md %}}
@@ -1266,7 +1266,7 @@ The following output properties are available:
             <td class="align-top">Bounce<wbr>Actions</td>
             <td class="align-top">
                 
-                <code><a href="#receiptrulebounceaction">[]ses.<wbr>Receipt<wbr>Rule<wbr>Bounce<wbr>Action</a></code>
+                <code><a href="#receiptrulebounceaction">[]Receipt<wbr>Rule<wbr>Bounce<wbr>Action</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of Bounce Action blocks. Documented below.
  {{% /md %}}
@@ -1292,7 +1292,7 @@ The following output properties are available:
             <td class="align-top">Lambda<wbr>Actions</td>
             <td class="align-top">
                 
-                <code><a href="#receiptrulelambdaaction">[]ses.<wbr>Receipt<wbr>Rule<wbr>Lambda<wbr>Action</a></code>
+                <code><a href="#receiptrulelambdaaction">[]Receipt<wbr>Rule<wbr>Lambda<wbr>Action</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of Lambda Action blocks. Documented below.
  {{% /md %}}
@@ -1344,7 +1344,7 @@ The following output properties are available:
             <td class="align-top">S3Actions</td>
             <td class="align-top">
                 
-                <code><a href="#receiptrules3action">[]ses.<wbr>Receipt<wbr>Rule<wbr>S3Action</a></code>
+                <code><a href="#receiptrules3action">[]Receipt<wbr>Rule<wbr>S3Action</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of S3 Action blocks. Documented below.
  {{% /md %}}
@@ -1370,7 +1370,7 @@ The following output properties are available:
             <td class="align-top">Sns<wbr>Actions</td>
             <td class="align-top">
                 
-                <code><a href="#receiptrulesnsaction">[]ses.<wbr>Receipt<wbr>Rule<wbr>Sns<wbr>Action</a></code>
+                <code><a href="#receiptrulesnsaction">[]Receipt<wbr>Rule<wbr>Sns<wbr>Action</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of SNS Action blocks. Documented below.
  {{% /md %}}
@@ -1383,7 +1383,7 @@ The following output properties are available:
             <td class="align-top">Stop<wbr>Actions</td>
             <td class="align-top">
                 
-                <code><a href="#receiptrulestopaction">[]ses.<wbr>Receipt<wbr>Rule<wbr>Stop<wbr>Action</a></code>
+                <code><a href="#receiptrulestopaction">[]Receipt<wbr>Rule<wbr>Stop<wbr>Action</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of Stop Action blocks. Documented below.
  {{% /md %}}
@@ -1409,7 +1409,7 @@ The following output properties are available:
             <td class="align-top">Workmail<wbr>Actions</td>
             <td class="align-top">
                 
-                <code><a href="#receiptruleworkmailaction">[]ses.<wbr>Receipt<wbr>Rule<wbr>Workmail<wbr>Action</a></code>
+                <code><a href="#receiptruleworkmailaction">[]Receipt<wbr>Rule<wbr>Workmail<wbr>Action</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of WorkMail Action blocks. Documented below.
  {{% /md %}}
@@ -2135,7 +2135,7 @@ A list of WorkMail Action blocks. Documented below.
             <td class="align-top">Add<wbr>Header<wbr>Actions</td>
             <td class="align-top">
                 
-                <code><a href="#receiptruleaddheaderaction">[]ses.<wbr>Receipt<wbr>Rule<wbr>Add<wbr>Header<wbr>Action</a></code>
+                <code><a href="#receiptruleaddheaderaction">[]Receipt<wbr>Rule<wbr>Add<wbr>Header<wbr>Action</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2165,7 +2165,7 @@ The name of the rule to place this rule after
             <td class="align-top">Bounce<wbr>Actions</td>
             <td class="align-top">
                 
-                <code><a href="#receiptrulebounceaction">[]ses.<wbr>Receipt<wbr>Rule<wbr>Bounce<wbr>Action</a></code>
+                <code><a href="#receiptrulebounceaction">[]Receipt<wbr>Rule<wbr>Bounce<wbr>Action</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2195,7 +2195,7 @@ If true, the rule will be enabled
             <td class="align-top">Lambda<wbr>Actions</td>
             <td class="align-top">
                 
-                <code><a href="#receiptrulelambdaaction">[]ses.<wbr>Receipt<wbr>Rule<wbr>Lambda<wbr>Action</a></code>
+                <code><a href="#receiptrulelambdaaction">[]Receipt<wbr>Rule<wbr>Lambda<wbr>Action</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2255,7 +2255,7 @@ The name of the rule set
             <td class="align-top">S3Actions</td>
             <td class="align-top">
                 
-                <code><a href="#receiptrules3action">[]ses.<wbr>Receipt<wbr>Rule<wbr>S3Action</a></code>
+                <code><a href="#receiptrules3action">[]Receipt<wbr>Rule<wbr>S3Action</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2285,7 +2285,7 @@ If true, incoming emails will be scanned for spam and viruses
             <td class="align-top">Sns<wbr>Actions</td>
             <td class="align-top">
                 
-                <code><a href="#receiptrulesnsaction">[]ses.<wbr>Receipt<wbr>Rule<wbr>Sns<wbr>Action</a></code>
+                <code><a href="#receiptrulesnsaction">[]Receipt<wbr>Rule<wbr>Sns<wbr>Action</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2300,7 +2300,7 @@ A list of SNS Action blocks. Documented below.
             <td class="align-top">Stop<wbr>Actions</td>
             <td class="align-top">
                 
-                <code><a href="#receiptrulestopaction">[]ses.<wbr>Receipt<wbr>Rule<wbr>Stop<wbr>Action</a></code>
+                <code><a href="#receiptrulestopaction">[]Receipt<wbr>Rule<wbr>Stop<wbr>Action</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2330,7 +2330,7 @@ Require or Optional
             <td class="align-top">Workmail<wbr>Actions</td>
             <td class="align-top">
                 
-                <code><a href="#receiptruleworkmailaction">[]ses.<wbr>Receipt<wbr>Rule<wbr>Workmail<wbr>Action</a></code>
+                <code><a href="#receiptruleworkmailaction">[]Receipt<wbr>Rule<wbr>Workmail<wbr>Action</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

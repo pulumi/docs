@@ -229,7 +229,7 @@ Name of the session queue.
             <td class="align-top">Player<wbr>Latency<wbr>Policies</td>
             <td class="align-top">
                 
-                <code><a href="#gamesessionqueueplayerlatencypolicy">[]gamelift.<wbr>Game<wbr>Session<wbr>Queue<wbr>Player<wbr>Latency<wbr>Policy</a></code>
+                <code><a href="#gamesessionqueueplayerlatencypolicy">[]Game<wbr>Session<wbr>Queue<wbr>Player<wbr>Latency<wbr>Policy</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -635,7 +635,7 @@ The following output properties are available:
             <td class="align-top">Player<wbr>Latency<wbr>Policies</td>
             <td class="align-top">
                 
-                <code><a href="#gamesessionqueueplayerlatencypolicy">[]gamelift.<wbr>Game<wbr>Session<wbr>Queue<wbr>Player<wbr>Latency<wbr>Policy</a></code>
+                <code><a href="#gamesessionqueueplayerlatencypolicy">[]Game<wbr>Session<wbr>Queue<wbr>Player<wbr>Latency<wbr>Policy</a></code>
             </td>
             <td class="align-top">{{% md %}} One or more policies used to choose fleet based on player latency. See below.
  {{% /md %}}
@@ -1104,7 +1104,7 @@ Name of the session queue.
             <td class="align-top">Player<wbr>Latency<wbr>Policies</td>
             <td class="align-top">
                 
-                <code><a href="#gamesessionqueueplayerlatencypolicy">[]gamelift.<wbr>Game<wbr>Session<wbr>Queue<wbr>Player<wbr>Latency<wbr>Policy</a></code>
+                <code><a href="#gamesessionqueueplayerlatencypolicy">[]Game<wbr>Session<wbr>Queue<wbr>Player<wbr>Latency<wbr>Policy</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

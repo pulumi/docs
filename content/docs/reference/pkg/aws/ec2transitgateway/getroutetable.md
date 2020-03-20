@@ -153,7 +153,7 @@ Identifier of the EC2 Transit Gateway Route Table.
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getroutetablefilter">[]ec2transitgateway.<wbr>Get<wbr>Route<wbr>Table<wbr>Filter</a></code>
+                <code><a href="#getroutetablefilter">[]Get<wbr>Route<wbr>Table<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -483,7 +483,7 @@ The following output properties are available:
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getroutetablefilter">[]ec2transitgateway.<wbr>Get<wbr>Route<wbr>Table<wbr>Filter</a></code>
+                <code><a href="#getroutetablefilter">[]Get<wbr>Route<wbr>Table<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 

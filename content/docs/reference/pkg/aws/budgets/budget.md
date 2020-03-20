@@ -436,7 +436,7 @@ Map of CostFilters key/value pairs to apply to the budget.
             <td class="align-top">Cost<wbr>Types</td>
             <td class="align-top">
                 
-                <code><a href="#budgetcosttypes">*budgets.<wbr>Budget<wbr>Cost<wbr>Types</a></code>
+                <code><a href="#budgetcosttypes">*Budget<wbr>Cost<wbr>Types</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -511,7 +511,7 @@ The prefix of the name of a budget. Unique within accounts.
             <td class="align-top">Notifications</td>
             <td class="align-top">
                 
-                <code><a href="#budgetnotification">[]budgets.<wbr>Budget<wbr>Notification</a></code>
+                <code><a href="#budgetnotification">[]Budget<wbr>Notification</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1220,7 +1220,7 @@ The following output properties are available:
             <td class="align-top">Cost<wbr>Types</td>
             <td class="align-top">
                 
-                <code><a href="#budgetcosttypes">budgets.<wbr>Budget<wbr>Cost<wbr>Types</a></code>
+                <code><a href="#budgetcosttypes">Budget<wbr>Cost<wbr>Types</a></code>
             </td>
             <td class="align-top">{{% md %}} Object containing CostTypes The types of cost included in a budget, such as tax and subscriptions..
  {{% /md %}}
@@ -1285,7 +1285,7 @@ The following output properties are available:
             <td class="align-top">Notifications</td>
             <td class="align-top">
                 
-                <code><a href="#budgetnotification">[]budgets.<wbr>Budget<wbr>Notification</a></code>
+                <code><a href="#budgetnotification">[]Budget<wbr>Notification</a></code>
             </td>
             <td class="align-top">{{% md %}} Object containing Budget Notifications. Can be used multiple times to define more than one budget notification
  {{% /md %}}
@@ -2013,7 +2013,7 @@ Map of CostFilters key/value pairs to apply to the budget.
             <td class="align-top">Cost<wbr>Types</td>
             <td class="align-top">
                 
-                <code><a href="#budgetcosttypes">*budgets.<wbr>Budget<wbr>Cost<wbr>Types</a></code>
+                <code><a href="#budgetcosttypes">*Budget<wbr>Cost<wbr>Types</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2088,7 +2088,7 @@ The prefix of the name of a budget. Unique within accounts.
             <td class="align-top">Notifications</td>
             <td class="align-top">
                 
-                <code><a href="#budgetnotification">[]budgets.<wbr>Budget<wbr>Notification</a></code>
+                <code><a href="#budgetnotification">[]Budget<wbr>Notification</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

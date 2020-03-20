@@ -414,7 +414,7 @@ The name of the SSM document to apply.
             <td class="align-top">Output<wbr>Location</td>
             <td class="align-top">
                 
-                <code><a href="#associationoutputlocation">*ssm.<wbr>Association<wbr>Output<wbr>Location</a></code>
+                <code><a href="#associationoutputlocation">*Association<wbr>Output<wbr>Location</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -459,7 +459,7 @@ A cron expression when the association will be applied to the target(s).
             <td class="align-top">Targets</td>
             <td class="align-top">
                 
-                <code><a href="#associationtarget">[]ssm.<wbr>Association<wbr>Target</a></code>
+                <code><a href="#associationtarget">[]Association<wbr>Target</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1214,7 +1214,7 @@ The following output properties are available:
             <td class="align-top">Output<wbr>Location</td>
             <td class="align-top">
                 
-                <code><a href="#associationoutputlocation">*ssm.<wbr>Association<wbr>Output<wbr>Location</a></code>
+                <code><a href="#associationoutputlocation">*Association<wbr>Output<wbr>Location</a></code>
             </td>
             <td class="align-top">{{% md %}} An output location block. Output Location is documented below.
  {{% /md %}}
@@ -1253,7 +1253,7 @@ The following output properties are available:
             <td class="align-top">Targets</td>
             <td class="align-top">
                 
-                <code><a href="#associationtarget">[]ssm.<wbr>Association<wbr>Target</a></code>
+                <code><a href="#associationtarget">[]Association<wbr>Target</a></code>
             </td>
             <td class="align-top">{{% md %}} A block containing the targets of the SSM association. Targets are documented below. AWS currently supports a maximum of 5 targets.
  {{% /md %}}
@@ -2073,7 +2073,7 @@ The name of the SSM document to apply.
             <td class="align-top">Output<wbr>Location</td>
             <td class="align-top">
                 
-                <code><a href="#associationoutputlocation">*ssm.<wbr>Association<wbr>Output<wbr>Location</a></code>
+                <code><a href="#associationoutputlocation">*Association<wbr>Output<wbr>Location</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2118,7 +2118,7 @@ A cron expression when the association will be applied to the target(s).
             <td class="align-top">Targets</td>
             <td class="align-top">
                 
-                <code><a href="#associationtarget">[]ssm.<wbr>Association<wbr>Target</a></code>
+                <code><a href="#associationtarget">[]Association<wbr>Target</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

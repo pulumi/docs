@@ -222,7 +222,7 @@ or `OUTBOUND` (resolver forwards DNS queries from the DNS service for a VPC to y
             <td class="align-top">Ip<wbr>Addresses</td>
             <td class="align-top">
                 
-                <code><a href="#resolverendpointipaddress">[]route53.<wbr>Resolver<wbr>Endpoint<wbr>Ip<wbr>Address</a></code>
+                <code><a href="#resolverendpointipaddress">[]Resolver<wbr>Endpoint<wbr>Ip<wbr>Address</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -668,7 +668,7 @@ or `OUTBOUND` (resolver forwards DNS queries from the DNS service for a VPC to y
             <td class="align-top">Ip<wbr>Addresses</td>
             <td class="align-top">
                 
-                <code><a href="#resolverendpointipaddress">[]route53.<wbr>Resolver<wbr>Endpoint<wbr>Ip<wbr>Address</a></code>
+                <code><a href="#resolverendpointipaddress">[]Resolver<wbr>Endpoint<wbr>Ip<wbr>Address</a></code>
             </td>
             <td class="align-top">{{% md %}} The subnets and IP addresses in your VPC that you want DNS queries to pass through on the way from your VPCs
 to your network (for outbound endpoints) or on the way from your network to your VPCs (for inbound endpoints). Described below.
@@ -1203,7 +1203,7 @@ The ID of the VPC that you want to create the resolver endpoint in.
             <td class="align-top">Ip<wbr>Addresses</td>
             <td class="align-top">
                 
-                <code><a href="#resolverendpointipaddress">[]route53.<wbr>Resolver<wbr>Endpoint<wbr>Ip<wbr>Address</a></code>
+                <code><a href="#resolverendpointipaddress">[]Resolver<wbr>Endpoint<wbr>Ip<wbr>Address</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

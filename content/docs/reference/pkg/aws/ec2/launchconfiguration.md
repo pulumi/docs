@@ -571,7 +571,7 @@ Associate a public ip address with an instance in a VPC.
             <td class="align-top">Ebs<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#launchconfigurationebsblockdevice">[]ec2.<wbr>Launch<wbr>Configuration<wbr>Ebs<wbr>Block<wbr>Device</a></code>
+                <code><a href="#launchconfigurationebsblockdevice">[]Launch<wbr>Configuration<wbr>Ebs<wbr>Block<wbr>Device</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -617,7 +617,7 @@ Enables/disables detailed monitoring. This is enabled by default.
             <td class="align-top">Ephemeral<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#launchconfigurationephemeralblockdevice">[]ec2.<wbr>Launch<wbr>Configuration<wbr>Ephemeral<wbr>Block<wbr>Device</a></code>
+                <code><a href="#launchconfigurationephemeralblockdevice">[]Launch<wbr>Configuration<wbr>Ephemeral<wbr>Block<wbr>Device</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -743,7 +743,7 @@ for more details
             <td class="align-top">Root<wbr>Block<wbr>Device</td>
             <td class="align-top">
                 
-                <code><a href="#launchconfigurationrootblockdevice">*ec2.<wbr>Launch<wbr>Configuration<wbr>Root<wbr>Block<wbr>Device</a></code>
+                <code><a href="#launchconfigurationrootblockdevice">*Launch<wbr>Configuration<wbr>Root<wbr>Block<wbr>Device</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1823,7 +1823,7 @@ device of the instance. See Block Devices below for details.
             <td class="align-top">Ebs<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#launchconfigurationebsblockdevice">[]ec2.<wbr>Launch<wbr>Configuration<wbr>Ebs<wbr>Block<wbr>Device</a></code>
+                <code><a href="#launchconfigurationebsblockdevice">[]Launch<wbr>Configuration<wbr>Ebs<wbr>Block<wbr>Device</a></code>
             </td>
             <td class="align-top">{{% md %}} Additional EBS block devices to attach to the
 instance.  See Block Devices below for details.
@@ -1863,7 +1863,7 @@ instance.  See Block Devices below for details.
             <td class="align-top">Ephemeral<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#launchconfigurationephemeralblockdevice">[]ec2.<wbr>Launch<wbr>Configuration<wbr>Ephemeral<wbr>Block<wbr>Device</a></code>
+                <code><a href="#launchconfigurationephemeralblockdevice">[]Launch<wbr>Configuration<wbr>Ephemeral<wbr>Block<wbr>Device</a></code>
             </td>
             <td class="align-top">{{% md %}} Customize Ephemeral (also known as
 &#34;Instance Store&#34;) volumes on the instance. See Block Devices below for details.
@@ -1973,7 +1973,7 @@ for more details
             <td class="align-top">Root<wbr>Block<wbr>Device</td>
             <td class="align-top">
                 
-                <code><a href="#launchconfigurationrootblockdevice">ec2.<wbr>Launch<wbr>Configuration<wbr>Root<wbr>Block<wbr>Device</a></code>
+                <code><a href="#launchconfigurationrootblockdevice">Launch<wbr>Configuration<wbr>Root<wbr>Block<wbr>Device</a></code>
             </td>
             <td class="align-top">{{% md %}} Customize details about the root block
 device of the instance. See Block Devices below for details.
@@ -3078,7 +3078,7 @@ Associate a public ip address with an instance in a VPC.
             <td class="align-top">Ebs<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#launchconfigurationebsblockdevice">[]ec2.<wbr>Launch<wbr>Configuration<wbr>Ebs<wbr>Block<wbr>Device</a></code>
+                <code><a href="#launchconfigurationebsblockdevice">[]Launch<wbr>Configuration<wbr>Ebs<wbr>Block<wbr>Device</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3124,7 +3124,7 @@ Enables/disables detailed monitoring. This is enabled by default.
             <td class="align-top">Ephemeral<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#launchconfigurationephemeralblockdevice">[]ec2.<wbr>Launch<wbr>Configuration<wbr>Ephemeral<wbr>Block<wbr>Device</a></code>
+                <code><a href="#launchconfigurationephemeralblockdevice">[]Launch<wbr>Configuration<wbr>Ephemeral<wbr>Block<wbr>Device</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3250,7 +3250,7 @@ for more details
             <td class="align-top">Root<wbr>Block<wbr>Device</td>
             <td class="align-top">
                 
-                <code><a href="#launchconfigurationrootblockdevice">*ec2.<wbr>Launch<wbr>Configuration<wbr>Root<wbr>Block<wbr>Device</a></code>
+                <code><a href="#launchconfigurationrootblockdevice">*Launch<wbr>Configuration<wbr>Root<wbr>Block<wbr>Device</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

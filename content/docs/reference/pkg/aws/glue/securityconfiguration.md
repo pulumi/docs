@@ -152,7 +152,7 @@ Name of the security configuration.
             <td class="align-top">Encryption<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#securityconfigurationencryptionconfiguration">glue.<wbr>Security<wbr>Configuration<wbr>Encryption<wbr>Configuration</a></code>
+                <code><a href="#securityconfigurationencryptionconfiguration">Security<wbr>Configuration<wbr>Encryption<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -362,7 +362,7 @@ The following output properties are available:
             <td class="align-top">Encryption<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#securityconfigurationencryptionconfiguration">glue.<wbr>Security<wbr>Configuration<wbr>Encryption<wbr>Configuration</a></code>
+                <code><a href="#securityconfigurationencryptionconfiguration">Security<wbr>Configuration<wbr>Encryption<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block containing encryption configuration. Detailed below.
  {{% /md %}}
@@ -609,7 +609,7 @@ Name of the security configuration.
             <td class="align-top">Encryption<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#securityconfigurationencryptionconfiguration">*glue.<wbr>Security<wbr>Configuration<wbr>Encryption<wbr>Configuration</a></code>
+                <code><a href="#securityconfigurationencryptionconfiguration">*Security<wbr>Configuration<wbr>Encryption<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -850,7 +850,7 @@ A `s3_encryption ` block as described below, which contains encryption configura
             <td class="align-top">Cloudwatch<wbr>Encryption</td>
             <td class="align-top">
                 
-                <code><a href="#securityconfigurationencryptionconfigurationcloudwatchencryption">glue.<wbr>Security<wbr>Configuration<wbr>Encryption<wbr>Configuration<wbr>Cloudwatch<wbr>Encryption</a></code>
+                <code><a href="#securityconfigurationencryptionconfigurationcloudwatchencryption">Security<wbr>Configuration<wbr>Encryption<wbr>Configuration<wbr>Cloudwatch<wbr>Encryption</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -864,7 +864,7 @@ A `s3_encryption ` block as described below, which contains encryption configura
             <td class="align-top">Job<wbr>Bookmarks<wbr>Encryption</td>
             <td class="align-top">
                 
-                <code><a href="#securityconfigurationencryptionconfigurationjobbookmarksencryption">glue.<wbr>Security<wbr>Configuration<wbr>Encryption<wbr>Configuration<wbr>Job<wbr>Bookmarks<wbr>Encryption</a></code>
+                <code><a href="#securityconfigurationencryptionconfigurationjobbookmarksencryption">Security<wbr>Configuration<wbr>Encryption<wbr>Configuration<wbr>Job<wbr>Bookmarks<wbr>Encryption</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -878,7 +878,7 @@ A `s3_encryption ` block as described below, which contains encryption configura
             <td class="align-top">S3Encryption</td>
             <td class="align-top">
                 
-                <code><a href="#securityconfigurationencryptionconfigurations3encryption">glue.<wbr>Security<wbr>Configuration<wbr>Encryption<wbr>Configuration<wbr>S3Encryption</a></code>
+                <code><a href="#securityconfigurationencryptionconfigurations3encryption">Security<wbr>Configuration<wbr>Encryption<wbr>Configuration<wbr>S3Encryption</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

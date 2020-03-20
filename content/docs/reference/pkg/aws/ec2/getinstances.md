@@ -121,7 +121,7 @@ exactly match a pair on desired instances.
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getinstancesfilter">[]ec2.<wbr>Get<wbr>Instances<wbr>Filter</a></code>
+                <code><a href="#getinstancesfilter">[]Get<wbr>Instances<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -448,7 +448,7 @@ The following output properties are available:
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getinstancesfilter">[]ec2.<wbr>Get<wbr>Instances<wbr>Filter</a></code>
+                <code><a href="#getinstancesfilter">[]Get<wbr>Instances<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 

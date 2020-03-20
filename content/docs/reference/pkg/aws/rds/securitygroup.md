@@ -191,7 +191,7 @@ The description of the DB security group. Defaults to &#34;Managed by Pulumi&#34
             <td class="align-top">Ingress</td>
             <td class="align-top">
                 
-                <code><a href="#securitygroupingress">[]rds.<wbr>Security<wbr>Group<wbr>Ingress</a></code>
+                <code><a href="#securitygroupingress">[]Security<wbr>Group<wbr>Ingress</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -541,7 +541,7 @@ The following output properties are available:
             <td class="align-top">Ingress</td>
             <td class="align-top">
                 
-                <code><a href="#securitygroupingress">[]rds.<wbr>Security<wbr>Group<wbr>Ingress</a></code>
+                <code><a href="#securitygroupingress">[]Security<wbr>Group<wbr>Ingress</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of ingress rules.
  {{% /md %}}
@@ -954,7 +954,7 @@ The description of the DB security group. Defaults to &#34;Managed by Pulumi&#34
             <td class="align-top">Ingress</td>
             <td class="align-top">
                 
-                <code><a href="#securitygroupingress">[]rds.<wbr>Security<wbr>Group<wbr>Ingress</a></code>
+                <code><a href="#securitygroupingress">[]Security<wbr>Group<wbr>Ingress</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

@@ -235,7 +235,7 @@ An identity pool ID in the format REGION:GUID.
             <td class="align-top">Role<wbr>Mappings</td>
             <td class="align-top">
                 
-                <code><a href="#identitypoolroleattachmentrolemapping">[]cognito.<wbr>Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping</a></code>
+                <code><a href="#identitypoolroleattachmentrolemapping">[]Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -250,7 +250,7 @@ A List of Role Mapping.
             <td class="align-top">Roles</td>
             <td class="align-top">
                 
-                <code><a href="#identitypoolroleattachmentroles">cognito.<wbr>Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Roles</a></code>
+                <code><a href="#identitypoolroleattachmentroles">Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Roles</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -501,7 +501,7 @@ The following output properties are available:
             <td class="align-top">Role<wbr>Mappings</td>
             <td class="align-top">
                 
-                <code><a href="#identitypoolroleattachmentrolemapping">[]cognito.<wbr>Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping</a></code>
+                <code><a href="#identitypoolroleattachmentrolemapping">[]Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping</a></code>
             </td>
             <td class="align-top">{{% md %}} A List of Role Mapping.
  {{% /md %}}
@@ -514,7 +514,7 @@ The following output properties are available:
             <td class="align-top">Roles</td>
             <td class="align-top">
                 
-                <code><a href="#identitypoolroleattachmentroles">cognito.<wbr>Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Roles</a></code>
+                <code><a href="#identitypoolroleattachmentroles">Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Roles</a></code>
             </td>
             <td class="align-top">{{% md %}} The map of roles associated with this pool. For a given role, the key will be either &#34;authenticated&#34; or &#34;unauthenticated&#34; and the value will be the Role ARN.
  {{% /md %}}
@@ -804,7 +804,7 @@ An identity pool ID in the format REGION:GUID.
             <td class="align-top">Role<wbr>Mappings</td>
             <td class="align-top">
                 
-                <code><a href="#identitypoolroleattachmentrolemapping">[]cognito.<wbr>Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping</a></code>
+                <code><a href="#identitypoolroleattachmentrolemapping">[]Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -819,7 +819,7 @@ A List of Role Mapping.
             <td class="align-top">Roles</td>
             <td class="align-top">
                 
-                <code><a href="#identitypoolroleattachmentroles">*cognito.<wbr>Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Roles</a></code>
+                <code><a href="#identitypoolroleattachmentroles">*Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Roles</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1122,7 +1122,7 @@ A string identifying the identity provider, for example, &#34;graph.facebook.com
             <td class="align-top">Mapping<wbr>Rules</td>
             <td class="align-top">
                 
-                <code><a href="#identitypoolroleattachmentrolemappingmappingrule">[]cognito.<wbr>Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping<wbr>Mapping<wbr>Rule</a></code>
+                <code><a href="#identitypoolroleattachmentrolemappingmappingrule">[]Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping<wbr>Mapping<wbr>Rule</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

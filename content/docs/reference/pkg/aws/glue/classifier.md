@@ -241,7 +241,7 @@ A classifier for XML content. Defined below.
             <td class="align-top">Csv<wbr>Classifier</td>
             <td class="align-top">
                 
-                <code><a href="#classifiercsvclassifier">*glue.<wbr>Classifier<wbr>Csv<wbr>Classifier</a></code>
+                <code><a href="#classifiercsvclassifier">*Classifier<wbr>Csv<wbr>Classifier</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -256,7 +256,7 @@ A classifier for Csv content. Defined below.
             <td class="align-top">Grok<wbr>Classifier</td>
             <td class="align-top">
                 
-                <code><a href="#classifiergrokclassifier">*glue.<wbr>Classifier<wbr>Grok<wbr>Classifier</a></code>
+                <code><a href="#classifiergrokclassifier">*Classifier<wbr>Grok<wbr>Classifier</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -271,7 +271,7 @@ A classifier that uses grok patterns. Defined below.
             <td class="align-top">Json<wbr>Classifier</td>
             <td class="align-top">
                 
-                <code><a href="#classifierjsonclassifier">*glue.<wbr>Classifier<wbr>Json<wbr>Classifier</a></code>
+                <code><a href="#classifierjsonclassifier">*Classifier<wbr>Json<wbr>Classifier</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -301,7 +301,7 @@ The name of the classifier.
             <td class="align-top">Xml<wbr>Classifier</td>
             <td class="align-top">
                 
-                <code><a href="#classifierxmlclassifier">*glue.<wbr>Classifier<wbr>Xml<wbr>Classifier</a></code>
+                <code><a href="#classifierxmlclassifier">*Classifier<wbr>Xml<wbr>Classifier</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -625,7 +625,7 @@ The following output properties are available:
             <td class="align-top">Csv<wbr>Classifier</td>
             <td class="align-top">
                 
-                <code><a href="#classifiercsvclassifier">*glue.<wbr>Classifier<wbr>Csv<wbr>Classifier</a></code>
+                <code><a href="#classifiercsvclassifier">*Classifier<wbr>Csv<wbr>Classifier</a></code>
             </td>
             <td class="align-top">{{% md %}} A classifier for Csv content. Defined below.
  {{% /md %}}
@@ -638,7 +638,7 @@ The following output properties are available:
             <td class="align-top">Grok<wbr>Classifier</td>
             <td class="align-top">
                 
-                <code><a href="#classifiergrokclassifier">*glue.<wbr>Classifier<wbr>Grok<wbr>Classifier</a></code>
+                <code><a href="#classifiergrokclassifier">*Classifier<wbr>Grok<wbr>Classifier</a></code>
             </td>
             <td class="align-top">{{% md %}} A classifier that uses grok patterns. Defined below.
  {{% /md %}}
@@ -651,7 +651,7 @@ The following output properties are available:
             <td class="align-top">Json<wbr>Classifier</td>
             <td class="align-top">
                 
-                <code><a href="#classifierjsonclassifier">*glue.<wbr>Classifier<wbr>Json<wbr>Classifier</a></code>
+                <code><a href="#classifierjsonclassifier">*Classifier<wbr>Json<wbr>Classifier</a></code>
             </td>
             <td class="align-top">{{% md %}} A classifier for JSON content. Defined below.
  {{% /md %}}
@@ -677,7 +677,7 @@ The following output properties are available:
             <td class="align-top">Xml<wbr>Classifier</td>
             <td class="align-top">
                 
-                <code><a href="#classifierxmlclassifier">*glue.<wbr>Classifier<wbr>Xml<wbr>Classifier</a></code>
+                <code><a href="#classifierxmlclassifier">*Classifier<wbr>Xml<wbr>Classifier</a></code>
             </td>
             <td class="align-top">{{% md %}} A classifier for XML content. Defined below.
  {{% /md %}}
@@ -1034,7 +1034,7 @@ A classifier for XML content. Defined below.
             <td class="align-top">Csv<wbr>Classifier</td>
             <td class="align-top">
                 
-                <code><a href="#classifiercsvclassifier">*glue.<wbr>Classifier<wbr>Csv<wbr>Classifier</a></code>
+                <code><a href="#classifiercsvclassifier">*Classifier<wbr>Csv<wbr>Classifier</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1049,7 +1049,7 @@ A classifier for Csv content. Defined below.
             <td class="align-top">Grok<wbr>Classifier</td>
             <td class="align-top">
                 
-                <code><a href="#classifiergrokclassifier">*glue.<wbr>Classifier<wbr>Grok<wbr>Classifier</a></code>
+                <code><a href="#classifiergrokclassifier">*Classifier<wbr>Grok<wbr>Classifier</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1064,7 +1064,7 @@ A classifier that uses grok patterns. Defined below.
             <td class="align-top">Json<wbr>Classifier</td>
             <td class="align-top">
                 
-                <code><a href="#classifierjsonclassifier">*glue.<wbr>Classifier<wbr>Json<wbr>Classifier</a></code>
+                <code><a href="#classifierjsonclassifier">*Classifier<wbr>Json<wbr>Classifier</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1094,7 +1094,7 @@ The name of the classifier.
             <td class="align-top">Xml<wbr>Classifier</td>
             <td class="align-top">
                 
-                <code><a href="#classifierxmlclassifier">*glue.<wbr>Classifier<wbr>Xml<wbr>Classifier</a></code>
+                <code><a href="#classifierxmlclassifier">*Classifier<wbr>Xml<wbr>Classifier</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

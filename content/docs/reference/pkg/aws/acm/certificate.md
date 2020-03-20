@@ -366,7 +366,7 @@ A domain name for which the certificate should be issued
             <td class="align-top">Options</td>
             <td class="align-top">
                 
-                <code><a href="#certificateoptions">*acm.<wbr>Certificate<wbr>Options</a></code>
+                <code><a href="#certificateoptions">*Certificate<wbr>Options</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1030,7 +1030,7 @@ The following output properties are available:
             <td class="align-top">Domain<wbr>Validation<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#certificatedomainvalidationoption">[]acm.<wbr>Certificate<wbr>Domain<wbr>Validation<wbr>Option</a></code>
+                <code><a href="#certificatedomainvalidationoption">[]Certificate<wbr>Domain<wbr>Validation<wbr>Option</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of attributes to feed into other resources to complete certificate validation. Can have more than one element, e.g. if SANs are defined. Only set if `DNS`-validation was used.
  {{% /md %}}
@@ -1043,7 +1043,7 @@ The following output properties are available:
             <td class="align-top">Options</td>
             <td class="align-top">
                 
-                <code><a href="#certificateoptions">*acm.<wbr>Certificate<wbr>Options</a></code>
+                <code><a href="#certificateoptions">*Certificate<wbr>Options</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1831,7 +1831,7 @@ A domain name for which the certificate should be issued
             <td class="align-top">Domain<wbr>Validation<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#certificatedomainvalidationoption">[]acm.<wbr>Certificate<wbr>Domain<wbr>Validation<wbr>Option</a></code>
+                <code><a href="#certificatedomainvalidationoption">[]Certificate<wbr>Domain<wbr>Validation<wbr>Option</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1846,7 +1846,7 @@ A list of attributes to feed into other resources to complete certificate valida
             <td class="align-top">Options</td>
             <td class="align-top">
                 
-                <code><a href="#certificateoptions">*acm.<wbr>Certificate<wbr>Options</a></code>
+                <code><a href="#certificateoptions">*Certificate<wbr>Options</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

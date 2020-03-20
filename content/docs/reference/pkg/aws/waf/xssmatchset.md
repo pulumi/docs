@@ -169,7 +169,7 @@ The name or description of the SizeConstraintSet.
             <td class="align-top">Xss<wbr>Match<wbr>Tuples</td>
             <td class="align-top">
                 
-                <code><a href="#xssmatchsetxssmatchtuple">[]waf.<wbr>Xss<wbr>Match<wbr>Set<wbr>Xss<wbr>Match<wbr>Tuple</a></code>
+                <code><a href="#xssmatchsetxssmatchtuple">[]Xss<wbr>Match<wbr>Set<wbr>Xss<wbr>Match<wbr>Tuple</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -403,7 +403,7 @@ The following output properties are available:
             <td class="align-top">Xss<wbr>Match<wbr>Tuples</td>
             <td class="align-top">
                 
-                <code><a href="#xssmatchsetxssmatchtuple">[]waf.<wbr>Xss<wbr>Match<wbr>Set<wbr>Xss<wbr>Match<wbr>Tuple</a></code>
+                <code><a href="#xssmatchsetxssmatchtuple">[]Xss<wbr>Match<wbr>Set<wbr>Xss<wbr>Match<wbr>Tuple</a></code>
             </td>
             <td class="align-top">{{% md %}} The parts of web requests that you want to inspect for cross-site scripting attacks.
  {{% /md %}}
@@ -708,7 +708,7 @@ The name or description of the SizeConstraintSet.
             <td class="align-top">Xss<wbr>Match<wbr>Tuples</td>
             <td class="align-top">
                 
-                <code><a href="#xssmatchsetxssmatchtuple">[]waf.<wbr>Xss<wbr>Match<wbr>Set<wbr>Xss<wbr>Match<wbr>Tuple</a></code>
+                <code><a href="#xssmatchsetxssmatchtuple">[]Xss<wbr>Match<wbr>Set<wbr>Xss<wbr>Match<wbr>Tuple</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -955,7 +955,7 @@ for all supported values.
             <td class="align-top">Field<wbr>To<wbr>Match</td>
             <td class="align-top">
                 
-                <code><a href="#xssmatchsetxssmatchtuplefieldtomatch">waf.<wbr>Xss<wbr>Match<wbr>Set<wbr>Xss<wbr>Match<wbr>Tuple<wbr>Field<wbr>To<wbr>Match</a></code>
+                <code><a href="#xssmatchsetxssmatchtuplefieldtomatch">Xss<wbr>Match<wbr>Set<wbr>Xss<wbr>Match<wbr>Tuple<wbr>Field<wbr>To<wbr>Match</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

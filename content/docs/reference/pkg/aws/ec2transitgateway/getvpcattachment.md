@@ -147,7 +147,7 @@ Identifier of the EC2 Transit Gateway VPC Attachment.
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getvpcattachmentfilter">[]ec2transitgateway.<wbr>Get<wbr>Vpc<wbr>Attachment<wbr>Filter</a></code>
+                <code><a href="#getvpcattachmentfilter">[]Get<wbr>Vpc<wbr>Attachment<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -503,7 +503,7 @@ The following output properties are available:
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getvpcattachmentfilter">[]ec2transitgateway.<wbr>Get<wbr>Vpc<wbr>Attachment<wbr>Filter</a></code>
+                <code><a href="#getvpcattachmentfilter">[]Get<wbr>Vpc<wbr>Attachment<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 

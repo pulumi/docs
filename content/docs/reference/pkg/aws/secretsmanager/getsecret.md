@@ -547,7 +547,7 @@ The following output properties are available:
             <td class="align-top">Rotation<wbr>Rules</td>
             <td class="align-top">
                 
-                <code><a href="#getsecretrotationrule">[]secretsmanager.<wbr>Get<wbr>Secret<wbr>Rotation<wbr>Rule</a></code>
+                <code><a href="#getsecretrotationrule">[]Get<wbr>Secret<wbr>Rotation<wbr>Rule</a></code>
             </td>
             <td class="align-top">{{% md %}} Rotation rules if rotation is enabled.
  {{% /md %}}

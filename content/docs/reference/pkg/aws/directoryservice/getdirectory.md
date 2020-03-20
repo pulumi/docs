@@ -529,7 +529,7 @@ The following output properties are available:
             <td class="align-top">Connect<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#getdirectoryconnectsetting">[]directoryservice.<wbr>Get<wbr>Directory<wbr>Connect<wbr>Setting</a></code>
+                <code><a href="#getdirectoryconnectsetting">[]Get<wbr>Directory<wbr>Connect<wbr>Setting</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -696,7 +696,7 @@ The following output properties are available:
             <td class="align-top">Vpc<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#getdirectoryvpcsetting">[]directoryservice.<wbr>Get<wbr>Directory<wbr>Vpc<wbr>Setting</a></code>
+                <code><a href="#getdirectoryvpcsetting">[]Get<wbr>Directory<wbr>Vpc<wbr>Setting</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 

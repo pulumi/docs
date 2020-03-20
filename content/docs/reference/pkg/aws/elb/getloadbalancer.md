@@ -548,7 +548,7 @@ The following output properties are available:
             <td class="align-top">Access<wbr>Logs</td>
             <td class="align-top">
                 
-                <code><a href="#getloadbalanceraccesslogs">elb.<wbr>Get<wbr>Load<wbr>Balancer<wbr>Access<wbr>Logs</a></code>
+                <code><a href="#getloadbalanceraccesslogs">Get<wbr>Load<wbr>Balancer<wbr>Access<wbr>Logs</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -632,7 +632,7 @@ The following output properties are available:
             <td class="align-top">Health<wbr>Check</td>
             <td class="align-top">
                 
-                <code><a href="#getloadbalancerhealthcheck">elb.<wbr>Get<wbr>Load<wbr>Balancer<wbr>Health<wbr>Check</a></code>
+                <code><a href="#getloadbalancerhealthcheck">Get<wbr>Load<wbr>Balancer<wbr>Health<wbr>Check</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -693,7 +693,7 @@ The following output properties are available:
             <td class="align-top">Listeners</td>
             <td class="align-top">
                 
-                <code><a href="#getloadbalancerlistener">[]elb.<wbr>Get<wbr>Load<wbr>Balancer<wbr>Listener</a></code>
+                <code><a href="#getloadbalancerlistener">[]Get<wbr>Load<wbr>Balancer<wbr>Listener</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 

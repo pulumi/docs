@@ -214,7 +214,7 @@ The ID of the associated VPC.
             <td class="align-top">Egress</td>
             <td class="align-top">
                 
-                <code><a href="#networkaclegress">[]ec2.<wbr>Network<wbr>Acl<wbr>Egress</a></code>
+                <code><a href="#networkaclegress">[]Network<wbr>Acl<wbr>Egress</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -230,7 +230,7 @@ This argument is processed in [attribute-as-blocks mode](https://www.terraform.i
             <td class="align-top">Ingress</td>
             <td class="align-top">
                 
-                <code><a href="#networkaclingress">[]ec2.<wbr>Network<wbr>Acl<wbr>Ingress</a></code>
+                <code><a href="#networkaclingress">[]Network<wbr>Acl<wbr>Ingress</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -619,7 +619,7 @@ This argument is processed in [attribute-as-blocks mode](https://www.terraform.i
             <td class="align-top">Egress</td>
             <td class="align-top">
                 
-                <code><a href="#networkaclegress">[]ec2.<wbr>Network<wbr>Acl<wbr>Egress</a></code>
+                <code><a href="#networkaclegress">[]Network<wbr>Acl<wbr>Egress</a></code>
             </td>
             <td class="align-top">{{% md %}} Specifies an egress rule. Parameters defined below.
 This argument is processed in [attribute-as-blocks mode](https://www.terraform.io/docs/configuration/attr-as-blocks.html).
@@ -633,7 +633,7 @@ This argument is processed in [attribute-as-blocks mode](https://www.terraform.i
             <td class="align-top">Ingress</td>
             <td class="align-top">
                 
-                <code><a href="#networkaclingress">[]ec2.<wbr>Network<wbr>Acl<wbr>Ingress</a></code>
+                <code><a href="#networkaclingress">[]Network<wbr>Acl<wbr>Ingress</a></code>
             </td>
             <td class="align-top">{{% md %}} Specifies an ingress rule. Parameters defined below.
 This argument is processed in [attribute-as-blocks mode](https://www.terraform.io/docs/configuration/attr-as-blocks.html).
@@ -1090,7 +1090,7 @@ The ID of the associated VPC.
             <td class="align-top">Egress</td>
             <td class="align-top">
                 
-                <code><a href="#networkaclegress">[]ec2.<wbr>Network<wbr>Acl<wbr>Egress</a></code>
+                <code><a href="#networkaclegress">[]Network<wbr>Acl<wbr>Egress</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1106,7 +1106,7 @@ This argument is processed in [attribute-as-blocks mode](https://www.terraform.i
             <td class="align-top">Ingress</td>
             <td class="align-top">
                 
-                <code><a href="#networkaclingress">[]ec2.<wbr>Network<wbr>Acl<wbr>Ingress</a></code>
+                <code><a href="#networkaclingress">[]Network<wbr>Acl<wbr>Ingress</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

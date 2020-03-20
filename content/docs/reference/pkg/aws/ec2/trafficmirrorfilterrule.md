@@ -277,7 +277,7 @@ The destination CIDR block to assign to the Traffic Mirror rule.
             <td class="align-top">Destination<wbr>Port<wbr>Range</td>
             <td class="align-top">
                 
-                <code><a href="#trafficmirrorfilterruledestinationportrange">*ec2.<wbr>Traffic<wbr>Mirror<wbr>Filter<wbr>Rule<wbr>Destination<wbr>Port<wbr>Range</a></code>
+                <code><a href="#trafficmirrorfilterruledestinationportrange">*Traffic<wbr>Mirror<wbr>Filter<wbr>Rule<wbr>Destination<wbr>Port<wbr>Range</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -352,7 +352,7 @@ The source CIDR block to assign to the Traffic Mirror rule.
             <td class="align-top">Source<wbr>Port<wbr>Range</td>
             <td class="align-top">
                 
-                <code><a href="#trafficmirrorfilterrulesourceportrange">*ec2.<wbr>Traffic<wbr>Mirror<wbr>Filter<wbr>Rule<wbr>Source<wbr>Port<wbr>Range</a></code>
+                <code><a href="#trafficmirrorfilterrulesourceportrange">*Traffic<wbr>Mirror<wbr>Filter<wbr>Rule<wbr>Source<wbr>Port<wbr>Range</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -947,7 +947,7 @@ The following output properties are available:
             <td class="align-top">Destination<wbr>Port<wbr>Range</td>
             <td class="align-top">
                 
-                <code><a href="#trafficmirrorfilterruledestinationportrange">*ec2.<wbr>Traffic<wbr>Mirror<wbr>Filter<wbr>Rule<wbr>Destination<wbr>Port<wbr>Range</a></code>
+                <code><a href="#trafficmirrorfilterruledestinationportrange">*Traffic<wbr>Mirror<wbr>Filter<wbr>Rule<wbr>Destination<wbr>Port<wbr>Range</a></code>
             </td>
             <td class="align-top">{{% md %}} The destination port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below
  {{% /md %}}
@@ -1012,7 +1012,7 @@ The following output properties are available:
             <td class="align-top">Source<wbr>Port<wbr>Range</td>
             <td class="align-top">
                 
-                <code><a href="#trafficmirrorfilterrulesourceportrange">*ec2.<wbr>Traffic<wbr>Mirror<wbr>Filter<wbr>Rule<wbr>Source<wbr>Port<wbr>Range</a></code>
+                <code><a href="#trafficmirrorfilterrulesourceportrange">*Traffic<wbr>Mirror<wbr>Filter<wbr>Rule<wbr>Source<wbr>Port<wbr>Range</a></code>
             </td>
             <td class="align-top">{{% md %}} The source port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below
  {{% /md %}}
@@ -1630,7 +1630,7 @@ The destination CIDR block to assign to the Traffic Mirror rule.
             <td class="align-top">Destination<wbr>Port<wbr>Range</td>
             <td class="align-top">
                 
-                <code><a href="#trafficmirrorfilterruledestinationportrange">*ec2.<wbr>Traffic<wbr>Mirror<wbr>Filter<wbr>Rule<wbr>Destination<wbr>Port<wbr>Range</a></code>
+                <code><a href="#trafficmirrorfilterruledestinationportrange">*Traffic<wbr>Mirror<wbr>Filter<wbr>Rule<wbr>Destination<wbr>Port<wbr>Range</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1705,7 +1705,7 @@ The source CIDR block to assign to the Traffic Mirror rule.
             <td class="align-top">Source<wbr>Port<wbr>Range</td>
             <td class="align-top">
                 
-                <code><a href="#trafficmirrorfilterrulesourceportrange">*ec2.<wbr>Traffic<wbr>Mirror<wbr>Filter<wbr>Rule<wbr>Source<wbr>Port<wbr>Range</a></code>
+                <code><a href="#trafficmirrorfilterrulesourceportrange">*Traffic<wbr>Mirror<wbr>Filter<wbr>Rule<wbr>Source<wbr>Port<wbr>Range</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

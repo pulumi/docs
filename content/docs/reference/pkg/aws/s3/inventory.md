@@ -288,7 +288,7 @@ The S3 bucket configuration where inventory results are published (documented be
             <td class="align-top">Destination</td>
             <td class="align-top">
                 
-                <code><a href="#inventorydestination">s3.<wbr>Inventory<wbr>Destination</a></code>
+                <code><a href="#inventorydestination">Inventory<wbr>Destination</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -318,7 +318,7 @@ Specifies whether the inventory is enabled or disabled.
             <td class="align-top">Filter</td>
             <td class="align-top">
                 
-                <code><a href="#inventoryfilter">*s3.<wbr>Inventory<wbr>Filter</a></code>
+                <code><a href="#inventoryfilter">*Inventory<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -379,7 +379,7 @@ Valid values: `Size`, `LastModifiedDate`, `StorageClass`, `ETag`, `IsMultipartUp
             <td class="align-top">Schedule</td>
             <td class="align-top">
                 
-                <code><a href="#inventoryschedule">s3.<wbr>Inventory<wbr>Schedule</a></code>
+                <code><a href="#inventoryschedule">Inventory<wbr>Schedule</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -848,7 +848,7 @@ Valid values: `Size`, `LastModifiedDate`, `StorageClass`, `ETag`, `IsMultipartUp
             <td class="align-top">Destination</td>
             <td class="align-top">
                 
-                <code><a href="#inventorydestination">s3.<wbr>Inventory<wbr>Destination</a></code>
+                <code><a href="#inventorydestination">Inventory<wbr>Destination</a></code>
             </td>
             <td class="align-top">{{% md %}} Contains information about where to publish the inventory results (documented below).
  {{% /md %}}
@@ -874,7 +874,7 @@ Valid values: `Size`, `LastModifiedDate`, `StorageClass`, `ETag`, `IsMultipartUp
             <td class="align-top">Filter</td>
             <td class="align-top">
                 
-                <code><a href="#inventoryfilter">*s3.<wbr>Inventory<wbr>Filter</a></code>
+                <code><a href="#inventoryfilter">*Inventory<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}} Specifies an inventory filter. The inventory only includes objects that meet the filter&#39;s criteria (documented below).
  {{% /md %}}
@@ -927,7 +927,7 @@ Valid values: `Size`, `LastModifiedDate`, `StorageClass`, `ETag`, `IsMultipartUp
             <td class="align-top">Schedule</td>
             <td class="align-top">
                 
-                <code><a href="#inventoryschedule">s3.<wbr>Inventory<wbr>Schedule</a></code>
+                <code><a href="#inventoryschedule">Inventory<wbr>Schedule</a></code>
             </td>
             <td class="align-top">{{% md %}} Specifies the schedule for generating inventory results (documented below).
  {{% /md %}}
@@ -1425,7 +1425,7 @@ The S3 bucket configuration where inventory results are published (documented be
             <td class="align-top">Destination</td>
             <td class="align-top">
                 
-                <code><a href="#inventorydestination">*s3.<wbr>Inventory<wbr>Destination</a></code>
+                <code><a href="#inventorydestination">*Inventory<wbr>Destination</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1455,7 +1455,7 @@ Specifies whether the inventory is enabled or disabled.
             <td class="align-top">Filter</td>
             <td class="align-top">
                 
-                <code><a href="#inventoryfilter">*s3.<wbr>Inventory<wbr>Filter</a></code>
+                <code><a href="#inventoryfilter">*Inventory<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1516,7 +1516,7 @@ Valid values: `Size`, `LastModifiedDate`, `StorageClass`, `ETag`, `IsMultipartUp
             <td class="align-top">Schedule</td>
             <td class="align-top">
                 
-                <code><a href="#inventoryschedule">*s3.<wbr>Inventory<wbr>Schedule</a></code>
+                <code><a href="#inventoryschedule">*Inventory<wbr>Schedule</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1896,7 +1896,7 @@ The S3 bucket configuration where inventory results are published (documented be
             <td class="align-top">Bucket</td>
             <td class="align-top">
                 
-                <code><a href="#inventorydestinationbucket">s3.<wbr>Inventory<wbr>Destination<wbr>Bucket</a></code>
+                <code><a href="#inventorydestinationbucket">Inventory<wbr>Destination<wbr>Bucket</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2147,7 +2147,7 @@ The Amazon S3 bucket ARN of the destination.
             <td class="align-top">Encryption</td>
             <td class="align-top">
                 
-                <code><a href="#inventorydestinationbucketencryption">*s3.<wbr>Inventory<wbr>Destination<wbr>Bucket<wbr>Encryption</a></code>
+                <code><a href="#inventorydestinationbucketencryption">*Inventory<wbr>Destination<wbr>Bucket<wbr>Encryption</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2473,7 +2473,7 @@ Specifies to use server-side encryption with Amazon S3-managed keys (SSE-S3) to 
             <td class="align-top">Sse<wbr>Kms</td>
             <td class="align-top">
                 
-                <code><a href="#inventorydestinationbucketencryptionssekms">*s3.<wbr>Inventory<wbr>Destination<wbr>Bucket<wbr>Encryption<wbr>Sse<wbr>Kms</a></code>
+                <code><a href="#inventorydestinationbucketencryptionssekms">*Inventory<wbr>Destination<wbr>Bucket<wbr>Encryption<wbr>Sse<wbr>Kms</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2488,7 +2488,7 @@ Specifies to use server-side encryption with AWS KMS-managed keys to encrypt the
             <td class="align-top">Sse<wbr>S3</td>
             <td class="align-top">
                 
-                <code><a href="#inventorydestinationbucketencryptionsses3">*s3.<wbr>Inventory<wbr>Destination<wbr>Bucket<wbr>Encryption<wbr>Sse<wbr>S3</a></code>
+                <code><a href="#inventorydestinationbucketencryptionsses3">*Inventory<wbr>Destination<wbr>Bucket<wbr>Encryption<wbr>Sse<wbr>S3</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

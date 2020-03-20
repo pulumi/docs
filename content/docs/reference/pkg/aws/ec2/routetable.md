@@ -218,7 +218,7 @@ A list of virtual gateways for propagation.
             <td class="align-top">Routes</td>
             <td class="align-top">
                 
-                <code><a href="#routetableroute">[]ec2.<wbr>Route<wbr>Table<wbr>Route</a></code>
+                <code><a href="#routetableroute">[]Route<wbr>Table<wbr>Route</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -568,7 +568,7 @@ The following output properties are available:
             <td class="align-top">Routes</td>
             <td class="align-top">
                 
-                <code><a href="#routetableroute">[]ec2.<wbr>Route<wbr>Table<wbr>Route</a></code>
+                <code><a href="#routetableroute">[]Route<wbr>Table<wbr>Route</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of route objects. Their keys are documented below. This argument is processed in [attribute-as-blocks mode](https://www.terraform.io/docs/configuration/attr-as-blocks.html).
  {{% /md %}}
@@ -981,7 +981,7 @@ A list of virtual gateways for propagation.
             <td class="align-top">Routes</td>
             <td class="align-top">
                 
-                <code><a href="#routetableroute">[]ec2.<wbr>Route<wbr>Table<wbr>Route</a></code>
+                <code><a href="#routetableroute">[]Route<wbr>Table<wbr>Route</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

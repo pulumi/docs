@@ -531,7 +531,7 @@ If `true`, this provider will wait for the service to reach a steady state (like
             <td class="align-top">Capacity<wbr>Provider<wbr>Strategies</td>
             <td class="align-top">
                 
-                <code><a href="#servicecapacityproviderstrategy">[]ecs.<wbr>Service<wbr>Capacity<wbr>Provider<wbr>Strategy</a></code>
+                <code><a href="#servicecapacityproviderstrategy">[]Service<wbr>Capacity<wbr>Provider<wbr>Strategy</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -561,7 +561,7 @@ ARN of an ECS cluster
             <td class="align-top">Deployment<wbr>Controller</td>
             <td class="align-top">
                 
-                <code><a href="#servicedeploymentcontroller">*ecs.<wbr>Service<wbr>Deployment<wbr>Controller</a></code>
+                <code><a href="#servicedeploymentcontroller">*Service<wbr>Deployment<wbr>Controller</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -681,7 +681,7 @@ The launch type on which to run your service. The valid values are `EC2` and `FA
             <td class="align-top">Load<wbr>Balancers</td>
             <td class="align-top">
                 
-                <code><a href="#serviceloadbalancer">[]ecs.<wbr>Service<wbr>Load<wbr>Balancer</a></code>
+                <code><a href="#serviceloadbalancer">[]Service<wbr>Load<wbr>Balancer</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -711,7 +711,7 @@ The name of the service (up to 255 letters, numbers, hyphens, and underscores)
             <td class="align-top">Network<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#servicenetworkconfiguration">*ecs.<wbr>Service<wbr>Network<wbr>Configuration</a></code>
+                <code><a href="#servicenetworkconfiguration">*Service<wbr>Network<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -726,7 +726,7 @@ The network configuration for the service. This parameter is required for task d
             <td class="align-top">Ordered<wbr>Placement<wbr>Strategies</td>
             <td class="align-top">
                 
-                <code><a href="#serviceorderedplacementstrategy">[]ecs.<wbr>Service<wbr>Ordered<wbr>Placement<wbr>Strategy</a></code>
+                <code><a href="#serviceorderedplacementstrategy">[]Service<wbr>Ordered<wbr>Placement<wbr>Strategy</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -741,7 +741,7 @@ Service level strategy rules that are taken into consideration during task place
             <td class="align-top">Placement<wbr>Constraints</td>
             <td class="align-top">
                 
-                <code><a href="#serviceplacementconstraint">[]ecs.<wbr>Service<wbr>Placement<wbr>Constraint</a></code>
+                <code><a href="#serviceplacementconstraint">[]Service<wbr>Placement<wbr>Constraint</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -802,7 +802,7 @@ The scheduling strategy to use for the service. The valid values are `REPLICA` a
             <td class="align-top">Service<wbr>Registries</td>
             <td class="align-top">
                 
-                <code><a href="#serviceserviceregistries">*ecs.<wbr>Service<wbr>Service<wbr>Registries</a></code>
+                <code><a href="#serviceserviceregistries">*Service<wbr>Service<wbr>Registries</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1905,7 +1905,7 @@ The following output properties are available:
             <td class="align-top">Capacity<wbr>Provider<wbr>Strategies</td>
             <td class="align-top">
                 
-                <code><a href="#servicecapacityproviderstrategy">[]ecs.<wbr>Service<wbr>Capacity<wbr>Provider<wbr>Strategy</a></code>
+                <code><a href="#servicecapacityproviderstrategy">[]Service<wbr>Capacity<wbr>Provider<wbr>Strategy</a></code>
             </td>
             <td class="align-top">{{% md %}} The capacity provider strategy to use for the service. Can be one or more.  Defined below.
  {{% /md %}}
@@ -1931,7 +1931,7 @@ The following output properties are available:
             <td class="align-top">Deployment<wbr>Controller</td>
             <td class="align-top">
                 
-                <code><a href="#servicedeploymentcontroller">*ecs.<wbr>Service<wbr>Deployment<wbr>Controller</a></code>
+                <code><a href="#servicedeploymentcontroller">*Service<wbr>Deployment<wbr>Controller</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block containing deployment controller configuration. Defined below.
  {{% /md %}}
@@ -2035,7 +2035,7 @@ The following output properties are available:
             <td class="align-top">Load<wbr>Balancers</td>
             <td class="align-top">
                 
-                <code><a href="#serviceloadbalancer">[]ecs.<wbr>Service<wbr>Load<wbr>Balancer</a></code>
+                <code><a href="#serviceloadbalancer">[]Service<wbr>Load<wbr>Balancer</a></code>
             </td>
             <td class="align-top">{{% md %}} A load balancer block. Load balancers documented below.
  {{% /md %}}
@@ -2061,7 +2061,7 @@ The following output properties are available:
             <td class="align-top">Network<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#servicenetworkconfiguration">*ecs.<wbr>Service<wbr>Network<wbr>Configuration</a></code>
+                <code><a href="#servicenetworkconfiguration">*Service<wbr>Network<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} The network configuration for the service. This parameter is required for task definitions that use the `awsvpc` network mode to receive their own Elastic Network Interface, and it is not supported for other network modes.
  {{% /md %}}
@@ -2074,7 +2074,7 @@ The following output properties are available:
             <td class="align-top">Ordered<wbr>Placement<wbr>Strategies</td>
             <td class="align-top">
                 
-                <code><a href="#serviceorderedplacementstrategy">[]ecs.<wbr>Service<wbr>Ordered<wbr>Placement<wbr>Strategy</a></code>
+                <code><a href="#serviceorderedplacementstrategy">[]Service<wbr>Ordered<wbr>Placement<wbr>Strategy</a></code>
             </td>
             <td class="align-top">{{% md %}} Service level strategy rules that are taken into consideration during task placement. List from top to bottom in order of precedence. The maximum number of `ordered_placement_strategy` blocks is `5`. Defined below.
  {{% /md %}}
@@ -2087,7 +2087,7 @@ The following output properties are available:
             <td class="align-top">Placement<wbr>Constraints</td>
             <td class="align-top">
                 
-                <code><a href="#serviceplacementconstraint">[]ecs.<wbr>Service<wbr>Placement<wbr>Constraint</a></code>
+                <code><a href="#serviceplacementconstraint">[]Service<wbr>Placement<wbr>Constraint</a></code>
             </td>
             <td class="align-top">{{% md %}} rules that are taken into consideration during task placement. Maximum number of
 `placement_constraints` is `10`. Defined below.
@@ -2140,7 +2140,7 @@ The following output properties are available:
             <td class="align-top">Service<wbr>Registries</td>
             <td class="align-top">
                 
-                <code><a href="#serviceserviceregistries">*ecs.<wbr>Service<wbr>Service<wbr>Registries</a></code>
+                <code><a href="#serviceserviceregistries">*Service<wbr>Service<wbr>Registries</a></code>
             </td>
             <td class="align-top">{{% md %}} The service discovery registries for the service. The maximum number of `service_registries` blocks is `1`.
  {{% /md %}}
@@ -3236,7 +3236,7 @@ If `true`, this provider will wait for the service to reach a steady state (like
             <td class="align-top">Capacity<wbr>Provider<wbr>Strategies</td>
             <td class="align-top">
                 
-                <code><a href="#servicecapacityproviderstrategy">[]ecs.<wbr>Service<wbr>Capacity<wbr>Provider<wbr>Strategy</a></code>
+                <code><a href="#servicecapacityproviderstrategy">[]Service<wbr>Capacity<wbr>Provider<wbr>Strategy</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3266,7 +3266,7 @@ ARN of an ECS cluster
             <td class="align-top">Deployment<wbr>Controller</td>
             <td class="align-top">
                 
-                <code><a href="#servicedeploymentcontroller">*ecs.<wbr>Service<wbr>Deployment<wbr>Controller</a></code>
+                <code><a href="#servicedeploymentcontroller">*Service<wbr>Deployment<wbr>Controller</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3386,7 +3386,7 @@ The launch type on which to run your service. The valid values are `EC2` and `FA
             <td class="align-top">Load<wbr>Balancers</td>
             <td class="align-top">
                 
-                <code><a href="#serviceloadbalancer">[]ecs.<wbr>Service<wbr>Load<wbr>Balancer</a></code>
+                <code><a href="#serviceloadbalancer">[]Service<wbr>Load<wbr>Balancer</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3416,7 +3416,7 @@ The name of the service (up to 255 letters, numbers, hyphens, and underscores)
             <td class="align-top">Network<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#servicenetworkconfiguration">*ecs.<wbr>Service<wbr>Network<wbr>Configuration</a></code>
+                <code><a href="#servicenetworkconfiguration">*Service<wbr>Network<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3431,7 +3431,7 @@ The network configuration for the service. This parameter is required for task d
             <td class="align-top">Ordered<wbr>Placement<wbr>Strategies</td>
             <td class="align-top">
                 
-                <code><a href="#serviceorderedplacementstrategy">[]ecs.<wbr>Service<wbr>Ordered<wbr>Placement<wbr>Strategy</a></code>
+                <code><a href="#serviceorderedplacementstrategy">[]Service<wbr>Ordered<wbr>Placement<wbr>Strategy</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3446,7 +3446,7 @@ Service level strategy rules that are taken into consideration during task place
             <td class="align-top">Placement<wbr>Constraints</td>
             <td class="align-top">
                 
-                <code><a href="#serviceplacementconstraint">[]ecs.<wbr>Service<wbr>Placement<wbr>Constraint</a></code>
+                <code><a href="#serviceplacementconstraint">[]Service<wbr>Placement<wbr>Constraint</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3507,7 +3507,7 @@ The scheduling strategy to use for the service. The valid values are `REPLICA` a
             <td class="align-top">Service<wbr>Registries</td>
             <td class="align-top">
                 
-                <code><a href="#serviceserviceregistries">*ecs.<wbr>Service<wbr>Service<wbr>Registries</a></code>
+                <code><a href="#serviceserviceregistries">*Service<wbr>Service<wbr>Registries</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

@@ -145,7 +145,7 @@ One or more AWS accounts IDs that can create volumes from the snapshot.
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getsnapshotidsfilter">[]ebs.<wbr>Get<wbr>Snapshot<wbr>Ids<wbr>Filter</a></code>
+                <code><a href="#getsnapshotidsfilter">[]Get<wbr>Snapshot<wbr>Ids<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -442,7 +442,7 @@ The following output properties are available:
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getsnapshotidsfilter">[]ebs.<wbr>Get<wbr>Snapshot<wbr>Ids<wbr>Filter</a></code>
+                <code><a href="#getsnapshotidsfilter">[]Get<wbr>Snapshot<wbr>Ids<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 

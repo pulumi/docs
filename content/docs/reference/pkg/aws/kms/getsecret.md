@@ -90,7 +90,7 @@ The following arguments are supported:
             <td class="align-top">Secrets</td>
             <td class="align-top">
                 
-                <code><a href="#getsecretsecret">[]kms.<wbr>Get<wbr>Secret<wbr>Secret</a></code>
+                <code><a href="#getsecretsecret">[]Get<wbr>Secret<wbr>Secret</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -265,7 +265,7 @@ The following output properties are available:
             <td class="align-top">Secrets</td>
             <td class="align-top">
                 
-                <code><a href="#getsecretsecret">[]kms.<wbr>Get<wbr>Secret<wbr>Secret</a></code>
+                <code><a href="#getsecretsecret">[]Get<wbr>Secret<wbr>Secret</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 

@@ -260,7 +260,7 @@ The principal that is given permission to retire the grant by using RetireGrant 
             <td class="align-top">Constraints</td>
             <td class="align-top">
                 
-                <code><a href="#grantconstraint">[]kms.<wbr>Grant<wbr>Constraint</a></code>
+                <code><a href="#grantconstraint">[]Grant<wbr>Constraint</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -848,7 +848,7 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
             <td class="align-top">Constraints</td>
             <td class="align-top">
                 
-                <code><a href="#grantconstraint">[]kms.<wbr>Grant<wbr>Constraint</a></code>
+                <code><a href="#grantconstraint">[]Grant<wbr>Constraint</a></code>
             </td>
             <td class="align-top">{{% md %}} A structure that you can use to allow certain operations in the grant only when the desired encryption context is present. For more information about encryption context, see [Encryption Context](http://docs.aws.amazon.com/kms/latest/developerguide/encryption-context.html).
  {{% /md %}}
@@ -1531,7 +1531,7 @@ The principal that is given permission to retire the grant by using RetireGrant 
             <td class="align-top">Constraints</td>
             <td class="align-top">
                 
-                <code><a href="#grantconstraint">[]kms.<wbr>Grant<wbr>Constraint</a></code>
+                <code><a href="#grantconstraint">[]Grant<wbr>Constraint</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

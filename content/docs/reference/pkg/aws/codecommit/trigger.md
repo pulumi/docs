@@ -167,7 +167,7 @@ The name for the repository. This needs to be less than 100 characters.
             <td class="align-top">Triggers</td>
             <td class="align-top">
                 
-                <code><a href="#triggertrigger">[]codecommit.<wbr>Trigger<wbr>Trigger</a></code>
+                <code><a href="#triggertrigger">[]Trigger<wbr>Trigger</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -395,7 +395,7 @@ The following output properties are available:
             <td class="align-top">Triggers</td>
             <td class="align-top">
                 
-                <code><a href="#triggertrigger">[]codecommit.<wbr>Trigger<wbr>Trigger</a></code>
+                <code><a href="#triggertrigger">[]Trigger<wbr>Trigger</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -692,7 +692,7 @@ The name for the repository. This needs to be less than 100 characters.
             <td class="align-top">Triggers</td>
             <td class="align-top">
                 
-                <code><a href="#triggertrigger">[]codecommit.<wbr>Trigger<wbr>Trigger</a></code>
+                <code><a href="#triggertrigger">[]Trigger<wbr>Trigger</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

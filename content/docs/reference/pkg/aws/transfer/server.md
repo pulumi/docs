@@ -282,7 +282,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">Endpoint<wbr>Details</td>
             <td class="align-top">
                 
-                <code><a href="#serverendpointdetails">*transfer.<wbr>Server<wbr>Endpoint<wbr>Details</a></code>
+                <code><a href="#serverendpointdetails">*Server<wbr>Endpoint<wbr>Details</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -963,7 +963,7 @@ The following output properties are available:
             <td class="align-top">Endpoint<wbr>Details</td>
             <td class="align-top">
                 
-                <code><a href="#serverendpointdetails">*transfer.<wbr>Server<wbr>Endpoint<wbr>Details</a></code>
+                <code><a href="#serverendpointdetails">*Server<wbr>Endpoint<wbr>Details</a></code>
             </td>
             <td class="align-top">{{% md %}} The virtual private cloud (VPC) endpoint settings that you want to configure for your SFTP server. Fields documented below.
  {{% /md %}}
@@ -1754,7 +1754,7 @@ The endpoint of the Transfer Server (e.g. `s-12345678.server.transfer.REGION.ama
             <td class="align-top">Endpoint<wbr>Details</td>
             <td class="align-top">
                 
-                <code><a href="#serverendpointdetails">*transfer.<wbr>Server<wbr>Endpoint<wbr>Details</a></code>
+                <code><a href="#serverendpointdetails">*Server<wbr>Endpoint<wbr>Details</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

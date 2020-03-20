@@ -151,7 +151,7 @@ The name or description of the Byte Match Set.
             <td class="align-top">Byte<wbr>Match<wbr>Tuples</td>
             <td class="align-top">
                 
-                <code><a href="#bytematchsetbytematchtuple">[]waf.<wbr>Byte<wbr>Match<wbr>Set<wbr>Byte<wbr>Match<wbr>Tuple</a></code>
+                <code><a href="#bytematchsetbytematchtuple">[]Byte<wbr>Match<wbr>Set<wbr>Byte<wbr>Match<wbr>Tuple</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -369,7 +369,7 @@ the location in requests that you want to search, and other settings.
             <td class="align-top">Byte<wbr>Match<wbr>Tuples</td>
             <td class="align-top">
                 
-                <code><a href="#bytematchsetbytematchtuple">[]waf.<wbr>Byte<wbr>Match<wbr>Set<wbr>Byte<wbr>Match<wbr>Tuple</a></code>
+                <code><a href="#bytematchsetbytematchtuple">[]Byte<wbr>Match<wbr>Set<wbr>Byte<wbr>Match<wbr>Tuple</a></code>
             </td>
             <td class="align-top">{{% md %}} Specifies the bytes (typically a string that corresponds
 with ASCII characters) that you want to search for in web requests,
@@ -624,7 +624,7 @@ The name or description of the Byte Match Set.
             <td class="align-top">Byte<wbr>Match<wbr>Tuples</td>
             <td class="align-top">
                 
-                <code><a href="#bytematchsetbytematchtuple">[]waf.<wbr>Byte<wbr>Match<wbr>Set<wbr>Byte<wbr>Match<wbr>Tuple</a></code>
+                <code><a href="#bytematchsetbytematchtuple">[]Byte<wbr>Match<wbr>Set<wbr>Byte<wbr>Match<wbr>Tuple</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -898,7 +898,7 @@ for all supported values.
             <td class="align-top">Field<wbr>To<wbr>Match</td>
             <td class="align-top">
                 
-                <code><a href="#bytematchsetbytematchtuplefieldtomatch">waf.<wbr>Byte<wbr>Match<wbr>Set<wbr>Byte<wbr>Match<wbr>Tuple<wbr>Field<wbr>To<wbr>Match</a></code>
+                <code><a href="#bytematchsetbytematchtuplefieldtomatch">Byte<wbr>Match<wbr>Set<wbr>Byte<wbr>Match<wbr>Tuple<wbr>Field<wbr>To<wbr>Match</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

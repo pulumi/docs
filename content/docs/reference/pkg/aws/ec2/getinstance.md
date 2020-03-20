@@ -190,7 +190,7 @@ exactly match a pair on the desired Instance.
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getinstancefilter">[]ec2.<wbr>Get<wbr>Instance<wbr>Filter</a></code>
+                <code><a href="#getinstancefilter">[]Get<wbr>Instance<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1094,7 +1094,7 @@ is only available if you&#39;ve enabled DNS hostnames for your VPC.
             <td class="align-top">Credit<wbr>Specifications</td>
             <td class="align-top">
                 
-                <code><a href="#getinstancecreditspecification">[]ec2.<wbr>Get<wbr>Instance<wbr>Credit<wbr>Specification</a></code>
+                <code><a href="#getinstancecreditspecification">[]Get<wbr>Instance<wbr>Credit<wbr>Specification</a></code>
             </td>
             <td class="align-top">{{% md %}} The credit specification of the Instance.
  {{% /md %}}
@@ -1119,7 +1119,7 @@ is only available if you&#39;ve enabled DNS hostnames for your VPC.
             <td class="align-top">Ebs<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#getinstanceebsblockdevice">[]ec2.<wbr>Get<wbr>Instance<wbr>Ebs<wbr>Block<wbr>Device</a></code>
+                <code><a href="#getinstanceebsblockdevice">[]Get<wbr>Instance<wbr>Ebs<wbr>Block<wbr>Device</a></code>
             </td>
             <td class="align-top">{{% md %}} The EBS block device mappings of the Instance.
  {{% /md %}}
@@ -1145,7 +1145,7 @@ is only available if you&#39;ve enabled DNS hostnames for your VPC.
             <td class="align-top">Ephemeral<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#getinstanceephemeralblockdevice">[]ec2.<wbr>Get<wbr>Instance<wbr>Ephemeral<wbr>Block<wbr>Device</a></code>
+                <code><a href="#getinstanceephemeralblockdevice">[]Get<wbr>Instance<wbr>Ephemeral<wbr>Block<wbr>Device</a></code>
             </td>
             <td class="align-top">{{% md %}} The ephemeral block device mappings of the Instance.
  {{% /md %}}
@@ -1158,7 +1158,7 @@ is only available if you&#39;ve enabled DNS hostnames for your VPC.
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getinstancefilter">[]ec2.<wbr>Get<wbr>Instance<wbr>Filter</a></code>
+                <code><a href="#getinstancefilter">[]Get<wbr>Instance<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1406,7 +1406,7 @@ is only available if you&#39;ve enabled DNS hostnames for your VPC.
             <td class="align-top">Root<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#getinstancerootblockdevice">[]ec2.<wbr>Get<wbr>Instance<wbr>Root<wbr>Block<wbr>Device</a></code>
+                <code><a href="#getinstancerootblockdevice">[]Get<wbr>Instance<wbr>Root<wbr>Block<wbr>Device</a></code>
             </td>
             <td class="align-top">{{% md %}} The root block device mappings of the Instance
  {{% /md %}}

@@ -297,7 +297,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">Targets</td>
             <td class="align-top">
                 
-                <code><a href="#notificationruletarget">[]codestarnotifications.<wbr>Notification<wbr>Rule<wbr>Target</a></code>
+                <code><a href="#notificationruletarget">[]Notification<wbr>Rule<wbr>Target</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -815,7 +815,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
             <td class="align-top">Targets</td>
             <td class="align-top">
                 
-                <code><a href="#notificationruletarget">[]codestarnotifications.<wbr>Notification<wbr>Rule<wbr>Target</a></code>
+                <code><a href="#notificationruletarget">[]Notification<wbr>Rule<wbr>Target</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration blocks containing notification target information. Can be specified multiple times. At least one target must be specified on creation.
  {{% /md %}}
@@ -1404,7 +1404,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">Targets</td>
             <td class="align-top">
                 
-                <code><a href="#notificationruletarget">[]codestarnotifications.<wbr>Notification<wbr>Rule<wbr>Target</a></code>
+                <code><a href="#notificationruletarget">[]Notification<wbr>Rule<wbr>Target</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

@@ -145,7 +145,7 @@ recent Volume.
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getvolumefilter">[]ebs.<wbr>Get<wbr>Volume<wbr>Filter</a></code>
+                <code><a href="#getvolumefilter">[]Get<wbr>Volume<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -587,7 +587,7 @@ The following output properties are available:
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getvolumefilter">[]ebs.<wbr>Get<wbr>Volume<wbr>Filter</a></code>
+                <code><a href="#getvolumefilter">[]Get<wbr>Volume<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 

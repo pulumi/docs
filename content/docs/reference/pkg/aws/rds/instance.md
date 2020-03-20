@@ -1677,7 +1677,7 @@ for more information on using Replication.
             <td class="align-top">S3Import</td>
             <td class="align-top">
                 
-                <code><a href="#instances3import">*rds.<wbr>Instance<wbr>S3Import</a></code>
+                <code><a href="#instances3import">*Instance<wbr>S3Import</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5128,7 +5128,7 @@ for more information on using Replication.
             <td class="align-top">S3Import</td>
             <td class="align-top">
                 
-                <code><a href="#instances3import">*rds.<wbr>Instance<wbr>S3Import</a></code>
+                <code><a href="#instances3import">*Instance<wbr>S3Import</a></code>
             </td>
             <td class="align-top">{{% md %}} Restore from a Percona Xtrabackup in S3.  See [Importing Data into an Amazon RDS MySQL DB Instance](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MySQL.Procedural.Importing.html)
  {{% /md %}}
@@ -8805,7 +8805,7 @@ The RDS Resource ID of this instance.
             <td class="align-top">S3Import</td>
             <td class="align-top">
                 
-                <code><a href="#instances3import">*rds.<wbr>Instance<wbr>S3Import</a></code>
+                <code><a href="#instances3import">*Instance<wbr>S3Import</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

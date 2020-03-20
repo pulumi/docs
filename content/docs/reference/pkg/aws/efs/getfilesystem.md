@@ -604,7 +604,7 @@ The following output properties are available:
             <td class="align-top">Lifecycle<wbr>Policy</td>
             <td class="align-top">
                 
-                <code><a href="#getfilesystemlifecyclepolicy">efs.<wbr>Get<wbr>File<wbr>System<wbr>Lifecycle<wbr>Policy</a></code>
+                <code><a href="#getfilesystemlifecyclepolicy">Get<wbr>File<wbr>System<wbr>Lifecycle<wbr>Policy</a></code>
             </td>
             <td class="align-top">{{% md %}} A file system [lifecycle policy](https://docs.aws.amazon.com/efs/latest/ug/API_LifecyclePolicy.html) object.
  {{% /md %}}

@@ -235,7 +235,7 @@ Amazon Resource Name (ARN) of the IAM Role that provides permissions for the EKS
             <td class="align-top">Selectors</td>
             <td class="align-top">
                 
-                <code><a href="#fargateprofileselector">[]eks.<wbr>Fargate<wbr>Profile<wbr>Selector</a></code>
+                <code><a href="#fargateprofileselector">[]Fargate<wbr>Profile<wbr>Selector</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -710,7 +710,7 @@ The following output properties are available:
             <td class="align-top">Selectors</td>
             <td class="align-top">
                 
-                <code><a href="#fargateprofileselector">[]eks.<wbr>Fargate<wbr>Profile<wbr>Selector</a></code>
+                <code><a href="#fargateprofileselector">[]Fargate<wbr>Profile<wbr>Selector</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block(s) for selecting Kubernetes Pods to execute with this EKS Fargate Profile. Detailed below.
  {{% /md %}}
@@ -1289,7 +1289,7 @@ Amazon Resource Name (ARN) of the IAM Role that provides permissions for the EKS
             <td class="align-top">Selectors</td>
             <td class="align-top">
                 
-                <code><a href="#fargateprofileselector">[]eks.<wbr>Fargate<wbr>Profile<wbr>Selector</a></code>
+                <code><a href="#fargateprofileselector">[]Fargate<wbr>Profile<wbr>Selector</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

@@ -638,7 +638,7 @@ distribution.
             <td class="align-top">Custom<wbr>Error<wbr>Responses</td>
             <td class="align-top">
                 
-                <code><a href="#distributioncustomerrorresponse">[]cloudfront.<wbr>Distribution<wbr>Custom<wbr>Error<wbr>Response</a></code>
+                <code><a href="#distributioncustomerrorresponse">[]Distribution<wbr>Custom<wbr>Error<wbr>Response</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -653,7 +653,7 @@ One or more custom error response elements (multiples allowed).
             <td class="align-top">Default<wbr>Cache<wbr>Behavior</td>
             <td class="align-top">
                 
-                <code><a href="#distributiondefaultcachebehavior">cloudfront.<wbr>Distribution<wbr>Default<wbr>Cache<wbr>Behavior</a></code>
+                <code><a href="#distributiondefaultcachebehavior">Distribution<wbr>Default<wbr>Cache<wbr>Behavior</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -733,7 +733,7 @@ Whether the IPv6 is enabled for the distribution.
             <td class="align-top">Logging<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#distributionloggingconfig">*cloudfront.<wbr>Distribution<wbr>Logging<wbr>Config</a></code>
+                <code><a href="#distributionloggingconfig">*Distribution<wbr>Logging<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -750,7 +750,7 @@ to your distribution (maximum one).
             <td class="align-top">Ordered<wbr>Cache<wbr>Behaviors</td>
             <td class="align-top">
                 
-                <code><a href="#distributionorderedcachebehavior">[]cloudfront.<wbr>Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior</a></code>
+                <code><a href="#distributionorderedcachebehavior">[]Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -767,7 +767,7 @@ in order of precedence. The topmost cache behavior will have precedence 0.
             <td class="align-top">Origin<wbr>Groups</td>
             <td class="align-top">
                 
-                <code><a href="#distributionorigingroup">[]cloudfront.<wbr>Distribution<wbr>Origin<wbr>Group</a></code>
+                <code><a href="#distributionorigingroup">[]Distribution<wbr>Origin<wbr>Group</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -783,7 +783,7 @@ distribution (multiples allowed).
             <td class="align-top">Origins</td>
             <td class="align-top">
                 
-                <code><a href="#distributionorigin">[]cloudfront.<wbr>Distribution<wbr>Origin</a></code>
+                <code><a href="#distributionorigin">[]Distribution<wbr>Origin</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -815,7 +815,7 @@ The price class for this distribution. One of
             <td class="align-top">Restrictions</td>
             <td class="align-top">
                 
-                <code><a href="#distributionrestrictions">cloudfront.<wbr>Distribution<wbr>Restrictions</a></code>
+                <code><a href="#distributionrestrictions">Distribution<wbr>Restrictions</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -863,7 +863,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">Viewer<wbr>Certificate</td>
             <td class="align-top">
                 
-                <code><a href="#distributionviewercertificate">cloudfront.<wbr>Distribution<wbr>Viewer<wbr>Certificate</a></code>
+                <code><a href="#distributionviewercertificate">Distribution<wbr>Viewer<wbr>Certificate</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2099,7 +2099,7 @@ distribution.
             <td class="align-top">Custom<wbr>Error<wbr>Responses</td>
             <td class="align-top">
                 
-                <code><a href="#distributioncustomerrorresponse">[]cloudfront.<wbr>Distribution<wbr>Custom<wbr>Error<wbr>Response</a></code>
+                <code><a href="#distributioncustomerrorresponse">[]Distribution<wbr>Custom<wbr>Error<wbr>Response</a></code>
             </td>
             <td class="align-top">{{% md %}} One or more custom error response elements (multiples allowed).
  {{% /md %}}
@@ -2112,7 +2112,7 @@ distribution.
             <td class="align-top">Default<wbr>Cache<wbr>Behavior</td>
             <td class="align-top">
                 
-                <code><a href="#distributiondefaultcachebehavior">cloudfront.<wbr>Distribution<wbr>Default<wbr>Cache<wbr>Behavior</a></code>
+                <code><a href="#distributiondefaultcachebehavior">Distribution<wbr>Default<wbr>Cache<wbr>Behavior</a></code>
             </td>
             <td class="align-top">{{% md %}} The default cache behavior for this distribution (maximum
 one).
@@ -2252,7 +2252,7 @@ currently in progress.
             <td class="align-top">Logging<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#distributionloggingconfig">*cloudfront.<wbr>Distribution<wbr>Logging<wbr>Config</a></code>
+                <code><a href="#distributionloggingconfig">*Distribution<wbr>Logging<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} The logging
 configuration that controls how logs are written
@@ -2267,7 +2267,7 @@ to your distribution (maximum one).
             <td class="align-top">Ordered<wbr>Cache<wbr>Behaviors</td>
             <td class="align-top">
                 
-                <code><a href="#distributionorderedcachebehavior">[]cloudfront.<wbr>Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior</a></code>
+                <code><a href="#distributionorderedcachebehavior">[]Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior</a></code>
             </td>
             <td class="align-top">{{% md %}} An ordered list of cache behaviors
 resource for this distribution. List from top to bottom
@@ -2282,7 +2282,7 @@ in order of precedence. The topmost cache behavior will have precedence 0.
             <td class="align-top">Origin<wbr>Groups</td>
             <td class="align-top">
                 
-                <code><a href="#distributionorigingroup">[]cloudfront.<wbr>Distribution<wbr>Origin<wbr>Group</a></code>
+                <code><a href="#distributionorigingroup">[]Distribution<wbr>Origin<wbr>Group</a></code>
             </td>
             <td class="align-top">{{% md %}} One or more origin_group for this
 distribution (multiples allowed).
@@ -2296,7 +2296,7 @@ distribution (multiples allowed).
             <td class="align-top">Origins</td>
             <td class="align-top">
                 
-                <code><a href="#distributionorigin">[]cloudfront.<wbr>Distribution<wbr>Origin</a></code>
+                <code><a href="#distributionorigin">[]Distribution<wbr>Origin</a></code>
             </td>
             <td class="align-top">{{% md %}} One or more origins for this
 distribution (multiples allowed).
@@ -2324,7 +2324,7 @@ distribution (multiples allowed).
             <td class="align-top">Restrictions</td>
             <td class="align-top">
                 
-                <code><a href="#distributionrestrictions">cloudfront.<wbr>Distribution<wbr>Restrictions</a></code>
+                <code><a href="#distributionrestrictions">Distribution<wbr>Restrictions</a></code>
             </td>
             <td class="align-top">{{% md %}} The restriction
 configuration for this distribution (maximum one).
@@ -2381,7 +2381,7 @@ CloudFront system.
             <td class="align-top">Viewer<wbr>Certificate</td>
             <td class="align-top">
                 
-                <code><a href="#distributionviewercertificate">cloudfront.<wbr>Distribution<wbr>Viewer<wbr>Certificate</a></code>
+                <code><a href="#distributionviewercertificate">Distribution<wbr>Viewer<wbr>Certificate</a></code>
             </td>
             <td class="align-top">{{% md %}} The SSL
 configuration for this distribution (maximum
@@ -3900,7 +3900,7 @@ distribution.
             <td class="align-top">Custom<wbr>Error<wbr>Responses</td>
             <td class="align-top">
                 
-                <code><a href="#distributioncustomerrorresponse">[]cloudfront.<wbr>Distribution<wbr>Custom<wbr>Error<wbr>Response</a></code>
+                <code><a href="#distributioncustomerrorresponse">[]Distribution<wbr>Custom<wbr>Error<wbr>Response</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3915,7 +3915,7 @@ One or more custom error response elements (multiples allowed).
             <td class="align-top">Default<wbr>Cache<wbr>Behavior</td>
             <td class="align-top">
                 
-                <code><a href="#distributiondefaultcachebehavior">*cloudfront.<wbr>Distribution<wbr>Default<wbr>Cache<wbr>Behavior</a></code>
+                <code><a href="#distributiondefaultcachebehavior">*Distribution<wbr>Default<wbr>Cache<wbr>Behavior</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4075,7 +4075,7 @@ The date and time the distribution was last modified.
             <td class="align-top">Logging<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#distributionloggingconfig">*cloudfront.<wbr>Distribution<wbr>Logging<wbr>Config</a></code>
+                <code><a href="#distributionloggingconfig">*Distribution<wbr>Logging<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4092,7 +4092,7 @@ to your distribution (maximum one).
             <td class="align-top">Ordered<wbr>Cache<wbr>Behaviors</td>
             <td class="align-top">
                 
-                <code><a href="#distributionorderedcachebehavior">[]cloudfront.<wbr>Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior</a></code>
+                <code><a href="#distributionorderedcachebehavior">[]Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4109,7 +4109,7 @@ in order of precedence. The topmost cache behavior will have precedence 0.
             <td class="align-top">Origin<wbr>Groups</td>
             <td class="align-top">
                 
-                <code><a href="#distributionorigingroup">[]cloudfront.<wbr>Distribution<wbr>Origin<wbr>Group</a></code>
+                <code><a href="#distributionorigingroup">[]Distribution<wbr>Origin<wbr>Group</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4125,7 +4125,7 @@ distribution (multiples allowed).
             <td class="align-top">Origins</td>
             <td class="align-top">
                 
-                <code><a href="#distributionorigin">[]cloudfront.<wbr>Distribution<wbr>Origin</a></code>
+                <code><a href="#distributionorigin">[]Distribution<wbr>Origin</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4157,7 +4157,7 @@ The price class for this distribution. One of
             <td class="align-top">Restrictions</td>
             <td class="align-top">
                 
-                <code><a href="#distributionrestrictions">*cloudfront.<wbr>Distribution<wbr>Restrictions</a></code>
+                <code><a href="#distributionrestrictions">*Distribution<wbr>Restrictions</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4222,7 +4222,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">Viewer<wbr>Certificate</td>
             <td class="align-top">
                 
-                <code><a href="#distributionviewercertificate">*cloudfront.<wbr>Distribution<wbr>Viewer<wbr>Certificate</a></code>
+                <code><a href="#distributionviewercertificate">*Distribution<wbr>Viewer<wbr>Certificate</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5954,7 +5954,7 @@ Field level encryption configuration ID
             <td class="align-top">Forwarded<wbr>Values</td>
             <td class="align-top">
                 
-                <code><a href="#distributiondefaultcachebehaviorforwardedvalues">cloudfront.<wbr>Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values</a></code>
+                <code><a href="#distributiondefaultcachebehaviorforwardedvalues">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -5970,7 +5970,7 @@ handles query strings, cookies and headers (maximum one).
             <td class="align-top">Lambda<wbr>Function<wbr>Associations</td>
             <td class="align-top">
                 
-                <code><a href="#distributiondefaultcachebehaviorlambdafunctionassociation">[]cloudfront.<wbr>Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Lambda<wbr>Function<wbr>Association</a></code>
+                <code><a href="#distributiondefaultcachebehaviorlambdafunctionassociation">[]Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Lambda<wbr>Function<wbr>Association</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6694,7 +6694,7 @@ value of `true` for `query_string`, all query string keys are cached.
             <td class="align-top">Cookies</td>
             <td class="align-top">
                 
-                <code><a href="#distributiondefaultcachebehaviorforwardedvaluescookies">cloudfront.<wbr>Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Cookies</a></code>
+                <code><a href="#distributiondefaultcachebehaviorforwardedvaluescookies">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Cookies</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -8135,7 +8135,7 @@ Field level encryption configuration ID
             <td class="align-top">Forwarded<wbr>Values</td>
             <td class="align-top">
                 
-                <code><a href="#distributionorderedcachebehaviorforwardedvalues">cloudfront.<wbr>Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values</a></code>
+                <code><a href="#distributionorderedcachebehaviorforwardedvalues">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -8151,7 +8151,7 @@ handles query strings, cookies and headers (maximum one).
             <td class="align-top">Lambda<wbr>Function<wbr>Associations</td>
             <td class="align-top">
                 
-                <code><a href="#distributionorderedcachebehaviorlambdafunctionassociation">[]cloudfront.<wbr>Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Lambda<wbr>Function<wbr>Association</a></code>
+                <code><a href="#distributionorderedcachebehaviorlambdafunctionassociation">[]Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Lambda<wbr>Function<wbr>Association</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -8923,7 +8923,7 @@ value of `true` for `query_string`, all query string keys are cached.
             <td class="align-top">Cookies</td>
             <td class="align-top">
                 
-                <code><a href="#distributionorderedcachebehaviorforwardedvaluescookies">cloudfront.<wbr>Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Cookies</a></code>
+                <code><a href="#distributionorderedcachebehaviorforwardedvaluescookies">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Cookies</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -9854,7 +9854,7 @@ configuration information. If a custom origin is required, use
             <td class="align-top">Custom<wbr>Headers</td>
             <td class="align-top">
                 
-                <code><a href="#distributionorigincustomheader">[]cloudfront.<wbr>Distribution<wbr>Origin<wbr>Custom<wbr>Header</a></code>
+                <code><a href="#distributionorigincustomheader">[]Distribution<wbr>Origin<wbr>Custom<wbr>Header</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -9871,7 +9871,7 @@ One or more sub-resources with `name` and
             <td class="align-top">Custom<wbr>Origin<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#distributionorigincustomoriginconfig">*cloudfront.<wbr>Distribution<wbr>Origin<wbr>Custom<wbr>Origin<wbr>Config</a></code>
+                <code><a href="#distributionorigincustomoriginconfig">*Distribution<wbr>Origin<wbr>Custom<wbr>Origin<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -9936,7 +9936,7 @@ custom origin.
             <td class="align-top">S3Origin<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#distributionorigins3originconfig">*cloudfront.<wbr>Distribution<wbr>Origin<wbr>S3Origin<wbr>Config</a></code>
+                <code><a href="#distributionorigins3originconfig">*Distribution<wbr>Origin<wbr>S3Origin<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -10983,7 +10983,7 @@ The unique identifier of the member origin
             <td class="align-top">Failover<wbr>Criteria</td>
             <td class="align-top">
                 
-                <code><a href="#distributionorigingroupfailovercriteria">cloudfront.<wbr>Distribution<wbr>Origin<wbr>Group<wbr>Failover<wbr>Criteria</a></code>
+                <code><a href="#distributionorigingroupfailovercriteria">Distribution<wbr>Origin<wbr>Group<wbr>Failover<wbr>Criteria</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -10998,7 +10998,7 @@ The failover criteria for when to failover to the secondary origin
             <td class="align-top">Members</td>
             <td class="align-top">
                 
-                <code><a href="#distributionorigingroupmember">[]cloudfront.<wbr>Distribution<wbr>Origin<wbr>Group<wbr>Member</a></code>
+                <code><a href="#distributionorigingroupmember">[]Distribution<wbr>Origin<wbr>Group<wbr>Member</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -11720,7 +11720,7 @@ identity][5] to associate with the origin.
             <td class="align-top">Geo<wbr>Restriction</td>
             <td class="align-top">
                 
-                <code><a href="#distributionrestrictionsgeorestriction">cloudfront.<wbr>Distribution<wbr>Restrictions<wbr>Geo<wbr>Restriction</a></code>
+                <code><a href="#distributionrestrictionsgeorestriction">Distribution<wbr>Restrictions<wbr>Geo<wbr>Restriction</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

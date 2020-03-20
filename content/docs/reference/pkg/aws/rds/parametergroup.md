@@ -277,7 +277,7 @@ Creates a unique name beginning with the specified prefix. Conflicts with `name`
             <td class="align-top">Parameters</td>
             <td class="align-top">
                 
-                <code><a href="#parametergroupparameter">[]rds.<wbr>Parameter<wbr>Group<wbr>Parameter</a></code>
+                <code><a href="#parametergroupparameter">[]Parameter<wbr>Group<wbr>Parameter</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -737,7 +737,7 @@ The following output properties are available:
             <td class="align-top">Parameters</td>
             <td class="align-top">
                 
-                <code><a href="#parametergroupparameter">[]rds.<wbr>Parameter<wbr>Group<wbr>Parameter</a></code>
+                <code><a href="#parametergroupparameter">[]Parameter<wbr>Group<wbr>Parameter</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of DB parameters to apply. Note that parameters may differ from a family to an other. Full list of all parameters can be discovered via [`aws rds describe-db-parameters`](https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-parameters.html) after initial creation of the group.
  {{% /md %}}
@@ -1264,7 +1264,7 @@ Creates a unique name beginning with the specified prefix. Conflicts with `name`
             <td class="align-top">Parameters</td>
             <td class="align-top">
                 
-                <code><a href="#parametergroupparameter">[]rds.<wbr>Parameter<wbr>Group<wbr>Parameter</a></code>
+                <code><a href="#parametergroupparameter">[]Parameter<wbr>Group<wbr>Parameter</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

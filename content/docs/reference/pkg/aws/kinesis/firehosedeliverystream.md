@@ -550,7 +550,7 @@ This is the destination to where the data is delivered. The only options are `s3
             <td class="align-top">Elasticsearch<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamelasticsearchconfiguration">*kinesis.<wbr>Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration</a></code>
+                <code><a href="#firehosedeliverystreamelasticsearchconfiguration">*Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -565,7 +565,7 @@ Configuration options if elasticsearch is the destination. More details are give
             <td class="align-top">Extended<wbr>S3Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamextendeds3configuration">*kinesis.<wbr>Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration</a></code>
+                <code><a href="#firehosedeliverystreamextendeds3configuration">*Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -580,7 +580,7 @@ Enhanced configuration options for the s3 destination. More details are given be
             <td class="align-top">Kinesis<wbr>Source<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamkinesissourceconfiguration">*kinesis.<wbr>Firehose<wbr>Delivery<wbr>Stream<wbr>Kinesis<wbr>Source<wbr>Configuration</a></code>
+                <code><a href="#firehosedeliverystreamkinesissourceconfiguration">*Firehose<wbr>Delivery<wbr>Stream<wbr>Kinesis<wbr>Source<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -611,7 +611,7 @@ AWS account and region the Stream is created in.
             <td class="align-top">Redshift<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamredshiftconfiguration">*kinesis.<wbr>Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration</a></code>
+                <code><a href="#firehosedeliverystreamredshiftconfiguration">*Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -628,7 +628,7 @@ Using `redshift_configuration` requires the user to also specify a
             <td class="align-top">S3Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreams3configuration">*kinesis.<wbr>Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration</a></code>
+                <code><a href="#firehosedeliverystreams3configuration">*Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -644,7 +644,7 @@ is redshift). More details are given below.
             <td class="align-top">Server<wbr>Side<wbr>Encryption</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamserversideencryption">*kinesis.<wbr>Firehose<wbr>Delivery<wbr>Stream<wbr>Server<wbr>Side<wbr>Encryption</a></code>
+                <code><a href="#firehosedeliverystreamserversideencryption">*Firehose<wbr>Delivery<wbr>Stream<wbr>Server<wbr>Side<wbr>Encryption</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -660,7 +660,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             <td class="align-top">Splunk<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamsplunkconfiguration">*kinesis.<wbr>Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration</a></code>
+                <code><a href="#firehosedeliverystreamsplunkconfiguration">*Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1404,7 +1404,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             <td class="align-top">Elasticsearch<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamelasticsearchconfiguration">*kinesis.<wbr>Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration</a></code>
+                <code><a href="#firehosedeliverystreamelasticsearchconfiguration">*Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration options if elasticsearch is the destination. More details are given below.
  {{% /md %}}
@@ -1417,7 +1417,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             <td class="align-top">Extended<wbr>S3Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamextendeds3configuration">*kinesis.<wbr>Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration</a></code>
+                <code><a href="#firehosedeliverystreamextendeds3configuration">*Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} Enhanced configuration options for the s3 destination. More details are given below.
  {{% /md %}}
@@ -1430,7 +1430,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             <td class="align-top">Kinesis<wbr>Source<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamkinesissourceconfiguration">*kinesis.<wbr>Firehose<wbr>Delivery<wbr>Stream<wbr>Kinesis<wbr>Source<wbr>Configuration</a></code>
+                <code><a href="#firehosedeliverystreamkinesissourceconfiguration">*Firehose<wbr>Delivery<wbr>Stream<wbr>Kinesis<wbr>Source<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} Allows the ability to specify the kinesis stream that is used as the source of the firehose delivery stream.
  {{% /md %}}
@@ -1457,7 +1457,7 @@ AWS account and region the Stream is created in.
             <td class="align-top">Redshift<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamredshiftconfiguration">*kinesis.<wbr>Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration</a></code>
+                <code><a href="#firehosedeliverystreamredshiftconfiguration">*Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration options if redshift is the destination.
 Using `redshift_configuration` requires the user to also specify a
@@ -1472,7 +1472,7 @@ Using `redshift_configuration` requires the user to also specify a
             <td class="align-top">S3Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreams3configuration">*kinesis.<wbr>Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration</a></code>
+                <code><a href="#firehosedeliverystreams3configuration">*Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} Required for non-S3 destinations. For S3 destination, use `extended_s3_configuration` instead. Configuration options for the s3 destination (or the intermediate bucket if the destination
 is redshift). More details are given below.
@@ -1486,7 +1486,7 @@ is redshift). More details are given below.
             <td class="align-top">Server<wbr>Side<wbr>Encryption</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamserversideencryption">*kinesis.<wbr>Firehose<wbr>Delivery<wbr>Stream<wbr>Server<wbr>Side<wbr>Encryption</a></code>
+                <code><a href="#firehosedeliverystreamserversideencryption">*Firehose<wbr>Delivery<wbr>Stream<wbr>Server<wbr>Side<wbr>Encryption</a></code>
             </td>
             <td class="align-top">{{% md %}} Encrypt at rest options.
 Server-side encryption should not be enabled when a kinesis stream is configured as the source of the firehose delivery stream.
@@ -1500,7 +1500,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             <td class="align-top">Splunk<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamsplunkconfiguration">*kinesis.<wbr>Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration</a></code>
+                <code><a href="#firehosedeliverystreamsplunkconfiguration">*Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -2263,7 +2263,7 @@ This is the destination to where the data is delivered. The only options are `s3
             <td class="align-top">Elasticsearch<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamelasticsearchconfiguration">*kinesis.<wbr>Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration</a></code>
+                <code><a href="#firehosedeliverystreamelasticsearchconfiguration">*Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2278,7 +2278,7 @@ Configuration options if elasticsearch is the destination. More details are give
             <td class="align-top">Extended<wbr>S3Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamextendeds3configuration">*kinesis.<wbr>Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration</a></code>
+                <code><a href="#firehosedeliverystreamextendeds3configuration">*Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2293,7 +2293,7 @@ Enhanced configuration options for the s3 destination. More details are given be
             <td class="align-top">Kinesis<wbr>Source<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamkinesissourceconfiguration">*kinesis.<wbr>Firehose<wbr>Delivery<wbr>Stream<wbr>Kinesis<wbr>Source<wbr>Configuration</a></code>
+                <code><a href="#firehosedeliverystreamkinesissourceconfiguration">*Firehose<wbr>Delivery<wbr>Stream<wbr>Kinesis<wbr>Source<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2324,7 +2324,7 @@ AWS account and region the Stream is created in.
             <td class="align-top">Redshift<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamredshiftconfiguration">*kinesis.<wbr>Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration</a></code>
+                <code><a href="#firehosedeliverystreamredshiftconfiguration">*Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2341,7 +2341,7 @@ Using `redshift_configuration` requires the user to also specify a
             <td class="align-top">S3Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreams3configuration">*kinesis.<wbr>Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration</a></code>
+                <code><a href="#firehosedeliverystreams3configuration">*Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2357,7 +2357,7 @@ is redshift). More details are given below.
             <td class="align-top">Server<wbr>Side<wbr>Encryption</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamserversideencryption">*kinesis.<wbr>Firehose<wbr>Delivery<wbr>Stream<wbr>Server<wbr>Side<wbr>Encryption</a></code>
+                <code><a href="#firehosedeliverystreamserversideencryption">*Firehose<wbr>Delivery<wbr>Stream<wbr>Server<wbr>Side<wbr>Encryption</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2373,7 +2373,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             <td class="align-top">Splunk<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamsplunkconfiguration">*kinesis.<wbr>Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration</a></code>
+                <code><a href="#firehosedeliverystreamsplunkconfiguration">*Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3116,7 +3116,7 @@ Buffer incoming data to the specified size, in MBs between 1 to 100, before deli
             <td class="align-top">Cloudwatch<wbr>Logging<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamelasticsearchconfigurationcloudwatchloggingoptions">*kinesis.<wbr>Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></code>
+                <code><a href="#firehosedeliverystreamelasticsearchconfigurationcloudwatchloggingoptions">*Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3176,7 +3176,7 @@ The Elasticsearch index rotation period.  Index rotation appends a timestamp to 
             <td class="align-top">Processing<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfiguration">*kinesis.<wbr>Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration</a></code>
+                <code><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfiguration">*Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4008,7 +4008,7 @@ Defaults to `true`. Set it to `false` if you want to disable format conversion w
             <td class="align-top">Processors</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfigurationprocessor">[]kinesis.<wbr>Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor</a></code>
+                <code><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfigurationprocessor">[]Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4214,7 +4214,7 @@ The type of processor. Valid Values: `Lambda`
             <td class="align-top">Parameters</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfigurationprocessorparameter">[]kinesis.<wbr>Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter</a></code>
+                <code><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfigurationprocessorparameter">[]Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4869,7 +4869,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
             <td class="align-top">Cloudwatch<wbr>Logging<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamextendeds3configurationcloudwatchloggingoptions">*kinesis.<wbr>Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></code>
+                <code><a href="#firehosedeliverystreamextendeds3configurationcloudwatchloggingoptions">*Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4899,7 +4899,7 @@ The compression format. If no value is specified, the default is UNCOMPRESSED. O
             <td class="align-top">Data<wbr>Format<wbr>Conversion<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfiguration">*kinesis.<wbr>Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration</a></code>
+                <code><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfiguration">*Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4960,7 +4960,7 @@ The &#34;YYYY/MM/DD/HH&#34; time format prefix is automatically used for deliver
             <td class="align-top">Processing<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamextendeds3configurationprocessingconfiguration">*kinesis.<wbr>Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration</a></code>
+                <code><a href="#firehosedeliverystreamextendeds3configurationprocessingconfiguration">*Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4990,7 +4990,7 @@ The role that Kinesis Data Firehose can use to access AWS Glue. This role must b
             <td class="align-top">S3Backup<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamextendeds3configurations3backupconfiguration">*kinesis.<wbr>Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>S3Backup<wbr>Configuration</a></code>
+                <code><a href="#firehosedeliverystreamextendeds3configurations3backupconfiguration">*Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>S3Backup<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5871,7 +5871,7 @@ Defaults to `true`. Set it to `false` if you want to disable format conversion w
             <td class="align-top">Input<wbr>Format<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfiguration">kinesis.<wbr>Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration</a></code>
+                <code><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -5886,7 +5886,7 @@ Nested argument that specifies the deserializer that you want Kinesis Data Fireh
             <td class="align-top">Output<wbr>Format<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfiguration">kinesis.<wbr>Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration</a></code>
+                <code><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -5901,7 +5901,7 @@ Nested argument that specifies the serializer that you want Kinesis Data Firehos
             <td class="align-top">Schema<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationschemaconfiguration">kinesis.<wbr>Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Schema<wbr>Configuration</a></code>
+                <code><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationschemaconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Schema<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -6152,7 +6152,7 @@ Nested argument that specifies which deserializer to use. You can choose either 
             <td class="align-top">Deserializer</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializer">kinesis.<wbr>Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Deserializer</a></code>
+                <code><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializer">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Deserializer</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -6328,7 +6328,7 @@ Nested argument that specifies the OpenX SerDe. More details below.
             <td class="align-top">Hive<wbr>Json<wbr>Ser<wbr>De</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializerhivejsonserde">*kinesis.<wbr>Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Deserializer<wbr>Hive<wbr>Json<wbr>Ser<wbr>De</a></code>
+                <code><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializerhivejsonserde">*Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Deserializer<wbr>Hive<wbr>Json<wbr>Ser<wbr>De</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6343,7 +6343,7 @@ Nested argument that specifies the native Hive / HCatalog JsonSerDe. More detail
             <td class="align-top">Open<wbr>XJson<wbr>Ser<wbr>De</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializeropenxjsonserde">*kinesis.<wbr>Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Deserializer<wbr>Open<wbr>XJson<wbr>Ser<wbr>De</a></code>
+                <code><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializeropenxjsonserde">*Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Deserializer<wbr>Open<wbr>XJson<wbr>Ser<wbr>De</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6976,7 +6976,7 @@ Nested argument that specifies which serializer to use. You can choose either th
             <td class="align-top">Serializer</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializer">kinesis.<wbr>Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Serializer</a></code>
+                <code><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializer">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Serializer</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -7152,7 +7152,7 @@ Nested argument that specifies converting data to the Parquet format before stor
             <td class="align-top">Orc<wbr>Ser<wbr>De</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializerorcserde">*kinesis.<wbr>Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Serializer<wbr>Orc<wbr>Ser<wbr>De</a></code>
+                <code><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializerorcserde">*Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Serializer<wbr>Orc<wbr>Ser<wbr>De</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -7167,7 +7167,7 @@ Nested argument that specifies converting data to the ORC format before storing 
             <td class="align-top">Parquet<wbr>Ser<wbr>De</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializerparquetserde">*kinesis.<wbr>Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Serializer<wbr>Parquet<wbr>Ser<wbr>De</a></code>
+                <code><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializerparquetserde">*Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Serializer<wbr>Parquet<wbr>Ser<wbr>De</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -9011,7 +9011,7 @@ Defaults to `true`. Set it to `false` if you want to disable format conversion w
             <td class="align-top">Processors</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamextendeds3configurationprocessingconfigurationprocessor">[]kinesis.<wbr>Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration<wbr>Processor</a></code>
+                <code><a href="#firehosedeliverystreamextendeds3configurationprocessingconfigurationprocessor">[]Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration<wbr>Processor</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -9217,7 +9217,7 @@ The type of processor. Valid Values: `Lambda`
             <td class="align-top">Parameters</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamextendeds3configurationprocessingconfigurationprocessorparameter">[]kinesis.<wbr>Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter</a></code>
+                <code><a href="#firehosedeliverystreamextendeds3configurationprocessingconfigurationprocessorparameter">[]Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -9797,7 +9797,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
             <td class="align-top">Cloudwatch<wbr>Logging<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamextendeds3configurations3backupconfigurationcloudwatchloggingoptions">*kinesis.<wbr>Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>S3Backup<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></code>
+                <code><a href="#firehosedeliverystreamextendeds3configurations3backupconfigurationcloudwatchloggingoptions">*Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>S3Backup<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -10900,7 +10900,7 @@ The username that the firehose delivery stream will assume. It is strongly recom
             <td class="align-top">Cloudwatch<wbr>Logging<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamredshiftconfigurationcloudwatchloggingoptions">*kinesis.<wbr>Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></code>
+                <code><a href="#firehosedeliverystreamredshiftconfigurationcloudwatchloggingoptions">*Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -10990,7 +10990,7 @@ The password for the username above.
             <td class="align-top">Processing<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfiguration">*kinesis.<wbr>Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration</a></code>
+                <code><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfiguration">*Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -11035,7 +11035,7 @@ The role that Kinesis Data Firehose can use to access AWS Glue. This role must b
             <td class="align-top">S3Backup<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamredshiftconfigurations3backupconfiguration">*kinesis.<wbr>Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>S3Backup<wbr>Configuration</a></code>
+                <code><a href="#firehosedeliverystreamredshiftconfigurations3backupconfiguration">*Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>S3Backup<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -11867,7 +11867,7 @@ Defaults to `true`. Set it to `false` if you want to disable format conversion w
             <td class="align-top">Processors</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfigurationprocessor">[]kinesis.<wbr>Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor</a></code>
+                <code><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfigurationprocessor">[]Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -12073,7 +12073,7 @@ The type of processor. Valid Values: `Lambda`
             <td class="align-top">Parameters</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfigurationprocessorparameter">[]kinesis.<wbr>Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter</a></code>
+                <code><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfigurationprocessorparameter">[]Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -12653,7 +12653,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
             <td class="align-top">Cloudwatch<wbr>Logging<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamredshiftconfigurations3backupconfigurationcloudwatchloggingoptions">*kinesis.<wbr>Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>S3Backup<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></code>
+                <code><a href="#firehosedeliverystreamredshiftconfigurations3backupconfigurationcloudwatchloggingoptions">*Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>S3Backup<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -13523,7 +13523,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
             <td class="align-top">Cloudwatch<wbr>Logging<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreams3configurationcloudwatchloggingoptions">*kinesis.<wbr>Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></code>
+                <code><a href="#firehosedeliverystreams3configurationcloudwatchloggingoptions">*Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -14506,7 +14506,7 @@ Defines how documents should be delivered to Amazon S3.  Valid values are `Faile
             <td class="align-top">Cloudwatch<wbr>Logging<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamsplunkconfigurationcloudwatchloggingoptions">*kinesis.<wbr>Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></code>
+                <code><a href="#firehosedeliverystreamsplunkconfigurationcloudwatchloggingoptions">*Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -14581,7 +14581,7 @@ The GUID that you obtain from your Splunk cluster when you create a new HEC endp
             <td class="align-top">Processing<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfiguration">*kinesis.<wbr>Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration</a></code>
+                <code><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfiguration">*Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -15293,7 +15293,7 @@ Defaults to `true`. Set it to `false` if you want to disable format conversion w
             <td class="align-top">Processors</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfigurationprocessor">[]kinesis.<wbr>Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor</a></code>
+                <code><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfigurationprocessor">[]Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -15499,7 +15499,7 @@ The type of processor. Valid Values: `Lambda`
             <td class="align-top">Parameters</td>
             <td class="align-top">
                 
-                <code><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfigurationprocessorparameter">[]kinesis.<wbr>Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter</a></code>
+                <code><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfigurationprocessorparameter">[]Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

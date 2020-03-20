@@ -406,7 +406,7 @@ The alias for the directory (must be unique amongst all aliases in AWS). Require
             <td class="align-top">Connect<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#directoryconnectsettings">*directoryservice.<wbr>Directory<wbr>Connect<wbr>Settings</a></code>
+                <code><a href="#directoryconnectsettings">*Directory<wbr>Connect<wbr>Settings</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -556,7 +556,7 @@ The directory type (`SimpleAD`, `ADConnector` or `MicrosoftAD` are accepted valu
             <td class="align-top">Vpc<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#directoryvpcsettings">*directoryservice.<wbr>Directory<wbr>Vpc<wbr>Settings</a></code>
+                <code><a href="#directoryvpcsettings">*Directory<wbr>Vpc<wbr>Settings</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1246,7 +1246,7 @@ The following output properties are available:
             <td class="align-top">Connect<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#directoryconnectsettings">*directoryservice.<wbr>Directory<wbr>Connect<wbr>Settings</a></code>
+                <code><a href="#directoryconnectsettings">*Directory<wbr>Connect<wbr>Settings</a></code>
             </td>
             <td class="align-top">{{% md %}} Connector related information about the directory. Fields documented below.
  {{% /md %}}
@@ -1402,7 +1402,7 @@ The following output properties are available:
             <td class="align-top">Vpc<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#directoryvpcsettings">*directoryservice.<wbr>Directory<wbr>Vpc<wbr>Settings</a></code>
+                <code><a href="#directoryvpcsettings">*Directory<wbr>Vpc<wbr>Settings</a></code>
             </td>
             <td class="align-top">{{% md %}} VPC related information about the directory. Fields documented below.
  {{% /md %}}
@@ -2199,7 +2199,7 @@ The alias for the directory (must be unique amongst all aliases in AWS). Require
             <td class="align-top">Connect<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#directoryconnectsettings">*directoryservice.<wbr>Directory<wbr>Connect<wbr>Settings</a></code>
+                <code><a href="#directoryconnectsettings">*Directory<wbr>Connect<wbr>Settings</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2379,7 +2379,7 @@ The directory type (`SimpleAD`, `ADConnector` or `MicrosoftAD` are accepted valu
             <td class="align-top">Vpc<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#directoryvpcsettings">*directoryservice.<wbr>Directory<wbr>Vpc<wbr>Settings</a></code>
+                <code><a href="#directoryvpcsettings">*Directory<wbr>Vpc<wbr>Settings</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

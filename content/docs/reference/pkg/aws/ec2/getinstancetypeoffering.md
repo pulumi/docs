@@ -144,7 +144,7 @@ Ordered list of preferred EC2 Instance Types. The first match in this list will 
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getinstancetypeofferingfilter">[]ec2.<wbr>Get<wbr>Instance<wbr>Type<wbr>Offering<wbr>Filter</a></code>
+                <code><a href="#getinstancetypeofferingfilter">[]Get<wbr>Instance<wbr>Type<wbr>Offering<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -436,7 +436,7 @@ The following output properties are available:
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getinstancetypeofferingfilter">[]ec2.<wbr>Get<wbr>Instance<wbr>Type<wbr>Offering<wbr>Filter</a></code>
+                <code><a href="#getinstancetypeofferingfilter">[]Get<wbr>Instance<wbr>Type<wbr>Offering<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 

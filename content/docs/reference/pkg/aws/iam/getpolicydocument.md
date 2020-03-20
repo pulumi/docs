@@ -206,7 +206,7 @@ json.  Statements without an `sid` cannot be overwritten.
             <td class="align-top">Statements</td>
             <td class="align-top">
                 
-                <code><a href="#getpolicydocumentstatement">[]iam.<wbr>Get<wbr>Policy<wbr>Document<wbr>Statement</a></code>
+                <code><a href="#getpolicydocumentstatement">[]Get<wbr>Policy<wbr>Document<wbr>Statement</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -644,7 +644,7 @@ The following output properties are available:
             <td class="align-top">Statements</td>
             <td class="align-top">
                 
-                <code><a href="#getpolicydocumentstatement">[]iam.<wbr>Get<wbr>Policy<wbr>Document<wbr>Statement</a></code>
+                <code><a href="#getpolicydocumentstatement">[]Get<wbr>Policy<wbr>Document<wbr>Statement</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1108,7 +1108,7 @@ or denies. For example, ``[&#34;ec2:RunInstances&#34;, &#34;s3:*&#34;]``.
             <td class="align-top">Conditions</td>
             <td class="align-top">
                 
-                <code><a href="#getpolicydocumentstatementcondition">[]iam.<wbr>Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Condition</a></code>
+                <code><a href="#getpolicydocumentstatementcondition">[]Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Condition</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1158,7 +1158,7 @@ listed.
             <td class="align-top">Not<wbr>Principals</td>
             <td class="align-top">
                 
-                <code><a href="#getpolicydocumentstatementnotprincipal">[]iam.<wbr>Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Not<wbr>Principal</a></code>
+                <code><a href="#getpolicydocumentstatementnotprincipal">[]Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Not<wbr>Principal</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1191,7 +1191,7 @@ does *not* apply to. Used to apply a policy statement to all resources
             <td class="align-top">Principals</td>
             <td class="align-top">
                 
-                <code><a href="#getpolicydocumentstatementprincipal">[]iam.<wbr>Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Principal</a></code>
+                <code><a href="#getpolicydocumentstatementprincipal">[]Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Principal</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

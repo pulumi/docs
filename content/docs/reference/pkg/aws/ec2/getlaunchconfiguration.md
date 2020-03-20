@@ -515,7 +515,7 @@ The following output properties are available:
             <td class="align-top">Ebs<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#getlaunchconfigurationebsblockdevice">[]ec2.<wbr>Get<wbr>Launch<wbr>Configuration<wbr>Ebs<wbr>Block<wbr>Device</a></code>
+                <code><a href="#getlaunchconfigurationebsblockdevice">[]Get<wbr>Launch<wbr>Configuration<wbr>Ebs<wbr>Block<wbr>Device</a></code>
             </td>
             <td class="align-top">{{% md %}} The EBS Block Devices attached to the instance.
  {{% /md %}}
@@ -554,7 +554,7 @@ The following output properties are available:
             <td class="align-top">Ephemeral<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#getlaunchconfigurationephemeralblockdevice">[]ec2.<wbr>Get<wbr>Launch<wbr>Configuration<wbr>Ephemeral<wbr>Block<wbr>Device</a></code>
+                <code><a href="#getlaunchconfigurationephemeralblockdevice">[]Get<wbr>Launch<wbr>Configuration<wbr>Ephemeral<wbr>Block<wbr>Device</a></code>
             </td>
             <td class="align-top">{{% md %}} The Ephemeral volumes on the instance.
  {{% /md %}}
@@ -658,7 +658,7 @@ The following output properties are available:
             <td class="align-top">Root<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#getlaunchconfigurationrootblockdevice">[]ec2.<wbr>Get<wbr>Launch<wbr>Configuration<wbr>Root<wbr>Block<wbr>Device</a></code>
+                <code><a href="#getlaunchconfigurationrootblockdevice">[]Get<wbr>Launch<wbr>Configuration<wbr>Root<wbr>Block<wbr>Device</a></code>
             </td>
             <td class="align-top">{{% md %}} The Root Block Device of the instance.
  {{% /md %}}

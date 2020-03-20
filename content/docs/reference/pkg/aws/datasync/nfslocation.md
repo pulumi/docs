@@ -177,7 +177,7 @@ Key-value pairs of resource tags to assign to the DataSync Location.
             <td class="align-top">On<wbr>Prem<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#nfslocationonpremconfig">datasync.<wbr>Nfs<wbr>Location<wbr>On<wbr>Prem<wbr>Config</a></code>
+                <code><a href="#nfslocationonpremconfig">Nfs<wbr>Location<wbr>On<wbr>Prem<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -541,7 +541,7 @@ The following output properties are available:
             <td class="align-top">On<wbr>Prem<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#nfslocationonpremconfig">datasync.<wbr>Nfs<wbr>Location<wbr>On<wbr>Prem<wbr>Config</a></code>
+                <code><a href="#nfslocationonpremconfig">Nfs<wbr>Location<wbr>On<wbr>Prem<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block containing information for connecting to the NFS File System.
  {{% /md %}}
@@ -1002,7 +1002,7 @@ Amazon Resource Name (ARN) of the DataSync Location.
             <td class="align-top">On<wbr>Prem<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#nfslocationonpremconfig">*datasync.<wbr>Nfs<wbr>Location<wbr>On<wbr>Prem<wbr>Config</a></code>
+                <code><a href="#nfslocationonpremconfig">*Nfs<wbr>Location<wbr>On<wbr>Prem<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

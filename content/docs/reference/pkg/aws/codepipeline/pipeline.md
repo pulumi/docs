@@ -298,7 +298,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">Artifact<wbr>Store</td>
             <td class="align-top">
                 
-                <code><a href="#pipelineartifactstore">codepipeline.<wbr>Pipeline<wbr>Artifact<wbr>Store</a></code>
+                <code><a href="#pipelineartifactstore">Pipeline<wbr>Artifact<wbr>Store</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -344,7 +344,7 @@ A service role Amazon Resource Name (ARN) that grants AWS CodePipeline permissio
             <td class="align-top">Stages</td>
             <td class="align-top">
                 
-                <code><a href="#pipelinestage">[]codepipeline.<wbr>Pipeline<wbr>Stage</a></code>
+                <code><a href="#pipelinestage">[]Pipeline<wbr>Stage</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -708,7 +708,7 @@ The following output properties are available:
             <td class="align-top">Artifact<wbr>Store</td>
             <td class="align-top">
                 
-                <code><a href="#pipelineartifactstore">codepipeline.<wbr>Pipeline<wbr>Artifact<wbr>Store</a></code>
+                <code><a href="#pipelineartifactstore">Pipeline<wbr>Artifact<wbr>Store</a></code>
             </td>
             <td class="align-top">{{% md %}} An artifact_store block. Artifact stores are documented below.
 * `stage` (Minimum of at least two `stage` blocks is required) A stage block. Stages are documented below.
@@ -748,7 +748,7 @@ The following output properties are available:
             <td class="align-top">Stages</td>
             <td class="align-top">
                 
-                <code><a href="#pipelinestage">[]codepipeline.<wbr>Pipeline<wbr>Stage</a></code>
+                <code><a href="#pipelinestage">[]Pipeline<wbr>Stage</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1173,7 +1173,7 @@ The codepipeline ARN.
             <td class="align-top">Artifact<wbr>Store</td>
             <td class="align-top">
                 
-                <code><a href="#pipelineartifactstore">*codepipeline.<wbr>Pipeline<wbr>Artifact<wbr>Store</a></code>
+                <code><a href="#pipelineartifactstore">*Pipeline<wbr>Artifact<wbr>Store</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1219,7 +1219,7 @@ A service role Amazon Resource Name (ARN) that grants AWS CodePipeline permissio
             <td class="align-top">Stages</td>
             <td class="align-top">
                 
-                <code><a href="#pipelinestage">[]codepipeline.<wbr>Pipeline<wbr>Stage</a></code>
+                <code><a href="#pipelinestage">[]Pipeline<wbr>Stage</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1578,7 +1578,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">Encryption<wbr>Key</td>
             <td class="align-top">
                 
-                <code><a href="#pipelineartifactstoreencryptionkey">*codepipeline.<wbr>Pipeline<wbr>Artifact<wbr>Store<wbr>Encryption<wbr>Key</a></code>
+                <code><a href="#pipelineartifactstoreencryptionkey">*Pipeline<wbr>Artifact<wbr>Store<wbr>Encryption<wbr>Key</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2051,7 +2051,7 @@ The name of the pipeline.
             <td class="align-top">Actions</td>
             <td class="align-top">
                 
-                <code><a href="#pipelinestageaction">[]codepipeline.<wbr>Pipeline<wbr>Stage<wbr>Action</a></code>
+                <code><a href="#pipelinestageaction">[]Pipeline<wbr>Stage<wbr>Action</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

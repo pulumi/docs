@@ -385,7 +385,7 @@ The following output properties are available:
             <td class="align-top">Users</td>
             <td class="align-top">
                 
-                <code><a href="#getgroupuser">[]iam.<wbr>Get<wbr>Group<wbr>User</a></code>
+                <code><a href="#getgroupuser">[]Get<wbr>Group<wbr>User</a></code>
             </td>
             <td class="align-top">{{% md %}} List of objects containing group member information. See supported fields below.
  {{% /md %}}

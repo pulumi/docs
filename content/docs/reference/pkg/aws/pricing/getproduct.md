@@ -167,7 +167,7 @@ The code of the service. Available service codes can be fetched using the Descri
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getproductfilter">[]pricing.<wbr>Get<wbr>Product<wbr>Filter</a></code>
+                <code><a href="#getproductfilter">[]Get<wbr>Product<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -402,7 +402,7 @@ The following output properties are available:
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getproductfilter">[]pricing.<wbr>Get<wbr>Product<wbr>Filter</a></code>
+                <code><a href="#getproductfilter">[]Get<wbr>Product<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 

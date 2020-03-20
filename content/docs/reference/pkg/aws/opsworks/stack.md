@@ -534,7 +534,7 @@ Version of the configuration manager to use. Defaults to &#34;11.4&#34;.
             <td class="align-top">Custom<wbr>Cookbooks<wbr>Sources</td>
             <td class="align-top">
                 
-                <code><a href="#stackcustomcookbookssource">[]opsworks.<wbr>Stack<wbr>Custom<wbr>Cookbooks<wbr>Source</a></code>
+                <code><a href="#stackcustomcookbookssource">[]Stack<wbr>Custom<wbr>Cookbooks<wbr>Source</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1958,7 +1958,7 @@ security groups apply to created instances.
             <td class="align-top">Custom<wbr>Cookbooks<wbr>Sources</td>
             <td class="align-top">
                 
-                <code><a href="#stackcustomcookbookssource">[]opsworks.<wbr>Stack<wbr>Custom<wbr>Cookbooks<wbr>Source</a></code>
+                <code><a href="#stackcustomcookbookssource">[]Stack<wbr>Custom<wbr>Cookbooks<wbr>Source</a></code>
             </td>
             <td class="align-top">{{% md %}} When `use_custom_cookbooks` is set, provide this sub-object as
 described below.
@@ -3425,7 +3425,7 @@ Version of the configuration manager to use. Defaults to &#34;11.4&#34;.
             <td class="align-top">Custom<wbr>Cookbooks<wbr>Sources</td>
             <td class="align-top">
                 
-                <code><a href="#stackcustomcookbookssource">[]opsworks.<wbr>Stack<wbr>Custom<wbr>Cookbooks<wbr>Source</a></code>
+                <code><a href="#stackcustomcookbookssource">[]Stack<wbr>Custom<wbr>Cookbooks<wbr>Source</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

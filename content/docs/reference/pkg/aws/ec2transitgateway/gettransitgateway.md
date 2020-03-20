@@ -147,7 +147,7 @@ Identifier of the EC2 Transit Gateway.
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#gettransitgatewayfilter">[]ec2transitgateway.<wbr>Get<wbr>Transit<wbr>Gateway<wbr>Filter</a></code>
+                <code><a href="#gettransitgatewayfilter">[]Get<wbr>Transit<wbr>Gateway<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -659,7 +659,7 @@ The following output properties are available:
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#gettransitgatewayfilter">[]ec2transitgateway.<wbr>Get<wbr>Transit<wbr>Gateway<wbr>Filter</a></code>
+                <code><a href="#gettransitgatewayfilter">[]Get<wbr>Transit<wbr>Gateway<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 

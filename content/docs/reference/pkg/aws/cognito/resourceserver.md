@@ -221,7 +221,7 @@ A name for the resource server.
             <td class="align-top">Scopes</td>
             <td class="align-top">
                 
-                <code><a href="#resourceserverscope">[]cognito.<wbr>Resource<wbr>Server<wbr>Scope</a></code>
+                <code><a href="#resourceserverscope">[]Resource<wbr>Server<wbr>Scope</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -565,7 +565,7 @@ The following output properties are available:
             <td class="align-top">Scopes</td>
             <td class="align-top">
                 
-                <code><a href="#resourceserverscope">[]cognito.<wbr>Resource<wbr>Server<wbr>Scope</a></code>
+                <code><a href="#resourceserverscope">[]Resource<wbr>Server<wbr>Scope</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of Authorization Scope.
  {{% /md %}}
@@ -976,7 +976,7 @@ A list of all scopes configured for this resource server in the format identifie
             <td class="align-top">Scopes</td>
             <td class="align-top">
                 
-                <code><a href="#resourceserverscope">[]cognito.<wbr>Resource<wbr>Server<wbr>Scope</a></code>
+                <code><a href="#resourceserverscope">[]Resource<wbr>Server<wbr>Scope</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

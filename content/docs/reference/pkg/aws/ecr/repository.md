@@ -174,7 +174,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">Image<wbr>Scanning<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#repositoryimagescanningconfiguration">*ecr.<wbr>Repository<wbr>Image<wbr>Scanning<wbr>Configuration</a></code>
+                <code><a href="#repositoryimagescanningconfiguration">*Repository<wbr>Image<wbr>Scanning<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -552,7 +552,7 @@ The following output properties are available:
             <td class="align-top">Image<wbr>Scanning<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#repositoryimagescanningconfiguration">*ecr.<wbr>Repository<wbr>Image<wbr>Scanning<wbr>Configuration</a></code>
+                <code><a href="#repositoryimagescanningconfiguration">*Repository<wbr>Image<wbr>Scanning<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block that defines image scanning configuration for the repository. By default, image scanning must be manually triggered. See the [ECR User Guide](https://docs.aws.amazon.com/AmazonECR/latest/userguide/image-scanning.html) for more information about image scanning.
  {{% /md %}}
@@ -1071,7 +1071,7 @@ Full ARN of the repository.
             <td class="align-top">Image<wbr>Scanning<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#repositoryimagescanningconfiguration">*ecr.<wbr>Repository<wbr>Image<wbr>Scanning<wbr>Configuration</a></code>
+                <code><a href="#repositoryimagescanningconfiguration">*Repository<wbr>Image<wbr>Scanning<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

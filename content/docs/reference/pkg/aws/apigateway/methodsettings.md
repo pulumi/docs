@@ -242,7 +242,7 @@ The ID of the REST API
             <td class="align-top">Settings</td>
             <td class="align-top">
                 
-                <code><a href="#methodsettingssettings">apigateway.<wbr>Method<wbr>Settings<wbr>Settings</a></code>
+                <code><a href="#methodsettingssettings">Method<wbr>Settings<wbr>Settings</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -564,7 +564,7 @@ The following output properties are available:
             <td class="align-top">Settings</td>
             <td class="align-top">
                 
-                <code><a href="#methodsettingssettings">apigateway.<wbr>Method<wbr>Settings<wbr>Settings</a></code>
+                <code><a href="#methodsettingssettings">Method<wbr>Settings<wbr>Settings</a></code>
             </td>
             <td class="align-top">{{% md %}} The settings block, see below.
  {{% /md %}}
@@ -923,7 +923,7 @@ The ID of the REST API
             <td class="align-top">Settings</td>
             <td class="align-top">
                 
-                <code><a href="#methodsettingssettings">*apigateway.<wbr>Method<wbr>Settings<wbr>Settings</a></code>
+                <code><a href="#methodsettingssettings">*Method<wbr>Settings<wbr>Settings</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

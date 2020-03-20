@@ -163,7 +163,7 @@ The owner of the resource share. Valid values are SELF or OTHER-ACCOUNTS
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getresourcesharefilter">[]ram.<wbr>Get<wbr>Resource<wbr>Share<wbr>Filter</a></code>
+                <code><a href="#getresourcesharefilter">[]Get<wbr>Resource<wbr>Share<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -536,7 +536,7 @@ The following output properties are available:
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getresourcesharefilter">[]ram.<wbr>Get<wbr>Resource<wbr>Share<wbr>Filter</a></code>
+                <code><a href="#getresourcesharefilter">[]Get<wbr>Resource<wbr>Share<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 

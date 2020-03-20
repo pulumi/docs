@@ -538,7 +538,7 @@ Configuration for the builds to run inside a VPC. VPC config blocks are document
             <td class="align-top">Artifacts</td>
             <td class="align-top">
                 
-                <code><a href="#projectartifacts">codebuild.<wbr>Project<wbr>Artifacts</a></code>
+                <code><a href="#projectartifacts">Project<wbr>Artifacts</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -583,7 +583,7 @@ How long in minutes, from 5 to 480 (8 hours), for AWS CodeBuild to wait until ti
             <td class="align-top">Cache</td>
             <td class="align-top">
                 
-                <code><a href="#projectcache">*codebuild.<wbr>Project<wbr>Cache</a></code>
+                <code><a href="#projectcache">*Project<wbr>Cache</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -628,7 +628,7 @@ The AWS Key Management Service (AWS KMS) customer master key (CMK) to be used fo
             <td class="align-top">Environment</td>
             <td class="align-top">
                 
-                <code><a href="#projectenvironment">codebuild.<wbr>Project<wbr>Environment</a></code>
+                <code><a href="#projectenvironment">Project<wbr>Environment</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -643,7 +643,7 @@ Information about the project&#39;s build environment. Environment blocks are do
             <td class="align-top">Logs<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#projectlogsconfig">*codebuild.<wbr>Project<wbr>Logs<wbr>Config</a></code>
+                <code><a href="#projectlogsconfig">*Project<wbr>Logs<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -688,7 +688,7 @@ How long in minutes, from 5 to 480 (8 hours), a build is allowed to be queued be
             <td class="align-top">Secondary<wbr>Artifacts</td>
             <td class="align-top">
                 
-                <code><a href="#projectsecondaryartifact">[]codebuild.<wbr>Project<wbr>Secondary<wbr>Artifact</a></code>
+                <code><a href="#projectsecondaryartifact">[]Project<wbr>Secondary<wbr>Artifact</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -703,7 +703,7 @@ A set of secondary artifacts to be used inside the build. Secondary artifacts bl
             <td class="align-top">Secondary<wbr>Sources</td>
             <td class="align-top">
                 
-                <code><a href="#projectsecondarysource">[]codebuild.<wbr>Project<wbr>Secondary<wbr>Source</a></code>
+                <code><a href="#projectsecondarysource">[]Project<wbr>Secondary<wbr>Source</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -733,7 +733,7 @@ The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) r
             <td class="align-top">Source</td>
             <td class="align-top">
                 
-                <code><a href="#projectsource">codebuild.<wbr>Project<wbr>Source</a></code>
+                <code><a href="#projectsource">Project<wbr>Source</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -778,7 +778,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">Vpc<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#projectvpcconfig">*codebuild.<wbr>Project<wbr>Vpc<wbr>Config</a></code>
+                <code><a href="#projectvpcconfig">*Project<wbr>Vpc<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1657,7 +1657,7 @@ The following output properties are available:
             <td class="align-top">Artifacts</td>
             <td class="align-top">
                 
-                <code><a href="#projectartifacts">codebuild.<wbr>Project<wbr>Artifacts</a></code>
+                <code><a href="#projectartifacts">Project<wbr>Artifacts</a></code>
             </td>
             <td class="align-top">{{% md %}} Information about the project&#39;s build output artifacts. Artifact blocks are documented below.
  {{% /md %}}
@@ -1709,7 +1709,7 @@ The following output properties are available:
             <td class="align-top">Cache</td>
             <td class="align-top">
                 
-                <code><a href="#projectcache">*codebuild.<wbr>Project<wbr>Cache</a></code>
+                <code><a href="#projectcache">*Project<wbr>Cache</a></code>
             </td>
             <td class="align-top">{{% md %}} Information about the cache storage for the project. Cache blocks are documented below.
  {{% /md %}}
@@ -1748,7 +1748,7 @@ The following output properties are available:
             <td class="align-top">Environment</td>
             <td class="align-top">
                 
-                <code><a href="#projectenvironment">codebuild.<wbr>Project<wbr>Environment</a></code>
+                <code><a href="#projectenvironment">Project<wbr>Environment</a></code>
             </td>
             <td class="align-top">{{% md %}} Information about the project&#39;s build environment. Environment blocks are documented below.
  {{% /md %}}
@@ -1761,7 +1761,7 @@ The following output properties are available:
             <td class="align-top">Logs<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#projectlogsconfig">*codebuild.<wbr>Project<wbr>Logs<wbr>Config</a></code>
+                <code><a href="#projectlogsconfig">*Project<wbr>Logs<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration for the builds to store log data to CloudWatch or S3.
  {{% /md %}}
@@ -1800,7 +1800,7 @@ The following output properties are available:
             <td class="align-top">Secondary<wbr>Artifacts</td>
             <td class="align-top">
                 
-                <code><a href="#projectsecondaryartifact">[]codebuild.<wbr>Project<wbr>Secondary<wbr>Artifact</a></code>
+                <code><a href="#projectsecondaryartifact">[]Project<wbr>Secondary<wbr>Artifact</a></code>
             </td>
             <td class="align-top">{{% md %}} A set of secondary artifacts to be used inside the build. Secondary artifacts blocks are documented below.
  {{% /md %}}
@@ -1813,7 +1813,7 @@ The following output properties are available:
             <td class="align-top">Secondary<wbr>Sources</td>
             <td class="align-top">
                 
-                <code><a href="#projectsecondarysource">[]codebuild.<wbr>Project<wbr>Secondary<wbr>Source</a></code>
+                <code><a href="#projectsecondarysource">[]Project<wbr>Secondary<wbr>Source</a></code>
             </td>
             <td class="align-top">{{% md %}} A set of secondary sources to be used inside the build. Secondary sources blocks are documented below.
  {{% /md %}}
@@ -1839,7 +1839,7 @@ The following output properties are available:
             <td class="align-top">Source</td>
             <td class="align-top">
                 
-                <code><a href="#projectsource">codebuild.<wbr>Project<wbr>Source</a></code>
+                <code><a href="#projectsource">Project<wbr>Source</a></code>
             </td>
             <td class="align-top">{{% md %}} Information about the project&#39;s input source code. Source blocks are documented below.
  {{% /md %}}
@@ -1878,7 +1878,7 @@ The following output properties are available:
             <td class="align-top">Vpc<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#projectvpcconfig">*codebuild.<wbr>Project<wbr>Vpc<wbr>Config</a></code>
+                <code><a href="#projectvpcconfig">*Project<wbr>Vpc<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration for the builds to run inside a VPC. VPC config blocks are documented below.
  {{% /md %}}
@@ -2824,7 +2824,7 @@ The ARN of the CodeBuild project.
             <td class="align-top">Artifacts</td>
             <td class="align-top">
                 
-                <code><a href="#projectartifacts">*codebuild.<wbr>Project<wbr>Artifacts</a></code>
+                <code><a href="#projectartifacts">*Project<wbr>Artifacts</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2884,7 +2884,7 @@ How long in minutes, from 5 to 480 (8 hours), for AWS CodeBuild to wait until ti
             <td class="align-top">Cache</td>
             <td class="align-top">
                 
-                <code><a href="#projectcache">*codebuild.<wbr>Project<wbr>Cache</a></code>
+                <code><a href="#projectcache">*Project<wbr>Cache</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2929,7 +2929,7 @@ The AWS Key Management Service (AWS KMS) customer master key (CMK) to be used fo
             <td class="align-top">Environment</td>
             <td class="align-top">
                 
-                <code><a href="#projectenvironment">*codebuild.<wbr>Project<wbr>Environment</a></code>
+                <code><a href="#projectenvironment">*Project<wbr>Environment</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2944,7 +2944,7 @@ Information about the project&#39;s build environment. Environment blocks are do
             <td class="align-top">Logs<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#projectlogsconfig">*codebuild.<wbr>Project<wbr>Logs<wbr>Config</a></code>
+                <code><a href="#projectlogsconfig">*Project<wbr>Logs<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2989,7 +2989,7 @@ How long in minutes, from 5 to 480 (8 hours), a build is allowed to be queued be
             <td class="align-top">Secondary<wbr>Artifacts</td>
             <td class="align-top">
                 
-                <code><a href="#projectsecondaryartifact">[]codebuild.<wbr>Project<wbr>Secondary<wbr>Artifact</a></code>
+                <code><a href="#projectsecondaryartifact">[]Project<wbr>Secondary<wbr>Artifact</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3004,7 +3004,7 @@ A set of secondary artifacts to be used inside the build. Secondary artifacts bl
             <td class="align-top">Secondary<wbr>Sources</td>
             <td class="align-top">
                 
-                <code><a href="#projectsecondarysource">[]codebuild.<wbr>Project<wbr>Secondary<wbr>Source</a></code>
+                <code><a href="#projectsecondarysource">[]Project<wbr>Secondary<wbr>Source</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3034,7 +3034,7 @@ The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) r
             <td class="align-top">Source</td>
             <td class="align-top">
                 
-                <code><a href="#projectsource">*codebuild.<wbr>Project<wbr>Source</a></code>
+                <code><a href="#projectsource">*Project<wbr>Source</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3079,7 +3079,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">Vpc<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#projectvpcconfig">*codebuild.<wbr>Project<wbr>Vpc<wbr>Config</a></code>
+                <code><a href="#projectvpcconfig">*Project<wbr>Vpc<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4844,7 +4844,7 @@ Information about the compute resources the build project will use. Available va
             <td class="align-top">Environment<wbr>Variables</td>
             <td class="align-top">
                 
-                <code><a href="#projectenvironmentenvironmentvariable">[]codebuild.<wbr>Project<wbr>Environment<wbr>Environment<wbr>Variable</a></code>
+                <code><a href="#projectenvironmentenvironmentvariable">[]Project<wbr>Environment<wbr>Environment<wbr>Variable</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4904,7 +4904,7 @@ If set to true, enables running the Docker daemon inside a Docker container. Def
             <td class="align-top">Registry<wbr>Credential</td>
             <td class="align-top">
                 
-                <code><a href="#projectenvironmentregistrycredential">*codebuild.<wbr>Project<wbr>Environment<wbr>Registry<wbr>Credential</a></code>
+                <code><a href="#projectenvironmentregistrycredential">*Project<wbr>Environment<wbr>Registry<wbr>Credential</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5807,7 +5807,7 @@ Configuration for the builds to store logs to S3.
             <td class="align-top">Cloudwatch<wbr>Logs</td>
             <td class="align-top">
                 
-                <code><a href="#projectlogsconfigcloudwatchlogs">*codebuild.<wbr>Project<wbr>Logs<wbr>Config<wbr>Cloudwatch<wbr>Logs</a></code>
+                <code><a href="#projectlogsconfigcloudwatchlogs">*Project<wbr>Logs<wbr>Config<wbr>Cloudwatch<wbr>Logs</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5822,7 +5822,7 @@ Configuration for the builds to store logs to CloudWatch
             <td class="align-top">S3Logs</td>
             <td class="align-top">
                 
-                <code><a href="#projectlogsconfigs3logs">*codebuild.<wbr>Project<wbr>Logs<wbr>Config<wbr>S3Logs</a></code>
+                <code><a href="#projectlogsconfigs3logs">*Project<wbr>Logs<wbr>Config<wbr>S3Logs</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -7336,7 +7336,7 @@ The type of repository that contains the source code to be built. Valid values f
             <td class="align-top">Auths</td>
             <td class="align-top">
                 
-                <code><a href="#projectsecondarysourceauth">[]codebuild.<wbr>Project<wbr>Secondary<wbr>Source<wbr>Auth</a></code>
+                <code><a href="#projectsecondarysourceauth">[]Project<wbr>Secondary<wbr>Source<wbr>Auth</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -7381,7 +7381,7 @@ Truncate git history to this many commits.
             <td class="align-top">Git<wbr>Submodules<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#projectsecondarysourcegitsubmodulesconfig">*codebuild.<wbr>Project<wbr>Secondary<wbr>Source<wbr>Git<wbr>Submodules<wbr>Config</a></code>
+                <code><a href="#projectsecondarysourcegitsubmodulesconfig">*Project<wbr>Secondary<wbr>Source<wbr>Git<wbr>Submodules<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -8344,7 +8344,7 @@ The type of repository that contains the source code to be built. Valid values f
             <td class="align-top">Auths</td>
             <td class="align-top">
                 
-                <code><a href="#projectsourceauth">[]codebuild.<wbr>Project<wbr>Source<wbr>Auth</a></code>
+                <code><a href="#projectsourceauth">[]Project<wbr>Source<wbr>Auth</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -8389,7 +8389,7 @@ Truncate git history to this many commits.
             <td class="align-top">Git<wbr>Submodules<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#projectsourcegitsubmodulesconfig">*codebuild.<wbr>Project<wbr>Source<wbr>Git<wbr>Submodules<wbr>Config</a></code>
+                <code><a href="#projectsourcegitsubmodulesconfig">*Project<wbr>Source<wbr>Git<wbr>Submodules<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

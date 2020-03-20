@@ -207,7 +207,7 @@ Key-value mapping of resource tags
             <td class="align-top">Campaign<wbr>Hook</td>
             <td class="align-top">
                 
-                <code><a href="#appcampaignhook">*pinpoint.<wbr>App<wbr>Campaign<wbr>Hook</a></code>
+                <code><a href="#appcampaignhook">*App<wbr>Campaign<wbr>Hook</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -222,7 +222,7 @@ The default campaign limits for the app. These limits apply to each campaign for
             <td class="align-top">Limits</td>
             <td class="align-top">
                 
-                <code><a href="#applimits">*pinpoint.<wbr>App<wbr>Limits</a></code>
+                <code><a href="#applimits">*App<wbr>Limits</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -267,7 +267,7 @@ The name of the Pinpoint application. Conflicts with `name`
             <td class="align-top">Quiet<wbr>Time</td>
             <td class="align-top">
                 
-                <code><a href="#appquiettime">*pinpoint.<wbr>App<wbr>Quiet<wbr>Time</a></code>
+                <code><a href="#appquiettime">*App<wbr>Quiet<wbr>Time</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -701,7 +701,7 @@ The following output properties are available:
             <td class="align-top">Campaign<wbr>Hook</td>
             <td class="align-top">
                 
-                <code><a href="#appcampaignhook">*pinpoint.<wbr>App<wbr>Campaign<wbr>Hook</a></code>
+                <code><a href="#appcampaignhook">*App<wbr>Campaign<wbr>Hook</a></code>
             </td>
             <td class="align-top">{{% md %}} The default campaign limits for the app. These limits apply to each campaign for the app, unless the campaign overrides the default with limits of its own
  {{% /md %}}
@@ -714,7 +714,7 @@ The following output properties are available:
             <td class="align-top">Limits</td>
             <td class="align-top">
                 
-                <code><a href="#applimits">*pinpoint.<wbr>App<wbr>Limits</a></code>
+                <code><a href="#applimits">*App<wbr>Limits</a></code>
             </td>
             <td class="align-top">{{% md %}} The default campaign limits for the app. These limits apply to each campaign for the app, unless the campaign overrides the default with limits of its own
  {{% /md %}}
@@ -753,7 +753,7 @@ The following output properties are available:
             <td class="align-top">Quiet<wbr>Time</td>
             <td class="align-top">
                 
-                <code><a href="#appquiettime">*pinpoint.<wbr>App<wbr>Quiet<wbr>Time</a></code>
+                <code><a href="#appquiettime">*App<wbr>Quiet<wbr>Time</a></code>
             </td>
             <td class="align-top">{{% md %}} The default quiet time for the app. Each campaign for this app sends no messages during this time unless the campaign overrides the default with a quiet time of its own
  {{% /md %}}
@@ -1276,7 +1276,7 @@ Amazon Resource Name (ARN) of the PinPoint Application
             <td class="align-top">Campaign<wbr>Hook</td>
             <td class="align-top">
                 
-                <code><a href="#appcampaignhook">*pinpoint.<wbr>App<wbr>Campaign<wbr>Hook</a></code>
+                <code><a href="#appcampaignhook">*App<wbr>Campaign<wbr>Hook</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1291,7 +1291,7 @@ The default campaign limits for the app. These limits apply to each campaign for
             <td class="align-top">Limits</td>
             <td class="align-top">
                 
-                <code><a href="#applimits">*pinpoint.<wbr>App<wbr>Limits</a></code>
+                <code><a href="#applimits">*App<wbr>Limits</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1336,7 +1336,7 @@ The name of the Pinpoint application. Conflicts with `name`
             <td class="align-top">Quiet<wbr>Time</td>
             <td class="align-top">
                 
-                <code><a href="#appquiettime">*pinpoint.<wbr>App<wbr>Quiet<wbr>Time</a></code>
+                <code><a href="#appquiettime">*App<wbr>Quiet<wbr>Time</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

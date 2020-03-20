@@ -150,7 +150,7 @@ a pair on the desired network interfaces.
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getnetworkinterfacesfilter">[]ec2.<wbr>Get<wbr>Network<wbr>Interfaces<wbr>Filter</a></code>
+                <code><a href="#getnetworkinterfacesfilter">[]Get<wbr>Network<wbr>Interfaces<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -388,7 +388,7 @@ The following output properties are available:
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getnetworkinterfacesfilter">[]ec2.<wbr>Get<wbr>Network<wbr>Interfaces<wbr>Filter</a></code>
+                <code><a href="#getnetworkinterfacesfilter">[]Get<wbr>Network<wbr>Interfaces<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 

@@ -214,7 +214,7 @@ The directory identifier for registration in WorkSpaces service.
             <td class="align-top">Self<wbr>Service<wbr>Permissions</td>
             <td class="align-top">
                 
-                <code><a href="#directoryselfservicepermissions">*workspaces.<wbr>Directory<wbr>Self<wbr>Service<wbr>Permissions</a></code>
+                <code><a href="#directoryselfservicepermissions">*Directory<wbr>Self<wbr>Service<wbr>Permissions</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -538,7 +538,7 @@ The following output properties are available:
             <td class="align-top">Self<wbr>Service<wbr>Permissions</td>
             <td class="align-top">
                 
-                <code><a href="#directoryselfservicepermissions">workspaces.<wbr>Directory<wbr>Self<wbr>Service<wbr>Permissions</a></code>
+                <code><a href="#directoryselfservicepermissions">Directory<wbr>Self<wbr>Service<wbr>Permissions</a></code>
             </td>
             <td class="align-top">{{% md %}} The permissions to enable or disable self-service capabilities.
  {{% /md %}}
@@ -895,7 +895,7 @@ The directory identifier for registration in WorkSpaces service.
             <td class="align-top">Self<wbr>Service<wbr>Permissions</td>
             <td class="align-top">
                 
-                <code><a href="#directoryselfservicepermissions">*workspaces.<wbr>Directory<wbr>Self<wbr>Service<wbr>Permissions</a></code>
+                <code><a href="#directoryselfservicepermissions">*Directory<wbr>Self<wbr>Service<wbr>Permissions</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

@@ -193,7 +193,7 @@ The id of the VPC that the desired Route Table belongs to.
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getroutetablefilter">[]ec2.<wbr>Get<wbr>Route<wbr>Table<wbr>Filter</a></code>
+                <code><a href="#getroutetablefilter">[]Get<wbr>Route<wbr>Table<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -686,7 +686,7 @@ The following output properties are available:
             <td class="align-top">Associations</td>
             <td class="align-top">
                 
-                <code><a href="#getroutetableassociation">[]ec2.<wbr>Get<wbr>Route<wbr>Table<wbr>Association</a></code>
+                <code><a href="#getroutetableassociation">[]Get<wbr>Route<wbr>Table<wbr>Association<wbr>Type</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -698,7 +698,7 @@ The following output properties are available:
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getroutetablefilter">[]ec2.<wbr>Get<wbr>Route<wbr>Table<wbr>Filter</a></code>
+                <code><a href="#getroutetablefilter">[]Get<wbr>Route<wbr>Table<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -762,7 +762,7 @@ The following output properties are available:
             <td class="align-top">Routes</td>
             <td class="align-top">
                 
-                <code><a href="#getroutetableroute">[]ec2.<wbr>Get<wbr>Route<wbr>Table<wbr>Route</a></code>
+                <code><a href="#getroutetableroute">[]Get<wbr>Route<wbr>Table<wbr>Route</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1118,7 +1118,7 @@ The following output properties are available:
 {{% /lang %}}
 
 {{% lang go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#GetRouteTableAssociation">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#GetRouteTableAssociationType">output</a> API doc for this type.
 {{% /lang %}}
 
 {{% lang csharp %}}

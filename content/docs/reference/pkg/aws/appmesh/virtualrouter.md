@@ -221,7 +221,7 @@ The name to use for the virtual router.
             <td class="align-top">Spec</td>
             <td class="align-top">
                 
-                <code><a href="#virtualrouterspec">appmesh.<wbr>Virtual<wbr>Router<wbr>Spec</a></code>
+                <code><a href="#virtualrouterspec">Virtual<wbr>Router<wbr>Spec</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -621,7 +621,7 @@ The following output properties are available:
             <td class="align-top">Spec</td>
             <td class="align-top">
                 
-                <code><a href="#virtualrouterspec">appmesh.<wbr>Virtual<wbr>Router<wbr>Spec</a></code>
+                <code><a href="#virtualrouterspec">Virtual<wbr>Router<wbr>Spec</a></code>
             </td>
             <td class="align-top">{{% md %}} The virtual router specification to apply.
  {{% /md %}}
@@ -1148,7 +1148,7 @@ The name to use for the virtual router.
             <td class="align-top">Spec</td>
             <td class="align-top">
                 
-                <code><a href="#virtualrouterspec">*appmesh.<wbr>Virtual<wbr>Router<wbr>Spec</a></code>
+                <code><a href="#virtualrouterspec">*Virtual<wbr>Router<wbr>Spec</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1512,7 +1512,7 @@ Currently only one listener is supported per virtual router.
             <td class="align-top">Listener</td>
             <td class="align-top">
                 
-                <code><a href="#virtualrouterspeclistener">appmesh.<wbr>Virtual<wbr>Router<wbr>Spec<wbr>Listener</a></code>
+                <code><a href="#virtualrouterspeclistener">Virtual<wbr>Router<wbr>Spec<wbr>Listener</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1676,7 +1676,7 @@ The port mapping information for the listener.
             <td class="align-top">Port<wbr>Mapping</td>
             <td class="align-top">
                 
-                <code><a href="#virtualrouterspeclistenerportmapping">appmesh.<wbr>Virtual<wbr>Router<wbr>Spec<wbr>Listener<wbr>Port<wbr>Mapping</a></code>
+                <code><a href="#virtualrouterspeclistenerportmapping">Virtual<wbr>Router<wbr>Spec<wbr>Listener<wbr>Port<wbr>Mapping</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

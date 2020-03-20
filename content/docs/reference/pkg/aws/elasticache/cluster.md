@@ -2096,7 +2096,7 @@ are applied immediately, or during the next maintenance window. Default is
             <td class="align-top">Cache<wbr>Nodes</td>
             <td class="align-top">
                 
-                <code><a href="#clustercachenode">[]elasticache.<wbr>Cluster<wbr>Cache<wbr>Node</a></code>
+                <code><a href="#clustercachenode">[]Cluster<wbr>Cache<wbr>Node</a></code>
             </td>
             <td class="align-top">{{% md %}} List of node objects including `id`, `address`, `port` and `availability_zone`.
 Referenceable e.g. as `${aws_elasticache_cluster.bar.cache_nodes.0.address}`
@@ -3755,7 +3755,7 @@ Specifies whether the nodes in this Memcached node group are created in a single
             <td class="align-top">Cache<wbr>Nodes</td>
             <td class="align-top">
                 
-                <code><a href="#clustercachenode">[]elasticache.<wbr>Cluster<wbr>Cache<wbr>Node</a></code>
+                <code><a href="#clustercachenode">[]Cluster<wbr>Cache<wbr>Node</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

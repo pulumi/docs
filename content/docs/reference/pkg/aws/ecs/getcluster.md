@@ -423,7 +423,7 @@ The following output properties are available:
             <td class="align-top">Settings</td>
             <td class="align-top">
                 
-                <code><a href="#getclustersetting">[]ecs.<wbr>Get<wbr>Cluster<wbr>Setting</a></code>
+                <code><a href="#getclustersetting">[]Get<wbr>Cluster<wbr>Setting</a></code>
             </td>
             <td class="align-top">{{% md %}} The settings associated with the ECS Cluster.
  {{% /md %}}

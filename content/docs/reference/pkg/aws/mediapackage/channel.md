@@ -490,7 +490,7 @@ The following output properties are available:
             <td class="align-top">Hls<wbr>Ingests</td>
             <td class="align-top">
                 
-                <code><a href="#channelhlsingest">[]mediapackage.<wbr>Channel<wbr>Hls<wbr>Ingest</a></code>
+                <code><a href="#channelhlsingest">[]Channel<wbr>Hls<wbr>Ingest</a></code>
             </td>
             <td class="align-top">{{% md %}} A single item list of HLS ingest information
  {{% /md %}}
@@ -905,7 +905,7 @@ A description of the channel
             <td class="align-top">Hls<wbr>Ingests</td>
             <td class="align-top">
                 
-                <code><a href="#channelhlsingest">[]mediapackage.<wbr>Channel<wbr>Hls<wbr>Ingest</a></code>
+                <code><a href="#channelhlsingest">[]Channel<wbr>Hls<wbr>Ingest</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1208,7 +1208,7 @@ A list of the ingest endpoints
             <td class="align-top">Ingest<wbr>Endpoints</td>
             <td class="align-top">
                 
-                <code><a href="#channelhlsingestingestendpoint">[]mediapackage.<wbr>Channel<wbr>Hls<wbr>Ingest<wbr>Ingest<wbr>Endpoint</a></code>
+                <code><a href="#channelhlsingestingestendpoint">[]Channel<wbr>Hls<wbr>Ingest<wbr>Ingest<wbr>Endpoint</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

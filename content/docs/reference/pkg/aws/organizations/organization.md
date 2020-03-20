@@ -519,7 +519,7 @@ The following output properties are available:
             <td class="align-top">Accounts</td>
             <td class="align-top">
                 
-                <code><a href="#organizationaccount">[]organizations.<wbr>Organization<wbr>Account</a></code>
+                <code><a href="#organizationaccount">[]Organization<wbr>Account</a></code>
             </td>
             <td class="align-top">{{% md %}} List of organization accounts including the master account. For a list excluding the master account, see the `non_master_accounts` attribute. All elements have these attributes:
  {{% /md %}}
@@ -623,7 +623,7 @@ The following output properties are available:
             <td class="align-top">Non<wbr>Master<wbr>Accounts</td>
             <td class="align-top">
                 
-                <code><a href="#organizationnonmasteraccount">[]organizations.<wbr>Organization<wbr>Non<wbr>Master<wbr>Account</a></code>
+                <code><a href="#organizationnonmasteraccount">[]Organization<wbr>Non<wbr>Master<wbr>Account</a></code>
             </td>
             <td class="align-top">{{% md %}} List of organization accounts excluding the master account. For a list including the master account, see the `accounts` attribute. All elements have these attributes:
  {{% /md %}}
@@ -636,7 +636,7 @@ The following output properties are available:
             <td class="align-top">Roots</td>
             <td class="align-top">
                 
-                <code><a href="#organizationroot">[]organizations.<wbr>Organization<wbr>Root</a></code>
+                <code><a href="#organizationroot">[]Organization<wbr>Root</a></code>
             </td>
             <td class="align-top">{{% md %}} List of organization roots. All elements have these attributes:
  {{% /md %}}
@@ -1198,7 +1198,7 @@ List of organization roots. All elements have these attributes:
             <td class="align-top">Accounts</td>
             <td class="align-top">
                 
-                <code><a href="#organizationaccount">[]organizations.<wbr>Organization<wbr>Account</a></code>
+                <code><a href="#organizationaccount">[]Organization<wbr>Account</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1318,7 +1318,7 @@ Identifier of the master account
             <td class="align-top">Non<wbr>Master<wbr>Accounts</td>
             <td class="align-top">
                 
-                <code><a href="#organizationnonmasteraccount">[]organizations.<wbr>Organization<wbr>Non<wbr>Master<wbr>Account</a></code>
+                <code><a href="#organizationnonmasteraccount">[]Organization<wbr>Non<wbr>Master<wbr>Account</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1333,7 +1333,7 @@ List of organization accounts excluding the master account. For a list including
             <td class="align-top">Roots</td>
             <td class="align-top">
                 
-                <code><a href="#organizationroot">[]organizations.<wbr>Organization<wbr>Root</a></code>
+                <code><a href="#organizationroot">[]Organization<wbr>Root</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2663,7 +2663,7 @@ The name of the policy type
             <td class="align-top">Policy<wbr>Types</td>
             <td class="align-top">
                 
-                <code><a href="#organizationrootpolicytype">[]organizations.<wbr>Organization<wbr>Root<wbr>Policy<wbr>Type</a></code>
+                <code><a href="#organizationrootpolicytype">[]Organization<wbr>Root<wbr>Policy<wbr>Type</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

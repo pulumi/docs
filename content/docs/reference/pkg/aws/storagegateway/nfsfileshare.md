@@ -429,7 +429,7 @@ The ARN of the backed storage used for storing file data.
             <td class="align-top">Nfs<wbr>File<wbr>Share<wbr>Defaults</td>
             <td class="align-top">
                 
-                <code><a href="#nfsfilesharenfsfilesharedefaults">*storagegateway.<wbr>Nfs<wbr>File<wbr>Share<wbr>Nfs<wbr>File<wbr>Share<wbr>Defaults</a></code>
+                <code><a href="#nfsfilesharenfsfilesharedefaults">*Nfs<wbr>File<wbr>Share<wbr>Nfs<wbr>File<wbr>Share<wbr>Defaults</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1373,7 +1373,7 @@ The following output properties are available:
             <td class="align-top">Nfs<wbr>File<wbr>Share<wbr>Defaults</td>
             <td class="align-top">
                 
-                <code><a href="#nfsfilesharenfsfilesharedefaults">*storagegateway.<wbr>Nfs<wbr>File<wbr>Share<wbr>Nfs<wbr>File<wbr>Share<wbr>Defaults</a></code>
+                <code><a href="#nfsfilesharenfsfilesharedefaults">*Nfs<wbr>File<wbr>Share<wbr>Nfs<wbr>File<wbr>Share<wbr>Defaults</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested argument with file share default values. More information below.
  {{% /md %}}
@@ -2394,7 +2394,7 @@ The ARN of the backed storage used for storing file data.
             <td class="align-top">Nfs<wbr>File<wbr>Share<wbr>Defaults</td>
             <td class="align-top">
                 
-                <code><a href="#nfsfilesharenfsfilesharedefaults">*storagegateway.<wbr>Nfs<wbr>File<wbr>Share<wbr>Nfs<wbr>File<wbr>Share<wbr>Defaults</a></code>
+                <code><a href="#nfsfilesharenfsfilesharedefaults">*Nfs<wbr>File<wbr>Share<wbr>Nfs<wbr>File<wbr>Share<wbr>Defaults</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

@@ -212,7 +212,7 @@ The name of the endpoint configuration. If omitted, this provider will assign a 
             <td class="align-top">Production<wbr>Variants</td>
             <td class="align-top">
                 
-                <code><a href="#endpointconfigurationproductionvariant">[]sagemaker.<wbr>Endpoint<wbr>Configuration<wbr>Production<wbr>Variant</a></code>
+                <code><a href="#endpointconfigurationproductionvariant">[]Endpoint<wbr>Configuration<wbr>Production<wbr>Variant</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -560,7 +560,7 @@ The following output properties are available:
             <td class="align-top">Production<wbr>Variants</td>
             <td class="align-top">
                 
-                <code><a href="#endpointconfigurationproductionvariant">[]sagemaker.<wbr>Endpoint<wbr>Configuration<wbr>Production<wbr>Variant</a></code>
+                <code><a href="#endpointconfigurationproductionvariant">[]Endpoint<wbr>Configuration<wbr>Production<wbr>Variant</a></code>
             </td>
             <td class="align-top">{{% md %}} Fields are documented below.
  {{% /md %}}
@@ -975,7 +975,7 @@ The name of the endpoint configuration. If omitted, this provider will assign a 
             <td class="align-top">Production<wbr>Variants</td>
             <td class="align-top">
                 
-                <code><a href="#endpointconfigurationproductionvariant">[]sagemaker.<wbr>Endpoint<wbr>Configuration<wbr>Production<wbr>Variant</a></code>
+                <code><a href="#endpointconfigurationproductionvariant">[]Endpoint<wbr>Configuration<wbr>Production<wbr>Variant</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

@@ -144,7 +144,7 @@ a pair on the desired vpcs.
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getvpcsfilter">[]ec2.<wbr>Get<wbr>Vpcs<wbr>Filter</a></code>
+                <code><a href="#getvpcsfilter">[]Get<wbr>Vpcs<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -382,7 +382,7 @@ The following output properties are available:
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getvpcsfilter">[]ec2.<wbr>Get<wbr>Vpcs<wbr>Filter</a></code>
+                <code><a href="#getvpcsfilter">[]Get<wbr>Vpcs<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 

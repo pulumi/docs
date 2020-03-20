@@ -244,7 +244,7 @@ The Availability Zone of the specific VPN Gateway to retrieve.
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getvpngatewayfilter">[]ec2.<wbr>Get<wbr>Vpn<wbr>Gateway<wbr>Filter</a></code>
+                <code><a href="#getvpngatewayfilter">[]Get<wbr>Vpn<wbr>Gateway<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -732,7 +732,7 @@ The following output properties are available:
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getvpngatewayfilter">[]ec2.<wbr>Get<wbr>Vpn<wbr>Gateway<wbr>Filter</a></code>
+                <code><a href="#getvpngatewayfilter">[]Get<wbr>Vpn<wbr>Gateway<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 

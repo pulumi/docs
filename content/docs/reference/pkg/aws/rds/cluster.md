@@ -1178,7 +1178,7 @@ ARN of a source DB cluster or DB instance if this DB cluster is to be created as
             <td class="align-top">S3Import</td>
             <td class="align-top">
                 
-                <code><a href="#clusters3import">*rds.<wbr>Cluster<wbr>S3Import</a></code>
+                <code><a href="#clusters3import">*Cluster<wbr>S3Import</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1192,7 +1192,7 @@ ARN of a source DB cluster or DB instance if this DB cluster is to be created as
             <td class="align-top">Scaling<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#clusterscalingconfiguration">*rds.<wbr>Cluster<wbr>Scaling<wbr>Configuration</a></code>
+                <code><a href="#clusterscalingconfiguration">*Cluster<wbr>Scaling<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3464,7 +3464,7 @@ load-balanced across replicas
             <td class="align-top">S3Import</td>
             <td class="align-top">
                 
-                <code><a href="#clusters3import">*rds.<wbr>Cluster<wbr>S3Import</a></code>
+                <code><a href="#clusters3import">*Cluster<wbr>S3Import</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -3476,7 +3476,7 @@ load-balanced across replicas
             <td class="align-top">Scaling<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#clusterscalingconfiguration">*rds.<wbr>Cluster<wbr>Scaling<wbr>Configuration</a></code>
+                <code><a href="#clusterscalingconfiguration">*Cluster<wbr>Scaling<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested attribute with scaling properties. Only valid when `engine_mode` is set to `serverless`. More details below.
  {{% /md %}}
@@ -5915,7 +5915,7 @@ ARN of a source DB cluster or DB instance if this DB cluster is to be created as
             <td class="align-top">S3Import</td>
             <td class="align-top">
                 
-                <code><a href="#clusters3import">*rds.<wbr>Cluster<wbr>S3Import</a></code>
+                <code><a href="#clusters3import">*Cluster<wbr>S3Import</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5929,7 +5929,7 @@ ARN of a source DB cluster or DB instance if this DB cluster is to be created as
             <td class="align-top">Scaling<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#clusterscalingconfiguration">*rds.<wbr>Cluster<wbr>Scaling<wbr>Configuration</a></code>
+                <code><a href="#clusterscalingconfiguration">*Cluster<wbr>Scaling<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

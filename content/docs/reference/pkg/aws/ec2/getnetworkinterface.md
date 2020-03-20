@@ -131,7 +131,7 @@ The identifier for the network interface.
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getnetworkinterfacefilter">[]ec2.<wbr>Get<wbr>Network<wbr>Interface<wbr>Filter</a></code>
+                <code><a href="#getnetworkinterfacefilter">[]Get<wbr>Network<wbr>Interface<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -589,7 +589,7 @@ The following output properties are available:
             <td class="align-top">Associations</td>
             <td class="align-top">
                 
-                <code><a href="#getnetworkinterfaceassociation">[]ec2.<wbr>Get<wbr>Network<wbr>Interface<wbr>Association</a></code>
+                <code><a href="#getnetworkinterfaceassociation">[]Get<wbr>Network<wbr>Interface<wbr>Association</a></code>
             </td>
             <td class="align-top">{{% md %}} The association information for an Elastic IP address (IPv4) associated with the network interface. See supported fields below.
  {{% /md %}}
@@ -602,7 +602,7 @@ The following output properties are available:
             <td class="align-top">Attachments</td>
             <td class="align-top">
                 
-                <code><a href="#getnetworkinterfaceattachment">[]ec2.<wbr>Get<wbr>Network<wbr>Interface<wbr>Attachment</a></code>
+                <code><a href="#getnetworkinterfaceattachment">[]Get<wbr>Network<wbr>Interface<wbr>Attachment<wbr>Type</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -640,7 +640,7 @@ The following output properties are available:
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getnetworkinterfacefilter">[]ec2.<wbr>Get<wbr>Network<wbr>Interface<wbr>Filter</a></code>
+                <code><a href="#getnetworkinterfacefilter">[]Get<wbr>Network<wbr>Interface<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1740,7 +1740,7 @@ The address of the Elastic IP address bound to the network interface.
 {{% /lang %}}
 
 {{% lang go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#GetNetworkInterfaceAttachment">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#GetNetworkInterfaceAttachmentType">output</a> API doc for this type.
 {{% /lang %}}
 
 {{% lang csharp %}}

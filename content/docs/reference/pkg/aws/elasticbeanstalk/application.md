@@ -180,7 +180,7 @@ Key-value mapping of tags for the Elastic Beanstalk Application.
             <td class="align-top">Appversion<wbr>Lifecycle</td>
             <td class="align-top">
                 
-                <code><a href="#applicationappversionlifecycle">*elasticbeanstalk.<wbr>Application<wbr>Appversion<wbr>Lifecycle</a></code>
+                <code><a href="#applicationappversionlifecycle">*Application<wbr>Appversion<wbr>Lifecycle</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -515,7 +515,7 @@ The following output properties are available:
             <td class="align-top">Appversion<wbr>Lifecycle</td>
             <td class="align-top">
                 
-                <code><a href="#applicationappversionlifecycle">*elasticbeanstalk.<wbr>Application<wbr>Appversion<wbr>Lifecycle</a></code>
+                <code><a href="#applicationappversionlifecycle">*Application<wbr>Appversion<wbr>Lifecycle</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -920,7 +920,7 @@ Key-value mapping of tags for the Elastic Beanstalk Application.
             <td class="align-top">Appversion<wbr>Lifecycle</td>
             <td class="align-top">
                 
-                <code><a href="#applicationappversionlifecycle">*elasticbeanstalk.<wbr>Application<wbr>Appversion<wbr>Lifecycle</a></code>
+                <code><a href="#applicationappversionlifecycle">*Application<wbr>Appversion<wbr>Lifecycle</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

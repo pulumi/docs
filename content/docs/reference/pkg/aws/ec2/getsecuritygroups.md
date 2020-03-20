@@ -142,7 +142,7 @@ desired security groups.
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getsecuritygroupsfilter">[]ec2.<wbr>Get<wbr>Security<wbr>Groups<wbr>Filter</a></code>
+                <code><a href="#getsecuritygroupsfilter">[]Get<wbr>Security<wbr>Groups<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -400,7 +400,7 @@ unless the `vpc-id` filter is also used.
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getsecuritygroupsfilter">[]ec2.<wbr>Get<wbr>Security<wbr>Groups<wbr>Filter</a></code>
+                <code><a href="#getsecuritygroupsfilter">[]Get<wbr>Security<wbr>Groups<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 

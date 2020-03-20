@@ -301,7 +301,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">Target<wbr>Ips</td>
             <td class="align-top">
                 
-                <code><a href="#resolverruletargetip">[]route53.<wbr>Resolver<wbr>Rule<wbr>Target<wbr>Ip</a></code>
+                <code><a href="#resolverruletargetip">[]Resolver<wbr>Rule<wbr>Target<wbr>Ip</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -821,7 +821,7 @@ Values are `NOT_SHARED`, `SHARED_BY_ME` or `SHARED_WITH_ME`
             <td class="align-top">Target<wbr>Ips</td>
             <td class="align-top">
                 
-                <code><a href="#resolverruletargetip">[]route53.<wbr>Resolver<wbr>Rule<wbr>Target<wbr>Ip</a></code>
+                <code><a href="#resolverruletargetip">[]Resolver<wbr>Rule<wbr>Target<wbr>Ip</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block(s) indicating the IPs that you want Resolver to forward DNS queries to (documented below).
 This argument should only be specified for `FORWARD` type rules.
@@ -1474,7 +1474,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">Target<wbr>Ips</td>
             <td class="align-top">
                 
-                <code><a href="#resolverruletargetip">[]route53.<wbr>Resolver<wbr>Rule<wbr>Target<wbr>Ip</a></code>
+                <code><a href="#resolverruletargetip">[]Resolver<wbr>Rule<wbr>Target<wbr>Ip</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

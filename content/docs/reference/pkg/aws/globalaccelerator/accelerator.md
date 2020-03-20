@@ -177,7 +177,7 @@ The name of the accelerator.
             <td class="align-top">Attributes</td>
             <td class="align-top">
                 
-                <code><a href="#acceleratorattributes">*globalaccelerator.<wbr>Accelerator<wbr>Attributes</a></code>
+                <code><a href="#acceleratorattributes">*Accelerator<wbr>Attributes</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -544,7 +544,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
             <td class="align-top">Attributes</td>
             <td class="align-top">
                 
-                <code><a href="#acceleratorattributes">*globalaccelerator.<wbr>Accelerator<wbr>Attributes</a></code>
+                <code><a href="#acceleratorattributes">*Accelerator<wbr>Attributes</a></code>
             </td>
             <td class="align-top">{{% md %}} The attributes of the accelerator. Fields documented below.
  {{% /md %}}
@@ -611,7 +611,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
             <td class="align-top">Ip<wbr>Sets</td>
             <td class="align-top">
                 
-                <code><a href="#acceleratoripset">[]globalaccelerator.<wbr>Accelerator<wbr>Ip<wbr>Set</a></code>
+                <code><a href="#acceleratoripset">[]Accelerator<wbr>Ip<wbr>Set</a></code>
             </td>
             <td class="align-top">{{% md %}} IP address set associated with the accelerator.
  {{% /md %}}
@@ -1069,7 +1069,7 @@ The name of the accelerator.
             <td class="align-top">Attributes</td>
             <td class="align-top">
                 
-                <code><a href="#acceleratorattributes">*globalaccelerator.<wbr>Accelerator<wbr>Attributes</a></code>
+                <code><a href="#acceleratorattributes">*Accelerator<wbr>Attributes</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1146,7 +1146,7 @@ The value for the address type must be `IPV4`.
             <td class="align-top">Ip<wbr>Sets</td>
             <td class="align-top">
                 
-                <code><a href="#acceleratoripset">[]globalaccelerator.<wbr>Accelerator<wbr>Ip<wbr>Set</a></code>
+                <code><a href="#acceleratoripset">[]Accelerator<wbr>Ip<wbr>Set</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

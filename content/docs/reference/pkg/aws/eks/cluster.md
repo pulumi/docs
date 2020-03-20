@@ -314,7 +314,7 @@ A list of the desired control plane logging to enable. For more information, see
             <td class="align-top">Encryption<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#clusterencryptionconfig">*eks.<wbr>Cluster<wbr>Encryption<wbr>Config</a></code>
+                <code><a href="#clusterencryptionconfig">*Cluster<wbr>Encryption<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -389,7 +389,7 @@ Desired Kubernetes master version. If you do not specify a value, the latest ava
             <td class="align-top">Vpc<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#clustervpcconfig">eks.<wbr>Cluster<wbr>Vpc<wbr>Config</a></code>
+                <code><a href="#clustervpcconfig">Cluster<wbr>Vpc<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -902,7 +902,7 @@ The following output properties are available:
             <td class="align-top">Certificate<wbr>Authority</td>
             <td class="align-top">
                 
-                <code><a href="#clustercertificateauthority">eks.<wbr>Cluster<wbr>Certificate<wbr>Authority</a></code>
+                <code><a href="#clustercertificateauthority">Cluster<wbr>Certificate<wbr>Authority</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested attribute containing `certificate-authority-data` for your cluster.
  {{% /md %}}
@@ -940,7 +940,7 @@ The following output properties are available:
             <td class="align-top">Encryption<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#clusterencryptionconfig">*eks.<wbr>Cluster<wbr>Encryption<wbr>Config</a></code>
+                <code><a href="#clusterencryptionconfig">*Cluster<wbr>Encryption<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block with encryption configuration for the cluster. Only available on Kubernetes 1.13 and above clusters created after March 6, 2020. Detailed below.
  {{% /md %}}
@@ -966,7 +966,7 @@ The following output properties are available:
             <td class="align-top">Identities</td>
             <td class="align-top">
                 
-                <code><a href="#clusteridentity">[]eks.<wbr>Cluster<wbr>Identity</a></code>
+                <code><a href="#clusteridentity">[]Cluster<wbr>Identity</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested attribute containing identity provider information for your cluster. Only available on Kubernetes version 1.13 and 1.14 clusters created or upgraded on or after September 3, 2019.
  {{% /md %}}
@@ -1057,7 +1057,7 @@ The following output properties are available:
             <td class="align-top">Vpc<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#clustervpcconfig">eks.<wbr>Cluster<wbr>Vpc<wbr>Config</a></code>
+                <code><a href="#clustervpcconfig">Cluster<wbr>Vpc<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested argument for the VPC associated with your cluster. Amazon EKS VPC resources have specific requirements to work properly with Kubernetes. For more information, see [Cluster VPC Considerations](https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html) and [Cluster Security Group Considerations](https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html) in the Amazon EKS User Guide. Configuration detailed below.
  {{% /md %}}
@@ -1795,7 +1795,7 @@ The Amazon Resource Name (ARN) of the cluster.
             <td class="align-top">Certificate<wbr>Authority</td>
             <td class="align-top">
                 
-                <code><a href="#clustercertificateauthority">*eks.<wbr>Cluster<wbr>Certificate<wbr>Authority</a></code>
+                <code><a href="#clustercertificateauthority">*Cluster<wbr>Certificate<wbr>Authority</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1839,7 +1839,7 @@ A list of the desired control plane logging to enable. For more information, see
             <td class="align-top">Encryption<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#clusterencryptionconfig">*eks.<wbr>Cluster<wbr>Encryption<wbr>Config</a></code>
+                <code><a href="#clusterencryptionconfig">*Cluster<wbr>Encryption<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1869,7 +1869,7 @@ The endpoint for your Kubernetes API server.
             <td class="align-top">Identities</td>
             <td class="align-top">
                 
-                <code><a href="#clusteridentity">[]eks.<wbr>Cluster<wbr>Identity</a></code>
+                <code><a href="#clusteridentity">[]Cluster<wbr>Identity</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1974,7 +1974,7 @@ Desired Kubernetes master version. If you do not specify a value, the latest ava
             <td class="align-top">Vpc<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#clustervpcconfig">*eks.<wbr>Cluster<wbr>Vpc<wbr>Config</a></code>
+                <code><a href="#clustervpcconfig">*Cluster<wbr>Vpc<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2706,7 +2706,7 @@ List of strings with resources to be encrypted. Valid values: `secrets`
             <td class="align-top">Provider</td>
             <td class="align-top">
                 
-                <code><a href="#clusterencryptionconfigprovider">eks.<wbr>Cluster<wbr>Encryption<wbr>Config<wbr>Provider</a></code>
+                <code><a href="#clusterencryptionconfigprovider">Cluster<wbr>Encryption<wbr>Config<wbr>Provider</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -3073,7 +3073,7 @@ Nested attribute containing [OpenID Connect](https://openid.net/connect/) identi
             <td class="align-top">Oidcs</td>
             <td class="align-top">
                 
-                <code><a href="#clusteridentityoidc">[]eks.<wbr>Cluster<wbr>Identity<wbr>Oidc</a></code>
+                <code><a href="#clusteridentityoidc">[]Cluster<wbr>Identity<wbr>Oidc</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

@@ -210,7 +210,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">Account<wbr>Aggregation<wbr>Source</td>
             <td class="align-top">
                 
-                <code><a href="#configurationaggregatoraccountaggregationsource">*cfg.<wbr>Configuration<wbr>Aggregator<wbr>Account<wbr>Aggregation<wbr>Source</a></code>
+                <code><a href="#configurationaggregatoraccountaggregationsource">*Configuration<wbr>Aggregator<wbr>Account<wbr>Aggregation<wbr>Source</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -240,7 +240,7 @@ The name of the configuration aggregator.
             <td class="align-top">Organization<wbr>Aggregation<wbr>Source</td>
             <td class="align-top">
                 
-                <code><a href="#configurationaggregatororganizationaggregationsource">*cfg.<wbr>Configuration<wbr>Aggregator<wbr>Organization<wbr>Aggregation<wbr>Source</a></code>
+                <code><a href="#configurationaggregatororganizationaggregationsource">*Configuration<wbr>Aggregator<wbr>Organization<wbr>Aggregation<wbr>Source</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -549,7 +549,7 @@ The following output properties are available:
             <td class="align-top">Account<wbr>Aggregation<wbr>Source</td>
             <td class="align-top">
                 
-                <code><a href="#configurationaggregatoraccountaggregationsource">*cfg.<wbr>Configuration<wbr>Aggregator<wbr>Account<wbr>Aggregation<wbr>Source</a></code>
+                <code><a href="#configurationaggregatoraccountaggregationsource">*Configuration<wbr>Aggregator<wbr>Account<wbr>Aggregation<wbr>Source</a></code>
             </td>
             <td class="align-top">{{% md %}} The account(s) to aggregate config data from as documented below.
  {{% /md %}}
@@ -588,7 +588,7 @@ The following output properties are available:
             <td class="align-top">Organization<wbr>Aggregation<wbr>Source</td>
             <td class="align-top">
                 
-                <code><a href="#configurationaggregatororganizationaggregationsource">*cfg.<wbr>Configuration<wbr>Aggregator<wbr>Organization<wbr>Aggregation<wbr>Source</a></code>
+                <code><a href="#configurationaggregatororganizationaggregationsource">*Configuration<wbr>Aggregator<wbr>Organization<wbr>Aggregation<wbr>Source</a></code>
             </td>
             <td class="align-top">{{% md %}} The organization to aggregate config data from as documented below.
  {{% /md %}}
@@ -958,7 +958,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">Account<wbr>Aggregation<wbr>Source</td>
             <td class="align-top">
                 
-                <code><a href="#configurationaggregatoraccountaggregationsource">*cfg.<wbr>Configuration<wbr>Aggregator<wbr>Account<wbr>Aggregation<wbr>Source</a></code>
+                <code><a href="#configurationaggregatoraccountaggregationsource">*Configuration<wbr>Aggregator<wbr>Account<wbr>Aggregation<wbr>Source</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1003,7 +1003,7 @@ The name of the configuration aggregator.
             <td class="align-top">Organization<wbr>Aggregation<wbr>Source</td>
             <td class="align-top">
                 
-                <code><a href="#configurationaggregatororganizationaggregationsource">*cfg.<wbr>Configuration<wbr>Aggregator<wbr>Organization<wbr>Aggregation<wbr>Source</a></code>
+                <code><a href="#configurationaggregatororganizationaggregationsource">*Configuration<wbr>Aggregator<wbr>Organization<wbr>Aggregation<wbr>Source</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

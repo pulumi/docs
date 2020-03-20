@@ -175,7 +175,7 @@ The display name of a backup plan.
             <td class="align-top">Rules</td>
             <td class="align-top">
                 
-                <code><a href="#planrule">[]backup.<wbr>Plan<wbr>Rule</a></code>
+                <code><a href="#planrule">[]Plan<wbr>Rule</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -480,7 +480,7 @@ The following output properties are available:
             <td class="align-top">Rules</td>
             <td class="align-top">
                 
-                <code><a href="#planrule">[]backup.<wbr>Plan<wbr>Rule</a></code>
+                <code><a href="#planrule">[]Plan<wbr>Rule</a></code>
             </td>
             <td class="align-top">{{% md %}} A rule object that specifies a scheduled task that is used to back up a selection of resources.
  {{% /md %}}
@@ -893,7 +893,7 @@ The display name of a backup plan.
             <td class="align-top">Rules</td>
             <td class="align-top">
                 
-                <code><a href="#planrule">[]backup.<wbr>Plan<wbr>Rule</a></code>
+                <code><a href="#planrule">[]Plan<wbr>Rule</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1316,7 +1316,7 @@ The amount of time AWS Backup attempts a backup before canceling the job and ret
             <td class="align-top">Lifecycle</td>
             <td class="align-top">
                 
-                <code><a href="#planrulelifecycle">*backup.<wbr>Plan<wbr>Rule<wbr>Lifecycle</a></code>
+                <code><a href="#planrulelifecycle">*Plan<wbr>Rule<wbr>Lifecycle</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

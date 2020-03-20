@@ -338,7 +338,7 @@ The ARN of the default SSL server certificate. Exactly one certificate is requir
             <td class="align-top">Default<wbr>Actions</td>
             <td class="align-top">
                 
-                <code><a href="#listenerdefaultaction">[]alb.<wbr>Listener<wbr>Default<wbr>Action</a></code>
+                <code><a href="#listenerdefaultaction">[]Listener<wbr>Default<wbr>Action</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -804,7 +804,7 @@ The following output properties are available:
             <td class="align-top">Default<wbr>Actions</td>
             <td class="align-top">
                 
-                <code><a href="#listenerdefaultaction">[]alb.<wbr>Listener<wbr>Default<wbr>Action</a></code>
+                <code><a href="#listenerdefaultaction">[]Listener<wbr>Default<wbr>Action</a></code>
             </td>
             <td class="align-top">{{% md %}} An Action block. Action blocks are documented below.
  {{% /md %}}
@@ -1325,7 +1325,7 @@ The ARN of the default SSL server certificate. Exactly one certificate is requir
             <td class="align-top">Default<wbr>Actions</td>
             <td class="align-top">
                 
-                <code><a href="#listenerdefaultaction">[]alb.<wbr>Listener<wbr>Default<wbr>Action</a></code>
+                <code><a href="#listenerdefaultaction">[]Listener<wbr>Default<wbr>Action</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1820,7 +1820,7 @@ The type of routing action. Valid values are `forward`, `redirect`, `fixed-respo
             <td class="align-top">Authenticate<wbr>Cognito</td>
             <td class="align-top">
                 
-                <code><a href="#listenerdefaultactionauthenticatecognito">*alb.<wbr>Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Cognito</a></code>
+                <code><a href="#listenerdefaultactionauthenticatecognito">*Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Cognito</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1834,7 +1834,7 @@ The type of routing action. Valid values are `forward`, `redirect`, `fixed-respo
             <td class="align-top">Authenticate<wbr>Oidc</td>
             <td class="align-top">
                 
-                <code><a href="#listenerdefaultactionauthenticateoidc">*alb.<wbr>Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Oidc</a></code>
+                <code><a href="#listenerdefaultactionauthenticateoidc">*Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Oidc</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1848,7 +1848,7 @@ The type of routing action. Valid values are `forward`, `redirect`, `fixed-respo
             <td class="align-top">Fixed<wbr>Response</td>
             <td class="align-top">
                 
-                <code><a href="#listenerdefaultactionfixedresponse">*alb.<wbr>Listener<wbr>Default<wbr>Action<wbr>Fixed<wbr>Response</a></code>
+                <code><a href="#listenerdefaultactionfixedresponse">*Listener<wbr>Default<wbr>Action<wbr>Fixed<wbr>Response</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1877,7 +1877,7 @@ Information for creating an action that returns a custom HTTP response. Required
             <td class="align-top">Redirect</td>
             <td class="align-top">
                 
-                <code><a href="#listenerdefaultactionredirect">*alb.<wbr>Listener<wbr>Default<wbr>Action<wbr>Redirect</a></code>
+                <code><a href="#listenerdefaultactionredirect">*Listener<wbr>Default<wbr>Action<wbr>Redirect</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

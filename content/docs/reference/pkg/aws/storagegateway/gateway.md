@@ -430,7 +430,7 @@ Type of the gateway. The default value is `STORED`. Valid values: `CACHED`, `FIL
             <td class="align-top">Smb<wbr>Active<wbr>Directory<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#gatewaysmbactivedirectorysettings">*storagegateway.<wbr>Gateway<wbr>Smb<wbr>Active<wbr>Directory<wbr>Settings</a></code>
+                <code><a href="#gatewaysmbactivedirectorysettings">*Gateway<wbr>Smb<wbr>Active<wbr>Directory<wbr>Settings</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1196,7 +1196,7 @@ The following output properties are available:
             <td class="align-top">Smb<wbr>Active<wbr>Directory<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#gatewaysmbactivedirectorysettings">*storagegateway.<wbr>Gateway<wbr>Smb<wbr>Active<wbr>Directory<wbr>Settings</a></code>
+                <code><a href="#gatewaysmbactivedirectorysettings">*Gateway<wbr>Smb<wbr>Active<wbr>Directory<wbr>Settings</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested argument with Active Directory domain join information for Server Message Block (SMB) file shares. Only valid for `FILE_S3` gateway type. Must be set before creating `ActiveDirectory` authentication SMB file shares. More details below.
  {{% /md %}}
@@ -2051,7 +2051,7 @@ Type of the gateway. The default value is `STORED`. Valid values: `CACHED`, `FIL
             <td class="align-top">Smb<wbr>Active<wbr>Directory<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#gatewaysmbactivedirectorysettings">*storagegateway.<wbr>Gateway<wbr>Smb<wbr>Active<wbr>Directory<wbr>Settings</a></code>
+                <code><a href="#gatewaysmbactivedirectorysettings">*Gateway<wbr>Smb<wbr>Active<wbr>Directory<wbr>Settings</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

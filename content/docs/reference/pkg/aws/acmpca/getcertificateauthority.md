@@ -145,7 +145,7 @@ Amazon Resource Name (ARN) of the certificate authority.
             <td class="align-top">Revocation<wbr>Configurations</td>
             <td class="align-top">
                 
-                <code><a href="#getcertificateauthorityrevocationconfiguration">[]acmpca.<wbr>Get<wbr>Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration</a></code>
+                <code><a href="#getcertificateauthorityrevocationconfiguration">[]Get<wbr>Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -604,7 +604,7 @@ The following output properties are available:
             <td class="align-top">Revocation<wbr>Configurations</td>
             <td class="align-top">
                 
-                <code><a href="#getcertificateauthorityrevocationconfiguration">[]acmpca.<wbr>Get<wbr>Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration</a></code>
+                <code><a href="#getcertificateauthorityrevocationconfiguration">[]Get<wbr>Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested attribute containing revocation configuration.
 * `revocation_configuration.0.crl_configuration` - Nested attribute containing configuration of the certificate revocation list (CRL), if any, maintained by the certificate authority.
@@ -1114,7 +1114,7 @@ The following output properties are available:
             <td class="align-top">Crl<wbr>Configurations</td>
             <td class="align-top">
                 
-                <code><a href="#getcertificateauthorityrevocationconfigurationcrlconfiguration">[]acmpca.<wbr>Get<wbr>Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration<wbr>Crl<wbr>Configuration</a></code>
+                <code><a href="#getcertificateauthorityrevocationconfigurationcrlconfiguration">[]Get<wbr>Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration<wbr>Crl<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

@@ -270,7 +270,7 @@ Whether the identity pool supports unauthenticated logins or not.
             <td class="align-top">Cognito<wbr>Identity<wbr>Providers</td>
             <td class="align-top">
                 
-                <code><a href="#identitypoolcognitoidentityprovider">[]cognito.<wbr>Identity<wbr>Pool<wbr>Cognito<wbr>Identity<wbr>Provider</a></code>
+                <code><a href="#identitypoolcognitoidentityprovider">[]Identity<wbr>Pool<wbr>Cognito<wbr>Identity<wbr>Provider</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -856,7 +856,7 @@ backend and the Cognito service to communicate about the developer provider.
             <td class="align-top">Cognito<wbr>Identity<wbr>Providers</td>
             <td class="align-top">
                 
-                <code><a href="#identitypoolcognitoidentityprovider">[]cognito.<wbr>Identity<wbr>Pool<wbr>Cognito<wbr>Identity<wbr>Provider</a></code>
+                <code><a href="#identitypoolcognitoidentityprovider">[]Identity<wbr>Pool<wbr>Cognito<wbr>Identity<wbr>Provider</a></code>
             </td>
             <td class="align-top">{{% md %}} An array of Amazon Cognito Identity user pools and their client IDs.
  {{% /md %}}
@@ -1489,7 +1489,7 @@ The ARN of the identity pool.
             <td class="align-top">Cognito<wbr>Identity<wbr>Providers</td>
             <td class="align-top">
                 
-                <code><a href="#identitypoolcognitoidentityprovider">[]cognito.<wbr>Identity<wbr>Pool<wbr>Cognito<wbr>Identity<wbr>Provider</a></code>
+                <code><a href="#identitypoolcognitoidentityprovider">[]Identity<wbr>Pool<wbr>Cognito<wbr>Identity<wbr>Provider</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

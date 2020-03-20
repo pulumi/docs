@@ -408,7 +408,7 @@ AMI version of the EKS Node Group. Defaults to latest version for Kubernetes ver
             <td class="align-top">Remote<wbr>Access</td>
             <td class="align-top">
                 
-                <code><a href="#nodegroupremoteaccess">*eks.<wbr>Node<wbr>Group<wbr>Remote<wbr>Access</a></code>
+                <code><a href="#nodegroupremoteaccess">*Node<wbr>Group<wbr>Remote<wbr>Access</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -423,7 +423,7 @@ Configuration block with remote access settings. Detailed below.
             <td class="align-top">Scaling<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#nodegroupscalingconfig">eks.<wbr>Node<wbr>Group<wbr>Scaling<wbr>Config</a></code>
+                <code><a href="#nodegroupscalingconfig">Node<wbr>Group<wbr>Scaling<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1276,7 +1276,7 @@ The following output properties are available:
             <td class="align-top">Remote<wbr>Access</td>
             <td class="align-top">
                 
-                <code><a href="#nodegroupremoteaccess">*eks.<wbr>Node<wbr>Group<wbr>Remote<wbr>Access</a></code>
+                <code><a href="#nodegroupremoteaccess">*Node<wbr>Group<wbr>Remote<wbr>Access</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block with remote access settings. Detailed below.
  {{% /md %}}
@@ -1289,7 +1289,7 @@ The following output properties are available:
             <td class="align-top">Resources</td>
             <td class="align-top">
                 
-                <code><a href="#nodegroupresource">[]eks.<wbr>Node<wbr>Group<wbr>Resource</a></code>
+                <code><a href="#nodegroupresource">[]Node<wbr>Group<wbr>Resource</a></code>
             </td>
             <td class="align-top">{{% md %}} List of objects containing information about underlying resources.
  {{% /md %}}
@@ -1302,7 +1302,7 @@ The following output properties are available:
             <td class="align-top">Scaling<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#nodegroupscalingconfig">eks.<wbr>Node<wbr>Group<wbr>Scaling<wbr>Config</a></code>
+                <code><a href="#nodegroupscalingconfig">Node<wbr>Group<wbr>Scaling<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block with scaling settings. Detailed below.
  {{% /md %}}
@@ -2281,7 +2281,7 @@ AMI version of the EKS Node Group. Defaults to latest version for Kubernetes ver
             <td class="align-top">Remote<wbr>Access</td>
             <td class="align-top">
                 
-                <code><a href="#nodegroupremoteaccess">*eks.<wbr>Node<wbr>Group<wbr>Remote<wbr>Access</a></code>
+                <code><a href="#nodegroupremoteaccess">*Node<wbr>Group<wbr>Remote<wbr>Access</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2296,7 +2296,7 @@ Configuration block with remote access settings. Detailed below.
             <td class="align-top">Resources</td>
             <td class="align-top">
                 
-                <code><a href="#nodegroupresource">[]eks.<wbr>Node<wbr>Group<wbr>Resource</a></code>
+                <code><a href="#nodegroupresource">[]Node<wbr>Group<wbr>Resource</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2311,7 +2311,7 @@ List of objects containing information about underlying resources.
             <td class="align-top">Scaling<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#nodegroupscalingconfig">*eks.<wbr>Node<wbr>Group<wbr>Scaling<wbr>Config</a></code>
+                <code><a href="#nodegroupscalingconfig">*Node<wbr>Group<wbr>Scaling<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3216,7 +3216,7 @@ Identifier of the remote access EC2 Security Group.
             <td class="align-top">Autoscaling<wbr>Groups</td>
             <td class="align-top">
                 
-                <code><a href="#nodegroupresourceautoscalinggroup">[]eks.<wbr>Node<wbr>Group<wbr>Resource<wbr>Autoscaling<wbr>Group</a></code>
+                <code><a href="#nodegroupresourceautoscalinggroup">[]Node<wbr>Group<wbr>Resource<wbr>Autoscaling<wbr>Group</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

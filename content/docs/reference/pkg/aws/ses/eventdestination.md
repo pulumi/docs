@@ -267,7 +267,7 @@ Send the events to an SNS Topic destination
             <td class="align-top">Cloudwatch<wbr>Destinations</td>
             <td class="align-top">
                 
-                <code><a href="#eventdestinationcloudwatchdestination">[]ses.<wbr>Event<wbr>Destination<wbr>Cloudwatch<wbr>Destination</a></code>
+                <code><a href="#eventdestinationcloudwatchdestination">[]Event<wbr>Destination<wbr>Cloudwatch<wbr>Destination</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -312,7 +312,7 @@ If true, the event destination will be enabled
             <td class="align-top">Kinesis<wbr>Destination</td>
             <td class="align-top">
                 
-                <code><a href="#eventdestinationkinesisdestination">*ses.<wbr>Event<wbr>Destination<wbr>Kinesis<wbr>Destination</a></code>
+                <code><a href="#eventdestinationkinesisdestination">*Event<wbr>Destination<wbr>Kinesis<wbr>Destination</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -357,7 +357,7 @@ The name of the event destination
             <td class="align-top">Sns<wbr>Destination</td>
             <td class="align-top">
                 
-                <code><a href="#eventdestinationsnsdestination">*ses.<wbr>Event<wbr>Destination<wbr>Sns<wbr>Destination</a></code>
+                <code><a href="#eventdestinationsnsdestination">*Event<wbr>Destination<wbr>Sns<wbr>Destination</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -767,7 +767,7 @@ The following output properties are available:
             <td class="align-top">Cloudwatch<wbr>Destinations</td>
             <td class="align-top">
                 
-                <code><a href="#eventdestinationcloudwatchdestination">[]ses.<wbr>Event<wbr>Destination<wbr>Cloudwatch<wbr>Destination</a></code>
+                <code><a href="#eventdestinationcloudwatchdestination">[]Event<wbr>Destination<wbr>Cloudwatch<wbr>Destination</a></code>
             </td>
             <td class="align-top">{{% md %}} CloudWatch destination for the events
  {{% /md %}}
@@ -806,7 +806,7 @@ The following output properties are available:
             <td class="align-top">Kinesis<wbr>Destination</td>
             <td class="align-top">
                 
-                <code><a href="#eventdestinationkinesisdestination">*ses.<wbr>Event<wbr>Destination<wbr>Kinesis<wbr>Destination</a></code>
+                <code><a href="#eventdestinationkinesisdestination">*Event<wbr>Destination<wbr>Kinesis<wbr>Destination</a></code>
             </td>
             <td class="align-top">{{% md %}} Send the events to a kinesis firehose destination
  {{% /md %}}
@@ -845,7 +845,7 @@ The following output properties are available:
             <td class="align-top">Sns<wbr>Destination</td>
             <td class="align-top">
                 
-                <code><a href="#eventdestinationsnsdestination">*ses.<wbr>Event<wbr>Destination<wbr>Sns<wbr>Destination</a></code>
+                <code><a href="#eventdestinationsnsdestination">*Event<wbr>Destination<wbr>Sns<wbr>Destination</a></code>
             </td>
             <td class="align-top">{{% md %}} Send the events to an SNS Topic destination
  {{% /md %}}
@@ -1284,7 +1284,7 @@ Send the events to an SNS Topic destination
             <td class="align-top">Cloudwatch<wbr>Destinations</td>
             <td class="align-top">
                 
-                <code><a href="#eventdestinationcloudwatchdestination">[]ses.<wbr>Event<wbr>Destination<wbr>Cloudwatch<wbr>Destination</a></code>
+                <code><a href="#eventdestinationcloudwatchdestination">[]Event<wbr>Destination<wbr>Cloudwatch<wbr>Destination</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1329,7 +1329,7 @@ If true, the event destination will be enabled
             <td class="align-top">Kinesis<wbr>Destination</td>
             <td class="align-top">
                 
-                <code><a href="#eventdestinationkinesisdestination">*ses.<wbr>Event<wbr>Destination<wbr>Kinesis<wbr>Destination</a></code>
+                <code><a href="#eventdestinationkinesisdestination">*Event<wbr>Destination<wbr>Kinesis<wbr>Destination</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1374,7 +1374,7 @@ The name of the event destination
             <td class="align-top">Sns<wbr>Destination</td>
             <td class="align-top">
                 
-                <code><a href="#eventdestinationsnsdestination">*ses.<wbr>Event<wbr>Destination<wbr>Sns<wbr>Destination</a></code>
+                <code><a href="#eventdestinationsnsdestination">*Event<wbr>Destination<wbr>Sns<wbr>Destination</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

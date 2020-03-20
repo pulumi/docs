@@ -901,7 +901,7 @@ Time (in seconds) after instance comes into service before checking health.
             <td class="align-top">Initial<wbr>Lifecycle<wbr>Hooks</td>
             <td class="align-top">
                 
-                <code><a href="#groupinitiallifecyclehook">[]autoscaling.<wbr>Group<wbr>Initial<wbr>Lifecycle<wbr>Hook</a></code>
+                <code><a href="#groupinitiallifecyclehook">[]Group<wbr>Initial<wbr>Lifecycle<wbr>Hook</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -937,7 +937,7 @@ The name of the launch configuration to use.
             <td class="align-top">Launch<wbr>Template</td>
             <td class="align-top">
                 
-                <code><a href="#grouplaunchtemplate">*autoscaling.<wbr>Group<wbr>Launch<wbr>Template</a></code>
+                <code><a href="#grouplaunchtemplate">*Group<wbr>Launch<wbr>Template</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1047,7 +1047,7 @@ The minimum size of the auto scale group.
             <td class="align-top">Mixed<wbr>Instances<wbr>Policy</td>
             <td class="align-top">
                 
-                <code><a href="#groupmixedinstancespolicy">*autoscaling.<wbr>Group<wbr>Mixed<wbr>Instances<wbr>Policy</a></code>
+                <code><a href="#groupmixedinstancespolicy">*Group<wbr>Mixed<wbr>Instances<wbr>Policy</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1156,7 +1156,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code><a href="#grouptag">[]autoscaling.<wbr>Group<wbr>Tag</a></code>
+                <code><a href="#grouptag">[]Group<wbr>Tag</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2863,7 +2863,7 @@ behavior and potentially leaves resources dangling.
             <td class="align-top">Initial<wbr>Lifecycle<wbr>Hooks</td>
             <td class="align-top">
                 
-                <code><a href="#groupinitiallifecyclehook">[]autoscaling.<wbr>Group<wbr>Initial<wbr>Lifecycle<wbr>Hook</a></code>
+                <code><a href="#groupinitiallifecyclehook">[]Group<wbr>Initial<wbr>Lifecycle<wbr>Hook</a></code>
             </td>
             <td class="align-top">{{% md %}} One or more
 [Lifecycle Hooks](http://docs.aws.amazon.com/autoscaling/latest/userguide/lifecycle-hooks.html)
@@ -2895,7 +2895,7 @@ a new autoscaling group. For all other use-cases, please use `aws.autoscaling.Li
             <td class="align-top">Launch<wbr>Template</td>
             <td class="align-top">
                 
-                <code><a href="#grouplaunchtemplate">*autoscaling.<wbr>Group<wbr>Launch<wbr>Template</a></code>
+                <code><a href="#grouplaunchtemplate">*Group<wbr>Launch<wbr>Template</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested argument containing launch template settings along with the overrides to specify multiple instance types and weights. Defined below.
  {{% /md %}}
@@ -2991,7 +2991,7 @@ ELB only on creation. Updates will not wait on ELB instance number changes.
             <td class="align-top">Mixed<wbr>Instances<wbr>Policy</td>
             <td class="align-top">
                 
-                <code><a href="#groupmixedinstancespolicy">*autoscaling.<wbr>Group<wbr>Mixed<wbr>Instances<wbr>Policy</a></code>
+                <code><a href="#groupmixedinstancespolicy">*Group<wbr>Mixed<wbr>Instances<wbr>Policy</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block containing settings to define launch targets for Auto Scaling groups. Defined below.
  {{% /md %}}
@@ -3086,7 +3086,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code><a href="#grouptag">[]autoscaling.<wbr>Group<wbr>Tag</a></code>
+                <code><a href="#grouptag">[]Group<wbr>Tag</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of tag blocks. Tags documented below.
  {{% /md %}}
@@ -4808,7 +4808,7 @@ Time (in seconds) after instance comes into service before checking health.
             <td class="align-top">Initial<wbr>Lifecycle<wbr>Hooks</td>
             <td class="align-top">
                 
-                <code><a href="#groupinitiallifecyclehook">[]autoscaling.<wbr>Group<wbr>Initial<wbr>Lifecycle<wbr>Hook</a></code>
+                <code><a href="#groupinitiallifecyclehook">[]Group<wbr>Initial<wbr>Lifecycle<wbr>Hook</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4844,7 +4844,7 @@ The name of the launch configuration to use.
             <td class="align-top">Launch<wbr>Template</td>
             <td class="align-top">
                 
-                <code><a href="#grouplaunchtemplate">*autoscaling.<wbr>Group<wbr>Launch<wbr>Template</a></code>
+                <code><a href="#grouplaunchtemplate">*Group<wbr>Launch<wbr>Template</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4954,7 +4954,7 @@ The minimum size of the auto scale group.
             <td class="align-top">Mixed<wbr>Instances<wbr>Policy</td>
             <td class="align-top">
                 
-                <code><a href="#groupmixedinstancespolicy">*autoscaling.<wbr>Group<wbr>Mixed<wbr>Instances<wbr>Policy</a></code>
+                <code><a href="#groupmixedinstancespolicy">*Group<wbr>Mixed<wbr>Instances<wbr>Policy</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5063,7 +5063,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code><a href="#grouptag">[]autoscaling.<wbr>Group<wbr>Tag</a></code>
+                <code><a href="#grouptag">[]Group<wbr>Tag</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -7075,7 +7075,7 @@ Nested argument containing launch template settings along with the overrides to 
             <td class="align-top">Instances<wbr>Distribution</td>
             <td class="align-top">
                 
-                <code><a href="#groupmixedinstancespolicyinstancesdistribution">*autoscaling.<wbr>Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Instances<wbr>Distribution</a></code>
+                <code><a href="#groupmixedinstancespolicyinstancesdistribution">*Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Instances<wbr>Distribution</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -7090,7 +7090,7 @@ Nested argument containing settings on how to mix on-demand and Spot instances i
             <td class="align-top">Launch<wbr>Template</td>
             <td class="align-top">
                 
-                <code><a href="#groupmixedinstancespolicylaunchtemplate">autoscaling.<wbr>Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template</a></code>
+                <code><a href="#groupmixedinstancespolicylaunchtemplate">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -7757,7 +7757,7 @@ List of nested arguments provides the ability to specify multiple instance types
             <td class="align-top">Launch<wbr>Template<wbr>Specification</td>
             <td class="align-top">
                 
-                <code><a href="#groupmixedinstancespolicylaunchtemplatelaunchtemplatespecification">autoscaling.<wbr>Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Launch<wbr>Template<wbr>Specification</a></code>
+                <code><a href="#groupmixedinstancespolicylaunchtemplatelaunchtemplatespecification">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Launch<wbr>Template<wbr>Specification</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -7772,7 +7772,7 @@ Nested argument defines the Launch Template. Defined below.
             <td class="align-top">Overrides</td>
             <td class="align-top">
                 
-                <code><a href="#groupmixedinstancespolicylaunchtemplateoverride">[]autoscaling.<wbr>Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Override</a></code>
+                <code><a href="#groupmixedinstancespolicylaunchtemplateoverride">[]Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Override</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

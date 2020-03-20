@@ -167,7 +167,7 @@ The following arguments are supported:
             <td class="align-top">Filter</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsconfigurationfilter">*s3.<wbr>Analytics<wbr>Configuration<wbr>Filter</a></code>
+                <code><a href="#analyticsconfigurationfilter">*Analytics<wbr>Configuration<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -195,7 +195,7 @@ The following arguments are supported:
             <td class="align-top">Storage<wbr>Class<wbr>Analysis</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsconfigurationstorageclassanalysis">*s3.<wbr>Analytics<wbr>Configuration<wbr>Storage<wbr>Class<wbr>Analysis</a></code>
+                <code><a href="#analyticsconfigurationstorageclassanalysis">*Analytics<wbr>Configuration<wbr>Storage<wbr>Class<wbr>Analysis</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -475,7 +475,7 @@ The following output properties are available:
             <td class="align-top">Filter</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsconfigurationfilter">*s3.<wbr>Analytics<wbr>Configuration<wbr>Filter</a></code>
+                <code><a href="#analyticsconfigurationfilter">*Analytics<wbr>Configuration<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -499,7 +499,7 @@ The following output properties are available:
             <td class="align-top">Storage<wbr>Class<wbr>Analysis</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsconfigurationstorageclassanalysis">*s3.<wbr>Analytics<wbr>Configuration<wbr>Storage<wbr>Class<wbr>Analysis</a></code>
+                <code><a href="#analyticsconfigurationstorageclassanalysis">*Analytics<wbr>Configuration<wbr>Storage<wbr>Class<wbr>Analysis</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -816,7 +816,7 @@ The following state arguments are supported:
             <td class="align-top">Filter</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsconfigurationfilter">*s3.<wbr>Analytics<wbr>Configuration<wbr>Filter</a></code>
+                <code><a href="#analyticsconfigurationfilter">*Analytics<wbr>Configuration<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -844,7 +844,7 @@ The following state arguments are supported:
             <td class="align-top">Storage<wbr>Class<wbr>Analysis</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsconfigurationstorageclassanalysis">*s3.<wbr>Analytics<wbr>Configuration<wbr>Storage<wbr>Class<wbr>Analysis</a></code>
+                <code><a href="#analyticsconfigurationstorageclassanalysis">*Analytics<wbr>Configuration<wbr>Storage<wbr>Class<wbr>Analysis</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1305,7 +1305,7 @@ The following state arguments are supported:
             <td class="align-top">Data<wbr>Export</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsconfigurationstorageclassanalysisdataexport">s3.<wbr>Analytics<wbr>Configuration<wbr>Storage<wbr>Class<wbr>Analysis<wbr>Data<wbr>Export</a></code>
+                <code><a href="#analyticsconfigurationstorageclassanalysisdataexport">Analytics<wbr>Configuration<wbr>Storage<wbr>Class<wbr>Analysis<wbr>Data<wbr>Export</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1476,7 +1476,7 @@ The following state arguments are supported:
             <td class="align-top">Destination</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsconfigurationstorageclassanalysisdataexportdestination">s3.<wbr>Analytics<wbr>Configuration<wbr>Storage<wbr>Class<wbr>Analysis<wbr>Data<wbr>Export<wbr>Destination</a></code>
+                <code><a href="#analyticsconfigurationstorageclassanalysisdataexportdestination">Analytics<wbr>Configuration<wbr>Storage<wbr>Class<wbr>Analysis<wbr>Data<wbr>Export<wbr>Destination</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1675,7 +1675,7 @@ The following state arguments are supported:
             <td class="align-top">S3Bucket<wbr>Destination</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsconfigurationstorageclassanalysisdataexportdestinations3bucketdestination">s3.<wbr>Analytics<wbr>Configuration<wbr>Storage<wbr>Class<wbr>Analysis<wbr>Data<wbr>Export<wbr>Destination<wbr>S3Bucket<wbr>Destination</a></code>
+                <code><a href="#analyticsconfigurationstorageclassanalysisdataexportdestinations3bucketdestination">Analytics<wbr>Configuration<wbr>Storage<wbr>Class<wbr>Analysis<wbr>Data<wbr>Export<wbr>Destination<wbr>S3Bucket<wbr>Destination</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

@@ -205,7 +205,7 @@ Name of the alias.
             <td class="align-top">Routing<wbr>Strategy</td>
             <td class="align-top">
                 
-                <code><a href="#aliasroutingstrategy">gamelift.<wbr>Alias<wbr>Routing<wbr>Strategy</a></code>
+                <code><a href="#aliasroutingstrategy">Alias<wbr>Routing<wbr>Strategy</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -553,7 +553,7 @@ The following output properties are available:
             <td class="align-top">Routing<wbr>Strategy</td>
             <td class="align-top">
                 
-                <code><a href="#aliasroutingstrategy">gamelift.<wbr>Alias<wbr>Routing<wbr>Strategy</a></code>
+                <code><a href="#aliasroutingstrategy">Alias<wbr>Routing<wbr>Strategy</a></code>
             </td>
             <td class="align-top">{{% md %}} Specifies the fleet and/or routing type to use for the alias.
  {{% /md %}}
@@ -968,7 +968,7 @@ Name of the alias.
             <td class="align-top">Routing<wbr>Strategy</td>
             <td class="align-top">
                 
-                <code><a href="#aliasroutingstrategy">*gamelift.<wbr>Alias<wbr>Routing<wbr>Strategy</a></code>
+                <code><a href="#aliasroutingstrategy">*Alias<wbr>Routing<wbr>Strategy</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

@@ -683,7 +683,7 @@ The following output properties are available:
             <td class="align-top">Dead<wbr>Letter<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#getfunctiondeadletterconfig">lambda.<wbr>Get<wbr>Function<wbr>Dead<wbr>Letter<wbr>Config</a></code>
+                <code><a href="#getfunctiondeadletterconfig">Get<wbr>Function<wbr>Dead<wbr>Letter<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} Configure the function&#39;s *dead letter queue*.
  {{% /md %}}
@@ -709,7 +709,7 @@ The following output properties are available:
             <td class="align-top">Environment</td>
             <td class="align-top">
                 
-                <code><a href="#getfunctionenvironment">lambda.<wbr>Get<wbr>Function<wbr>Environment</a></code>
+                <code><a href="#getfunctionenvironment">Get<wbr>Function<wbr>Environment</a></code>
             </td>
             <td class="align-top">{{% md %}} The Lambda environment&#39;s configuration settings.
  {{% /md %}}
@@ -940,7 +940,7 @@ The following output properties are available:
             <td class="align-top">Tracing<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#getfunctiontracingconfig">lambda.<wbr>Get<wbr>Function<wbr>Tracing<wbr>Config</a></code>
+                <code><a href="#getfunctiontracingconfig">Get<wbr>Function<wbr>Tracing<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} Tracing settings of the function.
  {{% /md %}}
@@ -966,7 +966,7 @@ The following output properties are available:
             <td class="align-top">Vpc<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#getfunctionvpcconfig">lambda.<wbr>Get<wbr>Function<wbr>Vpc<wbr>Config</a></code>
+                <code><a href="#getfunctionvpcconfig">Get<wbr>Function<wbr>Vpc<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} VPC configuration associated with your Lambda function.
  {{% /md %}}

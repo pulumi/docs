@@ -244,7 +244,7 @@ The name or description of the rule.
             <td class="align-top">Predicates</td>
             <td class="align-top">
                 
-                <code><a href="#ratebasedrulepredicate">[]waf.<wbr>Rate<wbr>Based<wbr>Rule<wbr>Predicate</a></code>
+                <code><a href="#ratebasedrulepredicate">[]Rate<wbr>Based<wbr>Rule<wbr>Predicate</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -708,7 +708,7 @@ The following output properties are available:
             <td class="align-top">Predicates</td>
             <td class="align-top">
                 
-                <code><a href="#ratebasedrulepredicate">[]waf.<wbr>Rate<wbr>Based<wbr>Rule<wbr>Predicate</a></code>
+                <code><a href="#ratebasedrulepredicate">[]Rate<wbr>Based<wbr>Rule<wbr>Predicate</a></code>
             </td>
             <td class="align-top">{{% md %}} The objects to include in a rule (documented below).
  {{% /md %}}
@@ -1231,7 +1231,7 @@ The name or description of the rule.
             <td class="align-top">Predicates</td>
             <td class="align-top">
                 
-                <code><a href="#ratebasedrulepredicate">[]waf.<wbr>Rate<wbr>Based<wbr>Rule<wbr>Predicate</a></code>
+                <code><a href="#ratebasedrulepredicate">[]Rate<wbr>Based<wbr>Rule<wbr>Predicate</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

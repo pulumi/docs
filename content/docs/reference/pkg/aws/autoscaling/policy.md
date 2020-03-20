@@ -432,7 +432,7 @@ up. A negative value scales down.
             <td class="align-top">Step<wbr>Adjustments</td>
             <td class="align-top">
                 
-                <code><a href="#policystepadjustment">[]autoscaling.<wbr>Policy<wbr>Step<wbr>Adjustment</a></code>
+                <code><a href="#policystepadjustment">[]Policy<wbr>Step<wbr>Adjustment</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -448,7 +448,7 @@ group scaling. These have the following structure:
             <td class="align-top">Target<wbr>Tracking<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#policytargettrackingconfiguration">*autoscaling.<wbr>Policy<wbr>Target<wbr>Tracking<wbr>Configuration</a></code>
+                <code><a href="#policytargettrackingconfiguration">*Policy<wbr>Target<wbr>Tracking<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1180,7 +1180,7 @@ up. A negative value scales down.
             <td class="align-top">Step<wbr>Adjustments</td>
             <td class="align-top">
                 
-                <code><a href="#policystepadjustment">[]autoscaling.<wbr>Policy<wbr>Step<wbr>Adjustment</a></code>
+                <code><a href="#policystepadjustment">[]Policy<wbr>Step<wbr>Adjustment</a></code>
             </td>
             <td class="align-top">{{% md %}} A set of adjustments that manage
 group scaling. These have the following structure:
@@ -1194,7 +1194,7 @@ group scaling. These have the following structure:
             <td class="align-top">Target<wbr>Tracking<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#policytargettrackingconfiguration">*autoscaling.<wbr>Policy<wbr>Target<wbr>Tracking<wbr>Configuration</a></code>
+                <code><a href="#policytargettrackingconfiguration">*Policy<wbr>Target<wbr>Tracking<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} A target tracking policy. These have the following structure:
  {{% /md %}}
@@ -1995,7 +1995,7 @@ up. A negative value scales down.
             <td class="align-top">Step<wbr>Adjustments</td>
             <td class="align-top">
                 
-                <code><a href="#policystepadjustment">[]autoscaling.<wbr>Policy<wbr>Step<wbr>Adjustment</a></code>
+                <code><a href="#policystepadjustment">[]Policy<wbr>Step<wbr>Adjustment</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2011,7 +2011,7 @@ group scaling. These have the following structure:
             <td class="align-top">Target<wbr>Tracking<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#policytargettrackingconfiguration">*autoscaling.<wbr>Policy<wbr>Target<wbr>Tracking<wbr>Configuration</a></code>
+                <code><a href="#policytargettrackingconfiguration">*Policy<wbr>Target<wbr>Tracking<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2867,7 +2867,7 @@ The target value for the metric.
             <td class="align-top">Customized<wbr>Metric<wbr>Specification</td>
             <td class="align-top">
                 
-                <code><a href="#policytargettrackingconfigurationcustomizedmetricspecification">*autoscaling.<wbr>Policy<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification</a></code>
+                <code><a href="#policytargettrackingconfigurationcustomizedmetricspecification">*Policy<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2897,7 +2897,7 @@ Indicates whether scale in by the target tracking policy is disabled.
             <td class="align-top">Predefined<wbr>Metric<wbr>Specification</td>
             <td class="align-top">
                 
-                <code><a href="#policytargettrackingconfigurationpredefinedmetricspecification">*autoscaling.<wbr>Policy<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Predefined<wbr>Metric<wbr>Specification</a></code>
+                <code><a href="#policytargettrackingconfigurationpredefinedmetricspecification">*Policy<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Predefined<wbr>Metric<wbr>Specification</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3223,7 +3223,7 @@ The unit of the metric.
             <td class="align-top">Metric<wbr>Dimensions</td>
             <td class="align-top">
                 
-                <code><a href="#policytargettrackingconfigurationcustomizedmetricspecificationmetricdimension">[]autoscaling.<wbr>Policy<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Metric<wbr>Dimension</a></code>
+                <code><a href="#policytargettrackingconfigurationcustomizedmetricspecificationmetricdimension">[]Policy<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Metric<wbr>Dimension</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

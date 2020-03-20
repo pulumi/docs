@@ -412,7 +412,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">Access<wbr>Logs</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalanceraccesslogs">*elb.<wbr>Load<wbr>Balancer<wbr>Access<wbr>Logs</a></code>
+                <code><a href="#loadbalanceraccesslogs">*Load<wbr>Balancer<wbr>Access<wbr>Logs</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -487,7 +487,7 @@ Enable cross-zone load balancing. Default: `true`
             <td class="align-top">Health<wbr>Check</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalancerhealthcheck">*elb.<wbr>Load<wbr>Balancer<wbr>Health<wbr>Check</a></code>
+                <code><a href="#loadbalancerhealthcheck">*Load<wbr>Balancer<wbr>Health<wbr>Check</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -547,7 +547,7 @@ If true, ELB will be an internal ELB.
             <td class="align-top">Listeners</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalancerlistener">[]elb.<wbr>Load<wbr>Balancer<wbr>Listener</a></code>
+                <code><a href="#loadbalancerlistener">[]Load<wbr>Balancer<wbr>Listener</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1504,7 +1504,7 @@ instances. Only available on ELBs launched in a VPC.
             <td class="align-top">Access<wbr>Logs</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalanceraccesslogs">*elb.<wbr>Load<wbr>Balancer<wbr>Access<wbr>Logs</a></code>
+                <code><a href="#loadbalanceraccesslogs">*Load<wbr>Balancer<wbr>Access<wbr>Logs</a></code>
             </td>
             <td class="align-top">{{% md %}} An Access Logs block. Access Logs documented below.
  {{% /md %}}
@@ -1595,7 +1595,7 @@ instances. Only available on ELBs launched in a VPC.
             <td class="align-top">Health<wbr>Check</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalancerhealthcheck">elb.<wbr>Load<wbr>Balancer<wbr>Health<wbr>Check</a></code>
+                <code><a href="#loadbalancerhealthcheck">Load<wbr>Balancer<wbr>Health<wbr>Check</a></code>
             </td>
             <td class="align-top">{{% md %}} A health_check block. Health Check documented below.
  {{% /md %}}
@@ -1647,7 +1647,7 @@ instances. Only available on ELBs launched in a VPC.
             <td class="align-top">Listeners</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalancerlistener">[]elb.<wbr>Load<wbr>Balancer<wbr>Listener</a></code>
+                <code><a href="#loadbalancerlistener">[]Load<wbr>Balancer<wbr>Listener</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of listener blocks. Listeners documented below.
  {{% /md %}}
@@ -2747,7 +2747,7 @@ The canonical hosted zone ID of the ELB (to be used in a Route 53 Alias record)
             <td class="align-top">Access<wbr>Logs</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalanceraccesslogs">*elb.<wbr>Load<wbr>Balancer<wbr>Access<wbr>Logs</a></code>
+                <code><a href="#loadbalanceraccesslogs">*Load<wbr>Balancer<wbr>Access<wbr>Logs</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2852,7 +2852,7 @@ The DNS name of the ELB
             <td class="align-top">Health<wbr>Check</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalancerhealthcheck">*elb.<wbr>Load<wbr>Balancer<wbr>Health<wbr>Check</a></code>
+                <code><a href="#loadbalancerhealthcheck">*Load<wbr>Balancer<wbr>Health<wbr>Check</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2912,7 +2912,7 @@ If true, ELB will be an internal ELB.
             <td class="align-top">Listeners</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalancerlistener">[]elb.<wbr>Load<wbr>Balancer<wbr>Listener</a></code>
+                <code><a href="#loadbalancerlistener">[]Load<wbr>Balancer<wbr>Listener</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

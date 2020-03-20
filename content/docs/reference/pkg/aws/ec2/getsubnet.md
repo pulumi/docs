@@ -322,7 +322,7 @@ subnet must be the default subnet for its associated availability zone.
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getsubnetfilter">[]ec2.<wbr>Get<wbr>Subnet<wbr>Filter</a></code>
+                <code><a href="#getsubnetfilter">[]Get<wbr>Subnet<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1069,7 +1069,7 @@ The following output properties are available:
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getsubnetfilter">[]ec2.<wbr>Get<wbr>Subnet<wbr>Filter</a></code>
+                <code><a href="#getsubnetfilter">[]Get<wbr>Subnet<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 

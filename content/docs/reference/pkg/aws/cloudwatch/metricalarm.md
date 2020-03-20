@@ -740,7 +740,7 @@ See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/la
             <td class="align-top">Metric<wbr>Queries</td>
             <td class="align-top">
                 
-                <code><a href="#metricalarmmetricquery">[]cloudwatch.<wbr>Metric<wbr>Alarm<wbr>Metric<wbr>Query</a></code>
+                <code><a href="#metricalarmmetricquery">[]Metric<wbr>Alarm<wbr>Metric<wbr>Query</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2146,7 +2146,7 @@ See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/la
             <td class="align-top">Metric<wbr>Queries</td>
             <td class="align-top">
                 
-                <code><a href="#metricalarmmetricquery">[]cloudwatch.<wbr>Metric<wbr>Alarm<wbr>Metric<wbr>Query</a></code>
+                <code><a href="#metricalarmmetricquery">[]Metric<wbr>Alarm<wbr>Metric<wbr>Query</a></code>
             </td>
             <td class="align-top">{{% md %}} Enables you to create an alarm based on a metric math expression. You may specify at most 20.
  {{% /md %}}
@@ -3583,7 +3583,7 @@ See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/la
             <td class="align-top">Metric<wbr>Queries</td>
             <td class="align-top">
                 
-                <code><a href="#metricalarmmetricquery">[]cloudwatch.<wbr>Metric<wbr>Alarm<wbr>Metric<wbr>Query</a></code>
+                <code><a href="#metricalarmmetricquery">[]Metric<wbr>Alarm<wbr>Metric<wbr>Query</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4684,7 +4684,7 @@ A human-readable label for this metric or expression. This is especially useful 
             <td class="align-top">Metric</td>
             <td class="align-top">
                 
-                <code><a href="#metricalarmmetricquerymetric">*cloudwatch.<wbr>Metric<wbr>Alarm<wbr>Metric<wbr>Query<wbr>Metric</a></code>
+                <code><a href="#metricalarmmetricquerymetric">*Metric<wbr>Alarm<wbr>Metric<wbr>Query<wbr>Metric</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

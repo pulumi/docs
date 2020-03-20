@@ -488,7 +488,7 @@ with the cluster
             <td class="align-top">Server<wbr>Side<wbr>Encryption</td>
             <td class="align-top">
                 
-                <code><a href="#clusterserversideencryption">*dax.<wbr>Cluster<wbr>Server<wbr>Side<wbr>Encryption</a></code>
+                <code><a href="#clusterserversideencryption">*Cluster<wbr>Server<wbr>Side<wbr>Encryption</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1426,7 +1426,7 @@ maintenance on the cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi`
             <td class="align-top">Nodes</td>
             <td class="align-top">
                 
-                <code><a href="#clusternode">[]dax.<wbr>Cluster<wbr>Node</a></code>
+                <code><a href="#clusternode">[]Cluster<wbr>Node</a></code>
             </td>
             <td class="align-top">{{% md %}} List of node objects including `id`, `address`, `port` and
 `availability_zone`. Referenceable e.g. as
@@ -1512,7 +1512,7 @@ with the cluster
             <td class="align-top">Server<wbr>Side<wbr>Encryption</td>
             <td class="align-top">
                 
-                <code><a href="#clusterserversideencryption">*dax.<wbr>Cluster<wbr>Server<wbr>Side<wbr>Encryption</a></code>
+                <code><a href="#clusterserversideencryption">*Cluster<wbr>Server<wbr>Side<wbr>Encryption</a></code>
             </td>
             <td class="align-top">{{% md %}} Encrypt at rest options
  {{% /md %}}
@@ -2627,7 +2627,7 @@ The compute and memory capacity of the nodes. See
             <td class="align-top">Nodes</td>
             <td class="align-top">
                 
-                <code><a href="#clusternode">[]dax.<wbr>Cluster<wbr>Node</a></code>
+                <code><a href="#clusternode">[]Cluster<wbr>Node</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2725,7 +2725,7 @@ with the cluster
             <td class="align-top">Server<wbr>Side<wbr>Encryption</td>
             <td class="align-top">
                 
-                <code><a href="#clusterserversideencryption">*dax.<wbr>Cluster<wbr>Server<wbr>Side<wbr>Encryption</a></code>
+                <code><a href="#clusterserversideencryption">*Cluster<wbr>Server<wbr>Side<wbr>Encryption</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

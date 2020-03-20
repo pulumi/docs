@@ -260,7 +260,7 @@ The type of the certificate authority. Defaults to `SUBORDINATE`. Valid values: 
             <td class="align-top">Certificate<wbr>Authority<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#certificateauthoritycertificateauthorityconfiguration">acmpca.<wbr>Certificate<wbr>Authority<wbr>Certificate<wbr>Authority<wbr>Configuration</a></code>
+                <code><a href="#certificateauthoritycertificateauthorityconfiguration">Certificate<wbr>Authority<wbr>Certificate<wbr>Authority<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -305,7 +305,7 @@ The number of days to make a CA restorable after it has been deleted, must be be
             <td class="align-top">Revocation<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#certificateauthorityrevocationconfiguration">*acmpca.<wbr>Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration</a></code>
+                <code><a href="#certificateauthorityrevocationconfiguration">*Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -832,7 +832,7 @@ The following output properties are available:
             <td class="align-top">Certificate<wbr>Authority<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#certificateauthoritycertificateauthorityconfiguration">acmpca.<wbr>Certificate<wbr>Authority<wbr>Certificate<wbr>Authority<wbr>Configuration</a></code>
+                <code><a href="#certificateauthoritycertificateauthorityconfiguration">Certificate<wbr>Authority<wbr>Certificate<wbr>Authority<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested argument containing algorithms and certificate subject information. Defined below.
  {{% /md %}}
@@ -923,7 +923,7 @@ The following output properties are available:
             <td class="align-top">Revocation<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#certificateauthorityrevocationconfiguration">*acmpca.<wbr>Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration</a></code>
+                <code><a href="#certificateauthorityrevocationconfiguration">*Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested argument containing revocation configuration. Defined below.
  {{% /md %}}
@@ -1731,7 +1731,7 @@ Base64-encoded certificate authority (CA) certificate. Only available after the 
             <td class="align-top">Certificate<wbr>Authority<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#certificateauthoritycertificateauthorityconfiguration">*acmpca.<wbr>Certificate<wbr>Authority<wbr>Certificate<wbr>Authority<wbr>Configuration</a></code>
+                <code><a href="#certificateauthoritycertificateauthorityconfiguration">*Certificate<wbr>Authority<wbr>Certificate<wbr>Authority<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1836,7 +1836,7 @@ The number of days to make a CA restorable after it has been deleted, must be be
             <td class="align-top">Revocation<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#certificateauthorityrevocationconfiguration">*acmpca.<wbr>Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration</a></code>
+                <code><a href="#certificateauthorityrevocationconfiguration">*Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2514,7 +2514,7 @@ Name of the algorithm your private CA uses to sign certificate requests. Valid v
             <td class="align-top">Subject</td>
             <td class="align-top">
                 
-                <code><a href="#certificateauthoritycertificateauthorityconfigurationsubject">acmpca.<wbr>Certificate<wbr>Authority<wbr>Certificate<wbr>Authority<wbr>Configuration<wbr>Subject</a></code>
+                <code><a href="#certificateauthoritycertificateauthorityconfigurationsubject">Certificate<wbr>Authority<wbr>Certificate<wbr>Authority<wbr>Configuration<wbr>Subject</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -3616,7 +3616,7 @@ Nested argument containing configuration of the certificate revocation list (CRL
             <td class="align-top">Crl<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#certificateauthorityrevocationconfigurationcrlconfiguration">*acmpca.<wbr>Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration<wbr>Crl<wbr>Configuration</a></code>
+                <code><a href="#certificateauthorityrevocationconfigurationcrlconfiguration">*Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration<wbr>Crl<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

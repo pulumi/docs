@@ -326,7 +326,7 @@ A description of the DataSource.
             <td class="align-top">Dynamodb<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#datasourcedynamodbconfig">*appsync.<wbr>Data<wbr>Source<wbr>Dynamodb<wbr>Config</a></code>
+                <code><a href="#datasourcedynamodbconfig">*Data<wbr>Source<wbr>Dynamodb<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -341,7 +341,7 @@ DynamoDB settings. See below
             <td class="align-top">Elasticsearch<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#datasourceelasticsearchconfig">*appsync.<wbr>Data<wbr>Source<wbr>Elasticsearch<wbr>Config</a></code>
+                <code><a href="#datasourceelasticsearchconfig">*Data<wbr>Source<wbr>Elasticsearch<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -356,7 +356,7 @@ Amazon Elasticsearch settings. See below
             <td class="align-top">Http<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#datasourcehttpconfig">*appsync.<wbr>Data<wbr>Source<wbr>Http<wbr>Config</a></code>
+                <code><a href="#datasourcehttpconfig">*Data<wbr>Source<wbr>Http<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -371,7 +371,7 @@ HTTP settings. See below
             <td class="align-top">Lambda<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#datasourcelambdaconfig">*appsync.<wbr>Data<wbr>Source<wbr>Lambda<wbr>Config</a></code>
+                <code><a href="#datasourcelambdaconfig">*Data<wbr>Source<wbr>Lambda<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -964,7 +964,7 @@ The following output properties are available:
             <td class="align-top">Dynamodb<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#datasourcedynamodbconfig">*appsync.<wbr>Data<wbr>Source<wbr>Dynamodb<wbr>Config</a></code>
+                <code><a href="#datasourcedynamodbconfig">*Data<wbr>Source<wbr>Dynamodb<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} DynamoDB settings. See below
  {{% /md %}}
@@ -977,7 +977,7 @@ The following output properties are available:
             <td class="align-top">Elasticsearch<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#datasourceelasticsearchconfig">*appsync.<wbr>Data<wbr>Source<wbr>Elasticsearch<wbr>Config</a></code>
+                <code><a href="#datasourceelasticsearchconfig">*Data<wbr>Source<wbr>Elasticsearch<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} Amazon Elasticsearch settings. See below
  {{% /md %}}
@@ -990,7 +990,7 @@ The following output properties are available:
             <td class="align-top">Http<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#datasourcehttpconfig">*appsync.<wbr>Data<wbr>Source<wbr>Http<wbr>Config</a></code>
+                <code><a href="#datasourcehttpconfig">*Data<wbr>Source<wbr>Http<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} HTTP settings. See below
  {{% /md %}}
@@ -1003,7 +1003,7 @@ The following output properties are available:
             <td class="align-top">Lambda<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#datasourcelambdaconfig">*appsync.<wbr>Data<wbr>Source<wbr>Lambda<wbr>Config</a></code>
+                <code><a href="#datasourcelambdaconfig">*Data<wbr>Source<wbr>Lambda<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} AWS Lambda settings. See below
  {{% /md %}}
@@ -1649,7 +1649,7 @@ A description of the DataSource.
             <td class="align-top">Dynamodb<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#datasourcedynamodbconfig">*appsync.<wbr>Data<wbr>Source<wbr>Dynamodb<wbr>Config</a></code>
+                <code><a href="#datasourcedynamodbconfig">*Data<wbr>Source<wbr>Dynamodb<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1664,7 +1664,7 @@ DynamoDB settings. See below
             <td class="align-top">Elasticsearch<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#datasourceelasticsearchconfig">*appsync.<wbr>Data<wbr>Source<wbr>Elasticsearch<wbr>Config</a></code>
+                <code><a href="#datasourceelasticsearchconfig">*Data<wbr>Source<wbr>Elasticsearch<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1679,7 +1679,7 @@ Amazon Elasticsearch settings. See below
             <td class="align-top">Http<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#datasourcehttpconfig">*appsync.<wbr>Data<wbr>Source<wbr>Http<wbr>Config</a></code>
+                <code><a href="#datasourcehttpconfig">*Data<wbr>Source<wbr>Http<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1694,7 +1694,7 @@ HTTP settings. See below
             <td class="align-top">Lambda<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#datasourcelambdaconfig">*appsync.<wbr>Data<wbr>Source<wbr>Lambda<wbr>Config</a></code>
+                <code><a href="#datasourcelambdaconfig">*Data<wbr>Source<wbr>Lambda<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

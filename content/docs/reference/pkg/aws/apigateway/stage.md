@@ -349,7 +349,7 @@ Whether active tracing with X-ray is enabled. Defaults to `false`.
             <td class="align-top">Access<wbr>Log<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#stageaccesslogsettings">*apigateway.<wbr>Stage<wbr>Access<wbr>Log<wbr>Settings</a></code>
+                <code><a href="#stageaccesslogsettings">*Stage<wbr>Access<wbr>Log<wbr>Settings</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1185,7 +1185,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
             <td class="align-top">Access<wbr>Log<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#stageaccesslogsettings">*apigateway.<wbr>Stage<wbr>Access<wbr>Log<wbr>Settings</a></code>
+                <code><a href="#stageaccesslogsettings">*Stage<wbr>Access<wbr>Log<wbr>Settings</a></code>
             </td>
             <td class="align-top">{{% md %}} Enables access logs for the API stage. Detailed below.
  {{% /md %}}
@@ -2150,7 +2150,7 @@ Whether active tracing with X-ray is enabled. Defaults to `false`.
             <td class="align-top">Access<wbr>Log<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#stageaccesslogsettings">*apigateway.<wbr>Stage<wbr>Access<wbr>Log<wbr>Settings</a></code>
+                <code><a href="#stageaccesslogsettings">*Stage<wbr>Access<wbr>Log<wbr>Settings</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

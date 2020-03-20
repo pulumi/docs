@@ -281,7 +281,7 @@ The ARN of an IAM role that is able to be assumed by the DLM service.
             <td class="align-top">Policy<wbr>Details</td>
             <td class="align-top">
                 
-                <code><a href="#lifecyclepolicypolicydetails">dlm.<wbr>Lifecycle<wbr>Policy<wbr>Policy<wbr>Details</a></code>
+                <code><a href="#lifecyclepolicypolicydetails">Lifecycle<wbr>Policy<wbr>Policy<wbr>Details</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -687,7 +687,7 @@ The following output properties are available:
             <td class="align-top">Policy<wbr>Details</td>
             <td class="align-top">
                 
-                <code><a href="#lifecyclepolicypolicydetails">dlm.<wbr>Lifecycle<wbr>Policy<wbr>Policy<wbr>Details</a></code>
+                <code><a href="#lifecyclepolicypolicydetails">Lifecycle<wbr>Policy<wbr>Policy<wbr>Details</a></code>
             </td>
             <td class="align-top">{{% md %}} See the `policy_details` configuration block. Max of 1.
  {{% /md %}}
@@ -1156,7 +1156,7 @@ The ARN of an IAM role that is able to be assumed by the DLM service.
             <td class="align-top">Policy<wbr>Details</td>
             <td class="align-top">
                 
-                <code><a href="#lifecyclepolicypolicydetails">*dlm.<wbr>Lifecycle<wbr>Policy<wbr>Policy<wbr>Details</a></code>
+                <code><a href="#lifecyclepolicypolicydetails">*Lifecycle<wbr>Policy<wbr>Policy<wbr>Details</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1549,7 +1549,7 @@ A list of resource types that should be targeted by the lifecycle policy. `VOLUM
             <td class="align-top">Schedules</td>
             <td class="align-top">
                 
-                <code><a href="#lifecyclepolicypolicydetailsschedule">[]dlm.<wbr>Lifecycle<wbr>Policy<wbr>Policy<wbr>Details<wbr>Schedule</a></code>
+                <code><a href="#lifecyclepolicypolicydetailsschedule">[]Lifecycle<wbr>Policy<wbr>Policy<wbr>Details<wbr>Schedule</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1860,7 +1860,7 @@ Copy all user-defined tags on a source volume to snapshots of the volume created
             <td class="align-top">Create<wbr>Rule</td>
             <td class="align-top">
                 
-                <code><a href="#lifecyclepolicypolicydetailsschedulecreaterule">dlm.<wbr>Lifecycle<wbr>Policy<wbr>Policy<wbr>Details<wbr>Schedule<wbr>Create<wbr>Rule</a></code>
+                <code><a href="#lifecyclepolicypolicydetailsschedulecreaterule">Lifecycle<wbr>Policy<wbr>Policy<wbr>Details<wbr>Schedule<wbr>Create<wbr>Rule</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1890,7 +1890,7 @@ A name for the schedule.
             <td class="align-top">Retain<wbr>Rule</td>
             <td class="align-top">
                 
-                <code><a href="#lifecyclepolicypolicydetailsscheduleretainrule">dlm.<wbr>Lifecycle<wbr>Policy<wbr>Policy<wbr>Details<wbr>Schedule<wbr>Retain<wbr>Rule</a></code>
+                <code><a href="#lifecyclepolicypolicydetailsscheduleretainrule">Lifecycle<wbr>Policy<wbr>Policy<wbr>Details<wbr>Schedule<wbr>Retain<wbr>Rule</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

@@ -289,7 +289,7 @@ The name of the fleet.
             <td class="align-top">Identity<wbr>Provider</td>
             <td class="align-top">
                 
-                <code><a href="#fleetidentityprovider">*worklink.<wbr>Fleet<wbr>Identity<wbr>Provider</a></code>
+                <code><a href="#fleetidentityprovider">*Fleet<wbr>Identity<wbr>Provider</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -319,7 +319,7 @@ A region-unique name for the AMI.
             <td class="align-top">Network</td>
             <td class="align-top">
                 
-                <code><a href="#fleetnetwork">*worklink.<wbr>Fleet<wbr>Network</a></code>
+                <code><a href="#fleetnetwork">*Fleet<wbr>Network</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -874,7 +874,7 @@ The following output properties are available:
             <td class="align-top">Identity<wbr>Provider</td>
             <td class="align-top">
                 
-                <code><a href="#fleetidentityprovider">*worklink.<wbr>Fleet<wbr>Identity<wbr>Provider</a></code>
+                <code><a href="#fleetidentityprovider">*Fleet<wbr>Identity<wbr>Provider</a></code>
             </td>
             <td class="align-top">{{% md %}} Provide this to allow manage the identity provider configuration for the fleet. Fields documented below.
  {{% /md %}}
@@ -913,7 +913,7 @@ The following output properties are available:
             <td class="align-top">Network</td>
             <td class="align-top">
                 
-                <code><a href="#fleetnetwork">*worklink.<wbr>Fleet<wbr>Network</a></code>
+                <code><a href="#fleetnetwork">*Fleet<wbr>Network</a></code>
             </td>
             <td class="align-top">{{% md %}} Provide this to allow manage the company network configuration for the fleet. Fields documented below.
  {{% /md %}}
@@ -1619,7 +1619,7 @@ The name of the fleet.
             <td class="align-top">Identity<wbr>Provider</td>
             <td class="align-top">
                 
-                <code><a href="#fleetidentityprovider">*worklink.<wbr>Fleet<wbr>Identity<wbr>Provider</a></code>
+                <code><a href="#fleetidentityprovider">*Fleet<wbr>Identity<wbr>Provider</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1664,7 +1664,7 @@ A region-unique name for the AMI.
             <td class="align-top">Network</td>
             <td class="align-top">
                 
-                <code><a href="#fleetnetwork">*worklink.<wbr>Fleet<wbr>Network</a></code>
+                <code><a href="#fleetnetwork">*Fleet<wbr>Network</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

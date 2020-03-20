@@ -357,7 +357,7 @@ The following output properties are available:
             <td class="align-top">Compute<wbr>Types</td>
             <td class="align-top">
                 
-                <code><a href="#getbundlecomputetype">[]workspaces.<wbr>Get<wbr>Bundle<wbr>Compute<wbr>Type</a></code>
+                <code><a href="#getbundlecomputetype">[]Get<wbr>Bundle<wbr>Compute<wbr>Type</a></code>
             </td>
             <td class="align-top">{{% md %}} The compute type. See supported fields below.
  {{% /md %}}
@@ -422,7 +422,7 @@ The following output properties are available:
             <td class="align-top">Root<wbr>Storages</td>
             <td class="align-top">
                 
-                <code><a href="#getbundlerootstorage">[]workspaces.<wbr>Get<wbr>Bundle<wbr>Root<wbr>Storage</a></code>
+                <code><a href="#getbundlerootstorage">[]Get<wbr>Bundle<wbr>Root<wbr>Storage</a></code>
             </td>
             <td class="align-top">{{% md %}} The root volume. See supported fields below.
  {{% /md %}}
@@ -435,7 +435,7 @@ The following output properties are available:
             <td class="align-top">User<wbr>Storages</td>
             <td class="align-top">
                 
-                <code><a href="#getbundleuserstorage">[]workspaces.<wbr>Get<wbr>Bundle<wbr>User<wbr>Storage</a></code>
+                <code><a href="#getbundleuserstorage">[]Get<wbr>Bundle<wbr>User<wbr>Storage</a></code>
             </td>
             <td class="align-top">{{% md %}} The user storage. See supported fields below.
  {{% /md %}}

@@ -144,7 +144,7 @@ The ID of the gateway.
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getcustomergatewayfilter">[]ec2.<wbr>Get<wbr>Customer<wbr>Gateway<wbr>Filter</a></code>
+                <code><a href="#getcustomergatewayfilter">[]Get<wbr>Customer<wbr>Gateway<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -460,7 +460,7 @@ The following output properties are available:
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getcustomergatewayfilter">[]ec2.<wbr>Get<wbr>Customer<wbr>Gateway<wbr>Filter</a></code>
+                <code><a href="#getcustomergatewayfilter">[]Get<wbr>Customer<wbr>Gateway<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 

@@ -228,7 +228,7 @@ The name to use for the virtual service.
             <td class="align-top">Spec</td>
             <td class="align-top">
                 
-                <code><a href="#virtualservicespec">appmesh.<wbr>Virtual<wbr>Service<wbr>Spec</a></code>
+                <code><a href="#virtualservicespec">Virtual<wbr>Service<wbr>Spec</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -628,7 +628,7 @@ The following output properties are available:
             <td class="align-top">Spec</td>
             <td class="align-top">
                 
-                <code><a href="#virtualservicespec">appmesh.<wbr>Virtual<wbr>Service<wbr>Spec</a></code>
+                <code><a href="#virtualservicespec">Virtual<wbr>Service<wbr>Spec</a></code>
             </td>
             <td class="align-top">{{% md %}} The virtual service specification to apply.
  {{% /md %}}
@@ -1155,7 +1155,7 @@ The name to use for the virtual service.
             <td class="align-top">Spec</td>
             <td class="align-top">
                 
-                <code><a href="#virtualservicespec">*appmesh.<wbr>Virtual<wbr>Service<wbr>Spec</a></code>
+                <code><a href="#virtualservicespec">*Virtual<wbr>Service<wbr>Spec</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1517,7 +1517,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">Provider</td>
             <td class="align-top">
                 
-                <code><a href="#virtualservicespecprovider">*appmesh.<wbr>Virtual<wbr>Service<wbr>Spec<wbr>Provider</a></code>
+                <code><a href="#virtualservicespecprovider">*Virtual<wbr>Service<wbr>Spec<wbr>Provider</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1690,7 +1690,7 @@ The virtual router associated with a virtual service.
             <td class="align-top">Virtual<wbr>Node</td>
             <td class="align-top">
                 
-                <code><a href="#virtualservicespecprovidervirtualnode">*appmesh.<wbr>Virtual<wbr>Service<wbr>Spec<wbr>Provider<wbr>Virtual<wbr>Node</a></code>
+                <code><a href="#virtualservicespecprovidervirtualnode">*Virtual<wbr>Service<wbr>Spec<wbr>Provider<wbr>Virtual<wbr>Node</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1705,7 +1705,7 @@ The virtual node associated with a virtual service.
             <td class="align-top">Virtual<wbr>Router</td>
             <td class="align-top">
                 
-                <code><a href="#virtualservicespecprovidervirtualrouter">*appmesh.<wbr>Virtual<wbr>Service<wbr>Spec<wbr>Provider<wbr>Virtual<wbr>Router</a></code>
+                <code><a href="#virtualservicespecprovidervirtualrouter">*Virtual<wbr>Service<wbr>Spec<wbr>Provider<wbr>Virtual<wbr>Router</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

@@ -149,7 +149,7 @@ The name or description of the ByteMatchSet.
             <td class="align-top">Byte<wbr>Match<wbr>Tuples</td>
             <td class="align-top">
                 
-                <code><a href="#bytematchsetbytematchtuple">[]wafregional.<wbr>Byte<wbr>Match<wbr>Set<wbr>Byte<wbr>Match<wbr>Tuple</a></code>
+                <code><a href="#bytematchsetbytematchtuple">[]Byte<wbr>Match<wbr>Set<wbr>Byte<wbr>Match<wbr>Tuple</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -359,7 +359,7 @@ The following output properties are available:
             <td class="align-top">Byte<wbr>Match<wbr>Tuples</td>
             <td class="align-top">
                 
-                <code><a href="#bytematchsetbytematchtuple">[]wafregional.<wbr>Byte<wbr>Match<wbr>Set<wbr>Byte<wbr>Match<wbr>Tuple</a></code>
+                <code><a href="#bytematchsetbytematchtuple">[]Byte<wbr>Match<wbr>Set<wbr>Byte<wbr>Match<wbr>Tuple</a></code>
             </td>
             <td class="align-top">{{% md %}} Settings for the ByteMatchSet, such as the bytes (typically a string that corresponds with ASCII characters) that you want AWS WAF to search for in web requests. ByteMatchTuple documented below.
  {{% /md %}}
@@ -606,7 +606,7 @@ The name or description of the ByteMatchSet.
             <td class="align-top">Byte<wbr>Match<wbr>Tuples</td>
             <td class="align-top">
                 
-                <code><a href="#bytematchsetbytematchtuple">[]wafregional.<wbr>Byte<wbr>Match<wbr>Set<wbr>Byte<wbr>Match<wbr>Tuple</a></code>
+                <code><a href="#bytematchsetbytematchtuple">[]Byte<wbr>Match<wbr>Set<wbr>Byte<wbr>Match<wbr>Tuple</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -864,7 +864,7 @@ The formatting way for web request.
             <td class="align-top">Field<wbr>To<wbr>Match</td>
             <td class="align-top">
                 
-                <code><a href="#bytematchsetbytematchtuplefieldtomatch">wafregional.<wbr>Byte<wbr>Match<wbr>Set<wbr>Byte<wbr>Match<wbr>Tuple<wbr>Field<wbr>To<wbr>Match</a></code>
+                <code><a href="#bytematchsetbytematchtuplefieldtomatch">Byte<wbr>Match<wbr>Set<wbr>Byte<wbr>Match<wbr>Tuple<wbr>Field<wbr>To<wbr>Match</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

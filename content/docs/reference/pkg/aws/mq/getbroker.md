@@ -182,7 +182,7 @@ The unique name of the mq broker.
             <td class="align-top">Logs</td>
             <td class="align-top">
                 
-                <code><a href="#getbrokerlogs">*mq.<wbr>Get<wbr>Broker<wbr>Logs</a></code>
+                <code><a href="#getbrokerlogs">*Get<wbr>Broker<wbr>Logs</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -698,7 +698,7 @@ The following output properties are available:
             <td class="align-top">Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#getbrokerconfiguration">mq.<wbr>Get<wbr>Broker<wbr>Configuration</a></code>
+                <code><a href="#getbrokerconfiguration">Get<wbr>Broker<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -722,7 +722,7 @@ The following output properties are available:
             <td class="align-top">Encryption<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#getbrokerencryptionoption">[]mq.<wbr>Get<wbr>Broker<wbr>Encryption<wbr>Option</a></code>
+                <code><a href="#getbrokerencryptionoption">[]Get<wbr>Broker<wbr>Encryption<wbr>Option</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -783,7 +783,7 @@ The following output properties are available:
             <td class="align-top">Instances</td>
             <td class="align-top">
                 
-                <code><a href="#getbrokerinstance">[]mq.<wbr>Get<wbr>Broker<wbr>Instance</a></code>
+                <code><a href="#getbrokerinstance">[]Get<wbr>Broker<wbr>Instance</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -795,7 +795,7 @@ The following output properties are available:
             <td class="align-top">Logs</td>
             <td class="align-top">
                 
-                <code><a href="#getbrokerlogs">*mq.<wbr>Get<wbr>Broker<wbr>Logs</a></code>
+                <code><a href="#getbrokerlogs">*Get<wbr>Broker<wbr>Logs</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -807,7 +807,7 @@ The following output properties are available:
             <td class="align-top">Maintenance<wbr>Window<wbr>Start<wbr>Time</td>
             <td class="align-top">
                 
-                <code><a href="#getbrokermaintenancewindowstarttime">mq.<wbr>Get<wbr>Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time</a></code>
+                <code><a href="#getbrokermaintenancewindowstarttime">Get<wbr>Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -867,7 +867,7 @@ The following output properties are available:
             <td class="align-top">Users</td>
             <td class="align-top">
                 
-                <code><a href="#getbrokeruser">[]mq.<wbr>Get<wbr>Broker<wbr>User</a></code>
+                <code><a href="#getbrokeruser">[]Get<wbr>Broker<wbr>User</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 

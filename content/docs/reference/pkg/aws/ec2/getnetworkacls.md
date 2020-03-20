@@ -166,7 +166,7 @@ The VPC ID that you want to filter from.
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getnetworkaclsfilter">[]ec2.<wbr>Get<wbr>Network<wbr>Acls<wbr>Filter</a></code>
+                <code><a href="#getnetworkaclsfilter">[]Get<wbr>Network<wbr>Acls<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -461,7 +461,7 @@ The following output properties are available:
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getnetworkaclsfilter">[]ec2.<wbr>Get<wbr>Network<wbr>Acls<wbr>Filter</a></code>
+                <code><a href="#getnetworkaclsfilter">[]Get<wbr>Network<wbr>Acls<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 

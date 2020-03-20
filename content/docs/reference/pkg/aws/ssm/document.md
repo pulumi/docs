@@ -272,7 +272,7 @@ The target type which defines the kinds of resources the document can run on. Fo
             <td class="align-top">Attachments<wbr>Sources</td>
             <td class="align-top">
                 
-                <code><a href="#documentattachmentssource">[]ssm.<wbr>Document<wbr>Attachments<wbr>Source</a></code>
+                <code><a href="#documentattachmentssource">[]Document<wbr>Attachments<wbr>Source</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -347,7 +347,7 @@ The name of the document.
             <td class="align-top">Permissions</td>
             <td class="align-top">
                 
-                <code><a href="#documentpermissions">*ssm.<wbr>Document<wbr>Permissions</a></code>
+                <code><a href="#documentpermissions">*Document<wbr>Permissions</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -997,7 +997,7 @@ The following output properties are available:
             <td class="align-top">Attachments<wbr>Sources</td>
             <td class="align-top">
                 
-                <code><a href="#documentattachmentssource">[]ssm.<wbr>Document<wbr>Attachments<wbr>Source</a></code>
+                <code><a href="#documentattachmentssource">[]Document<wbr>Attachments<wbr>Source</a></code>
             </td>
             <td class="align-top">{{% md %}} One or more configuration blocks describing attachments sources to a version of a document. Defined below.
  {{% /md %}}
@@ -1153,7 +1153,7 @@ The following output properties are available:
             <td class="align-top">Parameters</td>
             <td class="align-top">
                 
-                <code><a href="#documentparameter">[]ssm.<wbr>Document<wbr>Parameter</a></code>
+                <code><a href="#documentparameter">[]Document<wbr>Parameter</a></code>
             </td>
             <td class="align-top">{{% md %}} The parameters that are available to this document.
  {{% /md %}}
@@ -1166,7 +1166,7 @@ The following output properties are available:
             <td class="align-top">Permissions</td>
             <td class="align-top">
                 
-                <code><a href="#documentpermissions">*ssm.<wbr>Document<wbr>Permissions</a></code>
+                <code><a href="#documentpermissions">*Document<wbr>Permissions</a></code>
             </td>
             <td class="align-top">{{% md %}} Additional Permissions to attach to the document. See Permissions below for details.
  {{% /md %}}
@@ -2214,7 +2214,7 @@ The target type which defines the kinds of resources the document can run on. Fo
             <td class="align-top">Attachments<wbr>Sources</td>
             <td class="align-top">
                 
-                <code><a href="#documentattachmentssource">[]ssm.<wbr>Document<wbr>Attachments<wbr>Source</a></code>
+                <code><a href="#documentattachmentssource">[]Document<wbr>Attachments<wbr>Source</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2394,7 +2394,7 @@ The AWS user account of the person who created the document.
             <td class="align-top">Parameters</td>
             <td class="align-top">
                 
-                <code><a href="#documentparameter">[]ssm.<wbr>Document<wbr>Parameter</a></code>
+                <code><a href="#documentparameter">[]Document<wbr>Parameter</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2409,7 +2409,7 @@ The parameters that are available to this document.
             <td class="align-top">Permissions</td>
             <td class="align-top">
                 
-                <code><a href="#documentpermissions">*ssm.<wbr>Document<wbr>Permissions</a></code>
+                <code><a href="#documentpermissions">*Document<wbr>Permissions</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

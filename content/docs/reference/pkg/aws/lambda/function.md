@@ -426,7 +426,7 @@ The path to the function&#39;s deployment package within the local filesystem. I
             <td class="align-top">Dead<wbr>Letter<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#functiondeadletterconfig">*lambda.<wbr>Function<wbr>Dead<wbr>Letter<wbr>Config</a></code>
+                <code><a href="#functiondeadletterconfig">*Function<wbr>Dead<wbr>Letter<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -456,7 +456,7 @@ Description of what your Lambda Function does.
             <td class="align-top">Environment</td>
             <td class="align-top">
                 
-                <code><a href="#functionenvironment">*lambda.<wbr>Function<wbr>Environment</a></code>
+                <code><a href="#functionenvironment">*Function<wbr>Environment</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -696,7 +696,7 @@ The amount of time your Lambda Function has to run in seconds. Defaults to `3`. 
             <td class="align-top">Tracing<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#functiontracingconfig">*lambda.<wbr>Function<wbr>Tracing<wbr>Config</a></code>
+                <code><a href="#functiontracingconfig">*Function<wbr>Tracing<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -710,7 +710,7 @@ The amount of time your Lambda Function has to run in seconds. Defaults to `3`. 
             <td class="align-top">Vpc<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#functionvpcconfig">*lambda.<wbr>Function<wbr>Vpc<wbr>Config</a></code>
+                <code><a href="#functionvpcconfig">*Function<wbr>Vpc<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1824,7 +1824,7 @@ The following output properties are available:
             <td class="align-top">Dead<wbr>Letter<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#functiondeadletterconfig">*lambda.<wbr>Function<wbr>Dead<wbr>Letter<wbr>Config</a></code>
+                <code><a href="#functiondeadletterconfig">*Function<wbr>Dead<wbr>Letter<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested block to configure the function&#39;s *dead letter queue*. See details below.
  {{% /md %}}
@@ -1850,7 +1850,7 @@ The following output properties are available:
             <td class="align-top">Environment</td>
             <td class="align-top">
                 
-                <code><a href="#functionenvironment">*lambda.<wbr>Function<wbr>Environment</a></code>
+                <code><a href="#functionenvironment">*Function<wbr>Environment</a></code>
             </td>
             <td class="align-top">{{% md %}} The Lambda environment&#39;s configuration settings. Fields documented below.
  {{% /md %}}
@@ -2111,7 +2111,7 @@ The following output properties are available:
             <td class="align-top">Tracing<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#functiontracingconfig">lambda.<wbr>Function<wbr>Tracing<wbr>Config</a></code>
+                <code><a href="#functiontracingconfig">Function<wbr>Tracing<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -2136,7 +2136,7 @@ The following output properties are available:
             <td class="align-top">Vpc<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#functionvpcconfig">*lambda.<wbr>Function<wbr>Vpc<wbr>Config</a></code>
+                <code><a href="#functionvpcconfig">*Function<wbr>Vpc<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} Provide this to allow your function to access your VPC. Fields documented below. See [Lambda in VPC][7]
  {{% /md %}}
@@ -3425,7 +3425,7 @@ The path to the function&#39;s deployment package within the local filesystem. I
             <td class="align-top">Dead<wbr>Letter<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#functiondeadletterconfig">*lambda.<wbr>Function<wbr>Dead<wbr>Letter<wbr>Config</a></code>
+                <code><a href="#functiondeadletterconfig">*Function<wbr>Dead<wbr>Letter<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3455,7 +3455,7 @@ Description of what your Lambda Function does.
             <td class="align-top">Environment</td>
             <td class="align-top">
                 
-                <code><a href="#functionenvironment">*lambda.<wbr>Function<wbr>Environment</a></code>
+                <code><a href="#functionenvironment">*Function<wbr>Environment</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3756,7 +3756,7 @@ The amount of time your Lambda Function has to run in seconds. Defaults to `3`. 
             <td class="align-top">Tracing<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#functiontracingconfig">*lambda.<wbr>Function<wbr>Tracing<wbr>Config</a></code>
+                <code><a href="#functiontracingconfig">*Function<wbr>Tracing<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3785,7 +3785,7 @@ Latest published version of your Lambda Function.
             <td class="align-top">Vpc<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#functionvpcconfig">*lambda.<wbr>Function<wbr>Vpc<wbr>Config</a></code>
+                <code><a href="#functionvpcconfig">*Function<wbr>Vpc<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

@@ -870,7 +870,7 @@ If set to to 1, hyperthreading is disabled on the launched instance. Defaults to
             <td class="align-top">Credit<wbr>Specification</td>
             <td class="align-top">
                 
-                <code><a href="#spotinstancerequestcreditspecification">*ec2.<wbr>Spot<wbr>Instance<wbr>Request<wbr>Credit<wbr>Specification</a></code>
+                <code><a href="#spotinstancerequestcreditspecification">*Spot<wbr>Instance<wbr>Request<wbr>Credit<wbr>Specification</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -901,7 +901,7 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
             <td class="align-top">Ebs<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#spotinstancerequestebsblockdevice">[]ec2.<wbr>Spot<wbr>Instance<wbr>Request<wbr>Ebs<wbr>Block<wbr>Device</a></code>
+                <code><a href="#spotinstancerequestebsblockdevice">[]Spot<wbr>Instance<wbr>Request<wbr>Ebs<wbr>Block<wbr>Device</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -936,7 +936,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
             <td class="align-top">Ephemeral<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#spotinstancerequestephemeralblockdevice">[]ec2.<wbr>Spot<wbr>Instance<wbr>Request<wbr>Ephemeral<wbr>Block<wbr>Device</a></code>
+                <code><a href="#spotinstancerequestephemeralblockdevice">[]Spot<wbr>Instance<wbr>Request<wbr>Ephemeral<wbr>Block<wbr>Device</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1137,7 +1137,7 @@ If true, the launched EC2 instance will have detailed monitoring enabled. (Avail
             <td class="align-top">Network<wbr>Interfaces</td>
             <td class="align-top">
                 
-                <code><a href="#spotinstancerequestnetworkinterface">[]ec2.<wbr>Spot<wbr>Instance<wbr>Request<wbr>Network<wbr>Interface</a></code>
+                <code><a href="#spotinstancerequestnetworkinterface">[]Spot<wbr>Instance<wbr>Request<wbr>Network<wbr>Interface</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1183,7 +1183,7 @@ instance in a VPC.
             <td class="align-top">Root<wbr>Block<wbr>Device</td>
             <td class="align-top">
                 
-                <code><a href="#spotinstancerequestrootblockdevice">*ec2.<wbr>Spot<wbr>Instance<wbr>Request<wbr>Root<wbr>Block<wbr>Device</a></code>
+                <code><a href="#spotinstancerequestrootblockdevice">*Spot<wbr>Instance<wbr>Request<wbr>Root<wbr>Block<wbr>Device</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3564,7 +3564,7 @@ only supported on creation of instance type that support CPU Options
             <td class="align-top">Credit<wbr>Specification</td>
             <td class="align-top">
                 
-                <code><a href="#spotinstancerequestcreditspecification">*ec2.<wbr>Spot<wbr>Instance<wbr>Request<wbr>Credit<wbr>Specification</a></code>
+                <code><a href="#spotinstancerequestcreditspecification">*Spot<wbr>Instance<wbr>Request<wbr>Credit<wbr>Specification</a></code>
             </td>
             <td class="align-top">{{% md %}} Customize the credit specification of the instance. See Credit Specification below for more details.
  {{% /md %}}
@@ -3591,7 +3591,7 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
             <td class="align-top">Ebs<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#spotinstancerequestebsblockdevice">[]ec2.<wbr>Spot<wbr>Instance<wbr>Request<wbr>Ebs<wbr>Block<wbr>Device</a></code>
+                <code><a href="#spotinstancerequestebsblockdevice">[]Spot<wbr>Instance<wbr>Request<wbr>Ebs<wbr>Block<wbr>Device</a></code>
             </td>
             <td class="align-top">{{% md %}} Additional EBS block devices to attach to the
 instance.  Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection.
@@ -3622,7 +3622,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
             <td class="align-top">Ephemeral<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#spotinstancerequestephemeralblockdevice">[]ec2.<wbr>Spot<wbr>Instance<wbr>Request<wbr>Ephemeral<wbr>Block<wbr>Device</a></code>
+                <code><a href="#spotinstancerequestephemeralblockdevice">[]Spot<wbr>Instance<wbr>Request<wbr>Ephemeral<wbr>Block<wbr>Device</a></code>
             </td>
             <td class="align-top">{{% md %}} Customize Ephemeral (also known as
 &#34;Instance Store&#34;) volumes on the instance. See Block Devices below for details.
@@ -3809,7 +3809,7 @@ If left empty instances are launched and terminated individually.
             <td class="align-top">Network<wbr>Interfaces</td>
             <td class="align-top">
                 
-                <code><a href="#spotinstancerequestnetworkinterface">[]ec2.<wbr>Spot<wbr>Instance<wbr>Request<wbr>Network<wbr>Interface</a></code>
+                <code><a href="#spotinstancerequestnetworkinterface">[]Spot<wbr>Instance<wbr>Request<wbr>Network<wbr>Interface</a></code>
             </td>
             <td class="align-top">{{% md %}} Customize network interfaces to be attached at instance boot time. See Network Interfaces below for more details.
  {{% /md %}}
@@ -3915,7 +3915,7 @@ is only available if you&#39;ve enabled DNS hostnames for your VPC
             <td class="align-top">Root<wbr>Block<wbr>Device</td>
             <td class="align-top">
                 
-                <code><a href="#spotinstancerequestrootblockdevice">ec2.<wbr>Spot<wbr>Instance<wbr>Request<wbr>Root<wbr>Block<wbr>Device</a></code>
+                <code><a href="#spotinstancerequestrootblockdevice">Spot<wbr>Instance<wbr>Request<wbr>Root<wbr>Block<wbr>Device</a></code>
             </td>
             <td class="align-top">{{% md %}} Customize details about the root block
 device of the instance. See Block Devices below for details.
@@ -6575,7 +6575,7 @@ If set to to 1, hyperthreading is disabled on the launched instance. Defaults to
             <td class="align-top">Credit<wbr>Specification</td>
             <td class="align-top">
                 
-                <code><a href="#spotinstancerequestcreditspecification">*ec2.<wbr>Spot<wbr>Instance<wbr>Request<wbr>Credit<wbr>Specification</a></code>
+                <code><a href="#spotinstancerequestcreditspecification">*Spot<wbr>Instance<wbr>Request<wbr>Credit<wbr>Specification</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6606,7 +6606,7 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
             <td class="align-top">Ebs<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#spotinstancerequestebsblockdevice">[]ec2.<wbr>Spot<wbr>Instance<wbr>Request<wbr>Ebs<wbr>Block<wbr>Device</a></code>
+                <code><a href="#spotinstancerequestebsblockdevice">[]Spot<wbr>Instance<wbr>Request<wbr>Ebs<wbr>Block<wbr>Device</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6641,7 +6641,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
             <td class="align-top">Ephemeral<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#spotinstancerequestephemeralblockdevice">[]ec2.<wbr>Spot<wbr>Instance<wbr>Request<wbr>Ephemeral<wbr>Block<wbr>Device</a></code>
+                <code><a href="#spotinstancerequestephemeralblockdevice">[]Spot<wbr>Instance<wbr>Request<wbr>Ephemeral<wbr>Block<wbr>Device</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6856,7 +6856,7 @@ If true, the launched EC2 instance will have detailed monitoring enabled. (Avail
             <td class="align-top">Network<wbr>Interfaces</td>
             <td class="align-top">
                 
-                <code><a href="#spotinstancerequestnetworkinterface">[]ec2.<wbr>Spot<wbr>Instance<wbr>Request<wbr>Network<wbr>Interface</a></code>
+                <code><a href="#spotinstancerequestnetworkinterface">[]Spot<wbr>Instance<wbr>Request<wbr>Network<wbr>Interface</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6978,7 +6978,7 @@ The public IP address assigned to the instance, if applicable.
             <td class="align-top">Root<wbr>Block<wbr>Device</td>
             <td class="align-top">
                 
-                <code><a href="#spotinstancerequestrootblockdevice">*ec2.<wbr>Spot<wbr>Instance<wbr>Request<wbr>Root<wbr>Block<wbr>Device</a></code>
+                <code><a href="#spotinstancerequestrootblockdevice">*Spot<wbr>Instance<wbr>Request<wbr>Root<wbr>Block<wbr>Device</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

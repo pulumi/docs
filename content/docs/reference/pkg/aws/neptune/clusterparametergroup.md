@@ -266,7 +266,7 @@ Creates a unique name beginning with the specified prefix. Conflicts with `name`
             <td class="align-top">Parameters</td>
             <td class="align-top">
                 
-                <code><a href="#clusterparametergroupparameter">[]neptune.<wbr>Cluster<wbr>Parameter<wbr>Group<wbr>Parameter</a></code>
+                <code><a href="#clusterparametergroupparameter">[]Cluster<wbr>Parameter<wbr>Group<wbr>Parameter</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -726,7 +726,7 @@ The following output properties are available:
             <td class="align-top">Parameters</td>
             <td class="align-top">
                 
-                <code><a href="#clusterparametergroupparameter">[]neptune.<wbr>Cluster<wbr>Parameter<wbr>Group<wbr>Parameter</a></code>
+                <code><a href="#clusterparametergroupparameter">[]Cluster<wbr>Parameter<wbr>Group<wbr>Parameter</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of neptune parameters to apply.
  {{% /md %}}
@@ -1253,7 +1253,7 @@ Creates a unique name beginning with the specified prefix. Conflicts with `name`
             <td class="align-top">Parameters</td>
             <td class="align-top">
                 
-                <code><a href="#clusterparametergroupparameter">[]neptune.<wbr>Cluster<wbr>Parameter<wbr>Group<wbr>Parameter</a></code>
+                <code><a href="#clusterparametergroupparameter">[]Cluster<wbr>Parameter<wbr>Group<wbr>Parameter</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
