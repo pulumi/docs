@@ -163,7 +163,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         </tr>
     
         <tr>
-            <td class="align-top">Policy</td>
+            <td class="align-top">Policy<wbr>Document</td>
             <td class="align-top">
                 
                 <code>string</code>
@@ -566,7 +566,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         </tr>
     
         <tr>
-            <td class="align-top">Policy</td>
+            <td class="align-top">Policy<wbr>Document</td>
             <td class="align-top">
                 
                 <code>string</code>
@@ -1031,7 +1031,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         </tr>
     
         <tr>
-            <td class="align-top">Policy</td>
+            <td class="align-top">Policy<wbr>Document</td>
             <td class="align-top">
                 
                 <code>string?</code>

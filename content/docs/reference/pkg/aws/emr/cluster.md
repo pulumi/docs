@@ -2198,7 +2198,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">Cluster<wbr>State</td>
+            <td class="align-top">State</td>
             <td class="align-top">
                 
                 <code>string</code>
@@ -3955,7 +3955,7 @@ List of bootstrap actions that will be run before Hadoop is started on the clust
         </tr>
     
         <tr>
-            <td class="align-top">Cluster<wbr>State</td>
+            <td class="align-top">State</td>
             <td class="align-top">
                 
                 <code>string?</code>

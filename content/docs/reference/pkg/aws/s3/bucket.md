@@ -424,7 +424,7 @@ The ARN of the bucket. Will be of format `arn:aws:s3:::bucketname`.
         </tr>
     
         <tr>
-            <td class="align-top">Bucket</td>
+            <td class="align-top">Bucket<wbr>Name</td>
             <td class="align-top">
                 
                 <code>string?</code>
@@ -1848,7 +1848,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">Bucket</td>
+            <td class="align-top">Bucket<wbr>Name</td>
             <td class="align-top">
                 
                 <code>string</code>
@@ -3257,7 +3257,7 @@ The ARN of the bucket. Will be of format `arn:aws:s3:::bucketname`.
         </tr>
     
         <tr>
-            <td class="align-top">Bucket</td>
+            <td class="align-top">Bucket<wbr>Name</td>
             <td class="align-top">
                 
                 <code>string?</code>

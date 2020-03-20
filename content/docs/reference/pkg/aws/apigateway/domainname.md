@@ -300,7 +300,7 @@ domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint c
         </tr>
     
         <tr>
-            <td class="align-top">Domain<wbr>Name</td>
+            <td class="align-top">Domain</td>
             <td class="align-top">
                 
                 <code>string</code>
@@ -1134,7 +1134,7 @@ that can be used to create a Route53 alias record for the distribution.
         </tr>
     
         <tr>
-            <td class="align-top">Domain<wbr>Name</td>
+            <td class="align-top">Domain</td>
             <td class="align-top">
                 
                 <code>string</code>
@@ -2219,7 +2219,7 @@ that can be used to create a Route53 alias record for the distribution.
         </tr>
     
         <tr>
-            <td class="align-top">Domain<wbr>Name</td>
+            <td class="align-top">Domain</td>
             <td class="align-top">
                 
                 <code>string?</code>

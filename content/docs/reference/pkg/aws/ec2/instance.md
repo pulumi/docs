@@ -2467,7 +2467,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
         </tr>
     
         <tr>
-            <td class="align-top">Instance<wbr>State</td>
+            <td class="align-top">State</td>
             <td class="align-top">
                 
                 <code>string</code>
@@ -4810,7 +4810,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
         </tr>
     
         <tr>
-            <td class="align-top">Instance<wbr>State</td>
+            <td class="align-top">State</td>
             <td class="align-top">
                 
                 <code>string?</code>
