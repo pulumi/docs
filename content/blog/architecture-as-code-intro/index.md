@@ -52,7 +52,7 @@ const computeInstance = new gcp.compute.Instance("instance", {
     }],
 });
 
-// Export the name and IP address of the Instance
+// Export the name and IP address of the Instance.
 exports.instanceName = computeInstance.name;
 exports.instanceIP = computeInstance.networkInterfaces.apply(ni => ni[0].accessConfigs[0].natIp);
 ```
