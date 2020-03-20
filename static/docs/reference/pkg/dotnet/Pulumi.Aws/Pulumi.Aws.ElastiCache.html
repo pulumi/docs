@@ -1,0 +1,208 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace Pulumi.Aws.ElastiCache
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace Pulumi.Aws.ElastiCache
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Aws.ElastiCache">
+  
+  <h1 id="Pulumi_Aws_ElastiCache" data-uid="Pulumi.Aws.ElastiCache" class="text-break">Namespace Pulumi.Aws.ElastiCache
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">Classes
+  </h3>
+      <h4><a class="xref" href="Pulumi.Aws.ElastiCache.Cluster.html">Cluster</a></h4>
+      <section><p>Provides an ElastiCache Cluster resource, which manages a Memcached cluster or Redis instance.
+For working with Redis (Cluster Mode Enabled) replication groups, see the
+<a href="https://www.terraform.io/docs/providers/aws/r/elasticache_replication_group.html"><code>aws.elasticache.ReplicationGroup</code> resource</a>.</p>
+<blockquote>
+<p><strong>Note:</strong> When you change an attribute, such as <code>node_type</code>, by default
+it is applied in the next maintenance window. Because of this, this provider may report
+a difference in its planning phase because the actual modification has not yet taken
+place. You can use the <code>apply_immediately</code> flag to instruct the service to apply the
+change immediately. Using <code>apply_immediately</code> can result in a brief downtime as the server reboots.
+See the AWS Docs on [Modifying an ElastiCache Cache Cluster][2] for more information.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_cluster.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.ElastiCache.ClusterArgs.html">ClusterArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.ElastiCache.ClusterState.html">ClusterState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.ElastiCache.GetClusterArgs.html">GetClusterArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.ElastiCache.GetClusterResult.html">GetClusterResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.ElastiCache.GetReplicationGroupArgs.html">GetReplicationGroupArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.ElastiCache.GetReplicationGroupResult.html">GetReplicationGroupResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.ElastiCache.Invokes.html">Invokes</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.ElastiCache.ParameterGroup.html">ParameterGroup</a></h4>
+      <section><p>Provides an ElastiCache parameter group resource.</p>
+<blockquote>
+<p><strong>NOTE:</strong> Attempting to remove the <code>reserved-memory</code> parameter when <code>family</code> is set to <code>redis2.6</code> or <code>redis2.8</code> may show a perpetual difference in this provider due to an Elasticache API limitation. Leave that parameter configured with any value to workaround the issue.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_parameter_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_parameter_group.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.ElastiCache.ParameterGroupArgs.html">ParameterGroupArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.ElastiCache.ParameterGroupState.html">ParameterGroupState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.ElastiCache.ReplicationGroup.html">ReplicationGroup</a></h4>
+      <section><p>Provides an ElastiCache Replication Group resource.
+For working with Memcached or single primary Redis instances (Cluster Mode Disabled), see the
+<a href="https://www.terraform.io/docs/providers/aws/r/elasticache_cluster.html"><code>aws.elasticache.Cluster</code> resource</a>.</p>
+<blockquote>
+<p><strong>Note:</strong> When you change an attribute, such as <code>engine_version</code>, by
+default the ElastiCache API applies it in the next maintenance window. Because
+of this, this provider may report a difference in its planning phase because the
+actual modification has not yet taken place. You can use the
+<code>apply_immediately</code> flag to instruct the service to apply the change
+immediately. Using <code>apply_immediately</code> can result in a brief downtime as
+servers reboots.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_replication_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_replication_group.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.ElastiCache.ReplicationGroupArgs.html">ReplicationGroupArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.ElastiCache.ReplicationGroupState.html">ReplicationGroupState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.ElastiCache.SecurityGroup.html">SecurityGroup</a></h4>
+      <section><p>Provides an ElastiCache Security Group to control access to one or more cache
+clusters.</p>
+<blockquote>
+<p><strong>NOTE:</strong> ElastiCache Security Groups are for use only when working with an
+ElastiCache cluster <strong>outside</strong> of a VPC. If you are using a VPC, see the
+ElastiCache Subnet Group resource.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_security_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_security_group.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.ElastiCache.SecurityGroupArgs.html">SecurityGroupArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.ElastiCache.SecurityGroupState.html">SecurityGroupState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.ElastiCache.SubnetGroup.html">SubnetGroup</a></h4>
+      <section><p>Provides an ElastiCache Subnet Group resource.</p>
+<blockquote>
+<p><strong>NOTE:</strong> ElastiCache Subnet Groups are only for use when working with an
+ElastiCache cluster <strong>inside</strong> of a VPC. If you are on EC2 Classic, see the
+ElastiCache Security Group resource.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_subnet_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_subnet_group.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.ElastiCache.SubnetGroupArgs.html">SubnetGroupArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.ElastiCache.SubnetGroupState.html">SubnetGroupState</a></h4>
+      <section></section>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

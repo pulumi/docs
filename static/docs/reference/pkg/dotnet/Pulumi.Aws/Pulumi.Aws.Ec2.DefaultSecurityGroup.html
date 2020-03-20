@@ -1,0 +1,553 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class DefaultSecurityGroup
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class DefaultSecurityGroup
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Aws.Ec2.DefaultSecurityGroup">
+  
+  <h1 id="Pulumi_Aws_Ec2_DefaultSecurityGroup" data-uid="Pulumi.Aws.Ec2.DefaultSecurityGroup" class="text-break">Class DefaultSecurityGroup
+  </h1>
+  <div class="markdown level0 summary"><p>Provides a resource to manage the default AWS Security Group.</p>
+<p>For EC2 Classic accounts, each region comes with a Default Security Group.
+Additionally, each VPC created in AWS comes with a Default Security Group that can be managed, but not
+destroyed. <strong>This is an advanced resource</strong>, and has special caveats to be aware
+of when using it. Please read this document in its entirety before using this
+resource.</p>
+<p>The <code>aws.ec2.DefaultSecurityGroup</code> behaves differently from normal resources, in that
+this provider does not <em>create</em> this resource, but instead &quot;adopts&quot; it
+into management. We can do this because these default security groups cannot be
+destroyed, and are created with a known set of default ingress/egress rules.</p>
+<p>When this provider first adopts the Default Security Group, it <strong>immediately removes all
+ingress and egress rules in the Security Group</strong>. It then proceeds to create any rules specified in the
+configuration. This step is required so that only the rules specified in the
+configuration are created.</p>
+<p>This resource treats its inline rules as absolute; only the rules defined
+inline are created, and any additions/removals external to this resource will
+result in diff shown. For these reasons, this resource is incompatible with the
+<code>aws.ec2.SecurityGroupRule</code> resource.</p>
+<p>For more information about Default Security Groups, see the AWS Documentation on
+[Default Security Groups][aws-default-security-groups].</p>
+<h2 id="usage">Usage</h2>
+<p>With the exceptions mentioned above, <code>aws.ec2.DefaultSecurityGroup</code> should
+identical behavior to <code>aws.ec2.SecurityGroup</code>. Please consult <a href="https://www.terraform.io/docs/providers/aws/r/security_group.html">AWS_SECURITY_GROUP</a>
+for further usage documentation.</p>
+<h3 id="removing-awsec2defaultsecuritygroup-from-your-configuration">Removing <code>aws.ec2.DefaultSecurityGroup</code> from your configuration</h3>
+<p>Each AWS VPC (or region, if using EC2 Classic) comes with a Default Security
+Group that cannot be deleted. The <code>aws.ec2.DefaultSecurityGroup</code> allows you to
+manage this Security Group, but this provider cannot destroy it. Removing this resource
+from your configuration will remove it from your statefile and management, but
+will not destroy the Security Group. All ingress or egress rules will be left as
+they are at the time of removal. You can resume managing them via the AWS Console.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_security_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_security_group.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">DefaultSecurityGroup</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Ec2.html">Pulumi.Aws.Ec2</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
+  <h5 id="Pulumi_Aws_Ec2_DefaultSecurityGroup_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class DefaultSecurityGroup : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/DefaultSecurityGroup.cs/#L118">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Ec2_DefaultSecurityGroup__ctor_" data-uid="Pulumi.Aws.Ec2.DefaultSecurityGroup.#ctor*"></a>
+  <h4 id="Pulumi_Aws_Ec2_DefaultSecurityGroup__ctor_System_String_Pulumi_Aws_Ec2_DefaultSecurityGroupArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Ec2.DefaultSecurityGroup.#ctor(System.String,Pulumi.Aws.Ec2.DefaultSecurityGroupArgs,Pulumi.CustomResourceOptions)">DefaultSecurityGroup(String, DefaultSecurityGroupArgs, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Create a DefaultSecurityGroup resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DefaultSecurityGroup(string name, DefaultSecurityGroupArgs args = null, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Aws.Ec2.DefaultSecurityGroupArgs.html">DefaultSecurityGroupArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/DefaultSecurityGroup.cs/#L58">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Ec2_DefaultSecurityGroup_Arn_" data-uid="Pulumi.Aws.Ec2.DefaultSecurityGroup.Arn*"></a>
+  <h4 id="Pulumi_Aws_Ec2_DefaultSecurityGroup_Arn" data-uid="Pulumi.Aws.Ec2.DefaultSecurityGroup.Arn">Arn</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Arn { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/DefaultSecurityGroup.cs/#L64">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Ec2_DefaultSecurityGroup_Description_" data-uid="Pulumi.Aws.Ec2.DefaultSecurityGroup.Description*"></a>
+  <h4 id="Pulumi_Aws_Ec2_DefaultSecurityGroup_Description" data-uid="Pulumi.Aws.Ec2.DefaultSecurityGroup.Description">Description</h4>
+  <div class="markdown level1 summary"><p>The description of the security group</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/DefaultSecurityGroup.cs/#L71">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Ec2_DefaultSecurityGroup_Egress_" data-uid="Pulumi.Aws.Ec2.DefaultSecurityGroup.Egress*"></a>
+  <h4 id="Pulumi_Aws_Ec2_DefaultSecurityGroup_Egress" data-uid="Pulumi.Aws.Ec2.DefaultSecurityGroup.Egress">Egress</h4>
+  <div class="markdown level1 summary"><p>Can be specified multiple times for each
+egress rule. Each egress block supports fields documented below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;DefaultSecurityGroupEgress&gt;&gt; Egress { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Outputs.DefaultSecurityGroupEgress.html">DefaultSecurityGroupEgress</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/DefaultSecurityGroup.cs/#L78">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Ec2_DefaultSecurityGroup_Ingress_" data-uid="Pulumi.Aws.Ec2.DefaultSecurityGroup.Ingress*"></a>
+  <h4 id="Pulumi_Aws_Ec2_DefaultSecurityGroup_Ingress" data-uid="Pulumi.Aws.Ec2.DefaultSecurityGroup.Ingress">Ingress</h4>
+  <div class="markdown level1 summary"><p>Can be specified multiple times for each
+ingress rule. Each ingress block supports fields documented below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;DefaultSecurityGroupIngress&gt;&gt; Ingress { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Outputs.DefaultSecurityGroupIngress.html">DefaultSecurityGroupIngress</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/DefaultSecurityGroup.cs/#L84">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Ec2_DefaultSecurityGroup_Name_" data-uid="Pulumi.Aws.Ec2.DefaultSecurityGroup.Name*"></a>
+  <h4 id="Pulumi_Aws_Ec2_DefaultSecurityGroup_Name" data-uid="Pulumi.Aws.Ec2.DefaultSecurityGroup.Name">Name</h4>
+  <div class="markdown level1 summary"><p>The name of the security group</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/DefaultSecurityGroup.cs/#L90">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Ec2_DefaultSecurityGroup_OwnerId_" data-uid="Pulumi.Aws.Ec2.DefaultSecurityGroup.OwnerId*"></a>
+  <h4 id="Pulumi_Aws_Ec2_DefaultSecurityGroup_OwnerId" data-uid="Pulumi.Aws.Ec2.DefaultSecurityGroup.OwnerId">OwnerId</h4>
+  <div class="markdown level1 summary"><p>The owner ID.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; OwnerId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/DefaultSecurityGroup.cs/#L93">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Ec2_DefaultSecurityGroup_RevokeRulesOnDelete_" data-uid="Pulumi.Aws.Ec2.DefaultSecurityGroup.RevokeRulesOnDelete*"></a>
+  <h4 id="Pulumi_Aws_Ec2_DefaultSecurityGroup_RevokeRulesOnDelete" data-uid="Pulumi.Aws.Ec2.DefaultSecurityGroup.RevokeRulesOnDelete">RevokeRulesOnDelete</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; RevokeRulesOnDelete { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/DefaultSecurityGroup.cs/#L99">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Ec2_DefaultSecurityGroup_Tags_" data-uid="Pulumi.Aws.Ec2.DefaultSecurityGroup.Tags*"></a>
+  <h4 id="Pulumi_Aws_Ec2_DefaultSecurityGroup_Tags" data-uid="Pulumi.Aws.Ec2.DefaultSecurityGroup.Tags">Tags</h4>
+  <div class="markdown level1 summary"><p>A mapping of tags to assign to the resource.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Tags { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/DefaultSecurityGroup.cs/#L107">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Ec2_DefaultSecurityGroup_VpcId_" data-uid="Pulumi.Aws.Ec2.DefaultSecurityGroup.VpcId*"></a>
+  <h4 id="Pulumi_Aws_Ec2_DefaultSecurityGroup_VpcId" data-uid="Pulumi.Aws.Ec2.DefaultSecurityGroup.VpcId">VpcId</h4>
+  <div class="markdown level1 summary"><p>The VPC ID. <strong>Note that changing
+the <code>vpc_id</code> will <em>not</em> restore any default security group rules that were
+modified, added, or removed.</strong> It will be left in its current state</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; VpcId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/DefaultSecurityGroup.cs/#L148">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Ec2_DefaultSecurityGroup_Get_" data-uid="Pulumi.Aws.Ec2.DefaultSecurityGroup.Get*"></a>
+  <h4 id="Pulumi_Aws_Ec2_DefaultSecurityGroup_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_Ec2_DefaultSecurityGroupState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Ec2.DefaultSecurityGroup.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.Ec2.DefaultSecurityGroupState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, DefaultSecurityGroupState, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Get an existing DefaultSecurityGroup resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static DefaultSecurityGroup Get(string name, Input&lt;string&gt; id, DefaultSecurityGroupState state = null, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Aws.Ec2.DefaultSecurityGroupState.html">DefaultSecurityGroupState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Aws.Ec2.DefaultSecurityGroup.html">DefaultSecurityGroup</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/DefaultSecurityGroup.cs/#L56" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

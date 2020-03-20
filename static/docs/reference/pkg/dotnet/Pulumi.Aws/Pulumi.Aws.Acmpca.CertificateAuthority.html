@@ -1,0 +1,659 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class CertificateAuthority
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class CertificateAuthority
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Aws.Acmpca.CertificateAuthority">
+  
+  <h1 id="Pulumi_Aws_Acmpca_CertificateAuthority" data-uid="Pulumi.Aws.Acmpca.CertificateAuthority" class="text-break">Class CertificateAuthority
+  </h1>
+  <div class="markdown level0 summary"><p>Provides a resource to manage AWS Certificate Manager Private Certificate Authorities (ACM PCA Certificate Authorities).</p>
+<blockquote>
+<p><strong>NOTE:</strong> Creating this resource will leave the certificate authority in a <code>PENDING_CERTIFICATE</code> status, which means it cannot yet issue certificates. To complete this setup, you must fully sign the certificate authority CSR available in the <code>certificate_signing_request</code> attribute and import the signed certificate using the AWS SDK, CLI or Console. This provider can support another resource to manage that workflow automatically in the future.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/acmpca_certificate_authority.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/acmpca_certificate_authority.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">CertificateAuthority</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Acmpca.html">Pulumi.Aws.Acmpca</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
+  <h5 id="Pulumi_Aws_Acmpca_CertificateAuthority_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class CertificateAuthority : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Acmpca/CertificateAuthority.cs/#L113">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Acmpca_CertificateAuthority__ctor_" data-uid="Pulumi.Aws.Acmpca.CertificateAuthority.#ctor*"></a>
+  <h4 id="Pulumi_Aws_Acmpca_CertificateAuthority__ctor_System_String_Pulumi_Aws_Acmpca_CertificateAuthorityArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Acmpca.CertificateAuthority.#ctor(System.String,Pulumi.Aws.Acmpca.CertificateAuthorityArgs,Pulumi.CustomResourceOptions)">CertificateAuthority(String, CertificateAuthorityArgs, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Create a CertificateAuthority resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CertificateAuthority(string name, CertificateAuthorityArgs args, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Aws.Acmpca.CertificateAuthorityArgs.html">CertificateAuthorityArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Acmpca/CertificateAuthority.cs/#L24">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Acmpca_CertificateAuthority_Arn_" data-uid="Pulumi.Aws.Acmpca.CertificateAuthority.Arn*"></a>
+  <h4 id="Pulumi_Aws_Acmpca_CertificateAuthority_Arn" data-uid="Pulumi.Aws.Acmpca.CertificateAuthority.Arn">Arn</h4>
+  <div class="markdown level1 summary"><p>Amazon Resource Name (ARN) of the certificate authority.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Arn { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Acmpca/CertificateAuthority.cs/#L30">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Acmpca_CertificateAuthority_Certificate_" data-uid="Pulumi.Aws.Acmpca.CertificateAuthority.Certificate*"></a>
+  <h4 id="Pulumi_Aws_Acmpca_CertificateAuthority_Certificate" data-uid="Pulumi.Aws.Acmpca.CertificateAuthority.Certificate">Certificate</h4>
+  <div class="markdown level1 summary"><p>Base64-encoded certificate authority (CA) certificate. Only available after the certificate authority certificate has been imported.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Certificate { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Acmpca/CertificateAuthority.cs/#L36">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Acmpca_CertificateAuthority_CertificateAuthorityConfiguration_" data-uid="Pulumi.Aws.Acmpca.CertificateAuthority.CertificateAuthorityConfiguration*"></a>
+  <h4 id="Pulumi_Aws_Acmpca_CertificateAuthority_CertificateAuthorityConfiguration" data-uid="Pulumi.Aws.Acmpca.CertificateAuthority.CertificateAuthorityConfiguration">CertificateAuthorityConfiguration</h4>
+  <div class="markdown level1 summary"><p>Nested argument containing algorithms and certificate subject information. Defined below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;CertificateAuthorityCertificateAuthorityConfiguration&gt; CertificateAuthorityConfiguration { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.Acmpca.Outputs.CertificateAuthorityCertificateAuthorityConfiguration.html">CertificateAuthorityCertificateAuthorityConfiguration</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Acmpca/CertificateAuthority.cs/#L42">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Acmpca_CertificateAuthority_CertificateChain_" data-uid="Pulumi.Aws.Acmpca.CertificateAuthority.CertificateChain*"></a>
+  <h4 id="Pulumi_Aws_Acmpca_CertificateAuthority_CertificateChain" data-uid="Pulumi.Aws.Acmpca.CertificateAuthority.CertificateChain">CertificateChain</h4>
+  <div class="markdown level1 summary"><p>Base64-encoded certificate chain that includes any intermediate certificates and chains up to root on-premises certificate that you used to sign your private CA certificate. The chain does not include your private CA certificate. Only available after the certificate authority certificate has been imported.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; CertificateChain { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Acmpca/CertificateAuthority.cs/#L48">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Acmpca_CertificateAuthority_CertificateSigningRequest_" data-uid="Pulumi.Aws.Acmpca.CertificateAuthority.CertificateSigningRequest*"></a>
+  <h4 id="Pulumi_Aws_Acmpca_CertificateAuthority_CertificateSigningRequest" data-uid="Pulumi.Aws.Acmpca.CertificateAuthority.CertificateSigningRequest">CertificateSigningRequest</h4>
+  <div class="markdown level1 summary"><p>The base64 PEM-encoded certificate signing request (CSR) for your private CA certificate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; CertificateSigningRequest { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Acmpca/CertificateAuthority.cs/#L54">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Acmpca_CertificateAuthority_Enabled_" data-uid="Pulumi.Aws.Acmpca.CertificateAuthority.Enabled*"></a>
+  <h4 id="Pulumi_Aws_Acmpca_CertificateAuthority_Enabled" data-uid="Pulumi.Aws.Acmpca.CertificateAuthority.Enabled">Enabled</h4>
+  <div class="markdown level1 summary"><p>Boolean value that specifies whether certificate revocation lists (CRLs) are enabled. Defaults to <code>false</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; Enabled { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Acmpca/CertificateAuthority.cs/#L60">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Acmpca_CertificateAuthority_NotAfter_" data-uid="Pulumi.Aws.Acmpca.CertificateAuthority.NotAfter*"></a>
+  <h4 id="Pulumi_Aws_Acmpca_CertificateAuthority_NotAfter" data-uid="Pulumi.Aws.Acmpca.CertificateAuthority.NotAfter">NotAfter</h4>
+  <div class="markdown level1 summary"><p>Date and time after which the certificate authority is not valid. Only available after the certificate authority certificate has been imported.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; NotAfter { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Acmpca/CertificateAuthority.cs/#L66">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Acmpca_CertificateAuthority_NotBefore_" data-uid="Pulumi.Aws.Acmpca.CertificateAuthority.NotBefore*"></a>
+  <h4 id="Pulumi_Aws_Acmpca_CertificateAuthority_NotBefore" data-uid="Pulumi.Aws.Acmpca.CertificateAuthority.NotBefore">NotBefore</h4>
+  <div class="markdown level1 summary"><p>Date and time before which the certificate authority is not valid. Only available after the certificate authority certificate has been imported.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; NotBefore { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Acmpca/CertificateAuthority.cs/#L72">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Acmpca_CertificateAuthority_PermanentDeletionTimeInDays_" data-uid="Pulumi.Aws.Acmpca.CertificateAuthority.PermanentDeletionTimeInDays*"></a>
+  <h4 id="Pulumi_Aws_Acmpca_CertificateAuthority_PermanentDeletionTimeInDays" data-uid="Pulumi.Aws.Acmpca.CertificateAuthority.PermanentDeletionTimeInDays">PermanentDeletionTimeInDays</h4>
+  <div class="markdown level1 summary"><p>The number of days to make a CA restorable after it has been deleted, must be between 7 to 30 days, with default to 30 days.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; PermanentDeletionTimeInDays { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Acmpca/CertificateAuthority.cs/#L78">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Acmpca_CertificateAuthority_RevocationConfiguration_" data-uid="Pulumi.Aws.Acmpca.CertificateAuthority.RevocationConfiguration*"></a>
+  <h4 id="Pulumi_Aws_Acmpca_CertificateAuthority_RevocationConfiguration" data-uid="Pulumi.Aws.Acmpca.CertificateAuthority.RevocationConfiguration">RevocationConfiguration</h4>
+  <div class="markdown level1 summary"><p>Nested argument containing revocation configuration. Defined below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;CertificateAuthorityRevocationConfiguration&gt; RevocationConfiguration { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.Acmpca.Outputs.CertificateAuthorityRevocationConfiguration.html">CertificateAuthorityRevocationConfiguration</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Acmpca/CertificateAuthority.cs/#L84">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Acmpca_CertificateAuthority_Serial_" data-uid="Pulumi.Aws.Acmpca.CertificateAuthority.Serial*"></a>
+  <h4 id="Pulumi_Aws_Acmpca_CertificateAuthority_Serial" data-uid="Pulumi.Aws.Acmpca.CertificateAuthority.Serial">Serial</h4>
+  <div class="markdown level1 summary"><p>Serial number of the certificate authority. Only available after the certificate authority certificate has been imported.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Serial { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Acmpca/CertificateAuthority.cs/#L90">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Acmpca_CertificateAuthority_Status_" data-uid="Pulumi.Aws.Acmpca.CertificateAuthority.Status*"></a>
+  <h4 id="Pulumi_Aws_Acmpca_CertificateAuthority_Status" data-uid="Pulumi.Aws.Acmpca.CertificateAuthority.Status">Status</h4>
+  <div class="markdown level1 summary"><p>Status of the certificate authority.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Status { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Acmpca/CertificateAuthority.cs/#L96">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Acmpca_CertificateAuthority_Tags_" data-uid="Pulumi.Aws.Acmpca.CertificateAuthority.Tags*"></a>
+  <h4 id="Pulumi_Aws_Acmpca_CertificateAuthority_Tags" data-uid="Pulumi.Aws.Acmpca.CertificateAuthority.Tags">Tags</h4>
+  <div class="markdown level1 summary"><p>Specifies a key-value map of user-defined tags that are attached to the certificate authority.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Tags { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Acmpca/CertificateAuthority.cs/#L102">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Acmpca_CertificateAuthority_Type_" data-uid="Pulumi.Aws.Acmpca.CertificateAuthority.Type*"></a>
+  <h4 id="Pulumi_Aws_Acmpca_CertificateAuthority_Type" data-uid="Pulumi.Aws.Acmpca.CertificateAuthority.Type">Type</h4>
+  <div class="markdown level1 summary"><p>The type of the certificate authority. Defaults to <code>SUBORDINATE</code>. Valid values: <code>ROOT</code> and <code>SUBORDINATE</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Type { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Acmpca/CertificateAuthority.cs/#L143">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Acmpca_CertificateAuthority_Get_" data-uid="Pulumi.Aws.Acmpca.CertificateAuthority.Get*"></a>
+  <h4 id="Pulumi_Aws_Acmpca_CertificateAuthority_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_Acmpca_CertificateAuthorityState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Acmpca.CertificateAuthority.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.Acmpca.CertificateAuthorityState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, CertificateAuthorityState, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Get an existing CertificateAuthority resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static CertificateAuthority Get(string name, Input&lt;string&gt; id, CertificateAuthorityState state = null, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Aws.Acmpca.CertificateAuthorityState.html">CertificateAuthorityState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Aws.Acmpca.CertificateAuthority.html">CertificateAuthority</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Acmpca/CertificateAuthority.cs/#L19" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

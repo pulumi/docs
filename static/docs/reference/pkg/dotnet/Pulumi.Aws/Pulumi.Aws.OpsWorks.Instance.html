@@ -1,0 +1,1533 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Instance
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Instance
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Aws.OpsWorks.Instance">
+  
+  <h1 id="Pulumi_Aws_OpsWorks_Instance" data-uid="Pulumi.Aws.OpsWorks.Instance" class="text-break">Class Instance
+  </h1>
+  <div class="markdown level0 summary"><p>Provides an OpsWorks instance resource.</p>
+<h2 id="block-devices">Block devices</h2>
+<p>Each of the <code>*_block_device</code> attributes controls a portion of the AWS
+Instance's &quot;Block Device Mapping&quot;. It's a good idea to familiarize yourself with <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html">AWS's Block Device
+Mapping docs</a>
+to understand the implications of using these attributes.</p>
+<p>The <code>root_block_device</code> mapping supports the following:</p>
+<ul>
+<li><code>volume_type</code> - (Optional) The type of volume. Can be <code>&amp;quot;standard&amp;quot;</code>, <code>&amp;quot;gp2&amp;quot;</code>,
+or <code>&amp;quot;io1&amp;quot;</code>. (Default: <code>&amp;quot;standard&amp;quot;</code>).</li>
+<li><code>volume_size</code> - (Optional) The size of the volume in gigabytes.</li>
+<li><code>iops</code> - (Optional) The amount of provisioned
+<a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html">IOPS</a>.
+This must be set with a <code>volume_type</code> of <code>&amp;quot;io1&amp;quot;</code>.</li>
+<li><code>delete_on_termination</code> - (Optional) Whether the volume should be destroyed
+on instance termination (Default: <code>true</code>).</li>
+</ul>
+<p>Modifying any of the <code>root_block_device</code> settings requires resource
+replacement.</p>
+<p>Each <code>ebs_block_device</code> supports the following:</p>
+<ul>
+<li><code>device_name</code> - The name of the device to mount.</li>
+<li><code>snapshot_id</code> - (Optional) The Snapshot ID to mount.</li>
+<li><code>volume_type</code> - (Optional) The type of volume. Can be <code>&amp;quot;standard&amp;quot;</code>, <code>&amp;quot;gp2&amp;quot;</code>,
+or <code>&amp;quot;io1&amp;quot;</code>. (Default: <code>&amp;quot;standard&amp;quot;</code>).</li>
+<li><code>volume_size</code> - (Optional) The size of the volume in gigabytes.</li>
+<li><code>iops</code> - (Optional) The amount of provisioned
+<a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html">IOPS</a>.
+This must be set with a <code>volume_type</code> of <code>&amp;quot;io1&amp;quot;</code>.</li>
+<li><code>delete_on_termination</code> - (Optional) Whether the volume should be destroyed
+on instance termination (Default: <code>true</code>).</li>
+</ul>
+<p>Modifying any <code>ebs_block_device</code> currently requires resource replacement.</p>
+<p>Each <code>ephemeral_block_device</code> supports the following:</p>
+<ul>
+<li><code>device_name</code> - The name of the block device to mount on the instance.</li>
+<li><code>virtual_name</code> - The <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStoreDeviceNames">Instance Store Device
+Name</a>
+(e.g. <code>&amp;quot;ephemeral0&amp;quot;</code>)</li>
+</ul>
+<p>Each AWS Instance type has a different set of Instance Store block devices
+available for attachment. AWS <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#StorageOnInstanceTypes">publishes a
+list</a>
+of which ephemeral devices are available on each type. The devices are always
+identified by the <code>virtual_name</code> in the format <code>&amp;quot;ephemeral{0..N}&amp;quot;</code>.</p>
+<blockquote>
+<p><strong>NOTE:</strong> Currently, changes to <code>*_block_device</code> configuration of <em>existing</em>
+resources cannot be automatically detected by this provider. After making updates
+to block device configuration, resource recreation can be manually triggered by
+using the <a href="https://www.terraform.io/docs/commands/taint.html"><code>taint</code> command</a>.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_instance.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Instance</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.OpsWorks.html">Pulumi.Aws.OpsWorks</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
+  <h5 id="Pulumi_Aws_OpsWorks_Instance_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Instance : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/Instance.cs/#L305">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_OpsWorks_Instance__ctor_" data-uid="Pulumi.Aws.OpsWorks.Instance.#ctor*"></a>
+  <h4 id="Pulumi_Aws_OpsWorks_Instance__ctor_System_String_Pulumi_Aws_OpsWorks_InstanceArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.OpsWorks.Instance.#ctor(System.String,Pulumi.Aws.OpsWorks.InstanceArgs,Pulumi.CustomResourceOptions)">Instance(String, InstanceArgs, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Create a Instance resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Instance(string name, InstanceArgs args, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Aws.OpsWorks.InstanceArgs.html">InstanceArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/Instance.cs/#L76">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_OpsWorks_Instance_AgentVersion_" data-uid="Pulumi.Aws.OpsWorks.Instance.AgentVersion*"></a>
+  <h4 id="Pulumi_Aws_OpsWorks_Instance_AgentVersion" data-uid="Pulumi.Aws.OpsWorks.Instance.AgentVersion">AgentVersion</h4>
+  <div class="markdown level1 summary"><p>The AWS OpsWorks agent to install.  Defaults to <code>&amp;quot;INHERIT&amp;quot;</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AgentVersion { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/Instance.cs/#L82">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_OpsWorks_Instance_AmiId_" data-uid="Pulumi.Aws.OpsWorks.Instance.AmiId*"></a>
+  <h4 id="Pulumi_Aws_OpsWorks_Instance_AmiId" data-uid="Pulumi.Aws.OpsWorks.Instance.AmiId">AmiId</h4>
+  <div class="markdown level1 summary"><p>The AMI to use for the instance.  If an AMI is specified, <code>os</code> must be <code>&amp;quot;Custom&amp;quot;</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AmiId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/Instance.cs/#L88">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_OpsWorks_Instance_Architecture_" data-uid="Pulumi.Aws.OpsWorks.Instance.Architecture*"></a>
+  <h4 id="Pulumi_Aws_OpsWorks_Instance_Architecture" data-uid="Pulumi.Aws.OpsWorks.Instance.Architecture">Architecture</h4>
+  <div class="markdown level1 summary"><p>Machine architecture for created instances.  Can be either <code>&amp;quot;x86_64&amp;quot;</code> (the default) or <code>&amp;quot;i386&amp;quot;</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Architecture { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/Instance.cs/#L94">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_OpsWorks_Instance_AutoScalingType_" data-uid="Pulumi.Aws.OpsWorks.Instance.AutoScalingType*"></a>
+  <h4 id="Pulumi_Aws_OpsWorks_Instance_AutoScalingType" data-uid="Pulumi.Aws.OpsWorks.Instance.AutoScalingType">AutoScalingType</h4>
+  <div class="markdown level1 summary"><p>Creates load-based or time-based instances.  If set, can be either: <code>&amp;quot;load&amp;quot;</code> or <code>&amp;quot;timer&amp;quot;</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AutoScalingType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/Instance.cs/#L101">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_OpsWorks_Instance_AvailabilityZone_" data-uid="Pulumi.Aws.OpsWorks.Instance.AvailabilityZone*"></a>
+  <h4 id="Pulumi_Aws_OpsWorks_Instance_AvailabilityZone" data-uid="Pulumi.Aws.OpsWorks.Instance.AvailabilityZone">AvailabilityZone</h4>
+  <div class="markdown level1 summary"><p>Name of the availability zone where instances will be created
+by default.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AvailabilityZone { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/Instance.cs/#L104">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_OpsWorks_Instance_CreatedAt_" data-uid="Pulumi.Aws.OpsWorks.Instance.CreatedAt*"></a>
+  <h4 id="Pulumi_Aws_OpsWorks_Instance_CreatedAt" data-uid="Pulumi.Aws.OpsWorks.Instance.CreatedAt">CreatedAt</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; CreatedAt { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/Instance.cs/#L107">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_OpsWorks_Instance_DeleteEbs_" data-uid="Pulumi.Aws.OpsWorks.Instance.DeleteEbs*"></a>
+  <h4 id="Pulumi_Aws_OpsWorks_Instance_DeleteEbs" data-uid="Pulumi.Aws.OpsWorks.Instance.DeleteEbs">DeleteEbs</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; DeleteEbs { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/Instance.cs/#L110">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_OpsWorks_Instance_DeleteEip_" data-uid="Pulumi.Aws.OpsWorks.Instance.DeleteEip*"></a>
+  <h4 id="Pulumi_Aws_OpsWorks_Instance_DeleteEip" data-uid="Pulumi.Aws.OpsWorks.Instance.DeleteEip">DeleteEip</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; DeleteEip { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/Instance.cs/#L117">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_OpsWorks_Instance_EbsBlockDevices_" data-uid="Pulumi.Aws.OpsWorks.Instance.EbsBlockDevices*"></a>
+  <h4 id="Pulumi_Aws_OpsWorks_Instance_EbsBlockDevices" data-uid="Pulumi.Aws.OpsWorks.Instance.EbsBlockDevices">EbsBlockDevices</h4>
+  <div class="markdown level1 summary"><p>Additional EBS block devices to attach to the
+instance.  See Block Devices below for details.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;InstanceEbsBlockDevices&gt;&gt; EbsBlockDevices { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.OpsWorks.Outputs.InstanceEbsBlockDevices.html">InstanceEbsBlockDevices</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/Instance.cs/#L123">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_OpsWorks_Instance_EbsOptimized_" data-uid="Pulumi.Aws.OpsWorks.Instance.EbsOptimized*"></a>
+  <h4 id="Pulumi_Aws_OpsWorks_Instance_EbsOptimized" data-uid="Pulumi.Aws.OpsWorks.Instance.EbsOptimized">EbsOptimized</h4>
+  <div class="markdown level1 summary"><p>If true, the launched EC2 instance will be EBS-optimized.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; EbsOptimized { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/Instance.cs/#L129">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_OpsWorks_Instance_Ec2InstanceId_" data-uid="Pulumi.Aws.OpsWorks.Instance.Ec2InstanceId*"></a>
+  <h4 id="Pulumi_Aws_OpsWorks_Instance_Ec2InstanceId" data-uid="Pulumi.Aws.OpsWorks.Instance.Ec2InstanceId">Ec2InstanceId</h4>
+  <div class="markdown level1 summary"><p>EC2 instance ID</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Ec2InstanceId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/Instance.cs/#L132">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_OpsWorks_Instance_EcsClusterArn_" data-uid="Pulumi.Aws.OpsWorks.Instance.EcsClusterArn*"></a>
+  <h4 id="Pulumi_Aws_OpsWorks_Instance_EcsClusterArn" data-uid="Pulumi.Aws.OpsWorks.Instance.EcsClusterArn">EcsClusterArn</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; EcsClusterArn { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/Instance.cs/#L135">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_OpsWorks_Instance_ElasticIp_" data-uid="Pulumi.Aws.OpsWorks.Instance.ElasticIp*"></a>
+  <h4 id="Pulumi_Aws_OpsWorks_Instance_ElasticIp" data-uid="Pulumi.Aws.OpsWorks.Instance.ElasticIp">ElasticIp</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ElasticIp { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/Instance.cs/#L142">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_OpsWorks_Instance_EphemeralBlockDevices_" data-uid="Pulumi.Aws.OpsWorks.Instance.EphemeralBlockDevices*"></a>
+  <h4 id="Pulumi_Aws_OpsWorks_Instance_EphemeralBlockDevices" data-uid="Pulumi.Aws.OpsWorks.Instance.EphemeralBlockDevices">EphemeralBlockDevices</h4>
+  <div class="markdown level1 summary"><p>Customize Ephemeral (also known as
+&quot;Instance Store&quot;) volumes on the instance. See Block Devices below for details.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;InstanceEphemeralBlockDevices&gt;&gt; EphemeralBlockDevices { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.OpsWorks.Outputs.InstanceEphemeralBlockDevices.html">InstanceEphemeralBlockDevices</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/Instance.cs/#L148">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_OpsWorks_Instance_Hostname_" data-uid="Pulumi.Aws.OpsWorks.Instance.Hostname*"></a>
+  <h4 id="Pulumi_Aws_OpsWorks_Instance_Hostname" data-uid="Pulumi.Aws.OpsWorks.Instance.Hostname">Hostname</h4>
+  <div class="markdown level1 summary"><p>The instance's host name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Hostname { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/Instance.cs/#L151">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_OpsWorks_Instance_InfrastructureClass_" data-uid="Pulumi.Aws.OpsWorks.Instance.InfrastructureClass*"></a>
+  <h4 id="Pulumi_Aws_OpsWorks_Instance_InfrastructureClass" data-uid="Pulumi.Aws.OpsWorks.Instance.InfrastructureClass">InfrastructureClass</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; InfrastructureClass { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/Instance.cs/#L157">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_OpsWorks_Instance_InstallUpdatesOnBoot_" data-uid="Pulumi.Aws.OpsWorks.Instance.InstallUpdatesOnBoot*"></a>
+  <h4 id="Pulumi_Aws_OpsWorks_Instance_InstallUpdatesOnBoot" data-uid="Pulumi.Aws.OpsWorks.Instance.InstallUpdatesOnBoot">InstallUpdatesOnBoot</h4>
+  <div class="markdown level1 summary"><p>Controls where to install OS and package updates when the instance boots.  Defaults to <code>true</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; InstallUpdatesOnBoot { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/Instance.cs/#L160">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_OpsWorks_Instance_InstanceProfileArn_" data-uid="Pulumi.Aws.OpsWorks.Instance.InstanceProfileArn*"></a>
+  <h4 id="Pulumi_Aws_OpsWorks_Instance_InstanceProfileArn" data-uid="Pulumi.Aws.OpsWorks.Instance.InstanceProfileArn">InstanceProfileArn</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; InstanceProfileArn { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/Instance.cs/#L166">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_OpsWorks_Instance_InstanceType_" data-uid="Pulumi.Aws.OpsWorks.Instance.InstanceType*"></a>
+  <h4 id="Pulumi_Aws_OpsWorks_Instance_InstanceType" data-uid="Pulumi.Aws.OpsWorks.Instance.InstanceType">InstanceType</h4>
+  <div class="markdown level1 summary"><p>The type of instance to start</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; InstanceType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/Instance.cs/#L169">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_OpsWorks_Instance_LastServiceErrorId_" data-uid="Pulumi.Aws.OpsWorks.Instance.LastServiceErrorId*"></a>
+  <h4 id="Pulumi_Aws_OpsWorks_Instance_LastServiceErrorId" data-uid="Pulumi.Aws.OpsWorks.Instance.LastServiceErrorId">LastServiceErrorId</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; LastServiceErrorId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/Instance.cs/#L175">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_OpsWorks_Instance_LayerIds_" data-uid="Pulumi.Aws.OpsWorks.Instance.LayerIds*"></a>
+  <h4 id="Pulumi_Aws_OpsWorks_Instance_LayerIds" data-uid="Pulumi.Aws.OpsWorks.Instance.LayerIds">LayerIds</h4>
+  <div class="markdown level1 summary"><p>The ids of the layers the instance will belong to.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; LayerIds { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/Instance.cs/#L181">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_OpsWorks_Instance_Os_" data-uid="Pulumi.Aws.OpsWorks.Instance.Os*"></a>
+  <h4 id="Pulumi_Aws_OpsWorks_Instance_Os" data-uid="Pulumi.Aws.OpsWorks.Instance.Os">Os</h4>
+  <div class="markdown level1 summary"><p>Name of operating system that will be installed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Os { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/Instance.cs/#L184">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_OpsWorks_Instance_Platform_" data-uid="Pulumi.Aws.OpsWorks.Instance.Platform*"></a>
+  <h4 id="Pulumi_Aws_OpsWorks_Instance_Platform" data-uid="Pulumi.Aws.OpsWorks.Instance.Platform">Platform</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Platform { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/Instance.cs/#L192">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_OpsWorks_Instance_PrivateDns_" data-uid="Pulumi.Aws.OpsWorks.Instance.PrivateDns*"></a>
+  <h4 id="Pulumi_Aws_OpsWorks_Instance_PrivateDns" data-uid="Pulumi.Aws.OpsWorks.Instance.PrivateDns">PrivateDns</h4>
+  <div class="markdown level1 summary"><p>The private DNS name assigned to the instance. Can only be
+used inside the Amazon EC2, and only available if you've enabled DNS hostnames
+for your VPC</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; PrivateDns { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/Instance.cs/#L198">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_OpsWorks_Instance_PrivateIp_" data-uid="Pulumi.Aws.OpsWorks.Instance.PrivateIp*"></a>
+  <h4 id="Pulumi_Aws_OpsWorks_Instance_PrivateIp" data-uid="Pulumi.Aws.OpsWorks.Instance.PrivateIp">PrivateIp</h4>
+  <div class="markdown level1 summary"><p>The private IP address assigned to the instance</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; PrivateIp { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/Instance.cs/#L205">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_OpsWorks_Instance_PublicDns_" data-uid="Pulumi.Aws.OpsWorks.Instance.PublicDns*"></a>
+  <h4 id="Pulumi_Aws_OpsWorks_Instance_PublicDns" data-uid="Pulumi.Aws.OpsWorks.Instance.PublicDns">PublicDns</h4>
+  <div class="markdown level1 summary"><p>The public DNS name assigned to the instance. For EC2-VPC, this
+is only available if you've enabled DNS hostnames for your VPC</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; PublicDns { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/Instance.cs/#L211">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_OpsWorks_Instance_PublicIp_" data-uid="Pulumi.Aws.OpsWorks.Instance.PublicIp*"></a>
+  <h4 id="Pulumi_Aws_OpsWorks_Instance_PublicIp" data-uid="Pulumi.Aws.OpsWorks.Instance.PublicIp">PublicIp</h4>
+  <div class="markdown level1 summary"><p>The public IP address assigned to the instance, if applicable.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; PublicIp { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/Instance.cs/#L214">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_OpsWorks_Instance_RegisteredBy_" data-uid="Pulumi.Aws.OpsWorks.Instance.RegisteredBy*"></a>
+  <h4 id="Pulumi_Aws_OpsWorks_Instance_RegisteredBy" data-uid="Pulumi.Aws.OpsWorks.Instance.RegisteredBy">RegisteredBy</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; RegisteredBy { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/Instance.cs/#L217">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_OpsWorks_Instance_ReportedAgentVersion_" data-uid="Pulumi.Aws.OpsWorks.Instance.ReportedAgentVersion*"></a>
+  <h4 id="Pulumi_Aws_OpsWorks_Instance_ReportedAgentVersion" data-uid="Pulumi.Aws.OpsWorks.Instance.ReportedAgentVersion">ReportedAgentVersion</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ReportedAgentVersion { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/Instance.cs/#L220">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_OpsWorks_Instance_ReportedOsFamily_" data-uid="Pulumi.Aws.OpsWorks.Instance.ReportedOsFamily*"></a>
+  <h4 id="Pulumi_Aws_OpsWorks_Instance_ReportedOsFamily" data-uid="Pulumi.Aws.OpsWorks.Instance.ReportedOsFamily">ReportedOsFamily</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ReportedOsFamily { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/Instance.cs/#L223">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_OpsWorks_Instance_ReportedOsName_" data-uid="Pulumi.Aws.OpsWorks.Instance.ReportedOsName*"></a>
+  <h4 id="Pulumi_Aws_OpsWorks_Instance_ReportedOsName" data-uid="Pulumi.Aws.OpsWorks.Instance.ReportedOsName">ReportedOsName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ReportedOsName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/Instance.cs/#L226">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_OpsWorks_Instance_ReportedOsVersion_" data-uid="Pulumi.Aws.OpsWorks.Instance.ReportedOsVersion*"></a>
+  <h4 id="Pulumi_Aws_OpsWorks_Instance_ReportedOsVersion" data-uid="Pulumi.Aws.OpsWorks.Instance.ReportedOsVersion">ReportedOsVersion</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ReportedOsVersion { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/Instance.cs/#L233">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_OpsWorks_Instance_RootBlockDevices_" data-uid="Pulumi.Aws.OpsWorks.Instance.RootBlockDevices*"></a>
+  <h4 id="Pulumi_Aws_OpsWorks_Instance_RootBlockDevices" data-uid="Pulumi.Aws.OpsWorks.Instance.RootBlockDevices">RootBlockDevices</h4>
+  <div class="markdown level1 summary"><p>Customize details about the root block
+device of the instance. See Block Devices below for details.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;InstanceRootBlockDevices&gt;&gt; RootBlockDevices { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.OpsWorks.Outputs.InstanceRootBlockDevices.html">InstanceRootBlockDevices</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/Instance.cs/#L239">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_OpsWorks_Instance_RootDeviceType_" data-uid="Pulumi.Aws.OpsWorks.Instance.RootDeviceType*"></a>
+  <h4 id="Pulumi_Aws_OpsWorks_Instance_RootDeviceType" data-uid="Pulumi.Aws.OpsWorks.Instance.RootDeviceType">RootDeviceType</h4>
+  <div class="markdown level1 summary"><p>Name of the type of root device instances will have by default.  Can be either <code>&amp;quot;ebs&amp;quot;</code> or <code>&amp;quot;instance-store&amp;quot;</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; RootDeviceType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/Instance.cs/#L242">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_OpsWorks_Instance_RootDeviceVolumeId_" data-uid="Pulumi.Aws.OpsWorks.Instance.RootDeviceVolumeId*"></a>
+  <h4 id="Pulumi_Aws_OpsWorks_Instance_RootDeviceVolumeId" data-uid="Pulumi.Aws.OpsWorks.Instance.RootDeviceVolumeId">RootDeviceVolumeId</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; RootDeviceVolumeId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/Instance.cs/#L248">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_OpsWorks_Instance_SecurityGroupIds_" data-uid="Pulumi.Aws.OpsWorks.Instance.SecurityGroupIds*"></a>
+  <h4 id="Pulumi_Aws_OpsWorks_Instance_SecurityGroupIds" data-uid="Pulumi.Aws.OpsWorks.Instance.SecurityGroupIds">SecurityGroupIds</h4>
+  <div class="markdown level1 summary"><p>The associated security groups.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; SecurityGroupIds { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/Instance.cs/#L251">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_OpsWorks_Instance_SshHostDsaKeyFingerprint_" data-uid="Pulumi.Aws.OpsWorks.Instance.SshHostDsaKeyFingerprint*"></a>
+  <h4 id="Pulumi_Aws_OpsWorks_Instance_SshHostDsaKeyFingerprint" data-uid="Pulumi.Aws.OpsWorks.Instance.SshHostDsaKeyFingerprint">SshHostDsaKeyFingerprint</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SshHostDsaKeyFingerprint { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/Instance.cs/#L254">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_OpsWorks_Instance_SshHostRsaKeyFingerprint_" data-uid="Pulumi.Aws.OpsWorks.Instance.SshHostRsaKeyFingerprint*"></a>
+  <h4 id="Pulumi_Aws_OpsWorks_Instance_SshHostRsaKeyFingerprint" data-uid="Pulumi.Aws.OpsWorks.Instance.SshHostRsaKeyFingerprint">SshHostRsaKeyFingerprint</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SshHostRsaKeyFingerprint { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/Instance.cs/#L260">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_OpsWorks_Instance_SshKeyName_" data-uid="Pulumi.Aws.OpsWorks.Instance.SshKeyName*"></a>
+  <h4 id="Pulumi_Aws_OpsWorks_Instance_SshKeyName" data-uid="Pulumi.Aws.OpsWorks.Instance.SshKeyName">SshKeyName</h4>
+  <div class="markdown level1 summary"><p>Name of the SSH keypair that instances will have by default.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SshKeyName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/Instance.cs/#L266">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_OpsWorks_Instance_StackId_" data-uid="Pulumi.Aws.OpsWorks.Instance.StackId*"></a>
+  <h4 id="Pulumi_Aws_OpsWorks_Instance_StackId" data-uid="Pulumi.Aws.OpsWorks.Instance.StackId">StackId</h4>
+  <div class="markdown level1 summary"><p>The id of the stack the instance will belong to.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; StackId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/Instance.cs/#L272">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_OpsWorks_Instance_State_" data-uid="Pulumi.Aws.OpsWorks.Instance.State*"></a>
+  <h4 id="Pulumi_Aws_OpsWorks_Instance_State" data-uid="Pulumi.Aws.OpsWorks.Instance.State">State</h4>
+  <div class="markdown level1 summary"><p>The desired state of the instance.  Can be either <code>&amp;quot;running&amp;quot;</code> or <code>&amp;quot;stopped&amp;quot;</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; State { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/Instance.cs/#L275">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_OpsWorks_Instance_Status_" data-uid="Pulumi.Aws.OpsWorks.Instance.Status*"></a>
+  <h4 id="Pulumi_Aws_OpsWorks_Instance_Status" data-uid="Pulumi.Aws.OpsWorks.Instance.Status">Status</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Status { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/Instance.cs/#L281">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_OpsWorks_Instance_SubnetId_" data-uid="Pulumi.Aws.OpsWorks.Instance.SubnetId*"></a>
+  <h4 id="Pulumi_Aws_OpsWorks_Instance_SubnetId" data-uid="Pulumi.Aws.OpsWorks.Instance.SubnetId">SubnetId</h4>
+  <div class="markdown level1 summary"><p>Subnet ID to attach to</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SubnetId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/Instance.cs/#L287">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_OpsWorks_Instance_Tenancy_" data-uid="Pulumi.Aws.OpsWorks.Instance.Tenancy*"></a>
+  <h4 id="Pulumi_Aws_OpsWorks_Instance_Tenancy" data-uid="Pulumi.Aws.OpsWorks.Instance.Tenancy">Tenancy</h4>
+  <div class="markdown level1 summary"><p>Instance tenancy to use. Can be one of <code>&amp;quot;default&amp;quot;</code>, <code>&amp;quot;dedicated&amp;quot;</code> or <code>&amp;quot;host&amp;quot;</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Tenancy { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/Instance.cs/#L294">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_OpsWorks_Instance_VirtualizationType_" data-uid="Pulumi.Aws.OpsWorks.Instance.VirtualizationType*"></a>
+  <h4 id="Pulumi_Aws_OpsWorks_Instance_VirtualizationType" data-uid="Pulumi.Aws.OpsWorks.Instance.VirtualizationType">VirtualizationType</h4>
+  <div class="markdown level1 summary"><p>Keyword to choose what virtualization mode created instances
+will use. Can be either <code>&amp;quot;paravirtual&amp;quot;</code> or <code>&amp;quot;hvm&amp;quot;</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; VirtualizationType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/Instance.cs/#L335">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_OpsWorks_Instance_Get_" data-uid="Pulumi.Aws.OpsWorks.Instance.Get*"></a>
+  <h4 id="Pulumi_Aws_OpsWorks_Instance_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_OpsWorks_InstanceState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.OpsWorks.Instance.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.OpsWorks.InstanceState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, InstanceState, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Get an existing Instance resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Instance Get(string name, Input&lt;string&gt; id, InstanceState state = null, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Aws.OpsWorks.InstanceState.html">InstanceState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Aws.OpsWorks.Instance.html">Instance</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/Instance.cs/#L71" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

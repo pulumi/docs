@@ -1,0 +1,255 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace Pulumi.Aws.AutoScaling
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace Pulumi.Aws.AutoScaling
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Aws.AutoScaling">
+  
+  <h1 id="Pulumi_Aws_AutoScaling" data-uid="Pulumi.Aws.AutoScaling" class="text-break">Namespace Pulumi.Aws.AutoScaling
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">Classes
+  </h3>
+      <h4><a class="xref" href="Pulumi.Aws.AutoScaling.Attachment.html">Attachment</a></h4>
+      <section><p>Provides an AutoScaling Attachment resource.</p>
+<blockquote>
+<p><strong>NOTE on AutoScaling Groups and ASG Attachments:</strong> This provider currently provides
+both a standalone ASG Attachment resource (describing an ASG attached to
+an ELB), and an AutoScaling Group resource with
+<code>load_balancers</code> defined in-line. At this time you cannot use an ASG with in-line
+load balancers in conjunction with an ASG Attachment resource. Doing so will cause a
+conflict and will overwrite attachments.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/autoscaling_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/autoscaling_attachment.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.AutoScaling.AttachmentArgs.html">AttachmentArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.AutoScaling.AttachmentState.html">AttachmentState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.AutoScaling.GetGroupArgs.html">GetGroupArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.AutoScaling.GetGroupResult.html">GetGroupResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.AutoScaling.Group.html">Group</a></h4>
+      <section><p>Provides an AutoScaling Group resource.</p>
+<blockquote>
+<p><strong>Note:</strong> You must specify either <code>launch_configuration</code>, <code>launch_template</code>, or <code>mixed_instances_policy</code>.</p>
+</blockquote>
+<h2 id="waiting-for-capacity">Waiting for Capacity</h2>
+<p>A newly-created ASG is initially empty and begins to scale to <code>min_size</code> (or
+<code>desired_capacity</code>, if specified) by launching instances using the provided
+Launch Configuration. These instances take time to launch and boot.</p>
+<p>On ASG Update, changes to these values also take time to result in the target
+number of instances providing service.</p>
+<p>This provider provides two mechanisms to help consistently manage ASG scale up
+time across dependent resources.</p>
+<h4 id="waiting-for-asg-capacity">Waiting for ASG Capacity</h4>
+<p>The first is default behavior. This provider waits after ASG creation for
+<code>min_size</code> (or <code>desired_capacity</code>, if specified) healthy instances to show up
+in the ASG before continuing.</p>
+<p>If <code>min_size</code> or <code>desired_capacity</code> are changed in a subsequent update,
+this provider will also wait for the correct number of healthy instances before
+continuing.</p>
+<p>This provider considers an instance &quot;healthy&quot; when the ASG reports <code>HealthStatus: &amp;quot;Healthy&amp;quot;</code> and <code>LifecycleState: &amp;quot;InService&amp;quot;</code>. See the <a href="https://docs.aws.amazon.com/AutoScaling/latest/DeveloperGuide/AutoScalingGroupLifecycle.html">AWS AutoScaling
+Docs</a>
+for more information on an ASG's lifecycle.</p>
+<p>This provider will wait for healthy instances for up to
+<code>wait_for_capacity_timeout</code>. If ASG creation is taking more than a few minutes,
+it's worth investigating for scaling activity errors, which can be caused by
+problems with the selected Launch Configuration.</p>
+<p>Setting <code>wait_for_capacity_timeout</code> to <code>&amp;quot;0&amp;quot;</code> disables ASG Capacity waiting.</p>
+<h4 id="waiting-for-elb-capacity">Waiting for ELB Capacity</h4>
+<p>The second mechanism is optional, and affects ASGs with attached ELBs specified
+via the <code>load_balancers</code> attribute or with ALBs specified with <code>target_group_arns</code>.</p>
+<p>The <code>min_elb_capacity</code> parameter causes this provider to wait for at least the
+requested number of instances to show up <code>&amp;quot;InService&amp;quot;</code> in all attached ELBs
+during ASG creation.  It has no effect on ASG updates.</p>
+<p>If <code>wait_for_elb_capacity</code> is set, this provider will wait for exactly that number
+of Instances to be <code>&amp;quot;InService&amp;quot;</code> in all attached ELBs on both creation and
+updates.</p>
+<p>These parameters can be used to ensure that service is being provided before
+this provider moves on. If new instances don't pass the ELB's health checks for any
+reason, the deployment will time out, and the ASG will be marked as
+tainted (i.e. marked to be destroyed in a follow up run).</p>
+<p>As with ASG Capacity, this provider will wait for up to <code>wait_for_capacity_timeout</code>
+for the proper number of instances to be healthy.</p>
+<h4 id="troubleshooting-capacity-waiting-timeouts">Troubleshooting Capacity Waiting Timeouts</h4>
+<p>If ASG creation takes more than a few minutes, this could indicate one of a
+number of configuration problems. See the <a href="https://docs.aws.amazon.com/ElasticLoadBalancing/latest/DeveloperGuide/elb-troubleshooting.html">AWS Docs on Load Balancer
+Troubleshooting</a>
+for more information.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/autoscaling_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/autoscaling_group.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.AutoScaling.GroupArgs.html">GroupArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.AutoScaling.GroupState.html">GroupState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.AutoScaling.Invokes.html">Invokes</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.AutoScaling.LifecycleHook.html">LifecycleHook</a></h4>
+      <section><p>Provides an AutoScaling Lifecycle Hook resource.</p>
+<blockquote>
+<p><strong>NOTE:</strong> This provider has two types of ways you can add lifecycle hooks - via
+the <code>initial_lifecycle_hook</code> attribute from the
+<a href="https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html"><code>aws.autoscaling.Group</code></a>
+resource, or via this one. Hooks added via this resource will not be added
+until the autoscaling group has been created, and depending on your
+<a href="https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html#waiting-for-capacity">capacity</a>
+settings, after the initial instances have been launched, creating unintended
+behavior. If you need hooks to run on all instances, add them with
+<code>initial_lifecycle_hook</code> in
+<a href="https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html"><code>aws.autoscaling.Group</code></a>,
+but take care to not duplicate those hooks with this resource.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/autoscaling_lifecycle_hook.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/autoscaling_lifecycle_hook.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.AutoScaling.LifecycleHookArgs.html">LifecycleHookArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.AutoScaling.LifecycleHookState.html">LifecycleHookState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.AutoScaling.Notification.html">Notification</a></h4>
+      <section><p>Provides an AutoScaling Group with Notification support, via SNS Topics. Each of
+the <code>notifications</code> map to a [Notification Configuration][2] inside Amazon Web
+Services, and are applied to each AutoScaling Group you supply.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/autoscaling_notification.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/autoscaling_notification.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.AutoScaling.NotificationArgs.html">NotificationArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.AutoScaling.NotificationState.html">NotificationState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.AutoScaling.Policy.html">Policy</a></h4>
+      <section><p>Provides an AutoScaling Scaling Policy resource.</p>
+<blockquote>
+<p><strong>NOTE:</strong> You may want to omit <code>desired_capacity</code> attribute from attached <code>aws.autoscaling.Group</code>
+when using autoscaling policies. It's good practice to pick either
+<a href="https://docs.aws.amazon.com/AutoScaling/latest/DeveloperGuide/as-manual-scaling.html">manual</a>
+or <a href="https://docs.aws.amazon.com/AutoScaling/latest/DeveloperGuide/as-scale-based-on-demand.html">dynamic</a>
+(policy-based) scaling.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/autoscaling_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/autoscaling_policy.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.AutoScaling.PolicyArgs.html">PolicyArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.AutoScaling.PolicyState.html">PolicyState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.AutoScaling.Schedule.html">Schedule</a></h4>
+      <section><p>Provides an AutoScaling Schedule resource.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/autoscaling_schedule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/autoscaling_schedule.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.AutoScaling.ScheduleArgs.html">ScheduleArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.AutoScaling.ScheduleState.html">ScheduleState</a></h4>
+      <section></section>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

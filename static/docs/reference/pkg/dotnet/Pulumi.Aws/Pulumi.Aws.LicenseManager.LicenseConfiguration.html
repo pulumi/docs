@@ -1,0 +1,481 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class LicenseConfiguration
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class LicenseConfiguration
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Aws.LicenseManager.LicenseConfiguration">
+  
+  <h1 id="Pulumi_Aws_LicenseManager_LicenseConfiguration" data-uid="Pulumi.Aws.LicenseManager.LicenseConfiguration" class="text-break">Class LicenseConfiguration
+  </h1>
+  <div class="markdown level0 summary"><p>Provides a License Manager license configuration resource.</p>
+<blockquote>
+<p><strong>Note:</strong> Removing the <code>license_count</code> attribute is not supported by the License Manager API - recreate the resource instead.</p>
+</blockquote>
+<h2 id="rules">Rules</h2>
+<p>License rules should be in the format of <code>#RuleType=RuleValue</code>. Supported rule types:</p>
+<ul>
+<li><code>minimumVcpus</code> - Resource must have minimum vCPU count in order to use the license. Default: 1</li>
+<li><code>maximumVcpus</code> - Resource must have maximum vCPU count in order to use the license. Default: unbounded, limit: 10000</li>
+<li><code>minimumCores</code> - Resource must have minimum core count in order to use the license. Default: 1</li>
+<li><code>maximumCores</code> - Resource must have maximum core count in order to use the license. Default: unbounded, limit: 10000</li>
+<li><code>minimumSockets</code> - Resource must have minimum socket count in order to use the license. Default: 1</li>
+<li><code>maximumSockets</code> - Resource must have maximum socket count in order to use the license. Default: unbounded, limit: 10000</li>
+<li><code>allowedTenancy</code> - Defines where the license can be used. If set, restricts license usage to selected tenancies. Specify a comma delimited list of <code>EC2-Default</code>, <code>EC2-DedicatedHost</code>, <code>EC2-DedicatedInstance</code></li>
+</ul>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/licensemanager_license_configuration.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/licensemanager_license_configuration.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">LicenseConfiguration</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.LicenseManager.html">Pulumi.Aws.LicenseManager</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
+  <h5 id="Pulumi_Aws_LicenseManager_LicenseConfiguration_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class LicenseConfiguration : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Licensemanager/LicenseConfiguration.cs/#L83">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_LicenseManager_LicenseConfiguration__ctor_" data-uid="Pulumi.Aws.LicenseManager.LicenseConfiguration.#ctor*"></a>
+  <h4 id="Pulumi_Aws_LicenseManager_LicenseConfiguration__ctor_System_String_Pulumi_Aws_LicenseManager_LicenseConfigurationArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.LicenseManager.LicenseConfiguration.#ctor(System.String,Pulumi.Aws.LicenseManager.LicenseConfigurationArgs,Pulumi.CustomResourceOptions)">LicenseConfiguration(String, LicenseConfigurationArgs, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Create a LicenseConfiguration resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LicenseConfiguration(string name, LicenseConfigurationArgs args, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Aws.LicenseManager.LicenseConfigurationArgs.html">LicenseConfigurationArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Licensemanager/LicenseConfiguration.cs/#L36">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_LicenseManager_LicenseConfiguration_Description_" data-uid="Pulumi.Aws.LicenseManager.LicenseConfiguration.Description*"></a>
+  <h4 id="Pulumi_Aws_LicenseManager_LicenseConfiguration_Description" data-uid="Pulumi.Aws.LicenseManager.LicenseConfiguration.Description">Description</h4>
+  <div class="markdown level1 summary"><p>Description of the license configuration.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Licensemanager/LicenseConfiguration.cs/#L42">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_LicenseManager_LicenseConfiguration_LicenseCount_" data-uid="Pulumi.Aws.LicenseManager.LicenseConfiguration.LicenseCount*"></a>
+  <h4 id="Pulumi_Aws_LicenseManager_LicenseConfiguration_LicenseCount" data-uid="Pulumi.Aws.LicenseManager.LicenseConfiguration.LicenseCount">LicenseCount</h4>
+  <div class="markdown level1 summary"><p>Number of licenses managed by the license configuration.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; LicenseCount { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Licensemanager/LicenseConfiguration.cs/#L48">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_LicenseManager_LicenseConfiguration_LicenseCountHardLimit_" data-uid="Pulumi.Aws.LicenseManager.LicenseConfiguration.LicenseCountHardLimit*"></a>
+  <h4 id="Pulumi_Aws_LicenseManager_LicenseConfiguration_LicenseCountHardLimit" data-uid="Pulumi.Aws.LicenseManager.LicenseConfiguration.LicenseCountHardLimit">LicenseCountHardLimit</h4>
+  <div class="markdown level1 summary"><p>Sets the number of available licenses as a hard limit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; LicenseCountHardLimit { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Licensemanager/LicenseConfiguration.cs/#L54">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_LicenseManager_LicenseConfiguration_LicenseCountingType_" data-uid="Pulumi.Aws.LicenseManager.LicenseConfiguration.LicenseCountingType*"></a>
+  <h4 id="Pulumi_Aws_LicenseManager_LicenseConfiguration_LicenseCountingType" data-uid="Pulumi.Aws.LicenseManager.LicenseConfiguration.LicenseCountingType">LicenseCountingType</h4>
+  <div class="markdown level1 summary"><p>Dimension to use to track license inventory. Specify either <code>vCPU</code>, <code>Instance</code>, <code>Core</code> or <code>Socket</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; LicenseCountingType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Licensemanager/LicenseConfiguration.cs/#L60">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_LicenseManager_LicenseConfiguration_LicenseRules_" data-uid="Pulumi.Aws.LicenseManager.LicenseConfiguration.LicenseRules*"></a>
+  <h4 id="Pulumi_Aws_LicenseManager_LicenseConfiguration_LicenseRules" data-uid="Pulumi.Aws.LicenseManager.LicenseConfiguration.LicenseRules">LicenseRules</h4>
+  <div class="markdown level1 summary"><p>Array of configured License Manager rules.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; LicenseRules { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Licensemanager/LicenseConfiguration.cs/#L66">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_LicenseManager_LicenseConfiguration_Name_" data-uid="Pulumi.Aws.LicenseManager.LicenseConfiguration.Name*"></a>
+  <h4 id="Pulumi_Aws_LicenseManager_LicenseConfiguration_Name" data-uid="Pulumi.Aws.LicenseManager.LicenseConfiguration.Name">Name</h4>
+  <div class="markdown level1 summary"><p>Name of the license configuration.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Licensemanager/LicenseConfiguration.cs/#L72">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_LicenseManager_LicenseConfiguration_Tags_" data-uid="Pulumi.Aws.LicenseManager.LicenseConfiguration.Tags*"></a>
+  <h4 id="Pulumi_Aws_LicenseManager_LicenseConfiguration_Tags" data-uid="Pulumi.Aws.LicenseManager.LicenseConfiguration.Tags">Tags</h4>
+  <div class="markdown level1 summary"><p>A mapping of tags to assign to the resource.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Tags { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Licensemanager/LicenseConfiguration.cs/#L113">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_LicenseManager_LicenseConfiguration_Get_" data-uid="Pulumi.Aws.LicenseManager.LicenseConfiguration.Get*"></a>
+  <h4 id="Pulumi_Aws_LicenseManager_LicenseConfiguration_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_LicenseManager_LicenseConfigurationState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.LicenseManager.LicenseConfiguration.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.LicenseManager.LicenseConfigurationState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, LicenseConfigurationState, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Get an existing LicenseConfiguration resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static LicenseConfiguration Get(string name, Input&lt;string&gt; id, LicenseConfigurationState state = null, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Aws.LicenseManager.LicenseConfigurationState.html">LicenseConfigurationState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Aws.LicenseManager.LicenseConfiguration.html">LicenseConfiguration</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Licensemanager/LicenseConfiguration.cs/#L31" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

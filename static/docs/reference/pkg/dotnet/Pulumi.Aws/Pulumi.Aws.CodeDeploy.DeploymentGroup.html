@@ -1,0 +1,686 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class DeploymentGroup
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class DeploymentGroup
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Aws.CodeDeploy.DeploymentGroup">
+  
+  <h1 id="Pulumi_Aws_CodeDeploy_DeploymentGroup" data-uid="Pulumi.Aws.CodeDeploy.DeploymentGroup" class="text-break">Class DeploymentGroup
+  </h1>
+  <div class="markdown level0 summary"><p>Provides a CodeDeploy Deployment Group for a CodeDeploy Application</p>
+<blockquote>
+<p><strong>NOTE on blue/green deployments:</strong> When using <code>green_fleet_provisioning_option</code> with the <code>COPY_AUTO_SCALING_GROUP</code> action, CodeDeploy will create a new ASG with a different name. This ASG is <em>not</em> managed by this provider and will conflict with existing configuration and state. You may want to use a different approach to managing deployments that involve multiple ASG, such as <code>DISCOVER_EXISTING</code> with separate blue and green ASG.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codedeploy_deployment_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codedeploy_deployment_group.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">DeploymentGroup</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.CodeDeploy.html">Pulumi.Aws.CodeDeploy</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
+  <h5 id="Pulumi_Aws_CodeDeploy_DeploymentGroup_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class DeploymentGroup : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codedeploy/DeploymentGroup.cs/#L119">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_CodeDeploy_DeploymentGroup__ctor_" data-uid="Pulumi.Aws.CodeDeploy.DeploymentGroup.#ctor*"></a>
+  <h4 id="Pulumi_Aws_CodeDeploy_DeploymentGroup__ctor_System_String_Pulumi_Aws_CodeDeploy_DeploymentGroupArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.CodeDeploy.DeploymentGroup.#ctor(System.String,Pulumi.Aws.CodeDeploy.DeploymentGroupArgs,Pulumi.CustomResourceOptions)">DeploymentGroup(String, DeploymentGroupArgs, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Create a DeploymentGroup resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DeploymentGroup(string name, DeploymentGroupArgs args, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Aws.CodeDeploy.DeploymentGroupArgs.html">DeploymentGroupArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codedeploy/DeploymentGroup.cs/#L24">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_CodeDeploy_DeploymentGroup_AlarmConfiguration_" data-uid="Pulumi.Aws.CodeDeploy.DeploymentGroup.AlarmConfiguration*"></a>
+  <h4 id="Pulumi_Aws_CodeDeploy_DeploymentGroup_AlarmConfiguration" data-uid="Pulumi.Aws.CodeDeploy.DeploymentGroup.AlarmConfiguration">AlarmConfiguration</h4>
+  <div class="markdown level1 summary"><p>Configuration block of alarms associated with the deployment group (documented below).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;DeploymentGroupAlarmConfiguration&gt; AlarmConfiguration { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.CodeDeploy.Outputs.DeploymentGroupAlarmConfiguration.html">DeploymentGroupAlarmConfiguration</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codedeploy/DeploymentGroup.cs/#L30">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_CodeDeploy_DeploymentGroup_AppName_" data-uid="Pulumi.Aws.CodeDeploy.DeploymentGroup.AppName*"></a>
+  <h4 id="Pulumi_Aws_CodeDeploy_DeploymentGroup_AppName" data-uid="Pulumi.Aws.CodeDeploy.DeploymentGroup.AppName">AppName</h4>
+  <div class="markdown level1 summary"><p>The name of the application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AppName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codedeploy/DeploymentGroup.cs/#L36">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_CodeDeploy_DeploymentGroup_AutoRollbackConfiguration_" data-uid="Pulumi.Aws.CodeDeploy.DeploymentGroup.AutoRollbackConfiguration*"></a>
+  <h4 id="Pulumi_Aws_CodeDeploy_DeploymentGroup_AutoRollbackConfiguration" data-uid="Pulumi.Aws.CodeDeploy.DeploymentGroup.AutoRollbackConfiguration">AutoRollbackConfiguration</h4>
+  <div class="markdown level1 summary"><p>Configuration block of the automatic rollback configuration associated with the deployment group (documented below).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;DeploymentGroupAutoRollbackConfiguration&gt; AutoRollbackConfiguration { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.CodeDeploy.Outputs.DeploymentGroupAutoRollbackConfiguration.html">DeploymentGroupAutoRollbackConfiguration</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codedeploy/DeploymentGroup.cs/#L42">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_CodeDeploy_DeploymentGroup_AutoscalingGroups_" data-uid="Pulumi.Aws.CodeDeploy.DeploymentGroup.AutoscalingGroups*"></a>
+  <h4 id="Pulumi_Aws_CodeDeploy_DeploymentGroup_AutoscalingGroups" data-uid="Pulumi.Aws.CodeDeploy.DeploymentGroup.AutoscalingGroups">AutoscalingGroups</h4>
+  <div class="markdown level1 summary"><p>Autoscaling groups associated with the deployment group.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; AutoscalingGroups { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codedeploy/DeploymentGroup.cs/#L48">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_CodeDeploy_DeploymentGroup_BlueGreenDeploymentConfig_" data-uid="Pulumi.Aws.CodeDeploy.DeploymentGroup.BlueGreenDeploymentConfig*"></a>
+  <h4 id="Pulumi_Aws_CodeDeploy_DeploymentGroup_BlueGreenDeploymentConfig" data-uid="Pulumi.Aws.CodeDeploy.DeploymentGroup.BlueGreenDeploymentConfig">BlueGreenDeploymentConfig</h4>
+  <div class="markdown level1 summary"><p>Configuration block of the blue/green deployment options for a deployment group (documented below).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;DeploymentGroupBlueGreenDeploymentConfig&gt; BlueGreenDeploymentConfig { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.CodeDeploy.Outputs.DeploymentGroupBlueGreenDeploymentConfig.html">DeploymentGroupBlueGreenDeploymentConfig</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codedeploy/DeploymentGroup.cs/#L54">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_CodeDeploy_DeploymentGroup_DeploymentConfigName_" data-uid="Pulumi.Aws.CodeDeploy.DeploymentGroup.DeploymentConfigName*"></a>
+  <h4 id="Pulumi_Aws_CodeDeploy_DeploymentGroup_DeploymentConfigName" data-uid="Pulumi.Aws.CodeDeploy.DeploymentGroup.DeploymentConfigName">DeploymentConfigName</h4>
+  <div class="markdown level1 summary"><p>The name of the group's deployment config. The default is &quot;CodeDeployDefault.OneAtATime&quot;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DeploymentConfigName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codedeploy/DeploymentGroup.cs/#L60">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_CodeDeploy_DeploymentGroup_DeploymentGroupName_" data-uid="Pulumi.Aws.CodeDeploy.DeploymentGroup.DeploymentGroupName*"></a>
+  <h4 id="Pulumi_Aws_CodeDeploy_DeploymentGroup_DeploymentGroupName" data-uid="Pulumi.Aws.CodeDeploy.DeploymentGroup.DeploymentGroupName">DeploymentGroupName</h4>
+  <div class="markdown level1 summary"><p>The name of the deployment group.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DeploymentGroupName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codedeploy/DeploymentGroup.cs/#L66">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_CodeDeploy_DeploymentGroup_DeploymentStyle_" data-uid="Pulumi.Aws.CodeDeploy.DeploymentGroup.DeploymentStyle*"></a>
+  <h4 id="Pulumi_Aws_CodeDeploy_DeploymentGroup_DeploymentStyle" data-uid="Pulumi.Aws.CodeDeploy.DeploymentGroup.DeploymentStyle">DeploymentStyle</h4>
+  <div class="markdown level1 summary"><p>Configuration block of the type of deployment, either in-place or blue/green, you want to run and whether to route deployment traffic behind a load balancer (documented below).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;DeploymentGroupDeploymentStyle&gt; DeploymentStyle { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.CodeDeploy.Outputs.DeploymentGroupDeploymentStyle.html">DeploymentGroupDeploymentStyle</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codedeploy/DeploymentGroup.cs/#L72">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_CodeDeploy_DeploymentGroup_Ec2TagFilters_" data-uid="Pulumi.Aws.CodeDeploy.DeploymentGroup.Ec2TagFilters*"></a>
+  <h4 id="Pulumi_Aws_CodeDeploy_DeploymentGroup_Ec2TagFilters" data-uid="Pulumi.Aws.CodeDeploy.DeploymentGroup.Ec2TagFilters">Ec2TagFilters</h4>
+  <div class="markdown level1 summary"><p>Tag filters associated with the deployment group. See the AWS docs for details.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;DeploymentGroupEc2TagFilters&gt;&gt; Ec2TagFilters { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.CodeDeploy.Outputs.DeploymentGroupEc2TagFilters.html">DeploymentGroupEc2TagFilters</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codedeploy/DeploymentGroup.cs/#L78">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_CodeDeploy_DeploymentGroup_Ec2TagSets_" data-uid="Pulumi.Aws.CodeDeploy.DeploymentGroup.Ec2TagSets*"></a>
+  <h4 id="Pulumi_Aws_CodeDeploy_DeploymentGroup_Ec2TagSets" data-uid="Pulumi.Aws.CodeDeploy.DeploymentGroup.Ec2TagSets">Ec2TagSets</h4>
+  <div class="markdown level1 summary"><p>Configuration block(s) of Tag filters associated with the deployment group, which are also referred to as tag groups (documented below). See the AWS docs for details.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;DeploymentGroupEc2TagSets&gt;&gt; Ec2TagSets { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.CodeDeploy.Outputs.DeploymentGroupEc2TagSets.html">DeploymentGroupEc2TagSets</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codedeploy/DeploymentGroup.cs/#L84">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_CodeDeploy_DeploymentGroup_EcsService_" data-uid="Pulumi.Aws.CodeDeploy.DeploymentGroup.EcsService*"></a>
+  <h4 id="Pulumi_Aws_CodeDeploy_DeploymentGroup_EcsService" data-uid="Pulumi.Aws.CodeDeploy.DeploymentGroup.EcsService">EcsService</h4>
+  <div class="markdown level1 summary"><p>Configuration block(s) of the ECS services for a deployment group (documented below).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;DeploymentGroupEcsService&gt; EcsService { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.CodeDeploy.Outputs.DeploymentGroupEcsService.html">DeploymentGroupEcsService</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codedeploy/DeploymentGroup.cs/#L90">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_CodeDeploy_DeploymentGroup_LoadBalancerInfo_" data-uid="Pulumi.Aws.CodeDeploy.DeploymentGroup.LoadBalancerInfo*"></a>
+  <h4 id="Pulumi_Aws_CodeDeploy_DeploymentGroup_LoadBalancerInfo" data-uid="Pulumi.Aws.CodeDeploy.DeploymentGroup.LoadBalancerInfo">LoadBalancerInfo</h4>
+  <div class="markdown level1 summary"><p>Single configuration block of the load balancer to use in a blue/green deployment (documented below).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;DeploymentGroupLoadBalancerInfo&gt; LoadBalancerInfo { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.CodeDeploy.Outputs.DeploymentGroupLoadBalancerInfo.html">DeploymentGroupLoadBalancerInfo</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codedeploy/DeploymentGroup.cs/#L96">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_CodeDeploy_DeploymentGroup_OnPremisesInstanceTagFilters_" data-uid="Pulumi.Aws.CodeDeploy.DeploymentGroup.OnPremisesInstanceTagFilters*"></a>
+  <h4 id="Pulumi_Aws_CodeDeploy_DeploymentGroup_OnPremisesInstanceTagFilters" data-uid="Pulumi.Aws.CodeDeploy.DeploymentGroup.OnPremisesInstanceTagFilters">OnPremisesInstanceTagFilters</h4>
+  <div class="markdown level1 summary"><p>On premise tag filters associated with the group. See the AWS docs for details.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;DeploymentGroupOnPremisesInstanceTagFilters&gt;&gt; OnPremisesInstanceTagFilters { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.CodeDeploy.Outputs.DeploymentGroupOnPremisesInstanceTagFilters.html">DeploymentGroupOnPremisesInstanceTagFilters</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codedeploy/DeploymentGroup.cs/#L102">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_CodeDeploy_DeploymentGroup_ServiceRoleArn_" data-uid="Pulumi.Aws.CodeDeploy.DeploymentGroup.ServiceRoleArn*"></a>
+  <h4 id="Pulumi_Aws_CodeDeploy_DeploymentGroup_ServiceRoleArn" data-uid="Pulumi.Aws.CodeDeploy.DeploymentGroup.ServiceRoleArn">ServiceRoleArn</h4>
+  <div class="markdown level1 summary"><p>The service role ARN that allows deployments.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ServiceRoleArn { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codedeploy/DeploymentGroup.cs/#L108">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_CodeDeploy_DeploymentGroup_TriggerConfigurations_" data-uid="Pulumi.Aws.CodeDeploy.DeploymentGroup.TriggerConfigurations*"></a>
+  <h4 id="Pulumi_Aws_CodeDeploy_DeploymentGroup_TriggerConfigurations" data-uid="Pulumi.Aws.CodeDeploy.DeploymentGroup.TriggerConfigurations">TriggerConfigurations</h4>
+  <div class="markdown level1 summary"><p>Configuration block(s) of the triggers for the deployment group (documented below).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;DeploymentGroupTriggerConfigurations&gt;&gt; TriggerConfigurations { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.CodeDeploy.Outputs.DeploymentGroupTriggerConfigurations.html">DeploymentGroupTriggerConfigurations</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codedeploy/DeploymentGroup.cs/#L149">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_CodeDeploy_DeploymentGroup_Get_" data-uid="Pulumi.Aws.CodeDeploy.DeploymentGroup.Get*"></a>
+  <h4 id="Pulumi_Aws_CodeDeploy_DeploymentGroup_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_CodeDeploy_DeploymentGroupState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.CodeDeploy.DeploymentGroup.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.CodeDeploy.DeploymentGroupState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, DeploymentGroupState, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Get an existing DeploymentGroup resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static DeploymentGroup Get(string name, Input&lt;string&gt; id, DeploymentGroupState state = null, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Aws.CodeDeploy.DeploymentGroupState.html">DeploymentGroupState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Aws.CodeDeploy.DeploymentGroup.html">DeploymentGroup</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codedeploy/DeploymentGroup.cs/#L19" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

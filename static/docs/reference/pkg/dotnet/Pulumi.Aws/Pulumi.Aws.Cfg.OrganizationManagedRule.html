@@ -1,0 +1,581 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class OrganizationManagedRule
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class OrganizationManagedRule
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Aws.Cfg.OrganizationManagedRule">
+  
+  <h1 id="Pulumi_Aws_Cfg_OrganizationManagedRule" data-uid="Pulumi.Aws.Cfg.OrganizationManagedRule" class="text-break">Class OrganizationManagedRule
+  </h1>
+  <div class="markdown level0 summary"><p>Manages a Config Organization Managed Rule. More information about these rules can be found in the <a href="https://docs.aws.amazon.com/config/latest/developerguide/config-rule-multi-account-deployment.html">Enabling AWS Config Rules Across all Accounts in Your Organization</a> and <a href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html">AWS Config Managed Rules</a> documentation. For working with Organization Custom Rules (those invoking a custom Lambda Function), see the <a href="https://www.terraform.io/docs/providers/aws/r/config_organization_custom_rule.html"><code>aws.cfg.OrganizationCustomRule</code> resource</a>.</p>
+<blockquote>
+<p><strong>NOTE:</strong> This resource must be created in the Organization master account and rules will include the master account unless its ID is added to the <code>excluded_accounts</code> argument.</p>
+</blockquote>
+<blockquote>
+<p><strong>NOTE:</strong> Every Organization account except those configured in the <code>excluded_accounts</code> argument must have a Configuration Recorder with proper IAM permissions before the rule will successfully create or update. See also the <a href="https://www.terraform.io/docs/providers/aws/r/config_configuration_recorder.html"><code>aws.cfg.Recorder</code> resource</a>.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_organization_managed_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_organization_managed_rule.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">OrganizationManagedRule</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Cfg.html">Pulumi.Aws.Cfg</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
+  <h5 id="Pulumi_Aws_Cfg_OrganizationManagedRule_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class OrganizationManagedRule : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cfg/OrganizationManagedRule.cs/#L97">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Cfg_OrganizationManagedRule__ctor_" data-uid="Pulumi.Aws.Cfg.OrganizationManagedRule.#ctor*"></a>
+  <h4 id="Pulumi_Aws_Cfg_OrganizationManagedRule__ctor_System_String_Pulumi_Aws_Cfg_OrganizationManagedRuleArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Cfg.OrganizationManagedRule.#ctor(System.String,Pulumi.Aws.Cfg.OrganizationManagedRuleArgs,Pulumi.CustomResourceOptions)">OrganizationManagedRule(String, OrganizationManagedRuleArgs, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Create a OrganizationManagedRule resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OrganizationManagedRule(string name, OrganizationManagedRuleArgs args, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Aws.Cfg.OrganizationManagedRuleArgs.html">OrganizationManagedRuleArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cfg/OrganizationManagedRule.cs/#L26">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Cfg_OrganizationManagedRule_Arn_" data-uid="Pulumi.Aws.Cfg.OrganizationManagedRule.Arn*"></a>
+  <h4 id="Pulumi_Aws_Cfg_OrganizationManagedRule_Arn" data-uid="Pulumi.Aws.Cfg.OrganizationManagedRule.Arn">Arn</h4>
+  <div class="markdown level1 summary"><p>Amazon Resource Name (ARN) of the rule</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Arn { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cfg/OrganizationManagedRule.cs/#L32">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Cfg_OrganizationManagedRule_Description_" data-uid="Pulumi.Aws.Cfg.OrganizationManagedRule.Description*"></a>
+  <h4 id="Pulumi_Aws_Cfg_OrganizationManagedRule_Description" data-uid="Pulumi.Aws.Cfg.OrganizationManagedRule.Description">Description</h4>
+  <div class="markdown level1 summary"><p>Description of the rule</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cfg/OrganizationManagedRule.cs/#L38">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Cfg_OrganizationManagedRule_ExcludedAccounts_" data-uid="Pulumi.Aws.Cfg.OrganizationManagedRule.ExcludedAccounts*"></a>
+  <h4 id="Pulumi_Aws_Cfg_OrganizationManagedRule_ExcludedAccounts" data-uid="Pulumi.Aws.Cfg.OrganizationManagedRule.ExcludedAccounts">ExcludedAccounts</h4>
+  <div class="markdown level1 summary"><p>List of AWS account identifiers to exclude from the rule</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; ExcludedAccounts { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cfg/OrganizationManagedRule.cs/#L44">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Cfg_OrganizationManagedRule_InputParameters_" data-uid="Pulumi.Aws.Cfg.OrganizationManagedRule.InputParameters*"></a>
+  <h4 id="Pulumi_Aws_Cfg_OrganizationManagedRule_InputParameters" data-uid="Pulumi.Aws.Cfg.OrganizationManagedRule.InputParameters">InputParameters</h4>
+  <div class="markdown level1 summary"><p>A string in JSON format that is passed to the AWS Config Rule Lambda Function</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; InputParameters { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cfg/OrganizationManagedRule.cs/#L50">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Cfg_OrganizationManagedRule_MaximumExecutionFrequency_" data-uid="Pulumi.Aws.Cfg.OrganizationManagedRule.MaximumExecutionFrequency*"></a>
+  <h4 id="Pulumi_Aws_Cfg_OrganizationManagedRule_MaximumExecutionFrequency" data-uid="Pulumi.Aws.Cfg.OrganizationManagedRule.MaximumExecutionFrequency">MaximumExecutionFrequency</h4>
+  <div class="markdown level1 summary"><p>The maximum frequency with which AWS Config runs evaluations for a rule, if the rule is triggered at a periodic frequency. Defaults to <code>TwentyFour_Hours</code> for periodic frequency triggered rules. Valid values: <code>One_Hour</code>, <code>Three_Hours</code>, <code>Six_Hours</code>, <code>Twelve_Hours</code>, or <code>TwentyFour_Hours</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; MaximumExecutionFrequency { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cfg/OrganizationManagedRule.cs/#L56">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Cfg_OrganizationManagedRule_Name_" data-uid="Pulumi.Aws.Cfg.OrganizationManagedRule.Name*"></a>
+  <h4 id="Pulumi_Aws_Cfg_OrganizationManagedRule_Name" data-uid="Pulumi.Aws.Cfg.OrganizationManagedRule.Name">Name</h4>
+  <div class="markdown level1 summary"><p>The name of the rule</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cfg/OrganizationManagedRule.cs/#L62">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Cfg_OrganizationManagedRule_ResourceIdScope_" data-uid="Pulumi.Aws.Cfg.OrganizationManagedRule.ResourceIdScope*"></a>
+  <h4 id="Pulumi_Aws_Cfg_OrganizationManagedRule_ResourceIdScope" data-uid="Pulumi.Aws.Cfg.OrganizationManagedRule.ResourceIdScope">ResourceIdScope</h4>
+  <div class="markdown level1 summary"><p>Identifier of the AWS resource to evaluate</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ResourceIdScope { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cfg/OrganizationManagedRule.cs/#L68">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Cfg_OrganizationManagedRule_ResourceTypesScopes_" data-uid="Pulumi.Aws.Cfg.OrganizationManagedRule.ResourceTypesScopes*"></a>
+  <h4 id="Pulumi_Aws_Cfg_OrganizationManagedRule_ResourceTypesScopes" data-uid="Pulumi.Aws.Cfg.OrganizationManagedRule.ResourceTypesScopes">ResourceTypesScopes</h4>
+  <div class="markdown level1 summary"><p>List of types of AWS resources to evaluate</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; ResourceTypesScopes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cfg/OrganizationManagedRule.cs/#L74">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Cfg_OrganizationManagedRule_RuleIdentifier_" data-uid="Pulumi.Aws.Cfg.OrganizationManagedRule.RuleIdentifier*"></a>
+  <h4 id="Pulumi_Aws_Cfg_OrganizationManagedRule_RuleIdentifier" data-uid="Pulumi.Aws.Cfg.OrganizationManagedRule.RuleIdentifier">RuleIdentifier</h4>
+  <div class="markdown level1 summary"><p>Identifier of an available AWS Config Managed Rule to call. For available values, see the <a href="https://docs.aws.amazon.com/config/latest/developerguide/managed-rules-by-aws-config.html">List of AWS Config Managed Rules</a> documentation</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; RuleIdentifier { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cfg/OrganizationManagedRule.cs/#L80">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Cfg_OrganizationManagedRule_TagKeyScope_" data-uid="Pulumi.Aws.Cfg.OrganizationManagedRule.TagKeyScope*"></a>
+  <h4 id="Pulumi_Aws_Cfg_OrganizationManagedRule_TagKeyScope" data-uid="Pulumi.Aws.Cfg.OrganizationManagedRule.TagKeyScope">TagKeyScope</h4>
+  <div class="markdown level1 summary"><p>Tag key of AWS resources to evaluate</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; TagKeyScope { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cfg/OrganizationManagedRule.cs/#L86">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Cfg_OrganizationManagedRule_TagValueScope_" data-uid="Pulumi.Aws.Cfg.OrganizationManagedRule.TagValueScope*"></a>
+  <h4 id="Pulumi_Aws_Cfg_OrganizationManagedRule_TagValueScope" data-uid="Pulumi.Aws.Cfg.OrganizationManagedRule.TagValueScope">TagValueScope</h4>
+  <div class="markdown level1 summary"><p>Tag value of AWS resources to evaluate</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; TagValueScope { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cfg/OrganizationManagedRule.cs/#L127">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Cfg_OrganizationManagedRule_Get_" data-uid="Pulumi.Aws.Cfg.OrganizationManagedRule.Get*"></a>
+  <h4 id="Pulumi_Aws_Cfg_OrganizationManagedRule_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_Cfg_OrganizationManagedRuleState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Cfg.OrganizationManagedRule.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.Cfg.OrganizationManagedRuleState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, OrganizationManagedRuleState, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Get an existing OrganizationManagedRule resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static OrganizationManagedRule Get(string name, Input&lt;string&gt; id, OrganizationManagedRuleState state = null, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Aws.Cfg.OrganizationManagedRuleState.html">OrganizationManagedRuleState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Aws.Cfg.OrganizationManagedRule.html">OrganizationManagedRule</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cfg/OrganizationManagedRule.cs/#L21" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
