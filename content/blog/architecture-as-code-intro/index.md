@@ -239,7 +239,7 @@ The [original example](https://github.com/kubernetes/examples/tree/master/guestb
 
 ## Microservices
 
-Microservices are based on the idea that components encapsulate a business capability. Services are independently deployable and communicate via web service requests, which has the advantage of redeploying only one or selected services and leaving the remaining components up and running. The [12-Factor app](https://12factor.net/) is the canonical pattern for microservice, which is summarized by:
+Microservices are based on the idea that components encapsulate a business capability. Services are independently deployable and communicate via web service requests, which has the advantage of redeploying only one or selected services and leaving the remaining components up and running. The [12-Factor app](https://12factor.net/) is the canonical pattern for microservices, which is summarized by:
 
 - Use declarative methods to configure and deploy applications.
 - Enforce maximum portability between environments by establishing a clean contract with the underlying operating system.
