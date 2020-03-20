@@ -37,7 +37,7 @@ const computeFirewall = new gcp.compute.Firewall("firewall", {
 });
 
 // Read the configuration script
-const startupScript = fs.readFileSync(‘config.sh’, ‘utf-8’)
+const startupScript = fs.readFileSync("config.sh", "utf-8")
 
 // Create a Virtual Machine Instance
 const computeInstance = new gcp.compute.Instance("instance", {
