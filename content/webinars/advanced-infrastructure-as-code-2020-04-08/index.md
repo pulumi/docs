@@ -41,6 +41,8 @@ hero:
 main:
     # Webinar title.
     title: "Advanced Infrastructure as Code"
+    # Sortable date. The datetime Hugo will use to sort the webinars in date order.
+    sortable_date: 2020-04-08 11:30:00 +01:00
     # Datetime of the webinar.
     datetime: "WED APR 08, 2020 AT 11:30AM CET"
     # Description of the webinar.

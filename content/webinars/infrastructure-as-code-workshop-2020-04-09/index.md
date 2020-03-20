@@ -41,6 +41,8 @@ hero:
 main:
     # Webinar title.
     title: "Infrastructure as Code Workshop | Kubernetes"
+    # Sortable date. The datetime Hugo will use to sort the webinars in date order.
+    sortable_date: 2020-04-09 17:30:00 -07:00
     # Datetime of the webinar.
     datetime: "THU APR 09, 2020 AT 5:30PM - 8:30PM PDT"
     # Description of the webinar.

@@ -37,8 +37,10 @@ hero:
 main:
     # Webinar title.
     title: "Modernizing Logistics: How to program an asset tracking architecture using serverless technologies"
+    # Sortable date. The datetime Hugo will use to sort the webinars in date order.
+    sortable_date: 2019-02-05 10:00:00 -07:00
     # Datetime of the webinar.
-    datetime: 2019-06-13 11:00:00 -07:00
+    datetime: ""
     # Description of the webinar.
     description: >
         Serverless compute services offer an amazing power to application developers to leverage: highly available, automatically scaled, low-ceremony, pay-per-value functions created in several lines of code. With Pulumi’s cloud native SDKs, serverless gets more fun. Using general purpose languages, we can create resources, and then wire up event handlers, like in normal event-driven programming!

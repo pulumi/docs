@@ -43,8 +43,10 @@ main:
     title: "API Gateway for an AWS Lambda"
     # URL for embedding a URL for ungated webinars.
     youtube_url: "https://www.youtube.com/embed/yYWqcgs6FlA"
+    # Sortable date. The datetime Hugo will use to sort the webinars in date order.
+    sortable_date: 2020-03-18 10:00:00 -07:00
     # Datetime of the webinar.
-    datetime: 2019-02-05 10:00:00 -07:00
+    datetime: ""
     # Description of the webinar.
     description: |
         For our Inaugural Episode, we’ll show you how to set up an API Gateway for an AWS Lambda function in 30 minutes. You’ll learn how to wire this up to a domain name and secure it using an API key for authorization. Finally, we’ll show you how to store the API key in a secrets manager.

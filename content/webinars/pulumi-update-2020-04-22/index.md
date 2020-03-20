@@ -45,6 +45,8 @@ hero:
 main:
     # Webinar title.
     title: "Pulumi Up(date)"
+    # Sortable date. The datetime Hugo will use to sort the webinars in date order.
+    sortable_date: 2020-04-22 11:00:00 -07:00
     # Datetime of the webinar.
     datetime: "WED APR 22, 2020 AT 11:00AM PDT"
     # Description of the webinar.
