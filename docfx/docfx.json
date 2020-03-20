@@ -41,6 +41,7 @@
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
     "template": [
+      "default",
       "./pulumi-template"
     ],
     "postProcessors": [],
