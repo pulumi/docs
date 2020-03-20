@@ -18,19 +18,23 @@
         }
       ],
       "dest": "metadata/Pulumi.FSharp"
+    },
+    {
+      "src": [
+        {
+          "src": "../../pulumi-aws/sdk/dotnet",
+          "files": ["Pulumi.*.csproj"]
+        }
+      ],
+      "dest": "metadata/Pulumi.Aws"
     }
   ],
   "build": {
     "content": [
       {
-        "src": "metadata/Pulumi",
+        "src": "metadata",
         "files": ["**/*.yml"],
-        "dest": "Pulumi"
-      },
-      {
-        "src": "metadata/Pulumi.FSharp",
-        "files": ["**/*.yml"],
-        "dest": "Pulumi.FSharp"
+        "dest": "."
       }
     ],
     "overwrite": [],

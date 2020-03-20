@@ -134,7 +134,7 @@ program ending early before all resources are properly registered.
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/8a0987c892e86706bd3affb6eb934aa084a85c09/sdk/dotnet/Pulumi/Deployment/Deployment.cs/#L42">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Deployment/Deployment.cs/#L42">View Source</a>
   </span>
   <a id="Pulumi_Deployment_Instance_" data-uid="Pulumi.Deployment.Instance*"></a>
   <h4 id="Pulumi_Deployment_Instance" data-uid="Pulumi.Deployment.Instance">Instance</h4>
@@ -164,7 +164,7 @@ passed to <a class="xref" href="Pulumi.Deployment.html#Pulumi_Deployment_RunAsyn
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/8a0987c892e86706bd3affb6eb934aa084a85c09/sdk/dotnet/Pulumi/Deployment/Deployment_Run.cs/#L15">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Deployment/Deployment_Run.cs/#L17">View Source</a>
   </span>
   <a id="Pulumi_Deployment_RunAsync_" data-uid="Pulumi.Deployment.RunAsync*"></a>
   <h4 id="Pulumi_Deployment_RunAsync_System_Action_" data-uid="Pulumi.Deployment.RunAsync(System.Action)">RunAsync(Action)</h4>
@@ -208,7 +208,7 @@ passed to <a class="xref" href="Pulumi.Deployment.html#Pulumi_Deployment_RunAsyn
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/8a0987c892e86706bd3affb6eb934aa084a85c09/sdk/dotnet/Pulumi/Deployment/Deployment_Run.cs/#L27">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Deployment/Deployment_Run.cs/#L29">View Source</a>
   </span>
   <a id="Pulumi_Deployment_RunAsync_" data-uid="Pulumi.Deployment.RunAsync*"></a>
   <h4 id="Pulumi_Deployment_RunAsync_System_Func_System_Collections_Generic_IDictionary_System_String_System_Object___" data-uid="Pulumi.Deployment.RunAsync(System.Func{System.Collections.Generic.IDictionary{System.String,System.Object}})">RunAsync(Func&lt;IDictionary&lt;String, Object&gt;&gt;)</h4>
@@ -252,7 +252,7 @@ passed to <a class="xref" href="Pulumi.Deployment.html#Pulumi_Deployment_RunAsyn
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/8a0987c892e86706bd3affb6eb934aa084a85c09/sdk/dotnet/Pulumi/Deployment/Deployment_Run.cs/#L58">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Deployment/Deployment_Run.cs/#L60">View Source</a>
   </span>
   <a id="Pulumi_Deployment_RunAsync_" data-uid="Pulumi.Deployment.RunAsync*"></a>
   <h4 id="Pulumi_Deployment_RunAsync_System_Func_System_Threading_Tasks_Task_System_Collections_Generic_IDictionary_System_String_System_Object____" data-uid="Pulumi.Deployment.RunAsync(System.Func{System.Threading.Tasks.Task{System.Collections.Generic.IDictionary{System.String,System.Object}}})">RunAsync(Func&lt;Task&lt;IDictionary&lt;String, Object&gt;&gt;&gt;)</h4>
@@ -319,7 +319,7 @@ in this dictionary will become the outputs for the Pulumi Stack that is created.
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/8a0987c892e86706bd3affb6eb934aa084a85c09/sdk/dotnet/Pulumi/Deployment/Deployment_Run.cs/#L87">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Deployment/Deployment_Run.cs/#L89">View Source</a>
   </span>
   <a id="Pulumi_Deployment_RunAsync_" data-uid="Pulumi.Deployment.RunAsync*"></a>
   <h4 id="Pulumi_Deployment_RunAsync__1" data-uid="Pulumi.Deployment.RunAsync``1">RunAsync&lt;TStack&gt;()</h4>
@@ -350,6 +350,7 @@ resources are properly registered.
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;int&gt; RunAsync&lt;TStack&gt;()
+
     where TStack : Stack, new()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
@@ -382,10 +383,84 @@ resources are properly registered.
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Deployment/Deployment_Run.cs/#L103">View Source</a>
+  </span>
+  <a id="Pulumi_Deployment_TestAsync_" data-uid="Pulumi.Deployment.TestAsync*"></a>
+  <h4 id="Pulumi_Deployment_TestAsync__1_Pulumi_Testing_IMocks_Pulumi_Testing_TestOptions_" data-uid="Pulumi.Deployment.TestAsync``1(Pulumi.Testing.IMocks,Pulumi.Testing.TestOptions)">TestAsync&lt;TStack&gt;(IMocks, TestOptions)</h4>
+  <div class="markdown level1 summary"><p>Entry point to test a Pulumi application. Deployment will
+instantiate a new stack instance based on the type passed as TStack
+type parameter. This method creates no real resources.
+Note: Currently, unit tests that call <a class="xref" href="Pulumi.Deployment.html#Pulumi_Deployment_TestAsync__1_Pulumi_Testing_IMocks_Pulumi_Testing_TestOptions_">TestAsync&lt;TStack&gt;(IMocks, TestOptions)</a>
+must run serially; parallel execution is not supported.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;ImmutableArray&lt;Resource&gt;&gt; TestAsync&lt;TStack&gt;(IMocks mocks, TestOptions options = null)
+
+    where TStack : Stack, new()</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Testing.IMocks.html">IMocks</a></td>
+        <td><span class="parametername">mocks</span></td>
+        <td><p>Hooks to mock the engine calls.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Testing.TestOptions.html">TestOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>Optional settings for the test run.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Resource.html">Resource</a>&gt;&gt;</td>
+        <td><p>Test result containing created resources and errors, if any.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TStack</span></td>
+        <td><p>The type of the stack to test.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="eii">Explicit Interface Implementations
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/8a0987c892e86706bd3affb6eb934aa084a85c09/sdk/dotnet/Pulumi/Deployment/Deployment_Invoke.cs/#L13">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Deployment/Deployment_Invoke.cs/#L13">View Source</a>
   </span>
   <a id="Pulumi_Deployment_Pulumi_IDeployment_InvokeAsync_" data-uid="Pulumi.Deployment.Pulumi#IDeployment#InvokeAsync*"></a>
   <h4 id="Pulumi_Deployment_Pulumi_IDeployment_InvokeAsync_System_String_Pulumi_InvokeArgs_Pulumi_InvokeOptions_" data-uid="Pulumi.Deployment.Pulumi#IDeployment#InvokeAsync(System.String,Pulumi.InvokeArgs,Pulumi.InvokeOptions)">IDeployment.InvokeAsync(String, InvokeArgs, InvokeOptions)</h4>
@@ -438,7 +513,7 @@ resources are properly registered.
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/8a0987c892e86706bd3affb6eb934aa084a85c09/sdk/dotnet/Pulumi/Deployment/Deployment_Invoke.cs/#L16">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Deployment/Deployment_Invoke.cs/#L16">View Source</a>
   </span>
   <a id="Pulumi_Deployment_Pulumi_IDeployment_InvokeAsync_" data-uid="Pulumi.Deployment.Pulumi#IDeployment#InvokeAsync*"></a>
   <h4 id="Pulumi_Deployment_Pulumi_IDeployment_InvokeAsync__1_System_String_Pulumi_InvokeArgs_Pulumi_InvokeOptions_" data-uid="Pulumi.Deployment.Pulumi#IDeployment#InvokeAsync``1(System.String,Pulumi.InvokeArgs,Pulumi.InvokeOptions)">IDeployment.InvokeAsync&lt;T&gt;(String, InvokeArgs, InvokeOptions)</h4>
@@ -506,7 +581,7 @@ resources are properly registered.
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/8a0987c892e86706bd3affb6eb934aa084a85c09/sdk/dotnet/Pulumi/Deployment/Deployment.cs/#L114">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Deployment/Deployment.cs/#L124">View Source</a>
   </span>
   <a id="Pulumi_Deployment_Pulumi_IDeployment_IsDryRun_" data-uid="Pulumi.Deployment.Pulumi#IDeployment#IsDryRun*"></a>
   <h4 id="Pulumi_Deployment_Pulumi_IDeployment_IsDryRun" data-uid="Pulumi.Deployment.Pulumi#IDeployment#IsDryRun">IDeployment.IsDryRun</h4>
@@ -532,7 +607,7 @@ resources are properly registered.
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/8a0987c892e86706bd3affb6eb934aa084a85c09/sdk/dotnet/Pulumi/Deployment/Deployment.cs/#L112">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Deployment/Deployment.cs/#L122">View Source</a>
   </span>
   <a id="Pulumi_Deployment_Pulumi_IDeployment_ProjectName_" data-uid="Pulumi.Deployment.Pulumi#IDeployment#ProjectName*"></a>
   <h4 id="Pulumi_Deployment_Pulumi_IDeployment_ProjectName" data-uid="Pulumi.Deployment.Pulumi#IDeployment#ProjectName">IDeployment.ProjectName</h4>
@@ -558,7 +633,7 @@ resources are properly registered.
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/8a0987c892e86706bd3affb6eb934aa084a85c09/sdk/dotnet/Pulumi/Deployment/Deployment.cs/#L113">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Deployment/Deployment.cs/#L123">View Source</a>
   </span>
   <a id="Pulumi_Deployment_Pulumi_IDeployment_StackName_" data-uid="Pulumi.Deployment.Pulumi#IDeployment#StackName*"></a>
   <h4 id="Pulumi_Deployment_Pulumi_IDeployment_StackName" data-uid="Pulumi.Deployment.Pulumi#IDeployment#StackName">IDeployment.StackName</h4>
@@ -594,7 +669,7 @@ resources are properly registered.
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi/blob/8a0987c892e86706bd3affb6eb934aa084a85c09/sdk/dotnet/Pulumi/Deployment/Deployment_Serialization.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Deployment/Deployment_Serialization.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

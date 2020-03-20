@@ -758,6 +758,22 @@ references:
   fullName.vb: Pulumi.Deployment.RunAsync(Of TStack)()
   nameWithType: Deployment.RunAsync<TStack>()
   nameWithType.vb: Deployment.RunAsync(Of TStack)()
+- uid: Pulumi.Deployment.TestAsync*
+  name: TestAsync
+  href: Pulumi/Pulumi.Deployment.html#Pulumi_Deployment_TestAsync_
+  commentId: Overload:Pulumi.Deployment.TestAsync
+  isSpec: "True"
+  fullName: Pulumi.Deployment.TestAsync
+  nameWithType: Deployment.TestAsync
+- uid: Pulumi.Deployment.TestAsync``1(Pulumi.Testing.IMocks,Pulumi.Testing.TestOptions)
+  name: TestAsync<TStack>(IMocks, TestOptions)
+  href: Pulumi/Pulumi.Deployment.html#Pulumi_Deployment_TestAsync__1_Pulumi_Testing_IMocks_Pulumi_Testing_TestOptions_
+  commentId: M:Pulumi.Deployment.TestAsync``1(Pulumi.Testing.IMocks,Pulumi.Testing.TestOptions)
+  name.vb: TestAsync(Of TStack)(IMocks, TestOptions)
+  fullName: Pulumi.Deployment.TestAsync<TStack>(Pulumi.Testing.IMocks, Pulumi.Testing.TestOptions)
+  fullName.vb: Pulumi.Deployment.TestAsync(Of TStack)(Pulumi.Testing.IMocks, Pulumi.Testing.TestOptions)
+  nameWithType: Deployment.TestAsync<TStack>(IMocks, TestOptions)
+  nameWithType.vb: Deployment.TestAsync(Of TStack)(IMocks, TestOptions)
 - uid: Pulumi.DictionaryResourceArgs
   name: DictionaryResourceArgs
   href: Pulumi/Pulumi.DictionaryResourceArgs.html
@@ -2835,12 +2851,12 @@ references:
   commentId: T:Pulumi.Stack
   fullName: Pulumi.Stack
   nameWithType: Stack
-- uid: Pulumi.Stack.#ctor
-  name: Stack()
-  href: Pulumi/Pulumi.Stack.html#Pulumi_Stack__ctor
-  commentId: M:Pulumi.Stack.#ctor
-  fullName: Pulumi.Stack.Stack()
-  nameWithType: Stack.Stack()
+- uid: Pulumi.Stack.#ctor(Pulumi.StackOptions)
+  name: Stack(StackOptions)
+  href: Pulumi/Pulumi.Stack.html#Pulumi_Stack__ctor_Pulumi_StackOptions_
+  commentId: M:Pulumi.Stack.#ctor(Pulumi.StackOptions)
+  fullName: Pulumi.Stack.Stack(Pulumi.StackOptions)
+  nameWithType: Stack.Stack(StackOptions)
 - uid: Pulumi.Stack.#ctor*
   name: Stack
   href: Pulumi/Pulumi.Stack.html#Pulumi_Stack__ctor_
@@ -2848,6 +2864,25 @@ references:
   isSpec: "True"
   fullName: Pulumi.Stack.Stack
   nameWithType: Stack.Stack
+- uid: Pulumi.StackOptions
+  name: StackOptions
+  href: Pulumi/Pulumi.StackOptions.html
+  commentId: T:Pulumi.StackOptions
+  fullName: Pulumi.StackOptions
+  nameWithType: StackOptions
+- uid: Pulumi.StackOptions.ResourceTransformations
+  name: ResourceTransformations
+  href: Pulumi/Pulumi.StackOptions.html#Pulumi_StackOptions_ResourceTransformations
+  commentId: P:Pulumi.StackOptions.ResourceTransformations
+  fullName: Pulumi.StackOptions.ResourceTransformations
+  nameWithType: StackOptions.ResourceTransformations
+- uid: Pulumi.StackOptions.ResourceTransformations*
+  name: ResourceTransformations
+  href: Pulumi/Pulumi.StackOptions.html#Pulumi_StackOptions_ResourceTransformations_
+  commentId: Overload:Pulumi.StackOptions.ResourceTransformations
+  isSpec: "True"
+  fullName: Pulumi.StackOptions.ResourceTransformations
+  nameWithType: StackOptions.ResourceTransformations
 - uid: Pulumi.StackReference
   name: StackReference
   href: Pulumi/Pulumi.StackReference.html
@@ -3008,6 +3043,95 @@ references:
   isSpec: "True"
   fullName: Pulumi.StringAsset.StringAsset
   nameWithType: StringAsset.StringAsset
+- uid: Pulumi.Testing
+  name: Pulumi.Testing
+  href: Pulumi/Pulumi.Testing.html
+  commentId: N:Pulumi.Testing
+  fullName: Pulumi.Testing
+  nameWithType: Pulumi.Testing
+- uid: Pulumi.Testing.IMocks
+  name: IMocks
+  href: Pulumi/Pulumi.Testing.IMocks.html
+  commentId: T:Pulumi.Testing.IMocks
+  fullName: Pulumi.Testing.IMocks
+  nameWithType: IMocks
+- uid: Pulumi.Testing.IMocks.CallAsync(System.String,System.Collections.Immutable.ImmutableDictionary{System.String,System.Object},System.String)
+  name: CallAsync(String, ImmutableDictionary<String, Object>, String)
+  href: Pulumi/Pulumi.Testing.IMocks.html#Pulumi_Testing_IMocks_CallAsync_System_String_System_Collections_Immutable_ImmutableDictionary_System_String_System_Object__System_String_
+  commentId: M:Pulumi.Testing.IMocks.CallAsync(System.String,System.Collections.Immutable.ImmutableDictionary{System.String,System.Object},System.String)
+  name.vb: CallAsync(String, ImmutableDictionary(Of String, Object), String)
+  fullName: Pulumi.Testing.IMocks.CallAsync(System.String, System.Collections.Immutable.ImmutableDictionary<System.String, System.Object>, System.String)
+  fullName.vb: Pulumi.Testing.IMocks.CallAsync(System.String, System.Collections.Immutable.ImmutableDictionary(Of System.String, System.Object), System.String)
+  nameWithType: IMocks.CallAsync(String, ImmutableDictionary<String, Object>, String)
+  nameWithType.vb: IMocks.CallAsync(String, ImmutableDictionary(Of String, Object), String)
+- uid: Pulumi.Testing.IMocks.CallAsync*
+  name: CallAsync
+  href: Pulumi/Pulumi.Testing.IMocks.html#Pulumi_Testing_IMocks_CallAsync_
+  commentId: Overload:Pulumi.Testing.IMocks.CallAsync
+  isSpec: "True"
+  fullName: Pulumi.Testing.IMocks.CallAsync
+  nameWithType: IMocks.CallAsync
+- uid: Pulumi.Testing.IMocks.NewResourceAsync(System.String,System.String,System.Collections.Immutable.ImmutableDictionary{System.String,System.Object},System.String,System.String)
+  name: NewResourceAsync(String, String, ImmutableDictionary<String, Object>, String, String)
+  href: Pulumi/Pulumi.Testing.IMocks.html#Pulumi_Testing_IMocks_NewResourceAsync_System_String_System_String_System_Collections_Immutable_ImmutableDictionary_System_String_System_Object__System_String_System_String_
+  commentId: M:Pulumi.Testing.IMocks.NewResourceAsync(System.String,System.String,System.Collections.Immutable.ImmutableDictionary{System.String,System.Object},System.String,System.String)
+  name.vb: NewResourceAsync(String, String, ImmutableDictionary(Of String, Object), String, String)
+  fullName: Pulumi.Testing.IMocks.NewResourceAsync(System.String, System.String, System.Collections.Immutable.ImmutableDictionary<System.String, System.Object>, System.String, System.String)
+  fullName.vb: Pulumi.Testing.IMocks.NewResourceAsync(System.String, System.String, System.Collections.Immutable.ImmutableDictionary(Of System.String, System.Object), System.String, System.String)
+  nameWithType: IMocks.NewResourceAsync(String, String, ImmutableDictionary<String, Object>, String, String)
+  nameWithType.vb: IMocks.NewResourceAsync(String, String, ImmutableDictionary(Of String, Object), String, String)
+- uid: Pulumi.Testing.IMocks.NewResourceAsync*
+  name: NewResourceAsync
+  href: Pulumi/Pulumi.Testing.IMocks.html#Pulumi_Testing_IMocks_NewResourceAsync_
+  commentId: Overload:Pulumi.Testing.IMocks.NewResourceAsync
+  isSpec: "True"
+  fullName: Pulumi.Testing.IMocks.NewResourceAsync
+  nameWithType: IMocks.NewResourceAsync
+- uid: Pulumi.Testing.TestOptions
+  name: TestOptions
+  href: Pulumi/Pulumi.Testing.TestOptions.html
+  commentId: T:Pulumi.Testing.TestOptions
+  fullName: Pulumi.Testing.TestOptions
+  nameWithType: TestOptions
+- uid: Pulumi.Testing.TestOptions.IsPreview
+  name: IsPreview
+  href: Pulumi/Pulumi.Testing.TestOptions.html#Pulumi_Testing_TestOptions_IsPreview
+  commentId: P:Pulumi.Testing.TestOptions.IsPreview
+  fullName: Pulumi.Testing.TestOptions.IsPreview
+  nameWithType: TestOptions.IsPreview
+- uid: Pulumi.Testing.TestOptions.IsPreview*
+  name: IsPreview
+  href: Pulumi/Pulumi.Testing.TestOptions.html#Pulumi_Testing_TestOptions_IsPreview_
+  commentId: Overload:Pulumi.Testing.TestOptions.IsPreview
+  isSpec: "True"
+  fullName: Pulumi.Testing.TestOptions.IsPreview
+  nameWithType: TestOptions.IsPreview
+- uid: Pulumi.Testing.TestOptions.ProjectName
+  name: ProjectName
+  href: Pulumi/Pulumi.Testing.TestOptions.html#Pulumi_Testing_TestOptions_ProjectName
+  commentId: P:Pulumi.Testing.TestOptions.ProjectName
+  fullName: Pulumi.Testing.TestOptions.ProjectName
+  nameWithType: TestOptions.ProjectName
+- uid: Pulumi.Testing.TestOptions.ProjectName*
+  name: ProjectName
+  href: Pulumi/Pulumi.Testing.TestOptions.html#Pulumi_Testing_TestOptions_ProjectName_
+  commentId: Overload:Pulumi.Testing.TestOptions.ProjectName
+  isSpec: "True"
+  fullName: Pulumi.Testing.TestOptions.ProjectName
+  nameWithType: TestOptions.ProjectName
+- uid: Pulumi.Testing.TestOptions.StackName
+  name: StackName
+  href: Pulumi/Pulumi.Testing.TestOptions.html#Pulumi_Testing_TestOptions_StackName
+  commentId: P:Pulumi.Testing.TestOptions.StackName
+  fullName: Pulumi.Testing.TestOptions.StackName
+  nameWithType: TestOptions.StackName
+- uid: Pulumi.Testing.TestOptions.StackName*
+  name: StackName
+  href: Pulumi/Pulumi.Testing.TestOptions.html#Pulumi_Testing_TestOptions_StackName_
+  commentId: Overload:Pulumi.Testing.TestOptions.StackName
+  isSpec: "True"
+  fullName: Pulumi.Testing.TestOptions.StackName
+  nameWithType: TestOptions.StackName
 - uid: Pulumi.Union`2
   name: Union<T0, T1>
   href: Pulumi/Pulumi.Union-2.html
