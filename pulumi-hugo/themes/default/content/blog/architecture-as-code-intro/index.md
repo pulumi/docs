@@ -20,7 +20,7 @@ Abstraction is key to building resilient systems because it encapsulates behavio
 
 Virtual machines arose from the need to use expensive hardware more efficiently. VMs are more efficient because they share the host server, decreasing the number of physical servers needed to run applications. A group of hosts can also be aggregated so that it behaves as a single virtual host with large memory and processing capabilities. Virtual machines can emulate other environments that have specific hardware requirements or capabilities that the host machine does not have, thus reducing the need for specific hardware or operating systems. Finally, virtualization provides the host machine isolation from the guest virtual machines by limiting access to the host machine through an abstraction layer. Finally, virtualization has the added advantage of providing a fine degree of control over resources available to the virtual machine.
 
-If virtual machines are part of your infrastructure, Pulumi lets you create virtual machines programmatically across cloud service providers. The Javascript example below illustrates how to deploy a virtual machine on Google Cloud Platform. The script spins up a Debian based instance and creates a network with an open port 22 to let you configure and manage the machine as needed.
+If virtual machines are part of your infrastructure, Pulumi lets you create virtual machines programmatically across cloud service providers. The JavaScript example below illustrates how to deploy a virtual machine on Google Cloud Platform. The script spins up a Debian based instance and creates a network with an open port 22 to let you configure and manage the machine as needed.
 
 ```js
 const gcp = require("@pulumi/gcp");
