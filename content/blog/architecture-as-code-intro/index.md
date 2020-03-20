@@ -47,7 +47,7 @@ const computeInstance = new gcp.compute.Instance("instance", {
     bootDisk: { initializeParams: { image: "debian-cloud/debian-9" } },
     networkInterfaces: [{
         network: network.id,
-        // accessConfigus must includ a single empty config to request an ephemeral IP
+        // accessConfigs must include a single empty config to request an ephemeral IP.
         accessConfigs: [{}],
     }],
 });
