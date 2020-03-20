@@ -69,6 +69,73 @@ simply style the components externally, using the Sass defined in
 visibility), most of the styling you apply -- color, type, padding, and so on -- should
 happen there, and not be expressed as raw CSS alongside your component definition.
 
+## Available components
+
+### pulumi-chooser
+
+This component creates a set of tabs for selecting content, like a language, OS, or cloud
+provider. It can operate either as a self-closing component with no children or as a
+container with one or more `pulumi-choosable` components as its children. In both cases,
+by default, the `options` you provide will be set globally and persist between pageviews.
+
+If you want to present a chooser that works independently of what's globally stored, use
+the `mode="local"` attribute, as indicated in the example below.
+
+When a chooser's options don't line up with what's stored globally -- e.g., if a user's
+default language is C#, but the chooser doesn't have a C# option -- the chooser switches
+into local mode and displays the first available tab and `pulumi-choosable`, in order to
+ensure something always appears on the page.
+
+#### Usage
+
+This chooser sets the selected `os` to persist between pages.
+
+```
+<pulumi-chooser type="os" options="macos,windows,linux" />
+```
+
+This chooser operates in local mode, meaning it ignores whatever happens to be set on the
+global store. Useful if you want to present content that may be deliberately different
+from content more relevant to the user's general preferences.
+
+```
+<pulumi-chooser type="os" options="macos,windows,linux" mode="local">
+    <pulumi-choosable value="macos">Some Mac Stuff</pulumi-choosable>
+    <pulumi-choosable value="windows">Some Windows Stuff</pulumi-choosable>
+    <pulumi-choosable value="linux">Some Linux Stuff</pulumi-choosable>
+</pulumi-chooser>
+```
+
+This chooser groups a set of options, but hides its controls by providing an
+`option-style` (which is `tabbed` by default):
+
+```
+<pulumi-chooser type="os" options="macos,windows,linux" option-style="none">
+    <pulumi-choosable value="macos">Some Mac Stuff</pulumi-choosable>
+    <pulumi-choosable value="windows">Some Windows Stuff</pulumi-choosable>
+    <pulumi-choosable value="linux">Some Linux Stuff</pulumi-choosable>
+</pulumi-chooser>
+```
+
+This is useful if you have a set of related items you want to toggle based on a value on
+the global store (e.g., language-specific types, filenames and the like).
+
+### pulumi-choosable
+
+This component can be supplied either as a child of a chooser, as indicated above, or on
+its own, in which case it'll simply honor whatever's in the global store.
+
+#### Usage
+
+```
+<body>
+    <div>
+        <pulumi-choosable type="os" value="macos">
+            I'll only appear when the user's preferred OS is Mac. Otherwise, you'll never see me.
+        </pulumi-choosable>
+        ...
+```
+
 ## Questions?
 
 Blame Christian. Also, he's happy to help.

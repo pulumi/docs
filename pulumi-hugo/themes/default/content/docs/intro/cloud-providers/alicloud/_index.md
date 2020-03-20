@@ -19,7 +19,9 @@ The Alibaba Cloud provider supports several options for providing access to Alib
 
 ## Example
 
-{{< langchoose csharp >}}
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
 
 ```javascript
 const alicloud = require("@pulumi/alicloud")
@@ -29,6 +31,9 @@ const vpc = new alicloud.vpc.Network("my-vpc", {
 });
 ```
 
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
 ```typescript
 import * as alicloud from "@pulumi/alicloud";
 
@@ -37,6 +42,9 @@ const vpc = new alicloud.vpc.Network("my-vpc", {
 });
 ```
 
+{{% /choosable %}}
+{{% choosable language python %}}
+
 ```python
 import pulumi_alicloud as alicloud
 
@@ -44,6 +52,9 @@ vpc = alicloud.vpc.Network("my-vpc",
     cidr_block="10.0.0.0/16"
 )
 ```
+
+{{% /choosable %}}
+{{% choosable language go %}}
 
 ```go
 import (
@@ -54,6 +65,9 @@ vpc, _ := vpc.NewVpc(ctx, "demo-instance", &vpc.VpcArgs{
 	CidrBlock: "10.0.0.0/16",
 })
 ```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
 
 ```csharp
 using System.Collections.Generic;
@@ -72,6 +86,10 @@ class Program
         });
 }
 ```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 ## Libraries
 

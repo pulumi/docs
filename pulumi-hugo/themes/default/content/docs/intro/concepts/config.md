@@ -85,7 +85,9 @@ dbPassword                 ********
 
 Similarly, if our program attempts to print the value of `dbPassword` to the console---either intentionally or accidentally---Pulumi will mask it out:
 
-{{< langchoose csharp >}}
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
 
 ```javascript
 var pulumi = require("@pulumi/pulumi");
@@ -93,11 +95,17 @@ var config = new pulumi.Config();
 console.log("Password: " + config.require("dbPassword"));
 ```
 
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 const config = new pulumi.Config();
 console.log(`Password: ${config.require("dbPassword")}`);
 ```
+
+{{% /choosable %}}
+{{% choosable language python %}}
 
 ```python
 import pulumi
@@ -105,10 +113,16 @@ config = pulumi.Config()
 print('Password: %s'.format(config.require('dbPassword')))
 ```
 
+{{% /choosable %}}
+{{% choosable language go %}}
+
 ```go
 c := config.New(ctx, "")
 fmt.Println("Password: "+c.Require("dbPassword"))
 ```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
 
 ```csharp
 using System.Threading.Tasks;
@@ -123,6 +137,10 @@ class Program
         });
 }
 ```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 Running this program yields the following result:
 
@@ -148,7 +166,9 @@ $ pulumi config set --secret dbPassword S3cr37 # set an encrypted secret value
 
 Use the following code to access these configuration values in your Pulumi program:
 
-{{< langchoose csharp >}}
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
 
 ```javascript
 var pulumi = require("@pulumi/pulumi");
@@ -159,6 +179,9 @@ var name = config.require("name");
 var dbPassword = config.requireSecret("dbPassword");
 ```
 
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 
@@ -167,6 +190,9 @@ const config = new pulumi.Config();
 const name = config.require("name");
 const dbPassword = config.requireSecret("dbPassword");
 ```
+
+{{% /choosable %}}
+{{% choosable language python %}}
 
 ```python
 import pulumi
@@ -177,12 +203,18 @@ print(config.require('name'))
 print(config.require_secret('dbPassword'))
 ```
 
+{{% /choosable %}}
+{{% choosable language go %}}
+
 ```go
 c := config.New(ctx, "")
 
 name := c.Require("name")
 dbPassword := c.Require("dbPassword")
 ```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
 
 ```csharp
 using System.Threading.Tasks;
@@ -199,6 +231,10 @@ class Program
         });
 }
 ```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 In this example, we have read back the `name` and `dbPassword` configuration variables programmatically. The `name` is just the string `BroomeLLC`, while the `dbPassword` is a secret output value that is encrypted.
 
@@ -240,13 +276,18 @@ For structured config, `true` and `false` values are persisted as boolean values
 
 The `data` config can be accessed in your Pulumi program using:
 
-{{< langchoose csharp >}}
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
 
 ```javascript
 let config = new pulumi.Config();
 let data = config.requireObject("data");
 console.log(`Active: ${data.active}`);
 ```
+
+{{% /choosable %}}
+{{% choosable language typescript %}}
 
 ```typescript
 interface Data {
@@ -259,11 +300,17 @@ let data = config.requireObject<Data>("data");
 console.log(`Active: ${data.active}`);
 ```
 
+{{% /choosable %}}
+{{% choosable language python %}}
+
 ```python
 config = pulumi.Config()
 data = config.require_object("data")
 print(f"Active: ${data.active}")
 ```
+
+{{% /choosable %}}
+{{% choosable language go %}}
 
 ```go
 type Data struct {
@@ -282,11 +329,18 @@ func main() {
 }
 ```
 
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
 ```csharp
 var config = new Pulumi.Config();
 var data = config.RequireObject<JsonElement>("data");
 Console.WriteLine($"Active: {data.GetProperty("active")}");
 ```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 Secrets within structured config are also supported. Consider a list of endpoints, each having a `url` and `token` property. The `token` value could be stored as a secret:
 

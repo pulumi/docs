@@ -10,7 +10,7 @@ menu:
     weight: 3
 ---
 
-{{< cloudchoose >}}
+{{< chooser cloud "aws,azure,gcp" >}}
 
 The [worker nodes][k8s-concepts] are hosts that
 run the apps and workloads of the cluster after the control plane has
@@ -19,36 +19,29 @@ overlay or integrated network depending on setup.
 
 See the [official Kubernetes docs][k8s-docs] for more details.
 
-<div class="cloud-prologue-aws"></div>
-<div class="mt">
-{{% md %}}
+{{% choosable cloud aws %}}
 
 The full code for this stack is on [GitHub][gh-repo-stack].
 
 [gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/aws/03-cluster-configuration
-{{% /md %}}
-</div>
 
-<div class="cloud-prologue-azure"></div>
-<div class="mt">
-{{% md %}}
+{{% /choosable %}}
+
+{{% choosable cloud azure %}}
 
 The full code for this stack is on [GitHub][gh-repo-stack].
 
 [gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/azure/03-cluster-configuration
-{{% /md %}}
-</div>
 
-<div class="cloud-prologue-gcp"></div>
-<div class="mt">
-{{% md %}}
+{{% /choosable %}}
+
+{{% choosable cloud gcp %}}
 
 The full code for this stack is on [GitHub][gh-repo-stack].
 
 [gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/gcp/03-cluster-configuration
 
-{{% /md %}}
-</div>
+{{% /choosable %}}
 
 ## Overview
 
@@ -63,9 +56,7 @@ requirements. Generally, there are at minimum a few classes of worker node
 groups, for example: a standard pool of nodes that offers a base for
 medium-sized use, and a performant pool of nodes with higher capacity and capability.
 
-<div class="cloud-prologue-aws"></div>
-<div class="mt">
-{{% md %}}
+{{% choosable cloud aws %}}
 
 We'll configure and deploy:
 
@@ -112,12 +103,10 @@ const ng2xlarge = new eks.NodeGroup(`${projectName}-ng-2xlarge`, {
 
 [aws-instance-profile]: https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2_instance-profiles.html
 [crosswalk-aws-identity]: {{< relref "/docs/guides/crosswalk/kubernetes/identity" >}}
-{{% /md %}}
-</div>
 
-<div class="cloud-prologue-azure"></div>
-<div class="mt">
-{{% md %}}
+{{% /choosable %}}
+
+{{% choosable cloud azure %}}
 
 We'll configure and deploy:
 
@@ -126,12 +115,9 @@ We'll configure and deploy:
 * [Recommended Worker Settings](#recommended-worker-settings): To apply helpful features
 and best-practices.
 
-{{% /md %}}
-</div>
+{{% /choosable %}}
 
-<div class="cloud-prologue-gcp"></div>
-<div class="mt">
-{{% md %}}
+{{% choosable cloud gcp %}}
 
 We'll configure and deploy:
 
@@ -140,12 +126,9 @@ We'll configure and deploy:
 * [Recommended Worker Settings](#recommended-worker-settings): To apply helpful features
 and best-practices.
 
-{{% /md %}}
-</div>
+{{% /choosable %}}
 
-<div class="cloud-prologue-aws"></div>
-<div class="mt">
-{{% md %}}
+{{% choosable cloud aws %}}
 
 ## Node Group Networking
 
@@ -182,12 +165,10 @@ const ng2xlarge = new eks.NodeGroup(`${projectName}-ng-2xlarge`, {
 ```
 
 [crosswalk-sgs]: {{< relref "/docs/guides/crosswalk/aws/vpc#configuring-security-groups-for-a-vpc" >}}
-{{% /md %}}
-</div>
 
-<div class="cloud-prologue-azure"></div>
-<div class="mt">
-{{% md %}}
+{{% /choosable %}}
+
+{{% choosable cloud azure %}}
 
 ## Node Pool Networking
 
@@ -210,14 +191,11 @@ const cluster = new azure.containerservice.KubernetesCluster(`${name}`, {
 }
 ```
 
-{{% /md %}}
-</div>
+{{% /choosable %}}
 
 ## Node Sizing
 
-<div class="cloud-prologue-aws"></div>
-<div class="mt">
-{{% md %}}
+{{% choosable cloud aws %}}
 
 In EKS, worker node groups are backed by auto scaling groups.
 These groups provide automatic scaling and management of a logical
@@ -255,12 +233,9 @@ const ng2xlarge = new eks.NodeGroup(`${projectName}-ng-2xlarge`, {
 });
 ```
 
-{{% /md %}}
-</div>
+{{% /choosable %}}
 
-<div class="cloud-prologue-azure"></div>
-<div class="mt">
-{{% md %}}
+{{% choosable cloud azure %}}
 
 In AKS, worker node pools are backed by [VM Scale Sets][azure-scalesets].
 These pools provide automatic scaling and management of a logical
@@ -294,12 +269,10 @@ const cluster = new azure.containerservice.KubernetesCluster(`${name}`, {
 ```
 
 [azure-scalesets]: https://azure.microsoft.com/en-us/services/virtual-machine-scale-sets/
-{{% /md %}}
-</div>
 
-<div class="cloud-prologue-gcp"></div>
-<div class="mt">
-{{% md %}}
+{{% /choosable %}}
+
+{{% choosable cloud gcp %}}
 
 In GKE, worker node pools provide automatic scaling and management of a logical
 collection of hosts through health checks and policies, and are an effective
@@ -329,8 +302,7 @@ const performantNodes = new gcp.container.NodePool("performant-nodes", {
 });
 ```
 
-{{% /md %}}
-</div>
+{{% /choosable %}}
 
 If necessary, consider installing the [Kubernetes Cluster
 Autoscaler][k8s-cluster-autoscaler] to automatically adjust the size of the
@@ -351,9 +323,7 @@ Both configurations can be set in the `PodSpec` using a
 [`nodeSelector`][k8s-node-selector] or [`tolerations`][k8s-taints]
 respectively.
 
-<div class="cloud-prologue-aws"></div>
-<div class="mt">
-{{% md %}}
+{{% choosable cloud aws %}}
 
 ```typescript
 // Create a Standard node group of t2.medium workers with an IAM instance profile.
@@ -378,12 +348,9 @@ const ng2xlarge = new eks.NodeGroup(`${projectName}-ng-2xlarge`, {
 });
 ```
 
-{{% /md %}}
-</div>
+{{% /choosable %}}
 
-<div class="cloud-prologue-azure"></div>
-<div class="mt">
-{{% md %}}
+{{% choosable cloud azure %}}
 
 Set labels on nodes.
 
@@ -397,12 +364,9 @@ Set taints on nodes.
 $ kubectl taint nodes <NODE_NAME> special=true:NoSchedule
 ```
 
-{{% /md %}}
-</div>
+{{% /choosable %}}
 
-<div class="cloud-prologue-gcp"></div>
-<div class="mt">
-{{% md %}}
+{{% choosable cloud gcp %}}
 
 ```typescript
 import * as gcp from "@pulumi/gcp";
@@ -444,14 +408,11 @@ const performantNodes = new gcp.container.NodePool("performant-nodes", {
 
 ```
 
-{{% /md %}}
-</div>
+{{% /choosable %}}
 
 ## Recommended Worker Settings
 
-<div class="cloud-prologue-aws"></div>
-<div class="mt">
-{{% md %}}
+{{% choosable cloud aws %}}
 
 * Use a specific version of Kubernetes for each node group. This pins the nodes
 to a particular release in a declarative manner, instead of implicitly
@@ -491,24 +452,18 @@ const ng2xlarge = new eks.NodeGroup(`${projectName}-ng-2xlarge`, {
 });
 ```
 
-{{% /md %}}
-</div>
+{{% /choosable %}}
 
-<div class="cloud-prologue-azure"></div>
-<div class="mt">
-{{% md %}}
+{{% choosable cloud azure %}}
 
 * Use a specific version of Kubernetes for each node group. This pins the nodes
 to a particular release in a declarative manner, instead of implicitly
 using the latest available version, or using a smart default where both
 can be updated at any moment.
 
-{{% /md %}}
-</div>
+{{% /choosable %}}
 
-<div class="cloud-prologue-gcp"></div>
-<div class="mt">
-{{% md %}}
+{{% choosable cloud gcp %}}
 
 * Use a specific version of Kubernetes for each node group. This pins the nodes
     to a particular release in a declarative manner, instead of implicitly
@@ -540,8 +495,8 @@ const standardNodes = new gcp.container.NodePool("standard-nodes", {
 
 [gcp-oauth-scopes]: https://developers.google.com/identity/protocols/googlescopes
 [k8s-labels]: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/
-{{% /md %}}
-</div>
+
+{{% /choosable %}}
 
 [k8s-concepts]: https://kubernetes.io/docs/concepts
 [k8s-kubelet]: https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/

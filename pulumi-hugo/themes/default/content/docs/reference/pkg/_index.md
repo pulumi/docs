@@ -20,30 +20,30 @@ to private registries.
 
 ### Choose Your Language
 
-{{< langchoose csharp >}}
+{{% chooser language "javascript,typescript,python,go" / %}}
 
 ### General Purpose Packages
 
 The Pulumi SDK package is used for accessing the core programming model around resources, configuration, and other components
 directly. Additional general purpose packages can be used across all cloud platforms:
 
-{{% lang nodejs %}}
+{{% choosable language "javascript,typescript" %}}
 * [**Pulumi SDK** (`@pulumi/pulumi`)]({{< relref "nodejs/pulumi/pulumi" >}})
 * [**Docker** (`@pulumi/docker`)]({{< relref "nodejs/pulumi/docker" >}})
 * [**Policy** (`@pulumi/policy`) <span class="badge badge-preview">PREVIEW</span>]({{< relref "nodejs/pulumi/policy" >}})
 * [**Random** (`@pulumi/random`)]({{< relref "nodejs/pulumi/random" >}})
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang python %}}
+{{% choosable language python %}}
 * [**Pulumi SDK** (`pulumi`)]({{< relref "python/pulumi" >}})
 * [**Docker** (`pulumi_docker`)]({{< relref "python/pulumi_docker" >}})
 * [**Random** (`pulumi_random`)]({{< relref "python/pulumi_random" >}})
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
 * [**Pulumi SDK** (`pulumi`)](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi)
 * [**Random** (`random`)](https://pkg.go.dev/github.com/pulumi/pulumi-random/sdk/go/random)
-{{% /lang %}}
+{{% /choosable %}}
 
 {{% lang csharp %}}
 * [**Pulumi SDK** (`pulumi`)]({{< relref "dotnet/pulumi" >}})
@@ -53,7 +53,7 @@ directly. Additional general purpose packages can be used across all cloud platf
 
 Each cloud vendor has a dedicated package for deploying resources to it:
 
-{{% lang nodejs %}}
+{{% choosable language "javascript,typescript" %}}
 * [**AWS** (`@pulumi/aws`)]({{< relref "nodejs/pulumi/aws" >}})
     * [**AWS Extensions** (`@pulumi/awsx`)]({{< relref "nodejs/pulumi/awsx" >}}) - simpler interfaces for common AWS patterns
     * [**AWS EKS Cluster** (`@pulumi/eks`)]({{< relref "nodejs/pulumi/eks" >}}) - simpler interface for working with AWS EKS
@@ -92,9 +92,9 @@ Each cloud vendor has a dedicated package for deploying resources to it:
 * [**TLS** (`@pulumi/tls`)]({{< relref "nodejs/pulumi/tls" >}})
 * [**Hashicorp Vault** (`@pulumi/vault`)]({{< relref "nodejs/pulumi/vault" >}})
 * [**vSphere** (`@pulumi/vsphere`)]({{< relref "nodejs/pulumi/vsphere" >}})
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang python %}}
+{{% choosable language python %}}
 * [**AWS** (`pulumi_aws`)]({{< relref "python/pulumi_aws" >}})
 * [**Azure** (`pulumi_azure`)]({{< relref "python/pulumi_azure" >}})
     * [**Azure Active Directory** (`pulumi_azuread`)]({{< relref "python/pulumi_azuread" >}})
@@ -130,9 +130,9 @@ Each cloud vendor has a dedicated package for deploying resources to it:
 * [**TLS** (`pulumi_tls`)]({{< relref "python/pulumi_tls" >}})
 * [**Hashicorp Vault** (`pulumi_vault`)]({{< relref "python/pulumi_vault" >}})
 * [**vSphere** (`pulumi_vsphere`)]({{< relref "python/pulumi_vsphere" >}})
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
 * [**AWS** (`aws`)](https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws)
 * [**Azure** (`azure`)](https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure)
     * [**Azure Active Directory** (`pulumi_azuread`)](https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/go/azuread)
@@ -167,7 +167,7 @@ Each cloud vendor has a dedicated package for deploying resources to it:
 * [**TLS** (`tls`)](https://pkg.go.dev/github.com/pulumi/pulumi-tls/sdk/go/tls)
 * [**Hashicorp Vault** (`vault`)](https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/go/vault)
 * [**vSphere** (`vsphere`)](https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere)
-{{% /lang %}}
+{{% /choosable %}}
 
 {{% lang csharp %}}
 Coming soon!
@@ -175,21 +175,17 @@ Coming soon!
 
 ### Cloud-Agnostic Packages
 
-{{% lang nodejs %}}
+{{% choosable language "javascript,typescript" %}}
 Pulumi offers a highly productive, cloud-agnostic package for container and serverless programming in the
 `@pulumi/cloud` package which currently allows writing applications once and deploying to either AWS or Azure.
 
 * [**Pulumi Cloud Framework** (`@pulumi/cloud`) <span class="badge badge-preview">PREVIEW</span>]({{< relref "nodejs/pulumi/cloud" >}})
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang python %}}
+{{% choosable language python %}}
 Coming soon!
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
 Coming soon!
-{{% /lang %}}
-
-{{% lang csharp %}}
-Coming soon!
-{{% /lang %}}
+{{% /choosable %}}

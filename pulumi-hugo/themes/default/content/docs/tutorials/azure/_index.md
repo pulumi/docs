@@ -74,7 +74,7 @@ The following tutorials highlight the Azure platform using complete end-to-end s
 
 ## Other Examples and Tutorials
 
-{{< langchoose nogo >}}
+{{< chooser language "javascript,typescript,python" / >}}
 {{< tutorials-index-azure >}}
 
 If you'd like to see a new tutorial, please [request one](

@@ -1,4 +1,4 @@
-import { Component, h, Listen, Prop, State, Watch } from "@stencil/core";
+import { Component, Element, h, Listen, Prop, State } from "@stencil/core";
 import { Store, Unsubscribe } from "@stencil/redux";
 import { AppState } from "../../store/state";
 import { setLanguage, setK8sLanguage, setOS, setCloud } from "../../store/actions/preferences";
@@ -8,6 +8,8 @@ export type K8sLanguageKey = "typescript" | "yaml" | "typescript-kx"
 export type OSKey = "macos" | "linux" | "windows"
 export type CloudKey = "aws" | "azure" | "gcp"
 
+export type ChooserMode = "local" | "global";
+export type ChooserOptionStyle = "tabbed" | "none";
 export type ChooserType = "language" | "k8s-language" | "os" | "cloud";
 export type ChooserKey = LanguageKey | K8sLanguageKey | OSKey | CloudKey;
 export type ChooserOption = SupportedLanguage | SupportedK8sLanguage | SupportedOS | SupportedCloud;
@@ -15,6 +17,7 @@ export type ChooserOption = SupportedLanguage | SupportedK8sLanguage | Supported
 interface SupportedLanguage {
     key: LanguageKey;
     name: string;
+    extension: string;
     preview: boolean;
 }
 
@@ -50,6 +53,15 @@ export interface Choice {
  * ...would render three tabs. Clicking a tab dispatches an action that sets the
  * associated value on the store, allowing any pulumi-choosable component on the page to
  * be shown or hidden automatically.
+ *
+ * Alternatively, you can provide one or more pulumi-choosable components as children of
+ * this component, which will have the effect of treating them as tabbed content,
+ * irrespective of what may or may not be set on the global store. For example:
+ *
+ *     <pulumi-chooser type="language" value="typescript,javascript">
+ *         <pulumi choosable type="language" value="typescript">Some TypeScript</pulumi-choosable>
+ *         <pulumi choosable type="language" value="javascript">Some JavaScript</pulumi-choosable>
+ *     </pulumi-chooser>
  */
 @Component({
     tag: "pulumi-chooser",
@@ -63,7 +75,11 @@ export class Chooser {
     @Prop({ context: "store" })
     store: Store;
 
-    // The type of chooser to render (e.g., language, os, or cloud).
+    // A handle to the host element.
+    @Element()
+    el: HTMLElement;
+
+    // The type of chooser to render (e.g., "language", "os", "cloud").
     @Prop({ mutable: true })
     type: ChooserType;
 
@@ -75,6 +91,16 @@ export class Chooser {
     // The currently selected option.
     @Prop({ mutable: true })
     selection: ChooserKey;
+
+    // The current style option. Tabbed by default.
+    @Prop({ mutable: true })
+    optionStyle: ChooserOptionStyle;
+
+    // The chooser mode -- either global (the default), meaning it works in conjunction
+    // with the global state store, or local, meaning it operates solely on its
+    // pulumi-chooser children.
+    @Prop({ mutable: true })
+    mode: ChooserMode;
 
     // The currently visible set of chooser options.
     @State()
@@ -93,60 +119,94 @@ export class Chooser {
     }
 
     componentDidUnload() {
-        this.storeUnsubscribe();
+        if (this.storeUnsubscribe) {
+            this.storeUnsubscribe();
+        }
     }
 
-    @Listen('document:rendered')
+    componentDidRender() {
+        this.applyChoice();
+    }
+
+    @Listen("rendered", { target: "document" })
     onRendered(_event: CustomEvent) {
+
+        // By default, choosers act globally and use a tabbed layout.
+        this.mode = "global";
+        this.optionStyle = "tabbed";
+
+        // Map internal methods to actions defined on the store.
+        this.store.mapDispatchToProps(this, { setLanguage, setK8sLanguage, setOS, setCloud });
 
         // Map currently selected values from the store, so we can use them in this component.
         this.storeUnsubscribe = this.store.mapStateToProps(this, (state: AppState) => {
             const { preferences: { language, k8sLanguage, os, cloud } } = state;
 
+            // In some cases, the user's preferred (i.e., most recently selected) choice
+            // may not be available as an option. When that happens, we switch into local
+            // mode and choose the first available option, to make sure at least one
+            // choosable item is always visible.
+            const preferredOrDefault = (key: ChooserKey) => {
+                if (!this.currentOptions.find(o => o.key === key)) {
+                    const defaultChoice = this.currentOptions[0];
+                    key = defaultChoice.key;
+
+                    if (this.choosables.length > 0) {
+                        this.mode = "local";
+
+                        // Tell the children of this chooser they're local now, too.
+                        this.choosables.forEach(choosable => {
+                            choosable.setAttribute("mode", "local");
+                        })
+
+                        // In local mode, there's no need to listen for store updates anymore,
+                        // so we unsubscribe.
+                        setTimeout(() => this.storeUnsubscribe());
+
+                    } else {
+
+                        // This is a global chooser with (presumably) on-page choosables,
+                        // so we need to dispatch an event to reset the selected language.
+                        setTimeout(() => this.setChoice(this.type, defaultChoice));
+                    }
+                }
+                return { selection: key };
+            }
+
             switch (this.type) {
                 case "language":
-                    return { selection: language };
+                    return preferredOrDefault(language);
                 case "k8s-language":
-                     return { selection: k8sLanguage };
+                    return preferredOrDefault(k8sLanguage);
                 case "os":
-                    return { selection: os };
+                    return preferredOrDefault(os);
                 case "cloud":
-                    return { selection: cloud };
+                   return preferredOrDefault(cloud);
                 default:
                     return {};
             }
         });
-
-        // Map internal methods to actions defined on the store.
-        this.store.mapDispatchToProps(this, { setLanguage, setK8sLanguage, setOS, setCloud });
-    }
-
-    @Watch("type")
-    onType(_value: string) {
-        this.parseOptions();
-    }
-
-    @Watch("options")
-    onOptions(_value: string) {
-        this.parseOptions();
-    }
-
-    @Watch("selection")
-    onSelection(_value: LanguageKey) {
-        this.parseOptions();
     }
 
     render() {
-        return <ul>
-            {
-                // Render the current set of options, marking the selected one active.
-                this.currentOptions.map(opt => <li class={this.selection === opt.key ? "active" : ""}>
-                    <a onClick={() => this.makeChoice(this.type, opt)}>
-                        {opt.name} { opt.preview ? <span>PREVIEW</span> : ""}
-                    </a>
-                </li>)
-            }
-        </ul>;
+        return [
+            <ul>
+                {
+                    // Render the current set of options, marking the selected one active.
+                    this.currentOptions.map(opt => <li class={this.selection === opt.key ? "active" : ""}>
+                        <a onClick={(event) => this.makeChoice(event, this.type, opt)}>
+                            {opt.name} { opt.preview ? <span>PREVIEW</span> : ""}
+                        </a>
+                    </li>)
+                }
+            </ul>,
+            <slot></slot>
+        ];
+    }
+
+    // The choosable elements of this chooser, if any.
+    private get choosables() {
+        return this.el.querySelectorAll("pulumi-choosable");
     }
 
     // Convert inbound options lists into ChooserKeys, so they can be converted into
@@ -160,7 +220,7 @@ export class Chooser {
                 this.mapOptions(this.type, keys as ChooserKey[]);
             }
             catch (err) {
-                console.log(err);
+                console.error(`Error parsing chooser options "${this.options}"`, err);
             }
         }
     }
@@ -188,22 +248,50 @@ export class Chooser {
     }
 
     // Handle the selection of chooser item.
-    private makeChoice(type: ChooserType, choice: ChooserOption) {
-        const key = choice.key;
+    private makeChoice(event: Event, type: ChooserType, choice: ChooserOption) {
+        this.setChoice(type, choice);
 
-        switch (type) {
-            case "language":
-                this.setLanguage(key as LanguageKey);
-                break;
-            case "k8s-language":
-                this.setK8sLanguage(key as K8sLanguageKey);
-                break;
-            case "os":
-                this.setOS(key as OSKey);
-                break;
-            case "cloud":
-                this.setCloud(key as CloudKey);
-                break;
+        // Since choosing a tab toggles the visibility of an unknowable number of elements
+        // on the page (causing unpredictable reflows), we note the current position of
+        // the clicked element relative to the upper edge of the viewport, do the
+        // selection, then scroll to the same location once the reflow is complete.
+        var el = event.target as Element;
+        var distanceFromViewportTop = el.getBoundingClientRect().top;
+
+        window.requestAnimationFrame(function() {
+            window.scroll(0, el["offsetTop"] - distanceFromViewportTop);
+        });
+    }
+
+    private setChoice(type: ChooserType, choice: ChooserOption) {
+        const key = choice.key;
+        this.selection = key;
+
+        if (this.mode !== "local") {
+            switch (type) {
+                case "language":
+                    this.setLanguage(key as LanguageKey);
+                    break;
+                case "k8s-language":
+                    this.setK8sLanguage(key as K8sLanguageKey);
+                    break;
+                case "os":
+                    this.setOS(key as OSKey);
+                    break;
+                case "cloud":
+                    this.setCloud(key as CloudKey);
+                    break;
+            }
+        }
+    }
+
+    // Apply the currently selected value to all choosables, allowing them to decide
+    // whether to show or hide themselves.
+    private applyChoice() {
+        if (this.selection) {
+            this.choosables.forEach(choosable => {
+                choosable.setAttribute("selection", this.selection);
+            });
         }
     }
 
@@ -212,36 +300,43 @@ export class Chooser {
         {
             key: "typescript",
             name: "TypeScript",
+            extension: "ts",
             preview: false,
         },
         {
             key: "javascript",
             name: "JavaScript",
+            extension: "js",
             preview: false,
         },
         {
             key: "python",
             name: "Python",
+            extension: "py",
             preview: false,
         },
         {
             key: "go",
             name: "Go",
+            extension: "go",
             preview: true,
         },
         {
             key: "csharp",
             name: "C#",
+            extension: "cs",
             preview: true,
         },
         {
             key: "fsharp",
             name: "F#",
+            extension: "fs",
             preview: true,
         },
         {
             key: "visualbasic",
             name: "VB",
+            extension: "vb",
             preview: true,
         }
     ];

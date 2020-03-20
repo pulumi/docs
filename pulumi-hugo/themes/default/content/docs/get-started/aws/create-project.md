@@ -14,30 +14,33 @@ aliases: ["/docs/quickstart/aws/create-project/"]
 
 Let's get started with a new project in a new directory.
 
-{{< langchoose csharp >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
-<div class="language-prologue-javascript"></div>
+{{% choosable language javascript %}}
 
 ```bash
 $ mkdir quickstart && cd quickstart
 $ pulumi new aws-javascript
 ```
 
-<div class="language-prologue-typescript"></div>
+{{% /choosable %}}
+{{% choosable language typescript %}}
 
 ```bash
 $ mkdir quickstart && cd quickstart
 $ pulumi new aws-typescript
 ```
 
-<div class="language-prologue-python"></div>
+{{% /choosable %}}
+{{% choosable language python %}}
 
 ```bash
 $ mkdir quickstart && cd quickstart
 $ pulumi new aws-python
 ```
 
-<div class="language-prologue-go"></div>
+{{% /choosable %}}
+{{% choosable language go %}}
 
 ```bash
 # install the pulumi aws plugin
@@ -48,12 +51,15 @@ $ mkdir quickstart && cd quickstart
 $ pulumi new aws-go
 ```
 
-<div class="language-prologue-csharp"></div>
+{{% /choosable %}}
+{{% choosable language csharp %}}
 
 ```bash
 $ mkdir quickstart && cd quickstart
 $ pulumi new aws-csharp
 ```
+
+{{% /choosable %}}
 
 {{< cli-note >}}
 
@@ -86,21 +92,21 @@ Next, you will be prompted for some configuration values for the stack.
 
 For AWS projects, you will be prompted for the AWS region. You can accept the default value or choose another value like `us-west-2`.
 
-{{% lang nodejs %}}
+{{% choosable language "javascript,typescript" %}}
 After some dependency installations from `npm`, the project and stack will be ready.
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang python %}}
+{{% choosable language python %}}
 After the command completes, the project and stack will be ready.
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
 After the command completes, the project and stack will be ready.
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang dotnet %}}
+{{% choosable language "csharp,fsharp,visualbasic" %}}
 After the command completes, the project and stack will be ready.
-{{% /lang %}}
+{{% /choosable %}}
 
 Next, we'll review the generated project files.
 

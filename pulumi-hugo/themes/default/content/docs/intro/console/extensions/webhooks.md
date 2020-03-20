@@ -91,7 +91,9 @@ Payloads contain several headers.
 The following snippets show how to compute and verify the webhook signature.
 For examples in other languages, see [danharper/hmac-examples](https://github.com/danharper/hmac-examples).
 
-{{< langchoose >}}
+{{< chooser language "javascript,typescript,python,go" >}}
+
+{{% choosable language javascript %}}
 
 ```javascript
 var crypto = require('crypto');
@@ -102,6 +104,9 @@ const payload = req.body.toString();
 var hmacAlg = crypto.createHmac('sha256', sharedSecret);
 var expectedSignature = hmac.update(payloadBody).digest('hex');
 ```
+
+{{% /choosable %}}
+{{% choosable language typescript %}}
 
 ```typescript
 import * as crypto from "crypto";
@@ -114,6 +119,9 @@ const hmac = hmacAlg.update(payload).digest("hex");
 
 const result = crypto.timingSafeEqual(Buffer.from(webhookSig), Buffer.from(hmac));
 ```
+
+{{% /choosable %}}
+{{% choosable language python %}}
 
 ```python
 import hashlib
@@ -129,6 +137,9 @@ hash.hexdigest()
 expected_signature = base64.b64encode(hash.digest())
 ```
 
+{{% /choosable %}}
+{{% choosable language go %}}
+
 ```go
 func computeSignature(payload []byte, secret string) string {
 	mac := hmac.New(sha256.New, []byte(secret))
@@ -137,6 +148,10 @@ func computeSignature(payload []byte, secret string) string {
 	return fmt.Sprintf("%x", mac.Sum(nil))
 }
 ```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 ## Payload Examples
 

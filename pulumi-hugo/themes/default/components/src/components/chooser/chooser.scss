@@ -1,7 +1,19 @@
 pulumi-chooser {
 
-    // In general, these should probably only be used for styles that aren't properly
-    // handled with Tailwind classes. I'm not sure what that means yet, but my gut tells
-    // me it means things that aren't decorative, like visible/invisible and the like. But
-    // Will come back to this.
+    // Headless choosers' option lists are hidden.
+    &[option-style="none"] {
+        > ul {
+            display: none;
+        }
+    }
+
+    // Immediate descendents inherit the display property to allow them to be rendered
+    // inline as well.
+    > * {
+        display: inherit;
+    }
+
+    pulumi-choosable {
+        display: inherit;
+    }
 }

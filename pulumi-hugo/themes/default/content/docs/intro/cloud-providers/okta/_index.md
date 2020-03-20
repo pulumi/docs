@@ -20,7 +20,9 @@ The Okta provider supports several options for interacting with Okta.  See the [
 
 ## Example
 
-{{< langchoose csharp >}}
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
 
 ```javascript
 const okta = require("@pulumi/okta")
@@ -33,6 +35,9 @@ const user = new okta.user.User("example-user", {
 })
 ```
 
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
 ```typescript
 import * as okta from "@pulumi/okta";
 
@@ -44,6 +49,9 @@ const user = new okta.user.User("example-user", {
 });
 ```
 
+{{% /choosable %}}
+{{% choosable language python %}}
+
 ```python
 import pulumi_okta as okta
 
@@ -54,6 +62,9 @@ first_name="random",
 last_name="user",
 )
 ```
+
+{{% /choosable %}}
+{{% choosable language go %}}
 
 ```go
 import (
@@ -67,6 +78,9 @@ user, _ := user.User(ctx, "example-user", &user.UserArgs{
     Login: "test-user@mydomain.com"
 })
 ```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
 
 ```csharp
 using System.Collections.Generic;
@@ -87,6 +101,10 @@ class Program
         });
 }
 ```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 ## Libraries
 
