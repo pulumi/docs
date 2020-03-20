@@ -69,7 +69,7 @@ When the virtual machine is created, it reads the configuration file that create
 
 ## Serverless
 
-Serverless is a computing architecture characterized by server-side logic running in stateless containers that are invoked by events. They are typically ephemeral (often are available for only one call), and managed by third-party cloud providers. Serverless is also called Functions as a Service, or `FaaS`, and well-known implementations include AWS Lambda and Fargate, Azure Functions, and Google Cloud Run and Cloud Functions.
+Serverless is a computing architecture characterized by server-side logic running in stateless containers that are invoked by events. They are typically ephemeral (often are available for only one call), and managed by third-party cloud providers. Serverless is also called Functions as a Service, or FaaS, and well-known implementations include AWS Lambda and Fargate, Azure Functions, and Google Cloud Run and Cloud Functions.
 
 A significant benefit of serverless is that it's a polyglot platform that allows developers to choose languages optimized for a task. For example, scripting languages like Javascript or Python may be more responsive than a language such as Java. Serverless functions can support both synchronous and asynchronous calls. There are use cases that require an immediate response such as processing a video stream and instances where returning the result immediately is not critical as in an ETL batch job.
 
