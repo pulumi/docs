@@ -864,7 +864,7 @@ const api = new awsx.apigateway.API("myapi", {
         },
         apiKeyRequired: true,
     }],
-    apikeySource: "AUTHORIZER",
+    apiKeySource: "AUTHORIZER",
 });
 ```
 
