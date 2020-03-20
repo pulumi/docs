@@ -9,14 +9,12 @@ menu:
     weight: 5
 ---
 
-{{< cloudchoose >}}
+{{< chooser cloud "aws,azure,gcp" / >}}
 
 With a vanilla cluster running, create any desired resources, and logically
 segment the cluster as needed.
 
-<div class="cloud-prologue-aws"></div>
-<div class="mt">
-{{% md %}}
+{{% choosable cloud aws %}}
 
 The full code for this stack is on [GitHub][gh-repo-stack].
 
@@ -24,12 +22,9 @@ The full code for this stack is on [GitHub][gh-repo-stack].
 [gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/aws/03-cluster-configuration
 <!-- markdownlint-enable url -->
 
-{{% /md %}}
-</div>
+{{% /choosable %}}
 
-<div class="cloud-prologue-azure"></div>
-<div class="mt">
-{{% md %}}
+{{% choosable cloud azure %}}
 
 The full code for this stack is on [GitHub][gh-repo-stack].
 
@@ -37,12 +32,9 @@ The full code for this stack is on [GitHub][gh-repo-stack].
 [gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/azure/03-cluster-configuration
 <!-- markdownlint-enable url -->
 
-{{% /md %}}
-</div>
+{{% /choosable %}}
 
-<div class="cloud-prologue-gcp"></div>
-<div class="mt">
-{{% md %}}
+{{% choosable cloud gcp %}}
 
 The full code for this stack is on [GitHub][gh-repo-stack].
 
@@ -50,8 +42,7 @@ The full code for this stack is on [GitHub][gh-repo-stack].
 [gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/gcp/03-cluster-configuration
 <!-- markdownlint-enable url -->
 
-{{% /md %}}
-</div>
+{{% /choosable %}}
 
 ## Overview
 
@@ -63,9 +54,7 @@ We'll examine how to create:
 
 ## Prerequisites
 
-<div class="cloud-prologue-aws"></div>
-<div class="mt">
-{{% md %}}
+{{% choosable cloud aws %}}
 
 Authenticate as the `admins` role from the [Identity][aws-admin-identity-stack] stack.
 
@@ -75,11 +64,8 @@ $ export KUBECONFIG=`pwd`/kubeconfig-admin.json
 ```
 
 [aws-admin-identity-stack]: {{< relref "/docs/guides/crosswalk/kubernetes/identity#create-an-iam-role-for-admins" >}}
-{{% /md %}}
-</div>
-<div class="cloud-prologue-azure"></div>
-<div class="mt">
-{{% md %}}
+{{% /choosable %}}
+{{% choosable cloud azure %}}
 Authenticate as the ServicePrincipal from the [Identity][azure-identity-stack] stack.
 
 ```bash
@@ -88,11 +74,11 @@ $ export KUBECONFIG=`pwd`/kubeconfig-admin.json
 ```
 
 [azure-identity-stack]: {{< relref "/docs/guides/crosswalk/kubernetes/identity#prerequisites" >}}
-{{% /md %}}
-</div>
-<div class="cloud-prologue-gcp"></div>
-<div class="mt">
-{{% md %}}
+
+{{% /choosable %}}
+
+{{% choosable cloud gcp %}}
+
 Authenticate as the `admins` ServiceAccount from the [Identity][gcp-admin-identity-stack] stack.
 
 ```bash
@@ -101,8 +87,8 @@ $ export KUBECONFIG=`pwd`/kubeconfig.json
 ```
 
 [gcp-admin-identity-stack]: {{< relref "/docs/guides/crosswalk/kubernetes/identity#create-an-iam-role-and-serviceaccount-for-admins" >}}
-{{% /md %}}
-</div>
+
+{{% /choosable %}}
 
 ## Namespaces
 
@@ -112,11 +98,9 @@ Create namespaces for typical stacks:
 * App Services: Deploy application-scoped services, such as ingress or DNS management.
 * Apps: Deploy applications and workloads.
 
-{{< k8s-language nokx >}}
+{{< chooser k8s-language "typescript,yaml" / >}}
 
-<div class="k8s-language-prologue-yaml"></div>
-<div class="mt">
-{{% md %}}
+{{% choosable k8s-language yaml %}}
 
 ```yaml
 cat > namespaces.yaml << EOF
@@ -141,12 +125,9 @@ EOF
 $ kubectl apply -f namespaces.yaml
 ```
 
-{{% /md %}}
-</div>
+{{% /choosable %}}
 
-<div class="k8s-language-prologue-typescript"></div>
-<div class="mt">
-{{% md %}}
+{{% choosable k8s-language typescript %}}
 
 ```typescript
 import * as k8s from "@pulumi/kubernetes";
@@ -162,8 +143,7 @@ const appsNamespace = new k8s.core.v1.Namespace("apps", undefined, { provider: c
 export const appsNamespaceName = appsNamespace.metadata.name;
 ```
 
-{{% /md %}}
-</div>
+{{% /choosable %}}
 
 ## Quotas
 
@@ -174,11 +154,9 @@ all Pods in a namespace.
 [k8s-quotas]: https://kubernetes.io/docs/concepts/policy/resource-quotas/#compute-resource-quota
 <!-- markdownlint-enable url -->
 
-{{< k8s-language nokx >}}
+{{< chooser k8s-language "typescript,yaml" / >}}
 
-<div class="k8s-language-prologue-yaml"></div>
-<div class="mt">
-{{% md %}}
+{{% choosable k8s-language yaml %}}
 
 ```yaml
 cat > quota.yaml << EOF
@@ -201,12 +179,9 @@ EOF
 $ kubectl apply -f quota.yaml
 ```
 
-{{% /md %}}
-</div>
+{{% /choosable %}}
 
-<div class="k8s-language-prologue-typescript"></div>
-<div class="mt">
-{{% md %}}
+{{% choosable k8s-language typescript %}}
 
 ```typescript
 import * as k8s from "@pulumi/kubernetes";
@@ -229,8 +204,7 @@ const quotaAppNamespace = new k8s.core.v1.ResourceQuota("apps", {
 });
 ```
 
-{{% /md %}}
-</div>
+{{% /choosable %}}
 
 Track the quota usage in the namespace using `kubectl` and Pulumi output.
 
@@ -250,9 +224,7 @@ services                0     5
 
 ## PodSecurityPolicies
 
-<div class="cloud-prologue-aws"></div>
-<div class="mt">
-{{% md %}}
+{{% choosable cloud aws %}}
 
 By default, EKS ships with a fully privileged [PodSecurityPolicy][k8s-psp] named
 `eks.privileged`. This PSP is bound to the `system:authenticated` group, which means **any**
@@ -270,12 +242,9 @@ See the official [EKS Pod Security Policy][eks-psp] docs and the
 [eks-psp]: https://docs.aws.amazon.com/eks/latest/userguide/pod-security-policy.html
 <!-- markdownlint-enable url -->
 
-{{% /md %}}
-</div>
+{{% /choosable %}}
 
-<div class="cloud-prologue-azure"></div>
-<div class="mt">
-{{% md %}}
+{{% choosable cloud azure %}}
 
 By default, AKS ships with a fully privileged [PodSecurityPolicy][k8s-psp] named
 `privileged`. [Per AKS][aks-psp-priv], this privileged PSP should not be removed.
@@ -293,12 +262,9 @@ See the official [AKS Pod Security Policy][aks-psp] docs and the
 [aks-psp-priv]: https://docs.microsoft.com/en-us/azure/aks/use-pod-security-policies
 <!-- markdownlint-enable url -->
 
-{{% /md %}}
-</div>
+{{% /choosable %}}
 
-<div class="cloud-prologue-gcp"></div>
-<div class="mt">
-{{% md %}}
+{{% choosable cloud gcp %}}
 
 By default, GKE ships with the following [PodSecurityPolicies][k8s-psp].
 These PSPs are used by GKE Pods and should generally be left untouched. If you
@@ -318,22 +284,19 @@ See the official [GKE Pod Security Policy][gke-psp] docs and the
 
 [k8s-psp]: https://kubernetes.io/docs/concepts/policy/pod-security-policy/
 [gke-psp]: https://cloud.google.com/kubernetes-engine/docs/how-to/pod-security-policies
-{{% /md %}}
-</div>
+
+{{% /choosable %}}
 
 ### Create a Restrictive PSP
 
 Create a PSP that allows a restrictive, but usable set of permissions to deploy
 workloads.
 
-{{< k8s-language nokx >}}
+{{< chooser k8s-language "typescript,yaml" / >}}
 
-<div class="cloud-prologue-aws"></div>
-<div class="mt">
-{{% md %}}
-<div class="k8s-language-prologue-yaml"></div>
-<div class="mt">
-{{% md %}}
+{{% choosable cloud aws %}}
+
+{{% choosable k8s-language yaml %}}
 
 ```yaml
 cat > restrictive-psp.yaml << EOF
@@ -426,12 +389,9 @@ EOF
 $ kubectl apply -f restrictive-psp.yaml
 ```
 
-{{% /md %}}
-</div>
+{{% /choosable %}}
 
-<div class="k8s-language-prologue-typescript"></div>
-<div class="mt">
-{{% md %}}
+{{% choosable k8s-language typescript %}}
 
 ```ts
 import * as k8s from "@pulumi/kubernetes";
@@ -522,17 +482,13 @@ const allowRestrictedAppsCRB = new k8s.rbac.v1.ClusterRoleBinding("allow-restric
 });
 ```
 
-{{% /md %}}
-</div>
-{{% /md %}}
-</div>
+{{% /choosable %}}
 
-<div class="cloud-prologue-azure"></div>
-<div class="mt">
-{{% md %}}
-<div class="k8s-language-prologue-yaml"></div>
-<div class="mt">
-{{% md %}}
+{{% /choosable %}}
+
+{{% choosable cloud azure %}}
+
+{{% choosable k8s-language yaml %}}
 
 ```yaml
 cat > restrictive-psp.yaml << EOF
@@ -625,12 +581,9 @@ EOF
 $ kubectl apply -f restrictive-psp.yaml
 ```
 
-{{% /md %}}
-</div>
+{{% /choosable %}}
 
-<div class="k8s-language-prologue-typescript"></div>
-<div class="mt">
-{{% md %}}
+{{% choosable k8s-language typescript %}}
 
 ```ts
 import * as k8s from "@pulumi/kubernetes";
@@ -721,17 +674,13 @@ const allowRestrictedAppsCRB = new k8s.rbac.v1.ClusterRoleBinding("allow-restric
 });
 ```
 
-{{% /md %}}
-</div>
-{{% /md %}}
-</div>
+{{% /choosable %}}
 
-<div class="cloud-prologue-gcp"></div>
-<div class="mt">
-{{% md %}}
-<div class="k8s-language-prologue-yaml"></div>
-<div class="mt">
-{{% md %}}
+{{% /choosable %}}
+
+{{% choosable cloud gcp %}}
+
+{{% choosable k8s-language yaml %}}
 
 ```yaml
 cat > restrictive-psp.yaml << EOF
@@ -824,12 +773,9 @@ EOF
 $ kubectl apply -f restrictive-psp.yaml
 ```
 
-{{% /md %}}
-</div>
+{{% /choosable %}}
 
-<div class="k8s-language-prologue-typescript"></div>
-<div class="mt">
-{{% md %}}
+{{% choosable k8s-language typescript %}}
 
 ```ts
 import * as k8s from "@pulumi/kubernetes";
@@ -923,10 +869,9 @@ const allowRestrictedAppsCRB = pulumi.all([
 });
 ```
 
-{{% /md %}}
-</div>
-{{% /md %}}
-</div>
+{{% /choosable %}}
+
+{{% /choosable %}}
 
 ### Create a Privileged PSP Role Binding
 
@@ -934,15 +879,11 @@ If you wish to grant the ability to use a privileged PSP, we need to
 create a ClusterRoleBinding to the PSP. For example, here's how to bind the PSP to
 a given Namespace's (`ingress-nginx`) ServiceAccounts.
 
-{{< k8s-language nokx >}}
+{{< chooser k8s-language "typescript,yaml" / >}}
 
-<div class="k8s-language-prologue-yaml"></div>
-<div class="mt">
-{{% md %}}
+{{% choosable k8s-language yaml %}}
 
-<div class="cloud-prologue-aws"></div>
-<div class="mt">
-{{% md %}}
+{{% choosable cloud aws %}}
 
 ```yaml
 cat > privileged-clusterrolebinding.yaml << EOF
@@ -965,11 +906,9 @@ EOF
 $ kubectl apply -f privileged-rolebinding.yaml
 ```
 
-{{% /md %}}
-</div>
-<div class="cloud-prologue-azure"></div>
-<div class="mt">
-{{% md %}}
+{{% /choosable %}}
+
+{{% choosable cloud azure %}}
 
 ```yaml
 cat > privileged-clusterrolebinding.yaml << EOF
@@ -992,11 +931,9 @@ EOF
 $ kubectl apply -f privileged-rolebinding.yaml
 ```
 
-{{% /md %}}
-</div>
-<div class="cloud-prologue-gcp"></div>
-<div class="mt">
-{{% md %}}
+{{% /choosable %}}
+
+{{% choosable cloud gcp %}}
 
 ```yaml
 cat > privileged-clusterrolebinding.yaml << EOF
@@ -1019,18 +956,13 @@ EOF
 $ kubectl apply -f privileged-rolebinding.yaml
 ```
 
-{{% /md %}}
-</div>
+{{% /choosable %}}
 
-{{% /md %}}
-</div>
+{{% /choosable %}}
 
-<div class="k8s-language-prologue-typescript"></div>
-<div class="mt">
-{{% md %}}
-<div class="cloud-prologue-aws"></div>
-<div class="mt">
-{{% md %}}
+{{% choosable k8s-language typescript %}}
+
+{{% choosable cloud aws %}}
 
 ```ts
 import * as k8s from "@pulumi/kubernetes";
@@ -1052,12 +984,9 @@ const privilegedCRB = new k8s.rbac.v1.ClusterRoleBinding("privileged", {
 });
 ```
 
-{{% /md %}}
-</div>
+{{% /choosable %}}
 
-<div class="cloud-prologue-azure"></div>
-<div class="mt">
-{{% md %}}
+{{% choosable cloud azure %}}
 
 ```ts
 import * as k8s from "@pulumi/kubernetes";
@@ -1079,12 +1008,9 @@ const privilegedCRB = new k8s.rbac.v1.ClusterRoleBinding("privileged", {
 });
 ```
 
-{{% /md %}}
-</div>
+{{% /choosable %}}
 
-<div class="cloud-prologue-gcp"></div>
-<div class="mt">
-{{% md %}}
+{{% choosable cloud gcp %}}
 
 ```ts
 import * as k8s from "@pulumi/kubernetes";
@@ -1108,8 +1034,6 @@ const privilegedCRB = new k8s.rbac.v1.ClusterRoleBinding("privileged", {
 });
 ```
 
-{{% /md %}}
-</div>
+{{% /choosable %}}
 
-{{% /md %}}
-</div>
+{{% /choosable %}}

@@ -1,11 +1,13 @@
 pulumi-choosable {
 
-    // Structural things -- like visibility.
+    // Immediate descendents are hidden by default, visible when active.
     > * {
         display: none;
 
+        // Actives are visible, but inherit the display property to allow them to be
+        // rendered inline as well.
         &.active {
-            display: block;
+            display: inherit;
         }
     }
 }

@@ -20,7 +20,9 @@ The Vault provider supports several options for interacting with HashiCorp Vault
 
 ## Example
 
-{{< langchoose csharp >}}
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
 
 ```javascript
 const vault = require("@pulumi/vault")
@@ -30,6 +32,9 @@ const be = new vault.AuthBackend("example", {
 });
 ```
 
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
 ```typescript
 import * as vault from "@pulumi/vault";
 
@@ -38,6 +43,9 @@ const be = new vault.AuthBackend("example", {
 });
 ```
 
+{{% /choosable %}}
+{{% choosable language python %}}
+
 ```python
 import pulumi_vault as vault
 
@@ -45,6 +53,9 @@ be = vault.AuthBackend("example",
   type='github'
 )
 ```
+
+{{% /choosable %}}
+{{% choosable language go %}}
 
 ```go
 import (
@@ -55,6 +66,9 @@ be, _ := vault.NewAuthBackend(ctx, "example", &vault.AuthBackendArgs{
   Type: "github",
 })
 ```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
 
 ```csharp
 using System.Collections.Generic;
@@ -73,6 +87,10 @@ class Program
         });
 }
 ```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 ## Libraries
 

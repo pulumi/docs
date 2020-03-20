@@ -21,7 +21,9 @@ The DNSimple provider supports several options for providing access to DNSimple 
 
 ## Example
 
-{{< langchoose csharp >}}
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
 
 ```javascript
 const dnsimple = require("@pulumi/dnsimple")
@@ -34,6 +36,9 @@ const record = new dnsimple.Record("test", {
 });
 ```
 
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
 ```typescript
 import * as dnsimple from "@pulumi/dnsimple";
 
@@ -45,6 +50,9 @@ const record = new dnsimple.Record("test", {
 });
 ```
 
+{{% /choosable %}}
+{{% choosable language python %}}
+
 ```python
 import pulumi_dnsimple as dnsimple
 
@@ -55,6 +63,9 @@ record = dnsimple.Record("test",
   value="api.devflix.watch.herokudns.com"
 )
 ```
+
+{{% /choosable %}}
+{{% choosable language go %}}
 
 ```go
 import (
@@ -68,6 +79,9 @@ record, _ := dnsimple.NewRecord(ctx, "test", &dnsimple.RecordArgs{
   Value: "api.devflix.watch.herokudns.com",
 })
 ```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
 
 ```csharp
 using System.Collections.Generic;
@@ -89,6 +103,10 @@ class Program
         });
 }
 ```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 ## Libraries
 

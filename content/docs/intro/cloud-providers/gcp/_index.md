@@ -36,7 +36,9 @@ In addition to the tutorial, several interesting examples are available complete
 
 ## Example
 
-{{< langchoose csharp >}}
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
 
 ```javascript
 const gcp = require("@pulumi/gcp")
@@ -44,11 +46,17 @@ const gcp = require("@pulumi/gcp")
 const bucket = new gcp.storage.Bucket("my-bucket");
 ```
 
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
 ```typescript
 import * as gcp from "@pulumi/gcp";
 
 const bucket = new gcp.storage.Bucket("my-bucket");
 ```
+
+{{% /choosable %}}
+{{% choosable language python %}}
 
 ```python
 from pulumi_gcp import storage
@@ -56,11 +64,17 @@ from pulumi_gcp import storage
 bucket = storage.Bucket('my-bucket')
 ```
 
+{{% /choosable %}}
+{{% choosable language go %}}
+
 ```go
 import "github.com/pulumi/pulumi-gcp/sdk/go/gcp/storage"
 
 bucket, _ := storage.NewBucket(ctx, "my-bucket", nil)
 ```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
 
 ```csharp
 using System.Threading.Tasks;
@@ -75,6 +89,10 @@ class Program
         });
 }
 ```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 You can find additional examples of using Google Cloud in
 [the Pulumi examples repo](https://github.com/pulumi/examples).

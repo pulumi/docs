@@ -9,16 +9,14 @@ menu:
     weight: 7
 ---
 
-{{< cloudchoose >}}
+{{< chooser cloud "aws,azure,gcp" / >}}
 
 Cluster services are general services scoped at the Kubernetes cluster level.
 These services tend to include logging and monitoring at a minimum for the
 whole cluster, or a subset of apps and workloads. It could also include
 policy enforcement and service meshes.
 
-<div class="cloud-prologue-aws"></div>
-<div class="mt">
-{{% md %}}
+{{% choosable cloud aws %}}
 
 The full code for the AWS cluster services is on [GitHub][gh-repo-stack].
 
@@ -26,12 +24,9 @@ The full code for the AWS cluster services is on [GitHub][gh-repo-stack].
 [gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/aws/04-cluster-services
 <!-- markdownlint-enable url -->
 
-{{% /md %}}
-</div>
+{{% /choosable %}}
 
-<div class="cloud-prologue-azure"></div>
-<div class="mt">
-{{% md %}}
+{{% choosable cloud azure %}}
 
 The full code for the Azure cluster services is on [GitHub][gh-repo-stack].
 
@@ -39,12 +34,9 @@ The full code for the Azure cluster services is on [GitHub][gh-repo-stack].
 [gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/azure/04-cluster-services
 <!-- markdownlint-enable url -->
 
-{{% /md %}}
-</div>
+{{% /choosable %}}
 
-<div class="cloud-prologue-gcp"></div>
-<div class="mt">
-{{% md %}}
+{{% choosable cloud gcp %}}
 
 GKE logging and monitoring is managed by GCP through StackDriver.
 
@@ -55,8 +47,7 @@ The repo for the GCP cluster services is on [GitHub][gh-repo-stack], but it is e
 [gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/gcp/04-cluster-services
 <!-- markdownlint-enable url -->
 
-{{% /md %}}
-</div>
+{{% /choosable %}}
 
 The full code for the general cluster services is on [GitHub][gh-repo-stack].
 
@@ -64,9 +55,8 @@ The full code for the general cluster services is on [GitHub][gh-repo-stack].
 [gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/general-cluster-services
 <!-- markdownlint-enable url -->
 
-<div class="cloud-prologue-aws"></div>
-<div class="mt">
-{{% md %}}
+{{% choosable cloud aws %}}
+
 ## Overview
 
 We'll explore how to setup:
@@ -159,11 +149,9 @@ attachLogPolicies("perfRpa", perfNodegroupIamRoleName);
 [aws-cw-logs]: https://aws.amazon.com/cloudwatch/features/
 <!-- markdownlint-enable url -->
 
-{{< k8s-language nokx >}}
+{{< chooser k8s-language "typescript,yaml" / >}}
 
-<div class="k8s-language-prologue-yaml"></div>
-<div class="mt">
-{{% md %}}
+{{% choosable k8s-language yaml %}}
 
 Using the YAML manifests in the [AWS samples][k8s-logs-samples], we can provision `fluentd-cloudwatch`
 to run as a [DaemonSet][k8s-ds] and send worker and app logs to [CloudWatch
@@ -225,12 +213,9 @@ $ kubectl delete ns amazon-cloudwatch
 [aws-cw-logs]: https://aws.amazon.com/cloudwatch/features/
 <!-- markdownlint-enable url -->
 
-{{% /md %}}
-</div>
+{{% /choosable %}}
 
-<div class="k8s-language-prologue-typescript"></div>
-<div class="mt">
-{{% md %}}
+{{% choosable k8s-language typescript %}}
 
 Using the [Helm chart][fluentd-helm], we can provision `fluentd-cloudwatch`
 in Pulumi to run as a [DaemonSet][k8s-ds] and send worker and app logs to [CloudWatch
@@ -301,8 +286,7 @@ $ pulumi stack output fluentdCloudWatchLogGroupName
 [fluentd-helm]: https://github.com/helm/charts/tree/master/incubator/fluentd-cloudwatch
 <!-- markdownlint-enable url -->
 
-{{% /md %}}
-</div>
+{{% /choosable %}}
 
 > Note: CloudWatch is rate limited and often times the size of the
 data being sent can cause `ThrottlingException error="Rate exceeded"`. This can cause a delay in logs showing up in CloudWatch. Request a limit increase, or alter
@@ -313,12 +297,9 @@ the data being sent, if necessary.  See the [CloudWatch limits][aws-cw-limits] f
 [aws-cw-limits]: https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch_limits.html
 <!-- markdownlint-enable url -->
 
-{{% /md %}}
-</div>
+{{% /choosable %}}
 
-<div class="cloud-prologue-azure"></div>
-<div class="mt">
-{{% md %}}
+{{% choosable cloud azure %}}
 
 ## Overview
 
@@ -416,12 +397,9 @@ See the official [AKS docs][aks-kubelet-logs] for more details.
 [crosswalk-aks-cluster-svcs]: https://github.com/pulumi/kubernetes-guides/tree/master/azure/04-cluster-services
 <!-- markdownlint-enable url -->
 
-{{% /md %}}
-</div>
+{{% /choosable %}}
 
-<div class="cloud-prologue-gcp"></div>
-<div class="mt">
-{{% md %}}
+{{% choosable cloud gcp %}}
 
 ## Overview
 
@@ -478,11 +456,10 @@ const standardNodes = new gcp.container.NodePool("standard-nodes", {
 [crosswalk-k8s-cluster]: https://github.com/pulumi/kubernetes-guides/tree/master/gcp/03-cluster-configuration
 <!-- markdownlint-enable url -->
 
-</div>
+{{% /choosable %}}
 
-<div class="cloud-prologue-aws"></div>
-<div class="mt">
-{{% md %}}
+{{% choosable cloud aws %}}
+
 ## AWS Monitoring
 
 Using the YAML manifests in the [AWS samples][aws-metrics-samples], we can provision the CloudWatch Agent
@@ -494,7 +471,7 @@ to run as a [DaemonSet][k8s-ds] and send metrics to [CloudWatch][aws-cw].
 [aws-metrics-samples]: https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Container-Insights-setup-metrics.html
 <!-- markdownlint-enable url -->
 
-#### Install CloudWatch Agent
+### Install CloudWatch Agent
 
 Create a Namespace.
 
@@ -556,8 +533,7 @@ $ kubectl delete ns amazon-cloudwatch
 [aws-cw-console]: https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/GettingSetup.html#ConsoleSignIn
 <!-- markdownlint-enable url -->
 
-{{% /md %}}
-</div>
+{{% /choosable %}}
 
 ## Datadog
 

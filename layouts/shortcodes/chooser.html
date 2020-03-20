@@ -1,3 +1,5 @@
 <div>
-<pulumi-chooser type="{{ .Get 0 }}" options="{{ .Get 1 }}"></pulumi-chooser>
-</div>
+<pulumi-chooser
+    type="{{ .Get 0 }}"
+    options="{{ .Get 1 }}"
+    mode="{{ .Get 2 }}">{{ .Inner | markdownify }}</pulumi-chooser></div>

@@ -16,15 +16,22 @@ git_sha: "c6b908409ea7547a3f3c5fb878cdbb9afda719c9"
 > please consult the source [`terraform-providers/terraform-provider-cloudflare` repo](https://github.com/terraform-providers/terraform-provider-cloudflare/issues).
 
 
-{{< langchoose nodeonly >}}
+{{< chooser language "javascript,typescript" >}}
+{{% choosable language javascript %}}
 
 ```javascript
 var cloudflare = require("@pulumi/cloudflare");
 ```
 
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
 ```typescript
 import * as cloudflare from "@pulumi/cloudflare";
 ```
+
+{{% /choosable %}}
+{{% /chooser %}}
 
 
 <h3>Modules</h3>

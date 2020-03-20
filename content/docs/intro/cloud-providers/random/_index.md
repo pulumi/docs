@@ -14,7 +14,9 @@ See the [full API documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/r
 
 ## Example
 
-{{< langchoose csharp >}}
+{{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
 
 ```javascript
 const random = require("@pulumi/random")
@@ -22,17 +24,26 @@ const random = require("@pulumi/random")
 const username = new random.Pet("my-user-name");
 ```
 
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
 ```typescript
 import * as random from "@pulumi/random";
 
 const username = new random.Pet("my-user-name");
 ```
 
+{{% /choosable %}}
+{{% choosable language python %}}
+
 ```python
 import pulumi_random as random
 
 username = random.Pet("my-user-name")
 ```
+
+{{% /choosable %}}
+{{% choosable language go %}}
 
 ```go
 import (
@@ -41,6 +52,9 @@ import (
 
 username, _ := random.NewPet(ctx, "my-user-name", &random.PetArgs{})
 ```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
 
 ```csharp
 using System.Collections.Generic;
@@ -56,6 +70,10 @@ class Program
         });
 }
 ```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 ## Libraries
 

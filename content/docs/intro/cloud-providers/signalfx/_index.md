@@ -21,7 +21,9 @@ The SignalFx provider supports several options for providing access to SignalFx 
 
 ## Example
 
-{{< langchoose csharp >}}
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
 
 ```javascript
 const signalfx = require("@pulumi/signalfx")
@@ -31,6 +33,9 @@ const group = new signalfx.DashboardGroup("my-group", {
 });
 ```
 
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
 ```typescript
 import * as signalfx from "@pulumi/signalfx";
 
@@ -39,6 +44,9 @@ const group = new signalfx.DashboardGroup("my-group", {
 });
 ```
 
+{{% /choosable %}}
+{{% choosable language python %}}
+
 ```python
 import pulumi_signalfx as signalfx
 
@@ -46,6 +54,9 @@ group = signalfx.DashboardGroup("my-group",
   description="my demo dashboard group"
 )
 ```
+
+{{% /choosable %}}
+{{% choosable language go %}}
 
 ```go
 import (
@@ -56,6 +67,9 @@ group, _ := signalfx.NewDashboardGroup(ctx, "my-group", &signalfx.DashboardGroup
   Description: "my demo dashboard group"
 }
 ```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
 
 ```csharp
 using System.Collections.Generic;
@@ -74,6 +88,10 @@ class Program
         });
 }
 ```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 ## Libraries
 

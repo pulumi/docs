@@ -14,7 +14,9 @@ See the [full API documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/t
 
 ## Example
 
-{{< langchoose csharp >}}
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
 
 ```javascript
 const tls = require("@pulumi/tls")
@@ -25,6 +27,9 @@ const key = new tls.PrivateKey("my-private-key", {
 });
 ```
 
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
 ```typescript
 import * as tls from "@pulumi/tls";
 
@@ -34,6 +39,9 @@ const key = new tls.PrivateKey("my-private-key", {
 });
 ```
 
+{{% /choosable %}}
+{{% choosable language python %}}
+
 ```python
 import pulumi_tls as tls
 
@@ -42,6 +50,9 @@ key = tls.PrivateKey("my-private-key",
   ecdsa_curve="P384"
 )
 ```
+
+{{% /choosable %}}
+{{% choosable language go %}}
 
 ```go
 import (
@@ -53,6 +64,9 @@ key, _ := tls.NewPrivateKey(ctx, "my-private-key", &tls.PrivateKeyArgs{
   EcdsaCurve: "P384",
 })
 ```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
 
 ```csharp
 using System.Collections.Generic;
@@ -71,6 +85,10 @@ class Program
         });
 }
 ```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 ## Libraries
 

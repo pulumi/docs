@@ -18,7 +18,9 @@ Let's review some of the generated project files:
 - `Pulumi.dev.yaml` contains [configuration]({{< relref "/docs/intro/concepts/config" >}}) values for the [stack]({{< relref "/docs/intro/concepts/stack" >}}) we initialized.
 - {{< langfile >}} is the Pulumi program that defines our stack resources. Let's examine it.
 
-{{< langchoose csharp >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+
+{{% choosable language javascript %}}
 
 ```javascript
 "use strict";
@@ -39,6 +41,9 @@ const account = new azure.storage.Account("storage", {
 exports.connectionString = account.primaryConnectionString;
 ```
 
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -57,6 +62,9 @@ const account = new azure.storage.Account("storage", {
 export const connectionString = account.primaryConnectionString;
 ```
 
+{{% /choosable %}}
+{{% choosable language python %}}
+
 ```python
 import pulumi
 from pulumi_azure import core, storage
@@ -73,6 +81,9 @@ account = storage.Account("storage",
 # Export the connection string for the storage account
 pulumi.export('connection_string', account.primary_connection_string)
 ```
+
+{{% /choosable %}}
+{{% choosable language go %}}
 
 ```go
 package main
@@ -110,6 +121,9 @@ func main() {
 }
 ```
 
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
 ```csharp
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -141,24 +155,26 @@ class Program
 }
 ```
 
+{{% /choosable %}}
+
 This Pulumi program creates an Azure resource group and storage account and exports the storage account's connection string.
 
 **Note**: In this program, the location of the resource group is set in the configuration setting `azure:location` (check the `Pulumi.dev.yaml` file). This is an easy way to set a global location for your program so you don't have to specify the location for each resource manually. The location for the storage account is automatically derived from the location of the resource group. To override the location for a resource, simply set the location property to one of Azure's [supported locations](https://azure.microsoft.com/en-us/global-infrastructure/locations/).
 
-{{% lang python %}}
+{{% choosable language python %}}
 
 {{< python-venv >}}
 
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
 For Go, before we can deploy the stack, you will need to initialize your project's dependencies. Pulumi templates currently use `dep`:
 
 ```bash
 $ dep ensure
 ```
 
-{{% /lang %}}
+{{% /choosable %}}
 
 Next, we'll deploy the stack.
 

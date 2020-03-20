@@ -16,23 +16,23 @@ aliases: ["/docs/quickstart/aws/install-language-runtime/"]
 
 ## Choose Your Language
 
-{{< langchoose csharp >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
-{{% lang nodejs %}}
+{{% choosable language "javascript,typescript" %}}
 {{< install-node >}}
-{{< /lang >}}
+{{% /choosable %}}
 
-{{% lang python %}}
+{{% choosable language python %}}
 {{< install-python >}}
-{{< /lang >}}
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
 {{< install-go >}}
-{{< /lang >}}
+{{% /choosable %}}
 
-{{% lang dotnet %}}
+{{% choosable language "csharp,fsharp,visualbasic" %}}
 {{< install-dotnet >}}
-{{< /lang >}}
+{{% /choosable %}}
 
 Next, we'll configure AWS.
 
