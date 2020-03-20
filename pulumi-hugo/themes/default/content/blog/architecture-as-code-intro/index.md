@@ -1,7 +1,7 @@
 ---
 title: "Architecture as Code"
 date: 2020-03-18T13:42:35-05:00
-meta_desc: " An overview of fnfrastructure architecture and implementations with Pulumi"
+meta_desc: " An overview of infrastructure architecture and implementations with Pulumi."
 meta_image: architecture.png
 authors:
     - sophia-parafina
