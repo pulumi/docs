@@ -78,6 +78,16 @@ provider. It can operate either as a self-closing component with no children or 
 container with one or more `pulumi-choosable` components as its children. In both cases,
 by default, the `options` you provide will be set globally and persist between pageviews.
 
+Available chooser types are:
+
+* `cloud`, with supported options `aws`, `azure`, and `gcp`
+* `os`, with supported options `macos`, `linux` and `windows`
+* `language`, with supported options `javascript`, `typescript`, `python`, `go`, `csharp`, `fsharp`, and `visualbasic`.
+* `k8s-language`, with supported options `typescript`, `typescript-kx`, and `yaml`
+
+Options will be ordered automatically by the component; variable sort order is not exposed
+in the component API.
+
 If you want to present a chooser that works independently of what's globally stored, use
 the `mode="local"` attribute, as indicated in the example below.
 
@@ -100,9 +110,9 @@ from content more relevant to the user's general preferences.
 
 ```
 <pulumi-chooser type="os" options="macos,windows,linux" mode="local">
-    <pulumi-choosable value="macos">Some Mac Stuff</pulumi-choosable>
-    <pulumi-choosable value="windows">Some Windows Stuff</pulumi-choosable>
-    <pulumi-choosable value="linux">Some Linux Stuff</pulumi-choosable>
+    <pulumi-choosable type="os" value="macos">Some Mac Stuff</pulumi-choosable>
+    <pulumi-choosable type="os" value="windows">Some Windows Stuff</pulumi-choosable>
+    <pulumi-choosable type="os" value="linux">Some Linux Stuff</pulumi-choosable>
 </pulumi-chooser>
 ```
 
@@ -111,9 +121,9 @@ This chooser groups a set of options, but hides its controls by providing an
 
 ```
 <pulumi-chooser type="os" options="macos,windows,linux" option-style="none">
-    <pulumi-choosable value="macos">Some Mac Stuff</pulumi-choosable>
-    <pulumi-choosable value="windows">Some Windows Stuff</pulumi-choosable>
-    <pulumi-choosable value="linux">Some Linux Stuff</pulumi-choosable>
+    <pulumi-choosable type="os" value="macos">Some Mac Stuff</pulumi-choosable>
+    <pulumi-choosable type="os" value="windows">Some Windows Stuff</pulumi-choosable>
+    <pulumi-choosable type="os" value="linux">Some Linux Stuff</pulumi-choosable>
 </pulumi-chooser>
 ```
 
@@ -134,6 +144,85 @@ its own, in which case it'll simply honor whatever's in the global store.
             I'll only appear when the user's preferred OS is Mac. Otherwise, you'll never see me.
         </pulumi-choosable>
         ...
+```
+
+#### Shortcodes (and some gotchas)
+
+In Markdown files, you can express these choosers either as HTML alone or with
+[Hugo shortcodes](https://gohugo.io/content-management/shortcodes/). For example:
+
+```
+{{< chooser language "typescript,go,csharp" >}}
+```
+
+.. will render:
+
+```
+<div>
+    <pulumi-chooser type="language" options="typescript,go,csharp"></pulumi-chooser>
+</div>
+```
+
+Similarly:
+
+```
+{{< chooser cloud "aws,azure,gcp" >}}
+{{% choosable cloud aws %}}
+Some AWS stuff.
+{{% /choosable %}}
+{{% choosable cloud azure %}}
+Some Azure stuff.
+{{% /choosable %}}
+{{% choosable cloud gcp %}}
+Some GCP stuff.
+{{% /choosable %}}
+{{< /chooser >}}
+```
+
+.. will render:
+
+```
+<div>
+    <pulumi-chooser type="cloud" options="aws,azure,gcp">
+        <div>
+            <pulumi-choosable type="cloud" values="aws" mode="">Some AWS stuff.</pulumi-choosable>
+        </div>
+        <div>
+            <pulumi-choosable type="cloud" values="azure" mode="">Some Azure stuff.</pulumi-choosable>
+        </div>
+        <div>
+            <pulumi-choosable type="cloud" values="gcp" mode="">Some GCP stuff.</pulumi-choosable>
+        </div>
+    </pulumi-chooser>
+</div>
+```
+
+A few things to note:
+
+* The `choosable` shortcode **renders Markdown automatically**. You don't need use the
+  `md` shortcode to do that anymore. (So please don't, and thank you!)
+
+* The containing `div`s emitted by the `chooser` and `choosable` shortcodes are
+  intentional and in most cases required, because the template renderers we're using today
+  don't know how to handle [custom
+  elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements)
+  like these, so wrapping them in a standard HTML tag is necessary. (It's not necessary in
+  HTML layouts files, though -- only in Markdown files.)
+
+* By default, active choosables will inherit `display: block;`, but you can override this
+  behavior by passing the [TailwindCSS](https://tailwindcss.com/) utility class `inline`
+  in the chooser (typically in conjunction with `option-style="none"`:
+
+```
+<p>
+    It looks like you're on a
+    <pulumi-chooser type="os" options="macos,windows,linux" option-style="none" class="inline">
+        <pulumi-choosable type="os" value="macos">Mac</pulumi-choosable>
+        <pulumi-choosable type="os" value="windows">Windows</pulumi-choosable>
+        <pulumi-choosable type="os" value="linux">Linux</pulumi-choosable>
+    </pulumi-chooser>
+    computer. Nice!
+</p>
 ```
 
 ## Questions?
