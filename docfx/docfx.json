@@ -1,0 +1,54 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "src": "../../pulumi/sdk/dotnet",
+          "files": ["Pulumi/Pulumi.csproj"]
+        }
+      ],
+      "dest": "metadata/Pulumi",
+      "filter": "filterConfig.yml"
+    },
+    {
+      "src": [
+        {
+          "src": "../../pulumi/sdk/dotnet",
+          "files": ["Pulumi.FSharp/Pulumi.FSharp.fsproj"]
+        }
+      ],
+      "dest": "metadata/Pulumi.FSharp"
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "src": "metadata/Pulumi",
+        "files": ["**/*.yml"],
+        "dest": "Pulumi"
+      },
+      {
+        "src": "metadata/Pulumi.FSharp",
+        "files": ["**/*.yml"],
+        "dest": "Pulumi.FSharp"
+      }
+    ],
+    "overwrite": [],
+    "dest": "../static/docs/reference/pkg/dotnet",
+    "globalMetadata": {
+      "_appFooter": "Copyright 2016-2020, Pulumi Corporation."
+    },
+    "globalMetadataFiles": [],
+    "fileMetadataFiles": [],
+    "template": [
+      "default",
+      "./pulumi-template"
+    ],
+    "postProcessors": [],
+    "markdownEngineName": "markdig",
+    "noLangKeyword": false,
+    "keepFileLink": false,
+    "cleanupCacheHistory": false,
+    "disableGitFeatures": false
+  }
+}

@@ -1,0 +1,657 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class InputMap&lt;V&gt;
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class InputMap&lt;V&gt;
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.InputMap`1">
+  
+  <h1 id="Pulumi_InputMap_1" data-uid="Pulumi.InputMap`1" class="text-break">Class InputMap&lt;V&gt;
+  </h1>
+  <div class="markdown level0 summary"><p>A mapping of <span class="xref">System.String</span>s to values that can be passed in as the arguments to a
+<a class="xref" href="Pulumi.Resource.html">Resource</a>. The individual values are themselves <a class="xref" href="Pulumi.Input-1.html">Input&lt;T&gt;</a>s.  i.e.
+the individual values can be concrete values or <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a>s.</p>
+<p>
+<a class="xref" href="Pulumi.InputMap-1.html">InputMap&lt;V&gt;</a> differs from a normal <span class="xref">System.Collections.Generic.IDictionary&lt;TKey, TValue&gt;</span> in that it is
+itself an <a class="xref" href="Pulumi.Input-1.html">Input&lt;T&gt;</a>.  For example, a <a class="xref" href="Pulumi.Resource.html">Resource</a> that accepts an
+<a class="xref" href="Pulumi.InputMap-1.html">InputMap&lt;V&gt;</a> will accept not just a dictionary but an <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a>
+of a dictionary as well.  This is important for cases where the <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a>
+map from some <a class="xref" href="Pulumi.Resource.html">Resource</a> needs to be passed into another <a class="xref" href="Pulumi.Resource.html">Resource</a>.
+Or for cases where creating the map invariably produces an <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a> because
+its resultant value is dependent on other <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a>s.
+<p>
+This benefit of <a class="xref" href="Pulumi.InputMap-1.html">InputMap&lt;V&gt;</a> is also a limitation.  Because it represents a
+list of values that may eventually be created, there is no way to simply iterate over, or
+access the elements of the map synchronously.
+<p>
+<a class="xref" href="Pulumi.InputMap-1.html">InputMap&lt;V&gt;</a> is designed to be easily used in object and collection
+initializers.  For example, a resource that accepts a map of values can be written easily in
+this form:
+<p>
+<pre><code>    new SomeResource(&quot;name&quot;, new SomeResourceArgs {
+        MapProperty = {
+            { Key1, Value1 },
+            { Key2, Value2 },
+            { Key3, Value3 },
+        },
+    });</code></pre>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, V&gt;&gt;</div>
+    <div class="level2"><span class="xref">InputMap&lt;V&gt;</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.Collections.IEnumerable</span></div>
+    <div><span class="xref">IAsyncEnumerable</span>&lt;<a class="xref" href="Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;<span class="xref">System.String</span>, V&gt;&gt;&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.html">Pulumi</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.dll</h6>
+  <h5 id="Pulumi_InputMap_1_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class InputMap&lt;V&gt; : Input&lt;ImmutableDictionary&lt;string, V&gt;&gt;, IInput, IEnumerable, IAsyncEnumerable&lt;Input&lt;KeyValuePair&lt;string, V&gt;&gt;&gt;</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">V</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi/blob/8a0987c892e86706bd3affb6eb934aa084a85c09/sdk/dotnet/Pulumi/Core/InputMap.cs/#L44">View Source</a>
+  </span>
+  <a id="Pulumi_InputMap_1__ctor_" data-uid="Pulumi.InputMap`1.#ctor*"></a>
+  <h4 id="Pulumi_InputMap_1__ctor" data-uid="Pulumi.InputMap`1.#ctor">InputMap()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputMap()</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi/blob/8a0987c892e86706bd3affb6eb934aa084a85c09/sdk/dotnet/Pulumi/Core/InputMap.cs/#L60">View Source</a>
+  </span>
+  <a id="Pulumi_InputMap_1_Item_" data-uid="Pulumi.InputMap`1.Item*"></a>
+  <h4 id="Pulumi_InputMap_1_Item_System_String_" data-uid="Pulumi.InputMap`1.Item(System.String)">Item[String]</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;V&gt; this[string key] { set; }</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Input-1.html">Input</a>&lt;V&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi/blob/8a0987c892e86706bd3affb6eb934aa084a85c09/sdk/dotnet/Pulumi/Core/InputMap.cs/#L53">View Source</a>
+  </span>
+  <a id="Pulumi_InputMap_1_Add_" data-uid="Pulumi.InputMap`1.Add*"></a>
+  <h4 id="Pulumi_InputMap_1_Add_System_String_Pulumi_Input__0__" data-uid="Pulumi.InputMap`1.Add(System.String,Pulumi.Input{`0})">Add(String, Input&lt;V&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Add(string key, Input&lt;V&gt; value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Input-1.html">Input</a>&lt;V&gt;</td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi/blob/8a0987c892e86706bd3affb6eb934aa084a85c09/sdk/dotnet/Pulumi/Core/InputMap.cs/#L114">View Source</a>
+  </span>
+  <a id="Pulumi_InputMap_1_GetAsyncEnumerator_" data-uid="Pulumi.InputMap`1.GetAsyncEnumerator*"></a>
+  <h4 id="Pulumi_InputMap_1_GetAsyncEnumerator_System_Threading_CancellationToken_" data-uid="Pulumi.InputMap`1.GetAsyncEnumerator(System.Threading.CancellationToken)">GetAsyncEnumerator(CancellationToken)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAsyncEnumerator&lt;Input&lt;KeyValuePair&lt;string, V&gt;&gt;&gt; GetAsyncEnumerator(CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IAsyncEnumerator</span>&lt;<a class="xref" href="Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;<span class="xref">System.String</span>, V&gt;&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi/blob/8a0987c892e86706bd3affb6eb934aa084a85c09/sdk/dotnet/Pulumi/Core/InputMap.cs/#L76">View Source</a>
+  </span>
+  <a id="Pulumi_InputMap_1_Merge_" data-uid="Pulumi.InputMap`1.Merge*"></a>
+  <h4 id="Pulumi_InputMap_1_Merge_Pulumi_InputMap__0__Pulumi_InputMap__0__" data-uid="Pulumi.InputMap`1.Merge(Pulumi.InputMap{`0},Pulumi.InputMap{`0})">Merge(InputMap&lt;V&gt;, InputMap&lt;V&gt;)</h4>
+  <div class="markdown level1 summary"><p>Merge two instances of <a class="xref" href="Pulumi.InputMap-1.html">InputMap&lt;V&gt;</a>. Returns a new <a class="xref" href="Pulumi.InputMap-1.html">InputMap&lt;V&gt;</a>
+without modifying any of the arguments.</p>
+<p>If both maps contain the same key, the value from the second map takes over.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static InputMap&lt;V&gt; Merge(InputMap&lt;V&gt; first, InputMap&lt;V&gt; second)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.InputMap-1.html">InputMap</a>&lt;V&gt;</td>
+        <td><span class="parametername">first</span></td>
+        <td><p>The first <a class="xref" href="Pulumi.InputMap-1.html">InputMap&lt;V&gt;</a>. Has lower priority in case of
+key clash.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.InputMap-1.html">InputMap</a>&lt;V&gt;</td>
+        <td><span class="parametername">second</span></td>
+        <td><p>The second <a class="xref" href="Pulumi.InputMap-1.html">InputMap&lt;V&gt;</a>. Has higher priority in case of
+key clash.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.InputMap-1.html">InputMap</a>&lt;V&gt;</td>
+        <td><p>A new instance of <a class="xref" href="Pulumi.InputMap-1.html">InputMap&lt;V&gt;</a> that contains the items from
+both input maps.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="operators">Operators
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi/blob/8a0987c892e86706bd3affb6eb934aa084a85c09/sdk/dotnet/Pulumi/Core/InputMap.cs/#L98">View Source</a>
+  </span>
+  <a id="Pulumi_InputMap_1_op_Implicit_" data-uid="Pulumi.InputMap`1.op_Implicit*"></a>
+  <h4 id="Pulumi_InputMap_1_op_Implicit_Pulumi_Output_System_Collections_Generic_Dictionary_System_String__0____Pulumi_InputMap__0_" data-uid="Pulumi.InputMap`1.op_Implicit(Pulumi.Output{System.Collections.Generic.Dictionary{System.String,`0}})~Pulumi.InputMap{`0}">Implicit(Output&lt;Dictionary&lt;String, V&gt;&gt; to InputMap&lt;V&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator InputMap&lt;V&gt;(Output&lt;Dictionary&lt;string, V&gt;&gt; values)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Generic.Dictionary</span>&lt;<span class="xref">System.String</span>, V&gt;&gt;</td>
+        <td><span class="parametername">values</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.InputMap-1.html">InputMap</a>&lt;V&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi/blob/8a0987c892e86706bd3affb6eb934aa084a85c09/sdk/dotnet/Pulumi/Core/InputMap.cs/#L101">View Source</a>
+  </span>
+  <a id="Pulumi_InputMap_1_op_Implicit_" data-uid="Pulumi.InputMap`1.op_Implicit*"></a>
+  <h4 id="Pulumi_InputMap_1_op_Implicit_Pulumi_Output_System_Collections_Generic_IDictionary_System_String__0____Pulumi_InputMap__0_" data-uid="Pulumi.InputMap`1.op_Implicit(Pulumi.Output{System.Collections.Generic.IDictionary{System.String,`0}})~Pulumi.InputMap{`0}">Implicit(Output&lt;IDictionary&lt;String, V&gt;&gt; to InputMap&lt;V&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator InputMap&lt;V&gt;(Output&lt;IDictionary&lt;string, V&gt;&gt; values)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">System.String</span>, V&gt;&gt;</td>
+        <td><span class="parametername">values</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.InputMap-1.html">InputMap</a>&lt;V&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi/blob/8a0987c892e86706bd3affb6eb934aa084a85c09/sdk/dotnet/Pulumi/Core/InputMap.cs/#L104">View Source</a>
+  </span>
+  <a id="Pulumi_InputMap_1_op_Implicit_" data-uid="Pulumi.InputMap`1.op_Implicit*"></a>
+  <h4 id="Pulumi_InputMap_1_op_Implicit_Pulumi_Output_System_Collections_Immutable_ImmutableDictionary_System_String__0____Pulumi_InputMap__0_" data-uid="Pulumi.InputMap`1.op_Implicit(Pulumi.Output{System.Collections.Immutable.ImmutableDictionary{System.String,`0}})~Pulumi.InputMap{`0}">Implicit(Output&lt;ImmutableDictionary&lt;String, V&gt;&gt; to InputMap&lt;V&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator InputMap&lt;V&gt;(Output&lt;ImmutableDictionary&lt;string, V&gt;&gt; values)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, V&gt;&gt;</td>
+        <td><span class="parametername">values</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.InputMap-1.html">InputMap</a>&lt;V&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi/blob/8a0987c892e86706bd3affb6eb934aa084a85c09/sdk/dotnet/Pulumi/Core/InputMap.cs/#L92">View Source</a>
+  </span>
+  <a id="Pulumi_InputMap_1_op_Implicit_" data-uid="Pulumi.InputMap`1.op_Implicit*"></a>
+  <h4 id="Pulumi_InputMap_1_op_Implicit_System_Collections_Generic_Dictionary_System_String__0___Pulumi_InputMap__0_" data-uid="Pulumi.InputMap`1.op_Implicit(System.Collections.Generic.Dictionary{System.String,`0})~Pulumi.InputMap{`0}">Implicit(Dictionary&lt;String, V&gt; to InputMap&lt;V&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator InputMap&lt;V&gt;(Dictionary&lt;string, V&gt; values)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;<span class="xref">System.String</span>, V&gt;</td>
+        <td><span class="parametername">values</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.InputMap-1.html">InputMap</a>&lt;V&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi/blob/8a0987c892e86706bd3affb6eb934aa084a85c09/sdk/dotnet/Pulumi/Core/InputMap.cs/#L95">View Source</a>
+  </span>
+  <a id="Pulumi_InputMap_1_op_Implicit_" data-uid="Pulumi.InputMap`1.op_Implicit*"></a>
+  <h4 id="Pulumi_InputMap_1_op_Implicit_System_Collections_Immutable_ImmutableDictionary_System_String__0___Pulumi_InputMap__0_" data-uid="Pulumi.InputMap`1.op_Implicit(System.Collections.Immutable.ImmutableDictionary{System.String,`0})~Pulumi.InputMap{`0}">Implicit(ImmutableDictionary&lt;String, V&gt; to InputMap&lt;V&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator InputMap&lt;V&gt;(ImmutableDictionary&lt;string, V&gt; values)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, V&gt;</td>
+        <td><span class="parametername">values</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.InputMap-1.html">InputMap</a>&lt;V&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="eii">Explicit Interface Implementations
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi/blob/8a0987c892e86706bd3affb6eb934aa084a85c09/sdk/dotnet/Pulumi/Core/InputMap.cs/#L111">View Source</a>
+  </span>
+  <a id="Pulumi_InputMap_1_System_Collections_IEnumerable_GetEnumerator_" data-uid="Pulumi.InputMap`1.System#Collections#IEnumerable#GetEnumerator*"></a>
+  <h4 id="Pulumi_InputMap_1_System_Collections_IEnumerable_GetEnumerator" data-uid="Pulumi.InputMap`1.System#Collections#IEnumerable#GetEnumerator">IEnumerable.GetEnumerator()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerator IEnumerable.GetEnumerator()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.IEnumerator</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.Collections.IEnumerable</span>
+  </div>
+  <div>
+      <span class="xref">IAsyncEnumerable&lt;&gt;</span>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Pulumi.InputExtensions.html#Pulumi_InputExtensions_Apply__2_Pulumi_Input___0__System_Func___0___1__">InputExtensions.Apply&lt;T, U&gt;(Input&lt;T&gt;, Func&lt;T, U&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Pulumi.InputExtensions.html#Pulumi_InputExtensions_Apply__2_Pulumi_Input___0__System_Func___0_System_Threading_Tasks_Task___1___">InputExtensions.Apply&lt;T, U&gt;(Input&lt;T&gt;, Func&lt;T, Task&lt;U&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Pulumi.InputExtensions.html#Pulumi_InputExtensions_Apply__2_Pulumi_Input___0__System_Func___0_Pulumi_Input___1___">InputExtensions.Apply&lt;T, U&gt;(Input&lt;T&gt;, Func&lt;T, Input&lt;U&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Pulumi.InputExtensions.html#Pulumi_InputExtensions_Apply__2_Pulumi_Input___0__System_Func___0_Pulumi_Output___1___">InputExtensions.Apply&lt;T, U&gt;(Input&lt;T&gt;, Func&lt;T, Output&lt;U&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Pulumi.InputExtensions.html#Pulumi_InputExtensions_ToOutput__1_Pulumi_Input___0__">InputExtensions.ToOutput&lt;T&gt;(Input&lt;T&gt;)</a>
+  </div>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi/blob/8a0987c892e86706bd3affb6eb934aa084a85c09/sdk/dotnet/Pulumi/Core/InputMap.cs/#L42" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

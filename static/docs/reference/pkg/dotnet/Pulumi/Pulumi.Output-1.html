@@ -1,0 +1,471 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Output&lt;T&gt;
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Output&lt;T&gt;
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Output`1">
+  
+  <h1 id="Pulumi_Output_1" data-uid="Pulumi.Output`1" class="text-break">Class Output&lt;T&gt;
+  </h1>
+  <div class="markdown level0 summary"><p><a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a>s are a key part of how Pulumi tracks dependencies between <a class="xref" href="Pulumi.Resource.html">Resource</a>s. Because the values of outputs are not available until resources are
+created, these are represented using the special <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a>s type, which
+internally represents two things:</p>
+<ol><li></li><li></li></ol>
+In fact, <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a>s is quite similar to <span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>.
+Additionally, they carry along dependency information.
+<p>
+The output properties of all resource objects in Pulumi have type <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a>.
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Output&lt;T&gt;</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.html">Pulumi</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.dll</h6>
+  <h5 id="Pulumi_Output_1_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class Output&lt;T&gt; : IOutput</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi/blob/8a0987c892e86706bd3affb6eb934aa084a85c09/sdk/dotnet/Pulumi/Core/Output.cs/#L160">View Source</a>
+  </span>
+  <a id="Pulumi_Output_1_Apply_" data-uid="Pulumi.Output`1.Apply*"></a>
+  <h4 id="Pulumi_Output_1_Apply__1_System_Func__0___0__" data-uid="Pulumi.Output`1.Apply``1(System.Func{`0,``0})">Apply&lt;U&gt;(Func&lt;T, U&gt;)</h4>
+  <div class="markdown level1 summary"><p><a class="xref" href="Pulumi.Output-1.html#Pulumi_Output_1_Apply__1_System_Func__0_Pulumi_Output___0___">Apply&lt;U&gt;(Func&lt;T, Output&lt;U&gt;&gt;)</a> for more details.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;U&gt; Apply&lt;U&gt;(Func&lt;T, U&gt; func)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T, U&gt;</td>
+        <td><span class="parametername">func</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Output-1.html">Output</a>&lt;U&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">U</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi/blob/8a0987c892e86706bd3affb6eb934aa084a85c09/sdk/dotnet/Pulumi/Core/Output.cs/#L172">View Source</a>
+  </span>
+  <a id="Pulumi_Output_1_Apply_" data-uid="Pulumi.Output`1.Apply*"></a>
+  <h4 id="Pulumi_Output_1_Apply__1_System_Func__0_Pulumi_Input___0___" data-uid="Pulumi.Output`1.Apply``1(System.Func{`0,Pulumi.Input{``0}})">Apply&lt;U&gt;(Func&lt;T, Input&lt;U&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p><a class="xref" href="Pulumi.Output-1.html#Pulumi_Output_1_Apply__1_System_Func__0_Pulumi_Output___0___">Apply&lt;U&gt;(Func&lt;T, Output&lt;U&gt;&gt;)</a> for more details.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;U&gt; Apply&lt;U&gt;(Func&lt;T, Input&lt;U&gt;&gt; func)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T, <a class="xref" href="Pulumi.Input-1.html">Input</a>&lt;U&gt;&gt;</td>
+        <td><span class="parametername">func</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Output-1.html">Output</a>&lt;U&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">U</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi/blob/8a0987c892e86706bd3affb6eb934aa084a85c09/sdk/dotnet/Pulumi/Core/Output.cs/#L204">View Source</a>
+  </span>
+  <a id="Pulumi_Output_1_Apply_" data-uid="Pulumi.Output`1.Apply*"></a>
+  <h4 id="Pulumi_Output_1_Apply__1_System_Func__0_Pulumi_Output___0___" data-uid="Pulumi.Output`1.Apply``1(System.Func{`0,Pulumi.Output{``0}})">Apply&lt;U&gt;(Func&lt;T, Output&lt;U&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Transforms the data of this <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a> with the provided <code data-dev-comment-type="paramref" class="paramref">func</code>. The result remains an <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a> so that dependent resources
+can be properly tracked.</p>
+<p>
+<code data-dev-comment-type="paramref" class="paramref">func</code> is not allowed to make resources.
+<p>
+<code data-dev-comment-type="paramref" class="paramref">func</code> can return other <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a>s.  This can be handy if
+you have an <code>Output&lt;SomeType></code> and you want to get a transitive dependency of
+it.  i.e.:
+<pre><code>Output&lt;SomeType> d1 = ...;
+Output&lt;OtherType> d2 = d1.Apply(v => v.OtherOutput); // getting an output off of &apos;v&apos;.</code></pre>
+<p>In this example, taking a dependency on d2 means a resource will depend on all the resources
+of d1.  It will <strong>not</strong> depend on the resources of v.x.y.OtherDep.</p>
+<p>
+Importantly, the Resources that d2 feels like it will depend on are the same resources
+as d1. If you need have multiple <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a>s and a single <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a> is needed that combines both set of resources, then <a class="xref" href="Pulumi.Output.html#Pulumi_Output_All__1_Pulumi_Input___0____">All&lt;T&gt;(Input&lt;T&gt;[])</a> or <a class="xref" href="Pulumi.Output.html#Pulumi_Output_Tuple__3_Pulumi_Input___0__Pulumi_Input___1__Pulumi_Input___2__">Tuple&lt;T1, T2, T3&gt;(Input&lt;T1&gt;, Input&lt;T2&gt;, Input&lt;T3&gt;)</a>
+should be used instead.
+<p>
+This function will only be called execution of a <code>pulumi up</code> request.  It will not
+run during <code>pulumi preview</code> (as the values of resources are of course not known
+then).
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;U&gt; Apply&lt;U&gt;(Func&lt;T, Output&lt;U&gt;&gt; func)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T, <a class="xref" href="Pulumi.Output-1.html">Output</a>&lt;U&gt;&gt;</td>
+        <td><span class="parametername">func</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Output-1.html">Output</a>&lt;U&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">U</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi/blob/8a0987c892e86706bd3affb6eb934aa084a85c09/sdk/dotnet/Pulumi/Core/Output.cs/#L166">View Source</a>
+  </span>
+  <a id="Pulumi_Output_1_Apply_" data-uid="Pulumi.Output`1.Apply*"></a>
+  <h4 id="Pulumi_Output_1_Apply__1_System_Func__0_System_Threading_Tasks_Task___0___" data-uid="Pulumi.Output`1.Apply``1(System.Func{`0,System.Threading.Tasks.Task{``0}})">Apply&lt;U&gt;(Func&lt;T, Task&lt;U&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p><a class="xref" href="Pulumi.Output-1.html#Pulumi_Output_1_Apply__1_System_Func__0_Pulumi_Output___0___">Apply&lt;U&gt;(Func&lt;T, Output&lt;U&gt;&gt;)</a> for more details.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;U&gt; Apply&lt;U&gt;(Func&lt;T, Task&lt;U&gt;&gt; func)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T, <span class="xref">System.Threading.Tasks.Task</span>&lt;U&gt;&gt;</td>
+        <td><span class="parametername">func</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Output-1.html">Output</a>&lt;U&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">U</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi/blob/8a0987c892e86706bd3affb6eb934aa084a85c09/sdk/dotnet/Pulumi/Core/Output.cs/#L128">View Source</a>
+  </span>
+  <a id="Pulumi_Output_1_Create_" data-uid="Pulumi.Output`1.Create*"></a>
+  <h4 id="Pulumi_Output_1_Create_System_Threading_Tasks_Task__0__" data-uid="Pulumi.Output`1.Create(System.Threading.Tasks.Task{`0})">Create(Task&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Output&lt;T&gt; Create(Task&lt;T&gt; value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;T&gt;</td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Output-1.html">Output</a>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi/blob/8a0987c892e86706bd3affb6eb934aa084a85c09/sdk/dotnet/Pulumi/Core/Output.cs/#L106" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

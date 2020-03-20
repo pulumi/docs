@@ -1,0 +1,3356 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: Pulumi
+  name: Pulumi
+  href: Pulumi/Pulumi.html
+  commentId: N:Pulumi
+  fullName: Pulumi
+  nameWithType: Pulumi
+- uid: Pulumi.Alias
+  name: Alias
+  href: Pulumi/Pulumi.Alias.html
+  commentId: T:Pulumi.Alias
+  fullName: Pulumi.Alias
+  nameWithType: Alias
+- uid: Pulumi.Alias.Name
+  name: Name
+  href: Pulumi/Pulumi.Alias.html#Pulumi_Alias_Name
+  commentId: P:Pulumi.Alias.Name
+  fullName: Pulumi.Alias.Name
+  nameWithType: Alias.Name
+- uid: Pulumi.Alias.Name*
+  name: Name
+  href: Pulumi/Pulumi.Alias.html#Pulumi_Alias_Name_
+  commentId: Overload:Pulumi.Alias.Name
+  isSpec: "True"
+  fullName: Pulumi.Alias.Name
+  nameWithType: Alias.Name
+- uid: Pulumi.Alias.NoParent
+  name: NoParent
+  href: Pulumi/Pulumi.Alias.html#Pulumi_Alias_NoParent
+  commentId: P:Pulumi.Alias.NoParent
+  fullName: Pulumi.Alias.NoParent
+  nameWithType: Alias.NoParent
+- uid: Pulumi.Alias.NoParent*
+  name: NoParent
+  href: Pulumi/Pulumi.Alias.html#Pulumi_Alias_NoParent_
+  commentId: Overload:Pulumi.Alias.NoParent
+  isSpec: "True"
+  fullName: Pulumi.Alias.NoParent
+  nameWithType: Alias.NoParent
+- uid: Pulumi.Alias.Parent
+  name: Parent
+  href: Pulumi/Pulumi.Alias.html#Pulumi_Alias_Parent
+  commentId: P:Pulumi.Alias.Parent
+  fullName: Pulumi.Alias.Parent
+  nameWithType: Alias.Parent
+- uid: Pulumi.Alias.Parent*
+  name: Parent
+  href: Pulumi/Pulumi.Alias.html#Pulumi_Alias_Parent_
+  commentId: Overload:Pulumi.Alias.Parent
+  isSpec: "True"
+  fullName: Pulumi.Alias.Parent
+  nameWithType: Alias.Parent
+- uid: Pulumi.Alias.ParentUrn
+  name: ParentUrn
+  href: Pulumi/Pulumi.Alias.html#Pulumi_Alias_ParentUrn
+  commentId: P:Pulumi.Alias.ParentUrn
+  fullName: Pulumi.Alias.ParentUrn
+  nameWithType: Alias.ParentUrn
+- uid: Pulumi.Alias.ParentUrn*
+  name: ParentUrn
+  href: Pulumi/Pulumi.Alias.html#Pulumi_Alias_ParentUrn_
+  commentId: Overload:Pulumi.Alias.ParentUrn
+  isSpec: "True"
+  fullName: Pulumi.Alias.ParentUrn
+  nameWithType: Alias.ParentUrn
+- uid: Pulumi.Alias.Project
+  name: Project
+  href: Pulumi/Pulumi.Alias.html#Pulumi_Alias_Project
+  commentId: P:Pulumi.Alias.Project
+  fullName: Pulumi.Alias.Project
+  nameWithType: Alias.Project
+- uid: Pulumi.Alias.Project*
+  name: Project
+  href: Pulumi/Pulumi.Alias.html#Pulumi_Alias_Project_
+  commentId: Overload:Pulumi.Alias.Project
+  isSpec: "True"
+  fullName: Pulumi.Alias.Project
+  nameWithType: Alias.Project
+- uid: Pulumi.Alias.Stack
+  name: Stack
+  href: Pulumi/Pulumi.Alias.html#Pulumi_Alias_Stack
+  commentId: P:Pulumi.Alias.Stack
+  fullName: Pulumi.Alias.Stack
+  nameWithType: Alias.Stack
+- uid: Pulumi.Alias.Stack*
+  name: Stack
+  href: Pulumi/Pulumi.Alias.html#Pulumi_Alias_Stack_
+  commentId: Overload:Pulumi.Alias.Stack
+  isSpec: "True"
+  fullName: Pulumi.Alias.Stack
+  nameWithType: Alias.Stack
+- uid: Pulumi.Alias.Type
+  name: Type
+  href: Pulumi/Pulumi.Alias.html#Pulumi_Alias_Type
+  commentId: P:Pulumi.Alias.Type
+  fullName: Pulumi.Alias.Type
+  nameWithType: Alias.Type
+- uid: Pulumi.Alias.Type*
+  name: Type
+  href: Pulumi/Pulumi.Alias.html#Pulumi_Alias_Type_
+  commentId: Overload:Pulumi.Alias.Type
+  isSpec: "True"
+  fullName: Pulumi.Alias.Type
+  nameWithType: Alias.Type
+- uid: Pulumi.Alias.Urn
+  name: Urn
+  href: Pulumi/Pulumi.Alias.html#Pulumi_Alias_Urn
+  commentId: P:Pulumi.Alias.Urn
+  fullName: Pulumi.Alias.Urn
+  nameWithType: Alias.Urn
+- uid: Pulumi.Alias.Urn*
+  name: Urn
+  href: Pulumi/Pulumi.Alias.html#Pulumi_Alias_Urn_
+  commentId: Overload:Pulumi.Alias.Urn
+  isSpec: "True"
+  fullName: Pulumi.Alias.Urn
+  nameWithType: Alias.Urn
+- uid: Pulumi.Archive
+  name: Archive
+  href: Pulumi/Pulumi.Archive.html
+  commentId: T:Pulumi.Archive
+  fullName: Pulumi.Archive
+  nameWithType: Archive
+- uid: Pulumi.Asset
+  name: Asset
+  href: Pulumi/Pulumi.Asset.html
+  commentId: T:Pulumi.Asset
+  fullName: Pulumi.Asset
+  nameWithType: Asset
+- uid: Pulumi.AssetArchive
+  name: AssetArchive
+  href: Pulumi/Pulumi.AssetArchive.html
+  commentId: T:Pulumi.AssetArchive
+  fullName: Pulumi.AssetArchive
+  nameWithType: AssetArchive
+- uid: Pulumi.AssetArchive.#ctor(System.Collections.Generic.IDictionary{System.String,Pulumi.AssetOrArchive})
+  name: AssetArchive(IDictionary<String, AssetOrArchive>)
+  href: Pulumi/Pulumi.AssetArchive.html#Pulumi_AssetArchive__ctor_System_Collections_Generic_IDictionary_System_String_Pulumi_AssetOrArchive__
+  commentId: M:Pulumi.AssetArchive.#ctor(System.Collections.Generic.IDictionary{System.String,Pulumi.AssetOrArchive})
+  name.vb: AssetArchive(IDictionary(Of String, AssetOrArchive))
+  fullName: Pulumi.AssetArchive.AssetArchive(System.Collections.Generic.IDictionary<System.String, Pulumi.AssetOrArchive>)
+  fullName.vb: Pulumi.AssetArchive.AssetArchive(System.Collections.Generic.IDictionary(Of System.String, Pulumi.AssetOrArchive))
+  nameWithType: AssetArchive.AssetArchive(IDictionary<String, AssetOrArchive>)
+  nameWithType.vb: AssetArchive.AssetArchive(IDictionary(Of String, AssetOrArchive))
+- uid: Pulumi.AssetArchive.#ctor*
+  name: AssetArchive
+  href: Pulumi/Pulumi.AssetArchive.html#Pulumi_AssetArchive__ctor_
+  commentId: Overload:Pulumi.AssetArchive.#ctor
+  isSpec: "True"
+  fullName: Pulumi.AssetArchive.AssetArchive
+  nameWithType: AssetArchive.AssetArchive
+- uid: Pulumi.AssetOrArchive
+  name: AssetOrArchive
+  href: Pulumi/Pulumi.AssetOrArchive.html
+  commentId: T:Pulumi.AssetOrArchive
+  fullName: Pulumi.AssetOrArchive
+  nameWithType: AssetOrArchive
+- uid: Pulumi.ComponentResource
+  name: ComponentResource
+  href: Pulumi/Pulumi.ComponentResource.html
+  commentId: T:Pulumi.ComponentResource
+  fullName: Pulumi.ComponentResource
+  nameWithType: ComponentResource
+- uid: Pulumi.ComponentResource.#ctor(System.String,System.String,Pulumi.ComponentResourceOptions)
+  name: ComponentResource(String, String, ComponentResourceOptions)
+  href: Pulumi/Pulumi.ComponentResource.html#Pulumi_ComponentResource__ctor_System_String_System_String_Pulumi_ComponentResourceOptions_
+  commentId: M:Pulumi.ComponentResource.#ctor(System.String,System.String,Pulumi.ComponentResourceOptions)
+  fullName: Pulumi.ComponentResource.ComponentResource(System.String, System.String, Pulumi.ComponentResourceOptions)
+  nameWithType: ComponentResource.ComponentResource(String, String, ComponentResourceOptions)
+- uid: Pulumi.ComponentResource.#ctor*
+  name: ComponentResource
+  href: Pulumi/Pulumi.ComponentResource.html#Pulumi_ComponentResource__ctor_
+  commentId: Overload:Pulumi.ComponentResource.#ctor
+  isSpec: "True"
+  fullName: Pulumi.ComponentResource.ComponentResource
+  nameWithType: ComponentResource.ComponentResource
+- uid: Pulumi.ComponentResource.RegisterOutputs
+  name: RegisterOutputs()
+  href: Pulumi/Pulumi.ComponentResource.html#Pulumi_ComponentResource_RegisterOutputs
+  commentId: M:Pulumi.ComponentResource.RegisterOutputs
+  fullName: Pulumi.ComponentResource.RegisterOutputs()
+  nameWithType: ComponentResource.RegisterOutputs()
+- uid: Pulumi.ComponentResource.RegisterOutputs(Pulumi.Output{System.Collections.Generic.IDictionary{System.String,System.Object}})
+  name: RegisterOutputs(Output<IDictionary<String, Object>>)
+  href: Pulumi/Pulumi.ComponentResource.html#Pulumi_ComponentResource_RegisterOutputs_Pulumi_Output_System_Collections_Generic_IDictionary_System_String_System_Object___
+  commentId: M:Pulumi.ComponentResource.RegisterOutputs(Pulumi.Output{System.Collections.Generic.IDictionary{System.String,System.Object}})
+  name.vb: RegisterOutputs(Output(Of IDictionary(Of String, Object)))
+  fullName: Pulumi.ComponentResource.RegisterOutputs(Pulumi.Output<System.Collections.Generic.IDictionary<System.String, System.Object>>)
+  fullName.vb: Pulumi.ComponentResource.RegisterOutputs(Pulumi.Output(Of System.Collections.Generic.IDictionary(Of System.String, System.Object)))
+  nameWithType: ComponentResource.RegisterOutputs(Output<IDictionary<String, Object>>)
+  nameWithType.vb: ComponentResource.RegisterOutputs(Output(Of IDictionary(Of String, Object)))
+- uid: Pulumi.ComponentResource.RegisterOutputs(System.Collections.Generic.IDictionary{System.String,System.Object})
+  name: RegisterOutputs(IDictionary<String, Object>)
+  href: Pulumi/Pulumi.ComponentResource.html#Pulumi_ComponentResource_RegisterOutputs_System_Collections_Generic_IDictionary_System_String_System_Object__
+  commentId: M:Pulumi.ComponentResource.RegisterOutputs(System.Collections.Generic.IDictionary{System.String,System.Object})
+  name.vb: RegisterOutputs(IDictionary(Of String, Object))
+  fullName: Pulumi.ComponentResource.RegisterOutputs(System.Collections.Generic.IDictionary<System.String, System.Object>)
+  fullName.vb: Pulumi.ComponentResource.RegisterOutputs(System.Collections.Generic.IDictionary(Of System.String, System.Object))
+  nameWithType: ComponentResource.RegisterOutputs(IDictionary<String, Object>)
+  nameWithType.vb: ComponentResource.RegisterOutputs(IDictionary(Of String, Object))
+- uid: Pulumi.ComponentResource.RegisterOutputs(System.Threading.Tasks.Task{System.Collections.Generic.IDictionary{System.String,System.Object}})
+  name: RegisterOutputs(Task<IDictionary<String, Object>>)
+  href: Pulumi/Pulumi.ComponentResource.html#Pulumi_ComponentResource_RegisterOutputs_System_Threading_Tasks_Task_System_Collections_Generic_IDictionary_System_String_System_Object___
+  commentId: M:Pulumi.ComponentResource.RegisterOutputs(System.Threading.Tasks.Task{System.Collections.Generic.IDictionary{System.String,System.Object}})
+  name.vb: RegisterOutputs(Task(Of IDictionary(Of String, Object)))
+  fullName: Pulumi.ComponentResource.RegisterOutputs(System.Threading.Tasks.Task<System.Collections.Generic.IDictionary<System.String, System.Object>>)
+  fullName.vb: Pulumi.ComponentResource.RegisterOutputs(System.Threading.Tasks.Task(Of System.Collections.Generic.IDictionary(Of System.String, System.Object)))
+  nameWithType: ComponentResource.RegisterOutputs(Task<IDictionary<String, Object>>)
+  nameWithType.vb: ComponentResource.RegisterOutputs(Task(Of IDictionary(Of String, Object)))
+- uid: Pulumi.ComponentResource.RegisterOutputs*
+  name: RegisterOutputs
+  href: Pulumi/Pulumi.ComponentResource.html#Pulumi_ComponentResource_RegisterOutputs_
+  commentId: Overload:Pulumi.ComponentResource.RegisterOutputs
+  isSpec: "True"
+  fullName: Pulumi.ComponentResource.RegisterOutputs
+  nameWithType: ComponentResource.RegisterOutputs
+- uid: Pulumi.ComponentResourceOptions
+  name: ComponentResourceOptions
+  href: Pulumi/Pulumi.ComponentResourceOptions.html
+  commentId: T:Pulumi.ComponentResourceOptions
+  fullName: Pulumi.ComponentResourceOptions
+  nameWithType: ComponentResourceOptions
+- uid: Pulumi.ComponentResourceOptions.Merge(Pulumi.ComponentResourceOptions,Pulumi.ComponentResourceOptions)
+  name: Merge(ComponentResourceOptions, ComponentResourceOptions)
+  href: Pulumi/Pulumi.ComponentResourceOptions.html#Pulumi_ComponentResourceOptions_Merge_Pulumi_ComponentResourceOptions_Pulumi_ComponentResourceOptions_
+  commentId: M:Pulumi.ComponentResourceOptions.Merge(Pulumi.ComponentResourceOptions,Pulumi.ComponentResourceOptions)
+  fullName: Pulumi.ComponentResourceOptions.Merge(Pulumi.ComponentResourceOptions, Pulumi.ComponentResourceOptions)
+  nameWithType: ComponentResourceOptions.Merge(ComponentResourceOptions, ComponentResourceOptions)
+- uid: Pulumi.ComponentResourceOptions.Merge*
+  name: Merge
+  href: Pulumi/Pulumi.ComponentResourceOptions.html#Pulumi_ComponentResourceOptions_Merge_
+  commentId: Overload:Pulumi.ComponentResourceOptions.Merge
+  isSpec: "True"
+  fullName: Pulumi.ComponentResourceOptions.Merge
+  nameWithType: ComponentResourceOptions.Merge
+- uid: Pulumi.ComponentResourceOptions.Providers
+  name: Providers
+  href: Pulumi/Pulumi.ComponentResourceOptions.html#Pulumi_ComponentResourceOptions_Providers
+  commentId: P:Pulumi.ComponentResourceOptions.Providers
+  fullName: Pulumi.ComponentResourceOptions.Providers
+  nameWithType: ComponentResourceOptions.Providers
+- uid: Pulumi.ComponentResourceOptions.Providers*
+  name: Providers
+  href: Pulumi/Pulumi.ComponentResourceOptions.html#Pulumi_ComponentResourceOptions_Providers_
+  commentId: Overload:Pulumi.ComponentResourceOptions.Providers
+  isSpec: "True"
+  fullName: Pulumi.ComponentResourceOptions.Providers
+  nameWithType: ComponentResourceOptions.Providers
+- uid: Pulumi.Config
+  name: Config
+  href: Pulumi/Pulumi.Config.html
+  commentId: T:Pulumi.Config
+  fullName: Pulumi.Config
+  nameWithType: Config
+- uid: Pulumi.Config.#ctor(System.String)
+  name: Config(String)
+  href: Pulumi/Pulumi.Config.html#Pulumi_Config__ctor_System_String_
+  commentId: M:Pulumi.Config.#ctor(System.String)
+  fullName: Pulumi.Config.Config(System.String)
+  nameWithType: Config.Config(String)
+- uid: Pulumi.Config.#ctor*
+  name: Config
+  href: Pulumi/Pulumi.Config.html#Pulumi_Config__ctor_
+  commentId: Overload:Pulumi.Config.#ctor
+  isSpec: "True"
+  fullName: Pulumi.Config.Config
+  nameWithType: Config.Config
+- uid: Pulumi.Config.Get(System.String)
+  name: Get(String)
+  href: Pulumi/Pulumi.Config.html#Pulumi_Config_Get_System_String_
+  commentId: M:Pulumi.Config.Get(System.String)
+  fullName: Pulumi.Config.Get(System.String)
+  nameWithType: Config.Get(String)
+- uid: Pulumi.Config.Get*
+  name: Get
+  href: Pulumi/Pulumi.Config.html#Pulumi_Config_Get_
+  commentId: Overload:Pulumi.Config.Get
+  isSpec: "True"
+  fullName: Pulumi.Config.Get
+  nameWithType: Config.Get
+- uid: Pulumi.Config.GetBoolean(System.String)
+  name: GetBoolean(String)
+  href: Pulumi/Pulumi.Config.html#Pulumi_Config_GetBoolean_System_String_
+  commentId: M:Pulumi.Config.GetBoolean(System.String)
+  fullName: Pulumi.Config.GetBoolean(System.String)
+  nameWithType: Config.GetBoolean(String)
+- uid: Pulumi.Config.GetBoolean*
+  name: GetBoolean
+  href: Pulumi/Pulumi.Config.html#Pulumi_Config_GetBoolean_
+  commentId: Overload:Pulumi.Config.GetBoolean
+  isSpec: "True"
+  fullName: Pulumi.Config.GetBoolean
+  nameWithType: Config.GetBoolean
+- uid: Pulumi.Config.GetInt32(System.String)
+  name: GetInt32(String)
+  href: Pulumi/Pulumi.Config.html#Pulumi_Config_GetInt32_System_String_
+  commentId: M:Pulumi.Config.GetInt32(System.String)
+  fullName: Pulumi.Config.GetInt32(System.String)
+  nameWithType: Config.GetInt32(String)
+- uid: Pulumi.Config.GetInt32*
+  name: GetInt32
+  href: Pulumi/Pulumi.Config.html#Pulumi_Config_GetInt32_
+  commentId: Overload:Pulumi.Config.GetInt32
+  isSpec: "True"
+  fullName: Pulumi.Config.GetInt32
+  nameWithType: Config.GetInt32
+- uid: Pulumi.Config.GetObject*
+  name: GetObject
+  href: Pulumi/Pulumi.Config.html#Pulumi_Config_GetObject_
+  commentId: Overload:Pulumi.Config.GetObject
+  isSpec: "True"
+  fullName: Pulumi.Config.GetObject
+  nameWithType: Config.GetObject
+- uid: Pulumi.Config.GetObject``1(System.String)
+  name: GetObject<T>(String)
+  href: Pulumi/Pulumi.Config.html#Pulumi_Config_GetObject__1_System_String_
+  commentId: M:Pulumi.Config.GetObject``1(System.String)
+  name.vb: GetObject(Of T)(String)
+  fullName: Pulumi.Config.GetObject<T>(System.String)
+  fullName.vb: Pulumi.Config.GetObject(Of T)(System.String)
+  nameWithType: Config.GetObject<T>(String)
+  nameWithType.vb: Config.GetObject(Of T)(String)
+- uid: Pulumi.Config.GetSecret(System.String)
+  name: GetSecret(String)
+  href: Pulumi/Pulumi.Config.html#Pulumi_Config_GetSecret_System_String_
+  commentId: M:Pulumi.Config.GetSecret(System.String)
+  fullName: Pulumi.Config.GetSecret(System.String)
+  nameWithType: Config.GetSecret(String)
+- uid: Pulumi.Config.GetSecret*
+  name: GetSecret
+  href: Pulumi/Pulumi.Config.html#Pulumi_Config_GetSecret_
+  commentId: Overload:Pulumi.Config.GetSecret
+  isSpec: "True"
+  fullName: Pulumi.Config.GetSecret
+  nameWithType: Config.GetSecret
+- uid: Pulumi.Config.GetSecretBoolean(System.String)
+  name: GetSecretBoolean(String)
+  href: Pulumi/Pulumi.Config.html#Pulumi_Config_GetSecretBoolean_System_String_
+  commentId: M:Pulumi.Config.GetSecretBoolean(System.String)
+  fullName: Pulumi.Config.GetSecretBoolean(System.String)
+  nameWithType: Config.GetSecretBoolean(String)
+- uid: Pulumi.Config.GetSecretBoolean*
+  name: GetSecretBoolean
+  href: Pulumi/Pulumi.Config.html#Pulumi_Config_GetSecretBoolean_
+  commentId: Overload:Pulumi.Config.GetSecretBoolean
+  isSpec: "True"
+  fullName: Pulumi.Config.GetSecretBoolean
+  nameWithType: Config.GetSecretBoolean
+- uid: Pulumi.Config.GetSecretInt32(System.String)
+  name: GetSecretInt32(String)
+  href: Pulumi/Pulumi.Config.html#Pulumi_Config_GetSecretInt32_System_String_
+  commentId: M:Pulumi.Config.GetSecretInt32(System.String)
+  fullName: Pulumi.Config.GetSecretInt32(System.String)
+  nameWithType: Config.GetSecretInt32(String)
+- uid: Pulumi.Config.GetSecretInt32*
+  name: GetSecretInt32
+  href: Pulumi/Pulumi.Config.html#Pulumi_Config_GetSecretInt32_
+  commentId: Overload:Pulumi.Config.GetSecretInt32
+  isSpec: "True"
+  fullName: Pulumi.Config.GetSecretInt32
+  nameWithType: Config.GetSecretInt32
+- uid: Pulumi.Config.GetSecretObject*
+  name: GetSecretObject
+  href: Pulumi/Pulumi.Config.html#Pulumi_Config_GetSecretObject_
+  commentId: Overload:Pulumi.Config.GetSecretObject
+  isSpec: "True"
+  fullName: Pulumi.Config.GetSecretObject
+  nameWithType: Config.GetSecretObject
+- uid: Pulumi.Config.GetSecretObject``1(System.String)
+  name: GetSecretObject<T>(String)
+  href: Pulumi/Pulumi.Config.html#Pulumi_Config_GetSecretObject__1_System_String_
+  commentId: M:Pulumi.Config.GetSecretObject``1(System.String)
+  name.vb: GetSecretObject(Of T)(String)
+  fullName: Pulumi.Config.GetSecretObject<T>(System.String)
+  fullName.vb: Pulumi.Config.GetSecretObject(Of T)(System.String)
+  nameWithType: Config.GetSecretObject<T>(String)
+  nameWithType.vb: Config.GetSecretObject(Of T)(String)
+- uid: Pulumi.Config.Require(System.String)
+  name: Require(String)
+  href: Pulumi/Pulumi.Config.html#Pulumi_Config_Require_System_String_
+  commentId: M:Pulumi.Config.Require(System.String)
+  fullName: Pulumi.Config.Require(System.String)
+  nameWithType: Config.Require(String)
+- uid: Pulumi.Config.Require*
+  name: Require
+  href: Pulumi/Pulumi.Config.html#Pulumi_Config_Require_
+  commentId: Overload:Pulumi.Config.Require
+  isSpec: "True"
+  fullName: Pulumi.Config.Require
+  nameWithType: Config.Require
+- uid: Pulumi.Config.RequireBoolean(System.String)
+  name: RequireBoolean(String)
+  href: Pulumi/Pulumi.Config.html#Pulumi_Config_RequireBoolean_System_String_
+  commentId: M:Pulumi.Config.RequireBoolean(System.String)
+  fullName: Pulumi.Config.RequireBoolean(System.String)
+  nameWithType: Config.RequireBoolean(String)
+- uid: Pulumi.Config.RequireBoolean*
+  name: RequireBoolean
+  href: Pulumi/Pulumi.Config.html#Pulumi_Config_RequireBoolean_
+  commentId: Overload:Pulumi.Config.RequireBoolean
+  isSpec: "True"
+  fullName: Pulumi.Config.RequireBoolean
+  nameWithType: Config.RequireBoolean
+- uid: Pulumi.Config.RequireInt32(System.String)
+  name: RequireInt32(String)
+  href: Pulumi/Pulumi.Config.html#Pulumi_Config_RequireInt32_System_String_
+  commentId: M:Pulumi.Config.RequireInt32(System.String)
+  fullName: Pulumi.Config.RequireInt32(System.String)
+  nameWithType: Config.RequireInt32(String)
+- uid: Pulumi.Config.RequireInt32*
+  name: RequireInt32
+  href: Pulumi/Pulumi.Config.html#Pulumi_Config_RequireInt32_
+  commentId: Overload:Pulumi.Config.RequireInt32
+  isSpec: "True"
+  fullName: Pulumi.Config.RequireInt32
+  nameWithType: Config.RequireInt32
+- uid: Pulumi.Config.RequireObject*
+  name: RequireObject
+  href: Pulumi/Pulumi.Config.html#Pulumi_Config_RequireObject_
+  commentId: Overload:Pulumi.Config.RequireObject
+  isSpec: "True"
+  fullName: Pulumi.Config.RequireObject
+  nameWithType: Config.RequireObject
+- uid: Pulumi.Config.RequireObject``1(System.String)
+  name: RequireObject<T>(String)
+  href: Pulumi/Pulumi.Config.html#Pulumi_Config_RequireObject__1_System_String_
+  commentId: M:Pulumi.Config.RequireObject``1(System.String)
+  name.vb: RequireObject(Of T)(String)
+  fullName: Pulumi.Config.RequireObject<T>(System.String)
+  fullName.vb: Pulumi.Config.RequireObject(Of T)(System.String)
+  nameWithType: Config.RequireObject<T>(String)
+  nameWithType.vb: Config.RequireObject(Of T)(String)
+- uid: Pulumi.Config.RequireSecret(System.String)
+  name: RequireSecret(String)
+  href: Pulumi/Pulumi.Config.html#Pulumi_Config_RequireSecret_System_String_
+  commentId: M:Pulumi.Config.RequireSecret(System.String)
+  fullName: Pulumi.Config.RequireSecret(System.String)
+  nameWithType: Config.RequireSecret(String)
+- uid: Pulumi.Config.RequireSecret*
+  name: RequireSecret
+  href: Pulumi/Pulumi.Config.html#Pulumi_Config_RequireSecret_
+  commentId: Overload:Pulumi.Config.RequireSecret
+  isSpec: "True"
+  fullName: Pulumi.Config.RequireSecret
+  nameWithType: Config.RequireSecret
+- uid: Pulumi.Config.RequireSecretBoolean(System.String)
+  name: RequireSecretBoolean(String)
+  href: Pulumi/Pulumi.Config.html#Pulumi_Config_RequireSecretBoolean_System_String_
+  commentId: M:Pulumi.Config.RequireSecretBoolean(System.String)
+  fullName: Pulumi.Config.RequireSecretBoolean(System.String)
+  nameWithType: Config.RequireSecretBoolean(String)
+- uid: Pulumi.Config.RequireSecretBoolean*
+  name: RequireSecretBoolean
+  href: Pulumi/Pulumi.Config.html#Pulumi_Config_RequireSecretBoolean_
+  commentId: Overload:Pulumi.Config.RequireSecretBoolean
+  isSpec: "True"
+  fullName: Pulumi.Config.RequireSecretBoolean
+  nameWithType: Config.RequireSecretBoolean
+- uid: Pulumi.Config.RequireSecretInt32(System.String)
+  name: RequireSecretInt32(String)
+  href: Pulumi/Pulumi.Config.html#Pulumi_Config_RequireSecretInt32_System_String_
+  commentId: M:Pulumi.Config.RequireSecretInt32(System.String)
+  fullName: Pulumi.Config.RequireSecretInt32(System.String)
+  nameWithType: Config.RequireSecretInt32(String)
+- uid: Pulumi.Config.RequireSecretInt32*
+  name: RequireSecretInt32
+  href: Pulumi/Pulumi.Config.html#Pulumi_Config_RequireSecretInt32_
+  commentId: Overload:Pulumi.Config.RequireSecretInt32
+  isSpec: "True"
+  fullName: Pulumi.Config.RequireSecretInt32
+  nameWithType: Config.RequireSecretInt32
+- uid: Pulumi.Config.RequireSecretObject*
+  name: RequireSecretObject
+  href: Pulumi/Pulumi.Config.html#Pulumi_Config_RequireSecretObject_
+  commentId: Overload:Pulumi.Config.RequireSecretObject
+  isSpec: "True"
+  fullName: Pulumi.Config.RequireSecretObject
+  nameWithType: Config.RequireSecretObject
+- uid: Pulumi.Config.RequireSecretObject``1(System.String)
+  name: RequireSecretObject<T>(String)
+  href: Pulumi/Pulumi.Config.html#Pulumi_Config_RequireSecretObject__1_System_String_
+  commentId: M:Pulumi.Config.RequireSecretObject``1(System.String)
+  name.vb: RequireSecretObject(Of T)(String)
+  fullName: Pulumi.Config.RequireSecretObject<T>(System.String)
+  fullName.vb: Pulumi.Config.RequireSecretObject(Of T)(System.String)
+  nameWithType: Config.RequireSecretObject<T>(String)
+  nameWithType.vb: Config.RequireSecretObject(Of T)(String)
+- uid: Pulumi.CustomResource
+  name: CustomResource
+  href: Pulumi/Pulumi.CustomResource.html
+  commentId: T:Pulumi.CustomResource
+  fullName: Pulumi.CustomResource
+  nameWithType: CustomResource
+- uid: Pulumi.CustomResource.#ctor(System.String,System.String,Pulumi.ResourceArgs,Pulumi.CustomResourceOptions)
+  name: CustomResource(String, String, ResourceArgs, CustomResourceOptions)
+  href: Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource__ctor_System_String_System_String_Pulumi_ResourceArgs_Pulumi_CustomResourceOptions_
+  commentId: M:Pulumi.CustomResource.#ctor(System.String,System.String,Pulumi.ResourceArgs,Pulumi.CustomResourceOptions)
+  fullName: Pulumi.CustomResource.CustomResource(System.String, System.String, Pulumi.ResourceArgs, Pulumi.CustomResourceOptions)
+  nameWithType: CustomResource.CustomResource(String, String, ResourceArgs, CustomResourceOptions)
+- uid: Pulumi.CustomResource.#ctor*
+  name: CustomResource
+  href: Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource__ctor_
+  commentId: Overload:Pulumi.CustomResource.#ctor
+  isSpec: "True"
+  fullName: Pulumi.CustomResource.CustomResource
+  nameWithType: CustomResource.CustomResource
+- uid: Pulumi.CustomResource.Id
+  name: Id
+  href: Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id
+  commentId: P:Pulumi.CustomResource.Id
+  fullName: Pulumi.CustomResource.Id
+  nameWithType: CustomResource.Id
+- uid: Pulumi.CustomResource.Id*
+  name: Id
+  href: Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id_
+  commentId: Overload:Pulumi.CustomResource.Id
+  isSpec: "True"
+  fullName: Pulumi.CustomResource.Id
+  nameWithType: CustomResource.Id
+- uid: Pulumi.CustomResourceOptions
+  name: CustomResourceOptions
+  href: Pulumi/Pulumi.CustomResourceOptions.html
+  commentId: T:Pulumi.CustomResourceOptions
+  fullName: Pulumi.CustomResourceOptions
+  nameWithType: CustomResourceOptions
+- uid: Pulumi.CustomResourceOptions.AdditionalSecretOutputs
+  name: AdditionalSecretOutputs
+  href: Pulumi/Pulumi.CustomResourceOptions.html#Pulumi_CustomResourceOptions_AdditionalSecretOutputs
+  commentId: P:Pulumi.CustomResourceOptions.AdditionalSecretOutputs
+  fullName: Pulumi.CustomResourceOptions.AdditionalSecretOutputs
+  nameWithType: CustomResourceOptions.AdditionalSecretOutputs
+- uid: Pulumi.CustomResourceOptions.AdditionalSecretOutputs*
+  name: AdditionalSecretOutputs
+  href: Pulumi/Pulumi.CustomResourceOptions.html#Pulumi_CustomResourceOptions_AdditionalSecretOutputs_
+  commentId: Overload:Pulumi.CustomResourceOptions.AdditionalSecretOutputs
+  isSpec: "True"
+  fullName: Pulumi.CustomResourceOptions.AdditionalSecretOutputs
+  nameWithType: CustomResourceOptions.AdditionalSecretOutputs
+- uid: Pulumi.CustomResourceOptions.DeleteBeforeReplace
+  name: DeleteBeforeReplace
+  href: Pulumi/Pulumi.CustomResourceOptions.html#Pulumi_CustomResourceOptions_DeleteBeforeReplace
+  commentId: P:Pulumi.CustomResourceOptions.DeleteBeforeReplace
+  fullName: Pulumi.CustomResourceOptions.DeleteBeforeReplace
+  nameWithType: CustomResourceOptions.DeleteBeforeReplace
+- uid: Pulumi.CustomResourceOptions.DeleteBeforeReplace*
+  name: DeleteBeforeReplace
+  href: Pulumi/Pulumi.CustomResourceOptions.html#Pulumi_CustomResourceOptions_DeleteBeforeReplace_
+  commentId: Overload:Pulumi.CustomResourceOptions.DeleteBeforeReplace
+  isSpec: "True"
+  fullName: Pulumi.CustomResourceOptions.DeleteBeforeReplace
+  nameWithType: CustomResourceOptions.DeleteBeforeReplace
+- uid: Pulumi.CustomResourceOptions.ImportId
+  name: ImportId
+  href: Pulumi/Pulumi.CustomResourceOptions.html#Pulumi_CustomResourceOptions_ImportId
+  commentId: P:Pulumi.CustomResourceOptions.ImportId
+  fullName: Pulumi.CustomResourceOptions.ImportId
+  nameWithType: CustomResourceOptions.ImportId
+- uid: Pulumi.CustomResourceOptions.ImportId*
+  name: ImportId
+  href: Pulumi/Pulumi.CustomResourceOptions.html#Pulumi_CustomResourceOptions_ImportId_
+  commentId: Overload:Pulumi.CustomResourceOptions.ImportId
+  isSpec: "True"
+  fullName: Pulumi.CustomResourceOptions.ImportId
+  nameWithType: CustomResourceOptions.ImportId
+- uid: Pulumi.CustomResourceOptions.Merge(Pulumi.CustomResourceOptions,Pulumi.CustomResourceOptions)
+  name: Merge(CustomResourceOptions, CustomResourceOptions)
+  href: Pulumi/Pulumi.CustomResourceOptions.html#Pulumi_CustomResourceOptions_Merge_Pulumi_CustomResourceOptions_Pulumi_CustomResourceOptions_
+  commentId: M:Pulumi.CustomResourceOptions.Merge(Pulumi.CustomResourceOptions,Pulumi.CustomResourceOptions)
+  fullName: Pulumi.CustomResourceOptions.Merge(Pulumi.CustomResourceOptions, Pulumi.CustomResourceOptions)
+  nameWithType: CustomResourceOptions.Merge(CustomResourceOptions, CustomResourceOptions)
+- uid: Pulumi.CustomResourceOptions.Merge*
+  name: Merge
+  href: Pulumi/Pulumi.CustomResourceOptions.html#Pulumi_CustomResourceOptions_Merge_
+  commentId: Overload:Pulumi.CustomResourceOptions.Merge
+  isSpec: "True"
+  fullName: Pulumi.CustomResourceOptions.Merge
+  nameWithType: CustomResourceOptions.Merge
+- uid: Pulumi.CustomTimeouts
+  name: CustomTimeouts
+  href: Pulumi/Pulumi.CustomTimeouts.html
+  commentId: T:Pulumi.CustomTimeouts
+  fullName: Pulumi.CustomTimeouts
+  nameWithType: CustomTimeouts
+- uid: Pulumi.CustomTimeouts.Create
+  name: Create
+  href: Pulumi/Pulumi.CustomTimeouts.html#Pulumi_CustomTimeouts_Create
+  commentId: P:Pulumi.CustomTimeouts.Create
+  fullName: Pulumi.CustomTimeouts.Create
+  nameWithType: CustomTimeouts.Create
+- uid: Pulumi.CustomTimeouts.Create*
+  name: Create
+  href: Pulumi/Pulumi.CustomTimeouts.html#Pulumi_CustomTimeouts_Create_
+  commentId: Overload:Pulumi.CustomTimeouts.Create
+  isSpec: "True"
+  fullName: Pulumi.CustomTimeouts.Create
+  nameWithType: CustomTimeouts.Create
+- uid: Pulumi.CustomTimeouts.Delete
+  name: Delete
+  href: Pulumi/Pulumi.CustomTimeouts.html#Pulumi_CustomTimeouts_Delete
+  commentId: P:Pulumi.CustomTimeouts.Delete
+  fullName: Pulumi.CustomTimeouts.Delete
+  nameWithType: CustomTimeouts.Delete
+- uid: Pulumi.CustomTimeouts.Delete*
+  name: Delete
+  href: Pulumi/Pulumi.CustomTimeouts.html#Pulumi_CustomTimeouts_Delete_
+  commentId: Overload:Pulumi.CustomTimeouts.Delete
+  isSpec: "True"
+  fullName: Pulumi.CustomTimeouts.Delete
+  nameWithType: CustomTimeouts.Delete
+- uid: Pulumi.CustomTimeouts.Update
+  name: Update
+  href: Pulumi/Pulumi.CustomTimeouts.html#Pulumi_CustomTimeouts_Update
+  commentId: P:Pulumi.CustomTimeouts.Update
+  fullName: Pulumi.CustomTimeouts.Update
+  nameWithType: CustomTimeouts.Update
+- uid: Pulumi.CustomTimeouts.Update*
+  name: Update
+  href: Pulumi/Pulumi.CustomTimeouts.html#Pulumi_CustomTimeouts_Update_
+  commentId: Overload:Pulumi.CustomTimeouts.Update
+  isSpec: "True"
+  fullName: Pulumi.CustomTimeouts.Update
+  nameWithType: CustomTimeouts.Update
+- uid: Pulumi.Deployment
+  name: Deployment
+  href: Pulumi/Pulumi.Deployment.html
+  commentId: T:Pulumi.Deployment
+  fullName: Pulumi.Deployment
+  nameWithType: Deployment
+- uid: Pulumi.Deployment.Instance
+  name: Instance
+  href: Pulumi/Pulumi.Deployment.html#Pulumi_Deployment_Instance
+  commentId: P:Pulumi.Deployment.Instance
+  fullName: Pulumi.Deployment.Instance
+  nameWithType: Deployment.Instance
+- uid: Pulumi.Deployment.Instance*
+  name: Instance
+  href: Pulumi/Pulumi.Deployment.html#Pulumi_Deployment_Instance_
+  commentId: Overload:Pulumi.Deployment.Instance
+  isSpec: "True"
+  fullName: Pulumi.Deployment.Instance
+  nameWithType: Deployment.Instance
+- uid: Pulumi.Deployment.Pulumi#IDeployment#InvokeAsync(System.String,Pulumi.InvokeArgs,Pulumi.InvokeOptions)
+  name: IDeployment.InvokeAsync(String, InvokeArgs, InvokeOptions)
+  href: Pulumi/Pulumi.Deployment.html#Pulumi_Deployment_Pulumi_IDeployment_InvokeAsync_System_String_Pulumi_InvokeArgs_Pulumi_InvokeOptions_
+  commentId: M:Pulumi.Deployment.Pulumi#IDeployment#InvokeAsync(System.String,Pulumi.InvokeArgs,Pulumi.InvokeOptions)
+  name.vb: Pulumi.IDeployment.InvokeAsync(String, InvokeArgs, InvokeOptions)
+  fullName: Pulumi.Deployment.Pulumi.IDeployment.InvokeAsync(System.String, Pulumi.InvokeArgs, Pulumi.InvokeOptions)
+  nameWithType: Deployment.IDeployment.InvokeAsync(String, InvokeArgs, InvokeOptions)
+  nameWithType.vb: Deployment.Pulumi.IDeployment.InvokeAsync(String, InvokeArgs, InvokeOptions)
+- uid: Pulumi.Deployment.Pulumi#IDeployment#InvokeAsync*
+  name: IDeployment.InvokeAsync
+  href: Pulumi/Pulumi.Deployment.html#Pulumi_Deployment_Pulumi_IDeployment_InvokeAsync_
+  commentId: Overload:Pulumi.Deployment.Pulumi#IDeployment#InvokeAsync
+  isSpec: "True"
+  name.vb: Pulumi.IDeployment.InvokeAsync
+  fullName: Pulumi.Deployment.Pulumi.IDeployment.InvokeAsync
+  nameWithType: Deployment.IDeployment.InvokeAsync
+  nameWithType.vb: Deployment.Pulumi.IDeployment.InvokeAsync
+- uid: Pulumi.Deployment.Pulumi#IDeployment#InvokeAsync``1(System.String,Pulumi.InvokeArgs,Pulumi.InvokeOptions)
+  name: IDeployment.InvokeAsync<T>(String, InvokeArgs, InvokeOptions)
+  href: Pulumi/Pulumi.Deployment.html#Pulumi_Deployment_Pulumi_IDeployment_InvokeAsync__1_System_String_Pulumi_InvokeArgs_Pulumi_InvokeOptions_
+  commentId: M:Pulumi.Deployment.Pulumi#IDeployment#InvokeAsync``1(System.String,Pulumi.InvokeArgs,Pulumi.InvokeOptions)
+  name.vb: Pulumi.IDeployment.InvokeAsync(Of T)(String, InvokeArgs, InvokeOptions)
+  fullName: Pulumi.Deployment.Pulumi.IDeployment.InvokeAsync<T>(System.String, Pulumi.InvokeArgs, Pulumi.InvokeOptions)
+  fullName.vb: Pulumi.Deployment.Pulumi.IDeployment.InvokeAsync(Of T)(System.String, Pulumi.InvokeArgs, Pulumi.InvokeOptions)
+  nameWithType: Deployment.IDeployment.InvokeAsync<T>(String, InvokeArgs, InvokeOptions)
+  nameWithType.vb: Deployment.Pulumi.IDeployment.InvokeAsync(Of T)(String, InvokeArgs, InvokeOptions)
+- uid: Pulumi.Deployment.Pulumi#IDeployment#IsDryRun
+  name: IDeployment.IsDryRun
+  href: Pulumi/Pulumi.Deployment.html#Pulumi_Deployment_Pulumi_IDeployment_IsDryRun
+  commentId: P:Pulumi.Deployment.Pulumi#IDeployment#IsDryRun
+  name.vb: Pulumi.IDeployment.IsDryRun
+  fullName: Pulumi.Deployment.Pulumi.IDeployment.IsDryRun
+  nameWithType: Deployment.IDeployment.IsDryRun
+  nameWithType.vb: Deployment.Pulumi.IDeployment.IsDryRun
+- uid: Pulumi.Deployment.Pulumi#IDeployment#IsDryRun*
+  name: IDeployment.IsDryRun
+  href: Pulumi/Pulumi.Deployment.html#Pulumi_Deployment_Pulumi_IDeployment_IsDryRun_
+  commentId: Overload:Pulumi.Deployment.Pulumi#IDeployment#IsDryRun
+  isSpec: "True"
+  name.vb: Pulumi.IDeployment.IsDryRun
+  fullName: Pulumi.Deployment.Pulumi.IDeployment.IsDryRun
+  nameWithType: Deployment.IDeployment.IsDryRun
+  nameWithType.vb: Deployment.Pulumi.IDeployment.IsDryRun
+- uid: Pulumi.Deployment.Pulumi#IDeployment#ProjectName
+  name: IDeployment.ProjectName
+  href: Pulumi/Pulumi.Deployment.html#Pulumi_Deployment_Pulumi_IDeployment_ProjectName
+  commentId: P:Pulumi.Deployment.Pulumi#IDeployment#ProjectName
+  name.vb: Pulumi.IDeployment.ProjectName
+  fullName: Pulumi.Deployment.Pulumi.IDeployment.ProjectName
+  nameWithType: Deployment.IDeployment.ProjectName
+  nameWithType.vb: Deployment.Pulumi.IDeployment.ProjectName
+- uid: Pulumi.Deployment.Pulumi#IDeployment#ProjectName*
+  name: IDeployment.ProjectName
+  href: Pulumi/Pulumi.Deployment.html#Pulumi_Deployment_Pulumi_IDeployment_ProjectName_
+  commentId: Overload:Pulumi.Deployment.Pulumi#IDeployment#ProjectName
+  isSpec: "True"
+  name.vb: Pulumi.IDeployment.ProjectName
+  fullName: Pulumi.Deployment.Pulumi.IDeployment.ProjectName
+  nameWithType: Deployment.IDeployment.ProjectName
+  nameWithType.vb: Deployment.Pulumi.IDeployment.ProjectName
+- uid: Pulumi.Deployment.Pulumi#IDeployment#StackName
+  name: IDeployment.StackName
+  href: Pulumi/Pulumi.Deployment.html#Pulumi_Deployment_Pulumi_IDeployment_StackName
+  commentId: P:Pulumi.Deployment.Pulumi#IDeployment#StackName
+  name.vb: Pulumi.IDeployment.StackName
+  fullName: Pulumi.Deployment.Pulumi.IDeployment.StackName
+  nameWithType: Deployment.IDeployment.StackName
+  nameWithType.vb: Deployment.Pulumi.IDeployment.StackName
+- uid: Pulumi.Deployment.Pulumi#IDeployment#StackName*
+  name: IDeployment.StackName
+  href: Pulumi/Pulumi.Deployment.html#Pulumi_Deployment_Pulumi_IDeployment_StackName_
+  commentId: Overload:Pulumi.Deployment.Pulumi#IDeployment#StackName
+  isSpec: "True"
+  name.vb: Pulumi.IDeployment.StackName
+  fullName: Pulumi.Deployment.Pulumi.IDeployment.StackName
+  nameWithType: Deployment.IDeployment.StackName
+  nameWithType.vb: Deployment.Pulumi.IDeployment.StackName
+- uid: Pulumi.Deployment.RunAsync(System.Action)
+  name: RunAsync(Action)
+  href: Pulumi/Pulumi.Deployment.html#Pulumi_Deployment_RunAsync_System_Action_
+  commentId: M:Pulumi.Deployment.RunAsync(System.Action)
+  fullName: Pulumi.Deployment.RunAsync(System.Action)
+  nameWithType: Deployment.RunAsync(Action)
+- uid: Pulumi.Deployment.RunAsync(System.Func{System.Collections.Generic.IDictionary{System.String,System.Object}})
+  name: RunAsync(Func<IDictionary<String, Object>>)
+  href: Pulumi/Pulumi.Deployment.html#Pulumi_Deployment_RunAsync_System_Func_System_Collections_Generic_IDictionary_System_String_System_Object___
+  commentId: M:Pulumi.Deployment.RunAsync(System.Func{System.Collections.Generic.IDictionary{System.String,System.Object}})
+  name.vb: RunAsync(Func(Of IDictionary(Of String, Object)))
+  fullName: Pulumi.Deployment.RunAsync(System.Func<System.Collections.Generic.IDictionary<System.String, System.Object>>)
+  fullName.vb: Pulumi.Deployment.RunAsync(System.Func(Of System.Collections.Generic.IDictionary(Of System.String, System.Object)))
+  nameWithType: Deployment.RunAsync(Func<IDictionary<String, Object>>)
+  nameWithType.vb: Deployment.RunAsync(Func(Of IDictionary(Of String, Object)))
+- uid: Pulumi.Deployment.RunAsync(System.Func{System.Threading.Tasks.Task{System.Collections.Generic.IDictionary{System.String,System.Object}}})
+  name: RunAsync(Func<Task<IDictionary<String, Object>>>)
+  href: Pulumi/Pulumi.Deployment.html#Pulumi_Deployment_RunAsync_System_Func_System_Threading_Tasks_Task_System_Collections_Generic_IDictionary_System_String_System_Object____
+  commentId: M:Pulumi.Deployment.RunAsync(System.Func{System.Threading.Tasks.Task{System.Collections.Generic.IDictionary{System.String,System.Object}}})
+  name.vb: RunAsync(Func(Of Task(Of IDictionary(Of String, Object))))
+  fullName: Pulumi.Deployment.RunAsync(System.Func<System.Threading.Tasks.Task<System.Collections.Generic.IDictionary<System.String, System.Object>>>)
+  fullName.vb: Pulumi.Deployment.RunAsync(System.Func(Of System.Threading.Tasks.Task(Of System.Collections.Generic.IDictionary(Of System.String, System.Object))))
+  nameWithType: Deployment.RunAsync(Func<Task<IDictionary<String, Object>>>)
+  nameWithType.vb: Deployment.RunAsync(Func(Of Task(Of IDictionary(Of String, Object))))
+- uid: Pulumi.Deployment.RunAsync*
+  name: RunAsync
+  href: Pulumi/Pulumi.Deployment.html#Pulumi_Deployment_RunAsync_
+  commentId: Overload:Pulumi.Deployment.RunAsync
+  isSpec: "True"
+  fullName: Pulumi.Deployment.RunAsync
+  nameWithType: Deployment.RunAsync
+- uid: Pulumi.Deployment.RunAsync``1
+  name: RunAsync<TStack>()
+  href: Pulumi/Pulumi.Deployment.html#Pulumi_Deployment_RunAsync__1
+  commentId: M:Pulumi.Deployment.RunAsync``1
+  name.vb: RunAsync(Of TStack)()
+  fullName: Pulumi.Deployment.RunAsync<TStack>()
+  fullName.vb: Pulumi.Deployment.RunAsync(Of TStack)()
+  nameWithType: Deployment.RunAsync<TStack>()
+  nameWithType.vb: Deployment.RunAsync(Of TStack)()
+- uid: Pulumi.DictionaryResourceArgs
+  name: DictionaryResourceArgs
+  href: Pulumi/Pulumi.DictionaryResourceArgs.html
+  commentId: T:Pulumi.DictionaryResourceArgs
+  fullName: Pulumi.DictionaryResourceArgs
+  nameWithType: DictionaryResourceArgs
+- uid: Pulumi.DictionaryResourceArgs.#ctor(System.Collections.Immutable.ImmutableDictionary{System.String,System.Object})
+  name: DictionaryResourceArgs(ImmutableDictionary<String, Object>)
+  href: Pulumi/Pulumi.DictionaryResourceArgs.html#Pulumi_DictionaryResourceArgs__ctor_System_Collections_Immutable_ImmutableDictionary_System_String_System_Object__
+  commentId: M:Pulumi.DictionaryResourceArgs.#ctor(System.Collections.Immutable.ImmutableDictionary{System.String,System.Object})
+  name.vb: DictionaryResourceArgs(ImmutableDictionary(Of String, Object))
+  fullName: Pulumi.DictionaryResourceArgs.DictionaryResourceArgs(System.Collections.Immutable.ImmutableDictionary<System.String, System.Object>)
+  fullName.vb: Pulumi.DictionaryResourceArgs.DictionaryResourceArgs(System.Collections.Immutable.ImmutableDictionary(Of System.String, System.Object))
+  nameWithType: DictionaryResourceArgs.DictionaryResourceArgs(ImmutableDictionary<String, Object>)
+  nameWithType.vb: DictionaryResourceArgs.DictionaryResourceArgs(ImmutableDictionary(Of String, Object))
+- uid: Pulumi.DictionaryResourceArgs.#ctor*
+  name: DictionaryResourceArgs
+  href: Pulumi/Pulumi.DictionaryResourceArgs.html#Pulumi_DictionaryResourceArgs__ctor_
+  commentId: Overload:Pulumi.DictionaryResourceArgs.#ctor
+  isSpec: "True"
+  fullName: Pulumi.DictionaryResourceArgs.DictionaryResourceArgs
+  nameWithType: DictionaryResourceArgs.DictionaryResourceArgs
+- uid: Pulumi.FileArchive
+  name: FileArchive
+  href: Pulumi/Pulumi.FileArchive.html
+  commentId: T:Pulumi.FileArchive
+  fullName: Pulumi.FileArchive
+  nameWithType: FileArchive
+- uid: Pulumi.FileArchive.#ctor(System.String)
+  name: FileArchive(String)
+  href: Pulumi/Pulumi.FileArchive.html#Pulumi_FileArchive__ctor_System_String_
+  commentId: M:Pulumi.FileArchive.#ctor(System.String)
+  fullName: Pulumi.FileArchive.FileArchive(System.String)
+  nameWithType: FileArchive.FileArchive(String)
+- uid: Pulumi.FileArchive.#ctor*
+  name: FileArchive
+  href: Pulumi/Pulumi.FileArchive.html#Pulumi_FileArchive__ctor_
+  commentId: Overload:Pulumi.FileArchive.#ctor
+  isSpec: "True"
+  fullName: Pulumi.FileArchive.FileArchive
+  nameWithType: FileArchive.FileArchive
+- uid: Pulumi.FileAsset
+  name: FileAsset
+  href: Pulumi/Pulumi.FileAsset.html
+  commentId: T:Pulumi.FileAsset
+  fullName: Pulumi.FileAsset
+  nameWithType: FileAsset
+- uid: Pulumi.FileAsset.#ctor(System.String)
+  name: FileAsset(String)
+  href: Pulumi/Pulumi.FileAsset.html#Pulumi_FileAsset__ctor_System_String_
+  commentId: M:Pulumi.FileAsset.#ctor(System.String)
+  fullName: Pulumi.FileAsset.FileAsset(System.String)
+  nameWithType: FileAsset.FileAsset(String)
+- uid: Pulumi.FileAsset.#ctor*
+  name: FileAsset
+  href: Pulumi/Pulumi.FileAsset.html#Pulumi_FileAsset__ctor_
+  commentId: Overload:Pulumi.FileAsset.#ctor
+  isSpec: "True"
+  fullName: Pulumi.FileAsset.FileAsset
+  nameWithType: FileAsset.FileAsset
+- uid: Pulumi.FSharp
+  name: Pulumi.FSharp
+  href: Pulumi.FSharp/Pulumi.FSharp.html
+  commentId: N:Pulumi.FSharp
+  fullName: Pulumi.FSharp
+  nameWithType: Pulumi.FSharp
+- uid: Pulumi.FSharp.Deployment
+  name: Deployment (mod)
+  href: Pulumi.FSharp/Pulumi.FSharp.Deployment.html
+  commentId: T:Pulumi.FSharp.Deployment
+  fullName: Pulumi.FSharp.Deployment
+  nameWithType: Pulumi.FSharp.Deployment
+- uid: Pulumi.FSharp.Deployment.run(unit -> System.Collections.Generic.IDictionary<string,obj>)
+  name: 'val run: unit -> IDictionary<string,obj> -> int'
+  href: Pulumi.FSharp/Pulumi.FSharp.Deployment.html#Pulumi_FSharp_Deployment_run_unit____System_Collections_Generic_IDictionary_string_obj__
+  commentId: M:Pulumi.FSharp.run(Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Core.Unit,System.Collections.Generic.IDictionary{System.String,System.Object}})
+  fullName: 'val Pulumi.FSharp.Deployment.run: unit -> System.Collections.Generic.IDictionary<string,obj> -> int'
+  nameWithType: 'val Deployment.run: unit -> IDictionary<string,obj> -> int'
+- uid: Pulumi.FSharp.Deployment.run*
+  name: run
+  href: Pulumi.FSharp/Pulumi.FSharp.Deployment.html#Pulumi_FSharp_Deployment_run_
+  commentId: Overload:Pulumi.FSharp.Deployment.run*
+  isSpec: "True"
+  fullName: Pulumi.FSharp.Deployment.run
+  nameWithType: Deployment.run
+- uid: Pulumi.FSharp.Deployment.runAsync(unit -> FSharp.Control.Async<System.Collections.Generic.IDictionary<string,obj>>)
+  name: 'val runAsync: unit -> Async<IDictionary<string,obj>> -> int'
+  href: Pulumi.FSharp/Pulumi.FSharp.Deployment.html#Pulumi_FSharp_Deployment_runAsync_unit____FSharp_Control_Async_System_Collections_Generic_IDictionary_string_obj___
+  commentId: M:Pulumi.FSharp.runAsync(Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Core.Unit,Microsoft.FSharp.Control.FSharpAsync{System.Collections.Generic.IDictionary{System.String,System.Object}}})
+  fullName: 'val Pulumi.FSharp.Deployment.runAsync: unit -> FSharp.Control.Async<System.Collections.Generic.IDictionary<string,obj>> -> int'
+  nameWithType: 'val Deployment.runAsync: unit -> Async<IDictionary<string,obj>> -> int'
+- uid: Pulumi.FSharp.Deployment.runAsync*
+  name: runAsync
+  href: Pulumi.FSharp/Pulumi.FSharp.Deployment.html#Pulumi_FSharp_Deployment_runAsync_
+  commentId: Overload:Pulumi.FSharp.Deployment.runAsync*
+  isSpec: "True"
+  fullName: Pulumi.FSharp.Deployment.runAsync
+  nameWithType: Deployment.runAsync
+- uid: Pulumi.FSharp.Ops
+  name: Ops (mod)
+  href: Pulumi.FSharp/Pulumi.FSharp.Ops.html
+  commentId: T:Pulumi.FSharp.Ops
+  fullName: Pulumi.FSharp.Ops
+  nameWithType: Pulumi.FSharp.Ops
+- uid: Pulumi.FSharp.Ops.input('a)
+  name: "val input: 'a -> Input<'a>"
+  href: Pulumi.FSharp/Pulumi.FSharp.Ops.html#Pulumi_FSharp_Ops_input__a_
+  commentId: M:Pulumi.FSharp.input``1(``0)
+  fullName: "val Pulumi.FSharp.Ops.input: 'a -> Pulumi.Input<'a>"
+  nameWithType: "val Ops.input: 'a -> Input<'a>"
+- uid: Pulumi.FSharp.Ops.input*
+  name: input
+  href: Pulumi.FSharp/Pulumi.FSharp.Ops.html#Pulumi_FSharp_Ops_input_
+  commentId: Overload:Pulumi.FSharp.Ops.input*
+  isSpec: "True"
+  fullName: Pulumi.FSharp.Ops.input
+  nameWithType: Ops.input
+- uid: Pulumi.FSharp.Ops.inputList(seq<Pulumi.Input<'a>>)
+  name: "val inputList: seq<Input<'a>> -> InputList<'a>"
+  href: Pulumi.FSharp/Pulumi.FSharp.Ops.html#Pulumi_FSharp_Ops_inputList_seq_Pulumi_Input__a___
+  commentId: M:Pulumi.FSharp.inputList``1(System.Collections.Generic.IEnumerable{Pulumi.Input{``0}})
+  fullName: "val Pulumi.FSharp.Ops.inputList: seq<Pulumi.Input<'a>> -> Pulumi.InputList<'a>"
+  nameWithType: "val Ops.inputList: seq<Input<'a>> -> InputList<'a>"
+- uid: Pulumi.FSharp.Ops.inputList*
+  name: inputList
+  href: Pulumi.FSharp/Pulumi.FSharp.Ops.html#Pulumi_FSharp_Ops_inputList_
+  commentId: Overload:Pulumi.FSharp.Ops.inputList*
+  isSpec: "True"
+  fullName: Pulumi.FSharp.Ops.inputList
+  nameWithType: Ops.inputList
+- uid: Pulumi.FSharp.Ops.inputMap(seq<string * Pulumi.Input<'a>>)
+  name: "val inputMap: seq<string * Input<'a>> -> InputMap<'a>"
+  href: Pulumi.FSharp/Pulumi.FSharp.Ops.html#Pulumi_FSharp_Ops_inputMap_seq_string___Pulumi_Input__a___
+  commentId: M:Pulumi.FSharp.inputMap``1(System.Collections.Generic.IEnumerable{System.Tuple{System.String,Pulumi.Input{``0}}})
+  fullName: "val Pulumi.FSharp.Ops.inputMap: seq<string * Pulumi.Input<'a>> -> Pulumi.InputMap<'a>"
+  nameWithType: "val Ops.inputMap: seq<string * Input<'a>> -> InputMap<'a>"
+- uid: Pulumi.FSharp.Ops.inputMap*
+  name: inputMap
+  href: Pulumi.FSharp/Pulumi.FSharp.Ops.html#Pulumi_FSharp_Ops_inputMap_
+  commentId: Overload:Pulumi.FSharp.Ops.inputMap*
+  isSpec: "True"
+  fullName: Pulumi.FSharp.Ops.inputMap
+  nameWithType: Ops.inputMap
+- uid: Pulumi.FSharp.Ops.io(Pulumi.Output<'a>)
+  name: "val io: Output<'a> -> Input<'a>"
+  href: Pulumi.FSharp/Pulumi.FSharp.Ops.html#Pulumi_FSharp_Ops_io_Pulumi_Output__a__
+  commentId: M:Pulumi.FSharp.io``1(Pulumi.Output{``0})
+  fullName: "val Pulumi.FSharp.Ops.io: Pulumi.Output<'a> -> Pulumi.Input<'a>"
+  nameWithType: "val Ops.io: Output<'a> -> Input<'a>"
+- uid: Pulumi.FSharp.Ops.io*
+  name: io
+  href: Pulumi.FSharp/Pulumi.FSharp.Ops.html#Pulumi_FSharp_Ops_io_
+  commentId: Overload:Pulumi.FSharp.Ops.io*
+  isSpec: "True"
+  fullName: Pulumi.FSharp.Ops.io
+  nameWithType: Ops.io
+- uid: Pulumi.FSharp.Outputs
+  name: Outputs (mod)
+  href: Pulumi.FSharp/Pulumi.FSharp.Outputs.html
+  commentId: T:Pulumi.FSharp.Outputs
+  fullName: Pulumi.FSharp.Outputs
+  nameWithType: Pulumi.FSharp.Outputs
+- uid: Pulumi.FSharp.Outputs.all(List<Pulumi.Output<'a>>)
+  name: "val all: List<Output<'a>> -> Output<List<'a>>"
+  href: Pulumi.FSharp/Pulumi.FSharp.Outputs.html#Pulumi_FSharp_Outputs_all_List_Pulumi_Output__a___
+  commentId: M:Pulumi.FSharp.all``1(Microsoft.FSharp.Collections.FSharpList{Pulumi.Output{``0}})
+  fullName: "val Pulumi.FSharp.Outputs.all: List<Pulumi.Output<'a>> -> Pulumi.Output<List<'a>>"
+  nameWithType: "val Outputs.all: List<Output<'a>> -> Output<List<'a>>"
+- uid: Pulumi.FSharp.Outputs.all*
+  name: all
+  href: Pulumi.FSharp/Pulumi.FSharp.Outputs.html#Pulumi_FSharp_Outputs_all_
+  commentId: Overload:Pulumi.FSharp.Outputs.all*
+  isSpec: "True"
+  fullName: Pulumi.FSharp.Outputs.all
+  nameWithType: Outputs.all
+- uid: Pulumi.FSharp.Outputs.apply('a -> 'b -> Pulumi.Output<'a>)
+  name: "val apply: 'a -> 'b -> Output<'a> -> Output<'b>"
+  href: Pulumi.FSharp/Pulumi.FSharp.Outputs.html#Pulumi_FSharp_Outputs_apply__a_____b____Pulumi_Output__a__
+  commentId: M:Pulumi.FSharp.apply``2(Microsoft.FSharp.Core.FSharpFunc{``0,``1},Pulumi.Output{``0})
+  fullName: "val Pulumi.FSharp.Outputs.apply: 'a -> 'b -> Pulumi.Output<'a> -> Pulumi.Output<'b>"
+  nameWithType: "val Outputs.apply: 'a -> 'b -> Output<'a> -> Output<'b>"
+- uid: Pulumi.FSharp.Outputs.apply*
+  name: apply
+  href: Pulumi.FSharp/Pulumi.FSharp.Outputs.html#Pulumi_FSharp_Outputs_apply_
+  commentId: Overload:Pulumi.FSharp.Outputs.apply*
+  isSpec: "True"
+  fullName: Pulumi.FSharp.Outputs.apply
+  nameWithType: Outputs.apply
+- uid: Pulumi.FSharp.Outputs.applyAsync('a -> FSharp.Control.Async<'b> -> Pulumi.Output<'a>)
+  name: "val applyAsync: 'a -> Async<'b> -> Output<'a> -> Output<'b>"
+  href: Pulumi.FSharp/Pulumi.FSharp.Outputs.html#Pulumi_FSharp_Outputs_applyAsync__a____FSharp_Control_Async__b_____Pulumi_Output__a__
+  commentId: M:Pulumi.FSharp.applyAsync``2(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Control.FSharpAsync{``1}},Pulumi.Output{``0})
+  fullName: "val Pulumi.FSharp.Outputs.applyAsync: 'a -> FSharp.Control.Async<'b> -> Pulumi.Output<'a> -> Pulumi.Output<'b>"
+  nameWithType: "val Outputs.applyAsync: 'a -> Async<'b> -> Output<'a> -> Output<'b>"
+- uid: Pulumi.FSharp.Outputs.applyAsync*
+  name: applyAsync
+  href: Pulumi.FSharp/Pulumi.FSharp.Outputs.html#Pulumi_FSharp_Outputs_applyAsync_
+  commentId: Overload:Pulumi.FSharp.Outputs.applyAsync*
+  isSpec: "True"
+  fullName: Pulumi.FSharp.Outputs.applyAsync
+  nameWithType: Outputs.applyAsync
+- uid: Pulumi.FSharp.Outputs.bind('a -> Pulumi.Output<'b> -> Pulumi.Output<'a>)
+  name: "val bind: 'a -> Output<'b> -> Output<'a> -> Output<'b>"
+  href: Pulumi.FSharp/Pulumi.FSharp.Outputs.html#Pulumi_FSharp_Outputs_bind__a____Pulumi_Output__b_____Pulumi_Output__a__
+  commentId: M:Pulumi.FSharp.bind``2(Microsoft.FSharp.Core.FSharpFunc{``0,Pulumi.Output{``1}},Pulumi.Output{``0})
+  fullName: "val Pulumi.FSharp.Outputs.bind: 'a -> Pulumi.Output<'b> -> Pulumi.Output<'a> -> Pulumi.Output<'b>"
+  nameWithType: "val Outputs.bind: 'a -> Output<'b> -> Output<'a> -> Output<'b>"
+- uid: Pulumi.FSharp.Outputs.bind*
+  name: bind
+  href: Pulumi.FSharp/Pulumi.FSharp.Outputs.html#Pulumi_FSharp_Outputs_bind_
+  commentId: Overload:Pulumi.FSharp.Outputs.bind*
+  isSpec: "True"
+  fullName: Pulumi.FSharp.Outputs.bind
+  nameWithType: Outputs.bind
+- uid: Pulumi.FSharp.Outputs.pair(Pulumi.Output<'a> -> Pulumi.Output<'b>)
+  name: "val pair: Output<'a> -> Output<'b> -> Output<'a * 'b>"
+  href: Pulumi.FSharp/Pulumi.FSharp.Outputs.html#Pulumi_FSharp_Outputs_pair_Pulumi_Output__a_____Pulumi_Output__b__
+  commentId: M:Pulumi.FSharp.pair``2(Pulumi.Output{``0},Pulumi.Output{``1})
+  fullName: "val Pulumi.FSharp.Outputs.pair: Pulumi.Output<'a> -> Pulumi.Output<'b> -> Pulumi.Output<'a * 'b>"
+  nameWithType: "val Outputs.pair: Output<'a> -> Output<'b> -> Output<'a * 'b>"
+- uid: Pulumi.FSharp.Outputs.pair*
+  name: pair
+  href: Pulumi.FSharp/Pulumi.FSharp.Outputs.html#Pulumi_FSharp_Outputs_pair_
+  commentId: Overload:Pulumi.FSharp.Outputs.pair*
+  isSpec: "True"
+  fullName: Pulumi.FSharp.Outputs.pair
+  nameWithType: Outputs.pair
+- uid: Pulumi.FSharp.Outputs.pair3(Pulumi.Output<'a> -> Pulumi.Output<'b> -> Pulumi.Output<'c>)
+  name: "val pair3: Output<'a> -> Output<'b> -> Output<'c> -> Output<'a * 'b * 'c>"
+  href: Pulumi.FSharp/Pulumi.FSharp.Outputs.html#Pulumi_FSharp_Outputs_pair3_Pulumi_Output__a_____Pulumi_Output__b_____Pulumi_Output__c__
+  commentId: M:Pulumi.FSharp.pair3``3(Pulumi.Output{``0},Pulumi.Output{``1},Pulumi.Output{``2})
+  fullName: "val Pulumi.FSharp.Outputs.pair3: Pulumi.Output<'a> -> Pulumi.Output<'b> -> Pulumi.Output<'c> -> Pulumi.Output<'a * 'b * 'c>"
+  nameWithType: "val Outputs.pair3: Output<'a> -> Output<'b> -> Output<'c> -> Output<'a * 'b * 'c>"
+- uid: Pulumi.FSharp.Outputs.pair3*
+  name: pair3
+  href: Pulumi.FSharp/Pulumi.FSharp.Outputs.html#Pulumi_FSharp_Outputs_pair3_
+  commentId: Overload:Pulumi.FSharp.Outputs.pair3*
+  isSpec: "True"
+  fullName: Pulumi.FSharp.Outputs.pair3
+  nameWithType: Outputs.pair3
+- uid: Pulumi.FSharp.Outputs.pair4(Pulumi.Output<'a> -> Pulumi.Output<'b> -> Pulumi.Output<'c> -> Pulumi.Output<'d>)
+  name: "val pair4: Output<'a> -> Output<'b> -> Output<'c> -> Output<'d> -> Output<'a * 'b * 'c * 'd>"
+  href: Pulumi.FSharp/Pulumi.FSharp.Outputs.html#Pulumi_FSharp_Outputs_pair4_Pulumi_Output__a_____Pulumi_Output__b_____Pulumi_Output__c_____Pulumi_Output__d__
+  commentId: M:Pulumi.FSharp.pair4``4(Pulumi.Output{``0},Pulumi.Output{``1},Pulumi.Output{``2},Pulumi.Output{``3})
+  fullName: "val Pulumi.FSharp.Outputs.pair4: Pulumi.Output<'a> -> Pulumi.Output<'b> -> Pulumi.Output<'c> -> Pulumi.Output<'d> -> Pulumi.Output<'a * 'b * 'c * 'd>"
+  nameWithType: "val Outputs.pair4: Output<'a> -> Output<'b> -> Output<'c> -> Output<'d> -> Output<'a * 'b * 'c * 'd>"
+- uid: Pulumi.FSharp.Outputs.pair4*
+  name: pair4
+  href: Pulumi.FSharp/Pulumi.FSharp.Outputs.html#Pulumi_FSharp_Outputs_pair4_
+  commentId: Overload:Pulumi.FSharp.Outputs.pair4*
+  isSpec: "True"
+  fullName: Pulumi.FSharp.Outputs.pair4
+  nameWithType: Outputs.pair4
+- uid: Pulumi.IDeployment
+  name: IDeployment
+  href: Pulumi/Pulumi.IDeployment.html
+  commentId: T:Pulumi.IDeployment
+  fullName: Pulumi.IDeployment
+  nameWithType: IDeployment
+- uid: Pulumi.IDeployment.InvokeAsync(System.String,Pulumi.InvokeArgs,Pulumi.InvokeOptions)
+  name: InvokeAsync(String, InvokeArgs, InvokeOptions)
+  href: Pulumi/Pulumi.IDeployment.html#Pulumi_IDeployment_InvokeAsync_System_String_Pulumi_InvokeArgs_Pulumi_InvokeOptions_
+  commentId: M:Pulumi.IDeployment.InvokeAsync(System.String,Pulumi.InvokeArgs,Pulumi.InvokeOptions)
+  fullName: Pulumi.IDeployment.InvokeAsync(System.String, Pulumi.InvokeArgs, Pulumi.InvokeOptions)
+  nameWithType: IDeployment.InvokeAsync(String, InvokeArgs, InvokeOptions)
+- uid: Pulumi.IDeployment.InvokeAsync*
+  name: InvokeAsync
+  href: Pulumi/Pulumi.IDeployment.html#Pulumi_IDeployment_InvokeAsync_
+  commentId: Overload:Pulumi.IDeployment.InvokeAsync
+  isSpec: "True"
+  fullName: Pulumi.IDeployment.InvokeAsync
+  nameWithType: IDeployment.InvokeAsync
+- uid: Pulumi.IDeployment.InvokeAsync``1(System.String,Pulumi.InvokeArgs,Pulumi.InvokeOptions)
+  name: InvokeAsync<T>(String, InvokeArgs, InvokeOptions)
+  href: Pulumi/Pulumi.IDeployment.html#Pulumi_IDeployment_InvokeAsync__1_System_String_Pulumi_InvokeArgs_Pulumi_InvokeOptions_
+  commentId: M:Pulumi.IDeployment.InvokeAsync``1(System.String,Pulumi.InvokeArgs,Pulumi.InvokeOptions)
+  name.vb: InvokeAsync(Of T)(String, InvokeArgs, InvokeOptions)
+  fullName: Pulumi.IDeployment.InvokeAsync<T>(System.String, Pulumi.InvokeArgs, Pulumi.InvokeOptions)
+  fullName.vb: Pulumi.IDeployment.InvokeAsync(Of T)(System.String, Pulumi.InvokeArgs, Pulumi.InvokeOptions)
+  nameWithType: IDeployment.InvokeAsync<T>(String, InvokeArgs, InvokeOptions)
+  nameWithType.vb: IDeployment.InvokeAsync(Of T)(String, InvokeArgs, InvokeOptions)
+- uid: Pulumi.IDeployment.IsDryRun
+  name: IsDryRun
+  href: Pulumi/Pulumi.IDeployment.html#Pulumi_IDeployment_IsDryRun
+  commentId: P:Pulumi.IDeployment.IsDryRun
+  fullName: Pulumi.IDeployment.IsDryRun
+  nameWithType: IDeployment.IsDryRun
+- uid: Pulumi.IDeployment.IsDryRun*
+  name: IsDryRun
+  href: Pulumi/Pulumi.IDeployment.html#Pulumi_IDeployment_IsDryRun_
+  commentId: Overload:Pulumi.IDeployment.IsDryRun
+  isSpec: "True"
+  fullName: Pulumi.IDeployment.IsDryRun
+  nameWithType: IDeployment.IsDryRun
+- uid: Pulumi.IDeployment.ProjectName
+  name: ProjectName
+  href: Pulumi/Pulumi.IDeployment.html#Pulumi_IDeployment_ProjectName
+  commentId: P:Pulumi.IDeployment.ProjectName
+  fullName: Pulumi.IDeployment.ProjectName
+  nameWithType: IDeployment.ProjectName
+- uid: Pulumi.IDeployment.ProjectName*
+  name: ProjectName
+  href: Pulumi/Pulumi.IDeployment.html#Pulumi_IDeployment_ProjectName_
+  commentId: Overload:Pulumi.IDeployment.ProjectName
+  isSpec: "True"
+  fullName: Pulumi.IDeployment.ProjectName
+  nameWithType: IDeployment.ProjectName
+- uid: Pulumi.IDeployment.StackName
+  name: StackName
+  href: Pulumi/Pulumi.IDeployment.html#Pulumi_IDeployment_StackName
+  commentId: P:Pulumi.IDeployment.StackName
+  fullName: Pulumi.IDeployment.StackName
+  nameWithType: IDeployment.StackName
+- uid: Pulumi.IDeployment.StackName*
+  name: StackName
+  href: Pulumi/Pulumi.IDeployment.html#Pulumi_IDeployment_StackName_
+  commentId: Overload:Pulumi.IDeployment.StackName
+  isSpec: "True"
+  fullName: Pulumi.IDeployment.StackName
+  nameWithType: IDeployment.StackName
+- uid: Pulumi.Input`1
+  name: Input<T>
+  href: Pulumi/Pulumi.Input-1.html
+  commentId: T:Pulumi.Input`1
+  name.vb: Input(Of T)
+  fullName: Pulumi.Input<T>
+  fullName.vb: Pulumi.Input(Of T)
+  nameWithType: Input<T>
+  nameWithType.vb: Input(Of T)
+- uid: Pulumi.Input`1.op_Implicit(`0)~Pulumi.Input{`0}
+  name: Implicit(T to Input<T>)
+  href: Pulumi/Pulumi.Input-1.html#Pulumi_Input_1_op_Implicit__0__Pulumi_Input__0_
+  commentId: M:Pulumi.Input`1.op_Implicit(`0)~Pulumi.Input{`0}
+  name.vb: Widening(T to Input(Of T))
+  fullName: Pulumi.Input<T>.Implicit(T to Pulumi.Input<T>)
+  fullName.vb: Pulumi.Input(Of T).Widening(T to Pulumi.Input(Of T))
+  nameWithType: Input<T>.Implicit(T to Input<T>)
+  nameWithType.vb: Input(Of T).Widening(T to Input(Of T))
+- uid: Pulumi.Input`1.op_Implicit(Pulumi.Input{`0})~Pulumi.Output{`0}
+  name: Implicit(Input<T> to Output<T>)
+  href: Pulumi/Pulumi.Input-1.html#Pulumi_Input_1_op_Implicit_Pulumi_Input__0___Pulumi_Output__0_
+  commentId: M:Pulumi.Input`1.op_Implicit(Pulumi.Input{`0})~Pulumi.Output{`0}
+  name.vb: Widening(Input(Of T) to Output(Of T))
+  fullName: Pulumi.Input<T>.Implicit(Pulumi.Input<T> to Pulumi.Output<T>)
+  fullName.vb: Pulumi.Input(Of T).Widening(Pulumi.Input(Of T) to Pulumi.Output(Of T))
+  nameWithType: Input<T>.Implicit(Input<T> to Output<T>)
+  nameWithType.vb: Input(Of T).Widening(Input(Of T) to Output(Of T))
+- uid: Pulumi.Input`1.op_Implicit(Pulumi.Output{`0})~Pulumi.Input{`0}
+  name: Implicit(Output<T> to Input<T>)
+  href: Pulumi/Pulumi.Input-1.html#Pulumi_Input_1_op_Implicit_Pulumi_Output__0___Pulumi_Input__0_
+  commentId: M:Pulumi.Input`1.op_Implicit(Pulumi.Output{`0})~Pulumi.Input{`0}
+  name.vb: Widening(Output(Of T) to Input(Of T))
+  fullName: Pulumi.Input<T>.Implicit(Pulumi.Output<T> to Pulumi.Input<T>)
+  fullName.vb: Pulumi.Input(Of T).Widening(Pulumi.Output(Of T) to Pulumi.Input(Of T))
+  nameWithType: Input<T>.Implicit(Output<T> to Input<T>)
+  nameWithType.vb: Input(Of T).Widening(Output(Of T) to Input(Of T))
+- uid: Pulumi.Input`1.op_Implicit*
+  name: Implicit
+  href: Pulumi/Pulumi.Input-1.html#Pulumi_Input_1_op_Implicit_
+  commentId: Overload:Pulumi.Input`1.op_Implicit
+  isSpec: "True"
+  name.vb: Widening
+  fullName: Pulumi.Input<T>.Implicit
+  fullName.vb: Pulumi.Input(Of T).Widening
+  nameWithType: Input<T>.Implicit
+  nameWithType.vb: Input(Of T).Widening
+- uid: Pulumi.InputArgs
+  name: InputArgs
+  href: Pulumi/Pulumi.InputArgs.html
+  commentId: T:Pulumi.InputArgs
+  fullName: Pulumi.InputArgs
+  nameWithType: InputArgs
+- uid: Pulumi.InputArgs.#ctor
+  name: InputArgs()
+  href: Pulumi/Pulumi.InputArgs.html#Pulumi_InputArgs__ctor
+  commentId: M:Pulumi.InputArgs.#ctor
+  fullName: Pulumi.InputArgs.InputArgs()
+  nameWithType: InputArgs.InputArgs()
+- uid: Pulumi.InputArgs.#ctor*
+  name: InputArgs
+  href: Pulumi/Pulumi.InputArgs.html#Pulumi_InputArgs__ctor_
+  commentId: Overload:Pulumi.InputArgs.#ctor
+  isSpec: "True"
+  fullName: Pulumi.InputArgs.InputArgs
+  nameWithType: InputArgs.InputArgs
+- uid: Pulumi.InputAttribute
+  name: InputAttribute
+  href: Pulumi/Pulumi.InputAttribute.html
+  commentId: T:Pulumi.InputAttribute
+  fullName: Pulumi.InputAttribute
+  nameWithType: InputAttribute
+- uid: Pulumi.InputAttribute.#ctor(System.String,System.Boolean,System.Boolean)
+  name: InputAttribute(String, Boolean, Boolean)
+  href: Pulumi/Pulumi.InputAttribute.html#Pulumi_InputAttribute__ctor_System_String_System_Boolean_System_Boolean_
+  commentId: M:Pulumi.InputAttribute.#ctor(System.String,System.Boolean,System.Boolean)
+  fullName: Pulumi.InputAttribute.InputAttribute(System.String, System.Boolean, System.Boolean)
+  nameWithType: InputAttribute.InputAttribute(String, Boolean, Boolean)
+- uid: Pulumi.InputAttribute.#ctor*
+  name: InputAttribute
+  href: Pulumi/Pulumi.InputAttribute.html#Pulumi_InputAttribute__ctor_
+  commentId: Overload:Pulumi.InputAttribute.#ctor
+  isSpec: "True"
+  fullName: Pulumi.InputAttribute.InputAttribute
+  nameWithType: InputAttribute.InputAttribute
+- uid: Pulumi.InputExtensions
+  name: InputExtensions
+  href: Pulumi/Pulumi.InputExtensions.html
+  commentId: T:Pulumi.InputExtensions
+  fullName: Pulumi.InputExtensions
+  nameWithType: InputExtensions
+- uid: Pulumi.InputExtensions.Apply*
+  name: Apply
+  href: Pulumi/Pulumi.InputExtensions.html#Pulumi_InputExtensions_Apply_
+  commentId: Overload:Pulumi.InputExtensions.Apply
+  isSpec: "True"
+  fullName: Pulumi.InputExtensions.Apply
+  nameWithType: InputExtensions.Apply
+- uid: Pulumi.InputExtensions.Apply``2(Pulumi.Input{``0},System.Func{``0,``1})
+  name: Apply<T, U>(Input<T>, Func<T, U>)
+  href: Pulumi/Pulumi.InputExtensions.html#Pulumi_InputExtensions_Apply__2_Pulumi_Input___0__System_Func___0___1__
+  commentId: M:Pulumi.InputExtensions.Apply``2(Pulumi.Input{``0},System.Func{``0,``1})
+  name.vb: Apply(Of T, U)(Input(Of T), Func(Of T, U))
+  fullName: Pulumi.InputExtensions.Apply<T, U>(Pulumi.Input<T>, System.Func<T, U>)
+  fullName.vb: Pulumi.InputExtensions.Apply(Of T, U)(Pulumi.Input(Of T), System.Func(Of T, U))
+  nameWithType: InputExtensions.Apply<T, U>(Input<T>, Func<T, U>)
+  nameWithType.vb: InputExtensions.Apply(Of T, U)(Input(Of T), Func(Of T, U))
+- uid: Pulumi.InputExtensions.Apply``2(Pulumi.Input{``0},System.Func{``0,Pulumi.Input{``1}})
+  name: Apply<T, U>(Input<T>, Func<T, Input<U>>)
+  href: Pulumi/Pulumi.InputExtensions.html#Pulumi_InputExtensions_Apply__2_Pulumi_Input___0__System_Func___0_Pulumi_Input___1___
+  commentId: M:Pulumi.InputExtensions.Apply``2(Pulumi.Input{``0},System.Func{``0,Pulumi.Input{``1}})
+  name.vb: Apply(Of T, U)(Input(Of T), Func(Of T, Input(Of U)))
+  fullName: Pulumi.InputExtensions.Apply<T, U>(Pulumi.Input<T>, System.Func<T, Pulumi.Input<U>>)
+  fullName.vb: Pulumi.InputExtensions.Apply(Of T, U)(Pulumi.Input(Of T), System.Func(Of T, Pulumi.Input(Of U)))
+  nameWithType: InputExtensions.Apply<T, U>(Input<T>, Func<T, Input<U>>)
+  nameWithType.vb: InputExtensions.Apply(Of T, U)(Input(Of T), Func(Of T, Input(Of U)))
+- uid: Pulumi.InputExtensions.Apply``2(Pulumi.Input{``0},System.Func{``0,Pulumi.Output{``1}})
+  name: Apply<T, U>(Input<T>, Func<T, Output<U>>)
+  href: Pulumi/Pulumi.InputExtensions.html#Pulumi_InputExtensions_Apply__2_Pulumi_Input___0__System_Func___0_Pulumi_Output___1___
+  commentId: M:Pulumi.InputExtensions.Apply``2(Pulumi.Input{``0},System.Func{``0,Pulumi.Output{``1}})
+  name.vb: Apply(Of T, U)(Input(Of T), Func(Of T, Output(Of U)))
+  fullName: Pulumi.InputExtensions.Apply<T, U>(Pulumi.Input<T>, System.Func<T, Pulumi.Output<U>>)
+  fullName.vb: Pulumi.InputExtensions.Apply(Of T, U)(Pulumi.Input(Of T), System.Func(Of T, Pulumi.Output(Of U)))
+  nameWithType: InputExtensions.Apply<T, U>(Input<T>, Func<T, Output<U>>)
+  nameWithType.vb: InputExtensions.Apply(Of T, U)(Input(Of T), Func(Of T, Output(Of U)))
+- uid: Pulumi.InputExtensions.Apply``2(Pulumi.Input{``0},System.Func{``0,System.Threading.Tasks.Task{``1}})
+  name: Apply<T, U>(Input<T>, Func<T, Task<U>>)
+  href: Pulumi/Pulumi.InputExtensions.html#Pulumi_InputExtensions_Apply__2_Pulumi_Input___0__System_Func___0_System_Threading_Tasks_Task___1___
+  commentId: M:Pulumi.InputExtensions.Apply``2(Pulumi.Input{``0},System.Func{``0,System.Threading.Tasks.Task{``1}})
+  name.vb: Apply(Of T, U)(Input(Of T), Func(Of T, Task(Of U)))
+  fullName: Pulumi.InputExtensions.Apply<T, U>(Pulumi.Input<T>, System.Func<T, System.Threading.Tasks.Task<U>>)
+  fullName.vb: Pulumi.InputExtensions.Apply(Of T, U)(Pulumi.Input(Of T), System.Func(Of T, System.Threading.Tasks.Task(Of U)))
+  nameWithType: InputExtensions.Apply<T, U>(Input<T>, Func<T, Task<U>>)
+  nameWithType.vb: InputExtensions.Apply(Of T, U)(Input(Of T), Func(Of T, Task(Of U)))
+- uid: Pulumi.InputExtensions.ToOutput*
+  name: ToOutput
+  href: Pulumi/Pulumi.InputExtensions.html#Pulumi_InputExtensions_ToOutput_
+  commentId: Overload:Pulumi.InputExtensions.ToOutput
+  isSpec: "True"
+  fullName: Pulumi.InputExtensions.ToOutput
+  nameWithType: InputExtensions.ToOutput
+- uid: Pulumi.InputExtensions.ToOutput``1(Pulumi.Input{``0})
+  name: ToOutput<T>(Input<T>)
+  href: Pulumi/Pulumi.InputExtensions.html#Pulumi_InputExtensions_ToOutput__1_Pulumi_Input___0__
+  commentId: M:Pulumi.InputExtensions.ToOutput``1(Pulumi.Input{``0})
+  name.vb: ToOutput(Of T)(Input(Of T))
+  fullName: Pulumi.InputExtensions.ToOutput<T>(Pulumi.Input<T>)
+  fullName.vb: Pulumi.InputExtensions.ToOutput(Of T)(Pulumi.Input(Of T))
+  nameWithType: InputExtensions.ToOutput<T>(Input<T>)
+  nameWithType.vb: InputExtensions.ToOutput(Of T)(Input(Of T))
+- uid: Pulumi.InputJson
+  name: InputJson
+  href: Pulumi/Pulumi.InputJson.html
+  commentId: T:Pulumi.InputJson
+  fullName: Pulumi.InputJson
+  nameWithType: InputJson
+- uid: Pulumi.InputJson.#ctor
+  name: InputJson()
+  href: Pulumi/Pulumi.InputJson.html#Pulumi_InputJson__ctor
+  commentId: M:Pulumi.InputJson.#ctor
+  fullName: Pulumi.InputJson.InputJson()
+  nameWithType: InputJson.InputJson()
+- uid: Pulumi.InputJson.#ctor*
+  name: InputJson
+  href: Pulumi/Pulumi.InputJson.html#Pulumi_InputJson__ctor_
+  commentId: Overload:Pulumi.InputJson.#ctor
+  isSpec: "True"
+  fullName: Pulumi.InputJson.InputJson
+  nameWithType: InputJson.InputJson
+- uid: Pulumi.InputJson.op_Implicit(JsonDocument)~Pulumi.InputJson
+  name: Implicit(JsonDocument to InputJson)
+  href: Pulumi/Pulumi.InputJson.html#Pulumi_InputJson_op_Implicit_JsonDocument__Pulumi_InputJson
+  commentId: M:Pulumi.InputJson.op_Implicit(JsonDocument)~Pulumi.InputJson
+  name.vb: Widening(JsonDocument to InputJson)
+  fullName: Pulumi.InputJson.Implicit(JsonDocument to Pulumi.InputJson)
+  fullName.vb: Pulumi.InputJson.Widening(JsonDocument to Pulumi.InputJson)
+  nameWithType: InputJson.Implicit(JsonDocument to InputJson)
+  nameWithType.vb: InputJson.Widening(JsonDocument to InputJson)
+- uid: Pulumi.InputJson.op_Implicit(JsonElement)~Pulumi.InputJson
+  name: Implicit(JsonElement to InputJson)
+  href: Pulumi/Pulumi.InputJson.html#Pulumi_InputJson_op_Implicit_JsonElement__Pulumi_InputJson
+  commentId: M:Pulumi.InputJson.op_Implicit(JsonElement)~Pulumi.InputJson
+  name.vb: Widening(JsonElement to InputJson)
+  fullName: Pulumi.InputJson.Implicit(JsonElement to Pulumi.InputJson)
+  fullName.vb: Pulumi.InputJson.Widening(JsonElement to Pulumi.InputJson)
+  nameWithType: InputJson.Implicit(JsonElement to InputJson)
+  nameWithType.vb: InputJson.Widening(JsonElement to InputJson)
+- uid: Pulumi.InputJson.op_Implicit(Pulumi.Output{JsonDocument})~Pulumi.InputJson
+  name: Implicit(Output<JsonDocument> to InputJson)
+  href: Pulumi/Pulumi.InputJson.html#Pulumi_InputJson_op_Implicit_Pulumi_Output_JsonDocument___Pulumi_InputJson
+  commentId: M:Pulumi.InputJson.op_Implicit(Pulumi.Output{JsonDocument})~Pulumi.InputJson
+  name.vb: Widening(Output(Of JsonDocument) to InputJson)
+  fullName: Pulumi.InputJson.Implicit(Pulumi.Output<JsonDocument> to Pulumi.InputJson)
+  fullName.vb: Pulumi.InputJson.Widening(Pulumi.Output(Of JsonDocument) to Pulumi.InputJson)
+  nameWithType: InputJson.Implicit(Output<JsonDocument> to InputJson)
+  nameWithType.vb: InputJson.Widening(Output(Of JsonDocument) to InputJson)
+- uid: Pulumi.InputJson.op_Implicit(Pulumi.Output{JsonElement})~Pulumi.InputJson
+  name: Implicit(Output<JsonElement> to InputJson)
+  href: Pulumi/Pulumi.InputJson.html#Pulumi_InputJson_op_Implicit_Pulumi_Output_JsonElement___Pulumi_InputJson
+  commentId: M:Pulumi.InputJson.op_Implicit(Pulumi.Output{JsonElement})~Pulumi.InputJson
+  name.vb: Widening(Output(Of JsonElement) to InputJson)
+  fullName: Pulumi.InputJson.Implicit(Pulumi.Output<JsonElement> to Pulumi.InputJson)
+  fullName.vb: Pulumi.InputJson.Widening(Pulumi.Output(Of JsonElement) to Pulumi.InputJson)
+  nameWithType: InputJson.Implicit(Output<JsonElement> to InputJson)
+  nameWithType.vb: InputJson.Widening(Output(Of JsonElement) to InputJson)
+- uid: Pulumi.InputJson.op_Implicit(Pulumi.Output{System.String})~Pulumi.InputJson
+  name: Implicit(Output<String> to InputJson)
+  href: Pulumi/Pulumi.InputJson.html#Pulumi_InputJson_op_Implicit_Pulumi_Output_System_String___Pulumi_InputJson
+  commentId: M:Pulumi.InputJson.op_Implicit(Pulumi.Output{System.String})~Pulumi.InputJson
+  name.vb: Widening(Output(Of String) to InputJson)
+  fullName: Pulumi.InputJson.Implicit(Pulumi.Output<System.String> to Pulumi.InputJson)
+  fullName.vb: Pulumi.InputJson.Widening(Pulumi.Output(Of System.String) to Pulumi.InputJson)
+  nameWithType: InputJson.Implicit(Output<String> to InputJson)
+  nameWithType.vb: InputJson.Widening(Output(Of String) to InputJson)
+- uid: Pulumi.InputJson.op_Implicit(System.String)~Pulumi.InputJson
+  name: Implicit(String to InputJson)
+  href: Pulumi/Pulumi.InputJson.html#Pulumi_InputJson_op_Implicit_System_String__Pulumi_InputJson
+  commentId: M:Pulumi.InputJson.op_Implicit(System.String)~Pulumi.InputJson
+  name.vb: Widening(String to InputJson)
+  fullName: Pulumi.InputJson.Implicit(System.String to Pulumi.InputJson)
+  fullName.vb: Pulumi.InputJson.Widening(System.String to Pulumi.InputJson)
+  nameWithType: InputJson.Implicit(String to InputJson)
+  nameWithType.vb: InputJson.Widening(String to InputJson)
+- uid: Pulumi.InputJson.op_Implicit*
+  name: Implicit
+  href: Pulumi/Pulumi.InputJson.html#Pulumi_InputJson_op_Implicit_
+  commentId: Overload:Pulumi.InputJson.op_Implicit
+  isSpec: "True"
+  name.vb: Widening
+  fullName: Pulumi.InputJson.Implicit
+  fullName.vb: Pulumi.InputJson.Widening
+  nameWithType: InputJson.Implicit
+  nameWithType.vb: InputJson.Widening
+- uid: Pulumi.InputList`1
+  name: InputList<T>
+  href: Pulumi/Pulumi.InputList-1.html
+  commentId: T:Pulumi.InputList`1
+  name.vb: InputList(Of T)
+  fullName: Pulumi.InputList<T>
+  fullName.vb: Pulumi.InputList(Of T)
+  nameWithType: InputList<T>
+  nameWithType.vb: InputList(Of T)
+- uid: Pulumi.InputList`1.#ctor
+  name: InputList()
+  href: Pulumi/Pulumi.InputList-1.html#Pulumi_InputList_1__ctor
+  commentId: M:Pulumi.InputList`1.#ctor
+  fullName: Pulumi.InputList<T>.InputList()
+  fullName.vb: Pulumi.InputList(Of T).InputList()
+  nameWithType: InputList<T>.InputList()
+  nameWithType.vb: InputList(Of T).InputList()
+- uid: Pulumi.InputList`1.#ctor*
+  name: InputList
+  href: Pulumi/Pulumi.InputList-1.html#Pulumi_InputList_1__ctor_
+  commentId: Overload:Pulumi.InputList`1.#ctor
+  isSpec: "True"
+  fullName: Pulumi.InputList<T>.InputList
+  fullName.vb: Pulumi.InputList(Of T).InputList
+  nameWithType: InputList<T>.InputList
+  nameWithType.vb: InputList(Of T).InputList
+- uid: Pulumi.InputList`1.Add(Pulumi.Input{`0}[])
+  name: Add(Input<T>[])
+  href: Pulumi/Pulumi.InputList-1.html#Pulumi_InputList_1_Add_Pulumi_Input__0____
+  commentId: M:Pulumi.InputList`1.Add(Pulumi.Input{`0}[])
+  name.vb: Add(Input(Of T)())
+  fullName: Pulumi.InputList<T>.Add(Pulumi.Input<T>[])
+  fullName.vb: Pulumi.InputList(Of T).Add(Pulumi.Input(Of T)())
+  nameWithType: InputList<T>.Add(Input<T>[])
+  nameWithType.vb: InputList(Of T).Add(Input(Of T)())
+- uid: Pulumi.InputList`1.Add*
+  name: Add
+  href: Pulumi/Pulumi.InputList-1.html#Pulumi_InputList_1_Add_
+  commentId: Overload:Pulumi.InputList`1.Add
+  isSpec: "True"
+  fullName: Pulumi.InputList<T>.Add
+  fullName.vb: Pulumi.InputList(Of T).Add
+  nameWithType: InputList<T>.Add
+  nameWithType.vb: InputList(Of T).Add
+- uid: Pulumi.InputList`1.Concat(Pulumi.InputList{`0})
+  name: Concat(InputList<T>)
+  href: Pulumi/Pulumi.InputList-1.html#Pulumi_InputList_1_Concat_Pulumi_InputList__0__
+  commentId: M:Pulumi.InputList`1.Concat(Pulumi.InputList{`0})
+  name.vb: Concat(InputList(Of T))
+  fullName: Pulumi.InputList<T>.Concat(Pulumi.InputList<T>)
+  fullName.vb: Pulumi.InputList(Of T).Concat(Pulumi.InputList(Of T))
+  nameWithType: InputList<T>.Concat(InputList<T>)
+  nameWithType.vb: InputList(Of T).Concat(InputList(Of T))
+- uid: Pulumi.InputList`1.Concat*
+  name: Concat
+  href: Pulumi/Pulumi.InputList-1.html#Pulumi_InputList_1_Concat_
+  commentId: Overload:Pulumi.InputList`1.Concat
+  isSpec: "True"
+  fullName: Pulumi.InputList<T>.Concat
+  fullName.vb: Pulumi.InputList(Of T).Concat
+  nameWithType: InputList<T>.Concat
+  nameWithType.vb: InputList(Of T).Concat
+- uid: Pulumi.InputList`1.GetAsyncEnumerator(System.Threading.CancellationToken)
+  name: GetAsyncEnumerator(CancellationToken)
+  href: Pulumi/Pulumi.InputList-1.html#Pulumi_InputList_1_GetAsyncEnumerator_System_Threading_CancellationToken_
+  commentId: M:Pulumi.InputList`1.GetAsyncEnumerator(System.Threading.CancellationToken)
+  fullName: Pulumi.InputList<T>.GetAsyncEnumerator(System.Threading.CancellationToken)
+  fullName.vb: Pulumi.InputList(Of T).GetAsyncEnumerator(System.Threading.CancellationToken)
+  nameWithType: InputList<T>.GetAsyncEnumerator(CancellationToken)
+  nameWithType.vb: InputList(Of T).GetAsyncEnumerator(CancellationToken)
+- uid: Pulumi.InputList`1.GetAsyncEnumerator*
+  name: GetAsyncEnumerator
+  href: Pulumi/Pulumi.InputList-1.html#Pulumi_InputList_1_GetAsyncEnumerator_
+  commentId: Overload:Pulumi.InputList`1.GetAsyncEnumerator
+  isSpec: "True"
+  fullName: Pulumi.InputList<T>.GetAsyncEnumerator
+  fullName.vb: Pulumi.InputList(Of T).GetAsyncEnumerator
+  nameWithType: InputList<T>.GetAsyncEnumerator
+  nameWithType.vb: InputList(Of T).GetAsyncEnumerator
+- uid: Pulumi.InputList`1.op_Implicit(`0)~Pulumi.InputList{`0}
+  name: Implicit(T to InputList<T>)
+  href: Pulumi/Pulumi.InputList-1.html#Pulumi_InputList_1_op_Implicit__0__Pulumi_InputList__0_
+  commentId: M:Pulumi.InputList`1.op_Implicit(`0)~Pulumi.InputList{`0}
+  name.vb: Widening(T to InputList(Of T))
+  fullName: Pulumi.InputList<T>.Implicit(T to Pulumi.InputList<T>)
+  fullName.vb: Pulumi.InputList(Of T).Widening(T to Pulumi.InputList(Of T))
+  nameWithType: InputList<T>.Implicit(T to InputList<T>)
+  nameWithType.vb: InputList(Of T).Widening(T to InputList(Of T))
+- uid: Pulumi.InputList`1.op_Implicit(`0[])~Pulumi.InputList{`0}
+  name: Implicit(T[] to InputList<T>)
+  href: Pulumi/Pulumi.InputList-1.html#Pulumi_InputList_1_op_Implicit__0____Pulumi_InputList__0_
+  commentId: M:Pulumi.InputList`1.op_Implicit(`0[])~Pulumi.InputList{`0}
+  name.vb: Widening(T() to InputList(Of T))
+  fullName: Pulumi.InputList<T>.Implicit(T[] to Pulumi.InputList<T>)
+  fullName.vb: Pulumi.InputList(Of T).Widening(T() to Pulumi.InputList(Of T))
+  nameWithType: InputList<T>.Implicit(T[] to InputList<T>)
+  nameWithType.vb: InputList(Of T).Widening(T() to InputList(Of T))
+- uid: Pulumi.InputList`1.op_Implicit(Pulumi.Input{`0})~Pulumi.InputList{`0}
+  name: Implicit(Input<T> to InputList<T>)
+  href: Pulumi/Pulumi.InputList-1.html#Pulumi_InputList_1_op_Implicit_Pulumi_Input__0___Pulumi_InputList__0_
+  commentId: M:Pulumi.InputList`1.op_Implicit(Pulumi.Input{`0})~Pulumi.InputList{`0}
+  name.vb: Widening(Input(Of T) to InputList(Of T))
+  fullName: Pulumi.InputList<T>.Implicit(Pulumi.Input<T> to Pulumi.InputList<T>)
+  fullName.vb: Pulumi.InputList(Of T).Widening(Pulumi.Input(Of T) to Pulumi.InputList(Of T))
+  nameWithType: InputList<T>.Implicit(Input<T> to InputList<T>)
+  nameWithType.vb: InputList(Of T).Widening(Input(Of T) to InputList(Of T))
+- uid: Pulumi.InputList`1.op_Implicit(Pulumi.Input{`0}[])~Pulumi.InputList{`0}
+  name: Implicit(Input<T>[] to InputList<T>)
+  href: Pulumi/Pulumi.InputList-1.html#Pulumi_InputList_1_op_Implicit_Pulumi_Input__0_____Pulumi_InputList__0_
+  commentId: M:Pulumi.InputList`1.op_Implicit(Pulumi.Input{`0}[])~Pulumi.InputList{`0}
+  name.vb: Widening(Input(Of T)() to InputList(Of T))
+  fullName: Pulumi.InputList<T>.Implicit(Pulumi.Input<T>[] to Pulumi.InputList<T>)
+  fullName.vb: Pulumi.InputList(Of T).Widening(Pulumi.Input(Of T)() to Pulumi.InputList(Of T))
+  nameWithType: InputList<T>.Implicit(Input<T>[] to InputList<T>)
+  nameWithType.vb: InputList(Of T).Widening(Input(Of T)() to InputList(Of T))
+- uid: Pulumi.InputList`1.op_Implicit(Pulumi.Output{`0[]})~Pulumi.InputList{`0}
+  name: Implicit(Output<T[]> to InputList<T>)
+  href: Pulumi/Pulumi.InputList-1.html#Pulumi_InputList_1_op_Implicit_Pulumi_Output__0_____Pulumi_InputList__0_
+  commentId: M:Pulumi.InputList`1.op_Implicit(Pulumi.Output{`0[]})~Pulumi.InputList{`0}
+  name.vb: Widening(Output(Of T()) to InputList(Of T))
+  fullName: Pulumi.InputList<T>.Implicit(Pulumi.Output<T[]> to Pulumi.InputList<T>)
+  fullName.vb: Pulumi.InputList(Of T).Widening(Pulumi.Output(Of T()) to Pulumi.InputList(Of T))
+  nameWithType: InputList<T>.Implicit(Output<T[]> to InputList<T>)
+  nameWithType.vb: InputList(Of T).Widening(Output(Of T()) to InputList(Of T))
+- uid: Pulumi.InputList`1.op_Implicit(Pulumi.Output{`0})~Pulumi.InputList{`0}
+  name: Implicit(Output<T> to InputList<T>)
+  href: Pulumi/Pulumi.InputList-1.html#Pulumi_InputList_1_op_Implicit_Pulumi_Output__0___Pulumi_InputList__0_
+  commentId: M:Pulumi.InputList`1.op_Implicit(Pulumi.Output{`0})~Pulumi.InputList{`0}
+  name.vb: Widening(Output(Of T) to InputList(Of T))
+  fullName: Pulumi.InputList<T>.Implicit(Pulumi.Output<T> to Pulumi.InputList<T>)
+  fullName.vb: Pulumi.InputList(Of T).Widening(Pulumi.Output(Of T) to Pulumi.InputList(Of T))
+  nameWithType: InputList<T>.Implicit(Output<T> to InputList<T>)
+  nameWithType.vb: InputList(Of T).Widening(Output(Of T) to InputList(Of T))
+- uid: Pulumi.InputList`1.op_Implicit(Pulumi.Output{`0}[])~Pulumi.InputList{`0}
+  name: Implicit(Output<T>[] to InputList<T>)
+  href: Pulumi/Pulumi.InputList-1.html#Pulumi_InputList_1_op_Implicit_Pulumi_Output__0_____Pulumi_InputList__0_
+  commentId: M:Pulumi.InputList`1.op_Implicit(Pulumi.Output{`0}[])~Pulumi.InputList{`0}
+  name.vb: Widening(Output(Of T)() to InputList(Of T))
+  fullName: Pulumi.InputList<T>.Implicit(Pulumi.Output<T>[] to Pulumi.InputList<T>)
+  fullName.vb: Pulumi.InputList(Of T).Widening(Pulumi.Output(Of T)() to Pulumi.InputList(Of T))
+  nameWithType: InputList<T>.Implicit(Output<T>[] to InputList<T>)
+  nameWithType.vb: InputList(Of T).Widening(Output(Of T)() to InputList(Of T))
+- uid: Pulumi.InputList`1.op_Implicit(Pulumi.Output{System.Collections.Generic.IEnumerable{`0}})~Pulumi.InputList{`0}
+  name: Implicit(Output<IEnumerable<T>> to InputList<T>)
+  href: Pulumi/Pulumi.InputList-1.html#Pulumi_InputList_1_op_Implicit_Pulumi_Output_System_Collections_Generic_IEnumerable__0____Pulumi_InputList__0_
+  commentId: M:Pulumi.InputList`1.op_Implicit(Pulumi.Output{System.Collections.Generic.IEnumerable{`0}})~Pulumi.InputList{`0}
+  name.vb: Widening(Output(Of IEnumerable(Of T)) to InputList(Of T))
+  fullName: Pulumi.InputList<T>.Implicit(Pulumi.Output<System.Collections.Generic.IEnumerable<T>> to Pulumi.InputList<T>)
+  fullName.vb: Pulumi.InputList(Of T).Widening(Pulumi.Output(Of System.Collections.Generic.IEnumerable(Of T)) to Pulumi.InputList(Of T))
+  nameWithType: InputList<T>.Implicit(Output<IEnumerable<T>> to InputList<T>)
+  nameWithType.vb: InputList(Of T).Widening(Output(Of IEnumerable(Of T)) to InputList(Of T))
+- uid: Pulumi.InputList`1.op_Implicit(Pulumi.Output{System.Collections.Generic.List{`0}})~Pulumi.InputList{`0}
+  name: Implicit(Output<List<T>> to InputList<T>)
+  href: Pulumi/Pulumi.InputList-1.html#Pulumi_InputList_1_op_Implicit_Pulumi_Output_System_Collections_Generic_List__0____Pulumi_InputList__0_
+  commentId: M:Pulumi.InputList`1.op_Implicit(Pulumi.Output{System.Collections.Generic.List{`0}})~Pulumi.InputList{`0}
+  name.vb: Widening(Output(Of List(Of T)) to InputList(Of T))
+  fullName: Pulumi.InputList<T>.Implicit(Pulumi.Output<System.Collections.Generic.List<T>> to Pulumi.InputList<T>)
+  fullName.vb: Pulumi.InputList(Of T).Widening(Pulumi.Output(Of System.Collections.Generic.List(Of T)) to Pulumi.InputList(Of T))
+  nameWithType: InputList<T>.Implicit(Output<List<T>> to InputList<T>)
+  nameWithType.vb: InputList(Of T).Widening(Output(Of List(Of T)) to InputList(Of T))
+- uid: Pulumi.InputList`1.op_Implicit(Pulumi.Output{System.Collections.Immutable.ImmutableArray{`0}})~Pulumi.InputList{`0}
+  name: Implicit(Output<ImmutableArray<T>> to InputList<T>)
+  href: Pulumi/Pulumi.InputList-1.html#Pulumi_InputList_1_op_Implicit_Pulumi_Output_System_Collections_Immutable_ImmutableArray__0____Pulumi_InputList__0_
+  commentId: M:Pulumi.InputList`1.op_Implicit(Pulumi.Output{System.Collections.Immutable.ImmutableArray{`0}})~Pulumi.InputList{`0}
+  name.vb: Widening(Output(Of ImmutableArray(Of T)) to InputList(Of T))
+  fullName: Pulumi.InputList<T>.Implicit(Pulumi.Output<System.Collections.Immutable.ImmutableArray<T>> to Pulumi.InputList<T>)
+  fullName.vb: Pulumi.InputList(Of T).Widening(Pulumi.Output(Of System.Collections.Immutable.ImmutableArray(Of T)) to Pulumi.InputList(Of T))
+  nameWithType: InputList<T>.Implicit(Output<ImmutableArray<T>> to InputList<T>)
+  nameWithType.vb: InputList(Of T).Widening(Output(Of ImmutableArray(Of T)) to InputList(Of T))
+- uid: Pulumi.InputList`1.op_Implicit(System.Collections.Generic.List{`0})~Pulumi.InputList{`0}
+  name: Implicit(List<T> to InputList<T>)
+  href: Pulumi/Pulumi.InputList-1.html#Pulumi_InputList_1_op_Implicit_System_Collections_Generic_List__0___Pulumi_InputList__0_
+  commentId: M:Pulumi.InputList`1.op_Implicit(System.Collections.Generic.List{`0})~Pulumi.InputList{`0}
+  name.vb: Widening(List(Of T) to InputList(Of T))
+  fullName: Pulumi.InputList<T>.Implicit(System.Collections.Generic.List<T> to Pulumi.InputList<T>)
+  fullName.vb: Pulumi.InputList(Of T).Widening(System.Collections.Generic.List(Of T) to Pulumi.InputList(Of T))
+  nameWithType: InputList<T>.Implicit(List<T> to InputList<T>)
+  nameWithType.vb: InputList(Of T).Widening(List(Of T) to InputList(Of T))
+- uid: Pulumi.InputList`1.op_Implicit(System.Collections.Generic.List{Pulumi.Input{`0}})~Pulumi.InputList{`0}
+  name: Implicit(List<Input<T>> to InputList<T>)
+  href: Pulumi/Pulumi.InputList-1.html#Pulumi_InputList_1_op_Implicit_System_Collections_Generic_List_Pulumi_Input__0____Pulumi_InputList__0_
+  commentId: M:Pulumi.InputList`1.op_Implicit(System.Collections.Generic.List{Pulumi.Input{`0}})~Pulumi.InputList{`0}
+  name.vb: Widening(List(Of Input(Of T)) to InputList(Of T))
+  fullName: Pulumi.InputList<T>.Implicit(System.Collections.Generic.List<Pulumi.Input<T>> to Pulumi.InputList<T>)
+  fullName.vb: Pulumi.InputList(Of T).Widening(System.Collections.Generic.List(Of Pulumi.Input(Of T)) to Pulumi.InputList(Of T))
+  nameWithType: InputList<T>.Implicit(List<Input<T>> to InputList<T>)
+  nameWithType.vb: InputList(Of T).Widening(List(Of Input(Of T)) to InputList(Of T))
+- uid: Pulumi.InputList`1.op_Implicit(System.Collections.Generic.List{Pulumi.Output{`0}})~Pulumi.InputList{`0}
+  name: Implicit(List<Output<T>> to InputList<T>)
+  href: Pulumi/Pulumi.InputList-1.html#Pulumi_InputList_1_op_Implicit_System_Collections_Generic_List_Pulumi_Output__0____Pulumi_InputList__0_
+  commentId: M:Pulumi.InputList`1.op_Implicit(System.Collections.Generic.List{Pulumi.Output{`0}})~Pulumi.InputList{`0}
+  name.vb: Widening(List(Of Output(Of T)) to InputList(Of T))
+  fullName: Pulumi.InputList<T>.Implicit(System.Collections.Generic.List<Pulumi.Output<T>> to Pulumi.InputList<T>)
+  fullName.vb: Pulumi.InputList(Of T).Widening(System.Collections.Generic.List(Of Pulumi.Output(Of T)) to Pulumi.InputList(Of T))
+  nameWithType: InputList<T>.Implicit(List<Output<T>> to InputList<T>)
+  nameWithType.vb: InputList(Of T).Widening(List(Of Output(Of T)) to InputList(Of T))
+- uid: Pulumi.InputList`1.op_Implicit(System.Collections.Immutable.ImmutableArray{`0})~Pulumi.InputList{`0}
+  name: Implicit(ImmutableArray<T> to InputList<T>)
+  href: Pulumi/Pulumi.InputList-1.html#Pulumi_InputList_1_op_Implicit_System_Collections_Immutable_ImmutableArray__0___Pulumi_InputList__0_
+  commentId: M:Pulumi.InputList`1.op_Implicit(System.Collections.Immutable.ImmutableArray{`0})~Pulumi.InputList{`0}
+  name.vb: Widening(ImmutableArray(Of T) to InputList(Of T))
+  fullName: Pulumi.InputList<T>.Implicit(System.Collections.Immutable.ImmutableArray<T> to Pulumi.InputList<T>)
+  fullName.vb: Pulumi.InputList(Of T).Widening(System.Collections.Immutable.ImmutableArray(Of T) to Pulumi.InputList(Of T))
+  nameWithType: InputList<T>.Implicit(ImmutableArray<T> to InputList<T>)
+  nameWithType.vb: InputList(Of T).Widening(ImmutableArray(Of T) to InputList(Of T))
+- uid: Pulumi.InputList`1.op_Implicit(System.Collections.Immutable.ImmutableArray{Pulumi.Input{`0}})~Pulumi.InputList{`0}
+  name: Implicit(ImmutableArray<Input<T>> to InputList<T>)
+  href: Pulumi/Pulumi.InputList-1.html#Pulumi_InputList_1_op_Implicit_System_Collections_Immutable_ImmutableArray_Pulumi_Input__0____Pulumi_InputList__0_
+  commentId: M:Pulumi.InputList`1.op_Implicit(System.Collections.Immutable.ImmutableArray{Pulumi.Input{`0}})~Pulumi.InputList{`0}
+  name.vb: Widening(ImmutableArray(Of Input(Of T)) to InputList(Of T))
+  fullName: Pulumi.InputList<T>.Implicit(System.Collections.Immutable.ImmutableArray<Pulumi.Input<T>> to Pulumi.InputList<T>)
+  fullName.vb: Pulumi.InputList(Of T).Widening(System.Collections.Immutable.ImmutableArray(Of Pulumi.Input(Of T)) to Pulumi.InputList(Of T))
+  nameWithType: InputList<T>.Implicit(ImmutableArray<Input<T>> to InputList<T>)
+  nameWithType.vb: InputList(Of T).Widening(ImmutableArray(Of Input(Of T)) to InputList(Of T))
+- uid: Pulumi.InputList`1.op_Implicit(System.Collections.Immutable.ImmutableArray{Pulumi.Output{`0}})~Pulumi.InputList{`0}
+  name: Implicit(ImmutableArray<Output<T>> to InputList<T>)
+  href: Pulumi/Pulumi.InputList-1.html#Pulumi_InputList_1_op_Implicit_System_Collections_Immutable_ImmutableArray_Pulumi_Output__0____Pulumi_InputList__0_
+  commentId: M:Pulumi.InputList`1.op_Implicit(System.Collections.Immutable.ImmutableArray{Pulumi.Output{`0}})~Pulumi.InputList{`0}
+  name.vb: Widening(ImmutableArray(Of Output(Of T)) to InputList(Of T))
+  fullName: Pulumi.InputList<T>.Implicit(System.Collections.Immutable.ImmutableArray<Pulumi.Output<T>> to Pulumi.InputList<T>)
+  fullName.vb: Pulumi.InputList(Of T).Widening(System.Collections.Immutable.ImmutableArray(Of Pulumi.Output(Of T)) to Pulumi.InputList(Of T))
+  nameWithType: InputList<T>.Implicit(ImmutableArray<Output<T>> to InputList<T>)
+  nameWithType.vb: InputList(Of T).Widening(ImmutableArray(Of Output(Of T)) to InputList(Of T))
+- uid: Pulumi.InputList`1.op_Implicit*
+  name: Implicit
+  href: Pulumi/Pulumi.InputList-1.html#Pulumi_InputList_1_op_Implicit_
+  commentId: Overload:Pulumi.InputList`1.op_Implicit
+  isSpec: "True"
+  name.vb: Widening
+  fullName: Pulumi.InputList<T>.Implicit
+  fullName.vb: Pulumi.InputList(Of T).Widening
+  nameWithType: InputList<T>.Implicit
+  nameWithType.vb: InputList(Of T).Widening
+- uid: Pulumi.InputList`1.System#Collections#IEnumerable#GetEnumerator
+  name: IEnumerable.GetEnumerator()
+  href: Pulumi/Pulumi.InputList-1.html#Pulumi_InputList_1_System_Collections_IEnumerable_GetEnumerator
+  commentId: M:Pulumi.InputList`1.System#Collections#IEnumerable#GetEnumerator
+  name.vb: System.Collections.IEnumerable.GetEnumerator()
+  fullName: Pulumi.InputList<T>.System.Collections.IEnumerable.GetEnumerator()
+  fullName.vb: Pulumi.InputList(Of T).System.Collections.IEnumerable.GetEnumerator()
+  nameWithType: InputList<T>.IEnumerable.GetEnumerator()
+  nameWithType.vb: InputList(Of T).System.Collections.IEnumerable.GetEnumerator()
+- uid: Pulumi.InputList`1.System#Collections#IEnumerable#GetEnumerator*
+  name: IEnumerable.GetEnumerator
+  href: Pulumi/Pulumi.InputList-1.html#Pulumi_InputList_1_System_Collections_IEnumerable_GetEnumerator_
+  commentId: Overload:Pulumi.InputList`1.System#Collections#IEnumerable#GetEnumerator
+  isSpec: "True"
+  name.vb: System.Collections.IEnumerable.GetEnumerator
+  fullName: Pulumi.InputList<T>.System.Collections.IEnumerable.GetEnumerator
+  fullName.vb: Pulumi.InputList(Of T).System.Collections.IEnumerable.GetEnumerator
+  nameWithType: InputList<T>.IEnumerable.GetEnumerator
+  nameWithType.vb: InputList(Of T).System.Collections.IEnumerable.GetEnumerator
+- uid: Pulumi.InputMap`1
+  name: InputMap<V>
+  href: Pulumi/Pulumi.InputMap-1.html
+  commentId: T:Pulumi.InputMap`1
+  name.vb: InputMap(Of V)
+  fullName: Pulumi.InputMap<V>
+  fullName.vb: Pulumi.InputMap(Of V)
+  nameWithType: InputMap<V>
+  nameWithType.vb: InputMap(Of V)
+- uid: Pulumi.InputMap`1.#ctor
+  name: InputMap()
+  href: Pulumi/Pulumi.InputMap-1.html#Pulumi_InputMap_1__ctor
+  commentId: M:Pulumi.InputMap`1.#ctor
+  fullName: Pulumi.InputMap<V>.InputMap()
+  fullName.vb: Pulumi.InputMap(Of V).InputMap()
+  nameWithType: InputMap<V>.InputMap()
+  nameWithType.vb: InputMap(Of V).InputMap()
+- uid: Pulumi.InputMap`1.#ctor*
+  name: InputMap
+  href: Pulumi/Pulumi.InputMap-1.html#Pulumi_InputMap_1__ctor_
+  commentId: Overload:Pulumi.InputMap`1.#ctor
+  isSpec: "True"
+  fullName: Pulumi.InputMap<V>.InputMap
+  fullName.vb: Pulumi.InputMap(Of V).InputMap
+  nameWithType: InputMap<V>.InputMap
+  nameWithType.vb: InputMap(Of V).InputMap
+- uid: Pulumi.InputMap`1.Add(System.String,Pulumi.Input{`0})
+  name: Add(String, Input<V>)
+  href: Pulumi/Pulumi.InputMap-1.html#Pulumi_InputMap_1_Add_System_String_Pulumi_Input__0__
+  commentId: M:Pulumi.InputMap`1.Add(System.String,Pulumi.Input{`0})
+  name.vb: Add(String, Input(Of V))
+  fullName: Pulumi.InputMap<V>.Add(System.String, Pulumi.Input<V>)
+  fullName.vb: Pulumi.InputMap(Of V).Add(System.String, Pulumi.Input(Of V))
+  nameWithType: InputMap<V>.Add(String, Input<V>)
+  nameWithType.vb: InputMap(Of V).Add(String, Input(Of V))
+- uid: Pulumi.InputMap`1.Add*
+  name: Add
+  href: Pulumi/Pulumi.InputMap-1.html#Pulumi_InputMap_1_Add_
+  commentId: Overload:Pulumi.InputMap`1.Add
+  isSpec: "True"
+  fullName: Pulumi.InputMap<V>.Add
+  fullName.vb: Pulumi.InputMap(Of V).Add
+  nameWithType: InputMap<V>.Add
+  nameWithType.vb: InputMap(Of V).Add
+- uid: Pulumi.InputMap`1.GetAsyncEnumerator(System.Threading.CancellationToken)
+  name: GetAsyncEnumerator(CancellationToken)
+  href: Pulumi/Pulumi.InputMap-1.html#Pulumi_InputMap_1_GetAsyncEnumerator_System_Threading_CancellationToken_
+  commentId: M:Pulumi.InputMap`1.GetAsyncEnumerator(System.Threading.CancellationToken)
+  fullName: Pulumi.InputMap<V>.GetAsyncEnumerator(System.Threading.CancellationToken)
+  fullName.vb: Pulumi.InputMap(Of V).GetAsyncEnumerator(System.Threading.CancellationToken)
+  nameWithType: InputMap<V>.GetAsyncEnumerator(CancellationToken)
+  nameWithType.vb: InputMap(Of V).GetAsyncEnumerator(CancellationToken)
+- uid: Pulumi.InputMap`1.GetAsyncEnumerator*
+  name: GetAsyncEnumerator
+  href: Pulumi/Pulumi.InputMap-1.html#Pulumi_InputMap_1_GetAsyncEnumerator_
+  commentId: Overload:Pulumi.InputMap`1.GetAsyncEnumerator
+  isSpec: "True"
+  fullName: Pulumi.InputMap<V>.GetAsyncEnumerator
+  fullName.vb: Pulumi.InputMap(Of V).GetAsyncEnumerator
+  nameWithType: InputMap<V>.GetAsyncEnumerator
+  nameWithType.vb: InputMap(Of V).GetAsyncEnumerator
+- uid: Pulumi.InputMap`1.Item(System.String)
+  name: Item[String]
+  href: Pulumi/Pulumi.InputMap-1.html#Pulumi_InputMap_1_Item_System_String_
+  commentId: P:Pulumi.InputMap`1.Item(System.String)
+  name.vb: Item(String)
+  fullName: Pulumi.InputMap<V>.Item[System.String]
+  fullName.vb: Pulumi.InputMap(Of V).Item(System.String)
+  nameWithType: InputMap<V>.Item[String]
+  nameWithType.vb: InputMap(Of V).Item(String)
+- uid: Pulumi.InputMap`1.Item*
+  name: Item
+  href: Pulumi/Pulumi.InputMap-1.html#Pulumi_InputMap_1_Item_
+  commentId: Overload:Pulumi.InputMap`1.Item
+  isSpec: "True"
+  fullName: Pulumi.InputMap<V>.Item
+  fullName.vb: Pulumi.InputMap(Of V).Item
+  nameWithType: InputMap<V>.Item
+  nameWithType.vb: InputMap(Of V).Item
+- uid: Pulumi.InputMap`1.Merge(Pulumi.InputMap{`0},Pulumi.InputMap{`0})
+  name: Merge(InputMap<V>, InputMap<V>)
+  href: Pulumi/Pulumi.InputMap-1.html#Pulumi_InputMap_1_Merge_Pulumi_InputMap__0__Pulumi_InputMap__0__
+  commentId: M:Pulumi.InputMap`1.Merge(Pulumi.InputMap{`0},Pulumi.InputMap{`0})
+  name.vb: Merge(InputMap(Of V), InputMap(Of V))
+  fullName: Pulumi.InputMap<V>.Merge(Pulumi.InputMap<V>, Pulumi.InputMap<V>)
+  fullName.vb: Pulumi.InputMap(Of V).Merge(Pulumi.InputMap(Of V), Pulumi.InputMap(Of V))
+  nameWithType: InputMap<V>.Merge(InputMap<V>, InputMap<V>)
+  nameWithType.vb: InputMap(Of V).Merge(InputMap(Of V), InputMap(Of V))
+- uid: Pulumi.InputMap`1.Merge*
+  name: Merge
+  href: Pulumi/Pulumi.InputMap-1.html#Pulumi_InputMap_1_Merge_
+  commentId: Overload:Pulumi.InputMap`1.Merge
+  isSpec: "True"
+  fullName: Pulumi.InputMap<V>.Merge
+  fullName.vb: Pulumi.InputMap(Of V).Merge
+  nameWithType: InputMap<V>.Merge
+  nameWithType.vb: InputMap(Of V).Merge
+- uid: Pulumi.InputMap`1.op_Implicit(Pulumi.Output{System.Collections.Generic.Dictionary{System.String,`0}})~Pulumi.InputMap{`0}
+  name: Implicit(Output<Dictionary<String, V>> to InputMap<V>)
+  href: Pulumi/Pulumi.InputMap-1.html#Pulumi_InputMap_1_op_Implicit_Pulumi_Output_System_Collections_Generic_Dictionary_System_String__0____Pulumi_InputMap__0_
+  commentId: M:Pulumi.InputMap`1.op_Implicit(Pulumi.Output{System.Collections.Generic.Dictionary{System.String,`0}})~Pulumi.InputMap{`0}
+  name.vb: Widening(Output(Of Dictionary(Of String, V)) to InputMap(Of V))
+  fullName: Pulumi.InputMap<V>.Implicit(Pulumi.Output<System.Collections.Generic.Dictionary<System.String, V>> to Pulumi.InputMap<V>)
+  fullName.vb: Pulumi.InputMap(Of V).Widening(Pulumi.Output(Of System.Collections.Generic.Dictionary(Of System.String, V)) to Pulumi.InputMap(Of V))
+  nameWithType: InputMap<V>.Implicit(Output<Dictionary<String, V>> to InputMap<V>)
+  nameWithType.vb: InputMap(Of V).Widening(Output(Of Dictionary(Of String, V)) to InputMap(Of V))
+- uid: Pulumi.InputMap`1.op_Implicit(Pulumi.Output{System.Collections.Generic.IDictionary{System.String,`0}})~Pulumi.InputMap{`0}
+  name: Implicit(Output<IDictionary<String, V>> to InputMap<V>)
+  href: Pulumi/Pulumi.InputMap-1.html#Pulumi_InputMap_1_op_Implicit_Pulumi_Output_System_Collections_Generic_IDictionary_System_String__0____Pulumi_InputMap__0_
+  commentId: M:Pulumi.InputMap`1.op_Implicit(Pulumi.Output{System.Collections.Generic.IDictionary{System.String,`0}})~Pulumi.InputMap{`0}
+  name.vb: Widening(Output(Of IDictionary(Of String, V)) to InputMap(Of V))
+  fullName: Pulumi.InputMap<V>.Implicit(Pulumi.Output<System.Collections.Generic.IDictionary<System.String, V>> to Pulumi.InputMap<V>)
+  fullName.vb: Pulumi.InputMap(Of V).Widening(Pulumi.Output(Of System.Collections.Generic.IDictionary(Of System.String, V)) to Pulumi.InputMap(Of V))
+  nameWithType: InputMap<V>.Implicit(Output<IDictionary<String, V>> to InputMap<V>)
+  nameWithType.vb: InputMap(Of V).Widening(Output(Of IDictionary(Of String, V)) to InputMap(Of V))
+- uid: Pulumi.InputMap`1.op_Implicit(Pulumi.Output{System.Collections.Immutable.ImmutableDictionary{System.String,`0}})~Pulumi.InputMap{`0}
+  name: Implicit(Output<ImmutableDictionary<String, V>> to InputMap<V>)
+  href: Pulumi/Pulumi.InputMap-1.html#Pulumi_InputMap_1_op_Implicit_Pulumi_Output_System_Collections_Immutable_ImmutableDictionary_System_String__0____Pulumi_InputMap__0_
+  commentId: M:Pulumi.InputMap`1.op_Implicit(Pulumi.Output{System.Collections.Immutable.ImmutableDictionary{System.String,`0}})~Pulumi.InputMap{`0}
+  name.vb: Widening(Output(Of ImmutableDictionary(Of String, V)) to InputMap(Of V))
+  fullName: Pulumi.InputMap<V>.Implicit(Pulumi.Output<System.Collections.Immutable.ImmutableDictionary<System.String, V>> to Pulumi.InputMap<V>)
+  fullName.vb: Pulumi.InputMap(Of V).Widening(Pulumi.Output(Of System.Collections.Immutable.ImmutableDictionary(Of System.String, V)) to Pulumi.InputMap(Of V))
+  nameWithType: InputMap<V>.Implicit(Output<ImmutableDictionary<String, V>> to InputMap<V>)
+  nameWithType.vb: InputMap(Of V).Widening(Output(Of ImmutableDictionary(Of String, V)) to InputMap(Of V))
+- uid: Pulumi.InputMap`1.op_Implicit(System.Collections.Generic.Dictionary{System.String,`0})~Pulumi.InputMap{`0}
+  name: Implicit(Dictionary<String, V> to InputMap<V>)
+  href: Pulumi/Pulumi.InputMap-1.html#Pulumi_InputMap_1_op_Implicit_System_Collections_Generic_Dictionary_System_String__0___Pulumi_InputMap__0_
+  commentId: M:Pulumi.InputMap`1.op_Implicit(System.Collections.Generic.Dictionary{System.String,`0})~Pulumi.InputMap{`0}
+  name.vb: Widening(Dictionary(Of String, V) to InputMap(Of V))
+  fullName: Pulumi.InputMap<V>.Implicit(System.Collections.Generic.Dictionary<System.String, V> to Pulumi.InputMap<V>)
+  fullName.vb: Pulumi.InputMap(Of V).Widening(System.Collections.Generic.Dictionary(Of System.String, V) to Pulumi.InputMap(Of V))
+  nameWithType: InputMap<V>.Implicit(Dictionary<String, V> to InputMap<V>)
+  nameWithType.vb: InputMap(Of V).Widening(Dictionary(Of String, V) to InputMap(Of V))
+- uid: Pulumi.InputMap`1.op_Implicit(System.Collections.Immutable.ImmutableDictionary{System.String,`0})~Pulumi.InputMap{`0}
+  name: Implicit(ImmutableDictionary<String, V> to InputMap<V>)
+  href: Pulumi/Pulumi.InputMap-1.html#Pulumi_InputMap_1_op_Implicit_System_Collections_Immutable_ImmutableDictionary_System_String__0___Pulumi_InputMap__0_
+  commentId: M:Pulumi.InputMap`1.op_Implicit(System.Collections.Immutable.ImmutableDictionary{System.String,`0})~Pulumi.InputMap{`0}
+  name.vb: Widening(ImmutableDictionary(Of String, V) to InputMap(Of V))
+  fullName: Pulumi.InputMap<V>.Implicit(System.Collections.Immutable.ImmutableDictionary<System.String, V> to Pulumi.InputMap<V>)
+  fullName.vb: Pulumi.InputMap(Of V).Widening(System.Collections.Immutable.ImmutableDictionary(Of System.String, V) to Pulumi.InputMap(Of V))
+  nameWithType: InputMap<V>.Implicit(ImmutableDictionary<String, V> to InputMap<V>)
+  nameWithType.vb: InputMap(Of V).Widening(ImmutableDictionary(Of String, V) to InputMap(Of V))
+- uid: Pulumi.InputMap`1.op_Implicit*
+  name: Implicit
+  href: Pulumi/Pulumi.InputMap-1.html#Pulumi_InputMap_1_op_Implicit_
+  commentId: Overload:Pulumi.InputMap`1.op_Implicit
+  isSpec: "True"
+  name.vb: Widening
+  fullName: Pulumi.InputMap<V>.Implicit
+  fullName.vb: Pulumi.InputMap(Of V).Widening
+  nameWithType: InputMap<V>.Implicit
+  nameWithType.vb: InputMap(Of V).Widening
+- uid: Pulumi.InputMap`1.System#Collections#IEnumerable#GetEnumerator
+  name: IEnumerable.GetEnumerator()
+  href: Pulumi/Pulumi.InputMap-1.html#Pulumi_InputMap_1_System_Collections_IEnumerable_GetEnumerator
+  commentId: M:Pulumi.InputMap`1.System#Collections#IEnumerable#GetEnumerator
+  name.vb: System.Collections.IEnumerable.GetEnumerator()
+  fullName: Pulumi.InputMap<V>.System.Collections.IEnumerable.GetEnumerator()
+  fullName.vb: Pulumi.InputMap(Of V).System.Collections.IEnumerable.GetEnumerator()
+  nameWithType: InputMap<V>.IEnumerable.GetEnumerator()
+  nameWithType.vb: InputMap(Of V).System.Collections.IEnumerable.GetEnumerator()
+- uid: Pulumi.InputMap`1.System#Collections#IEnumerable#GetEnumerator*
+  name: IEnumerable.GetEnumerator
+  href: Pulumi/Pulumi.InputMap-1.html#Pulumi_InputMap_1_System_Collections_IEnumerable_GetEnumerator_
+  commentId: Overload:Pulumi.InputMap`1.System#Collections#IEnumerable#GetEnumerator
+  isSpec: "True"
+  name.vb: System.Collections.IEnumerable.GetEnumerator
+  fullName: Pulumi.InputMap<V>.System.Collections.IEnumerable.GetEnumerator
+  fullName.vb: Pulumi.InputMap(Of V).System.Collections.IEnumerable.GetEnumerator
+  nameWithType: InputMap<V>.IEnumerable.GetEnumerator
+  nameWithType.vb: InputMap(Of V).System.Collections.IEnumerable.GetEnumerator
+- uid: Pulumi.InputUnion`2
+  name: InputUnion<T0, T1>
+  href: Pulumi/Pulumi.InputUnion-2.html
+  commentId: T:Pulumi.InputUnion`2
+  name.vb: InputUnion(Of T0, T1)
+  fullName: Pulumi.InputUnion<T0, T1>
+  fullName.vb: Pulumi.InputUnion(Of T0, T1)
+  nameWithType: InputUnion<T0, T1>
+  nameWithType.vb: InputUnion(Of T0, T1)
+- uid: Pulumi.InputUnion`2.#ctor
+  name: InputUnion()
+  href: Pulumi/Pulumi.InputUnion-2.html#Pulumi_InputUnion_2__ctor
+  commentId: M:Pulumi.InputUnion`2.#ctor
+  fullName: Pulumi.InputUnion<T0, T1>.InputUnion()
+  fullName.vb: Pulumi.InputUnion(Of T0, T1).InputUnion()
+  nameWithType: InputUnion<T0, T1>.InputUnion()
+  nameWithType.vb: InputUnion(Of T0, T1).InputUnion()
+- uid: Pulumi.InputUnion`2.#ctor*
+  name: InputUnion
+  href: Pulumi/Pulumi.InputUnion-2.html#Pulumi_InputUnion_2__ctor_
+  commentId: Overload:Pulumi.InputUnion`2.#ctor
+  isSpec: "True"
+  fullName: Pulumi.InputUnion<T0, T1>.InputUnion
+  fullName.vb: Pulumi.InputUnion(Of T0, T1).InputUnion
+  nameWithType: InputUnion<T0, T1>.InputUnion
+  nameWithType.vb: InputUnion(Of T0, T1).InputUnion
+- uid: Pulumi.InputUnion`2.op_Implicit(`0)~Pulumi.InputUnion{`0,`1}
+  name: Implicit(T0 to InputUnion<T0, T1>)
+  href: Pulumi/Pulumi.InputUnion-2.html#Pulumi_InputUnion_2_op_Implicit__0__Pulumi_InputUnion__0__1_
+  commentId: M:Pulumi.InputUnion`2.op_Implicit(`0)~Pulumi.InputUnion{`0,`1}
+  name.vb: Widening(T0 to InputUnion(Of T0, T1))
+  fullName: Pulumi.InputUnion<T0, T1>.Implicit(T0 to Pulumi.InputUnion<T0, T1>)
+  fullName.vb: Pulumi.InputUnion(Of T0, T1).Widening(T0 to Pulumi.InputUnion(Of T0, T1))
+  nameWithType: InputUnion<T0, T1>.Implicit(T0 to InputUnion<T0, T1>)
+  nameWithType.vb: InputUnion(Of T0, T1).Widening(T0 to InputUnion(Of T0, T1))
+- uid: Pulumi.InputUnion`2.op_Implicit(`1)~Pulumi.InputUnion{`0,`1}
+  name: Implicit(T1 to InputUnion<T0, T1>)
+  href: Pulumi/Pulumi.InputUnion-2.html#Pulumi_InputUnion_2_op_Implicit__1__Pulumi_InputUnion__0__1_
+  commentId: M:Pulumi.InputUnion`2.op_Implicit(`1)~Pulumi.InputUnion{`0,`1}
+  name.vb: Widening(T1 to InputUnion(Of T0, T1))
+  fullName: Pulumi.InputUnion<T0, T1>.Implicit(T1 to Pulumi.InputUnion<T0, T1>)
+  fullName.vb: Pulumi.InputUnion(Of T0, T1).Widening(T1 to Pulumi.InputUnion(Of T0, T1))
+  nameWithType: InputUnion<T0, T1>.Implicit(T1 to InputUnion<T0, T1>)
+  nameWithType.vb: InputUnion(Of T0, T1).Widening(T1 to InputUnion(Of T0, T1))
+- uid: Pulumi.InputUnion`2.op_Implicit(Pulumi.Output{`0})~Pulumi.InputUnion{`0,`1}
+  name: Implicit(Output<T0> to InputUnion<T0, T1>)
+  href: Pulumi/Pulumi.InputUnion-2.html#Pulumi_InputUnion_2_op_Implicit_Pulumi_Output__0___Pulumi_InputUnion__0__1_
+  commentId: M:Pulumi.InputUnion`2.op_Implicit(Pulumi.Output{`0})~Pulumi.InputUnion{`0,`1}
+  name.vb: Widening(Output(Of T0) to InputUnion(Of T0, T1))
+  fullName: Pulumi.InputUnion<T0, T1>.Implicit(Pulumi.Output<T0> to Pulumi.InputUnion<T0, T1>)
+  fullName.vb: Pulumi.InputUnion(Of T0, T1).Widening(Pulumi.Output(Of T0) to Pulumi.InputUnion(Of T0, T1))
+  nameWithType: InputUnion<T0, T1>.Implicit(Output<T0> to InputUnion<T0, T1>)
+  nameWithType.vb: InputUnion(Of T0, T1).Widening(Output(Of T0) to InputUnion(Of T0, T1))
+- uid: Pulumi.InputUnion`2.op_Implicit(Pulumi.Output{`1})~Pulumi.InputUnion{`0,`1}
+  name: Implicit(Output<T1> to InputUnion<T0, T1>)
+  href: Pulumi/Pulumi.InputUnion-2.html#Pulumi_InputUnion_2_op_Implicit_Pulumi_Output__1___Pulumi_InputUnion__0__1_
+  commentId: M:Pulumi.InputUnion`2.op_Implicit(Pulumi.Output{`1})~Pulumi.InputUnion{`0,`1}
+  name.vb: Widening(Output(Of T1) to InputUnion(Of T0, T1))
+  fullName: Pulumi.InputUnion<T0, T1>.Implicit(Pulumi.Output<T1> to Pulumi.InputUnion<T0, T1>)
+  fullName.vb: Pulumi.InputUnion(Of T0, T1).Widening(Pulumi.Output(Of T1) to Pulumi.InputUnion(Of T0, T1))
+  nameWithType: InputUnion<T0, T1>.Implicit(Output<T1> to InputUnion<T0, T1>)
+  nameWithType.vb: InputUnion(Of T0, T1).Widening(Output(Of T1) to InputUnion(Of T0, T1))
+- uid: Pulumi.InputUnion`2.op_Implicit*
+  name: Implicit
+  href: Pulumi/Pulumi.InputUnion-2.html#Pulumi_InputUnion_2_op_Implicit_
+  commentId: Overload:Pulumi.InputUnion`2.op_Implicit
+  isSpec: "True"
+  name.vb: Widening
+  fullName: Pulumi.InputUnion<T0, T1>.Implicit
+  fullName.vb: Pulumi.InputUnion(Of T0, T1).Widening
+  nameWithType: InputUnion<T0, T1>.Implicit
+  nameWithType.vb: InputUnion(Of T0, T1).Widening
+- uid: Pulumi.InvokeArgs
+  name: InvokeArgs
+  href: Pulumi/Pulumi.InvokeArgs.html
+  commentId: T:Pulumi.InvokeArgs
+  fullName: Pulumi.InvokeArgs
+  nameWithType: InvokeArgs
+- uid: Pulumi.InvokeArgs.#ctor
+  name: InvokeArgs()
+  href: Pulumi/Pulumi.InvokeArgs.html#Pulumi_InvokeArgs__ctor
+  commentId: M:Pulumi.InvokeArgs.#ctor
+  fullName: Pulumi.InvokeArgs.InvokeArgs()
+  nameWithType: InvokeArgs.InvokeArgs()
+- uid: Pulumi.InvokeArgs.#ctor*
+  name: InvokeArgs
+  href: Pulumi/Pulumi.InvokeArgs.html#Pulumi_InvokeArgs__ctor_
+  commentId: Overload:Pulumi.InvokeArgs.#ctor
+  isSpec: "True"
+  fullName: Pulumi.InvokeArgs.InvokeArgs
+  nameWithType: InvokeArgs.InvokeArgs
+- uid: Pulumi.InvokeArgs.Empty
+  name: Empty
+  href: Pulumi/Pulumi.InvokeArgs.html#Pulumi_InvokeArgs_Empty
+  commentId: F:Pulumi.InvokeArgs.Empty
+  fullName: Pulumi.InvokeArgs.Empty
+  nameWithType: InvokeArgs.Empty
+- uid: Pulumi.InvokeOptions
+  name: InvokeOptions
+  href: Pulumi/Pulumi.InvokeOptions.html
+  commentId: T:Pulumi.InvokeOptions
+  fullName: Pulumi.InvokeOptions
+  nameWithType: InvokeOptions
+- uid: Pulumi.InvokeOptions.Parent
+  name: Parent
+  href: Pulumi/Pulumi.InvokeOptions.html#Pulumi_InvokeOptions_Parent
+  commentId: P:Pulumi.InvokeOptions.Parent
+  fullName: Pulumi.InvokeOptions.Parent
+  nameWithType: InvokeOptions.Parent
+- uid: Pulumi.InvokeOptions.Parent*
+  name: Parent
+  href: Pulumi/Pulumi.InvokeOptions.html#Pulumi_InvokeOptions_Parent_
+  commentId: Overload:Pulumi.InvokeOptions.Parent
+  isSpec: "True"
+  fullName: Pulumi.InvokeOptions.Parent
+  nameWithType: InvokeOptions.Parent
+- uid: Pulumi.InvokeOptions.Provider
+  name: Provider
+  href: Pulumi/Pulumi.InvokeOptions.html#Pulumi_InvokeOptions_Provider
+  commentId: P:Pulumi.InvokeOptions.Provider
+  fullName: Pulumi.InvokeOptions.Provider
+  nameWithType: InvokeOptions.Provider
+- uid: Pulumi.InvokeOptions.Provider*
+  name: Provider
+  href: Pulumi/Pulumi.InvokeOptions.html#Pulumi_InvokeOptions_Provider_
+  commentId: Overload:Pulumi.InvokeOptions.Provider
+  isSpec: "True"
+  fullName: Pulumi.InvokeOptions.Provider
+  nameWithType: InvokeOptions.Provider
+- uid: Pulumi.InvokeOptions.Version
+  name: Version
+  href: Pulumi/Pulumi.InvokeOptions.html#Pulumi_InvokeOptions_Version
+  commentId: P:Pulumi.InvokeOptions.Version
+  fullName: Pulumi.InvokeOptions.Version
+  nameWithType: InvokeOptions.Version
+- uid: Pulumi.InvokeOptions.Version*
+  name: Version
+  href: Pulumi/Pulumi.InvokeOptions.html#Pulumi_InvokeOptions_Version_
+  commentId: Overload:Pulumi.InvokeOptions.Version
+  isSpec: "True"
+  fullName: Pulumi.InvokeOptions.Version
+  nameWithType: InvokeOptions.Version
+- uid: Pulumi.Log
+  name: Log
+  href: Pulumi/Pulumi.Log.html
+  commentId: T:Pulumi.Log
+  fullName: Pulumi.Log
+  nameWithType: Log
+- uid: Pulumi.Log.Debug(System.String,Pulumi.Resource,System.Nullable{System.Int32},System.Nullable{System.Boolean})
+  name: Debug(String, Resource, Nullable<Int32>, Nullable<Boolean>)
+  href: Pulumi/Pulumi.Log.html#Pulumi_Log_Debug_System_String_Pulumi_Resource_System_Nullable_System_Int32__System_Nullable_System_Boolean__
+  commentId: M:Pulumi.Log.Debug(System.String,Pulumi.Resource,System.Nullable{System.Int32},System.Nullable{System.Boolean})
+  name.vb: Debug(String, Resource, Nullable(Of Int32), Nullable(Of Boolean))
+  fullName: Pulumi.Log.Debug(System.String, Pulumi.Resource, System.Nullable<System.Int32>, System.Nullable<System.Boolean>)
+  fullName.vb: Pulumi.Log.Debug(System.String, Pulumi.Resource, System.Nullable(Of System.Int32), System.Nullable(Of System.Boolean))
+  nameWithType: Log.Debug(String, Resource, Nullable<Int32>, Nullable<Boolean>)
+  nameWithType.vb: Log.Debug(String, Resource, Nullable(Of Int32), Nullable(Of Boolean))
+- uid: Pulumi.Log.Debug*
+  name: Debug
+  href: Pulumi/Pulumi.Log.html#Pulumi_Log_Debug_
+  commentId: Overload:Pulumi.Log.Debug
+  isSpec: "True"
+  fullName: Pulumi.Log.Debug
+  nameWithType: Log.Debug
+- uid: Pulumi.Log.Error(System.String,Pulumi.Resource,System.Nullable{System.Int32},System.Nullable{System.Boolean})
+  name: Error(String, Resource, Nullable<Int32>, Nullable<Boolean>)
+  href: Pulumi/Pulumi.Log.html#Pulumi_Log_Error_System_String_Pulumi_Resource_System_Nullable_System_Int32__System_Nullable_System_Boolean__
+  commentId: M:Pulumi.Log.Error(System.String,Pulumi.Resource,System.Nullable{System.Int32},System.Nullable{System.Boolean})
+  name.vb: Error(String, Resource, Nullable(Of Int32), Nullable(Of Boolean))
+  fullName: Pulumi.Log.Error(System.String, Pulumi.Resource, System.Nullable<System.Int32>, System.Nullable<System.Boolean>)
+  fullName.vb: Pulumi.Log.Error(System.String, Pulumi.Resource, System.Nullable(Of System.Int32), System.Nullable(Of System.Boolean))
+  nameWithType: Log.Error(String, Resource, Nullable<Int32>, Nullable<Boolean>)
+  nameWithType.vb: Log.Error(String, Resource, Nullable(Of Int32), Nullable(Of Boolean))
+- uid: Pulumi.Log.Error*
+  name: Error
+  href: Pulumi/Pulumi.Log.html#Pulumi_Log_Error_
+  commentId: Overload:Pulumi.Log.Error
+  isSpec: "True"
+  fullName: Pulumi.Log.Error
+  nameWithType: Log.Error
+- uid: Pulumi.Log.Exception(System.Exception,Pulumi.Resource,System.Nullable{System.Int32},System.Nullable{System.Boolean})
+  name: Exception(Exception, Resource, Nullable<Int32>, Nullable<Boolean>)
+  href: Pulumi/Pulumi.Log.html#Pulumi_Log_Exception_System_Exception_Pulumi_Resource_System_Nullable_System_Int32__System_Nullable_System_Boolean__
+  commentId: M:Pulumi.Log.Exception(System.Exception,Pulumi.Resource,System.Nullable{System.Int32},System.Nullable{System.Boolean})
+  name.vb: Exception(Exception, Resource, Nullable(Of Int32), Nullable(Of Boolean))
+  fullName: Pulumi.Log.Exception(System.Exception, Pulumi.Resource, System.Nullable<System.Int32>, System.Nullable<System.Boolean>)
+  fullName.vb: Pulumi.Log.Exception(System.Exception, Pulumi.Resource, System.Nullable(Of System.Int32), System.Nullable(Of System.Boolean))
+  nameWithType: Log.Exception(Exception, Resource, Nullable<Int32>, Nullable<Boolean>)
+  nameWithType.vb: Log.Exception(Exception, Resource, Nullable(Of Int32), Nullable(Of Boolean))
+- uid: Pulumi.Log.Exception*
+  name: Exception
+  href: Pulumi/Pulumi.Log.html#Pulumi_Log_Exception_
+  commentId: Overload:Pulumi.Log.Exception
+  isSpec: "True"
+  fullName: Pulumi.Log.Exception
+  nameWithType: Log.Exception
+- uid: Pulumi.Log.Info(System.String,Pulumi.Resource,System.Nullable{System.Int32},System.Nullable{System.Boolean})
+  name: Info(String, Resource, Nullable<Int32>, Nullable<Boolean>)
+  href: Pulumi/Pulumi.Log.html#Pulumi_Log_Info_System_String_Pulumi_Resource_System_Nullable_System_Int32__System_Nullable_System_Boolean__
+  commentId: M:Pulumi.Log.Info(System.String,Pulumi.Resource,System.Nullable{System.Int32},System.Nullable{System.Boolean})
+  name.vb: Info(String, Resource, Nullable(Of Int32), Nullable(Of Boolean))
+  fullName: Pulumi.Log.Info(System.String, Pulumi.Resource, System.Nullable<System.Int32>, System.Nullable<System.Boolean>)
+  fullName.vb: Pulumi.Log.Info(System.String, Pulumi.Resource, System.Nullable(Of System.Int32), System.Nullable(Of System.Boolean))
+  nameWithType: Log.Info(String, Resource, Nullable<Int32>, Nullable<Boolean>)
+  nameWithType.vb: Log.Info(String, Resource, Nullable(Of Int32), Nullable(Of Boolean))
+- uid: Pulumi.Log.Info*
+  name: Info
+  href: Pulumi/Pulumi.Log.html#Pulumi_Log_Info_
+  commentId: Overload:Pulumi.Log.Info
+  isSpec: "True"
+  fullName: Pulumi.Log.Info
+  nameWithType: Log.Info
+- uid: Pulumi.Log.Warn(System.String,Pulumi.Resource,System.Nullable{System.Int32},System.Nullable{System.Boolean})
+  name: Warn(String, Resource, Nullable<Int32>, Nullable<Boolean>)
+  href: Pulumi/Pulumi.Log.html#Pulumi_Log_Warn_System_String_Pulumi_Resource_System_Nullable_System_Int32__System_Nullable_System_Boolean__
+  commentId: M:Pulumi.Log.Warn(System.String,Pulumi.Resource,System.Nullable{System.Int32},System.Nullable{System.Boolean})
+  name.vb: Warn(String, Resource, Nullable(Of Int32), Nullable(Of Boolean))
+  fullName: Pulumi.Log.Warn(System.String, Pulumi.Resource, System.Nullable<System.Int32>, System.Nullable<System.Boolean>)
+  fullName.vb: Pulumi.Log.Warn(System.String, Pulumi.Resource, System.Nullable(Of System.Int32), System.Nullable(Of System.Boolean))
+  nameWithType: Log.Warn(String, Resource, Nullable<Int32>, Nullable<Boolean>)
+  nameWithType.vb: Log.Warn(String, Resource, Nullable(Of Int32), Nullable(Of Boolean))
+- uid: Pulumi.Log.Warn*
+  name: Warn
+  href: Pulumi/Pulumi.Log.html#Pulumi_Log_Warn_
+  commentId: Overload:Pulumi.Log.Warn
+  isSpec: "True"
+  fullName: Pulumi.Log.Warn
+  nameWithType: Log.Warn
+- uid: Pulumi.Output
+  name: Output
+  href: Pulumi/Pulumi.Output.html
+  commentId: T:Pulumi.Output
+  fullName: Pulumi.Output
+  nameWithType: Output
+- uid: Pulumi.Output.All*
+  name: All
+  href: Pulumi/Pulumi.Output.html#Pulumi_Output_All_
+  commentId: Overload:Pulumi.Output.All
+  isSpec: "True"
+  fullName: Pulumi.Output.All
+  nameWithType: Output.All
+- uid: Pulumi.Output.All``1(Pulumi.Input{``0}[])
+  name: All<T>(Input<T>[])
+  href: Pulumi/Pulumi.Output.html#Pulumi_Output_All__1_Pulumi_Input___0____
+  commentId: M:Pulumi.Output.All``1(Pulumi.Input{``0}[])
+  name.vb: All(Of T)(Input(Of T)())
+  fullName: Pulumi.Output.All<T>(Pulumi.Input<T>[])
+  fullName.vb: Pulumi.Output.All(Of T)(Pulumi.Input(Of T)())
+  nameWithType: Output.All<T>(Input<T>[])
+  nameWithType.vb: Output.All(Of T)(Input(Of T)())
+- uid: Pulumi.Output.All``1(System.Collections.Immutable.ImmutableArray{Pulumi.Input{``0}})
+  name: All<T>(ImmutableArray<Input<T>>)
+  href: Pulumi/Pulumi.Output.html#Pulumi_Output_All__1_System_Collections_Immutable_ImmutableArray_Pulumi_Input___0___
+  commentId: M:Pulumi.Output.All``1(System.Collections.Immutable.ImmutableArray{Pulumi.Input{``0}})
+  name.vb: All(Of T)(ImmutableArray(Of Input(Of T)))
+  fullName: Pulumi.Output.All<T>(System.Collections.Immutable.ImmutableArray<Pulumi.Input<T>>)
+  fullName.vb: Pulumi.Output.All(Of T)(System.Collections.Immutable.ImmutableArray(Of Pulumi.Input(Of T)))
+  nameWithType: Output.All<T>(ImmutableArray<Input<T>>)
+  nameWithType.vb: Output.All(Of T)(ImmutableArray(Of Input(Of T)))
+- uid: Pulumi.Output.Create*
+  name: Create
+  href: Pulumi/Pulumi.Output.html#Pulumi_Output_Create_
+  commentId: Overload:Pulumi.Output.Create
+  isSpec: "True"
+  fullName: Pulumi.Output.Create
+  nameWithType: Output.Create
+- uid: Pulumi.Output.Create``1(``0)
+  name: Create<T>(T)
+  href: Pulumi/Pulumi.Output.html#Pulumi_Output_Create__1___0_
+  commentId: M:Pulumi.Output.Create``1(``0)
+  name.vb: Create(Of T)(T)
+  fullName: Pulumi.Output.Create<T>(T)
+  fullName.vb: Pulumi.Output.Create(Of T)(T)
+  nameWithType: Output.Create<T>(T)
+  nameWithType.vb: Output.Create(Of T)(T)
+- uid: Pulumi.Output.Create``1(System.Threading.Tasks.Task{``0})
+  name: Create<T>(Task<T>)
+  href: Pulumi/Pulumi.Output.html#Pulumi_Output_Create__1_System_Threading_Tasks_Task___0__
+  commentId: M:Pulumi.Output.Create``1(System.Threading.Tasks.Task{``0})
+  name.vb: Create(Of T)(Task(Of T))
+  fullName: Pulumi.Output.Create<T>(System.Threading.Tasks.Task<T>)
+  fullName.vb: Pulumi.Output.Create(Of T)(System.Threading.Tasks.Task(Of T))
+  nameWithType: Output.Create<T>(Task<T>)
+  nameWithType.vb: Output.Create(Of T)(Task(Of T))
+- uid: Pulumi.Output.CreateSecret*
+  name: CreateSecret
+  href: Pulumi/Pulumi.Output.html#Pulumi_Output_CreateSecret_
+  commentId: Overload:Pulumi.Output.CreateSecret
+  isSpec: "True"
+  fullName: Pulumi.Output.CreateSecret
+  nameWithType: Output.CreateSecret
+- uid: Pulumi.Output.CreateSecret``1(``0)
+  name: CreateSecret<T>(T)
+  href: Pulumi/Pulumi.Output.html#Pulumi_Output_CreateSecret__1___0_
+  commentId: M:Pulumi.Output.CreateSecret``1(``0)
+  name.vb: CreateSecret(Of T)(T)
+  fullName: Pulumi.Output.CreateSecret<T>(T)
+  fullName.vb: Pulumi.Output.CreateSecret(Of T)(T)
+  nameWithType: Output.CreateSecret<T>(T)
+  nameWithType.vb: Output.CreateSecret(Of T)(T)
+- uid: Pulumi.Output.CreateSecret``1(System.Threading.Tasks.Task{``0})
+  name: CreateSecret<T>(Task<T>)
+  href: Pulumi/Pulumi.Output.html#Pulumi_Output_CreateSecret__1_System_Threading_Tasks_Task___0__
+  commentId: M:Pulumi.Output.CreateSecret``1(System.Threading.Tasks.Task{``0})
+  name.vb: CreateSecret(Of T)(Task(Of T))
+  fullName: Pulumi.Output.CreateSecret<T>(System.Threading.Tasks.Task<T>)
+  fullName.vb: Pulumi.Output.CreateSecret(Of T)(System.Threading.Tasks.Task(Of T))
+  nameWithType: Output.CreateSecret<T>(Task<T>)
+  nameWithType.vb: Output.CreateSecret(Of T)(Task(Of T))
+- uid: Pulumi.Output.Format(System.FormattableString)
+  name: Format(FormattableString)
+  href: Pulumi/Pulumi.Output.html#Pulumi_Output_Format_System_FormattableString_
+  commentId: M:Pulumi.Output.Format(System.FormattableString)
+  fullName: Pulumi.Output.Format(System.FormattableString)
+  nameWithType: Output.Format(FormattableString)
+- uid: Pulumi.Output.Format*
+  name: Format
+  href: Pulumi/Pulumi.Output.html#Pulumi_Output_Format_
+  commentId: Overload:Pulumi.Output.Format
+  isSpec: "True"
+  fullName: Pulumi.Output.Format
+  nameWithType: Output.Format
+- uid: Pulumi.Output.Tuple*
+  name: Tuple
+  href: Pulumi/Pulumi.Output.html#Pulumi_Output_Tuple_
+  commentId: Overload:Pulumi.Output.Tuple
+  isSpec: "True"
+  fullName: Pulumi.Output.Tuple
+  nameWithType: Output.Tuple
+- uid: Pulumi.Output.Tuple``2(Pulumi.Input{``0},Pulumi.Input{``1})
+  name: Tuple<T1, T2>(Input<T1>, Input<T2>)
+  href: Pulumi/Pulumi.Output.html#Pulumi_Output_Tuple__2_Pulumi_Input___0__Pulumi_Input___1__
+  commentId: M:Pulumi.Output.Tuple``2(Pulumi.Input{``0},Pulumi.Input{``1})
+  name.vb: Tuple(Of T1, T2)(Input(Of T1), Input(Of T2))
+  fullName: Pulumi.Output.Tuple<T1, T2>(Pulumi.Input<T1>, Pulumi.Input<T2>)
+  fullName.vb: Pulumi.Output.Tuple(Of T1, T2)(Pulumi.Input(Of T1), Pulumi.Input(Of T2))
+  nameWithType: Output.Tuple<T1, T2>(Input<T1>, Input<T2>)
+  nameWithType.vb: Output.Tuple(Of T1, T2)(Input(Of T1), Input(Of T2))
+- uid: Pulumi.Output.Tuple``2(Pulumi.Output{``0},Pulumi.Output{``1})
+  name: Tuple<T1, T2>(Output<T1>, Output<T2>)
+  href: Pulumi/Pulumi.Output.html#Pulumi_Output_Tuple__2_Pulumi_Output___0__Pulumi_Output___1__
+  commentId: M:Pulumi.Output.Tuple``2(Pulumi.Output{``0},Pulumi.Output{``1})
+  name.vb: Tuple(Of T1, T2)(Output(Of T1), Output(Of T2))
+  fullName: Pulumi.Output.Tuple<T1, T2>(Pulumi.Output<T1>, Pulumi.Output<T2>)
+  fullName.vb: Pulumi.Output.Tuple(Of T1, T2)(Pulumi.Output(Of T1), Pulumi.Output(Of T2))
+  nameWithType: Output.Tuple<T1, T2>(Output<T1>, Output<T2>)
+  nameWithType.vb: Output.Tuple(Of T1, T2)(Output(Of T1), Output(Of T2))
+- uid: Pulumi.Output.Tuple``3(Pulumi.Input{``0},Pulumi.Input{``1},Pulumi.Input{``2})
+  name: Tuple<T1, T2, T3>(Input<T1>, Input<T2>, Input<T3>)
+  href: Pulumi/Pulumi.Output.html#Pulumi_Output_Tuple__3_Pulumi_Input___0__Pulumi_Input___1__Pulumi_Input___2__
+  commentId: M:Pulumi.Output.Tuple``3(Pulumi.Input{``0},Pulumi.Input{``1},Pulumi.Input{``2})
+  name.vb: Tuple(Of T1, T2, T3)(Input(Of T1), Input(Of T2), Input(Of T3))
+  fullName: Pulumi.Output.Tuple<T1, T2, T3>(Pulumi.Input<T1>, Pulumi.Input<T2>, Pulumi.Input<T3>)
+  fullName.vb: Pulumi.Output.Tuple(Of T1, T2, T3)(Pulumi.Input(Of T1), Pulumi.Input(Of T2), Pulumi.Input(Of T3))
+  nameWithType: Output.Tuple<T1, T2, T3>(Input<T1>, Input<T2>, Input<T3>)
+  nameWithType.vb: Output.Tuple(Of T1, T2, T3)(Input(Of T1), Input(Of T2), Input(Of T3))
+- uid: Pulumi.Output.Tuple``3(Pulumi.Output{``0},Pulumi.Output{``1},Pulumi.Output{``2})
+  name: Tuple<T1, T2, T3>(Output<T1>, Output<T2>, Output<T3>)
+  href: Pulumi/Pulumi.Output.html#Pulumi_Output_Tuple__3_Pulumi_Output___0__Pulumi_Output___1__Pulumi_Output___2__
+  commentId: M:Pulumi.Output.Tuple``3(Pulumi.Output{``0},Pulumi.Output{``1},Pulumi.Output{``2})
+  name.vb: Tuple(Of T1, T2, T3)(Output(Of T1), Output(Of T2), Output(Of T3))
+  fullName: Pulumi.Output.Tuple<T1, T2, T3>(Pulumi.Output<T1>, Pulumi.Output<T2>, Pulumi.Output<T3>)
+  fullName.vb: Pulumi.Output.Tuple(Of T1, T2, T3)(Pulumi.Output(Of T1), Pulumi.Output(Of T2), Pulumi.Output(Of T3))
+  nameWithType: Output.Tuple<T1, T2, T3>(Output<T1>, Output<T2>, Output<T3>)
+  nameWithType.vb: Output.Tuple(Of T1, T2, T3)(Output(Of T1), Output(Of T2), Output(Of T3))
+- uid: Pulumi.Output.Tuple``4(Pulumi.Input{``0},Pulumi.Input{``1},Pulumi.Input{``2},Pulumi.Input{``3})
+  name: Tuple<T1, T2, T3, T4>(Input<T1>, Input<T2>, Input<T3>, Input<T4>)
+  href: Pulumi/Pulumi.Output.html#Pulumi_Output_Tuple__4_Pulumi_Input___0__Pulumi_Input___1__Pulumi_Input___2__Pulumi_Input___3__
+  commentId: M:Pulumi.Output.Tuple``4(Pulumi.Input{``0},Pulumi.Input{``1},Pulumi.Input{``2},Pulumi.Input{``3})
+  name.vb: Tuple(Of T1, T2, T3, T4)(Input(Of T1), Input(Of T2), Input(Of T3), Input(Of T4))
+  fullName: Pulumi.Output.Tuple<T1, T2, T3, T4>(Pulumi.Input<T1>, Pulumi.Input<T2>, Pulumi.Input<T3>, Pulumi.Input<T4>)
+  fullName.vb: Pulumi.Output.Tuple(Of T1, T2, T3, T4)(Pulumi.Input(Of T1), Pulumi.Input(Of T2), Pulumi.Input(Of T3), Pulumi.Input(Of T4))
+  nameWithType: Output.Tuple<T1, T2, T3, T4>(Input<T1>, Input<T2>, Input<T3>, Input<T4>)
+  nameWithType.vb: Output.Tuple(Of T1, T2, T3, T4)(Input(Of T1), Input(Of T2), Input(Of T3), Input(Of T4))
+- uid: Pulumi.Output.Tuple``4(Pulumi.Output{``0},Pulumi.Output{``1},Pulumi.Output{``2},Pulumi.Output{``3})
+  name: Tuple<T1, T2, T3, T4>(Output<T1>, Output<T2>, Output<T3>, Output<T4>)
+  href: Pulumi/Pulumi.Output.html#Pulumi_Output_Tuple__4_Pulumi_Output___0__Pulumi_Output___1__Pulumi_Output___2__Pulumi_Output___3__
+  commentId: M:Pulumi.Output.Tuple``4(Pulumi.Output{``0},Pulumi.Output{``1},Pulumi.Output{``2},Pulumi.Output{``3})
+  name.vb: Tuple(Of T1, T2, T3, T4)(Output(Of T1), Output(Of T2), Output(Of T3), Output(Of T4))
+  fullName: Pulumi.Output.Tuple<T1, T2, T3, T4>(Pulumi.Output<T1>, Pulumi.Output<T2>, Pulumi.Output<T3>, Pulumi.Output<T4>)
+  fullName.vb: Pulumi.Output.Tuple(Of T1, T2, T3, T4)(Pulumi.Output(Of T1), Pulumi.Output(Of T2), Pulumi.Output(Of T3), Pulumi.Output(Of T4))
+  nameWithType: Output.Tuple<T1, T2, T3, T4>(Output<T1>, Output<T2>, Output<T3>, Output<T4>)
+  nameWithType.vb: Output.Tuple(Of T1, T2, T3, T4)(Output(Of T1), Output(Of T2), Output(Of T3), Output(Of T4))
+- uid: Pulumi.Output.Tuple``5(Pulumi.Input{``0},Pulumi.Input{``1},Pulumi.Input{``2},Pulumi.Input{``3},Pulumi.Input{``4})
+  name: Tuple<T1, T2, T3, T4, T5>(Input<T1>, Input<T2>, Input<T3>, Input<T4>, Input<T5>)
+  href: Pulumi/Pulumi.Output.html#Pulumi_Output_Tuple__5_Pulumi_Input___0__Pulumi_Input___1__Pulumi_Input___2__Pulumi_Input___3__Pulumi_Input___4__
+  commentId: M:Pulumi.Output.Tuple``5(Pulumi.Input{``0},Pulumi.Input{``1},Pulumi.Input{``2},Pulumi.Input{``3},Pulumi.Input{``4})
+  name.vb: Tuple(Of T1, T2, T3, T4, T5)(Input(Of T1), Input(Of T2), Input(Of T3), Input(Of T4), Input(Of T5))
+  fullName: Pulumi.Output.Tuple<T1, T2, T3, T4, T5>(Pulumi.Input<T1>, Pulumi.Input<T2>, Pulumi.Input<T3>, Pulumi.Input<T4>, Pulumi.Input<T5>)
+  fullName.vb: Pulumi.Output.Tuple(Of T1, T2, T3, T4, T5)(Pulumi.Input(Of T1), Pulumi.Input(Of T2), Pulumi.Input(Of T3), Pulumi.Input(Of T4), Pulumi.Input(Of T5))
+  nameWithType: Output.Tuple<T1, T2, T3, T4, T5>(Input<T1>, Input<T2>, Input<T3>, Input<T4>, Input<T5>)
+  nameWithType.vb: Output.Tuple(Of T1, T2, T3, T4, T5)(Input(Of T1), Input(Of T2), Input(Of T3), Input(Of T4), Input(Of T5))
+- uid: Pulumi.Output.Tuple``5(Pulumi.Output{``0},Pulumi.Output{``1},Pulumi.Output{``2},Pulumi.Output{``3},Pulumi.Output{``4})
+  name: Tuple<T1, T2, T3, T4, T5>(Output<T1>, Output<T2>, Output<T3>, Output<T4>, Output<T5>)
+  href: Pulumi/Pulumi.Output.html#Pulumi_Output_Tuple__5_Pulumi_Output___0__Pulumi_Output___1__Pulumi_Output___2__Pulumi_Output___3__Pulumi_Output___4__
+  commentId: M:Pulumi.Output.Tuple``5(Pulumi.Output{``0},Pulumi.Output{``1},Pulumi.Output{``2},Pulumi.Output{``3},Pulumi.Output{``4})
+  name.vb: Tuple(Of T1, T2, T3, T4, T5)(Output(Of T1), Output(Of T2), Output(Of T3), Output(Of T4), Output(Of T5))
+  fullName: Pulumi.Output.Tuple<T1, T2, T3, T4, T5>(Pulumi.Output<T1>, Pulumi.Output<T2>, Pulumi.Output<T3>, Pulumi.Output<T4>, Pulumi.Output<T5>)
+  fullName.vb: Pulumi.Output.Tuple(Of T1, T2, T3, T4, T5)(Pulumi.Output(Of T1), Pulumi.Output(Of T2), Pulumi.Output(Of T3), Pulumi.Output(Of T4), Pulumi.Output(Of T5))
+  nameWithType: Output.Tuple<T1, T2, T3, T4, T5>(Output<T1>, Output<T2>, Output<T3>, Output<T4>, Output<T5>)
+  nameWithType.vb: Output.Tuple(Of T1, T2, T3, T4, T5)(Output(Of T1), Output(Of T2), Output(Of T3), Output(Of T4), Output(Of T5))
+- uid: Pulumi.Output.Tuple``6(Pulumi.Input{``0},Pulumi.Input{``1},Pulumi.Input{``2},Pulumi.Input{``3},Pulumi.Input{``4},Pulumi.Input{``5})
+  name: Tuple<T1, T2, T3, T4, T5, T6>(Input<T1>, Input<T2>, Input<T3>, Input<T4>, Input<T5>, Input<T6>)
+  href: Pulumi/Pulumi.Output.html#Pulumi_Output_Tuple__6_Pulumi_Input___0__Pulumi_Input___1__Pulumi_Input___2__Pulumi_Input___3__Pulumi_Input___4__Pulumi_Input___5__
+  commentId: M:Pulumi.Output.Tuple``6(Pulumi.Input{``0},Pulumi.Input{``1},Pulumi.Input{``2},Pulumi.Input{``3},Pulumi.Input{``4},Pulumi.Input{``5})
+  name.vb: Tuple(Of T1, T2, T3, T4, T5, T6)(Input(Of T1), Input(Of T2), Input(Of T3), Input(Of T4), Input(Of T5), Input(Of T6))
+  fullName: Pulumi.Output.Tuple<T1, T2, T3, T4, T5, T6>(Pulumi.Input<T1>, Pulumi.Input<T2>, Pulumi.Input<T3>, Pulumi.Input<T4>, Pulumi.Input<T5>, Pulumi.Input<T6>)
+  fullName.vb: Pulumi.Output.Tuple(Of T1, T2, T3, T4, T5, T6)(Pulumi.Input(Of T1), Pulumi.Input(Of T2), Pulumi.Input(Of T3), Pulumi.Input(Of T4), Pulumi.Input(Of T5), Pulumi.Input(Of T6))
+  nameWithType: Output.Tuple<T1, T2, T3, T4, T5, T6>(Input<T1>, Input<T2>, Input<T3>, Input<T4>, Input<T5>, Input<T6>)
+  nameWithType.vb: Output.Tuple(Of T1, T2, T3, T4, T5, T6)(Input(Of T1), Input(Of T2), Input(Of T3), Input(Of T4), Input(Of T5), Input(Of T6))
+- uid: Pulumi.Output.Tuple``6(Pulumi.Output{``0},Pulumi.Output{``1},Pulumi.Output{``2},Pulumi.Output{``3},Pulumi.Output{``4},Pulumi.Output{``5})
+  name: Tuple<T1, T2, T3, T4, T5, T6>(Output<T1>, Output<T2>, Output<T3>, Output<T4>, Output<T5>, Output<T6>)
+  href: Pulumi/Pulumi.Output.html#Pulumi_Output_Tuple__6_Pulumi_Output___0__Pulumi_Output___1__Pulumi_Output___2__Pulumi_Output___3__Pulumi_Output___4__Pulumi_Output___5__
+  commentId: M:Pulumi.Output.Tuple``6(Pulumi.Output{``0},Pulumi.Output{``1},Pulumi.Output{``2},Pulumi.Output{``3},Pulumi.Output{``4},Pulumi.Output{``5})
+  name.vb: Tuple(Of T1, T2, T3, T4, T5, T6)(Output(Of T1), Output(Of T2), Output(Of T3), Output(Of T4), Output(Of T5), Output(Of T6))
+  fullName: Pulumi.Output.Tuple<T1, T2, T3, T4, T5, T6>(Pulumi.Output<T1>, Pulumi.Output<T2>, Pulumi.Output<T3>, Pulumi.Output<T4>, Pulumi.Output<T5>, Pulumi.Output<T6>)
+  fullName.vb: Pulumi.Output.Tuple(Of T1, T2, T3, T4, T5, T6)(Pulumi.Output(Of T1), Pulumi.Output(Of T2), Pulumi.Output(Of T3), Pulumi.Output(Of T4), Pulumi.Output(Of T5), Pulumi.Output(Of T6))
+  nameWithType: Output.Tuple<T1, T2, T3, T4, T5, T6>(Output<T1>, Output<T2>, Output<T3>, Output<T4>, Output<T5>, Output<T6>)
+  nameWithType.vb: Output.Tuple(Of T1, T2, T3, T4, T5, T6)(Output(Of T1), Output(Of T2), Output(Of T3), Output(Of T4), Output(Of T5), Output(Of T6))
+- uid: Pulumi.Output.Tuple``7(Pulumi.Input{``0},Pulumi.Input{``1},Pulumi.Input{``2},Pulumi.Input{``3},Pulumi.Input{``4},Pulumi.Input{``5},Pulumi.Input{``6})
+  name: Tuple<T1, T2, T3, T4, T5, T6, T7>(Input<T1>, Input<T2>, Input<T3>, Input<T4>, Input<T5>, Input<T6>, Input<T7>)
+  href: Pulumi/Pulumi.Output.html#Pulumi_Output_Tuple__7_Pulumi_Input___0__Pulumi_Input___1__Pulumi_Input___2__Pulumi_Input___3__Pulumi_Input___4__Pulumi_Input___5__Pulumi_Input___6__
+  commentId: M:Pulumi.Output.Tuple``7(Pulumi.Input{``0},Pulumi.Input{``1},Pulumi.Input{``2},Pulumi.Input{``3},Pulumi.Input{``4},Pulumi.Input{``5},Pulumi.Input{``6})
+  name.vb: Tuple(Of T1, T2, T3, T4, T5, T6, T7)(Input(Of T1), Input(Of T2), Input(Of T3), Input(Of T4), Input(Of T5), Input(Of T6), Input(Of T7))
+  fullName: Pulumi.Output.Tuple<T1, T2, T3, T4, T5, T6, T7>(Pulumi.Input<T1>, Pulumi.Input<T2>, Pulumi.Input<T3>, Pulumi.Input<T4>, Pulumi.Input<T5>, Pulumi.Input<T6>, Pulumi.Input<T7>)
+  fullName.vb: Pulumi.Output.Tuple(Of T1, T2, T3, T4, T5, T6, T7)(Pulumi.Input(Of T1), Pulumi.Input(Of T2), Pulumi.Input(Of T3), Pulumi.Input(Of T4), Pulumi.Input(Of T5), Pulumi.Input(Of T6), Pulumi.Input(Of T7))
+  nameWithType: Output.Tuple<T1, T2, T3, T4, T5, T6, T7>(Input<T1>, Input<T2>, Input<T3>, Input<T4>, Input<T5>, Input<T6>, Input<T7>)
+  nameWithType.vb: Output.Tuple(Of T1, T2, T3, T4, T5, T6, T7)(Input(Of T1), Input(Of T2), Input(Of T3), Input(Of T4), Input(Of T5), Input(Of T6), Input(Of T7))
+- uid: Pulumi.Output.Tuple``7(Pulumi.Output{``0},Pulumi.Output{``1},Pulumi.Output{``2},Pulumi.Output{``3},Pulumi.Output{``4},Pulumi.Output{``5},Pulumi.Output{``6})
+  name: Tuple<T1, T2, T3, T4, T5, T6, T7>(Output<T1>, Output<T2>, Output<T3>, Output<T4>, Output<T5>, Output<T6>, Output<T7>)
+  href: Pulumi/Pulumi.Output.html#Pulumi_Output_Tuple__7_Pulumi_Output___0__Pulumi_Output___1__Pulumi_Output___2__Pulumi_Output___3__Pulumi_Output___4__Pulumi_Output___5__Pulumi_Output___6__
+  commentId: M:Pulumi.Output.Tuple``7(Pulumi.Output{``0},Pulumi.Output{``1},Pulumi.Output{``2},Pulumi.Output{``3},Pulumi.Output{``4},Pulumi.Output{``5},Pulumi.Output{``6})
+  name.vb: Tuple(Of T1, T2, T3, T4, T5, T6, T7)(Output(Of T1), Output(Of T2), Output(Of T3), Output(Of T4), Output(Of T5), Output(Of T6), Output(Of T7))
+  fullName: Pulumi.Output.Tuple<T1, T2, T3, T4, T5, T6, T7>(Pulumi.Output<T1>, Pulumi.Output<T2>, Pulumi.Output<T3>, Pulumi.Output<T4>, Pulumi.Output<T5>, Pulumi.Output<T6>, Pulumi.Output<T7>)
+  fullName.vb: Pulumi.Output.Tuple(Of T1, T2, T3, T4, T5, T6, T7)(Pulumi.Output(Of T1), Pulumi.Output(Of T2), Pulumi.Output(Of T3), Pulumi.Output(Of T4), Pulumi.Output(Of T5), Pulumi.Output(Of T6), Pulumi.Output(Of T7))
+  nameWithType: Output.Tuple<T1, T2, T3, T4, T5, T6, T7>(Output<T1>, Output<T2>, Output<T3>, Output<T4>, Output<T5>, Output<T6>, Output<T7>)
+  nameWithType.vb: Output.Tuple(Of T1, T2, T3, T4, T5, T6, T7)(Output(Of T1), Output(Of T2), Output(Of T3), Output(Of T4), Output(Of T5), Output(Of T6), Output(Of T7))
+- uid: Pulumi.Output.Tuple``8(Pulumi.Input{``0},Pulumi.Input{``1},Pulumi.Input{``2},Pulumi.Input{``3},Pulumi.Input{``4},Pulumi.Input{``5},Pulumi.Input{``6},Pulumi.Input{``7})
+  name: Tuple<T1, T2, T3, T4, T5, T6, T7, T8>(Input<T1>, Input<T2>, Input<T3>, Input<T4>, Input<T5>, Input<T6>, Input<T7>, Input<T8>)
+  href: Pulumi/Pulumi.Output.html#Pulumi_Output_Tuple__8_Pulumi_Input___0__Pulumi_Input___1__Pulumi_Input___2__Pulumi_Input___3__Pulumi_Input___4__Pulumi_Input___5__Pulumi_Input___6__Pulumi_Input___7__
+  commentId: M:Pulumi.Output.Tuple``8(Pulumi.Input{``0},Pulumi.Input{``1},Pulumi.Input{``2},Pulumi.Input{``3},Pulumi.Input{``4},Pulumi.Input{``5},Pulumi.Input{``6},Pulumi.Input{``7})
+  name.vb: Tuple(Of T1, T2, T3, T4, T5, T6, T7, T8)(Input(Of T1), Input(Of T2), Input(Of T3), Input(Of T4), Input(Of T5), Input(Of T6), Input(Of T7), Input(Of T8))
+  fullName: Pulumi.Output.Tuple<T1, T2, T3, T4, T5, T6, T7, T8>(Pulumi.Input<T1>, Pulumi.Input<T2>, Pulumi.Input<T3>, Pulumi.Input<T4>, Pulumi.Input<T5>, Pulumi.Input<T6>, Pulumi.Input<T7>, Pulumi.Input<T8>)
+  fullName.vb: Pulumi.Output.Tuple(Of T1, T2, T3, T4, T5, T6, T7, T8)(Pulumi.Input(Of T1), Pulumi.Input(Of T2), Pulumi.Input(Of T3), Pulumi.Input(Of T4), Pulumi.Input(Of T5), Pulumi.Input(Of T6), Pulumi.Input(Of T7), Pulumi.Input(Of T8))
+  nameWithType: Output.Tuple<T1, T2, T3, T4, T5, T6, T7, T8>(Input<T1>, Input<T2>, Input<T3>, Input<T4>, Input<T5>, Input<T6>, Input<T7>, Input<T8>)
+  nameWithType.vb: Output.Tuple(Of T1, T2, T3, T4, T5, T6, T7, T8)(Input(Of T1), Input(Of T2), Input(Of T3), Input(Of T4), Input(Of T5), Input(Of T6), Input(Of T7), Input(Of T8))
+- uid: Pulumi.Output.Tuple``8(Pulumi.Output{``0},Pulumi.Output{``1},Pulumi.Output{``2},Pulumi.Output{``3},Pulumi.Output{``4},Pulumi.Output{``5},Pulumi.Output{``6},Pulumi.Output{``7})
+  name: Tuple<T1, T2, T3, T4, T5, T6, T7, T8>(Output<T1>, Output<T2>, Output<T3>, Output<T4>, Output<T5>, Output<T6>, Output<T7>, Output<T8>)
+  href: Pulumi/Pulumi.Output.html#Pulumi_Output_Tuple__8_Pulumi_Output___0__Pulumi_Output___1__Pulumi_Output___2__Pulumi_Output___3__Pulumi_Output___4__Pulumi_Output___5__Pulumi_Output___6__Pulumi_Output___7__
+  commentId: M:Pulumi.Output.Tuple``8(Pulumi.Output{``0},Pulumi.Output{``1},Pulumi.Output{``2},Pulumi.Output{``3},Pulumi.Output{``4},Pulumi.Output{``5},Pulumi.Output{``6},Pulumi.Output{``7})
+  name.vb: Tuple(Of T1, T2, T3, T4, T5, T6, T7, T8)(Output(Of T1), Output(Of T2), Output(Of T3), Output(Of T4), Output(Of T5), Output(Of T6), Output(Of T7), Output(Of T8))
+  fullName: Pulumi.Output.Tuple<T1, T2, T3, T4, T5, T6, T7, T8>(Pulumi.Output<T1>, Pulumi.Output<T2>, Pulumi.Output<T3>, Pulumi.Output<T4>, Pulumi.Output<T5>, Pulumi.Output<T6>, Pulumi.Output<T7>, Pulumi.Output<T8>)
+  fullName.vb: Pulumi.Output.Tuple(Of T1, T2, T3, T4, T5, T6, T7, T8)(Pulumi.Output(Of T1), Pulumi.Output(Of T2), Pulumi.Output(Of T3), Pulumi.Output(Of T4), Pulumi.Output(Of T5), Pulumi.Output(Of T6), Pulumi.Output(Of T7), Pulumi.Output(Of T8))
+  nameWithType: Output.Tuple<T1, T2, T3, T4, T5, T6, T7, T8>(Output<T1>, Output<T2>, Output<T3>, Output<T4>, Output<T5>, Output<T6>, Output<T7>, Output<T8>)
+  nameWithType.vb: Output.Tuple(Of T1, T2, T3, T4, T5, T6, T7, T8)(Output(Of T1), Output(Of T2), Output(Of T3), Output(Of T4), Output(Of T5), Output(Of T6), Output(Of T7), Output(Of T8))
+- uid: Pulumi.Output`1
+  name: Output<T>
+  href: Pulumi/Pulumi.Output-1.html
+  commentId: T:Pulumi.Output`1
+  name.vb: Output(Of T)
+  fullName: Pulumi.Output<T>
+  fullName.vb: Pulumi.Output(Of T)
+  nameWithType: Output<T>
+  nameWithType.vb: Output(Of T)
+- uid: Pulumi.Output`1.Apply*
+  name: Apply
+  href: Pulumi/Pulumi.Output-1.html#Pulumi_Output_1_Apply_
+  commentId: Overload:Pulumi.Output`1.Apply
+  isSpec: "True"
+  fullName: Pulumi.Output<T>.Apply
+  fullName.vb: Pulumi.Output(Of T).Apply
+  nameWithType: Output<T>.Apply
+  nameWithType.vb: Output(Of T).Apply
+- uid: Pulumi.Output`1.Apply``1(System.Func{`0,``0})
+  name: Apply<U>(Func<T, U>)
+  href: Pulumi/Pulumi.Output-1.html#Pulumi_Output_1_Apply__1_System_Func__0___0__
+  commentId: M:Pulumi.Output`1.Apply``1(System.Func{`0,``0})
+  name.vb: Apply(Of U)(Func(Of T, U))
+  fullName: Pulumi.Output<T>.Apply<U>(System.Func<T, U>)
+  fullName.vb: Pulumi.Output(Of T).Apply(Of U)(System.Func(Of T, U))
+  nameWithType: Output<T>.Apply<U>(Func<T, U>)
+  nameWithType.vb: Output(Of T).Apply(Of U)(Func(Of T, U))
+- uid: Pulumi.Output`1.Apply``1(System.Func{`0,Pulumi.Input{``0}})
+  name: Apply<U>(Func<T, Input<U>>)
+  href: Pulumi/Pulumi.Output-1.html#Pulumi_Output_1_Apply__1_System_Func__0_Pulumi_Input___0___
+  commentId: M:Pulumi.Output`1.Apply``1(System.Func{`0,Pulumi.Input{``0}})
+  name.vb: Apply(Of U)(Func(Of T, Input(Of U)))
+  fullName: Pulumi.Output<T>.Apply<U>(System.Func<T, Pulumi.Input<U>>)
+  fullName.vb: Pulumi.Output(Of T).Apply(Of U)(System.Func(Of T, Pulumi.Input(Of U)))
+  nameWithType: Output<T>.Apply<U>(Func<T, Input<U>>)
+  nameWithType.vb: Output(Of T).Apply(Of U)(Func(Of T, Input(Of U)))
+- uid: Pulumi.Output`1.Apply``1(System.Func{`0,Pulumi.Output{``0}})
+  name: Apply<U>(Func<T, Output<U>>)
+  href: Pulumi/Pulumi.Output-1.html#Pulumi_Output_1_Apply__1_System_Func__0_Pulumi_Output___0___
+  commentId: M:Pulumi.Output`1.Apply``1(System.Func{`0,Pulumi.Output{``0}})
+  name.vb: Apply(Of U)(Func(Of T, Output(Of U)))
+  fullName: Pulumi.Output<T>.Apply<U>(System.Func<T, Pulumi.Output<U>>)
+  fullName.vb: Pulumi.Output(Of T).Apply(Of U)(System.Func(Of T, Pulumi.Output(Of U)))
+  nameWithType: Output<T>.Apply<U>(Func<T, Output<U>>)
+  nameWithType.vb: Output(Of T).Apply(Of U)(Func(Of T, Output(Of U)))
+- uid: Pulumi.Output`1.Apply``1(System.Func{`0,System.Threading.Tasks.Task{``0}})
+  name: Apply<U>(Func<T, Task<U>>)
+  href: Pulumi/Pulumi.Output-1.html#Pulumi_Output_1_Apply__1_System_Func__0_System_Threading_Tasks_Task___0___
+  commentId: M:Pulumi.Output`1.Apply``1(System.Func{`0,System.Threading.Tasks.Task{``0}})
+  name.vb: Apply(Of U)(Func(Of T, Task(Of U)))
+  fullName: Pulumi.Output<T>.Apply<U>(System.Func<T, System.Threading.Tasks.Task<U>>)
+  fullName.vb: Pulumi.Output(Of T).Apply(Of U)(System.Func(Of T, System.Threading.Tasks.Task(Of U)))
+  nameWithType: Output<T>.Apply<U>(Func<T, Task<U>>)
+  nameWithType.vb: Output(Of T).Apply(Of U)(Func(Of T, Task(Of U)))
+- uid: Pulumi.Output`1.Create(System.Threading.Tasks.Task{`0})
+  name: Create(Task<T>)
+  href: Pulumi/Pulumi.Output-1.html#Pulumi_Output_1_Create_System_Threading_Tasks_Task__0__
+  commentId: M:Pulumi.Output`1.Create(System.Threading.Tasks.Task{`0})
+  name.vb: Create(Task(Of T))
+  fullName: Pulumi.Output<T>.Create(System.Threading.Tasks.Task<T>)
+  fullName.vb: Pulumi.Output(Of T).Create(System.Threading.Tasks.Task(Of T))
+  nameWithType: Output<T>.Create(Task<T>)
+  nameWithType.vb: Output(Of T).Create(Task(Of T))
+- uid: Pulumi.Output`1.Create*
+  name: Create
+  href: Pulumi/Pulumi.Output-1.html#Pulumi_Output_1_Create_
+  commentId: Overload:Pulumi.Output`1.Create
+  isSpec: "True"
+  fullName: Pulumi.Output<T>.Create
+  fullName.vb: Pulumi.Output(Of T).Create
+  nameWithType: Output<T>.Create
+  nameWithType.vb: Output(Of T).Create
+- uid: Pulumi.OutputAttribute
+  name: OutputAttribute
+  href: Pulumi/Pulumi.OutputAttribute.html
+  commentId: T:Pulumi.OutputAttribute
+  fullName: Pulumi.OutputAttribute
+  nameWithType: OutputAttribute
+- uid: Pulumi.OutputAttribute.#ctor(System.String)
+  name: OutputAttribute(String)
+  href: Pulumi/Pulumi.OutputAttribute.html#Pulumi_OutputAttribute__ctor_System_String_
+  commentId: M:Pulumi.OutputAttribute.#ctor(System.String)
+  fullName: Pulumi.OutputAttribute.OutputAttribute(System.String)
+  nameWithType: OutputAttribute.OutputAttribute(String)
+- uid: Pulumi.OutputAttribute.#ctor*
+  name: OutputAttribute
+  href: Pulumi/Pulumi.OutputAttribute.html#Pulumi_OutputAttribute__ctor_
+  commentId: Overload:Pulumi.OutputAttribute.#ctor
+  isSpec: "True"
+  fullName: Pulumi.OutputAttribute.OutputAttribute
+  nameWithType: OutputAttribute.OutputAttribute
+- uid: Pulumi.OutputAttribute.Name
+  name: Name
+  href: Pulumi/Pulumi.OutputAttribute.html#Pulumi_OutputAttribute_Name
+  commentId: P:Pulumi.OutputAttribute.Name
+  fullName: Pulumi.OutputAttribute.Name
+  nameWithType: OutputAttribute.Name
+- uid: Pulumi.OutputAttribute.Name*
+  name: Name
+  href: Pulumi/Pulumi.OutputAttribute.html#Pulumi_OutputAttribute_Name_
+  commentId: Overload:Pulumi.OutputAttribute.Name
+  isSpec: "True"
+  fullName: Pulumi.OutputAttribute.Name
+  nameWithType: OutputAttribute.Name
+- uid: Pulumi.OutputConstructorAttribute
+  name: OutputConstructorAttribute
+  href: Pulumi/Pulumi.OutputConstructorAttribute.html
+  commentId: T:Pulumi.OutputConstructorAttribute
+  fullName: Pulumi.OutputConstructorAttribute
+  nameWithType: OutputConstructorAttribute
+- uid: Pulumi.OutputExtensions
+  name: OutputExtensions
+  href: Pulumi/Pulumi.OutputExtensions.html
+  commentId: T:Pulumi.OutputExtensions
+  fullName: Pulumi.OutputExtensions
+  nameWithType: OutputExtensions
+- uid: Pulumi.OutputExtensions.AsT0*
+  name: AsT0
+  href: Pulumi/Pulumi.OutputExtensions.html#Pulumi_OutputExtensions_AsT0_
+  commentId: Overload:Pulumi.OutputExtensions.AsT0
+  isSpec: "True"
+  fullName: Pulumi.OutputExtensions.AsT0
+  nameWithType: OutputExtensions.AsT0
+- uid: Pulumi.OutputExtensions.AsT0``2(Pulumi.Output{Pulumi.Union{``0,``1}})
+  name: AsT0<T0, T1>(Output<Union<T0, T1>>)
+  href: Pulumi/Pulumi.OutputExtensions.html#Pulumi_OutputExtensions_AsT0__2_Pulumi_Output_Pulumi_Union___0___1___
+  commentId: M:Pulumi.OutputExtensions.AsT0``2(Pulumi.Output{Pulumi.Union{``0,``1}})
+  name.vb: AsT0(Of T0, T1)(Output(Of Union(Of T0, T1)))
+  fullName: Pulumi.OutputExtensions.AsT0<T0, T1>(Pulumi.Output<Pulumi.Union<T0, T1>>)
+  fullName.vb: Pulumi.OutputExtensions.AsT0(Of T0, T1)(Pulumi.Output(Of Pulumi.Union(Of T0, T1)))
+  nameWithType: OutputExtensions.AsT0<T0, T1>(Output<Union<T0, T1>>)
+  nameWithType.vb: OutputExtensions.AsT0(Of T0, T1)(Output(Of Union(Of T0, T1)))
+- uid: Pulumi.OutputExtensions.AsT1*
+  name: AsT1
+  href: Pulumi/Pulumi.OutputExtensions.html#Pulumi_OutputExtensions_AsT1_
+  commentId: Overload:Pulumi.OutputExtensions.AsT1
+  isSpec: "True"
+  fullName: Pulumi.OutputExtensions.AsT1
+  nameWithType: OutputExtensions.AsT1
+- uid: Pulumi.OutputExtensions.AsT1``2(Pulumi.Output{Pulumi.Union{``0,``1}})
+  name: AsT1<T0, T1>(Output<Union<T0, T1>>)
+  href: Pulumi/Pulumi.OutputExtensions.html#Pulumi_OutputExtensions_AsT1__2_Pulumi_Output_Pulumi_Union___0___1___
+  commentId: M:Pulumi.OutputExtensions.AsT1``2(Pulumi.Output{Pulumi.Union{``0,``1}})
+  name.vb: AsT1(Of T0, T1)(Output(Of Union(Of T0, T1)))
+  fullName: Pulumi.OutputExtensions.AsT1<T0, T1>(Pulumi.Output<Pulumi.Union<T0, T1>>)
+  fullName.vb: Pulumi.OutputExtensions.AsT1(Of T0, T1)(Pulumi.Output(Of Pulumi.Union(Of T0, T1)))
+  nameWithType: OutputExtensions.AsT1<T0, T1>(Output<Union<T0, T1>>)
+  nameWithType.vb: OutputExtensions.AsT1(Of T0, T1)(Output(Of Union(Of T0, T1)))
+- uid: Pulumi.OutputExtensions.First*
+  name: First
+  href: Pulumi/Pulumi.OutputExtensions.html#Pulumi_OutputExtensions_First_
+  commentId: Overload:Pulumi.OutputExtensions.First
+  isSpec: "True"
+  fullName: Pulumi.OutputExtensions.First
+  nameWithType: OutputExtensions.First
+- uid: Pulumi.OutputExtensions.First``1(Pulumi.Output{System.Collections.Immutable.ImmutableArray{``0}})
+  name: First<T>(Output<ImmutableArray<T>>)
+  href: Pulumi/Pulumi.OutputExtensions.html#Pulumi_OutputExtensions_First__1_Pulumi_Output_System_Collections_Immutable_ImmutableArray___0___
+  commentId: M:Pulumi.OutputExtensions.First``1(Pulumi.Output{System.Collections.Immutable.ImmutableArray{``0}})
+  name.vb: First(Of T)(Output(Of ImmutableArray(Of T)))
+  fullName: Pulumi.OutputExtensions.First<T>(Pulumi.Output<System.Collections.Immutable.ImmutableArray<T>>)
+  fullName.vb: Pulumi.OutputExtensions.First(Of T)(Pulumi.Output(Of System.Collections.Immutable.ImmutableArray(Of T)))
+  nameWithType: OutputExtensions.First<T>(Output<ImmutableArray<T>>)
+  nameWithType.vb: OutputExtensions.First(Of T)(Output(Of ImmutableArray(Of T)))
+- uid: Pulumi.OutputExtensions.GetAt*
+  name: GetAt
+  href: Pulumi/Pulumi.OutputExtensions.html#Pulumi_OutputExtensions_GetAt_
+  commentId: Overload:Pulumi.OutputExtensions.GetAt
+  isSpec: "True"
+  fullName: Pulumi.OutputExtensions.GetAt
+  nameWithType: OutputExtensions.GetAt
+- uid: Pulumi.OutputExtensions.GetAt``1(Pulumi.Output{System.Collections.Immutable.ImmutableArray{``0}},Pulumi.Input{System.Int32})
+  name: GetAt<T>(Output<ImmutableArray<T>>, Input<Int32>)
+  href: Pulumi/Pulumi.OutputExtensions.html#Pulumi_OutputExtensions_GetAt__1_Pulumi_Output_System_Collections_Immutable_ImmutableArray___0___Pulumi_Input_System_Int32__
+  commentId: M:Pulumi.OutputExtensions.GetAt``1(Pulumi.Output{System.Collections.Immutable.ImmutableArray{``0}},Pulumi.Input{System.Int32})
+  name.vb: GetAt(Of T)(Output(Of ImmutableArray(Of T)), Input(Of Int32))
+  fullName: Pulumi.OutputExtensions.GetAt<T>(Pulumi.Output<System.Collections.Immutable.ImmutableArray<T>>, Pulumi.Input<System.Int32>)
+  fullName.vb: Pulumi.OutputExtensions.GetAt(Of T)(Pulumi.Output(Of System.Collections.Immutable.ImmutableArray(Of T)), Pulumi.Input(Of System.Int32))
+  nameWithType: OutputExtensions.GetAt<T>(Output<ImmutableArray<T>>, Input<Int32>)
+  nameWithType.vb: OutputExtensions.GetAt(Of T)(Output(Of ImmutableArray(Of T)), Input(Of Int32))
+- uid: Pulumi.OutputExtensions.IsT0*
+  name: IsT0
+  href: Pulumi/Pulumi.OutputExtensions.html#Pulumi_OutputExtensions_IsT0_
+  commentId: Overload:Pulumi.OutputExtensions.IsT0
+  isSpec: "True"
+  fullName: Pulumi.OutputExtensions.IsT0
+  nameWithType: OutputExtensions.IsT0
+- uid: Pulumi.OutputExtensions.IsT0``2(Pulumi.Output{Pulumi.Union{``0,``1}})
+  name: IsT0<T0, T1>(Output<Union<T0, T1>>)
+  href: Pulumi/Pulumi.OutputExtensions.html#Pulumi_OutputExtensions_IsT0__2_Pulumi_Output_Pulumi_Union___0___1___
+  commentId: M:Pulumi.OutputExtensions.IsT0``2(Pulumi.Output{Pulumi.Union{``0,``1}})
+  name.vb: IsT0(Of T0, T1)(Output(Of Union(Of T0, T1)))
+  fullName: Pulumi.OutputExtensions.IsT0<T0, T1>(Pulumi.Output<Pulumi.Union<T0, T1>>)
+  fullName.vb: Pulumi.OutputExtensions.IsT0(Of T0, T1)(Pulumi.Output(Of Pulumi.Union(Of T0, T1)))
+  nameWithType: OutputExtensions.IsT0<T0, T1>(Output<Union<T0, T1>>)
+  nameWithType.vb: OutputExtensions.IsT0(Of T0, T1)(Output(Of Union(Of T0, T1)))
+- uid: Pulumi.OutputExtensions.IsT1*
+  name: IsT1
+  href: Pulumi/Pulumi.OutputExtensions.html#Pulumi_OutputExtensions_IsT1_
+  commentId: Overload:Pulumi.OutputExtensions.IsT1
+  isSpec: "True"
+  fullName: Pulumi.OutputExtensions.IsT1
+  nameWithType: OutputExtensions.IsT1
+- uid: Pulumi.OutputExtensions.IsT1``2(Pulumi.Output{Pulumi.Union{``0,``1}})
+  name: IsT1<T0, T1>(Output<Union<T0, T1>>)
+  href: Pulumi/Pulumi.OutputExtensions.html#Pulumi_OutputExtensions_IsT1__2_Pulumi_Output_Pulumi_Union___0___1___
+  commentId: M:Pulumi.OutputExtensions.IsT1``2(Pulumi.Output{Pulumi.Union{``0,``1}})
+  name.vb: IsT1(Of T0, T1)(Output(Of Union(Of T0, T1)))
+  fullName: Pulumi.OutputExtensions.IsT1<T0, T1>(Pulumi.Output<Pulumi.Union<T0, T1>>)
+  fullName.vb: Pulumi.OutputExtensions.IsT1(Of T0, T1)(Pulumi.Output(Of Pulumi.Union(Of T0, T1)))
+  nameWithType: OutputExtensions.IsT1<T0, T1>(Output<Union<T0, T1>>)
+  nameWithType.vb: OutputExtensions.IsT1(Of T0, T1)(Output(Of Union(Of T0, T1)))
+- uid: Pulumi.OutputExtensions.Length*
+  name: Length
+  href: Pulumi/Pulumi.OutputExtensions.html#Pulumi_OutputExtensions_Length_
+  commentId: Overload:Pulumi.OutputExtensions.Length
+  isSpec: "True"
+  fullName: Pulumi.OutputExtensions.Length
+  nameWithType: OutputExtensions.Length
+- uid: Pulumi.OutputExtensions.Length``1(Pulumi.Output{System.Collections.Immutable.ImmutableArray{``0}})
+  name: Length<T>(Output<ImmutableArray<T>>)
+  href: Pulumi/Pulumi.OutputExtensions.html#Pulumi_OutputExtensions_Length__1_Pulumi_Output_System_Collections_Immutable_ImmutableArray___0___
+  commentId: M:Pulumi.OutputExtensions.Length``1(Pulumi.Output{System.Collections.Immutable.ImmutableArray{``0}})
+  name.vb: Length(Of T)(Output(Of ImmutableArray(Of T)))
+  fullName: Pulumi.OutputExtensions.Length<T>(Pulumi.Output<System.Collections.Immutable.ImmutableArray<T>>)
+  fullName.vb: Pulumi.OutputExtensions.Length(Of T)(Pulumi.Output(Of System.Collections.Immutable.ImmutableArray(Of T)))
+  nameWithType: OutputExtensions.Length<T>(Output<ImmutableArray<T>>)
+  nameWithType.vb: OutputExtensions.Length(Of T)(Output(Of ImmutableArray(Of T)))
+- uid: Pulumi.OutputExtensions.Value*
+  name: Value
+  href: Pulumi/Pulumi.OutputExtensions.html#Pulumi_OutputExtensions_Value_
+  commentId: Overload:Pulumi.OutputExtensions.Value
+  isSpec: "True"
+  fullName: Pulumi.OutputExtensions.Value
+  nameWithType: OutputExtensions.Value
+- uid: Pulumi.OutputExtensions.Value``2(Pulumi.Output{Pulumi.Union{``0,``1}})
+  name: Value<T0, T1>(Output<Union<T0, T1>>)
+  href: Pulumi/Pulumi.OutputExtensions.html#Pulumi_OutputExtensions_Value__2_Pulumi_Output_Pulumi_Union___0___1___
+  commentId: M:Pulumi.OutputExtensions.Value``2(Pulumi.Output{Pulumi.Union{``0,``1}})
+  name.vb: Value(Of T0, T1)(Output(Of Union(Of T0, T1)))
+  fullName: Pulumi.OutputExtensions.Value<T0, T1>(Pulumi.Output<Pulumi.Union<T0, T1>>)
+  fullName.vb: Pulumi.OutputExtensions.Value(Of T0, T1)(Pulumi.Output(Of Pulumi.Union(Of T0, T1)))
+  nameWithType: OutputExtensions.Value<T0, T1>(Output<Union<T0, T1>>)
+  nameWithType.vb: OutputExtensions.Value(Of T0, T1)(Output(Of Union(Of T0, T1)))
+- uid: Pulumi.OutputTypeAttribute
+  name: OutputTypeAttribute
+  href: Pulumi/Pulumi.OutputTypeAttribute.html
+  commentId: T:Pulumi.OutputTypeAttribute
+  fullName: Pulumi.OutputTypeAttribute
+  nameWithType: OutputTypeAttribute
+- uid: Pulumi.ProviderResource
+  name: ProviderResource
+  href: Pulumi/Pulumi.ProviderResource.html
+  commentId: T:Pulumi.ProviderResource
+  fullName: Pulumi.ProviderResource
+  nameWithType: ProviderResource
+- uid: Pulumi.ProviderResource.#ctor(System.String,System.String,Pulumi.ResourceArgs,Pulumi.CustomResourceOptions)
+  name: ProviderResource(String, String, ResourceArgs, CustomResourceOptions)
+  href: Pulumi/Pulumi.ProviderResource.html#Pulumi_ProviderResource__ctor_System_String_System_String_Pulumi_ResourceArgs_Pulumi_CustomResourceOptions_
+  commentId: M:Pulumi.ProviderResource.#ctor(System.String,System.String,Pulumi.ResourceArgs,Pulumi.CustomResourceOptions)
+  fullName: Pulumi.ProviderResource.ProviderResource(System.String, System.String, Pulumi.ResourceArgs, Pulumi.CustomResourceOptions)
+  nameWithType: ProviderResource.ProviderResource(String, String, ResourceArgs, CustomResourceOptions)
+- uid: Pulumi.ProviderResource.#ctor*
+  name: ProviderResource
+  href: Pulumi/Pulumi.ProviderResource.html#Pulumi_ProviderResource__ctor_
+  commentId: Overload:Pulumi.ProviderResource.#ctor
+  isSpec: "True"
+  fullName: Pulumi.ProviderResource.ProviderResource
+  nameWithType: ProviderResource.ProviderResource
+- uid: Pulumi.RemoteArchive
+  name: RemoteArchive
+  href: Pulumi/Pulumi.RemoteArchive.html
+  commentId: T:Pulumi.RemoteArchive
+  fullName: Pulumi.RemoteArchive
+  nameWithType: RemoteArchive
+- uid: Pulumi.RemoteArchive.#ctor(System.String)
+  name: RemoteArchive(String)
+  href: Pulumi/Pulumi.RemoteArchive.html#Pulumi_RemoteArchive__ctor_System_String_
+  commentId: M:Pulumi.RemoteArchive.#ctor(System.String)
+  fullName: Pulumi.RemoteArchive.RemoteArchive(System.String)
+  nameWithType: RemoteArchive.RemoteArchive(String)
+- uid: Pulumi.RemoteArchive.#ctor*
+  name: RemoteArchive
+  href: Pulumi/Pulumi.RemoteArchive.html#Pulumi_RemoteArchive__ctor_
+  commentId: Overload:Pulumi.RemoteArchive.#ctor
+  isSpec: "True"
+  fullName: Pulumi.RemoteArchive.RemoteArchive
+  nameWithType: RemoteArchive.RemoteArchive
+- uid: Pulumi.RemoteAsset
+  name: RemoteAsset
+  href: Pulumi/Pulumi.RemoteAsset.html
+  commentId: T:Pulumi.RemoteAsset
+  fullName: Pulumi.RemoteAsset
+  nameWithType: RemoteAsset
+- uid: Pulumi.RemoteAsset.#ctor(System.String)
+  name: RemoteAsset(String)
+  href: Pulumi/Pulumi.RemoteAsset.html#Pulumi_RemoteAsset__ctor_System_String_
+  commentId: M:Pulumi.RemoteAsset.#ctor(System.String)
+  fullName: Pulumi.RemoteAsset.RemoteAsset(System.String)
+  nameWithType: RemoteAsset.RemoteAsset(String)
+- uid: Pulumi.RemoteAsset.#ctor*
+  name: RemoteAsset
+  href: Pulumi/Pulumi.RemoteAsset.html#Pulumi_RemoteAsset__ctor_
+  commentId: Overload:Pulumi.RemoteAsset.#ctor
+  isSpec: "True"
+  fullName: Pulumi.RemoteAsset.RemoteAsset
+  nameWithType: RemoteAsset.RemoteAsset
+- uid: Pulumi.Resource
+  name: Resource
+  href: Pulumi/Pulumi.Resource.html
+  commentId: T:Pulumi.Resource
+  fullName: Pulumi.Resource
+  nameWithType: Resource
+- uid: Pulumi.Resource.GetResourceName
+  name: GetResourceName()
+  href: Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName
+  commentId: M:Pulumi.Resource.GetResourceName
+  fullName: Pulumi.Resource.GetResourceName()
+  nameWithType: Resource.GetResourceName()
+- uid: Pulumi.Resource.GetResourceName*
+  name: GetResourceName
+  href: Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName_
+  commentId: Overload:Pulumi.Resource.GetResourceName
+  isSpec: "True"
+  fullName: Pulumi.Resource.GetResourceName
+  nameWithType: Resource.GetResourceName
+- uid: Pulumi.Resource.GetResourceType
+  name: GetResourceType()
+  href: Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType
+  commentId: M:Pulumi.Resource.GetResourceType
+  fullName: Pulumi.Resource.GetResourceType()
+  nameWithType: Resource.GetResourceType()
+- uid: Pulumi.Resource.GetResourceType*
+  name: GetResourceType
+  href: Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType_
+  commentId: Overload:Pulumi.Resource.GetResourceType
+  isSpec: "True"
+  fullName: Pulumi.Resource.GetResourceType
+  nameWithType: Resource.GetResourceType
+- uid: Pulumi.Resource.Urn
+  name: Urn
+  href: Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn
+  commentId: P:Pulumi.Resource.Urn
+  fullName: Pulumi.Resource.Urn
+  nameWithType: Resource.Urn
+- uid: Pulumi.Resource.Urn*
+  name: Urn
+  href: Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn_
+  commentId: Overload:Pulumi.Resource.Urn
+  isSpec: "True"
+  fullName: Pulumi.Resource.Urn
+  nameWithType: Resource.Urn
+- uid: Pulumi.ResourceArgs
+  name: ResourceArgs
+  href: Pulumi/Pulumi.ResourceArgs.html
+  commentId: T:Pulumi.ResourceArgs
+  fullName: Pulumi.ResourceArgs
+  nameWithType: ResourceArgs
+- uid: Pulumi.ResourceArgs.#ctor
+  name: ResourceArgs()
+  href: Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs__ctor
+  commentId: M:Pulumi.ResourceArgs.#ctor
+  fullName: Pulumi.ResourceArgs.ResourceArgs()
+  nameWithType: ResourceArgs.ResourceArgs()
+- uid: Pulumi.ResourceArgs.#ctor*
+  name: ResourceArgs
+  href: Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs__ctor_
+  commentId: Overload:Pulumi.ResourceArgs.#ctor
+  isSpec: "True"
+  fullName: Pulumi.ResourceArgs.ResourceArgs
+  nameWithType: ResourceArgs.ResourceArgs
+- uid: Pulumi.ResourceArgs.Empty
+  name: Empty
+  href: Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty
+  commentId: F:Pulumi.ResourceArgs.Empty
+  fullName: Pulumi.ResourceArgs.Empty
+  nameWithType: ResourceArgs.Empty
+- uid: Pulumi.ResourceException
+  name: ResourceException
+  href: Pulumi/Pulumi.ResourceException.html
+  commentId: T:Pulumi.ResourceException
+  fullName: Pulumi.ResourceException
+  nameWithType: ResourceException
+- uid: Pulumi.ResourceException.#ctor(System.String,Pulumi.Resource,System.Boolean)
+  name: ResourceException(String, Resource, Boolean)
+  href: Pulumi/Pulumi.ResourceException.html#Pulumi_ResourceException__ctor_System_String_Pulumi_Resource_System_Boolean_
+  commentId: M:Pulumi.ResourceException.#ctor(System.String,Pulumi.Resource,System.Boolean)
+  fullName: Pulumi.ResourceException.ResourceException(System.String, Pulumi.Resource, System.Boolean)
+  nameWithType: ResourceException.ResourceException(String, Resource, Boolean)
+- uid: Pulumi.ResourceException.#ctor*
+  name: ResourceException
+  href: Pulumi/Pulumi.ResourceException.html#Pulumi_ResourceException__ctor_
+  commentId: Overload:Pulumi.ResourceException.#ctor
+  isSpec: "True"
+  fullName: Pulumi.ResourceException.ResourceException
+  nameWithType: ResourceException.ResourceException
+- uid: Pulumi.ResourceOptions
+  name: ResourceOptions
+  href: Pulumi/Pulumi.ResourceOptions.html
+  commentId: T:Pulumi.ResourceOptions
+  fullName: Pulumi.ResourceOptions
+  nameWithType: ResourceOptions
+- uid: Pulumi.ResourceOptions.Aliases
+  name: Aliases
+  href: Pulumi/Pulumi.ResourceOptions.html#Pulumi_ResourceOptions_Aliases
+  commentId: P:Pulumi.ResourceOptions.Aliases
+  fullName: Pulumi.ResourceOptions.Aliases
+  nameWithType: ResourceOptions.Aliases
+- uid: Pulumi.ResourceOptions.Aliases*
+  name: Aliases
+  href: Pulumi/Pulumi.ResourceOptions.html#Pulumi_ResourceOptions_Aliases_
+  commentId: Overload:Pulumi.ResourceOptions.Aliases
+  isSpec: "True"
+  fullName: Pulumi.ResourceOptions.Aliases
+  nameWithType: ResourceOptions.Aliases
+- uid: Pulumi.ResourceOptions.CustomTimeouts
+  name: CustomTimeouts
+  href: Pulumi/Pulumi.ResourceOptions.html#Pulumi_ResourceOptions_CustomTimeouts
+  commentId: P:Pulumi.ResourceOptions.CustomTimeouts
+  fullName: Pulumi.ResourceOptions.CustomTimeouts
+  nameWithType: ResourceOptions.CustomTimeouts
+- uid: Pulumi.ResourceOptions.CustomTimeouts*
+  name: CustomTimeouts
+  href: Pulumi/Pulumi.ResourceOptions.html#Pulumi_ResourceOptions_CustomTimeouts_
+  commentId: Overload:Pulumi.ResourceOptions.CustomTimeouts
+  isSpec: "True"
+  fullName: Pulumi.ResourceOptions.CustomTimeouts
+  nameWithType: ResourceOptions.CustomTimeouts
+- uid: Pulumi.ResourceOptions.DependsOn
+  name: DependsOn
+  href: Pulumi/Pulumi.ResourceOptions.html#Pulumi_ResourceOptions_DependsOn
+  commentId: P:Pulumi.ResourceOptions.DependsOn
+  fullName: Pulumi.ResourceOptions.DependsOn
+  nameWithType: ResourceOptions.DependsOn
+- uid: Pulumi.ResourceOptions.DependsOn*
+  name: DependsOn
+  href: Pulumi/Pulumi.ResourceOptions.html#Pulumi_ResourceOptions_DependsOn_
+  commentId: Overload:Pulumi.ResourceOptions.DependsOn
+  isSpec: "True"
+  fullName: Pulumi.ResourceOptions.DependsOn
+  nameWithType: ResourceOptions.DependsOn
+- uid: Pulumi.ResourceOptions.Id
+  name: Id
+  href: Pulumi/Pulumi.ResourceOptions.html#Pulumi_ResourceOptions_Id
+  commentId: P:Pulumi.ResourceOptions.Id
+  fullName: Pulumi.ResourceOptions.Id
+  nameWithType: ResourceOptions.Id
+- uid: Pulumi.ResourceOptions.Id*
+  name: Id
+  href: Pulumi/Pulumi.ResourceOptions.html#Pulumi_ResourceOptions_Id_
+  commentId: Overload:Pulumi.ResourceOptions.Id
+  isSpec: "True"
+  fullName: Pulumi.ResourceOptions.Id
+  nameWithType: ResourceOptions.Id
+- uid: Pulumi.ResourceOptions.IgnoreChanges
+  name: IgnoreChanges
+  href: Pulumi/Pulumi.ResourceOptions.html#Pulumi_ResourceOptions_IgnoreChanges
+  commentId: P:Pulumi.ResourceOptions.IgnoreChanges
+  fullName: Pulumi.ResourceOptions.IgnoreChanges
+  nameWithType: ResourceOptions.IgnoreChanges
+- uid: Pulumi.ResourceOptions.IgnoreChanges*
+  name: IgnoreChanges
+  href: Pulumi/Pulumi.ResourceOptions.html#Pulumi_ResourceOptions_IgnoreChanges_
+  commentId: Overload:Pulumi.ResourceOptions.IgnoreChanges
+  isSpec: "True"
+  fullName: Pulumi.ResourceOptions.IgnoreChanges
+  nameWithType: ResourceOptions.IgnoreChanges
+- uid: Pulumi.ResourceOptions.Parent
+  name: Parent
+  href: Pulumi/Pulumi.ResourceOptions.html#Pulumi_ResourceOptions_Parent
+  commentId: P:Pulumi.ResourceOptions.Parent
+  fullName: Pulumi.ResourceOptions.Parent
+  nameWithType: ResourceOptions.Parent
+- uid: Pulumi.ResourceOptions.Parent*
+  name: Parent
+  href: Pulumi/Pulumi.ResourceOptions.html#Pulumi_ResourceOptions_Parent_
+  commentId: Overload:Pulumi.ResourceOptions.Parent
+  isSpec: "True"
+  fullName: Pulumi.ResourceOptions.Parent
+  nameWithType: ResourceOptions.Parent
+- uid: Pulumi.ResourceOptions.Protect
+  name: Protect
+  href: Pulumi/Pulumi.ResourceOptions.html#Pulumi_ResourceOptions_Protect
+  commentId: P:Pulumi.ResourceOptions.Protect
+  fullName: Pulumi.ResourceOptions.Protect
+  nameWithType: ResourceOptions.Protect
+- uid: Pulumi.ResourceOptions.Protect*
+  name: Protect
+  href: Pulumi/Pulumi.ResourceOptions.html#Pulumi_ResourceOptions_Protect_
+  commentId: Overload:Pulumi.ResourceOptions.Protect
+  isSpec: "True"
+  fullName: Pulumi.ResourceOptions.Protect
+  nameWithType: ResourceOptions.Protect
+- uid: Pulumi.ResourceOptions.Provider
+  name: Provider
+  href: Pulumi/Pulumi.ResourceOptions.html#Pulumi_ResourceOptions_Provider
+  commentId: P:Pulumi.ResourceOptions.Provider
+  fullName: Pulumi.ResourceOptions.Provider
+  nameWithType: ResourceOptions.Provider
+- uid: Pulumi.ResourceOptions.Provider*
+  name: Provider
+  href: Pulumi/Pulumi.ResourceOptions.html#Pulumi_ResourceOptions_Provider_
+  commentId: Overload:Pulumi.ResourceOptions.Provider
+  isSpec: "True"
+  fullName: Pulumi.ResourceOptions.Provider
+  nameWithType: ResourceOptions.Provider
+- uid: Pulumi.ResourceOptions.ResourceTransformations
+  name: ResourceTransformations
+  href: Pulumi/Pulumi.ResourceOptions.html#Pulumi_ResourceOptions_ResourceTransformations
+  commentId: P:Pulumi.ResourceOptions.ResourceTransformations
+  fullName: Pulumi.ResourceOptions.ResourceTransformations
+  nameWithType: ResourceOptions.ResourceTransformations
+- uid: Pulumi.ResourceOptions.ResourceTransformations*
+  name: ResourceTransformations
+  href: Pulumi/Pulumi.ResourceOptions.html#Pulumi_ResourceOptions_ResourceTransformations_
+  commentId: Overload:Pulumi.ResourceOptions.ResourceTransformations
+  isSpec: "True"
+  fullName: Pulumi.ResourceOptions.ResourceTransformations
+  nameWithType: ResourceOptions.ResourceTransformations
+- uid: Pulumi.ResourceOptions.Version
+  name: Version
+  href: Pulumi/Pulumi.ResourceOptions.html#Pulumi_ResourceOptions_Version
+  commentId: P:Pulumi.ResourceOptions.Version
+  fullName: Pulumi.ResourceOptions.Version
+  nameWithType: ResourceOptions.Version
+- uid: Pulumi.ResourceOptions.Version*
+  name: Version
+  href: Pulumi/Pulumi.ResourceOptions.html#Pulumi_ResourceOptions_Version_
+  commentId: Overload:Pulumi.ResourceOptions.Version
+  isSpec: "True"
+  fullName: Pulumi.ResourceOptions.Version
+  nameWithType: ResourceOptions.Version
+- uid: Pulumi.ResourceTransformation
+  name: ResourceTransformation
+  href: Pulumi/Pulumi.ResourceTransformation.html
+  commentId: T:Pulumi.ResourceTransformation
+  fullName: Pulumi.ResourceTransformation
+  nameWithType: ResourceTransformation
+- uid: Pulumi.ResourceTransformationArgs
+  name: ResourceTransformationArgs
+  href: Pulumi/Pulumi.ResourceTransformationArgs.html
+  commentId: T:Pulumi.ResourceTransformationArgs
+  fullName: Pulumi.ResourceTransformationArgs
+  nameWithType: ResourceTransformationArgs
+- uid: Pulumi.ResourceTransformationArgs.#ctor(Pulumi.Resource,Pulumi.ResourceArgs,Pulumi.ResourceOptions)
+  name: ResourceTransformationArgs(Resource, ResourceArgs, ResourceOptions)
+  href: Pulumi/Pulumi.ResourceTransformationArgs.html#Pulumi_ResourceTransformationArgs__ctor_Pulumi_Resource_Pulumi_ResourceArgs_Pulumi_ResourceOptions_
+  commentId: M:Pulumi.ResourceTransformationArgs.#ctor(Pulumi.Resource,Pulumi.ResourceArgs,Pulumi.ResourceOptions)
+  fullName: Pulumi.ResourceTransformationArgs.ResourceTransformationArgs(Pulumi.Resource, Pulumi.ResourceArgs, Pulumi.ResourceOptions)
+  nameWithType: ResourceTransformationArgs.ResourceTransformationArgs(Resource, ResourceArgs, ResourceOptions)
+- uid: Pulumi.ResourceTransformationArgs.#ctor*
+  name: ResourceTransformationArgs
+  href: Pulumi/Pulumi.ResourceTransformationArgs.html#Pulumi_ResourceTransformationArgs__ctor_
+  commentId: Overload:Pulumi.ResourceTransformationArgs.#ctor
+  isSpec: "True"
+  fullName: Pulumi.ResourceTransformationArgs.ResourceTransformationArgs
+  nameWithType: ResourceTransformationArgs.ResourceTransformationArgs
+- uid: Pulumi.ResourceTransformationArgs.Args
+  name: Args
+  href: Pulumi/Pulumi.ResourceTransformationArgs.html#Pulumi_ResourceTransformationArgs_Args
+  commentId: P:Pulumi.ResourceTransformationArgs.Args
+  fullName: Pulumi.ResourceTransformationArgs.Args
+  nameWithType: ResourceTransformationArgs.Args
+- uid: Pulumi.ResourceTransformationArgs.Args*
+  name: Args
+  href: Pulumi/Pulumi.ResourceTransformationArgs.html#Pulumi_ResourceTransformationArgs_Args_
+  commentId: Overload:Pulumi.ResourceTransformationArgs.Args
+  isSpec: "True"
+  fullName: Pulumi.ResourceTransformationArgs.Args
+  nameWithType: ResourceTransformationArgs.Args
+- uid: Pulumi.ResourceTransformationArgs.Options
+  name: Options
+  href: Pulumi/Pulumi.ResourceTransformationArgs.html#Pulumi_ResourceTransformationArgs_Options
+  commentId: P:Pulumi.ResourceTransformationArgs.Options
+  fullName: Pulumi.ResourceTransformationArgs.Options
+  nameWithType: ResourceTransformationArgs.Options
+- uid: Pulumi.ResourceTransformationArgs.Options*
+  name: Options
+  href: Pulumi/Pulumi.ResourceTransformationArgs.html#Pulumi_ResourceTransformationArgs_Options_
+  commentId: Overload:Pulumi.ResourceTransformationArgs.Options
+  isSpec: "True"
+  fullName: Pulumi.ResourceTransformationArgs.Options
+  nameWithType: ResourceTransformationArgs.Options
+- uid: Pulumi.ResourceTransformationArgs.Resource
+  name: Resource
+  href: Pulumi/Pulumi.ResourceTransformationArgs.html#Pulumi_ResourceTransformationArgs_Resource
+  commentId: P:Pulumi.ResourceTransformationArgs.Resource
+  fullName: Pulumi.ResourceTransformationArgs.Resource
+  nameWithType: ResourceTransformationArgs.Resource
+- uid: Pulumi.ResourceTransformationArgs.Resource*
+  name: Resource
+  href: Pulumi/Pulumi.ResourceTransformationArgs.html#Pulumi_ResourceTransformationArgs_Resource_
+  commentId: Overload:Pulumi.ResourceTransformationArgs.Resource
+  isSpec: "True"
+  fullName: Pulumi.ResourceTransformationArgs.Resource
+  nameWithType: ResourceTransformationArgs.Resource
+- uid: Pulumi.ResourceTransformationResult
+  name: ResourceTransformationResult
+  href: Pulumi/Pulumi.ResourceTransformationResult.html
+  commentId: T:Pulumi.ResourceTransformationResult
+  fullName: Pulumi.ResourceTransformationResult
+  nameWithType: ResourceTransformationResult
+- uid: Pulumi.ResourceTransformationResult.#ctor(Pulumi.ResourceArgs,Pulumi.ResourceOptions)
+  name: ResourceTransformationResult(ResourceArgs, ResourceOptions)
+  href: Pulumi/Pulumi.ResourceTransformationResult.html#Pulumi_ResourceTransformationResult__ctor_Pulumi_ResourceArgs_Pulumi_ResourceOptions_
+  commentId: M:Pulumi.ResourceTransformationResult.#ctor(Pulumi.ResourceArgs,Pulumi.ResourceOptions)
+  fullName: Pulumi.ResourceTransformationResult.ResourceTransformationResult(Pulumi.ResourceArgs, Pulumi.ResourceOptions)
+  nameWithType: ResourceTransformationResult.ResourceTransformationResult(ResourceArgs, ResourceOptions)
+- uid: Pulumi.ResourceTransformationResult.#ctor*
+  name: ResourceTransformationResult
+  href: Pulumi/Pulumi.ResourceTransformationResult.html#Pulumi_ResourceTransformationResult__ctor_
+  commentId: Overload:Pulumi.ResourceTransformationResult.#ctor
+  isSpec: "True"
+  fullName: Pulumi.ResourceTransformationResult.ResourceTransformationResult
+  nameWithType: ResourceTransformationResult.ResourceTransformationResult
+- uid: Pulumi.ResourceTransformationResult.Args
+  name: Args
+  href: Pulumi/Pulumi.ResourceTransformationResult.html#Pulumi_ResourceTransformationResult_Args
+  commentId: P:Pulumi.ResourceTransformationResult.Args
+  fullName: Pulumi.ResourceTransformationResult.Args
+  nameWithType: ResourceTransformationResult.Args
+- uid: Pulumi.ResourceTransformationResult.Args*
+  name: Args
+  href: Pulumi/Pulumi.ResourceTransformationResult.html#Pulumi_ResourceTransformationResult_Args_
+  commentId: Overload:Pulumi.ResourceTransformationResult.Args
+  isSpec: "True"
+  fullName: Pulumi.ResourceTransformationResult.Args
+  nameWithType: ResourceTransformationResult.Args
+- uid: Pulumi.ResourceTransformationResult.Options
+  name: Options
+  href: Pulumi/Pulumi.ResourceTransformationResult.html#Pulumi_ResourceTransformationResult_Options
+  commentId: P:Pulumi.ResourceTransformationResult.Options
+  fullName: Pulumi.ResourceTransformationResult.Options
+  nameWithType: ResourceTransformationResult.Options
+- uid: Pulumi.ResourceTransformationResult.Options*
+  name: Options
+  href: Pulumi/Pulumi.ResourceTransformationResult.html#Pulumi_ResourceTransformationResult_Options_
+  commentId: Overload:Pulumi.ResourceTransformationResult.Options
+  isSpec: "True"
+  fullName: Pulumi.ResourceTransformationResult.Options
+  nameWithType: ResourceTransformationResult.Options
+- uid: Pulumi.Stack
+  name: Stack
+  href: Pulumi/Pulumi.Stack.html
+  commentId: T:Pulumi.Stack
+  fullName: Pulumi.Stack
+  nameWithType: Stack
+- uid: Pulumi.Stack.#ctor
+  name: Stack()
+  href: Pulumi/Pulumi.Stack.html#Pulumi_Stack__ctor
+  commentId: M:Pulumi.Stack.#ctor
+  fullName: Pulumi.Stack.Stack()
+  nameWithType: Stack.Stack()
+- uid: Pulumi.Stack.#ctor*
+  name: Stack
+  href: Pulumi/Pulumi.Stack.html#Pulumi_Stack__ctor_
+  commentId: Overload:Pulumi.Stack.#ctor
+  isSpec: "True"
+  fullName: Pulumi.Stack.Stack
+  nameWithType: Stack.Stack
+- uid: Pulumi.StackReference
+  name: StackReference
+  href: Pulumi/Pulumi.StackReference.html
+  commentId: T:Pulumi.StackReference
+  fullName: Pulumi.StackReference
+  nameWithType: StackReference
+- uid: Pulumi.StackReference.#ctor(System.String,Pulumi.StackReferenceArgs,Pulumi.CustomResourceOptions)
+  name: StackReference(String, StackReferenceArgs, CustomResourceOptions)
+  href: Pulumi/Pulumi.StackReference.html#Pulumi_StackReference__ctor_System_String_Pulumi_StackReferenceArgs_Pulumi_CustomResourceOptions_
+  commentId: M:Pulumi.StackReference.#ctor(System.String,Pulumi.StackReferenceArgs,Pulumi.CustomResourceOptions)
+  fullName: Pulumi.StackReference.StackReference(System.String, Pulumi.StackReferenceArgs, Pulumi.CustomResourceOptions)
+  nameWithType: StackReference.StackReference(String, StackReferenceArgs, CustomResourceOptions)
+- uid: Pulumi.StackReference.#ctor*
+  name: StackReference
+  href: Pulumi/Pulumi.StackReference.html#Pulumi_StackReference__ctor_
+  commentId: Overload:Pulumi.StackReference.#ctor
+  isSpec: "True"
+  fullName: Pulumi.StackReference.StackReference
+  nameWithType: StackReference.StackReference
+- uid: Pulumi.StackReference.GetOutput(Pulumi.Input{System.String})
+  name: GetOutput(Input<String>)
+  href: Pulumi/Pulumi.StackReference.html#Pulumi_StackReference_GetOutput_Pulumi_Input_System_String__
+  commentId: M:Pulumi.StackReference.GetOutput(Pulumi.Input{System.String})
+  name.vb: GetOutput(Input(Of String))
+  fullName: Pulumi.StackReference.GetOutput(Pulumi.Input<System.String>)
+  fullName.vb: Pulumi.StackReference.GetOutput(Pulumi.Input(Of System.String))
+  nameWithType: StackReference.GetOutput(Input<String>)
+  nameWithType.vb: StackReference.GetOutput(Input(Of String))
+- uid: Pulumi.StackReference.GetOutput*
+  name: GetOutput
+  href: Pulumi/Pulumi.StackReference.html#Pulumi_StackReference_GetOutput_
+  commentId: Overload:Pulumi.StackReference.GetOutput
+  isSpec: "True"
+  fullName: Pulumi.StackReference.GetOutput
+  nameWithType: StackReference.GetOutput
+- uid: Pulumi.StackReference.GetValueAsync(Pulumi.Input{System.String})
+  name: GetValueAsync(Input<String>)
+  href: Pulumi/Pulumi.StackReference.html#Pulumi_StackReference_GetValueAsync_Pulumi_Input_System_String__
+  commentId: M:Pulumi.StackReference.GetValueAsync(Pulumi.Input{System.String})
+  name.vb: GetValueAsync(Input(Of String))
+  fullName: Pulumi.StackReference.GetValueAsync(Pulumi.Input<System.String>)
+  fullName.vb: Pulumi.StackReference.GetValueAsync(Pulumi.Input(Of System.String))
+  nameWithType: StackReference.GetValueAsync(Input<String>)
+  nameWithType.vb: StackReference.GetValueAsync(Input(Of String))
+- uid: Pulumi.StackReference.GetValueAsync*
+  name: GetValueAsync
+  href: Pulumi/Pulumi.StackReference.html#Pulumi_StackReference_GetValueAsync_
+  commentId: Overload:Pulumi.StackReference.GetValueAsync
+  isSpec: "True"
+  fullName: Pulumi.StackReference.GetValueAsync
+  nameWithType: StackReference.GetValueAsync
+- uid: Pulumi.StackReference.Name
+  name: Name
+  href: Pulumi/Pulumi.StackReference.html#Pulumi_StackReference_Name
+  commentId: P:Pulumi.StackReference.Name
+  fullName: Pulumi.StackReference.Name
+  nameWithType: StackReference.Name
+- uid: Pulumi.StackReference.Name*
+  name: Name
+  href: Pulumi/Pulumi.StackReference.html#Pulumi_StackReference_Name_
+  commentId: Overload:Pulumi.StackReference.Name
+  isSpec: "True"
+  fullName: Pulumi.StackReference.Name
+  nameWithType: StackReference.Name
+- uid: Pulumi.StackReference.Outputs
+  name: Outputs
+  href: Pulumi/Pulumi.StackReference.html#Pulumi_StackReference_Outputs
+  commentId: P:Pulumi.StackReference.Outputs
+  fullName: Pulumi.StackReference.Outputs
+  nameWithType: StackReference.Outputs
+- uid: Pulumi.StackReference.Outputs*
+  name: Outputs
+  href: Pulumi/Pulumi.StackReference.html#Pulumi_StackReference_Outputs_
+  commentId: Overload:Pulumi.StackReference.Outputs
+  isSpec: "True"
+  fullName: Pulumi.StackReference.Outputs
+  nameWithType: StackReference.Outputs
+- uid: Pulumi.StackReference.RequireOutput(Pulumi.Input{System.String})
+  name: RequireOutput(Input<String>)
+  href: Pulumi/Pulumi.StackReference.html#Pulumi_StackReference_RequireOutput_Pulumi_Input_System_String__
+  commentId: M:Pulumi.StackReference.RequireOutput(Pulumi.Input{System.String})
+  name.vb: RequireOutput(Input(Of String))
+  fullName: Pulumi.StackReference.RequireOutput(Pulumi.Input<System.String>)
+  fullName.vb: Pulumi.StackReference.RequireOutput(Pulumi.Input(Of System.String))
+  nameWithType: StackReference.RequireOutput(Input<String>)
+  nameWithType.vb: StackReference.RequireOutput(Input(Of String))
+- uid: Pulumi.StackReference.RequireOutput*
+  name: RequireOutput
+  href: Pulumi/Pulumi.StackReference.html#Pulumi_StackReference_RequireOutput_
+  commentId: Overload:Pulumi.StackReference.RequireOutput
+  isSpec: "True"
+  fullName: Pulumi.StackReference.RequireOutput
+  nameWithType: StackReference.RequireOutput
+- uid: Pulumi.StackReference.RequireValueAsync(Pulumi.Input{System.String})
+  name: RequireValueAsync(Input<String>)
+  href: Pulumi/Pulumi.StackReference.html#Pulumi_StackReference_RequireValueAsync_Pulumi_Input_System_String__
+  commentId: M:Pulumi.StackReference.RequireValueAsync(Pulumi.Input{System.String})
+  name.vb: RequireValueAsync(Input(Of String))
+  fullName: Pulumi.StackReference.RequireValueAsync(Pulumi.Input<System.String>)
+  fullName.vb: Pulumi.StackReference.RequireValueAsync(Pulumi.Input(Of System.String))
+  nameWithType: StackReference.RequireValueAsync(Input<String>)
+  nameWithType.vb: StackReference.RequireValueAsync(Input(Of String))
+- uid: Pulumi.StackReference.RequireValueAsync*
+  name: RequireValueAsync
+  href: Pulumi/Pulumi.StackReference.html#Pulumi_StackReference_RequireValueAsync_
+  commentId: Overload:Pulumi.StackReference.RequireValueAsync
+  isSpec: "True"
+  fullName: Pulumi.StackReference.RequireValueAsync
+  nameWithType: StackReference.RequireValueAsync
+- uid: Pulumi.StackReference.SecretOutputNames
+  name: SecretOutputNames
+  href: Pulumi/Pulumi.StackReference.html#Pulumi_StackReference_SecretOutputNames
+  commentId: P:Pulumi.StackReference.SecretOutputNames
+  fullName: Pulumi.StackReference.SecretOutputNames
+  nameWithType: StackReference.SecretOutputNames
+- uid: Pulumi.StackReference.SecretOutputNames*
+  name: SecretOutputNames
+  href: Pulumi/Pulumi.StackReference.html#Pulumi_StackReference_SecretOutputNames_
+  commentId: Overload:Pulumi.StackReference.SecretOutputNames
+  isSpec: "True"
+  fullName: Pulumi.StackReference.SecretOutputNames
+  nameWithType: StackReference.SecretOutputNames
+- uid: Pulumi.StackReferenceArgs
+  name: StackReferenceArgs
+  href: Pulumi/Pulumi.StackReferenceArgs.html
+  commentId: T:Pulumi.StackReferenceArgs
+  fullName: Pulumi.StackReferenceArgs
+  nameWithType: StackReferenceArgs
+- uid: Pulumi.StackReferenceArgs.Name
+  name: Name
+  href: Pulumi/Pulumi.StackReferenceArgs.html#Pulumi_StackReferenceArgs_Name
+  commentId: P:Pulumi.StackReferenceArgs.Name
+  fullName: Pulumi.StackReferenceArgs.Name
+  nameWithType: StackReferenceArgs.Name
+- uid: Pulumi.StackReferenceArgs.Name*
+  name: Name
+  href: Pulumi/Pulumi.StackReferenceArgs.html#Pulumi_StackReferenceArgs_Name_
+  commentId: Overload:Pulumi.StackReferenceArgs.Name
+  isSpec: "True"
+  fullName: Pulumi.StackReferenceArgs.Name
+  nameWithType: StackReferenceArgs.Name
+- uid: Pulumi.StringAsset
+  name: StringAsset
+  href: Pulumi/Pulumi.StringAsset.html
+  commentId: T:Pulumi.StringAsset
+  fullName: Pulumi.StringAsset
+  nameWithType: StringAsset
+- uid: Pulumi.StringAsset.#ctor(System.String)
+  name: StringAsset(String)
+  href: Pulumi/Pulumi.StringAsset.html#Pulumi_StringAsset__ctor_System_String_
+  commentId: M:Pulumi.StringAsset.#ctor(System.String)
+  fullName: Pulumi.StringAsset.StringAsset(System.String)
+  nameWithType: StringAsset.StringAsset(String)
+- uid: Pulumi.StringAsset.#ctor*
+  name: StringAsset
+  href: Pulumi/Pulumi.StringAsset.html#Pulumi_StringAsset__ctor_
+  commentId: Overload:Pulumi.StringAsset.#ctor
+  isSpec: "True"
+  fullName: Pulumi.StringAsset.StringAsset
+  nameWithType: StringAsset.StringAsset
+- uid: Pulumi.Union`2
+  name: Union<T0, T1>
+  href: Pulumi/Pulumi.Union-2.html
+  commentId: T:Pulumi.Union`2
+  name.vb: Union(Of T0, T1)
+  fullName: Pulumi.Union<T0, T1>
+  fullName.vb: Pulumi.Union(Of T0, T1)
+  nameWithType: Union<T0, T1>
+  nameWithType.vb: Union(Of T0, T1)
+- uid: Pulumi.Union`2.AsT0
+  name: AsT0
+  href: Pulumi/Pulumi.Union-2.html#Pulumi_Union_2_AsT0
+  commentId: P:Pulumi.Union`2.AsT0
+  fullName: Pulumi.Union<T0, T1>.AsT0
+  fullName.vb: Pulumi.Union(Of T0, T1).AsT0
+  nameWithType: Union<T0, T1>.AsT0
+  nameWithType.vb: Union(Of T0, T1).AsT0
+- uid: Pulumi.Union`2.AsT0*
+  name: AsT0
+  href: Pulumi/Pulumi.Union-2.html#Pulumi_Union_2_AsT0_
+  commentId: Overload:Pulumi.Union`2.AsT0
+  isSpec: "True"
+  fullName: Pulumi.Union<T0, T1>.AsT0
+  fullName.vb: Pulumi.Union(Of T0, T1).AsT0
+  nameWithType: Union<T0, T1>.AsT0
+  nameWithType.vb: Union(Of T0, T1).AsT0
+- uid: Pulumi.Union`2.AsT1
+  name: AsT1
+  href: Pulumi/Pulumi.Union-2.html#Pulumi_Union_2_AsT1
+  commentId: P:Pulumi.Union`2.AsT1
+  fullName: Pulumi.Union<T0, T1>.AsT1
+  fullName.vb: Pulumi.Union(Of T0, T1).AsT1
+  nameWithType: Union<T0, T1>.AsT1
+  nameWithType.vb: Union(Of T0, T1).AsT1
+- uid: Pulumi.Union`2.AsT1*
+  name: AsT1
+  href: Pulumi/Pulumi.Union-2.html#Pulumi_Union_2_AsT1_
+  commentId: Overload:Pulumi.Union`2.AsT1
+  isSpec: "True"
+  fullName: Pulumi.Union<T0, T1>.AsT1
+  fullName.vb: Pulumi.Union(Of T0, T1).AsT1
+  nameWithType: Union<T0, T1>.AsT1
+  nameWithType.vb: Union(Of T0, T1).AsT1
+- uid: Pulumi.Union`2.Equals(Pulumi.Union{`0,`1})
+  name: Equals(Union<T0, T1>)
+  href: Pulumi/Pulumi.Union-2.html#Pulumi_Union_2_Equals_Pulumi_Union__0__1__
+  commentId: M:Pulumi.Union`2.Equals(Pulumi.Union{`0,`1})
+  name.vb: Equals(Union(Of T0, T1))
+  fullName: Pulumi.Union<T0, T1>.Equals(Pulumi.Union<T0, T1>)
+  fullName.vb: Pulumi.Union(Of T0, T1).Equals(Pulumi.Union(Of T0, T1))
+  nameWithType: Union<T0, T1>.Equals(Union<T0, T1>)
+  nameWithType.vb: Union(Of T0, T1).Equals(Union(Of T0, T1))
+- uid: Pulumi.Union`2.Equals(System.Object)
+  name: Equals(Object)
+  href: Pulumi/Pulumi.Union-2.html#Pulumi_Union_2_Equals_System_Object_
+  commentId: M:Pulumi.Union`2.Equals(System.Object)
+  fullName: Pulumi.Union<T0, T1>.Equals(System.Object)
+  fullName.vb: Pulumi.Union(Of T0, T1).Equals(System.Object)
+  nameWithType: Union<T0, T1>.Equals(Object)
+  nameWithType.vb: Union(Of T0, T1).Equals(Object)
+- uid: Pulumi.Union`2.Equals*
+  name: Equals
+  href: Pulumi/Pulumi.Union-2.html#Pulumi_Union_2_Equals_
+  commentId: Overload:Pulumi.Union`2.Equals
+  isSpec: "True"
+  fullName: Pulumi.Union<T0, T1>.Equals
+  fullName.vb: Pulumi.Union(Of T0, T1).Equals
+  nameWithType: Union<T0, T1>.Equals
+  nameWithType.vb: Union(Of T0, T1).Equals
+- uid: Pulumi.Union`2.FromT0(`0)
+  name: FromT0(T0)
+  href: Pulumi/Pulumi.Union-2.html#Pulumi_Union_2_FromT0__0_
+  commentId: M:Pulumi.Union`2.FromT0(`0)
+  fullName: Pulumi.Union<T0, T1>.FromT0(T0)
+  fullName.vb: Pulumi.Union(Of T0, T1).FromT0(T0)
+  nameWithType: Union<T0, T1>.FromT0(T0)
+  nameWithType.vb: Union(Of T0, T1).FromT0(T0)
+- uid: Pulumi.Union`2.FromT0*
+  name: FromT0
+  href: Pulumi/Pulumi.Union-2.html#Pulumi_Union_2_FromT0_
+  commentId: Overload:Pulumi.Union`2.FromT0
+  isSpec: "True"
+  fullName: Pulumi.Union<T0, T1>.FromT0
+  fullName.vb: Pulumi.Union(Of T0, T1).FromT0
+  nameWithType: Union<T0, T1>.FromT0
+  nameWithType.vb: Union(Of T0, T1).FromT0
+- uid: Pulumi.Union`2.FromT1(`1)
+  name: FromT1(T1)
+  href: Pulumi/Pulumi.Union-2.html#Pulumi_Union_2_FromT1__1_
+  commentId: M:Pulumi.Union`2.FromT1(`1)
+  fullName: Pulumi.Union<T0, T1>.FromT1(T1)
+  fullName.vb: Pulumi.Union(Of T0, T1).FromT1(T1)
+  nameWithType: Union<T0, T1>.FromT1(T1)
+  nameWithType.vb: Union(Of T0, T1).FromT1(T1)
+- uid: Pulumi.Union`2.FromT1*
+  name: FromT1
+  href: Pulumi/Pulumi.Union-2.html#Pulumi_Union_2_FromT1_
+  commentId: Overload:Pulumi.Union`2.FromT1
+  isSpec: "True"
+  fullName: Pulumi.Union<T0, T1>.FromT1
+  fullName.vb: Pulumi.Union(Of T0, T1).FromT1
+  nameWithType: Union<T0, T1>.FromT1
+  nameWithType.vb: Union(Of T0, T1).FromT1
+- uid: Pulumi.Union`2.GetHashCode
+  name: GetHashCode()
+  href: Pulumi/Pulumi.Union-2.html#Pulumi_Union_2_GetHashCode
+  commentId: M:Pulumi.Union`2.GetHashCode
+  fullName: Pulumi.Union<T0, T1>.GetHashCode()
+  fullName.vb: Pulumi.Union(Of T0, T1).GetHashCode()
+  nameWithType: Union<T0, T1>.GetHashCode()
+  nameWithType.vb: Union(Of T0, T1).GetHashCode()
+- uid: Pulumi.Union`2.GetHashCode*
+  name: GetHashCode
+  href: Pulumi/Pulumi.Union-2.html#Pulumi_Union_2_GetHashCode_
+  commentId: Overload:Pulumi.Union`2.GetHashCode
+  isSpec: "True"
+  fullName: Pulumi.Union<T0, T1>.GetHashCode
+  fullName.vb: Pulumi.Union(Of T0, T1).GetHashCode
+  nameWithType: Union<T0, T1>.GetHashCode
+  nameWithType.vb: Union(Of T0, T1).GetHashCode
+- uid: Pulumi.Union`2.IsT0
+  name: IsT0
+  href: Pulumi/Pulumi.Union-2.html#Pulumi_Union_2_IsT0
+  commentId: P:Pulumi.Union`2.IsT0
+  fullName: Pulumi.Union<T0, T1>.IsT0
+  fullName.vb: Pulumi.Union(Of T0, T1).IsT0
+  nameWithType: Union<T0, T1>.IsT0
+  nameWithType.vb: Union(Of T0, T1).IsT0
+- uid: Pulumi.Union`2.IsT0*
+  name: IsT0
+  href: Pulumi/Pulumi.Union-2.html#Pulumi_Union_2_IsT0_
+  commentId: Overload:Pulumi.Union`2.IsT0
+  isSpec: "True"
+  fullName: Pulumi.Union<T0, T1>.IsT0
+  fullName.vb: Pulumi.Union(Of T0, T1).IsT0
+  nameWithType: Union<T0, T1>.IsT0
+  nameWithType.vb: Union(Of T0, T1).IsT0
+- uid: Pulumi.Union`2.IsT1
+  name: IsT1
+  href: Pulumi/Pulumi.Union-2.html#Pulumi_Union_2_IsT1
+  commentId: P:Pulumi.Union`2.IsT1
+  fullName: Pulumi.Union<T0, T1>.IsT1
+  fullName.vb: Pulumi.Union(Of T0, T1).IsT1
+  nameWithType: Union<T0, T1>.IsT1
+  nameWithType.vb: Union(Of T0, T1).IsT1
+- uid: Pulumi.Union`2.IsT1*
+  name: IsT1
+  href: Pulumi/Pulumi.Union-2.html#Pulumi_Union_2_IsT1_
+  commentId: Overload:Pulumi.Union`2.IsT1
+  isSpec: "True"
+  fullName: Pulumi.Union<T0, T1>.IsT1
+  fullName.vb: Pulumi.Union(Of T0, T1).IsT1
+  nameWithType: Union<T0, T1>.IsT1
+  nameWithType.vb: Union(Of T0, T1).IsT1
+- uid: Pulumi.Union`2.MapT0*
+  name: MapT0
+  href: Pulumi/Pulumi.Union-2.html#Pulumi_Union_2_MapT0_
+  commentId: Overload:Pulumi.Union`2.MapT0
+  isSpec: "True"
+  fullName: Pulumi.Union<T0, T1>.MapT0
+  fullName.vb: Pulumi.Union(Of T0, T1).MapT0
+  nameWithType: Union<T0, T1>.MapT0
+  nameWithType.vb: Union(Of T0, T1).MapT0
+- uid: Pulumi.Union`2.MapT0``1(System.Func{`0,``0})
+  name: MapT0<TResult>(Func<T0, TResult>)
+  href: Pulumi/Pulumi.Union-2.html#Pulumi_Union_2_MapT0__1_System_Func__0___0__
+  commentId: M:Pulumi.Union`2.MapT0``1(System.Func{`0,``0})
+  name.vb: MapT0(Of TResult)(Func(Of T0, TResult))
+  fullName: Pulumi.Union<T0, T1>.MapT0<TResult>(System.Func<T0, TResult>)
+  fullName.vb: Pulumi.Union(Of T0, T1).MapT0(Of TResult)(System.Func(Of T0, TResult))
+  nameWithType: Union<T0, T1>.MapT0<TResult>(Func<T0, TResult>)
+  nameWithType.vb: Union(Of T0, T1).MapT0(Of TResult)(Func(Of T0, TResult))
+- uid: Pulumi.Union`2.MapT1*
+  name: MapT1
+  href: Pulumi/Pulumi.Union-2.html#Pulumi_Union_2_MapT1_
+  commentId: Overload:Pulumi.Union`2.MapT1
+  isSpec: "True"
+  fullName: Pulumi.Union<T0, T1>.MapT1
+  fullName.vb: Pulumi.Union(Of T0, T1).MapT1
+  nameWithType: Union<T0, T1>.MapT1
+  nameWithType.vb: Union(Of T0, T1).MapT1
+- uid: Pulumi.Union`2.MapT1``1(System.Func{`1,``0})
+  name: MapT1<TResult>(Func<T1, TResult>)
+  href: Pulumi/Pulumi.Union-2.html#Pulumi_Union_2_MapT1__1_System_Func__1___0__
+  commentId: M:Pulumi.Union`2.MapT1``1(System.Func{`1,``0})
+  name.vb: MapT1(Of TResult)(Func(Of T1, TResult))
+  fullName: Pulumi.Union<T0, T1>.MapT1<TResult>(System.Func<T1, TResult>)
+  fullName.vb: Pulumi.Union(Of T0, T1).MapT1(Of TResult)(System.Func(Of T1, TResult))
+  nameWithType: Union<T0, T1>.MapT1<TResult>(Func<T1, TResult>)
+  nameWithType.vb: Union(Of T0, T1).MapT1(Of TResult)(Func(Of T1, TResult))
+- uid: Pulumi.Union`2.Match*
+  name: Match
+  href: Pulumi/Pulumi.Union-2.html#Pulumi_Union_2_Match_
+  commentId: Overload:Pulumi.Union`2.Match
+  isSpec: "True"
+  fullName: Pulumi.Union<T0, T1>.Match
+  fullName.vb: Pulumi.Union(Of T0, T1).Match
+  nameWithType: Union<T0, T1>.Match
+  nameWithType.vb: Union(Of T0, T1).Match
+- uid: Pulumi.Union`2.Match``1(System.Func{`0,``0},System.Func{`1,``0})
+  name: Match<TResult>(Func<T0, TResult>, Func<T1, TResult>)
+  href: Pulumi/Pulumi.Union-2.html#Pulumi_Union_2_Match__1_System_Func__0___0__System_Func__1___0__
+  commentId: M:Pulumi.Union`2.Match``1(System.Func{`0,``0},System.Func{`1,``0})
+  name.vb: Match(Of TResult)(Func(Of T0, TResult), Func(Of T1, TResult))
+  fullName: Pulumi.Union<T0, T1>.Match<TResult>(System.Func<T0, TResult>, System.Func<T1, TResult>)
+  fullName.vb: Pulumi.Union(Of T0, T1).Match(Of TResult)(System.Func(Of T0, TResult), System.Func(Of T1, TResult))
+  nameWithType: Union<T0, T1>.Match<TResult>(Func<T0, TResult>, Func<T1, TResult>)
+  nameWithType.vb: Union(Of T0, T1).Match(Of TResult)(Func(Of T0, TResult), Func(Of T1, TResult))
+- uid: Pulumi.Union`2.op_Implicit(`0)~Pulumi.Union{`0,`1}
+  name: Implicit(T0 to Union<T0, T1>)
+  href: Pulumi/Pulumi.Union-2.html#Pulumi_Union_2_op_Implicit__0__Pulumi_Union__0__1_
+  commentId: M:Pulumi.Union`2.op_Implicit(`0)~Pulumi.Union{`0,`1}
+  name.vb: Widening(T0 to Union(Of T0, T1))
+  fullName: Pulumi.Union<T0, T1>.Implicit(T0 to Pulumi.Union<T0, T1>)
+  fullName.vb: Pulumi.Union(Of T0, T1).Widening(T0 to Pulumi.Union(Of T0, T1))
+  nameWithType: Union<T0, T1>.Implicit(T0 to Union<T0, T1>)
+  nameWithType.vb: Union(Of T0, T1).Widening(T0 to Union(Of T0, T1))
+- uid: Pulumi.Union`2.op_Implicit(`1)~Pulumi.Union{`0,`1}
+  name: Implicit(T1 to Union<T0, T1>)
+  href: Pulumi/Pulumi.Union-2.html#Pulumi_Union_2_op_Implicit__1__Pulumi_Union__0__1_
+  commentId: M:Pulumi.Union`2.op_Implicit(`1)~Pulumi.Union{`0,`1}
+  name.vb: Widening(T1 to Union(Of T0, T1))
+  fullName: Pulumi.Union<T0, T1>.Implicit(T1 to Pulumi.Union<T0, T1>)
+  fullName.vb: Pulumi.Union(Of T0, T1).Widening(T1 to Pulumi.Union(Of T0, T1))
+  nameWithType: Union<T0, T1>.Implicit(T1 to Union<T0, T1>)
+  nameWithType.vb: Union(Of T0, T1).Widening(T1 to Union(Of T0, T1))
+- uid: Pulumi.Union`2.op_Implicit*
+  name: Implicit
+  href: Pulumi/Pulumi.Union-2.html#Pulumi_Union_2_op_Implicit_
+  commentId: Overload:Pulumi.Union`2.op_Implicit
+  isSpec: "True"
+  name.vb: Widening
+  fullName: Pulumi.Union<T0, T1>.Implicit
+  fullName.vb: Pulumi.Union(Of T0, T1).Widening
+  nameWithType: Union<T0, T1>.Implicit
+  nameWithType.vb: Union(Of T0, T1).Widening
+- uid: Pulumi.Union`2.Switch(System.Action{`0},System.Action{`1})
+  name: Switch(Action<T0>, Action<T1>)
+  href: Pulumi/Pulumi.Union-2.html#Pulumi_Union_2_Switch_System_Action__0__System_Action__1__
+  commentId: M:Pulumi.Union`2.Switch(System.Action{`0},System.Action{`1})
+  name.vb: Switch(Action(Of T0), Action(Of T1))
+  fullName: Pulumi.Union<T0, T1>.Switch(System.Action<T0>, System.Action<T1>)
+  fullName.vb: Pulumi.Union(Of T0, T1).Switch(System.Action(Of T0), System.Action(Of T1))
+  nameWithType: Union<T0, T1>.Switch(Action<T0>, Action<T1>)
+  nameWithType.vb: Union(Of T0, T1).Switch(Action(Of T0), Action(Of T1))
+- uid: Pulumi.Union`2.Switch*
+  name: Switch
+  href: Pulumi/Pulumi.Union-2.html#Pulumi_Union_2_Switch_
+  commentId: Overload:Pulumi.Union`2.Switch
+  isSpec: "True"
+  fullName: Pulumi.Union<T0, T1>.Switch
+  fullName.vb: Pulumi.Union(Of T0, T1).Switch
+  nameWithType: Union<T0, T1>.Switch
+  nameWithType.vb: Union(Of T0, T1).Switch
+- uid: Pulumi.Union`2.ToString
+  name: ToString()
+  href: Pulumi/Pulumi.Union-2.html#Pulumi_Union_2_ToString
+  commentId: M:Pulumi.Union`2.ToString
+  fullName: Pulumi.Union<T0, T1>.ToString()
+  fullName.vb: Pulumi.Union(Of T0, T1).ToString()
+  nameWithType: Union<T0, T1>.ToString()
+  nameWithType.vb: Union(Of T0, T1).ToString()
+- uid: Pulumi.Union`2.ToString*
+  name: ToString
+  href: Pulumi/Pulumi.Union-2.html#Pulumi_Union_2_ToString_
+  commentId: Overload:Pulumi.Union`2.ToString
+  isSpec: "True"
+  fullName: Pulumi.Union<T0, T1>.ToString
+  fullName.vb: Pulumi.Union(Of T0, T1).ToString
+  nameWithType: Union<T0, T1>.ToString
+  nameWithType.vb: Union(Of T0, T1).ToString
+- uid: Pulumi.Union`2.TryPickT0(`0@,`1@)
+  name: TryPickT0(out T0, out T1)
+  href: Pulumi/Pulumi.Union-2.html#Pulumi_Union_2_TryPickT0__0___1__
+  commentId: M:Pulumi.Union`2.TryPickT0(`0@,`1@)
+  name.vb: TryPickT0(ByRef T0, ByRef T1)
+  fullName: Pulumi.Union<T0, T1>.TryPickT0(out T0, out T1)
+  fullName.vb: Pulumi.Union(Of T0, T1).TryPickT0(ByRef T0, ByRef T1)
+  nameWithType: Union<T0, T1>.TryPickT0(out T0, out T1)
+  nameWithType.vb: Union(Of T0, T1).TryPickT0(ByRef T0, ByRef T1)
+- uid: Pulumi.Union`2.TryPickT0*
+  name: TryPickT0
+  href: Pulumi/Pulumi.Union-2.html#Pulumi_Union_2_TryPickT0_
+  commentId: Overload:Pulumi.Union`2.TryPickT0
+  isSpec: "True"
+  fullName: Pulumi.Union<T0, T1>.TryPickT0
+  fullName.vb: Pulumi.Union(Of T0, T1).TryPickT0
+  nameWithType: Union<T0, T1>.TryPickT0
+  nameWithType.vb: Union(Of T0, T1).TryPickT0
+- uid: Pulumi.Union`2.TryPickT1(`1@,`0@)
+  name: TryPickT1(out T1, out T0)
+  href: Pulumi/Pulumi.Union-2.html#Pulumi_Union_2_TryPickT1__1___0__
+  commentId: M:Pulumi.Union`2.TryPickT1(`1@,`0@)
+  name.vb: TryPickT1(ByRef T1, ByRef T0)
+  fullName: Pulumi.Union<T0, T1>.TryPickT1(out T1, out T0)
+  fullName.vb: Pulumi.Union(Of T0, T1).TryPickT1(ByRef T1, ByRef T0)
+  nameWithType: Union<T0, T1>.TryPickT1(out T1, out T0)
+  nameWithType.vb: Union(Of T0, T1).TryPickT1(ByRef T1, ByRef T0)
+- uid: Pulumi.Union`2.TryPickT1*
+  name: TryPickT1
+  href: Pulumi/Pulumi.Union-2.html#Pulumi_Union_2_TryPickT1_
+  commentId: Overload:Pulumi.Union`2.TryPickT1
+  isSpec: "True"
+  fullName: Pulumi.Union<T0, T1>.TryPickT1
+  fullName.vb: Pulumi.Union(Of T0, T1).TryPickT1
+  nameWithType: Union<T0, T1>.TryPickT1
+  nameWithType.vb: Union(Of T0, T1).TryPickT1
+- uid: Pulumi.Union`2.Value
+  name: Value
+  href: Pulumi/Pulumi.Union-2.html#Pulumi_Union_2_Value
+  commentId: P:Pulumi.Union`2.Value
+  fullName: Pulumi.Union<T0, T1>.Value
+  fullName.vb: Pulumi.Union(Of T0, T1).Value
+  nameWithType: Union<T0, T1>.Value
+  nameWithType.vb: Union(Of T0, T1).Value
+- uid: Pulumi.Union`2.Value*
+  name: Value
+  href: Pulumi/Pulumi.Union-2.html#Pulumi_Union_2_Value_
+  commentId: Overload:Pulumi.Union`2.Value
+  isSpec: "True"
+  fullName: Pulumi.Union<T0, T1>.Value
+  fullName.vb: Pulumi.Union(Of T0, T1).Value
+  nameWithType: Union<T0, T1>.Value
+  nameWithType.vb: Union(Of T0, T1).Value
+- uid: Pulumi.Urn
+  name: Urn
+  href: Pulumi/Pulumi.Urn.html
+  commentId: T:Pulumi.Urn
+  fullName: Pulumi.Urn
+  nameWithType: Urn
+- uid: Pulumi.Urn.Create(Pulumi.Input{System.String},Pulumi.Input{System.String},Pulumi.Resource,Pulumi.Input{System.String},Pulumi.Input{System.String},Pulumi.Input{System.String})
+  name: Create(Input<String>, Input<String>, Resource, Input<String>, Input<String>, Input<String>)
+  href: Pulumi/Pulumi.Urn.html#Pulumi_Urn_Create_Pulumi_Input_System_String__Pulumi_Input_System_String__Pulumi_Resource_Pulumi_Input_System_String__Pulumi_Input_System_String__Pulumi_Input_System_String__
+  commentId: M:Pulumi.Urn.Create(Pulumi.Input{System.String},Pulumi.Input{System.String},Pulumi.Resource,Pulumi.Input{System.String},Pulumi.Input{System.String},Pulumi.Input{System.String})
+  name.vb: Create(Input(Of String), Input(Of String), Resource, Input(Of String), Input(Of String), Input(Of String))
+  fullName: Pulumi.Urn.Create(Pulumi.Input<System.String>, Pulumi.Input<System.String>, Pulumi.Resource, Pulumi.Input<System.String>, Pulumi.Input<System.String>, Pulumi.Input<System.String>)
+  fullName.vb: Pulumi.Urn.Create(Pulumi.Input(Of System.String), Pulumi.Input(Of System.String), Pulumi.Resource, Pulumi.Input(Of System.String), Pulumi.Input(Of System.String), Pulumi.Input(Of System.String))
+  nameWithType: Urn.Create(Input<String>, Input<String>, Resource, Input<String>, Input<String>, Input<String>)
+  nameWithType.vb: Urn.Create(Input(Of String), Input(Of String), Resource, Input(Of String), Input(Of String), Input(Of String))
+- uid: Pulumi.Urn.Create*
+  name: Create
+  href: Pulumi/Pulumi.Urn.html#Pulumi_Urn_Create_
+  commentId: Overload:Pulumi.Urn.Create
+  isSpec: "True"
+  fullName: Pulumi.Urn.Create
+  nameWithType: Urn.Create
