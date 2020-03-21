@@ -29,6 +29,11 @@ anything, please consult the source <a class="reference external" href="https://
 <dd></dd></dl>
 
 <dl class="class">
+<dt id="pulumi_alicloud.fc.AwaitableGetZonesResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.fc.</code><code class="sig-name descname">AwaitableGetZonesResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">zones=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.fc.AwaitableGetZonesResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_alicloud.fc.Function">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.fc.</code><code class="sig-name descname">Function</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">code_checksum=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">environment_variables=None</em>, <em class="sig-param">filename=None</em>, <em class="sig-param">handler=None</em>, <em class="sig-param">memory_size=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">oss_bucket=None</em>, <em class="sig-param">oss_key=None</em>, <em class="sig-param">runtime=None</em>, <em class="sig-param">service=None</em>, <em class="sig-param">timeout=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.fc.Function" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a Function resource with the given unique name, props, and options.
@@ -293,6 +298,30 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.fc.GetTriggersResult.triggers">
 <code class="sig-name descname">triggers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.fc.GetTriggersResult.triggers" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of FC triggers. Each element contains the following attributes:</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_alicloud.fc.GetZonesResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.fc.</code><code class="sig-name descname">GetZonesResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">zones=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.fc.GetZonesResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getZones.</p>
+<dl class="attribute">
+<dt id="pulumi_alicloud.fc.GetZonesResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.fc.GetZonesResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.fc.GetZonesResult.ids">
+<code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.fc.GetZonesResult.ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of zone IDs.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.fc.GetZonesResult.zones">
+<code class="sig-name descname">zones</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.fc.GetZonesResult.zones" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of availability zones. Each element contains the following attributes:</p>
 </dd></dl>
 
 </dd></dl>
@@ -672,6 +701,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><p><strong>service_name</strong> (<em>str</em>) – FC service name.</p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_alicloud.fc.get_zones">
+<code class="sig-prename descclassname">pulumi_alicloud.fc.</code><code class="sig-name descname">get_zones</code><span class="sig-paren">(</span><em class="sig-param">output_file=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.fc.get_zones" title="Permalink to this definition">¶</a></dt>
+<dd><p>This data source provides availability zones for FunctionCompute that can be accessed by an Alibaba Cloud account within the region configured in the provider.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong> Available in v1.74.0+.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/fc_zones.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/fc_zones.html.markdown</a>.</p>
+</div></blockquote>
 </dd></dl>
 
 </div>

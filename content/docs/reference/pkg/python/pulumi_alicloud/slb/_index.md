@@ -320,6 +320,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd></dd></dl>
 
 <dl class="class">
+<dt id="pulumi_alicloud.slb.AwaitableGetZonesResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">AwaitableGetZonesResult</code><span class="sig-paren">(</span><em class="sig-param">available_slb_address_ip_version=None</em>, <em class="sig-param">available_slb_address_type=None</em>, <em class="sig-param">enable_details=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">zones=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.AwaitableGetZonesResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_alicloud.slb.BackendServer">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">BackendServer</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">backend_servers=None</em>, <em class="sig-param">delete_protection_validation=None</em>, <em class="sig-param">load_balancer_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.BackendServer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add a group of backend servers (ECS or ENI instance) to the Server Load Balancer or remove them from it.</p>
@@ -1015,6 +1020,30 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.slb.GetServerGroupsResult.slb_server_groups">
 <code class="sig-name descname">slb_server_groups</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.slb.GetServerGroupsResult.slb_server_groups" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of SLB VServer groups. Each element contains the following attributes:</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_alicloud.slb.GetZonesResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">GetZonesResult</code><span class="sig-paren">(</span><em class="sig-param">available_slb_address_ip_version=None</em>, <em class="sig-param">available_slb_address_type=None</em>, <em class="sig-param">enable_details=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">zones=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.GetZonesResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getZones.</p>
+<dl class="attribute">
+<dt id="pulumi_alicloud.slb.GetZonesResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.slb.GetZonesResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.slb.GetZonesResult.ids">
+<code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.slb.GetZonesResult.ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of zone IDs.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.slb.GetZonesResult.zones">
+<code class="sig-name descname">zones</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.slb.GetZonesResult.zones" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of availability zones. Each element contains the following attributes:</p>
 </dd></dl>
 
 </dd></dl>
@@ -2590,6 +2619,25 @@ tagKey2 = &quot;tagValue2&quot;
 <li><p><strong>ids</strong> (<em>list</em>) – A list of VServer group IDs to filter results.</p></li>
 <li><p><strong>load_balancer_id</strong> (<em>str</em>) – ID of the SLB.</p></li>
 <li><p><strong>name_regex</strong> (<em>str</em>) – A regex string to filter results by VServer group name.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_alicloud.slb.get_zones">
+<code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">get_zones</code><span class="sig-paren">(</span><em class="sig-param">available_slb_address_ip_version=None</em>, <em class="sig-param">available_slb_address_type=None</em>, <em class="sig-param">enable_details=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.get_zones" title="Permalink to this definition">¶</a></dt>
+<dd><p>This data source provides availability zones for SLB that can be accessed by an Alibaba Cloud account within the region configured in the provider.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong> Available in v1.73.0+.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_zones.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_zones.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>available_slb_address_ip_version</strong> (<em>str</em>) – Filter the results by a slb instance address version. Can be either <code class="docutils literal notranslate"><span class="pre">ipv4</span></code>, or <code class="docutils literal notranslate"><span class="pre">ipv6</span></code>.</p></li>
+<li><p><strong>available_slb_address_type</strong> (<em>str</em>) – Filter the results by a slb instance address type. Can be either <code class="docutils literal notranslate"><span class="pre">Vpc</span></code>, <code class="docutils literal notranslate"><span class="pre">classic_internet</span></code> or <code class="docutils literal notranslate"><span class="pre">classic_intranet</span></code></p></li>
+<li><p><strong>enable_details</strong> (<em>bool</em>) – Default to false and only output <code class="docutils literal notranslate"><span class="pre">id</span></code> in the <code class="docutils literal notranslate"><span class="pre">zones</span></code> block. Set it to true can output more details.</p></li>
 </ul>
 </dd>
 </dl>

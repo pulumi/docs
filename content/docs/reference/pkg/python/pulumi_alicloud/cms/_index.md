@@ -28,7 +28,7 @@ Details for <a class="reference external" href="https://www.alibabacloud.com/hel
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>contact_groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List contact groups of the alarm rule, which must have been created on the console.</p></li>
 <li><p><strong>dimensions</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Map of the resources associated with the alarm rule, such as “instanceId”, “device” and “port”. Each key’s value is a string and it uses comma to split multiple items. For more information, see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/28619.htm">Metrics Reference</a>.</p></li>
-<li><p><strong>effective_interval</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The interval of effecting alarm rule. It foramt as “hh:mm-hh:mm”, like “0:00-4:00”. Default to “0:00-24:00”.</p></li>
+<li><p><strong>effective_interval</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The interval of effecting alarm rule. It foramt as “hh:mm-hh:mm”, like “0:00-4:00”. Default to “00:00-23:59”.</p></li>
 <li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable alarm rule. Default to true.</p></li>
 </ul>
 </dd>
@@ -70,7 +70,7 @@ Details for <a class="reference external" href="https://www.alibabacloud.com/hel
 <dl class="attribute">
 <dt id="pulumi_alicloud.cms.Alarm.effective_interval">
 <code class="sig-name descname">effective_interval</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cms.Alarm.effective_interval" title="Permalink to this definition">¶</a></dt>
-<dd><p>The interval of effecting alarm rule. It foramt as “hh:mm-hh:mm”, like “0:00-4:00”. Default to “0:00-24:00”.</p>
+<dd><p>The interval of effecting alarm rule. It foramt as “hh:mm-hh:mm”, like “0:00-4:00”. Default to “00:00-23:59”.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -168,7 +168,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>contact_groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List contact groups of the alarm rule, which must have been created on the console.</p></li>
 <li><p><strong>dimensions</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>Map of the resources associated with the alarm rule, such as “instanceId”, “device” and “port”. Each key’s value is a string and it uses comma to split multiple items. For more information, see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/28619.htm">Metrics Reference</a>.</p>
 </p></li>
-<li><p><strong>effective_interval</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The interval of effecting alarm rule. It foramt as “hh:mm-hh:mm”, like “0:00-4:00”. Default to “0:00-24:00”.</p></li>
+<li><p><strong>effective_interval</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The interval of effecting alarm rule. It foramt as “hh:mm-hh:mm”, like “0:00-4:00”. Default to “00:00-23:59”.</p></li>
 <li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable alarm rule. Default to true.</p></li>
 </ul>
 </dd>
