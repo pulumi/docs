@@ -18,6 +18,9 @@ anything, please consult the source <a class="reference external" href="https://
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">ActiveDirectory</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_mode=None</em>, <em class="sig-param">allowed_principal_ids=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">certificate=None</em>, <em class="sig-param">connection_timeout=None</em>, <em class="sig-param">default_login_domain=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">group_dn_attribute=None</em>, <em class="sig-param">group_member_mapping_attribute=None</em>, <em class="sig-param">group_member_user_attribute=None</em>, <em class="sig-param">group_name_attribute=None</em>, <em class="sig-param">group_object_class=None</em>, <em class="sig-param">group_search_attribute=None</em>, <em class="sig-param">group_search_base=None</em>, <em class="sig-param">group_search_filter=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">nested_group_membership_enabled=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">servers=None</em>, <em class="sig-param">service_account_password=None</em>, <em class="sig-param">service_account_username=None</em>, <em class="sig-param">tls=None</em>, <em class="sig-param">user_disabled_bit_mask=None</em>, <em class="sig-param">user_enabled_attribute=None</em>, <em class="sig-param">user_login_attribute=None</em>, <em class="sig-param">user_name_attribute=None</em>, <em class="sig-param">user_object_class=None</em>, <em class="sig-param">user_search_attribute=None</em>, <em class="sig-param">user_search_base=None</em>, <em class="sig-param">user_search_filter=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.ActiveDirectory" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Auth Config ActiveDirectory resource. This can be used to configure and enable Auth Config ActiveDirectory for Rancher v2 RKE clusters and retrieve their information.</p>
 <p>In addition to the built-in local auth, only one external auth config provider can be enabled at a time.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/authConfigActiveDirectory.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/authConfigActiveDirectory.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -56,9 +59,6 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/auth_config_activedirectory.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/auth_config_activedirectory.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_rancher2.ActiveDirectory.access_mode">
 <code class="sig-name descname">access_mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.ActiveDirectory.access_mode" title="Permalink to this definition">¶</a></dt>
@@ -297,9 +297,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/auth_config_activedirectory.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/auth_config_activedirectory.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -343,18 +340,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_rancher2.App">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">App</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">answers=None</em>, <em class="sig-param">catalog_name=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">force_upgrade=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">revision_id=None</em>, <em class="sig-param">target_namespace=None</em>, <em class="sig-param">template_name=None</em>, <em class="sig-param">template_version=None</em>, <em class="sig-param">values_yaml=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.App" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a App resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>annotations</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Annotations for App object (map)</p></li>
-<li><p><strong>answers</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Answers for the app template. If modified, app will be upgraded (map)</p></li>
-<li><p><strong>catalog_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Catalog name of the app. If modified, app will be upgraded. For use scoped catalogs:</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a App resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[dict] annotations: Annotations for App object (map)
+:param pulumi.Input[dict] answers: Answers for the app template. If modified, app will be upgraded (map)
+:param pulumi.Input[str] catalog_name: Catalog name of the app. If modified, app will be upgraded. For use scoped catalogs:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* add cluster ID before name, `c-XXXXX:&lt;name&gt;`
 * add project ID before name, `p-XXXXX:&lt;name&gt;`
 </pre></div>
@@ -375,9 +366,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/app.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/app.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_rancher2.App.annotations">
 <code class="sig-name descname">annotations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.App.annotations" title="Permalink to this definition">¶</a></dt>
@@ -504,9 +492,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/app.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/app.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -552,6 +537,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AuthConfigAdfs</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_mode=None</em>, <em class="sig-param">allowed_principal_ids=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">display_name_field=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">groups_field=None</em>, <em class="sig-param">idp_metadata_content=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">rancher_api_host=None</em>, <em class="sig-param">sp_cert=None</em>, <em class="sig-param">sp_key=None</em>, <em class="sig-param">uid_field=None</em>, <em class="sig-param">user_name_field=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AuthConfigAdfs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Auth Config ADFS resource. This can be used to configure and enable Auth Config ADFS for Rancher v2 RKE clusters and retrieve their information.</p>
 <p>In addition to the built-in local auth, only one external auth config provider can be enabled at a time.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/authConfigADFS.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/authConfigADFS.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -573,9 +561,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/auth_config_adfs.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/auth_config_adfs.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_rancher2.AuthConfigAdfs.access_mode">
 <code class="sig-name descname">access_mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.AuthConfigAdfs.access_mode" title="Permalink to this definition">¶</a></dt>
@@ -695,9 +680,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/auth_config_adfs.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/auth_config_adfs.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -743,6 +725,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AuthConfigAzureAd</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_mode=None</em>, <em class="sig-param">allowed_principal_ids=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">application_id=None</em>, <em class="sig-param">application_secret=None</em>, <em class="sig-param">auth_endpoint=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">endpoint=None</em>, <em class="sig-param">graph_endpoint=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">rancher_url=None</em>, <em class="sig-param">tenant_id=None</em>, <em class="sig-param">token_endpoint=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AuthConfigAzureAd" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Auth Config AzureAD resource. This can be used to configure and enable Auth Config AzureAD for Rancher v2 RKE clusters and retrieve their information.</p>
 <p>In addition to the built-in local auth, only one external auth config provider can be enabled at a time.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/authConfigAzureAD.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/authConfigAzureAD.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -764,9 +749,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/auth_config_azuread.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/auth_config_azuread.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_rancher2.AuthConfigAzureAd.access_mode">
 <code class="sig-name descname">access_mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.AuthConfigAzureAd.access_mode" title="Permalink to this definition">¶</a></dt>
@@ -886,9 +868,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/auth_config_azuread.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/auth_config_azuread.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -934,6 +913,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AuthConfigFreeIpa</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_mode=None</em>, <em class="sig-param">allowed_principal_ids=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">certificate=None</em>, <em class="sig-param">connection_timeout=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">group_dn_attribute=None</em>, <em class="sig-param">group_member_mapping_attribute=None</em>, <em class="sig-param">group_member_user_attribute=None</em>, <em class="sig-param">group_name_attribute=None</em>, <em class="sig-param">group_object_class=None</em>, <em class="sig-param">group_search_attribute=None</em>, <em class="sig-param">group_search_base=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">nested_group_membership_enabled=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">servers=None</em>, <em class="sig-param">service_account_distinguished_name=None</em>, <em class="sig-param">service_account_password=None</em>, <em class="sig-param">tls=None</em>, <em class="sig-param">user_disabled_bit_mask=None</em>, <em class="sig-param">user_enabled_attribute=None</em>, <em class="sig-param">user_login_attribute=None</em>, <em class="sig-param">user_member_attribute=None</em>, <em class="sig-param">user_name_attribute=None</em>, <em class="sig-param">user_object_class=None</em>, <em class="sig-param">user_search_attribute=None</em>, <em class="sig-param">user_search_base=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AuthConfigFreeIpa" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Auth Config FreeIpa resource. This can be used to configure and enable Auth Config FreeIpa for Rancher v2 RKE clusters and retrieve their information.</p>
 <p>In addition to the built-in local auth, only one external auth config provider can be enabled at a time.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/authConfigFreeIpa.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/authConfigFreeIpa.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -970,9 +952,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/auth_config_freeipa.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/auth_config_freeipa.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_rancher2.AuthConfigFreeIpa.access_mode">
 <code class="sig-name descname">access_mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.AuthConfigFreeIpa.access_mode" title="Permalink to this definition">¶</a></dt>
@@ -1197,9 +1176,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/auth_config_freeipa.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/auth_config_freeipa.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1245,6 +1221,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AuthConfigGithub</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_mode=None</em>, <em class="sig-param">allowed_principal_ids=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">client_id=None</em>, <em class="sig-param">client_secret=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">hostname=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">tls=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AuthConfigGithub" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Auth Config Github resource. This can be used to configure and enable Auth Config Github for Rancher v2 RKE clusters and retrieve their information.</p>
 <p>In addition to the built-in local auth, only one external auth config provider can be enabled at a time.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/authConfigGithub.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/authConfigGithub.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1262,9 +1241,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/auth_config_github.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/auth_config_github.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_rancher2.AuthConfigGithub.access_mode">
 <code class="sig-name descname">access_mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.AuthConfigGithub.access_mode" title="Permalink to this definition">¶</a></dt>
@@ -1356,9 +1332,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/auth_config_github.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/auth_config_github.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1404,6 +1377,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AuthConfigKeycloak</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_mode=None</em>, <em class="sig-param">allowed_principal_ids=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">display_name_field=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">groups_field=None</em>, <em class="sig-param">idp_metadata_content=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">rancher_api_host=None</em>, <em class="sig-param">sp_cert=None</em>, <em class="sig-param">sp_key=None</em>, <em class="sig-param">uid_field=None</em>, <em class="sig-param">user_name_field=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AuthConfigKeycloak" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Auth Config KeyCloak resource. This can be used to configure and enable Auth Config KeyCloak for Rancher v2 RKE clusters and retrieve their information.</p>
 <p>In addition to the built-in local auth, only one external auth config provider can be enabled at a time.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/authConfigKeyCloak.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/authConfigKeyCloak.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1425,9 +1401,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/auth_config_keycloak.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/auth_config_keycloak.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_rancher2.AuthConfigKeycloak.access_mode">
 <code class="sig-name descname">access_mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.AuthConfigKeycloak.access_mode" title="Permalink to this definition">¶</a></dt>
@@ -1547,9 +1520,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/auth_config_keycloak.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/auth_config_keycloak.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1595,6 +1565,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AuthConfigOkta</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_mode=None</em>, <em class="sig-param">allowed_principal_ids=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">display_name_field=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">groups_field=None</em>, <em class="sig-param">idp_metadata_content=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">rancher_api_host=None</em>, <em class="sig-param">sp_cert=None</em>, <em class="sig-param">sp_key=None</em>, <em class="sig-param">uid_field=None</em>, <em class="sig-param">user_name_field=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AuthConfigOkta" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Auth Config OKTA resource. This can be used to configure and enable Auth Config OKTA for Rancher v2 RKE clusters and retrieve their information.</p>
 <p>In addition to the built-in local auth, only one external auth config provider can be enabled at a time.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/authConfigOKTA.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/authConfigOKTA.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1616,9 +1589,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/auth_config_okta.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/auth_config_okta.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_rancher2.AuthConfigOkta.access_mode">
 <code class="sig-name descname">access_mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.AuthConfigOkta.access_mode" title="Permalink to this definition">¶</a></dt>
@@ -1738,9 +1708,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/auth_config_okta.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/auth_config_okta.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1786,6 +1753,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AuthConfigOpenLdap</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_mode=None</em>, <em class="sig-param">allowed_principal_ids=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">certificate=None</em>, <em class="sig-param">connection_timeout=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">group_dn_attribute=None</em>, <em class="sig-param">group_member_mapping_attribute=None</em>, <em class="sig-param">group_member_user_attribute=None</em>, <em class="sig-param">group_name_attribute=None</em>, <em class="sig-param">group_object_class=None</em>, <em class="sig-param">group_search_attribute=None</em>, <em class="sig-param">group_search_base=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">nested_group_membership_enabled=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">servers=None</em>, <em class="sig-param">service_account_distinguished_name=None</em>, <em class="sig-param">service_account_password=None</em>, <em class="sig-param">tls=None</em>, <em class="sig-param">user_disabled_bit_mask=None</em>, <em class="sig-param">user_enabled_attribute=None</em>, <em class="sig-param">user_login_attribute=None</em>, <em class="sig-param">user_member_attribute=None</em>, <em class="sig-param">user_name_attribute=None</em>, <em class="sig-param">user_object_class=None</em>, <em class="sig-param">user_search_attribute=None</em>, <em class="sig-param">user_search_base=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AuthConfigOpenLdap" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Auth Config OpenLdap resource. This can be used to configure and enable Auth Config OpenLdap for Rancher v2 RKE clusters and retrieve their information.</p>
 <p>In addition to the built-in local auth, only one external auth config provider can be enabled at a time.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/authConfigOpenLdap.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/authConfigOpenLdap.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1822,9 +1792,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/auth_config_openldap.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/auth_config_openldap.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_rancher2.AuthConfigOpenLdap.access_mode">
 <code class="sig-name descname">access_mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.AuthConfigOpenLdap.access_mode" title="Permalink to this definition">¶</a></dt>
@@ -2049,9 +2016,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/auth_config_openldap.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/auth_config_openldap.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2097,6 +2061,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AuthConfigPing</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_mode=None</em>, <em class="sig-param">allowed_principal_ids=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">display_name_field=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">groups_field=None</em>, <em class="sig-param">idp_metadata_content=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">rancher_api_host=None</em>, <em class="sig-param">sp_cert=None</em>, <em class="sig-param">sp_key=None</em>, <em class="sig-param">uid_field=None</em>, <em class="sig-param">user_name_field=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AuthConfigPing" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Auth Config Ping resource. This can be used to configure and enable Auth Config Ping for Rancher v2 RKE clusters and retrieve their information.</p>
 <p>In addition to the built-in local auth, only one external auth config provider can be enabled at a time.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/authConfigPing.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/authConfigPing.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2118,9 +2085,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/auth_config_ping.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/auth_config_ping.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_rancher2.AuthConfigPing.access_mode">
 <code class="sig-name descname">access_mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.AuthConfigPing.access_mode" title="Permalink to this definition">¶</a></dt>
@@ -2240,9 +2204,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/auth_config_ping.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/auth_config_ping.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2285,169 +2246,160 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_rancher2.AwaitableGetAppResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetAppResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">answers=None</em>, <em class="sig-param">catalog_name=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">external_id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">revision_id=None</em>, <em class="sig-param">target_namespace=None</em>, <em class="sig-param">template_name=None</em>, <em class="sig-param">template_version=None</em>, <em class="sig-param">values_yaml=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetAppResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetAppResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">answers=None</em>, <em class="sig-param">catalog_name=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">external_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">revision_id=None</em>, <em class="sig-param">target_namespace=None</em>, <em class="sig-param">template_name=None</em>, <em class="sig-param">template_version=None</em>, <em class="sig-param">values_yaml=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetAppResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_rancher2.AwaitableGetCatalogResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetCatalogResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">branch=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">kind=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">scope=None</em>, <em class="sig-param">url=None</em>, <em class="sig-param">username=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetCatalogResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetCatalogResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">branch=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">kind=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">scope=None</em>, <em class="sig-param">url=None</em>, <em class="sig-param">username=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetCatalogResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_rancher2.AwaitableGetCertificateResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetCertificateResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">certs=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_id=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetCertificateResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetCertificateResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">certs=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_id=None</em>, <em class="sig-param">project_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetCertificateResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_rancher2.AwaitableGetCloudCredentialResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetCloudCredentialResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetCloudCredentialResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetCloudCredentialResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetCloudCredentialResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_rancher2.AwaitableGetClusterAlertGroupResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetClusterAlertGroupResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">group_interval_seconds=None</em>, <em class="sig-param">group_wait_seconds=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">recipients=None</em>, <em class="sig-param">repeat_interval_seconds=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetClusterAlertGroupResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetClusterAlertGroupResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">group_interval_seconds=None</em>, <em class="sig-param">group_wait_seconds=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">recipients=None</em>, <em class="sig-param">repeat_interval_seconds=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetClusterAlertGroupResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_rancher2.AwaitableGetClusterAlterRuleResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetClusterAlterRuleResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">event_rule=None</em>, <em class="sig-param">group_id=None</em>, <em class="sig-param">group_interval_seconds=None</em>, <em class="sig-param">group_wait_seconds=None</em>, <em class="sig-param">inherited=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">metric_rule=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">node_rule=None</em>, <em class="sig-param">repeat_interval_seconds=None</em>, <em class="sig-param">severity=None</em>, <em class="sig-param">system_service_rule=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetClusterAlterRuleResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetClusterAlterRuleResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">event_rule=None</em>, <em class="sig-param">group_id=None</em>, <em class="sig-param">group_interval_seconds=None</em>, <em class="sig-param">group_wait_seconds=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">inherited=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">metric_rule=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">node_rule=None</em>, <em class="sig-param">repeat_interval_seconds=None</em>, <em class="sig-param">severity=None</em>, <em class="sig-param">system_service_rule=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetClusterAlterRuleResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_rancher2.AwaitableGetClusterDriverResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetClusterDriverResult</code><span class="sig-paren">(</span><em class="sig-param">active=None</em>, <em class="sig-param">actual_url=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">builtin=None</em>, <em class="sig-param">checksum=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">ui_url=None</em>, <em class="sig-param">url=None</em>, <em class="sig-param">whitelist_domains=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetClusterDriverResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetClusterDriverResult</code><span class="sig-paren">(</span><em class="sig-param">active=None</em>, <em class="sig-param">actual_url=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">builtin=None</em>, <em class="sig-param">checksum=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">ui_url=None</em>, <em class="sig-param">url=None</em>, <em class="sig-param">whitelist_domains=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetClusterDriverResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_rancher2.AwaitableGetClusterLoggingResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetClusterLoggingResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">elasticsearch_config=None</em>, <em class="sig-param">fluentd_config=None</em>, <em class="sig-param">kafka_config=None</em>, <em class="sig-param">kind=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_id=None</em>, <em class="sig-param">output_flush_interval=None</em>, <em class="sig-param">output_tags=None</em>, <em class="sig-param">splunk_config=None</em>, <em class="sig-param">syslog_config=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetClusterLoggingResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetClusterLoggingResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">elasticsearch_config=None</em>, <em class="sig-param">fluentd_config=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">kafka_config=None</em>, <em class="sig-param">kind=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_id=None</em>, <em class="sig-param">output_flush_interval=None</em>, <em class="sig-param">output_tags=None</em>, <em class="sig-param">splunk_config=None</em>, <em class="sig-param">syslog_config=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetClusterLoggingResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_rancher2.AwaitableGetClusterResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetClusterResult</code><span class="sig-paren">(</span><em class="sig-param">aks_config=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_auth_endpoint=None</em>, <em class="sig-param">cluster_monitoring_input=None</em>, <em class="sig-param">cluster_registration_token=None</em>, <em class="sig-param">cluster_template_answers=None</em>, <em class="sig-param">cluster_template_id=None</em>, <em class="sig-param">cluster_template_questions=None</em>, <em class="sig-param">cluster_template_revision_id=None</em>, <em class="sig-param">default_pod_security_policy_template_id=None</em>, <em class="sig-param">default_project_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">driver=None</em>, <em class="sig-param">eks_config=None</em>, <em class="sig-param">enable_cluster_alerting=None</em>, <em class="sig-param">enable_cluster_monitoring=None</em>, <em class="sig-param">enable_network_policy=None</em>, <em class="sig-param">gke_config=None</em>, <em class="sig-param">kube_config=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">rke_config=None</em>, <em class="sig-param">system_project_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetClusterResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetClusterResult</code><span class="sig-paren">(</span><em class="sig-param">aks_config=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_auth_endpoint=None</em>, <em class="sig-param">cluster_monitoring_input=None</em>, <em class="sig-param">cluster_registration_token=None</em>, <em class="sig-param">cluster_template_answers=None</em>, <em class="sig-param">cluster_template_id=None</em>, <em class="sig-param">cluster_template_questions=None</em>, <em class="sig-param">cluster_template_revision_id=None</em>, <em class="sig-param">default_pod_security_policy_template_id=None</em>, <em class="sig-param">default_project_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">driver=None</em>, <em class="sig-param">eks_config=None</em>, <em class="sig-param">enable_cluster_alerting=None</em>, <em class="sig-param">enable_cluster_monitoring=None</em>, <em class="sig-param">enable_network_policy=None</em>, <em class="sig-param">gke_config=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">kube_config=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">rke_config=None</em>, <em class="sig-param">system_project_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetClusterResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_rancher2.AwaitableGetClusterRoleTemplateBindingResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetClusterRoleTemplateBindingResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">group_id=None</em>, <em class="sig-param">group_principal_id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">role_template_id=None</em>, <em class="sig-param">user_id=None</em>, <em class="sig-param">user_principal_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetClusterRoleTemplateBindingResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetClusterRoleTemplateBindingResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">group_id=None</em>, <em class="sig-param">group_principal_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">role_template_id=None</em>, <em class="sig-param">user_id=None</em>, <em class="sig-param">user_principal_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetClusterRoleTemplateBindingResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_rancher2.AwaitableGetClusterTemplateResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetClusterTemplateResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">default_revision_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">members=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">template_revisions=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetClusterTemplateResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetClusterTemplateResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">default_revision_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">members=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">template_revisions=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetClusterTemplateResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_rancher2.AwaitableGetEtcdBackupResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetEtcdBackupResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">backup_config=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">filename=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">manual=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetEtcdBackupResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetEtcdBackupResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">backup_config=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">filename=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">manual=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetEtcdBackupResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_rancher2.AwaitableGetGlobalRoleBindingResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetGlobalRoleBindingResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">global_role_id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">user_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetGlobalRoleBindingResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetGlobalRoleBindingResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">global_role_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">user_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetGlobalRoleBindingResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_rancher2.AwaitableGetMultiClusterAppResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetMultiClusterAppResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">answers=None</em>, <em class="sig-param">catalog_name=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">members=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">revision_history_limit=None</em>, <em class="sig-param">revision_id=None</em>, <em class="sig-param">roles=None</em>, <em class="sig-param">targets=None</em>, <em class="sig-param">template_name=None</em>, <em class="sig-param">template_version=None</em>, <em class="sig-param">template_version_id=None</em>, <em class="sig-param">upgrade_strategies=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetMultiClusterAppResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetMultiClusterAppResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">answers=None</em>, <em class="sig-param">catalog_name=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">members=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">revision_history_limit=None</em>, <em class="sig-param">revision_id=None</em>, <em class="sig-param">roles=None</em>, <em class="sig-param">targets=None</em>, <em class="sig-param">template_name=None</em>, <em class="sig-param">template_version=None</em>, <em class="sig-param">template_version_id=None</em>, <em class="sig-param">upgrade_strategies=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetMultiClusterAppResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_rancher2.AwaitableGetNamespaceResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetNamespaceResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">container_resource_limit=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">resource_quota=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetNamespaceResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetNamespaceResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">container_resource_limit=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">resource_quota=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetNamespaceResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_rancher2.AwaitableGetNodeDriverResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetNodeDriverResult</code><span class="sig-paren">(</span><em class="sig-param">active=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">builtin=None</em>, <em class="sig-param">checksum=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">external_id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">ui_url=None</em>, <em class="sig-param">url=None</em>, <em class="sig-param">whitelist_domains=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetNodeDriverResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetNodeDriverResult</code><span class="sig-paren">(</span><em class="sig-param">active=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">builtin=None</em>, <em class="sig-param">checksum=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">external_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">ui_url=None</em>, <em class="sig-param">url=None</em>, <em class="sig-param">whitelist_domains=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetNodeDriverResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_rancher2.AwaitableGetNodePoolResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetNodePoolResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">control_plane=None</em>, <em class="sig-param">etcd=None</em>, <em class="sig-param">hostname_prefix=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">node_template_id=None</em>, <em class="sig-param">quantity=None</em>, <em class="sig-param">worker=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetNodePoolResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetNodePoolResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">control_plane=None</em>, <em class="sig-param">delete_not_ready_after_secs=None</em>, <em class="sig-param">etcd=None</em>, <em class="sig-param">hostname_prefix=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">node_taints=None</em>, <em class="sig-param">node_template_id=None</em>, <em class="sig-param">quantity=None</em>, <em class="sig-param">worker=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetNodePoolResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_rancher2.AwaitableGetNodeTemplateResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetNodeTemplateResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">cloud_credential_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">driver=None</em>, <em class="sig-param">engine_env=None</em>, <em class="sig-param">engine_insecure_registries=None</em>, <em class="sig-param">engine_install_url=None</em>, <em class="sig-param">engine_label=None</em>, <em class="sig-param">engine_opt=None</em>, <em class="sig-param">engine_registry_mirrors=None</em>, <em class="sig-param">engine_storage_driver=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">use_internal_ip_address=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetNodeTemplateResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetNodeTemplateResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">cloud_credential_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">driver=None</em>, <em class="sig-param">engine_env=None</em>, <em class="sig-param">engine_insecure_registries=None</em>, <em class="sig-param">engine_install_url=None</em>, <em class="sig-param">engine_label=None</em>, <em class="sig-param">engine_opt=None</em>, <em class="sig-param">engine_registry_mirrors=None</em>, <em class="sig-param">engine_storage_driver=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">use_internal_ip_address=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetNodeTemplateResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_rancher2.AwaitableGetNotifierResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetNotifierResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">pagerduty_config=None</em>, <em class="sig-param">slack_config=None</em>, <em class="sig-param">smtp_config=None</em>, <em class="sig-param">webhook_config=None</em>, <em class="sig-param">wechat_config=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetNotifierResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetNotifierResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">pagerduty_config=None</em>, <em class="sig-param">slack_config=None</em>, <em class="sig-param">smtp_config=None</em>, <em class="sig-param">webhook_config=None</em>, <em class="sig-param">wechat_config=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetNotifierResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_rancher2.AwaitableGetProjectAlertGroupResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetProjectAlertGroupResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">group_interval_seconds=None</em>, <em class="sig-param">group_wait_seconds=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">recipients=None</em>, <em class="sig-param">repeat_interval_seconds=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetProjectAlertGroupResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetProjectAlertGroupResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">group_interval_seconds=None</em>, <em class="sig-param">group_wait_seconds=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">recipients=None</em>, <em class="sig-param">repeat_interval_seconds=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetProjectAlertGroupResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_rancher2.AwaitableGetProjectAlertRuleResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetProjectAlertRuleResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">group_id=None</em>, <em class="sig-param">group_interval_seconds=None</em>, <em class="sig-param">group_wait_seconds=None</em>, <em class="sig-param">inherited=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">metric_rule=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">pod_rule=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">repeat_interval_seconds=None</em>, <em class="sig-param">severity=None</em>, <em class="sig-param">workload_rule=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetProjectAlertRuleResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetProjectAlertRuleResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">group_id=None</em>, <em class="sig-param">group_interval_seconds=None</em>, <em class="sig-param">group_wait_seconds=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">inherited=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">metric_rule=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">pod_rule=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">repeat_interval_seconds=None</em>, <em class="sig-param">severity=None</em>, <em class="sig-param">workload_rule=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetProjectAlertRuleResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_rancher2.AwaitableGetProjectLoggingResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetProjectLoggingResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">elasticsearch_config=None</em>, <em class="sig-param">fluentd_config=None</em>, <em class="sig-param">kafka_config=None</em>, <em class="sig-param">kind=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_id=None</em>, <em class="sig-param">output_flush_interval=None</em>, <em class="sig-param">output_tags=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">splunk_config=None</em>, <em class="sig-param">syslog_config=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetProjectLoggingResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetProjectLoggingResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">elasticsearch_config=None</em>, <em class="sig-param">fluentd_config=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">kafka_config=None</em>, <em class="sig-param">kind=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_id=None</em>, <em class="sig-param">output_flush_interval=None</em>, <em class="sig-param">output_tags=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">splunk_config=None</em>, <em class="sig-param">syslog_config=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetProjectLoggingResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_rancher2.AwaitableGetProjectResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetProjectResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">container_resource_limit=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enable_project_monitoring=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">pod_security_policy_template_id=None</em>, <em class="sig-param">resource_quota=None</em>, <em class="sig-param">uuid=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetProjectResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetProjectResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">container_resource_limit=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enable_project_monitoring=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">pod_security_policy_template_id=None</em>, <em class="sig-param">resource_quota=None</em>, <em class="sig-param">uuid=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetProjectResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_rancher2.AwaitableGetProjectRoleTemplateBindingResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetProjectRoleTemplateBindingResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">group_id=None</em>, <em class="sig-param">group_principal_id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">role_template_id=None</em>, <em class="sig-param">user_id=None</em>, <em class="sig-param">user_principal_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetProjectRoleTemplateBindingResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetProjectRoleTemplateBindingResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">group_id=None</em>, <em class="sig-param">group_principal_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">role_template_id=None</em>, <em class="sig-param">user_id=None</em>, <em class="sig-param">user_principal_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetProjectRoleTemplateBindingResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_rancher2.AwaitableGetRegistryResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetRegistryResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_id=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">registries=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetRegistryResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetRegistryResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_id=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">registries=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetRegistryResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_rancher2.AwaitableGetRoleTempalteResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetRoleTempalteResult</code><span class="sig-paren">(</span><em class="sig-param">administrative=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">builtin=None</em>, <em class="sig-param">context=None</em>, <em class="sig-param">default_role=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">external=None</em>, <em class="sig-param">hidden=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">locked=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">role_template_ids=None</em>, <em class="sig-param">rules=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetRoleTempalteResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetRoleTempalteResult</code><span class="sig-paren">(</span><em class="sig-param">administrative=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">builtin=None</em>, <em class="sig-param">context=None</em>, <em class="sig-param">default_role=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">external=None</em>, <em class="sig-param">hidden=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">locked=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">role_template_ids=None</em>, <em class="sig-param">rules=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetRoleTempalteResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_rancher2.AwaitableGetSecretResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetSecretResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">data=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_id=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetSecretResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetSecretResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">data=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_id=None</em>, <em class="sig-param">project_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetSecretResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_rancher2.AwaitableGetSettingResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetSettingResult</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">value=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetSettingResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetSettingResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">value=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetSettingResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_rancher2.AwaitableGetUserResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetUserResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">principal_ids=None</em>, <em class="sig-param">username=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetUserResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetUserResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">is_external=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">principal_ids=None</em>, <em class="sig-param">username=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetUserResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_rancher2.Bootstrap">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">Bootstrap</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">current_password=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">telemetry=None</em>, <em class="sig-param">token_ttl=None</em>, <em class="sig-param">token_update=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.Bootstrap" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Bootstrap resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>current_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Current password for Admin user. Just needed for recover if admin password has been changed from other resources and token is expired (string)</p></li>
-<li><p><strong>password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Password for Admin user or random generated if empty (string)</p></li>
-<li><p><strong>telemetry</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Send telemetry anonymous data. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
-<li><p><strong>token_ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – TTL in seconds for generated admin token. Default: <code class="docutils literal notranslate"><span class="pre">0</span></code>  (int)</p></li>
-<li><p><strong>token_update</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Regenerate admin token. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
-</ul>
-</dd>
-</dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/bootstrap.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/bootstrap.html.markdown</a>.</p>
-</div></blockquote>
+<dd><p>Create a Bootstrap resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] current_password: Current password for Admin user. Just needed for recover if admin password has been changed from other resources and token is expired (string)
+:param pulumi.Input[str] password: Password for Admin user or random generated if empty (string)
+:param pulumi.Input[bool] telemetry: Send telemetry anonymous data. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)
+:param pulumi.Input[float] token_ttl: TTL in seconds for generated admin token. Default: <code class="docutils literal notranslate"><span class="pre">0</span></code>  (int)
+:param pulumi.Input[bool] token_update: Regenerate admin token. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p>
 <dl class="attribute">
 <dt id="pulumi_rancher2.Bootstrap.current_password">
 <code class="sig-name descname">current_password</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.Bootstrap.current_password" title="Permalink to this definition">¶</a></dt>
@@ -2539,9 +2491,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/bootstrap.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/bootstrap.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2584,8 +2533,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_rancher2.Catalog">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">Catalog</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">branch=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">kind=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">scope=None</em>, <em class="sig-param">url=None</em>, <em class="sig-param">username=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.Catalog" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">Catalog</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">branch=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">kind=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">refresh=None</em>, <em class="sig-param">scope=None</em>, <em class="sig-param">url=None</em>, <em class="sig-param">username=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.Catalog" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Catalog resource. This can be used to create cluster, global and/or project catalogs for Rancher v2 environments and retrieve their information.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/catalog.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/catalog.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2600,15 +2552,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the catalog (string)</p></li>
 <li><p><strong>password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The password to access the catalog if needed (string)</p></li>
 <li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project id of the catalog. Mandatory if <code class="docutils literal notranslate"><span class="pre">scope</span> <span class="pre">=</span> <span class="pre">project</span></code> (string)</p></li>
+<li><p><strong>refresh</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Catalog will wait for refresh after tf creation and on every tf read. Default <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
 <li><p><strong>scope</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The scope of the catalog. <code class="docutils literal notranslate"><span class="pre">cluster</span></code>, <code class="docutils literal notranslate"><span class="pre">global</span></code>, and <code class="docutils literal notranslate"><span class="pre">project</span></code> are supported. Default <code class="docutils literal notranslate"><span class="pre">global</span></code> (string)</p></li>
 <li><p><strong>url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The url of the catalog repo (string)</p></li>
 <li><p><strong>username</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The username to access the catalog if needed (string)</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/catalog.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/catalog.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_rancher2.Catalog.annotations">
 <code class="sig-name descname">annotations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.Catalog.annotations" title="Permalink to this definition">¶</a></dt>
@@ -2664,6 +2614,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_rancher2.Catalog.refresh">
+<code class="sig-name descname">refresh</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.Catalog.refresh" title="Permalink to this definition">¶</a></dt>
+<dd><p>Catalog will wait for refresh after tf creation and on every tf read. Default <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_rancher2.Catalog.scope">
 <code class="sig-name descname">scope</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.Catalog.scope" title="Permalink to this definition">¶</a></dt>
 <dd><p>The scope of the catalog. <code class="docutils literal notranslate"><span class="pre">cluster</span></code>, <code class="docutils literal notranslate"><span class="pre">global</span></code>, and <code class="docutils literal notranslate"><span class="pre">project</span></code> are supported. Default <code class="docutils literal notranslate"><span class="pre">global</span></code> (string)</p>
@@ -2683,7 +2639,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_rancher2.Catalog.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">branch=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">kind=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">scope=None</em>, <em class="sig-param">url=None</em>, <em class="sig-param">username=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.Catalog.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">branch=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">kind=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">refresh=None</em>, <em class="sig-param">scope=None</em>, <em class="sig-param">url=None</em>, <em class="sig-param">username=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.Catalog.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Catalog resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -2701,15 +2657,13 @@ properties used to qualify the lookup.</p>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the catalog (string)</p></li>
 <li><p><strong>password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The password to access the catalog if needed (string)</p></li>
 <li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project id of the catalog. Mandatory if <code class="docutils literal notranslate"><span class="pre">scope</span> <span class="pre">=</span> <span class="pre">project</span></code> (string)</p></li>
+<li><p><strong>refresh</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Catalog will wait for refresh after tf creation and on every tf read. Default <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
 <li><p><strong>scope</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The scope of the catalog. <code class="docutils literal notranslate"><span class="pre">cluster</span></code>, <code class="docutils literal notranslate"><span class="pre">global</span></code>, and <code class="docutils literal notranslate"><span class="pre">project</span></code> are supported. Default <code class="docutils literal notranslate"><span class="pre">global</span></code> (string)</p></li>
 <li><p><strong>url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The url of the catalog repo (string)</p></li>
 <li><p><strong>username</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The username to access the catalog if needed (string)</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/catalog.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/catalog.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2759,6 +2713,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p>Project certificate: Available to all namespaces in the <code class="docutils literal notranslate"><span class="pre">project_id</span></code></p></li>
 <li><p>Namespaced certificate: Available to just <code class="docutils literal notranslate"><span class="pre">namespace_id</span></code> in the <code class="docutils literal notranslate"><span class="pre">project_id</span></code></p></li>
 </ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/certificate.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/certificate.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2775,9 +2732,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/certificate.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/certificate.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_rancher2.Certificate.annotations">
 <code class="sig-name descname">annotations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.Certificate.annotations" title="Permalink to this definition">¶</a></dt>
@@ -2848,9 +2802,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/certificate.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/certificate.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2896,6 +2847,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">CloudCredential</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">amazonec2_credential_config=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">azure_credential_config=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">digitalocean_credential_config=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">openstack_credential_config=None</em>, <em class="sig-param">vsphere_credential_config=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.CloudCredential" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Cloud Credential resource. This can be used to create Cloud Credential for Rancher v2.2.x and retrieve their information.</p>
 <p>amazonec2, azure, digitalocean, openstack and vsphere credentials config are supported for Cloud Credential.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/cloudCredential.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/cloudCredential.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2939,9 +2893,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">vcenter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - vSphere IP/hostname for vCenter (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">vcenterPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - vSphere Port for vCenter. Default <code class="docutils literal notranslate"><span class="pre">443</span></code> (string)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/cloud_credential.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/cloud_credential.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_rancher2.CloudCredential.amazonec2_credential_config">
 <code class="sig-name descname">amazonec2_credential_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.CloudCredential.amazonec2_credential_config" title="Permalink to this definition">¶</a></dt>
@@ -3073,9 +3024,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">vcenter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - vSphere IP/hostname for vCenter (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">vcenterPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - vSphere Port for vCenter. Default <code class="docutils literal notranslate"><span class="pre">443</span></code> (string)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/cloud_credential.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/cloud_credential.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -3118,8 +3066,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_rancher2.Cluster">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">Cluster</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">aks_config=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_auth_endpoint=None</em>, <em class="sig-param">cluster_monitoring_input=None</em>, <em class="sig-param">cluster_template_answers=None</em>, <em class="sig-param">cluster_template_id=None</em>, <em class="sig-param">cluster_template_questions=None</em>, <em class="sig-param">cluster_template_revision_id=None</em>, <em class="sig-param">default_pod_security_policy_template_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">desired_agent_image=None</em>, <em class="sig-param">desired_auth_image=None</em>, <em class="sig-param">docker_root_dir=None</em>, <em class="sig-param">driver=None</em>, <em class="sig-param">eks_config=None</em>, <em class="sig-param">enable_cluster_alerting=None</em>, <em class="sig-param">enable_cluster_istio=None</em>, <em class="sig-param">enable_cluster_monitoring=None</em>, <em class="sig-param">enable_network_policy=None</em>, <em class="sig-param">gke_config=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">rke_config=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.Cluster" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">Cluster</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">aks_config=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_auth_endpoint=None</em>, <em class="sig-param">cluster_monitoring_input=None</em>, <em class="sig-param">cluster_template_answers=None</em>, <em class="sig-param">cluster_template_id=None</em>, <em class="sig-param">cluster_template_questions=None</em>, <em class="sig-param">cluster_template_revision_id=None</em>, <em class="sig-param">default_pod_security_policy_template_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">desired_agent_image=None</em>, <em class="sig-param">desired_auth_image=None</em>, <em class="sig-param">docker_root_dir=None</em>, <em class="sig-param">driver=None</em>, <em class="sig-param">eks_config=None</em>, <em class="sig-param">enable_cluster_alerting=None</em>, <em class="sig-param">enable_cluster_istio=None</em>, <em class="sig-param">enable_cluster_monitoring=None</em>, <em class="sig-param">enable_network_policy=None</em>, <em class="sig-param">gke_config=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">rke_config=None</em>, <em class="sig-param">windows_prefered_cluster=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.Cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Cluster resource. This can be used to create Clusters for Rancher v2 environments and retrieve their information.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/cluster.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3148,6 +3099,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Labels for cluster registration token object (map)</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of cluster registration token (string)</p></li>
 <li><p><strong>rke_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The RKE configuration for <code class="docutils literal notranslate"><span class="pre">rke</span></code> Clusters. Conflicts with <code class="docutils literal notranslate"><span class="pre">aks_config</span></code>, <code class="docutils literal notranslate"><span class="pre">eks_config</span></code> and <code class="docutils literal notranslate"><span class="pre">gke_config</span></code> (list maxitems:1)</p></li>
+<li><p><strong>windows_prefered_cluster</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Windows preferred cluster. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
 </ul>
 </dd>
 </dl>
@@ -3507,6 +3459,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">ignoreDockerVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Ignore docker version. Default <code class="docutils literal notranslate"><span class="pre">true</span></code> (bool)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ingress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Kubernetes ingress configuration (list maxitems:1)</p>
 <ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">dnsPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Ingress controller DNS policy. <code class="docutils literal notranslate"><span class="pre">ClusterFirstWithHostNet</span></code>, <code class="docutils literal notranslate"><span class="pre">ClusterFirst</span></code>, <code class="docutils literal notranslate"><span class="pre">Default</span></code>, and <code class="docutils literal notranslate"><span class="pre">None</span></code> are supported. <a class="reference external" href="https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/#pod-s-dns-policy">K8S dns Policy</a> (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">extraArgs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Extra arguments for scheduler service (map)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">nodeSelector</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Node selector for RKE Ingress (map)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">options</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - RKE options for network (map)</p></li>
@@ -3591,6 +3544,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">secret_key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The AWS Client Secret associated with the Client ID (string)</p></li>
 </ul>
 </li>
+<li><p><code class="docutils literal notranslate"><span class="pre">safeTimestamp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Safe timestamp for etcd backup. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">caCert</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - TLS CA certificate for etcd service (string)</p></li>
@@ -3603,7 +3557,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">gid</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Etcd service GID. Default: <code class="docutils literal notranslate"><span class="pre">0</span></code>. For Rancher v2.3.x or above (int)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">image</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Docker image for scheduler service (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - TLS key for etcd service (string)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Path for etcd service (string)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - (Optional) Audit log path. Default: <code class="docutils literal notranslate"><span class="pre">/var/log/kube-audit/audit-log.json</span></code> (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">retention</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Retention for etcd backup. Default <code class="docutils literal notranslate"><span class="pre">6</span></code> (int)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">snapshot</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Snapshot option for etcd service (bool)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">uid</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Etcd service UID. Default: <code class="docutils literal notranslate"><span class="pre">0</span></code>. For Rancher v2.3.x or above (int)</p></li>
@@ -3611,12 +3565,40 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">kubeApi</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Kube API options for RKE services (list maxitems:1)</p>
 <ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">admissionConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Admission configuration (map)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">alwaysPullImages</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enable <a class="reference external" href="https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/#alwayspullimages">AlwaysPullImages</a> Admission controller plugin. <a class="reference external" href="https://rancher.com/docs/rke/latest/en/config-options/services/#kubernetes-api-server-options">Rancher docs</a> Default: <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">auditLog</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - K8s audit log configuration. (list maxitem: 1)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">configuration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Event rate limit configuration. (map)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">format</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Audit log format. Default: ‘json’ (string)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxAge</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Audit log max age. Default: <code class="docutils literal notranslate"><span class="pre">30</span></code> (int)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxBackup</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Audit log max backup. Default: <code class="docutils literal notranslate"><span class="pre">10</span></code> (int)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Audit log max size. Default: <code class="docutils literal notranslate"><span class="pre">100</span></code> (int)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - (Optional) Audit log path. Default: <code class="docutils literal notranslate"><span class="pre">/var/log/kube-audit/audit-log.json</span></code> (string)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">policy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Audit log policy json formated string. <code class="docutils literal notranslate"><span class="pre">omitStages</span></code> and <code class="docutils literal notranslate"><span class="pre">rules</span></code> json fields are supported. Example: <code class="docutils literal notranslate"><span class="pre">policy</span> <span class="pre">=</span> <span class="pre">jsonencode({&quot;rules&quot;:[{&quot;level&quot;:</span> <span class="pre">&quot;Metadata&quot;}]})</span></code> (string)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enable the authorized cluster endpoint. Default <code class="docutils literal notranslate"><span class="pre">true</span></code> (bool)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">eventRateLimit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - K8s event rate limit configuration. (list maxitem: 1)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">configuration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Event rate limit configuration. (map)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enable the authorized cluster endpoint. Default <code class="docutils literal notranslate"><span class="pre">true</span></code> (bool)</p></li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">extraArgs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Extra arguments for scheduler service (map)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">extraBinds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Extra binds for scheduler service (list)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">extraEnvs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Extra environment for scheduler service (list)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">image</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Docker image for scheduler service (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">podSecurityPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Pod Security Policy option for kube API service. Default <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">secretsEncryptionConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - <a class="reference external" href="https://rancher.com/docs/rke/latest/en/config-options/secrets-encryption/">Encrypt k8s secret data configration</a>. (list maxitem: 1)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">customConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Secrets encryption configuration. (map)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enable the authorized cluster endpoint. Default <code class="docutils literal notranslate"><span class="pre">true</span></code> (bool)</p></li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">serviceClusterIpRange</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Service Cluster ip Range option for kube controller service (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">serviceNodePortRange</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Service Node Port Range option for kube API service (string)</p></li>
 </ul>
@@ -3638,7 +3620,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">extraArgs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Extra arguments for scheduler service (map)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">extraBinds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Extra binds for scheduler service (list)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">extraEnvs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Extra environment for scheduler service (list)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">failSwapOn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enable or disable failing when swap on is not supported (bool)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">failSwapOn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enable or disable failing when swap on is not supported (bool)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">generate_serving_certificate</span></code> <a class="reference external" href="https://rancher.com/docs/rke/latest/en/config-options/services/#kubelet-serving-certificate-requirements">Generate a certificate signed by the kube-ca</a>. Default <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">generateServingCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">image</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Docker image for scheduler service (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">infraContainerImage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Infra container image for kubelet service (string)</p></li>
 </ul>
@@ -3662,11 +3649,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sshAgentAuth</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Use ssh agent auth. Default <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sshCertPath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Cluster level SSH certificate path (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sshKeyPath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Node SSH private key path (string)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/cluster.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_rancher2.Cluster.aks_config">
 <code class="sig-name descname">aks_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.Cluster.aks_config" title="Permalink to this definition">¶</a></dt>
@@ -4182,6 +4167,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">ignoreDockerVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Ignore docker version. Default <code class="docutils literal notranslate"><span class="pre">true</span></code> (bool)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ingress</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Kubernetes ingress configuration (list maxitems:1)</p>
 <ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">dnsPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Ingress controller DNS policy. <code class="docutils literal notranslate"><span class="pre">ClusterFirstWithHostNet</span></code>, <code class="docutils literal notranslate"><span class="pre">ClusterFirst</span></code>, <code class="docutils literal notranslate"><span class="pre">Default</span></code>, and <code class="docutils literal notranslate"><span class="pre">None</span></code> are supported. <a class="reference external" href="https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/#pod-s-dns-policy">K8S dns Policy</a> (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">extraArgs</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Extra arguments for scheduler service (map)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">nodeSelector</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Node selector for RKE Ingress (map)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">options</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - RKE options for network (map)</p></li>
@@ -4266,6 +4252,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">secret_key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The AWS Client Secret associated with the Client ID (string)</p></li>
 </ul>
 </li>
+<li><p><code class="docutils literal notranslate"><span class="pre">safeTimestamp</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Safe timestamp for etcd backup. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">caCert</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - TLS CA certificate for etcd service (string)</p></li>
@@ -4278,7 +4265,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">gid</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Etcd service GID. Default: <code class="docutils literal notranslate"><span class="pre">0</span></code>. For Rancher v2.3.x or above (int)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">image</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Docker image for scheduler service (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - TLS key for etcd service (string)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Path for etcd service (string)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - (Optional) Audit log path. Default: <code class="docutils literal notranslate"><span class="pre">/var/log/kube-audit/audit-log.json</span></code> (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">retention</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Retention for etcd backup. Default <code class="docutils literal notranslate"><span class="pre">6</span></code> (int)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">snapshot</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Snapshot option for etcd service (bool)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">uid</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Etcd service UID. Default: <code class="docutils literal notranslate"><span class="pre">0</span></code>. For Rancher v2.3.x or above (int)</p></li>
@@ -4286,12 +4273,40 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">kubeApi</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Kube API options for RKE services (list maxitems:1)</p>
 <ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">admissionConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Admission configuration (map)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">alwaysPullImages</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enable <a class="reference external" href="https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/#alwayspullimages">AlwaysPullImages</a> Admission controller plugin. <a class="reference external" href="https://rancher.com/docs/rke/latest/en/config-options/services/#kubernetes-api-server-options">Rancher docs</a> Default: <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">auditLog</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - K8s audit log configuration. (list maxitem: 1)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">configuration</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Event rate limit configuration. (map)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">format</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Audit log format. Default: ‘json’ (string)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxAge</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Audit log max age. Default: <code class="docutils literal notranslate"><span class="pre">30</span></code> (int)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxBackup</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Audit log max backup. Default: <code class="docutils literal notranslate"><span class="pre">10</span></code> (int)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxSize</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Audit log max size. Default: <code class="docutils literal notranslate"><span class="pre">100</span></code> (int)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - (Optional) Audit log path. Default: <code class="docutils literal notranslate"><span class="pre">/var/log/kube-audit/audit-log.json</span></code> (string)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">policy</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Audit log policy json formated string. <code class="docutils literal notranslate"><span class="pre">omitStages</span></code> and <code class="docutils literal notranslate"><span class="pre">rules</span></code> json fields are supported. Example: <code class="docutils literal notranslate"><span class="pre">policy</span> <span class="pre">=</span> <span class="pre">jsonencode({&quot;rules&quot;:[{&quot;level&quot;:</span> <span class="pre">&quot;Metadata&quot;}]})</span></code> (string)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enable the authorized cluster endpoint. Default <code class="docutils literal notranslate"><span class="pre">true</span></code> (bool)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">eventRateLimit</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - K8s event rate limit configuration. (list maxitem: 1)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">configuration</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Event rate limit configuration. (map)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enable the authorized cluster endpoint. Default <code class="docutils literal notranslate"><span class="pre">true</span></code> (bool)</p></li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">extraArgs</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Extra arguments for scheduler service (map)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">extraBinds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Extra binds for scheduler service (list)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">extraEnvs</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Extra environment for scheduler service (list)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">image</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Docker image for scheduler service (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">podSecurityPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Pod Security Policy option for kube API service. Default <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">secretsEncryptionConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - <a class="reference external" href="https://rancher.com/docs/rke/latest/en/config-options/secrets-encryption/">Encrypt k8s secret data configration</a>. (list maxitem: 1)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">customConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Secrets encryption configuration. (map)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enable the authorized cluster endpoint. Default <code class="docutils literal notranslate"><span class="pre">true</span></code> (bool)</p></li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">serviceClusterIpRange</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Service Cluster ip Range option for kube controller service (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">serviceNodePortRange</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Service Node Port Range option for kube API service (string)</p></li>
 </ul>
@@ -4313,7 +4328,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">extraArgs</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Extra arguments for scheduler service (map)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">extraBinds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Extra binds for scheduler service (list)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">extraEnvs</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Extra environment for scheduler service (list)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">failSwapOn</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enable or disable failing when swap on is not supported (bool)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">failSwapOn</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enable or disable failing when swap on is not supported (bool)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">generate_serving_certificate</span></code> <a class="reference external" href="https://rancher.com/docs/rke/latest/en/config-options/services/#kubelet-serving-certificate-requirements">Generate a certificate signed by the kube-ca</a>. Default <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">generateServingCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">image</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Docker image for scheduler service (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">infraContainerImage</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Infra container image for kubelet service (string)</p></li>
 </ul>
@@ -4337,6 +4357,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sshAgentAuth</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Use ssh agent auth. Default <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sshCertPath</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Cluster level SSH certificate path (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sshKeyPath</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Node SSH private key path (string)</p></li>
 </ul>
 </dd></dl>
@@ -4347,9 +4368,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>(Computed) System project ID for the cluster (string)</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_rancher2.Cluster.windows_prefered_cluster">
+<code class="sig-name descname">windows_prefered_cluster</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.Cluster.windows_prefered_cluster" title="Permalink to this definition">¶</a></dt>
+<dd><p>Windows preferred cluster. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_rancher2.Cluster.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">aks_config=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_auth_endpoint=None</em>, <em class="sig-param">cluster_monitoring_input=None</em>, <em class="sig-param">cluster_registration_token=None</em>, <em class="sig-param">cluster_template_answers=None</em>, <em class="sig-param">cluster_template_id=None</em>, <em class="sig-param">cluster_template_questions=None</em>, <em class="sig-param">cluster_template_revision_id=None</em>, <em class="sig-param">default_pod_security_policy_template_id=None</em>, <em class="sig-param">default_project_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">desired_agent_image=None</em>, <em class="sig-param">desired_auth_image=None</em>, <em class="sig-param">docker_root_dir=None</em>, <em class="sig-param">driver=None</em>, <em class="sig-param">eks_config=None</em>, <em class="sig-param">enable_cluster_alerting=None</em>, <em class="sig-param">enable_cluster_istio=None</em>, <em class="sig-param">enable_cluster_monitoring=None</em>, <em class="sig-param">enable_network_policy=None</em>, <em class="sig-param">gke_config=None</em>, <em class="sig-param">kube_config=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">rke_config=None</em>, <em class="sig-param">system_project_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.Cluster.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">aks_config=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_auth_endpoint=None</em>, <em class="sig-param">cluster_monitoring_input=None</em>, <em class="sig-param">cluster_registration_token=None</em>, <em class="sig-param">cluster_template_answers=None</em>, <em class="sig-param">cluster_template_id=None</em>, <em class="sig-param">cluster_template_questions=None</em>, <em class="sig-param">cluster_template_revision_id=None</em>, <em class="sig-param">default_pod_security_policy_template_id=None</em>, <em class="sig-param">default_project_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">desired_agent_image=None</em>, <em class="sig-param">desired_auth_image=None</em>, <em class="sig-param">docker_root_dir=None</em>, <em class="sig-param">driver=None</em>, <em class="sig-param">eks_config=None</em>, <em class="sig-param">enable_cluster_alerting=None</em>, <em class="sig-param">enable_cluster_istio=None</em>, <em class="sig-param">enable_cluster_monitoring=None</em>, <em class="sig-param">enable_network_policy=None</em>, <em class="sig-param">gke_config=None</em>, <em class="sig-param">kube_config=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">rke_config=None</em>, <em class="sig-param">system_project_id=None</em>, <em class="sig-param">windows_prefered_cluster=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.Cluster.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Cluster resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -4388,6 +4415,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of cluster registration token (string)</p></li>
 <li><p><strong>rke_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The RKE configuration for <code class="docutils literal notranslate"><span class="pre">rke</span></code> Clusters. Conflicts with <code class="docutils literal notranslate"><span class="pre">aks_config</span></code>, <code class="docutils literal notranslate"><span class="pre">eks_config</span></code> and <code class="docutils literal notranslate"><span class="pre">gke_config</span></code> (list maxitems:1)</p></li>
 <li><p><strong>system_project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Computed) System project ID for the cluster (string)</p></li>
+<li><p><strong>windows_prefered_cluster</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Windows preferred cluster. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
 </ul>
 </dd>
 </dl>
@@ -4761,6 +4789,7 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">ignoreDockerVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Ignore docker version. Default <code class="docutils literal notranslate"><span class="pre">true</span></code> (bool)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ingress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Kubernetes ingress configuration (list maxitems:1)</p>
 <ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">dnsPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Ingress controller DNS policy. <code class="docutils literal notranslate"><span class="pre">ClusterFirstWithHostNet</span></code>, <code class="docutils literal notranslate"><span class="pre">ClusterFirst</span></code>, <code class="docutils literal notranslate"><span class="pre">Default</span></code>, and <code class="docutils literal notranslate"><span class="pre">None</span></code> are supported. <a class="reference external" href="https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/#pod-s-dns-policy">K8S dns Policy</a> (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">extraArgs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Extra arguments for scheduler service (map)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">nodeSelector</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Node selector for RKE Ingress (map)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">options</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - RKE options for network (map)</p></li>
@@ -4845,6 +4874,7 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">secret_key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The AWS Client Secret associated with the Client ID (string)</p></li>
 </ul>
 </li>
+<li><p><code class="docutils literal notranslate"><span class="pre">safeTimestamp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Safe timestamp for etcd backup. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">caCert</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - TLS CA certificate for etcd service (string)</p></li>
@@ -4857,7 +4887,7 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">gid</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Etcd service GID. Default: <code class="docutils literal notranslate"><span class="pre">0</span></code>. For Rancher v2.3.x or above (int)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">image</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Docker image for scheduler service (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - TLS key for etcd service (string)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Path for etcd service (string)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - (Optional) Audit log path. Default: <code class="docutils literal notranslate"><span class="pre">/var/log/kube-audit/audit-log.json</span></code> (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">retention</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Retention for etcd backup. Default <code class="docutils literal notranslate"><span class="pre">6</span></code> (int)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">snapshot</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Snapshot option for etcd service (bool)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">uid</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Etcd service UID. Default: <code class="docutils literal notranslate"><span class="pre">0</span></code>. For Rancher v2.3.x or above (int)</p></li>
@@ -4865,12 +4895,40 @@ properties used to qualify the lookup.</p>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">kubeApi</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Kube API options for RKE services (list maxitems:1)</p>
 <ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">admissionConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Admission configuration (map)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">alwaysPullImages</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enable <a class="reference external" href="https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/#alwayspullimages">AlwaysPullImages</a> Admission controller plugin. <a class="reference external" href="https://rancher.com/docs/rke/latest/en/config-options/services/#kubernetes-api-server-options">Rancher docs</a> Default: <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">auditLog</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - K8s audit log configuration. (list maxitem: 1)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">configuration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Event rate limit configuration. (map)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">format</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Audit log format. Default: ‘json’ (string)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxAge</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Audit log max age. Default: <code class="docutils literal notranslate"><span class="pre">30</span></code> (int)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxBackup</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Audit log max backup. Default: <code class="docutils literal notranslate"><span class="pre">10</span></code> (int)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Audit log max size. Default: <code class="docutils literal notranslate"><span class="pre">100</span></code> (int)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - (Optional) Audit log path. Default: <code class="docutils literal notranslate"><span class="pre">/var/log/kube-audit/audit-log.json</span></code> (string)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">policy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Audit log policy json formated string. <code class="docutils literal notranslate"><span class="pre">omitStages</span></code> and <code class="docutils literal notranslate"><span class="pre">rules</span></code> json fields are supported. Example: <code class="docutils literal notranslate"><span class="pre">policy</span> <span class="pre">=</span> <span class="pre">jsonencode({&quot;rules&quot;:[{&quot;level&quot;:</span> <span class="pre">&quot;Metadata&quot;}]})</span></code> (string)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enable the authorized cluster endpoint. Default <code class="docutils literal notranslate"><span class="pre">true</span></code> (bool)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">eventRateLimit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - K8s event rate limit configuration. (list maxitem: 1)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">configuration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Event rate limit configuration. (map)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enable the authorized cluster endpoint. Default <code class="docutils literal notranslate"><span class="pre">true</span></code> (bool)</p></li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">extraArgs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Extra arguments for scheduler service (map)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">extraBinds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Extra binds for scheduler service (list)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">extraEnvs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Extra environment for scheduler service (list)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">image</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Docker image for scheduler service (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">podSecurityPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Pod Security Policy option for kube API service. Default <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">secretsEncryptionConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - <a class="reference external" href="https://rancher.com/docs/rke/latest/en/config-options/secrets-encryption/">Encrypt k8s secret data configration</a>. (list maxitem: 1)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">customConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Secrets encryption configuration. (map)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enable the authorized cluster endpoint. Default <code class="docutils literal notranslate"><span class="pre">true</span></code> (bool)</p></li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">serviceClusterIpRange</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Service Cluster ip Range option for kube controller service (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">serviceNodePortRange</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Service Node Port Range option for kube API service (string)</p></li>
 </ul>
@@ -4892,7 +4950,12 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">extraArgs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Extra arguments for scheduler service (map)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">extraBinds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Extra binds for scheduler service (list)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">extraEnvs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Extra environment for scheduler service (list)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">failSwapOn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enable or disable failing when swap on is not supported (bool)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">failSwapOn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enable or disable failing when swap on is not supported (bool)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">generate_serving_certificate</span></code> <a class="reference external" href="https://rancher.com/docs/rke/latest/en/config-options/services/#kubelet-serving-certificate-requirements">Generate a certificate signed by the kube-ca</a>. Default <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">generateServingCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">image</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Docker image for scheduler service (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">infraContainerImage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Infra container image for kubelet service (string)</p></li>
 </ul>
@@ -4916,11 +4979,9 @@ properties used to qualify the lookup.</p>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sshAgentAuth</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Use ssh agent auth. Default <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sshCertPath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Cluster level SSH certificate path (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sshKeyPath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Node SSH private key path (string)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/cluster.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -4965,6 +5026,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.ClusterAlterGroup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">ClusterAlterGroup</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">group_interval_seconds=None</em>, <em class="sig-param">group_wait_seconds=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">recipients=None</em>, <em class="sig-param">repeat_interval_seconds=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.ClusterAlterGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Cluster Alert Group resource. This can be used to create Cluster Alert Group for Rancher v2 environments and retrieve their information.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/clusterAlertGroup.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/clusterAlertGroup.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4988,9 +5052,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">notifierType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Recipient notifier ID. Supported values : <code class="docutils literal notranslate"><span class="pre">&quot;pagerduty&quot;</span> <span class="pre">|</span> <span class="pre">&quot;slack&quot;</span> <span class="pre">|</span> <span class="pre">&quot;email&quot;</span> <span class="pre">|</span> <span class="pre">&quot;webhook&quot;</span> <span class="pre">|</span> <span class="pre">&quot;wechat&quot;</span></code> (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">recipient</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Recipient (string)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/cluster_alert_group.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/cluster_alert_group.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_rancher2.ClusterAlterGroup.annotations">
 <code class="sig-name descname">annotations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.ClusterAlterGroup.annotations" title="Permalink to this definition">¶</a></dt>
@@ -5079,9 +5140,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">notifierType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Recipient notifier ID. Supported values : <code class="docutils literal notranslate"><span class="pre">&quot;pagerduty&quot;</span> <span class="pre">|</span> <span class="pre">&quot;slack&quot;</span> <span class="pre">|</span> <span class="pre">&quot;email&quot;</span> <span class="pre">|</span> <span class="pre">&quot;webhook&quot;</span> <span class="pre">|</span> <span class="pre">&quot;wechat&quot;</span></code> (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">recipient</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Recipient (string)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/cluster_alert_group.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/cluster_alert_group.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -5126,6 +5184,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.ClusterAlterRule">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">ClusterAlterRule</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">event_rule=None</em>, <em class="sig-param">group_id=None</em>, <em class="sig-param">group_interval_seconds=None</em>, <em class="sig-param">group_wait_seconds=None</em>, <em class="sig-param">inherited=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">metric_rule=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">node_rule=None</em>, <em class="sig-param">repeat_interval_seconds=None</em>, <em class="sig-param">severity=None</em>, <em class="sig-param">system_service_rule=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.ClusterAlterRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Cluster Alert Rule resource. This can be used to create Cluster Alert Rule for Rancher v2 environments and retrieve their information.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/clusterAlertRule.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/clusterAlertRule.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5133,13 +5194,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>annotations</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The cluster alert rule annotations (map)</p></li>
 <li><p><strong>cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster id where create cluster alert rule (string)</p></li>
-<li><p><strong>event_rule</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The cluster alert rule event rule. ConflictsWith: :raw-html-m2r:<a href="#id19"><span class="problematic" id="id20">`</span></a>&lt;code class=”docutils literal”&gt;&lt;span class=”pre”&gt;”metric_rule”, “node_rule”, “system_service_rule”`` (list Maxitems:1)</p></li>
+<li><p><strong>event_rule</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The cluster alert rule event rule. ConflictsWith: :raw-html-m2r:<a href="#id25"><span class="problematic" id="id26">`</span></a>&lt;code class=”docutils literal”&gt;&lt;span class=”pre”&gt;”metric_rule”, “node_rule”, “system_service_rule”`` (list Maxitems:1)</p></li>
 <li><p><strong>group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster alert rule alert group ID (string)</p></li>
-<li><p><strong>group_interval_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The cluster alert rule group interval seconds. Default:&lt;/span&gt;&lt;/code&gt;`180<a href="#id21"><span class="problematic" id="id22">``</span></a>(int)</p></li>
-<li><p><strong>group_wait_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The cluster alert rule group wait seconds. Default:<a href="#id23"><span class="problematic" id="id24">``</span></a>180<a href="#id25"><span class="problematic" id="id26">``</span></a>(int)</p></li>
-<li><p><strong>inherited</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – The cluster alert rule inherited. Default:<a href="#id27"><span class="problematic" id="id28">``</span></a>true<a href="#id29"><span class="problematic" id="id30">``</span></a>(bool)</p></li>
+<li><p><strong>group_interval_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The cluster alert rule group interval seconds. Default:&lt;/span&gt;&lt;/code&gt;`180<a href="#id27"><span class="problematic" id="id28">``</span></a>(int)</p></li>
+<li><p><strong>group_wait_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The cluster alert rule group wait seconds. Default:<a href="#id29"><span class="problematic" id="id30">``</span></a>180<a href="#id31"><span class="problematic" id="id32">``</span></a>(int)</p></li>
+<li><p><strong>inherited</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – The cluster alert rule inherited. Default:<a href="#id33"><span class="problematic" id="id34">``</span></a>true<a href="#id35"><span class="problematic" id="id36">``</span></a>(bool)</p></li>
 <li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The cluster alert rule labels (map)</p></li>
-<li><p><strong>metric_rule</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The cluster alert rule metric rule. ConflictsWith:<a href="#id31"><span class="problematic" id="id32">``</span></a>”event_rule”, “node_rule”, “system_service_rule”<a href="#id33"><span class="problematic" id="id34">``</span></a>(list Maxitems:1)</p></li>
+<li><p><strong>metric_rule</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The cluster alert rule metric rule. ConflictsWith:<a href="#id37"><span class="problematic" id="id38">``</span></a>”event_rule”, “node_rule”, “system_service_rule”<a href="#id39"><span class="problematic" id="id40">``</span></a>(list Maxitems:1)</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster alert rule name (string)</p></li>
 <li><p><strong>node_rule</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The cluster alert rule node rule. ConflictsWith: <cite>“event_rule”, “metric_rule”, “system_service_rule”`</cite> (list Maxitems:1)</p></li>
 <li><p><strong>repeat_interval_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The cluster alert rule wait seconds. Default: <code class="docutils literal notranslate"><span class="pre">3600</span></code> (int)</p></li>
@@ -5173,9 +5234,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">condition</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - System service rule condition. Supported values : <code class="docutils literal notranslate"><span class="pre">&quot;controller-manager&quot;</span> <span class="pre">|</span> <span class="pre">&quot;etcd&quot;</span> <span class="pre">|</span> <span class="pre">&quot;scheduler&quot;</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">scheduler</span></code> (string)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/cluster_alert_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/cluster_alert_rule.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_rancher2.ClusterAlterRule.annotations">
 <code class="sig-name descname">annotations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.ClusterAlterRule.annotations" title="Permalink to this definition">¶</a></dt>
@@ -5294,13 +5352,13 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>annotations</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The cluster alert rule annotations (map)</p></li>
 <li><p><strong>cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster id where create cluster alert rule (string)</p></li>
-<li><p><strong>event_rule</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The cluster alert rule event rule. ConflictsWith: :raw-html-m2r:<a href="#id35"><span class="problematic" id="id36">`</span></a>&lt;code class=”docutils literal”&gt;&lt;span class=”pre”&gt;”metric_rule”, “node_rule”, “system_service_rule”`` (list Maxitems:1)</p></li>
+<li><p><strong>event_rule</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The cluster alert rule event rule. ConflictsWith: :raw-html-m2r:<a href="#id41"><span class="problematic" id="id42">`</span></a>&lt;code class=”docutils literal”&gt;&lt;span class=”pre”&gt;”metric_rule”, “node_rule”, “system_service_rule”`` (list Maxitems:1)</p></li>
 <li><p><strong>group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster alert rule alert group ID (string)</p></li>
-<li><p><strong>group_interval_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The cluster alert rule group interval seconds. Default:&lt;/span&gt;&lt;/code&gt;`180<a href="#id37"><span class="problematic" id="id38">``</span></a>(int)</p></li>
-<li><p><strong>group_wait_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The cluster alert rule group wait seconds. Default:<a href="#id39"><span class="problematic" id="id40">``</span></a>180<a href="#id41"><span class="problematic" id="id42">``</span></a>(int)</p></li>
-<li><p><strong>inherited</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – The cluster alert rule inherited. Default:<a href="#id43"><span class="problematic" id="id44">``</span></a>true<a href="#id45"><span class="problematic" id="id46">``</span></a>(bool)</p></li>
+<li><p><strong>group_interval_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The cluster alert rule group interval seconds. Default:&lt;/span&gt;&lt;/code&gt;`180<a href="#id43"><span class="problematic" id="id44">``</span></a>(int)</p></li>
+<li><p><strong>group_wait_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The cluster alert rule group wait seconds. Default:<a href="#id45"><span class="problematic" id="id46">``</span></a>180<a href="#id47"><span class="problematic" id="id48">``</span></a>(int)</p></li>
+<li><p><strong>inherited</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – The cluster alert rule inherited. Default:<a href="#id49"><span class="problematic" id="id50">``</span></a>true<a href="#id51"><span class="problematic" id="id52">``</span></a>(bool)</p></li>
 <li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The cluster alert rule labels (map)</p></li>
-<li><p><strong>metric_rule</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The cluster alert rule metric rule. ConflictsWith:<a href="#id47"><span class="problematic" id="id48">``</span></a>”event_rule”, “node_rule”, “system_service_rule”<a href="#id49"><span class="problematic" id="id50">``</span></a>(list Maxitems:1)</p></li>
+<li><p><strong>metric_rule</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The cluster alert rule metric rule. ConflictsWith:<a href="#id53"><span class="problematic" id="id54">``</span></a>”event_rule”, “node_rule”, “system_service_rule”<a href="#id55"><span class="problematic" id="id56">``</span></a>(list Maxitems:1)</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster alert rule name (string)</p></li>
 <li><p><strong>node_rule</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The cluster alert rule node rule. ConflictsWith: <cite>“event_rule”, “metric_rule”, “system_service_rule”`</cite> (list Maxitems:1)</p></li>
 <li><p><strong>repeat_interval_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The cluster alert rule wait seconds. Default: <code class="docutils literal notranslate"><span class="pre">3600</span></code> (int)</p></li>
@@ -5334,9 +5392,6 @@ properties used to qualify the lookup.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">condition</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - System service rule condition. Supported values : <code class="docutils literal notranslate"><span class="pre">&quot;controller-manager&quot;</span> <span class="pre">|</span> <span class="pre">&quot;etcd&quot;</span> <span class="pre">|</span> <span class="pre">&quot;scheduler&quot;</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">scheduler</span></code> (string)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/cluster_alert_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/cluster_alert_rule.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -5381,6 +5436,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.ClusterDriver">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">ClusterDriver</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">active=None</em>, <em class="sig-param">actual_url=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">builtin=None</em>, <em class="sig-param">checksum=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">ui_url=None</em>, <em class="sig-param">url=None</em>, <em class="sig-param">whitelist_domains=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.ClusterDriver" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Cluster Driver resource. This can be used to create Cluster Driver for Rancher v2.2.x Kontainer Engine clusters and retrieve their information.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/clusterDriver.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/clusterDriver.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5399,9 +5457,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/cluster_driver.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/cluster_driver.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_rancher2.ClusterDriver.active">
 <code class="sig-name descname">active</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.ClusterDriver.active" title="Permalink to this definition">¶</a></dt>
@@ -5486,9 +5541,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/cluster_driver.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/cluster_driver.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -5533,6 +5585,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.ClusterLogging">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">ClusterLogging</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">elasticsearch_config=None</em>, <em class="sig-param">fluentd_config=None</em>, <em class="sig-param">kafka_config=None</em>, <em class="sig-param">kind=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_id=None</em>, <em class="sig-param">output_flush_interval=None</em>, <em class="sig-param">output_tags=None</em>, <em class="sig-param">splunk_config=None</em>, <em class="sig-param">syslog_config=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.ClusterLogging" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Cluster Logging resource. This can be used to configure Cluster Logging for Rancher v2 environments and retrieve their information.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/clusterLogging.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/clusterLogging.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5618,9 +5673,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">sslVerify</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - SSL verify for the syslog service (bool)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">token</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Token for the syslog service (string)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/cluster_logging.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/cluster_logging.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_rancher2.ClusterLogging.annotations">
 <code class="sig-name descname">annotations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.ClusterLogging.annotations" title="Permalink to this definition">¶</a></dt>
@@ -5849,9 +5901,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">sslVerify</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - SSL verify for the syslog service (bool)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">token</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Token for the syslog service (string)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/cluster_logging.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/cluster_logging.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -5896,6 +5945,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.ClusterRoleTemplateBinding">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">ClusterRoleTemplateBinding</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">group_id=None</em>, <em class="sig-param">group_principal_id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">role_template_id=None</em>, <em class="sig-param">user_id=None</em>, <em class="sig-param">user_principal_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.ClusterRoleTemplateBinding" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Cluster Role Template Binding resource. This can be used to create Cluster Role Template Bindings for Rancher v2 environments and retrieve their information.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/clusterRole.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/clusterRole.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5913,9 +5965,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/cluster_role_template_binding.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/cluster_role_template_binding.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_rancher2.ClusterRoleTemplateBinding.annotations">
 <code class="sig-name descname">annotations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.ClusterRoleTemplateBinding.annotations" title="Permalink to this definition">¶</a></dt>
@@ -5993,9 +6042,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/cluster_role_template_binding.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/cluster_role_template_binding.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -6039,20 +6085,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_rancher2.ClusterSync">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">ClusterSync</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">node_pool_ids=None</em>, <em class="sig-param">synced=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.ClusterSync" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a ClusterSync resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster ID that is syncing (string)</p></li>
-<li><p><strong>node_pool_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The node pool IDs used by the cluster id (list)</p></li>
-</ul>
-</dd>
-</dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/cluster_sync.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/cluster_sync.html.markdown</a>.</p>
-</div></blockquote>
+<dd><p>Create a ClusterSync resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] cluster_id: The cluster ID that is syncing (string)
+:param pulumi.Input[list] node_pool_ids: The node pool IDs used by the cluster id (list)</p>
 <dl class="attribute">
 <dt id="pulumi_rancher2.ClusterSync.cluster_id">
 <code class="sig-name descname">cluster_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.ClusterSync.cluster_id" title="Permalink to this definition">¶</a></dt>
@@ -6102,9 +6139,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/cluster_sync.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/cluster_sync.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -6150,12 +6184,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">ClusterTemplate</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">members=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">template_revisions=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.ClusterTemplate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Cluster Template resource. This can be used to create Cluster Templates for Rancher v2 RKE clusters and retrieve their information.</p>
 <p>Cluster Templates are available from Rancher v2.3.x and above.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/clusterTemplate.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/clusterTemplate.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>annotations</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Annotations for the cluster template revision (map)</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Cluster template description</p></li>
 <li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Labels for the cluster template revision (map)</p></li>
 <li><p><strong>members</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Cluster template members (list)</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster template revision name (string)</p></li>
@@ -6387,6 +6425,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">ignoreDockerVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ingress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
 <ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">dnsPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">extraArgs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">nodeSelector</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">options</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
@@ -6471,6 +6510,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </li>
 </ul>
 </li>
+<li><p><code class="docutils literal notranslate"><span class="pre">safeTimestamp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">caCert</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
@@ -6491,12 +6531,40 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">kubeApi</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
 <ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">admissionConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">alwaysPullImages</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">auditLog</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">configuration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">format</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)* <code class="docutils literal notranslate"><span class="pre">maxAge</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxBackup</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)* <code class="docutils literal notranslate"><span class="pre">maxSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)* <code class="docutils literal notranslate"><span class="pre">policy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enable cluster template revision. Default <code class="docutils literal notranslate"><span class="pre">true</span></code> (bool)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">eventRateLimit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">configuration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enable cluster template revision. Default <code class="docutils literal notranslate"><span class="pre">true</span></code> (bool)</p></li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">extraArgs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">extraBinds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">extraEnvs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">image</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">podSecurityPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">secretsEncryptionConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">customConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enable cluster template revision. Default <code class="docutils literal notranslate"><span class="pre">true</span></code> (bool)</p></li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">serviceClusterIpRange</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">serviceNodePortRange</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
@@ -6519,6 +6587,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">extraBinds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">extraEnvs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">failSwapOn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">generateServingCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">image</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">infraContainerImage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
@@ -6542,10 +6611,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sshAgentAuth</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sshCertPath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sshKeyPath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">windowsPreferedCluster</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Windows prefered cluster. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">windows_prefered_cluster</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Windows prefered cluster. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">cluster_template_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Cluster template ID (string)</p></li>
@@ -6563,9 +6633,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/cluster_template.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/cluster_template.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_rancher2.ClusterTemplate.annotations">
 <code class="sig-name descname">annotations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.ClusterTemplate.annotations" title="Permalink to this definition">¶</a></dt>
@@ -6576,6 +6643,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.ClusterTemplate.default_revision_id">
 <code class="sig-name descname">default_revision_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.ClusterTemplate.default_revision_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Computed) Default cluster template revision ID (string)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_rancher2.ClusterTemplate.description">
+<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.ClusterTemplate.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cluster template description</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -6822,6 +6895,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">ignoreDockerVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ingress</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
 <ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">dnsPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">extraArgs</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">nodeSelector</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">options</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
@@ -6906,6 +6980,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </li>
 </ul>
 </li>
+<li><p><code class="docutils literal notranslate"><span class="pre">safeTimestamp</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">caCert</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
@@ -6926,12 +7001,40 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">kubeApi</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
 <ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">admissionConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">alwaysPullImages</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">auditLog</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">configuration</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">format</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)* <code class="docutils literal notranslate"><span class="pre">maxAge</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxBackup</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)* <code class="docutils literal notranslate"><span class="pre">maxSize</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)* <code class="docutils literal notranslate"><span class="pre">policy</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enable cluster template revision. Default <code class="docutils literal notranslate"><span class="pre">true</span></code> (bool)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">eventRateLimit</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">configuration</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enable cluster template revision. Default <code class="docutils literal notranslate"><span class="pre">true</span></code> (bool)</p></li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">extraArgs</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">extraBinds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">extraEnvs</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">image</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">podSecurityPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">secretsEncryptionConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">customConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enable cluster template revision. Default <code class="docutils literal notranslate"><span class="pre">true</span></code> (bool)</p></li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">serviceClusterIpRange</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">serviceNodePortRange</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
@@ -6954,6 +7057,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">extraBinds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">extraEnvs</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">failSwapOn</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">generateServingCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">image</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">infraContainerImage</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
@@ -6977,10 +7081,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sshAgentAuth</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sshCertPath</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sshKeyPath</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">windowsPreferedCluster</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Windows prefered cluster. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">windows_prefered_cluster</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Windows prefered cluster. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">cluster_template_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Cluster template ID (string)</p></li>
@@ -7013,6 +7118,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>annotations</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Annotations for the cluster template revision (map)</p></li>
 <li><p><strong>default_revision_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Computed) Default cluster template revision ID (string)</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Cluster template description</p></li>
 <li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Labels for the cluster template revision (map)</p></li>
 <li><p><strong>members</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Cluster template members (list)</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster template revision name (string)</p></li>
@@ -7244,6 +7350,7 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">ignoreDockerVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ingress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
 <ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">dnsPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">extraArgs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">nodeSelector</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">options</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
@@ -7328,6 +7435,7 @@ properties used to qualify the lookup.</p>
 </li>
 </ul>
 </li>
+<li><p><code class="docutils literal notranslate"><span class="pre">safeTimestamp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">caCert</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
@@ -7348,12 +7456,40 @@ properties used to qualify the lookup.</p>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">kubeApi</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
 <ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">admissionConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">alwaysPullImages</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">auditLog</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">configuration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">format</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)* <code class="docutils literal notranslate"><span class="pre">maxAge</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxBackup</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)* <code class="docutils literal notranslate"><span class="pre">maxSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)* <code class="docutils literal notranslate"><span class="pre">policy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enable cluster template revision. Default <code class="docutils literal notranslate"><span class="pre">true</span></code> (bool)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">eventRateLimit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">configuration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enable cluster template revision. Default <code class="docutils literal notranslate"><span class="pre">true</span></code> (bool)</p></li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">extraArgs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">extraBinds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">extraEnvs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">image</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">podSecurityPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">secretsEncryptionConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">customConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enable cluster template revision. Default <code class="docutils literal notranslate"><span class="pre">true</span></code> (bool)</p></li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">serviceClusterIpRange</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">serviceNodePortRange</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
@@ -7376,6 +7512,7 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">extraBinds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">extraEnvs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">failSwapOn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">generateServingCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">image</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">infraContainerImage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
@@ -7399,10 +7536,11 @@ properties used to qualify the lookup.</p>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sshAgentAuth</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sshCertPath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sshKeyPath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">windowsPreferedCluster</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Windows prefered cluster. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">windows_prefered_cluster</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Windows prefered cluster. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">cluster_template_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Cluster template ID (string)</p></li>
@@ -7420,9 +7558,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/cluster_template.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/cluster_template.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -7466,23 +7601,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_rancher2.EtcdBackup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">EtcdBackup</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">backup_config=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">filename=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">manual=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.EtcdBackup" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a EtcdBackup resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>annotations</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Annotations for Etcd Backup object (map)</p></li>
-<li><p><strong>backup_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Backup config for etcd backup (list maxitems:1)</p></li>
-<li><p><strong>cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Cluster ID to config Etcd Backup (string)</p></li>
-<li><p><strong>filename</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Filename of the Etcd Backup (string)</p></li>
-<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Labels for Etcd Backup object (map)</p></li>
-<li><p><strong>manual</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Manual execution of the Etcd Backup. Default <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Etcd Backup (string)</p></li>
-<li><p><strong>namespace_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description for the Etcd Backup (string)</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a EtcdBackup resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[dict] annotations: Annotations for Etcd Backup object (map)
+:param pulumi.Input[dict] backup_config: Backup config for etcd backup (list maxitems:1)
+:param pulumi.Input[str] cluster_id: Cluster ID to config Etcd Backup (string)
+:param pulumi.Input[str] filename: Filename of the Etcd Backup (string)
+:param pulumi.Input[dict] labels: Labels for Etcd Backup object (map)
+:param pulumi.Input[bool] manual: Manual execution of the Etcd Backup. Default <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)
+:param pulumi.Input[str] name: The name of the Etcd Backup (string)
+:param pulumi.Input[str] namespace_id: Description for the Etcd Backup (string)</p>
 <p>The <strong>backup_config</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enable etcd backup (bool)</p></li>
@@ -7499,10 +7628,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">secret_key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Secret key for S3 service (string)</p></li>
 </ul>
 </li>
+<li><p><code class="docutils literal notranslate"><span class="pre">safeTimestamp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/etcd_backup.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/etcd_backup.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_rancher2.EtcdBackup.annotations">
 <code class="sig-name descname">annotations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.EtcdBackup.annotations" title="Permalink to this definition">¶</a></dt>
@@ -7528,6 +7655,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">secret_key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Secret key for S3 service (string)</p></li>
 </ul>
 </li>
+<li><p><code class="docutils literal notranslate"><span class="pre">safeTimestamp</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
 </ul>
 </dd></dl>
 
@@ -7605,10 +7733,8 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">secret_key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Secret key for S3 service (string)</p></li>
 </ul>
 </li>
+<li><p><code class="docutils literal notranslate"><span class="pre">safeTimestamp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/etcd_backup.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/etcd_backup.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -7651,7 +7777,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_rancher2.GetAppResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetAppResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">answers=None</em>, <em class="sig-param">catalog_name=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">external_id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">revision_id=None</em>, <em class="sig-param">target_namespace=None</em>, <em class="sig-param">template_name=None</em>, <em class="sig-param">template_version=None</em>, <em class="sig-param">values_yaml=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetAppResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetAppResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">answers=None</em>, <em class="sig-param">catalog_name=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">external_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">revision_id=None</em>, <em class="sig-param">target_namespace=None</em>, <em class="sig-param">template_name=None</em>, <em class="sig-param">template_version=None</em>, <em class="sig-param">values_yaml=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetAppResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getApp.</p>
 <dl class="attribute">
 <dt id="pulumi_rancher2.GetAppResult.annotations">
@@ -7684,6 +7810,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_rancher2.GetAppResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetAppResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_rancher2.GetAppResult.labels">
 <code class="sig-name descname">labels</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetAppResult.labels" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Computed) Labels for the catalog (map)</p>
@@ -7713,17 +7845,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>(Computed) values.yaml base64 encoded file content for the app (string)</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_rancher2.GetAppResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetAppResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_rancher2.GetCatalogResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetCatalogResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">branch=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">kind=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">scope=None</em>, <em class="sig-param">url=None</em>, <em class="sig-param">username=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetCatalogResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetCatalogResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">branch=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">kind=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">scope=None</em>, <em class="sig-param">url=None</em>, <em class="sig-param">username=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetCatalogResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getCatalog.</p>
 <dl class="attribute">
 <dt id="pulumi_rancher2.GetCatalogResult.annotations">
@@ -7747,6 +7873,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.GetCatalogResult.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetCatalogResult.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Computed) A catalog description (string)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_rancher2.GetCatalogResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetCatalogResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -7785,17 +7917,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>(Computed/Sensitive) The username to access the catalog if needed (string)</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_rancher2.GetCatalogResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetCatalogResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_rancher2.GetCertificateResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetCertificateResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">certs=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_id=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetCertificateResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetCertificateResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">certs=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_id=None</em>, <em class="sig-param">project_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetCertificateResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getCertificate.</p>
 <dl class="attribute">
 <dt id="pulumi_rancher2.GetCertificateResult.annotations">
@@ -7816,22 +7942,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pulumi_rancher2.GetCertificateResult.labels">
-<code class="sig-name descname">labels</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetCertificateResult.labels" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Computed) Labels for certificate object (map)</p>
-</dd></dl>
-
-<dl class="attribute">
 <dt id="pulumi_rancher2.GetCertificateResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetCertificateResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_rancher2.GetCertificateResult.labels">
+<code class="sig-name descname">labels</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetCertificateResult.labels" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Computed) Labels for certificate object (map)</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_rancher2.GetCloudCredentialResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetCloudCredentialResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetCloudCredentialResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetCloudCredentialResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetCloudCredentialResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getCloudCredential.</p>
 <dl class="attribute">
 <dt id="pulumi_rancher2.GetCloudCredentialResult.annotations">
@@ -7840,22 +7966,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pulumi_rancher2.GetCloudCredentialResult.labels">
-<code class="sig-name descname">labels</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetCloudCredentialResult.labels" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Computed) Labels for the Cloud Credential (map)</p>
-</dd></dl>
-
-<dl class="attribute">
 <dt id="pulumi_rancher2.GetCloudCredentialResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetCloudCredentialResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_rancher2.GetCloudCredentialResult.labels">
+<code class="sig-name descname">labels</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetCloudCredentialResult.labels" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Computed) Labels for the Cloud Credential (map)</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_rancher2.GetClusterAlertGroupResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetClusterAlertGroupResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">group_interval_seconds=None</em>, <em class="sig-param">group_wait_seconds=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">recipients=None</em>, <em class="sig-param">repeat_interval_seconds=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetClusterAlertGroupResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetClusterAlertGroupResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">group_interval_seconds=None</em>, <em class="sig-param">group_wait_seconds=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">recipients=None</em>, <em class="sig-param">repeat_interval_seconds=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetClusterAlertGroupResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getClusterAlertGroup.</p>
 <dl class="attribute">
 <dt id="pulumi_rancher2.GetClusterAlertGroupResult.annotations">
@@ -7882,6 +8008,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_rancher2.GetClusterAlertGroupResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetClusterAlertGroupResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_rancher2.GetClusterAlertGroupResult.labels">
 <code class="sig-name descname">labels</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetClusterAlertGroupResult.labels" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Computed) The cluster alert group labels (map)</p>
@@ -7899,17 +8031,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>(Computed) The cluster alert group wait seconds. Default: <code class="docutils literal notranslate"><span class="pre">3600</span></code> (int)</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_rancher2.GetClusterAlertGroupResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetClusterAlertGroupResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_rancher2.GetClusterAlterRuleResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetClusterAlterRuleResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">event_rule=None</em>, <em class="sig-param">group_id=None</em>, <em class="sig-param">group_interval_seconds=None</em>, <em class="sig-param">group_wait_seconds=None</em>, <em class="sig-param">inherited=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">metric_rule=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">node_rule=None</em>, <em class="sig-param">repeat_interval_seconds=None</em>, <em class="sig-param">severity=None</em>, <em class="sig-param">system_service_rule=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetClusterAlterRuleResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetClusterAlterRuleResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">event_rule=None</em>, <em class="sig-param">group_id=None</em>, <em class="sig-param">group_interval_seconds=None</em>, <em class="sig-param">group_wait_seconds=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">inherited=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">metric_rule=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">node_rule=None</em>, <em class="sig-param">repeat_interval_seconds=None</em>, <em class="sig-param">severity=None</em>, <em class="sig-param">system_service_rule=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetClusterAlterRuleResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getClusterAlterRule.</p>
 <dl class="attribute">
 <dt id="pulumi_rancher2.GetClusterAlterRuleResult.annotations">
@@ -7939,6 +8065,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.GetClusterAlterRuleResult.group_wait_seconds">
 <code class="sig-name descname">group_wait_seconds</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetClusterAlterRuleResult.group_wait_seconds" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Computed) The cluster alert rule group wait seconds. Default: <code class="docutils literal notranslate"><span class="pre">180</span></code> (int)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_rancher2.GetClusterAlterRuleResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetClusterAlterRuleResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -7983,17 +8115,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>(Computed) The cluster alert rule system service rule. ConflictsWith: <cite>“event_rule”, “metric_rule”, “node_rule”`</cite> (list Maxitems:1)</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_rancher2.GetClusterAlterRuleResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetClusterAlterRuleResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_rancher2.GetClusterDriverResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetClusterDriverResult</code><span class="sig-paren">(</span><em class="sig-param">active=None</em>, <em class="sig-param">actual_url=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">builtin=None</em>, <em class="sig-param">checksum=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">ui_url=None</em>, <em class="sig-param">url=None</em>, <em class="sig-param">whitelist_domains=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetClusterDriverResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetClusterDriverResult</code><span class="sig-paren">(</span><em class="sig-param">active=None</em>, <em class="sig-param">actual_url=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">builtin=None</em>, <em class="sig-param">checksum=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">ui_url=None</em>, <em class="sig-param">url=None</em>, <em class="sig-param">whitelist_domains=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetClusterDriverResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getClusterDriver.</p>
 <dl class="attribute">
 <dt id="pulumi_rancher2.GetClusterDriverResult.active">
@@ -8026,6 +8152,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_rancher2.GetClusterDriverResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetClusterDriverResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_rancher2.GetClusterDriverResult.labels">
 <code class="sig-name descname">labels</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetClusterDriverResult.labels" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Computed) Labels of the resource (map)</p>
@@ -8043,17 +8175,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>(Computed) Domains to whitelist for the ui (list)</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_rancher2.GetClusterDriverResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetClusterDriverResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_rancher2.GetClusterLoggingResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetClusterLoggingResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">elasticsearch_config=None</em>, <em class="sig-param">fluentd_config=None</em>, <em class="sig-param">kafka_config=None</em>, <em class="sig-param">kind=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_id=None</em>, <em class="sig-param">output_flush_interval=None</em>, <em class="sig-param">output_tags=None</em>, <em class="sig-param">splunk_config=None</em>, <em class="sig-param">syslog_config=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetClusterLoggingResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetClusterLoggingResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">elasticsearch_config=None</em>, <em class="sig-param">fluentd_config=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">kafka_config=None</em>, <em class="sig-param">kind=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_id=None</em>, <em class="sig-param">output_flush_interval=None</em>, <em class="sig-param">output_tags=None</em>, <em class="sig-param">splunk_config=None</em>, <em class="sig-param">syslog_config=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetClusterLoggingResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getClusterLogging.</p>
 <dl class="attribute">
 <dt id="pulumi_rancher2.GetClusterLoggingResult.annotations">
@@ -8071,6 +8197,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.GetClusterLoggingResult.fluentd_config">
 <code class="sig-name descname">fluentd_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetClusterLoggingResult.fluentd_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Computed) The fluentd config for Cluster Logging. For <code class="docutils literal notranslate"><span class="pre">kind</span> <span class="pre">=</span> <span class="pre">fluentd</span></code> (list maxitems:1)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_rancher2.GetClusterLoggingResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetClusterLoggingResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -8127,17 +8259,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>(Computed) The syslog config for Cluster Logging. For <code class="docutils literal notranslate"><span class="pre">kind</span> <span class="pre">=</span> <span class="pre">syslog</span></code> (list maxitems:1)</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_rancher2.GetClusterLoggingResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetClusterLoggingResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_rancher2.GetClusterResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetClusterResult</code><span class="sig-paren">(</span><em class="sig-param">aks_config=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_auth_endpoint=None</em>, <em class="sig-param">cluster_monitoring_input=None</em>, <em class="sig-param">cluster_registration_token=None</em>, <em class="sig-param">cluster_template_answers=None</em>, <em class="sig-param">cluster_template_id=None</em>, <em class="sig-param">cluster_template_questions=None</em>, <em class="sig-param">cluster_template_revision_id=None</em>, <em class="sig-param">default_pod_security_policy_template_id=None</em>, <em class="sig-param">default_project_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">driver=None</em>, <em class="sig-param">eks_config=None</em>, <em class="sig-param">enable_cluster_alerting=None</em>, <em class="sig-param">enable_cluster_monitoring=None</em>, <em class="sig-param">enable_network_policy=None</em>, <em class="sig-param">gke_config=None</em>, <em class="sig-param">kube_config=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">rke_config=None</em>, <em class="sig-param">system_project_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetClusterResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetClusterResult</code><span class="sig-paren">(</span><em class="sig-param">aks_config=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_auth_endpoint=None</em>, <em class="sig-param">cluster_monitoring_input=None</em>, <em class="sig-param">cluster_registration_token=None</em>, <em class="sig-param">cluster_template_answers=None</em>, <em class="sig-param">cluster_template_id=None</em>, <em class="sig-param">cluster_template_questions=None</em>, <em class="sig-param">cluster_template_revision_id=None</em>, <em class="sig-param">default_pod_security_policy_template_id=None</em>, <em class="sig-param">default_project_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">driver=None</em>, <em class="sig-param">eks_config=None</em>, <em class="sig-param">enable_cluster_alerting=None</em>, <em class="sig-param">enable_cluster_monitoring=None</em>, <em class="sig-param">enable_network_policy=None</em>, <em class="sig-param">gke_config=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">kube_config=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">rke_config=None</em>, <em class="sig-param">system_project_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetClusterResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getCluster.</p>
 <dl class="attribute">
 <dt id="pulumi_rancher2.GetClusterResult.aks_config">
@@ -8242,6 +8368,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_rancher2.GetClusterResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetClusterResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_rancher2.GetClusterResult.kube_config">
 <code class="sig-name descname">kube_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetClusterResult.kube_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Computed) Kube Config generated for the cluster (string)</p>
@@ -8265,17 +8397,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>(Computed) System project ID for the cluster (string)</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_rancher2.GetClusterResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetClusterResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_rancher2.GetClusterRoleTemplateBindingResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetClusterRoleTemplateBindingResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">group_id=None</em>, <em class="sig-param">group_principal_id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">role_template_id=None</em>, <em class="sig-param">user_id=None</em>, <em class="sig-param">user_principal_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetClusterRoleTemplateBindingResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetClusterRoleTemplateBindingResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">group_id=None</em>, <em class="sig-param">group_principal_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">role_template_id=None</em>, <em class="sig-param">user_id=None</em>, <em class="sig-param">user_principal_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetClusterRoleTemplateBindingResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getClusterRoleTemplateBinding.</p>
 <dl class="attribute">
 <dt id="pulumi_rancher2.GetClusterRoleTemplateBindingResult.annotations">
@@ -8296,6 +8422,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_rancher2.GetClusterRoleTemplateBindingResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetClusterRoleTemplateBindingResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_rancher2.GetClusterRoleTemplateBindingResult.labels">
 <code class="sig-name descname">labels</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetClusterRoleTemplateBindingResult.labels" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Computed) Labels of the resource (map)</p>
@@ -8313,17 +8445,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>(Computed) The user_principal ID to assign cluster role template binding (string)</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_rancher2.GetClusterRoleTemplateBindingResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetClusterRoleTemplateBindingResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_rancher2.GetClusterTemplateResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetClusterTemplateResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">default_revision_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">members=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">template_revisions=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetClusterTemplateResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetClusterTemplateResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">default_revision_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">members=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">template_revisions=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetClusterTemplateResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getClusterTemplate.</p>
 <dl class="attribute">
 <dt id="pulumi_rancher2.GetClusterTemplateResult.annotations">
@@ -8335,6 +8461,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.GetClusterTemplateResult.default_revision_id">
 <code class="sig-name descname">default_revision_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetClusterTemplateResult.default_revision_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Computed) Default cluster template revision ID (string)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_rancher2.GetClusterTemplateResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetClusterTemplateResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -8355,17 +8487,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>(Computed) Cluster template revisions (list)</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_rancher2.GetClusterTemplateResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetClusterTemplateResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_rancher2.GetEtcdBackupResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetEtcdBackupResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">backup_config=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">filename=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">manual=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetEtcdBackupResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetEtcdBackupResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">backup_config=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">filename=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">manual=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetEtcdBackupResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getEtcdBackup.</p>
 <dl class="attribute">
 <dt id="pulumi_rancher2.GetEtcdBackupResult.annotations">
@@ -8386,6 +8512,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_rancher2.GetEtcdBackupResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetEtcdBackupResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_rancher2.GetEtcdBackupResult.labels">
 <code class="sig-name descname">labels</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetEtcdBackupResult.labels" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Computed) Labels for Etcd Backup object (map)</p>
@@ -8403,22 +8535,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>(Computed) Description for the Etcd Backup (string)</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_rancher2.GetEtcdBackupResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetEtcdBackupResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_rancher2.GetGlobalRoleBindingResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetGlobalRoleBindingResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">global_role_id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">user_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetGlobalRoleBindingResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetGlobalRoleBindingResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">global_role_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">user_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetGlobalRoleBindingResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getGlobalRoleBinding.</p>
 <dl class="attribute">
 <dt id="pulumi_rancher2.GetGlobalRoleBindingResult.annotations">
 <code class="sig-name descname">annotations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetGlobalRoleBindingResult.annotations" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Computed) Annotations of the resource (map)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_rancher2.GetGlobalRoleBindingResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetGlobalRoleBindingResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -8433,17 +8565,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>(Computed) The user ID to assign global role binding (string)</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_rancher2.GetGlobalRoleBindingResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetGlobalRoleBindingResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_rancher2.GetMultiClusterAppResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetMultiClusterAppResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">answers=None</em>, <em class="sig-param">catalog_name=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">members=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">revision_history_limit=None</em>, <em class="sig-param">revision_id=None</em>, <em class="sig-param">roles=None</em>, <em class="sig-param">targets=None</em>, <em class="sig-param">template_name=None</em>, <em class="sig-param">template_version=None</em>, <em class="sig-param">template_version_id=None</em>, <em class="sig-param">upgrade_strategies=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetMultiClusterAppResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetMultiClusterAppResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">answers=None</em>, <em class="sig-param">catalog_name=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">members=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">revision_history_limit=None</em>, <em class="sig-param">revision_id=None</em>, <em class="sig-param">roles=None</em>, <em class="sig-param">targets=None</em>, <em class="sig-param">template_name=None</em>, <em class="sig-param">template_version=None</em>, <em class="sig-param">template_version_id=None</em>, <em class="sig-param">upgrade_strategies=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetMultiClusterAppResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getMultiClusterApp.</p>
 <dl class="attribute">
 <dt id="pulumi_rancher2.GetMultiClusterAppResult.annotations">
@@ -8461,6 +8587,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.GetMultiClusterAppResult.catalog_name">
 <code class="sig-name descname">catalog_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetMultiClusterAppResult.catalog_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Computed) The multi cluster app catalog name (string)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_rancher2.GetMultiClusterAppResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetMultiClusterAppResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -8523,17 +8655,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>(Computed) The multi cluster app upgrade strategy (list)</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_rancher2.GetMultiClusterAppResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetMultiClusterAppResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_rancher2.GetNamespaceResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetNamespaceResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">container_resource_limit=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">resource_quota=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetNamespaceResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetNamespaceResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">container_resource_limit=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">resource_quota=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetNamespaceResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getNamespace.</p>
 <dl class="attribute">
 <dt id="pulumi_rancher2.GetNamespaceResult.annotations">
@@ -8554,6 +8680,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_rancher2.GetNamespaceResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetNamespaceResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_rancher2.GetNamespaceResult.labels">
 <code class="sig-name descname">labels</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetNamespaceResult.labels" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Computed) Labels for Node Pool object (map)</p>
@@ -8565,17 +8697,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>(Computed) Resource quota for namespace. Rancher v2.1.x or higher (list maxitems:1)</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_rancher2.GetNamespaceResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetNamespaceResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_rancher2.GetNodeDriverResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetNodeDriverResult</code><span class="sig-paren">(</span><em class="sig-param">active=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">builtin=None</em>, <em class="sig-param">checksum=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">external_id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">ui_url=None</em>, <em class="sig-param">url=None</em>, <em class="sig-param">whitelist_domains=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetNodeDriverResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetNodeDriverResult</code><span class="sig-paren">(</span><em class="sig-param">active=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">builtin=None</em>, <em class="sig-param">checksum=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">external_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">ui_url=None</em>, <em class="sig-param">url=None</em>, <em class="sig-param">whitelist_domains=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetNodeDriverResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getNodeDriver.</p>
 <dl class="attribute">
 <dt id="pulumi_rancher2.GetNodeDriverResult.active">
@@ -8614,6 +8740,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_rancher2.GetNodeDriverResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetNodeDriverResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_rancher2.GetNodeDriverResult.labels">
 <code class="sig-name descname">labels</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetNodeDriverResult.labels" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Computed) Labels of the resource (map)</p>
@@ -8631,17 +8763,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>(Computed) Domains to whitelist for the ui (list)</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_rancher2.GetNodeDriverResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetNodeDriverResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_rancher2.GetNodePoolResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetNodePoolResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">control_plane=None</em>, <em class="sig-param">etcd=None</em>, <em class="sig-param">hostname_prefix=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">node_template_id=None</em>, <em class="sig-param">quantity=None</em>, <em class="sig-param">worker=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetNodePoolResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetNodePoolResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">control_plane=None</em>, <em class="sig-param">delete_not_ready_after_secs=None</em>, <em class="sig-param">etcd=None</em>, <em class="sig-param">hostname_prefix=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">node_taints=None</em>, <em class="sig-param">node_template_id=None</em>, <em class="sig-param">quantity=None</em>, <em class="sig-param">worker=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetNodePoolResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getNodePool.</p>
 <dl class="attribute">
 <dt id="pulumi_rancher2.GetNodePoolResult.annotations">
@@ -8653,6 +8779,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.GetNodePoolResult.control_plane">
 <code class="sig-name descname">control_plane</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetNodePoolResult.control_plane" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Computed) RKE control plane role for created nodes (bool)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_rancher2.GetNodePoolResult.delete_not_ready_after_secs">
+<code class="sig-name descname">delete_not_ready_after_secs</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetNodePoolResult.delete_not_ready_after_secs" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Computed) Delete not ready node after secs. Default <code class="docutils literal notranslate"><span class="pre">0</span></code> (int)</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -8668,9 +8800,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_rancher2.GetNodePoolResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetNodePoolResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_rancher2.GetNodePoolResult.labels">
 <code class="sig-name descname">labels</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetNodePoolResult.labels" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Computed) Labels for Node Pool object (map)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_rancher2.GetNodePoolResult.node_taints">
+<code class="sig-name descname">node_taints</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetNodePoolResult.node_taints" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Computed) Node taints (List)</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -8685,17 +8829,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>(Computed) RKE role role for created nodes (bool)</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_rancher2.GetNodePoolResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetNodePoolResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_rancher2.GetNodeTemplateResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetNodeTemplateResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">cloud_credential_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">driver=None</em>, <em class="sig-param">engine_env=None</em>, <em class="sig-param">engine_insecure_registries=None</em>, <em class="sig-param">engine_install_url=None</em>, <em class="sig-param">engine_label=None</em>, <em class="sig-param">engine_opt=None</em>, <em class="sig-param">engine_registry_mirrors=None</em>, <em class="sig-param">engine_storage_driver=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">use_internal_ip_address=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetNodeTemplateResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetNodeTemplateResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">cloud_credential_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">driver=None</em>, <em class="sig-param">engine_env=None</em>, <em class="sig-param">engine_insecure_registries=None</em>, <em class="sig-param">engine_install_url=None</em>, <em class="sig-param">engine_label=None</em>, <em class="sig-param">engine_opt=None</em>, <em class="sig-param">engine_registry_mirrors=None</em>, <em class="sig-param">engine_storage_driver=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">use_internal_ip_address=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetNodeTemplateResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getNodeTemplate.</p>
 <dl class="attribute">
 <dt id="pulumi_rancher2.GetNodeTemplateResult.annotations">
@@ -8764,6 +8902,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_rancher2.GetNodeTemplateResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetNodeTemplateResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_rancher2.GetNodeTemplateResult.labels">
 <code class="sig-name descname">labels</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetNodeTemplateResult.labels" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Computed) Labels for Node Template object (map)</p>
@@ -8775,17 +8919,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>(Computed) Engine storage driver for the node template (bool)</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_rancher2.GetNodeTemplateResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetNodeTemplateResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_rancher2.GetNotifierResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetNotifierResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">pagerduty_config=None</em>, <em class="sig-param">slack_config=None</em>, <em class="sig-param">smtp_config=None</em>, <em class="sig-param">webhook_config=None</em>, <em class="sig-param">wechat_config=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetNotifierResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetNotifierResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">pagerduty_config=None</em>, <em class="sig-param">slack_config=None</em>, <em class="sig-param">smtp_config=None</em>, <em class="sig-param">webhook_config=None</em>, <em class="sig-param">wechat_config=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetNotifierResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getNotifier.</p>
 <dl class="attribute">
 <dt id="pulumi_rancher2.GetNotifierResult.annotations">
@@ -8797,6 +8935,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.GetNotifierResult.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetNotifierResult.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Computed) The notifier description (string)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_rancher2.GetNotifierResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetNotifierResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -8835,17 +8979,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>(Computed) Wechat config for notifier (list maxitems:1)</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_rancher2.GetNotifierResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetNotifierResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_rancher2.GetProjectAlertGroupResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetProjectAlertGroupResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">group_interval_seconds=None</em>, <em class="sig-param">group_wait_seconds=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">recipients=None</em>, <em class="sig-param">repeat_interval_seconds=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetProjectAlertGroupResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetProjectAlertGroupResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">group_interval_seconds=None</em>, <em class="sig-param">group_wait_seconds=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">recipients=None</em>, <em class="sig-param">repeat_interval_seconds=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetProjectAlertGroupResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getProjectAlertGroup.</p>
 <dl class="attribute">
 <dt id="pulumi_rancher2.GetProjectAlertGroupResult.annotations">
@@ -8872,6 +9010,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_rancher2.GetProjectAlertGroupResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetProjectAlertGroupResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_rancher2.GetProjectAlertGroupResult.labels">
 <code class="sig-name descname">labels</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetProjectAlertGroupResult.labels" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Computed) The project alert group labels (map)</p>
@@ -8889,17 +9033,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>(Computed) The project alert group wait seconds. Default: <code class="docutils literal notranslate"><span class="pre">3600</span></code> (int)</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_rancher2.GetProjectAlertGroupResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetProjectAlertGroupResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_rancher2.GetProjectAlertRuleResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetProjectAlertRuleResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">group_id=None</em>, <em class="sig-param">group_interval_seconds=None</em>, <em class="sig-param">group_wait_seconds=None</em>, <em class="sig-param">inherited=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">metric_rule=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">pod_rule=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">repeat_interval_seconds=None</em>, <em class="sig-param">severity=None</em>, <em class="sig-param">workload_rule=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetProjectAlertRuleResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetProjectAlertRuleResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">group_id=None</em>, <em class="sig-param">group_interval_seconds=None</em>, <em class="sig-param">group_wait_seconds=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">inherited=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">metric_rule=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">pod_rule=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">repeat_interval_seconds=None</em>, <em class="sig-param">severity=None</em>, <em class="sig-param">workload_rule=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetProjectAlertRuleResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getProjectAlertRule.</p>
 <dl class="attribute">
 <dt id="pulumi_rancher2.GetProjectAlertRuleResult.annotations">
@@ -8923,6 +9061,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.GetProjectAlertRuleResult.group_wait_seconds">
 <code class="sig-name descname">group_wait_seconds</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetProjectAlertRuleResult.group_wait_seconds" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Computed) The project alert rule group wait seconds. Default: <code class="docutils literal notranslate"><span class="pre">180</span></code> (int)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_rancher2.GetProjectAlertRuleResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetProjectAlertRuleResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -8967,17 +9111,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>(Computed) The project alert rule workload rule. ConflictsWith: <cite>“metric_rule”, “pod_rule”`</cite> (list Maxitems:1)</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_rancher2.GetProjectAlertRuleResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetProjectAlertRuleResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_rancher2.GetProjectLoggingResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetProjectLoggingResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">elasticsearch_config=None</em>, <em class="sig-param">fluentd_config=None</em>, <em class="sig-param">kafka_config=None</em>, <em class="sig-param">kind=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_id=None</em>, <em class="sig-param">output_flush_interval=None</em>, <em class="sig-param">output_tags=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">splunk_config=None</em>, <em class="sig-param">syslog_config=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetProjectLoggingResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetProjectLoggingResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">elasticsearch_config=None</em>, <em class="sig-param">fluentd_config=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">kafka_config=None</em>, <em class="sig-param">kind=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_id=None</em>, <em class="sig-param">output_flush_interval=None</em>, <em class="sig-param">output_tags=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">splunk_config=None</em>, <em class="sig-param">syslog_config=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetProjectLoggingResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getProjectLogging.</p>
 <dl class="attribute">
 <dt id="pulumi_rancher2.GetProjectLoggingResult.annotations">
@@ -8995,6 +9133,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.GetProjectLoggingResult.fluentd_config">
 <code class="sig-name descname">fluentd_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetProjectLoggingResult.fluentd_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Computed) The fluentd config for Cluster Logging. For <code class="docutils literal notranslate"><span class="pre">kind</span> <span class="pre">=</span> <span class="pre">fluentd</span></code> (list maxitems:1)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_rancher2.GetProjectLoggingResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetProjectLoggingResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -9051,17 +9195,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>(Computed) The syslog config for Cluster Logging. For <code class="docutils literal notranslate"><span class="pre">kind</span> <span class="pre">=</span> <span class="pre">syslog</span></code> (list maxitems:1)</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_rancher2.GetProjectLoggingResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetProjectLoggingResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_rancher2.GetProjectResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetProjectResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">container_resource_limit=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enable_project_monitoring=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">pod_security_policy_template_id=None</em>, <em class="sig-param">resource_quota=None</em>, <em class="sig-param">uuid=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetProjectResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetProjectResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">container_resource_limit=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enable_project_monitoring=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">pod_security_policy_template_id=None</em>, <em class="sig-param">resource_quota=None</em>, <em class="sig-param">uuid=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetProjectResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getProject.</p>
 <dl class="attribute">
 <dt id="pulumi_rancher2.GetProjectResult.annotations">
@@ -9088,6 +9226,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_rancher2.GetProjectResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetProjectResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_rancher2.GetProjectResult.labels">
 <code class="sig-name descname">labels</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetProjectResult.labels" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Computed) Labels of the rancher2 project (map)</p>
@@ -9111,17 +9255,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>(Computed) UUID of the project as stored by Rancher 2 (string)</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_rancher2.GetProjectResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetProjectResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_rancher2.GetProjectRoleTemplateBindingResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetProjectRoleTemplateBindingResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">group_id=None</em>, <em class="sig-param">group_principal_id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">role_template_id=None</em>, <em class="sig-param">user_id=None</em>, <em class="sig-param">user_principal_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetProjectRoleTemplateBindingResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetProjectRoleTemplateBindingResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">group_id=None</em>, <em class="sig-param">group_principal_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">role_template_id=None</em>, <em class="sig-param">user_id=None</em>, <em class="sig-param">user_principal_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetProjectRoleTemplateBindingResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getProjectRoleTemplateBinding.</p>
 <dl class="attribute">
 <dt id="pulumi_rancher2.GetProjectRoleTemplateBindingResult.annotations">
@@ -9142,6 +9280,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_rancher2.GetProjectRoleTemplateBindingResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetProjectRoleTemplateBindingResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_rancher2.GetProjectRoleTemplateBindingResult.labels">
 <code class="sig-name descname">labels</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetProjectRoleTemplateBindingResult.labels" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Computed) Labels of the resource (map)</p>
@@ -9159,17 +9303,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>(Computed) The user_principal ID to assign project role template binding (string)</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_rancher2.GetProjectRoleTemplateBindingResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetProjectRoleTemplateBindingResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_rancher2.GetRegistryResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetRegistryResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_id=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">registries=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetRegistryResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetRegistryResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_id=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">registries=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetRegistryResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getRegistry.</p>
 <dl class="attribute">
 <dt id="pulumi_rancher2.GetRegistryResult.annotations">
@@ -9184,6 +9322,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_rancher2.GetRegistryResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetRegistryResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_rancher2.GetRegistryResult.labels">
 <code class="sig-name descname">labels</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetRegistryResult.labels" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Computed) Labels for Registry object (map)</p>
@@ -9195,17 +9339,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>(Computed) Registries data for registry (list)</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_rancher2.GetRegistryResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetRegistryResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_rancher2.GetRoleTempalteResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetRoleTempalteResult</code><span class="sig-paren">(</span><em class="sig-param">administrative=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">builtin=None</em>, <em class="sig-param">context=None</em>, <em class="sig-param">default_role=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">external=None</em>, <em class="sig-param">hidden=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">locked=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">role_template_ids=None</em>, <em class="sig-param">rules=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetRoleTempalteResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetRoleTempalteResult</code><span class="sig-paren">(</span><em class="sig-param">administrative=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">builtin=None</em>, <em class="sig-param">context=None</em>, <em class="sig-param">default_role=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">external=None</em>, <em class="sig-param">hidden=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">locked=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">role_template_ids=None</em>, <em class="sig-param">rules=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetRoleTempalteResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getRoleTempalte.</p>
 <dl class="attribute">
 <dt id="pulumi_rancher2.GetRoleTempalteResult.administrative">
@@ -9250,6 +9388,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_rancher2.GetRoleTempalteResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetRoleTempalteResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_rancher2.GetRoleTempalteResult.labels">
 <code class="sig-name descname">labels</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetRoleTempalteResult.labels" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Computed) Labels for role template object (map)</p>
@@ -9273,17 +9417,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>(Computed) Role template policy rules (list)</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_rancher2.GetRoleTempalteResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetRoleTempalteResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_rancher2.GetSecretResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetSecretResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">data=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_id=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetSecretResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetSecretResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">data=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_id=None</em>, <em class="sig-param">project_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetSecretResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getSecret.</p>
 <dl class="attribute">
 <dt id="pulumi_rancher2.GetSecretResult.annotations">
@@ -9304,40 +9442,40 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pulumi_rancher2.GetSecretResult.labels">
-<code class="sig-name descname">labels</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetSecretResult.labels" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Computed) Labels for secret object (map)</p>
-</dd></dl>
-
-<dl class="attribute">
 <dt id="pulumi_rancher2.GetSecretResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetSecretResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_rancher2.GetSecretResult.labels">
+<code class="sig-name descname">labels</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetSecretResult.labels" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Computed) Labels for secret object (map)</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_rancher2.GetSettingResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetSettingResult</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">value=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetSettingResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetSettingResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">value=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetSettingResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getSetting.</p>
-<dl class="attribute">
-<dt id="pulumi_rancher2.GetSettingResult.value">
-<code class="sig-name descname">value</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetSettingResult.value" title="Permalink to this definition">¶</a></dt>
-<dd><p>the settting’s value.</p>
-</dd></dl>
-
 <dl class="attribute">
 <dt id="pulumi_rancher2.GetSettingResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetSettingResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_rancher2.GetSettingResult.value">
+<code class="sig-name descname">value</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetSettingResult.value" title="Permalink to this definition">¶</a></dt>
+<dd><p>the settting’s value.</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_rancher2.GetUserResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetUserResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">principal_ids=None</em>, <em class="sig-param">username=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetUserResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetUserResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">is_external=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">principal_ids=None</em>, <em class="sig-param">username=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetUserResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getUser.</p>
 <dl class="attribute">
 <dt id="pulumi_rancher2.GetUserResult.annotations">
@@ -9349,6 +9487,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.GetUserResult.enabled">
 <code class="sig-name descname">enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetUserResult.enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Computed) The user is enabled (bool)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_rancher2.GetUserResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetUserResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -9369,18 +9513,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>(Computed) The user principal IDs (list)</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_rancher2.GetUserResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetUserResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_rancher2.GlobalRoleBinding">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GlobalRoleBinding</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">global_role_id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">user_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GlobalRoleBinding" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Global Role Binding resource. This can be used to create Global Role Bindings for Rancher v2 environments and retrieve their information.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/globalRole.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/globalRole.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -9394,9 +9535,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/global_role_binding.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/global_role_binding.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_rancher2.GlobalRoleBinding.annotations">
 <code class="sig-name descname">annotations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GlobalRoleBinding.annotations" title="Permalink to this definition">¶</a></dt>
@@ -9446,9 +9584,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/global_role_binding.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/global_role_binding.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -9492,29 +9627,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_rancher2.MultiClusterApp">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">MultiClusterApp</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">answers=None</em>, <em class="sig-param">catalog_name=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">members=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">revision_history_limit=None</em>, <em class="sig-param">revision_id=None</em>, <em class="sig-param">roles=None</em>, <em class="sig-param">targets=None</em>, <em class="sig-param">template_name=None</em>, <em class="sig-param">template_version=None</em>, <em class="sig-param">upgrade_strategy=None</em>, <em class="sig-param">wait=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.MultiClusterApp" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a MultiClusterApp resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>annotations</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Annotations for multi cluster app object (map)</p></li>
-<li><p><strong>answers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The multi cluster app answers (list)</p></li>
-<li><p><strong>catalog_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The multi cluster app catalog name (string)</p></li>
-<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Labels for multi cluster app object (map)</p></li>
-<li><p><strong>members</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The multi cluster app answers (list)</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The multi cluster app name (string)</p></li>
-<li><p><strong>revision_history_limit</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The multi cluster app revision history limit. Default <code class="docutils literal notranslate"><span class="pre">10</span></code> (int)</p></li>
-<li><p><strong>revision_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Current revision id for the multi cluster app (string)</p></li>
-<li><p><strong>roles</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The multi cluster app roles (list)</p></li>
-<li><p><strong>targets</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The multi cluster app target projects (list)</p></li>
-<li><p><strong>template_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The multi cluster app template name (string)</p></li>
-<li><p><strong>template_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The multi cluster app template version. Default: <code class="docutils literal notranslate"><span class="pre">latest</span></code> (string)</p></li>
-<li><p><strong>upgrade_strategy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The multi cluster app upgrade strategy (list MaxItems:1)</p></li>
-<li><p><strong>wait</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Wait until the multi cluster app is active. Default <code class="docutils literal notranslate"><span class="pre">true</span></code> (bool)</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a MultiClusterApp resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[dict] annotations: Annotations for multi cluster app object (map)
+:param pulumi.Input[list] answers: The multi cluster app answers (list)
+:param pulumi.Input[str] catalog_name: The multi cluster app catalog name (string)
+:param pulumi.Input[dict] labels: Labels for multi cluster app object (map)
+:param pulumi.Input[list] members: The multi cluster app answers (list)
+:param pulumi.Input[str] name: The multi cluster app name (string)
+:param pulumi.Input[float] revision_history_limit: The multi cluster app revision history limit. Default <code class="docutils literal notranslate"><span class="pre">10</span></code> (int)
+:param pulumi.Input[str] revision_id: Current revision id for the multi cluster app (string)
+:param pulumi.Input[list] roles: The multi cluster app roles (list)
+:param pulumi.Input[list] targets: The multi cluster app target projects (list)
+:param pulumi.Input[str] template_name: The multi cluster app template name (string)
+:param pulumi.Input[str] template_version: The multi cluster app template version. Default: <code class="docutils literal notranslate"><span class="pre">latest</span></code> (string)
+:param pulumi.Input[dict] upgrade_strategy: The multi cluster app upgrade strategy (list MaxItems:1)
+:param pulumi.Input[bool] wait: Wait until the multi cluster app is active. Default <code class="docutils literal notranslate"><span class="pre">true</span></code> (bool)</p>
 <p>The <strong>answers</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">cluster_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Cluster ID for answer (string)</p></li>
@@ -9543,9 +9672,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/multi_cluster_app.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/multi_cluster_app.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_rancher2.MultiClusterApp.annotations">
 <code class="sig-name descname">annotations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.MultiClusterApp.annotations" title="Permalink to this definition">¶</a></dt>
@@ -9717,9 +9843,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/multi_cluster_app.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/multi_cluster_app.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -9764,6 +9887,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.Namespace">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">Namespace</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">container_resource_limit=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">resource_quota=None</em>, <em class="sig-param">wait_for_cluster=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.Namespace" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Namespace resource. This can be used to create namespaces for Rancher v2 environments and retrieve their information.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/namespace.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/namespace.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -9807,9 +9933,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/namespace.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/namespace.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_rancher2.Namespace.annotations">
 <code class="sig-name descname">annotations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.Namespace.annotations" title="Permalink to this definition">¶</a></dt>
@@ -9932,9 +10055,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/namespace.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/namespace.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -9979,6 +10099,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.NodeDriver">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">NodeDriver</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">active=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">builtin=None</em>, <em class="sig-param">checksum=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">external_id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">ui_url=None</em>, <em class="sig-param">url=None</em>, <em class="sig-param">whitelist_domains=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.NodeDriver" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Node Driver resource. This can be used to create Node Driver for Rancher v2 RKE clusters and retrieve their information.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/nodeDriver.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/nodeDriver.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -9998,9 +10121,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/node_driver.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/node_driver.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_rancher2.NodeDriver.active">
 <code class="sig-name descname">active</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.NodeDriver.active" title="Permalink to this definition">¶</a></dt>
@@ -10092,9 +10212,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/node_driver.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/node_driver.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -10137,8 +10254,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_rancher2.NodePool">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">NodePool</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">control_plane=None</em>, <em class="sig-param">etcd=None</em>, <em class="sig-param">hostname_prefix=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">node_template_id=None</em>, <em class="sig-param">quantity=None</em>, <em class="sig-param">worker=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.NodePool" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">NodePool</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">control_plane=None</em>, <em class="sig-param">delete_not_ready_after_secs=None</em>, <em class="sig-param">etcd=None</em>, <em class="sig-param">hostname_prefix=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">node_taints=None</em>, <em class="sig-param">node_template_id=None</em>, <em class="sig-param">quantity=None</em>, <em class="sig-param">worker=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.NodePool" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Node Pool resource. This can be used to create Node Pool, using Node template for Rancher v2 RKE clusters and retrieve their information.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/nodePool.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/nodePool.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -10147,19 +10267,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>annotations</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Annotations for Node Pool object (map)</p></li>
 <li><p><strong>cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The RKE cluster id to use Node Pool (string)</p></li>
 <li><p><strong>control_plane</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – RKE control plane role for created nodes (bool)</p></li>
+<li><p><strong>delete_not_ready_after_secs</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Delete not ready node after secs. For Rancher v2.3.3 or above. Default <code class="docutils literal notranslate"><span class="pre">0</span></code> (int)</p></li>
 <li><p><strong>etcd</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – RKE etcd role for created nodes (bool)</p></li>
 <li><p><strong>hostname_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The prefix for created nodes of the Node Pool (string)</p></li>
 <li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Labels for Node Pool object (map)</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Node Pool (string)</p></li>
+<li><p><strong>node_taints</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Node taints. For Rancher v2.3.3 or above (List)</p></li>
 <li><p><strong>node_template_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Node Template ID to use for node creation (string)</p></li>
 <li><p><strong>quantity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of nodes to create on Node Pool. Default <code class="docutils literal notranslate"><span class="pre">1</span></code>. Only values &gt;= 1 allowed (int)</p></li>
 <li><p><strong>worker</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – RKE role role for created nodes (bool)</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/node_pool.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/node_pool.html.markdown</a>.</p>
-</div></blockquote>
+<p>The <strong>node_taints</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">effect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Taint effect. Supported values : <code class="docutils literal notranslate"><span class="pre">&quot;NoExecute&quot;</span> <span class="pre">|</span> <span class="pre">&quot;NoSchedule&quot;</span> <span class="pre">|</span> <span class="pre">&quot;PreferNoSchedule&quot;</span></code> (string)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Taint key (string)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeAdded</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Taint time added (string)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Taint value (string)</p></li>
+</ul>
 <dl class="attribute">
 <dt id="pulumi_rancher2.NodePool.annotations">
 <code class="sig-name descname">annotations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.NodePool.annotations" title="Permalink to this definition">¶</a></dt>
@@ -10176,6 +10302,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.NodePool.control_plane">
 <code class="sig-name descname">control_plane</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.NodePool.control_plane" title="Permalink to this definition">¶</a></dt>
 <dd><p>RKE control plane role for created nodes (bool)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_rancher2.NodePool.delete_not_ready_after_secs">
+<code class="sig-name descname">delete_not_ready_after_secs</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.NodePool.delete_not_ready_after_secs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete not ready node after secs. For Rancher v2.3.3 or above. Default <code class="docutils literal notranslate"><span class="pre">0</span></code> (int)</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -10203,6 +10335,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_rancher2.NodePool.node_taints">
+<code class="sig-name descname">node_taints</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.NodePool.node_taints" title="Permalink to this definition">¶</a></dt>
+<dd><p>Node taints. For Rancher v2.3.3 or above (List)</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">effect</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Taint effect. Supported values : <code class="docutils literal notranslate"><span class="pre">&quot;NoExecute&quot;</span> <span class="pre">|</span> <span class="pre">&quot;NoSchedule&quot;</span> <span class="pre">|</span> <span class="pre">&quot;PreferNoSchedule&quot;</span></code> (string)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Taint key (string)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeAdded</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Taint time added (string)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Taint value (string)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_rancher2.NodePool.node_template_id">
 <code class="sig-name descname">node_template_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.NodePool.node_template_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Node Template ID to use for node creation (string)</p>
@@ -10222,7 +10366,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_rancher2.NodePool.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">control_plane=None</em>, <em class="sig-param">etcd=None</em>, <em class="sig-param">hostname_prefix=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">node_template_id=None</em>, <em class="sig-param">quantity=None</em>, <em class="sig-param">worker=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.NodePool.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">control_plane=None</em>, <em class="sig-param">delete_not_ready_after_secs=None</em>, <em class="sig-param">etcd=None</em>, <em class="sig-param">hostname_prefix=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">node_taints=None</em>, <em class="sig-param">node_template_id=None</em>, <em class="sig-param">quantity=None</em>, <em class="sig-param">worker=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.NodePool.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing NodePool resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -10234,19 +10378,25 @@ properties used to qualify the lookup.</p>
 <li><p><strong>annotations</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Annotations for Node Pool object (map)</p></li>
 <li><p><strong>cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The RKE cluster id to use Node Pool (string)</p></li>
 <li><p><strong>control_plane</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – RKE control plane role for created nodes (bool)</p></li>
+<li><p><strong>delete_not_ready_after_secs</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Delete not ready node after secs. For Rancher v2.3.3 or above. Default <code class="docutils literal notranslate"><span class="pre">0</span></code> (int)</p></li>
 <li><p><strong>etcd</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – RKE etcd role for created nodes (bool)</p></li>
 <li><p><strong>hostname_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The prefix for created nodes of the Node Pool (string)</p></li>
 <li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Labels for Node Pool object (map)</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Node Pool (string)</p></li>
+<li><p><strong>node_taints</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Node taints. For Rancher v2.3.3 or above (List)</p></li>
 <li><p><strong>node_template_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Node Template ID to use for node creation (string)</p></li>
 <li><p><strong>quantity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of nodes to create on Node Pool. Default <code class="docutils literal notranslate"><span class="pre">1</span></code>. Only values &gt;= 1 allowed (int)</p></li>
 <li><p><strong>worker</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – RKE role role for created nodes (bool)</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/node_pool.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/node_pool.html.markdown</a>.</p>
-</div></blockquote>
+<p>The <strong>node_taints</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">effect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Taint effect. Supported values : <code class="docutils literal notranslate"><span class="pre">&quot;NoExecute&quot;</span> <span class="pre">|</span> <span class="pre">&quot;NoSchedule&quot;</span> <span class="pre">|</span> <span class="pre">&quot;PreferNoSchedule&quot;</span></code> (string)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Taint key (string)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeAdded</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Taint time added (string)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Taint value (string)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="method">
@@ -10289,10 +10439,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_rancher2.NodeTemplate">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">NodeTemplate</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">amazonec2_config=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">auth_certificate_authority=None</em>, <em class="sig-param">auth_key=None</em>, <em class="sig-param">azure_config=None</em>, <em class="sig-param">cloud_credential_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">digitalocean_config=None</em>, <em class="sig-param">engine_env=None</em>, <em class="sig-param">engine_insecure_registries=None</em>, <em class="sig-param">engine_install_url=None</em>, <em class="sig-param">engine_label=None</em>, <em class="sig-param">engine_opt=None</em>, <em class="sig-param">engine_registry_mirrors=None</em>, <em class="sig-param">engine_storage_driver=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">openstack_config=None</em>, <em class="sig-param">use_internal_ip_address=None</em>, <em class="sig-param">vsphere_config=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.NodeTemplate" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">NodeTemplate</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">amazonec2_config=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">auth_certificate_authority=None</em>, <em class="sig-param">auth_key=None</em>, <em class="sig-param">azure_config=None</em>, <em class="sig-param">cloud_credential_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">digitalocean_config=None</em>, <em class="sig-param">driver_id=None</em>, <em class="sig-param">engine_env=None</em>, <em class="sig-param">engine_insecure_registries=None</em>, <em class="sig-param">engine_install_url=None</em>, <em class="sig-param">engine_label=None</em>, <em class="sig-param">engine_opt=None</em>, <em class="sig-param">engine_registry_mirrors=None</em>, <em class="sig-param">engine_storage_driver=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">openstack_config=None</em>, <em class="sig-param">use_internal_ip_address=None</em>, <em class="sig-param">vsphere_config=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.NodeTemplate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Node Template resource. This can be used to create Node Template for Rancher v2 and retrieve their information.</p>
 <p>amazonec2, azure, digitalocean, openstack and vsphere drivers are supported for node templates.</p>
 <p><strong>Note</strong> If you are upgrading to Rancher v2.3.3, please take a look to final section</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/nodeTemplate.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/nodeTemplate.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -10306,6 +10459,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>cloud_credential_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Cloud credential ID for the Node Template. Required from Rancher v2.2.x (string)</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description for the Node Template (string)</p></li>
 <li><p><strong>digitalocean_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Digitalocean config for the Node Template (list maxitems:1)</p></li>
+<li><p><strong>driver_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The node driver id used by the node template. It’s required if the node driver isn’t built in Rancher (string)</p></li>
 <li><p><strong>engine_env</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Engine environment for the node template (string)</p></li>
 <li><p><strong>engine_insecure_registries</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Insecure registry for the node template (list)</p></li>
 <li><p><strong>engine_install_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Docker engine install URL for the node template. Default <code class="docutils literal notranslate"><span class="pre">https://releases.rancher.com/install-docker/18.09.sh</span></code>. Available install docker versions at <code class="docutils literal notranslate"><span class="pre">https://github.com/rancher/install-docker</span></code> (string)</p></li>
@@ -10340,8 +10494,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">retries</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Set retry count for recoverable failures (use -1 to disable). Default <code class="docutils literal notranslate"><span class="pre">5</span></code> (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">rootSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - AWS root disk size (in GB). Default <code class="docutils literal notranslate"><span class="pre">16</span></code> (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">secret_key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - AWS secret key. Required on Rancher v2.0.x and v2.1.x. Use <code class="docutils literal notranslate"><span class="pre">.CloudCredential</span></code> from Rancher v2.2.x (string)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">securityGroups</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - AWS VPC security group. (list)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">securityGroupReadonly</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Skip adding default rules to security groups (bool)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">securityGroups</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - AWS VPC security group. (list)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sessionToken</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - AWS Session Token (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">spotPrice</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - AWS spot instance bid price (in dollar). Default <code class="docutils literal notranslate"><span class="pre">0.50</span></code> (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sshKeypath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - SSH Key for Instance (string)</p></li>
@@ -10468,9 +10622,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">vcenter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - vSphere IP/hostname for vCenter. Mandatory on Rancher v2.0.x and v2.1.x. Use <code class="docutils literal notranslate"><span class="pre">.CloudCredential</span></code> from Rancher v2.2.x (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">vcenterPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - vSphere Port for vCenter. Mandatory on Rancher v2.0.x and v2.1.x. Use <code class="docutils literal notranslate"><span class="pre">.CloudCredential</span></code> from Rancher v2.2.x. Default <code class="docutils literal notranslate"><span class="pre">443</span></code> (string)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/node_template.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/node_template.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_rancher2.NodeTemplate.amazonec2_config">
 <code class="sig-name descname">amazonec2_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.NodeTemplate.amazonec2_config" title="Permalink to this definition">¶</a></dt>
@@ -10493,8 +10644,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">retries</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Set retry count for recoverable failures (use -1 to disable). Default <code class="docutils literal notranslate"><span class="pre">5</span></code> (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">rootSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - AWS root disk size (in GB). Default <code class="docutils literal notranslate"><span class="pre">16</span></code> (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">secret_key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - AWS secret key. Required on Rancher v2.0.x and v2.1.x. Use <code class="docutils literal notranslate"><span class="pre">.CloudCredential</span></code> from Rancher v2.2.x (string)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">securityGroups</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - AWS VPC security group. (list)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">securityGroupReadonly</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Skip adding default rules to security groups (bool)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">securityGroups</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - AWS VPC security group. (list)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sessionToken</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - AWS Session Token (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">spotPrice</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - AWS spot instance bid price (in dollar). Default <code class="docutils literal notranslate"><span class="pre">0.50</span></code> (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sshKeypath</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - SSH Key for Instance (string)</p></li>
@@ -10601,6 +10752,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.NodeTemplate.driver">
 <code class="sig-name descname">driver</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.NodeTemplate.driver" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Computed) The driver of the node template (string)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_rancher2.NodeTemplate.driver_id">
+<code class="sig-name descname">driver_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.NodeTemplate.driver_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The node driver id used by the node template. It’s required if the node driver isn’t built in Rancher (string)</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -10741,7 +10898,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_rancher2.NodeTemplate.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">amazonec2_config=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">auth_certificate_authority=None</em>, <em class="sig-param">auth_key=None</em>, <em class="sig-param">azure_config=None</em>, <em class="sig-param">cloud_credential_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">digitalocean_config=None</em>, <em class="sig-param">driver=None</em>, <em class="sig-param">engine_env=None</em>, <em class="sig-param">engine_insecure_registries=None</em>, <em class="sig-param">engine_install_url=None</em>, <em class="sig-param">engine_label=None</em>, <em class="sig-param">engine_opt=None</em>, <em class="sig-param">engine_registry_mirrors=None</em>, <em class="sig-param">engine_storage_driver=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">openstack_config=None</em>, <em class="sig-param">use_internal_ip_address=None</em>, <em class="sig-param">vsphere_config=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.NodeTemplate.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">amazonec2_config=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">auth_certificate_authority=None</em>, <em class="sig-param">auth_key=None</em>, <em class="sig-param">azure_config=None</em>, <em class="sig-param">cloud_credential_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">digitalocean_config=None</em>, <em class="sig-param">driver=None</em>, <em class="sig-param">driver_id=None</em>, <em class="sig-param">engine_env=None</em>, <em class="sig-param">engine_insecure_registries=None</em>, <em class="sig-param">engine_install_url=None</em>, <em class="sig-param">engine_label=None</em>, <em class="sig-param">engine_opt=None</em>, <em class="sig-param">engine_registry_mirrors=None</em>, <em class="sig-param">engine_storage_driver=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">openstack_config=None</em>, <em class="sig-param">use_internal_ip_address=None</em>, <em class="sig-param">vsphere_config=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.NodeTemplate.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing NodeTemplate resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -10759,6 +10916,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description for the Node Template (string)</p></li>
 <li><p><strong>digitalocean_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Digitalocean config for the Node Template (list maxitems:1)</p></li>
 <li><p><strong>driver</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Computed) The driver of the node template (string)</p></li>
+<li><p><strong>driver_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The node driver id used by the node template. It’s required if the node driver isn’t built in Rancher (string)</p></li>
 <li><p><strong>engine_env</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Engine environment for the node template (string)</p></li>
 <li><p><strong>engine_insecure_registries</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Insecure registry for the node template (list)</p></li>
 <li><p><strong>engine_install_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Docker engine install URL for the node template. Default <code class="docutils literal notranslate"><span class="pre">https://releases.rancher.com/install-docker/18.09.sh</span></code>. Available install docker versions at <code class="docutils literal notranslate"><span class="pre">https://github.com/rancher/install-docker</span></code> (string)</p></li>
@@ -10793,8 +10951,8 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">retries</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Set retry count for recoverable failures (use -1 to disable). Default <code class="docutils literal notranslate"><span class="pre">5</span></code> (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">rootSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - AWS root disk size (in GB). Default <code class="docutils literal notranslate"><span class="pre">16</span></code> (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">secret_key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - AWS secret key. Required on Rancher v2.0.x and v2.1.x. Use <code class="docutils literal notranslate"><span class="pre">.CloudCredential</span></code> from Rancher v2.2.x (string)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">securityGroups</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - AWS VPC security group. (list)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">securityGroupReadonly</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Skip adding default rules to security groups (bool)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">securityGroups</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - AWS VPC security group. (list)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sessionToken</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - AWS Session Token (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">spotPrice</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - AWS spot instance bid price (in dollar). Default <code class="docutils literal notranslate"><span class="pre">0.50</span></code> (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sshKeypath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - SSH Key for Instance (string)</p></li>
@@ -10921,9 +11079,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">vcenter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - vSphere IP/hostname for vCenter. Mandatory on Rancher v2.0.x and v2.1.x. Use <code class="docutils literal notranslate"><span class="pre">.CloudCredential</span></code> from Rancher v2.2.x (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">vcenterPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - vSphere Port for vCenter. Mandatory on Rancher v2.0.x and v2.1.x. Use <code class="docutils literal notranslate"><span class="pre">.CloudCredential</span></code> from Rancher v2.2.x. Default <code class="docutils literal notranslate"><span class="pre">443</span></code> (string)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/node_template.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/node_template.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -10966,8 +11121,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_rancher2.Notifier">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">Notifier</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">pagerduty_config=None</em>, <em class="sig-param">slack_config=None</em>, <em class="sig-param">smtp_config=None</em>, <em class="sig-param">webhook_config=None</em>, <em class="sig-param">wechat_config=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.Notifier" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">Notifier</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">pagerduty_config=None</em>, <em class="sig-param">send_resolved=None</em>, <em class="sig-param">slack_config=None</em>, <em class="sig-param">smtp_config=None</em>, <em class="sig-param">webhook_config=None</em>, <em class="sig-param">wechat_config=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.Notifier" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Notifier resource. This can be used to create notifiers for Rancher v2 environments and retrieve their information.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/notifier.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/notifier.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -10976,9 +11134,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>annotations</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Annotations for notifier object (map)</p></li>
 <li><p><strong>cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster id where create notifier (string)</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The notifier description (string)</p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `send_resolved` = (Optional) Enable the notifier to send resolved notifications. Default `false` (bool)
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
 <li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Labels for notifier object (map)</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the notifier (string)</p></li>
 <li><p><strong>pagerduty_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Pagerduty config for notifier (list maxitems:1)</p></li>
+<li><p><strong>send_resolved</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Notifier send resolved</p></li>
 <li><p><strong>slack_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Slack config for notifier (list maxitems:1)</p></li>
 <li><p><strong>smtp_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – SMTP config for notifier (list maxitems:1)</p></li>
 <li><p><strong>webhook_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Webhook config for notifier (list maxitems:1)</p></li>
@@ -11021,9 +11189,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">recipientType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Wechat recipient type. Allowed values: <code class="docutils literal notranslate"><span class="pre">party</span></code> | <code class="docutils literal notranslate"><span class="pre">tag</span></code> | <code class="docutils literal notranslate"><span class="pre">user</span></code> (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">secret</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Wechat agent ID (string)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/notifier.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/notifier.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_rancher2.Notifier.annotations">
 <code class="sig-name descname">annotations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.Notifier.annotations" title="Permalink to this definition">¶</a></dt>
@@ -11040,6 +11205,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.Notifier.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.Notifier.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>The notifier description (string)</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">send_resolved</span></code> = (Optional) Enable the notifier to send resolved notifications. Default <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -11062,6 +11230,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">proxyUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Wechat proxy url (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">serviceKey</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Pagerduty service key (string)</p></li>
 </ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_rancher2.Notifier.send_resolved">
+<code class="sig-name descname">send_resolved</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.Notifier.send_resolved" title="Permalink to this definition">¶</a></dt>
+<dd><p>Notifier send resolved</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -11116,7 +11290,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_rancher2.Notifier.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">pagerduty_config=None</em>, <em class="sig-param">slack_config=None</em>, <em class="sig-param">smtp_config=None</em>, <em class="sig-param">webhook_config=None</em>, <em class="sig-param">wechat_config=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.Notifier.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">pagerduty_config=None</em>, <em class="sig-param">send_resolved=None</em>, <em class="sig-param">slack_config=None</em>, <em class="sig-param">smtp_config=None</em>, <em class="sig-param">webhook_config=None</em>, <em class="sig-param">wechat_config=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.Notifier.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Notifier resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -11128,9 +11302,19 @@ properties used to qualify the lookup.</p>
 <li><p><strong>annotations</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Annotations for notifier object (map)</p></li>
 <li><p><strong>cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster id where create notifier (string)</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The notifier description (string)</p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `send_resolved` = (Optional) Enable the notifier to send resolved notifications. Default `false` (bool)
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
 <li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Labels for notifier object (map)</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the notifier (string)</p></li>
 <li><p><strong>pagerduty_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Pagerduty config for notifier (list maxitems:1)</p></li>
+<li><p><strong>send_resolved</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Notifier send resolved</p></li>
 <li><p><strong>slack_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Slack config for notifier (list maxitems:1)</p></li>
 <li><p><strong>smtp_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – SMTP config for notifier (list maxitems:1)</p></li>
 <li><p><strong>webhook_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Webhook config for notifier (list maxitems:1)</p></li>
@@ -11173,9 +11357,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">recipientType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Wechat recipient type. Allowed values: <code class="docutils literal notranslate"><span class="pre">party</span></code> | <code class="docutils literal notranslate"><span class="pre">tag</span></code> | <code class="docutils literal notranslate"><span class="pre">user</span></code> (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">secret</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Wechat agent ID (string)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/notifier.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/notifier.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -11220,6 +11401,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.Project">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">Project</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">container_resource_limit=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enable_project_monitoring=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">pod_security_policy_template_id=None</em>, <em class="sig-param">project_monitoring_input=None</em>, <em class="sig-param">resource_quota=None</em>, <em class="sig-param">wait_for_cluster=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.Project" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Project resource. This can be used to create projects for Rancher v2 environments and retrieve their information.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/project.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/project.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -11288,9 +11472,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/project.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/project.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_rancher2.Project.annotations">
 <code class="sig-name descname">annotations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.Project.annotations" title="Permalink to this definition">¶</a></dt>
@@ -11476,9 +11657,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/project.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/project.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -11523,6 +11701,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.ProjectAlertGroup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">ProjectAlertGroup</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">group_interval_seconds=None</em>, <em class="sig-param">group_wait_seconds=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">recipients=None</em>, <em class="sig-param">repeat_interval_seconds=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.ProjectAlertGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Project Alert Group resource. This can be used to create Project Alert Group for Rancher v2 environments and retrieve their information.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/projectAlertGroup.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/projectAlertGroup.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -11546,9 +11727,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">notifierType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Recipient notifier ID. Supported values : <code class="docutils literal notranslate"><span class="pre">&quot;pagerduty&quot;</span> <span class="pre">|</span> <span class="pre">&quot;slack&quot;</span> <span class="pre">|</span> <span class="pre">&quot;email&quot;</span> <span class="pre">|</span> <span class="pre">&quot;webhook&quot;</span> <span class="pre">|</span> <span class="pre">&quot;wechat&quot;</span></code> (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">recipient</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Recipient (string)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/project_alert_group.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/project_alert_group.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_rancher2.ProjectAlertGroup.annotations">
 <code class="sig-name descname">annotations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.ProjectAlertGroup.annotations" title="Permalink to this definition">¶</a></dt>
@@ -11637,9 +11815,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">notifierType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Recipient notifier ID. Supported values : <code class="docutils literal notranslate"><span class="pre">&quot;pagerduty&quot;</span> <span class="pre">|</span> <span class="pre">&quot;slack&quot;</span> <span class="pre">|</span> <span class="pre">&quot;email&quot;</span> <span class="pre">|</span> <span class="pre">&quot;webhook&quot;</span> <span class="pre">|</span> <span class="pre">&quot;wechat&quot;</span></code> (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">recipient</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Recipient (string)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/project_alert_group.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/project_alert_group.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -11684,6 +11859,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.ProjectAlertRule">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">ProjectAlertRule</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">group_id=None</em>, <em class="sig-param">group_interval_seconds=None</em>, <em class="sig-param">group_wait_seconds=None</em>, <em class="sig-param">inherited=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">metric_rule=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">pod_rule=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">repeat_interval_seconds=None</em>, <em class="sig-param">severity=None</em>, <em class="sig-param">workload_rule=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.ProjectAlertRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Project Alert Rule resource. This can be used to create Project Alert Rule for Rancher v2 environments and retrieve their information.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/projectAlertRule.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/projectAlertRule.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -11695,9 +11873,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>group_wait_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The project alert rule group wait seconds. Default: <code class="docutils literal notranslate"><span class="pre">180</span></code> (int)</p></li>
 <li><p><strong>inherited</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – The project alert rule inherited. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code> (bool)</p></li>
 <li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The project alert rule labels (map)</p></li>
-<li><p><strong>metric_rule</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The project alert rule metric rule. ConflictsWith: :raw-html-m2r:<a href="#id56"><span class="problematic" id="id57">`</span></a>&lt;code class=”docutils literal”&gt;&lt;span class=”pre”&gt;”pod_rule”, “workload_rule”`` (list Maxitems:1)</p></li>
+<li><p><strong>metric_rule</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The project alert rule metric rule. ConflictsWith: :raw-html-m2r:<a href="#id62"><span class="problematic" id="id63">`</span></a>&lt;code class=”docutils literal”&gt;&lt;span class=”pre”&gt;”pod_rule”, “workload_rule”`` (list Maxitems:1)</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project alert rule name (string)</p></li>
-<li><p><strong>pod_rule</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The project alert rule pod rule. ConflictsWith:&lt;/span&gt;&lt;/code&gt;`”metric_rule”, “workload_rule”<a href="#id58"><span class="problematic" id="id59">``</span></a>(list Maxitems:1)</p></li>
+<li><p><strong>pod_rule</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The project alert rule pod rule. ConflictsWith:&lt;/span&gt;&lt;/code&gt;`”metric_rule”, “workload_rule”<a href="#id64"><span class="problematic" id="id65">``</span></a>(list Maxitems:1)</p></li>
 <li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project id where create project alert rule (string)</p></li>
 <li><p><strong>repeat_interval_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The project alert rule wait seconds. Default: <cite>3600</cite> (int)</p></li>
 <li><p><strong>severity</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project alert rule severity. Supported values : <cite>“critical” | “info” | “warning”</cite>. Default: <cite>critical</cite> (string)</p></li>
@@ -11726,9 +11904,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">selector</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Workload rule selector (map)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">workloadId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Workload ID (string)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/project_alert_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/project_alert_rule.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_rancher2.ProjectAlertRule.annotations">
 <code class="sig-name descname">annotations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.ProjectAlertRule.annotations" title="Permalink to this definition">¶</a></dt>
@@ -11842,9 +12017,9 @@ properties used to qualify the lookup.</p>
 <li><p><strong>group_wait_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The project alert rule group wait seconds. Default: <code class="docutils literal notranslate"><span class="pre">180</span></code> (int)</p></li>
 <li><p><strong>inherited</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – The project alert rule inherited. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code> (bool)</p></li>
 <li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The project alert rule labels (map)</p></li>
-<li><p><strong>metric_rule</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The project alert rule metric rule. ConflictsWith: :raw-html-m2r:<a href="#id60"><span class="problematic" id="id61">`</span></a>&lt;code class=”docutils literal”&gt;&lt;span class=”pre”&gt;”pod_rule”, “workload_rule”`` (list Maxitems:1)</p></li>
+<li><p><strong>metric_rule</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The project alert rule metric rule. ConflictsWith: :raw-html-m2r:<a href="#id66"><span class="problematic" id="id67">`</span></a>&lt;code class=”docutils literal”&gt;&lt;span class=”pre”&gt;”pod_rule”, “workload_rule”`` (list Maxitems:1)</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project alert rule name (string)</p></li>
-<li><p><strong>pod_rule</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The project alert rule pod rule. ConflictsWith:&lt;/span&gt;&lt;/code&gt;`”metric_rule”, “workload_rule”<a href="#id62"><span class="problematic" id="id63">``</span></a>(list Maxitems:1)</p></li>
+<li><p><strong>pod_rule</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The project alert rule pod rule. ConflictsWith:&lt;/span&gt;&lt;/code&gt;`”metric_rule”, “workload_rule”<a href="#id68"><span class="problematic" id="id69">``</span></a>(list Maxitems:1)</p></li>
 <li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project id where create project alert rule (string)</p></li>
 <li><p><strong>repeat_interval_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The project alert rule wait seconds. Default: <cite>3600</cite> (int)</p></li>
 <li><p><strong>severity</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project alert rule severity. Supported values : <cite>“critical” | “info” | “warning”</cite>. Default: <cite>critical</cite> (string)</p></li>
@@ -11873,9 +12048,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">selector</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Workload rule selector (map)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">workloadId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Workload ID (string)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/project_alert_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/project_alert_rule.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -11920,6 +12092,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.ProjectLogging">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">ProjectLogging</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">elasticsearch_config=None</em>, <em class="sig-param">fluentd_config=None</em>, <em class="sig-param">kafka_config=None</em>, <em class="sig-param">kind=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_id=None</em>, <em class="sig-param">output_flush_interval=None</em>, <em class="sig-param">output_tags=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">splunk_config=None</em>, <em class="sig-param">syslog_config=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.ProjectLogging" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Project Logging resource. This can be used to create Project Logging for Rancher v2 environments and retrieve their information.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/projectLogging.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/projectLogging.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -12005,9 +12180,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">sslVerify</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - SSL verify for the syslog service (bool)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">token</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Token for the syslog service (string)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/project_logging.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/project_logging.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_rancher2.ProjectLogging.annotations">
 <code class="sig-name descname">annotations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.ProjectLogging.annotations" title="Permalink to this definition">¶</a></dt>
@@ -12236,9 +12408,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">sslVerify</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - SSL verify for the syslog service (bool)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">token</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Token for the syslog service (string)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/project_logging.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/project_logging.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -12283,6 +12452,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.ProjectRoleTemplateBinding">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">ProjectRoleTemplateBinding</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">group_id=None</em>, <em class="sig-param">group_principal_id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">role_template_id=None</em>, <em class="sig-param">user_id=None</em>, <em class="sig-param">user_principal_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.ProjectRoleTemplateBinding" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Project Role Template Binding resource. This can be used to create Project Role Template Bindings for Rancher v2 environments and retrieve their information.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/projectRole.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/projectRole.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -12300,9 +12472,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/project_role_template_binding.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/project_role_template_binding.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_rancher2.ProjectRoleTemplateBinding.annotations">
 <code class="sig-name descname">annotations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.ProjectRoleTemplateBinding.annotations" title="Permalink to this definition">¶</a></dt>
@@ -12380,9 +12549,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/project_role_template_binding.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/project_role_template_binding.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -12430,36 +12596,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 settings, however an explicit <code class="docutils literal notranslate"><span class="pre">Provider</span></code> instance may be created and passed during resource
 construction to achieve fine-grained programmatic control over provider settings. See the
 <a class="reference external" href="https://www.pulumi.com/docs/reference/programming-model/#providers">documentation</a> for more information.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/index.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/index.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>access_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – API Key used to authenticate with the rancher server</p></li>
+<li><p><strong>api_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URL to the rancher API</p></li>
+<li><p><strong>bootstrap</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Bootstrap rancher server</p></li>
+<li><p><strong>ca_certs</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – CA certificates used to sign rancher server tls certificates. Mandatory if self signed tls and insecure option false</p></li>
+<li><p><strong>insecure</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allow insecure connections to Rancher. Mandatory if self signed tls and not ca_certs provided</p></li>
+<li><p><strong>secret_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – API secret used to authenticate with the rancher server</p></li>
+<li><p><strong>token_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – API token used to authenticate with the rancher server</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/index.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/index.html.markdown</a>.</p>
-</div></blockquote>
-<dl class="method">
-<dt id="pulumi_rancher2.Provider.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.Provider.get" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get an existing Provider resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
-<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-</ul>
-</dd>
-</dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/index.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/index.html.markdown</a>.</p>
-</div></blockquote>
-</dd></dl>
-
 <dl class="method">
 <dt id="pulumi_rancher2.Provider.translate_output_property">
 <code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.Provider.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -12507,6 +12661,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p>Project registry: Available to all namespaces in the <code class="docutils literal notranslate"><span class="pre">project_id</span></code></p></li>
 <li><p>Namespaced regitry: Available to just <code class="docutils literal notranslate"><span class="pre">namespace_id</span></code> in the <code class="docutils literal notranslate"><span class="pre">project_id</span></code></p></li>
 </ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/registry.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/registry.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -12528,9 +12685,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Password for the registry (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Username for the registry (string)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/registry.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/registry.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_rancher2.Registry.annotations">
 <code class="sig-name descname">annotations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.Registry.annotations" title="Permalink to this definition">¶</a></dt>
@@ -12605,9 +12759,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Password for the registry (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Username for the registry (string)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/registry.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/registry.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -12653,6 +12804,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">RoleTempalte</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">administrative=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">context=None</em>, <em class="sig-param">default_role=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">external=None</em>, <em class="sig-param">hidden=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">locked=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">role_template_ids=None</em>, <em class="sig-param">rules=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.RoleTempalte" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Role Template resource. This can be used to create Role Template for Rancher v2 and retrieve their information.</p>
 <p><code class="docutils literal notranslate"><span class="pre">cluster</span></code> and <code class="docutils literal notranslate"><span class="pre">project</span></code> scopes are supported for role templates.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/roleTemplate.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/roleTemplate.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -12681,9 +12835,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">resources</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Policy rule resources (list)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">verbs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Policy rule verbs. <code class="docutils literal notranslate"><span class="pre">create</span></code>, <code class="docutils literal notranslate"><span class="pre">delete</span></code>, <code class="docutils literal notranslate"><span class="pre">get</span></code>, <code class="docutils literal notranslate"><span class="pre">list</span></code>, <code class="docutils literal notranslate"><span class="pre">patch</span></code>, <code class="docutils literal notranslate"><span class="pre">update</span></code>, <code class="docutils literal notranslate"><span class="pre">watch</span></code> and <code class="docutils literal notranslate"><span class="pre">*</span></code> values are supported (list)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/role_template.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/role_template.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_rancher2.RoleTempalte.administrative">
 <code class="sig-name descname">administrative</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.RoleTempalte.administrative" title="Permalink to this definition">¶</a></dt>
@@ -12804,9 +12955,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">resources</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Policy rule resources (list)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">verbs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Policy rule verbs. <code class="docutils literal notranslate"><span class="pre">create</span></code>, <code class="docutils literal notranslate"><span class="pre">delete</span></code>, <code class="docutils literal notranslate"><span class="pre">get</span></code>, <code class="docutils literal notranslate"><span class="pre">list</span></code>, <code class="docutils literal notranslate"><span class="pre">patch</span></code>, <code class="docutils literal notranslate"><span class="pre">update</span></code>, <code class="docutils literal notranslate"><span class="pre">watch</span></code> and <code class="docutils literal notranslate"><span class="pre">*</span></code> values are supported (list)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/role_template.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/role_template.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -12856,6 +13004,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p>Project secret: Available to all namespaces in the <code class="docutils literal notranslate"><span class="pre">project_id</span></code></p></li>
 <li><p>Namespaced secret: Available to just <code class="docutils literal notranslate"><span class="pre">namespace_id</span></code> in the <code class="docutils literal notranslate"><span class="pre">project_id</span></code></p></li>
 </ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/secret.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/secret.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -12871,9 +13022,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/secret.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/secret.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_rancher2.Secret.annotations">
 <code class="sig-name descname">annotations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.Secret.annotations" title="Permalink to this definition">¶</a></dt>
@@ -12937,9 +13085,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/secret.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/secret.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -12986,6 +13131,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides a Rancher v2 Setting resource. This can be used to create settings for Rancher v2 environments and retrieve their information.</p>
 <p>On create, if setting already exists, provider will import it and update its value.</p>
 <p>On destroy, if setting is a system setting like <code class="docutils literal notranslate"><span class="pre">server-url</span></code>, provider’ll not delete it from Rancher, it’ll just update setting value to default and remove it from tfstate.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/setting.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/setting.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -12998,9 +13146,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/setting.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/setting.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_rancher2.Setting.annotations">
 <code class="sig-name descname">annotations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.Setting.annotations" title="Permalink to this definition">¶</a></dt>
@@ -13043,9 +13188,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/setting.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/setting.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -13096,6 +13238,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p>scoped: valid for just a specific cluster (<code class="docutils literal notranslate"><span class="pre">cluster_id</span></code> should be provided).</p></li>
 </ul>
 <p>Tokens can’t be updated once created. Any diff in token data will recreate the token. If any token expire, Rancher2 provider will generate a diff to regenerate it.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/token.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/token.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13105,13 +13250,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Cluster ID for scoped token (string)</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Token description (string)</p></li>
 <li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Labels of the token (map)</p></li>
+<li><p><strong>renew</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Renew expired or disabled token</p></li>
 <li><p><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Token time to live in seconds. Default <code class="docutils literal notranslate"><span class="pre">0</span></code> (int)</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/token.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/token.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_rancher2.Token.access_key">
 <code class="sig-name descname">access_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.Token.access_key" title="Permalink to this definition">¶</a></dt>
@@ -13161,6 +13304,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_rancher2.Token.renew">
+<code class="sig-name descname">renew</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.Token.renew" title="Permalink to this definition">¶</a></dt>
+<dd><p>Renew expired or disabled token</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_rancher2.Token.secret_key">
 <code class="sig-name descname">secret_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.Token.secret_key" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Computed/Sensitive) Token secret key part (string)</p>
@@ -13203,6 +13352,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>expired</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – (Computed) Token is expired (bool)</p></li>
 <li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Labels of the token (map)</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Computed) Token name (string)</p></li>
+<li><p><strong>renew</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Renew expired or disabled token</p></li>
 <li><p><strong>secret_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Computed/Sensitive) Token secret key part (string)</p></li>
 <li><p><strong>token</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Computed/Sensitive) Token value (string)</p></li>
 <li><p><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Token time to live in seconds. Default <code class="docutils literal notranslate"><span class="pre">0</span></code> (int)</p></li>
@@ -13210,9 +13360,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/token.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/token.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -13258,6 +13405,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">User</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">username=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.User" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 User resource. This can be used to create Users for Rancher v2 environments and retrieve their information.</p>
 <p>When a Rancher User is created, it doesn’t have a global role binding. At least, <code class="docutils literal notranslate"><span class="pre">user-base</span></code> global role binding in needed in order to enable user login.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/user.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/user.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13271,9 +13421,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/user.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/user.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_rancher2.User.annotations">
 <code class="sig-name descname">annotations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.User.annotations" title="Permalink to this definition">¶</a></dt>
@@ -13330,9 +13477,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/user.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/user.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -13377,6 +13521,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.get_app">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_app</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">target_namespace=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_app" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 app.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/app.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/app.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13386,15 +13533,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/app.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/app.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_rancher2.get_catalog">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_catalog</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">scope=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_catalog" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 catalog.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/catalog.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/catalog.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13403,9 +13550,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/catalog.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/catalog.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -13417,6 +13561,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p>Project certificate: Available to all namespaces in the <code class="docutils literal notranslate"><span class="pre">project_id</span></code></p></li>
 <li><p>Namespaced certificate: Available to just <code class="docutils literal notranslate"><span class="pre">namespace_id</span></code> in the <code class="docutils literal notranslate"><span class="pre">project_id</span></code></p></li>
 </ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/certificate.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/certificate.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13426,43 +13573,43 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/certificate.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/certificate.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_rancher2.get_cloud_credential">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_cloud_credential</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_cloud_credential" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 Cloud Credential.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/cloudCredential.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/cloudCredential.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The Cloud Credential name.</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/cloud_credential.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/cloud_credential.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_rancher2.get_cluster">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_cluster</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 cluster.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/cluster.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the Cluster (string)</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/cluster.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_rancher2.get_cluster_alert_group">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_cluster_alert_group</code><span class="sig-paren">(</span><em class="sig-param">cluster_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_cluster_alert_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 cluster alert group.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/clusterAlertGroup.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/clusterAlertGroup.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13471,15 +13618,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/cluster_alert_group.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/cluster_alert_group.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_rancher2.get_cluster_alter_rule">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_cluster_alter_rule</code><span class="sig-paren">(</span><em class="sig-param">cluster_id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_cluster_alter_rule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 cluster alert rule.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/clusterAlertRule.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/clusterAlertRule.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13488,15 +13635,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/cluster_alert_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/cluster_alert_rule.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_rancher2.get_cluster_driver">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_cluster_driver</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">url=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_cluster_driver" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 Cluster Driver resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/clusterDriver.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/clusterDriver.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13505,29 +13652,29 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/cluster_driver.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/cluster_driver.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_rancher2.get_cluster_logging">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_cluster_logging</code><span class="sig-paren">(</span><em class="sig-param">cluster_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_cluster_logging" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 Cluster Logging.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/clusterLogging.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/clusterLogging.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>cluster_id</strong> (<em>str</em>) – The cluster id to configure logging (string)</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/cluster_logging.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/cluster_logging.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_rancher2.get_cluster_role_template_binding">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_cluster_role_template_binding</code><span class="sig-paren">(</span><em class="sig-param">cluster_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">role_template_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_cluster_role_template_binding" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 cluster role template binding.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/clusterRole.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/clusterRole.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13537,9 +13684,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/cluster_role_template_binding.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/cluster_role_template_binding.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -13547,20 +13691,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_cluster_template</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_cluster_template" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 cluster template.</p>
 <p>Cluster Templates are available from Rancher v2.3.x and above.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/clusterTemplate.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/clusterTemplate.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The cluster template name (string)</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/cluster_template.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/cluster_template.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_rancher2.get_etcd_backup">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_etcd_backup</code><span class="sig-paren">(</span><em class="sig-param">cluster_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_etcd_backup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 etcd backup.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/etcdBackup.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/etcdBackup.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13569,15 +13716,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/etcd_backup.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/etcd_backup.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_rancher2.get_global_role_binding">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_global_role_binding</code><span class="sig-paren">(</span><em class="sig-param">global_role_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_global_role_binding" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 global role binding.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/globalRole.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/globalRole.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13586,29 +13733,29 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/global_role_binding.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/global_role_binding.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_rancher2.get_multi_cluster_app">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_multi_cluster_app</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_multi_cluster_app" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 multi cluster app.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/multiClusterApp.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/multiClusterApp.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The multi cluster app name (string)</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/multi_cluster_app.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/multi_cluster_app.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_rancher2.get_namespace">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_namespace</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_namespace" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 namespace.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/namespace.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/namespace.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13617,15 +13764,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/namespace.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/namespace.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_rancher2.get_node_driver">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_node_driver</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">url=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_node_driver" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 Node Driver resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/nodeDriver.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/nodeDriver.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13634,15 +13781,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/node_driver.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/node_driver.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_rancher2.get_node_pool">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_node_pool</code><span class="sig-paren">(</span><em class="sig-param">cluster_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">node_template_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_node_pool" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 Node Pool resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/nodePool.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/nodePool.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13652,29 +13799,29 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/node_pool.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/node_pool.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_rancher2.get_node_template">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_node_template</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">use_internal_ip_address=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_node_template" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 Node Template resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/nodeTemplate.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/nodeTemplate.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the Node Template (string)</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/node_template.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/node_template.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_rancher2.get_notifier">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_notifier</code><span class="sig-paren">(</span><em class="sig-param">cluster_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_notifier" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 notifier.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/notifier.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/notifier.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13683,9 +13830,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/notifier.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/notifier.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -13700,15 +13844,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/project.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/project.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_rancher2.get_project_alert_group">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_project_alert_group</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_project_alert_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 project alert group.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/projectAlertGroup.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/projectAlertGroup.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13717,15 +13861,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/project_alert_group.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/project_alert_group.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_rancher2.get_project_alert_rule">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_project_alert_rule</code><span class="sig-paren">(</span><em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_project_alert_rule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 project alert rule.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/projectAlertRule.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/projectAlertRule.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13734,29 +13878,29 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/project_alert_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/project_alert_rule.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_rancher2.get_project_logging">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_project_logging</code><span class="sig-paren">(</span><em class="sig-param">project_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_project_logging" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 Project Logging.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/projectLogging.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/projectLogging.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>project_id</strong> (<em>str</em>) – The project id to configure logging (string)</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/project_logging.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/project_logging.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_rancher2.get_project_role_template_binding">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_project_role_template_binding</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">role_template_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_project_role_template_binding" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 project role template binding.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/projectRole.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/projectRole.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13766,9 +13910,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/project_role_template_binding.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/project_role_template_binding.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -13780,6 +13921,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p>Project registry: Available to all namespaces in the <code class="docutils literal notranslate"><span class="pre">project_id</span></code></p></li>
 <li><p>Namespaced registry: Available to just <code class="docutils literal notranslate"><span class="pre">namespace_id</span></code> in the <code class="docutils literal notranslate"><span class="pre">project_id</span></code></p></li>
 </ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/registry.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/registry.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13789,15 +13933,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/registry.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/registry.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_rancher2.get_role_tempalte">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_role_tempalte</code><span class="sig-paren">(</span><em class="sig-param">context=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_role_tempalte" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 role template resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/roleTemplate.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/roleTemplate.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13806,9 +13950,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/role_template.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/role_template.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -13820,6 +13961,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p>Project secret: Available to all namespaces in the <code class="docutils literal notranslate"><span class="pre">project_id</span></code></p></li>
 <li><p>Namespaced secret: Available to just <code class="docutils literal notranslate"><span class="pre">namespace_id</span></code> in the <code class="docutils literal notranslate"><span class="pre">project_id</span></code></p></li>
 </ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/secret.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/secret.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13829,37 +13973,38 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/secret.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/secret.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_rancher2.get_setting">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_setting</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_setting" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 setting.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/setting.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/setting.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The setting name.</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/setting.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/setting.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_rancher2.get_user">
-<code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_user</code><span class="sig-paren">(</span><em class="sig-param">username=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_user" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_user</code><span class="sig-paren">(</span><em class="sig-param">is_external=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">username=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_user" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 user</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>username</strong> (<em>str</em>) – The name of the user (string)</p>
-</dd>
-</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/user.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/user.html.markdown</a>.</p>
 </div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>is_external</strong> (<em>bool</em>) – Set is the user if the user is external. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The name of the user (string)</p></li>
+<li><p><strong>username</strong> (<em>str</em>) – The username of the user (string)</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 </div>
