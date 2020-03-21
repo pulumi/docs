@@ -10,15 +10,9 @@ notitle: true
 <dl class="class">
 <dt id="pulumi_keycloak.authentication.Execution">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.authentication.</code><code class="sig-name descname">Execution</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">authenticator=None</em>, <em class="sig-param">parent_flow_alias=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">requirement=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.authentication.Execution" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Execution resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a Execution resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.</p>
 <dl class="method">
 <dt id="pulumi_keycloak.authentication.Execution.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">authenticator=None</em>, <em class="sig-param">parent_flow_alias=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">requirement=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.authentication.Execution.get" title="Permalink to this definition">¶</a></dt>
@@ -76,15 +70,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_keycloak.authentication.ExecutionConfig">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.authentication.</code><code class="sig-name descname">ExecutionConfig</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">alias=None</em>, <em class="sig-param">config=None</em>, <em class="sig-param">execution_id=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.authentication.ExecutionConfig" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a ExecutionConfig resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a ExecutionConfig resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.</p>
 <dl class="method">
 <dt id="pulumi_keycloak.authentication.ExecutionConfig.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">alias=None</em>, <em class="sig-param">config=None</em>, <em class="sig-param">execution_id=None</em>, <em class="sig-param">realm_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.authentication.ExecutionConfig.get" title="Permalink to this definition">¶</a></dt>
@@ -142,15 +130,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_keycloak.authentication.Flow">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.authentication.</code><code class="sig-name descname">Flow</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">alias=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">provider_id=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.authentication.Flow" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Flow resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a Flow resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.</p>
 <dl class="method">
 <dt id="pulumi_keycloak.authentication.Flow.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">alias=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">provider_id=None</em>, <em class="sig-param">realm_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.authentication.Flow.get" title="Permalink to this definition">¶</a></dt>
@@ -208,15 +190,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_keycloak.authentication.Subflow">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.authentication.</code><code class="sig-name descname">Subflow</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">alias=None</em>, <em class="sig-param">authenticator=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">parent_flow_alias=None</em>, <em class="sig-param">provider_id=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">requirement=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.authentication.Subflow" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Subflow resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a Subflow resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] authenticator: Might be needed to be set with certain custom subflow with specific authenticator, in general this will remain empty</p>
+<dl class="attribute">
+<dt id="pulumi_keycloak.authentication.Subflow.authenticator">
+<code class="sig-name descname">authenticator</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.authentication.Subflow.authenticator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Might be needed to be set with certain custom subflow with specific authenticator, in general this will remain empty</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_keycloak.authentication.Subflow.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">alias=None</em>, <em class="sig-param">authenticator=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">parent_flow_alias=None</em>, <em class="sig-param">provider_id=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">requirement=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.authentication.Subflow.get" title="Permalink to this definition">¶</a></dt>
@@ -228,6 +211,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>authenticator</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Might be needed to be set with certain custom subflow with specific authenticator, in general this will remain empty</p></li>
 </ul>
 </dd>
 </dl>

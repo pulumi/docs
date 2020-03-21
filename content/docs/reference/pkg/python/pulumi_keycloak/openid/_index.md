@@ -26,17 +26,73 @@ mapped to the ID of a pre-existing client.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">add_to_id_token</span></code> - (Optional) Indicates if the audience should be included in the <code class="docutils literal notranslate"><span class="pre">aud</span></code> claim for the id token. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">add_to_access_token</span></code> - (Optional) Indicates if the audience should be included in the <code class="docutils literal notranslate"><span class="pre">aud</span></code> claim for the id token. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 </ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_openid_audience_protocol_mapper.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_openid_audience_protocol_mapper.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>add_to_access_token</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates if this claim should be added to the access token.</p></li>
+<li><p><strong>add_to_id_token</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates if this claim should be added to the id token.</p></li>
+<li><p><strong>client_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The mapper’s associated client. Cannot be used at the same time as client_scope_id.</p></li>
+<li><p><strong>client_scope_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The mapper’s associated client scope. Cannot be used at the same time as client_id.</p></li>
+<li><p><strong>included_client_audience</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A client ID to include within the token’s <code class="docutils literal notranslate"><span class="pre">aud</span></code> claim. Cannot be used with included_custom_audience</p></li>
+<li><p><strong>included_custom_audience</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A custom audience to include within the token’s <code class="docutils literal notranslate"><span class="pre">aud</span></code> claim. Cannot be used with included_custom_audience</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A human-friendly name that will appear in the Keycloak console.</p></li>
+<li><p><strong>realm_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The realm id where the associated client or client scope exists.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/openid_audience_protocol_mapper.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/openid_audience_protocol_mapper.html.markdown</a>.</p>
-</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_keycloak.openid.AudienceProtocolMapper.add_to_access_token">
+<code class="sig-name descname">add_to_access_token</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.AudienceProtocolMapper.add_to_access_token" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates if this claim should be added to the access token.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.openid.AudienceProtocolMapper.add_to_id_token">
+<code class="sig-name descname">add_to_id_token</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.AudienceProtocolMapper.add_to_id_token" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates if this claim should be added to the id token.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.openid.AudienceProtocolMapper.client_id">
+<code class="sig-name descname">client_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.AudienceProtocolMapper.client_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The mapper’s associated client. Cannot be used at the same time as client_scope_id.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.openid.AudienceProtocolMapper.client_scope_id">
+<code class="sig-name descname">client_scope_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.AudienceProtocolMapper.client_scope_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The mapper’s associated client scope. Cannot be used at the same time as client_id.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.openid.AudienceProtocolMapper.included_client_audience">
+<code class="sig-name descname">included_client_audience</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.AudienceProtocolMapper.included_client_audience" title="Permalink to this definition">¶</a></dt>
+<dd><p>A client ID to include within the token’s <code class="docutils literal notranslate"><span class="pre">aud</span></code> claim. Cannot be used with included_custom_audience</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.openid.AudienceProtocolMapper.included_custom_audience">
+<code class="sig-name descname">included_custom_audience</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.AudienceProtocolMapper.included_custom_audience" title="Permalink to this definition">¶</a></dt>
+<dd><p>A custom audience to include within the token’s <code class="docutils literal notranslate"><span class="pre">aud</span></code> claim. Cannot be used with included_custom_audience</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.openid.AudienceProtocolMapper.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.AudienceProtocolMapper.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>A human-friendly name that will appear in the Keycloak console.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.openid.AudienceProtocolMapper.realm_id">
+<code class="sig-name descname">realm_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.AudienceProtocolMapper.realm_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The realm id where the associated client or client scope exists.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_keycloak.openid.AudienceProtocolMapper.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">add_to_access_token=None</em>, <em class="sig-param">add_to_id_token=None</em>, <em class="sig-param">client_id=None</em>, <em class="sig-param">client_scope_id=None</em>, <em class="sig-param">included_client_audience=None</em>, <em class="sig-param">included_custom_audience=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">realm_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.AudienceProtocolMapper.get" title="Permalink to this definition">¶</a></dt>
@@ -48,12 +104,17 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>add_to_access_token</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates if this claim should be added to the access token.</p></li>
+<li><p><strong>add_to_id_token</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates if this claim should be added to the id token.</p></li>
+<li><p><strong>client_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The mapper’s associated client. Cannot be used at the same time as client_scope_id.</p></li>
+<li><p><strong>client_scope_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The mapper’s associated client scope. Cannot be used at the same time as client_id.</p></li>
+<li><p><strong>included_client_audience</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A client ID to include within the token’s <code class="docutils literal notranslate"><span class="pre">aud</span></code> claim. Cannot be used with included_custom_audience</p></li>
+<li><p><strong>included_custom_audience</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A custom audience to include within the token’s <code class="docutils literal notranslate"><span class="pre">aud</span></code> claim. Cannot be used with included_custom_audience</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A human-friendly name that will appear in the Keycloak console.</p></li>
+<li><p><strong>realm_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The realm id where the associated client or client scope exists.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/openid_audience_protocol_mapper.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/openid_audience_protocol_mapper.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -96,17 +157,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_keycloak.openid.AwaitableGetClientAuthorizationPolicyResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.openid.</code><code class="sig-name descname">AwaitableGetClientAuthorizationPolicyResult</code><span class="sig-paren">(</span><em class="sig-param">decision_strategy=None</em>, <em class="sig-param">logic=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">owner=None</em>, <em class="sig-param">policies=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">resource_server_id=None</em>, <em class="sig-param">resources=None</em>, <em class="sig-param">scopes=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.AwaitableGetClientAuthorizationPolicyResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.openid.</code><code class="sig-name descname">AwaitableGetClientAuthorizationPolicyResult</code><span class="sig-paren">(</span><em class="sig-param">decision_strategy=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">logic=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">owner=None</em>, <em class="sig-param">policies=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">resource_server_id=None</em>, <em class="sig-param">resources=None</em>, <em class="sig-param">scopes=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.AwaitableGetClientAuthorizationPolicyResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_keycloak.openid.AwaitableGetClientResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.openid.</code><code class="sig-name descname">AwaitableGetClientResult</code><span class="sig-paren">(</span><em class="sig-param">access_type=None</em>, <em class="sig-param">authorization=None</em>, <em class="sig-param">client_id=None</em>, <em class="sig-param">client_secret=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">direct_access_grants_enabled=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">full_scope_allowed=None</em>, <em class="sig-param">implicit_flow_enabled=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">resource_server_id=None</em>, <em class="sig-param">service_account_user_id=None</em>, <em class="sig-param">service_accounts_enabled=None</em>, <em class="sig-param">standard_flow_enabled=None</em>, <em class="sig-param">valid_redirect_uris=None</em>, <em class="sig-param">web_origins=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.AwaitableGetClientResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.openid.</code><code class="sig-name descname">AwaitableGetClientResult</code><span class="sig-paren">(</span><em class="sig-param">access_type=None</em>, <em class="sig-param">authorization=None</em>, <em class="sig-param">client_id=None</em>, <em class="sig-param">client_secret=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">direct_access_grants_enabled=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">full_scope_allowed=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">implicit_flow_enabled=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">resource_server_id=None</em>, <em class="sig-param">service_account_user_id=None</em>, <em class="sig-param">service_accounts_enabled=None</em>, <em class="sig-param">standard_flow_enabled=None</em>, <em class="sig-param">valid_redirect_uris=None</em>, <em class="sig-param">web_origins=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.AwaitableGetClientResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_keycloak.openid.AwaitableGetClientServiceAccountUserResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.openid.</code><code class="sig-name descname">AwaitableGetClientServiceAccountUserResult</code><span class="sig-paren">(</span><em class="sig-param">attributes=None</em>, <em class="sig-param">client_id=None</em>, <em class="sig-param">email=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">federated_identities=None</em>, <em class="sig-param">first_name=None</em>, <em class="sig-param">last_name=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">username=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.AwaitableGetClientServiceAccountUserResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.openid.</code><code class="sig-name descname">AwaitableGetClientServiceAccountUserResult</code><span class="sig-paren">(</span><em class="sig-param">attributes=None</em>, <em class="sig-param">client_id=None</em>, <em class="sig-param">email=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">federated_identities=None</em>, <em class="sig-param">first_name=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">last_name=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">username=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.AwaitableGetClientServiceAccountUserResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -151,6 +212,9 @@ is set to <code class="docutils literal notranslate"><span class="pre">true</spa
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">service_account_user_id</span></code> - When service accounts are enabled for this client, this attribute is the unique ID for the Keycloak user that represents this service account.</p></li>
 </ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_openid_client.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_openid_client.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -165,9 +229,6 @@ is set to <code class="docutils literal notranslate"><span class="pre">true</spa
 <li><p><code class="docutils literal notranslate"><span class="pre">keepDefaults</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">policyEnforcementMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/openid_client.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/openid_client.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="method">
 <dt id="pulumi_keycloak.openid.Client.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_token_lifespan=None</em>, <em class="sig-param">access_type=None</em>, <em class="sig-param">admin_url=None</em>, <em class="sig-param">authorization=None</em>, <em class="sig-param">base_url=None</em>, <em class="sig-param">client_id=None</em>, <em class="sig-param">client_secret=None</em>, <em class="sig-param">consent_required=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">direct_access_grants_enabled=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">exclude_session_state_from_auth_response=None</em>, <em class="sig-param">full_scope_allowed=None</em>, <em class="sig-param">implicit_flow_enabled=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">pkce_code_challenge_method=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">resource_server_id=None</em>, <em class="sig-param">service_account_user_id=None</em>, <em class="sig-param">service_accounts_enabled=None</em>, <em class="sig-param">standard_flow_enabled=None</em>, <em class="sig-param">valid_redirect_uris=None</em>, <em class="sig-param">web_origins=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.Client.get" title="Permalink to this definition">¶</a></dt>
@@ -188,9 +249,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">keepDefaults</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">policyEnforcementMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/openid_client.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/openid_client.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -234,15 +292,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_keycloak.openid.ClientAggregatePolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.openid.</code><code class="sig-name descname">ClientAggregatePolicy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">decision_strategy=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">logic=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">policies=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">resource_server_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.ClientAggregatePolicy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a ClientAggregatePolicy resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a ClientAggregatePolicy resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.</p>
 <dl class="method">
 <dt id="pulumi_keycloak.openid.ClientAggregatePolicy.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">decision_strategy=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">logic=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">policies=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">resource_server_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.ClientAggregatePolicy.get" title="Permalink to this definition">¶</a></dt>
@@ -300,15 +352,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_keycloak.openid.ClientAuthorizationPermission">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.openid.</code><code class="sig-name descname">ClientAuthorizationPermission</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">decision_strategy=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">policies=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">resource_server_id=None</em>, <em class="sig-param">resources=None</em>, <em class="sig-param">scopes=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.ClientAuthorizationPermission" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a ClientAuthorizationPermission resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a ClientAuthorizationPermission resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.</p>
 <dl class="method">
 <dt id="pulumi_keycloak.openid.ClientAuthorizationPermission.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">decision_strategy=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">policies=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">resource_server_id=None</em>, <em class="sig-param">resources=None</em>, <em class="sig-param">scopes=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.ClientAuthorizationPermission.get" title="Permalink to this definition">¶</a></dt>
@@ -366,15 +412,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_keycloak.openid.ClientAuthorizationResource">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.openid.</code><code class="sig-name descname">ClientAuthorizationResource</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">attributes=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">icon_uri=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">owner_managed_access=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">resource_server_id=None</em>, <em class="sig-param">scopes=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">uris=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.ClientAuthorizationResource" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a ClientAuthorizationResource resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a ClientAuthorizationResource resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.</p>
 <dl class="method">
 <dt id="pulumi_keycloak.openid.ClientAuthorizationResource.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">attributes=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">icon_uri=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">owner_managed_access=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">resource_server_id=None</em>, <em class="sig-param">scopes=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">uris=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.ClientAuthorizationResource.get" title="Permalink to this definition">¶</a></dt>
@@ -432,15 +472,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_keycloak.openid.ClientAuthorizationScope">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.openid.</code><code class="sig-name descname">ClientAuthorizationScope</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">icon_uri=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">resource_server_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.ClientAuthorizationScope" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a ClientAuthorizationScope resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a ClientAuthorizationScope resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.</p>
 <dl class="method">
 <dt id="pulumi_keycloak.openid.ClientAuthorizationScope.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">icon_uri=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">resource_server_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.ClientAuthorizationScope.get" title="Permalink to this definition">¶</a></dt>
@@ -498,18 +532,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_keycloak.openid.ClientDefaultScopes">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.openid.</code><code class="sig-name descname">ClientDefaultScopes</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">client_id=None</em>, <em class="sig-param">default_scopes=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.ClientDefaultScopes" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a ClientDefaultScopes resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-</ul>
-</dd>
-</dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/openid_client_default_scopes.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/openid_client_default_scopes.html.markdown</a>.</p>
-</div></blockquote>
+<dd><p>Create a ClientDefaultScopes resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.</p>
 <dl class="method">
 <dt id="pulumi_keycloak.openid.ClientDefaultScopes.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">client_id=None</em>, <em class="sig-param">default_scopes=None</em>, <em class="sig-param">realm_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.ClientDefaultScopes.get" title="Permalink to this definition">¶</a></dt>
@@ -524,9 +549,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/openid_client_default_scopes.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/openid_client_default_scopes.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -570,15 +592,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_keycloak.openid.ClientGroupPolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.openid.</code><code class="sig-name descname">ClientGroupPolicy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">decision_strategy=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">groups=None</em>, <em class="sig-param">groups_claim=None</em>, <em class="sig-param">logic=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">resource_server_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.ClientGroupPolicy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a ClientGroupPolicy resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a ClientGroupPolicy resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.</p>
 <p>The <strong>groups</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">extendChildren</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
@@ -648,15 +664,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_keycloak.openid.ClientJsPolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.openid.</code><code class="sig-name descname">ClientJsPolicy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">code=None</em>, <em class="sig-param">decision_strategy=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">logic=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">resource_server_id=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.ClientJsPolicy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a ClientJsPolicy resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a ClientJsPolicy resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.</p>
 <dl class="method">
 <dt id="pulumi_keycloak.openid.ClientJsPolicy.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">code=None</em>, <em class="sig-param">decision_strategy=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">logic=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">resource_server_id=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.ClientJsPolicy.get" title="Permalink to this definition">¶</a></dt>
@@ -714,18 +724,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_keycloak.openid.ClientOptionalScopes">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.openid.</code><code class="sig-name descname">ClientOptionalScopes</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">client_id=None</em>, <em class="sig-param">optional_scopes=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.ClientOptionalScopes" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a ClientOptionalScopes resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-</ul>
-</dd>
-</dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/openid_client_optional_scopes.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/openid_client_optional_scopes.html.markdown</a>.</p>
-</div></blockquote>
+<dd><p>Create a ClientOptionalScopes resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.</p>
 <dl class="method">
 <dt id="pulumi_keycloak.openid.ClientOptionalScopes.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">client_id=None</em>, <em class="sig-param">optional_scopes=None</em>, <em class="sig-param">realm_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.ClientOptionalScopes.get" title="Permalink to this definition">¶</a></dt>
@@ -740,9 +741,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/openid_client_optional_scopes.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/openid_client_optional_scopes.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -786,15 +784,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_keycloak.openid.ClientPolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.openid.</code><code class="sig-name descname">ClientPolicy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">clients=None</em>, <em class="sig-param">decision_strategy=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">logic=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">resource_server_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.ClientPolicy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a ClientPolicy resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a ClientPolicy resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.</p>
 <dl class="method">
 <dt id="pulumi_keycloak.openid.ClientPolicy.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">clients=None</em>, <em class="sig-param">decision_strategy=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">logic=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">resource_server_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.ClientPolicy.get" title="Permalink to this definition">¶</a></dt>
@@ -852,15 +844,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_keycloak.openid.ClientRolePolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.openid.</code><code class="sig-name descname">ClientRolePolicy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">decision_strategy=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">logic=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">resource_server_id=None</em>, <em class="sig-param">roles=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.ClientRolePolicy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a ClientRolePolicy resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a ClientRolePolicy resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.</p>
 <p>The <strong>roles</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
@@ -942,6 +928,9 @@ claims or roles for a user based on the OAuth 2.0 <code class="docutils literal 
 authenticating to clients with this scope attached. The consent screen will display the string
 value of this attribute.</p></li>
 </ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_openid_client_scope.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_openid_client_scope.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -950,9 +939,6 @@ value of this attribute.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/openid_client_scope.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/openid_client_scope.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="method">
 <dt id="pulumi_keycloak.openid.ClientScope.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">consent_screen_text=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">realm_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.ClientScope.get" title="Permalink to this definition">¶</a></dt>
@@ -967,9 +953,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/openid_client_scope.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/openid_client_scope.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1013,15 +996,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_keycloak.openid.ClientServiceAccountRealmRole">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.openid.</code><code class="sig-name descname">ClientServiceAccountRealmRole</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">service_account_user_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.ClientServiceAccountRealmRole" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a ClientServiceAccountRealmRole resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a ClientServiceAccountRealmRole resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.</p>
 <dl class="method">
 <dt id="pulumi_keycloak.openid.ClientServiceAccountRealmRole.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">service_account_user_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.ClientServiceAccountRealmRole.get" title="Permalink to this definition">¶</a></dt>
@@ -1079,15 +1056,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_keycloak.openid.ClientServiceAccountRole">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.openid.</code><code class="sig-name descname">ClientServiceAccountRole</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">client_id=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">service_account_user_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.ClientServiceAccountRole" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a ClientServiceAccountRole resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a ClientServiceAccountRole resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.</p>
 <dl class="method">
 <dt id="pulumi_keycloak.openid.ClientServiceAccountRole.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">client_id=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">service_account_user_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.ClientServiceAccountRole.get" title="Permalink to this definition">¶</a></dt>
@@ -1145,15 +1116,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_keycloak.openid.ClientTimePolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.openid.</code><code class="sig-name descname">ClientTimePolicy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">day_month=None</em>, <em class="sig-param">day_month_end=None</em>, <em class="sig-param">decision_strategy=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">hour=None</em>, <em class="sig-param">hour_end=None</em>, <em class="sig-param">logic=None</em>, <em class="sig-param">minute=None</em>, <em class="sig-param">minute_end=None</em>, <em class="sig-param">month=None</em>, <em class="sig-param">month_end=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">not_before=None</em>, <em class="sig-param">not_on_or_after=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">resource_server_id=None</em>, <em class="sig-param">year=None</em>, <em class="sig-param">year_end=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.ClientTimePolicy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a ClientTimePolicy resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a ClientTimePolicy resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.</p>
 <dl class="method">
 <dt id="pulumi_keycloak.openid.ClientTimePolicy.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">day_month=None</em>, <em class="sig-param">day_month_end=None</em>, <em class="sig-param">decision_strategy=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">hour=None</em>, <em class="sig-param">hour_end=None</em>, <em class="sig-param">logic=None</em>, <em class="sig-param">minute=None</em>, <em class="sig-param">minute_end=None</em>, <em class="sig-param">month=None</em>, <em class="sig-param">month_end=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">not_before=None</em>, <em class="sig-param">not_on_or_after=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">resource_server_id=None</em>, <em class="sig-param">year=None</em>, <em class="sig-param">year_end=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.ClientTimePolicy.get" title="Permalink to this definition">¶</a></dt>
@@ -1211,15 +1176,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_keycloak.openid.ClientUserPolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.openid.</code><code class="sig-name descname">ClientUserPolicy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">decision_strategy=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">logic=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">resource_server_id=None</em>, <em class="sig-param">users=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.ClientUserPolicy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a ClientUserPolicy resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a ClientUserPolicy resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.</p>
 <dl class="method">
 <dt id="pulumi_keycloak.openid.ClientUserPolicy.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">decision_strategy=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">logic=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">resource_server_id=None</em>, <em class="sig-param">users=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.ClientUserPolicy.get" title="Permalink to this definition">¶</a></dt>
@@ -1293,17 +1252,45 @@ be shared between multiple different clients.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">add_to_access_token</span></code> - (Optional) Indicates if the user’s full name should be added as a claim to the access token. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">add_to_userinfo</span></code> - (Optional) Indicates if the user’s full name should be added as a claim to the UserInfo response body. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 </ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_openid_full_name_protocol_mapper.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_openid_full_name_protocol_mapper.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>client_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The mapper’s associated client. Cannot be used at the same time as client_scope_id.</p></li>
+<li><p><strong>client_scope_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The mapper’s associated client scope. Cannot be used at the same time as client_id.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A human-friendly name that will appear in the Keycloak console.</p></li>
+<li><p><strong>realm_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The realm id where the associated client or client scope exists.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/openid_full_name_protocol_mapper.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/openid_full_name_protocol_mapper.html.markdown</a>.</p>
-</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_keycloak.openid.FullNameProtocolMapper.client_id">
+<code class="sig-name descname">client_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.FullNameProtocolMapper.client_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The mapper’s associated client. Cannot be used at the same time as client_scope_id.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.openid.FullNameProtocolMapper.client_scope_id">
+<code class="sig-name descname">client_scope_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.FullNameProtocolMapper.client_scope_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The mapper’s associated client scope. Cannot be used at the same time as client_id.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.openid.FullNameProtocolMapper.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.FullNameProtocolMapper.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>A human-friendly name that will appear in the Keycloak console.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.openid.FullNameProtocolMapper.realm_id">
+<code class="sig-name descname">realm_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.FullNameProtocolMapper.realm_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The realm id where the associated client or client scope exists.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_keycloak.openid.FullNameProtocolMapper.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">add_to_access_token=None</em>, <em class="sig-param">add_to_id_token=None</em>, <em class="sig-param">add_to_userinfo=None</em>, <em class="sig-param">client_id=None</em>, <em class="sig-param">client_scope_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">realm_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.FullNameProtocolMapper.get" title="Permalink to this definition">¶</a></dt>
@@ -1315,12 +1302,13 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>client_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The mapper’s associated client. Cannot be used at the same time as client_scope_id.</p></li>
+<li><p><strong>client_scope_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The mapper’s associated client scope. Cannot be used at the same time as client_id.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A human-friendly name that will appear in the Keycloak console.</p></li>
+<li><p><strong>realm_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The realm id where the associated client or client scope exists.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/openid_full_name_protocol_mapper.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/openid_full_name_protocol_mapper.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1363,7 +1351,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_keycloak.openid.GetClientAuthorizationPolicyResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.openid.</code><code class="sig-name descname">GetClientAuthorizationPolicyResult</code><span class="sig-paren">(</span><em class="sig-param">decision_strategy=None</em>, <em class="sig-param">logic=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">owner=None</em>, <em class="sig-param">policies=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">resource_server_id=None</em>, <em class="sig-param">resources=None</em>, <em class="sig-param">scopes=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.GetClientAuthorizationPolicyResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.openid.</code><code class="sig-name descname">GetClientAuthorizationPolicyResult</code><span class="sig-paren">(</span><em class="sig-param">decision_strategy=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">logic=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">owner=None</em>, <em class="sig-param">policies=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">resource_server_id=None</em>, <em class="sig-param">resources=None</em>, <em class="sig-param">scopes=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.GetClientAuthorizationPolicyResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getClientAuthorizationPolicy.</p>
 <dl class="attribute">
 <dt id="pulumi_keycloak.openid.GetClientAuthorizationPolicyResult.id">
@@ -1375,7 +1363,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_keycloak.openid.GetClientResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.openid.</code><code class="sig-name descname">GetClientResult</code><span class="sig-paren">(</span><em class="sig-param">access_type=None</em>, <em class="sig-param">authorization=None</em>, <em class="sig-param">client_id=None</em>, <em class="sig-param">client_secret=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">direct_access_grants_enabled=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">full_scope_allowed=None</em>, <em class="sig-param">implicit_flow_enabled=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">resource_server_id=None</em>, <em class="sig-param">service_account_user_id=None</em>, <em class="sig-param">service_accounts_enabled=None</em>, <em class="sig-param">standard_flow_enabled=None</em>, <em class="sig-param">valid_redirect_uris=None</em>, <em class="sig-param">web_origins=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.GetClientResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.openid.</code><code class="sig-name descname">GetClientResult</code><span class="sig-paren">(</span><em class="sig-param">access_type=None</em>, <em class="sig-param">authorization=None</em>, <em class="sig-param">client_id=None</em>, <em class="sig-param">client_secret=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">direct_access_grants_enabled=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">full_scope_allowed=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">implicit_flow_enabled=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">resource_server_id=None</em>, <em class="sig-param">service_account_user_id=None</em>, <em class="sig-param">service_accounts_enabled=None</em>, <em class="sig-param">standard_flow_enabled=None</em>, <em class="sig-param">valid_redirect_uris=None</em>, <em class="sig-param">web_origins=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.GetClientResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getClient.</p>
 <dl class="attribute">
 <dt id="pulumi_keycloak.openid.GetClientResult.id">
@@ -1387,7 +1375,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_keycloak.openid.GetClientServiceAccountUserResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.openid.</code><code class="sig-name descname">GetClientServiceAccountUserResult</code><span class="sig-paren">(</span><em class="sig-param">attributes=None</em>, <em class="sig-param">client_id=None</em>, <em class="sig-param">email=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">federated_identities=None</em>, <em class="sig-param">first_name=None</em>, <em class="sig-param">last_name=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">username=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.GetClientServiceAccountUserResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.openid.</code><code class="sig-name descname">GetClientServiceAccountUserResult</code><span class="sig-paren">(</span><em class="sig-param">attributes=None</em>, <em class="sig-param">client_id=None</em>, <em class="sig-param">email=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">federated_identities=None</em>, <em class="sig-param">first_name=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">last_name=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">username=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.GetClientServiceAccountUserResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getClientServiceAccountUser.</p>
 <dl class="attribute">
 <dt id="pulumi_keycloak.openid.GetClientServiceAccountUserResult.id">
@@ -1418,17 +1406,45 @@ different clients.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">add_to_access_token</span></code> - (Optional) Indicates if the property should be added as a claim to the access token. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">add_to_userinfo</span></code> - (Optional) Indicates if the property should be added as a claim to the UserInfo response body. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 </ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_openid_group_membership_protocol_mapper.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_openid_group_membership_protocol_mapper.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>client_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The mapper’s associated client. Cannot be used at the same time as client_scope_id.</p></li>
+<li><p><strong>client_scope_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The mapper’s associated client scope. Cannot be used at the same time as client_id.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A human-friendly name that will appear in the Keycloak console.</p></li>
+<li><p><strong>realm_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The realm id where the associated client or client scope exists.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/openid_group_membership_protocol_mapper.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/openid_group_membership_protocol_mapper.html.markdown</a>.</p>
-</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_keycloak.openid.GroupMembershipProtocolMapper.client_id">
+<code class="sig-name descname">client_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.GroupMembershipProtocolMapper.client_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The mapper’s associated client. Cannot be used at the same time as client_scope_id.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.openid.GroupMembershipProtocolMapper.client_scope_id">
+<code class="sig-name descname">client_scope_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.GroupMembershipProtocolMapper.client_scope_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The mapper’s associated client scope. Cannot be used at the same time as client_id.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.openid.GroupMembershipProtocolMapper.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.GroupMembershipProtocolMapper.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>A human-friendly name that will appear in the Keycloak console.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.openid.GroupMembershipProtocolMapper.realm_id">
+<code class="sig-name descname">realm_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.GroupMembershipProtocolMapper.realm_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The realm id where the associated client or client scope exists.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_keycloak.openid.GroupMembershipProtocolMapper.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">add_to_access_token=None</em>, <em class="sig-param">add_to_id_token=None</em>, <em class="sig-param">add_to_userinfo=None</em>, <em class="sig-param">claim_name=None</em>, <em class="sig-param">client_id=None</em>, <em class="sig-param">client_scope_id=None</em>, <em class="sig-param">full_path=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">realm_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.GroupMembershipProtocolMapper.get" title="Permalink to this definition">¶</a></dt>
@@ -1440,12 +1456,13 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>client_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The mapper’s associated client. Cannot be used at the same time as client_scope_id.</p></li>
+<li><p><strong>client_scope_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The mapper’s associated client scope. Cannot be used at the same time as client_id.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A human-friendly name that will appear in the Keycloak console.</p></li>
+<li><p><strong>realm_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The realm id where the associated client or client scope exists.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/openid_group_membership_protocol_mapper.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/openid_group_membership_protocol_mapper.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1508,17 +1525,73 @@ clients.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">add_to_access_token</span></code> - (Optional) Indicates if the property should be added as a claim to the access token. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">add_to_userinfo</span></code> - (Optional) Indicates if the property should be added as a claim to the UserInfo response body. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 </ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_openid_hardcoded_claim_protocol_mapper.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_openid_hardcoded_claim_protocol_mapper.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>add_to_access_token</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates if the attribute should be a claim in the access token.</p></li>
+<li><p><strong>add_to_id_token</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates if the attribute should be a claim in the id token.</p></li>
+<li><p><strong>add_to_userinfo</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates if the attribute should appear in the userinfo response body.</p></li>
+<li><p><strong>claim_value_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Claim type used when serializing tokens.</p></li>
+<li><p><strong>client_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The mapper’s associated client. Cannot be used at the same time as client_scope_id.</p></li>
+<li><p><strong>client_scope_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The mapper’s associated client scope. Cannot be used at the same time as client_id.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A human-friendly name that will appear in the Keycloak console.</p></li>
+<li><p><strong>realm_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The realm id where the associated client or client scope exists.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/openid_hardcoded_claim_protocol_mapper.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/openid_hardcoded_claim_protocol_mapper.html.markdown</a>.</p>
-</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_keycloak.openid.HardcodedClaimProtocolMapper.add_to_access_token">
+<code class="sig-name descname">add_to_access_token</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.HardcodedClaimProtocolMapper.add_to_access_token" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates if the attribute should be a claim in the access token.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.openid.HardcodedClaimProtocolMapper.add_to_id_token">
+<code class="sig-name descname">add_to_id_token</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.HardcodedClaimProtocolMapper.add_to_id_token" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates if the attribute should be a claim in the id token.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.openid.HardcodedClaimProtocolMapper.add_to_userinfo">
+<code class="sig-name descname">add_to_userinfo</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.HardcodedClaimProtocolMapper.add_to_userinfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates if the attribute should appear in the userinfo response body.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.openid.HardcodedClaimProtocolMapper.claim_value_type">
+<code class="sig-name descname">claim_value_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.HardcodedClaimProtocolMapper.claim_value_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Claim type used when serializing tokens.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.openid.HardcodedClaimProtocolMapper.client_id">
+<code class="sig-name descname">client_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.HardcodedClaimProtocolMapper.client_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The mapper’s associated client. Cannot be used at the same time as client_scope_id.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.openid.HardcodedClaimProtocolMapper.client_scope_id">
+<code class="sig-name descname">client_scope_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.HardcodedClaimProtocolMapper.client_scope_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The mapper’s associated client scope. Cannot be used at the same time as client_id.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.openid.HardcodedClaimProtocolMapper.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.HardcodedClaimProtocolMapper.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>A human-friendly name that will appear in the Keycloak console.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.openid.HardcodedClaimProtocolMapper.realm_id">
+<code class="sig-name descname">realm_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.HardcodedClaimProtocolMapper.realm_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The realm id where the associated client or client scope exists.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_keycloak.openid.HardcodedClaimProtocolMapper.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">add_to_access_token=None</em>, <em class="sig-param">add_to_id_token=None</em>, <em class="sig-param">add_to_userinfo=None</em>, <em class="sig-param">claim_name=None</em>, <em class="sig-param">claim_value=None</em>, <em class="sig-param">claim_value_type=None</em>, <em class="sig-param">client_id=None</em>, <em class="sig-param">client_scope_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">realm_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.HardcodedClaimProtocolMapper.get" title="Permalink to this definition">¶</a></dt>
@@ -1530,12 +1603,17 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>add_to_access_token</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates if the attribute should be a claim in the access token.</p></li>
+<li><p><strong>add_to_id_token</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates if the attribute should be a claim in the id token.</p></li>
+<li><p><strong>add_to_userinfo</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates if the attribute should appear in the userinfo response body.</p></li>
+<li><p><strong>claim_value_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Claim type used when serializing tokens.</p></li>
+<li><p><strong>client_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The mapper’s associated client. Cannot be used at the same time as client_scope_id.</p></li>
+<li><p><strong>client_scope_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The mapper’s associated client scope. Cannot be used at the same time as client_id.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A human-friendly name that will appear in the Keycloak console.</p></li>
+<li><p><strong>realm_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The realm id where the associated client or client scope exists.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/openid_hardcoded_claim_protocol_mapper.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/openid_hardcoded_claim_protocol_mapper.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1594,17 +1672,45 @@ which can be shared between multiple different clients.</p>
 GUI.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">role_id</span></code> - (Required) The ID of the role to map to an access token.</p></li>
 </ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_openid_hardcoded_role_protocol_mapper.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_openid_hardcoded_role_protocol_mapper.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>client_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The mapper’s associated client. Cannot be used at the same time as client_scope_id.</p></li>
+<li><p><strong>client_scope_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The mapper’s associated client scope. Cannot be used at the same time as client_id.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A human-friendly name that will appear in the Keycloak console.</p></li>
+<li><p><strong>realm_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The realm id where the associated client or client scope exists.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/openid_hardcoded_role_protocol_mapper.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/openid_hardcoded_role_protocol_mapper.html.markdown</a>.</p>
-</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_keycloak.openid.HardcodedRoleProtocolMapper.client_id">
+<code class="sig-name descname">client_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.HardcodedRoleProtocolMapper.client_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The mapper’s associated client. Cannot be used at the same time as client_scope_id.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.openid.HardcodedRoleProtocolMapper.client_scope_id">
+<code class="sig-name descname">client_scope_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.HardcodedRoleProtocolMapper.client_scope_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The mapper’s associated client scope. Cannot be used at the same time as client_id.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.openid.HardcodedRoleProtocolMapper.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.HardcodedRoleProtocolMapper.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>A human-friendly name that will appear in the Keycloak console.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.openid.HardcodedRoleProtocolMapper.realm_id">
+<code class="sig-name descname">realm_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.HardcodedRoleProtocolMapper.realm_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The realm id where the associated client or client scope exists.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_keycloak.openid.HardcodedRoleProtocolMapper.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">client_id=None</em>, <em class="sig-param">client_scope_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">role_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.HardcodedRoleProtocolMapper.get" title="Permalink to this definition">¶</a></dt>
@@ -1616,12 +1722,13 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>client_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The mapper’s associated client. Cannot be used at the same time as client_scope_id.</p></li>
+<li><p><strong>client_scope_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The mapper’s associated client scope. Cannot be used at the same time as client_id.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A human-friendly name that will appear in the Keycloak console.</p></li>
+<li><p><strong>realm_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The realm id where the associated client or client scope exists.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/openid_hardcoded_role_protocol_mapper.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/openid_hardcoded_role_protocol_mapper.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1685,17 +1792,80 @@ can be shared between multiple different clients.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">add_to_access_token</span></code> - (Optional) Indicates if the attribute should be added as a claim to the access token. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">add_to_userinfo</span></code> - (Optional) Indicates if the attribute should be added as a claim to the UserInfo response body. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 </ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_openid_user_attribute_protocol_mapper.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_openid_user_attribute_protocol_mapper.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>add_to_access_token</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates if the attribute should be a claim in the access token.</p></li>
+<li><p><strong>add_to_id_token</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates if the attribute should be a claim in the id token.</p></li>
+<li><p><strong>add_to_userinfo</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates if the attribute should appear in the userinfo response body.</p></li>
+<li><p><strong>claim_value_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Claim type used when serializing tokens.</p></li>
+<li><p><strong>client_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The mapper’s associated client. Cannot be used at the same time as client_scope_id.</p></li>
+<li><p><strong>client_scope_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The mapper’s associated client scope. Cannot be used at the same time as client_id.</p></li>
+<li><p><strong>multivalued</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether this attribute is a single value or an array of values.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A human-friendly name that will appear in the Keycloak console.</p></li>
+<li><p><strong>realm_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The realm id where the associated client or client scope exists.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/openid_user_attribute_protocol_mapper.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/openid_user_attribute_protocol_mapper.html.markdown</a>.</p>
-</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_keycloak.openid.UserAttributeProtocolMapper.add_to_access_token">
+<code class="sig-name descname">add_to_access_token</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.UserAttributeProtocolMapper.add_to_access_token" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates if the attribute should be a claim in the access token.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.openid.UserAttributeProtocolMapper.add_to_id_token">
+<code class="sig-name descname">add_to_id_token</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.UserAttributeProtocolMapper.add_to_id_token" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates if the attribute should be a claim in the id token.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.openid.UserAttributeProtocolMapper.add_to_userinfo">
+<code class="sig-name descname">add_to_userinfo</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.UserAttributeProtocolMapper.add_to_userinfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates if the attribute should appear in the userinfo response body.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.openid.UserAttributeProtocolMapper.claim_value_type">
+<code class="sig-name descname">claim_value_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.UserAttributeProtocolMapper.claim_value_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Claim type used when serializing tokens.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.openid.UserAttributeProtocolMapper.client_id">
+<code class="sig-name descname">client_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.UserAttributeProtocolMapper.client_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The mapper’s associated client. Cannot be used at the same time as client_scope_id.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.openid.UserAttributeProtocolMapper.client_scope_id">
+<code class="sig-name descname">client_scope_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.UserAttributeProtocolMapper.client_scope_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The mapper’s associated client scope. Cannot be used at the same time as client_id.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.openid.UserAttributeProtocolMapper.multivalued">
+<code class="sig-name descname">multivalued</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.UserAttributeProtocolMapper.multivalued" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates whether this attribute is a single value or an array of values.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.openid.UserAttributeProtocolMapper.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.UserAttributeProtocolMapper.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>A human-friendly name that will appear in the Keycloak console.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.openid.UserAttributeProtocolMapper.realm_id">
+<code class="sig-name descname">realm_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.UserAttributeProtocolMapper.realm_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The realm id where the associated client or client scope exists.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_keycloak.openid.UserAttributeProtocolMapper.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">add_to_access_token=None</em>, <em class="sig-param">add_to_id_token=None</em>, <em class="sig-param">add_to_userinfo=None</em>, <em class="sig-param">claim_name=None</em>, <em class="sig-param">claim_value_type=None</em>, <em class="sig-param">client_id=None</em>, <em class="sig-param">client_scope_id=None</em>, <em class="sig-param">multivalued=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">user_attribute=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.UserAttributeProtocolMapper.get" title="Permalink to this definition">¶</a></dt>
@@ -1707,12 +1877,18 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>add_to_access_token</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates if the attribute should be a claim in the access token.</p></li>
+<li><p><strong>add_to_id_token</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates if the attribute should be a claim in the id token.</p></li>
+<li><p><strong>add_to_userinfo</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates if the attribute should appear in the userinfo response body.</p></li>
+<li><p><strong>claim_value_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Claim type used when serializing tokens.</p></li>
+<li><p><strong>client_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The mapper’s associated client. Cannot be used at the same time as client_scope_id.</p></li>
+<li><p><strong>client_scope_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The mapper’s associated client scope. Cannot be used at the same time as client_id.</p></li>
+<li><p><strong>multivalued</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether this attribute is a single value or an array of values.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A human-friendly name that will appear in the Keycloak console.</p></li>
+<li><p><strong>realm_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The realm id where the associated client or client scope exists.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/openid_user_attribute_protocol_mapper.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/openid_user_attribute_protocol_mapper.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1775,17 +1951,73 @@ can be shared between multiple different clients.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">add_to_access_token</span></code> - (Optional) Indicates if the property should be added as a claim to the access token. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">add_to_userinfo</span></code> - (Optional) Indicates if the property should be added as a claim to the UserInfo response body. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 </ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_openid_user_property_protocol_mapper.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_openid_user_property_protocol_mapper.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>add_to_access_token</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates if the property should be a claim in the access token.</p></li>
+<li><p><strong>add_to_id_token</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates if the property should be a claim in the id token.</p></li>
+<li><p><strong>add_to_userinfo</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates if the property should appear in the userinfo response body.</p></li>
+<li><p><strong>claim_value_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Claim type used when serializing tokens.</p></li>
+<li><p><strong>client_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The mapper’s associated client. Cannot be used at the same time as client_scope_id.</p></li>
+<li><p><strong>client_scope_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The mapper’s associated client scope. Cannot be used at the same time as client_id.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A human-friendly name that will appear in the Keycloak console.</p></li>
+<li><p><strong>realm_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The realm id where the associated client or client scope exists.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/openid_user_property_protocol_mapper.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/openid_user_property_protocol_mapper.html.markdown</a>.</p>
-</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_keycloak.openid.UserPropertyProtocolMapper.add_to_access_token">
+<code class="sig-name descname">add_to_access_token</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.UserPropertyProtocolMapper.add_to_access_token" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates if the property should be a claim in the access token.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.openid.UserPropertyProtocolMapper.add_to_id_token">
+<code class="sig-name descname">add_to_id_token</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.UserPropertyProtocolMapper.add_to_id_token" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates if the property should be a claim in the id token.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.openid.UserPropertyProtocolMapper.add_to_userinfo">
+<code class="sig-name descname">add_to_userinfo</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.UserPropertyProtocolMapper.add_to_userinfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates if the property should appear in the userinfo response body.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.openid.UserPropertyProtocolMapper.claim_value_type">
+<code class="sig-name descname">claim_value_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.UserPropertyProtocolMapper.claim_value_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Claim type used when serializing tokens.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.openid.UserPropertyProtocolMapper.client_id">
+<code class="sig-name descname">client_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.UserPropertyProtocolMapper.client_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The mapper’s associated client. Cannot be used at the same time as client_scope_id.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.openid.UserPropertyProtocolMapper.client_scope_id">
+<code class="sig-name descname">client_scope_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.UserPropertyProtocolMapper.client_scope_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The mapper’s associated client scope. Cannot be used at the same time as client_id.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.openid.UserPropertyProtocolMapper.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.UserPropertyProtocolMapper.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>A human-friendly name that will appear in the Keycloak console.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.openid.UserPropertyProtocolMapper.realm_id">
+<code class="sig-name descname">realm_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.UserPropertyProtocolMapper.realm_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The realm id where the associated client or client scope exists.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_keycloak.openid.UserPropertyProtocolMapper.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">add_to_access_token=None</em>, <em class="sig-param">add_to_id_token=None</em>, <em class="sig-param">add_to_userinfo=None</em>, <em class="sig-param">claim_name=None</em>, <em class="sig-param">claim_value_type=None</em>, <em class="sig-param">client_id=None</em>, <em class="sig-param">client_scope_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">user_property=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.UserPropertyProtocolMapper.get" title="Permalink to this definition">¶</a></dt>
@@ -1797,12 +2029,17 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>add_to_access_token</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates if the property should be a claim in the access token.</p></li>
+<li><p><strong>add_to_id_token</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates if the property should be a claim in the id token.</p></li>
+<li><p><strong>add_to_userinfo</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates if the property should appear in the userinfo response body.</p></li>
+<li><p><strong>claim_value_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Claim type used when serializing tokens.</p></li>
+<li><p><strong>client_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The mapper’s associated client. Cannot be used at the same time as client_scope_id.</p></li>
+<li><p><strong>client_scope_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The mapper’s associated client scope. Cannot be used at the same time as client_id.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A human-friendly name that will appear in the Keycloak console.</p></li>
+<li><p><strong>realm_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The realm id where the associated client or client scope exists.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/openid_user_property_protocol_mapper.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/openid_user_property_protocol_mapper.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1866,17 +2103,87 @@ clients.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">add_to_access_token</span></code> - (Optional) Indicates if the property should be added as a claim to the access token. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">add_to_userinfo</span></code> - (Optional) Indicates if the property should be added as a claim to the UserInfo response body. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 </ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_openid_user_realm_role_protocol_mapper.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_openid_user_realm_role_protocol_mapper.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>add_to_access_token</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates if the attribute should be a claim in the access token.</p></li>
+<li><p><strong>add_to_id_token</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates if the attribute should be a claim in the id token.</p></li>
+<li><p><strong>add_to_userinfo</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates if the attribute should appear in the userinfo response body.</p></li>
+<li><p><strong>claim_value_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Claim type used when serializing tokens.</p></li>
+<li><p><strong>client_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The mapper’s associated client. Cannot be used at the same time as client_scope_id.</p></li>
+<li><p><strong>client_scope_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The mapper’s associated client scope. Cannot be used at the same time as client_id.</p></li>
+<li><p><strong>multivalued</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether this attribute is a single value or an array of values.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A human-friendly name that will appear in the Keycloak console.</p></li>
+<li><p><strong>realm_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The realm id where the associated client or client scope exists.</p></li>
+<li><p><strong>realm_role_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Prefix that will be added to each realm role.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/openid_user_realm_role_protocol_mapper.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/openid_user_realm_role_protocol_mapper.html.markdown</a>.</p>
-</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_keycloak.openid.UserRealmRoleProtocolMapper.add_to_access_token">
+<code class="sig-name descname">add_to_access_token</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.UserRealmRoleProtocolMapper.add_to_access_token" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates if the attribute should be a claim in the access token.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.openid.UserRealmRoleProtocolMapper.add_to_id_token">
+<code class="sig-name descname">add_to_id_token</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.UserRealmRoleProtocolMapper.add_to_id_token" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates if the attribute should be a claim in the id token.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.openid.UserRealmRoleProtocolMapper.add_to_userinfo">
+<code class="sig-name descname">add_to_userinfo</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.UserRealmRoleProtocolMapper.add_to_userinfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates if the attribute should appear in the userinfo response body.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.openid.UserRealmRoleProtocolMapper.claim_value_type">
+<code class="sig-name descname">claim_value_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.UserRealmRoleProtocolMapper.claim_value_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Claim type used when serializing tokens.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.openid.UserRealmRoleProtocolMapper.client_id">
+<code class="sig-name descname">client_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.UserRealmRoleProtocolMapper.client_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The mapper’s associated client. Cannot be used at the same time as client_scope_id.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.openid.UserRealmRoleProtocolMapper.client_scope_id">
+<code class="sig-name descname">client_scope_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.UserRealmRoleProtocolMapper.client_scope_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The mapper’s associated client scope. Cannot be used at the same time as client_id.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.openid.UserRealmRoleProtocolMapper.multivalued">
+<code class="sig-name descname">multivalued</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.UserRealmRoleProtocolMapper.multivalued" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates whether this attribute is a single value or an array of values.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.openid.UserRealmRoleProtocolMapper.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.UserRealmRoleProtocolMapper.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>A human-friendly name that will appear in the Keycloak console.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.openid.UserRealmRoleProtocolMapper.realm_id">
+<code class="sig-name descname">realm_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.UserRealmRoleProtocolMapper.realm_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The realm id where the associated client or client scope exists.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.openid.UserRealmRoleProtocolMapper.realm_role_prefix">
+<code class="sig-name descname">realm_role_prefix</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.UserRealmRoleProtocolMapper.realm_role_prefix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prefix that will be added to each realm role.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_keycloak.openid.UserRealmRoleProtocolMapper.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">add_to_access_token=None</em>, <em class="sig-param">add_to_id_token=None</em>, <em class="sig-param">add_to_userinfo=None</em>, <em class="sig-param">claim_name=None</em>, <em class="sig-param">claim_value_type=None</em>, <em class="sig-param">client_id=None</em>, <em class="sig-param">client_scope_id=None</em>, <em class="sig-param">multivalued=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">realm_role_prefix=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.UserRealmRoleProtocolMapper.get" title="Permalink to this definition">¶</a></dt>
@@ -1888,12 +2195,19 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>add_to_access_token</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates if the attribute should be a claim in the access token.</p></li>
+<li><p><strong>add_to_id_token</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates if the attribute should be a claim in the id token.</p></li>
+<li><p><strong>add_to_userinfo</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates if the attribute should appear in the userinfo response body.</p></li>
+<li><p><strong>claim_value_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Claim type used when serializing tokens.</p></li>
+<li><p><strong>client_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The mapper’s associated client. Cannot be used at the same time as client_scope_id.</p></li>
+<li><p><strong>client_scope_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The mapper’s associated client scope. Cannot be used at the same time as client_id.</p></li>
+<li><p><strong>multivalued</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether this attribute is a single value or an array of values.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A human-friendly name that will appear in the Keycloak console.</p></li>
+<li><p><strong>realm_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The realm id where the associated client or client scope exists.</p></li>
+<li><p><strong>realm_role_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Prefix that will be added to each realm role.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/openid_user_realm_role_protocol_mapper.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/openid_user_realm_role_protocol_mapper.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1945,7 +2259,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 <p>See the docs for the <code class="docutils literal notranslate"><span class="pre">openid.Client</span></code> resource for details on the exported attributes.</p>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/d/openid_client.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/d/openid_client.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/d/keycloak_openid_client.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/d/keycloak_openid_client.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 

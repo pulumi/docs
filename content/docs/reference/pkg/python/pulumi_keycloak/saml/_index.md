@@ -42,6 +42,9 @@ in order to take advantage of Keycloak’s user sessions for SSO.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">logout_service_redirect_binding_url</span></code> - (Optional) SAML Redirect Binding URL for the client’s single logout service.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">full_scope_allowed</span></code> - (Optional) - Allow to include all roles mappings in the access token</p></li>
 </ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_saml_client.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_saml_client.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -50,9 +53,6 @@ in order to take advantage of Keycloak’s user sessions for SSO.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/saml_client.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/saml_client.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="method">
 <dt id="pulumi_keycloak.saml.Client.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">assertion_consumer_post_url=None</em>, <em class="sig-param">assertion_consumer_redirect_url=None</em>, <em class="sig-param">base_url=None</em>, <em class="sig-param">client_id=None</em>, <em class="sig-param">client_signature_required=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">force_post_binding=None</em>, <em class="sig-param">front_channel_logout=None</em>, <em class="sig-param">full_scope_allowed=None</em>, <em class="sig-param">idp_initiated_sso_relay_state=None</em>, <em class="sig-param">idp_initiated_sso_url_name=None</em>, <em class="sig-param">include_authn_statement=None</em>, <em class="sig-param">logout_service_post_binding_url=None</em>, <em class="sig-param">logout_service_redirect_binding_url=None</em>, <em class="sig-param">master_saml_processing_url=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_id_format=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">root_url=None</em>, <em class="sig-param">sign_assertions=None</em>, <em class="sig-param">sign_documents=None</em>, <em class="sig-param">signing_certificate=None</em>, <em class="sig-param">signing_private_key=None</em>, <em class="sig-param">valid_redirect_uris=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.saml.Client.get" title="Permalink to this definition">¶</a></dt>
@@ -67,9 +67,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/saml_client.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/saml_client.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -146,17 +143,215 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">signature_algorithm</span></code> - (Optional) Signing Algorithm. Defaults to empty.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">xml_sign_key_info_key_name_transformer</span></code> - (Optional) Sign Key Transformer. Defaults to empty.</p></li>
 </ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_saml_identity_provider.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_saml_identity_provider.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>add_read_token_role_on_create</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable/disable if new users can read any stored tokens. This assigns the broker.read-token role.</p></li>
+<li><p><strong>alias</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The alias uniquely identifies an identity provider and it is also used to build the redirect uri.</p></li>
+<li><p><strong>authenticate_by_default</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable/disable authenticate users by default.</p></li>
+<li><p><strong>backchannel_supported</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Does the external IDP support backchannel logout?</p></li>
+<li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Friendly name for Identity Providers.</p></li>
+<li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable/disable this identity provider.</p></li>
+<li><p><strong>first_broker_login_flow_alias</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Alias of authentication flow, which is triggered after first login with this identity provider. Term ‘First Login’ means
+that there is not yet existing Keycloak account linked with the authenticated identity provider account.</p></li>
+<li><p><strong>force_authn</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Require Force Authn.</p></li>
+<li><p><strong>hide_on_login_page</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Hide On Login Page.</p></li>
+<li><p><strong>link_only</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, users cannot log in through this provider. They can only link to this provider. This is useful if you don’t
+want to allow login from the provider, but want to integrate with a provider</p></li>
+<li><p><strong>name_id_policy_format</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name ID Policy Format.</p></li>
+<li><p><strong>post_binding_authn_request</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Post Binding Authn Request.</p></li>
+<li><p><strong>post_binding_logout</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Post Binding Logout.</p></li>
+<li><p><strong>post_binding_response</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Post Binding Response.</p></li>
+<li><p><strong>post_broker_login_flow_alias</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Alias of authentication flow, which is triggered after each login with this identity provider. Useful if you want
+additional verification of each user authenticated with this identity provider (for example OTP). Leave this empty if
+you don’t want any additional authenticators to be triggered after login with this identity provider. Also note, that
+authenticator implementations must assume that user is already set in ClientSession as identity provider already set it.</p></li>
+<li><p><strong>realm</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Realm Name</p></li>
+<li><p><strong>signature_algorithm</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Signing Algorithm.</p></li>
+<li><p><strong>signing_certificate</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Signing Certificate.</p></li>
+<li><p><strong>single_logout_service_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Logout URL.</p></li>
+<li><p><strong>single_sign_on_service_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – SSO Logout URL.</p></li>
+<li><p><strong>store_token</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable/disable if tokens must be stored after authenticating users.</p></li>
+<li><p><strong>trust_email</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If enabled then email provided by this provider is not verified even if verification is enabled for the realm.</p></li>
+<li><p><strong>validate_signature</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable/disable signature validation of SAML responses.</p></li>
+<li><p><strong>want_assertions_encrypted</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Want Assertions Encrypted.</p></li>
+<li><p><strong>want_assertions_signed</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Want Assertions Signed.</p></li>
+<li><p><strong>xml_sign_key_info_key_name_transformer</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Sign Key Transformer.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/saml_identity_provider.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/saml_identity_provider.html.markdown</a>.</p>
-</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_keycloak.saml.IdentityProvider.add_read_token_role_on_create">
+<code class="sig-name descname">add_read_token_role_on_create</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.saml.IdentityProvider.add_read_token_role_on_create" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable/disable if new users can read any stored tokens. This assigns the broker.read-token role.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.saml.IdentityProvider.alias">
+<code class="sig-name descname">alias</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.saml.IdentityProvider.alias" title="Permalink to this definition">¶</a></dt>
+<dd><p>The alias uniquely identifies an identity provider and it is also used to build the redirect uri.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.saml.IdentityProvider.authenticate_by_default">
+<code class="sig-name descname">authenticate_by_default</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.saml.IdentityProvider.authenticate_by_default" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable/disable authenticate users by default.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.saml.IdentityProvider.backchannel_supported">
+<code class="sig-name descname">backchannel_supported</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.saml.IdentityProvider.backchannel_supported" title="Permalink to this definition">¶</a></dt>
+<dd><p>Does the external IDP support backchannel logout?</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.saml.IdentityProvider.display_name">
+<code class="sig-name descname">display_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.saml.IdentityProvider.display_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Friendly name for Identity Providers.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.saml.IdentityProvider.enabled">
+<code class="sig-name descname">enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.saml.IdentityProvider.enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable/disable this identity provider.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.saml.IdentityProvider.first_broker_login_flow_alias">
+<code class="sig-name descname">first_broker_login_flow_alias</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.saml.IdentityProvider.first_broker_login_flow_alias" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias of authentication flow, which is triggered after first login with this identity provider. Term ‘First Login’ means
+that there is not yet existing Keycloak account linked with the authenticated identity provider account.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.saml.IdentityProvider.force_authn">
+<code class="sig-name descname">force_authn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.saml.IdentityProvider.force_authn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Require Force Authn.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.saml.IdentityProvider.hide_on_login_page">
+<code class="sig-name descname">hide_on_login_page</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.saml.IdentityProvider.hide_on_login_page" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hide On Login Page.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.saml.IdentityProvider.internal_id">
+<code class="sig-name descname">internal_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.saml.IdentityProvider.internal_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Internal Identity Provider Id</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.saml.IdentityProvider.link_only">
+<code class="sig-name descname">link_only</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.saml.IdentityProvider.link_only" title="Permalink to this definition">¶</a></dt>
+<dd><p>If true, users cannot log in through this provider. They can only link to this provider. This is useful if you don’t
+want to allow login from the provider, but want to integrate with a provider</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.saml.IdentityProvider.name_id_policy_format">
+<code class="sig-name descname">name_id_policy_format</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.saml.IdentityProvider.name_id_policy_format" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name ID Policy Format.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.saml.IdentityProvider.post_binding_authn_request">
+<code class="sig-name descname">post_binding_authn_request</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.saml.IdentityProvider.post_binding_authn_request" title="Permalink to this definition">¶</a></dt>
+<dd><p>Post Binding Authn Request.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.saml.IdentityProvider.post_binding_logout">
+<code class="sig-name descname">post_binding_logout</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.saml.IdentityProvider.post_binding_logout" title="Permalink to this definition">¶</a></dt>
+<dd><p>Post Binding Logout.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.saml.IdentityProvider.post_binding_response">
+<code class="sig-name descname">post_binding_response</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.saml.IdentityProvider.post_binding_response" title="Permalink to this definition">¶</a></dt>
+<dd><p>Post Binding Response.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.saml.IdentityProvider.post_broker_login_flow_alias">
+<code class="sig-name descname">post_broker_login_flow_alias</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.saml.IdentityProvider.post_broker_login_flow_alias" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias of authentication flow, which is triggered after each login with this identity provider. Useful if you want
+additional verification of each user authenticated with this identity provider (for example OTP). Leave this empty if
+you don’t want any additional authenticators to be triggered after login with this identity provider. Also note, that
+authenticator implementations must assume that user is already set in ClientSession as identity provider already set it.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.saml.IdentityProvider.realm">
+<code class="sig-name descname">realm</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.saml.IdentityProvider.realm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Realm Name</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.saml.IdentityProvider.signature_algorithm">
+<code class="sig-name descname">signature_algorithm</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.saml.IdentityProvider.signature_algorithm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Signing Algorithm.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.saml.IdentityProvider.signing_certificate">
+<code class="sig-name descname">signing_certificate</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.saml.IdentityProvider.signing_certificate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Signing Certificate.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.saml.IdentityProvider.single_logout_service_url">
+<code class="sig-name descname">single_logout_service_url</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.saml.IdentityProvider.single_logout_service_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Logout URL.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.saml.IdentityProvider.single_sign_on_service_url">
+<code class="sig-name descname">single_sign_on_service_url</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.saml.IdentityProvider.single_sign_on_service_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>SSO Logout URL.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.saml.IdentityProvider.store_token">
+<code class="sig-name descname">store_token</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.saml.IdentityProvider.store_token" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable/disable if tokens must be stored after authenticating users.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.saml.IdentityProvider.trust_email">
+<code class="sig-name descname">trust_email</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.saml.IdentityProvider.trust_email" title="Permalink to this definition">¶</a></dt>
+<dd><p>If enabled then email provided by this provider is not verified even if verification is enabled for the realm.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.saml.IdentityProvider.validate_signature">
+<code class="sig-name descname">validate_signature</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.saml.IdentityProvider.validate_signature" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable/disable signature validation of SAML responses.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.saml.IdentityProvider.want_assertions_encrypted">
+<code class="sig-name descname">want_assertions_encrypted</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.saml.IdentityProvider.want_assertions_encrypted" title="Permalink to this definition">¶</a></dt>
+<dd><p>Want Assertions Encrypted.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.saml.IdentityProvider.want_assertions_signed">
+<code class="sig-name descname">want_assertions_signed</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.saml.IdentityProvider.want_assertions_signed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Want Assertions Signed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.saml.IdentityProvider.xml_sign_key_info_key_name_transformer">
+<code class="sig-name descname">xml_sign_key_info_key_name_transformer</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.saml.IdentityProvider.xml_sign_key_info_key_name_transformer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sign Key Transformer.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_keycloak.saml.IdentityProvider.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">add_read_token_role_on_create=None</em>, <em class="sig-param">alias=None</em>, <em class="sig-param">authenticate_by_default=None</em>, <em class="sig-param">backchannel_supported=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">first_broker_login_flow_alias=None</em>, <em class="sig-param">force_authn=None</em>, <em class="sig-param">hide_on_login_page=None</em>, <em class="sig-param">internal_id=None</em>, <em class="sig-param">link_only=None</em>, <em class="sig-param">name_id_policy_format=None</em>, <em class="sig-param">post_binding_authn_request=None</em>, <em class="sig-param">post_binding_logout=None</em>, <em class="sig-param">post_binding_response=None</em>, <em class="sig-param">post_broker_login_flow_alias=None</em>, <em class="sig-param">realm=None</em>, <em class="sig-param">signature_algorithm=None</em>, <em class="sig-param">signing_certificate=None</em>, <em class="sig-param">single_logout_service_url=None</em>, <em class="sig-param">single_sign_on_service_url=None</em>, <em class="sig-param">store_token=None</em>, <em class="sig-param">trust_email=None</em>, <em class="sig-param">validate_signature=None</em>, <em class="sig-param">want_assertions_encrypted=None</em>, <em class="sig-param">want_assertions_signed=None</em>, <em class="sig-param">xml_sign_key_info_key_name_transformer=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.saml.IdentityProvider.get" title="Permalink to this definition">¶</a></dt>
@@ -168,12 +363,41 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>add_read_token_role_on_create</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable/disable if new users can read any stored tokens. This assigns the broker.read-token role.</p></li>
+<li><p><strong>alias</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The alias uniquely identifies an identity provider and it is also used to build the redirect uri.</p></li>
+<li><p><strong>authenticate_by_default</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable/disable authenticate users by default.</p></li>
+<li><p><strong>backchannel_supported</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Does the external IDP support backchannel logout?</p></li>
+<li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Friendly name for Identity Providers.</p></li>
+<li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable/disable this identity provider.</p></li>
+<li><p><strong>first_broker_login_flow_alias</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Alias of authentication flow, which is triggered after first login with this identity provider. Term ‘First Login’ means
+that there is not yet existing Keycloak account linked with the authenticated identity provider account.</p></li>
+<li><p><strong>force_authn</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Require Force Authn.</p></li>
+<li><p><strong>hide_on_login_page</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Hide On Login Page.</p></li>
+<li><p><strong>internal_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Internal Identity Provider Id</p></li>
+<li><p><strong>link_only</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, users cannot log in through this provider. They can only link to this provider. This is useful if you don’t
+want to allow login from the provider, but want to integrate with a provider</p></li>
+<li><p><strong>name_id_policy_format</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name ID Policy Format.</p></li>
+<li><p><strong>post_binding_authn_request</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Post Binding Authn Request.</p></li>
+<li><p><strong>post_binding_logout</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Post Binding Logout.</p></li>
+<li><p><strong>post_binding_response</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Post Binding Response.</p></li>
+<li><p><strong>post_broker_login_flow_alias</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Alias of authentication flow, which is triggered after each login with this identity provider. Useful if you want
+additional verification of each user authenticated with this identity provider (for example OTP). Leave this empty if
+you don’t want any additional authenticators to be triggered after login with this identity provider. Also note, that
+authenticator implementations must assume that user is already set in ClientSession as identity provider already set it.</p></li>
+<li><p><strong>realm</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Realm Name</p></li>
+<li><p><strong>signature_algorithm</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Signing Algorithm.</p></li>
+<li><p><strong>signing_certificate</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Signing Certificate.</p></li>
+<li><p><strong>single_logout_service_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Logout URL.</p></li>
+<li><p><strong>single_sign_on_service_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – SSO Logout URL.</p></li>
+<li><p><strong>store_token</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable/disable if tokens must be stored after authenticating users.</p></li>
+<li><p><strong>trust_email</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If enabled then email provided by this provider is not verified even if verification is enabled for the realm.</p></li>
+<li><p><strong>validate_signature</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable/disable signature validation of SAML responses.</p></li>
+<li><p><strong>want_assertions_encrypted</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Want Assertions Encrypted.</p></li>
+<li><p><strong>want_assertions_signed</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Want Assertions Signed.</p></li>
+<li><p><strong>xml_sign_key_info_key_name_transformer</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Sign Key Transformer.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/saml_identity_provider.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/saml_identity_provider.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -234,6 +458,9 @@ can be shared between multiple different clients.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">saml_attribute_name</span></code> - (Required) The name of the SAML attribute.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">saml_attribute_name_format</span></code> - (Required) The SAML attribute Name Format. Can be one of <code class="docutils literal notranslate"><span class="pre">Unspecified</span></code>, <code class="docutils literal notranslate"><span class="pre">Basic</span></code>, or <code class="docutils literal notranslate"><span class="pre">URI</span> <span class="pre">Reference</span></code>.</p></li>
 </ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_saml_user_attribute_protocol_mapper.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_saml_user_attribute_protocol_mapper.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -242,9 +469,6 @@ can be shared between multiple different clients.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/saml_user_attribute_protocol_mapper.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/saml_user_attribute_protocol_mapper.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="method">
 <dt id="pulumi_keycloak.saml.UserAttributeProtocolMapper.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">client_id=None</em>, <em class="sig-param">client_scope_id=None</em>, <em class="sig-param">friendly_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">saml_attribute_name=None</em>, <em class="sig-param">saml_attribute_name_format=None</em>, <em class="sig-param">user_attribute=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.saml.UserAttributeProtocolMapper.get" title="Permalink to this definition">¶</a></dt>
@@ -259,9 +483,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/saml_user_attribute_protocol_mapper.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/saml_user_attribute_protocol_mapper.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -322,6 +543,9 @@ can be shared between multiple different clients.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">saml_attribute_name</span></code> - (Required) The name of the SAML attribute.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">saml_attribute_name_format</span></code> - (Required) The SAML attribute Name Format. Can be one of <code class="docutils literal notranslate"><span class="pre">Unspecified</span></code>, <code class="docutils literal notranslate"><span class="pre">Basic</span></code>, or <code class="docutils literal notranslate"><span class="pre">URI</span> <span class="pre">Reference</span></code>.</p></li>
 </ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_saml_user_property_protocol_mapper.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_saml_user_property_protocol_mapper.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -330,9 +554,6 @@ can be shared between multiple different clients.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/saml_user_property_protocol_mapper.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/saml_user_property_protocol_mapper.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="method">
 <dt id="pulumi_keycloak.saml.UserPropertyProtocolMapper.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">client_id=None</em>, <em class="sig-param">client_scope_id=None</em>, <em class="sig-param">friendly_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">saml_attribute_name=None</em>, <em class="sig-param">saml_attribute_name_format=None</em>, <em class="sig-param">user_property=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.saml.UserPropertyProtocolMapper.get" title="Permalink to this definition">¶</a></dt>
@@ -347,9 +568,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/saml_user_property_protocol_mapper.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/saml_user_property_protocol_mapper.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
