@@ -17,6 +17,9 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_spotinst.gcp.Elastigroup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_spotinst.gcp.</code><code class="sig-name descname">Elastigroup</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_healing=None</em>, <em class="sig-param">availability_zones=None</em>, <em class="sig-param">backend_services=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">desired_capacity=None</em>, <em class="sig-param">disks=None</em>, <em class="sig-param">draining_timeout=None</em>, <em class="sig-param">fallback_to_ondemand=None</em>, <em class="sig-param">gpu=None</em>, <em class="sig-param">health_check_grace_period=None</em>, <em class="sig-param">health_check_type=None</em>, <em class="sig-param">instance_types_customs=None</em>, <em class="sig-param">instance_types_ondemand=None</em>, <em class="sig-param">instance_types_preemptibles=None</em>, <em class="sig-param">integration_docker_swarm=None</em>, <em class="sig-param">integration_gke=None</em>, <em class="sig-param">ip_forwarding=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">max_size=None</em>, <em class="sig-param">metadatas=None</em>, <em class="sig-param">min_size=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_interfaces=None</em>, <em class="sig-param">ondemand_count=None</em>, <em class="sig-param">preemptible_percentage=None</em>, <em class="sig-param">scaling_down_policies=None</em>, <em class="sig-param">scaling_up_policies=None</em>, <em class="sig-param">scheduled_tasks=None</em>, <em class="sig-param">service_account=None</em>, <em class="sig-param">shutdown_script=None</em>, <em class="sig-param">startup_script=None</em>, <em class="sig-param">subnets=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">unhealthy_duration=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.gcp.Elastigroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Spotinst elastigroup GCP resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/elastigroup_gcp.html.markdown">https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/elastigroup_gcp.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -65,7 +68,7 @@ anything, please consult the source <a class="reference external" href="https://
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">diskSizeGb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">diskType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sourceImage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source_image</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">interface</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
@@ -199,9 +202,6 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><code class="docutils literal notranslate"><span class="pre">region</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The region for the group of subnets.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">subnetNames</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The names of the subnets in the region.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/elastigroup_gcp.html.markdown">https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/elastigroup_gcp.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_spotinst.gcp.Elastigroup.availability_zones">
 <code class="sig-name descname">availability_zones</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.gcp.Elastigroup.availability_zones" title="Permalink to this definition">¶</a></dt>
@@ -387,7 +387,7 @@ properties used to qualify the lookup.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">diskSizeGb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">diskType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sourceImage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source_image</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">interface</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
@@ -521,9 +521,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">region</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The region for the group of subnets.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">subnetNames</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The names of the subnets in the region.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/elastigroup_gcp.html.markdown">https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/elastigroup_gcp.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">

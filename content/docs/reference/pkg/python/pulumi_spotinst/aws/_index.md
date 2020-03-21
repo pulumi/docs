@@ -17,6 +17,9 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_spotinst.aws.Beanstalk">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_spotinst.aws.</code><code class="sig-name descname">Beanstalk</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">beanstalk_environment_id=None</em>, <em class="sig-param">beanstalk_environment_name=None</em>, <em class="sig-param">deployment_preferences=None</em>, <em class="sig-param">desired_capacity=None</em>, <em class="sig-param">instance_types_spots=None</em>, <em class="sig-param">maintenance=None</em>, <em class="sig-param">managed_actions=None</em>, <em class="sig-param">max_size=None</em>, <em class="sig-param">min_size=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">product=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">scheduled_tasks=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.aws.Beanstalk" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Spotinst AWS group resource using Elastic Beanstalk.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/elastigroup_aws_beanstalk.html.markdown">https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/elastigroup_aws_beanstalk.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -77,9 +80,6 @@ For EC2 Classic instances:  <code class="docutils literal notranslate"><span cla
 <li><p><code class="docutils literal notranslate"><span class="pre">targetCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">taskType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/elastigroup_aws_beanstalk.html.markdown">https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/elastigroup_aws_beanstalk.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_spotinst.aws.Beanstalk.beanstalk_environment_id">
 <code class="sig-name descname">beanstalk_environment_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.aws.Beanstalk.beanstalk_environment_id" title="Permalink to this definition">¶</a></dt>
@@ -233,9 +233,6 @@ For EC2 Classic instances:  <code class="docutils literal notranslate"><span cla
 <li><p><code class="docutils literal notranslate"><span class="pre">targetCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">taskType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/elastigroup_aws_beanstalk.html.markdown">https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/elastigroup_aws_beanstalk.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -280,6 +277,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_spotinst.aws.Elastigroup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_spotinst.aws.</code><code class="sig-name descname">Elastigroup</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">availability_zones=None</em>, <em class="sig-param">block_devices_mode=None</em>, <em class="sig-param">capacity_unit=None</em>, <em class="sig-param">cpu_credits=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">desired_capacity=None</em>, <em class="sig-param">draining_timeout=None</em>, <em class="sig-param">ebs_block_devices=None</em>, <em class="sig-param">ebs_optimized=None</em>, <em class="sig-param">elastic_ips=None</em>, <em class="sig-param">elastic_load_balancers=None</em>, <em class="sig-param">enable_monitoring=None</em>, <em class="sig-param">ephemeral_block_devices=None</em>, <em class="sig-param">fallback_to_ondemand=None</em>, <em class="sig-param">health_check_grace_period=None</em>, <em class="sig-param">health_check_type=None</em>, <em class="sig-param">health_check_unhealthy_duration_before_replacement=None</em>, <em class="sig-param">iam_instance_profile=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">instance_types_ondemand=None</em>, <em class="sig-param">instance_types_preferred_spots=None</em>, <em class="sig-param">instance_types_spots=None</em>, <em class="sig-param">instance_types_weights=None</em>, <em class="sig-param">integration_beanstalk=None</em>, <em class="sig-param">integration_codedeploy=None</em>, <em class="sig-param">integration_docker_swarm=None</em>, <em class="sig-param">integration_ecs=None</em>, <em class="sig-param">integration_gitlab=None</em>, <em class="sig-param">integration_kubernetes=None</em>, <em class="sig-param">integration_mesosphere=None</em>, <em class="sig-param">integration_multai_runtime=None</em>, <em class="sig-param">integration_nomad=None</em>, <em class="sig-param">integration_rancher=None</em>, <em class="sig-param">integration_route53=None</em>, <em class="sig-param">key_name=None</em>, <em class="sig-param">lifetime_period=None</em>, <em class="sig-param">max_size=None</em>, <em class="sig-param">min_size=None</em>, <em class="sig-param">multai_target_sets=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_interfaces=None</em>, <em class="sig-param">ondemand_count=None</em>, <em class="sig-param">orientation=None</em>, <em class="sig-param">persist_block_devices=None</em>, <em class="sig-param">persist_private_ip=None</em>, <em class="sig-param">persist_root_device=None</em>, <em class="sig-param">placement_tenancy=None</em>, <em class="sig-param">preferred_availability_zones=None</em>, <em class="sig-param">private_ips=None</em>, <em class="sig-param">product=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">revert_to_spot=None</em>, <em class="sig-param">scaling_down_policies=None</em>, <em class="sig-param">scaling_strategies=None</em>, <em class="sig-param">scaling_target_policies=None</em>, <em class="sig-param">scaling_up_policies=None</em>, <em class="sig-param">scheduled_tasks=None</em>, <em class="sig-param">security_groups=None</em>, <em class="sig-param">shutdown_script=None</em>, <em class="sig-param">signals=None</em>, <em class="sig-param">spot_percentage=None</em>, <em class="sig-param">stateful_deallocation=None</em>, <em class="sig-param">subnet_ids=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">target_group_arns=None</em>, <em class="sig-param">update_policy=None</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">utilize_reserved_instances=None</em>, <em class="sig-param">wait_for_capacity=None</em>, <em class="sig-param">wait_for_capacity_timeout=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.aws.Elastigroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Spotinst AWS group resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/elastigroup_aws.html.markdown">https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/elastigroup_aws.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -438,7 +438,7 @@ Note: When this parameter is set, <code class="docutils literal notranslate"><sp
 <li><p><code class="docutils literal notranslate"><span class="pre">autoscaleIsAutoConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">autoscaleIsEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">autoscaleScaleDownNonServiceTasks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">clusterName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cluster_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <p>The <strong>integration_gitlab</strong> object supports the following:</p>
 <ul class="simple">
@@ -482,7 +482,7 @@ Note: When this parameter is set, <code class="docutils literal notranslate"><sp
 </ul>
 <p>The <strong>integration_multai_runtime</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">deploymentId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deployment_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <p>The <strong>integration_nomad</strong> object supports the following:</p>
 <ul class="simple">
@@ -534,8 +534,8 @@ Note: When this parameter is set, <code class="docutils literal notranslate"><sp
 </ul>
 <p>The <strong>multai_target_sets</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">balancerId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">targetSetId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">balancer_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">target_set_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <p>The <strong>network_interfaces</strong> object supports the following:</p>
 <ul class="simple">
@@ -689,9 +689,6 @@ Note: When this parameter is set, <code class="docutils literal notranslate"><sp
 <li><p><code class="docutils literal notranslate"><span class="pre">shouldResumeStateful</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">shouldRoll</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/elastigroup_aws.html.markdown">https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/elastigroup_aws.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_spotinst.aws.Elastigroup.availability_zones">
 <code class="sig-name descname">availability_zones</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.aws.Elastigroup.availability_zones" title="Permalink to this definition">¶</a></dt>
@@ -1120,7 +1117,7 @@ Note: When this parameter is set, <code class="docutils literal notranslate"><sp
 <li><p><code class="docutils literal notranslate"><span class="pre">autoscaleIsAutoConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">autoscaleIsEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">autoscaleScaleDownNonServiceTasks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">clusterName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cluster_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <p>The <strong>integration_gitlab</strong> object supports the following:</p>
 <ul class="simple">
@@ -1164,7 +1161,7 @@ Note: When this parameter is set, <code class="docutils literal notranslate"><sp
 </ul>
 <p>The <strong>integration_multai_runtime</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">deploymentId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deployment_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <p>The <strong>integration_nomad</strong> object supports the following:</p>
 <ul class="simple">
@@ -1216,8 +1213,8 @@ Note: When this parameter is set, <code class="docutils literal notranslate"><sp
 </ul>
 <p>The <strong>multai_target_sets</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">balancerId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">targetSetId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">balancer_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">target_set_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <p>The <strong>network_interfaces</strong> object supports the following:</p>
 <ul class="simple">
@@ -1371,9 +1368,6 @@ Note: When this parameter is set, <code class="docutils literal notranslate"><sp
 <li><p><code class="docutils literal notranslate"><span class="pre">shouldResumeStateful</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">shouldRoll</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/elastigroup_aws.html.markdown">https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/elastigroup_aws.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1449,6 +1443,9 @@ Default: ts-123456</p></li>
 </pre></div>
 </div>
 <p><span class="raw-html-m2r"><a id="route53"></a></span></p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/managed_instance_aws.html.markdown">https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/managed_instance_aws.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1519,9 +1516,9 @@ Default: <code class="docutils literal notranslate"><span class="pre">&quot;fals
 <li><p><code class="docutils literal notranslate"><span class="pre">arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">autoWeight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">azAwareness</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">balancerId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">balancer_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ManagedInstance name.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">targetSetId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">target_set_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <p>The <strong>network_interfaces</strong> object supports the following:</p>
@@ -1548,9 +1545,6 @@ Default <code class="docutils literal notranslate"><span class="pre">&quot;never
 <li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Tag’s key.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Tag’s name.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/managed_instance_aws.html.markdown">https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/managed_instance_aws.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_spotinst.aws.ManagedInstance.auto_healing">
 <code class="sig-name descname">auto_healing</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.aws.ManagedInstance.auto_healing" title="Permalink to this definition">¶</a></dt>
@@ -1838,9 +1832,9 @@ Default: <code class="docutils literal notranslate"><span class="pre">&quot;fals
 <li><p><code class="docutils literal notranslate"><span class="pre">arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">autoWeight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">azAwareness</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">balancerId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">balancer_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ManagedInstance name.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">targetSetId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">target_set_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <p>The <strong>network_interfaces</strong> object supports the following:</p>
@@ -1867,9 +1861,6 @@ Default <code class="docutils literal notranslate"><span class="pre">&quot;never
 <li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Tag’s key.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Tag’s name.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/managed_instance_aws.html.markdown">https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/managed_instance_aws.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2083,6 +2074,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">min_capacity</span></code> - (Optional) New min capacity for the elastigroup.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">max_capacity</span></code> - (Optional) New max capacity for the elastigroup.</p></li>
 </ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/mrscaler_aws.html.markdown">https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/mrscaler_aws.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2247,9 +2241,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">threshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">unit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/mrscaler_aws.html.markdown">https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/mrscaler_aws.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_spotinst.aws.MrScalar.cluster_id">
 <code class="sig-name descname">cluster_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.aws.MrScalar.cluster_id" title="Permalink to this definition">¶</a></dt>
@@ -2450,9 +2441,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">threshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">unit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/mrscaler_aws.html.markdown">https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/mrscaler_aws.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2497,6 +2485,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_spotinst.aws.Ocean">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_spotinst.aws.</code><code class="sig-name descname">Ocean</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">associate_public_ip_address=None</em>, <em class="sig-param">autoscaler=None</em>, <em class="sig-param">blacklists=None</em>, <em class="sig-param">controller_id=None</em>, <em class="sig-param">desired_capacity=None</em>, <em class="sig-param">draining_timeout=None</em>, <em class="sig-param">ebs_optimized=None</em>, <em class="sig-param">fallback_to_ondemand=None</em>, <em class="sig-param">iam_instance_profile=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">key_name=None</em>, <em class="sig-param">load_balancers=None</em>, <em class="sig-param">max_size=None</em>, <em class="sig-param">min_size=None</em>, <em class="sig-param">monitoring=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">root_volume_size=None</em>, <em class="sig-param">security_groups=None</em>, <em class="sig-param">spot_percentage=None</em>, <em class="sig-param">subnet_ids=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">update_policy=None</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">utilize_reserved_instances=None</em>, <em class="sig-param">whitelists=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.aws.Ocean" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Spotinst Ocean AWS resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/ocean_aws.html.markdown">https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/ocean_aws.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2579,9 +2570,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">shouldRoll</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/ocean_aws.html.markdown">https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/ocean_aws.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_spotinst.aws.Ocean.associate_public_ip_address">
 <code class="sig-name descname">associate_public_ip_address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.aws.Ocean.associate_public_ip_address" title="Permalink to this definition">¶</a></dt>
@@ -2857,9 +2845,6 @@ properties used to qualify the lookup.</p>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">shouldRoll</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/ocean_aws.html.markdown">https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/ocean_aws.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2904,6 +2889,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_spotinst.aws.OceanLaunchSpec">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_spotinst.aws.</code><code class="sig-name descname">OceanLaunchSpec</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">autoscale_headrooms=None</em>, <em class="sig-param">iam_instance_profile=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">ocean_id=None</em>, <em class="sig-param">root_volume_size=None</em>, <em class="sig-param">security_groups=None</em>, <em class="sig-param">subnet_ids=None</em>, <em class="sig-param">taints=None</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.aws.OceanLaunchSpec" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a custom Spotinst Ocean AWS Launch Spec resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/ocean_aws_launch_spec.html.markdown">https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/ocean_aws_launch_spec.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2940,9 +2928,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The tag key.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The tag value.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/ocean_aws_launch_spec.html.markdown">https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/ocean_aws_launch_spec.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_spotinst.aws.OceanLaunchSpec.autoscale_headrooms">
 <code class="sig-name descname">autoscale_headrooms</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.aws.OceanLaunchSpec.autoscale_headrooms" title="Permalink to this definition">¶</a></dt>
@@ -3060,9 +3045,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The tag key.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The tag value.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/ocean_aws_launch_spec.html.markdown">https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/ocean_aws_launch_spec.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
