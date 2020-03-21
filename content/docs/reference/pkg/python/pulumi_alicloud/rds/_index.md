@@ -291,6 +291,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd></dd></dl>
 
 <dl class="class">
+<dt id="pulumi_alicloud.rds.AwaitableGetZonesResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.rds.</code><code class="sig-name descname">AwaitableGetZonesResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">multi=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">zones=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.rds.AwaitableGetZonesResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_alicloud.rds.BackupPolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.rds.</code><code class="sig-name descname">BackupPolicy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">archive_backup_keep_count=None</em>, <em class="sig-param">archive_backup_keep_policy=None</em>, <em class="sig-param">archive_backup_retention_period=None</em>, <em class="sig-param">backup_periods=None</em>, <em class="sig-param">backup_retention_period=None</em>, <em class="sig-param">backup_time=None</em>, <em class="sig-param">compress_type=None</em>, <em class="sig-param">enable_backup_log=None</em>, <em class="sig-param">high_space_usage_protection=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">local_log_retention_hours=None</em>, <em class="sig-param">local_log_retention_space=None</em>, <em class="sig-param">log_backup=None</em>, <em class="sig-param">log_backup_frequency=None</em>, <em class="sig-param">log_backup_retention_period=None</em>, <em class="sig-param">log_retention_period=None</em>, <em class="sig-param">preferred_backup_periods=None</em>, <em class="sig-param">preferred_backup_time=None</em>, <em class="sig-param">retention_period=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.rds.BackupPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an RDS instance backup policy resource and used to configure instance backup policy.</p>
@@ -877,8 +882,32 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_alicloud.rds.GetZonesResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.rds.</code><code class="sig-name descname">GetZonesResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">multi=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">zones=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.rds.GetZonesResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getZones.</p>
+<dl class="attribute">
+<dt id="pulumi_alicloud.rds.GetZonesResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.rds.GetZonesResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.rds.GetZonesResult.ids">
+<code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.rds.GetZonesResult.ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of zone IDs.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.rds.GetZonesResult.zones">
+<code class="sig-name descname">zones</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.rds.GetZonesResult.zones" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of availability zones. Each element contains the following attributes:</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_alicloud.rds.Instance">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.rds.</code><code class="sig-name descname">Instance</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_renew=None</em>, <em class="sig-param">auto_renew_period=None</em>, <em class="sig-param">auto_upgrade_minor_version=None</em>, <em class="sig-param">db_instance_storage_type=None</em>, <em class="sig-param">engine=None</em>, <em class="sig-param">engine_version=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">instance_name=None</em>, <em class="sig-param">instance_storage=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">maintain_time=None</em>, <em class="sig-param">monitoring_period=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">period=None</em>, <em class="sig-param">security_group_id=None</em>, <em class="sig-param">security_group_ids=None</em>, <em class="sig-param">security_ip_mode=None</em>, <em class="sig-param">security_ips=None</em>, <em class="sig-param">sql_collector_config_value=None</em>, <em class="sig-param">sql_collector_status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vswitch_id=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.rds.Instance" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.rds.</code><code class="sig-name descname">Instance</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_renew=None</em>, <em class="sig-param">auto_renew_period=None</em>, <em class="sig-param">auto_upgrade_minor_version=None</em>, <em class="sig-param">db_instance_storage_type=None</em>, <em class="sig-param">engine=None</em>, <em class="sig-param">engine_version=None</em>, <em class="sig-param">force_restart=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">instance_name=None</em>, <em class="sig-param">instance_storage=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">maintain_time=None</em>, <em class="sig-param">monitoring_period=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">period=None</em>, <em class="sig-param">security_group_id=None</em>, <em class="sig-param">security_group_ids=None</em>, <em class="sig-param">security_ip_mode=None</em>, <em class="sig-param">security_ips=None</em>, <em class="sig-param">sql_collector_config_value=None</em>, <em class="sig-param">sql_collector_status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vswitch_id=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.rds.Instance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an RDS instance resource. A DB instance is an isolated database
 environment in the cloud. A DB instance can contain multiple user-created
 databases.</p>
@@ -917,6 +946,7 @@ databases.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>engine</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Database type. Value options: MySQL, SQLServer, PostgreSQL, and PPAS.</p></li>
 <li><p><strong>engine_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Database version. Value options can refer to the latest docs <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/26228.htm">CreateDBInstance</a> <code class="docutils literal notranslate"><span class="pre">EngineVersion</span></code>.</p></li>
+<li><p><strong>force_restart</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Set it to true to make some parameter efficient when modifying them. Default to false.</p></li>
 <li><p><strong>instance_charge_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Valid values are <code class="docutils literal notranslate"><span class="pre">Prepaid</span></code>, <code class="docutils literal notranslate"><span class="pre">Postpaid</span></code>, Default to <code class="docutils literal notranslate"><span class="pre">Postpaid</span></code>. Currently, the resource only supports PostPaid to PrePaid.</p></li>
 <li><p><strong>instance_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of DB instance. It a string of 2 to 256 characters.</p></li>
 <li><p><strong>instance_storage</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – User-defined DB instance storage space. Value range:</p></li>
@@ -1019,6 +1049,12 @@ The multiple zone ID can be retrieved by setting <code class="docutils literal n
 <dt id="pulumi_alicloud.rds.Instance.engine_version">
 <code class="sig-name descname">engine_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.rds.Instance.engine_version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Database version. Value options can refer to the latest docs <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/26228.htm">CreateDBInstance</a> <code class="docutils literal notranslate"><span class="pre">EngineVersion</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.rds.Instance.force_restart">
+<code class="sig-name descname">force_restart</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.rds.Instance.force_restart" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set it to true to make some parameter efficient when modifying them. Default to false.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1149,7 +1185,7 @@ The multiple zone ID can be retrieved by setting <code class="docutils literal n
 
 <dl class="method">
 <dt id="pulumi_alicloud.rds.Instance.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_renew=None</em>, <em class="sig-param">auto_renew_period=None</em>, <em class="sig-param">auto_upgrade_minor_version=None</em>, <em class="sig-param">connection_string=None</em>, <em class="sig-param">db_instance_storage_type=None</em>, <em class="sig-param">engine=None</em>, <em class="sig-param">engine_version=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">instance_name=None</em>, <em class="sig-param">instance_storage=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">maintain_time=None</em>, <em class="sig-param">monitoring_period=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">period=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">security_group_id=None</em>, <em class="sig-param">security_group_ids=None</em>, <em class="sig-param">security_ip_mode=None</em>, <em class="sig-param">security_ips=None</em>, <em class="sig-param">sql_collector_config_value=None</em>, <em class="sig-param">sql_collector_status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vswitch_id=None</em>, <em class="sig-param">zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.rds.Instance.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_renew=None</em>, <em class="sig-param">auto_renew_period=None</em>, <em class="sig-param">auto_upgrade_minor_version=None</em>, <em class="sig-param">connection_string=None</em>, <em class="sig-param">db_instance_storage_type=None</em>, <em class="sig-param">engine=None</em>, <em class="sig-param">engine_version=None</em>, <em class="sig-param">force_restart=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">instance_name=None</em>, <em class="sig-param">instance_storage=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">maintain_time=None</em>, <em class="sig-param">monitoring_period=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">period=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">security_group_id=None</em>, <em class="sig-param">security_group_ids=None</em>, <em class="sig-param">security_ip_mode=None</em>, <em class="sig-param">security_ips=None</em>, <em class="sig-param">sql_collector_config_value=None</em>, <em class="sig-param">sql_collector_status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vswitch_id=None</em>, <em class="sig-param">zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.rds.Instance.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Instance resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1189,6 +1225,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>engine</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Database type. Value options: MySQL, SQLServer, PostgreSQL, and PPAS.</p></li>
 <li><p><strong>engine_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Database version. Value options can refer to the latest docs <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/26228.htm">CreateDBInstance</a> <code class="docutils literal notranslate"><span class="pre">EngineVersion</span></code>.</p>
 </p></li>
+<li><p><strong>force_restart</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Set it to true to make some parameter efficient when modifying them. Default to false.</p></li>
 <li><p><strong>instance_charge_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Valid values are <code class="docutils literal notranslate"><span class="pre">Prepaid</span></code>, <code class="docutils literal notranslate"><span class="pre">Postpaid</span></code>, Default to <code class="docutils literal notranslate"><span class="pre">Postpaid</span></code>. Currently, the resource only supports PostPaid to PrePaid.</p></li>
 <li><p><strong>instance_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of DB instance. It a string of 2 to 256 characters.</p></li>
 <li><p><strong>instance_storage</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – User-defined DB instance storage space. Value range:</p></li>
@@ -1683,6 +1720,24 @@ Filters support regular expression for the instance name, searches by tags, and 
 Note: Before 1.60.0, the value’s format is a <code class="docutils literal notranslate"><span class="pre">json</span></code> string which including <code class="docutils literal notranslate"><span class="pre">TagKey</span></code> and <code class="docutils literal notranslate"><span class="pre">TagValue</span></code>. <code class="docutils literal notranslate"><span class="pre">TagKey</span></code> cannot be null, and <code class="docutils literal notranslate"><span class="pre">TagValue</span></code> can be empty. Format example <code class="docutils literal notranslate"><span class="pre">&quot;{&quot;key1&quot;:&quot;value1&quot;}&quot;</span></code></p></li>
 <li><p><strong>vpc_id</strong> (<em>str</em>) – Used to retrieve instances belong to specified VPC.</p></li>
 <li><p><strong>vswitch_id</strong> (<em>str</em>) – Used to retrieve instances belong to specified <code class="docutils literal notranslate"><span class="pre">vswitch</span></code> resources.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_alicloud.rds.get_zones">
+<code class="sig-prename descclassname">pulumi_alicloud.rds.</code><code class="sig-name descname">get_zones</code><span class="sig-paren">(</span><em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">multi=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.rds.get_zones" title="Permalink to this definition">¶</a></dt>
+<dd><p>This data source provides availability zones for RDS that can be accessed by an Alibaba Cloud account within the region configured in the provider.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong> Available in v1.73.0+.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/db_zones.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/db_zones.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>instance_charge_type</strong> (<em>str</em>) – Filter the results by a specific instance charge type. Valid values: <code class="docutils literal notranslate"><span class="pre">PrePaid</span></code> and <code class="docutils literal notranslate"><span class="pre">PostPaid</span></code>. Default to <code class="docutils literal notranslate"><span class="pre">PostPaid</span></code>.</p></li>
+<li><p><strong>multi</strong> (<em>bool</em>) – Indicate whether the zones can be used in a multi AZ configuration. Default to <code class="docutils literal notranslate"><span class="pre">false</span></code>. Multi AZ is usually used to launch RDS instances.</p></li>
 </ul>
 </dd>
 </dl>

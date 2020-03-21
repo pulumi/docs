@@ -363,7 +363,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_alicloud.cs.Kubernetes">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cs.</code><code class="sig-name descname">Kubernetes</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">client_cert=None</em>, <em class="sig-param">client_key=None</em>, <em class="sig-param">cluster_ca_cert=None</em>, <em class="sig-param">cluster_network_type=None</em>, <em class="sig-param">enable_ssh=None</em>, <em class="sig-param">force_update=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">install_cloud_monitor=None</em>, <em class="sig-param">is_outdated=None</em>, <em class="sig-param">key_name=None</em>, <em class="sig-param">kms_encrypted_password=None</em>, <em class="sig-param">kms_encryption_context=None</em>, <em class="sig-param">kube_config=None</em>, <em class="sig-param">log_config=None</em>, <em class="sig-param">master_auto_renew=None</em>, <em class="sig-param">master_auto_renew_period=None</em>, <em class="sig-param">master_disk_category=None</em>, <em class="sig-param">master_disk_size=None</em>, <em class="sig-param">master_instance_charge_type=None</em>, <em class="sig-param">master_instance_type=None</em>, <em class="sig-param">master_instance_types=None</em>, <em class="sig-param">master_period=None</em>, <em class="sig-param">master_period_unit=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">new_nat_gateway=None</em>, <em class="sig-param">node_cidr_mask=None</em>, <em class="sig-param">nodes=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">pod_cidr=None</em>, <em class="sig-param">service_cidr=None</em>, <em class="sig-param">slb_internet_enabled=None</em>, <em class="sig-param">user_ca=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">vswitch_id=None</em>, <em class="sig-param">vswitch_ids=None</em>, <em class="sig-param">worker_auto_renew=None</em>, <em class="sig-param">worker_auto_renew_period=None</em>, <em class="sig-param">worker_data_disk_category=None</em>, <em class="sig-param">worker_data_disk_size=None</em>, <em class="sig-param">worker_disk_category=None</em>, <em class="sig-param">worker_disk_size=None</em>, <em class="sig-param">worker_instance_charge_type=None</em>, <em class="sig-param">worker_instance_type=None</em>, <em class="sig-param">worker_instance_types=None</em>, <em class="sig-param">worker_number=None</em>, <em class="sig-param">worker_numbers=None</em>, <em class="sig-param">worker_period=None</em>, <em class="sig-param">worker_period_unit=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cs.Kubernetes" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cs.</code><code class="sig-name descname">Kubernetes</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">addons=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">client_cert=None</em>, <em class="sig-param">client_key=None</em>, <em class="sig-param">cluster_ca_cert=None</em>, <em class="sig-param">cpu_policy=None</em>, <em class="sig-param">enable_ssh=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">install_cloud_monitor=None</em>, <em class="sig-param">key_name=None</em>, <em class="sig-param">kms_encrypted_password=None</em>, <em class="sig-param">kms_encryption_context=None</em>, <em class="sig-param">kube_config=None</em>, <em class="sig-param">master_auto_renew=None</em>, <em class="sig-param">master_auto_renew_period=None</em>, <em class="sig-param">master_disk_category=None</em>, <em class="sig-param">master_disk_size=None</em>, <em class="sig-param">master_instance_charge_type=None</em>, <em class="sig-param">master_instance_types=None</em>, <em class="sig-param">master_period=None</em>, <em class="sig-param">master_period_unit=None</em>, <em class="sig-param">master_vswitch_ids=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">new_nat_gateway=None</em>, <em class="sig-param">node_cidr_mask=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">pod_cidr=None</em>, <em class="sig-param">pod_vswitch_ids=None</em>, <em class="sig-param">proxy_mode=None</em>, <em class="sig-param">service_cidr=None</em>, <em class="sig-param">slb_internet_enabled=None</em>, <em class="sig-param">user_ca=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">worker_auto_renew=None</em>, <em class="sig-param">worker_auto_renew_period=None</em>, <em class="sig-param">worker_data_disk_category=None</em>, <em class="sig-param">worker_data_disk_size=None</em>, <em class="sig-param">worker_disk_category=None</em>, <em class="sig-param">worker_disk_size=None</em>, <em class="sig-param">worker_instance_charge_type=None</em>, <em class="sig-param">worker_instance_types=None</em>, <em class="sig-param">worker_number=None</em>, <em class="sig-param">worker_period=None</em>, <em class="sig-param">worker_period_unit=None</em>, <em class="sig-param">worker_vswitch_ids=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cs.Kubernetes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a Kubernetes resource with the given unique name, props, and options.
 :param str resource_name: The name of the resource.
 :param pulumi.ResourceOptions opts: Options for the resource.
@@ -371,62 +371,46 @@ a format of their choosing before sending those properties to the Pulumi engine.
 :param pulumi.Input[str] client_cert: The path of client certificate, like <code class="docutils literal notranslate"><span class="pre">~/.kube/client-cert.pem</span></code>.
 :param pulumi.Input[str] client_key: The path of client key, like <code class="docutils literal notranslate"><span class="pre">~/.kube/client-key.pem</span></code>.
 :param pulumi.Input[str] cluster_ca_cert: The path of cluster ca certificate, like <code class="docutils literal notranslate"><span class="pre">~/.kube/cluster-ca-cert.pem</span></code>
-:param pulumi.Input[str] cluster_network_type: The network that cluster uses, use <code class="docutils literal notranslate"><span class="pre">flannel</span></code> or <code class="docutils literal notranslate"><span class="pre">terway</span></code>.
-:param pulumi.Input[bool] enable_ssh: Whether to allow to SSH login kubernetes. Default to false.
-:param pulumi.Input[bool] force_update: Whether to force the update of kubernetes cluster arguments. Default to false.
-:param pulumi.Input[bool] install_cloud_monitor: Whether to install cloud monitor for the kubernetes’ node.
-:param pulumi.Input[bool] is_outdated: Whether to use outdated instance type. Default to false.
-:param pulumi.Input[str] key_name: The keypair of ssh login cluster node, you have to create it first.
-:param pulumi.Input[str] kms_encrypted_password: An KMS encrypts password used to a cs kubernetes. It is conflicted with <code class="docutils literal notranslate"><span class="pre">password</span></code> and <code class="docutils literal notranslate"><span class="pre">key_name</span></code>.
+:param pulumi.Input[str] cpu_policy: kubelet cpu policy. options: static|none. default: none.
+:param pulumi.Input[bool] enable_ssh: Enable login to the node through SSH. default: false 
+:param pulumi.Input[str] image_id: Custom Image support. Must based on CentOS7 or AliyunLinux2.
+:param pulumi.Input[bool] install_cloud_monitor: Install cloud monitor agent on ECS. default: true 
+:param pulumi.Input[str] key_name: The keypair of ssh login cluster node, you have to create it first. You have to specify one of <code class="docutils literal notranslate"><span class="pre">password</span></code> <code class="docutils literal notranslate"><span class="pre">key_name</span></code> <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code> fields.
+:param pulumi.Input[str] kms_encrypted_password: An KMS encrypts password used to a cs kubernetes. You have to specify one of <code class="docutils literal notranslate"><span class="pre">password</span></code> <code class="docutils literal notranslate"><span class="pre">key_name</span></code> <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code> fields.
 :param pulumi.Input[dict] kms_encryption_context: An KMS encryption context used to decrypt <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code> before creating or updating a cs kubernetes with <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code>. See <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/42975.htm">Encryption Context</a>. It is valid when <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code> is set.
 :param pulumi.Input[str] kube_config: The path of kube config, like <code class="docutils literal notranslate"><span class="pre">~/.kube/config</span></code>.
-:param pulumi.Input[dict] log_config: A list of one element containing information about the associated log store. It contains the following attributes:
 :param pulumi.Input[bool] master_auto_renew: Enable master payment auto-renew, defaults to false.
 :param pulumi.Input[float] master_auto_renew_period: Master payment auto-renew period. When period unit is <code class="docutils literal notranslate"><span class="pre">Month</span></code>, it can be one of {“1”, “2”, “3”, “6”, “12”}.  When period unit is <code class="docutils literal notranslate"><span class="pre">Week</span></code>, it can be one of {“1”, “2”, “3”}.
 :param pulumi.Input[str] master_disk_category: The system disk category of master node. Its valid value are <code class="docutils literal notranslate"><span class="pre">cloud_ssd</span></code> and <code class="docutils literal notranslate"><span class="pre">cloud_efficiency</span></code>. Default to <code class="docutils literal notranslate"><span class="pre">cloud_efficiency</span></code>.
 :param pulumi.Input[float] master_disk_size: The system disk size of master node. Its valid value range [20~500] in GB. Default to 20.
 :param pulumi.Input[str] master_instance_charge_type: Master payment type. <code class="docutils literal notranslate"><span class="pre">PrePaid</span></code> or <code class="docutils literal notranslate"><span class="pre">PostPaid</span></code>, defaults to <code class="docutils literal notranslate"><span class="pre">PostPaid</span></code>.
-:param pulumi.Input[str] master_instance_type: (Required, Force new resource) The instance type of master node.
+:param pulumi.Input[list] master_instance_types: The instance type of master node. Specify one type for single AZ Cluster, three types for MultiAZ Cluster.
 :param pulumi.Input[float] master_period: Master payment period. When period unit is <code class="docutils literal notranslate"><span class="pre">Month</span></code>, it can be one of { “1”, “2”, “3”, “4”, “5”, “6”, “7”, “8”, “9”, “12”, “24”, “36”,”48”,”60”}.  When period unit is <code class="docutils literal notranslate"><span class="pre">Week</span></code>, it can be one of {“1”, “2”, “3”, “4”}.
 :param pulumi.Input[str] master_period_unit: Master payment period unit. <code class="docutils literal notranslate"><span class="pre">Month</span></code> or <code class="docutils literal notranslate"><span class="pre">Week</span></code>, defaults to <code class="docutils literal notranslate"><span class="pre">Month</span></code>.
-:param pulumi.Input[str] name: The kubernetes cluster’s name. It is the only in one Alicloud account.
-:param pulumi.Input[bool] new_nat_gateway: Whether to create a new nat gateway while creating kubernetes cluster. Default to true.
-:param pulumi.Input[float] node_cidr_mask: The network mask used on pods for each node, ranging from <code class="docutils literal notranslate"><span class="pre">24</span></code> to <code class="docutils literal notranslate"><span class="pre">28</span></code>.</p>
-<blockquote>
-<div><p>Larger this number is, less pods can be allocated on each node. Default value is <code class="docutils literal notranslate"><span class="pre">24</span></code>, means you can allocate 256 pods on each node.</p>
-</div></blockquote>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The password of ssh login cluster node. You have to specify one of <code class="docutils literal notranslate"><span class="pre">password</span></code> <code class="docutils literal notranslate"><span class="pre">key_name</span></code> <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code> fields.</p></li>
-<li><p><strong>pod_cidr</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The CIDR block for the pod network. It will be allocated automatically when <code class="docutils literal notranslate"><span class="pre">vswitch_ids</span></code> is not specified.
-It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in VPC, cannot be modified after creation.
-Maximum number of hosts allowed in the cluster: 256. Refer to <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/64530.htm">Plan Kubernetes CIDR blocks under VPC</a>.</p></li>
-<li><p><strong>service_cidr</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The CIDR block for the service network. 
-It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in VPC, cannot be modified after creation.</p></li>
-<li><p><strong>slb_internet_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to create internet load balancer for API Server. Default to true.</p></li>
-<li><p><strong>user_ca</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path of customized CA cert, you can use this CA to sign client certs to connect your cluster.</p></li>
-<li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Desired Kubernetes version. If you do not specify a value, the latest available version at resource creation is used and no upgrades will occur except you set a higher version number. The value must be configured and increased to upgrade the version when desired. Downgrades are not supported by ACK.</p></li>
-<li><p><strong>vswitch_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Force new resource) The vswitch where new kubernetes cluster will be located. If it is not specified, a new VPC and VSwicth will be built. It must be in the zone which <code class="docutils literal notranslate"><span class="pre">availability_zone</span></code> specified.</p></li>
-<li><p><strong>vswitch_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The vswitch where new kubernetes cluster will be located. Specify one or more vswitch’s id. It must be in the zone which <code class="docutils literal notranslate"><span class="pre">availability_zone</span></code> specified.</p></li>
-<li><p><strong>worker_auto_renew</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable worker payment auto-renew, defaults to false.</p></li>
-<li><p><strong>worker_auto_renew_period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Worker payment auto-renew period. When period unit is <code class="docutils literal notranslate"><span class="pre">Month</span></code>, it can be one of {“1”, “2”, “3”, “6”, “12”}.  When period unit is <code class="docutils literal notranslate"><span class="pre">Week</span></code>, it can be one of {“1”, “2”, “3”}.</p></li>
-<li><p><strong>worker_data_disk_category</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The data disk category of worker node. Its valid value are <code class="docutils literal notranslate"><span class="pre">cloud_ssd</span></code> and <code class="docutils literal notranslate"><span class="pre">cloud_efficiency</span></code>, if not set, data disk will not be created.</p></li>
-<li><p><strong>worker_data_disk_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The data disk size of worker node. Its valid value range [20~32768] in GB. When <code class="docutils literal notranslate"><span class="pre">worker_data_disk_category</span></code> is presented, it defaults to 40.</p></li>
-<li><p><strong>worker_disk_category</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The system disk category of worker node. Its valid value are <code class="docutils literal notranslate"><span class="pre">cloud_ssd</span></code> and <code class="docutils literal notranslate"><span class="pre">cloud_efficiency</span></code>. Default to <code class="docutils literal notranslate"><span class="pre">cloud_efficiency</span></code>.</p></li>
-<li><p><strong>worker_disk_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The system disk size of worker node. Its valid value range [20~32768] in GB. Default to 20.</p></li>
-<li><p><strong>worker_instance_charge_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Worker payment type. <code class="docutils literal notranslate"><span class="pre">PrePaid</span></code> or <code class="docutils literal notranslate"><span class="pre">PostPaid</span></code>, defaults to <code class="docutils literal notranslate"><span class="pre">PostPaid</span></code>.</p></li>
-<li><p><strong>worker_instance_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Required, Force new resource) The instance type of worker node.</p></li>
-<li><p><strong>worker_number</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The worker node number of the kubernetes cluster. Default to 3. It is limited up to 50 and if you want to enlarge it, please apply white list or contact with us.</p></li>
-<li><p><strong>worker_period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Worker payment period. When period unit is <code class="docutils literal notranslate"><span class="pre">Month</span></code>, it can be one of { “1”, “2”, “3”, “4”, “5”, “6”, “7”, “8”, “9”, “12”, “24”, “36”,”48”,”60”}.  When period unit is <code class="docutils literal notranslate"><span class="pre">Week</span></code>, it can be one of {“1”, “2”, “3”, “4”}.</p></li>
-<li><p><strong>worker_period_unit</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Worker payment period unit. <code class="docutils literal notranslate"><span class="pre">Month</span></code> or <code class="docutils literal notranslate"><span class="pre">Week</span></code>, defaults to <code class="docutils literal notranslate"><span class="pre">Month</span></code>.</p></li>
-</ul>
-</dd>
-</dl>
-<p>The <strong>log_config</strong> object supports the following:</p>
+:param pulumi.Input[str] name: The kubernetes cluster’s name. It is unique in one Alicloud account.
+:param pulumi.Input[bool] new_nat_gateway: Whether to create a new nat gateway while creating kubernetes cluster. Default to true. Then openapi in Alibaba Cloud are not all on intranet, So turn this option on is a good choice.
+:param pulumi.Input[float] node_cidr_mask: The node cidr block to specific how many pods can run on single node. 24-28 is allowed. 24 means 2^(32-24)-1=255 and the node can run at most 255 pods. default: 24
+:param pulumi.Input[str] password: The password of ssh login cluster node. You have to specify one of <code class="docutils literal notranslate"><span class="pre">password</span></code> <code class="docutils literal notranslate"><span class="pre">key_name</span></code> <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code> fields.
+:param pulumi.Input[str] pod_cidr: [Flannel Specific] The CIDR block for the pod network when using Flannel. 
+:param pulumi.Input[list] pod_vswitch_ids: [Terway Specific] The vswitches for the pod network when using Terway.Be careful the <code class="docutils literal notranslate"><span class="pre">pod_vswitch_ids</span></code> can not equal to <code class="docutils literal notranslate"><span class="pre">worker_vswtich_ids</span></code> or <code class="docutils literal notranslate"><span class="pre">master_vswtich_ids</span></code> but must be in same availability zones.
+:param pulumi.Input[str] proxy_mode: Proxy mode is option of kube-proxy. options: iptables|ipvs. default: ipvs.
+:param pulumi.Input[str] service_cidr: The CIDR block for the service network. It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in VPC, cannot be modified after creation.
+:param pulumi.Input[bool] slb_internet_enabled: Whether to create internet load balancer for API Server. Default to true.
+:param pulumi.Input[str] user_ca: The path of customized CA cert, you can use this CA to sign client certs to connect your cluster.
+:param pulumi.Input[str] version: Desired Kubernetes version. If you do not specify a value, the latest available version at resource creation is used and no upgrades will occur except you set a higher version number. The value must be configured and increased to upgrade the version when desired. Downgrades are not supported by ACK.
+:param pulumi.Input[bool] worker_auto_renew: Enable worker payment auto-renew, defaults to false.
+:param pulumi.Input[float] worker_auto_renew_period: Worker payment auto-renew period. When period unit is <code class="docutils literal notranslate"><span class="pre">Month</span></code>, it can be one of {“1”, “2”, “3”, “6”, “12”}.  When period unit is <code class="docutils literal notranslate"><span class="pre">Week</span></code>, it can be one of {“1”, “2”, “3”}.
+:param pulumi.Input[str] worker_disk_category: The system disk category of worker node. Its valid value are <code class="docutils literal notranslate"><span class="pre">cloud_ssd</span></code> and <code class="docutils literal notranslate"><span class="pre">cloud_efficiency</span></code>. Default to <code class="docutils literal notranslate"><span class="pre">cloud_efficiency</span></code>.
+:param pulumi.Input[float] worker_disk_size: The system disk size of worker node. Its valid value range [20~32768] in GB. Default to 20.
+:param pulumi.Input[str] worker_instance_charge_type: Worker payment type. <code class="docutils literal notranslate"><span class="pre">PrePaid</span></code> or <code class="docutils literal notranslate"><span class="pre">PostPaid</span></code>, defaults to <code class="docutils literal notranslate"><span class="pre">PostPaid</span></code>.
+:param pulumi.Input[list] worker_instance_types: The instance type of worker node. Specify one type for single AZ Cluster, three types for MultiAZ Cluster.
+:param pulumi.Input[float] worker_number: The worker node number of the kubernetes cluster. Default to 3. It is limited up to 50 and if you want to enlarge it, please apply white list or contact with us.
+:param pulumi.Input[float] worker_period: Worker payment period. When period unit is <code class="docutils literal notranslate"><span class="pre">Month</span></code>, it can be one of { “1”, “2”, “3”, “4”, “5”, “6”, “7”, “8”, “9”, “12”, “24”, “36”,”48”,”60”}.  When period unit is <code class="docutils literal notranslate"><span class="pre">Week</span></code>, it can be one of {“1”, “2”, “3”, “4”}.
+:param pulumi.Input[str] worker_period_unit: Worker payment period unit. <code class="docutils literal notranslate"><span class="pre">Month</span></code> or <code class="docutils literal notranslate"><span class="pre">Week</span></code>, defaults to <code class="docutils literal notranslate"><span class="pre">Month</span></code>.</p>
+<p>The <strong>addons</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">project</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Log Service project name, cluster logs will output to this project.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Type of collecting logs, only <code class="docutils literal notranslate"><span class="pre">SLS</span></code> are supported currently.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">config</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The kubernetes cluster’s name. It is unique in one Alicloud account.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_alicloud.cs.Kubernetes.availability_zone">
@@ -453,12 +437,6 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pulumi_alicloud.cs.Kubernetes.cluster_network_type">
-<code class="sig-name descname">cluster_network_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.Kubernetes.cluster_network_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>The network that cluster uses, use <code class="docutils literal notranslate"><span class="pre">flannel</span></code> or <code class="docutils literal notranslate"><span class="pre">terway</span></code>.</p>
-</dd></dl>
-
-<dl class="attribute">
 <dt id="pulumi_alicloud.cs.Kubernetes.connections">
 <code class="sig-name descname">connections</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.Kubernetes.connections" title="Permalink to this definition">¶</a></dt>
 <dd><p>Map of kubernetes cluster connection information. It contains several attributes to <code class="docutils literal notranslate"><span class="pre">Block</span> <span class="pre">Connections</span></code>.</p>
@@ -471,39 +449,39 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pulumi_alicloud.cs.Kubernetes.enable_ssh">
-<code class="sig-name descname">enable_ssh</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.Kubernetes.enable_ssh" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether to allow to SSH login kubernetes. Default to false.</p>
+<dt id="pulumi_alicloud.cs.Kubernetes.cpu_policy">
+<code class="sig-name descname">cpu_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.Kubernetes.cpu_policy" title="Permalink to this definition">¶</a></dt>
+<dd><p>kubelet cpu policy. options: static|none. default: none.</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pulumi_alicloud.cs.Kubernetes.force_update">
-<code class="sig-name descname">force_update</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.Kubernetes.force_update" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether to force the update of kubernetes cluster arguments. Default to false.</p>
+<dt id="pulumi_alicloud.cs.Kubernetes.enable_ssh">
+<code class="sig-name descname">enable_ssh</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.Kubernetes.enable_ssh" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable login to the node through SSH. default: false</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.cs.Kubernetes.image_id">
+<code class="sig-name descname">image_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.Kubernetes.image_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Custom Image support. Must based on CentOS7 or AliyunLinux2.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_alicloud.cs.Kubernetes.install_cloud_monitor">
 <code class="sig-name descname">install_cloud_monitor</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.Kubernetes.install_cloud_monitor" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether to install cloud monitor for the kubernetes’ node.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_alicloud.cs.Kubernetes.is_outdated">
-<code class="sig-name descname">is_outdated</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.Kubernetes.is_outdated" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether to use outdated instance type. Default to false.</p>
+<dd><p>Install cloud monitor agent on ECS. default: true</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_alicloud.cs.Kubernetes.key_name">
 <code class="sig-name descname">key_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.Kubernetes.key_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The keypair of ssh login cluster node, you have to create it first.</p>
+<dd><p>The keypair of ssh login cluster node, you have to create it first. You have to specify one of <code class="docutils literal notranslate"><span class="pre">password</span></code> <code class="docutils literal notranslate"><span class="pre">key_name</span></code> <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code> fields.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_alicloud.cs.Kubernetes.kms_encrypted_password">
 <code class="sig-name descname">kms_encrypted_password</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.Kubernetes.kms_encrypted_password" title="Permalink to this definition">¶</a></dt>
-<dd><p>An KMS encrypts password used to a cs kubernetes. It is conflicted with <code class="docutils literal notranslate"><span class="pre">password</span></code> and <code class="docutils literal notranslate"><span class="pre">key_name</span></code>.</p>
+<dd><p>An KMS encrypts password used to a cs kubernetes. You have to specify one of <code class="docutils literal notranslate"><span class="pre">password</span></code> <code class="docutils literal notranslate"><span class="pre">key_name</span></code> <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code> fields.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -516,16 +494,6 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
 <dt id="pulumi_alicloud.cs.Kubernetes.kube_config">
 <code class="sig-name descname">kube_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.Kubernetes.kube_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>The path of kube config, like <code class="docutils literal notranslate"><span class="pre">~/.kube/config</span></code>.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_alicloud.cs.Kubernetes.log_config">
-<code class="sig-name descname">log_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.Kubernetes.log_config" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of one element containing information about the associated log store. It contains the following attributes:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">project</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Log Service project name, cluster logs will output to this project.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Type of collecting logs, only <code class="docutils literal notranslate"><span class="pre">SLS</span></code> are supported currently.</p></li>
-</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -559,9 +527,9 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pulumi_alicloud.cs.Kubernetes.master_instance_type">
-<code class="sig-name descname">master_instance_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.Kubernetes.master_instance_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Required, Force new resource) The instance type of master node.</p>
+<dt id="pulumi_alicloud.cs.Kubernetes.master_instance_types">
+<code class="sig-name descname">master_instance_types</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.Kubernetes.master_instance_types" title="Permalink to this definition">¶</a></dt>
+<dd><p>The instance type of master node. Specify one type for single AZ Cluster, three types for MultiAZ Cluster.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -570,7 +538,7 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
 <dd><p>List of cluster master nodes. It contains several attributes to <code class="docutils literal notranslate"><span class="pre">Block</span> <span class="pre">Nodes</span></code>.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - ID of the node.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The kubernetes cluster’s name. It is the only in one Alicloud account.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The kubernetes cluster’s name. It is unique in one Alicloud account.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">private_ip</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The private IP address of node.</p></li>
 </ul>
 </dd></dl>
@@ -590,7 +558,7 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
 <dl class="attribute">
 <dt id="pulumi_alicloud.cs.Kubernetes.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.Kubernetes.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The kubernetes cluster’s name. It is the only in one Alicloud account.</p>
+<dd><p>The kubernetes cluster’s name. It is unique in one Alicloud account.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -602,14 +570,13 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
 <dl class="attribute">
 <dt id="pulumi_alicloud.cs.Kubernetes.new_nat_gateway">
 <code class="sig-name descname">new_nat_gateway</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.Kubernetes.new_nat_gateway" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether to create a new nat gateway while creating kubernetes cluster. Default to true.</p>
+<dd><p>Whether to create a new nat gateway while creating kubernetes cluster. Default to true. Then openapi in Alibaba Cloud are not all on intranet, So turn this option on is a good choice.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_alicloud.cs.Kubernetes.node_cidr_mask">
 <code class="sig-name descname">node_cidr_mask</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.Kubernetes.node_cidr_mask" title="Permalink to this definition">¶</a></dt>
-<dd><p>The network mask used on pods for each node, ranging from <code class="docutils literal notranslate"><span class="pre">24</span></code> to <code class="docutils literal notranslate"><span class="pre">28</span></code>.
-Larger this number is, less pods can be allocated on each node. Default value is <code class="docutils literal notranslate"><span class="pre">24</span></code>, means you can allocate 256 pods on each node.</p>
+<dd><p>The node cidr block to specific how many pods can run on single node. 24-28 is allowed. 24 means 2^(32-24)-1=255 and the node can run at most 255 pods. default: 24</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -621,9 +588,19 @@ Larger this number is, less pods can be allocated on each node. Default value is
 <dl class="attribute">
 <dt id="pulumi_alicloud.cs.Kubernetes.pod_cidr">
 <code class="sig-name descname">pod_cidr</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.Kubernetes.pod_cidr" title="Permalink to this definition">¶</a></dt>
-<dd><p>The CIDR block for the pod network. It will be allocated automatically when <code class="docutils literal notranslate"><span class="pre">vswitch_ids</span></code> is not specified.
-It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in VPC, cannot be modified after creation.
-Maximum number of hosts allowed in the cluster: 256. Refer to <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/64530.htm">Plan Kubernetes CIDR blocks under VPC</a>.</p>
+<dd><p>[Flannel Specific] The CIDR block for the pod network when using Flannel.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.cs.Kubernetes.pod_vswitch_ids">
+<code class="sig-name descname">pod_vswitch_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.Kubernetes.pod_vswitch_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>[Terway Specific] The vswitches for the pod network when using Terway.Be careful the <code class="docutils literal notranslate"><span class="pre">pod_vswitch_ids</span></code> can not equal to <code class="docutils literal notranslate"><span class="pre">worker_vswtich_ids</span></code> or <code class="docutils literal notranslate"><span class="pre">master_vswtich_ids</span></code> but must be in same availability zones.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.cs.Kubernetes.proxy_mode">
+<code class="sig-name descname">proxy_mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.Kubernetes.proxy_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Proxy mode is option of kube-proxy. options: iptables|ipvs. default: ipvs.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -635,8 +612,7 @@ Maximum number of hosts allowed in the cluster: 256. Refer to <a class="referenc
 <dl class="attribute">
 <dt id="pulumi_alicloud.cs.Kubernetes.service_cidr">
 <code class="sig-name descname">service_cidr</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.Kubernetes.service_cidr" title="Permalink to this definition">¶</a></dt>
-<dd><p>The CIDR block for the service network. 
-It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in VPC, cannot be modified after creation.</p>
+<dd><p>The CIDR block for the service network. It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in VPC, cannot be modified after creation.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -670,18 +646,6 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pulumi_alicloud.cs.Kubernetes.vswitch_id">
-<code class="sig-name descname">vswitch_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.Kubernetes.vswitch_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Force new resource) The vswitch where new kubernetes cluster will be located. If it is not specified, a new VPC and VSwicth will be built. It must be in the zone which <code class="docutils literal notranslate"><span class="pre">availability_zone</span></code> specified.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_alicloud.cs.Kubernetes.vswitch_ids">
-<code class="sig-name descname">vswitch_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.Kubernetes.vswitch_ids" title="Permalink to this definition">¶</a></dt>
-<dd><p>The vswitch where new kubernetes cluster will be located. Specify one or more vswitch’s id. It must be in the zone which <code class="docutils literal notranslate"><span class="pre">availability_zone</span></code> specified.</p>
-</dd></dl>
-
-<dl class="attribute">
 <dt id="pulumi_alicloud.cs.Kubernetes.worker_auto_renew">
 <code class="sig-name descname">worker_auto_renew</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.Kubernetes.worker_auto_renew" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable worker payment auto-renew, defaults to false.</p>
@@ -691,18 +655,6 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
 <dt id="pulumi_alicloud.cs.Kubernetes.worker_auto_renew_period">
 <code class="sig-name descname">worker_auto_renew_period</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.Kubernetes.worker_auto_renew_period" title="Permalink to this definition">¶</a></dt>
 <dd><p>Worker payment auto-renew period. When period unit is <code class="docutils literal notranslate"><span class="pre">Month</span></code>, it can be one of {“1”, “2”, “3”, “6”, “12”}.  When period unit is <code class="docutils literal notranslate"><span class="pre">Week</span></code>, it can be one of {“1”, “2”, “3”}.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_alicloud.cs.Kubernetes.worker_data_disk_category">
-<code class="sig-name descname">worker_data_disk_category</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.Kubernetes.worker_data_disk_category" title="Permalink to this definition">¶</a></dt>
-<dd><p>The data disk category of worker node. Its valid value are <code class="docutils literal notranslate"><span class="pre">cloud_ssd</span></code> and <code class="docutils literal notranslate"><span class="pre">cloud_efficiency</span></code>, if not set, data disk will not be created.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_alicloud.cs.Kubernetes.worker_data_disk_size">
-<code class="sig-name descname">worker_data_disk_size</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.Kubernetes.worker_data_disk_size" title="Permalink to this definition">¶</a></dt>
-<dd><p>The data disk size of worker node. Its valid value range [20~32768] in GB. When <code class="docutils literal notranslate"><span class="pre">worker_data_disk_category</span></code> is presented, it defaults to 40.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -724,9 +676,9 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pulumi_alicloud.cs.Kubernetes.worker_instance_type">
-<code class="sig-name descname">worker_instance_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.Kubernetes.worker_instance_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Required, Force new resource) The instance type of worker node.</p>
+<dt id="pulumi_alicloud.cs.Kubernetes.worker_instance_types">
+<code class="sig-name descname">worker_instance_types</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.Kubernetes.worker_instance_types" title="Permalink to this definition">¶</a></dt>
+<dd><p>The instance type of worker node. Specify one type for single AZ Cluster, three types for MultiAZ Cluster.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -735,7 +687,7 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
 <dd><p>List of cluster worker nodes. It contains several attributes to <code class="docutils literal notranslate"><span class="pre">Block</span> <span class="pre">Nodes</span></code>.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - ID of the node.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The kubernetes cluster’s name. It is the only in one Alicloud account.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The kubernetes cluster’s name. It is unique in one Alicloud account.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">private_ip</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The private IP address of node.</p></li>
 </ul>
 </dd></dl>
@@ -760,7 +712,7 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
 
 <dl class="method">
 <dt id="pulumi_alicloud.cs.Kubernetes.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">client_cert=None</em>, <em class="sig-param">client_key=None</em>, <em class="sig-param">cluster_ca_cert=None</em>, <em class="sig-param">cluster_network_type=None</em>, <em class="sig-param">connections=None</em>, <em class="sig-param">enable_ssh=None</em>, <em class="sig-param">force_update=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">install_cloud_monitor=None</em>, <em class="sig-param">is_outdated=None</em>, <em class="sig-param">key_name=None</em>, <em class="sig-param">kms_encrypted_password=None</em>, <em class="sig-param">kms_encryption_context=None</em>, <em class="sig-param">kube_config=None</em>, <em class="sig-param">log_config=None</em>, <em class="sig-param">master_auto_renew=None</em>, <em class="sig-param">master_auto_renew_period=None</em>, <em class="sig-param">master_disk_category=None</em>, <em class="sig-param">master_disk_size=None</em>, <em class="sig-param">master_instance_charge_type=None</em>, <em class="sig-param">master_instance_type=None</em>, <em class="sig-param">master_instance_types=None</em>, <em class="sig-param">master_nodes=None</em>, <em class="sig-param">master_period=None</em>, <em class="sig-param">master_period_unit=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">nat_gateway_id=None</em>, <em class="sig-param">new_nat_gateway=None</em>, <em class="sig-param">node_cidr_mask=None</em>, <em class="sig-param">nodes=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">pod_cidr=None</em>, <em class="sig-param">security_group_id=None</em>, <em class="sig-param">service_cidr=None</em>, <em class="sig-param">slb_id=None</em>, <em class="sig-param">slb_internet=None</em>, <em class="sig-param">slb_internet_enabled=None</em>, <em class="sig-param">slb_intranet=None</em>, <em class="sig-param">user_ca=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">vswitch_id=None</em>, <em class="sig-param">vswitch_ids=None</em>, <em class="sig-param">worker_auto_renew=None</em>, <em class="sig-param">worker_auto_renew_period=None</em>, <em class="sig-param">worker_data_disk_category=None</em>, <em class="sig-param">worker_data_disk_size=None</em>, <em class="sig-param">worker_disk_category=None</em>, <em class="sig-param">worker_disk_size=None</em>, <em class="sig-param">worker_instance_charge_type=None</em>, <em class="sig-param">worker_instance_type=None</em>, <em class="sig-param">worker_instance_types=None</em>, <em class="sig-param">worker_nodes=None</em>, <em class="sig-param">worker_number=None</em>, <em class="sig-param">worker_numbers=None</em>, <em class="sig-param">worker_period=None</em>, <em class="sig-param">worker_period_unit=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cs.Kubernetes.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">addons=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">client_cert=None</em>, <em class="sig-param">client_key=None</em>, <em class="sig-param">cluster_ca_cert=None</em>, <em class="sig-param">connections=None</em>, <em class="sig-param">cpu_policy=None</em>, <em class="sig-param">enable_ssh=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">install_cloud_monitor=None</em>, <em class="sig-param">key_name=None</em>, <em class="sig-param">kms_encrypted_password=None</em>, <em class="sig-param">kms_encryption_context=None</em>, <em class="sig-param">kube_config=None</em>, <em class="sig-param">master_auto_renew=None</em>, <em class="sig-param">master_auto_renew_period=None</em>, <em class="sig-param">master_disk_category=None</em>, <em class="sig-param">master_disk_size=None</em>, <em class="sig-param">master_instance_charge_type=None</em>, <em class="sig-param">master_instance_types=None</em>, <em class="sig-param">master_nodes=None</em>, <em class="sig-param">master_period=None</em>, <em class="sig-param">master_period_unit=None</em>, <em class="sig-param">master_vswitch_ids=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">nat_gateway_id=None</em>, <em class="sig-param">new_nat_gateway=None</em>, <em class="sig-param">node_cidr_mask=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">pod_cidr=None</em>, <em class="sig-param">pod_vswitch_ids=None</em>, <em class="sig-param">proxy_mode=None</em>, <em class="sig-param">security_group_id=None</em>, <em class="sig-param">service_cidr=None</em>, <em class="sig-param">slb_id=None</em>, <em class="sig-param">slb_internet=None</em>, <em class="sig-param">slb_internet_enabled=None</em>, <em class="sig-param">slb_intranet=None</em>, <em class="sig-param">user_ca=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">worker_auto_renew=None</em>, <em class="sig-param">worker_auto_renew_period=None</em>, <em class="sig-param">worker_data_disk_category=None</em>, <em class="sig-param">worker_data_disk_size=None</em>, <em class="sig-param">worker_disk_category=None</em>, <em class="sig-param">worker_disk_size=None</em>, <em class="sig-param">worker_instance_charge_type=None</em>, <em class="sig-param">worker_instance_types=None</em>, <em class="sig-param">worker_nodes=None</em>, <em class="sig-param">worker_number=None</em>, <em class="sig-param">worker_period=None</em>, <em class="sig-param">worker_period_unit=None</em>, <em class="sig-param">worker_vswitch_ids=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cs.Kubernetes.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Kubernetes resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -773,55 +725,46 @@ properties used to qualify the lookup.</p>
 <li><p><strong>client_cert</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path of client certificate, like <code class="docutils literal notranslate"><span class="pre">~/.kube/client-cert.pem</span></code>.</p></li>
 <li><p><strong>client_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path of client key, like <code class="docutils literal notranslate"><span class="pre">~/.kube/client-key.pem</span></code>.</p></li>
 <li><p><strong>cluster_ca_cert</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path of cluster ca certificate, like <code class="docutils literal notranslate"><span class="pre">~/.kube/cluster-ca-cert.pem</span></code></p></li>
-<li><p><strong>cluster_network_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The network that cluster uses, use <code class="docutils literal notranslate"><span class="pre">flannel</span></code> or <code class="docutils literal notranslate"><span class="pre">terway</span></code>.</p></li>
 <li><p><strong>connections</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Map of kubernetes cluster connection information. It contains several attributes to <code class="docutils literal notranslate"><span class="pre">Block</span> <span class="pre">Connections</span></code>.</p></li>
-<li><p><strong>enable_ssh</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to allow to SSH login kubernetes. Default to false.</p></li>
-<li><p><strong>force_update</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to force the update of kubernetes cluster arguments. Default to false.</p></li>
-<li><p><strong>install_cloud_monitor</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to install cloud monitor for the kubernetes’ node.</p></li>
-<li><p><strong>is_outdated</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to use outdated instance type. Default to false.</p></li>
-<li><p><strong>key_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The keypair of ssh login cluster node, you have to create it first.</p></li>
-<li><p><strong>kms_encrypted_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An KMS encrypts password used to a cs kubernetes. It is conflicted with <code class="docutils literal notranslate"><span class="pre">password</span></code> and <code class="docutils literal notranslate"><span class="pre">key_name</span></code>.</p></li>
+<li><p><strong>cpu_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – kubelet cpu policy. options: static|none. default: none.</p></li>
+<li><p><strong>enable_ssh</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable login to the node through SSH. default: false</p></li>
+<li><p><strong>image_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Custom Image support. Must based on CentOS7 or AliyunLinux2.</p></li>
+<li><p><strong>install_cloud_monitor</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Install cloud monitor agent on ECS. default: true</p></li>
+<li><p><strong>key_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The keypair of ssh login cluster node, you have to create it first. You have to specify one of <code class="docutils literal notranslate"><span class="pre">password</span></code> <code class="docutils literal notranslate"><span class="pre">key_name</span></code> <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code> fields.</p></li>
+<li><p><strong>kms_encrypted_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An KMS encrypts password used to a cs kubernetes. You have to specify one of <code class="docutils literal notranslate"><span class="pre">password</span></code> <code class="docutils literal notranslate"><span class="pre">key_name</span></code> <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code> fields.</p></li>
 <li><p><strong>kms_encryption_context</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>An KMS encryption context used to decrypt <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code> before creating or updating a cs kubernetes with <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code>. See <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/42975.htm">Encryption Context</a>. It is valid when <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code> is set.</p>
 </p></li>
 <li><p><strong>kube_config</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path of kube config, like <code class="docutils literal notranslate"><span class="pre">~/.kube/config</span></code>.</p></li>
-<li><p><strong>log_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A list of one element containing information about the associated log store. It contains the following attributes:</p></li>
 <li><p><strong>master_auto_renew</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable master payment auto-renew, defaults to false.</p></li>
 <li><p><strong>master_auto_renew_period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Master payment auto-renew period. When period unit is <code class="docutils literal notranslate"><span class="pre">Month</span></code>, it can be one of {“1”, “2”, “3”, “6”, “12”}.  When period unit is <code class="docutils literal notranslate"><span class="pre">Week</span></code>, it can be one of {“1”, “2”, “3”}.</p></li>
 <li><p><strong>master_disk_category</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The system disk category of master node. Its valid value are <code class="docutils literal notranslate"><span class="pre">cloud_ssd</span></code> and <code class="docutils literal notranslate"><span class="pre">cloud_efficiency</span></code>. Default to <code class="docutils literal notranslate"><span class="pre">cloud_efficiency</span></code>.</p></li>
 <li><p><strong>master_disk_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The system disk size of master node. Its valid value range [20~500] in GB. Default to 20.</p></li>
 <li><p><strong>master_instance_charge_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Master payment type. <code class="docutils literal notranslate"><span class="pre">PrePaid</span></code> or <code class="docutils literal notranslate"><span class="pre">PostPaid</span></code>, defaults to <code class="docutils literal notranslate"><span class="pre">PostPaid</span></code>.</p></li>
-<li><p><strong>master_instance_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Required, Force new resource) The instance type of master node.</p></li>
+<li><p><strong>master_instance_types</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The instance type of master node. Specify one type for single AZ Cluster, three types for MultiAZ Cluster.</p></li>
 <li><p><strong>master_nodes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of cluster master nodes. It contains several attributes to <code class="docutils literal notranslate"><span class="pre">Block</span> <span class="pre">Nodes</span></code>.</p></li>
 <li><p><strong>master_period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Master payment period. When period unit is <code class="docutils literal notranslate"><span class="pre">Month</span></code>, it can be one of { “1”, “2”, “3”, “4”, “5”, “6”, “7”, “8”, “9”, “12”, “24”, “36”,”48”,”60”}.  When period unit is <code class="docutils literal notranslate"><span class="pre">Week</span></code>, it can be one of {“1”, “2”, “3”, “4”}.</p></li>
 <li><p><strong>master_period_unit</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Master payment period unit. <code class="docutils literal notranslate"><span class="pre">Month</span></code> or <code class="docutils literal notranslate"><span class="pre">Week</span></code>, defaults to <code class="docutils literal notranslate"><span class="pre">Month</span></code>.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The kubernetes cluster’s name. It is the only in one Alicloud account.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The kubernetes cluster’s name. It is unique in one Alicloud account.</p></li>
 <li><p><strong>nat_gateway_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of nat gateway used to launch kubernetes cluster.</p></li>
-<li><p><strong>new_nat_gateway</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to create a new nat gateway while creating kubernetes cluster. Default to true.</p></li>
-<li><p><strong>node_cidr_mask</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The network mask used on pods for each node, ranging from <code class="docutils literal notranslate"><span class="pre">24</span></code> to <code class="docutils literal notranslate"><span class="pre">28</span></code>.
-Larger this number is, less pods can be allocated on each node. Default value is <code class="docutils literal notranslate"><span class="pre">24</span></code>, means you can allocate 256 pods on each node.</p></li>
+<li><p><strong>new_nat_gateway</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to create a new nat gateway while creating kubernetes cluster. Default to true. Then openapi in Alibaba Cloud are not all on intranet, So turn this option on is a good choice.</p></li>
+<li><p><strong>node_cidr_mask</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The node cidr block to specific how many pods can run on single node. 24-28 is allowed. 24 means 2^(32-24)-1=255 and the node can run at most 255 pods. default: 24</p></li>
 <li><p><strong>password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The password of ssh login cluster node. You have to specify one of <code class="docutils literal notranslate"><span class="pre">password</span></code> <code class="docutils literal notranslate"><span class="pre">key_name</span></code> <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code> fields.</p></li>
-<li><p><strong>pod_cidr</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The CIDR block for the pod network. It will be allocated automatically when <code class="docutils literal notranslate"><span class="pre">vswitch_ids</span></code> is not specified.
-It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in VPC, cannot be modified after creation.
-Maximum number of hosts allowed in the cluster: 256. Refer to <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/64530.htm">Plan Kubernetes CIDR blocks under VPC</a>.</p>
-</p></li>
+<li><p><strong>pod_cidr</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – [Flannel Specific] The CIDR block for the pod network when using Flannel.</p></li>
+<li><p><strong>pod_vswitch_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – [Terway Specific] The vswitches for the pod network when using Terway.Be careful the <code class="docutils literal notranslate"><span class="pre">pod_vswitch_ids</span></code> can not equal to <code class="docutils literal notranslate"><span class="pre">worker_vswtich_ids</span></code> or <code class="docutils literal notranslate"><span class="pre">master_vswtich_ids</span></code> but must be in same availability zones.</p></li>
+<li><p><strong>proxy_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Proxy mode is option of kube-proxy. options: iptables|ipvs. default: ipvs.</p></li>
 <li><p><strong>security_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of security group where the current cluster worker node is located.</p></li>
-<li><p><strong>service_cidr</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The CIDR block for the service network. 
-It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in VPC, cannot be modified after creation.</p></li>
+<li><p><strong>service_cidr</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The CIDR block for the service network. It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in VPC, cannot be modified after creation.</p></li>
 <li><p><strong>slb_internet_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to create internet load balancer for API Server. Default to true.</p></li>
 <li><p><strong>slb_intranet</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of private load balancer where the current cluster master node is located.</p></li>
 <li><p><strong>user_ca</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path of customized CA cert, you can use this CA to sign client certs to connect your cluster.</p></li>
 <li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Desired Kubernetes version. If you do not specify a value, the latest available version at resource creation is used and no upgrades will occur except you set a higher version number. The value must be configured and increased to upgrade the version when desired. Downgrades are not supported by ACK.</p></li>
 <li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of VPC where the current cluster is located.</p></li>
-<li><p><strong>vswitch_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Force new resource) The vswitch where new kubernetes cluster will be located. If it is not specified, a new VPC and VSwicth will be built. It must be in the zone which <code class="docutils literal notranslate"><span class="pre">availability_zone</span></code> specified.</p></li>
-<li><p><strong>vswitch_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The vswitch where new kubernetes cluster will be located. Specify one or more vswitch’s id. It must be in the zone which <code class="docutils literal notranslate"><span class="pre">availability_zone</span></code> specified.</p></li>
 <li><p><strong>worker_auto_renew</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable worker payment auto-renew, defaults to false.</p></li>
 <li><p><strong>worker_auto_renew_period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Worker payment auto-renew period. When period unit is <code class="docutils literal notranslate"><span class="pre">Month</span></code>, it can be one of {“1”, “2”, “3”, “6”, “12”}.  When period unit is <code class="docutils literal notranslate"><span class="pre">Week</span></code>, it can be one of {“1”, “2”, “3”}.</p></li>
-<li><p><strong>worker_data_disk_category</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The data disk category of worker node. Its valid value are <code class="docutils literal notranslate"><span class="pre">cloud_ssd</span></code> and <code class="docutils literal notranslate"><span class="pre">cloud_efficiency</span></code>, if not set, data disk will not be created.</p></li>
-<li><p><strong>worker_data_disk_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The data disk size of worker node. Its valid value range [20~32768] in GB. When <code class="docutils literal notranslate"><span class="pre">worker_data_disk_category</span></code> is presented, it defaults to 40.</p></li>
 <li><p><strong>worker_disk_category</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The system disk category of worker node. Its valid value are <code class="docutils literal notranslate"><span class="pre">cloud_ssd</span></code> and <code class="docutils literal notranslate"><span class="pre">cloud_efficiency</span></code>. Default to <code class="docutils literal notranslate"><span class="pre">cloud_efficiency</span></code>.</p></li>
 <li><p><strong>worker_disk_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The system disk size of worker node. Its valid value range [20~32768] in GB. Default to 20.</p></li>
 <li><p><strong>worker_instance_charge_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Worker payment type. <code class="docutils literal notranslate"><span class="pre">PrePaid</span></code> or <code class="docutils literal notranslate"><span class="pre">PostPaid</span></code>, defaults to <code class="docutils literal notranslate"><span class="pre">PostPaid</span></code>.</p></li>
-<li><p><strong>worker_instance_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Required, Force new resource) The instance type of worker node.</p></li>
+<li><p><strong>worker_instance_types</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The instance type of worker node. Specify one type for single AZ Cluster, three types for MultiAZ Cluster.</p></li>
 <li><p><strong>worker_nodes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of cluster worker nodes. It contains several attributes to <code class="docutils literal notranslate"><span class="pre">Block</span> <span class="pre">Nodes</span></code>.</p></li>
 <li><p><strong>worker_number</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The worker node number of the kubernetes cluster. Default to 3. It is limited up to 50 and if you want to enlarge it, please apply white list or contact with us.</p></li>
 <li><p><strong>worker_period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Worker payment period. When period unit is <code class="docutils literal notranslate"><span class="pre">Month</span></code>, it can be one of { “1”, “2”, “3”, “4”, “5”, “6”, “7”, “8”, “9”, “12”, “24”, “36”,”48”,”60”}.  When period unit is <code class="docutils literal notranslate"><span class="pre">Week</span></code>, it can be one of {“1”, “2”, “3”, “4”}.</p></li>
@@ -829,6 +772,11 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
 </ul>
 </dd>
 </dl>
+<p>The <strong>addons</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">config</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The kubernetes cluster’s name. It is unique in one Alicloud account.</p></li>
+</ul>
 <p>The <strong>connections</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">api_server_internet</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - API Server Internet endpoint.</p></li>
@@ -836,21 +784,16 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
 <li><p><code class="docutils literal notranslate"><span class="pre">master_public_ip</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Master node SSH IP address.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">service_domain</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Service Access Domain.</p></li>
 </ul>
-<p>The <strong>log_config</strong> object supports the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">project</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Log Service project name, cluster logs will output to this project.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Type of collecting logs, only <code class="docutils literal notranslate"><span class="pre">SLS</span></code> are supported currently.</p></li>
-</ul>
 <p>The <strong>master_nodes</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - ID of the node.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The kubernetes cluster’s name. It is the only in one Alicloud account.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The kubernetes cluster’s name. It is unique in one Alicloud account.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">private_ip</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The private IP address of node.</p></li>
 </ul>
 <p>The <strong>worker_nodes</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - ID of the node.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The kubernetes cluster’s name. It is the only in one Alicloud account.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The kubernetes cluster’s name. It is unique in one Alicloud account.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">private_ip</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The private IP address of node.</p></li>
 </ul>
 </dd></dl>
@@ -1048,62 +991,52 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_alicloud.cs.ManagedKubernetes">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cs.</code><code class="sig-name descname">ManagedKubernetes</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">client_cert=None</em>, <em class="sig-param">client_key=None</em>, <em class="sig-param">cluster_ca_cert=None</em>, <em class="sig-param">cluster_network_type=None</em>, <em class="sig-param">force_update=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">install_cloud_monitor=None</em>, <em class="sig-param">key_name=None</em>, <em class="sig-param">kms_encrypted_password=None</em>, <em class="sig-param">kms_encryption_context=None</em>, <em class="sig-param">kube_config=None</em>, <em class="sig-param">log_config=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">new_nat_gateway=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">pod_cidr=None</em>, <em class="sig-param">service_cidr=None</em>, <em class="sig-param">slb_internet_enabled=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">vswitch_ids=None</em>, <em class="sig-param">worker_auto_renew=None</em>, <em class="sig-param">worker_auto_renew_period=None</em>, <em class="sig-param">worker_data_disk_category=None</em>, <em class="sig-param">worker_data_disk_size=None</em>, <em class="sig-param">worker_disk_category=None</em>, <em class="sig-param">worker_disk_size=None</em>, <em class="sig-param">worker_instance_charge_type=None</em>, <em class="sig-param">worker_instance_types=None</em>, <em class="sig-param">worker_number=None</em>, <em class="sig-param">worker_numbers=None</em>, <em class="sig-param">worker_period=None</em>, <em class="sig-param">worker_period_unit=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cs.ManagedKubernetes" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cs.</code><code class="sig-name descname">ManagedKubernetes</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">addons=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">client_cert=None</em>, <em class="sig-param">client_key=None</em>, <em class="sig-param">cluster_ca_cert=None</em>, <em class="sig-param">cpu_policy=None</em>, <em class="sig-param">enable_ssh=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">install_cloud_monitor=None</em>, <em class="sig-param">key_name=None</em>, <em class="sig-param">kms_encrypted_password=None</em>, <em class="sig-param">kms_encryption_context=None</em>, <em class="sig-param">kube_config=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">new_nat_gateway=None</em>, <em class="sig-param">node_cidr_mask=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">pod_cidr=None</em>, <em class="sig-param">pod_vswitch_ids=None</em>, <em class="sig-param">proxy_mode=None</em>, <em class="sig-param">service_cidr=None</em>, <em class="sig-param">slb_internet_enabled=None</em>, <em class="sig-param">user_ca=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">worker_auto_renew=None</em>, <em class="sig-param">worker_auto_renew_period=None</em>, <em class="sig-param">worker_data_disk_category=None</em>, <em class="sig-param">worker_data_disk_size=None</em>, <em class="sig-param">worker_disk_category=None</em>, <em class="sig-param">worker_disk_size=None</em>, <em class="sig-param">worker_instance_charge_type=None</em>, <em class="sig-param">worker_instance_types=None</em>, <em class="sig-param">worker_number=None</em>, <em class="sig-param">worker_period=None</em>, <em class="sig-param">worker_period_unit=None</em>, <em class="sig-param">worker_vswitch_ids=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cs.ManagedKubernetes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a ManagedKubernetes resource with the given unique name, props, and options.
 :param str resource_name: The name of the resource.
 :param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] availability_zone: The Zone where new kubernetes cluster will be located. If it is not be specified, the <code class="docutils literal notranslate"><span class="pre">vswitch_ids</span></code> should be set, the value will be vswitch’s zone.
+:param pulumi.Input[str] availability_zone: The Zone where new kubernetes cluster will be located. If it is not be specified, the <code class="docutils literal notranslate"><span class="pre">vswitch_ids</span></code> should be set, its value will be vswitch’s zone.
 :param pulumi.Input[str] client_cert: The path of client certificate, like <code class="docutils literal notranslate"><span class="pre">~/.kube/client-cert.pem</span></code>.
 :param pulumi.Input[str] client_key: The path of client key, like <code class="docutils literal notranslate"><span class="pre">~/.kube/client-key.pem</span></code>.
 :param pulumi.Input[str] cluster_ca_cert: The path of cluster ca certificate, like <code class="docutils literal notranslate"><span class="pre">~/.kube/cluster-ca-cert.pem</span></code>
-:param pulumi.Input[str] cluster_network_type: The network that cluster uses, use <code class="docutils literal notranslate"><span class="pre">flannel</span></code> or <code class="docutils literal notranslate"><span class="pre">terway</span></code>.
-:param pulumi.Input[bool] force_update: Default false, when you want to change <code class="docutils literal notranslate"><span class="pre">worker_instance_types</span></code> and <code class="docutils literal notranslate"><span class="pre">vswitch_ids</span></code>, you have to set this field to true, then the cluster will be recreated.
-:param pulumi.Input[str] image_id: The ID of node image.
-:param pulumi.Input[bool] install_cloud_monitor: Whether to install cloud monitor for the kubernetes’ node.
-:param pulumi.Input[str] key_name: The keypair of ssh login cluster node, you have to create it first.
-:param pulumi.Input[str] kms_encrypted_password: An KMS encrypts password used to a cs managed kubernetes. It is conflicted with <code class="docutils literal notranslate"><span class="pre">password</span></code> and <code class="docutils literal notranslate"><span class="pre">key_name</span></code>.
-:param pulumi.Input[dict] kms_encryption_context: An KMS encryption context used to decrypt <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code> before creating or updating a cs managed kubernetes with <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code>. See <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/42975.htm">Encryption Context</a>. It is valid when <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code> is set.
+:param pulumi.Input[str] cpu_policy: kubelet cpu policy. options: static|none. default: none.
+:param pulumi.Input[bool] enable_ssh: Enable login to the node through SSH. default: false 
+:param pulumi.Input[str] image_id: Custom Image support. Must based on CentOS7 or AliyunLinux2.
+:param pulumi.Input[bool] install_cloud_monitor: Install cloud monitor agent on ECS. default: true 
+:param pulumi.Input[str] key_name: The keypair of ssh login cluster node, you have to create it first. You have to specify one of <code class="docutils literal notranslate"><span class="pre">password</span></code> <code class="docutils literal notranslate"><span class="pre">key_name</span></code> <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code> fields.
+:param pulumi.Input[str] kms_encrypted_password: An KMS encrypts password used to a cs kubernetes. You have to specify one of <code class="docutils literal notranslate"><span class="pre">password</span></code> <code class="docutils literal notranslate"><span class="pre">key_name</span></code> <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code> fields.
+:param pulumi.Input[dict] kms_encryption_context: An KMS encryption context used to decrypt <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code> before creating or updating a cs kubernetes with <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code>. See <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/42975.htm">Encryption Context</a>. It is valid when <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code> is set.
 :param pulumi.Input[str] kube_config: The path of kube config, like <code class="docutils literal notranslate"><span class="pre">~/.kube/config</span></code>.
-:param pulumi.Input[dict] log_config: A list of one element containing information about the associated log store. It contains the following attributes:
-:param pulumi.Input[str] name: The kubernetes cluster’s name. It is the only in one Alicloud account.
-:param pulumi.Input[bool] new_nat_gateway: Whether to create a new nat gateway while creating kubernetes cluster. Default to true.
+:param pulumi.Input[str] name: The kubernetes cluster’s name. It is unique in one Alicloud account.
+:param pulumi.Input[bool] new_nat_gateway: Whether to create a new nat gateway while creating kubernetes cluster. Default to true. Then openapi in Alibaba Cloud are not all on intranet, So turn this option on is a good choice.
+:param pulumi.Input[float] node_cidr_mask: The node cidr block to specific how many pods can run on single node. 24-28 is allowed. 24 means 2^(32-24)-1=255 and the node can run at most 255 pods. default: 24
 :param pulumi.Input[str] password: The password of ssh login cluster node. You have to specify one of <code class="docutils literal notranslate"><span class="pre">password</span></code> <code class="docutils literal notranslate"><span class="pre">key_name</span></code> <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code> fields.
-:param pulumi.Input[str] pod_cidr: The CIDR block for the pod network. When <code class="docutils literal notranslate"><span class="pre">cluster_network_type</span></code> is  set to <code class="docutils literal notranslate"><span class="pre">flanne</span></code>, you must set value to this filed .</p>
-<blockquote>
-<div><p>It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in VPC, cannot be modified after creation.
-Maximum number of hosts allowed in the cluster: 256. Refer to <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/64530.htm">Plan Kubernetes CIDR blocks under VPC</a>.</p>
-</div></blockquote>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>service_cidr</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The CIDR block for the service network.<span class="raw-html-m2r"><br></span>
-It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in VPC, cannot be modified after creation.</p></li>
-<li><p><strong>slb_internet_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to create internet load balancer for API Server. Default to false.</p></li>
-<li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Desired Kubernetes version. If you do not specify a value, the latest available version at resource creation is used and no upgrades will occur except you set a higher version number. The value must be configured and increased to upgrade the version when desired. Downgrades are not supported by ACK.</p></li>
-<li><p><strong>vswitch_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The vswitch where new kubernetes cluster will be located. Specify one or more vswitch’s id. It must be in the zone which <code class="docutils literal notranslate"><span class="pre">availability_zone</span></code> specified.</p></li>
-<li><p><strong>worker_auto_renew</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable worker payment auto-renew, defaults to false.</p></li>
-<li><p><strong>worker_auto_renew_period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Worker payment auto-renew period. When period unit is <code class="docutils literal notranslate"><span class="pre">Month</span></code>, it can be one of {“1”, “2”, “3”, “6”, “12”}.  When period unit is <code class="docutils literal notranslate"><span class="pre">Week</span></code>, it can be one of {“1”, “2”, “3”}.</p></li>
-<li><p><strong>worker_data_disk_category</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The data disk category of worker node. Its valid value are <code class="docutils literal notranslate"><span class="pre">cloud_ssd</span></code> and <code class="docutils literal notranslate"><span class="pre">cloud_efficiency</span></code>, if not set, data disk will not be created.</p></li>
-<li><p><strong>worker_data_disk_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The data disk size of worker node. Its valid value range [20~32768] in GB. When <code class="docutils literal notranslate"><span class="pre">worker_data_disk_category</span></code> is presented, it defaults to 40.</p></li>
-<li><p><strong>worker_disk_category</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The system disk category of worker node. Its valid value are <code class="docutils literal notranslate"><span class="pre">cloud_ssd</span></code> and <code class="docutils literal notranslate"><span class="pre">cloud_efficiency</span></code>. Default to <code class="docutils literal notranslate"><span class="pre">cloud_efficiency</span></code>.</p></li>
-<li><p><strong>worker_disk_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The system disk size of worker node. Its valid value range [20~32768] in GB. Default to 20.</p></li>
-<li><p><strong>worker_instance_charge_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Worker payment type. <code class="docutils literal notranslate"><span class="pre">PrePaid</span></code> or <code class="docutils literal notranslate"><span class="pre">PostPaid</span></code>, defaults to <code class="docutils literal notranslate"><span class="pre">PostPaid</span></code>.</p></li>
-<li><p><strong>worker_number</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The total worker node number of the kubernetes cluster. Default to 3. It is limited up to 50 and if you want to enlarge it, please apply white list or contact with us.</p></li>
-<li><p><strong>worker_numbers</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The worker node number of the kubernetes cluster. Default to [3]. It is limited up to 50 and if you want to enlarge it, please apply white list or contact with us.</p></li>
-<li><p><strong>worker_period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Worker payment period. When period unit is <code class="docutils literal notranslate"><span class="pre">Month</span></code>, it can be one of { “1”, “2”, “3”, “4”, “5”, “6”, “7”, “8”, “9”, “12”, “24”, “36”,”48”,”60”}.  When period unit is <code class="docutils literal notranslate"><span class="pre">Week</span></code>, it can be one of {“1”, “2”, “3”, “4”}.</p></li>
-<li><p><strong>worker_period_unit</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Worker payment period unit. <code class="docutils literal notranslate"><span class="pre">Month</span></code> or <code class="docutils literal notranslate"><span class="pre">Week</span></code>, defaults to <code class="docutils literal notranslate"><span class="pre">Month</span></code>.</p></li>
-</ul>
-</dd>
-</dl>
-<p>The <strong>log_config</strong> object supports the following:</p>
+:param pulumi.Input[str] pod_cidr: [Flannel Specific] The CIDR block for the pod network when using Flannel. 
+:param pulumi.Input[list] pod_vswitch_ids: [Terway Specific] The vswitches for the pod network when using Terway.Be careful the <code class="docutils literal notranslate"><span class="pre">pod_vswitch_ids</span></code> can not equal to <code class="docutils literal notranslate"><span class="pre">worker_vswtich_ids</span></code> or <code class="docutils literal notranslate"><span class="pre">master_vswtich_ids</span></code> but must be in same availability zones.
+:param pulumi.Input[str] proxy_mode: Proxy mode is option of kube-proxy. options: iptables|ipvs. default: ipvs.
+:param pulumi.Input[str] service_cidr: The CIDR block for the service network. It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in VPC, cannot be modified after creation.
+:param pulumi.Input[bool] slb_internet_enabled: Whether to create internet load balancer for API Server. Default to true.
+:param pulumi.Input[str] user_ca: The path of customized CA cert, you can use this CA to sign client certs to connect your cluster.
+:param pulumi.Input[str] version: Desired Kubernetes version. If you do not specify a value, the latest available version at resource creation is used and no upgrades will occur except you set a higher version number. The value must be configured and increased to upgrade the version when desired. Downgrades are not supported by ACK.
+:param pulumi.Input[bool] worker_auto_renew: Enable worker payment auto-renew, defaults to false.
+:param pulumi.Input[float] worker_auto_renew_period: Worker payment auto-renew period. When period unit is <code class="docutils literal notranslate"><span class="pre">Month</span></code>, it can be one of {“1”, “2”, “3”, “6”, “12”}.  When period unit is <code class="docutils literal notranslate"><span class="pre">Week</span></code>, it can be one of {“1”, “2”, “3”}.
+:param pulumi.Input[str] worker_disk_category: The system disk category of worker node. Its valid value are <code class="docutils literal notranslate"><span class="pre">cloud_ssd</span></code> and <code class="docutils literal notranslate"><span class="pre">cloud_efficiency</span></code>. Default to <code class="docutils literal notranslate"><span class="pre">cloud_efficiency</span></code>.
+:param pulumi.Input[float] worker_disk_size: The system disk size of worker node. Its valid value range [20~32768] in GB. Default to 20.
+:param pulumi.Input[str] worker_instance_charge_type: Worker payment type. <code class="docutils literal notranslate"><span class="pre">PrePaid</span></code> or <code class="docutils literal notranslate"><span class="pre">PostPaid</span></code>, defaults to <code class="docutils literal notranslate"><span class="pre">PostPaid</span></code>.
+:param pulumi.Input[list] worker_instance_types: The instance type of worker node. Specify one type for single AZ Cluster, three types for MultiAZ Cluster.
+:param pulumi.Input[float] worker_number: The worker node number of the kubernetes cluster. Default to 3. It is limited up to 50 and if you want to enlarge it, please apply white list or contact with us.
+:param pulumi.Input[float] worker_period: Worker payment period. When period unit is <code class="docutils literal notranslate"><span class="pre">Month</span></code>, it can be one of { “1”, “2”, “3”, “4”, “5”, “6”, “7”, “8”, “9”, “12”, “24”, “36”,”48”,”60”}.  When period unit is <code class="docutils literal notranslate"><span class="pre">Week</span></code>, it can be one of {“1”, “2”, “3”, “4”}.
+:param pulumi.Input[str] worker_period_unit: Worker payment period unit. <code class="docutils literal notranslate"><span class="pre">Month</span></code> or <code class="docutils literal notranslate"><span class="pre">Week</span></code>, defaults to <code class="docutils literal notranslate"><span class="pre">Month</span></code>.</p>
+<p>The <strong>addons</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">project</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Log Service project name, cluster logs will output to this project.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Type of collecting logs, only <code class="docutils literal notranslate"><span class="pre">SLS</span></code> are supported currently.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">config</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The kubernetes cluster’s name. It is unique in one Alicloud account.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_alicloud.cs.ManagedKubernetes.availability_zone">
 <code class="sig-name descname">availability_zone</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.ManagedKubernetes.availability_zone" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Zone where new kubernetes cluster will be located. If it is not be specified, the <code class="docutils literal notranslate"><span class="pre">vswitch_ids</span></code> should be set, the value will be vswitch’s zone.</p>
+<dd><p>The Zone where new kubernetes cluster will be located. If it is not be specified, the <code class="docutils literal notranslate"><span class="pre">vswitch_ids</span></code> should be set, its value will be vswitch’s zone.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1125,45 +1058,57 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pulumi_alicloud.cs.ManagedKubernetes.cluster_network_type">
-<code class="sig-name descname">cluster_network_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.ManagedKubernetes.cluster_network_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>The network that cluster uses, use <code class="docutils literal notranslate"><span class="pre">flannel</span></code> or <code class="docutils literal notranslate"><span class="pre">terway</span></code>.</p>
+<dt id="pulumi_alicloud.cs.ManagedKubernetes.connections">
+<code class="sig-name descname">connections</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.ManagedKubernetes.connections" title="Permalink to this definition">¶</a></dt>
+<dd><p>Map of kubernetes cluster connection information. It contains several attributes to <code class="docutils literal notranslate"><span class="pre">Block</span> <span class="pre">Connections</span></code>.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">api_server_internet</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - API Server Internet endpoint.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">api_server_intranet</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - API Server Intranet endpoint.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">master_public_ip</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Master node SSH IP address.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">service_domain</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Service Access Domain.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pulumi_alicloud.cs.ManagedKubernetes.force_update">
-<code class="sig-name descname">force_update</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.ManagedKubernetes.force_update" title="Permalink to this definition">¶</a></dt>
-<dd><p>Default false, when you want to change <code class="docutils literal notranslate"><span class="pre">worker_instance_types</span></code> and <code class="docutils literal notranslate"><span class="pre">vswitch_ids</span></code>, you have to set this field to true, then the cluster will be recreated.</p>
+<dt id="pulumi_alicloud.cs.ManagedKubernetes.cpu_policy">
+<code class="sig-name descname">cpu_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.ManagedKubernetes.cpu_policy" title="Permalink to this definition">¶</a></dt>
+<dd><p>kubelet cpu policy. options: static|none. default: none.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.cs.ManagedKubernetes.enable_ssh">
+<code class="sig-name descname">enable_ssh</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.ManagedKubernetes.enable_ssh" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable login to the node through SSH. default: false</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_alicloud.cs.ManagedKubernetes.image_id">
 <code class="sig-name descname">image_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.ManagedKubernetes.image_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The ID of node image.</p>
+<dd><p>Custom Image support. Must based on CentOS7 or AliyunLinux2.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_alicloud.cs.ManagedKubernetes.install_cloud_monitor">
 <code class="sig-name descname">install_cloud_monitor</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.ManagedKubernetes.install_cloud_monitor" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether to install cloud monitor for the kubernetes’ node.</p>
+<dd><p>Install cloud monitor agent on ECS. default: true</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_alicloud.cs.ManagedKubernetes.key_name">
 <code class="sig-name descname">key_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.ManagedKubernetes.key_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The keypair of ssh login cluster node, you have to create it first.</p>
+<dd><p>The keypair of ssh login cluster node, you have to create it first. You have to specify one of <code class="docutils literal notranslate"><span class="pre">password</span></code> <code class="docutils literal notranslate"><span class="pre">key_name</span></code> <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code> fields.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_alicloud.cs.ManagedKubernetes.kms_encrypted_password">
 <code class="sig-name descname">kms_encrypted_password</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.ManagedKubernetes.kms_encrypted_password" title="Permalink to this definition">¶</a></dt>
-<dd><p>An KMS encrypts password used to a cs managed kubernetes. It is conflicted with <code class="docutils literal notranslate"><span class="pre">password</span></code> and <code class="docutils literal notranslate"><span class="pre">key_name</span></code>.</p>
+<dd><p>An KMS encrypts password used to a cs kubernetes. You have to specify one of <code class="docutils literal notranslate"><span class="pre">password</span></code> <code class="docutils literal notranslate"><span class="pre">key_name</span></code> <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code> fields.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_alicloud.cs.ManagedKubernetes.kms_encryption_context">
 <code class="sig-name descname">kms_encryption_context</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.ManagedKubernetes.kms_encryption_context" title="Permalink to this definition">¶</a></dt>
-<dd><p>An KMS encryption context used to decrypt <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code> before creating or updating a cs managed kubernetes with <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code>. See <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/42975.htm">Encryption Context</a>. It is valid when <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code> is set.</p>
+<dd><p>An KMS encryption context used to decrypt <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code> before creating or updating a cs kubernetes with <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code>. See <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/42975.htm">Encryption Context</a>. It is valid when <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code> is set.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1173,25 +1118,27 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pulumi_alicloud.cs.ManagedKubernetes.log_config">
-<code class="sig-name descname">log_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.ManagedKubernetes.log_config" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of one element containing information about the associated log store. It contains the following attributes:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">project</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Log Service project name, cluster logs will output to this project.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Type of collecting logs, only <code class="docutils literal notranslate"><span class="pre">SLS</span></code> are supported currently.</p></li>
-</ul>
+<dt id="pulumi_alicloud.cs.ManagedKubernetes.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.ManagedKubernetes.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The kubernetes cluster’s name. It is unique in one Alicloud account.</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pulumi_alicloud.cs.ManagedKubernetes.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.ManagedKubernetes.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The kubernetes cluster’s name. It is the only in one Alicloud account.</p>
+<dt id="pulumi_alicloud.cs.ManagedKubernetes.nat_gateway_id">
+<code class="sig-name descname">nat_gateway_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.ManagedKubernetes.nat_gateway_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of nat gateway used to launch kubernetes cluster.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_alicloud.cs.ManagedKubernetes.new_nat_gateway">
 <code class="sig-name descname">new_nat_gateway</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.ManagedKubernetes.new_nat_gateway" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether to create a new nat gateway while creating kubernetes cluster. Default to true.</p>
+<dd><p>Whether to create a new nat gateway while creating kubernetes cluster. Default to true. Then openapi in Alibaba Cloud are not all on intranet, So turn this option on is a good choice.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.cs.ManagedKubernetes.node_cidr_mask">
+<code class="sig-name descname">node_cidr_mask</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.ManagedKubernetes.node_cidr_mask" title="Permalink to this definition">¶</a></dt>
+<dd><p>The node cidr block to specific how many pods can run on single node. 24-28 is allowed. 24 means 2^(32-24)-1=255 and the node can run at most 255 pods. default: 24</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1203,9 +1150,19 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
 <dl class="attribute">
 <dt id="pulumi_alicloud.cs.ManagedKubernetes.pod_cidr">
 <code class="sig-name descname">pod_cidr</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.ManagedKubernetes.pod_cidr" title="Permalink to this definition">¶</a></dt>
-<dd><p>The CIDR block for the pod network. When <code class="docutils literal notranslate"><span class="pre">cluster_network_type</span></code> is  set to <code class="docutils literal notranslate"><span class="pre">flanne</span></code>, you must set value to this filed .
-It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in VPC, cannot be modified after creation.
-Maximum number of hosts allowed in the cluster: 256. Refer to <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/64530.htm">Plan Kubernetes CIDR blocks under VPC</a>.</p>
+<dd><p>[Flannel Specific] The CIDR block for the pod network when using Flannel.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.cs.ManagedKubernetes.pod_vswitch_ids">
+<code class="sig-name descname">pod_vswitch_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.ManagedKubernetes.pod_vswitch_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>[Terway Specific] The vswitches for the pod network when using Terway.Be careful the <code class="docutils literal notranslate"><span class="pre">pod_vswitch_ids</span></code> can not equal to <code class="docutils literal notranslate"><span class="pre">worker_vswtich_ids</span></code> or <code class="docutils literal notranslate"><span class="pre">master_vswtich_ids</span></code> but must be in same availability zones.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.cs.ManagedKubernetes.proxy_mode">
+<code class="sig-name descname">proxy_mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.ManagedKubernetes.proxy_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Proxy mode is option of kube-proxy. options: iptables|ipvs. default: ipvs.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1217,14 +1174,25 @@ Maximum number of hosts allowed in the cluster: 256. Refer to <a class="referenc
 <dl class="attribute">
 <dt id="pulumi_alicloud.cs.ManagedKubernetes.service_cidr">
 <code class="sig-name descname">service_cidr</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.ManagedKubernetes.service_cidr" title="Permalink to this definition">¶</a></dt>
-<dd><p>The CIDR block for the service network.<span class="raw-html-m2r"><br></span>
-It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in VPC, cannot be modified after creation.</p>
+<dd><p>The CIDR block for the service network. It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in VPC, cannot be modified after creation.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_alicloud.cs.ManagedKubernetes.slb_internet_enabled">
 <code class="sig-name descname">slb_internet_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.ManagedKubernetes.slb_internet_enabled" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether to create internet load balancer for API Server. Default to false.</p>
+<dd><p>Whether to create internet load balancer for API Server. Default to true.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.cs.ManagedKubernetes.slb_intranet">
+<code class="sig-name descname">slb_intranet</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.ManagedKubernetes.slb_intranet" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of private load balancer where the current cluster master node is located.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.cs.ManagedKubernetes.user_ca">
+<code class="sig-name descname">user_ca</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.ManagedKubernetes.user_ca" title="Permalink to this definition">¶</a></dt>
+<dd><p>The path of customized CA cert, you can use this CA to sign client certs to connect your cluster.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1240,12 +1208,6 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pulumi_alicloud.cs.ManagedKubernetes.vswitch_ids">
-<code class="sig-name descname">vswitch_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.ManagedKubernetes.vswitch_ids" title="Permalink to this definition">¶</a></dt>
-<dd><p>The vswitch where new kubernetes cluster will be located. Specify one or more vswitch’s id. It must be in the zone which <code class="docutils literal notranslate"><span class="pre">availability_zone</span></code> specified.</p>
-</dd></dl>
-
-<dl class="attribute">
 <dt id="pulumi_alicloud.cs.ManagedKubernetes.worker_auto_renew">
 <code class="sig-name descname">worker_auto_renew</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.ManagedKubernetes.worker_auto_renew" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable worker payment auto-renew, defaults to false.</p>
@@ -1255,18 +1217,6 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
 <dt id="pulumi_alicloud.cs.ManagedKubernetes.worker_auto_renew_period">
 <code class="sig-name descname">worker_auto_renew_period</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.ManagedKubernetes.worker_auto_renew_period" title="Permalink to this definition">¶</a></dt>
 <dd><p>Worker payment auto-renew period. When period unit is <code class="docutils literal notranslate"><span class="pre">Month</span></code>, it can be one of {“1”, “2”, “3”, “6”, “12”}.  When period unit is <code class="docutils literal notranslate"><span class="pre">Week</span></code>, it can be one of {“1”, “2”, “3”}.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_alicloud.cs.ManagedKubernetes.worker_data_disk_category">
-<code class="sig-name descname">worker_data_disk_category</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.ManagedKubernetes.worker_data_disk_category" title="Permalink to this definition">¶</a></dt>
-<dd><p>The data disk category of worker node. Its valid value are <code class="docutils literal notranslate"><span class="pre">cloud_ssd</span></code> and <code class="docutils literal notranslate"><span class="pre">cloud_efficiency</span></code>, if not set, data disk will not be created.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_alicloud.cs.ManagedKubernetes.worker_data_disk_size">
-<code class="sig-name descname">worker_data_disk_size</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.ManagedKubernetes.worker_data_disk_size" title="Permalink to this definition">¶</a></dt>
-<dd><p>The data disk size of worker node. Its valid value range [20~32768] in GB. When <code class="docutils literal notranslate"><span class="pre">worker_data_disk_category</span></code> is presented, it defaults to 40.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1288,12 +1238,18 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_alicloud.cs.ManagedKubernetes.worker_instance_types">
+<code class="sig-name descname">worker_instance_types</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.ManagedKubernetes.worker_instance_types" title="Permalink to this definition">¶</a></dt>
+<dd><p>The instance type of worker node. Specify one type for single AZ Cluster, three types for MultiAZ Cluster.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_alicloud.cs.ManagedKubernetes.worker_nodes">
 <code class="sig-name descname">worker_nodes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.ManagedKubernetes.worker_nodes" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of cluster worker nodes. It contains several attributes to <code class="docutils literal notranslate"><span class="pre">Block</span> <span class="pre">Nodes</span></code>.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - ID of the node.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The kubernetes cluster’s name. It is the only in one Alicloud account.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The kubernetes cluster’s name. It is unique in one Alicloud account.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">private_ip</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The private IP address of node.</p></li>
 </ul>
 </dd></dl>
@@ -1301,13 +1257,7 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
 <dl class="attribute">
 <dt id="pulumi_alicloud.cs.ManagedKubernetes.worker_number">
 <code class="sig-name descname">worker_number</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.ManagedKubernetes.worker_number" title="Permalink to this definition">¶</a></dt>
-<dd><p>The total worker node number of the kubernetes cluster. Default to 3. It is limited up to 50 and if you want to enlarge it, please apply white list or contact with us.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_alicloud.cs.ManagedKubernetes.worker_numbers">
-<code class="sig-name descname">worker_numbers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.ManagedKubernetes.worker_numbers" title="Permalink to this definition">¶</a></dt>
-<dd><p>The worker node number of the kubernetes cluster. Default to [3]. It is limited up to 50 and if you want to enlarge it, please apply white list or contact with us.</p>
+<dd><p>The worker node number of the kubernetes cluster. Default to 3. It is limited up to 50 and if you want to enlarge it, please apply white list or contact with us.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1324,7 +1274,7 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
 
 <dl class="method">
 <dt id="pulumi_alicloud.cs.ManagedKubernetes.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">client_cert=None</em>, <em class="sig-param">client_key=None</em>, <em class="sig-param">cluster_ca_cert=None</em>, <em class="sig-param">cluster_network_type=None</em>, <em class="sig-param">force_update=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">install_cloud_monitor=None</em>, <em class="sig-param">key_name=None</em>, <em class="sig-param">kms_encrypted_password=None</em>, <em class="sig-param">kms_encryption_context=None</em>, <em class="sig-param">kube_config=None</em>, <em class="sig-param">log_config=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">new_nat_gateway=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">pod_cidr=None</em>, <em class="sig-param">security_group_id=None</em>, <em class="sig-param">service_cidr=None</em>, <em class="sig-param">slb_internet_enabled=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">vswitch_ids=None</em>, <em class="sig-param">worker_auto_renew=None</em>, <em class="sig-param">worker_auto_renew_period=None</em>, <em class="sig-param">worker_data_disk_category=None</em>, <em class="sig-param">worker_data_disk_size=None</em>, <em class="sig-param">worker_disk_category=None</em>, <em class="sig-param">worker_disk_size=None</em>, <em class="sig-param">worker_instance_charge_type=None</em>, <em class="sig-param">worker_instance_types=None</em>, <em class="sig-param">worker_nodes=None</em>, <em class="sig-param">worker_number=None</em>, <em class="sig-param">worker_numbers=None</em>, <em class="sig-param">worker_period=None</em>, <em class="sig-param">worker_period_unit=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cs.ManagedKubernetes.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">addons=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">client_cert=None</em>, <em class="sig-param">client_key=None</em>, <em class="sig-param">cluster_ca_cert=None</em>, <em class="sig-param">connections=None</em>, <em class="sig-param">cpu_policy=None</em>, <em class="sig-param">enable_ssh=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">install_cloud_monitor=None</em>, <em class="sig-param">key_name=None</em>, <em class="sig-param">kms_encrypted_password=None</em>, <em class="sig-param">kms_encryption_context=None</em>, <em class="sig-param">kube_config=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">nat_gateway_id=None</em>, <em class="sig-param">new_nat_gateway=None</em>, <em class="sig-param">node_cidr_mask=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">pod_cidr=None</em>, <em class="sig-param">pod_vswitch_ids=None</em>, <em class="sig-param">proxy_mode=None</em>, <em class="sig-param">security_group_id=None</em>, <em class="sig-param">service_cidr=None</em>, <em class="sig-param">slb_id=None</em>, <em class="sig-param">slb_internet=None</em>, <em class="sig-param">slb_internet_enabled=None</em>, <em class="sig-param">slb_intranet=None</em>, <em class="sig-param">user_ca=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">worker_auto_renew=None</em>, <em class="sig-param">worker_auto_renew_period=None</em>, <em class="sig-param">worker_data_disk_category=None</em>, <em class="sig-param">worker_data_disk_size=None</em>, <em class="sig-param">worker_disk_category=None</em>, <em class="sig-param">worker_disk_size=None</em>, <em class="sig-param">worker_instance_charge_type=None</em>, <em class="sig-param">worker_instance_types=None</em>, <em class="sig-param">worker_nodes=None</em>, <em class="sig-param">worker_number=None</em>, <em class="sig-param">worker_period=None</em>, <em class="sig-param">worker_period_unit=None</em>, <em class="sig-param">worker_vswitch_ids=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cs.ManagedKubernetes.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ManagedKubernetes resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1333,58 +1283,65 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Zone where new kubernetes cluster will be located. If it is not be specified, the <code class="docutils literal notranslate"><span class="pre">vswitch_ids</span></code> should be set, the value will be vswitch’s zone.</p></li>
+<li><p><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Zone where new kubernetes cluster will be located. If it is not be specified, the <code class="docutils literal notranslate"><span class="pre">vswitch_ids</span></code> should be set, its value will be vswitch’s zone.</p></li>
 <li><p><strong>client_cert</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path of client certificate, like <code class="docutils literal notranslate"><span class="pre">~/.kube/client-cert.pem</span></code>.</p></li>
 <li><p><strong>client_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path of client key, like <code class="docutils literal notranslate"><span class="pre">~/.kube/client-key.pem</span></code>.</p></li>
 <li><p><strong>cluster_ca_cert</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path of cluster ca certificate, like <code class="docutils literal notranslate"><span class="pre">~/.kube/cluster-ca-cert.pem</span></code></p></li>
-<li><p><strong>cluster_network_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The network that cluster uses, use <code class="docutils literal notranslate"><span class="pre">flannel</span></code> or <code class="docutils literal notranslate"><span class="pre">terway</span></code>.</p></li>
-<li><p><strong>force_update</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Default false, when you want to change <code class="docutils literal notranslate"><span class="pre">worker_instance_types</span></code> and <code class="docutils literal notranslate"><span class="pre">vswitch_ids</span></code>, you have to set this field to true, then the cluster will be recreated.</p></li>
-<li><p><strong>image_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of node image.</p></li>
-<li><p><strong>install_cloud_monitor</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to install cloud monitor for the kubernetes’ node.</p></li>
-<li><p><strong>key_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The keypair of ssh login cluster node, you have to create it first.</p></li>
-<li><p><strong>kms_encrypted_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An KMS encrypts password used to a cs managed kubernetes. It is conflicted with <code class="docutils literal notranslate"><span class="pre">password</span></code> and <code class="docutils literal notranslate"><span class="pre">key_name</span></code>.</p></li>
-<li><p><strong>kms_encryption_context</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>An KMS encryption context used to decrypt <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code> before creating or updating a cs managed kubernetes with <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code>. See <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/42975.htm">Encryption Context</a>. It is valid when <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code> is set.</p>
+<li><p><strong>connections</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Map of kubernetes cluster connection information. It contains several attributes to <code class="docutils literal notranslate"><span class="pre">Block</span> <span class="pre">Connections</span></code>.</p></li>
+<li><p><strong>cpu_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – kubelet cpu policy. options: static|none. default: none.</p></li>
+<li><p><strong>enable_ssh</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable login to the node through SSH. default: false</p></li>
+<li><p><strong>image_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Custom Image support. Must based on CentOS7 or AliyunLinux2.</p></li>
+<li><p><strong>install_cloud_monitor</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Install cloud monitor agent on ECS. default: true</p></li>
+<li><p><strong>key_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The keypair of ssh login cluster node, you have to create it first. You have to specify one of <code class="docutils literal notranslate"><span class="pre">password</span></code> <code class="docutils literal notranslate"><span class="pre">key_name</span></code> <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code> fields.</p></li>
+<li><p><strong>kms_encrypted_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An KMS encrypts password used to a cs kubernetes. You have to specify one of <code class="docutils literal notranslate"><span class="pre">password</span></code> <code class="docutils literal notranslate"><span class="pre">key_name</span></code> <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code> fields.</p></li>
+<li><p><strong>kms_encryption_context</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>An KMS encryption context used to decrypt <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code> before creating or updating a cs kubernetes with <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code>. See <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/42975.htm">Encryption Context</a>. It is valid when <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code> is set.</p>
 </p></li>
 <li><p><strong>kube_config</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path of kube config, like <code class="docutils literal notranslate"><span class="pre">~/.kube/config</span></code>.</p></li>
-<li><p><strong>log_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A list of one element containing information about the associated log store. It contains the following attributes:</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The kubernetes cluster’s name. It is the only in one Alicloud account.</p></li>
-<li><p><strong>new_nat_gateway</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to create a new nat gateway while creating kubernetes cluster. Default to true.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The kubernetes cluster’s name. It is unique in one Alicloud account.</p></li>
+<li><p><strong>nat_gateway_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of nat gateway used to launch kubernetes cluster.</p></li>
+<li><p><strong>new_nat_gateway</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to create a new nat gateway while creating kubernetes cluster. Default to true. Then openapi in Alibaba Cloud are not all on intranet, So turn this option on is a good choice.</p></li>
+<li><p><strong>node_cidr_mask</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The node cidr block to specific how many pods can run on single node. 24-28 is allowed. 24 means 2^(32-24)-1=255 and the node can run at most 255 pods. default: 24</p></li>
 <li><p><strong>password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The password of ssh login cluster node. You have to specify one of <code class="docutils literal notranslate"><span class="pre">password</span></code> <code class="docutils literal notranslate"><span class="pre">key_name</span></code> <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code> fields.</p></li>
-<li><p><strong>pod_cidr</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The CIDR block for the pod network. When <code class="docutils literal notranslate"><span class="pre">cluster_network_type</span></code> is  set to <code class="docutils literal notranslate"><span class="pre">flanne</span></code>, you must set value to this filed .
-It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in VPC, cannot be modified after creation.
-Maximum number of hosts allowed in the cluster: 256. Refer to <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/64530.htm">Plan Kubernetes CIDR blocks under VPC</a>.</p>
-</p></li>
+<li><p><strong>pod_cidr</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – [Flannel Specific] The CIDR block for the pod network when using Flannel.</p></li>
+<li><p><strong>pod_vswitch_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – [Terway Specific] The vswitches for the pod network when using Terway.Be careful the <code class="docutils literal notranslate"><span class="pre">pod_vswitch_ids</span></code> can not equal to <code class="docutils literal notranslate"><span class="pre">worker_vswtich_ids</span></code> or <code class="docutils literal notranslate"><span class="pre">master_vswtich_ids</span></code> but must be in same availability zones.</p></li>
+<li><p><strong>proxy_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Proxy mode is option of kube-proxy. options: iptables|ipvs. default: ipvs.</p></li>
 <li><p><strong>security_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of security group where the current cluster worker node is located.</p></li>
-<li><p><strong>service_cidr</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The CIDR block for the service network.<span class="raw-html-m2r"><br></span>
-It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in VPC, cannot be modified after creation.</p></li>
-<li><p><strong>slb_internet_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to create internet load balancer for API Server. Default to false.</p></li>
+<li><p><strong>service_cidr</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The CIDR block for the service network. It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in VPC, cannot be modified after creation.</p></li>
+<li><p><strong>slb_internet_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to create internet load balancer for API Server. Default to true.</p></li>
+<li><p><strong>slb_intranet</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of private load balancer where the current cluster master node is located.</p></li>
+<li><p><strong>user_ca</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path of customized CA cert, you can use this CA to sign client certs to connect your cluster.</p></li>
 <li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Desired Kubernetes version. If you do not specify a value, the latest available version at resource creation is used and no upgrades will occur except you set a higher version number. The value must be configured and increased to upgrade the version when desired. Downgrades are not supported by ACK.</p></li>
 <li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of VPC where the current cluster is located.</p></li>
-<li><p><strong>vswitch_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The vswitch where new kubernetes cluster will be located. Specify one or more vswitch’s id. It must be in the zone which <code class="docutils literal notranslate"><span class="pre">availability_zone</span></code> specified.</p></li>
 <li><p><strong>worker_auto_renew</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable worker payment auto-renew, defaults to false.</p></li>
 <li><p><strong>worker_auto_renew_period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Worker payment auto-renew period. When period unit is <code class="docutils literal notranslate"><span class="pre">Month</span></code>, it can be one of {“1”, “2”, “3”, “6”, “12”}.  When period unit is <code class="docutils literal notranslate"><span class="pre">Week</span></code>, it can be one of {“1”, “2”, “3”}.</p></li>
-<li><p><strong>worker_data_disk_category</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The data disk category of worker node. Its valid value are <code class="docutils literal notranslate"><span class="pre">cloud_ssd</span></code> and <code class="docutils literal notranslate"><span class="pre">cloud_efficiency</span></code>, if not set, data disk will not be created.</p></li>
-<li><p><strong>worker_data_disk_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The data disk size of worker node. Its valid value range [20~32768] in GB. When <code class="docutils literal notranslate"><span class="pre">worker_data_disk_category</span></code> is presented, it defaults to 40.</p></li>
 <li><p><strong>worker_disk_category</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The system disk category of worker node. Its valid value are <code class="docutils literal notranslate"><span class="pre">cloud_ssd</span></code> and <code class="docutils literal notranslate"><span class="pre">cloud_efficiency</span></code>. Default to <code class="docutils literal notranslate"><span class="pre">cloud_efficiency</span></code>.</p></li>
 <li><p><strong>worker_disk_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The system disk size of worker node. Its valid value range [20~32768] in GB. Default to 20.</p></li>
 <li><p><strong>worker_instance_charge_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Worker payment type. <code class="docutils literal notranslate"><span class="pre">PrePaid</span></code> or <code class="docutils literal notranslate"><span class="pre">PostPaid</span></code>, defaults to <code class="docutils literal notranslate"><span class="pre">PostPaid</span></code>.</p></li>
+<li><p><strong>worker_instance_types</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The instance type of worker node. Specify one type for single AZ Cluster, three types for MultiAZ Cluster.</p></li>
 <li><p><strong>worker_nodes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of cluster worker nodes. It contains several attributes to <code class="docutils literal notranslate"><span class="pre">Block</span> <span class="pre">Nodes</span></code>.</p></li>
-<li><p><strong>worker_number</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The total worker node number of the kubernetes cluster. Default to 3. It is limited up to 50 and if you want to enlarge it, please apply white list or contact with us.</p></li>
-<li><p><strong>worker_numbers</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The worker node number of the kubernetes cluster. Default to [3]. It is limited up to 50 and if you want to enlarge it, please apply white list or contact with us.</p></li>
+<li><p><strong>worker_number</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The worker node number of the kubernetes cluster. Default to 3. It is limited up to 50 and if you want to enlarge it, please apply white list or contact with us.</p></li>
 <li><p><strong>worker_period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Worker payment period. When period unit is <code class="docutils literal notranslate"><span class="pre">Month</span></code>, it can be one of { “1”, “2”, “3”, “4”, “5”, “6”, “7”, “8”, “9”, “12”, “24”, “36”,”48”,”60”}.  When period unit is <code class="docutils literal notranslate"><span class="pre">Week</span></code>, it can be one of {“1”, “2”, “3”, “4”}.</p></li>
 <li><p><strong>worker_period_unit</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Worker payment period unit. <code class="docutils literal notranslate"><span class="pre">Month</span></code> or <code class="docutils literal notranslate"><span class="pre">Week</span></code>, defaults to <code class="docutils literal notranslate"><span class="pre">Month</span></code>.</p></li>
 </ul>
 </dd>
 </dl>
-<p>The <strong>log_config</strong> object supports the following:</p>
+<p>The <strong>addons</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">project</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Log Service project name, cluster logs will output to this project.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Type of collecting logs, only <code class="docutils literal notranslate"><span class="pre">SLS</span></code> are supported currently.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">config</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The kubernetes cluster’s name. It is unique in one Alicloud account.</p></li>
+</ul>
+<p>The <strong>connections</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">api_server_internet</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - API Server Internet endpoint.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">api_server_intranet</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - API Server Intranet endpoint.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">master_public_ip</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Master node SSH IP address.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">service_domain</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Service Access Domain.</p></li>
 </ul>
 <p>The <strong>worker_nodes</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - ID of the node.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The kubernetes cluster’s name. It is the only in one Alicloud account.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The kubernetes cluster’s name. It is unique in one Alicloud account.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">private_ip</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The private IP address of node.</p></li>
 </ul>
 </dd></dl>

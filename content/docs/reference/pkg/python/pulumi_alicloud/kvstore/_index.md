@@ -214,6 +214,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd></dd></dl>
 
 <dl class="class">
+<dt id="pulumi_alicloud.kvstore.AwaitableGetZonesResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.kvstore.</code><code class="sig-name descname">AwaitableGetZonesResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">multi=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">zones=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kvstore.AwaitableGetZonesResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_alicloud.kvstore.BackupPolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.kvstore.</code><code class="sig-name descname">BackupPolicy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">backup_periods=None</em>, <em class="sig-param">backup_time=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kvstore.BackupPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a backup policy for ApsaraDB Redis / Memcache instance resource.</p>
@@ -414,6 +419,30 @@ For more information, see <a class="reference external" href="https://www.alibab
 <dt id="pulumi_alicloud.kvstore.GetInstancesResult.vswitch_id">
 <code class="sig-name descname">vswitch_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kvstore.GetInstancesResult.vswitch_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>VSwitch ID the instance belongs to.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_alicloud.kvstore.GetZonesResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.kvstore.</code><code class="sig-name descname">GetZonesResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">multi=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">zones=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kvstore.GetZonesResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getZones.</p>
+<dl class="attribute">
+<dt id="pulumi_alicloud.kvstore.GetZonesResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kvstore.GetZonesResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.kvstore.GetZonesResult.ids">
+<code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kvstore.GetZonesResult.ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of zone IDs.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.kvstore.GetZonesResult.zones">
+<code class="sig-name descname">zones</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kvstore.GetZonesResult.zones" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of availability zones. Each element contains the following attributes:</p>
 </dd></dl>
 
 </dd></dl>
@@ -742,6 +771,24 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
 <li><p><strong>tags</strong> (<em>dict</em>) – Query the instance bound to the tag. The format of the incoming value is <code class="docutils literal notranslate"><span class="pre">json</span></code> string, including <code class="docutils literal notranslate"><span class="pre">TagKey</span></code> and <code class="docutils literal notranslate"><span class="pre">TagValue</span></code>. <code class="docutils literal notranslate"><span class="pre">TagKey</span></code> cannot be null, and <code class="docutils literal notranslate"><span class="pre">TagValue</span></code> can be empty. Format example <code class="docutils literal notranslate"><span class="pre">{&quot;key1&quot;:&quot;value1&quot;}</span></code>.</p></li>
 <li><p><strong>vpc_id</strong> (<em>str</em>) – Used to retrieve instances belong to specified VPC.</p></li>
 <li><p><strong>vswitch_id</strong> (<em>str</em>) – Used to retrieve instances belong to specified <code class="docutils literal notranslate"><span class="pre">vswitch</span></code> resources.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_alicloud.kvstore.get_zones">
+<code class="sig-prename descclassname">pulumi_alicloud.kvstore.</code><code class="sig-name descname">get_zones</code><span class="sig-paren">(</span><em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">multi=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kvstore.get_zones" title="Permalink to this definition">¶</a></dt>
+<dd><p>This data source provides availability zones for KVStore that can be accessed by an Alibaba Cloud account within the region configured in the provider.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong> Available in v1.73.0+.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/kvstore_zones.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/kvstore_zones.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>instance_charge_type</strong> (<em>str</em>) – Filter the results by a specific instance charge type. Valid values: <code class="docutils literal notranslate"><span class="pre">PrePaid</span></code> and <code class="docutils literal notranslate"><span class="pre">PostPaid</span></code>. Default to <code class="docutils literal notranslate"><span class="pre">PostPaid</span></code>.</p></li>
+<li><p><strong>multi</strong> (<em>bool</em>) – Indicate whether the zones can be used in a multi AZ configuration. Default to <code class="docutils literal notranslate"><span class="pre">false</span></code>. Multi AZ is usually used to launch KVStore instances.</p></li>
 </ul>
 </dd>
 </dl>
