@@ -15,7 +15,7 @@ event:
     # The type of activities we will be doing at the event.
     type: ["workshop"]
     # The event address
-    location: "680 Folsom St #145, San Francisco, CA 94107"
+    location: "Online"
     # The start date of an event. Format YYYY-MM-DD
     start_date: "2020-04-09"
     # The end date of an event. Format YYYY-MM-DD
