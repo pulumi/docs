@@ -2,62 +2,34 @@
     bucket_prefix = "mybucket"
 }
 
-data "archive_file" "lambda_zip" {
-    type        = "zip"
-    output_path = "lambda.zip"
-
-    source {
-    filename = "index.js"
-    content = < {
-    console.log(JSON.stringify(ev))
-}
-EOF
-    }
+resource "aws_s3_bucket_object" "data_txt" {
+    key        = "data.txt"
+    bucket     = "${aws_s3_bucket.mybucket.id}"
+    source     = "./files/data.txt"
 }
 
-data "aws_iam_policy_document" "lambda-assume-role-policy" {
-    statement {
-        actions = ["sts:AssumeRole"]
-
-        principals {
-            type        = "Service"
-            identifiers = ["lambda.amazonaws.com"]
-        }
-    }
+resource "aws_s3_bucket_object" "index_html" {
+    key        = "index.html"
+    bucket     = "${aws_s3_bucket.mybucket.id}"
+    source     = "./files/index.html"
 }
 
-resource "aws_iam_role" "lambda" {
-    assume_role_policy = "${data.aws_iam_policy_document.lambda-assume-role-policy.json}"
+resource "aws_s3_bucket_object" "index_js" {
+    key        = "index.js"
+    bucket     = "${aws_s3_bucket.mybucket.id}"
+    source     = "./files/index.js"
 }
 
-resource "aws_lambda_function" "my_lambda" {
-    filename = "${data.archive_file.lambda_zip.output_path}"
-    source_code_hash = "${data.archive_file.lambda_zip.output_base64sha256}"
-    function_name = "my_lambda"
-    role = "${aws_iam_role.lambda.arn}"
-    handler = "index.handler"
-    runtime = "nodejs8.10"
+resource "aws_s3_bucket_object" "main.css" {
+    key        = "main.css"
+    bucket     = "${aws_s3_bucket.mybucket.id}"
+    source     = "./files/main.css"
 }
 
-resource "aws_lambda_permission" "allow_bucket" {
-    statement_id  = "AllowExecutionFromS3Bucket"
-    action        = "lambda:InvokeFunction"
-    function_name = "${aws_lambda_function.my_lambda.arn}"
-    principal     = "s3.amazonaws.com"
-    source_arn    = "${aws_s3_bucket.mybucket.arn}"
-}
-
-resource "aws_s3_bucket_notification" "bucket_notification" {
-    bucket = "${aws_s3_bucket.mybucket.id}"
-
-    lambda_function {
-        lambda_function_arn = "${aws_lambda_function.my_lambda.arn}"
-        events              = ["s3:ObjectCreated:*"]
-    }
-}
-
-output "bucket_name" {
-    value = "${aws_s3_bucket.mybucket.id}"
+resource "aws_s3_bucket_object" "favicon.ico" {
+    key        = "favicon.ico"
+    bucket     = "${aws_s3_bucket.mybucket.id}"
+    source     = "./files/favicon.ico"
 }`}}
 
 {{ $typeScriptCodeBlock := `import * as aws from "@pulumi/aws";
