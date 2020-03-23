@@ -15,12 +15,12 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_okta.auth"></span><dl class="class">
 <dt id="pulumi_okta.auth.AwaitableGetServerResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.auth.</code><code class="sig-name descname">AwaitableGetServerResult</code><span class="sig-paren">(</span><em class="sig-param">audiences=None</em>, <em class="sig-param">credentials_last_rotated=None</em>, <em class="sig-param">credentials_next_rotation=None</em>, <em class="sig-param">credentials_rotation_mode=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">kid=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.auth.AwaitableGetServerResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.auth.</code><code class="sig-name descname">AwaitableGetServerResult</code><span class="sig-paren">(</span><em class="sig-param">audiences=None</em>, <em class="sig-param">credentials_last_rotated=None</em>, <em class="sig-param">credentials_next_rotation=None</em>, <em class="sig-param">credentials_rotation_mode=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">kid=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">status=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.auth.AwaitableGetServerResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_okta.auth.GetServerResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.auth.</code><code class="sig-name descname">GetServerResult</code><span class="sig-paren">(</span><em class="sig-param">audiences=None</em>, <em class="sig-param">credentials_last_rotated=None</em>, <em class="sig-param">credentials_next_rotation=None</em>, <em class="sig-param">credentials_rotation_mode=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">kid=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.auth.GetServerResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.auth.</code><code class="sig-name descname">GetServerResult</code><span class="sig-paren">(</span><em class="sig-param">audiences=None</em>, <em class="sig-param">credentials_last_rotated=None</em>, <em class="sig-param">credentials_next_rotation=None</em>, <em class="sig-param">credentials_rotation_mode=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">kid=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">status=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.auth.GetServerResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getServer.</p>
 <dl class="attribute">
 <dt id="pulumi_okta.auth.GetServerResult.audiences">
@@ -53,6 +53,12 @@ anything, please consult the source <a class="reference external" href="https://
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_okta.auth.GetServerResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.auth.GetServerResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_okta.auth.GetServerResult.kid">
 <code class="sig-name descname">kid</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.auth.GetServerResult.kid" title="Permalink to this definition">¶</a></dt>
 <dd><p>auth server key id.</p>
@@ -70,12 +76,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>the activation status of the authorization server.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_okta.auth.GetServerResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.auth.GetServerResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
@@ -83,6 +83,9 @@ anything, please consult the source <a class="reference external" href="https://
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.auth.</code><code class="sig-name descname">Server</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">audiences=None</em>, <em class="sig-param">credentials_rotation_mode=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">issuer_mode=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.auth.Server" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an Authorization Server.</p>
 <p>This resource allows you to create and configure an Authorization Server.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/auth_server.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/auth_server.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -97,9 +100,6 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/auth_server.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/auth_server.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_okta.auth.Server.audiences">
 <code class="sig-name descname">audiences</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.auth.Server.audiences" title="Permalink to this definition">¶</a></dt>
@@ -184,9 +184,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/auth_server.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/auth_server.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -232,6 +229,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.auth.</code><code class="sig-name descname">ServerClaim</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">always_include_in_token=None</em>, <em class="sig-param">auth_server_id=None</em>, <em class="sig-param">claim_type=None</em>, <em class="sig-param">group_filter_type=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">scopes=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">value=None</em>, <em class="sig-param">value_type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.auth.ServerClaim" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an Authorization Server Claim.</p>
 <p>This resource allows you to create and configure an Authorization Server Claim.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/auth_server_claim.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/auth_server_claim.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -249,9 +249,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/auth_server_claim.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/auth_server_claim.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_okta.auth.ServerClaim.always_include_in_token">
 <code class="sig-name descname">always_include_in_token</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.auth.ServerClaim.always_include_in_token" title="Permalink to this definition">¶</a></dt>
@@ -329,9 +326,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/auth_server_claim.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/auth_server_claim.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -377,6 +371,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.auth.</code><code class="sig-name descname">ServerPolicy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auth_server_id=None</em>, <em class="sig-param">client_whitelists=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">priority=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.auth.ServerPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an Authorization Server Policy.</p>
 <p>This resource allows you to create and configure an Authorization Server Policy.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/auth_server_policy.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/auth_server_policy.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -392,9 +389,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/auth_server_policy.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/auth_server_policy.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_okta.auth.ServerPolicy.auth_server_id">
 <code class="sig-name descname">auth_server_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.auth.ServerPolicy.auth_server_id" title="Permalink to this definition">¶</a></dt>
@@ -458,9 +452,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/auth_server_policy.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/auth_server_policy.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -506,6 +497,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.auth.</code><code class="sig-name descname">ServerPolicyClaim</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_token_lifetime_minutes=None</em>, <em class="sig-param">auth_server_id=None</em>, <em class="sig-param">grant_type_whitelists=None</em>, <em class="sig-param">group_blacklists=None</em>, <em class="sig-param">group_whitelists=None</em>, <em class="sig-param">inline_hook_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">policy_id=None</em>, <em class="sig-param">priority=None</em>, <em class="sig-param">refresh_token_lifetime_minutes=None</em>, <em class="sig-param">refresh_token_window_minutes=None</em>, <em class="sig-param">scope_whitelists=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">user_blacklists=None</em>, <em class="sig-param">user_whitelists=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.auth.ServerPolicyClaim" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an Authorization Server Policy Rule.</p>
 <p>This resource allows you to create and configure an Authorization Server Policy Rule.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/auth_server_policy_rule.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/auth_server_policy_rule.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -525,9 +519,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/auth_server_policy_rule.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/auth_server_policy_rule.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_okta.auth.ServerPolicyClaim.access_token_lifetime_minutes">
 <code class="sig-name descname">access_token_lifetime_minutes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.auth.ServerPolicyClaim.access_token_lifetime_minutes" title="Permalink to this definition">¶</a></dt>
@@ -619,9 +610,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/auth_server_policy_rule.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/auth_server_policy_rule.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -667,6 +655,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.auth.</code><code class="sig-name descname">ServerScope</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auth_server_id=None</em>, <em class="sig-param">consent=None</em>, <em class="sig-param">default=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">metadata_publish=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.auth.ServerScope" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an Authorization Server Scope.</p>
 <p>This resource allows you to create and configure an Authorization Server Scope.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/auth_server_scope.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/auth_server_scope.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -681,9 +672,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/auth_server_scope.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/auth_server_scope.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_okta.auth.ServerScope.auth_server_id">
 <code class="sig-name descname">auth_server_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.auth.ServerScope.auth_server_id" title="Permalink to this definition">¶</a></dt>
@@ -740,9 +728,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/auth_server_scope.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/auth_server_scope.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -787,14 +772,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_okta.auth.get_server">
 <code class="sig-prename descclassname">pulumi_okta.auth.</code><code class="sig-name descname">get_server</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.auth.get_server" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve an auth server from Okta.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/auth_server.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/auth_server.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the auth server to retrieve.</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/auth_server.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/auth_server.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

@@ -15,7 +15,7 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_okta.idp"></span><dl class="class">
 <dt id="pulumi_okta.idp.AwaitableGetMetadataSamlResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.idp.</code><code class="sig-name descname">AwaitableGetMetadataSamlResult</code><span class="sig-paren">(</span><em class="sig-param">assertions_signed=None</em>, <em class="sig-param">authn_request_signed=None</em>, <em class="sig-param">encryption_certificate=None</em>, <em class="sig-param">entity_id=None</em>, <em class="sig-param">http_post_binding=None</em>, <em class="sig-param">http_redirect_binding=None</em>, <em class="sig-param">idp_id=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">signing_certificate=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.idp.AwaitableGetMetadataSamlResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.idp.</code><code class="sig-name descname">AwaitableGetMetadataSamlResult</code><span class="sig-paren">(</span><em class="sig-param">assertions_signed=None</em>, <em class="sig-param">authn_request_signed=None</em>, <em class="sig-param">encryption_certificate=None</em>, <em class="sig-param">entity_id=None</em>, <em class="sig-param">http_post_binding=None</em>, <em class="sig-param">http_redirect_binding=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">idp_id=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">signing_certificate=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.idp.AwaitableGetMetadataSamlResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -25,7 +25,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="class">
 <dt id="pulumi_okta.idp.GetMetadataSamlResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.idp.</code><code class="sig-name descname">GetMetadataSamlResult</code><span class="sig-paren">(</span><em class="sig-param">assertions_signed=None</em>, <em class="sig-param">authn_request_signed=None</em>, <em class="sig-param">encryption_certificate=None</em>, <em class="sig-param">entity_id=None</em>, <em class="sig-param">http_post_binding=None</em>, <em class="sig-param">http_redirect_binding=None</em>, <em class="sig-param">idp_id=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">signing_certificate=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.idp.GetMetadataSamlResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.idp.</code><code class="sig-name descname">GetMetadataSamlResult</code><span class="sig-paren">(</span><em class="sig-param">assertions_signed=None</em>, <em class="sig-param">authn_request_signed=None</em>, <em class="sig-param">encryption_certificate=None</em>, <em class="sig-param">entity_id=None</em>, <em class="sig-param">http_post_binding=None</em>, <em class="sig-param">http_redirect_binding=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">idp_id=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">signing_certificate=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.idp.GetMetadataSamlResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getMetadataSaml.</p>
 <dl class="attribute">
 <dt id="pulumi_okta.idp.GetMetadataSamlResult.assertions_signed">
@@ -64,6 +64,12 @@ anything, please consult the source <a class="reference external" href="https://
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_okta.idp.GetMetadataSamlResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.idp.GetMetadataSamlResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_okta.idp.GetMetadataSamlResult.metadata">
 <code class="sig-name descname">metadata</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.idp.GetMetadataSamlResult.metadata" title="Permalink to this definition">¶</a></dt>
 <dd><p>raw IdP metadata.</p>
@@ -73,12 +79,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_okta.idp.GetMetadataSamlResult.signing_certificate">
 <code class="sig-name descname">signing_certificate</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.idp.GetMetadataSamlResult.signing_certificate" title="Permalink to this definition">¶</a></dt>
 <dd><p>SAML request signing certificate.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_okta.idp.GetMetadataSamlResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.idp.GetMetadataSamlResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -178,6 +178,9 @@ anything, please consult the source <a class="reference external" href="https://
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.idp.</code><code class="sig-name descname">Oidc</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">account_link_action=None</em>, <em class="sig-param">account_link_group_includes=None</em>, <em class="sig-param">acs_binding=None</em>, <em class="sig-param">acs_type=None</em>, <em class="sig-param">authorization_binding=None</em>, <em class="sig-param">authorization_url=None</em>, <em class="sig-param">client_id=None</em>, <em class="sig-param">client_secret=None</em>, <em class="sig-param">deprovisioned_action=None</em>, <em class="sig-param">groups_action=None</em>, <em class="sig-param">groups_assignments=None</em>, <em class="sig-param">groups_attribute=None</em>, <em class="sig-param">groups_filters=None</em>, <em class="sig-param">issuer_mode=None</em>, <em class="sig-param">issuer_url=None</em>, <em class="sig-param">jwks_binding=None</em>, <em class="sig-param">jwks_url=None</em>, <em class="sig-param">max_clock_skew=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">profile_master=None</em>, <em class="sig-param">protocol_type=None</em>, <em class="sig-param">provisioning_action=None</em>, <em class="sig-param">request_signature_algorithm=None</em>, <em class="sig-param">request_signature_scope=None</em>, <em class="sig-param">response_signature_algorithm=None</em>, <em class="sig-param">response_signature_scope=None</em>, <em class="sig-param">scopes=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">subject_match_attribute=None</em>, <em class="sig-param">subject_match_type=None</em>, <em class="sig-param">suspended_action=None</em>, <em class="sig-param">token_binding=None</em>, <em class="sig-param">token_url=None</em>, <em class="sig-param">user_info_binding=None</em>, <em class="sig-param">user_info_url=None</em>, <em class="sig-param">username_template=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.idp.Oidc" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an OIDC Identity Provider.</p>
 <p>This resource allows you to create and configure an OIDC Identity Provider.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/idp_oidc.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/idp_oidc.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -205,6 +208,10 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><strong>profile_master</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Determines if the IdP should act as a source of truth for user profile attributes.</p></li>
 <li><p><strong>protocol_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of protocol to use. It can be <code class="docutils literal notranslate"><span class="pre">&quot;OIDC&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;OAUTH2&quot;</span></code>.</p></li>
 <li><p><strong>provisioning_action</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Provisioning action for an IdP user during authentication.</p></li>
+<li><p><strong>request_signature_algorithm</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – algorithm to use to sign requests</p></li>
+<li><p><strong>request_signature_scope</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – algorithm to use to sign response</p></li>
+<li><p><strong>response_signature_algorithm</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – algorithm to use to sign requests</p></li>
+<li><p><strong>response_signature_scope</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – algorithm to use to sign response</p></li>
 <li><p><strong>scopes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The scopes of the IdP.</p></li>
 <li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Status of the IdP.</p></li>
 <li><p><strong>subject_match_attribute</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Okta user profile attribute for matching transformed IdP username. Only for matchType <code class="docutils literal notranslate"><span class="pre">&quot;CUSTOM_ATTRIBUTE&quot;</span></code>.</p></li>
@@ -217,9 +224,6 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/idp_oidc.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/idp_oidc.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_okta.idp.Oidc.account_link_action">
 <code class="sig-name descname">account_link_action</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.idp.Oidc.account_link_action" title="Permalink to this definition">¶</a></dt>
@@ -353,6 +357,30 @@ anything, please consult the source <a class="reference external" href="https://
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_okta.idp.Oidc.request_signature_algorithm">
+<code class="sig-name descname">request_signature_algorithm</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.idp.Oidc.request_signature_algorithm" title="Permalink to this definition">¶</a></dt>
+<dd><p>algorithm to use to sign requests</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_okta.idp.Oidc.request_signature_scope">
+<code class="sig-name descname">request_signature_scope</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.idp.Oidc.request_signature_scope" title="Permalink to this definition">¶</a></dt>
+<dd><p>algorithm to use to sign response</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_okta.idp.Oidc.response_signature_algorithm">
+<code class="sig-name descname">response_signature_algorithm</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.idp.Oidc.response_signature_algorithm" title="Permalink to this definition">¶</a></dt>
+<dd><p>algorithm to use to sign requests</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_okta.idp.Oidc.response_signature_scope">
+<code class="sig-name descname">response_signature_scope</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.idp.Oidc.response_signature_scope" title="Permalink to this definition">¶</a></dt>
+<dd><p>algorithm to use to sign response</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_okta.idp.Oidc.scopes">
 <code class="sig-name descname">scopes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.idp.Oidc.scopes" title="Permalink to this definition">¶</a></dt>
 <dd><p>The scopes of the IdP.</p>
@@ -445,6 +473,10 @@ properties used to qualify the lookup.</p>
 <li><p><strong>profile_master</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Determines if the IdP should act as a source of truth for user profile attributes.</p></li>
 <li><p><strong>protocol_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of protocol to use. It can be <code class="docutils literal notranslate"><span class="pre">&quot;OIDC&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;OAUTH2&quot;</span></code>.</p></li>
 <li><p><strong>provisioning_action</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Provisioning action for an IdP user during authentication.</p></li>
+<li><p><strong>request_signature_algorithm</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – algorithm to use to sign requests</p></li>
+<li><p><strong>request_signature_scope</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – algorithm to use to sign response</p></li>
+<li><p><strong>response_signature_algorithm</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – algorithm to use to sign requests</p></li>
+<li><p><strong>response_signature_scope</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – algorithm to use to sign response</p></li>
 <li><p><strong>scopes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The scopes of the IdP.</p></li>
 <li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Status of the IdP.</p></li>
 <li><p><strong>subject_match_attribute</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Okta user profile attribute for matching transformed IdP username. Only for matchType <code class="docutils literal notranslate"><span class="pre">&quot;CUSTOM_ATTRIBUTE&quot;</span></code>.</p></li>
@@ -458,9 +490,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/idp_oidc.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/idp_oidc.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -506,6 +535,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.idp.</code><code class="sig-name descname">Saml</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">account_link_action=None</em>, <em class="sig-param">account_link_group_includes=None</em>, <em class="sig-param">acs_binding=None</em>, <em class="sig-param">acs_type=None</em>, <em class="sig-param">deprovisioned_action=None</em>, <em class="sig-param">groups_action=None</em>, <em class="sig-param">groups_assignments=None</em>, <em class="sig-param">groups_attribute=None</em>, <em class="sig-param">groups_filters=None</em>, <em class="sig-param">issuer=None</em>, <em class="sig-param">issuer_mode=None</em>, <em class="sig-param">kid=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_format=None</em>, <em class="sig-param">profile_master=None</em>, <em class="sig-param">provisioning_action=None</em>, <em class="sig-param">request_signature_algorithm=None</em>, <em class="sig-param">request_signature_scope=None</em>, <em class="sig-param">response_signature_algorithm=None</em>, <em class="sig-param">response_signature_scope=None</em>, <em class="sig-param">sso_binding=None</em>, <em class="sig-param">sso_destination=None</em>, <em class="sig-param">sso_url=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">subject_filter=None</em>, <em class="sig-param">subject_formats=None</em>, <em class="sig-param">subject_match_attribute=None</em>, <em class="sig-param">subject_match_type=None</em>, <em class="sig-param">suspended_action=None</em>, <em class="sig-param">username_template=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.idp.Saml" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a SAML Identity Provider.</p>
 <p>This resource allows you to create and configure a SAML Identity Provider.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/idp_saml.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/idp_saml.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -544,9 +576,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/idp_saml.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/idp_saml.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_okta.idp.Saml.account_link_action">
 <code class="sig-name descname">account_link_action</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.idp.Saml.account_link_action" title="Permalink to this definition">¶</a></dt>
@@ -785,9 +814,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/idp_saml.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/idp_saml.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -833,6 +859,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.idp.</code><code class="sig-name descname">SamlKey</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">x5cs=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.idp.SamlKey" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a SAML Identity Provider Signing Key.</p>
 <p>This resource allows you to create and configure a SAML Identity Provider Signing Key.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/idp_saml_signing_key.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/idp_saml_signing_key.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -842,9 +871,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/idp_saml_key.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/idp_saml_key.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_okta.idp.SamlKey.created">
 <code class="sig-name descname">created</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.idp.SamlKey.created" title="Permalink to this definition">¶</a></dt>
@@ -908,9 +934,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/idp_saml_key.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/idp_saml_key.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -956,6 +979,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.idp.</code><code class="sig-name descname">Social</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">account_link_action=None</em>, <em class="sig-param">account_link_group_includes=None</em>, <em class="sig-param">client_id=None</em>, <em class="sig-param">client_secret=None</em>, <em class="sig-param">deprovisioned_action=None</em>, <em class="sig-param">groups_action=None</em>, <em class="sig-param">groups_assignments=None</em>, <em class="sig-param">groups_attribute=None</em>, <em class="sig-param">groups_filters=None</em>, <em class="sig-param">issuer_mode=None</em>, <em class="sig-param">match_attribute=None</em>, <em class="sig-param">match_type=None</em>, <em class="sig-param">max_clock_skew=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">profile_master=None</em>, <em class="sig-param">protocol_type=None</em>, <em class="sig-param">provisioning_action=None</em>, <em class="sig-param">request_signature_algorithm=None</em>, <em class="sig-param">request_signature_scope=None</em>, <em class="sig-param">response_signature_algorithm=None</em>, <em class="sig-param">response_signature_scope=None</em>, <em class="sig-param">scopes=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">subject_match_attribute=None</em>, <em class="sig-param">subject_match_type=None</em>, <em class="sig-param">suspended_action=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">username_template=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.idp.Social" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an Social Identity Provider.</p>
 <p>This resource allows you to create and configure an Social Identity Provider.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/idp_social.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/idp_social.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -990,9 +1016,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/idp_social.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/idp_social.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_okta.idp.Social.account_link_action">
 <code class="sig-name descname">account_link_action</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.idp.Social.account_link_action" title="Permalink to this definition">¶</a></dt>
@@ -1217,9 +1240,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/idp_social.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/idp_social.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1264,20 +1284,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_okta.idp.get_metadata_saml">
 <code class="sig-prename descclassname">pulumi_okta.idp.</code><code class="sig-name descname">get_metadata_saml</code><span class="sig-paren">(</span><em class="sig-param">idp_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.idp.get_metadata_saml" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve SAML IdP metadata from Okta.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/idp_metadata_saml.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/idp_metadata_saml.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>idp_id</strong> (<em>str</em>) – The id of the IdP to retrieve metadata for.</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/idp_metadata_saml.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/idp_metadata_saml.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_okta.idp.get_saml">
 <code class="sig-prename descclassname">pulumi_okta.idp.</code><code class="sig-name descname">get_saml</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.idp.get_saml" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve a SAML IdP from Okta.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/idp_saml.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/idp_saml.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1286,9 +1309,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/idp_saml.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/idp_saml.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

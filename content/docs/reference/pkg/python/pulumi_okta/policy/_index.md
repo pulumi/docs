@@ -15,36 +15,42 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_okta.policy"></span><dl class="class">
 <dt id="pulumi_okta.policy.AwaitableGetDefaultPolicyResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.policy.</code><code class="sig-name descname">AwaitableGetDefaultPolicyResult</code><span class="sig-paren">(</span><em class="sig-param">type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.policy.AwaitableGetDefaultPolicyResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.policy.</code><code class="sig-name descname">AwaitableGetDefaultPolicyResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.policy.AwaitableGetDefaultPolicyResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_okta.policy.AwaitableGetPolicyResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.policy.</code><code class="sig-name descname">AwaitableGetPolicyResult</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.policy.AwaitableGetPolicyResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.policy.</code><code class="sig-name descname">AwaitableGetPolicyResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.policy.AwaitableGetPolicyResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_okta.policy.GetDefaultPolicyResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.policy.</code><code class="sig-name descname">GetDefaultPolicyResult</code><span class="sig-paren">(</span><em class="sig-param">type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.policy.GetDefaultPolicyResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.policy.</code><code class="sig-name descname">GetDefaultPolicyResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.policy.GetDefaultPolicyResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getDefaultPolicy.</p>
-<dl class="attribute">
-<dt id="pulumi_okta.policy.GetDefaultPolicyResult.type">
-<code class="sig-name descname">type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.policy.GetDefaultPolicyResult.type" title="Permalink to this definition">¶</a></dt>
-<dd><p>type of policy.</p>
-</dd></dl>
-
 <dl class="attribute">
 <dt id="pulumi_okta.policy.GetDefaultPolicyResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.policy.GetDefaultPolicyResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_okta.policy.GetDefaultPolicyResult.type">
+<code class="sig-name descname">type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.policy.GetDefaultPolicyResult.type" title="Permalink to this definition">¶</a></dt>
+<dd><p>type of policy.</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_okta.policy.GetPolicyResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.policy.</code><code class="sig-name descname">GetPolicyResult</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.policy.GetPolicyResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.policy.</code><code class="sig-name descname">GetPolicyResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.policy.GetPolicyResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getPolicy.</p>
+<dl class="attribute">
+<dt id="pulumi_okta.policy.GetPolicyResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.policy.GetPolicyResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_okta.policy.GetPolicyResult.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.policy.GetPolicyResult.name" title="Permalink to this definition">¶</a></dt>
@@ -57,12 +63,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>type of policy.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_okta.policy.GetPolicyResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.policy.GetPolicyResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
@@ -70,6 +70,9 @@ anything, please consult the source <a class="reference external" href="https://
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.policy.</code><code class="sig-name descname">Mfa</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">duo=None</em>, <em class="sig-param">fido_u2f=None</em>, <em class="sig-param">fido_webauthn=None</em>, <em class="sig-param">google_otp=None</em>, <em class="sig-param">groups_includeds=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">okta_call=None</em>, <em class="sig-param">okta_otp=None</em>, <em class="sig-param">okta_password=None</em>, <em class="sig-param">okta_push=None</em>, <em class="sig-param">okta_question=None</em>, <em class="sig-param">okta_sms=None</em>, <em class="sig-param">priority=None</em>, <em class="sig-param">rsa_token=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">symantec_vip=None</em>, <em class="sig-param">yubikey_token=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.policy.Mfa" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an MFA Policy.</p>
 <p>This resource allows you to create and configure an MFA Policy.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_mfa.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_mfa.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -161,9 +164,6 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><code class="docutils literal notranslate"><span class="pre">consent_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - User consent type required before enrolling in the factor: <code class="docutils literal notranslate"><span class="pre">&quot;NONE&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;TERMS_OF_SERVICE&quot;</span></code>. By default it is <code class="docutils literal notranslate"><span class="pre">&quot;NONE&quot;</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">enroll</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Requirements for user initiated enrollment. Can be <code class="docutils literal notranslate"><span class="pre">&quot;NOT_ALLOWED&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;OPTIONAL&quot;</span></code>, or <code class="docutils literal notranslate"><span class="pre">&quot;REQUIRED&quot;</span></code>. By default it is <code class="docutils literal notranslate"><span class="pre">&quot;OPTIONAL&quot;</span></code>.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_mfa.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_mfa.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_okta.policy.Mfa.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.policy.Mfa.description" title="Permalink to this definition">¶</a></dt>
@@ -421,9 +421,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">consent_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - User consent type required before enrolling in the factor: <code class="docutils literal notranslate"><span class="pre">&quot;NONE&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;TERMS_OF_SERVICE&quot;</span></code>. By default it is <code class="docutils literal notranslate"><span class="pre">&quot;NONE&quot;</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">enroll</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Requirements for user initiated enrollment. Can be <code class="docutils literal notranslate"><span class="pre">&quot;NOT_ALLOWED&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;OPTIONAL&quot;</span></code>, or <code class="docutils literal notranslate"><span class="pre">&quot;REQUIRED&quot;</span></code>. By default it is <code class="docutils literal notranslate"><span class="pre">&quot;OPTIONAL&quot;</span></code>.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_mfa.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_mfa.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -469,6 +466,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.policy.</code><code class="sig-name descname">Password</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auth_provider=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">email_recovery=None</em>, <em class="sig-param">groups_includeds=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">password_auto_unlock_minutes=None</em>, <em class="sig-param">password_dictionary_lookup=None</em>, <em class="sig-param">password_exclude_first_name=None</em>, <em class="sig-param">password_exclude_last_name=None</em>, <em class="sig-param">password_exclude_username=None</em>, <em class="sig-param">password_expire_warn_days=None</em>, <em class="sig-param">password_history_count=None</em>, <em class="sig-param">password_max_age_days=None</em>, <em class="sig-param">password_max_lockout_attempts=None</em>, <em class="sig-param">password_min_age_minutes=None</em>, <em class="sig-param">password_min_length=None</em>, <em class="sig-param">password_min_lowercase=None</em>, <em class="sig-param">password_min_number=None</em>, <em class="sig-param">password_min_symbol=None</em>, <em class="sig-param">password_min_uppercase=None</em>, <em class="sig-param">password_show_lockout_failures=None</em>, <em class="sig-param">priority=None</em>, <em class="sig-param">question_min_length=None</em>, <em class="sig-param">question_recovery=None</em>, <em class="sig-param">recovery_email_token=None</em>, <em class="sig-param">skip_unlock=None</em>, <em class="sig-param">sms_recovery=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.policy.Password" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a Password Policy.</p>
 <p>This resource allows you to create and configure a Password Policy.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_password.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_password.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -505,9 +505,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_password.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_password.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_okta.policy.Password.auth_provider">
 <code class="sig-name descname">auth_provider</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.policy.Password.auth_provider" title="Permalink to this definition">¶</a></dt>
@@ -718,9 +715,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_password.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_password.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -766,11 +760,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.policy.</code><code class="sig-name descname">RuleIdpDiscovery</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">app_excludes=None</em>, <em class="sig-param">app_includes=None</em>, <em class="sig-param">idp_id=None</em>, <em class="sig-param">idp_type=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_connection=None</em>, <em class="sig-param">network_excludes=None</em>, <em class="sig-param">network_includes=None</em>, <em class="sig-param">platform_includes=None</em>, <em class="sig-param">policyid=None</em>, <em class="sig-param">priority=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">user_identifier_attribute=None</em>, <em class="sig-param">user_identifier_patterns=None</em>, <em class="sig-param">user_identifier_type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.policy.RuleIdpDiscovery" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an IdP Discovery Policy Rule.</p>
 <p>This resource allows you to create and configure an IdP Discovery Policy Rule.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_rule_idp_discovery.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_rule_idp_discovery.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>app_excludes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Applications to exclude in discovery rule</p></li>
+<li><p><strong>app_includes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Applications to include in discovery rule</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Policy Rule Name.</p></li>
 <li><p><strong>network_connection</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Network selection mode: <code class="docutils literal notranslate"><span class="pre">&quot;ANYWHERE&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;ZONE&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;ON_NETWORK&quot;</span></code>, or <code class="docutils literal notranslate"><span class="pre">&quot;OFF_NETWORK&quot;</span></code>.</p></li>
 <li><p><strong>network_excludes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The network zones to exclude. Conflicts with <code class="docutils literal notranslate"><span class="pre">network_includes</span></code>.</p></li>
@@ -804,9 +803,28 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">match_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_rule_idp_discovery.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_rule_idp_discovery.html.markdown</a>.</p>
-</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_okta.policy.RuleIdpDiscovery.app_excludes">
+<code class="sig-name descname">app_excludes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.policy.RuleIdpDiscovery.app_excludes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applications to exclude in discovery rule</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - ID of the Rule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Policy Rule Name.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_okta.policy.RuleIdpDiscovery.app_includes">
+<code class="sig-name descname">app_includes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.policy.RuleIdpDiscovery.app_includes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applications to include in discovery rule</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - ID of the Rule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Policy Rule Name.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_okta.policy.RuleIdpDiscovery.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.policy.RuleIdpDiscovery.name" title="Permalink to this definition">¶</a></dt>
@@ -860,6 +878,8 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>app_excludes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Applications to exclude in discovery rule</p></li>
+<li><p><strong>app_includes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Applications to include in discovery rule</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Policy Rule Name.</p></li>
 <li><p><strong>network_connection</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Network selection mode: <code class="docutils literal notranslate"><span class="pre">&quot;ANYWHERE&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;ZONE&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;ON_NETWORK&quot;</span></code>, or <code class="docutils literal notranslate"><span class="pre">&quot;OFF_NETWORK&quot;</span></code>.</p></li>
 <li><p><strong>network_excludes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The network zones to exclude. Conflicts with <code class="docutils literal notranslate"><span class="pre">network_includes</span></code>.</p></li>
@@ -893,9 +913,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">match_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_rule_idp_discovery.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_rule_idp_discovery.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -941,6 +958,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.policy.</code><code class="sig-name descname">RuleMfa</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">enroll=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_connection=None</em>, <em class="sig-param">network_excludes=None</em>, <em class="sig-param">network_includes=None</em>, <em class="sig-param">policyid=None</em>, <em class="sig-param">priority=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">users_excludeds=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.policy.RuleMfa" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an MFA Policy Rule.</p>
 <p>This resource allows you to create and configure an MFA Policy Rule.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_rule_mfa.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_rule_mfa.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -954,12 +974,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>policyid</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Policy ID.</p></li>
 <li><p><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an invalid priority is provided. API defaults it to the last/lowest if not there.</p></li>
 <li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Policy Rule Status: <code class="docutils literal notranslate"><span class="pre">&quot;ACTIVE&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;INACTIVE&quot;</span></code>.</p></li>
+<li><p><strong>users_excludeds</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Set of User IDs to Exclude</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_rule_mfa.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_rule_mfa.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_okta.policy.RuleMfa.enroll">
 <code class="sig-name descname">enroll</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.policy.RuleMfa.enroll" title="Permalink to this definition">¶</a></dt>
@@ -1008,6 +1026,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Policy Rule Status: <code class="docutils literal notranslate"><span class="pre">&quot;ACTIVE&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;INACTIVE&quot;</span></code>.</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_okta.policy.RuleMfa.users_excludeds">
+<code class="sig-name descname">users_excludeds</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.policy.RuleMfa.users_excludeds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set of User IDs to Exclude</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_okta.policy.RuleMfa.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">enroll=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_connection=None</em>, <em class="sig-param">network_excludes=None</em>, <em class="sig-param">network_includes=None</em>, <em class="sig-param">policyid=None</em>, <em class="sig-param">priority=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">users_excludeds=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.policy.RuleMfa.get" title="Permalink to this definition">¶</a></dt>
@@ -1027,12 +1051,10 @@ properties used to qualify the lookup.</p>
 <li><p><strong>policyid</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Policy ID.</p></li>
 <li><p><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an invalid priority is provided. API defaults it to the last/lowest if not there.</p></li>
 <li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Policy Rule Status: <code class="docutils literal notranslate"><span class="pre">&quot;ACTIVE&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;INACTIVE&quot;</span></code>.</p></li>
+<li><p><strong>users_excludeds</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Set of User IDs to Exclude</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_rule_mfa.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_rule_mfa.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1078,6 +1100,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.policy.</code><code class="sig-name descname">RulePassword</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_connection=None</em>, <em class="sig-param">network_excludes=None</em>, <em class="sig-param">network_includes=None</em>, <em class="sig-param">password_change=None</em>, <em class="sig-param">password_reset=None</em>, <em class="sig-param">password_unlock=None</em>, <em class="sig-param">policyid=None</em>, <em class="sig-param">priority=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">users_excludeds=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.policy.RulePassword" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a Password Policy Rule.</p>
 <p>This resource allows you to create and configure a Password Policy Rule.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_rule_password.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_rule_password.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1093,12 +1118,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>policyid</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Policy ID.</p></li>
 <li><p><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an invalid priority is provided. API defaults it to the last/lowest if not there.</p></li>
 <li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Policy Rule Status: <code class="docutils literal notranslate"><span class="pre">&quot;ACTIVE&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;INACTIVE&quot;</span></code>.</p></li>
+<li><p><strong>users_excludeds</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Set of User IDs to Exclude</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_rule_password.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_rule_password.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_okta.policy.RulePassword.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.policy.RulePassword.name" title="Permalink to this definition">¶</a></dt>
@@ -1159,6 +1182,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Policy Rule Status: <code class="docutils literal notranslate"><span class="pre">&quot;ACTIVE&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;INACTIVE&quot;</span></code>.</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_okta.policy.RulePassword.users_excludeds">
+<code class="sig-name descname">users_excludeds</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.policy.RulePassword.users_excludeds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set of User IDs to Exclude</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_okta.policy.RulePassword.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_connection=None</em>, <em class="sig-param">network_excludes=None</em>, <em class="sig-param">network_includes=None</em>, <em class="sig-param">password_change=None</em>, <em class="sig-param">password_reset=None</em>, <em class="sig-param">password_unlock=None</em>, <em class="sig-param">policyid=None</em>, <em class="sig-param">priority=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">users_excludeds=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.policy.RulePassword.get" title="Permalink to this definition">¶</a></dt>
@@ -1180,12 +1209,10 @@ properties used to qualify the lookup.</p>
 <li><p><strong>policyid</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Policy ID.</p></li>
 <li><p><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an invalid priority is provided. API defaults it to the last/lowest if not there.</p></li>
 <li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Policy Rule Status: <code class="docutils literal notranslate"><span class="pre">&quot;ACTIVE&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;INACTIVE&quot;</span></code>.</p></li>
+<li><p><strong>users_excludeds</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Set of User IDs to Exclude</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_rule_password.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_rule_password.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1230,6 +1257,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_okta.policy.RuleSignon">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.policy.</code><code class="sig-name descname">RuleSignon</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access=None</em>, <em class="sig-param">authtype=None</em>, <em class="sig-param">mfa_lifetime=None</em>, <em class="sig-param">mfa_prompt=None</em>, <em class="sig-param">mfa_remember_device=None</em>, <em class="sig-param">mfa_required=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_connection=None</em>, <em class="sig-param">network_excludes=None</em>, <em class="sig-param">network_includes=None</em>, <em class="sig-param">policyid=None</em>, <em class="sig-param">priority=None</em>, <em class="sig-param">session_idle=None</em>, <em class="sig-param">session_lifetime=None</em>, <em class="sig-param">session_persistent=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">users_excludeds=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.policy.RuleSignon" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a Sign On Policy Rule.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_rule_signon.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_rule_signon.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1251,12 +1281,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>session_lifetime</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Max minutes a session is active: Disable = 0.</p></li>
 <li><p><strong>session_persistent</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether session cookies will last across browser sessions. Okta Administrators can never have persistent session cookies.</p></li>
 <li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Policy Rule Status: <code class="docutils literal notranslate"><span class="pre">&quot;ACTIVE&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;INACTIVE&quot;</span></code>.</p></li>
+<li><p><strong>users_excludeds</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Set of User IDs to Exclude</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_rule_signon.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_rule_signon.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_okta.policy.RuleSignon.access">
 <code class="sig-name descname">access</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.policy.RuleSignon.access" title="Permalink to this definition">¶</a></dt>
@@ -1353,6 +1381,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Policy Rule Status: <code class="docutils literal notranslate"><span class="pre">&quot;ACTIVE&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;INACTIVE&quot;</span></code>.</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_okta.policy.RuleSignon.users_excludeds">
+<code class="sig-name descname">users_excludeds</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.policy.RuleSignon.users_excludeds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set of User IDs to Exclude</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_okta.policy.RuleSignon.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access=None</em>, <em class="sig-param">authtype=None</em>, <em class="sig-param">mfa_lifetime=None</em>, <em class="sig-param">mfa_prompt=None</em>, <em class="sig-param">mfa_remember_device=None</em>, <em class="sig-param">mfa_required=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_connection=None</em>, <em class="sig-param">network_excludes=None</em>, <em class="sig-param">network_includes=None</em>, <em class="sig-param">policyid=None</em>, <em class="sig-param">priority=None</em>, <em class="sig-param">session_idle=None</em>, <em class="sig-param">session_lifetime=None</em>, <em class="sig-param">session_persistent=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">users_excludeds=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.policy.RuleSignon.get" title="Permalink to this definition">¶</a></dt>
@@ -1380,12 +1414,10 @@ properties used to qualify the lookup.</p>
 <li><p><strong>session_lifetime</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Max minutes a session is active: Disable = 0.</p></li>
 <li><p><strong>session_persistent</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether session cookies will last across browser sessions. Okta Administrators can never have persistent session cookies.</p></li>
 <li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Policy Rule Status: <code class="docutils literal notranslate"><span class="pre">&quot;ACTIVE&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;INACTIVE&quot;</span></code>.</p></li>
+<li><p><strong>users_excludeds</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Set of User IDs to Exclude</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_rule_signon.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_rule_signon.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1431,6 +1463,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.policy.</code><code class="sig-name descname">Signon</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">groups_includeds=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">priority=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.policy.Signon" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a Sign On Policy.</p>
 <p>This resource allows you to create and configure a Sign On Policy.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_signon.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_signon.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1444,9 +1479,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_signon.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_signon.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_okta.policy.Signon.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.policy.Signon.description" title="Permalink to this definition">¶</a></dt>
@@ -1496,9 +1528,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_signon.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_signon.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1543,20 +1572,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_okta.policy.get_default_policy">
 <code class="sig-prename descclassname">pulumi_okta.policy.</code><code class="sig-name descname">get_default_policy</code><span class="sig-paren">(</span><em class="sig-param">type=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.policy.get_default_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve a “Default” policy from Okta. This same thing can be achieved using the <code class="docutils literal notranslate"><span class="pre">policy.getPolicy</span></code> with <code class="docutils literal notranslate"><span class="pre">name</span> <span class="pre">=</span> <span class="pre">&quot;Default&quot;</span></code>, this is simply a shortcut.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/default_policy.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/default_policy.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>type</strong> (<em>str</em>) – type of policy to retrieve.</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/default_policy.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/default_policy.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_okta.policy.get_policy">
 <code class="sig-prename descclassname">pulumi_okta.policy.</code><code class="sig-name descname">get_policy</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.policy.get_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve a policy from Okta.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/policy.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/policy.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1565,9 +1597,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/policy.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/policy.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>
