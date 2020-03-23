@@ -18,14 +18,30 @@ anything, please consult the source <a class="reference external" href="https://
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.app.</code><code class="sig-name descname">AutoLogin</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">accessibility_error_redirect_url=None</em>, <em class="sig-param">accessibility_self_service=None</em>, <em class="sig-param">auto_submit_toolbar=None</em>, <em class="sig-param">credentials_scheme=None</em>, <em class="sig-param">groups=None</em>, <em class="sig-param">hide_ios=None</em>, <em class="sig-param">hide_web=None</em>, <em class="sig-param">label=None</em>, <em class="sig-param">preconfigured_app=None</em>, <em class="sig-param">reveal_password=None</em>, <em class="sig-param">shared_password=None</em>, <em class="sig-param">shared_username=None</em>, <em class="sig-param">sign_on_redirect_url=None</em>, <em class="sig-param">sign_on_url=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">users=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.app.AutoLogin" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an Auto Login Okta Application.</p>
 <p>This resource allows you to create and configure an Auto Login Okta Application.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_auto_login.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_auto_login.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>accessibility_error_redirect_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Custom error page URL</p></li>
+<li><p><strong>accessibility_self_service</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable self service</p></li>
+<li><p><strong>auto_submit_toolbar</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Display auto submit toolbar</p></li>
+<li><p><strong>credentials_scheme</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Application credentials scheme</p></li>
+<li><p><strong>groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Groups associated with the application</p></li>
+<li><p><strong>hide_ios</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Do not display application icon on mobile app</p></li>
+<li><p><strong>hide_web</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Do not display application icon to users</p></li>
 <li><p><strong>label</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Application’s display name.</p></li>
 <li><p><strong>preconfigured_app</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Tells Okta to use an existing application in their application catalog, as opposed to a custom application.</p></li>
+<li><p><strong>reveal_password</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allow user to reveal password</p></li>
+<li><p><strong>shared_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Shared password, required for certain schemes.</p></li>
+<li><p><strong>shared_username</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Shared username, required for certain schemes.</p></li>
+<li><p><strong>sign_on_redirect_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Post login redirect URL</p></li>
+<li><p><strong>sign_on_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Login URL</p></li>
 <li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The status of the application, by default it is <code class="docutils literal notranslate"><span class="pre">&quot;ACTIVE&quot;</span></code>.</p></li>
+<li><p><strong>users</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Users associated with the application</p></li>
 </ul>
 </dd>
 </dl>
@@ -36,9 +52,48 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><code class="docutils literal notranslate"><span class="pre">scope</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_auto_login.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_auto_login.html.markdown</a>.</p>
-</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_okta.app.AutoLogin.accessibility_error_redirect_url">
+<code class="sig-name descname">accessibility_error_redirect_url</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.app.AutoLogin.accessibility_error_redirect_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Custom error page URL</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_okta.app.AutoLogin.accessibility_self_service">
+<code class="sig-name descname">accessibility_self_service</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.app.AutoLogin.accessibility_self_service" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable self service</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_okta.app.AutoLogin.auto_submit_toolbar">
+<code class="sig-name descname">auto_submit_toolbar</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.app.AutoLogin.auto_submit_toolbar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display auto submit toolbar</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_okta.app.AutoLogin.credentials_scheme">
+<code class="sig-name descname">credentials_scheme</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.app.AutoLogin.credentials_scheme" title="Permalink to this definition">¶</a></dt>
+<dd><p>Application credentials scheme</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_okta.app.AutoLogin.groups">
+<code class="sig-name descname">groups</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.app.AutoLogin.groups" title="Permalink to this definition">¶</a></dt>
+<dd><p>Groups associated with the application</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_okta.app.AutoLogin.hide_ios">
+<code class="sig-name descname">hide_ios</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.app.AutoLogin.hide_ios" title="Permalink to this definition">¶</a></dt>
+<dd><p>Do not display application icon on mobile app</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_okta.app.AutoLogin.hide_web">
+<code class="sig-name descname">hide_web</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.app.AutoLogin.hide_web" title="Permalink to this definition">¶</a></dt>
+<dd><p>Do not display application icon to users</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_okta.app.AutoLogin.label">
 <code class="sig-name descname">label</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.app.AutoLogin.label" title="Permalink to this definition">¶</a></dt>
@@ -58,15 +113,69 @@ anything, please consult the source <a class="reference external" href="https://
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_okta.app.AutoLogin.reveal_password">
+<code class="sig-name descname">reveal_password</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.app.AutoLogin.reveal_password" title="Permalink to this definition">¶</a></dt>
+<dd><p>Allow user to reveal password</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_okta.app.AutoLogin.shared_password">
+<code class="sig-name descname">shared_password</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.app.AutoLogin.shared_password" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shared password, required for certain schemes.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_okta.app.AutoLogin.shared_username">
+<code class="sig-name descname">shared_username</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.app.AutoLogin.shared_username" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shared username, required for certain schemes.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_okta.app.AutoLogin.sign_on_mode">
 <code class="sig-name descname">sign_on_mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.app.AutoLogin.sign_on_mode" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sign on mode of application.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_okta.app.AutoLogin.sign_on_redirect_url">
+<code class="sig-name descname">sign_on_redirect_url</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.app.AutoLogin.sign_on_redirect_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Post login redirect URL</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_okta.app.AutoLogin.sign_on_url">
+<code class="sig-name descname">sign_on_url</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.app.AutoLogin.sign_on_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Login URL</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_okta.app.AutoLogin.status">
 <code class="sig-name descname">status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.app.AutoLogin.status" title="Permalink to this definition">¶</a></dt>
 <dd><p>The status of the application, by default it is <code class="docutils literal notranslate"><span class="pre">&quot;ACTIVE&quot;</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_okta.app.AutoLogin.user_name_template">
+<code class="sig-name descname">user_name_template</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.app.AutoLogin.user_name_template" title="Permalink to this definition">¶</a></dt>
+<dd><p>Username template</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_okta.app.AutoLogin.user_name_template_type">
+<code class="sig-name descname">user_name_template_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.app.AutoLogin.user_name_template_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Username template type</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_okta.app.AutoLogin.users">
+<code class="sig-name descname">users</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.app.AutoLogin.users" title="Permalink to this definition">¶</a></dt>
+<dd><p>Users associated with the application</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scope</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="method">
@@ -80,11 +189,26 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>accessibility_error_redirect_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Custom error page URL</p></li>
+<li><p><strong>accessibility_self_service</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable self service</p></li>
+<li><p><strong>auto_submit_toolbar</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Display auto submit toolbar</p></li>
+<li><p><strong>credentials_scheme</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Application credentials scheme</p></li>
+<li><p><strong>groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Groups associated with the application</p></li>
+<li><p><strong>hide_ios</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Do not display application icon on mobile app</p></li>
+<li><p><strong>hide_web</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Do not display application icon to users</p></li>
 <li><p><strong>label</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Application’s display name.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name assigned to the application by Okta.</p></li>
 <li><p><strong>preconfigured_app</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Tells Okta to use an existing application in their application catalog, as opposed to a custom application.</p></li>
+<li><p><strong>reveal_password</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allow user to reveal password</p></li>
+<li><p><strong>shared_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Shared password, required for certain schemes.</p></li>
+<li><p><strong>shared_username</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Shared username, required for certain schemes.</p></li>
 <li><p><strong>sign_on_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Sign on mode of application.</p></li>
+<li><p><strong>sign_on_redirect_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Post login redirect URL</p></li>
+<li><p><strong>sign_on_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Login URL</p></li>
 <li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The status of the application, by default it is <code class="docutils literal notranslate"><span class="pre">&quot;ACTIVE&quot;</span></code>.</p></li>
+<li><p><strong>user_name_template</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Username template</p></li>
+<li><p><strong>user_name_template_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Username template type</p></li>
+<li><p><strong>users</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Users associated with the application</p></li>
 </ul>
 </dd>
 </dl>
@@ -95,9 +219,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">scope</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_auto_login.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_auto_login.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -145,7 +266,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_okta.app.AwaitableGetMetadataSamlResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.app.</code><code class="sig-name descname">AwaitableGetMetadataSamlResult</code><span class="sig-paren">(</span><em class="sig-param">app_id=None</em>, <em class="sig-param">certificate=None</em>, <em class="sig-param">entity_id=None</em>, <em class="sig-param">http_post_binding=None</em>, <em class="sig-param">http_redirect_binding=None</em>, <em class="sig-param">key_id=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">want_authn_requests_signed=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.app.AwaitableGetMetadataSamlResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.app.</code><code class="sig-name descname">AwaitableGetMetadataSamlResult</code><span class="sig-paren">(</span><em class="sig-param">app_id=None</em>, <em class="sig-param">certificate=None</em>, <em class="sig-param">entity_id=None</em>, <em class="sig-param">http_post_binding=None</em>, <em class="sig-param">http_redirect_binding=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">key_id=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">want_authn_requests_signed=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.app.AwaitableGetMetadataSamlResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -158,14 +279,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.app.</code><code class="sig-name descname">BasicAuth</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auth_url=None</em>, <em class="sig-param">auto_submit_toolbar=None</em>, <em class="sig-param">groups=None</em>, <em class="sig-param">hide_ios=None</em>, <em class="sig-param">hide_web=None</em>, <em class="sig-param">label=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">url=None</em>, <em class="sig-param">users=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.app.BasicAuth" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a Bsaic Auth Application.</p>
 <p>This resource allows you to create and configure a Basic Auth Application.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_basic_auth.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_basic_auth.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>auth_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URL of the authenticating site for this app.</p></li>
+<li><p><strong>auto_submit_toolbar</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Display auto submit toolbar</p></li>
+<li><p><strong>groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Groups associated with the application</p></li>
+<li><p><strong>hide_ios</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Do not display application icon on mobile app</p></li>
+<li><p><strong>hide_web</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Do not display application icon to users</p></li>
 <li><p><strong>label</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Application’s display name.</p></li>
+<li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Status of application.</p></li>
 <li><p><strong>url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URL of the sign-in page for this app.</p></li>
+<li><p><strong>users</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Users associated with the application</p></li>
 </ul>
 </dd>
 </dl>
@@ -176,13 +306,34 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">scope</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_basic_auth.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_basic_auth.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_okta.app.BasicAuth.auth_url">
 <code class="sig-name descname">auth_url</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.app.BasicAuth.auth_url" title="Permalink to this definition">¶</a></dt>
 <dd><p>The URL of the authenticating site for this app.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_okta.app.BasicAuth.auto_submit_toolbar">
+<code class="sig-name descname">auto_submit_toolbar</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.app.BasicAuth.auto_submit_toolbar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display auto submit toolbar</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_okta.app.BasicAuth.groups">
+<code class="sig-name descname">groups</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.app.BasicAuth.groups" title="Permalink to this definition">¶</a></dt>
+<dd><p>Groups associated with the application</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_okta.app.BasicAuth.hide_ios">
+<code class="sig-name descname">hide_ios</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.app.BasicAuth.hide_ios" title="Permalink to this definition">¶</a></dt>
+<dd><p>Do not display application icon on mobile app</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_okta.app.BasicAuth.hide_web">
+<code class="sig-name descname">hide_web</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.app.BasicAuth.hide_web" title="Permalink to this definition">¶</a></dt>
+<dd><p>Do not display application icon to users</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -192,9 +343,39 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_okta.app.BasicAuth.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.app.BasicAuth.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>name of app.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_okta.app.BasicAuth.sign_on_mode">
+<code class="sig-name descname">sign_on_mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.app.BasicAuth.sign_on_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sign on mode of application.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_okta.app.BasicAuth.status">
+<code class="sig-name descname">status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.app.BasicAuth.status" title="Permalink to this definition">¶</a></dt>
+<dd><p>Status of application.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_okta.app.BasicAuth.url">
 <code class="sig-name descname">url</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.app.BasicAuth.url" title="Permalink to this definition">¶</a></dt>
 <dd><p>The URL of the sign-in page for this app.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_okta.app.BasicAuth.users">
+<code class="sig-name descname">users</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.app.BasicAuth.users" title="Permalink to this definition">¶</a></dt>
+<dd><p>Users associated with the application</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - ID of the Application.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scope</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="method">
@@ -209,8 +390,16 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>auth_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URL of the authenticating site for this app.</p></li>
+<li><p><strong>auto_submit_toolbar</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Display auto submit toolbar</p></li>
+<li><p><strong>groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Groups associated with the application</p></li>
+<li><p><strong>hide_ios</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Do not display application icon on mobile app</p></li>
+<li><p><strong>hide_web</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Do not display application icon to users</p></li>
 <li><p><strong>label</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Application’s display name.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – name of app.</p></li>
+<li><p><strong>sign_on_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Sign on mode of application.</p></li>
+<li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Status of application.</p></li>
 <li><p><strong>url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URL of the sign-in page for this app.</p></li>
+<li><p><strong>users</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Users associated with the application</p></li>
 </ul>
 </dd>
 </dl>
@@ -221,9 +410,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">scope</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_basic_auth.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_basic_auth.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -269,14 +455,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.app.</code><code class="sig-name descname">Bookmark</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_submit_toolbar=None</em>, <em class="sig-param">groups=None</em>, <em class="sig-param">hide_ios=None</em>, <em class="sig-param">hide_web=None</em>, <em class="sig-param">label=None</em>, <em class="sig-param">request_integration=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">url=None</em>, <em class="sig-param">users=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.app.Bookmark" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a Bookmark Application.</p>
 <p>This resource allows you to create and configure a Bookmark Application.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_bookmark.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_bookmark.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>auto_submit_toolbar</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Display auto submit toolbar</p></li>
+<li><p><strong>groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Groups associated with the application</p></li>
+<li><p><strong>hide_ios</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Do not display application icon on mobile app</p></li>
+<li><p><strong>hide_web</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Do not display application icon to users</p></li>
 <li><p><strong>label</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Application’s display name.</p></li>
 <li><p><strong>request_integration</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Would you like Okta to add an integration for this app?</p></li>
+<li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Status of application.</p></li>
 <li><p><strong>url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URL of the bookmark.</p></li>
+<li><p><strong>users</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Users associated with the application</p></li>
 </ul>
 </dd>
 </dl>
@@ -287,13 +482,40 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">scope</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_bookmark.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_bookmark.html.markdown</a>.</p>
-</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_okta.app.Bookmark.auto_submit_toolbar">
+<code class="sig-name descname">auto_submit_toolbar</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.app.Bookmark.auto_submit_toolbar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display auto submit toolbar</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_okta.app.Bookmark.groups">
+<code class="sig-name descname">groups</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.app.Bookmark.groups" title="Permalink to this definition">¶</a></dt>
+<dd><p>Groups associated with the application</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_okta.app.Bookmark.hide_ios">
+<code class="sig-name descname">hide_ios</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.app.Bookmark.hide_ios" title="Permalink to this definition">¶</a></dt>
+<dd><p>Do not display application icon on mobile app</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_okta.app.Bookmark.hide_web">
+<code class="sig-name descname">hide_web</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.app.Bookmark.hide_web" title="Permalink to this definition">¶</a></dt>
+<dd><p>Do not display application icon to users</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_okta.app.Bookmark.label">
 <code class="sig-name descname">label</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.app.Bookmark.label" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Application’s display name.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_okta.app.Bookmark.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.app.Bookmark.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>name of app.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -303,9 +525,33 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_okta.app.Bookmark.sign_on_mode">
+<code class="sig-name descname">sign_on_mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.app.Bookmark.sign_on_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sign on mode of application.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_okta.app.Bookmark.status">
+<code class="sig-name descname">status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.app.Bookmark.status" title="Permalink to this definition">¶</a></dt>
+<dd><p>Status of application.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_okta.app.Bookmark.url">
 <code class="sig-name descname">url</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.app.Bookmark.url" title="Permalink to this definition">¶</a></dt>
 <dd><p>The URL of the bookmark.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_okta.app.Bookmark.users">
+<code class="sig-name descname">users</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.app.Bookmark.users" title="Permalink to this definition">¶</a></dt>
+<dd><p>Users associated with the application</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - ID of the Application.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scope</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="method">
@@ -319,9 +565,17 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>auto_submit_toolbar</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Display auto submit toolbar</p></li>
+<li><p><strong>groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Groups associated with the application</p></li>
+<li><p><strong>hide_ios</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Do not display application icon on mobile app</p></li>
+<li><p><strong>hide_web</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Do not display application icon to users</p></li>
 <li><p><strong>label</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Application’s display name.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – name of app.</p></li>
 <li><p><strong>request_integration</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Would you like Okta to add an integration for this app?</p></li>
+<li><p><strong>sign_on_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Sign on mode of application.</p></li>
+<li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Status of application.</p></li>
 <li><p><strong>url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URL of the bookmark.</p></li>
+<li><p><strong>users</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Users associated with the application</p></li>
 </ul>
 </dd>
 </dl>
@@ -332,9 +586,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">scope</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_bookmark.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_bookmark.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -413,7 +664,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_okta.app.GetMetadataSamlResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.app.</code><code class="sig-name descname">GetMetadataSamlResult</code><span class="sig-paren">(</span><em class="sig-param">app_id=None</em>, <em class="sig-param">certificate=None</em>, <em class="sig-param">entity_id=None</em>, <em class="sig-param">http_post_binding=None</em>, <em class="sig-param">http_redirect_binding=None</em>, <em class="sig-param">key_id=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">want_authn_requests_signed=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.app.GetMetadataSamlResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.app.</code><code class="sig-name descname">GetMetadataSamlResult</code><span class="sig-paren">(</span><em class="sig-param">app_id=None</em>, <em class="sig-param">certificate=None</em>, <em class="sig-param">entity_id=None</em>, <em class="sig-param">http_post_binding=None</em>, <em class="sig-param">http_redirect_binding=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">key_id=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">want_authn_requests_signed=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.app.GetMetadataSamlResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getMetadataSaml.</p>
 <dl class="attribute">
 <dt id="pulumi_okta.app.GetMetadataSamlResult.certificate">
@@ -440,6 +691,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_okta.app.GetMetadataSamlResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.app.GetMetadataSamlResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_okta.app.GetMetadataSamlResult.metadata">
 <code class="sig-name descname">metadata</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.app.GetMetadataSamlResult.metadata" title="Permalink to this definition">¶</a></dt>
 <dd><p>raw metadata of application.</p>
@@ -449,12 +706,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_okta.app.GetMetadataSamlResult.want_authn_requests_signed">
 <code class="sig-name descname">want_authn_requests_signed</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.app.GetMetadataSamlResult.want_authn_requests_signed" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether authn requests are signed.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_okta.app.GetMetadataSamlResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.app.GetMetadataSamlResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -675,6 +926,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Assigns a group to an application.</p>
 <p>This resource allows you to create an App Group assignment.</p>
 <p><strong>When using this resource, make sure to add the following ``lifefycle`` argument to the application resource you are assigning to:</strong></p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_group_assignment.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_group_assignment.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -686,9 +940,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_group_assignment.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_group_assignment.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_okta.app.GroupAssignment.app_id">
 <code class="sig-name descname">app_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.app.GroupAssignment.app_id" title="Permalink to this definition">¶</a></dt>
@@ -725,9 +976,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_group_assignment.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_group_assignment.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -773,6 +1021,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.app.</code><code class="sig-name descname">OAuth</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_key_rotation=None</em>, <em class="sig-param">auto_submit_toolbar=None</em>, <em class="sig-param">client_basic_secret=None</em>, <em class="sig-param">client_uri=None</em>, <em class="sig-param">consent_method=None</em>, <em class="sig-param">custom_client_id=None</em>, <em class="sig-param">grant_types=None</em>, <em class="sig-param">groups=None</em>, <em class="sig-param">hide_ios=None</em>, <em class="sig-param">hide_web=None</em>, <em class="sig-param">issuer_mode=None</em>, <em class="sig-param">label=None</em>, <em class="sig-param">login_uri=None</em>, <em class="sig-param">logo_uri=None</em>, <em class="sig-param">omit_secret=None</em>, <em class="sig-param">policy_uri=None</em>, <em class="sig-param">post_logout_redirect_uris=None</em>, <em class="sig-param">profile=None</em>, <em class="sig-param">redirect_uris=None</em>, <em class="sig-param">response_types=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">token_endpoint_auth_method=None</em>, <em class="sig-param">tos_uri=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">users=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.app.OAuth" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an OIDC Application.</p>
 <p>This resource allows you to create and configure an OIDC Application.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_oauth.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_oauth.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -813,9 +1064,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">scope</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_oauth.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_oauth.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_okta.app.OAuth.auto_key_rotation">
 <code class="sig-name descname">auto_key_rotation</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.app.OAuth.auto_key_rotation" title="Permalink to this definition">¶</a></dt>
@@ -1046,9 +1294,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">scope</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_oauth.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_oauth.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1092,15 +1337,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_okta.app.OAuthRedirectUri">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.app.</code><code class="sig-name descname">OAuthRedirectUri</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">app_id=None</em>, <em class="sig-param">uri=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.app.OAuthRedirectUri" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a OAuthRedirectUri resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a OAuthRedirectUri resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] uri: Redirect URI to append to Okta OIDC application.</p>
+<dl class="attribute">
+<dt id="pulumi_okta.app.OAuthRedirectUri.uri">
+<code class="sig-name descname">uri</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.app.OAuthRedirectUri.uri" title="Permalink to this definition">¶</a></dt>
+<dd><p>Redirect URI to append to Okta OIDC application.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_okta.app.OAuthRedirectUri.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">app_id=None</em>, <em class="sig-param">uri=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.app.OAuthRedirectUri.get" title="Permalink to this definition">¶</a></dt>
@@ -1112,6 +1358,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>uri</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Redirect URI to append to Okta OIDC application.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1160,6 +1407,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.app.</code><code class="sig-name descname">Saml</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">accessibility_error_redirect_url=None</em>, <em class="sig-param">accessibility_login_redirect_url=None</em>, <em class="sig-param">accessibility_self_service=None</em>, <em class="sig-param">app_settings_json=None</em>, <em class="sig-param">assertion_signed=None</em>, <em class="sig-param">attribute_statements=None</em>, <em class="sig-param">audience=None</em>, <em class="sig-param">authn_context_class_ref=None</em>, <em class="sig-param">auto_submit_toolbar=None</em>, <em class="sig-param">default_relay_state=None</em>, <em class="sig-param">destination=None</em>, <em class="sig-param">digest_algorithm=None</em>, <em class="sig-param">features=None</em>, <em class="sig-param">groups=None</em>, <em class="sig-param">hide_ios=None</em>, <em class="sig-param">hide_web=None</em>, <em class="sig-param">honor_force_authn=None</em>, <em class="sig-param">idp_issuer=None</em>, <em class="sig-param">key_name=None</em>, <em class="sig-param">key_years_valid=None</em>, <em class="sig-param">label=None</em>, <em class="sig-param">preconfigured_app=None</em>, <em class="sig-param">recipient=None</em>, <em class="sig-param">request_compressed=None</em>, <em class="sig-param">response_signed=None</em>, <em class="sig-param">signature_algorithm=None</em>, <em class="sig-param">sp_issuer=None</em>, <em class="sig-param">sso_url=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">subject_name_id_format=None</em>, <em class="sig-param">subject_name_id_template=None</em>, <em class="sig-param">user_name_template=None</em>, <em class="sig-param">user_name_template_suffix=None</em>, <em class="sig-param">user_name_template_type=None</em>, <em class="sig-param">users=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.app.Saml" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an SAML Application.</p>
 <p>This resource allows you to create and configure an SAML Application.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_saml.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_saml.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1178,10 +1428,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>destination</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifies the location where the SAML response is intended to be sent inside of the SAML assertion.</p></li>
 <li><p><strong>digest_algorithm</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Determines the digest algorithm used to digitally sign the SAML assertion and response.</p></li>
 <li><p><strong>features</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – features enabled.</p></li>
+<li><p><strong>groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Groups associated with the application</p></li>
 <li><p><strong>hide_ios</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Do not display application icon on mobile app.</p></li>
 <li><p><strong>hide_web</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Do not display application icon to users</p></li>
 <li><p><strong>honor_force_authn</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Prompt user to re-authenticate if SP asks for it.</p></li>
 <li><p><strong>idp_issuer</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – SAML issuer ID.</p></li>
+<li><p><strong>key_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Certificate name. This modulates the rotation of keys. New name == new key.</p></li>
+<li><p><strong>key_years_valid</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Number of years the certificate is valid.</p></li>
 <li><p><strong>label</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – label of application.</p></li>
 <li><p><strong>preconfigured_app</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – name of application from the Okta Integration Network, if not included a custom app will be created.</p></li>
 <li><p><strong>recipient</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The location where the app may present the SAML assertion.</p></li>
@@ -1196,6 +1449,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>user_name_template</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Username template.</p></li>
 <li><p><strong>user_name_template_suffix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Username template suffix.</p></li>
 <li><p><strong>user_name_template_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Username template type.</p></li>
+<li><p><strong>users</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Users associated with the application</p></li>
 </ul>
 </dd>
 </dl>
@@ -1215,9 +1469,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">scope</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_saml.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_saml.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_okta.app.Saml.accessibility_error_redirect_url">
 <code class="sig-name descname">accessibility_error_redirect_url</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.app.Saml.accessibility_error_redirect_url" title="Permalink to this definition">¶</a></dt>
@@ -1323,6 +1574,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_okta.app.Saml.groups">
+<code class="sig-name descname">groups</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.app.Saml.groups" title="Permalink to this definition">¶</a></dt>
+<dd><p>Groups associated with the application</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_okta.app.Saml.hide_ios">
 <code class="sig-name descname">hide_ios</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.app.Saml.hide_ios" title="Permalink to this definition">¶</a></dt>
 <dd><p>Do not display application icon on mobile app.</p>
@@ -1362,6 +1619,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_okta.app.Saml.key_id">
 <code class="sig-name descname">key_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.app.Saml.key_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Certificate key ID.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_okta.app.Saml.key_name">
+<code class="sig-name descname">key_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.app.Saml.key_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Certificate name. This modulates the rotation of keys. New name == new key.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_okta.app.Saml.key_years_valid">
+<code class="sig-name descname">key_years_valid</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.app.Saml.key_years_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of years the certificate is valid.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1466,6 +1735,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Username template type.</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_okta.app.Saml.users">
+<code class="sig-name descname">users</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.app.Saml.users" title="Permalink to this definition">¶</a></dt>
+<dd><p>Users associated with the application</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - id of application.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scope</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_okta.app.Saml.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">accessibility_error_redirect_url=None</em>, <em class="sig-param">accessibility_login_redirect_url=None</em>, <em class="sig-param">accessibility_self_service=None</em>, <em class="sig-param">app_settings_json=None</em>, <em class="sig-param">assertion_signed=None</em>, <em class="sig-param">attribute_statements=None</em>, <em class="sig-param">audience=None</em>, <em class="sig-param">authn_context_class_ref=None</em>, <em class="sig-param">auto_submit_toolbar=None</em>, <em class="sig-param">certificate=None</em>, <em class="sig-param">default_relay_state=None</em>, <em class="sig-param">destination=None</em>, <em class="sig-param">digest_algorithm=None</em>, <em class="sig-param">entity_key=None</em>, <em class="sig-param">entity_url=None</em>, <em class="sig-param">features=None</em>, <em class="sig-param">groups=None</em>, <em class="sig-param">hide_ios=None</em>, <em class="sig-param">hide_web=None</em>, <em class="sig-param">honor_force_authn=None</em>, <em class="sig-param">http_post_binding=None</em>, <em class="sig-param">http_redirect_binding=None</em>, <em class="sig-param">idp_issuer=None</em>, <em class="sig-param">key_id=None</em>, <em class="sig-param">key_name=None</em>, <em class="sig-param">key_years_valid=None</em>, <em class="sig-param">label=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">preconfigured_app=None</em>, <em class="sig-param">recipient=None</em>, <em class="sig-param">request_compressed=None</em>, <em class="sig-param">response_signed=None</em>, <em class="sig-param">sign_on_mode=None</em>, <em class="sig-param">signature_algorithm=None</em>, <em class="sig-param">sp_issuer=None</em>, <em class="sig-param">sso_url=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">subject_name_id_format=None</em>, <em class="sig-param">subject_name_id_template=None</em>, <em class="sig-param">user_name_template=None</em>, <em class="sig-param">user_name_template_suffix=None</em>, <em class="sig-param">user_name_template_type=None</em>, <em class="sig-param">users=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.app.Saml.get" title="Permalink to this definition">¶</a></dt>
@@ -1493,6 +1774,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>entity_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Entity ID, the ID portion of the <code class="docutils literal notranslate"><span class="pre">entity_url</span></code>.</p></li>
 <li><p><strong>entity_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Entity URL for instance <a class="reference external" href="http://www.okta.com/exk1fcia6d6EMsf331d8">http://www.okta.com/exk1fcia6d6EMsf331d8</a>.</p></li>
 <li><p><strong>features</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – features enabled.</p></li>
+<li><p><strong>groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Groups associated with the application</p></li>
 <li><p><strong>hide_ios</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Do not display application icon on mobile app.</p></li>
 <li><p><strong>hide_web</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Do not display application icon to users</p></li>
 <li><p><strong>honor_force_authn</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Prompt user to re-authenticate if SP asks for it.</p></li>
@@ -1500,6 +1782,8 @@ properties used to qualify the lookup.</p>
 <li><p><strong>http_redirect_binding</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <code class="docutils literal notranslate"><span class="pre">urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect</span></code> location from the SAML metadata.</p></li>
 <li><p><strong>idp_issuer</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – SAML issuer ID.</p></li>
 <li><p><strong>key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Certificate key ID.</p></li>
+<li><p><strong>key_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Certificate name. This modulates the rotation of keys. New name == new key.</p></li>
+<li><p><strong>key_years_valid</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Number of years the certificate is valid.</p></li>
 <li><p><strong>label</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – label of application.</p></li>
 <li><p><strong>metadata</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The raw SAML metadata in XML.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the attribute statement.</p></li>
@@ -1517,6 +1801,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>user_name_template</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Username template.</p></li>
 <li><p><strong>user_name_template_suffix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Username template suffix.</p></li>
 <li><p><strong>user_name_template_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Username template type.</p></li>
+<li><p><strong>users</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Users associated with the application</p></li>
 </ul>
 </dd>
 </dl>
@@ -1536,9 +1821,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">scope</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_saml.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_saml.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1584,6 +1866,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.app.</code><code class="sig-name descname">SecurePasswordStore</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">accessibility_error_redirect_url=None</em>, <em class="sig-param">accessibility_self_service=None</em>, <em class="sig-param">auto_submit_toolbar=None</em>, <em class="sig-param">credentials_scheme=None</em>, <em class="sig-param">groups=None</em>, <em class="sig-param">hide_ios=None</em>, <em class="sig-param">hide_web=None</em>, <em class="sig-param">label=None</em>, <em class="sig-param">optional_field1=None</em>, <em class="sig-param">optional_field1_value=None</em>, <em class="sig-param">optional_field2=None</em>, <em class="sig-param">optional_field2_value=None</em>, <em class="sig-param">optional_field3=None</em>, <em class="sig-param">optional_field3_value=None</em>, <em class="sig-param">password_field=None</em>, <em class="sig-param">reveal_password=None</em>, <em class="sig-param">shared_password=None</em>, <em class="sig-param">shared_username=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">url=None</em>, <em class="sig-param">username_field=None</em>, <em class="sig-param">users=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.app.SecurePasswordStore" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a Secure Password Store Application.</p>
 <p>This resource allows you to create and configure a Secure Password Store Application.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_secure_password_store.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_secure_password_store.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1621,9 +1906,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">scope</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_secure_password_store.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_secure_password_store.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_okta.app.SecurePasswordStore.accessibility_error_redirect_url">
 <code class="sig-name descname">accessibility_error_redirect_url</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.app.SecurePasswordStore.accessibility_error_redirect_url" title="Permalink to this definition">¶</a></dt>
@@ -1833,9 +2115,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">scope</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_secure_password_store.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_secure_password_store.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1881,6 +2160,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.app.</code><code class="sig-name descname">Swa</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">accessibility_error_redirect_url=None</em>, <em class="sig-param">accessibility_self_service=None</em>, <em class="sig-param">auto_submit_toolbar=None</em>, <em class="sig-param">button_field=None</em>, <em class="sig-param">groups=None</em>, <em class="sig-param">hide_ios=None</em>, <em class="sig-param">hide_web=None</em>, <em class="sig-param">label=None</em>, <em class="sig-param">password_field=None</em>, <em class="sig-param">preconfigured_app=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">url=None</em>, <em class="sig-param">url_regex=None</em>, <em class="sig-param">username_field=None</em>, <em class="sig-param">users=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.app.Swa" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an SWA Application.</p>
 <p>This resource allows you to create and configure an SWA Application.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_swa.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_swa.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1911,9 +2193,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">scope</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_swa.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_swa.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_okta.app.Swa.accessibility_error_redirect_url">
 <code class="sig-name descname">accessibility_error_redirect_url</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.app.Swa.accessibility_error_redirect_url" title="Permalink to this definition">¶</a></dt>
@@ -2074,9 +2353,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">scope</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_swa.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_swa.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2122,6 +2398,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.app.</code><code class="sig-name descname">ThreeField</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">accessibility_error_redirect_url=None</em>, <em class="sig-param">accessibility_self_service=None</em>, <em class="sig-param">auto_submit_toolbar=None</em>, <em class="sig-param">button_selector=None</em>, <em class="sig-param">extra_field_selector=None</em>, <em class="sig-param">extra_field_value=None</em>, <em class="sig-param">groups=None</em>, <em class="sig-param">hide_ios=None</em>, <em class="sig-param">hide_web=None</em>, <em class="sig-param">label=None</em>, <em class="sig-param">password_selector=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">url=None</em>, <em class="sig-param">url_regex=None</em>, <em class="sig-param">username_selector=None</em>, <em class="sig-param">users=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.app.ThreeField" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an Three Field Application.</p>
 <p>This resource allows you to create and configure an Three Field Application.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_three_field.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_three_field.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2153,9 +2432,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">scope</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_three_field.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_three_field.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_okta.app.ThreeField.accessibility_error_redirect_url">
 <code class="sig-name descname">accessibility_error_redirect_url</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.app.ThreeField.accessibility_error_redirect_url" title="Permalink to this definition">¶</a></dt>
@@ -2323,9 +2599,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">scope</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_three_field.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_three_field.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2372,6 +2645,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Creates an Application User.</p>
 <p>This resource allows you to create and configure an Application User.</p>
 <p><strong>When using this resource, make sure to add the following ``lifefycle`` argument to the application resource you are assigning to:</strong></p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_user.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_user.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2385,9 +2661,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_user.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_user.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_okta.app.User.app_id">
 <code class="sig-name descname">app_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.app.User.app_id" title="Permalink to this definition">¶</a></dt>
@@ -2437,9 +2710,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_user.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_user.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2485,6 +2755,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.app.</code><code class="sig-name descname">UserBaseSchema</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">app_id=None</em>, <em class="sig-param">index=None</em>, <em class="sig-param">master=None</em>, <em class="sig-param">permissions=None</em>, <em class="sig-param">required=None</em>, <em class="sig-param">title=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.app.UserBaseSchema" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Application User Base Schema property.</p>
 <p>This resource allows you to configure a base app user schema property.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_user_base_schema.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_user_base_schema.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2500,9 +2773,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_user_base_schema.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_user_base_schema.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_okta.app.UserBaseSchema.app_id">
 <code class="sig-name descname">app_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.app.UserBaseSchema.app_id" title="Permalink to this definition">¶</a></dt>
@@ -2566,9 +2836,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_user_base_schema.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_user_base_schema.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2614,6 +2881,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.app.</code><code class="sig-name descname">UserSchema</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">app_id=None</em>, <em class="sig-param">array_enums=None</em>, <em class="sig-param">array_one_ofs=None</em>, <em class="sig-param">array_type=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enums=None</em>, <em class="sig-param">external_name=None</em>, <em class="sig-param">index=None</em>, <em class="sig-param">master=None</em>, <em class="sig-param">max_length=None</em>, <em class="sig-param">min_length=None</em>, <em class="sig-param">one_ofs=None</em>, <em class="sig-param">permissions=None</em>, <em class="sig-param">required=None</em>, <em class="sig-param">scope=None</em>, <em class="sig-param">title=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.app.UserSchema" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an Application User Schema property.</p>
 <p>This resource allows you to create and configure a custom user schema property and associate it with an application.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_user_schema.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_user_schema.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2649,9 +2919,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">const</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - value mapping to member of <code class="docutils literal notranslate"><span class="pre">enum</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - display name for the enum value.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_user_schema.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_user_schema.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_okta.app.UserSchema.app_id">
 <code class="sig-name descname">app_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.app.UserSchema.app_id" title="Permalink to this definition">¶</a></dt>
@@ -2803,9 +3070,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">const</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - value mapping to member of <code class="docutils literal notranslate"><span class="pre">enum</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - display name for the enum value.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_user_schema.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_user_schema.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2850,6 +3114,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_okta.app.get_app">
 <code class="sig-prename descclassname">pulumi_okta.app.</code><code class="sig-name descname">get_app</code><span class="sig-paren">(</span><em class="sig-param">active_only=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">label=None</em>, <em class="sig-param">label_prefix=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.app.get_app" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve the collaborators for a given repository.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/app.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/app.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2860,15 +3127,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/app.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/app.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_okta.app.get_metadata_saml">
 <code class="sig-prename descclassname">pulumi_okta.app.</code><code class="sig-name descname">get_metadata_saml</code><span class="sig-paren">(</span><em class="sig-param">app_id=None</em>, <em class="sig-param">key_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.app.get_metadata_saml" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve the collaborators for a given repository.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/app_metadata_saml.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/app_metadata_saml.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2877,15 +3144,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/app_metadata_saml.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/app_metadata_saml.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_okta.app.get_saml">
 <code class="sig-prename descclassname">pulumi_okta.app.</code><code class="sig-name descname">get_saml</code><span class="sig-paren">(</span><em class="sig-param">accessibility_error_redirect_url=None</em>, <em class="sig-param">accessibility_login_redirect_url=None</em>, <em class="sig-param">accessibility_self_service=None</em>, <em class="sig-param">active_only=None</em>, <em class="sig-param">app_settings_json=None</em>, <em class="sig-param">assertion_signed=None</em>, <em class="sig-param">attribute_statements=None</em>, <em class="sig-param">audience=None</em>, <em class="sig-param">authn_context_class_ref=None</em>, <em class="sig-param">auto_submit_toolbar=None</em>, <em class="sig-param">default_relay_state=None</em>, <em class="sig-param">destination=None</em>, <em class="sig-param">digest_algorithm=None</em>, <em class="sig-param">features=None</em>, <em class="sig-param">hide_ios=None</em>, <em class="sig-param">hide_web=None</em>, <em class="sig-param">honor_force_authn=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">idp_issuer=None</em>, <em class="sig-param">label=None</em>, <em class="sig-param">label_prefix=None</em>, <em class="sig-param">recipient=None</em>, <em class="sig-param">request_compressed=None</em>, <em class="sig-param">response_signed=None</em>, <em class="sig-param">signature_algorithm=None</em>, <em class="sig-param">sp_issuer=None</em>, <em class="sig-param">sso_url=None</em>, <em class="sig-param">subject_name_id_format=None</em>, <em class="sig-param">subject_name_id_template=None</em>, <em class="sig-param">user_name_template=None</em>, <em class="sig-param">user_name_template_suffix=None</em>, <em class="sig-param">user_name_template_type=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.app.get_saml" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve the collaborators for a given repository.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/app_saml.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/app_saml.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2905,9 +3172,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/app_saml.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/app_saml.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

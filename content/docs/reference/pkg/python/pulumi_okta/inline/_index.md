@@ -18,6 +18,9 @@ anything, please consult the source <a class="reference external" href="https://
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.inline.</code><code class="sig-name descname">Hook</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auth=None</em>, <em class="sig-param">channel=None</em>, <em class="sig-param">headers=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.inline.Hook" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an inline hook.</p>
 <p>This resource allows you to create and configure an inline hook.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/inline_hook.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/inline_hook.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -50,9 +53,6 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Key to use for authentication, usually the header name, for example <code class="docutils literal notranslate"><span class="pre">&quot;Authorization&quot;</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Authentication secret.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/inline_hook.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/inline_hook.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_okta.inline.Hook.auth">
 <code class="sig-name descname">auth</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.inline.Hook.auth" title="Permalink to this definition">¶</a></dt>
@@ -142,9 +142,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Key to use for authentication, usually the header name, for example <code class="docutils literal notranslate"><span class="pre">&quot;Authorization&quot;</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Authentication secret.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/inline_hook.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/inline_hook.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">

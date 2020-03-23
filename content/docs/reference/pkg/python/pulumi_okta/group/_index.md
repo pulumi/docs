@@ -15,17 +15,17 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_okta.group"></span><dl class="class">
 <dt id="pulumi_okta.group.AwaitableGetEveryoneGroupResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.group.</code><code class="sig-name descname">AwaitableGetEveryoneGroupResult</code><span class="sig-paren">(</span><em class="sig-param">include_users=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.group.AwaitableGetEveryoneGroupResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.group.</code><code class="sig-name descname">AwaitableGetEveryoneGroupResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">include_users=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.group.AwaitableGetEveryoneGroupResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_okta.group.AwaitableGetGroupResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.group.</code><code class="sig-name descname">AwaitableGetGroupResult</code><span class="sig-paren">(</span><em class="sig-param">description=None</em>, <em class="sig-param">include_users=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">users=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.group.AwaitableGetGroupResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.group.</code><code class="sig-name descname">AwaitableGetGroupResult</code><span class="sig-paren">(</span><em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">include_users=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">users=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.group.AwaitableGetGroupResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_okta.group.GetEveryoneGroupResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.group.</code><code class="sig-name descname">GetEveryoneGroupResult</code><span class="sig-paren">(</span><em class="sig-param">include_users=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.group.GetEveryoneGroupResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.group.</code><code class="sig-name descname">GetEveryoneGroupResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">include_users=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.group.GetEveryoneGroupResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getEveryoneGroup.</p>
 <dl class="attribute">
 <dt id="pulumi_okta.group.GetEveryoneGroupResult.id">
@@ -37,12 +37,18 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="class">
 <dt id="pulumi_okta.group.GetGroupResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.group.</code><code class="sig-name descname">GetGroupResult</code><span class="sig-paren">(</span><em class="sig-param">description=None</em>, <em class="sig-param">include_users=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">users=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.group.GetGroupResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.group.</code><code class="sig-name descname">GetGroupResult</code><span class="sig-paren">(</span><em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">include_users=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">users=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.group.GetGroupResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getGroup.</p>
 <dl class="attribute">
 <dt id="pulumi_okta.group.GetGroupResult.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.group.GetGroupResult.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>description of group.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_okta.group.GetGroupResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.group.GetGroupResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -57,12 +63,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>user ids that are members of this group, only included if <code class="docutils literal notranslate"><span class="pre">include_users</span></code> is set to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_okta.group.GetGroupResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.group.GetGroupResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
@@ -70,6 +70,9 @@ anything, please consult the source <a class="reference external" href="https://
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.group.</code><code class="sig-name descname">Group</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">users=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.group.Group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an Okta Group.</p>
 <p>This resource allows you to create and configure an Okta Group.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/group.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/group.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -77,12 +80,10 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the Okta Group.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Okta Group.</p></li>
+<li><p><strong>users</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Users associated with the group. This can also be done per user.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/group.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/group.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_okta.group.Group.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.group.Group.description" title="Permalink to this definition">¶</a></dt>
@@ -93,6 +94,12 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_okta.group.Group.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.group.Group.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the Okta Group.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_okta.group.Group.users">
+<code class="sig-name descname">users</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.group.Group.users" title="Permalink to this definition">¶</a></dt>
+<dd><p>Users associated with the group. This can also be done per user.</p>
 </dd></dl>
 
 <dl class="method">
@@ -108,12 +115,10 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the Okta Group.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Okta Group.</p></li>
+<li><p><strong>users</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Users associated with the group. This can also be done per user.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/group.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/group.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -159,6 +164,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.group.</code><code class="sig-name descname">Roles</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">admin_roles=None</em>, <em class="sig-param">group_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.group.Roles" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates Group level Admin Role Assignments.</p>
 <p>This resource allows you to create and configure Group level Admin Role Assignments.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/group_roles.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/group_roles.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -169,9 +177,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/group_roles.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/group_roles.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_okta.group.Roles.admin_roles">
 <code class="sig-name descname">admin_roles</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.group.Roles.admin_roles" title="Permalink to this definition">¶</a></dt>
@@ -200,9 +205,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/group_roles.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/group_roles.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -248,6 +250,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.group.</code><code class="sig-name descname">Rule</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">expression_type=None</em>, <em class="sig-param">expression_value=None</em>, <em class="sig-param">group_assignments=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.group.Rule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an Okta Group Rule.</p>
 <p>This resource allows you to create and configure an Okta Group Rule.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/group_rule.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/group_rule.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -261,9 +266,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/group_rule.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/group_rule.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_okta.group.Rule.expression_type">
 <code class="sig-name descname">expression_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.group.Rule.expression_type" title="Permalink to this definition">¶</a></dt>
@@ -313,9 +315,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/group_rule.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/group_rule.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -369,6 +368,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_okta.group.get_group">
 <code class="sig-prename descclassname">pulumi_okta.group.</code><code class="sig-name descname">get_group</code><span class="sig-paren">(</span><em class="sig-param">include_users=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.group.get_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve a group from Okta.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/group.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/group.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -377,9 +379,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/group.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/group.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

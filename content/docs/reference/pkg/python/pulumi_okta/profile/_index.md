@@ -16,12 +16,18 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="target" id="module-pulumi_okta.profile"></span><dl class="class">
 <dt id="pulumi_okta.profile.Mapping">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.profile.</code><code class="sig-name descname">Mapping</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">delete_when_absent=None</em>, <em class="sig-param">mappings=None</em>, <em class="sig-param">source_id=None</em>, <em class="sig-param">target_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.profile.Mapping" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Mapping resource with the given unique name, props, and options.</p>
+<dd><p>Create a Mapping resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[bool] delete_when_absent: When turned on this flag will trigger the provider to delete mapping properties that are not defined in config. By</p>
+<blockquote>
+<div><p>default, we do not delete missing properties.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>source_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The source id of the mapping to manage.</p></li>
+<li><p><strong>target_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The target id of the mapping to manage.</p></li>
 </ul>
 </dd>
 </dl>
@@ -31,6 +37,25 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pushStatus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
+<dl class="attribute">
+<dt id="pulumi_okta.profile.Mapping.delete_when_absent">
+<code class="sig-name descname">delete_when_absent</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.profile.Mapping.delete_when_absent" title="Permalink to this definition">¶</a></dt>
+<dd><p>When turned on this flag will trigger the provider to delete mapping properties that are not defined in config. By
+default, we do not delete missing properties.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_okta.profile.Mapping.source_id">
+<code class="sig-name descname">source_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.profile.Mapping.source_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The source id of the mapping to manage.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_okta.profile.Mapping.target_id">
+<code class="sig-name descname">target_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.profile.Mapping.target_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The target id of the mapping to manage.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_okta.profile.Mapping.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">delete_when_absent=None</em>, <em class="sig-param">mappings=None</em>, <em class="sig-param">source_id=None</em>, <em class="sig-param">source_name=None</em>, <em class="sig-param">source_type=None</em>, <em class="sig-param">target_id=None</em>, <em class="sig-param">target_name=None</em>, <em class="sig-param">target_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.profile.Mapping.get" title="Permalink to this definition">¶</a></dt>
@@ -42,6 +67,10 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>delete_when_absent</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – When turned on this flag will trigger the provider to delete mapping properties that are not defined in config. By
+default, we do not delete missing properties.</p></li>
+<li><p><strong>source_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The source id of the mapping to manage.</p></li>
+<li><p><strong>target_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The target id of the mapping to manage.</p></li>
 </ul>
 </dd>
 </dl>

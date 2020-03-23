@@ -18,6 +18,9 @@ anything, please consult the source <a class="reference external" href="https://
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.network.</code><code class="sig-name descname">Zone</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">dynamic_locations=None</em>, <em class="sig-param">gateways=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">proxies=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.network.Zone" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an Okta Network Zone.</p>
 <p>This resource allows you to create and configure an Okta Network Zone.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/network_zone.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/network_zone.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -31,9 +34,6 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/network_zone.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/network_zone.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_okta.network.Zone.dynamic_locations">
 <code class="sig-name descname">dynamic_locations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.network.Zone.dynamic_locations" title="Permalink to this definition">¶</a></dt>
@@ -83,9 +83,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/network_zone.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/network_zone.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
