@@ -17,6 +17,9 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_newrelic.synthetics.AlertCondition">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_newrelic.synthetics.</code><code class="sig-name descname">AlertCondition</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">monitor_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">policy_id=None</em>, <em class="sig-param">runbook_url=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.synthetics.AlertCondition" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this resource to create and manage synthetics alert conditions in New Relic.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/synthetics_alert_condition.html.markdown">https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/synthetics_alert_condition.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -30,9 +33,6 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/synthetics_alert_condition.html.markdown">https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/synthetics_alert_condition.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_newrelic.synthetics.AlertCondition.enabled">
 <code class="sig-name descname">enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_newrelic.synthetics.AlertCondition.enabled" title="Permalink to this definition">¶</a></dt>
@@ -82,9 +82,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/synthetics_alert_condition.html.markdown">https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/synthetics_alert_condition.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -127,35 +124,35 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_newrelic.synthetics.AwaitableGetMonitorResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_newrelic.synthetics.</code><code class="sig-name descname">AwaitableGetMonitorResult</code><span class="sig-paren">(</span><em class="sig-param">monitor_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.synthetics.AwaitableGetMonitorResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_newrelic.synthetics.</code><code class="sig-name descname">AwaitableGetMonitorResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">monitor_id=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.synthetics.AwaitableGetMonitorResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_newrelic.synthetics.AwaitableGetSecureCredentialResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_newrelic.synthetics.</code><code class="sig-name descname">AwaitableGetSecureCredentialResult</code><span class="sig-paren">(</span><em class="sig-param">created_at=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">key=None</em>, <em class="sig-param">last_updated=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.synthetics.AwaitableGetSecureCredentialResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_newrelic.synthetics.</code><code class="sig-name descname">AwaitableGetSecureCredentialResult</code><span class="sig-paren">(</span><em class="sig-param">created_at=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">key=None</em>, <em class="sig-param">last_updated=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.synthetics.AwaitableGetSecureCredentialResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_newrelic.synthetics.GetMonitorResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_newrelic.synthetics.</code><code class="sig-name descname">GetMonitorResult</code><span class="sig-paren">(</span><em class="sig-param">monitor_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.synthetics.GetMonitorResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_newrelic.synthetics.</code><code class="sig-name descname">GetMonitorResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">monitor_id=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.synthetics.GetMonitorResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getMonitor.</p>
-<dl class="attribute">
-<dt id="pulumi_newrelic.synthetics.GetMonitorResult.monitor_id">
-<code class="sig-name descname">monitor_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_newrelic.synthetics.GetMonitorResult.monitor_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The ID of the synthetics monitor.</p>
-</dd></dl>
-
 <dl class="attribute">
 <dt id="pulumi_newrelic.synthetics.GetMonitorResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_newrelic.synthetics.GetMonitorResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_newrelic.synthetics.GetMonitorResult.monitor_id">
+<code class="sig-name descname">monitor_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_newrelic.synthetics.GetMonitorResult.monitor_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the synthetics monitor.</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_newrelic.synthetics.GetSecureCredentialResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_newrelic.synthetics.</code><code class="sig-name descname">GetSecureCredentialResult</code><span class="sig-paren">(</span><em class="sig-param">created_at=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">key=None</em>, <em class="sig-param">last_updated=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.synthetics.GetSecureCredentialResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_newrelic.synthetics.</code><code class="sig-name descname">GetSecureCredentialResult</code><span class="sig-paren">(</span><em class="sig-param">created_at=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">key=None</em>, <em class="sig-param">last_updated=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.synthetics.GetSecureCredentialResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getSecureCredential.</p>
 <dl class="attribute">
 <dt id="pulumi_newrelic.synthetics.GetSecureCredentialResult.created_at">
@@ -175,12 +172,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_newrelic.synthetics.GetSecureCredentialResult.last_updated">
+<code class="sig-name descname">last_updated</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_newrelic.synthetics.GetSecureCredentialResult.last_updated" title="Permalink to this definition">¶</a></dt>
+<dd><p>The time the secure credential was last updated.</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_newrelic.synthetics.Label">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_newrelic.synthetics.</code><code class="sig-name descname">Label</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">monitor_id=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">value=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.synthetics.Label" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this resource to create, update, and delete a Synthetics label in New Relic.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/synthetics_label.html.markdown">https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/synthetics_label.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -192,9 +198,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/synthetics_label.html.markdown">https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/synthetics_label.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_newrelic.synthetics.Label.href">
 <code class="sig-name descname">href</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_newrelic.synthetics.Label.href" title="Permalink to this definition">¶</a></dt>
@@ -237,9 +240,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/synthetics_label.html.markdown">https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/synthetics_label.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -284,6 +284,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_newrelic.synthetics.Monitor">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_newrelic.synthetics.</code><code class="sig-name descname">Monitor</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bypass_head_request=None</em>, <em class="sig-param">frequency=None</em>, <em class="sig-param">locations=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">sla_threshold=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">treat_redirect_as_failure=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">uri=None</em>, <em class="sig-param">validation_string=None</em>, <em class="sig-param">verify_ssl=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.synthetics.Monitor" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this resource to create, update, and delete a synthetics monitor in New Relic.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/synthetics_monitor.html.markdown">https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/synthetics_monitor.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -294,7 +297,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>locations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The locations in which this monitor should be run.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The title of this monitor.</p></li>
 <li><p><strong>sla_threshold</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The base threshold for the SLA report.</p></li>
-<li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The monitor status (i.e. <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code>, <code class="docutils literal notranslate"><span class="pre">MUTED</span></code>, <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code>)</p></li>
+<li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The monitor status (i.e. <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code>, <code class="docutils literal notranslate"><span class="pre">MUTED</span></code>, <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code>).</p></li>
 <li><p><strong>treat_redirect_as_failure</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Fail the monitor check if redirected.</p></li>
 <li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The monitor type. Valid values are <code class="docutils literal notranslate"><span class="pre">SIMPLE</span></code>, <code class="docutils literal notranslate"><span class="pre">BROWSER</span></code>, <code class="docutils literal notranslate"><span class="pre">SCRIPT_BROWSER</span></code>, and <code class="docutils literal notranslate"><span class="pre">SCRIPT_API</span></code>.</p></li>
 <li><p><strong>uri</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URI for the monitor to hit.</p></li>
@@ -303,9 +306,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/synthetics_monitor.html.markdown">https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/synthetics_monitor.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_newrelic.synthetics.Monitor.bypass_head_request">
 <code class="sig-name descname">bypass_head_request</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_newrelic.synthetics.Monitor.bypass_head_request" title="Permalink to this definition">¶</a></dt>
@@ -339,7 +339,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_newrelic.synthetics.Monitor.status">
 <code class="sig-name descname">status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_newrelic.synthetics.Monitor.status" title="Permalink to this definition">¶</a></dt>
-<dd><p>The monitor status (i.e. <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code>, <code class="docutils literal notranslate"><span class="pre">MUTED</span></code>, <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code>)</p>
+<dd><p>The monitor status (i.e. <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code>, <code class="docutils literal notranslate"><span class="pre">MUTED</span></code>, <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code>).</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -388,7 +388,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>locations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The locations in which this monitor should be run.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The title of this monitor.</p></li>
 <li><p><strong>sla_threshold</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The base threshold for the SLA report.</p></li>
-<li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The monitor status (i.e. <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code>, <code class="docutils literal notranslate"><span class="pre">MUTED</span></code>, <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code>)</p></li>
+<li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The monitor status (i.e. <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code>, <code class="docutils literal notranslate"><span class="pre">MUTED</span></code>, <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code>).</p></li>
 <li><p><strong>treat_redirect_as_failure</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Fail the monitor check if redirected.</p></li>
 <li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The monitor type. Valid values are <code class="docutils literal notranslate"><span class="pre">SIMPLE</span></code>, <code class="docutils literal notranslate"><span class="pre">BROWSER</span></code>, <code class="docutils literal notranslate"><span class="pre">SCRIPT_BROWSER</span></code>, and <code class="docutils literal notranslate"><span class="pre">SCRIPT_API</span></code>.</p></li>
 <li><p><strong>uri</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URI for the monitor to hit.</p></li>
@@ -397,9 +397,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/synthetics_monitor.html.markdown">https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/synthetics_monitor.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -444,19 +441,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_newrelic.synthetics.MonitorScript">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_newrelic.synthetics.</code><code class="sig-name descname">MonitorScript</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">monitor_id=None</em>, <em class="sig-param">text=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.synthetics.MonitorScript" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this resource to update a synthetics monitor script in New Relic.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/synthetics_monitor_script.html.markdown">https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/synthetics_monitor_script.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>monitor_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the monitor to attach the script to.</p></li>
-<li><p><strong>text</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – plaintext of the monitor script.</p></li>
+<li><p><strong>text</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The plaintext representing the monitor script.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/synthetics_monitor_script.html.markdown">https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/synthetics_monitor_script.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_newrelic.synthetics.MonitorScript.monitor_id">
 <code class="sig-name descname">monitor_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_newrelic.synthetics.MonitorScript.monitor_id" title="Permalink to this definition">¶</a></dt>
@@ -466,7 +463,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_newrelic.synthetics.MonitorScript.text">
 <code class="sig-name descname">text</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_newrelic.synthetics.MonitorScript.text" title="Permalink to this definition">¶</a></dt>
-<dd><p>plaintext of the monitor script.</p>
+<dd><p>The plaintext representing the monitor script.</p>
 </dd></dl>
 
 <dl class="method">
@@ -481,13 +478,10 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>monitor_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the monitor to attach the script to.</p></li>
-<li><p><strong>text</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – plaintext of the monitor script.</p></li>
+<li><p><strong>text</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The plaintext representing the monitor script.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/synthetics_monitor_script.html.markdown">https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/synthetics_monitor_script.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -532,6 +526,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_newrelic.synthetics.SecureCredential">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_newrelic.synthetics.</code><code class="sig-name descname">SecureCredential</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">key=None</em>, <em class="sig-param">last_updated=None</em>, <em class="sig-param">value=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.synthetics.SecureCredential" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this resource to create and manage New Relic Synthetic secure credentials.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/synthetics_secure_credential.html.markdown">https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/synthetics_secure_credential.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -540,13 +537,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>created_at</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The time the secure credential was created.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The secure credential’s description.</p></li>
 <li><p><strong>key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The secure credential’s key name.  Regardless of the case used in the configuration, the provider will provide an upcased key to the underlying API.</p></li>
+<li><p><strong>last_updated</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The time the secure credential was last updated.</p></li>
 <li><p><strong>value</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The secure credential’s value.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/synthetics_secure_credential.html.markdown">https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/synthetics_secure_credential.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_newrelic.synthetics.SecureCredential.created_at">
 <code class="sig-name descname">created_at</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_newrelic.synthetics.SecureCredential.created_at" title="Permalink to this definition">¶</a></dt>
@@ -563,6 +558,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_newrelic.synthetics.SecureCredential.key">
 <code class="sig-name descname">key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_newrelic.synthetics.SecureCredential.key" title="Permalink to this definition">¶</a></dt>
 <dd><p>The secure credential’s key name.  Regardless of the case used in the configuration, the provider will provide an upcased key to the underlying API.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_newrelic.synthetics.SecureCredential.last_updated">
+<code class="sig-name descname">last_updated</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_newrelic.synthetics.SecureCredential.last_updated" title="Permalink to this definition">¶</a></dt>
+<dd><p>The time the secure credential was last updated.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -585,13 +586,11 @@ properties used to qualify the lookup.</p>
 <li><p><strong>created_at</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The time the secure credential was created.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The secure credential’s description.</p></li>
 <li><p><strong>key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The secure credential’s key name.  Regardless of the case used in the configuration, the provider will provide an upcased key to the underlying API.</p></li>
+<li><p><strong>last_updated</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The time the secure credential was last updated.</p></li>
 <li><p><strong>value</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The secure credential’s value.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/synthetics_secure_credential.html.markdown">https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/synthetics_secure_credential.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -636,14 +635,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_newrelic.synthetics.get_monitor">
 <code class="sig-prename descclassname">pulumi_newrelic.synthetics.</code><code class="sig-name descname">get_monitor</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.synthetics.get_monitor" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about a specific synthetics monitor in New Relic that already exists. This can be used to set up a Synthetics alert condition.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/d/synthetics_monitor.html.markdown">https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/d/synthetics_monitor.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the synthetics monitor in New Relic.</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/d/synthetics_monitor.html.markdown">https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/d/synthetics_monitor.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -651,14 +650,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-prename descclassname">pulumi_newrelic.synthetics.</code><code class="sig-name descname">get_secure_credential</code><span class="sig-paren">(</span><em class="sig-param">key=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.synthetics.get_secure_credential" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about a specific Synthetics secure credential in New Relic that already exists.</p>
 <p>Note that the secure credential’s value is not returned as an attribute for security reasons.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/d/synthetics_secure_credential.html.markdown">https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/d/synthetics_secure_credential.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>key</strong> (<em>str</em>) – The secure credential’s key name.  Regardless of the case used in the configuration, the provider will provide an upcased key to the underlying API.</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/d/synthetics_secure_credential.html.markdown">https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/d/synthetics_secure_credential.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>
