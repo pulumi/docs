@@ -16,16 +16,18 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="target" id="module-pulumi_vault.aws"></span><dl class="class">
 <dt id="pulumi_vault.aws.AuthBackendCert">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.aws.</code><code class="sig-name descname">AuthBackendCert</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">aws_public_cert=None</em>, <em class="sig-param">backend=None</em>, <em class="sig-param">cert_name=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.aws.AuthBackendCert" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a AuthBackendCert resource with the given unique name, props, and options.</p>
+<dd><p>Create a AuthBackendCert resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] aws_public_cert: The  Base64 encoded AWS Public key required to</p>
+<blockquote>
+<div><p>verify PKCS7 signature of the EC2 instance metadata. You can find this key in
+the <a class="reference external" href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-identity-documents.html">AWS
+documentation</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>aws_public_cert</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The  Base64 encoded AWS Public key required to
-verify PKCS7 signature of the EC2 instance metadata. You can find this key in
-the <a class="reference external" href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-identity-documents.html">AWS
-documentation</a>.</p></li>
 <li><p><strong>backend</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path the AWS auth backend being configured was
 mounted at.  Defaults to <code class="docutils literal notranslate"><span class="pre">aws</span></code>.</p></li>
 <li><p><strong>cert_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the certificate.</p></li>
@@ -35,9 +37,6 @@ document which can be verified using the given certificate. Defaults to
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/aws_auth_backend_cert.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/aws_auth_backend_cert.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vault.aws.AuthBackendCert.aws_public_cert">
 <code class="sig-name descname">aws_public_cert</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.aws.AuthBackendCert.aws_public_cert" title="Permalink to this definition">¶</a></dt>
@@ -93,9 +92,6 @@ document which can be verified using the given certificate. Defaults to
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/aws_auth_backend_cert.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/aws_auth_backend_cert.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -139,14 +135,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_vault.aws.AuthBackendClient">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.aws.</code><code class="sig-name descname">AuthBackendClient</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_key=None</em>, <em class="sig-param">backend=None</em>, <em class="sig-param">ec2_endpoint=None</em>, <em class="sig-param">iam_endpoint=None</em>, <em class="sig-param">iam_server_id_header_value=None</em>, <em class="sig-param">secret_key=None</em>, <em class="sig-param">sts_endpoint=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.aws.AuthBackendClient" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a AuthBackendClient resource with the given unique name, props, and options.</p>
+<dd><p>Create a AuthBackendClient resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] access_key: The AWS access key that Vault should use for the</p>
+<blockquote>
+<div><p>auth backend.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>access_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AWS access key that Vault should use for the
-auth backend.</p></li>
 <li><p><strong>backend</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path the AWS auth backend being configured was
 mounted at.  Defaults to <code class="docutils literal notranslate"><span class="pre">aws</span></code>.</p></li>
 <li><p><strong>ec2_endpoint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Override the URL Vault uses when making EC2 API
@@ -163,9 +161,6 @@ calls.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/aws_auth_backend_client.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/aws_auth_backend_client.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vault.aws.AuthBackendClient.access_key">
 <code class="sig-name descname">access_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.aws.AuthBackendClient.access_key" title="Permalink to this definition">¶</a></dt>
@@ -245,9 +240,6 @@ calls.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/aws_auth_backend_client.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/aws_auth_backend_client.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -294,6 +286,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Configures the periodic tidying operation of the whitelisted identity entries.</p>
 <p>For more information, see the
 <a class="reference external" href="https://www.vaultproject.io/api/auth/aws/index.html#configure-identity-whitelist-tidy-operation">Vault docs</a>.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/aws_auth_backend_identity_whitelist.html.md">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/aws_auth_backend_identity_whitelist.html.md</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -308,9 +303,6 @@ backend storage.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/aws_auth_backend_identity_whitelist.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/aws_auth_backend_identity_whitelist.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vault.aws.AuthBackendIdentityWhitelist.backend">
 <code class="sig-name descname">backend</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.aws.AuthBackendIdentityWhitelist.backend" title="Permalink to this definition">¶</a></dt>
@@ -352,9 +344,6 @@ backend storage.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/aws_auth_backend_identity_whitelist.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/aws_auth_backend_identity_whitelist.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -402,6 +391,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 accomplished using a signed identity request from IAM or using ec2
 instance metadata. For more information, see the <a class="reference external" href="https://www.vaultproject.io/docs/auth/aws.html">Vault
 documentation</a>.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/aws_auth_backend_login.html.md">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/aws_auth_backend_login.html.md</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -434,9 +426,6 @@ removed. Can be retrieved from the EC2 metadata server.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/aws_auth_backend_login.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/aws_auth_backend_login.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vault.aws.AuthBackendLogin.accessor">
 <code class="sig-name descname">accessor</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.aws.AuthBackendLogin.accessor" title="Permalink to this definition">¶</a></dt>
@@ -502,6 +491,12 @@ authenticate with. Can be retrieved from the EC2 metadata server.</p>
 <code class="sig-name descname">lease_duration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.aws.AuthBackendLogin.lease_duration" title="Permalink to this definition">¶</a></dt>
 <dd><p>The duration in seconds the token will be valid, relative
 to the time in <code class="docutils literal notranslate"><span class="pre">lease_start_time</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vault.aws.AuthBackendLogin.lease_start_time">
+<code class="sig-name descname">lease_start_time</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.aws.AuthBackendLogin.lease_start_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Time at which the lease was read, using the clock of the system where Terraform was running</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -583,6 +578,7 @@ request.</p></li>
 authenticate with. Can be retrieved from the EC2 metadata server.</p></li>
 <li><p><strong>lease_duration</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The duration in seconds the token will be valid, relative
 to the time in <code class="docutils literal notranslate"><span class="pre">lease_start_time</span></code>.</p></li>
+<li><p><strong>lease_start_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Time at which the lease was read, using the clock of the system where Terraform was running</p></li>
 <li><p><strong>metadata</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of information returned by the Vault server about the
 authentication used to generate this token.</p></li>
 <li><p><strong>nonce</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique nonce to be used for login requests. Can be
@@ -602,9 +598,6 @@ removed. Can be retrieved from the EC2 metadata server.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/aws_auth_backend_login.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/aws_auth_backend_login.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -653,6 +646,9 @@ instances or principals that can perform the login operation against the
 backend. See the <a class="reference external" href="https://www.vaultproject.io/docs/auth/aws.html">Vault
 documentation</a> for more
 information.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/aws_auth_backend_role.html.md">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/aws_auth_backend_role.html.md</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -662,6 +658,7 @@ information.</p>
 the underlying instance where the client resides.</p></li>
 <li><p><strong>auth_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The auth type permitted for this role. Valid choices
 are <code class="docutils literal notranslate"><span class="pre">ec2</span></code> and <code class="docutils literal notranslate"><span class="pre">iam</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">iam</span></code>.</p></li>
+<li><p><strong>backend</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique name of the auth backend to configure.</p></li>
 <li><p><strong>bound_account_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – If set, defines a constraint on the EC2
 instances that can perform the login operation that they should be using the
 account ID specified by this field. <code class="docutils literal notranslate"><span class="pre">auth_type</span></code> must be set to <code class="docutils literal notranslate"><span class="pre">ec2</span></code> or
@@ -670,6 +667,7 @@ account ID specified by this field. <code class="docutils literal notranslate"><
 that can perform the login operation that they should be using the AMI ID
 specified by this field. <code class="docutils literal notranslate"><span class="pre">auth_type</span></code> must be set to <code class="docutils literal notranslate"><span class="pre">ec2</span></code> or
 <code class="docutils literal notranslate"><span class="pre">inferred_entity_type</span></code> must be set to <code class="docutils literal notranslate"><span class="pre">ec2_instance</span></code> to use this constraint.</p></li>
+<li><p><strong>bound_ec2_instance_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Only EC2 instances that match this instance ID will be permitted to log in.</p></li>
 <li><p><strong>bound_iam_instance_profile_arns</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – If set, defines a constraint on
 the EC2 instances that can perform the login operation that they must be
 associated with an IAM instance profile ARN which has a prefix that matches
@@ -764,9 +762,6 @@ using this role, provided as a number of seconds.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/aws_auth_backend_role.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/aws_auth_backend_role.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vault.aws.AuthBackendRole.allow_instance_migration">
 <code class="sig-name descname">allow_instance_migration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.aws.AuthBackendRole.allow_instance_migration" title="Permalink to this definition">¶</a></dt>
@@ -779,6 +774,12 @@ the underlying instance where the client resides.</p>
 <code class="sig-name descname">auth_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.aws.AuthBackendRole.auth_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>The auth type permitted for this role. Valid choices
 are <code class="docutils literal notranslate"><span class="pre">ec2</span></code> and <code class="docutils literal notranslate"><span class="pre">iam</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">iam</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vault.aws.AuthBackendRole.backend">
+<code class="sig-name descname">backend</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.aws.AuthBackendRole.backend" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unique name of the auth backend to configure.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -797,6 +798,12 @@ account ID specified by this field. <code class="docutils literal notranslate"><
 that can perform the login operation that they should be using the AMI ID
 specified by this field. <code class="docutils literal notranslate"><span class="pre">auth_type</span></code> must be set to <code class="docutils literal notranslate"><span class="pre">ec2</span></code> or
 <code class="docutils literal notranslate"><span class="pre">inferred_entity_type</span></code> must be set to <code class="docutils literal notranslate"><span class="pre">ec2_instance</span></code> to use this constraint.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vault.aws.AuthBackendRole.bound_ec2_instance_ids">
+<code class="sig-name descname">bound_ec2_instance_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.aws.AuthBackendRole.bound_ec2_instance_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>Only EC2 instances that match this instance ID will be permitted to log in.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1030,6 +1037,7 @@ properties used to qualify the lookup.</p>
 the underlying instance where the client resides.</p></li>
 <li><p><strong>auth_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The auth type permitted for this role. Valid choices
 are <code class="docutils literal notranslate"><span class="pre">ec2</span></code> and <code class="docutils literal notranslate"><span class="pre">iam</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">iam</span></code>.</p></li>
+<li><p><strong>backend</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique name of the auth backend to configure.</p></li>
 <li><p><strong>bound_account_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – If set, defines a constraint on the EC2
 instances that can perform the login operation that they should be using the
 account ID specified by this field. <code class="docutils literal notranslate"><span class="pre">auth_type</span></code> must be set to <code class="docutils literal notranslate"><span class="pre">ec2</span></code> or
@@ -1038,6 +1046,7 @@ account ID specified by this field. <code class="docutils literal notranslate"><
 that can perform the login operation that they should be using the AMI ID
 specified by this field. <code class="docutils literal notranslate"><span class="pre">auth_type</span></code> must be set to <code class="docutils literal notranslate"><span class="pre">ec2</span></code> or
 <code class="docutils literal notranslate"><span class="pre">inferred_entity_type</span></code> must be set to <code class="docutils literal notranslate"><span class="pre">ec2_instance</span></code> to use this constraint.</p></li>
+<li><p><strong>bound_ec2_instance_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Only EC2 instances that match this instance ID will be permitted to log in.</p></li>
 <li><p><strong>bound_iam_instance_profile_arns</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – If set, defines a constraint on
 the EC2 instances that can perform the login operation that they must be
 associated with an IAM instance profile ARN which has a prefix that matches
@@ -1135,9 +1144,6 @@ using this role, provided as a number of seconds.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/aws_auth_backend_role.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/aws_auth_backend_role.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1182,6 +1188,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_vault.aws.AuthBackendRoleTag">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.aws.</code><code class="sig-name descname">AuthBackendRoleTag</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allow_instance_migration=None</em>, <em class="sig-param">backend=None</em>, <em class="sig-param">disallow_reauthentication=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">max_ttl=None</em>, <em class="sig-param">policies=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.aws.AuthBackendRoleTag" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reads role tag information from an AWS auth backend in Vault.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/aws_auth_backend_role_tag.html.md">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/aws_auth_backend_role_tag.html.md</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1199,9 +1208,6 @@ role tags from, with no leading or trailing <code class="docutils literal notran
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/aws_auth_backend_role_tag.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/aws_auth_backend_role_tag.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vault.aws.AuthBackendRoleTag.allow_instance_migration">
 <code class="sig-name descname">allow_instance_migration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.aws.AuthBackendRoleTag.allow_instance_migration" title="Permalink to this definition">¶</a></dt>
@@ -1283,9 +1289,6 @@ role tags from, with no leading or trailing <code class="docutils literal notran
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/aws_auth_backend_role_tag.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/aws_auth_backend_role_tag.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1330,6 +1333,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_vault.aws.AuthBackendRoletagBlacklist">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.aws.</code><code class="sig-name descname">AuthBackendRoletagBlacklist</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">backend=None</em>, <em class="sig-param">disable_periodic_tidy=None</em>, <em class="sig-param">safety_buffer=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.aws.AuthBackendRoletagBlacklist" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configures the periodic tidying operation of the blacklisted role tag entries.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/aws_auth_backend_roletag_blacklist.html.md">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/aws_auth_backend_roletag_blacklist.html.md</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1345,9 +1351,6 @@ Defaults to 259,200 seconds, or 72 hours.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/aws_auth_backend_roletag_blacklist.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/aws_auth_backend_roletag_blacklist.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vault.aws.AuthBackendRoletagBlacklist.backend">
 <code class="sig-name descname">backend</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.aws.AuthBackendRoletagBlacklist.backend" title="Permalink to this definition">¶</a></dt>
@@ -1391,9 +1394,6 @@ Defaults to 259,200 seconds, or 72 hours.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/aws_auth_backend_roletag_blacklist.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/aws_auth_backend_roletag_blacklist.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1437,23 +1437,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_vault.aws.AuthBackendStsRole">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.aws.</code><code class="sig-name descname">AuthBackendStsRole</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">account_id=None</em>, <em class="sig-param">backend=None</em>, <em class="sig-param">sts_role=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.aws.AuthBackendStsRole" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a AuthBackendStsRole resource with the given unique name, props, and options.</p>
+<dd><p>Create a AuthBackendStsRole resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] account_id: The AWS account ID to configure the STS role for.
+:param pulumi.Input[str] backend: The path the AWS auth backend being configured was</p>
+<blockquote>
+<div><p>mounted at.  Defaults to <code class="docutils literal notranslate"><span class="pre">aws</span></code>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AWS account ID to configure the STS role for.</p></li>
-<li><p><strong>backend</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path the AWS auth backend being configured was
-mounted at.  Defaults to <code class="docutils literal notranslate"><span class="pre">aws</span></code>.</p></li>
-<li><p><strong>sts_role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The STS role to assume when verifying requests made
-by EC2 instances in the account specified by <code class="docutils literal notranslate"><span class="pre">account_id</span></code>.</p></li>
-</ul>
+<dd class="field-odd"><p><strong>sts_role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The STS role to assume when verifying requests made
+by EC2 instances in the account specified by <code class="docutils literal notranslate"><span class="pre">account_id</span></code>.</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/aws_auth_backend_sts_role.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/aws_auth_backend_sts_role.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vault.aws.AuthBackendStsRole.account_id">
 <code class="sig-name descname">account_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.aws.AuthBackendStsRole.account_id" title="Permalink to this definition">¶</a></dt>
@@ -1493,9 +1490,6 @@ by EC2 instances in the account specified by <code class="docutils literal notra
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/aws_auth_backend_sts_role.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/aws_auth_backend_sts_role.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1538,17 +1532,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_vault.aws.AwaitableGetAccessCredentialsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.aws.</code><code class="sig-name descname">AwaitableGetAccessCredentialsResult</code><span class="sig-paren">(</span><em class="sig-param">access_key=None</em>, <em class="sig-param">backend=None</em>, <em class="sig-param">lease_duration=None</em>, <em class="sig-param">lease_id=None</em>, <em class="sig-param">lease_renewable=None</em>, <em class="sig-param">lease_start_time=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">secret_key=None</em>, <em class="sig-param">security_token=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.aws.AwaitableGetAccessCredentialsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.aws.</code><code class="sig-name descname">AwaitableGetAccessCredentialsResult</code><span class="sig-paren">(</span><em class="sig-param">access_key=None</em>, <em class="sig-param">backend=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">lease_duration=None</em>, <em class="sig-param">lease_id=None</em>, <em class="sig-param">lease_renewable=None</em>, <em class="sig-param">lease_start_time=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">secret_key=None</em>, <em class="sig-param">security_token=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.aws.AwaitableGetAccessCredentialsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_vault.aws.GetAccessCredentialsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.aws.</code><code class="sig-name descname">GetAccessCredentialsResult</code><span class="sig-paren">(</span><em class="sig-param">access_key=None</em>, <em class="sig-param">backend=None</em>, <em class="sig-param">lease_duration=None</em>, <em class="sig-param">lease_id=None</em>, <em class="sig-param">lease_renewable=None</em>, <em class="sig-param">lease_start_time=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">secret_key=None</em>, <em class="sig-param">security_token=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.aws.GetAccessCredentialsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.aws.</code><code class="sig-name descname">GetAccessCredentialsResult</code><span class="sig-paren">(</span><em class="sig-param">access_key=None</em>, <em class="sig-param">backend=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">lease_duration=None</em>, <em class="sig-param">lease_id=None</em>, <em class="sig-param">lease_renewable=None</em>, <em class="sig-param">lease_start_time=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">secret_key=None</em>, <em class="sig-param">security_token=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.aws.GetAccessCredentialsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getAccessCredentials.</p>
 <dl class="attribute">
 <dt id="pulumi_vault.aws.GetAccessCredentialsResult.access_key">
 <code class="sig-name descname">access_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.aws.GetAccessCredentialsResult.access_key" title="Permalink to this definition">¶</a></dt>
 <dd><p>The AWS Access Key ID returned by Vault.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vault.aws.GetAccessCredentialsResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.aws.GetAccessCredentialsResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1577,25 +1577,21 @@ generated with this data may fail to apply.</p>
 <dd><p>The STS token returned by Vault, if any.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_vault.aws.GetAccessCredentialsResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.aws.GetAccessCredentialsResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_vault.aws.SecretBackend">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.aws.</code><code class="sig-name descname">SecretBackend</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_key=None</em>, <em class="sig-param">default_lease_ttl_seconds=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">max_lease_ttl_seconds=None</em>, <em class="sig-param">path=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">secret_key=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.aws.SecretBackend" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a SecretBackend resource with the given unique name, props, and options.</p>
+<dd><p>Create a SecretBackend resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] access_key: The AWS Access Key ID this backend should use to</p>
+<blockquote>
+<div><p>issue new credentials. Vault uses the official AWS SDK to authenticate, and thus can also use standard AWS environment credentials, shared file credentials or IAM role/ECS task credentials.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>access_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AWS Access Key ID this backend should use to
-issue new credentials. Vault uses the official AWS SDK to authenticate, and thus can also use standard AWS environment credentials, shared file credentials or IAM role/ECS task credentials.</p></li>
 <li><p><strong>default_lease_ttl_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The default TTL for credentials
 issued by this backend.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A human-friendly description for this backend.</p></li>
@@ -1609,9 +1605,6 @@ issue new credentials. Vault uses the official AWS SDK to authenticate, and thus
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/aws_secret_backend.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/aws_secret_backend.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vault.aws.SecretBackend.access_key">
 <code class="sig-name descname">access_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.aws.SecretBackend.access_key" title="Permalink to this definition">¶</a></dt>
@@ -1685,9 +1678,6 @@ issue new credentials. Vault uses the official AWS SDK to authenticate, and thus
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/aws_secret_backend.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/aws_secret_backend.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1731,14 +1721,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_vault.aws.SecretBackendRole">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.aws.</code><code class="sig-name descname">SecretBackendRole</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">backend=None</em>, <em class="sig-param">credential_type=None</em>, <em class="sig-param">default_sts_ttl=None</em>, <em class="sig-param">max_sts_ttl=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">policy_arns=None</em>, <em class="sig-param">policy_document=None</em>, <em class="sig-param">role_arns=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.aws.SecretBackendRole" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a SecretBackendRole resource with the given unique name, props, and options.</p>
+<dd><p>Create a SecretBackendRole resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] backend: The path the AWS secret backend is mounted at,</p>
+<blockquote>
+<div><p>with no leading or trailing <code class="docutils literal notranslate"><span class="pre">/</span></code>s.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>backend</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path the AWS secret backend is mounted at,
-with no leading or trailing <code class="docutils literal notranslate"><span class="pre">/</span></code>s.</p></li>
 <li><p><strong>credential_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the type of credential to be used when
 retrieving credentials from the role. Must be one of <code class="docutils literal notranslate"><span class="pre">iam_user</span></code>, <code class="docutils literal notranslate"><span class="pre">assumed_role</span></code>, or
 <code class="docutils literal notranslate"><span class="pre">federation_token</span></code>.</p></li>
@@ -1762,9 +1754,6 @@ prohibited otherwise.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/aws_secret_backend_role.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/aws_secret_backend_role.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vault.aws.SecretBackendRole.backend">
 <code class="sig-name descname">backend</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.aws.SecretBackendRole.backend" title="Permalink to this definition">¶</a></dt>
@@ -1863,9 +1852,6 @@ prohibited otherwise.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/aws_secret_backend_role.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/aws_secret_backend_role.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1927,9 +1913,6 @@ in addition to the keys.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/d/aws_access_credentials.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/d/aws_access_credentials.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

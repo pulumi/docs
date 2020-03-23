@@ -17,6 +17,9 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_vault.transit.SecretBackendKey">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.transit.</code><code class="sig-name descname">SecretBackendKey</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allow_plaintext_backup=None</em>, <em class="sig-param">backend=None</em>, <em class="sig-param">convergent_encryption=None</em>, <em class="sig-param">deletion_allowed=None</em>, <em class="sig-param">derived=None</em>, <em class="sig-param">exportable=None</em>, <em class="sig-param">min_decryption_version=None</em>, <em class="sig-param">min_encryption_version=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.transit.SecretBackendKey" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an Encryption Keyring on a Transit Secret Backend for Vault.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/transit_secret_backend_key.html.md">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/transit_secret_backend_key.html.md</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -34,6 +37,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>backend</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path the transit secret backend is mounted at, with no leading or trailing <code class="docutils literal notranslate"><span class="pre">/</span></code>s.</p></li>
 <li><p><strong>convergent_encryption</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether or not to support convergent encryption, where the same plaintext creates the same ciphertext. This requires <code class="docutils literal notranslate"><span class="pre">derived</span></code> to be set to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><strong>deletion_allowed</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies if the key is allowed to be deleted.</p></li>
 <li><p><strong>derived</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies if key derivation is to be used. If enabled, all encrypt/decrypt requests to this key must provide a context which is used for key derivation.</p></li>
 <li><p><strong>exportable</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enables keys to be exportable. This allows for all valid private keys in the keyring to be exported. Once set, this cannot be disabled.</p></li>
 <li><p><strong>min_decryption_version</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Minimum key version to use for decryption.</p></li>
@@ -46,9 +50,6 @@ anything, please consult the source <a class="reference external" href="https://
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">Refer</span> <span class="n">to</span> <span class="n">the</span> <span class="n">Vault</span> <span class="n">documentation</span> <span class="n">on</span> <span class="n">transit</span> <span class="n">key</span> <span class="n">types</span> <span class="k">for</span> <span class="n">more</span> <span class="n">information</span><span class="p">:</span> <span class="p">[</span><span class="n">Key</span> <span class="n">Types</span><span class="p">](</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">vaultproject</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">docs</span><span class="o">/</span><span class="n">secrets</span><span class="o">/</span><span class="n">transit</span><span class="o">/</span><span class="n">index</span><span class="o">.</span><span class="n">html</span><span class="c1">#key-types)</span>
 </pre></div>
 </div>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/transit_secret_backend_key.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/transit_secret_backend_key.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vault.transit.SecretBackendKey.allow_plaintext_backup">
 <code class="sig-name descname">allow_plaintext_backup</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.transit.SecretBackendKey.allow_plaintext_backup" title="Permalink to this definition">¶</a></dt>
@@ -68,6 +69,12 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_vault.transit.SecretBackendKey.convergent_encryption">
 <code class="sig-name descname">convergent_encryption</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.transit.SecretBackendKey.convergent_encryption" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether or not to support convergent encryption, where the same plaintext creates the same ciphertext. This requires <code class="docutils literal notranslate"><span class="pre">derived</span></code> to be set to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vault.transit.SecretBackendKey.deletion_allowed">
+<code class="sig-name descname">deletion_allowed</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.transit.SecretBackendKey.deletion_allowed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies if the key is allowed to be deleted.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -178,6 +185,7 @@ properties used to qualify the lookup.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>backend</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path the transit secret backend is mounted at, with no leading or trailing <code class="docutils literal notranslate"><span class="pre">/</span></code>s.</p></li>
 <li><p><strong>convergent_encryption</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether or not to support convergent encryption, where the same plaintext creates the same ciphertext. This requires <code class="docutils literal notranslate"><span class="pre">derived</span></code> to be set to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><strong>deletion_allowed</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies if the key is allowed to be deleted.</p></li>
 <li><p><strong>derived</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies if key derivation is to be used. If enabled, all encrypt/decrypt requests to this key must provide a context which is used for key derivation.</p></li>
 <li><p><strong>exportable</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enables keys to be exportable. This allows for all valid private keys in the keyring to be exported. Once set, this cannot be disabled.</p></li>
 <li><p><strong>keys</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of key versions in the keyring. This attribute is zero-indexed and will contain a map of values depending on the <code class="docutils literal notranslate"><span class="pre">type</span></code> of the encryption key.</p></li>
@@ -207,9 +215,6 @@ properties used to qualify the lookup.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">Refer</span> <span class="n">to</span> <span class="n">the</span> <span class="n">Vault</span> <span class="n">documentation</span> <span class="n">on</span> <span class="n">transit</span> <span class="n">key</span> <span class="n">types</span> <span class="k">for</span> <span class="n">more</span> <span class="n">information</span><span class="p">:</span> <span class="p">[</span><span class="n">Key</span> <span class="n">Types</span><span class="p">](</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">vaultproject</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">docs</span><span class="o">/</span><span class="n">secrets</span><span class="o">/</span><span class="n">transit</span><span class="o">/</span><span class="n">index</span><span class="o">.</span><span class="n">html</span><span class="c1">#key-types)</span>
 </pre></div>
 </div>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/transit_secret_backend_key.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/transit_secret_backend_key.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -254,6 +259,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_vault.transit.SecretCacheConfig">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.transit.</code><code class="sig-name descname">SecretCacheConfig</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">backend=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.transit.SecretCacheConfig" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configure the cache for the Transit Secret Backend in Vault.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/transit_secret_backend_cache_config.html.md">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/transit_secret_backend_cache_config.html.md</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -264,9 +272,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/transit_secret_cache_config.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/transit_secret_cache_config.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vault.transit.SecretCacheConfig.backend">
 <code class="sig-name descname">backend</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.transit.SecretCacheConfig.backend" title="Permalink to this definition">¶</a></dt>
@@ -295,9 +300,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/transit_secret_cache_config.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/transit_secret_cache_config.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
