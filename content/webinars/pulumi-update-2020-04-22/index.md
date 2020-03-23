@@ -61,7 +61,7 @@ main:
 
     # A bullet point list containing what the user will learn during the webinar.
     learn:
-      - Cloud programming best practices and production ready techniques.
+      - Cloud programming best practices and production-ready techniques.
       - How to provision cloud resources in your favorite programming language.
 
 
