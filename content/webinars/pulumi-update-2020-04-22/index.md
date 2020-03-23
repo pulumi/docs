@@ -51,8 +51,7 @@ main:
     datetime: "WED APR 22, 2020 AT 11:00AM PDT"
     # Description of the webinar.
     description: |
-        Join Pulumi CEO, Joe Duffy, and the Pulumi team for a walk-through of all the improvements and modern infrastructure capabilities of Pulumi.
-
+        Pulumi 2.0 makes it easier than ever to master any cloud using your favorite languages.  Learn about new capabilities to help your team plan, build, validate, deploy and secure your cloud resources. With Pulumi’s new capabilities, you’ll spend less time fretting about complex configurations and more time delivering new infrastructure, apps, and services for your customers and stakeholders. Our improved documentation and first-class support for Python, .NET and Go means that more teams can start building, collaborating on and re-using infrastructure code.
     # The webinar presenters
     presenters:
         - name: Joe Duffy

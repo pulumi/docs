@@ -47,7 +47,7 @@ main:
     datetime: "THU APR 09, 2020 AT 11:00AM - 12:00PM PDT"
     # Description of the webinar.
     description: |
-        Erin Krengel and Cameron Stokes will demonstrate practical examples for defining and enforcing policies on AWS, Azure and GCP.
+        Poorly configured cloud infrastructure is a common source of security, reliability and cost issues that result in the types of headlines that make executive leaders cringe. The Pulumi team will show you how to create durable policies that scale from a single infrastructure stack to company-wide rules that enforce best practices. From properly secured S3 buckets to mandated resource labels - Pulumi’s Policy as Code capabilities help you to prevent defective configurations from impacting your cloud of choice.
 
     # The webinar presenters
     presenters:

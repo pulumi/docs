@@ -47,9 +47,7 @@ main:
     datetime: "THUR APR 02, 2020 AT 11:30AM CET"
     # Description of the webinar.
     description: |
-        Paul Stack and Mikhail Shilkov from Pulumi will show you how to get started mastering your preferred cloud using your favorite languages.
-
-        In this webinar, you'll learn advanced topics including Kubernetes, infrastructure testing, dynamic providers and component resources.
+        All Pulumi capabilities for defining cloud resources are now available for .NET developers. Pulumi engineer Mikhail Shilkov will show you how you can use C#, F#, and VB.NET to define the infrastructure for Azure, AWS, or even on-prem Kubernetes clusters.
 
     # The webinar presenters
     presenters:
