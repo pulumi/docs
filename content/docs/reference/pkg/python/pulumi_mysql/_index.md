@@ -24,6 +24,7 @@ database just as easily as it can create it. To avoid costly accidents,
 consider setting
 <cite>``prevent_destroy`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/configuration/resources.html#prevent_destroy">https://www.terraform.io/docs/configuration/resources.html#prevent_destroy</a>&gt;`_
 on your database resources as an extra safety measure.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-mysql/blob/master/website/docs/r/database.html.markdown">https://github.com/terraform-providers/terraform-provider-mysql/blob/master/website/docs/r/database.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -43,9 +44,6 @@ the operating system on which the MySQL server is running.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-mysql/blob/master/website/docs/r/database.html.markdown">https://github.com/terraform-providers/terraform-provider-mysql/blob/master/website/docs/r/database.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_mysql.Database.default_character_set">
 <code class="sig-name descname">default_character_set</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_mysql.Database.default_character_set" title="Permalink to this definition">¶</a></dt>
@@ -95,9 +93,6 @@ the operating system on which the MySQL server is running.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-mysql/blob/master/website/docs/r/database.html.markdown">https://github.com/terraform-providers/terraform-provider-mysql/blob/master/website/docs/r/database.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -143,6 +138,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_mysql.</code><code class="sig-name descname">Grant</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">database=None</em>, <em class="sig-param">grant=None</em>, <em class="sig-param">host=None</em>, <em class="sig-param">privileges=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">roles=None</em>, <em class="sig-param">table=None</em>, <em class="sig-param">tls_option=None</em>, <em class="sig-param">user=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mysql.Grant" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.Grant</span></code> resource creates and manages privileges given to
 a user on a MySQL server.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-mysql/blob/master/website/docs/r/grant.html.markdown">https://github.com/terraform-providers/terraform-provider-mysql/blob/master/website/docs/r/grant.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -160,9 +158,6 @@ a user on a MySQL server.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-mysql/blob/master/website/docs/r/grant.html.markdown">https://github.com/terraform-providers/terraform-provider-mysql/blob/master/website/docs/r/grant.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_mysql.Grant.database">
 <code class="sig-name descname">database</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_mysql.Grant.database" title="Permalink to this definition">¶</a></dt>
@@ -241,9 +236,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-mysql/blob/master/website/docs/r/grant.html.markdown">https://github.com/terraform-providers/terraform-provider-mysql/blob/master/website/docs/r/grant.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -291,6 +283,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 settings, however an explicit <code class="docutils literal notranslate"><span class="pre">Provider</span></code> instance may be created and passed during resource
 construction to achieve fine-grained programmatic control over provider settings. See the
 <a class="reference external" href="https://www.pulumi.com/docs/reference/programming-model/#providers">documentation</a> for more information.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-mysql/blob/master/website/docs/index.html.markdown">https://github.com/terraform-providers/terraform-provider-mysql/blob/master/website/docs/index.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -299,28 +294,6 @@ construction to achieve fine-grained programmatic control over provider settings
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-mysql/blob/master/website/docs/index.html.markdown">https://github.com/terraform-providers/terraform-provider-mysql/blob/master/website/docs/index.html.markdown</a>.</p>
-</div></blockquote>
-<dl class="method">
-<dt id="pulumi_mysql.Provider.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mysql.Provider.get" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get an existing Provider resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
-<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-</ul>
-</dd>
-</dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-mysql/blob/master/website/docs/index.html.markdown">https://github.com/terraform-providers/terraform-provider-mysql/blob/master/website/docs/index.html.markdown</a>.</p>
-</div></blockquote>
-</dd></dl>
-
 <dl class="method">
 <dt id="pulumi_mysql.Provider.translate_output_property">
 <code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mysql.Provider.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -366,6 +339,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 server.</p>
 <blockquote>
 <div><p><strong>Note:</strong> MySQL introduced roles in version 8. They do not work on MySQL 5 and lower.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-mysql/blob/master/website/docs/r/role.html.markdown">https://github.com/terraform-providers/terraform-provider-mysql/blob/master/website/docs/r/role.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -376,9 +350,6 @@ server.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-mysql/blob/master/website/docs/r/role.html.markdown">https://github.com/terraform-providers/terraform-provider-mysql/blob/master/website/docs/r/role.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_mysql.Role.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_mysql.Role.name" title="Permalink to this definition">¶</a></dt>
@@ -400,9 +371,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-mysql/blob/master/website/docs/r/role.html.markdown">https://github.com/terraform-providers/terraform-provider-mysql/blob/master/website/docs/r/role.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -453,6 +421,7 @@ server.</p>
 obscured by an unsalted hash in the state
 <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.
 Care is required when using this resource, to avoid disclosing the password.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-mysql/blob/master/website/docs/r/user.html.markdown">https://github.com/terraform-providers/terraform-provider-mysql/blob/master/website/docs/r/user.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -468,9 +437,6 @@ Care is required when using this resource, to avoid disclosing the password.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-mysql/blob/master/website/docs/r/user.html.markdown">https://github.com/terraform-providers/terraform-provider-mysql/blob/master/website/docs/r/user.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_mysql.User.auth_plugin">
 <code class="sig-name descname">auth_plugin</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_mysql.User.auth_plugin" title="Permalink to this definition">¶</a></dt>
@@ -527,9 +493,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-mysql/blob/master/website/docs/r/user.html.markdown">https://github.com/terraform-providers/terraform-provider-mysql/blob/master/website/docs/r/user.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -573,21 +536,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_mysql.UserPassword">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_mysql.</code><code class="sig-name descname">UserPassword</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">host=None</em>, <em class="sig-param">pgp_key=None</em>, <em class="sig-param">user=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mysql.UserPassword" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a UserPassword resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>host</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The source host of the user. Defaults to <code class="docutils literal notranslate"><span class="pre">localhost</span></code>.</p></li>
-<li><p><strong>pgp_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Either a base-64 encoded PGP public key, or a keybase username in the form <code class="docutils literal notranslate"><span class="pre">keybase:some_person_that_exists</span></code>.</p></li>
-<li><p><strong>user</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IAM user to associate with this access key.</p></li>
-</ul>
-</dd>
-</dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-mysql/blob/master/website/docs/r/user_password.html.markdown">https://github.com/terraform-providers/terraform-provider-mysql/blob/master/website/docs/r/user_password.html.markdown</a>.</p>
-</div></blockquote>
+<dd><p>Create a UserPassword resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] host: The source host of the user. Defaults to <code class="docutils literal notranslate"><span class="pre">localhost</span></code>.
+:param pulumi.Input[str] pgp_key: Either a base-64 encoded PGP public key, or a keybase username in the form <code class="docutils literal notranslate"><span class="pre">keybase:some_person_that_exists</span></code>.
+:param pulumi.Input[str] user: The IAM user to associate with this access key.</p>
 <dl class="attribute">
 <dt id="pulumi_mysql.UserPassword.encrypted_password">
 <code class="sig-name descname">encrypted_password</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_mysql.UserPassword.encrypted_password" title="Permalink to this definition">¶</a></dt>
@@ -637,9 +591,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-mysql/blob/master/website/docs/r/user_password.html.markdown">https://github.com/terraform-providers/terraform-provider-mysql/blob/master/website/docs/r/user_password.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">

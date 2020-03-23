@@ -50,7 +50,12 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="class">
 <dt id="pulumi_digitalocean.AwaitableGetImageResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">AwaitableGetImageResult</code><span class="sig-paren">(</span><em class="sig-param">distribution=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">image=None</em>, <em class="sig-param">min_disk_size=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">private=None</em>, <em class="sig-param">regions=None</em>, <em class="sig-param">slug=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.AwaitableGetImageResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">AwaitableGetImageResult</code><span class="sig-paren">(</span><em class="sig-param">created=None</em>, <em class="sig-param">distribution=None</em>, <em class="sig-param">error_message=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">image=None</em>, <em class="sig-param">min_disk_size=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">private=None</em>, <em class="sig-param">regions=None</em>, <em class="sig-param">size_gigabytes=None</em>, <em class="sig-param">slug=None</em>, <em class="sig-param">source=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.AwaitableGetImageResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_digitalocean.AwaitableGetImagesResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">AwaitableGetImagesResult</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">images=None</em>, <em class="sig-param">sorts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.AwaitableGetImagesResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -69,8 +74,28 @@ anything, please consult the source <a class="reference external" href="https://
 <dd></dd></dl>
 
 <dl class="class">
+<dt id="pulumi_digitalocean.AwaitableGetProjectResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">AwaitableGetProjectResult</code><span class="sig-paren">(</span><em class="sig-param">created_at=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">environment=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">is_default=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">owner_id=None</em>, <em class="sig-param">owner_uuid=None</em>, <em class="sig-param">purpose=None</em>, <em class="sig-param">resources=None</em>, <em class="sig-param">updated_at=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.AwaitableGetProjectResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_digitalocean.AwaitableGetProjectsResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">AwaitableGetProjectsResult</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">projects=None</em>, <em class="sig-param">sorts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.AwaitableGetProjectsResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_digitalocean.AwaitableGetRecordResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">AwaitableGetRecordResult</code><span class="sig-paren">(</span><em class="sig-param">data=None</em>, <em class="sig-param">domain=None</em>, <em class="sig-param">flags=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">priority=None</em>, <em class="sig-param">tag=None</em>, <em class="sig-param">ttl=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">weight=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.AwaitableGetRecordResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_digitalocean.AwaitableGetRegionResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">AwaitableGetRegionResult</code><span class="sig-paren">(</span><em class="sig-param">available=None</em>, <em class="sig-param">features=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">sizes=None</em>, <em class="sig-param">slug=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.AwaitableGetRegionResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_digitalocean.AwaitableGetRegionsResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">AwaitableGetRegionsResult</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">regions=None</em>, <em class="sig-param">sorts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.AwaitableGetRegionsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -1128,7 +1153,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_digitalocean.DatabaseUser">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">DatabaseUser</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.DatabaseUser" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">DatabaseUser</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">mysql_auth_plugin=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.DatabaseUser" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DigitalOcean database user resource. When creating a new database cluster, a default admin user with name <code class="docutils literal notranslate"><span class="pre">doadmin</span></code> will be created. Then, this resource can be used to provide additional normal users inside the cluster.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Any new users created will always have <code class="docutils literal notranslate"><span class="pre">normal</span></code> role, only the default user that comes with database cluster creation has <code class="docutils literal notranslate"><span class="pre">primary</span></code> role. Additional permissions must be managed manually.</p>
@@ -1140,6 +1165,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the original source database cluster.</p></li>
+<li><p><strong>mysql_auth_plugin</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The authentication method to use for connections to the MySQL user account. The valid values are <code class="docutils literal notranslate"><span class="pre">mysql_native_password</span></code> or <code class="docutils literal notranslate"><span class="pre">caching_sha2_password</span></code> (this is the default).</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name for the database user.</p></li>
 </ul>
 </dd>
@@ -1148,6 +1174,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_digitalocean.DatabaseUser.cluster_id">
 <code class="sig-name descname">cluster_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.DatabaseUser.cluster_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the original source database cluster.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.DatabaseUser.mysql_auth_plugin">
+<code class="sig-name descname">mysql_auth_plugin</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.DatabaseUser.mysql_auth_plugin" title="Permalink to this definition">¶</a></dt>
+<dd><p>The authentication method to use for connections to the MySQL user account. The valid values are <code class="docutils literal notranslate"><span class="pre">mysql_native_password</span></code> or <code class="docutils literal notranslate"><span class="pre">caching_sha2_password</span></code> (this is the default).</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1170,7 +1202,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_digitalocean.DatabaseUser.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">role=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.DatabaseUser.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">mysql_auth_plugin=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">role=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.DatabaseUser.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing DatabaseUser resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1180,6 +1212,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the original source database cluster.</p></li>
+<li><p><strong>mysql_auth_plugin</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The authentication method to use for connections to the MySQL user account. The valid values are <code class="docutils literal notranslate"><span class="pre">mysql_native_password</span></code> or <code class="docutils literal notranslate"><span class="pre">caching_sha2_password</span></code> (this is the default).</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name for the database user.</p></li>
 <li><p><strong>password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Password for the database user.</p></li>
 <li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Role for the database user. The value will be either “primary” or “normal”.</p></li>
@@ -1240,7 +1273,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>domain</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The domain to add the record to.</p></li>
 <li><p><strong>flags</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The flags of the record. Only valid when type is <code class="docutils literal notranslate"><span class="pre">CAA</span></code>. Must be between 0 and 255.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the record.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the record. Use <code class="docutils literal notranslate"><span class="pre">&#64;</span></code> for records on domain’s name itself.</p></li>
 <li><p><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The port of the record. Only valid when type is <code class="docutils literal notranslate"><span class="pre">SRV</span></code>.  Must be between 1 and 65535.</p></li>
 <li><p><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The priority of the record. Only valid when type is <code class="docutils literal notranslate"><span class="pre">MX</span></code> or <code class="docutils literal notranslate"><span class="pre">SRV</span></code>. Must be between 0 and 65535.</p></li>
 <li><p><strong>tag</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The tag of the record. Only valid when type is <code class="docutils literal notranslate"><span class="pre">CAA</span></code>. Must be one of <code class="docutils literal notranslate"><span class="pre">issue</span></code>, <code class="docutils literal notranslate"><span class="pre">issuewild</span></code>, or <code class="docutils literal notranslate"><span class="pre">iodef</span></code>.</p></li>
@@ -1272,7 +1305,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_digitalocean.DnsRecord.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.DnsRecord.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the record.</p>
+<dd><p>The name of the record. Use <code class="docutils literal notranslate"><span class="pre">&#64;</span></code> for records on domain’s name itself.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1331,7 +1364,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>domain</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The domain to add the record to.</p></li>
 <li><p><strong>flags</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The flags of the record. Only valid when type is <code class="docutils literal notranslate"><span class="pre">CAA</span></code>. Must be between 0 and 255.</p></li>
 <li><p><strong>fqdn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The FQDN of the record</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the record.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the record. Use <code class="docutils literal notranslate"><span class="pre">&#64;</span></code> for records on domain’s name itself.</p></li>
 <li><p><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The port of the record. Only valid when type is <code class="docutils literal notranslate"><span class="pre">SRV</span></code>.  Must be between 1 and 65535.</p></li>
 <li><p><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The priority of the record. Only valid when type is <code class="docutils literal notranslate"><span class="pre">MX</span></code> or <code class="docutils literal notranslate"><span class="pre">SRV</span></code>. Must be between 0 and 65535.</p></li>
 <li><p><strong>tag</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The tag of the record. Only valid when type is <code class="docutils literal notranslate"><span class="pre">CAA</span></code>. Must be one of <code class="docutils literal notranslate"><span class="pre">issue</span></code>, <code class="docutils literal notranslate"><span class="pre">issuewild</span></code>, or <code class="docutils literal notranslate"><span class="pre">iodef</span></code>.</p></li>
@@ -2678,7 +2711,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_digitalocean.GetImageResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">GetImageResult</code><span class="sig-paren">(</span><em class="sig-param">distribution=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">image=None</em>, <em class="sig-param">min_disk_size=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">private=None</em>, <em class="sig-param">regions=None</em>, <em class="sig-param">slug=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.GetImageResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">GetImageResult</code><span class="sig-paren">(</span><em class="sig-param">created=None</em>, <em class="sig-param">distribution=None</em>, <em class="sig-param">error_message=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">image=None</em>, <em class="sig-param">min_disk_size=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">private=None</em>, <em class="sig-param">regions=None</em>, <em class="sig-param">size_gigabytes=None</em>, <em class="sig-param">slug=None</em>, <em class="sig-param">source=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.GetImageResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getImage.</p>
 <dl class="attribute">
 <dt id="pulumi_digitalocean.GetImageResult.distribution">
@@ -2686,19 +2719,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The name of the distribution of the OS of the image.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">min_disk_size</span></code>: The minimum ‘disk’ required for the image.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">size_gigabytes</span></code>: The size of the image in GB.</p></li>
 </ul>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_digitalocean.GetImageResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetImageResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_digitalocean.GetImageResult.image">
 <code class="sig-name descname">image</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetImageResult.image" title="Permalink to this definition">¶</a></dt>
-<dd><p>The id of the image.</p>
+<dd><p>The id of the image (legacy parameter).</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2708,8 +2736,47 @@ a format of their choosing before sending those properties to the Pulumi engine.
 Linux distributions or One-Click Applications, while non-public images represent
 snapshots and backups and are only available within your account.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">regions</span></code>: The regions that the image is available in.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">regions</span></code>: A set of the regions that the image is available in.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code>: A set of tags applied to the image</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">created</span></code>: When the image was created</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">status</span></code>: Current status of the image</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">error_message</span></code>: Any applicable error message pertaining to the image</p></li>
+</ul>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_digitalocean.GetImagesResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">GetImagesResult</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">images=None</em>, <em class="sig-param">sorts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.GetImagesResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getImages.</p>
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetImagesResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetImagesResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetImagesResult.images">
+<code class="sig-name descname">images</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetImagesResult.images" title="Permalink to this definition">¶</a></dt>
+<dd><p>A set of images satisfying any <code class="docutils literal notranslate"><span class="pre">filter</span></code> and <code class="docutils literal notranslate"><span class="pre">sort</span></code> criteria. Each image has the following attributes:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">slug</span></code>: Unique text identifier of the image.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code>: The ID of the image.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code>: The name of the image.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code>: Type of the image.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">distribution</span></code> - The name of the distribution of the OS of the image.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">min_disk_size</span></code>: The minimum ‘disk’ required for the image.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">size_gigabytes</span></code>: The size of the image in GB.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">private</span></code> - Is image a public image or not. Public images represent
+Linux distributions or One-Click Applications, while non-public images represent
+snapshots and backups and are only available within your account.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">regions</span></code>: A set of the regions that the image is available in.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code>: A set of tags applied to the image</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">created</span></code>: When the image was created</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">status</span></code>: Current status of the image</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">error_message</span></code>: Any applicable error message pertaining to the image</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">image</span></code> - The id of the image (legacy parameter).</p></li>
 </ul>
 </dd></dl>
 
@@ -2763,6 +2830,7 @@ snapshots and backups and are only available within your account.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">min_nodes</span></code> - If auto-scaling is enabled, this represents the minimum number of nodes that the node pool can be scaled down to.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">max_nodes</span></code> - If auto-scaling is enabled, this represents the maximum number of nodes that the node pool can be scaled up to.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> - A list of tag names applied to the node pool.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">labels</span></code> - A map of key/value pairs applied to nodes in the pool. The labels are exposed in the Kubernetes API as labels in the metadata of the corresponding <a class="reference external" href="https://kubernetes.io/docs/concepts/architecture/nodes/">Node resources</a>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">nodes</span></code> - A list of nodes in the pool. Each node exports the following attributes:</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> -  A unique ID that can be used to identify and reference the node.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> - The auto-generated name for the node.</p></li>
@@ -2857,6 +2925,91 @@ snapshots and backups and are only available within your account.</p>
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_digitalocean.GetProjectResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">GetProjectResult</code><span class="sig-paren">(</span><em class="sig-param">created_at=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">environment=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">is_default=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">owner_id=None</em>, <em class="sig-param">owner_uuid=None</em>, <em class="sig-param">purpose=None</em>, <em class="sig-param">resources=None</em>, <em class="sig-param">updated_at=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.GetProjectResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getProject.</p>
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetProjectResult.created_at">
+<code class="sig-name descname">created_at</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetProjectResult.created_at" title="Permalink to this definition">¶</a></dt>
+<dd><p>The date and time when the project was created, (ISO8601)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetProjectResult.description">
+<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetProjectResult.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>The description of the project</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetProjectResult.environment">
+<code class="sig-name descname">environment</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetProjectResult.environment" title="Permalink to this definition">¶</a></dt>
+<dd><p>The environment of the project’s resources. The possible values are: <code class="docutils literal notranslate"><span class="pre">Development</span></code>, <code class="docutils literal notranslate"><span class="pre">Staging</span></code>, <code class="docutils literal notranslate"><span class="pre">Production</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetProjectResult.owner_id">
+<code class="sig-name descname">owner_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetProjectResult.owner_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the project owner.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetProjectResult.owner_uuid">
+<code class="sig-name descname">owner_uuid</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetProjectResult.owner_uuid" title="Permalink to this definition">¶</a></dt>
+<dd><p>The unique universal identifier of the project owner.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetProjectResult.purpose">
+<code class="sig-name descname">purpose</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetProjectResult.purpose" title="Permalink to this definition">¶</a></dt>
+<dd><p>The purpose of the project, (Default: “Web Application”)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetProjectResult.resources">
+<code class="sig-name descname">resources</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetProjectResult.resources" title="Permalink to this definition">¶</a></dt>
+<dd><p>A set of uniform resource names (URNs) for the resources associated with the project</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetProjectResult.updated_at">
+<code class="sig-name descname">updated_at</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetProjectResult.updated_at" title="Permalink to this definition">¶</a></dt>
+<dd><p>The date and time when the project was last updated, (ISO8601)</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_digitalocean.GetProjectsResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">GetProjectsResult</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">projects=None</em>, <em class="sig-param">sorts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.GetProjectsResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getProjects.</p>
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetProjectsResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetProjectsResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetProjectsResult.projects">
+<code class="sig-name descname">projects</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetProjectsResult.projects" title="Permalink to this definition">¶</a></dt>
+<dd><p>A set of projects satisfying any <code class="docutils literal notranslate"><span class="pre">filter</span></code> and <code class="docutils literal notranslate"><span class="pre">sort</span></code> criteria. Each project has
+the following attributes:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> - The ID of the project</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> - The name of the project</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> - The description of the project</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">purpose</span></code> -  The purpose of the project (Default: “Web Application”)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">environment</span></code> - The environment of the project’s resources. The possible values are: <code class="docutils literal notranslate"><span class="pre">Development</span></code>, <code class="docutils literal notranslate"><span class="pre">Staging</span></code>, <code class="docutils literal notranslate"><span class="pre">Production</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resources</span></code> - A set of uniform resource names (URNs) for the resources associated with the project</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">owner_uuid</span></code> - The unique universal identifier of the project owner</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">owner_id</span></code> - The ID of the project owner</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">created_at</span></code> - The date and time when the project was created, (ISO8601)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">updated_at</span></code> - The date and time when the project was last updated, (ISO8601)</p></li>
+</ul>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_digitalocean.GetRecordResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">GetRecordResult</code><span class="sig-paren">(</span><em class="sig-param">data=None</em>, <em class="sig-param">domain=None</em>, <em class="sig-param">flags=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">priority=None</em>, <em class="sig-param">tag=None</em>, <em class="sig-param">ttl=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">weight=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.GetRecordResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getRecord.</p>
@@ -2864,6 +3017,73 @@ snapshots and backups and are only available within your account.</p>
 <dt id="pulumi_digitalocean.GetRecordResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetRecordResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_digitalocean.GetRegionResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">GetRegionResult</code><span class="sig-paren">(</span><em class="sig-param">available=None</em>, <em class="sig-param">features=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">sizes=None</em>, <em class="sig-param">slug=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.GetRegionResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getRegion.</p>
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetRegionResult.available">
+<code class="sig-name descname">available</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetRegionResult.available" title="Permalink to this definition">¶</a></dt>
+<dd><p>A boolean value that represents whether new Droplets can be created in this region.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetRegionResult.features">
+<code class="sig-name descname">features</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetRegionResult.features" title="Permalink to this definition">¶</a></dt>
+<dd><p>A set of features available in this region.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetRegionResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetRegionResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetRegionResult.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetRegionResult.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The display name of the region.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetRegionResult.sizes">
+<code class="sig-name descname">sizes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetRegionResult.sizes" title="Permalink to this definition">¶</a></dt>
+<dd><p>A set of identifying slugs for the Droplet sizes available in this region.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetRegionResult.slug">
+<code class="sig-name descname">slug</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetRegionResult.slug" title="Permalink to this definition">¶</a></dt>
+<dd><p>A human-readable string that is used as a unique identifier for each region.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_digitalocean.GetRegionsResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">GetRegionsResult</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">regions=None</em>, <em class="sig-param">sorts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.GetRegionsResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getRegions.</p>
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetRegionsResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetRegionsResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetRegionsResult.regions">
+<code class="sig-name descname">regions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetRegionsResult.regions" title="Permalink to this definition">¶</a></dt>
+<dd><p>A set of regions satisfying any <code class="docutils literal notranslate"><span class="pre">filter</span></code> and <code class="docutils literal notranslate"><span class="pre">sort</span></code> criteria. Each region has the following attributes:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">slug</span></code> - A human-readable string that is used as a unique identifier for each region.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> - The display name of the region.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">available</span></code> - A boolean value that represents whether new Droplets can be created in this region.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sizes</span></code> - A set of identifying slugs for the Droplet sizes available in this region.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">features</span></code> - A set of features available in this region.</p></li>
+</ul>
 </dd></dl>
 
 </dd></dl>
@@ -3024,6 +3244,7 @@ snapshots and backups and are only available within your account.</p>
 - `min_nodes` - (Optional) If auto-scaling is enabled, this represents the minimum number of nodes that the node pool can be scaled down to.
 - `max_nodes` - (Optional) If auto-scaling is enabled, this represents the maximum number of nodes that the node pool can be scaled up to.
 - `tags` - (Optional) A list of tag names to be applied to the Kubernetes cluster.
+- `labels` - (Optional) A map of key/value pairs to apply to nodes in the pool. The labels are exposed in the Kubernetes API as labels in the metadata of the corresponding [Node resources](https://kubernetes.io/docs/concepts/architecture/nodes/).
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -3040,6 +3261,7 @@ snapshots and backups and are only available within your account.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">actual_node_count</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">auto_scale</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A unique ID that can be used to identify and reference a Kubernetes cluster.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">labels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">max_nodes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">min_nodes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A name for the Kubernetes cluster.</p></li>
@@ -3109,11 +3331,13 @@ snapshots and backups and are only available within your account.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">auto_scale</span></code> - (Optional) Enable auto-scaling of the number of nodes in the node pool within the given min/max range.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">min_nodes</span></code> - (Optional) If auto-scaling is enabled, this represents the minimum number of nodes that the node pool can be scaled down to.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">max_nodes</span></code> - (Optional) If auto-scaling is enabled, this represents the maximum number of nodes that the node pool can be scaled up to.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> - (Optional) A list of tag names to be applied to the Kubernetes cluster.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> - (Optional) A list of tag names to be applied to the Kubernetes cluster.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">labels</span></code> - (Optional) A map of key/value pairs to apply to nodes in the pool. The labels are exposed in the Kubernetes API as labels in the metadata of the corresponding <a class="reference external" href="https://kubernetes.io/docs/concepts/architecture/nodes/">Node resources</a>.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">actual_node_count</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">auto_scale</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A unique ID that can be used to identify and reference a Kubernetes cluster.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">labels</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">max_nodes</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">min_nodes</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A name for the Kubernetes cluster.</p></li>
@@ -3219,6 +3443,7 @@ properties used to qualify the lookup.</p>
 - `min_nodes` - (Optional) If auto-scaling is enabled, this represents the minimum number of nodes that the node pool can be scaled down to.
 - `max_nodes` - (Optional) If auto-scaling is enabled, this represents the maximum number of nodes that the node pool can be scaled up to.
 - `tags` - (Optional) A list of tag names to be applied to the Kubernetes cluster.
+- `labels` - (Optional) A map of key/value pairs to apply to nodes in the pool. The labels are exposed in the Kubernetes API as labels in the metadata of the corresponding [Node resources](https://kubernetes.io/docs/concepts/architecture/nodes/).
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -3263,6 +3488,7 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">actual_node_count</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">auto_scale</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A unique ID that can be used to identify and reference a Kubernetes cluster.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">labels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">max_nodes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">min_nodes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A name for the Kubernetes cluster.</p></li>
@@ -3333,7 +3559,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_digitalocean.KubernetesNodePool">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">KubernetesNodePool</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_scale=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">max_nodes=None</em>, <em class="sig-param">min_nodes=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">node_count=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.KubernetesNodePool" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">KubernetesNodePool</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_scale=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">max_nodes=None</em>, <em class="sig-param">min_nodes=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">node_count=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.KubernetesNodePool" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DigitalOcean Kubernetes node pool resource. While the default node pool must be defined in the <code class="docutils literal notranslate"><span class="pre">.KubernetesCluster</span></code> resource, this resource can be used to add additional ones to a cluster.</p>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/kubernetes_node_pool.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/kubernetes_node_pool.html.markdown</a>.</p>
@@ -3345,6 +3571,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>auto_scale</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable auto-scaling of the number of nodes in the node pool within the given min/max range.</p></li>
 <li><p><strong>cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Kubernetes cluster to which the node pool is associated.</p></li>
+<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>A map of key/value pairs to apply to nodes in the pool. The labels are exposed in the Kubernetes API as labels in the metadata of the corresponding <a class="reference external" href="https://kubernetes.io/docs/concepts/architecture/nodes/">Node resources</a>.</p>
+</p></li>
 <li><p><strong>max_nodes</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – If auto-scaling is enabled, this represents the maximum number of nodes that the node pool can be scaled up to.</p></li>
 <li><p><strong>min_nodes</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – If auto-scaling is enabled, this represents the minimum number of nodes that the node pool can be scaled down to.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A name for the node pool.</p></li>
@@ -3370,6 +3598,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_digitalocean.KubernetesNodePool.cluster_id">
 <code class="sig-name descname">cluster_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.KubernetesNodePool.cluster_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the Kubernetes cluster to which the node pool is associated.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.KubernetesNodePool.labels">
+<code class="sig-name descname">labels</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.KubernetesNodePool.labels" title="Permalink to this definition">¶</a></dt>
+<dd><p>A map of key/value pairs to apply to nodes in the pool. The labels are exposed in the Kubernetes API as labels in the metadata of the corresponding <a class="reference external" href="https://kubernetes.io/docs/concepts/architecture/nodes/">Node resources</a>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -3433,7 +3667,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_digitalocean.KubernetesNodePool.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">actual_node_count=None</em>, <em class="sig-param">auto_scale=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">max_nodes=None</em>, <em class="sig-param">min_nodes=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">node_count=None</em>, <em class="sig-param">nodes=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.KubernetesNodePool.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">actual_node_count=None</em>, <em class="sig-param">auto_scale=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">max_nodes=None</em>, <em class="sig-param">min_nodes=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">node_count=None</em>, <em class="sig-param">nodes=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.KubernetesNodePool.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing KubernetesNodePool resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -3445,6 +3679,8 @@ properties used to qualify the lookup.</p>
 <li><p><strong>actual_node_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – A computed field representing the actual number of nodes in the node pool, which is especially useful when auto-scaling is enabled.</p></li>
 <li><p><strong>auto_scale</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable auto-scaling of the number of nodes in the node pool within the given min/max range.</p></li>
 <li><p><strong>cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Kubernetes cluster to which the node pool is associated.</p></li>
+<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>A map of key/value pairs to apply to nodes in the pool. The labels are exposed in the Kubernetes API as labels in the metadata of the corresponding <a class="reference external" href="https://kubernetes.io/docs/concepts/architecture/nodes/">Node resources</a>.</p>
+</p></li>
 <li><p><strong>max_nodes</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – If auto-scaling is enabled, this represents the maximum number of nodes that the node pool can be scaled up to.</p></li>
 <li><p><strong>min_nodes</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – If auto-scaling is enabled, this represents the minimum number of nodes that the node pool can be scaled down to.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A name for the node pool.</p></li>
@@ -3777,37 +4013,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_digitalocean.Project">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">Project</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">environment=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">purpose=None</em>, <em class="sig-param">resources=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.Project" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a DigitalOcean Project resource.</p>
-<p>Projects allow you to organize your resources into groups that fit the way you work.
-You can group resources (like Droplets, Spaces, Load Balancers, domains, and Floating IPs)
-in ways that align with the applications you host on DigitalOcean.</p>
-<p>The following resource types can be associated with a project:</p>
-<ul class="simple">
-<li><p>Database Clusters</p></li>
-<li><p>Domains</p></li>
-<li><p>Droplets</p></li>
-<li><p>Floating IP</p></li>
-<li><p>Load Balancers</p></li>
-<li><p>Spaces Bucket</p></li>
-<li><p>Volume</p></li>
-</ul>
-<p><strong>Note:</strong> A Terrafrom managed project cannot be set as a default project.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/project.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/project.html.markdown</a>.</p>
-</div></blockquote>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – the description of the project</p></li>
-<li><p><strong>environment</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – the environment of the project’s resources. The possible values are: <code class="docutils literal notranslate"><span class="pre">Development</span></code>, <code class="docutils literal notranslate"><span class="pre">Staging</span></code>, <code class="docutils literal notranslate"><span class="pre">Production</span></code>)</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Project</p></li>
-<li><p><strong>purpose</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – the purpose of the project, (Default: “Web Application”)</p></li>
-<li><p><strong>resources</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – a list of uniform resource names (URNs) for the resources associated with the project</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a Project resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] description: the description of the project
+:param pulumi.Input[str] environment: the environment of the project’s resources. The possible values are: <code class="docutils literal notranslate"><span class="pre">Development</span></code>, <code class="docutils literal notranslate"><span class="pre">Staging</span></code>, <code class="docutils literal notranslate"><span class="pre">Production</span></code>)
+:param pulumi.Input[str] name: The name of the Project
+:param pulumi.Input[str] purpose: the purpose of the project, (Default: “Web Application”)
+:param pulumi.Input[list] resources: a list of uniform resource names (URNs) for the resources associated with the project</p>
 <dl class="attribute">
 <dt id="pulumi_digitalocean.Project.created_at">
 <code class="sig-name descname">created_at</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.Project.created_at" title="Permalink to this definition">¶</a></dt>
@@ -3864,7 +4077,7 @@ in ways that align with the applications you host on DigitalOcean.</p>
 
 <dl class="method">
 <dt id="pulumi_digitalocean.Project.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">environment=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">owner_id=None</em>, <em class="sig-param">owner_uuid=None</em>, <em class="sig-param">purpose=None</em>, <em class="sig-param">resources=None</em>, <em class="sig-param">updated_at=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.Project.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">environment=None</em>, <em class="sig-param">is_default=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">owner_id=None</em>, <em class="sig-param">owner_uuid=None</em>, <em class="sig-param">purpose=None</em>, <em class="sig-param">resources=None</em>, <em class="sig-param">updated_at=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.Project.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Project resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -4020,7 +4233,7 @@ example:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">allowedHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of headers that will be included in the CORS preflight request’s <code class="docutils literal notranslate"><span class="pre">Access-Control-Request-Headers</span></code>. A header may contain one wildcard (e.g. <code class="docutils literal notranslate"><span class="pre">x-amz-*</span></code>).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">allowedMethods</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of HTTP methods (e.g. <code class="docutils literal notranslate"><span class="pre">GET</span></code>) which are allowed from the specified origin.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">allowedOrigins</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of hosts from which requests using the specified methods are allowed. A host may contain one wildcard (e.g. <a class="reference external" href="http://">http://</a><a href="#id9"><span class="problematic" id="id10">*</span></a>.example.com).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedOrigins</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of hosts from which requests using the specified methods are allowed. A host may contain one wildcard (e.g. <a class="reference external" href="http://">http://</a><a href="#id13"><span class="problematic" id="id14">*</span></a>.example.com).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxAgeSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The time in seconds that browser can cache the response for a preflight request.</p></li>
 </ul>
 <dl class="attribute">
@@ -4042,7 +4255,7 @@ example:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">allowedHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of headers that will be included in the CORS preflight request’s <code class="docutils literal notranslate"><span class="pre">Access-Control-Request-Headers</span></code>. A header may contain one wildcard (e.g. <code class="docutils literal notranslate"><span class="pre">x-amz-*</span></code>).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">allowedMethods</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of HTTP methods (e.g. <code class="docutils literal notranslate"><span class="pre">GET</span></code>) which are allowed from the specified origin.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">allowedOrigins</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of hosts from which requests using the specified methods are allowed. A host may contain one wildcard (e.g. <a class="reference external" href="http://">http://</a><a href="#id11"><span class="problematic" id="id12">*</span></a>.example.com).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedOrigins</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of hosts from which requests using the specified methods are allowed. A host may contain one wildcard (e.g. <a class="reference external" href="http://">http://</a><a href="#id15"><span class="problematic" id="id16">*</span></a>.example.com).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxAgeSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The time in seconds that browser can cache the response for a preflight request.</p></li>
 </ul>
 </dd></dl>
@@ -4096,7 +4309,7 @@ properties used to qualify the lookup.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">allowedHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of headers that will be included in the CORS preflight request’s <code class="docutils literal notranslate"><span class="pre">Access-Control-Request-Headers</span></code>. A header may contain one wildcard (e.g. <code class="docutils literal notranslate"><span class="pre">x-amz-*</span></code>).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">allowedMethods</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of HTTP methods (e.g. <code class="docutils literal notranslate"><span class="pre">GET</span></code>) which are allowed from the specified origin.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">allowedOrigins</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of hosts from which requests using the specified methods are allowed. A host may contain one wildcard (e.g. <a class="reference external" href="http://">http://</a><a href="#id13"><span class="problematic" id="id14">*</span></a>.example.com).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedOrigins</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of hosts from which requests using the specified methods are allowed. A host may contain one wildcard (e.g. <a class="reference external" href="http://">http://</a><a href="#id17"><span class="problematic" id="id18">*</span></a>.example.com).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxAgeSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The time in seconds that browser can cache the response for a preflight request.</p></li>
 </ul>
 </dd></dl>
@@ -4410,7 +4623,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_digitalocean.Volume.urn">
 <code class="sig-name descname">urn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.Volume.urn" title="Permalink to this definition">¶</a></dt>
-<dd><p>the uniform resource name for the volume.</p>
+<dd><p>The uniform resource name for the volume.</p>
 </dd></dl>
 
 <dl class="method">
@@ -4435,7 +4648,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The size of the block storage volume in GiB. If updated, can only be expanded.</p></li>
 <li><p><strong>snapshot_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of an existing volume snapshot from which the new volume will be created. If supplied, the region and size will be limitied on creation to that of the referenced snapshot</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of the tags to be applied to this Volume.</p></li>
-<li><p><strong>urn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – the uniform resource name for the volume.</p></li>
+<li><p><strong>urn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The uniform resource name for the volume.</p></li>
 </ul>
 </dd>
 </dl>
@@ -4780,16 +4993,53 @@ resources.</p>
 
 <dl class="function">
 <dt id="pulumi_digitalocean.get_image">
-<code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">get_image</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">slug=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_image" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">get_image</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">slug=None</em>, <em class="sig-param">source=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_image" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing resource.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<em>str</em>) – The name of the private image.</p></li>
+<li><p><strong>id</strong> (<em>float</em>) – The id of the image</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The name of the image.</p></li>
 <li><p><strong>slug</strong> (<em>str</em>) – The slug of the official image.</p></li>
+<li><p><strong>source</strong> (<em>str</em>) – Restrict the search to one of the following categories of images:</p></li>
 </ul>
 </dd>
 </dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>- `all` - All images (whether public or private)
+- `applications` - One-click applications
+- `distributions` - Distributions
+- `user` - (Default) User (private) images
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_digitalocean.get_images">
+<code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">get_images</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">sorts=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_images" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing resource.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filters</strong> (<em>list</em>) – Filter the results.
+The <code class="docutils literal notranslate"><span class="pre">filter</span></code> block is documented below.</p></li>
+<li><p><strong>sorts</strong> (<em>list</em>) – Sort the results.
+The <code class="docutils literal notranslate"><span class="pre">sort</span></code> block is documented below.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>filters</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Sort the images by this key. This may be one of <code class="docutils literal notranslate"><span class="pre">distribution</span></code>, <code class="docutils literal notranslate"><span class="pre">error_message</span></code>, <code class="docutils literal notranslate"><span class="pre">id</span></code>,
+<code class="docutils literal notranslate"><span class="pre">image</span></code>, <code class="docutils literal notranslate"><span class="pre">min_disk_size</span></code>, <code class="docutils literal notranslate"><span class="pre">name</span></code>, <code class="docutils literal notranslate"><span class="pre">private</span></code>, <code class="docutils literal notranslate"><span class="pre">size_gigabytes</span></code>, <code class="docutils literal notranslate"><span class="pre">slug</span></code>, <code class="docutils literal notranslate"><span class="pre">status</span></code>, or <code class="docutils literal notranslate"><span class="pre">type</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of values to match against the <code class="docutils literal notranslate"><span class="pre">key</span></code> field. Only retrieves images
+where the <code class="docutils literal notranslate"><span class="pre">key</span></code> field takes on one or more of the values provided here.</p></li>
+</ul>
+<p>The <strong>sorts</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">direction</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The sort direction. This may be either <code class="docutils literal notranslate"><span class="pre">asc</span></code> or <code class="docutils literal notranslate"><span class="pre">desc</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Sort the images by this key. This may be one of <code class="docutils literal notranslate"><span class="pre">distribution</span></code>, <code class="docutils literal notranslate"><span class="pre">error_message</span></code>, <code class="docutils literal notranslate"><span class="pre">id</span></code>,
+<code class="docutils literal notranslate"><span class="pre">image</span></code>, <code class="docutils literal notranslate"><span class="pre">min_disk_size</span></code>, <code class="docutils literal notranslate"><span class="pre">name</span></code>, <code class="docutils literal notranslate"><span class="pre">private</span></code>, <code class="docutils literal notranslate"><span class="pre">size_gigabytes</span></code>, <code class="docutils literal notranslate"><span class="pre">slug</span></code>, <code class="docutils literal notranslate"><span class="pre">status</span></code>, or <code class="docutils literal notranslate"><span class="pre">type</span></code>.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="function">
@@ -4824,6 +5074,62 @@ resources.</p>
 </dd></dl>
 
 <dl class="function">
+<dt id="pulumi_digitalocean.get_project">
+<code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">get_project</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_project" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get information on a single DigitalOcean project. If neither the <code class="docutils literal notranslate"><span class="pre">id</span></code> nor <code class="docutils literal notranslate"><span class="pre">name</span></code> attributes are provided,
+then this data source returns the default project.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/project.html.md">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/project.html.md</a>.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> (<em>str</em>) – the ID of the project to retrieve</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – the name of the project to retrieve. The data source will raise an error if more than
+one project has the provided name or if no project has that name.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_digitalocean.get_projects">
+<code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">get_projects</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">sorts=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_projects" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve information about all DigitalOcean projects associated with an account, with
+the ability to filter and sort the results. If no filters are specified, all projects
+will be returned.</p>
+<p>Note: You can use the <cite>`</cite>.Project`` &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/do/d/project.html">https://www.terraform.io/docs/providers/do/d/project.html</a>&gt;`_ data source to
+obtain metadata about a single project if you already know the <code class="docutils literal notranslate"><span class="pre">id</span></code> to retrieve or the unique
+<code class="docutils literal notranslate"><span class="pre">name</span></code> of the project.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/projects.html.md">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/projects.html.md</a>.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filters</strong> (<em>list</em>) – Filter the results.
+The <code class="docutils literal notranslate"><span class="pre">filter</span></code> block is documented below.</p></li>
+<li><p><strong>sorts</strong> (<em>list</em>) – Sort the results.
+The <code class="docutils literal notranslate"><span class="pre">sort</span></code> block is documented below.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>filters</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Sort the projects by this key. This may be one of <code class="docutils literal notranslate"><span class="pre">name</span></code>,
+<code class="docutils literal notranslate"><span class="pre">purpose</span></code>, <code class="docutils literal notranslate"><span class="pre">description</span></code>, or <code class="docutils literal notranslate"><span class="pre">environment</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of values to match against the <code class="docutils literal notranslate"><span class="pre">key</span></code> field. Only retrieves projects
+where the <code class="docutils literal notranslate"><span class="pre">key</span></code> field takes on one or more of the values provided here.</p></li>
+</ul>
+<p>The <strong>sorts</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">direction</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The sort direction. This may be either <code class="docutils literal notranslate"><span class="pre">asc</span></code> or <code class="docutils literal notranslate"><span class="pre">desc</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Sort the projects by this key. This may be one of <code class="docutils literal notranslate"><span class="pre">name</span></code>,
+<code class="docutils literal notranslate"><span class="pre">purpose</span></code>, <code class="docutils literal notranslate"><span class="pre">description</span></code>, or <code class="docutils literal notranslate"><span class="pre">environment</span></code>.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="function">
 <dt id="pulumi_digitalocean.get_record">
 <code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">get_record</code><span class="sig-paren">(</span><em class="sig-param">domain=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_record" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing resource.</p>
@@ -4838,9 +5144,61 @@ resources.</p>
 </dd></dl>
 
 <dl class="function">
+<dt id="pulumi_digitalocean.get_region">
+<code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">get_region</code><span class="sig-paren">(</span><em class="sig-param">slug=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_region" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get information on a single DigitalOcean region. This is useful to find out 
+what Droplet sizes and features are supported within a region.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/region.html.md">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/region.html.md</a>.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>slug</strong> (<em>str</em>) – A human-readable string that is used as a unique identifier for each region.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_digitalocean.get_regions">
+<code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">get_regions</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">sorts=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_regions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve information about all supported DigitalOcean regions, with the ability to
+filter and sort the results. If no filters are specified, all regions will be returned.</p>
+<p>Note: You can use the <cite>`</cite>.getRegion`` &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/do/d/region.html">https://www.terraform.io/docs/providers/do/d/region.html</a>&gt;`_ data source
+to obtain metadata about a single region if you already know the <code class="docutils literal notranslate"><span class="pre">slug</span></code> to retrieve.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/regions.html.md">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/regions.html.md</a>.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filters</strong> (<em>list</em>) – Filter the results.
+The <code class="docutils literal notranslate"><span class="pre">filter</span></code> block is documented below.</p></li>
+<li><p><strong>sorts</strong> (<em>list</em>) – Sort the results.
+The <code class="docutils literal notranslate"><span class="pre">sort</span></code> block is documented below.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>filters</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Sort the regions by this key. This may be one of <code class="docutils literal notranslate"><span class="pre">slug</span></code>,
+<code class="docutils literal notranslate"><span class="pre">name</span></code>, or <code class="docutils literal notranslate"><span class="pre">available</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of values to match against the <code class="docutils literal notranslate"><span class="pre">key</span></code> field. Only retrieves regions
+where the <code class="docutils literal notranslate"><span class="pre">key</span></code> field takes on one or more of the values provided here.</p></li>
+</ul>
+<p>The <strong>sorts</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">direction</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The sort direction. This may be either <code class="docutils literal notranslate"><span class="pre">asc</span></code> or <code class="docutils literal notranslate"><span class="pre">desc</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Sort the regions by this key. This may be one of <code class="docutils literal notranslate"><span class="pre">slug</span></code>,
+<code class="docutils literal notranslate"><span class="pre">name</span></code>, or <code class="docutils literal notranslate"><span class="pre">available</span></code>.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="function">
 <dt id="pulumi_digitalocean.get_sizes">
 <code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">get_sizes</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">sorts=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_sizes" title="Permalink to this definition">¶</a></dt>
-<dd><p>Retrieves information about droplet sizes that DigitalOcean supports. This data source provides all of droplet size properties, with the ability to filter and sort the results.</p>
+<dd><p>Retrieves information about the Droplet sizes that DigitalOcean supports, with
+the ability to filter and sort the results. If no filters are specified, all sizes
+will be returned.</p>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/sizes.html.md">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/sizes.html.md</a>.</p>
 </div></blockquote>
