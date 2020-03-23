@@ -15,97 +15,99 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_vsphere"></span><dl class="class">
 <dt id="pulumi_vsphere.AwaitableGetComputeClusterResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetComputeClusterResult</code><span class="sig-paren">(</span><em class="sig-param">datacenter_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_pool_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetComputeClusterResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetComputeClusterResult</code><span class="sig-paren">(</span><em class="sig-param">datacenter_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_pool_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetComputeClusterResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_vsphere.AwaitableGetCustomAttributeResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetCustomAttributeResult</code><span class="sig-paren">(</span><em class="sig-param">managed_object_type=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetCustomAttributeResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetCustomAttributeResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">managed_object_type=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetCustomAttributeResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_vsphere.AwaitableGetDatacenterResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetDatacenterResult</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetDatacenterResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetDatacenterResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetDatacenterResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_vsphere.AwaitableGetDatastoreClusterResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetDatastoreClusterResult</code><span class="sig-paren">(</span><em class="sig-param">datacenter_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetDatastoreClusterResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetDatastoreClusterResult</code><span class="sig-paren">(</span><em class="sig-param">datacenter_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetDatastoreClusterResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_vsphere.AwaitableGetDatastoreResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetDatastoreResult</code><span class="sig-paren">(</span><em class="sig-param">datacenter_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetDatastoreResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetDatastoreResult</code><span class="sig-paren">(</span><em class="sig-param">datacenter_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetDatastoreResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_vsphere.AwaitableGetDistributedVirtualSwitchResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetDistributedVirtualSwitchResult</code><span class="sig-paren">(</span><em class="sig-param">datacenter_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">uplinks=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetDistributedVirtualSwitchResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetDistributedVirtualSwitchResult</code><span class="sig-paren">(</span><em class="sig-param">datacenter_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">uplinks=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetDistributedVirtualSwitchResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_vsphere.AwaitableGetFolderResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetFolderResult</code><span class="sig-paren">(</span><em class="sig-param">path=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetFolderResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetFolderResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">path=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetFolderResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_vsphere.AwaitableGetHostResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetHostResult</code><span class="sig-paren">(</span><em class="sig-param">datacenter_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_pool_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetHostResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetHostResult</code><span class="sig-paren">(</span><em class="sig-param">datacenter_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_pool_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetHostResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_vsphere.AwaitableGetNetworkResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetNetworkResult</code><span class="sig-paren">(</span><em class="sig-param">datacenter_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetNetworkResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetNetworkResult</code><span class="sig-paren">(</span><em class="sig-param">datacenter_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetNetworkResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_vsphere.AwaitableGetPolicyResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetPolicyResult</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetPolicyResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetPolicyResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetPolicyResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_vsphere.AwaitableGetResourcePoolResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetResourcePoolResult</code><span class="sig-paren">(</span><em class="sig-param">datacenter_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetResourcePoolResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetResourcePoolResult</code><span class="sig-paren">(</span><em class="sig-param">datacenter_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetResourcePoolResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_vsphere.AwaitableGetTagCategoryResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetTagCategoryResult</code><span class="sig-paren">(</span><em class="sig-param">associable_types=None</em>, <em class="sig-param">cardinality=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetTagCategoryResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetTagCategoryResult</code><span class="sig-paren">(</span><em class="sig-param">associable_types=None</em>, <em class="sig-param">cardinality=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetTagCategoryResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_vsphere.AwaitableGetTagResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetTagResult</code><span class="sig-paren">(</span><em class="sig-param">category_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetTagResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetTagResult</code><span class="sig-paren">(</span><em class="sig-param">category_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetTagResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_vsphere.AwaitableGetVappContainerResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetVappContainerResult</code><span class="sig-paren">(</span><em class="sig-param">datacenter_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetVappContainerResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetVappContainerResult</code><span class="sig-paren">(</span><em class="sig-param">datacenter_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetVappContainerResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_vsphere.AwaitableGetVirtualMachineResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetVirtualMachineResult</code><span class="sig-paren">(</span><em class="sig-param">alternate_guest_name=None</em>, <em class="sig-param">datacenter_id=None</em>, <em class="sig-param">disks=None</em>, <em class="sig-param">firmware=None</em>, <em class="sig-param">guest_id=None</em>, <em class="sig-param">guest_ip_addresses=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_interface_types=None</em>, <em class="sig-param">scsi_bus_sharing=None</em>, <em class="sig-param">scsi_controller_scan_count=None</em>, <em class="sig-param">scsi_type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetVirtualMachineResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetVirtualMachineResult</code><span class="sig-paren">(</span><em class="sig-param">alternate_guest_name=None</em>, <em class="sig-param">datacenter_id=None</em>, <em class="sig-param">disks=None</em>, <em class="sig-param">firmware=None</em>, <em class="sig-param">guest_id=None</em>, <em class="sig-param">guest_ip_addresses=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_interface_types=None</em>, <em class="sig-param">scsi_bus_sharing=None</em>, <em class="sig-param">scsi_controller_scan_count=None</em>, <em class="sig-param">scsi_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetVirtualMachineResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_vsphere.AwaitableGetVmfsDisksResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetVmfsDisksResult</code><span class="sig-paren">(</span><em class="sig-param">disks=None</em>, <em class="sig-param">filter=None</em>, <em class="sig-param">host_system_id=None</em>, <em class="sig-param">rescan=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetVmfsDisksResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetVmfsDisksResult</code><span class="sig-paren">(</span><em class="sig-param">disks=None</em>, <em class="sig-param">filter=None</em>, <em class="sig-param">host_system_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">rescan=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetVmfsDisksResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_vsphere.ComputeCluster">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">ComputeCluster</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">custom_attributes=None</em>, <em class="sig-param">datacenter_id=None</em>, <em class="sig-param">dpm_automation_level=None</em>, <em class="sig-param">dpm_enabled=None</em>, <em class="sig-param">dpm_threshold=None</em>, <em class="sig-param">drs_advanced_options=None</em>, <em class="sig-param">drs_automation_level=None</em>, <em class="sig-param">drs_enable_predictive_drs=None</em>, <em class="sig-param">drs_enable_vm_overrides=None</em>, <em class="sig-param">drs_enabled=None</em>, <em class="sig-param">drs_migration_threshold=None</em>, <em class="sig-param">folder=None</em>, <em class="sig-param">force_evacuate_on_destroy=None</em>, <em class="sig-param">ha_admission_control_failover_host_system_ids=None</em>, <em class="sig-param">ha_admission_control_host_failure_tolerance=None</em>, <em class="sig-param">ha_admission_control_performance_tolerance=None</em>, <em class="sig-param">ha_admission_control_policy=None</em>, <em class="sig-param">ha_admission_control_resource_percentage_auto_compute=None</em>, <em class="sig-param">ha_admission_control_resource_percentage_cpu=None</em>, <em class="sig-param">ha_admission_control_resource_percentage_memory=None</em>, <em class="sig-param">ha_admission_control_slot_policy_explicit_cpu=None</em>, <em class="sig-param">ha_admission_control_slot_policy_explicit_memory=None</em>, <em class="sig-param">ha_admission_control_slot_policy_use_explicit_size=None</em>, <em class="sig-param">ha_advanced_options=None</em>, <em class="sig-param">ha_datastore_apd_recovery_action=None</em>, <em class="sig-param">ha_datastore_apd_response=None</em>, <em class="sig-param">ha_datastore_apd_response_delay=None</em>, <em class="sig-param">ha_datastore_pdl_response=None</em>, <em class="sig-param">ha_enabled=None</em>, <em class="sig-param">ha_heartbeat_datastore_ids=None</em>, <em class="sig-param">ha_heartbeat_datastore_policy=None</em>, <em class="sig-param">ha_host_isolation_response=None</em>, <em class="sig-param">ha_host_monitoring=None</em>, <em class="sig-param">ha_vm_component_protection=None</em>, <em class="sig-param">ha_vm_dependency_restart_condition=None</em>, <em class="sig-param">ha_vm_failure_interval=None</em>, <em class="sig-param">ha_vm_maximum_failure_window=None</em>, <em class="sig-param">ha_vm_maximum_resets=None</em>, <em class="sig-param">ha_vm_minimum_uptime=None</em>, <em class="sig-param">ha_vm_monitoring=None</em>, <em class="sig-param">ha_vm_restart_additional_delay=None</em>, <em class="sig-param">ha_vm_restart_priority=None</em>, <em class="sig-param">ha_vm_restart_timeout=None</em>, <em class="sig-param">host_cluster_exit_timeout=None</em>, <em class="sig-param">host_system_ids=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">proactive_ha_automation_level=None</em>, <em class="sig-param">proactive_ha_enabled=None</em>, <em class="sig-param">proactive_ha_moderate_remediation=None</em>, <em class="sig-param">proactive_ha_provider_ids=None</em>, <em class="sig-param">proactive_ha_severe_remediation=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeCluster" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a ComputeCluster resource with the given unique name, props, and options.</p>
+<dd><p>Create a ComputeCluster resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[dict] custom_attributes: A map of custom attribute ids to attribute</p>
+<blockquote>
+<div><p>value strings to set for the datastore cluster. See
+[here][docs-setting-custom-attributes] for a reference on how to set values
+for custom attributes.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>custom_attributes</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of custom attribute ids to attribute
-value strings to set for the datastore cluster. See
-[here][docs-setting-custom-attributes] for a reference on how to set values
-for custom attributes.</p></li>
 <li><p><strong>datacenter_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The [managed object ID][docs-about-morefs] of
 the datacenter to create the cluster in. Forces a new resource if changed.</p></li>
 <li><p><strong>dpm_automation_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The automation level for host power
@@ -133,6 +135,9 @@ set for virtual machines in the cluster. Default: <code class="docutils literal 
 the threshold of imbalance tolerated between hosts. A lower setting will
 tolerate more imbalance while a higher setting will tolerate less. Default:
 <code class="docutils literal notranslate"><span class="pre">3</span></code>.</p></li>
+<li><p><strong>folder</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the folder to locate the cluster in.</p></li>
+<li><p><strong>force_evacuate_on_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Force removal of all hosts in the cluster during destroy and make them standalone hosts. Use of this flag mainly exists
+for testing and is not recommended in normal use.</p></li>
 <li><p><strong>ha_admission_control_failover_host_system_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Defines the
 [managed object IDs][docs-about-morefs] of hosts to use as dedicated failover
 hosts. These hosts are kept as available as possible - admission control will
@@ -277,9 +282,6 @@ set to <code class="docutils literal notranslate"><span class="pre">MaintenanceM
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vsphere.ComputeCluster.custom_attributes">
 <code class="sig-name descname">custom_attributes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.custom_attributes" title="Permalink to this definition">¶</a></dt>
@@ -364,6 +366,19 @@ set for virtual machines in the cluster. Default: <code class="docutils literal 
 the threshold of imbalance tolerated between hosts. A lower setting will
 tolerate more imbalance while a higher setting will tolerate less. Default:
 <code class="docutils literal notranslate"><span class="pre">3</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.ComputeCluster.folder">
+<code class="sig-name descname">folder</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.folder" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the folder to locate the cluster in.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.ComputeCluster.force_evacuate_on_destroy">
+<code class="sig-name descname">force_evacuate_on_destroy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.force_evacuate_on_destroy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Force removal of all hosts in the cluster during destroy and make them standalone hosts. Use of this flag mainly exists
+for testing and is not recommended in normal use.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -696,6 +711,12 @@ set to <code class="docutils literal notranslate"><span class="pre">MaintenanceM
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_vsphere.ComputeCluster.resource_pool_id">
+<code class="sig-name descname">resource_pool_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.resource_pool_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The managed object ID of the cluster’s root resource pool.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_vsphere.ComputeCluster.tags">
 <code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>The IDs of any tags to attach to this resource. See
@@ -744,6 +765,9 @@ set for virtual machines in the cluster. Default: <code class="docutils literal 
 the threshold of imbalance tolerated between hosts. A lower setting will
 tolerate more imbalance while a higher setting will tolerate less. Default:
 <code class="docutils literal notranslate"><span class="pre">3</span></code>.</p></li>
+<li><p><strong>folder</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the folder to locate the cluster in.</p></li>
+<li><p><strong>force_evacuate_on_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Force removal of all hosts in the cluster during destroy and make them standalone hosts. Use of this flag mainly exists
+for testing and is not recommended in normal use.</p></li>
 <li><p><strong>ha_admission_control_failover_host_system_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Defines the
 [managed object IDs][docs-about-morefs] of hosts to use as dedicated failover
 hosts. These hosts are kept as available as possible - admission control will
@@ -883,14 +907,12 @@ Note that this cannot be set to <code class="docutils literal notranslate"><span
 <code class="docutils literal notranslate"><span class="pre">proactive_ha_moderate_remediation</span></code> is
 set to <code class="docutils literal notranslate"><span class="pre">MaintenanceMode</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">QuarantineMode</span></code>.
 <span class="raw-html-m2r"><sup>\*</sup></span></p></li>
+<li><p><strong>resource_pool_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The managed object ID of the cluster’s root resource pool.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The IDs of any tags to attach to this resource. See
 [here][docs-applying-tags] for a reference on how to apply tags.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -946,6 +968,7 @@ to use host groups.</p>
 <div><p><strong>NOTE:</strong> This resource requires vCenter and is not available on direct ESXi
 connections.</p>
 <p><strong>NOTE:</strong> vSphere DRS requires a vSphere Enterprise Plus license.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_host_group.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_host_group.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -962,9 +985,6 @@ cluster. Forces a new resource if changed.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_host_group.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_host_group.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vsphere.ComputeClusterHostGroup.compute_cluster_id">
 <code class="sig-name descname">compute_cluster_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterHostGroup.compute_cluster_id" title="Permalink to this definition">¶</a></dt>
@@ -1008,9 +1028,6 @@ cluster. Forces a new resource if changed.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_host_group.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_host_group.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1074,6 +1091,7 @@ resource.</p>
 <div><p><strong>NOTE:</strong> This resource requires vCenter and is not available on direct ESXi
 connections.</p>
 <p><strong>NOTE:</strong> vSphere DRS requires a vSphere Enterprise Plus license.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_vm_affinity_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_vm_affinity_rule.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1092,9 +1110,6 @@ on the same host together.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_vm_affinity_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_vm_affinity_rule.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vsphere.ComputeClusterVmAffinityRule.compute_cluster_id">
 <code class="sig-name descname">compute_cluster_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmAffinityRule.compute_cluster_id" title="Permalink to this definition">¶</a></dt>
@@ -1152,9 +1167,6 @@ on the same host together.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_vm_affinity_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_vm_affinity_rule.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1219,6 +1231,7 @@ resource.</p>
 <div><p><strong>NOTE:</strong> This resource requires vCenter and is not available on direct ESXi
 connections.</p>
 <p><strong>NOTE:</strong> vSphere DRS requires a vSphere Enterprise Plus license.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_vm_anti_affinity_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_vm_anti_affinity_rule.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1237,9 +1250,6 @@ on hosts different from each other.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_vm_anti_affinity_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_vm_anti_affinity_rule.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vsphere.ComputeClusterVmAntiAffinityRule.compute_cluster_id">
 <code class="sig-name descname">compute_cluster_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmAntiAffinityRule.compute_cluster_id" title="Permalink to this definition">¶</a></dt>
@@ -1297,9 +1307,6 @@ on hosts different from each other.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_vm_anti_affinity_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_vm_anti_affinity_rule.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1355,6 +1362,7 @@ resource.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> This resource requires vCenter and is not available on direct ESXi
 connections.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_vm_dependency_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_vm_dependency_rule.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1380,9 +1388,6 @@ the group specified by
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_vm_dependency_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_vm_dependency_rule.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vsphere.ComputeClusterVmDependencyRule.compute_cluster_id">
 <code class="sig-name descname">compute_cluster_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmDependencyRule.compute_cluster_id" title="Permalink to this definition">¶</a></dt>
@@ -1459,9 +1464,6 @@ the group specified by
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_vm_dependency_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_vm_dependency_rule.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1518,6 +1520,7 @@ resources. See the individual resource documentation pages for more information.
 <div><p><strong>NOTE:</strong> This resource requires vCenter and is not available on direct ESXi
 connections.</p>
 <p><strong>NOTE:</strong> vSphere DRS requires a vSphere Enterprise Plus license.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_vm_group.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_vm_group.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1534,9 +1537,6 @@ group.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_vm_group.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_vm_group.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vsphere.ComputeClusterVmGroup.compute_cluster_id">
 <code class="sig-name descname">compute_cluster_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmGroup.compute_cluster_id" title="Permalink to this definition">¶</a></dt>
@@ -1580,9 +1580,6 @@ group.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_vm_group.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_vm_group.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1641,6 +1638,7 @@ resources.</p>
 <div><p><strong>NOTE:</strong> This resource requires vCenter and is not available on direct ESXi
 connections.</p>
 <p><strong>NOTE:</strong> vSphere DRS requires a vSphere Enterprise Plus license.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_vm_host_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_vm_host_rule.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1666,9 +1664,6 @@ with this rule.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_vm_host_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_vm_host_rule.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vsphere.ComputeClusterVmHostRule.affinity_host_group_name">
 <code class="sig-name descname">affinity_host_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmHostRule.affinity_host_group_name" title="Permalink to this definition">¶</a></dt>
@@ -1750,9 +1745,6 @@ with this rule.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_vm_host_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_vm_host_rule.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1825,7 +1817,10 @@ unspecified.</p>
 <tr><td>Resource Pools</td><td>`ResourcePool`</td></tr>
 <tr><td>vApps</td><td>`VirtualApp`</td></tr>
 <tr><td>Virtual Machines</td><td>`VirtualMachine`</td></tr>
-</table><dl class="field-list simple">
+</table><blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/custom_attribute.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/custom_attribute.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
@@ -1838,9 +1833,6 @@ resource if changed.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/custom_attribute.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/custom_attribute.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vsphere.CustomAttribute.managed_object_type">
 <code class="sig-name descname">managed_object_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.CustomAttribute.managed_object_type" title="Permalink to this definition">¶</a></dt>
@@ -1875,9 +1867,6 @@ resource if changed.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/custom_attribute.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/custom_attribute.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1923,6 +1912,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">Datacenter</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">custom_attributes=None</em>, <em class="sig-param">folder=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Datacenter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a VMware vSphere datacenter resource. This can be used as the primary
 container of inventory objects such as hosts and virtual machines.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/datacenter.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/datacenter.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1941,9 +1933,6 @@ within the folder. Forces a new resource if changed.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/datacenter.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/datacenter.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vsphere.Datacenter.custom_attributes">
 <code class="sig-name descname">custom_attributes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Datacenter.custom_attributes" title="Permalink to this definition">¶</a></dt>
@@ -2005,9 +1994,6 @@ within the folder. Forces a new resource if changed.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/datacenter.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/datacenter.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2061,6 +2047,7 @@ page</a>.</p>
 <div><p><strong>NOTE:</strong> This resource requires vCenter and is not available on direct ESXi
 connections.</p>
 <p><strong>NOTE:</strong> Storage DRS requires a vSphere Enterprise Plus license.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/datastore_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/datastore_cluster.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2074,7 +2061,9 @@ for custom attributes.</p></li>
 <li><p><strong>datacenter_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The [managed object ID][docs-about-morefs] of
 the datacenter to create the datastore cluster in. Forces a new resource if
 changed.</p></li>
+<li><p><strong>folder</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the folder to locate the datastore cluster in.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the datastore cluster.</p></li>
+<li><p><strong>sdrs_advanced_options</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Advanced configuration options for storage DRS.</p></li>
 <li><p><strong>sdrs_automation_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The global automation level for all
 virtual machines in this datastore cluster. Default: <code class="docutils literal notranslate"><span class="pre">manual</span></code>.</p></li>
 <li><p><strong>sdrs_default_intra_vm_affinity</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – When <code class="docutils literal notranslate"><span class="pre">true</span></code>, all disks in a
@@ -2085,6 +2074,8 @@ Default: <code class="docutils literal notranslate"><span class="pre">false</spa
 When set to <code class="docutils literal notranslate"><span class="pre">utilization</span></code>, <code class="docutils literal notranslate"><span class="pre">drs_space_utilization_threshold</span></code> is used, and
 when set to <code class="docutils literal notranslate"><span class="pre">freeSpace</span></code>, <code class="docutils literal notranslate"><span class="pre">drs_free_space_threshold</span></code> is used. Default:
 <code class="docutils literal notranslate"><span class="pre">utilization</span></code>.</p></li>
+<li><p><strong>sdrs_free_space_threshold_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The free space threshold to use. When set to utilization, drs_space_utilization_threshold is used, and when set to
+freeSpace, drs_free_space_threshold is used.</p></li>
 <li><p><strong>sdrs_free_space_utilization_difference</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The threshold, in
 percent, of difference between space utilization in datastores before storage
 DRS makes decisions to balance the space. Default: <code class="docutils literal notranslate"><span class="pre">5</span></code> percent.</p></li>
@@ -2120,6 +2111,7 @@ automation settings when correcting storage and VM policy violations.</p></li>
 automation settings when correcting affinity rule violations.</p></li>
 <li><p><strong>sdrs_space_balance_automation_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Overrides the default
 automation settings when correcting disk space imbalances.</p></li>
+<li><p><strong>sdrs_space_utilization_threshold</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The threshold, in percent of used space, that storage DRS uses to make decisions to migrate VMs out of a datastore.</p></li>
 <li><p><strong>sdrs_vm_evacuation_automation_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Overrides the default
 automation settings when generating recommendations for datastore evacuation.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The IDs of any tags to attach to this resource. See
@@ -2127,9 +2119,6 @@ automation settings when generating recommendations for datastore evacuation.</p
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/datastore_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/datastore_cluster.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vsphere.DatastoreCluster.custom_attributes">
 <code class="sig-name descname">custom_attributes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster.custom_attributes" title="Permalink to this definition">¶</a></dt>
@@ -2148,9 +2137,21 @@ changed.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_vsphere.DatastoreCluster.folder">
+<code class="sig-name descname">folder</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster.folder" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the folder to locate the datastore cluster in.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_vsphere.DatastoreCluster.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the datastore cluster.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.DatastoreCluster.sdrs_advanced_options">
+<code class="sig-name descname">sdrs_advanced_options</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster.sdrs_advanced_options" title="Permalink to this definition">¶</a></dt>
+<dd><p>Advanced configuration options for storage DRS.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2181,6 +2182,13 @@ Default: <code class="docutils literal notranslate"><span class="pre">false</spa
 When set to <code class="docutils literal notranslate"><span class="pre">utilization</span></code>, <code class="docutils literal notranslate"><span class="pre">drs_space_utilization_threshold</span></code> is used, and
 when set to <code class="docutils literal notranslate"><span class="pre">freeSpace</span></code>, <code class="docutils literal notranslate"><span class="pre">drs_free_space_threshold</span></code> is used. Default:
 <code class="docutils literal notranslate"><span class="pre">utilization</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.DatastoreCluster.sdrs_free_space_threshold_mode">
+<code class="sig-name descname">sdrs_free_space_threshold_mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster.sdrs_free_space_threshold_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>The free space threshold to use. When set to utilization, drs_space_utilization_threshold is used, and when set to
+freeSpace, drs_free_space_threshold is used.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2279,6 +2287,12 @@ automation settings when correcting disk space imbalances.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_vsphere.DatastoreCluster.sdrs_space_utilization_threshold">
+<code class="sig-name descname">sdrs_space_utilization_threshold</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster.sdrs_space_utilization_threshold" title="Permalink to this definition">¶</a></dt>
+<dd><p>The threshold, in percent of used space, that storage DRS uses to make decisions to migrate VMs out of a datastore.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_vsphere.DatastoreCluster.sdrs_vm_evacuation_automation_level">
 <code class="sig-name descname">sdrs_vm_evacuation_automation_level</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster.sdrs_vm_evacuation_automation_level" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overrides the default
@@ -2310,7 +2324,9 @@ for custom attributes.</p></li>
 <li><p><strong>datacenter_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The [managed object ID][docs-about-morefs] of
 the datacenter to create the datastore cluster in. Forces a new resource if
 changed.</p></li>
+<li><p><strong>folder</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the folder to locate the datastore cluster in.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the datastore cluster.</p></li>
+<li><p><strong>sdrs_advanced_options</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Advanced configuration options for storage DRS.</p></li>
 <li><p><strong>sdrs_automation_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The global automation level for all
 virtual machines in this datastore cluster. Default: <code class="docutils literal notranslate"><span class="pre">manual</span></code>.</p></li>
 <li><p><strong>sdrs_default_intra_vm_affinity</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – When <code class="docutils literal notranslate"><span class="pre">true</span></code>, all disks in a
@@ -2321,6 +2337,8 @@ Default: <code class="docutils literal notranslate"><span class="pre">false</spa
 When set to <code class="docutils literal notranslate"><span class="pre">utilization</span></code>, <code class="docutils literal notranslate"><span class="pre">drs_space_utilization_threshold</span></code> is used, and
 when set to <code class="docutils literal notranslate"><span class="pre">freeSpace</span></code>, <code class="docutils literal notranslate"><span class="pre">drs_free_space_threshold</span></code> is used. Default:
 <code class="docutils literal notranslate"><span class="pre">utilization</span></code>.</p></li>
+<li><p><strong>sdrs_free_space_threshold_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The free space threshold to use. When set to utilization, drs_space_utilization_threshold is used, and when set to
+freeSpace, drs_free_space_threshold is used.</p></li>
 <li><p><strong>sdrs_free_space_utilization_difference</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The threshold, in
 percent, of difference between space utilization in datastores before storage
 DRS makes decisions to balance the space. Default: <code class="docutils literal notranslate"><span class="pre">5</span></code> percent.</p></li>
@@ -2356,6 +2374,7 @@ automation settings when correcting storage and VM policy violations.</p></li>
 automation settings when correcting affinity rule violations.</p></li>
 <li><p><strong>sdrs_space_balance_automation_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Overrides the default
 automation settings when correcting disk space imbalances.</p></li>
+<li><p><strong>sdrs_space_utilization_threshold</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The threshold, in percent of used space, that storage DRS uses to make decisions to migrate VMs out of a datastore.</p></li>
 <li><p><strong>sdrs_vm_evacuation_automation_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Overrides the default
 automation settings when generating recommendations for datastore evacuation.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The IDs of any tags to attach to this resource. See
@@ -2363,9 +2382,6 @@ automation settings when generating recommendations for datastore evacuation.</p
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/datastore_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/datastore_cluster.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2423,6 +2439,7 @@ operation that would keep that from happening, depending on the value of the
 <div><p><strong>NOTE:</strong> This resource requires vCenter and is not available on direct ESXi
 connections.</p>
 <p><strong>NOTE:</strong> Storage DRS requires a vSphere Enterprise Plus license.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/datastore_cluster_vm_anti_affinity_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/datastore_cluster_vm_anti_affinity_rule.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2441,9 +2458,6 @@ on different datastores from each other.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/datastore_cluster_vm_anti_affinity_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/datastore_cluster_vm_anti_affinity_rule.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vsphere.DatastoreClusterVmAntiAffinityRule.datastore_cluster_id">
 <code class="sig-name descname">datastore_cluster_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreClusterVmAntiAffinityRule.datastore_cluster_id" title="Permalink to this definition">¶</a></dt>
@@ -2501,9 +2515,6 @@ on different datastores from each other.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/datastore_cluster_vm_anti_affinity_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/datastore_cluster_vm_anti_affinity_rule.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2560,25 +2571,46 @@ portgroups, see <a class="reference external" href="https://docs.vmware.com/en/V
 <blockquote>
 <div><p><strong>NOTE:</strong> This resource requires vCenter and is not available on direct ESXi
 connections.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/distributed_port_group.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/distributed_port_group.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>active_uplinks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of active uplinks used for load balancing, matching the names of the uplinks assigned in the DVS.</p></li>
+<li><p><strong>allow_forged_transmits</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Controls whether or not the virtual network adapter is allowed to send network traffic with a different MAC address than
+that of its own.</p></li>
+<li><p><strong>allow_mac_changes</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Controls whether or not the Media Access Control (MAC) address can be changed.</p></li>
+<li><p><strong>allow_promiscuous</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable promiscuous mode on the network. This flag indicates whether or not all traffic is seen on a given port.</p></li>
 <li><p><strong>auto_expand</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allows the port group to create additional ports
 past the limit specified in <code class="docutils literal notranslate"><span class="pre">number_of_ports</span></code> if necessary. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><strong>block_all_ports</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether to block all ports by default.</p></li>
 <li><p><strong>block_override_allowed</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allow the [port shutdown
 policy][port-shutdown-policy] to be overridden on an individual port.</p></li>
+<li><p><strong>check_beacon</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable beacon probing on the ports this policy applies to.</p></li>
 <li><p><strong>custom_attributes</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Map of custom attribute ids to attribute
 value string to set for port group. See [here][docs-setting-custom-attributes]
 for a reference on how to set values for custom attributes.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional description for the port group.</p></li>
+<li><p><strong>directpath_gen2_allowed</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allow VMDirectPath Gen2 on the ports this policy applies to.</p></li>
 <li><p><strong>distributed_virtual_switch_uuid</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the DVS to add the
 port group to. Forces a new resource if changed.</p></li>
+<li><p><strong>egress_shaping_average_bandwidth</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The average egress bandwidth in bits per second if egress shaping is enabled on the port.</p></li>
+<li><p><strong>egress_shaping_burst_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum egress burst size allowed in bytes if egress shaping is enabled on the port.</p></li>
+<li><p><strong>egress_shaping_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – True if the traffic shaper is enabled for egress traffic on the port.</p></li>
+<li><p><strong>egress_shaping_peak_bandwidth</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The peak egress bandwidth during bursts in bits per second if egress traffic shaping is enabled on the port.</p></li>
+<li><p><strong>failback</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, the teaming policy will re-activate failed interfaces higher in precedence when they come back up.</p></li>
+<li><p><strong>ingress_shaping_average_bandwidth</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The average ingress bandwidth in bits per second if ingress shaping is enabled on the port.</p></li>
+<li><p><strong>ingress_shaping_burst_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum ingress burst size allowed in bytes if ingress shaping is enabled on the port.</p></li>
+<li><p><strong>ingress_shaping_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – True if the traffic shaper is enabled for ingress traffic on the port.</p></li>
+<li><p><strong>ingress_shaping_peak_bandwidth</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The peak ingress bandwidth during bursts in bits per second if ingress traffic shaping is enabled on the port.</p></li>
+<li><p><strong>lacp_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether or not to enable LACP on all uplink ports.</p></li>
+<li><p><strong>lacp_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The uplink LACP mode to use. Can be one of active or passive.</p></li>
 <li><p><strong>live_port_moving_allowed</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allow a port in this port group to be
 moved to another port group while it is connected.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the port group.</p></li>
+<li><p><strong>netflow_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether to enable netflow on all ports.</p></li>
 <li><p><strong>netflow_override_allowed</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allow the [Netflow
 policy][netflow-policy] on this port group to be overridden on an individual
 port.</p></li>
@@ -2587,6 +2619,7 @@ to associate with this port group. The default is <code class="docutils literal 
 association.</p></li>
 <li><p><strong>network_resource_pool_override_allowed</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allow the network
 resource pool set on this port group to be overridden on an individual port.</p></li>
+<li><p><strong>notify_switches</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, the teaming policy will notify the broadcast network of a NIC failover, triggering cache updates.</p></li>
 <li><p><strong>number_of_ports</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of ports available on this port
 group. Cannot be decreased below the amount of used ports on the port group.</p></li>
 <li><p><strong>port_config_reset_at_disconnect</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Reset a port’s settings to the
@@ -2594,21 +2627,30 @@ settings defined on this port group policy when the port disconnects.</p></li>
 <li><p><strong>port_name_format</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional formatting policy for naming of
 the ports in this port group. See the <code class="docutils literal notranslate"><span class="pre">portNameFormat</span></code> attribute listed
 [here][ext-vsphere-portname-format] for details on the format syntax.</p></li>
+<li><p><strong>port_private_secondary_vlan_id</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The secondary VLAN ID for this port.</p></li>
 <li><p><strong>security_policy_override_allowed</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allow the [security policy
 settings][sec-policy-settings] defined in this port group policy to be
 overridden on an individual port.</p></li>
 <li><p><strong>shaping_override_allowed</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allow the [traffic shaping
 options][traffic-shaping-settings] on this port group policy to be overridden
 on an individual port.</p></li>
+<li><p><strong>standby_uplinks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of active uplinks used for load balancing, matching the names of the uplinks assigned in the DVS.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of tag IDs to apply to this object.</p></li>
+<li><p><strong>teaming_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The network adapter teaming policy. Can be one of loadbalance_ip, loadbalance_srcmac, loadbalance_srcid,
+failover_explicit, or loadbalance_loadbased.</p></li>
 <li><p><strong>traffic_filter_override_allowed</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allow any traffic filters on
 this port group to be overridden on an individual port.</p></li>
+<li><p><strong>tx_uplink</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, a copy of packets sent to the switch will always be forwarded to an uplink in addition to the regular packet
+forwarded done by the switch.</p></li>
 <li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The port group type. Can be one of <code class="docutils literal notranslate"><span class="pre">earlyBinding</span></code> (static
 binding) or <code class="docutils literal notranslate"><span class="pre">ephemeral</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">earlyBinding</span></code>.</p></li>
 <li><p><strong>uplink_teaming_override_allowed</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allow the [uplink teaming
 options][uplink-teaming-settings] on this port group to be overridden on an
 individual port.</p></li>
+<li><p><strong>vlan_id</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The VLAN ID for single VLAN mode. 0 denotes no VLAN.</p></li>
 <li><p><strong>vlan_override_allowed</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allow the [VLAN settings][vlan-settings]
 on this port group to be overridden on an individual port.</p></li>
+<li><p><strong>vlan_ranges</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The VLAN ID for single VLAN mode. 0 denotes no VLAN.</p></li>
 </ul>
 </dd>
 </dl>
@@ -2617,9 +2659,31 @@ on this port group to be overridden on an individual port.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxVlan</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">minVlan</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/distributed_port_group.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/distributed_port_group.html.markdown</a>.</p>
-</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_vsphere.DistributedPortGroup.active_uplinks">
+<code class="sig-name descname">active_uplinks</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.active_uplinks" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of active uplinks used for load balancing, matching the names of the uplinks assigned in the DVS.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.DistributedPortGroup.allow_forged_transmits">
+<code class="sig-name descname">allow_forged_transmits</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.allow_forged_transmits" title="Permalink to this definition">¶</a></dt>
+<dd><p>Controls whether or not the virtual network adapter is allowed to send network traffic with a different MAC address than
+that of its own.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.DistributedPortGroup.allow_mac_changes">
+<code class="sig-name descname">allow_mac_changes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.allow_mac_changes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Controls whether or not the Media Access Control (MAC) address can be changed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.DistributedPortGroup.allow_promiscuous">
+<code class="sig-name descname">allow_promiscuous</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.allow_promiscuous" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable promiscuous mode on the network. This flag indicates whether or not all traffic is seen on a given port.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_vsphere.DistributedPortGroup.auto_expand">
 <code class="sig-name descname">auto_expand</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.auto_expand" title="Permalink to this definition">¶</a></dt>
@@ -2628,10 +2692,28 @@ past the limit specified in <code class="docutils literal notranslate"><span cla
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_vsphere.DistributedPortGroup.block_all_ports">
+<code class="sig-name descname">block_all_ports</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.block_all_ports" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates whether to block all ports by default.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_vsphere.DistributedPortGroup.block_override_allowed">
 <code class="sig-name descname">block_override_allowed</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.block_override_allowed" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allow the [port shutdown
 policy][port-shutdown-policy] to be overridden on an individual port.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.DistributedPortGroup.check_beacon">
+<code class="sig-name descname">check_beacon</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.check_beacon" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable beacon probing on the ports this policy applies to.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.DistributedPortGroup.config_version">
+<code class="sig-name descname">config_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.config_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Version string of the configuration that this spec is trying to change.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2649,10 +2731,88 @@ for a reference on how to set values for custom attributes.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_vsphere.DistributedPortGroup.directpath_gen2_allowed">
+<code class="sig-name descname">directpath_gen2_allowed</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.directpath_gen2_allowed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Allow VMDirectPath Gen2 on the ports this policy applies to.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_vsphere.DistributedPortGroup.distributed_virtual_switch_uuid">
 <code class="sig-name descname">distributed_virtual_switch_uuid</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.distributed_virtual_switch_uuid" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the DVS to add the
 port group to. Forces a new resource if changed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.DistributedPortGroup.egress_shaping_average_bandwidth">
+<code class="sig-name descname">egress_shaping_average_bandwidth</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.egress_shaping_average_bandwidth" title="Permalink to this definition">¶</a></dt>
+<dd><p>The average egress bandwidth in bits per second if egress shaping is enabled on the port.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.DistributedPortGroup.egress_shaping_burst_size">
+<code class="sig-name descname">egress_shaping_burst_size</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.egress_shaping_burst_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>The maximum egress burst size allowed in bytes if egress shaping is enabled on the port.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.DistributedPortGroup.egress_shaping_enabled">
+<code class="sig-name descname">egress_shaping_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.egress_shaping_enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>True if the traffic shaper is enabled for egress traffic on the port.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.DistributedPortGroup.egress_shaping_peak_bandwidth">
+<code class="sig-name descname">egress_shaping_peak_bandwidth</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.egress_shaping_peak_bandwidth" title="Permalink to this definition">¶</a></dt>
+<dd><p>The peak egress bandwidth during bursts in bits per second if egress traffic shaping is enabled on the port.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.DistributedPortGroup.failback">
+<code class="sig-name descname">failback</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.failback" title="Permalink to this definition">¶</a></dt>
+<dd><p>If true, the teaming policy will re-activate failed interfaces higher in precedence when they come back up.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.DistributedPortGroup.ingress_shaping_average_bandwidth">
+<code class="sig-name descname">ingress_shaping_average_bandwidth</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.ingress_shaping_average_bandwidth" title="Permalink to this definition">¶</a></dt>
+<dd><p>The average ingress bandwidth in bits per second if ingress shaping is enabled on the port.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.DistributedPortGroup.ingress_shaping_burst_size">
+<code class="sig-name descname">ingress_shaping_burst_size</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.ingress_shaping_burst_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>The maximum ingress burst size allowed in bytes if ingress shaping is enabled on the port.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.DistributedPortGroup.ingress_shaping_enabled">
+<code class="sig-name descname">ingress_shaping_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.ingress_shaping_enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>True if the traffic shaper is enabled for ingress traffic on the port.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.DistributedPortGroup.ingress_shaping_peak_bandwidth">
+<code class="sig-name descname">ingress_shaping_peak_bandwidth</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.ingress_shaping_peak_bandwidth" title="Permalink to this definition">¶</a></dt>
+<dd><p>The peak ingress bandwidth during bursts in bits per second if ingress traffic shaping is enabled on the port.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.DistributedPortGroup.key">
+<code class="sig-name descname">key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.key" title="Permalink to this definition">¶</a></dt>
+<dd><p>The generated UUID of the portgroup.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.DistributedPortGroup.lacp_enabled">
+<code class="sig-name descname">lacp_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.lacp_enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether or not to enable LACP on all uplink ports.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.DistributedPortGroup.lacp_mode">
+<code class="sig-name descname">lacp_mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.lacp_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>The uplink LACP mode to use. Can be one of active or passive.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2666,6 +2826,12 @@ moved to another port group while it is connected.</p>
 <dt id="pulumi_vsphere.DistributedPortGroup.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the port group.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.DistributedPortGroup.netflow_enabled">
+<code class="sig-name descname">netflow_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.netflow_enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates whether to enable netflow on all ports.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2692,6 +2858,12 @@ resource pool set on this port group to be overridden on an individual port.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_vsphere.DistributedPortGroup.notify_switches">
+<code class="sig-name descname">notify_switches</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.notify_switches" title="Permalink to this definition">¶</a></dt>
+<dd><p>If true, the teaming policy will notify the broadcast network of a NIC failover, triggering cache updates.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_vsphere.DistributedPortGroup.number_of_ports">
 <code class="sig-name descname">number_of_ports</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.number_of_ports" title="Permalink to this definition">¶</a></dt>
 <dd><p>The number of ports available on this port
@@ -2714,6 +2886,12 @@ the ports in this port group. See the <code class="docutils literal notranslate"
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_vsphere.DistributedPortGroup.port_private_secondary_vlan_id">
+<code class="sig-name descname">port_private_secondary_vlan_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.port_private_secondary_vlan_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The secondary VLAN ID for this port.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_vsphere.DistributedPortGroup.security_policy_override_allowed">
 <code class="sig-name descname">security_policy_override_allowed</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.security_policy_override_allowed" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allow the [security policy
@@ -2730,10 +2908,36 @@ on an individual port.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_vsphere.DistributedPortGroup.standby_uplinks">
+<code class="sig-name descname">standby_uplinks</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.standby_uplinks" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of active uplinks used for load balancing, matching the names of the uplinks assigned in the DVS.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.DistributedPortGroup.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of tag IDs to apply to this object.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.DistributedPortGroup.teaming_policy">
+<code class="sig-name descname">teaming_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.teaming_policy" title="Permalink to this definition">¶</a></dt>
+<dd><p>The network adapter teaming policy. Can be one of loadbalance_ip, loadbalance_srcmac, loadbalance_srcid,
+failover_explicit, or loadbalance_loadbased.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_vsphere.DistributedPortGroup.traffic_filter_override_allowed">
 <code class="sig-name descname">traffic_filter_override_allowed</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.traffic_filter_override_allowed" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allow any traffic filters on
 this port group to be overridden on an individual port.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.DistributedPortGroup.tx_uplink">
+<code class="sig-name descname">tx_uplink</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.tx_uplink" title="Permalink to this definition">¶</a></dt>
+<dd><p>If true, a copy of packets sent to the switch will always be forwarded to an uplink in addition to the regular packet
+forwarded done by the switch.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2752,10 +2956,26 @@ individual port.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_vsphere.DistributedPortGroup.vlan_id">
+<code class="sig-name descname">vlan_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.vlan_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The VLAN ID for single VLAN mode. 0 denotes no VLAN.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_vsphere.DistributedPortGroup.vlan_override_allowed">
 <code class="sig-name descname">vlan_override_allowed</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.vlan_override_allowed" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allow the [VLAN settings][vlan-settings]
 on this port group to be overridden on an individual port.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.DistributedPortGroup.vlan_ranges">
+<code class="sig-name descname">vlan_ranges</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.vlan_ranges" title="Permalink to this definition">¶</a></dt>
+<dd><p>The VLAN ID for single VLAN mode. 0 denotes no VLAN.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">maxVlan</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minVlan</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="method">
@@ -2769,19 +2989,41 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>active_uplinks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of active uplinks used for load balancing, matching the names of the uplinks assigned in the DVS.</p></li>
+<li><p><strong>allow_forged_transmits</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Controls whether or not the virtual network adapter is allowed to send network traffic with a different MAC address than
+that of its own.</p></li>
+<li><p><strong>allow_mac_changes</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Controls whether or not the Media Access Control (MAC) address can be changed.</p></li>
+<li><p><strong>allow_promiscuous</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable promiscuous mode on the network. This flag indicates whether or not all traffic is seen on a given port.</p></li>
 <li><p><strong>auto_expand</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allows the port group to create additional ports
 past the limit specified in <code class="docutils literal notranslate"><span class="pre">number_of_ports</span></code> if necessary. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><strong>block_all_ports</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether to block all ports by default.</p></li>
 <li><p><strong>block_override_allowed</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allow the [port shutdown
 policy][port-shutdown-policy] to be overridden on an individual port.</p></li>
+<li><p><strong>check_beacon</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable beacon probing on the ports this policy applies to.</p></li>
+<li><p><strong>config_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Version string of the configuration that this spec is trying to change.</p></li>
 <li><p><strong>custom_attributes</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Map of custom attribute ids to attribute
 value string to set for port group. See [here][docs-setting-custom-attributes]
 for a reference on how to set values for custom attributes.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional description for the port group.</p></li>
+<li><p><strong>directpath_gen2_allowed</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allow VMDirectPath Gen2 on the ports this policy applies to.</p></li>
 <li><p><strong>distributed_virtual_switch_uuid</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the DVS to add the
 port group to. Forces a new resource if changed.</p></li>
+<li><p><strong>egress_shaping_average_bandwidth</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The average egress bandwidth in bits per second if egress shaping is enabled on the port.</p></li>
+<li><p><strong>egress_shaping_burst_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum egress burst size allowed in bytes if egress shaping is enabled on the port.</p></li>
+<li><p><strong>egress_shaping_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – True if the traffic shaper is enabled for egress traffic on the port.</p></li>
+<li><p><strong>egress_shaping_peak_bandwidth</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The peak egress bandwidth during bursts in bits per second if egress traffic shaping is enabled on the port.</p></li>
+<li><p><strong>failback</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, the teaming policy will re-activate failed interfaces higher in precedence when they come back up.</p></li>
+<li><p><strong>ingress_shaping_average_bandwidth</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The average ingress bandwidth in bits per second if ingress shaping is enabled on the port.</p></li>
+<li><p><strong>ingress_shaping_burst_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum ingress burst size allowed in bytes if ingress shaping is enabled on the port.</p></li>
+<li><p><strong>ingress_shaping_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – True if the traffic shaper is enabled for ingress traffic on the port.</p></li>
+<li><p><strong>ingress_shaping_peak_bandwidth</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The peak ingress bandwidth during bursts in bits per second if ingress traffic shaping is enabled on the port.</p></li>
+<li><p><strong>key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The generated UUID of the portgroup.</p></li>
+<li><p><strong>lacp_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether or not to enable LACP on all uplink ports.</p></li>
+<li><p><strong>lacp_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The uplink LACP mode to use. Can be one of active or passive.</p></li>
 <li><p><strong>live_port_moving_allowed</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allow a port in this port group to be
 moved to another port group while it is connected.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the port group.</p></li>
+<li><p><strong>netflow_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether to enable netflow on all ports.</p></li>
 <li><p><strong>netflow_override_allowed</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allow the [Netflow
 policy][netflow-policy] on this port group to be overridden on an individual
 port.</p></li>
@@ -2790,6 +3032,7 @@ to associate with this port group. The default is <code class="docutils literal 
 association.</p></li>
 <li><p><strong>network_resource_pool_override_allowed</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allow the network
 resource pool set on this port group to be overridden on an individual port.</p></li>
+<li><p><strong>notify_switches</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, the teaming policy will notify the broadcast network of a NIC failover, triggering cache updates.</p></li>
 <li><p><strong>number_of_ports</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of ports available on this port
 group. Cannot be decreased below the amount of used ports on the port group.</p></li>
 <li><p><strong>port_config_reset_at_disconnect</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Reset a port’s settings to the
@@ -2797,21 +3040,30 @@ settings defined on this port group policy when the port disconnects.</p></li>
 <li><p><strong>port_name_format</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional formatting policy for naming of
 the ports in this port group. See the <code class="docutils literal notranslate"><span class="pre">portNameFormat</span></code> attribute listed
 [here][ext-vsphere-portname-format] for details on the format syntax.</p></li>
+<li><p><strong>port_private_secondary_vlan_id</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The secondary VLAN ID for this port.</p></li>
 <li><p><strong>security_policy_override_allowed</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allow the [security policy
 settings][sec-policy-settings] defined in this port group policy to be
 overridden on an individual port.</p></li>
 <li><p><strong>shaping_override_allowed</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allow the [traffic shaping
 options][traffic-shaping-settings] on this port group policy to be overridden
 on an individual port.</p></li>
+<li><p><strong>standby_uplinks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of active uplinks used for load balancing, matching the names of the uplinks assigned in the DVS.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of tag IDs to apply to this object.</p></li>
+<li><p><strong>teaming_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The network adapter teaming policy. Can be one of loadbalance_ip, loadbalance_srcmac, loadbalance_srcid,
+failover_explicit, or loadbalance_loadbased.</p></li>
 <li><p><strong>traffic_filter_override_allowed</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allow any traffic filters on
 this port group to be overridden on an individual port.</p></li>
+<li><p><strong>tx_uplink</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, a copy of packets sent to the switch will always be forwarded to an uplink in addition to the regular packet
+forwarded done by the switch.</p></li>
 <li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The port group type. Can be one of <code class="docutils literal notranslate"><span class="pre">earlyBinding</span></code> (static
 binding) or <code class="docutils literal notranslate"><span class="pre">ephemeral</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">earlyBinding</span></code>.</p></li>
 <li><p><strong>uplink_teaming_override_allowed</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allow the [uplink teaming
 options][uplink-teaming-settings] on this port group to be overridden on an
 individual port.</p></li>
+<li><p><strong>vlan_id</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The VLAN ID for single VLAN mode. 0 denotes no VLAN.</p></li>
 <li><p><strong>vlan_override_allowed</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allow the [VLAN settings][vlan-settings]
 on this port group to be overridden on an individual port.</p></li>
+<li><p><strong>vlan_ranges</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The VLAN ID for single VLAN mode. 0 denotes no VLAN.</p></li>
 </ul>
 </dd>
 </dl>
@@ -2820,9 +3072,6 @@ on this port group to be overridden on an individual port.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxVlan</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">minVlan</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/distributed_port_group.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/distributed_port_group.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2881,6 +3130,7 @@ page</a>.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> This resource requires vCenter and is not available on direct ESXi
 connections.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/distributed_virtual_switch.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/distributed_virtual_switch.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2926,8 +3176,16 @@ on the port for egress traffic.</p></li>
 in bits per second if egress traffic shaping is enabled on the port.</p></li>
 <li><p><strong>failback</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If <code class="docutils literal notranslate"><span class="pre">true</span></code>, the teaming policy will re-activate failed
 uplinks higher in precedence when they come back up.</p></li>
+<li><p><strong>faulttolerance_maximum_mbit</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum allowed usage for the faultTolerance traffic class, in Mbits/sec.</p></li>
+<li><p><strong>faulttolerance_reservation_mbit</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of guaranteed bandwidth for the faultTolerance traffic class, in Mbits/sec.</p></li>
+<li><p><strong>faulttolerance_share_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of shares to allocate to the faultTolerance traffic class for a custom share level.</p></li>
+<li><p><strong>faulttolerance_share_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The allocation level for the faultTolerance traffic class. Can be one of high, low, normal, or custom.</p></li>
 <li><p><strong>folder</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The folder to create the DVS in. Forces a new resource
 if changed.</p></li>
+<li><p><strong>hbr_maximum_mbit</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum allowed usage for the hbr traffic class, in Mbits/sec.</p></li>
+<li><p><strong>hbr_reservation_mbit</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of guaranteed bandwidth for the hbr traffic class, in Mbits/sec.</p></li>
+<li><p><strong>hbr_share_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of shares to allocate to the hbr traffic class for a custom share level.</p></li>
+<li><p><strong>hbr_share_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The allocation level for the hbr traffic class. Can be one of high, low, normal, or custom.</p></li>
 <li><p><strong>hosts</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Use the <code class="docutils literal notranslate"><span class="pre">host</span></code> block to declare a host specification. The
 options are:</p></li>
 <li><p><strong>ingress_shaping_average_bandwidth</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The average bandwidth in
@@ -2941,6 +3199,10 @@ bursts in bits per second if ingress traffic shaping is enabled on the port.</p>
 <li><p><strong>ipv4_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An IPv4 address to identify the switch. This is
 mostly useful when used with the Netflow arguments found
 below.</p></li>
+<li><p><strong>iscsi_maximum_mbit</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum allowed usage for the iSCSI traffic class, in Mbits/sec.</p></li>
+<li><p><strong>iscsi_reservation_mbit</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of guaranteed bandwidth for the iSCSI traffic class, in Mbits/sec.</p></li>
+<li><p><strong>iscsi_share_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of shares to allocate to the iSCSI traffic class for a custom share level.</p></li>
+<li><p><strong>iscsi_share_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The allocation level for the iSCSI traffic class. Can be one of high, low, normal, or custom.</p></li>
 <li><p><strong>lacp_api_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Link Aggregation Control Protocol group
 version to use with the switch. Possible values are <code class="docutils literal notranslate"><span class="pre">singleLag</span></code> and
 <code class="docutils literal notranslate"><span class="pre">multipleLag</span></code>.</p></li>
@@ -2951,6 +3213,10 @@ applies to.</p></li>
 for link discovery traffic.</p></li>
 <li><p><strong>link_discovery_protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The discovery protocol type. Valid
 types are <code class="docutils literal notranslate"><span class="pre">cdp</span></code> and <code class="docutils literal notranslate"><span class="pre">lldp</span></code>.</p></li>
+<li><p><strong>management_maximum_mbit</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum allowed usage for the management traffic class, in Mbits/sec.</p></li>
+<li><p><strong>management_reservation_mbit</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of guaranteed bandwidth for the management traffic class, in Mbits/sec.</p></li>
+<li><p><strong>management_share_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of shares to allocate to the management traffic class for a custom share level.</p></li>
+<li><p><strong>management_share_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The allocation level for the management traffic class. Can be one of high, low, normal, or custom.</p></li>
 <li><p><strong>max_mtu</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum transmission unit (MTU) for the virtual
 switch.</p></li>
 <li><p><strong>multicast_filtering_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The multicast filtering mode to use
@@ -2982,6 +3248,10 @@ indicates an analysis rate of 0.001%.</p></li>
 network I/O control. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>network_resource_control_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The version of network I/O
 control to use. Can be one of <code class="docutils literal notranslate"><span class="pre">version2</span></code> or <code class="docutils literal notranslate"><span class="pre">version3</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">version2</span></code>.</p></li>
+<li><p><strong>nfs_maximum_mbit</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum allowed usage for the nfs traffic class, in Mbits/sec.</p></li>
+<li><p><strong>nfs_reservation_mbit</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of guaranteed bandwidth for the nfs traffic class, in Mbits/sec.</p></li>
+<li><p><strong>nfs_share_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of shares to allocate to the nfs traffic class for a custom share level.</p></li>
+<li><p><strong>nfs_share_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The allocation level for the nfs traffic class. Can be one of high, low, normal, or custom.</p></li>
 <li><p><strong>notify_switches</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If <code class="docutils literal notranslate"><span class="pre">true</span></code>, the teaming policy will notify the
 broadcast network of an uplink failover, triggering cache updates.</p></li>
 <li><p><strong>port_private_secondary_vlan_id</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Used to define a secondary VLAN
@@ -3002,6 +3272,10 @@ of the uplinks on the DVS across hosts. The number of items in this list
 controls the number of uplinks that exist on the DVS, in addition to the
 names.  See here for an example on how to
 use this option.</p></li>
+<li><p><strong>vdp_maximum_mbit</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum allowed usage for the vdp traffic class, in Mbits/sec.</p></li>
+<li><p><strong>vdp_reservation_mbit</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of guaranteed bandwidth for the vdp traffic class, in Mbits/sec.</p></li>
+<li><p><strong>vdp_share_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of shares to allocate to the vdp traffic class for a custom share level.</p></li>
+<li><p><strong>vdp_share_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The allocation level for the vdp traffic class. Can be one of high, low, normal, or custom.</p></li>
 <li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <ul>
 <li><p>The version of the DVS to create. The default is to</p></li>
 </ul>
@@ -3009,10 +3283,23 @@ use this option.</p></li>
 being used. A DVS can be upgraded to another version, but cannot be
 downgraded.</p>
 </p></li>
+<li><p><strong>virtualmachine_maximum_mbit</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum allowed usage for the virtualMachine traffic class, in Mbits/sec.</p></li>
+<li><p><strong>virtualmachine_reservation_mbit</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of guaranteed bandwidth for the virtualMachine traffic class, in Mbits/sec.</p></li>
+<li><p><strong>virtualmachine_share_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of shares to allocate to the virtualMachine traffic class for a custom share level.</p></li>
+<li><p><strong>virtualmachine_share_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The allocation level for the virtualMachine traffic class. Can be one of high, low, normal, or custom.</p></li>
+<li><p><strong>vlan_id</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The VLAN ID for single VLAN mode. 0 denotes no VLAN.</p></li>
 <li><p><strong>vlan_ranges</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Used to denote VLAN trunking. Use the <code class="docutils literal notranslate"><span class="pre">min_vlan</span></code>
 and <code class="docutils literal notranslate"><span class="pre">max_vlan</span></code> sub-arguments to define the tagged VLAN range. Multiple
 <code class="docutils literal notranslate"><span class="pre">vlan_range</span></code> definitions are allowed, but they must not overlap. Example
 below:</p></li>
+<li><p><strong>vmotion_maximum_mbit</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum allowed usage for the vmotion traffic class, in Mbits/sec.</p></li>
+<li><p><strong>vmotion_reservation_mbit</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of guaranteed bandwidth for the vmotion traffic class, in Mbits/sec.</p></li>
+<li><p><strong>vmotion_share_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of shares to allocate to the vmotion traffic class for a custom share level.</p></li>
+<li><p><strong>vmotion_share_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The allocation level for the vmotion traffic class. Can be one of high, low, normal, or custom.</p></li>
+<li><p><strong>vsan_maximum_mbit</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum allowed usage for the vsan traffic class, in Mbits/sec.</p></li>
+<li><p><strong>vsan_reservation_mbit</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of guaranteed bandwidth for the vsan traffic class, in Mbits/sec.</p></li>
+<li><p><strong>vsan_share_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of shares to allocate to the vsan traffic class for a custom share level.</p></li>
+<li><p><strong>vsan_share_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The allocation level for the vsan traffic class. Can be one of high, low, normal, or custom.</p></li>
 </ul>
 </dd>
 </dl>
@@ -3028,9 +3315,6 @@ DVS.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxVlan</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">minVlan</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/distributed_virtual_switch.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/distributed_virtual_switch.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.active_uplinks">
 <code class="sig-name descname">active_uplinks</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.active_uplinks" title="Permalink to this definition">¶</a></dt>
@@ -3075,6 +3359,12 @@ virtual devices.</p>
 <code class="sig-name descname">check_beacon</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.check_beacon" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enables beacon probing as an additional measure
 to detect NIC failure.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.DistributedVirtualSwitch.config_version">
+<code class="sig-name descname">config_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.config_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>The version string of the configuration that this spec is trying to change.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -3156,10 +3446,58 @@ uplinks higher in precedence when they come back up.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_vsphere.DistributedVirtualSwitch.faulttolerance_maximum_mbit">
+<code class="sig-name descname">faulttolerance_maximum_mbit</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.faulttolerance_maximum_mbit" title="Permalink to this definition">¶</a></dt>
+<dd><p>The maximum allowed usage for the faultTolerance traffic class, in Mbits/sec.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.DistributedVirtualSwitch.faulttolerance_reservation_mbit">
+<code class="sig-name descname">faulttolerance_reservation_mbit</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.faulttolerance_reservation_mbit" title="Permalink to this definition">¶</a></dt>
+<dd><p>The amount of guaranteed bandwidth for the faultTolerance traffic class, in Mbits/sec.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.DistributedVirtualSwitch.faulttolerance_share_count">
+<code class="sig-name descname">faulttolerance_share_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.faulttolerance_share_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>The amount of shares to allocate to the faultTolerance traffic class for a custom share level.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.DistributedVirtualSwitch.faulttolerance_share_level">
+<code class="sig-name descname">faulttolerance_share_level</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.faulttolerance_share_level" title="Permalink to this definition">¶</a></dt>
+<dd><p>The allocation level for the faultTolerance traffic class. Can be one of high, low, normal, or custom.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.folder">
 <code class="sig-name descname">folder</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.folder" title="Permalink to this definition">¶</a></dt>
 <dd><p>The folder to create the DVS in. Forces a new resource
 if changed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.DistributedVirtualSwitch.hbr_maximum_mbit">
+<code class="sig-name descname">hbr_maximum_mbit</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.hbr_maximum_mbit" title="Permalink to this definition">¶</a></dt>
+<dd><p>The maximum allowed usage for the hbr traffic class, in Mbits/sec.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.DistributedVirtualSwitch.hbr_reservation_mbit">
+<code class="sig-name descname">hbr_reservation_mbit</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.hbr_reservation_mbit" title="Permalink to this definition">¶</a></dt>
+<dd><p>The amount of guaranteed bandwidth for the hbr traffic class, in Mbits/sec.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.DistributedVirtualSwitch.hbr_share_count">
+<code class="sig-name descname">hbr_share_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.hbr_share_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>The amount of shares to allocate to the hbr traffic class for a custom share level.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.DistributedVirtualSwitch.hbr_share_level">
+<code class="sig-name descname">hbr_share_level</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.hbr_share_level" title="Permalink to this definition">¶</a></dt>
+<dd><p>The allocation level for the hbr traffic class. Can be one of high, low, normal, or custom.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -3212,6 +3550,30 @@ below.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_vsphere.DistributedVirtualSwitch.iscsi_maximum_mbit">
+<code class="sig-name descname">iscsi_maximum_mbit</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.iscsi_maximum_mbit" title="Permalink to this definition">¶</a></dt>
+<dd><p>The maximum allowed usage for the iSCSI traffic class, in Mbits/sec.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.DistributedVirtualSwitch.iscsi_reservation_mbit">
+<code class="sig-name descname">iscsi_reservation_mbit</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.iscsi_reservation_mbit" title="Permalink to this definition">¶</a></dt>
+<dd><p>The amount of guaranteed bandwidth for the iSCSI traffic class, in Mbits/sec.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.DistributedVirtualSwitch.iscsi_share_count">
+<code class="sig-name descname">iscsi_share_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.iscsi_share_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>The amount of shares to allocate to the iSCSI traffic class for a custom share level.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.DistributedVirtualSwitch.iscsi_share_level">
+<code class="sig-name descname">iscsi_share_level</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.iscsi_share_level" title="Permalink to this definition">¶</a></dt>
+<dd><p>The allocation level for the iSCSI traffic class. Can be one of high, low, normal, or custom.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.lacp_api_version">
 <code class="sig-name descname">lacp_api_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.lacp_api_version" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Link Aggregation Control Protocol group
@@ -3244,6 +3606,30 @@ for link discovery traffic.</p>
 <code class="sig-name descname">link_discovery_protocol</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.link_discovery_protocol" title="Permalink to this definition">¶</a></dt>
 <dd><p>The discovery protocol type. Valid
 types are <code class="docutils literal notranslate"><span class="pre">cdp</span></code> and <code class="docutils literal notranslate"><span class="pre">lldp</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.DistributedVirtualSwitch.management_maximum_mbit">
+<code class="sig-name descname">management_maximum_mbit</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.management_maximum_mbit" title="Permalink to this definition">¶</a></dt>
+<dd><p>The maximum allowed usage for the management traffic class, in Mbits/sec.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.DistributedVirtualSwitch.management_reservation_mbit">
+<code class="sig-name descname">management_reservation_mbit</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.management_reservation_mbit" title="Permalink to this definition">¶</a></dt>
+<dd><p>The amount of guaranteed bandwidth for the management traffic class, in Mbits/sec.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.DistributedVirtualSwitch.management_share_count">
+<code class="sig-name descname">management_share_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.management_share_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>The amount of shares to allocate to the management traffic class for a custom share level.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.DistributedVirtualSwitch.management_share_level">
+<code class="sig-name descname">management_share_level</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.management_share_level" title="Permalink to this definition">¶</a></dt>
+<dd><p>The allocation level for the management traffic class. Can be one of high, low, normal, or custom.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -3343,6 +3729,30 @@ control to use. Can be one of <code class="docutils literal notranslate"><span c
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_vsphere.DistributedVirtualSwitch.nfs_maximum_mbit">
+<code class="sig-name descname">nfs_maximum_mbit</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.nfs_maximum_mbit" title="Permalink to this definition">¶</a></dt>
+<dd><p>The maximum allowed usage for the nfs traffic class, in Mbits/sec.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.DistributedVirtualSwitch.nfs_reservation_mbit">
+<code class="sig-name descname">nfs_reservation_mbit</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.nfs_reservation_mbit" title="Permalink to this definition">¶</a></dt>
+<dd><p>The amount of guaranteed bandwidth for the nfs traffic class, in Mbits/sec.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.DistributedVirtualSwitch.nfs_share_count">
+<code class="sig-name descname">nfs_share_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.nfs_share_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>The amount of shares to allocate to the nfs traffic class for a custom share level.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.DistributedVirtualSwitch.nfs_share_level">
+<code class="sig-name descname">nfs_share_level</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.nfs_share_level" title="Permalink to this definition">¶</a></dt>
+<dd><p>The allocation level for the nfs traffic class. Can be one of high, low, normal, or custom.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.notify_switches">
 <code class="sig-name descname">notify_switches</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.notify_switches" title="Permalink to this definition">¶</a></dt>
 <dd><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, the teaming policy will notify the
@@ -3398,6 +3808,30 @@ use this option.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_vsphere.DistributedVirtualSwitch.vdp_maximum_mbit">
+<code class="sig-name descname">vdp_maximum_mbit</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.vdp_maximum_mbit" title="Permalink to this definition">¶</a></dt>
+<dd><p>The maximum allowed usage for the vdp traffic class, in Mbits/sec.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.DistributedVirtualSwitch.vdp_reservation_mbit">
+<code class="sig-name descname">vdp_reservation_mbit</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.vdp_reservation_mbit" title="Permalink to this definition">¶</a></dt>
+<dd><p>The amount of guaranteed bandwidth for the vdp traffic class, in Mbits/sec.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.DistributedVirtualSwitch.vdp_share_count">
+<code class="sig-name descname">vdp_share_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.vdp_share_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>The amount of shares to allocate to the vdp traffic class for a custom share level.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.DistributedVirtualSwitch.vdp_share_level">
+<code class="sig-name descname">vdp_share_level</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.vdp_share_level" title="Permalink to this definition">¶</a></dt>
+<dd><p>The allocation level for the vdp traffic class. Can be one of high, low, normal, or custom.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.version">
 <code class="sig-name descname">version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.version" title="Permalink to this definition">¶</a></dt>
 <dd><ul class="simple">
@@ -3406,6 +3840,36 @@ create the DVS at the latest version supported by the version of vSphere
 being used. A DVS can be upgraded to another version, but cannot be
 downgraded.</p></li>
 </ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.DistributedVirtualSwitch.virtualmachine_maximum_mbit">
+<code class="sig-name descname">virtualmachine_maximum_mbit</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.virtualmachine_maximum_mbit" title="Permalink to this definition">¶</a></dt>
+<dd><p>The maximum allowed usage for the virtualMachine traffic class, in Mbits/sec.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.DistributedVirtualSwitch.virtualmachine_reservation_mbit">
+<code class="sig-name descname">virtualmachine_reservation_mbit</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.virtualmachine_reservation_mbit" title="Permalink to this definition">¶</a></dt>
+<dd><p>The amount of guaranteed bandwidth for the virtualMachine traffic class, in Mbits/sec.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.DistributedVirtualSwitch.virtualmachine_share_count">
+<code class="sig-name descname">virtualmachine_share_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.virtualmachine_share_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>The amount of shares to allocate to the virtualMachine traffic class for a custom share level.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.DistributedVirtualSwitch.virtualmachine_share_level">
+<code class="sig-name descname">virtualmachine_share_level</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.virtualmachine_share_level" title="Permalink to this definition">¶</a></dt>
+<dd><p>The allocation level for the virtualMachine traffic class. Can be one of high, low, normal, or custom.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.DistributedVirtualSwitch.vlan_id">
+<code class="sig-name descname">vlan_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.vlan_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The VLAN ID for single VLAN mode. 0 denotes no VLAN.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -3419,6 +3883,54 @@ below:</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxVlan</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">minVlan</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
 </ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.DistributedVirtualSwitch.vmotion_maximum_mbit">
+<code class="sig-name descname">vmotion_maximum_mbit</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.vmotion_maximum_mbit" title="Permalink to this definition">¶</a></dt>
+<dd><p>The maximum allowed usage for the vmotion traffic class, in Mbits/sec.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.DistributedVirtualSwitch.vmotion_reservation_mbit">
+<code class="sig-name descname">vmotion_reservation_mbit</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.vmotion_reservation_mbit" title="Permalink to this definition">¶</a></dt>
+<dd><p>The amount of guaranteed bandwidth for the vmotion traffic class, in Mbits/sec.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.DistributedVirtualSwitch.vmotion_share_count">
+<code class="sig-name descname">vmotion_share_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.vmotion_share_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>The amount of shares to allocate to the vmotion traffic class for a custom share level.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.DistributedVirtualSwitch.vmotion_share_level">
+<code class="sig-name descname">vmotion_share_level</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.vmotion_share_level" title="Permalink to this definition">¶</a></dt>
+<dd><p>The allocation level for the vmotion traffic class. Can be one of high, low, normal, or custom.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.DistributedVirtualSwitch.vsan_maximum_mbit">
+<code class="sig-name descname">vsan_maximum_mbit</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.vsan_maximum_mbit" title="Permalink to this definition">¶</a></dt>
+<dd><p>The maximum allowed usage for the vsan traffic class, in Mbits/sec.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.DistributedVirtualSwitch.vsan_reservation_mbit">
+<code class="sig-name descname">vsan_reservation_mbit</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.vsan_reservation_mbit" title="Permalink to this definition">¶</a></dt>
+<dd><p>The amount of guaranteed bandwidth for the vsan traffic class, in Mbits/sec.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.DistributedVirtualSwitch.vsan_share_count">
+<code class="sig-name descname">vsan_share_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.vsan_share_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>The amount of shares to allocate to the vsan traffic class for a custom share level.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.DistributedVirtualSwitch.vsan_share_level">
+<code class="sig-name descname">vsan_share_level</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.vsan_share_level" title="Permalink to this definition">¶</a></dt>
+<dd><p>The allocation level for the vsan traffic class. Can be one of high, low, normal, or custom.</p>
 </dd></dl>
 
 <dl class="method">
@@ -3448,6 +3960,7 @@ this policy applies to, effectively blocking all network access to connected
 virtual devices.</p></li>
 <li><p><strong>check_beacon</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enables beacon probing as an additional measure
 to detect NIC failure.</p></li>
+<li><p><strong>config_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The version string of the configuration that this spec is trying to change.</p></li>
 <li><p><strong>contact_detail</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The detailed contact information for the person
 who is responsible for the DVS.</p></li>
 <li><p><strong>contact_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the person who is responsible for the
@@ -3471,8 +3984,16 @@ on the port for egress traffic.</p></li>
 in bits per second if egress traffic shaping is enabled on the port.</p></li>
 <li><p><strong>failback</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If <code class="docutils literal notranslate"><span class="pre">true</span></code>, the teaming policy will re-activate failed
 uplinks higher in precedence when they come back up.</p></li>
+<li><p><strong>faulttolerance_maximum_mbit</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum allowed usage for the faultTolerance traffic class, in Mbits/sec.</p></li>
+<li><p><strong>faulttolerance_reservation_mbit</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of guaranteed bandwidth for the faultTolerance traffic class, in Mbits/sec.</p></li>
+<li><p><strong>faulttolerance_share_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of shares to allocate to the faultTolerance traffic class for a custom share level.</p></li>
+<li><p><strong>faulttolerance_share_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The allocation level for the faultTolerance traffic class. Can be one of high, low, normal, or custom.</p></li>
 <li><p><strong>folder</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The folder to create the DVS in. Forces a new resource
 if changed.</p></li>
+<li><p><strong>hbr_maximum_mbit</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum allowed usage for the hbr traffic class, in Mbits/sec.</p></li>
+<li><p><strong>hbr_reservation_mbit</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of guaranteed bandwidth for the hbr traffic class, in Mbits/sec.</p></li>
+<li><p><strong>hbr_share_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of shares to allocate to the hbr traffic class for a custom share level.</p></li>
+<li><p><strong>hbr_share_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The allocation level for the hbr traffic class. Can be one of high, low, normal, or custom.</p></li>
 <li><p><strong>hosts</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Use the <code class="docutils literal notranslate"><span class="pre">host</span></code> block to declare a host specification. The
 options are:</p></li>
 <li><p><strong>ingress_shaping_average_bandwidth</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The average bandwidth in
@@ -3486,6 +4007,10 @@ bursts in bits per second if ingress traffic shaping is enabled on the port.</p>
 <li><p><strong>ipv4_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An IPv4 address to identify the switch. This is
 mostly useful when used with the Netflow arguments found
 below.</p></li>
+<li><p><strong>iscsi_maximum_mbit</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum allowed usage for the iSCSI traffic class, in Mbits/sec.</p></li>
+<li><p><strong>iscsi_reservation_mbit</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of guaranteed bandwidth for the iSCSI traffic class, in Mbits/sec.</p></li>
+<li><p><strong>iscsi_share_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of shares to allocate to the iSCSI traffic class for a custom share level.</p></li>
+<li><p><strong>iscsi_share_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The allocation level for the iSCSI traffic class. Can be one of high, low, normal, or custom.</p></li>
 <li><p><strong>lacp_api_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Link Aggregation Control Protocol group
 version to use with the switch. Possible values are <code class="docutils literal notranslate"><span class="pre">singleLag</span></code> and
 <code class="docutils literal notranslate"><span class="pre">multipleLag</span></code>.</p></li>
@@ -3496,6 +4021,10 @@ applies to.</p></li>
 for link discovery traffic.</p></li>
 <li><p><strong>link_discovery_protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The discovery protocol type. Valid
 types are <code class="docutils literal notranslate"><span class="pre">cdp</span></code> and <code class="docutils literal notranslate"><span class="pre">lldp</span></code>.</p></li>
+<li><p><strong>management_maximum_mbit</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum allowed usage for the management traffic class, in Mbits/sec.</p></li>
+<li><p><strong>management_reservation_mbit</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of guaranteed bandwidth for the management traffic class, in Mbits/sec.</p></li>
+<li><p><strong>management_share_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of shares to allocate to the management traffic class for a custom share level.</p></li>
+<li><p><strong>management_share_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The allocation level for the management traffic class. Can be one of high, low, normal, or custom.</p></li>
 <li><p><strong>max_mtu</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum transmission unit (MTU) for the virtual
 switch.</p></li>
 <li><p><strong>multicast_filtering_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The multicast filtering mode to use
@@ -3527,6 +4056,10 @@ indicates an analysis rate of 0.001%.</p></li>
 network I/O control. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>network_resource_control_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The version of network I/O
 control to use. Can be one of <code class="docutils literal notranslate"><span class="pre">version2</span></code> or <code class="docutils literal notranslate"><span class="pre">version3</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">version2</span></code>.</p></li>
+<li><p><strong>nfs_maximum_mbit</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum allowed usage for the nfs traffic class, in Mbits/sec.</p></li>
+<li><p><strong>nfs_reservation_mbit</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of guaranteed bandwidth for the nfs traffic class, in Mbits/sec.</p></li>
+<li><p><strong>nfs_share_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of shares to allocate to the nfs traffic class for a custom share level.</p></li>
+<li><p><strong>nfs_share_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The allocation level for the nfs traffic class. Can be one of high, low, normal, or custom.</p></li>
 <li><p><strong>notify_switches</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If <code class="docutils literal notranslate"><span class="pre">true</span></code>, the teaming policy will notify the
 broadcast network of an uplink failover, triggering cache updates.</p></li>
 <li><p><strong>port_private_secondary_vlan_id</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Used to define a secondary VLAN
@@ -3547,6 +4080,10 @@ of the uplinks on the DVS across hosts. The number of items in this list
 controls the number of uplinks that exist on the DVS, in addition to the
 names.  See here for an example on how to
 use this option.</p></li>
+<li><p><strong>vdp_maximum_mbit</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum allowed usage for the vdp traffic class, in Mbits/sec.</p></li>
+<li><p><strong>vdp_reservation_mbit</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of guaranteed bandwidth for the vdp traffic class, in Mbits/sec.</p></li>
+<li><p><strong>vdp_share_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of shares to allocate to the vdp traffic class for a custom share level.</p></li>
+<li><p><strong>vdp_share_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The allocation level for the vdp traffic class. Can be one of high, low, normal, or custom.</p></li>
 <li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <ul>
 <li><p>The version of the DVS to create. The default is to</p></li>
 </ul>
@@ -3554,10 +4091,23 @@ use this option.</p></li>
 being used. A DVS can be upgraded to another version, but cannot be
 downgraded.</p>
 </p></li>
+<li><p><strong>virtualmachine_maximum_mbit</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum allowed usage for the virtualMachine traffic class, in Mbits/sec.</p></li>
+<li><p><strong>virtualmachine_reservation_mbit</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of guaranteed bandwidth for the virtualMachine traffic class, in Mbits/sec.</p></li>
+<li><p><strong>virtualmachine_share_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of shares to allocate to the virtualMachine traffic class for a custom share level.</p></li>
+<li><p><strong>virtualmachine_share_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The allocation level for the virtualMachine traffic class. Can be one of high, low, normal, or custom.</p></li>
+<li><p><strong>vlan_id</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The VLAN ID for single VLAN mode. 0 denotes no VLAN.</p></li>
 <li><p><strong>vlan_ranges</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Used to denote VLAN trunking. Use the <code class="docutils literal notranslate"><span class="pre">min_vlan</span></code>
 and <code class="docutils literal notranslate"><span class="pre">max_vlan</span></code> sub-arguments to define the tagged VLAN range. Multiple
 <code class="docutils literal notranslate"><span class="pre">vlan_range</span></code> definitions are allowed, but they must not overlap. Example
 below:</p></li>
+<li><p><strong>vmotion_maximum_mbit</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum allowed usage for the vmotion traffic class, in Mbits/sec.</p></li>
+<li><p><strong>vmotion_reservation_mbit</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of guaranteed bandwidth for the vmotion traffic class, in Mbits/sec.</p></li>
+<li><p><strong>vmotion_share_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of shares to allocate to the vmotion traffic class for a custom share level.</p></li>
+<li><p><strong>vmotion_share_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The allocation level for the vmotion traffic class. Can be one of high, low, normal, or custom.</p></li>
+<li><p><strong>vsan_maximum_mbit</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum allowed usage for the vsan traffic class, in Mbits/sec.</p></li>
+<li><p><strong>vsan_reservation_mbit</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of guaranteed bandwidth for the vsan traffic class, in Mbits/sec.</p></li>
+<li><p><strong>vsan_share_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of shares to allocate to the vsan traffic class for a custom share level.</p></li>
+<li><p><strong>vsan_share_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The allocation level for the vsan traffic class. Can be one of high, low, normal, or custom.</p></li>
 </ul>
 </dd>
 </dl>
@@ -3573,9 +4123,6 @@ DVS.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxVlan</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">minVlan</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/distributed_virtual_switch.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/distributed_virtual_switch.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -3629,6 +4176,7 @@ page</a>.</p>
 <div><p><strong>NOTE:</strong> This resource requires vCenter and is not available on direct ESXi
 connections.</p>
 <p><strong>NOTE:</strong> vSphere DRS requires a vSphere Enterprise Plus license.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/dpm_host_override.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/dpm_host_override.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -3643,12 +4191,10 @@ operations on this host. Can be one of <code class="docutils literal notranslate
 <code class="docutils literal notranslate"><span class="pre">manual</span></code>.</p></li>
 <li><p><strong>dpm_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable DPM support for this host. Default:
 <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>host_system_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The managed object ID of the host.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/dpm_host_override.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/dpm_host_override.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vsphere.DpmHostOverride.compute_cluster_id">
 <code class="sig-name descname">compute_cluster_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DpmHostOverride.compute_cluster_id" title="Permalink to this definition">¶</a></dt>
@@ -3672,6 +4218,12 @@ operations on this host. Can be one of <code class="docutils literal notranslate
 <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_vsphere.DpmHostOverride.host_system_id">
+<code class="sig-name descname">host_system_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DpmHostOverride.host_system_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The managed object ID of the host.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_vsphere.DpmHostOverride.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">compute_cluster_id=None</em>, <em class="sig-param">dpm_automation_level=None</em>, <em class="sig-param">dpm_enabled=None</em>, <em class="sig-param">host_system_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.DpmHostOverride.get" title="Permalink to this definition">¶</a></dt>
@@ -3691,12 +4243,10 @@ operations on this host. Can be one of <code class="docutils literal notranslate
 <code class="docutils literal notranslate"><span class="pre">manual</span></code>.</p></li>
 <li><p><strong>dpm_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable DPM support for this host. Default:
 <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>host_system_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The managed object ID of the host.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/dpm_host_override.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/dpm_host_override.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -3750,6 +4300,7 @@ page</a>.</p>
 <div><p><strong>NOTE:</strong> This resource requires vCenter and is not available on direct ESXi
 connections.</p>
 <p><strong>NOTE:</strong> vSphere DRS requires a vSphere Enterprise Plus license.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/drs_vm_override.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/drs_vm_override.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -3769,9 +4320,6 @@ the override for.  Forces a new resource if changed.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/drs_vm_override.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/drs_vm_override.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vsphere.DrsVmOverride.compute_cluster_id">
 <code class="sig-name descname">compute_cluster_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DrsVmOverride.compute_cluster_id" title="Permalink to this definition">¶</a></dt>
@@ -3826,9 +4374,6 @@ the override for.  Forces a new resource if changed.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/drs_vm_override.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/drs_vm_override.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -3872,14 +4417,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_vsphere.File">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">File</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">create_directories=None</em>, <em class="sig-param">datacenter=None</em>, <em class="sig-param">datastore=None</em>, <em class="sig-param">destination_file=None</em>, <em class="sig-param">source_datacenter=None</em>, <em class="sig-param">source_datastore=None</em>, <em class="sig-param">source_file=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.File" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a File resource with the given unique name, props, and options.</p>
+<dd><p>Create a File resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[bool] create_directories: Create directories in <code class="docutils literal notranslate"><span class="pre">destination_file</span></code></p>
+<blockquote>
+<div><p>path parameter if any missing for copy operation.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>create_directories</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Create directories in <code class="docutils literal notranslate"><span class="pre">destination_file</span></code>
-path parameter if any missing for copy operation.</p></li>
 <li><p><strong>datacenter</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of a datacenter in which the file will be
 uploaded to.</p></li>
 <li><p><strong>datastore</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the datastore in which to upload the
@@ -3893,9 +4440,6 @@ be copied from. Forces a new resource if changed.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/file.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/file.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vsphere.File.create_directories">
 <code class="sig-name descname">create_directories</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.File.create_directories" title="Permalink to this definition">¶</a></dt>
@@ -3964,9 +4508,6 @@ be copied from. Forces a new resource if changed.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/file.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/file.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -4018,6 +4559,9 @@ and network folders.</p>
 Subfolders are discovered by parsing the relative path specified in <code class="docutils literal notranslate"><span class="pre">path</span></code>, so
 <code class="docutils literal notranslate"><span class="pre">foo/bar</span></code> will create a folder named <code class="docutils literal notranslate"><span class="pre">bar</span></code> in the parent folder <code class="docutils literal notranslate"><span class="pre">foo</span></code>, as long
 as that folder exists.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/folder.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/folder.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4029,6 +4573,7 @@ for a reference on how to set values for custom attributes.</p></li>
 <li><p><strong>datacenter_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the datacenter the folder will be created in.
 Required for all folder types except for datacenter folders. Forces a new
 resource if changed.</p></li>
+<li><p><strong>path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path of the folder and any parents, relative to the datacenter and folder type being defined.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The IDs of any tags to attach to this resource. See
 [here][docs-applying-tags] for a reference on how to apply tags.</p></li>
 <li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of folder to create. Allowed options are
@@ -4038,9 +4583,6 @@ resource if changed.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/folder.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/folder.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vsphere.Folder.custom_attributes">
 <code class="sig-name descname">custom_attributes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Folder.custom_attributes" title="Permalink to this definition">¶</a></dt>
@@ -4055,6 +4597,12 @@ for a reference on how to set values for custom attributes.</p>
 <dd><p>The ID of the datacenter the folder will be created in.
 Required for all folder types except for datacenter folders. Forces a new
 resource if changed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.Folder.path">
+<code class="sig-name descname">path</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Folder.path" title="Permalink to this definition">¶</a></dt>
+<dd><p>The path of the folder and any parents, relative to the datacenter and folder type being defined.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -4090,6 +4638,7 @@ for a reference on how to set values for custom attributes.</p></li>
 <li><p><strong>datacenter_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the datacenter the folder will be created in.
 Required for all folder types except for datacenter folders. Forces a new
 resource if changed.</p></li>
+<li><p><strong>path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path of the folder and any parents, relative to the datacenter and folder type being defined.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The IDs of any tags to attach to this resource. See
 [here][docs-applying-tags] for a reference on how to apply tags.</p></li>
 <li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of folder to create. Allowed options are
@@ -4099,9 +4648,6 @@ resource if changed.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/folder.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/folder.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -4144,7 +4690,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_vsphere.GetComputeClusterResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetComputeClusterResult</code><span class="sig-paren">(</span><em class="sig-param">datacenter_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_pool_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetComputeClusterResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetComputeClusterResult</code><span class="sig-paren">(</span><em class="sig-param">datacenter_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_pool_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetComputeClusterResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getComputeCluster.</p>
 <dl class="attribute">
 <dt id="pulumi_vsphere.GetComputeClusterResult.id">
@@ -4156,7 +4702,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_vsphere.GetCustomAttributeResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetCustomAttributeResult</code><span class="sig-paren">(</span><em class="sig-param">managed_object_type=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetCustomAttributeResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetCustomAttributeResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">managed_object_type=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetCustomAttributeResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getCustomAttribute.</p>
 <dl class="attribute">
 <dt id="pulumi_vsphere.GetCustomAttributeResult.id">
@@ -4168,7 +4714,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_vsphere.GetDatacenterResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetDatacenterResult</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetDatacenterResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetDatacenterResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetDatacenterResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getDatacenter.</p>
 <dl class="attribute">
 <dt id="pulumi_vsphere.GetDatacenterResult.id">
@@ -4180,7 +4726,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_vsphere.GetDatastoreClusterResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetDatastoreClusterResult</code><span class="sig-paren">(</span><em class="sig-param">datacenter_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetDatastoreClusterResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetDatastoreClusterResult</code><span class="sig-paren">(</span><em class="sig-param">datacenter_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetDatastoreClusterResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getDatastoreCluster.</p>
 <dl class="attribute">
 <dt id="pulumi_vsphere.GetDatastoreClusterResult.id">
@@ -4192,7 +4738,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_vsphere.GetDatastoreResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetDatastoreResult</code><span class="sig-paren">(</span><em class="sig-param">datacenter_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetDatastoreResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetDatastoreResult</code><span class="sig-paren">(</span><em class="sig-param">datacenter_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetDatastoreResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getDatastore.</p>
 <dl class="attribute">
 <dt id="pulumi_vsphere.GetDatastoreResult.id">
@@ -4204,7 +4750,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_vsphere.GetDistributedVirtualSwitchResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetDistributedVirtualSwitchResult</code><span class="sig-paren">(</span><em class="sig-param">datacenter_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">uplinks=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetDistributedVirtualSwitchResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetDistributedVirtualSwitchResult</code><span class="sig-paren">(</span><em class="sig-param">datacenter_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">uplinks=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetDistributedVirtualSwitchResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getDistributedVirtualSwitch.</p>
 <dl class="attribute">
 <dt id="pulumi_vsphere.GetDistributedVirtualSwitchResult.id">
@@ -4216,7 +4762,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_vsphere.GetFolderResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetFolderResult</code><span class="sig-paren">(</span><em class="sig-param">path=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetFolderResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetFolderResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">path=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetFolderResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getFolder.</p>
 <dl class="attribute">
 <dt id="pulumi_vsphere.GetFolderResult.id">
@@ -4228,8 +4774,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_vsphere.GetHostResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetHostResult</code><span class="sig-paren">(</span><em class="sig-param">datacenter_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_pool_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetHostResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetHostResult</code><span class="sig-paren">(</span><em class="sig-param">datacenter_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_pool_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetHostResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getHost.</p>
+<dl class="attribute">
+<dt id="pulumi_vsphere.GetHostResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.GetHostResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_vsphere.GetHostResult.resource_pool_id">
 <code class="sig-name descname">resource_pool_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.GetHostResult.resource_pool_id" title="Permalink to this definition">¶</a></dt>
@@ -4237,17 +4789,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 root resource pool.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_vsphere.GetHostResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.GetHostResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_vsphere.GetNetworkResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetNetworkResult</code><span class="sig-paren">(</span><em class="sig-param">datacenter_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetNetworkResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetNetworkResult</code><span class="sig-paren">(</span><em class="sig-param">datacenter_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetNetworkResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getNetwork.</p>
 <dl class="attribute">
 <dt id="pulumi_vsphere.GetNetworkResult.id">
@@ -4259,7 +4805,7 @@ root resource pool.</p>
 
 <dl class="class">
 <dt id="pulumi_vsphere.GetPolicyResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetPolicyResult</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetPolicyResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetPolicyResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetPolicyResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getPolicy.</p>
 <dl class="attribute">
 <dt id="pulumi_vsphere.GetPolicyResult.id">
@@ -4271,7 +4817,7 @@ root resource pool.</p>
 
 <dl class="class">
 <dt id="pulumi_vsphere.GetResourcePoolResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetResourcePoolResult</code><span class="sig-paren">(</span><em class="sig-param">datacenter_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetResourcePoolResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetResourcePoolResult</code><span class="sig-paren">(</span><em class="sig-param">datacenter_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetResourcePoolResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getResourcePool.</p>
 <dl class="attribute">
 <dt id="pulumi_vsphere.GetResourcePoolResult.id">
@@ -4283,7 +4829,7 @@ root resource pool.</p>
 
 <dl class="class">
 <dt id="pulumi_vsphere.GetTagCategoryResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetTagCategoryResult</code><span class="sig-paren">(</span><em class="sig-param">associable_types=None</em>, <em class="sig-param">cardinality=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetTagCategoryResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetTagCategoryResult</code><span class="sig-paren">(</span><em class="sig-param">associable_types=None</em>, <em class="sig-param">cardinality=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetTagCategoryResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getTagCategory.</p>
 <dl class="attribute">
 <dt id="pulumi_vsphere.GetTagCategoryResult.id">
@@ -4295,7 +4841,7 @@ root resource pool.</p>
 
 <dl class="class">
 <dt id="pulumi_vsphere.GetTagResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetTagResult</code><span class="sig-paren">(</span><em class="sig-param">category_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetTagResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetTagResult</code><span class="sig-paren">(</span><em class="sig-param">category_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetTagResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getTag.</p>
 <dl class="attribute">
 <dt id="pulumi_vsphere.GetTagResult.id">
@@ -4307,7 +4853,7 @@ root resource pool.</p>
 
 <dl class="class">
 <dt id="pulumi_vsphere.GetVappContainerResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetVappContainerResult</code><span class="sig-paren">(</span><em class="sig-param">datacenter_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetVappContainerResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetVappContainerResult</code><span class="sig-paren">(</span><em class="sig-param">datacenter_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetVappContainerResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getVappContainer.</p>
 <dl class="attribute">
 <dt id="pulumi_vsphere.GetVappContainerResult.id">
@@ -4319,7 +4865,7 @@ root resource pool.</p>
 
 <dl class="class">
 <dt id="pulumi_vsphere.GetVirtualMachineResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetVirtualMachineResult</code><span class="sig-paren">(</span><em class="sig-param">alternate_guest_name=None</em>, <em class="sig-param">datacenter_id=None</em>, <em class="sig-param">disks=None</em>, <em class="sig-param">firmware=None</em>, <em class="sig-param">guest_id=None</em>, <em class="sig-param">guest_ip_addresses=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_interface_types=None</em>, <em class="sig-param">scsi_bus_sharing=None</em>, <em class="sig-param">scsi_controller_scan_count=None</em>, <em class="sig-param">scsi_type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetVirtualMachineResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetVirtualMachineResult</code><span class="sig-paren">(</span><em class="sig-param">alternate_guest_name=None</em>, <em class="sig-param">datacenter_id=None</em>, <em class="sig-param">disks=None</em>, <em class="sig-param">firmware=None</em>, <em class="sig-param">guest_id=None</em>, <em class="sig-param">guest_ip_addresses=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_interface_types=None</em>, <em class="sig-param">scsi_bus_sharing=None</em>, <em class="sig-param">scsi_controller_scan_count=None</em>, <em class="sig-param">scsi_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetVirtualMachineResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getVirtualMachine.</p>
 <dl class="attribute">
 <dt id="pulumi_vsphere.GetVirtualMachineResult.alternate_guest_name">
@@ -4360,6 +4906,12 @@ are scanned for disks. The sub-attributes are:</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_vsphere.GetVirtualMachineResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.GetVirtualMachineResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_vsphere.GetVirtualMachineResult.network_interface_types">
 <code class="sig-name descname">network_interface_types</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.GetVirtualMachineResult.network_interface_types" title="Permalink to this definition">¶</a></dt>
 <dd><p>The network interface types for each network
@@ -4385,17 +4937,11 @@ there are multiple controller types. Only the first number of controllers
 defined by <code class="docutils literal notranslate"><span class="pre">scsi_controller_scan_count</span></code> are scanned.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_vsphere.GetVirtualMachineResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.GetVirtualMachineResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_vsphere.GetVmfsDisksResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetVmfsDisksResult</code><span class="sig-paren">(</span><em class="sig-param">disks=None</em>, <em class="sig-param">filter=None</em>, <em class="sig-param">host_system_id=None</em>, <em class="sig-param">rescan=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetVmfsDisksResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetVmfsDisksResult</code><span class="sig-paren">(</span><em class="sig-param">disks=None</em>, <em class="sig-param">filter=None</em>, <em class="sig-param">host_system_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">rescan=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetVmfsDisksResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getVmfsDisks.</p>
 <dl class="attribute">
 <dt id="pulumi_vsphere.GetVmfsDisksResult.disks">
@@ -4424,6 +4970,7 @@ while not affecting the rest of the cluster.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> This resource requires vCenter and is not available on direct ESXi
 connections.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/ha_vm_override.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/ha_vm_override.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -4492,9 +5039,6 @@ the override for.  Forces a new resource if changed.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/ha_vm_override.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/ha_vm_override.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vsphere.HaVmOverride.compute_cluster_id">
 <code class="sig-name descname">compute_cluster_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HaVmOverride.compute_cluster_id" title="Permalink to this definition">¶</a></dt>
@@ -4702,9 +5246,6 @@ the override for.  Forces a new resource if changed.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/ha_vm_override.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/ha_vm_override.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -4750,6 +5291,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">Host</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cluster=None</em>, <em class="sig-param">connected=None</em>, <em class="sig-param">datacenter=None</em>, <em class="sig-param">force=None</em>, <em class="sig-param">hostname=None</em>, <em class="sig-param">license=None</em>, <em class="sig-param">lockdown=None</em>, <em class="sig-param">maintenance=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">thumbprint=None</em>, <em class="sig-param">username=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Host" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a VMware vSphere host resource. This represents an ESXi host that
 can be used either as part of a Compute Cluster or Standalone.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/host.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/host.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4779,9 +5323,6 @@ to the host.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/host.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/host.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vsphere.Host.cluster">
 <code class="sig-name descname">cluster</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Host.cluster" title="Permalink to this definition">¶</a></dt>
@@ -4893,9 +5434,6 @@ to the host.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/host.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/host.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -4944,15 +5482,34 @@ port groups on an ESXi host. These port groups are connected to standard
 virtual switches, which can be managed by the
 <cite>`</cite>.HostVirtualSwitch`` &lt;/docs/providers/vsphere/r/host_virtual_switch.html&gt;`_ resource.</p>
 <p>For an overview on vSphere networking concepts, see <a class="reference external" href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.networking.doc/GUID-2B11DBB8-CB3C-4AFF-8885-EFEA0FC562F4.html">this page</a>.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/host_port_group.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/host_port_group.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>active_nics</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of active network adapters used for load balancing.</p></li>
+<li><p><strong>allow_forged_transmits</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Controls whether or not the virtual network adapter is allowed to send network traffic with a different MAC address than
+that of its own.</p></li>
+<li><p><strong>allow_mac_changes</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Controls whether or not the Media Access Control (MAC) address can be changed.</p></li>
+<li><p><strong>allow_promiscuous</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable promiscuous mode on the network. This flag indicates whether or not all traffic is seen on a given port.</p></li>
+<li><p><strong>check_beacon</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable beacon probing. Requires that the vSwitch has been configured to use a beacon. If disabled, link status is used
+only.</p></li>
+<li><p><strong>failback</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, the teaming policy will re-activate failed interfaces higher in precedence when they come back up.</p></li>
 <li><p><strong>host_system_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The [managed object ID][docs-about-morefs] of
 the host to set the port group up on. Forces a new resource if changed.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the port group.  Forces a new resource if
 changed.</p></li>
+<li><p><strong>notify_switches</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, the teaming policy will notify the broadcast network of a NIC failover, triggering cache updates.</p></li>
+<li><p><strong>shaping_average_bandwidth</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The average bandwidth in bits per second if traffic shaping is enabled.</p></li>
+<li><p><strong>shaping_burst_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum burst size allowed in bytes if traffic shaping is enabled.</p></li>
+<li><p><strong>shaping_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable traffic shaping on this virtual switch or port group.</p></li>
+<li><p><strong>shaping_peak_bandwidth</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The peak bandwidth during bursts in bits per second if traffic shaping is enabled.</p></li>
+<li><p><strong>standby_nics</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of standby network adapters used for failover.</p></li>
+<li><p><strong>teaming_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The network adapter teaming policy. Can be one of loadbalance_ip, loadbalance_srcmac, loadbalance_srcid, or
+failover_explicit.</p></li>
 <li><p><strong>virtual_switch_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the virtual switch to bind
 this port group to. Forces a new resource if changed.</p></li>
 <li><p><strong>vlan_id</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The VLAN ID/trunk mode for this port group.  An ID of
@@ -4962,15 +5519,50 @@ tagging. Default: <code class="docutils literal notranslate"><span class="pre">0
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/host_port_group.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/host_port_group.html.markdown</a>.</p>
-</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_vsphere.HostPortGroup.active_nics">
+<code class="sig-name descname">active_nics</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostPortGroup.active_nics" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of active network adapters used for load balancing.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.HostPortGroup.allow_forged_transmits">
+<code class="sig-name descname">allow_forged_transmits</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostPortGroup.allow_forged_transmits" title="Permalink to this definition">¶</a></dt>
+<dd><p>Controls whether or not the virtual network adapter is allowed to send network traffic with a different MAC address than
+that of its own.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.HostPortGroup.allow_mac_changes">
+<code class="sig-name descname">allow_mac_changes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostPortGroup.allow_mac_changes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Controls whether or not the Media Access Control (MAC) address can be changed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.HostPortGroup.allow_promiscuous">
+<code class="sig-name descname">allow_promiscuous</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostPortGroup.allow_promiscuous" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable promiscuous mode on the network. This flag indicates whether or not all traffic is seen on a given port.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.HostPortGroup.check_beacon">
+<code class="sig-name descname">check_beacon</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostPortGroup.check_beacon" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable beacon probing. Requires that the vSwitch has been configured to use a beacon. If disabled, link status is used
+only.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_vsphere.HostPortGroup.computed_policy">
 <code class="sig-name descname">computed_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostPortGroup.computed_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>A map with a full set of the [policy
 options][host-vswitch-policy-options] computed from defaults and overrides,
 explaining the effective policy for this port group.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.HostPortGroup.failback">
+<code class="sig-name descname">failback</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostPortGroup.failback" title="Permalink to this definition">¶</a></dt>
+<dd><p>If true, the teaming policy will re-activate failed interfaces higher in precedence when they come back up.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -4994,6 +5586,12 @@ changed.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_vsphere.HostPortGroup.notify_switches">
+<code class="sig-name descname">notify_switches</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostPortGroup.notify_switches" title="Permalink to this definition">¶</a></dt>
+<dd><p>If true, the teaming policy will notify the broadcast network of a NIC failover, triggering cache updates.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_vsphere.HostPortGroup.ports">
 <code class="sig-name descname">ports</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostPortGroup.ports" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of ports that currently exist and are used on this port group.</p>
@@ -5002,6 +5600,43 @@ changed.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">macAddresses</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.HostPortGroup.shaping_average_bandwidth">
+<code class="sig-name descname">shaping_average_bandwidth</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostPortGroup.shaping_average_bandwidth" title="Permalink to this definition">¶</a></dt>
+<dd><p>The average bandwidth in bits per second if traffic shaping is enabled.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.HostPortGroup.shaping_burst_size">
+<code class="sig-name descname">shaping_burst_size</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostPortGroup.shaping_burst_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>The maximum burst size allowed in bytes if traffic shaping is enabled.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.HostPortGroup.shaping_enabled">
+<code class="sig-name descname">shaping_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostPortGroup.shaping_enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable traffic shaping on this virtual switch or port group.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.HostPortGroup.shaping_peak_bandwidth">
+<code class="sig-name descname">shaping_peak_bandwidth</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostPortGroup.shaping_peak_bandwidth" title="Permalink to this definition">¶</a></dt>
+<dd><p>The peak bandwidth during bursts in bits per second if traffic shaping is enabled.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.HostPortGroup.standby_nics">
+<code class="sig-name descname">standby_nics</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostPortGroup.standby_nics" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of standby network adapters used for failover.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.HostPortGroup.teaming_policy">
+<code class="sig-name descname">teaming_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostPortGroup.teaming_policy" title="Permalink to this definition">¶</a></dt>
+<dd><p>The network adapter teaming policy. Can be one of loadbalance_ip, loadbalance_srcmac, loadbalance_srcid, or
+failover_explicit.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -5031,15 +5666,31 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>active_nics</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of active network adapters used for load balancing.</p></li>
+<li><p><strong>allow_forged_transmits</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Controls whether or not the virtual network adapter is allowed to send network traffic with a different MAC address than
+that of its own.</p></li>
+<li><p><strong>allow_mac_changes</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Controls whether or not the Media Access Control (MAC) address can be changed.</p></li>
+<li><p><strong>allow_promiscuous</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable promiscuous mode on the network. This flag indicates whether or not all traffic is seen on a given port.</p></li>
+<li><p><strong>check_beacon</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable beacon probing. Requires that the vSwitch has been configured to use a beacon. If disabled, link status is used
+only.</p></li>
 <li><p><strong>computed_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map with a full set of the [policy
 options][host-vswitch-policy-options] computed from defaults and overrides,
 explaining the effective policy for this port group.</p></li>
+<li><p><strong>failback</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, the teaming policy will re-activate failed interfaces higher in precedence when they come back up.</p></li>
 <li><p><strong>host_system_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The [managed object ID][docs-about-morefs] of
 the host to set the port group up on. Forces a new resource if changed.</p></li>
 <li><p><strong>key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The key for this port group as returned from the vSphere API.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the port group.  Forces a new resource if
 changed.</p></li>
+<li><p><strong>notify_switches</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, the teaming policy will notify the broadcast network of a NIC failover, triggering cache updates.</p></li>
 <li><p><strong>ports</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A list of ports that currently exist and are used on this port group.</p></li>
+<li><p><strong>shaping_average_bandwidth</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The average bandwidth in bits per second if traffic shaping is enabled.</p></li>
+<li><p><strong>shaping_burst_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum burst size allowed in bytes if traffic shaping is enabled.</p></li>
+<li><p><strong>shaping_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable traffic shaping on this virtual switch or port group.</p></li>
+<li><p><strong>shaping_peak_bandwidth</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The peak bandwidth during bursts in bits per second if traffic shaping is enabled.</p></li>
+<li><p><strong>standby_nics</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of standby network adapters used for failover.</p></li>
+<li><p><strong>teaming_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The network adapter teaming policy. Can be one of loadbalance_ip, loadbalance_srcmac, loadbalance_srcid, or
+failover_explicit.</p></li>
 <li><p><strong>virtual_switch_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the virtual switch to bind
 this port group to. Forces a new resource if changed.</p></li>
 <li><p><strong>vlan_id</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The VLAN ID/trunk mode for this port group.  An ID of
@@ -5055,9 +5706,6 @@ tagging. Default: <code class="docutils literal notranslate"><span class="pre">0
 <li><p><code class="docutils literal notranslate"><span class="pre">macAddresses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/host_port_group.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/host_port_group.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -5107,6 +5755,9 @@ standard port groups, which can be managed by the
 <cite>`</cite>.HostPortGroup`` &lt;/docs/providers/vsphere/r/host_port_group.html&gt;`_ resource.</p>
 <p>For an overview on vSphere networking concepts, see <a class="reference external" href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.networking.doc/GUID-2B11DBB8-CB3C-4AFF-8885-EFEA0FC562F4.html">this
 page</a>.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/host_virtual_switch.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/host_virtual_switch.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5164,9 +5815,6 @@ of <code class="docutils literal notranslate"><span class="pre">loadbalance_ip</
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/host_virtual_switch.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/host_virtual_switch.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vsphere.HostVirtualSwitch.active_nics">
 <code class="sig-name descname">active_nics</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostVirtualSwitch.active_nics" title="Permalink to this definition">¶</a></dt>
@@ -5384,9 +6032,6 @@ of <code class="docutils literal notranslate"><span class="pre">loadbalance_ip</
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/host_virtual_switch.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/host_virtual_switch.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -5431,6 +6076,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_vsphere.License">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">License</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">license_key=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.License" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a VMware vSphere license resource. This can be used to add and remove license keys.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/license.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/license.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5441,9 +6089,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/license.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/license.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vsphere.License.edition_key">
 <code class="sig-name descname">edition_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.License.edition_key" title="Permalink to this definition">¶</a></dt>
@@ -5500,9 +6145,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/license.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/license.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -5555,6 +6197,9 @@ datastore is only mounted on the hosts you choose to mount it on. To mount on
 multiple hosts, you must specify each host that you want to add in the
 <code class="docutils literal notranslate"><span class="pre">host_system_ids</span></code> argument.</p>
 </div></blockquote>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/nas_datastore.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/nas_datastore.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5571,6 +6216,7 @@ for custom attributes.</p></li>
 <li><p><strong>datastore_cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The [managed object
 ID][docs-about-morefs] of a datastore cluster to put this datastore in.
 Conflicts with <code class="docutils literal notranslate"><span class="pre">folder</span></code>.</p></li>
+<li><p><strong>folder</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path to the datastore folder to put the datastore in.</p></li>
 <li><p><strong>host_system_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The [managed object IDs][docs-about-morefs] of
 the hosts to mount the datastore on.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the datastore. Forces a new resource if
@@ -5591,9 +6237,6 @@ changed.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/nas_datastore.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/nas_datastore.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vsphere.NasDatastore.access_mode">
 <code class="sig-name descname">access_mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.NasDatastore.access_mode" title="Permalink to this definition">¶</a></dt>
@@ -5631,6 +6274,12 @@ for custom attributes.</p>
 <dd><p>The [managed object
 ID][docs-about-morefs] of a datastore cluster to put this datastore in.
 Conflicts with <code class="docutils literal notranslate"><span class="pre">folder</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.NasDatastore.folder">
+<code class="sig-name descname">folder</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.NasDatastore.folder" title="Permalink to this definition">¶</a></dt>
+<dd><p>The path to the datastore folder to put the datastore in.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -5749,6 +6398,7 @@ for custom attributes.</p></li>
 <li><p><strong>datastore_cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The [managed object
 ID][docs-about-morefs] of a datastore cluster to put this datastore in.
 Conflicts with <code class="docutils literal notranslate"><span class="pre">folder</span></code>.</p></li>
+<li><p><strong>folder</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path to the datastore folder to put the datastore in.</p></li>
 <li><p><strong>free_space</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Available space of this datastore, in megabytes.</p></li>
 <li><p><strong>host_system_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The [managed object IDs][docs-about-morefs] of
 the hosts to mount the datastore on.</p></li>
@@ -5778,9 +6428,6 @@ potentially used by all virtual machines on this datastore.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/nas_datastore.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/nas_datastore.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -5828,36 +6475,28 @@ a format of their choosing before sending those properties to the Pulumi engine.
 settings, however an explicit <code class="docutils literal notranslate"><span class="pre">Provider</span></code> instance may be created and passed during resource
 construction to achieve fine-grained programmatic control over provider settings. See the
 <a class="reference external" href="https://www.pulumi.com/docs/reference/programming-model/#providers">documentation</a> for more information.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/index.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/index.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>allow_unverified_ssl</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If set, VMware vSphere client will permit unverifiable SSL certificates.</p></li>
+<li><p><strong>client_debug</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – govmomi debug</p></li>
+<li><p><strong>client_debug_path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – govmomi debug path for debug</p></li>
+<li><p><strong>client_debug_path_run</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – govmomi debug path for a single run</p></li>
+<li><p><strong>password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The user password for vSphere API operations.</p></li>
+<li><p><strong>persist_session</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Persist vSphere client sessions to disk</p></li>
+<li><p><strong>rest_session_path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The directory to save vSphere REST API sessions to</p></li>
+<li><p><strong>user</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The user name for vSphere API operations.</p></li>
+<li><p><strong>vim_keep_alive</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Keep alive interval for the VIM session in minutes</p></li>
+<li><p><strong>vim_session_path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The directory to save vSphere SOAP API sessions to</p></li>
+<li><p><strong>vsphere_server</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The vSphere Server name for vSphere API operations.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/index.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/index.html.markdown</a>.</p>
-</div></blockquote>
-<dl class="method">
-<dt id="pulumi_vsphere.Provider.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Provider.get" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get an existing Provider resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
-<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-</ul>
-</dd>
-</dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/index.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/index.html.markdown</a>.</p>
-</div></blockquote>
-</dd></dl>
-
 <dl class="method">
 <dt id="pulumi_vsphere.Provider.translate_output_property">
 <code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Provider.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -5903,6 +6542,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 resource pools in standalone hosts or on compute clusters.</p>
 <p>For more information on vSphere resource pools, see <a class="reference external" href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.resmgmt.doc/GUID-60077B40-66FF-4625-934A-641703ED7601.html">this
 page</a>.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/resource_pool.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/resource_pool.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5924,6 +6566,7 @@ ignored.  Default: <code class="docutils literal notranslate"><span class="pre">
 <li><p><strong>cpu_shares</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
 <code class="docutils literal notranslate"><span class="pre">cpu_share_level</span></code> must be <code class="docutils literal notranslate"><span class="pre">custom</span></code>.</p></li>
+<li><p><strong>custom_attributes</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A list of custom attributes to set on this resource.</p></li>
 <li><p><strong>memory_expandable</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Determines if the reservation on a resource
 pool can grow beyond the specified value if the parent resource pool has
 unreserved resources. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code></p></li>
@@ -5951,9 +6594,6 @@ resource pool or the move will fail.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/resource_pool.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/resource_pool.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vsphere.ResourcePool.cpu_expandable">
 <code class="sig-name descname">cpu_expandable</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ResourcePool.cpu_expandable" title="Permalink to this definition">¶</a></dt>
@@ -5993,6 +6633,12 @@ ignored.  Default: <code class="docutils literal notranslate"><span class="pre">
 <dd><p>The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
 <code class="docutils literal notranslate"><span class="pre">cpu_share_level</span></code> must be <code class="docutils literal notranslate"><span class="pre">custom</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.ResourcePool.custom_attributes">
+<code class="sig-name descname">custom_attributes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ResourcePool.custom_attributes" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of custom attributes to set on this resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -6086,6 +6732,7 @@ ignored.  Default: <code class="docutils literal notranslate"><span class="pre">
 <li><p><strong>cpu_shares</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
 <code class="docutils literal notranslate"><span class="pre">cpu_share_level</span></code> must be <code class="docutils literal notranslate"><span class="pre">custom</span></code>.</p></li>
+<li><p><strong>custom_attributes</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A list of custom attributes to set on this resource.</p></li>
 <li><p><strong>memory_expandable</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Determines if the reservation on a resource
 pool can grow beyond the specified value if the parent resource pool has
 unreserved resources. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code></p></li>
@@ -6113,9 +6760,6 @@ resource pool or the move will fail.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/resource_pool.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/resource_pool.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -6166,6 +6810,9 @@ level and disk affinity for a single virtual machine without affecting the rest
 of the datastore cluster.</p>
 <p>For more information on vSphere datastore clusters and Storage DRS, see <a class="reference external" href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.resmgmt.doc/GUID-598DF695-107E-406B-9C95-0AF961FC227A.html">this
 page</a>.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/storage_drs_vm_override.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/storage_drs_vm_override.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -6191,9 +6838,6 @@ the override for.  Forces a new resource if changed.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/storage_drs_vm_override.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/storage_drs_vm_override.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vsphere.StorageDrsVmOverride.datastore_cluster_id">
 <code class="sig-name descname">datastore_cluster_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.StorageDrsVmOverride.datastore_cluster_id" title="Permalink to this definition">¶</a></dt>
@@ -6267,9 +6911,6 @@ the override for.  Forces a new resource if changed.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/storage_drs_vm_override.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/storage_drs_vm_override.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -6320,6 +6961,7 @@ objects more sortable and searchable.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Tagging support is unsupported on direct ESXi connections and
 requires vCenter 6.0 or higher.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/tag.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/tag.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -6334,9 +6976,6 @@ within its category.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/tag.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/tag.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vsphere.Tag.category_id">
 <code class="sig-name descname">category_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Tag.category_id" title="Permalink to this definition">¶</a></dt>
@@ -6376,9 +7015,6 @@ within its category.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/tag.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/tag.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -6431,6 +7067,7 @@ information about tag categories specifically, click
 <blockquote>
 <div><p><strong>NOTE:</strong> Tagging support is unsupported on direct ESXi connections and
 requires vCenter 6.0 or higher.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/tag_category.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/tag_category.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -6449,9 +7086,6 @@ multiple tags in this category). Forces a new resource if changed.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/tag_category.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/tag_category.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vsphere.TagCategory.associable_types">
 <code class="sig-name descname">associable_types</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.TagCategory.associable_types" title="Permalink to this definition">¶</a></dt>
@@ -6504,9 +7138,6 @@ multiple tags in this category). Forces a new resource if changed.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/tag_category.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/tag_category.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -6554,6 +7185,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 vApps.</p>
 <p>For more information on vSphere vApps, see <a class="reference external" href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.vm_admin.doc/GUID-2A95EBB8-1779-40FA-B4FB-4D0845750879.html">this
 page</a>.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/vapp_container.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/vapp_container.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -6576,6 +7210,7 @@ ignored.  Default: <code class="docutils literal notranslate"><span class="pre">
 <li><p><strong>cpu_shares</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
 <code class="docutils literal notranslate"><span class="pre">cpu_share_level</span></code> must be <code class="docutils literal notranslate"><span class="pre">custom</span></code>.</p></li>
+<li><p><strong>custom_attributes</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A list of custom attributes to set on this resource.</p></li>
 <li><p><strong>memory_expandable</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Determines if the reservation on a vApp
 container can grow beyond the specified value if the parent resource pool has
 unreserved resources. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code></p></li>
@@ -6606,9 +7241,6 @@ resource pool or the move will fail.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/vapp_container.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/vapp_container.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vsphere.VappContainer.cpu_expandable">
 <code class="sig-name descname">cpu_expandable</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VappContainer.cpu_expandable" title="Permalink to this definition">¶</a></dt>
@@ -6649,6 +7281,12 @@ ignored.  Default: <code class="docutils literal notranslate"><span class="pre">
 <dd><p>The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
 <code class="docutils literal notranslate"><span class="pre">cpu_share_level</span></code> must be <code class="docutils literal notranslate"><span class="pre">custom</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.VappContainer.custom_attributes">
+<code class="sig-name descname">custom_attributes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VappContainer.custom_attributes" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of custom attributes to set on this resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -6751,6 +7389,7 @@ ignored.  Default: <code class="docutils literal notranslate"><span class="pre">
 <li><p><strong>cpu_shares</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
 <code class="docutils literal notranslate"><span class="pre">cpu_share_level</span></code> must be <code class="docutils literal notranslate"><span class="pre">custom</span></code>.</p></li>
+<li><p><strong>custom_attributes</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A list of custom attributes to set on this resource.</p></li>
 <li><p><strong>memory_expandable</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Determines if the reservation on a vApp
 container can grow beyond the specified value if the parent resource pool has
 unreserved resources. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code></p></li>
@@ -6781,9 +7420,6 @@ resource pool or the move will fail.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/vapp_container.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/vapp_container.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -6831,6 +7467,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 entity (virtual machine or sub-vApp container) in a vApp container.</p>
 <p>For more information on vSphere vApps, see <a class="reference external" href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.vm_admin.doc/GUID-2A95EBB8-1779-40FA-B4FB-4D0845750879.html">this
 page</a>.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/vapp_entity.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/vapp_entity.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -6838,6 +7477,7 @@ page</a>.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>container_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – [Managed object ID|docs-about-morefs] of the vApp
 container the entity is a member of.</p></li>
+<li><p><strong>custom_attributes</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A list of custom attributes to set on this resource.</p></li>
 <li><p><strong>start_action</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – How to start the entity. Valid settings are none
 or powerOn. If set to none, then the entity does not participate in auto-start.
 Default: powerOn</p></li>
@@ -6850,6 +7490,7 @@ does not participate in auto-stop. Default: powerOff</p></li>
 <li><p><strong>stop_delay</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Delay in seconds before continuing with the next
 entity in the order sequence. This is only used if the stopAction is
 guestShutdown. Default: 120</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of tag IDs to apply to this object.</p></li>
 <li><p><strong>target_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – [Managed object ID|docs-about-morefs] of the entity
 to power on or power off. This can be a virtual machine or a vApp.</p></li>
 <li><p><strong>wait_for_guest</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Determines if the VM should be marked as being
@@ -6858,14 +7499,17 @@ property has no effect for vApps. Default: false</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/vapp_entity.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/vapp_entity.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vsphere.VappEntity.container_id">
 <code class="sig-name descname">container_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VappEntity.container_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>[Managed object ID|docs-about-morefs] of the vApp
 container the entity is a member of.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.VappEntity.custom_attributes">
+<code class="sig-name descname">custom_attributes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VappEntity.custom_attributes" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of custom attributes to set on this resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -6906,6 +7550,12 @@ guestShutdown. Default: 120</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_vsphere.VappEntity.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VappEntity.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of tag IDs to apply to this object.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_vsphere.VappEntity.target_id">
 <code class="sig-name descname">target_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VappEntity.target_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>[Managed object ID|docs-about-morefs] of the entity
@@ -6933,6 +7583,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>container_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – [Managed object ID|docs-about-morefs] of the vApp
 container the entity is a member of.</p></li>
+<li><p><strong>custom_attributes</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A list of custom attributes to set on this resource.</p></li>
 <li><p><strong>start_action</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – How to start the entity. Valid settings are none
 or powerOn. If set to none, then the entity does not participate in auto-start.
 Default: powerOn</p></li>
@@ -6945,6 +7596,7 @@ does not participate in auto-stop. Default: powerOff</p></li>
 <li><p><strong>stop_delay</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Delay in seconds before continuing with the next
 entity in the order sequence. This is only used if the stopAction is
 guestShutdown. Default: 120</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of tag IDs to apply to this object.</p></li>
 <li><p><strong>target_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – [Managed object ID|docs-about-morefs] of the entity
 to power on or power off. This can be a virtual machine or a vApp.</p></li>
 <li><p><strong>wait_for_guest</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Determines if the VM should be marked as being
@@ -6953,9 +7605,6 @@ property has no effect for vApps. Default: false</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/vapp_entity.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/vapp_entity.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -7003,6 +7652,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 of any given <cite>`</cite>.VirtualMachine`` &lt;/docs/providers/vsphere/r/virtual_machine.html&gt;`_
 resource. These disks can be attached to a virtual machine by creating a disk
 block with the <cite>``attach`</cite> &lt;/docs/providers/vsphere/r/virtual_machine.html#attach&gt;`_ parameter.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/virtual_disk.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/virtual_disk.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -7028,9 +7680,6 @@ be created.  This needs to end in <code class="docutils literal notranslate"><sp
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/virtual_disk.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/virtual_disk.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vsphere.VirtualDisk.adapter_type">
 <code class="sig-name descname">adapter_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualDisk.adapter_type" title="Permalink to this definition">¶</a></dt>
@@ -7114,9 +7763,6 @@ be created.  This needs to end in <code class="docutils literal notranslate"><sp
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/virtual_disk.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/virtual_disk.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -7160,14 +7806,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_vsphere.VirtualMachine">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">VirtualMachine</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">alternate_guest_name=None</em>, <em class="sig-param">annotation=None</em>, <em class="sig-param">boot_delay=None</em>, <em class="sig-param">boot_retry_delay=None</em>, <em class="sig-param">boot_retry_enabled=None</em>, <em class="sig-param">cdrom=None</em>, <em class="sig-param">clone=None</em>, <em class="sig-param">cpu_hot_add_enabled=None</em>, <em class="sig-param">cpu_hot_remove_enabled=None</em>, <em class="sig-param">cpu_limit=None</em>, <em class="sig-param">cpu_performance_counters_enabled=None</em>, <em class="sig-param">cpu_reservation=None</em>, <em class="sig-param">cpu_share_count=None</em>, <em class="sig-param">cpu_share_level=None</em>, <em class="sig-param">custom_attributes=None</em>, <em class="sig-param">datastore_cluster_id=None</em>, <em class="sig-param">datastore_id=None</em>, <em class="sig-param">disks=None</em>, <em class="sig-param">efi_secure_boot_enabled=None</em>, <em class="sig-param">enable_disk_uuid=None</em>, <em class="sig-param">enable_logging=None</em>, <em class="sig-param">ept_rvi_mode=None</em>, <em class="sig-param">extra_config=None</em>, <em class="sig-param">firmware=None</em>, <em class="sig-param">folder=None</em>, <em class="sig-param">force_power_off=None</em>, <em class="sig-param">guest_id=None</em>, <em class="sig-param">host_system_id=None</em>, <em class="sig-param">hv_mode=None</em>, <em class="sig-param">ignored_guest_ips=None</em>, <em class="sig-param">latency_sensitivity=None</em>, <em class="sig-param">memory=None</em>, <em class="sig-param">memory_hot_add_enabled=None</em>, <em class="sig-param">memory_limit=None</em>, <em class="sig-param">memory_reservation=None</em>, <em class="sig-param">memory_share_count=None</em>, <em class="sig-param">memory_share_level=None</em>, <em class="sig-param">migrate_wait_timeout=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">nested_hv_enabled=None</em>, <em class="sig-param">network_interfaces=None</em>, <em class="sig-param">num_cores_per_socket=None</em>, <em class="sig-param">num_cpus=None</em>, <em class="sig-param">resource_pool_id=None</em>, <em class="sig-param">run_tools_scripts_after_power_on=None</em>, <em class="sig-param">run_tools_scripts_after_resume=None</em>, <em class="sig-param">run_tools_scripts_before_guest_reboot=None</em>, <em class="sig-param">run_tools_scripts_before_guest_shutdown=None</em>, <em class="sig-param">run_tools_scripts_before_guest_standby=None</em>, <em class="sig-param">scsi_bus_sharing=None</em>, <em class="sig-param">scsi_controller_count=None</em>, <em class="sig-param">scsi_type=None</em>, <em class="sig-param">shutdown_wait_timeout=None</em>, <em class="sig-param">storage_policy_id=None</em>, <em class="sig-param">swap_placement_policy=None</em>, <em class="sig-param">sync_time_with_host=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vapp=None</em>, <em class="sig-param">wait_for_guest_ip_timeout=None</em>, <em class="sig-param">wait_for_guest_net_routable=None</em>, <em class="sig-param">wait_for_guest_net_timeout=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VirtualMachine" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a VirtualMachine resource with the given unique name, props, and options.</p>
+<dd><p>Create a VirtualMachine resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] alternate_guest_name: The guest name for the operating system</p>
+<blockquote>
+<div><p>when <code class="docutils literal notranslate"><span class="pre">guest_id</span></code> is <code class="docutils literal notranslate"><span class="pre">other</span></code> or <code class="docutils literal notranslate"><span class="pre">other-64</span></code>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>alternate_guest_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The guest name for the operating system
-when <code class="docutils literal notranslate"><span class="pre">guest_id</span></code> is <code class="docutils literal notranslate"><span class="pre">other</span></code> or <code class="docutils literal notranslate"><span class="pre">other-64</span></code>.</p></li>
 <li><p><strong>annotation</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A user-provided description of the virtual machine.
 The default is no annotation.</p></li>
 <li><p><strong>boot_delay</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of milliseconds to wait before starting
@@ -7299,6 +7947,9 @@ of pre-shutdown scripts when VMware tools is installed. Default: <code class="do
 pre-standby scripts when VMware tools is installed. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><strong>scsi_bus_sharing</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Mode for sharing the SCSI bus. The modes are
 physicalSharing, virtualSharing, and noSharing. Default: <code class="docutils literal notranslate"><span class="pre">noSharing</span></code>.</p></li>
+<li><p><strong>scsi_controller_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of SCSI controllers that Terraform manages on this virtual machine. This directly affects the amount of disks
+you can add to the virtual machine and the maximum disk unit number. Note that lowering this value does not remove
+controllers.</p></li>
 <li><p><strong>scsi_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of SCSI bus this virtual machine will have.
 Can be one of lsilogic (LSI Logic Parallel), lsilogic-sas (LSI Logic SAS) or
 pvscsi (VMware Paravirtual). Defualt: <code class="docutils literal notranslate"><span class="pre">pvscsi</span></code>.</p></li>
@@ -7345,7 +7996,7 @@ instead. A value less than 1 disables the waiter. Default: 5 minutes.</p></li>
 remote client device. Conflicts with <code class="docutils literal notranslate"><span class="pre">datastore_id</span></code> and <code class="docutils literal notranslate"><span class="pre">path</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">datastore_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The datastore ID that the ISO is located in.
 Requried for using a datastore ISO. Conflicts with <code class="docutils literal notranslate"><span class="pre">client_device</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">deviceAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - <span class="raw-html-m2r"><elided></span></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deviceAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The ID of the device within the virtual machine.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path to the ISO file. Required for using a datastore
 ISO. Conflicts with <code class="docutils literal notranslate"><span class="pre">client_device</span></code>.</p></li>
@@ -7410,7 +8061,7 @@ Implies and conflicts with <code class="docutils literal notranslate"><span clas
 <code class="docutils literal notranslate"><span class="pre">eagerly_scrub</span></code>, or <code class="docutils literal notranslate"><span class="pre">thin_provisioned</span></code>. Must set <code class="docutils literal notranslate"><span class="pre">path</span></code> if used.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">datastore_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The datastore ID that the ISO is located in.
 Requried for using a datastore ISO. Conflicts with <code class="docutils literal notranslate"><span class="pre">client_device</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">deviceAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - <span class="raw-html-m2r"><elided></span></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deviceAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">diskMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The mode of this this virtual disk for purposes of
 writes and snapshotting. Can be one of <code class="docutils literal notranslate"><span class="pre">append</span></code>, <code class="docutils literal notranslate"><span class="pre">independent_nonpersistent</span></code>,
 <code class="docutils literal notranslate"><span class="pre">independent_persistent</span></code>, <code class="docutils literal notranslate"><span class="pre">nonpersistent</span></code>, <code class="docutils literal notranslate"><span class="pre">persistent</span></code>, or <code class="docutils literal notranslate"><span class="pre">undoable</span></code>.
@@ -7468,7 +8119,7 @@ interface when the share level is <code class="docutils literal notranslate"><sp
 <li><p><code class="docutils literal notranslate"><span class="pre">bandwidthShareLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The bandwidth share allocation level for
 this interface. Can be one of <code class="docutils literal notranslate"><span class="pre">low</span></code>, <code class="docutils literal notranslate"><span class="pre">normal</span></code>, <code class="docutils literal notranslate"><span class="pre">high</span></code>, or <code class="docutils literal notranslate"><span class="pre">custom</span></code>. Default:
 <code class="docutils literal notranslate"><span class="pre">normal</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">deviceAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - <span class="raw-html-m2r"><elided></span></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deviceAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The ID of the device within the virtual machine.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">macAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The MAC address of this network interface. Can
 only be manually set if <code class="docutils literal notranslate"><span class="pre">use_static_mac</span></code> is true, otherwise this is a
@@ -7483,9 +8134,6 @@ a static MAC address and set accordingly. Setting this to <code class="docutils 
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">properties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/virtual_machine.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/virtual_machine.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vsphere.VirtualMachine.alternate_guest_name">
 <code class="sig-name descname">alternate_guest_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.alternate_guest_name" title="Permalink to this definition">¶</a></dt>
@@ -7533,7 +8181,7 @@ machine. See CDROM options below.</p>
 remote client device. Conflicts with <code class="docutils literal notranslate"><span class="pre">datastore_id</span></code> and <code class="docutils literal notranslate"><span class="pre">path</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">datastore_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The datastore ID that the ISO is located in.
 Requried for using a datastore ISO. Conflicts with <code class="docutils literal notranslate"><span class="pre">client_device</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">deviceAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - <span class="raw-html-m2r"><elided></span></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deviceAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The ID of the device within the virtual machine.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The path to the ISO file. Required for using a datastore
 ISO. Conflicts with <code class="docutils literal notranslate"><span class="pre">client_device</span></code>.</p></li>
@@ -7686,6 +8334,12 @@ Requried for using a datastore ISO. Conflicts with <code class="docutils literal
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_vsphere.VirtualMachine.default_ip_address">
+<code class="sig-name descname">default_ip_address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.default_ip_address" title="Permalink to this definition">¶</a></dt>
+<dd><p>The IP address selected by Terraform to be used for the provisioner.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_vsphere.VirtualMachine.disks">
 <code class="sig-name descname">disks</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.disks" title="Permalink to this definition">¶</a></dt>
 <dd><p>A specification for a virtual disk device on this virtual
@@ -7696,7 +8350,7 @@ Implies and conflicts with <code class="docutils literal notranslate"><span clas
 <code class="docutils literal notranslate"><span class="pre">eagerly_scrub</span></code>, or <code class="docutils literal notranslate"><span class="pre">thin_provisioned</span></code>. Must set <code class="docutils literal notranslate"><span class="pre">path</span></code> if used.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">datastore_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The datastore ID that the ISO is located in.
 Requried for using a datastore ISO. Conflicts with <code class="docutils literal notranslate"><span class="pre">client_device</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">deviceAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - <span class="raw-html-m2r"><elided></span></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deviceAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">diskMode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The mode of this this virtual disk for purposes of
 writes and snapshotting. Can be one of <code class="docutils literal notranslate"><span class="pre">append</span></code>, <code class="docutils literal notranslate"><span class="pre">independent_nonpersistent</span></code>,
 <code class="docutils literal notranslate"><span class="pre">independent_persistent</span></code>, <code class="docutils literal notranslate"><span class="pre">nonpersistent</span></code>, <code class="docutils literal notranslate"><span class="pre">persistent</span></code>, or <code class="docutils literal notranslate"><span class="pre">undoable</span></code>.
@@ -7922,6 +8576,12 @@ migration.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_vsphere.VirtualMachine.moid">
+<code class="sig-name descname">moid</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.moid" title="Permalink to this definition">¶</a></dt>
+<dd><p>The machine object ID from VMWare</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_vsphere.VirtualMachine.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>An alias for both <code class="docutils literal notranslate"><span class="pre">label</span></code> and <code class="docutils literal notranslate"><span class="pre">path</span></code>, the latter when
@@ -7954,7 +8614,7 @@ interface when the share level is <code class="docutils literal notranslate"><sp
 <li><p><code class="docutils literal notranslate"><span class="pre">bandwidthShareLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The bandwidth share allocation level for
 this interface. Can be one of <code class="docutils literal notranslate"><span class="pre">low</span></code>, <code class="docutils literal notranslate"><span class="pre">normal</span></code>, <code class="docutils literal notranslate"><span class="pre">high</span></code>, or <code class="docutils literal notranslate"><span class="pre">custom</span></code>. Default:
 <code class="docutils literal notranslate"><span class="pre">normal</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">deviceAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - <span class="raw-html-m2r"><elided></span></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deviceAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The ID of the device within the virtual machine.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">macAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The MAC address of this network interface. Can
 only be manually set if <code class="docutils literal notranslate"><span class="pre">use_static_mac</span></code> is true, otherwise this is a
@@ -7981,6 +8641,12 @@ supplied to <code class="docutils literal notranslate"><span class="pre">num_cpu
 <code class="sig-name descname">num_cpus</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.num_cpus" title="Permalink to this definition">¶</a></dt>
 <dd><p>The total number of virtual processor cores to assign
 to this virtual machine. Default: <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.VirtualMachine.reboot_required">
+<code class="sig-name descname">reboot_required</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.reboot_required" title="Permalink to this definition">¶</a></dt>
+<dd><p>Value internal to Terraform used to determine if a configuration set change requires a reboot.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -8032,6 +8698,14 @@ pre-standby scripts when VMware tools is installed. Default: <code class="docuti
 <code class="sig-name descname">scsi_bus_sharing</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.scsi_bus_sharing" title="Permalink to this definition">¶</a></dt>
 <dd><p>Mode for sharing the SCSI bus. The modes are
 physicalSharing, virtualSharing, and noSharing. Default: <code class="docutils literal notranslate"><span class="pre">noSharing</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.VirtualMachine.scsi_controller_count">
+<code class="sig-name descname">scsi_controller_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.scsi_controller_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of SCSI controllers that Terraform manages on this virtual machine. This directly affects the amount of disks
+you can add to the virtual machine and the maximum disk unit number. Note that lowering this value does not remove
+controllers.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -8211,6 +8885,7 @@ DRS with this virtual machine. See the section on virtual machine
 migration for details on changing this value.</p></li>
 <li><p><strong>datastore_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The datastore ID that the ISO is located in.
 Requried for using a datastore ISO. Conflicts with <code class="docutils literal notranslate"><span class="pre">client_device</span></code>.</p></li>
+<li><p><strong>default_ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IP address selected by Terraform to be used for the provisioner.</p></li>
 <li><p><strong>disks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A specification for a virtual disk device on this virtual
 machine. See disk options below.</p></li>
 <li><p><strong>efi_secure_boot_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – When the <code class="docutils literal notranslate"><span class="pre">firmware</span></code> type is set to is
@@ -8287,6 +8962,7 @@ Can be one of <code class="docutils literal notranslate"><span class="pre">high<
 for a virtual machine migration to complete before failing. Default: 10
 minutes. Also see the section on virtual machine
 migration.</p></li>
+<li><p><strong>moid</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The machine object ID from VMWare</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An alias for both <code class="docutils literal notranslate"><span class="pre">label</span></code> and <code class="docutils literal notranslate"><span class="pre">path</span></code>, the latter when
 using <code class="docutils literal notranslate"><span class="pre">attach</span></code>. Required if not using <code class="docutils literal notranslate"><span class="pre">label</span></code>.</p></li>
 <li><p><strong>nested_hv_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable nested hardware virtualization on
@@ -8301,6 +8977,7 @@ virtual machine. The number of vCPUs on the virtual machine will be
 supplied to <code class="docutils literal notranslate"><span class="pre">num_cpus</span></code> must be evenly divisible by this value. Default: <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p></li>
 <li><p><strong>num_cpus</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The total number of virtual processor cores to assign
 to this virtual machine. Default: <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p></li>
+<li><p><strong>reboot_required</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Value internal to Terraform used to determine if a configuration set change requires a reboot.</p></li>
 <li><p><strong>resource_pool_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The [managed object reference
 ID][docs-about-morefs] of the resource pool to put this virtual machine in.
 See the section on virtual machine migration
@@ -8317,6 +8994,9 @@ of pre-shutdown scripts when VMware tools is installed. Default: <code class="do
 pre-standby scripts when VMware tools is installed. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><strong>scsi_bus_sharing</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Mode for sharing the SCSI bus. The modes are
 physicalSharing, virtualSharing, and noSharing. Default: <code class="docutils literal notranslate"><span class="pre">noSharing</span></code>.</p></li>
+<li><p><strong>scsi_controller_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of SCSI controllers that Terraform manages on this virtual machine. This directly affects the amount of disks
+you can add to the virtual machine and the maximum disk unit number. Note that lowering this value does not remove
+controllers.</p></li>
 <li><p><strong>scsi_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of SCSI bus this virtual machine will have.
 Can be one of lsilogic (LSI Logic Parallel), lsilogic-sas (LSI Logic SAS) or
 pvscsi (VMware Paravirtual). Defualt: <code class="docutils literal notranslate"><span class="pre">pvscsi</span></code>.</p></li>
@@ -8372,7 +9052,7 @@ instead. A value less than 1 disables the waiter. Default: 5 minutes.</p></li>
 remote client device. Conflicts with <code class="docutils literal notranslate"><span class="pre">datastore_id</span></code> and <code class="docutils literal notranslate"><span class="pre">path</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">datastore_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The datastore ID that the ISO is located in.
 Requried for using a datastore ISO. Conflicts with <code class="docutils literal notranslate"><span class="pre">client_device</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">deviceAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - <span class="raw-html-m2r"><elided></span></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deviceAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The ID of the device within the virtual machine.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path to the ISO file. Required for using a datastore
 ISO. Conflicts with <code class="docutils literal notranslate"><span class="pre">client_device</span></code>.</p></li>
@@ -8437,7 +9117,7 @@ Implies and conflicts with <code class="docutils literal notranslate"><span clas
 <code class="docutils literal notranslate"><span class="pre">eagerly_scrub</span></code>, or <code class="docutils literal notranslate"><span class="pre">thin_provisioned</span></code>. Must set <code class="docutils literal notranslate"><span class="pre">path</span></code> if used.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">datastore_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The datastore ID that the ISO is located in.
 Requried for using a datastore ISO. Conflicts with <code class="docutils literal notranslate"><span class="pre">client_device</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">deviceAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - <span class="raw-html-m2r"><elided></span></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deviceAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">diskMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The mode of this this virtual disk for purposes of
 writes and snapshotting. Can be one of <code class="docutils literal notranslate"><span class="pre">append</span></code>, <code class="docutils literal notranslate"><span class="pre">independent_nonpersistent</span></code>,
 <code class="docutils literal notranslate"><span class="pre">independent_persistent</span></code>, <code class="docutils literal notranslate"><span class="pre">nonpersistent</span></code>, <code class="docutils literal notranslate"><span class="pre">persistent</span></code>, or <code class="docutils literal notranslate"><span class="pre">undoable</span></code>.
@@ -8495,7 +9175,7 @@ interface when the share level is <code class="docutils literal notranslate"><sp
 <li><p><code class="docutils literal notranslate"><span class="pre">bandwidthShareLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The bandwidth share allocation level for
 this interface. Can be one of <code class="docutils literal notranslate"><span class="pre">low</span></code>, <code class="docutils literal notranslate"><span class="pre">normal</span></code>, <code class="docutils literal notranslate"><span class="pre">high</span></code>, or <code class="docutils literal notranslate"><span class="pre">custom</span></code>. Default:
 <code class="docutils literal notranslate"><span class="pre">normal</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">deviceAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - <span class="raw-html-m2r"><elided></span></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deviceAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The ID of the device within the virtual machine.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">macAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The MAC address of this network interface. Can
 only be manually set if <code class="docutils literal notranslate"><span class="pre">use_static_mac</span></code> is true, otherwise this is a
@@ -8510,9 +9190,6 @@ a static MAC address and set accordingly. Setting this to <code class="docutils 
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">properties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/virtual_machine.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/virtual_machine.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -8573,6 +9250,9 @@ HashiCorp recommends retaining snapshots for a extended period of time and does
 NOT recommend using them as as backup feature. For more information on the
 limitation of virtual machine snapshots, see <a class="reference external" href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.vm_admin.doc/GUID-53F65726-A23B-4CF0-A7D5-48E584B88613.html">here</a>.</p>
 </div></blockquote>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/virtual_machine_snapshot.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/virtual_machine_snapshot.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -8594,9 +9274,6 @@ is removed when this resource is destroyed.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/virtual_machine_snapshot.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/virtual_machine_snapshot.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vsphere.VirtualMachineSnapshot.consolidate">
 <code class="sig-name descname">consolidate</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachineSnapshot.consolidate" title="Permalink to this definition">¶</a></dt>
@@ -8672,9 +9349,6 @@ is removed when this resource is destroyed.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/virtual_machine_snapshot.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/virtual_machine_snapshot.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -8718,20 +9392,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_vsphere.VmfsDatastore">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">VmfsDatastore</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">custom_attributes=None</em>, <em class="sig-param">datastore_cluster_id=None</em>, <em class="sig-param">disks=None</em>, <em class="sig-param">folder=None</em>, <em class="sig-param">host_system_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VmfsDatastore" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a VmfsDatastore resource with the given unique name, props, and options.</p>
+<dd><p>Create a VmfsDatastore resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[dict] custom_attributes: Map of custom attribute ids to attribute</p>
+<blockquote>
+<div><p>value string to set on datastore resource. See
+[here][docs-setting-custom-attributes] for a reference on how to set values
+for custom attributes.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>custom_attributes</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Map of custom attribute ids to attribute 
-value string to set on datastore resource. See
-[here][docs-setting-custom-attributes] for a reference on how to set values
-for custom attributes.</p></li>
 <li><p><strong>datastore_cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The [managed object
 ID][docs-about-morefs] of a datastore cluster to put this datastore in.
 Conflicts with <code class="docutils literal notranslate"><span class="pre">folder</span></code>.</p></li>
 <li><p><strong>disks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The disks to use with the datastore.</p></li>
+<li><p><strong>folder</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path to the datastore folder to put the datastore in.</p></li>
 <li><p><strong>host_system_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The [managed object ID][docs-about-morefs] of
 the host to set the datastore up on. Note that this is not necessarily the
 only host that the datastore will be set up on - see
@@ -8744,9 +9421,6 @@ changed.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/vmfs_datastore.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/vmfs_datastore.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vsphere.VmfsDatastore.accessible">
 <code class="sig-name descname">accessible</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VmfsDatastore.accessible" title="Permalink to this definition">¶</a></dt>
@@ -8781,6 +9455,12 @@ Conflicts with <code class="docutils literal notranslate"><span class="pre">fold
 <dt id="pulumi_vsphere.VmfsDatastore.disks">
 <code class="sig-name descname">disks</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VmfsDatastore.disks" title="Permalink to this definition">¶</a></dt>
 <dd><p>The disks to use with the datastore.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.VmfsDatastore.folder">
+<code class="sig-name descname">folder</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VmfsDatastore.folder" title="Permalink to this definition">¶</a></dt>
+<dd><p>The path to the datastore folder to put the datastore in.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -8861,6 +9541,7 @@ for custom attributes.</p></li>
 ID][docs-about-morefs] of a datastore cluster to put this datastore in.
 Conflicts with <code class="docutils literal notranslate"><span class="pre">folder</span></code>.</p></li>
 <li><p><strong>disks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The disks to use with the datastore.</p></li>
+<li><p><strong>folder</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path to the datastore folder to put the datastore in.</p></li>
 <li><p><strong>free_space</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Available space of this datastore, in megabytes.</p></li>
 <li><p><strong>host_system_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The [managed object ID][docs-about-morefs] of
 the host to set the datastore up on. Note that this is not necessarily the
@@ -8880,9 +9561,6 @@ potentially used by all virtual machines on this datastore.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/vmfs_datastore.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/vmfs_datastore.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -8927,6 +9605,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_vsphere.Vnic">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">Vnic</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">distributed_port_group=None</em>, <em class="sig-param">distributed_switch_port=None</em>, <em class="sig-param">host=None</em>, <em class="sig-param">ipv4=None</em>, <em class="sig-param">ipv6=None</em>, <em class="sig-param">mac=None</em>, <em class="sig-param">mtu=None</em>, <em class="sig-param">netstack=None</em>, <em class="sig-param">portgroup=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Vnic" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a VMware vSphere vnic resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/vnic.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/vnic.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -8934,6 +9615,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>distributed_port_group</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Key of the distributed portgroup the nic will connect to.</p></li>
 <li><p><strong>distributed_switch_port</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – UUID of the DVSwitch the nic will be attached to. Do not set if you set portgroup.</p></li>
+<li><p><strong>host</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ESX host the interface belongs to</p></li>
 <li><p><strong>ipv4</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – IPv4 settings. Either this or <code class="docutils literal notranslate"><span class="pre">ipv6</span></code> needs to be set. See  ipv4 options below.</p></li>
 <li><p><strong>ipv6</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – IPv6 settings. Either this or <code class="docutils literal notranslate"><span class="pre">ipv6</span></code> needs to be set. See  ipv6 options below.</p></li>
 <li><p><strong>mac</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – MAC address of the interface.</p></li>
@@ -8957,9 +9639,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">dhcp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Use DHCP to configure the interface’s IPv4 stack.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">gw</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - IP address of the default gateway, if DHCP or autoconfig is not set.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/vnic.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/vnic.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vsphere.Vnic.distributed_port_group">
 <code class="sig-name descname">distributed_port_group</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Vnic.distributed_port_group" title="Permalink to this definition">¶</a></dt>
@@ -8970,6 +9649,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_vsphere.Vnic.distributed_switch_port">
 <code class="sig-name descname">distributed_switch_port</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Vnic.distributed_switch_port" title="Permalink to this definition">¶</a></dt>
 <dd><p>UUID of the DVSwitch the nic will be attached to. Do not set if you set portgroup.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.Vnic.host">
+<code class="sig-name descname">host</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Vnic.host" title="Permalink to this definition">¶</a></dt>
+<dd><p>ESX host the interface belongs to</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -9033,6 +9718,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>distributed_port_group</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Key of the distributed portgroup the nic will connect to.</p></li>
 <li><p><strong>distributed_switch_port</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – UUID of the DVSwitch the nic will be attached to. Do not set if you set portgroup.</p></li>
+<li><p><strong>host</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ESX host the interface belongs to</p></li>
 <li><p><strong>ipv4</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – IPv4 settings. Either this or <code class="docutils literal notranslate"><span class="pre">ipv6</span></code> needs to be set. See  ipv4 options below.</p></li>
 <li><p><strong>ipv6</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – IPv6 settings. Either this or <code class="docutils literal notranslate"><span class="pre">ipv6</span></code> needs to be set. See  ipv6 options below.</p></li>
 <li><p><strong>mac</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – MAC address of the interface.</p></li>
@@ -9056,9 +9742,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">dhcp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Use DHCP to configure the interface’s IPv4 stack.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">gw</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - IP address of the default gateway, if DHCP or autoconfig is not set.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/vnic.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/vnic.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -9115,9 +9798,6 @@ data source.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/compute_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/compute_cluster.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -9129,9 +9809,6 @@ data source.</p></li>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the custom attribute.</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/custom_attribute.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/custom_attribute.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -9141,15 +9818,15 @@ data source.</p></li>
 vSphere datacenter. This can then be used with resources or data sources that
 require a datacenter, such as the <cite>`</cite>.Host`` &lt;/docs/providers/vsphere/d/host.html&gt;`_
 data source.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/datacenter.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/datacenter.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the datacenter. This can be a name or path.
 Can be omitted if there is only one datacenter in your inventory.</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/datacenter.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/datacenter.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -9159,6 +9836,9 @@ Can be omitted if there is only one datacenter in your inventory.</p>
 datastore in vSphere. This is useful to fetch the ID of a datastore that you
 want to use to create virtual machines in using the
 <cite>`</cite>.VirtualMachine`` &lt;/docs/providers/vsphere/r/virtual_machine.html&gt;`_ resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/datastore.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/datastore.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -9171,9 +9851,6 @@ data source.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/datastore.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/datastore.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -9186,6 +9863,9 @@ cluster that you want to use to assign datastores to using the
 <cite>`</cite>.VmfsDatastore`` &lt;/docs/providers/vsphere/r/vmfs_datastore.html&gt;`_ resources, or create
 virtual machines in using the
 <cite>`</cite>.VirtualMachine`` &lt;/docs/providers/vsphere/r/virtual_machine.html&gt;`_ resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/datastore_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/datastore_cluster.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -9198,9 +9878,6 @@ For default datacenters, use the id attribute from an empty
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/datastore_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/datastore_cluster.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -9214,6 +9891,7 @@ an example is shown below.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> This data source requires vCenter and is not available on direct
 ESXi connections.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/distributed_virtual_switch.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/distributed_virtual_switch.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -9228,9 +9906,6 @@ name or path.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/distributed_virtual_switch.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/distributed_virtual_switch.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -9250,6 +9925,9 @@ datacenter.</p>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.Host</span></code> data source can be used to discover the ID of a vSphere
 host. This can then be used with resources or data sources that require a host
 managed object reference ID.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/host.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/host.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -9260,9 +9938,6 @@ omitted if there is only one host in your inventory.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/host.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/host.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -9273,6 +9948,9 @@ in vSphere. This can be any network that can be used as the backing for a
 network interface for <code class="docutils literal notranslate"><span class="pre">.VirtualMachine</span></code> or any other vSphere resource
 that requires a network. This includes standard (host-based) port groups, DVS
 port groups, or opaque networks such as those managed by NSX.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/network.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/network.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -9285,9 +9963,6 @@ source.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/network.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/network.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -9299,15 +9974,13 @@ require a storage policy.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Storage policy support is unsupported on direct ESXi connections and
 requires vCenter 6.0 or higher.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/storage_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/storage_policy.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the storage policy.</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/storage_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/storage_policy.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -9317,6 +9990,9 @@ requires vCenter 6.0 or higher.</p>
 resource pool in vSphere. This is useful to fetch the ID of a resource pool
 that you want to use to create virtual machines in using the
 <cite>`</cite>.VirtualMachine`` &lt;/docs/providers/vsphere/r/virtual_machine.html&gt;`_ resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/resource_pool.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/resource_pool.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -9330,9 +10006,6 @@ path. This is required when using vCenter.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/resource_pool.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/resource_pool.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -9347,9 +10020,6 @@ path. This is required when using vCenter.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/tag.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/tag.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -9361,9 +10031,6 @@ path. This is required when using vCenter.</p></li>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the tag category.</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/tag_category.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/tag_category.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -9373,6 +10040,9 @@ path. This is required when using vCenter.</p></li>
 vApp container in vSphere. This is useful to fetch the ID of a vApp container
 that you want to use to create virtual machines in using the
 <cite>`</cite>.VirtualMachine`` &lt;/docs/providers/vsphere/r/virtual_machine.html&gt;`_ resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/vapp_container.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/vapp_container.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -9383,9 +10053,6 @@ path.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/vapp_container.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/vapp_container.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -9396,6 +10063,9 @@ existing virtual machine or template. Its most relevant purpose is for finding
 the UUID of a template to be used as the source for cloning into a new
 <cite>`</cite>.VirtualMachine`` &lt;/docs/providers/vsphere/r/virtual_machine.html&gt;`_ resource. It also
 reads the guest ID so that can be supplied as well.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/virtual_machine.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/virtual_machine.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -9411,9 +10081,6 @@ scan for disk attributes and controller types on. Default: <code class="docutils
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/virtual_machine.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/virtual_machine.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -9423,6 +10090,9 @@ scan for disk attributes and controller types on. Default: <code class="docutils
 devices available on an ESXi host. This data source can be combined with the
 <cite>`</cite>.VmfsDatastore`` &lt;/docs/providers/vsphere/r/vmfs_datastore.html&gt;`_ resource to create VMFS
 datastores based off a set of discovered disks.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/vmfs_disks.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/vmfs_disks.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -9436,9 +10106,6 @@ search. Default: <code class="docutils literal notranslate"><span class="pre">fa
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/vmfs_disks.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/vmfs_disks.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>
