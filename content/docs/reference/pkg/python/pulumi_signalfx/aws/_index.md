@@ -17,9 +17,10 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_signalfx.aws.ExternalIntegration">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_signalfx.aws.</code><code class="sig-name descname">ExternalIntegration</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_signalfx.aws.ExternalIntegration" title="Permalink to this definition">¶</a></dt>
 <dd><p>SignalFx AWS CloudWatch integrations using Role ARNs. For help with this integration see <a class="reference external" href="https://docs.signalfx.com/en/latest/integrations/amazon-web-services.html#connect-to-aws">Connect to AWS CloudWatch</a>.</p>
-<p><strong>Note:</strong> When managing integrations you’ll need to use an admin token to authenticate the SignalFx provider.</p>
 <blockquote>
-<div><p><strong>WARNING</strong> This resource implements a part of a workflow. You must use it with <code class="docutils literal notranslate"><span class="pre">aws.Integration</span></code>. Check with SignalFx support for your realm’s AWS account id.</p>
+<div><p><strong>NOTE</strong> When managing integrations you’ll need to use an admin token to authenticate the SignalFx provider.</p>
+<p><strong>WARNING</strong> This resource implements a part of a workflow. You must use it with <code class="docutils literal notranslate"><span class="pre">aws.Integration</span></code>. Check with SignalFx support for your realm’s AWS account id.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/aws_external_integration.html.markdown">https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/aws_external_integration.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -30,9 +31,6 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/aws_external_integration.html.markdown">https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/aws_external_integration.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_signalfx.aws.ExternalIntegration.external_id">
 <code class="sig-name descname">external_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.aws.ExternalIntegration.external_id" title="Permalink to this definition">¶</a></dt>
@@ -68,9 +66,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/aws_external_integration.html.markdown">https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/aws_external_integration.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -115,11 +110,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_signalfx.aws.Integration">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_signalfx.aws.</code><code class="sig-name descname">Integration</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">custom_cloudwatch_namespaces=None</em>, <em class="sig-param">custom_namespace_sync_rules=None</em>, <em class="sig-param">enable_aws_usage=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">external_id=None</em>, <em class="sig-param">import_cloud_watch=None</em>, <em class="sig-param">integration_id=None</em>, <em class="sig-param">key=None</em>, <em class="sig-param">namespace_sync_rules=None</em>, <em class="sig-param">poll_rate=None</em>, <em class="sig-param">regions=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">services=None</em>, <em class="sig-param">token=None</em>, <em class="sig-param">use_get_metric_data_method=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_signalfx.aws.Integration" title="Permalink to this definition">¶</a></dt>
 <dd><p>SignalFx AWS CloudWatch integrations. For help with this integration see <a class="reference external" href="https://docs.signalfx.com/en/latest/integrations/amazon-web-services.html#monitor-amazon-web-services">Monitoring Amazon Web Services</a>.</p>
-<p><strong>Note:</strong> When managing integrations you’ll need to use an admin token to authenticate the SignalFx provider.</p>
 <blockquote>
-<div><p><strong>WARNING</strong> This resource implements a part of a workflow. You must use it with one of either <code class="docutils literal notranslate"><span class="pre">aws.ExternalIntegration</span></code> or <code class="docutils literal notranslate"><span class="pre">aws.TokenIntegration</span></code>.</p>
+<div><p><strong>NOTE</strong> When managing integrations you’ll need to use an admin token to authenticate the SignalFx provider.</p>
+<p><strong>WARNING</strong> This resource implements a part of a workflow. You must use it with one of either <code class="docutils literal notranslate"><span class="pre">aws.ExternalIntegration</span></code> or <code class="docutils literal notranslate"><span class="pre">aws.TokenIntegration</span></code>.</p>
 </div></blockquote>
-<p>Fields that expect an AWS service/namespace will work with one of: “AWS/ApiGateway” “AWS/AppStream” “AWS/AutoScaling” “AWS/Billing” “AWS/CloudFront” “AWS/CloudSearch” “AWS/Events” “AWS/Logs” “AWS/Connect” “AWS/DMS” “AWS/DX” “AWS/DynamoDB” “AWS/EC2” “AWS/EC2Spot” “AWS/ECS” “AWS/ElasticBeanstalk” “AWS/EBS” “AWS/EFS” “AWS/ELB” “AWS/ApplicationELB” “AWS/NetworkELB” “AWS/ElasticTranscoder” “AWS/ElastiCache” “AWS/ES” “AWS/ElasticMapReduce” “AWS/GameLift” “AWS/Inspector” “AWS/IoT” “AWS/KMS” “AWS/KinesisAnalytics” “AWS/Firehose” “AWS/Kinesis” “AWS/KinesisVideo” “AWS/Lambda” “AWS/Lex” “AWS/ML” “AWS/OpsWorks” “AWS/Polly” “AWS/Redshift” “AWS/RDS” “AWS/Route53” “AWS/SageMaker” “AWS/DDoSProtection” “AWS/SES” “AWS/SNS” “AWS/SQS” “AWS/S3” “AWS/SWF” “AWS/States” “AWS/StorageGateway” “AWS/Translate” “AWS/NATGateway” “AWS/VPN (VPN)” “WAF” “AWS/WorkSpaces”.</p>
+<p>Fields that expect an AWS service/namespace will work with one of: “AWS/ApiGateway” “AWS/AppStream” “AWS/AutoScaling” “AWS/Billing” “AWS/CloudFront” “AWS/CloudSearch” “AWS/Events” “AWS/Logs” “AWS/Connect” “AWS/DMS” “AWS/DX” “AWS/DynamoDB” “AWS/EC2” “AWS/EC2Spot” “AWS/ECS” “AWS/ElasticBeanstalk” “AWS/EBS” “AWS/EFS” “AWS/ELB” “AWS/ApplicationELB” “AWS/NetworkELB” “AWS/ElasticTranscoder” “AWS/ElastiCache” “AWS/ES” “AWS/ElasticMapReduce” “AWS/GameLift” “AWS/Inspector” “AWS/IoT” “AWS/KMS” “AWS/KinesisAnalytics” “AWS/Firehose” “AWS/Kinesis” “AWS/KinesisVideo” “AWS/Lambda” “AWS/Lex” “AWS/ML” “AWS/OpsWorks” “AWS/Polly” “AWS/Redshift” “AWS/RDS” “AWS/Route53” “AWS/SageMaker” “AWS/DDoSProtection” “AWS/SES” “AWS/SNS” “AWS/SQS” “AWS/S3” “AWS/SWF” “AWS/States” “AWS/StorageGateway” “AWS/Translate” “AWS/NATGateway” “AWS/VPN” “WAF” “AWS/WorkSpaces”.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/aws_integration.html.markdown">https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/aws_integration.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -138,6 +136,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>regions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of AWS regions that SignalFx should monitor.</p></li>
 <li><p><strong>role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Role ARN that you add to an existing AWS integration object. <strong>Note</strong>: Ensure you use the <code class="docutils literal notranslate"><span class="pre">arn</span></code> property of your role, not the id!</p></li>
 <li><p><strong>services</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of AWS services that you want SignalFx to monitor. Each element is a string designating an AWS service. Conflicts with <code class="docutils literal notranslate"><span class="pre">namespace_sync_rule</span></code>.</p></li>
+<li><p><strong>token</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Used with <code class="docutils literal notranslate"><span class="pre">signalfx_aws_token_integration</span></code>. Use this property to specify the token.</p></li>
 <li><p><strong>use_get_metric_data_method</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable the use of Amazon’s <code class="docutils literal notranslate"><span class="pre">GetMetricData</span></code> for collecting metrics. Note that this requires the inclusion of the <code class="docutils literal notranslate"><span class="pre">&quot;cloudwatch:GetMetricData&quot;</span></code> permission.</p></li>
 </ul>
 </dd>
@@ -156,9 +155,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">filterSource</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Expression that selects the data that SignalFx should sync for the custom namespace associated with this sync rule. The expression uses the syntax defined for the SignalFlow <code class="docutils literal notranslate"><span class="pre">filter()</span></code> function; it can be any valid SignalFlow filter expression.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">namespace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An AWS custom namespace having custom AWS metrics that you want to sync with SignalFx. See the AWS documentation on publishing metrics for more information.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/aws_integration.html.markdown">https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/aws_integration.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_signalfx.aws.Integration.custom_cloudwatch_namespaces">
 <code class="sig-name descname">custom_cloudwatch_namespaces</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.aws.Integration.custom_cloudwatch_namespaces" title="Permalink to this definition">¶</a></dt>
@@ -250,6 +246,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_signalfx.aws.Integration.token">
+<code class="sig-name descname">token</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.aws.Integration.token" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used with <code class="docutils literal notranslate"><span class="pre">signalfx_aws_token_integration</span></code>. Use this property to specify the token.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_signalfx.aws.Integration.use_get_metric_data_method">
 <code class="sig-name descname">use_get_metric_data_method</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.aws.Integration.use_get_metric_data_method" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable the use of Amazon’s <code class="docutils literal notranslate"><span class="pre">GetMetricData</span></code> for collecting metrics. Note that this requires the inclusion of the <code class="docutils literal notranslate"><span class="pre">&quot;cloudwatch:GetMetricData&quot;</span></code> permission.</p>
@@ -279,6 +281,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>regions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of AWS regions that SignalFx should monitor.</p></li>
 <li><p><strong>role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Role ARN that you add to an existing AWS integration object. <strong>Note</strong>: Ensure you use the <code class="docutils literal notranslate"><span class="pre">arn</span></code> property of your role, not the id!</p></li>
 <li><p><strong>services</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of AWS services that you want SignalFx to monitor. Each element is a string designating an AWS service. Conflicts with <code class="docutils literal notranslate"><span class="pre">namespace_sync_rule</span></code>.</p></li>
+<li><p><strong>token</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Used with <code class="docutils literal notranslate"><span class="pre">signalfx_aws_token_integration</span></code>. Use this property to specify the token.</p></li>
 <li><p><strong>use_get_metric_data_method</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable the use of Amazon’s <code class="docutils literal notranslate"><span class="pre">GetMetricData</span></code> for collecting metrics. Note that this requires the inclusion of the <code class="docutils literal notranslate"><span class="pre">&quot;cloudwatch:GetMetricData&quot;</span></code> permission.</p></li>
 </ul>
 </dd>
@@ -297,9 +300,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">filterSource</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Expression that selects the data that SignalFx should sync for the custom namespace associated with this sync rule. The expression uses the syntax defined for the SignalFlow <code class="docutils literal notranslate"><span class="pre">filter()</span></code> function; it can be any valid SignalFlow filter expression.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">namespace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An AWS custom namespace having custom AWS metrics that you want to sync with SignalFx. See the AWS documentation on publishing metrics for more information.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/aws_integration.html.markdown">https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/aws_integration.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -344,9 +344,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_signalfx.aws.TokenIntegration">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_signalfx.aws.</code><code class="sig-name descname">TokenIntegration</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_signalfx.aws.TokenIntegration" title="Permalink to this definition">¶</a></dt>
 <dd><p>SignalFx AWS CloudWatch integrations using security tokens. For help with this integration see <a class="reference external" href="https://docs.signalfx.com/en/latest/integrations/amazon-web-services.html#connect-to-aws">Connect to AWS CloudWatch</a>.</p>
-<p><strong>Note:</strong> When managing integrations you’ll need to use an admin token to authenticate the SignalFx provider.</p>
 <blockquote>
-<div><p><strong>WARNING</strong> This resource implements a part of a workflow. You must use it with <code class="docutils literal notranslate"><span class="pre">aws.Integration</span></code>.</p>
+<div><p><strong>NOTE</strong> When managing integrations you’ll need to use an admin token to authenticate the SignalFx provider.</p>
+<p><strong>WARNING</strong> This resource implements a part of a workflow. You must use it with <code class="docutils literal notranslate"><span class="pre">aws.Integration</span></code>.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/aws_token_integration.html.markdown">https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/aws_token_integration.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -357,9 +358,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/aws_token_integration.html.markdown">https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/aws_token_integration.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_signalfx.aws.TokenIntegration.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.aws.TokenIntegration.name" title="Permalink to this definition">¶</a></dt>
@@ -370,6 +368,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_signalfx.aws.TokenIntegration.signalfx_aws_account">
 <code class="sig-name descname">signalfx_aws_account</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.aws.TokenIntegration.signalfx_aws_account" title="Permalink to this definition">¶</a></dt>
 <dd><p>The AWS Account ARN to use with your policies/roles, provided by SignalFx.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_signalfx.aws.TokenIntegration.token_id">
+<code class="sig-name descname">token_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.aws.TokenIntegration.token_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The SignalFx-generated AWS token to use with an AWS integration.</p>
 </dd></dl>
 
 <dl class="method">
@@ -385,12 +389,10 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of this integration</p></li>
 <li><p><strong>signalfx_aws_account</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AWS Account ARN to use with your policies/roles, provided by SignalFx.</p></li>
+<li><p><strong>token_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The SignalFx-generated AWS token to use with an AWS integration.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/aws_token_integration.html.markdown">https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/aws_token_integration.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">

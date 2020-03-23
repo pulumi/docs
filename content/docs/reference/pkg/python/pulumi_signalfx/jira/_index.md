@@ -17,7 +17,10 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_signalfx.jira.Integration">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_signalfx.jira.</code><code class="sig-name descname">Integration</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">api_token=None</em>, <em class="sig-param">assignee_display_name=None</em>, <em class="sig-param">assignee_name=None</em>, <em class="sig-param">auth_method=None</em>, <em class="sig-param">base_url=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">issue_type=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">project_key=None</em>, <em class="sig-param">user_email=None</em>, <em class="sig-param">username=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_signalfx.jira.Integration" title="Permalink to this definition">¶</a></dt>
 <dd><p>SignalFx Jira integrations. For help with this integration see <a class="reference external" href="https://docs.signalfx.com/en/latest/admin-guide/integrate-notifications.html#integrate-with-jira">Integration with Jira</a>.</p>
-<p><strong>Note:</strong> When managing integrations you’ll need to use an admin token to authenticate the SignalFx provider. Otherwise you’ll receive a 4xx error.</p>
+<blockquote>
+<div><p><strong>NOTE</strong> When managing integrations you’ll need to use an admin token to authenticate the SignalFx provider. Otherwise you’ll receive a 4xx error.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/jira_integration.html.markdown">https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/jira_integration.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -38,9 +41,6 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/jira_integration.html.markdown">https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/jira_integration.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_signalfx.jira.Integration.api_token">
 <code class="sig-name descname">api_token</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.jira.Integration.api_token" title="Permalink to this definition">¶</a></dt>
@@ -139,9 +139,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/jira_integration.html.markdown">https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/jira_integration.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">

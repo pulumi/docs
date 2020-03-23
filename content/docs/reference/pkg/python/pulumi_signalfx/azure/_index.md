@@ -16,9 +16,14 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="target" id="module-pulumi_signalfx.azure"></span><dl class="class">
 <dt id="pulumi_signalfx.azure.Integration">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_signalfx.azure.</code><code class="sig-name descname">Integration</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">app_id=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">environment=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">poll_rate=None</em>, <em class="sig-param">secret_key=None</em>, <em class="sig-param">services=None</em>, <em class="sig-param">subscriptions=None</em>, <em class="sig-param">tenant_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_signalfx.azure.Integration" title="Permalink to this definition">¶</a></dt>
-<dd><p>SignalFx Azure integrations. For help with this integration see <a class="reference external" href="https://docs.signalfx.com/en/latest/integrations/azure-info.html">Monitoring Microsoft Azure</a>.</p>
-<p><strong>Note:</strong> When managing integrations you’ll need to use an admin token to authenticate the SignalFx provider. Otherwise you’ll receive a 4xx error.</p>
+<dd><p>SignalFx Azure integrations. For help with this integration see <a class="reference external" href="https://docs.signalfx.com/en/latest/integrations/azure-info.html#connect-to-azure">Monitoring Microsoft Azure</a>.</p>
+<blockquote>
+<div><p><strong>NOTE</strong> When managing integrations you’ll need to use an admin token to authenticate the SignalFx provider. Otherwise you’ll receive a 4xx error.</p>
+</div></blockquote>
 <p>Fields that expect an Azure service will work with one of: “microsoft.sql/servers/elasticpools” “microsoft.storage/storageaccounts” “microsoft.storage/storageaccountsservices/tableservices” “microsoft.storage/storageaccountsservices/blobservices” “microsoft.storage/storageaccounts/queueservices” “microsoft.storage/storageaccounts/fileservices” “microsoft.compute/virtualmachinescalesets” “microsoft.compute/virtualmachinescalesets/virtualmachines” “microsoft.compute/virtualmachines” “microsoft.devices/iothubs” “microsoft.eventHub/namespaces” “microsoft.batch/batchaccounts” “microsoft.sql/servers/databases” “microsoft.cache/redis” “microsoft.logic/workflows”.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/azure_integration.html.markdown">https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/azure_integration.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -29,18 +34,15 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><strong>environment</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – What type of Azure integration this is. The allowed values are <code class="docutils literal notranslate"><span class="pre">&quot;azure_us_government&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">&quot;azure&quot;</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">&quot;azure&quot;</span></code>.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the integration.</p></li>
 <li><p><strong>poll_rate</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – AWS poll rate (in seconds). One of <code class="docutils literal notranslate"><span class="pre">60</span></code> or <code class="docutils literal notranslate"><span class="pre">300</span></code>.</p></li>
-<li><p><strong>secret_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Azure secret key that associates the SignalFx app in Azure with the Azure tenant ID. To learn how to get this ID, see the topic <a class="reference external" href="https://docs.signalfx.com/en/latest/getting-started/send-data.html#connect-to-microsoft-azure">Connect to Microsoft Azure</a> in the product documentation.</p>
+<li><p><strong>secret_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Azure secret key that associates the SignalFx app in Azure with the Azure tenant ID. To learn how to get this ID, see the topic <a class="reference external" href="https://docs.signalfx.com/en/latest/integrations/azure-info.html#connect-to-azure">Connect to Microsoft Azure</a> in the product documentation.</p>
 </p></li>
 <li><p><strong>services</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of Microsoft Azure service names for the Azure services you want SignalFx to monitor.</p></li>
 <li><p><strong>subscriptions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of Azure subscriptions that SignalFx should monitor.</p></li>
-<li><p><strong>tenant_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Azure ID of the Azure tenant. To learn how to get this ID, see the topic <a class="reference external" href="https://docs.signalfx.com/en/latest/getting-started/send-data.html#connect-to-microsoft-azure">Connect to Microsoft Azure</a> in the product documentation.</p>
+<li><p><strong>tenant_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Azure ID of the Azure tenant. To learn how to get this ID, see the topic <a class="reference external" href="https://docs.signalfx.com/en/latest/integrations/azure-info.html#connect-to-azure">Connect to Microsoft Azure</a> in the product documentation.</p>
 </p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/azure_integration.html.markdown">https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/azure_integration.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_signalfx.azure.Integration.app_id">
 <code class="sig-name descname">app_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.azure.Integration.app_id" title="Permalink to this definition">¶</a></dt>
@@ -74,7 +76,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="attribute">
 <dt id="pulumi_signalfx.azure.Integration.secret_key">
 <code class="sig-name descname">secret_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.azure.Integration.secret_key" title="Permalink to this definition">¶</a></dt>
-<dd><p>Azure secret key that associates the SignalFx app in Azure with the Azure tenant ID. To learn how to get this ID, see the topic <a class="reference external" href="https://docs.signalfx.com/en/latest/getting-started/send-data.html#connect-to-microsoft-azure">Connect to Microsoft Azure</a> in the product documentation.</p>
+<dd><p>Azure secret key that associates the SignalFx app in Azure with the Azure tenant ID. To learn how to get this ID, see the topic <a class="reference external" href="https://docs.signalfx.com/en/latest/integrations/azure-info.html#connect-to-azure">Connect to Microsoft Azure</a> in the product documentation.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -92,7 +94,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="attribute">
 <dt id="pulumi_signalfx.azure.Integration.tenant_id">
 <code class="sig-name descname">tenant_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.azure.Integration.tenant_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>Azure ID of the Azure tenant. To learn how to get this ID, see the topic <a class="reference external" href="https://docs.signalfx.com/en/latest/getting-started/send-data.html#connect-to-microsoft-azure">Connect to Microsoft Azure</a> in the product documentation.</p>
+<dd><p>Azure ID of the Azure tenant. To learn how to get this ID, see the topic <a class="reference external" href="https://docs.signalfx.com/en/latest/integrations/azure-info.html#connect-to-azure">Connect to Microsoft Azure</a> in the product documentation.</p>
 </dd></dl>
 
 <dl class="method">
@@ -112,18 +114,15 @@ properties used to qualify the lookup.</p>
 <li><p><strong>environment</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – What type of Azure integration this is. The allowed values are <code class="docutils literal notranslate"><span class="pre">&quot;azure_us_government&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">&quot;azure&quot;</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">&quot;azure&quot;</span></code>.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the integration.</p></li>
 <li><p><strong>poll_rate</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – AWS poll rate (in seconds). One of <code class="docutils literal notranslate"><span class="pre">60</span></code> or <code class="docutils literal notranslate"><span class="pre">300</span></code>.</p></li>
-<li><p><strong>secret_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Azure secret key that associates the SignalFx app in Azure with the Azure tenant ID. To learn how to get this ID, see the topic <a class="reference external" href="https://docs.signalfx.com/en/latest/getting-started/send-data.html#connect-to-microsoft-azure">Connect to Microsoft Azure</a> in the product documentation.</p>
+<li><p><strong>secret_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Azure secret key that associates the SignalFx app in Azure with the Azure tenant ID. To learn how to get this ID, see the topic <a class="reference external" href="https://docs.signalfx.com/en/latest/integrations/azure-info.html#connect-to-azure">Connect to Microsoft Azure</a> in the product documentation.</p>
 </p></li>
 <li><p><strong>services</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of Microsoft Azure service names for the Azure services you want SignalFx to monitor.</p></li>
 <li><p><strong>subscriptions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of Azure subscriptions that SignalFx should monitor.</p></li>
-<li><p><strong>tenant_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Azure ID of the Azure tenant. To learn how to get this ID, see the topic <a class="reference external" href="https://docs.signalfx.com/en/latest/getting-started/send-data.html#connect-to-microsoft-azure">Connect to Microsoft Azure</a> in the product documentation.</p>
+<li><p><strong>tenant_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Azure ID of the Azure tenant. To learn how to get this ID, see the topic <a class="reference external" href="https://docs.signalfx.com/en/latest/integrations/azure-info.html#connect-to-azure">Connect to Microsoft Azure</a> in the product documentation.</p>
 </p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/azure_integration.html.markdown">https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/azure_integration.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
