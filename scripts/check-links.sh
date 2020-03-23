@@ -1,6 +1,8 @@
 #!/bin/bash
 set -o nounset -o errexit -o pipefail
 
+HTTP_SERVER_PORT=8888
+
 check_links() {
     # We exclude some links:
 	#     - Our generated API docs have lots of broken links
@@ -10,7 +12,7 @@ check_links() {
 	#     - Our Visual Studio Marketplace link for the Azure Pipelines task extension,
 	#       although valid and publicly available, is reported as a broken link.
 	#     - A number of synthetic illustrative links come from our examples/tutorials.
-    ./node_modules/.bin/blc http://localhost:1313 --recursive --follow \
+    ./node_modules/.bin/blc http://localhost:$HTTP_SERVER_PORT --recursive --follow \
         --exclude "/docs/reference/pkg" \
         --exclude "/docs/get-started/install/versions" \
         --exclude "https://api.pulumi.com/" \
@@ -49,4 +51,14 @@ retry() {
     done
 }
 
+# Start an HTTP server listening at the root of the built website.
+yarn run http-server public --port $HTTP_SERVER_PORT &>/dev/null &
+HTTP_SERVER_PID=$!
+
+# Run the link checker once the HTTP server is listening.
+while ! nc -z localhost $HTTP_SERVER_PORT; do sleep 0.1; done
+# Re-run the link checker up to three times, to handle the occasional transient failure.
 retry check_links
+
+# Kill the server process.
+kill $HTTP_SERVER_PID

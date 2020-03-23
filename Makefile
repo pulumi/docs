@@ -60,15 +60,6 @@ build:
 test:
 	./scripts/check-links.sh
 
-.PHONY: validate
-validate:
-	hugo server \
-	    --buildDrafts --disableBrowserError --disableLiveReload \
-	    &>/dev/null &
-	while ! nc -z localhost 1313; do sleep 0.1; done
-	$(MAKE) test
-	pkill -f hugo
-
 .PHONY: travis_push
 travis_push::
 	$(MAKE) banner
@@ -96,4 +87,4 @@ travis_cron::
 	$(MAKE) banner
 	$(MAKE) ensure
 	$(MAKE) build
-	$(MAKE) validate
+	$(MAKE) test
