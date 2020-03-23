@@ -16,7 +16,7 @@ aliases: ["/docs/get-started/policy-as-code/authoring-a-policy-pack/"]
 1. Install prerequisites.
 
    - [Install Pulumi]({{< relref "/docs/get-started/install" >}})
-   - [Install Node.js version 8 or later](https://nodejs.org/en/download/)
+   - [Install Node.js](https://nodejs.org/en/download/)
 
 1. Verify your version of Pulumi.
 

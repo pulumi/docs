@@ -36,7 +36,7 @@ showcased live during the webinar tomorrow.
 <!--more-->
 
 **Prerequisites:** [Install Pulumi]({{< relref "/docs/get-started/install" >}});
-[Install Node.js version 8 or later](https://nodejs.org/en/download/) and
+[Install Node.js](https://nodejs.org/en/download/) and
 [Setup AWS]({{< relref "/docs/get-started/aws" >}})
 
 The diagram represents how Mapbox's solution design on AWS services is

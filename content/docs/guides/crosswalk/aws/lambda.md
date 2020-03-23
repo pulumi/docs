@@ -197,7 +197,7 @@ const docsHandlerFunc = new aws.lambda.Function("docsHandlerFunc", {
    code: new pulumi.asset.AssetArchive({
       ".": new pulumi.asset.FileArchive("./app"),
    }),
-   runtime: "nodejs8.10",
+   runtime: "nodejs12.x",
    role: docsHandlerRole.arn,
 });
 
