@@ -17,6 +17,9 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_openstack.networking.AddressScope">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">AddressScope</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">ip_version=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">shared=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.AddressScope" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 Neutron addressscope resource within OpenStack.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_addressscope_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_addressscope_v2.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -39,9 +42,6 @@ address-scope.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_addressscope_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_addressscope_v2.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.AddressScope.ip_version">
 <code class="sig-name descname">ip_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.AddressScope.ip_version" title="Permalink to this definition">¶</a></dt>
@@ -109,9 +109,6 @@ address-scope.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_addressscope_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_addressscope_v2.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -154,72 +151,72 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.networking.AwaitableGetAddressScopeResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">AwaitableGetAddressScopeResult</code><span class="sig-paren">(</span><em class="sig-param">ip_version=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">shared=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.AwaitableGetAddressScopeResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">AwaitableGetAddressScopeResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">ip_version=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">shared=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.AwaitableGetAddressScopeResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_openstack.networking.AwaitableGetFloatingIpResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">AwaitableGetFloatingIpResult</code><span class="sig-paren">(</span><em class="sig-param">address=None</em>, <em class="sig-param">all_tags=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">dns_domain=None</em>, <em class="sig-param">dns_name=None</em>, <em class="sig-param">fixed_ip=None</em>, <em class="sig-param">pool=None</em>, <em class="sig-param">port_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tenant_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.AwaitableGetFloatingIpResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">AwaitableGetFloatingIpResult</code><span class="sig-paren">(</span><em class="sig-param">address=None</em>, <em class="sig-param">all_tags=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">dns_domain=None</em>, <em class="sig-param">dns_name=None</em>, <em class="sig-param">fixed_ip=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">pool=None</em>, <em class="sig-param">port_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tenant_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.AwaitableGetFloatingIpResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_openstack.networking.AwaitableGetNetworkResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">AwaitableGetNetworkResult</code><span class="sig-paren">(</span><em class="sig-param">admin_state_up=None</em>, <em class="sig-param">all_tags=None</em>, <em class="sig-param">availability_zone_hints=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">dns_domain=None</em>, <em class="sig-param">external=None</em>, <em class="sig-param">matching_subnet_cidr=None</em>, <em class="sig-param">mtu=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">shared=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tenant_id=None</em>, <em class="sig-param">transparent_vlan=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.AwaitableGetNetworkResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">AwaitableGetNetworkResult</code><span class="sig-paren">(</span><em class="sig-param">admin_state_up=None</em>, <em class="sig-param">all_tags=None</em>, <em class="sig-param">availability_zone_hints=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">dns_domain=None</em>, <em class="sig-param">external=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">matching_subnet_cidr=None</em>, <em class="sig-param">mtu=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">shared=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tenant_id=None</em>, <em class="sig-param">transparent_vlan=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.AwaitableGetNetworkResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_openstack.networking.AwaitableGetPortIdsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">AwaitableGetPortIdsResult</code><span class="sig-paren">(</span><em class="sig-param">admin_state_up=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">device_id=None</em>, <em class="sig-param">device_owner=None</em>, <em class="sig-param">dns_name=None</em>, <em class="sig-param">fixed_ip=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">mac_address=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_id=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">security_group_ids=None</em>, <em class="sig-param">sort_direction=None</em>, <em class="sig-param">sort_key=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tenant_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.AwaitableGetPortIdsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">AwaitableGetPortIdsResult</code><span class="sig-paren">(</span><em class="sig-param">admin_state_up=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">device_id=None</em>, <em class="sig-param">device_owner=None</em>, <em class="sig-param">dns_name=None</em>, <em class="sig-param">fixed_ip=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">mac_address=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_id=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">security_group_ids=None</em>, <em class="sig-param">sort_direction=None</em>, <em class="sig-param">sort_key=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tenant_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.AwaitableGetPortIdsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_openstack.networking.AwaitableGetPortResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">AwaitableGetPortResult</code><span class="sig-paren">(</span><em class="sig-param">admin_state_up=None</em>, <em class="sig-param">all_fixed_ips=None</em>, <em class="sig-param">all_security_group_ids=None</em>, <em class="sig-param">all_tags=None</em>, <em class="sig-param">allowed_address_pairs=None</em>, <em class="sig-param">bindings=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">device_id=None</em>, <em class="sig-param">device_owner=None</em>, <em class="sig-param">dns_assignments=None</em>, <em class="sig-param">dns_name=None</em>, <em class="sig-param">extra_dhcp_options=None</em>, <em class="sig-param">fixed_ip=None</em>, <em class="sig-param">mac_address=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_id=None</em>, <em class="sig-param">port_id=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">security_group_ids=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tenant_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.AwaitableGetPortResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">AwaitableGetPortResult</code><span class="sig-paren">(</span><em class="sig-param">admin_state_up=None</em>, <em class="sig-param">all_fixed_ips=None</em>, <em class="sig-param">all_security_group_ids=None</em>, <em class="sig-param">all_tags=None</em>, <em class="sig-param">allowed_address_pairs=None</em>, <em class="sig-param">bindings=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">device_id=None</em>, <em class="sig-param">device_owner=None</em>, <em class="sig-param">dns_assignments=None</em>, <em class="sig-param">dns_name=None</em>, <em class="sig-param">extra_dhcp_options=None</em>, <em class="sig-param">fixed_ip=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">mac_address=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_id=None</em>, <em class="sig-param">port_id=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">security_group_ids=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tenant_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.AwaitableGetPortResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_openstack.networking.AwaitableGetQosBandwidthLimitRuleResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">AwaitableGetQosBandwidthLimitRuleResult</code><span class="sig-paren">(</span><em class="sig-param">direction=None</em>, <em class="sig-param">max_burst_kbps=None</em>, <em class="sig-param">max_kbps=None</em>, <em class="sig-param">qos_policy_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.AwaitableGetQosBandwidthLimitRuleResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">AwaitableGetQosBandwidthLimitRuleResult</code><span class="sig-paren">(</span><em class="sig-param">direction=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">max_burst_kbps=None</em>, <em class="sig-param">max_kbps=None</em>, <em class="sig-param">qos_policy_id=None</em>, <em class="sig-param">region=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.AwaitableGetQosBandwidthLimitRuleResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_openstack.networking.AwaitableGetQosDscpMarkingRuleResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">AwaitableGetQosDscpMarkingRuleResult</code><span class="sig-paren">(</span><em class="sig-param">dscp_mark=None</em>, <em class="sig-param">qos_policy_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.AwaitableGetQosDscpMarkingRuleResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">AwaitableGetQosDscpMarkingRuleResult</code><span class="sig-paren">(</span><em class="sig-param">dscp_mark=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">qos_policy_id=None</em>, <em class="sig-param">region=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.AwaitableGetQosDscpMarkingRuleResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_openstack.networking.AwaitableGetQosMinimumBandwidthRuleResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">AwaitableGetQosMinimumBandwidthRuleResult</code><span class="sig-paren">(</span><em class="sig-param">direction=None</em>, <em class="sig-param">min_kbps=None</em>, <em class="sig-param">qos_policy_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.AwaitableGetQosMinimumBandwidthRuleResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">AwaitableGetQosMinimumBandwidthRuleResult</code><span class="sig-paren">(</span><em class="sig-param">direction=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">min_kbps=None</em>, <em class="sig-param">qos_policy_id=None</em>, <em class="sig-param">region=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.AwaitableGetQosMinimumBandwidthRuleResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_openstack.networking.AwaitableGetQosPolicyResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">AwaitableGetQosPolicyResult</code><span class="sig-paren">(</span><em class="sig-param">all_tags=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">is_default=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">revision_number=None</em>, <em class="sig-param">shared=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">updated_at=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.AwaitableGetQosPolicyResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">AwaitableGetQosPolicyResult</code><span class="sig-paren">(</span><em class="sig-param">all_tags=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">is_default=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">revision_number=None</em>, <em class="sig-param">shared=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">updated_at=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.AwaitableGetQosPolicyResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_openstack.networking.AwaitableGetRouterResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">AwaitableGetRouterResult</code><span class="sig-paren">(</span><em class="sig-param">admin_state_up=None</em>, <em class="sig-param">all_tags=None</em>, <em class="sig-param">availability_zone_hints=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">distributed=None</em>, <em class="sig-param">enable_snat=None</em>, <em class="sig-param">external_fixed_ips=None</em>, <em class="sig-param">external_network_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">router_id=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tenant_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.AwaitableGetRouterResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">AwaitableGetRouterResult</code><span class="sig-paren">(</span><em class="sig-param">admin_state_up=None</em>, <em class="sig-param">all_tags=None</em>, <em class="sig-param">availability_zone_hints=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">distributed=None</em>, <em class="sig-param">enable_snat=None</em>, <em class="sig-param">external_fixed_ips=None</em>, <em class="sig-param">external_network_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">router_id=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tenant_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.AwaitableGetRouterResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_openstack.networking.AwaitableGetSecGroupResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">AwaitableGetSecGroupResult</code><span class="sig-paren">(</span><em class="sig-param">all_tags=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">secgroup_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tenant_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.AwaitableGetSecGroupResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">AwaitableGetSecGroupResult</code><span class="sig-paren">(</span><em class="sig-param">all_tags=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">secgroup_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tenant_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.AwaitableGetSecGroupResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_openstack.networking.AwaitableGetSubnetPoolResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">AwaitableGetSubnetPoolResult</code><span class="sig-paren">(</span><em class="sig-param">address_scope_id=None</em>, <em class="sig-param">all_tags=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">default_prefixlen=None</em>, <em class="sig-param">default_quota=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">ip_version=None</em>, <em class="sig-param">is_default=None</em>, <em class="sig-param">max_prefixlen=None</em>, <em class="sig-param">min_prefixlen=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">prefixes=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">revision_number=None</em>, <em class="sig-param">shared=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">updated_at=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.AwaitableGetSubnetPoolResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">AwaitableGetSubnetPoolResult</code><span class="sig-paren">(</span><em class="sig-param">address_scope_id=None</em>, <em class="sig-param">all_tags=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">default_prefixlen=None</em>, <em class="sig-param">default_quota=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ip_version=None</em>, <em class="sig-param">is_default=None</em>, <em class="sig-param">max_prefixlen=None</em>, <em class="sig-param">min_prefixlen=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">prefixes=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">revision_number=None</em>, <em class="sig-param">shared=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">updated_at=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.AwaitableGetSubnetPoolResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_openstack.networking.AwaitableGetSubnetResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">AwaitableGetSubnetResult</code><span class="sig-paren">(</span><em class="sig-param">all_tags=None</em>, <em class="sig-param">allocation_pools=None</em>, <em class="sig-param">cidr=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">dhcp_disabled=None</em>, <em class="sig-param">dhcp_enabled=None</em>, <em class="sig-param">dns_nameservers=None</em>, <em class="sig-param">enable_dhcp=None</em>, <em class="sig-param">gateway_ip=None</em>, <em class="sig-param">host_routes=None</em>, <em class="sig-param">ip_version=None</em>, <em class="sig-param">ipv6_address_mode=None</em>, <em class="sig-param">ipv6_ra_mode=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">subnet_id=None</em>, <em class="sig-param">subnetpool_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tenant_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.AwaitableGetSubnetResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">AwaitableGetSubnetResult</code><span class="sig-paren">(</span><em class="sig-param">all_tags=None</em>, <em class="sig-param">allocation_pools=None</em>, <em class="sig-param">cidr=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">dhcp_disabled=None</em>, <em class="sig-param">dhcp_enabled=None</em>, <em class="sig-param">dns_nameservers=None</em>, <em class="sig-param">enable_dhcp=None</em>, <em class="sig-param">gateway_ip=None</em>, <em class="sig-param">host_routes=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ip_version=None</em>, <em class="sig-param">ipv6_address_mode=None</em>, <em class="sig-param">ipv6_ra_mode=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">subnet_id=None</em>, <em class="sig-param">subnetpool_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tenant_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.AwaitableGetSubnetResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_openstack.networking.AwaitableGetTrunkResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">AwaitableGetTrunkResult</code><span class="sig-paren">(</span><em class="sig-param">admin_state_up=None</em>, <em class="sig-param">all_tags=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">port_id=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">sub_ports=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">trunk_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.AwaitableGetTrunkResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">AwaitableGetTrunkResult</code><span class="sig-paren">(</span><em class="sig-param">admin_state_up=None</em>, <em class="sig-param">all_tags=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">port_id=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">sub_ports=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">trunk_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.AwaitableGetTrunkResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -229,6 +226,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 that can be used for load balancers.
 These are similar to Nova (compute) floating IP resources,
 but only compute floating IPs can be used with compute instances.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_floatingip_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_floatingip_v2.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -269,9 +269,6 @@ may or may not have a different address)</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_floatingip_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_floatingip_v2.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.FloatingIp.address">
 <code class="sig-name descname">address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.FloatingIp.address" title="Permalink to this definition">¶</a></dt>
@@ -419,9 +416,6 @@ may or may not have a different address)</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_floatingip_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_floatingip_v2.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -468,6 +462,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Associates a floating IP to a port. This is useful for situations
 where you have a pre-allocated floating IP or are unable to use the
 <code class="docutils literal notranslate"><span class="pre">networking.FloatingIp</span></code> resource to create a floating IP.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_floatingip_associate_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_floatingip_associate_v2.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -484,9 +481,6 @@ floating IP (which may or may not have a different address).</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_floatingip_associate_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_floatingip_associate_v2.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.FloatingIpAssociate.floating_ip">
 <code class="sig-name descname">floating_ip</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.FloatingIpAssociate.floating_ip" title="Permalink to this definition">¶</a></dt>
@@ -532,9 +526,6 @@ floating IP (which may or may not have a different address).</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_floatingip_associate_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_floatingip_associate_v2.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -577,8 +568,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.networking.GetAddressScopeResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">GetAddressScopeResult</code><span class="sig-paren">(</span><em class="sig-param">ip_version=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">shared=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.GetAddressScopeResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">GetAddressScopeResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">ip_version=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">shared=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.GetAddressScopeResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getAddressScope.</p>
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.GetAddressScopeResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.GetAddressScopeResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.GetAddressScopeResult.ip_version">
 <code class="sig-name descname">ip_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.GetAddressScopeResult.ip_version" title="Permalink to this definition">¶</a></dt>
@@ -603,17 +600,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>See Argument Reference above.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_openstack.networking.GetAddressScopeResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.GetAddressScopeResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_openstack.networking.GetFloatingIpResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">GetFloatingIpResult</code><span class="sig-paren">(</span><em class="sig-param">address=None</em>, <em class="sig-param">all_tags=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">dns_domain=None</em>, <em class="sig-param">dns_name=None</em>, <em class="sig-param">fixed_ip=None</em>, <em class="sig-param">pool=None</em>, <em class="sig-param">port_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tenant_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.GetFloatingIpResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">GetFloatingIpResult</code><span class="sig-paren">(</span><em class="sig-param">address=None</em>, <em class="sig-param">all_tags=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">dns_domain=None</em>, <em class="sig-param">dns_name=None</em>, <em class="sig-param">fixed_ip=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">pool=None</em>, <em class="sig-param">port_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tenant_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.GetFloatingIpResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getFloatingIp.</p>
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.GetFloatingIpResult.all_tags">
@@ -645,7 +636,7 @@ is enabled.</p>
 
 <dl class="class">
 <dt id="pulumi_openstack.networking.GetNetworkResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">GetNetworkResult</code><span class="sig-paren">(</span><em class="sig-param">admin_state_up=None</em>, <em class="sig-param">all_tags=None</em>, <em class="sig-param">availability_zone_hints=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">dns_domain=None</em>, <em class="sig-param">external=None</em>, <em class="sig-param">matching_subnet_cidr=None</em>, <em class="sig-param">mtu=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">shared=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tenant_id=None</em>, <em class="sig-param">transparent_vlan=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.GetNetworkResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">GetNetworkResult</code><span class="sig-paren">(</span><em class="sig-param">admin_state_up=None</em>, <em class="sig-param">all_tags=None</em>, <em class="sig-param">availability_zone_hints=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">dns_domain=None</em>, <em class="sig-param">external=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">matching_subnet_cidr=None</em>, <em class="sig-param">mtu=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">shared=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tenant_id=None</em>, <em class="sig-param">transparent_vlan=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.GetNetworkResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getNetwork.</p>
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.GetNetworkResult.admin_state_up">
@@ -685,6 +676,12 @@ is enabled</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_openstack.networking.GetNetworkResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.GetNetworkResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_openstack.networking.GetNetworkResult.mtu">
 <code class="sig-name descname">mtu</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.GetNetworkResult.mtu" title="Permalink to this definition">¶</a></dt>
 <dd><p>See Argument Reference above.</p>
@@ -715,17 +712,11 @@ tenant or not.</p>
 <dd><p>See Argument Reference above.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_openstack.networking.GetNetworkResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.GetNetworkResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_openstack.networking.GetPortIdsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">GetPortIdsResult</code><span class="sig-paren">(</span><em class="sig-param">admin_state_up=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">device_id=None</em>, <em class="sig-param">device_owner=None</em>, <em class="sig-param">dns_name=None</em>, <em class="sig-param">fixed_ip=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">mac_address=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_id=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">security_group_ids=None</em>, <em class="sig-param">sort_direction=None</em>, <em class="sig-param">sort_key=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tenant_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.GetPortIdsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">GetPortIdsResult</code><span class="sig-paren">(</span><em class="sig-param">admin_state_up=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">device_id=None</em>, <em class="sig-param">device_owner=None</em>, <em class="sig-param">dns_name=None</em>, <em class="sig-param">fixed_ip=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">mac_address=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_id=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">security_group_ids=None</em>, <em class="sig-param">sort_direction=None</em>, <em class="sig-param">sort_key=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tenant_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.GetPortIdsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getPortIds.</p>
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.GetPortIdsResult.id">
@@ -737,7 +728,7 @@ tenant or not.</p>
 
 <dl class="class">
 <dt id="pulumi_openstack.networking.GetPortResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">GetPortResult</code><span class="sig-paren">(</span><em class="sig-param">admin_state_up=None</em>, <em class="sig-param">all_fixed_ips=None</em>, <em class="sig-param">all_security_group_ids=None</em>, <em class="sig-param">all_tags=None</em>, <em class="sig-param">allowed_address_pairs=None</em>, <em class="sig-param">bindings=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">device_id=None</em>, <em class="sig-param">device_owner=None</em>, <em class="sig-param">dns_assignments=None</em>, <em class="sig-param">dns_name=None</em>, <em class="sig-param">extra_dhcp_options=None</em>, <em class="sig-param">fixed_ip=None</em>, <em class="sig-param">mac_address=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_id=None</em>, <em class="sig-param">port_id=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">security_group_ids=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tenant_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.GetPortResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">GetPortResult</code><span class="sig-paren">(</span><em class="sig-param">admin_state_up=None</em>, <em class="sig-param">all_fixed_ips=None</em>, <em class="sig-param">all_security_group_ids=None</em>, <em class="sig-param">all_tags=None</em>, <em class="sig-param">allowed_address_pairs=None</em>, <em class="sig-param">bindings=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">device_id=None</em>, <em class="sig-param">device_owner=None</em>, <em class="sig-param">dns_assignments=None</em>, <em class="sig-param">dns_name=None</em>, <em class="sig-param">extra_dhcp_options=None</em>, <em class="sig-param">fixed_ip=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">mac_address=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_id=None</em>, <em class="sig-param">port_id=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">security_group_ids=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tenant_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.GetPortResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getPort.</p>
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.GetPortResult.admin_state_up">
@@ -816,6 +807,12 @@ The structure is described below.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_openstack.networking.GetPortResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.GetPortResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_openstack.networking.GetPortResult.mac_address">
 <code class="sig-name descname">mac_address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.GetPortResult.mac_address" title="Permalink to this definition">¶</a></dt>
 <dd><p>The additional MAC address.</p>
@@ -851,22 +848,22 @@ The structure is described below.</p>
 <dd><p>See Argument Reference above.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_openstack.networking.GetPortResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.GetPortResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_openstack.networking.GetQosBandwidthLimitRuleResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">GetQosBandwidthLimitRuleResult</code><span class="sig-paren">(</span><em class="sig-param">direction=None</em>, <em class="sig-param">max_burst_kbps=None</em>, <em class="sig-param">max_kbps=None</em>, <em class="sig-param">qos_policy_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.GetQosBandwidthLimitRuleResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">GetQosBandwidthLimitRuleResult</code><span class="sig-paren">(</span><em class="sig-param">direction=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">max_burst_kbps=None</em>, <em class="sig-param">max_kbps=None</em>, <em class="sig-param">qos_policy_id=None</em>, <em class="sig-param">region=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.GetQosBandwidthLimitRuleResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getQosBandwidthLimitRule.</p>
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.GetQosBandwidthLimitRuleResult.direction">
 <code class="sig-name descname">direction</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.GetQosBandwidthLimitRuleResult.direction" title="Permalink to this definition">¶</a></dt>
 <dd><p>See Argument Reference above.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.GetQosBandwidthLimitRuleResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.GetQosBandwidthLimitRuleResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -893,22 +890,22 @@ The structure is described below.</p>
 <dd><p>See Argument Reference above.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_openstack.networking.GetQosBandwidthLimitRuleResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.GetQosBandwidthLimitRuleResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_openstack.networking.GetQosDscpMarkingRuleResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">GetQosDscpMarkingRuleResult</code><span class="sig-paren">(</span><em class="sig-param">dscp_mark=None</em>, <em class="sig-param">qos_policy_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.GetQosDscpMarkingRuleResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">GetQosDscpMarkingRuleResult</code><span class="sig-paren">(</span><em class="sig-param">dscp_mark=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">qos_policy_id=None</em>, <em class="sig-param">region=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.GetQosDscpMarkingRuleResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getQosDscpMarkingRule.</p>
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.GetQosDscpMarkingRuleResult.dscp_mark">
 <code class="sig-name descname">dscp_mark</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.GetQosDscpMarkingRuleResult.dscp_mark" title="Permalink to this definition">¶</a></dt>
 <dd><p>See Argument Reference above.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.GetQosDscpMarkingRuleResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.GetQosDscpMarkingRuleResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -923,18 +920,18 @@ The structure is described below.</p>
 <dd><p>See Argument Reference above.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_openstack.networking.GetQosDscpMarkingRuleResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.GetQosDscpMarkingRuleResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_openstack.networking.GetQosMinimumBandwidthRuleResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">GetQosMinimumBandwidthRuleResult</code><span class="sig-paren">(</span><em class="sig-param">direction=None</em>, <em class="sig-param">min_kbps=None</em>, <em class="sig-param">qos_policy_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.GetQosMinimumBandwidthRuleResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">GetQosMinimumBandwidthRuleResult</code><span class="sig-paren">(</span><em class="sig-param">direction=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">min_kbps=None</em>, <em class="sig-param">qos_policy_id=None</em>, <em class="sig-param">region=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.GetQosMinimumBandwidthRuleResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getQosMinimumBandwidthRule.</p>
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.GetQosMinimumBandwidthRuleResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.GetQosMinimumBandwidthRuleResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.GetQosMinimumBandwidthRuleResult.min_kbps">
 <code class="sig-name descname">min_kbps</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.GetQosMinimumBandwidthRuleResult.min_kbps" title="Permalink to this definition">¶</a></dt>
@@ -953,17 +950,11 @@ The structure is described below.</p>
 <dd><p>See Argument Reference above.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_openstack.networking.GetQosMinimumBandwidthRuleResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.GetQosMinimumBandwidthRuleResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_openstack.networking.GetQosPolicyResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">GetQosPolicyResult</code><span class="sig-paren">(</span><em class="sig-param">all_tags=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">is_default=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">revision_number=None</em>, <em class="sig-param">shared=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">updated_at=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.GetQosPolicyResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">GetQosPolicyResult</code><span class="sig-paren">(</span><em class="sig-param">all_tags=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">is_default=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">revision_number=None</em>, <em class="sig-param">shared=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">updated_at=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.GetQosPolicyResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getQosPolicy.</p>
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.GetQosPolicyResult.all_tags">
@@ -981,6 +972,12 @@ The structure is described below.</p>
 <dt id="pulumi_openstack.networking.GetQosPolicyResult.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.GetQosPolicyResult.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>See Argument Reference above.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.GetQosPolicyResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.GetQosPolicyResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1019,17 +1016,11 @@ The structure is described below.</p>
 <dd><p>The time at which QoS policy was created.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_openstack.networking.GetQosPolicyResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.GetQosPolicyResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_openstack.networking.GetRouterResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">GetRouterResult</code><span class="sig-paren">(</span><em class="sig-param">admin_state_up=None</em>, <em class="sig-param">all_tags=None</em>, <em class="sig-param">availability_zone_hints=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">distributed=None</em>, <em class="sig-param">enable_snat=None</em>, <em class="sig-param">external_fixed_ips=None</em>, <em class="sig-param">external_network_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">router_id=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tenant_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.GetRouterResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">GetRouterResult</code><span class="sig-paren">(</span><em class="sig-param">admin_state_up=None</em>, <em class="sig-param">all_tags=None</em>, <em class="sig-param">availability_zone_hints=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">distributed=None</em>, <em class="sig-param">enable_snat=None</em>, <em class="sig-param">external_fixed_ips=None</em>, <em class="sig-param">external_network_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">router_id=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tenant_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.GetRouterResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getRouter.</p>
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.GetRouterResult.all_tags">
@@ -1071,12 +1062,18 @@ The structure is described below.</p>
 
 <dl class="class">
 <dt id="pulumi_openstack.networking.GetSecGroupResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">GetSecGroupResult</code><span class="sig-paren">(</span><em class="sig-param">all_tags=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">secgroup_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tenant_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.GetSecGroupResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">GetSecGroupResult</code><span class="sig-paren">(</span><em class="sig-param">all_tags=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">secgroup_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tenant_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.GetSecGroupResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getSecGroup.</p>
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.GetSecGroupResult.all_tags">
 <code class="sig-name descname">all_tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.GetSecGroupResult.all_tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>The set of string tags applied on the security group.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.GetSecGroupResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.GetSecGroupResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1094,17 +1091,11 @@ The structure is described below.</p>
 <dd><p>See Argument Reference above.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_openstack.networking.GetSecGroupResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.GetSecGroupResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_openstack.networking.GetSubnetPoolResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">GetSubnetPoolResult</code><span class="sig-paren">(</span><em class="sig-param">address_scope_id=None</em>, <em class="sig-param">all_tags=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">default_prefixlen=None</em>, <em class="sig-param">default_quota=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">ip_version=None</em>, <em class="sig-param">is_default=None</em>, <em class="sig-param">max_prefixlen=None</em>, <em class="sig-param">min_prefixlen=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">prefixes=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">revision_number=None</em>, <em class="sig-param">shared=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">updated_at=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.GetSubnetPoolResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">GetSubnetPoolResult</code><span class="sig-paren">(</span><em class="sig-param">address_scope_id=None</em>, <em class="sig-param">all_tags=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">default_prefixlen=None</em>, <em class="sig-param">default_quota=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ip_version=None</em>, <em class="sig-param">is_default=None</em>, <em class="sig-param">max_prefixlen=None</em>, <em class="sig-param">min_prefixlen=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">prefixes=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">revision_number=None</em>, <em class="sig-param">shared=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">updated_at=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.GetSubnetPoolResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getSubnetPool.</p>
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.GetSubnetPoolResult.address_scope_id">
@@ -1143,6 +1134,12 @@ The structure is described below.</p>
 <dt id="pulumi_openstack.networking.GetSubnetPoolResult.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.GetSubnetPoolResult.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>See Argument Reference above.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.GetSubnetPoolResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.GetSubnetPoolResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1205,17 +1202,11 @@ The structure is described below.</p>
 <dd><p>The time at which subnetpool was created.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_openstack.networking.GetSubnetPoolResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.GetSubnetPoolResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_openstack.networking.GetSubnetResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">GetSubnetResult</code><span class="sig-paren">(</span><em class="sig-param">all_tags=None</em>, <em class="sig-param">allocation_pools=None</em>, <em class="sig-param">cidr=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">dhcp_disabled=None</em>, <em class="sig-param">dhcp_enabled=None</em>, <em class="sig-param">dns_nameservers=None</em>, <em class="sig-param">enable_dhcp=None</em>, <em class="sig-param">gateway_ip=None</em>, <em class="sig-param">host_routes=None</em>, <em class="sig-param">ip_version=None</em>, <em class="sig-param">ipv6_address_mode=None</em>, <em class="sig-param">ipv6_ra_mode=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">subnet_id=None</em>, <em class="sig-param">subnetpool_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tenant_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.GetSubnetResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">GetSubnetResult</code><span class="sig-paren">(</span><em class="sig-param">all_tags=None</em>, <em class="sig-param">allocation_pools=None</em>, <em class="sig-param">cidr=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">dhcp_disabled=None</em>, <em class="sig-param">dhcp_enabled=None</em>, <em class="sig-param">dns_nameservers=None</em>, <em class="sig-param">enable_dhcp=None</em>, <em class="sig-param">gateway_ip=None</em>, <em class="sig-param">host_routes=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ip_version=None</em>, <em class="sig-param">ipv6_address_mode=None</em>, <em class="sig-param">ipv6_ra_mode=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">subnet_id=None</em>, <em class="sig-param">subnetpool_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tenant_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.GetSubnetResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getSubnet.</p>
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.GetSubnetResult.all_tags">
@@ -1248,27 +1239,33 @@ The structure is described below.</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pulumi_openstack.networking.GetSubnetResult.region">
-<code class="sig-name descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.GetSubnetResult.region" title="Permalink to this definition">¶</a></dt>
-<dd><p>See Argument Reference above.</p>
-</dd></dl>
-
-<dl class="attribute">
 <dt id="pulumi_openstack.networking.GetSubnetResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.GetSubnetResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.GetSubnetResult.region">
+<code class="sig-name descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.GetSubnetResult.region" title="Permalink to this definition">¶</a></dt>
+<dd><p>See Argument Reference above.</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_openstack.networking.GetTrunkResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">GetTrunkResult</code><span class="sig-paren">(</span><em class="sig-param">admin_state_up=None</em>, <em class="sig-param">all_tags=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">port_id=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">sub_ports=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">trunk_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.GetTrunkResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">GetTrunkResult</code><span class="sig-paren">(</span><em class="sig-param">admin_state_up=None</em>, <em class="sig-param">all_tags=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">port_id=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">sub_ports=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">trunk_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.GetTrunkResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getTrunk.</p>
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.GetTrunkResult.all_tags">
 <code class="sig-name descname">all_tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.GetTrunkResult.all_tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>The set of string tags applied on the trunk.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.GetTrunkResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.GetTrunkResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1284,18 +1281,15 @@ The structure is described below.</p>
 described below.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_openstack.networking.GetTrunkResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.GetTrunkResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_openstack.networking.Network">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">Network</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">admin_state_up=None</em>, <em class="sig-param">availability_zone_hints=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">dns_domain=None</em>, <em class="sig-param">external=None</em>, <em class="sig-param">mtu=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">port_security_enabled=None</em>, <em class="sig-param">qos_policy_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">segments=None</em>, <em class="sig-param">shared=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tenant_id=None</em>, <em class="sig-param">transparent_vlan=None</em>, <em class="sig-param">value_specs=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.Network" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 Neutron network resource within OpenStack.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_network_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_network_v2.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1349,13 +1343,10 @@ network.</p></li>
 </dl>
 <p>The <strong>segments</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">networkType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">network_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">physicalNetwork</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">segmentationId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">segmentation_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_network_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_network_v2.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.Network.admin_state_up">
 <code class="sig-name descname">admin_state_up</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.Network.admin_state_up" title="Permalink to this definition">¶</a></dt>
@@ -1449,9 +1440,9 @@ network.</p>
 <code class="sig-name descname">segments</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.Network.segments" title="Permalink to this definition">¶</a></dt>
 <dd><p>An array of one or more provider segment objects.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">networkType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">network_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">physicalNetwork</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">segmentationId</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">segmentation_id</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
 </ul>
 </dd></dl>
 
@@ -1552,13 +1543,10 @@ network.</p></li>
 </dl>
 <p>The <strong>segments</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">networkType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">network_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">physicalNetwork</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">segmentationId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">segmentation_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_network_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_network_v2.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1606,6 +1594,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>There are some notes to consider when connecting Instances to networks using
 Ports. Please see the <code class="docutils literal notranslate"><span class="pre">compute.Instance</span></code> documentation for further
 documentation.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_port_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_port_v2.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1694,9 +1685,6 @@ updates the <code class="docutils literal notranslate"><span class="pre">name</s
 <li><p><code class="docutils literal notranslate"><span class="pre">ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_port_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_port_v2.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.Port.admin_state_up">
 <code class="sig-name descname">admin_state_up</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.Port.admin_state_up" title="Permalink to this definition">¶</a></dt>
@@ -2006,9 +1994,6 @@ updates the <code class="docutils literal notranslate"><span class="pre">name</s
 <li><p><code class="docutils literal notranslate"><span class="pre">ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_port_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_port_v2.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2052,14 +2037,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_openstack.networking.PortSecGroupAssociate">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">PortSecGroupAssociate</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">enforce=None</em>, <em class="sig-param">port_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">security_group_ids=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.PortSecGroupAssociate" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a PortSecGroupAssociate resource with the given unique name, props, and options.</p>
+<dd><p>Create a PortSecGroupAssociate resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[bool] enforce: Whether to replace or append the list of security</p>
+<blockquote>
+<div><p>groups, specified in the <code class="docutils literal notranslate"><span class="pre">security_group_ids</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>enforce</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to replace or append the list of security
-groups, specified in the <code class="docutils literal notranslate"><span class="pre">security_group_ids</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>port_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An UUID of the port to apply security groups to.</p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 networking client.
 A networking client is needed to manage a port. If omitted, the
@@ -2071,9 +2058,6 @@ opposed to how they are configured with the Compute Instance).</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_port_secgroup_associate_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_port_secgroup_associate_v2.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.PortSecGroupAssociate.all_security_group_ids">
 <code class="sig-name descname">all_security_group_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.PortSecGroupAssociate.all_security_group_ids" title="Permalink to this definition">¶</a></dt>
@@ -2137,9 +2121,6 @@ opposed to how they are configured with the Compute Instance).</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_port_secgroup_associate_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_port_secgroup_associate_v2.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2184,6 +2165,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.networking.QosBandwidthLimitRule">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">QosBandwidthLimitRule</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">direction=None</em>, <em class="sig-param">max_burst_kbps=None</em>, <em class="sig-param">max_kbps=None</em>, <em class="sig-param">qos_policy_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.QosBandwidthLimitRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 Neutron QoS bandwidth limit rule resource within OpenStack.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_qos_bandwidth_limit_rule_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_qos_bandwidth_limit_rule_v2.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2202,9 +2186,6 @@ A Networking client is needed to create a Neutron QoS bandwidth limit rule. If o
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_qos_bandwidth_limit_rule_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_qos_bandwidth_limit_rule_v2.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.QosBandwidthLimitRule.direction">
 <code class="sig-name descname">direction</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.QosBandwidthLimitRule.direction" title="Permalink to this definition">¶</a></dt>
@@ -2264,9 +2245,6 @@ A Networking client is needed to create a Neutron QoS bandwidth limit rule. If o
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_qos_bandwidth_limit_rule_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_qos_bandwidth_limit_rule_v2.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2311,6 +2289,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.networking.QosDscpMarkingRule">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">QosDscpMarkingRule</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">dscp_mark=None</em>, <em class="sig-param">qos_policy_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.QosDscpMarkingRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 Neutron QoS DSCP marking rule resource within OpenStack.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_qos_dscp_marking_rule_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_qos_dscp_marking_rule_v2.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2325,9 +2306,6 @@ A Networking client is needed to create a Neutron QoS DSCP marking rule. If omit
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_qos_dscp_marking_rule_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_qos_dscp_marking_rule_v2.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.QosDscpMarkingRule.dscp_mark">
 <code class="sig-name descname">dscp_mark</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.QosDscpMarkingRule.dscp_mark" title="Permalink to this definition">¶</a></dt>
@@ -2369,9 +2347,6 @@ A Networking client is needed to create a Neutron QoS DSCP marking rule. If omit
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_qos_dscp_marking_rule_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_qos_dscp_marking_rule_v2.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2416,6 +2391,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.networking.QosMinimumBandwidthRule">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">QosMinimumBandwidthRule</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">direction=None</em>, <em class="sig-param">min_kbps=None</em>, <em class="sig-param">qos_policy_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.QosMinimumBandwidthRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 Neutron QoS minimum bandwidth rule resource within OpenStack.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_qos_minimum_bandwidth_rule_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_qos_minimum_bandwidth_rule_v2.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2432,9 +2410,6 @@ A Networking client is needed to create a Neutron QoS minimum bandwidth rule. If
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_qos_minimum_bandwidth_rule_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_qos_minimum_bandwidth_rule_v2.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.QosMinimumBandwidthRule.direction">
 <code class="sig-name descname">direction</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.QosMinimumBandwidthRule.direction" title="Permalink to this definition">¶</a></dt>
@@ -2485,9 +2460,6 @@ A Networking client is needed to create a Neutron QoS minimum bandwidth rule. If
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_qos_minimum_bandwidth_rule_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_qos_minimum_bandwidth_rule_v2.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2532,6 +2504,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.networking.QosPolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">QosPolicy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">is_default=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">shared=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">value_specs=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.QosPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 Neutron QoS policy resource within OpenStack.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_qos_policy_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_qos_policy_v2.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2558,9 +2533,6 @@ QoS policy.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_qos_policy_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_qos_policy_v2.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.QosPolicy.all_tags">
 <code class="sig-name descname">all_tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.QosPolicy.all_tags" title="Permalink to this definition">¶</a></dt>
@@ -2681,9 +2653,6 @@ QoS policy.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_qos_policy_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_qos_policy_v2.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2734,6 +2703,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt><strong>Note:</strong> This resource has a no-op deletion so no actual actions will be done against the OpenStack API </dt><dd><p>in case of delete call.</p>
 </dd>
 </dl>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_quota_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_quota_v2.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2766,9 +2736,6 @@ Changing this updates the existing quota.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_quota_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_quota_v2.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.QuotaV2.floatingip">
 <code class="sig-name descname">floatingip</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.QuotaV2.floatingip" title="Permalink to this definition">¶</a></dt>
@@ -2884,9 +2851,6 @@ Changing this updates the existing quota.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_quota_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_quota_v2.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2941,6 +2905,9 @@ rather than all projects, use the <code class="docutils literal notranslate"><sp
 If a network is marked as external during creation, it now implicitly creates
 a wildcard RBAC policy granting everyone access to preserve previous behavior
 before this feature was added.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_rbac_policy_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_rbac_policy_v2.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2962,9 +2929,6 @@ will be enforced.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_rbac_policy_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_rbac_policy_v2.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.RbacPolicyV2.action">
 <code class="sig-name descname">action</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.RbacPolicyV2.action" title="Permalink to this definition">¶</a></dt>
@@ -3030,9 +2994,6 @@ will be enforced.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_rbac_policy_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_rbac_policy_v2.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -3077,6 +3038,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.networking.Router">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">Router</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">admin_state_up=None</em>, <em class="sig-param">availability_zone_hints=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">distributed=None</em>, <em class="sig-param">enable_snat=None</em>, <em class="sig-param">external_fixed_ips=None</em>, <em class="sig-param">external_gateway=None</em>, <em class="sig-param">external_network_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tenant_id=None</em>, <em class="sig-param">value_specs=None</em>, <em class="sig-param">vendor_options=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.Router" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 router resource within OpenStack.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_router_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_router_v2.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3134,9 +3098,6 @@ Supported options are described below.</p></li>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">setRouterGatewayAfterCreate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_router_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_router_v2.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.Router.admin_state_up">
 <code class="sig-name descname">admin_state_up</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.Router.admin_state_up" title="Permalink to this definition">¶</a></dt>
@@ -3326,9 +3287,6 @@ Supported options are described below.</p></li>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">setRouterGatewayAfterCreate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_router_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_router_v2.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -3373,6 +3331,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.networking.RouterInterface">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">RouterInterface</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">port_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">router_id=None</em>, <em class="sig-param">subnet_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.RouterInterface" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 router interface resource within OpenStack.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_router_interface_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_router_interface_v2.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3391,9 +3352,6 @@ this creates a new router interface.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_router_interface_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_router_interface_v2.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.RouterInterface.port_id">
 <code class="sig-name descname">port_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.RouterInterface.port_id" title="Permalink to this definition">¶</a></dt>
@@ -3448,9 +3406,6 @@ this creates a new router interface.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_router_interface_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_router_interface_v2.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -3498,6 +3453,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>The <code class="docutils literal notranslate"><span class="pre">next_hop</span></code> IP address must be directly reachable from the router at the <code class="docutils literal notranslate"><span class="pre">networking.RouterRoute</span></code>
 resource creation time.  You can ensure that by explicitly specifying a dependency on the <code class="docutils literal notranslate"><span class="pre">networking.RouterInterface</span></code>
 resource that connects the next hop to the router, as in the example above.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_router_route_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_router_route_v2.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3516,9 +3474,6 @@ this creates a new routing entry.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_router_route_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_router_route_v2.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.RouterRoute.destination_cidr">
 <code class="sig-name descname">destination_cidr</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.RouterRoute.destination_cidr" title="Permalink to this definition">¶</a></dt>
@@ -3573,9 +3528,6 @@ this creates a new routing entry.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_router_route_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_router_route_v2.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -3622,6 +3574,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages a V2 neutron security group resource within OpenStack.
 Unlike Nova security groups, neutron separates the group from the rules
 and also allows an admin to target a specific tenant_id.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_secgroup_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_secgroup_v2.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3643,9 +3598,6 @@ security group.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_secgroup_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_secgroup_v2.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.SecGroup.all_tags">
 <code class="sig-name descname">all_tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.SecGroup.all_tags" title="Permalink to this definition">¶</a></dt>
@@ -3725,9 +3677,6 @@ security group.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_secgroup_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_secgroup_v2.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -3774,6 +3723,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages a V2 neutron security group rule resource within OpenStack.
 Unlike Nova security groups, neutron separates the group from the rules
 and also allows an admin to target a specific tenant_id.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_secgroup_rule_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_secgroup_rule_v2.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3838,9 +3790,6 @@ security group rule.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_secgroup_rule_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_secgroup_rule_v2.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.SecGroupRule.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.SecGroupRule.description" title="Permalink to this definition">¶</a></dt>
@@ -4016,9 +3965,6 @@ security group rule.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_secgroup_rule_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_secgroup_rule_v2.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -4063,6 +4009,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.networking.Subnet">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">Subnet</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allocation_pools=None</em>, <em class="sig-param">allocation_pools_collection=None</em>, <em class="sig-param">cidr=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">dns_nameservers=None</em>, <em class="sig-param">enable_dhcp=None</em>, <em class="sig-param">gateway_ip=None</em>, <em class="sig-param">host_routes=None</em>, <em class="sig-param">ip_version=None</em>, <em class="sig-param">ipv6_address_mode=None</em>, <em class="sig-param">ipv6_ra_mode=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_id=None</em>, <em class="sig-param">no_gateway=None</em>, <em class="sig-param">prefix_length=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">subnetpool_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tenant_id=None</em>, <em class="sig-param">value_specs=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.Subnet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 Neutron subnet resource within OpenStack.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_subnet_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_subnet_v2.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4140,9 +4089,6 @@ create a subnet for another tenant. Changing this creates a new subnet.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">destination_cidr</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">next_hop</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_subnet_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_subnet_v2.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.Subnet.all_tags">
 <code class="sig-name descname">all_tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.Subnet.all_tags" title="Permalink to this definition">¶</a></dt>
@@ -4401,9 +4347,6 @@ create a subnet for another tenant. Changing this creates a new subnet.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">destination_cidr</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">next_hop</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_subnet_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_subnet_v2.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -4448,6 +4391,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.networking.SubnetPool">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">SubnetPool</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">address_scope_id=None</em>, <em class="sig-param">default_prefixlen=None</em>, <em class="sig-param">default_quota=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">ip_version=None</em>, <em class="sig-param">is_default=None</em>, <em class="sig-param">max_prefixlen=None</em>, <em class="sig-param">min_prefixlen=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">prefixes=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">shared=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">value_specs=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.SubnetPool" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 Neutron subnetpool resource within OpenStack.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_subnetpool_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_subnetpool_v2.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4497,9 +4443,6 @@ subnetpool.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_subnetpool_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_subnetpool_v2.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.SubnetPool.address_scope_id">
 <code class="sig-name descname">address_scope_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.SubnetPool.address_scope_id" title="Permalink to this definition">¶</a></dt>
@@ -4701,9 +4644,6 @@ subnetpool.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_subnetpool_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_subnetpool_v2.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -4748,6 +4688,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.networking.SubnetRoute">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">SubnetRoute</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">destination_cidr=None</em>, <em class="sig-param">next_hop=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">subnet_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.SubnetRoute" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a routing entry on a OpenStack V2 subnet.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_subnet_route_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_subnet_route_v2.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4766,9 +4709,6 @@ this creates a new routing entry.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_subnet_route_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_subnet_route_v2.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.SubnetRoute.destination_cidr">
 <code class="sig-name descname">destination_cidr</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.SubnetRoute.destination_cidr" title="Permalink to this definition">¶</a></dt>
@@ -4823,9 +4763,6 @@ this creates a new routing entry.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_subnet_route_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_subnet_route_v2.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -4870,6 +4807,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.networking.Trunk">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">Trunk</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">admin_state_up=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">port_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">sub_ports=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tenant_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.Trunk" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a networking V2 trunk resource within OpenStack.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_trunk_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_trunk_v2.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4902,12 +4842,9 @@ to create a trunk on behalf of another tenant. Changing this creates a new trunk
 <li><p><code class="docutils literal notranslate"><span class="pre">port_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the port to be used as the parent port of the
 trunk. This is the port that should be used as the compute instance network
 port. Changing this creates a new trunk.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">segmentationId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">segmentation_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">segmentationType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_trunk_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_trunk_v2.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.Trunk.admin_state_up">
 <code class="sig-name descname">admin_state_up</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.Trunk.admin_state_up" title="Permalink to this definition">¶</a></dt>
@@ -4963,7 +4900,7 @@ The structure of each subport is described below.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">port_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the port to be used as the parent port of the
 trunk. This is the port that should be used as the compute instance network
 port. Changing this creates a new trunk.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">segmentationId</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">segmentation_id</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">segmentationType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
 </dd></dl>
@@ -5021,12 +4958,9 @@ to create a trunk on behalf of another tenant. Changing this creates a new trunk
 <li><p><code class="docutils literal notranslate"><span class="pre">port_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the port to be used as the parent port of the
 trunk. This is the port that should be used as the compute instance network
 port. Changing this creates a new trunk.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">segmentationId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">segmentation_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">segmentationType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_trunk_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_trunk_v2.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -5071,6 +5005,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.networking.get_address_scope">
 <code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">get_address_scope</code><span class="sig-paren">(</span><em class="sig-param">ip_version=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">shared=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.get_address_scope" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an available OpenStack address-scope.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_addressscope_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_addressscope_v2.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5085,15 +5022,15 @@ all projects.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_addressscope_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_addressscope_v2.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_openstack.networking.get_floating_ip">
 <code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">get_floating_ip</code><span class="sig-paren">(</span><em class="sig-param">address=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">fixed_ip=None</em>, <em class="sig-param">pool=None</em>, <em class="sig-param">port_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tenant_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.get_floating_ip" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an available OpenStack floating IP.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_floatingip_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_floatingip_v2.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5111,15 +5048,15 @@ A Neutron client is needed to retrieve floating IP ids. If omitted, the
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_floatingip_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_floatingip_v2.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_openstack.networking.get_network">
 <code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">get_network</code><span class="sig-paren">(</span><em class="sig-param">description=None</em>, <em class="sig-param">external=None</em>, <em class="sig-param">matching_subnet_cidr=None</em>, <em class="sig-param">mtu=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tenant_id=None</em>, <em class="sig-param">transparent_vlan=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.get_network" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an available OpenStack network.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_network_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_network_v2.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5141,15 +5078,15 @@ network.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_network_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_network_v2.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_openstack.networking.get_port">
 <code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">get_port</code><span class="sig-paren">(</span><em class="sig-param">admin_state_up=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">device_id=None</em>, <em class="sig-param">device_owner=None</em>, <em class="sig-param">dns_name=None</em>, <em class="sig-param">fixed_ip=None</em>, <em class="sig-param">mac_address=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_id=None</em>, <em class="sig-param">port_id=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">security_group_ids=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tenant_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.get_port" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an available OpenStack port.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_port_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_port_v2.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5174,9 +5111,6 @@ A Neutron client is needed to retrieve port ids. If omitted, the
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_port_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_port_v2.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -5184,6 +5118,9 @@ A Neutron client is needed to retrieve port ids. If omitted, the
 <code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">get_port_ids</code><span class="sig-paren">(</span><em class="sig-param">admin_state_up=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">device_id=None</em>, <em class="sig-param">device_owner=None</em>, <em class="sig-param">dns_name=None</em>, <em class="sig-param">fixed_ip=None</em>, <em class="sig-param">mac_address=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_id=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">security_group_ids=None</em>, <em class="sig-param">sort_direction=None</em>, <em class="sig-param">sort_key=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tenant_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.get_port_ids" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get a list of Openstack Port IDs matching the
 specified criteria.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_port_ids_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_port_ids_v2.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5208,15 +5145,15 @@ Defaults to none.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_port_ids_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_port_ids_v2.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_openstack.networking.get_qos_bandwidth_limit_rule">
 <code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">get_qos_bandwidth_limit_rule</code><span class="sig-paren">(</span><em class="sig-param">max_burst_kbps=None</em>, <em class="sig-param">max_kbps=None</em>, <em class="sig-param">qos_policy_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.get_qos_bandwidth_limit_rule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an available OpenStack QoS bandwidth limit rule.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_qos_bandwidth_limit_rule_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_qos_bandwidth_limit_rule_v2.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5229,15 +5166,15 @@ A Networking client is needed to create a Neutron QoS bandwidth limit rule. If o
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_qos_bandwidth_limit_rule_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_qos_bandwidth_limit_rule_v2.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_openstack.networking.get_qos_dscp_marking_rule">
 <code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">get_qos_dscp_marking_rule</code><span class="sig-paren">(</span><em class="sig-param">dscp_mark=None</em>, <em class="sig-param">qos_policy_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.get_qos_dscp_marking_rule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an available OpenStack QoS DSCP marking rule.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_qos_dscp_marking_rule_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_qos_dscp_marking_rule_v2.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5249,15 +5186,15 @@ A Networking client is needed to create a Neutron QoS DSCP marking rule. If omit
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_qos_dscp_marking_rule_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_qos_dscp_marking_rule_v2.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_openstack.networking.get_qos_minimum_bandwidth_rule">
 <code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">get_qos_minimum_bandwidth_rule</code><span class="sig-paren">(</span><em class="sig-param">direction=None</em>, <em class="sig-param">min_kbps=None</em>, <em class="sig-param">qos_policy_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.get_qos_minimum_bandwidth_rule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an available OpenStack QoS minimum bandwidth rule.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_qos_minimum_bandwidth_rule_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_qos_minimum_bandwidth_rule_v2.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5269,15 +5206,15 @@ A Networking client is needed to create a Neutron QoS minimum bandwidth rule. If
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_qos_minimum_bandwidth_rule_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_qos_minimum_bandwidth_rule_v2.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_openstack.networking.get_qos_policy">
 <code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">get_qos_policy</code><span class="sig-paren">(</span><em class="sig-param">description=None</em>, <em class="sig-param">is_default=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">shared=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.get_qos_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an available OpenStack QoS policy.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_qos_policy_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_qos_policy_v2.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5293,15 +5230,15 @@ A Networking client is needed to retrieve a QoS policy ID. If omitted, the
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_qos_policy_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_qos_policy_v2.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_openstack.networking.get_router">
 <code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">get_router</code><span class="sig-paren">(</span><em class="sig-param">admin_state_up=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">distributed=None</em>, <em class="sig-param">enable_snat=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">router_id=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tenant_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.get_router" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an available OpenStack router.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_router_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_router_v2.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5319,15 +5256,15 @@ A Neutron client is needed to retrieve router ids. If omitted, the
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_router_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_router_v2.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_openstack.networking.get_sec_group">
 <code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">get_sec_group</code><span class="sig-paren">(</span><em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">secgroup_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tenant_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.get_sec_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an available OpenStack security group.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_secgroup_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_secgroup_v2.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5342,15 +5279,15 @@ A Neutron client is needed to retrieve security groups ids. If omitted, the
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_secgroup_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_secgroup_v2.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_openstack.networking.get_subnet">
 <code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">get_subnet</code><span class="sig-paren">(</span><em class="sig-param">cidr=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">dhcp_disabled=None</em>, <em class="sig-param">dhcp_enabled=None</em>, <em class="sig-param">gateway_ip=None</em>, <em class="sig-param">ip_version=None</em>, <em class="sig-param">ipv6_address_mode=None</em>, <em class="sig-param">ipv6_ra_mode=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">subnet_id=None</em>, <em class="sig-param">subnetpool_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tenant_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.get_subnet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an available OpenStack subnet.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_subnet_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_subnet_v2.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5376,15 +5313,15 @@ A Neutron client is needed to retrieve subnet ids. If omitted, the
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_subnet_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_subnet_v2.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_openstack.networking.get_subnet_pool">
 <code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">get_subnet_pool</code><span class="sig-paren">(</span><em class="sig-param">address_scope_id=None</em>, <em class="sig-param">default_prefixlen=None</em>, <em class="sig-param">default_quota=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">ip_version=None</em>, <em class="sig-param">is_default=None</em>, <em class="sig-param">max_prefixlen=None</em>, <em class="sig-param">min_prefixlen=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">shared=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.get_subnet_pool" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an available OpenStack subnetpool.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_subnetpool_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_subnetpool_v2.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5409,15 +5346,15 @@ A Networking client is needed to retrieve a subnetpool id. If omitted, the
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_subnetpool_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_subnetpool_v2.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_openstack.networking.get_trunk">
 <code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">get_trunk</code><span class="sig-paren">(</span><em class="sig-param">admin_state_up=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">port_id=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">trunk_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.get_trunk" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an available OpenStack trunk.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_trunk_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_trunk_v2.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5435,9 +5372,6 @@ A Neutron client is needed to retrieve trunk ids. If omitted, the
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_trunk_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_trunk_v2.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

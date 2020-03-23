@@ -15,23 +15,29 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_openstack.keymanager"></span><dl class="class">
 <dt id="pulumi_openstack.keymanager.AwaitableGetContainerResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.keymanager.</code><code class="sig-name descname">AwaitableGetContainerResult</code><span class="sig-paren">(</span><em class="sig-param">consumers=None</em>, <em class="sig-param">container_ref=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">creator_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">secret_refs=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">updated_at=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.keymanager.AwaitableGetContainerResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.keymanager.</code><code class="sig-name descname">AwaitableGetContainerResult</code><span class="sig-paren">(</span><em class="sig-param">acls=None</em>, <em class="sig-param">consumers=None</em>, <em class="sig-param">container_ref=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">creator_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">secret_refs=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">updated_at=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.keymanager.AwaitableGetContainerResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_openstack.keymanager.AwaitableGetSecretResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.keymanager.</code><code class="sig-name descname">AwaitableGetSecretResult</code><span class="sig-paren">(</span><em class="sig-param">acl_only=None</em>, <em class="sig-param">algorithm=None</em>, <em class="sig-param">bit_length=None</em>, <em class="sig-param">content_types=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">created_at_filter=None</em>, <em class="sig-param">creator_id=None</em>, <em class="sig-param">expiration=None</em>, <em class="sig-param">expiration_filter=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">mode=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">payload=None</em>, <em class="sig-param">payload_content_encoding=None</em>, <em class="sig-param">payload_content_type=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">secret_ref=None</em>, <em class="sig-param">secret_type=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">updated_at=None</em>, <em class="sig-param">updated_at_filter=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.keymanager.AwaitableGetSecretResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.keymanager.</code><code class="sig-name descname">AwaitableGetSecretResult</code><span class="sig-paren">(</span><em class="sig-param">acl_only=None</em>, <em class="sig-param">acls=None</em>, <em class="sig-param">algorithm=None</em>, <em class="sig-param">bit_length=None</em>, <em class="sig-param">content_types=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">created_at_filter=None</em>, <em class="sig-param">creator_id=None</em>, <em class="sig-param">expiration=None</em>, <em class="sig-param">expiration_filter=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">mode=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">payload=None</em>, <em class="sig-param">payload_content_encoding=None</em>, <em class="sig-param">payload_content_type=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">secret_ref=None</em>, <em class="sig-param">secret_type=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">updated_at=None</em>, <em class="sig-param">updated_at_filter=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.keymanager.AwaitableGetSecretResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_openstack.keymanager.ContainerV1">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.keymanager.</code><code class="sig-name descname">ContainerV1</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">secret_refs=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.keymanager.ContainerV1" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.keymanager.</code><code class="sig-name descname">ContainerV1</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">acl=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">secret_refs=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.keymanager.ContainerV1" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V1 Barbican container resource within OpenStack.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/keymanager_container_v1.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/keymanager_container_v1.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>acl</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Allows to control an access to a container. Currently only
+the <code class="docutils literal notranslate"><span class="pre">read</span></code> operation is supported. If not specified, the container is
+accessible project wide. The <code class="docutils literal notranslate"><span class="pre">read</span></code> structure is described below.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human-readable name for the Container. Does not have
 to be unique.</p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V1 KeyManager client.
@@ -44,15 +50,41 @@ below.</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>acl</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">read</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">created_at</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The date the container was created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">projectAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">updated_at</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The date the container was last updated.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">users</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+</ul>
+</li>
+</ul>
 <p>The <strong>secret_refs</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Human-readable name for the Container. Does not have
 to be unique.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">secret_ref</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/keymanager_container_v1.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/keymanager_container_v1.html.markdown</a>.</p>
-</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_openstack.keymanager.ContainerV1.acl">
+<code class="sig-name descname">acl</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.keymanager.ContainerV1.acl" title="Permalink to this definition">¶</a></dt>
+<dd><p>Allows to control an access to a container. Currently only
+the <code class="docutils literal notranslate"><span class="pre">read</span></code> operation is supported. If not specified, the container is
+accessible project wide. The <code class="docutils literal notranslate"><span class="pre">read</span></code> structure is described below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">read</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">created_at</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The date the container was created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">projectAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">updated_at</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The date the container was last updated.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">users</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+</ul>
+</li>
+</ul>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_openstack.keymanager.ContainerV1.consumers">
 <code class="sig-name descname">consumers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.keymanager.ContainerV1.consumers" title="Permalink to this definition">¶</a></dt>
@@ -130,7 +162,7 @@ to be unique.</p></li>
 
 <dl class="method">
 <dt id="pulumi_openstack.keymanager.ContainerV1.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">consumers=None</em>, <em class="sig-param">container_ref=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">creator_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">secret_refs=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">updated_at=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.keymanager.ContainerV1.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">acl=None</em>, <em class="sig-param">consumers=None</em>, <em class="sig-param">container_ref=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">creator_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">secret_refs=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">updated_at=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.keymanager.ContainerV1.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ContainerV1 resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -139,6 +171,9 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>acl</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Allows to control an access to a container. Currently only
+the <code class="docutils literal notranslate"><span class="pre">read</span></code> operation is supported. If not specified, the container is
+accessible project wide. The <code class="docutils literal notranslate"><span class="pre">read</span></code> structure is described below.</p></li>
 <li><p><strong>consumers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of the container consumers. The structure is described below.</p></li>
 <li><p><strong>container_ref</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The container reference / where to find the container.</p></li>
 <li><p><strong>created_at</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The date the container was created.</p></li>
@@ -157,6 +192,17 @@ below.</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>acl</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">read</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">created_at</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The date the container was created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">projectAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">updated_at</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The date the container was last updated.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">users</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+</ul>
+</li>
+</ul>
 <p>The <strong>consumers</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Human-readable name for the Container. Does not have
@@ -169,9 +215,6 @@ to be unique.</p></li>
 to be unique.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">secret_ref</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/keymanager_container_v1.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/keymanager_container_v1.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -214,8 +257,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.keymanager.GetContainerResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.keymanager.</code><code class="sig-name descname">GetContainerResult</code><span class="sig-paren">(</span><em class="sig-param">consumers=None</em>, <em class="sig-param">container_ref=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">creator_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">secret_refs=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">updated_at=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.keymanager.GetContainerResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.keymanager.</code><code class="sig-name descname">GetContainerResult</code><span class="sig-paren">(</span><em class="sig-param">acls=None</em>, <em class="sig-param">consumers=None</em>, <em class="sig-param">container_ref=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">creator_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">secret_refs=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">updated_at=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.keymanager.GetContainerResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getContainer.</p>
+<dl class="attribute">
+<dt id="pulumi_openstack.keymanager.GetContainerResult.acls">
+<code class="sig-name descname">acls</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.keymanager.GetContainerResult.acls" title="Permalink to this definition">¶</a></dt>
+<dd><p>The list of ACLs assigned to a container. The <code class="docutils literal notranslate"><span class="pre">read</span></code> structure is
+described below.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_openstack.keymanager.GetContainerResult.consumers">
 <code class="sig-name descname">consumers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.keymanager.GetContainerResult.consumers" title="Permalink to this definition">¶</a></dt>
@@ -232,13 +282,19 @@ below.</p>
 <dl class="attribute">
 <dt id="pulumi_openstack.keymanager.GetContainerResult.created_at">
 <code class="sig-name descname">created_at</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.keymanager.GetContainerResult.created_at" title="Permalink to this definition">¶</a></dt>
-<dd><p>The date the container was created.</p>
+<dd><p>The date the container ACL was created.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_openstack.keymanager.GetContainerResult.creator_id">
 <code class="sig-name descname">creator_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.keymanager.GetContainerResult.creator_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The creator of the container.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.keymanager.GetContainerResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.keymanager.GetContainerResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -275,25 +331,25 @@ structure is described below.</p>
 <dl class="attribute">
 <dt id="pulumi_openstack.keymanager.GetContainerResult.updated_at">
 <code class="sig-name descname">updated_at</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.keymanager.GetContainerResult.updated_at" title="Permalink to this definition">¶</a></dt>
-<dd><p>The date the container was last updated.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_openstack.keymanager.GetContainerResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.keymanager.GetContainerResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The date the container ACL was last updated.</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_openstack.keymanager.GetSecretResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.keymanager.</code><code class="sig-name descname">GetSecretResult</code><span class="sig-paren">(</span><em class="sig-param">acl_only=None</em>, <em class="sig-param">algorithm=None</em>, <em class="sig-param">bit_length=None</em>, <em class="sig-param">content_types=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">created_at_filter=None</em>, <em class="sig-param">creator_id=None</em>, <em class="sig-param">expiration=None</em>, <em class="sig-param">expiration_filter=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">mode=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">payload=None</em>, <em class="sig-param">payload_content_encoding=None</em>, <em class="sig-param">payload_content_type=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">secret_ref=None</em>, <em class="sig-param">secret_type=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">updated_at=None</em>, <em class="sig-param">updated_at_filter=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.keymanager.GetSecretResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.keymanager.</code><code class="sig-name descname">GetSecretResult</code><span class="sig-paren">(</span><em class="sig-param">acl_only=None</em>, <em class="sig-param">acls=None</em>, <em class="sig-param">algorithm=None</em>, <em class="sig-param">bit_length=None</em>, <em class="sig-param">content_types=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">created_at_filter=None</em>, <em class="sig-param">creator_id=None</em>, <em class="sig-param">expiration=None</em>, <em class="sig-param">expiration_filter=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">mode=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">payload=None</em>, <em class="sig-param">payload_content_encoding=None</em>, <em class="sig-param">payload_content_type=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">secret_ref=None</em>, <em class="sig-param">secret_type=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">updated_at=None</em>, <em class="sig-param">updated_at_filter=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.keymanager.GetSecretResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getSecret.</p>
 <dl class="attribute">
 <dt id="pulumi_openstack.keymanager.GetSecretResult.acl_only">
 <code class="sig-name descname">acl_only</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.keymanager.GetSecretResult.acl_only" title="Permalink to this definition">¶</a></dt>
 <dd><p>See Argument Reference above.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.keymanager.GetSecretResult.acls">
+<code class="sig-name descname">acls</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.keymanager.GetSecretResult.acls" title="Permalink to this definition">¶</a></dt>
+<dd><p>The list of ACLs assigned to a secret. The <code class="docutils literal notranslate"><span class="pre">read</span></code> structure is described below.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -317,7 +373,7 @@ structure is described below.</p>
 <dl class="attribute">
 <dt id="pulumi_openstack.keymanager.GetSecretResult.created_at">
 <code class="sig-name descname">created_at</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.keymanager.GetSecretResult.created_at" title="Permalink to this definition">¶</a></dt>
-<dd><p>The date the secret was created.</p>
+<dd><p>The date the secret ACL was created.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -342,6 +398,12 @@ structure is described below.</p>
 <dt id="pulumi_openstack.keymanager.GetSecretResult.expiration_filter">
 <code class="sig-name descname">expiration_filter</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.keymanager.GetSecretResult.expiration_filter" title="Permalink to this definition">¶</a></dt>
 <dd><p>See Argument Reference above.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.keymanager.GetSecretResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.keymanager.GetSecretResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -408,7 +470,7 @@ explicitly and implicitly added.</p>
 <dl class="attribute">
 <dt id="pulumi_openstack.keymanager.GetSecretResult.updated_at">
 <code class="sig-name descname">updated_at</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.keymanager.GetSecretResult.updated_at" title="Permalink to this definition">¶</a></dt>
-<dd><p>The date the secret was last updated.</p>
+<dd><p>The date the secret ACL was last updated.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -417,23 +479,22 @@ explicitly and implicitly added.</p>
 <dd><p>See Argument Reference above.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_openstack.keymanager.GetSecretResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.keymanager.GetSecretResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_openstack.keymanager.SecretV1">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.keymanager.</code><code class="sig-name descname">SecretV1</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">algorithm=None</em>, <em class="sig-param">bit_length=None</em>, <em class="sig-param">expiration=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">mode=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">payload=None</em>, <em class="sig-param">payload_content_encoding=None</em>, <em class="sig-param">payload_content_type=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">secret_type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.keymanager.SecretV1" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a SecretV1 resource with the given unique name, props, and options.</p>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.keymanager.</code><code class="sig-name descname">SecretV1</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">acl=None</em>, <em class="sig-param">algorithm=None</em>, <em class="sig-param">bit_length=None</em>, <em class="sig-param">expiration=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">mode=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">payload=None</em>, <em class="sig-param">payload_content_encoding=None</em>, <em class="sig-param">payload_content_type=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">secret_type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.keymanager.SecretV1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a SecretV1 resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[dict] acl: Allows to control an access to a secret. Currently only the</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">read</span></code> operation is supported. If not specified, the secret is accessible
+project wide.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>algorithm</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Metadata provided by a user or system for informational purposes.</p></li>
 <li><p><strong>bit_length</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Metadata provided by a user or system for informational purposes.</p></li>
 <li><p><strong>expiration</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The expiration time of the secret in the RFC3339 timestamp format (e.g. <code class="docutils literal notranslate"><span class="pre">2019-03-09T12:58:49Z</span></code>). If omitted, a secret will never expire. Changing this creates a new secret.</p></li>
@@ -452,9 +513,35 @@ V1 secret.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/keymanager_secret_v1.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/keymanager_secret_v1.html.markdown</a>.</p>
-</div></blockquote>
+<p>The <strong>acl</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">read</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">created_at</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The date the secret was created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">projectAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">updated_at</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The date the secret was last updated.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">users</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+</ul>
+</li>
+</ul>
+<dl class="attribute">
+<dt id="pulumi_openstack.keymanager.SecretV1.acl">
+<code class="sig-name descname">acl</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.keymanager.SecretV1.acl" title="Permalink to this definition">¶</a></dt>
+<dd><p>Allows to control an access to a secret. Currently only the
+<code class="docutils literal notranslate"><span class="pre">read</span></code> operation is supported. If not specified, the secret is accessible
+project wide.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">read</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">created_at</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The date the secret was created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">projectAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">updated_at</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The date the secret was last updated.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">users</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+</ul>
+</li>
+</ul>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_openstack.keymanager.SecretV1.algorithm">
 <code class="sig-name descname">algorithm</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.keymanager.SecretV1.algorithm" title="Permalink to this definition">¶</a></dt>
@@ -570,7 +657,7 @@ V1 secret.</p>
 
 <dl class="method">
 <dt id="pulumi_openstack.keymanager.SecretV1.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">algorithm=None</em>, <em class="sig-param">all_metadata=None</em>, <em class="sig-param">bit_length=None</em>, <em class="sig-param">content_types=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">creator_id=None</em>, <em class="sig-param">expiration=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">mode=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">payload=None</em>, <em class="sig-param">payload_content_encoding=None</em>, <em class="sig-param">payload_content_type=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">secret_ref=None</em>, <em class="sig-param">secret_type=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">updated_at=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.keymanager.SecretV1.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">acl=None</em>, <em class="sig-param">algorithm=None</em>, <em class="sig-param">all_metadata=None</em>, <em class="sig-param">bit_length=None</em>, <em class="sig-param">content_types=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">creator_id=None</em>, <em class="sig-param">expiration=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">mode=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">payload=None</em>, <em class="sig-param">payload_content_encoding=None</em>, <em class="sig-param">payload_content_type=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">secret_ref=None</em>, <em class="sig-param">secret_type=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">updated_at=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.keymanager.SecretV1.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing SecretV1 resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -579,6 +666,9 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>acl</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Allows to control an access to a secret. Currently only the
+<code class="docutils literal notranslate"><span class="pre">read</span></code> operation is supported. If not specified, the secret is accessible
+project wide.</p></li>
 <li><p><strong>algorithm</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Metadata provided by a user or system for informational purposes.</p></li>
 <li><p><strong>all_metadata</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The map of metadata, assigned on the secret, which has been
 explicitly and implicitly added.</p></li>
@@ -606,9 +696,17 @@ V1 secret.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/keymanager_secret_v1.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/keymanager_secret_v1.html.markdown</a>.</p>
-</div></blockquote>
+<p>The <strong>acl</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">read</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">created_at</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The date the secret was created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">projectAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">updated_at</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The date the secret was last updated.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">users</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+</ul>
+</li>
+</ul>
 </dd></dl>
 
 <dl class="method">
@@ -653,6 +751,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.keymanager.get_container">
 <code class="sig-prename descclassname">pulumi_openstack.keymanager.</code><code class="sig-name descname">get_container</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.keymanager.get_container" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an available Barbican container.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/keymanager_container_v1.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/keymanager_container_v1.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -663,9 +764,6 @@ argument of the provider is used.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/keymanager_container_v1.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/keymanager_container_v1.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -699,9 +797,6 @@ detail.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/keymanager_secret_v1.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/keymanager_secret_v1.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

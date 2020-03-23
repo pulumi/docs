@@ -15,12 +15,12 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_openstack.images"></span><dl class="class">
 <dt id="pulumi_openstack.images.AwaitableGetImageResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.images.</code><code class="sig-name descname">AwaitableGetImageResult</code><span class="sig-paren">(</span><em class="sig-param">checksum=None</em>, <em class="sig-param">container_format=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">disk_format=None</em>, <em class="sig-param">file=None</em>, <em class="sig-param">member_status=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">min_disk_gb=None</em>, <em class="sig-param">min_ram_mb=None</em>, <em class="sig-param">most_recent=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">owner=None</em>, <em class="sig-param">properties=None</em>, <em class="sig-param">protected=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">schema=None</em>, <em class="sig-param">size_bytes=None</em>, <em class="sig-param">size_max=None</em>, <em class="sig-param">size_min=None</em>, <em class="sig-param">sort_direction=None</em>, <em class="sig-param">sort_key=None</em>, <em class="sig-param">tag=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">updated_at=None</em>, <em class="sig-param">visibility=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.images.AwaitableGetImageResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.images.</code><code class="sig-name descname">AwaitableGetImageResult</code><span class="sig-paren">(</span><em class="sig-param">checksum=None</em>, <em class="sig-param">container_format=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">disk_format=None</em>, <em class="sig-param">file=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">member_status=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">min_disk_gb=None</em>, <em class="sig-param">min_ram_mb=None</em>, <em class="sig-param">most_recent=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">owner=None</em>, <em class="sig-param">properties=None</em>, <em class="sig-param">protected=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">schema=None</em>, <em class="sig-param">size_bytes=None</em>, <em class="sig-param">size_max=None</em>, <em class="sig-param">size_min=None</em>, <em class="sig-param">sort_direction=None</em>, <em class="sig-param">sort_key=None</em>, <em class="sig-param">tag=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">updated_at=None</em>, <em class="sig-param">visibility=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.images.AwaitableGetImageResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_openstack.images.GetImageResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.images.</code><code class="sig-name descname">GetImageResult</code><span class="sig-paren">(</span><em class="sig-param">checksum=None</em>, <em class="sig-param">container_format=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">disk_format=None</em>, <em class="sig-param">file=None</em>, <em class="sig-param">member_status=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">min_disk_gb=None</em>, <em class="sig-param">min_ram_mb=None</em>, <em class="sig-param">most_recent=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">owner=None</em>, <em class="sig-param">properties=None</em>, <em class="sig-param">protected=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">schema=None</em>, <em class="sig-param">size_bytes=None</em>, <em class="sig-param">size_max=None</em>, <em class="sig-param">size_min=None</em>, <em class="sig-param">sort_direction=None</em>, <em class="sig-param">sort_key=None</em>, <em class="sig-param">tag=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">updated_at=None</em>, <em class="sig-param">visibility=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.images.GetImageResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.images.</code><code class="sig-name descname">GetImageResult</code><span class="sig-paren">(</span><em class="sig-param">checksum=None</em>, <em class="sig-param">container_format=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">disk_format=None</em>, <em class="sig-param">file=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">member_status=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">min_disk_gb=None</em>, <em class="sig-param">min_ram_mb=None</em>, <em class="sig-param">most_recent=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">owner=None</em>, <em class="sig-param">properties=None</em>, <em class="sig-param">protected=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">schema=None</em>, <em class="sig-param">size_bytes=None</em>, <em class="sig-param">size_max=None</em>, <em class="sig-param">size_min=None</em>, <em class="sig-param">sort_direction=None</em>, <em class="sig-param">sort_key=None</em>, <em class="sig-param">tag=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">updated_at=None</em>, <em class="sig-param">visibility=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.images.GetImageResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getImage.</p>
 <dl class="attribute">
 <dt id="pulumi_openstack.images.GetImageResult.checksum">
@@ -43,6 +43,12 @@ anything, please consult the source <a class="reference external" href="https://
 <code class="sig-name descname">file</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.images.GetImageResult.file" title="Permalink to this definition">¶</a></dt>
 <dd><p>the trailing path after the glance endpoint that represent the
 location of the image or the path to retrieve it.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.images.GetImageResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.images.GetImageResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -102,12 +108,6 @@ the image or image</p>
 <dd><p>The date the image was last updated.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_openstack.images.GetImageResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.images.GetImageResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
@@ -123,6 +123,9 @@ this resource will automatically reconcile these with the user-provided
 properties.</p>
 <p>In addition, the <code class="docutils literal notranslate"><span class="pre">direct_url</span></code> property is also automatically reconciled if the
 Image Service set it.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/images_image_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/images_image_v2.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -163,9 +166,6 @@ visibility depends upon the configuration of the OpenStack cloud.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/images_image_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/images_image_v2.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.images.Image.checksum">
 <code class="sig-name descname">checksum</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.images.Image.checksum" title="Permalink to this definition">¶</a></dt>
@@ -391,9 +391,6 @@ visibility depends upon the configuration of the OpenStack cloud.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/images_image_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/images_image_v2.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -439,6 +436,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.images.</code><code class="sig-name descname">ImageAccess</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">member_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.images.ImageAccess" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages members for the shared OpenStack Glance V2 Image within the source
 project, which owns the Image.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/images_image_access_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/images_image_access_v2.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -455,9 +455,6 @@ force the member proposal acceptance. Can either be <code class="docutils litera
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/images_image_access_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/images_image_access_v2.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.images.ImageAccess.created_at">
 <code class="sig-name descname">created_at</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.images.ImageAccess.created_at" title="Permalink to this definition">¶</a></dt>
@@ -529,9 +526,6 @@ force the member proposal acceptance. Can either be <code class="docutils litera
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/images_image_access_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/images_image_access_v2.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -577,6 +571,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.images.</code><code class="sig-name descname">ImageAccessAccept</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">member_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.images.ImageAccessAccept" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages memberships status for the shared OpenStack Glance V2 Image within the
 destination project, which has a member proposal.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/images_image_access_accept_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/images_image_access_accept_v2.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -594,9 +591,6 @@ membership.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/images_image_access_accept_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/images_image_access_accept_v2.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.images.ImageAccessAccept.created_at">
 <code class="sig-name descname">created_at</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.images.ImageAccessAccept.created_at" title="Permalink to this definition">¶</a></dt>
@@ -670,9 +664,6 @@ membership.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/images_image_access_accept_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/images_image_access_accept_v2.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -717,6 +708,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.images.get_image">
 <code class="sig-prename descclassname">pulumi_openstack.images.</code><code class="sig-name descname">get_image</code><span class="sig-paren">(</span><em class="sig-param">member_status=None</em>, <em class="sig-param">most_recent=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">owner=None</em>, <em class="sig-param">properties=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">size_max=None</em>, <em class="sig-param">size_min=None</em>, <em class="sig-param">sort_direction=None</em>, <em class="sig-param">sort_key=None</em>, <em class="sig-param">tag=None</em>, <em class="sig-param">visibility=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.images.get_image" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an available OpenStack image.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/images_image_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/images_image_v2.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -742,9 +736,6 @@ is used.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/images_image_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/images_image_v2.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

@@ -15,12 +15,12 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_openstack.containerinfra"></span><dl class="class">
 <dt id="pulumi_openstack.containerinfra.AwaitableGetClusterResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.containerinfra.</code><code class="sig-name descname">AwaitableGetClusterResult</code><span class="sig-paren">(</span><em class="sig-param">api_address=None</em>, <em class="sig-param">cluster_template_id=None</em>, <em class="sig-param">coe_version=None</em>, <em class="sig-param">container_version=None</em>, <em class="sig-param">create_timeout=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">discovery_url=None</em>, <em class="sig-param">docker_volume_size=None</em>, <em class="sig-param">fixed_network=None</em>, <em class="sig-param">fixed_subnet=None</em>, <em class="sig-param">flavor=None</em>, <em class="sig-param">keypair=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">master_addresses=None</em>, <em class="sig-param">master_count=None</em>, <em class="sig-param">master_flavor=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">node_addresses=None</em>, <em class="sig-param">node_count=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">stack_id=None</em>, <em class="sig-param">updated_at=None</em>, <em class="sig-param">user_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.containerinfra.AwaitableGetClusterResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.containerinfra.</code><code class="sig-name descname">AwaitableGetClusterResult</code><span class="sig-paren">(</span><em class="sig-param">api_address=None</em>, <em class="sig-param">cluster_template_id=None</em>, <em class="sig-param">coe_version=None</em>, <em class="sig-param">container_version=None</em>, <em class="sig-param">create_timeout=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">discovery_url=None</em>, <em class="sig-param">docker_volume_size=None</em>, <em class="sig-param">fixed_network=None</em>, <em class="sig-param">fixed_subnet=None</em>, <em class="sig-param">flavor=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">keypair=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">master_addresses=None</em>, <em class="sig-param">master_count=None</em>, <em class="sig-param">master_flavor=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">node_addresses=None</em>, <em class="sig-param">node_count=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">stack_id=None</em>, <em class="sig-param">updated_at=None</em>, <em class="sig-param">user_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.containerinfra.AwaitableGetClusterResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_openstack.containerinfra.AwaitableGetClusterTemplateResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.containerinfra.</code><code class="sig-name descname">AwaitableGetClusterTemplateResult</code><span class="sig-paren">(</span><em class="sig-param">apiserver_port=None</em>, <em class="sig-param">cluster_distro=None</em>, <em class="sig-param">coe=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">dns_nameserver=None</em>, <em class="sig-param">docker_storage_driver=None</em>, <em class="sig-param">docker_volume_size=None</em>, <em class="sig-param">external_network_id=None</em>, <em class="sig-param">fixed_network=None</em>, <em class="sig-param">fixed_subnet=None</em>, <em class="sig-param">flavor=None</em>, <em class="sig-param">floating_ip_enabled=None</em>, <em class="sig-param">http_proxy=None</em>, <em class="sig-param">https_proxy=None</em>, <em class="sig-param">image=None</em>, <em class="sig-param">insecure_registry=None</em>, <em class="sig-param">keypair_id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">master_flavor=None</em>, <em class="sig-param">master_lb_enabled=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_driver=None</em>, <em class="sig-param">no_proxy=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">public=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">registry_enabled=None</em>, <em class="sig-param">server_type=None</em>, <em class="sig-param">tls_disabled=None</em>, <em class="sig-param">updated_at=None</em>, <em class="sig-param">user_id=None</em>, <em class="sig-param">volume_driver=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.containerinfra.AwaitableGetClusterTemplateResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.containerinfra.</code><code class="sig-name descname">AwaitableGetClusterTemplateResult</code><span class="sig-paren">(</span><em class="sig-param">apiserver_port=None</em>, <em class="sig-param">cluster_distro=None</em>, <em class="sig-param">coe=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">dns_nameserver=None</em>, <em class="sig-param">docker_storage_driver=None</em>, <em class="sig-param">docker_volume_size=None</em>, <em class="sig-param">external_network_id=None</em>, <em class="sig-param">fixed_network=None</em>, <em class="sig-param">fixed_subnet=None</em>, <em class="sig-param">flavor=None</em>, <em class="sig-param">floating_ip_enabled=None</em>, <em class="sig-param">http_proxy=None</em>, <em class="sig-param">https_proxy=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">image=None</em>, <em class="sig-param">insecure_registry=None</em>, <em class="sig-param">keypair_id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">master_flavor=None</em>, <em class="sig-param">master_lb_enabled=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_driver=None</em>, <em class="sig-param">no_proxy=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">public=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">registry_enabled=None</em>, <em class="sig-param">server_type=None</em>, <em class="sig-param">tls_disabled=None</em>, <em class="sig-param">updated_at=None</em>, <em class="sig-param">user_id=None</em>, <em class="sig-param">volume_driver=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.containerinfra.AwaitableGetClusterTemplateResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -142,6 +142,9 @@ new cluster.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">node_addresses</span></code> - IP addresses of the node of the cluster.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">stack_id</span></code> - UUID of the Orchestration service stack.</p></li>
 </ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/containerinfra_cluster_v1.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/containerinfra_cluster_v1.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -150,9 +153,6 @@ new cluster.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/containerinfra_cluster_v1.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/containerinfra_cluster_v1.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="method">
 <dt id="pulumi_openstack.containerinfra.Cluster.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">api_address=None</em>, <em class="sig-param">cluster_template_id=None</em>, <em class="sig-param">coe_version=None</em>, <em class="sig-param">container_version=None</em>, <em class="sig-param">create_timeout=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">discovery_url=None</em>, <em class="sig-param">docker_volume_size=None</em>, <em class="sig-param">fixed_network=None</em>, <em class="sig-param">fixed_subnet=None</em>, <em class="sig-param">flavor=None</em>, <em class="sig-param">keypair=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">master_addresses=None</em>, <em class="sig-param">master_count=None</em>, <em class="sig-param">master_flavor=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">node_addresses=None</em>, <em class="sig-param">node_count=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">stack_id=None</em>, <em class="sig-param">updated_at=None</em>, <em class="sig-param">user_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.containerinfra.Cluster.get" title="Permalink to this definition">¶</a></dt>
@@ -167,9 +167,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/containerinfra_cluster_v1.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/containerinfra_cluster_v1.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -428,6 +425,9 @@ the existing cluster template.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">tls_disabled</span></code> - See Argument Reference above.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">volume_driver</span></code> - See Argument Reference above.</p></li>
 </ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/containerinfra_clustertemplate_v1.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/containerinfra_clustertemplate_v1.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -436,9 +436,6 @@ the existing cluster template.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/containerinfra_clustertemplate_v1.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/containerinfra_clustertemplate_v1.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="method">
 <dt id="pulumi_openstack.containerinfra.ClusterTemplate.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">apiserver_port=None</em>, <em class="sig-param">cluster_distro=None</em>, <em class="sig-param">coe=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">dns_nameserver=None</em>, <em class="sig-param">docker_storage_driver=None</em>, <em class="sig-param">docker_volume_size=None</em>, <em class="sig-param">external_network_id=None</em>, <em class="sig-param">fixed_network=None</em>, <em class="sig-param">fixed_subnet=None</em>, <em class="sig-param">flavor=None</em>, <em class="sig-param">floating_ip_enabled=None</em>, <em class="sig-param">http_proxy=None</em>, <em class="sig-param">https_proxy=None</em>, <em class="sig-param">image=None</em>, <em class="sig-param">insecure_registry=None</em>, <em class="sig-param">keypair_id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">master_flavor=None</em>, <em class="sig-param">master_lb_enabled=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_driver=None</em>, <em class="sig-param">no_proxy=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">public=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">registry_enabled=None</em>, <em class="sig-param">server_type=None</em>, <em class="sig-param">tls_disabled=None</em>, <em class="sig-param">updated_at=None</em>, <em class="sig-param">user_id=None</em>, <em class="sig-param">volume_driver=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.containerinfra.ClusterTemplate.get" title="Permalink to this definition">¶</a></dt>
@@ -453,9 +450,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/containerinfra_clustertemplate_v1.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/containerinfra_clustertemplate_v1.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -498,7 +492,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.containerinfra.GetClusterResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.containerinfra.</code><code class="sig-name descname">GetClusterResult</code><span class="sig-paren">(</span><em class="sig-param">api_address=None</em>, <em class="sig-param">cluster_template_id=None</em>, <em class="sig-param">coe_version=None</em>, <em class="sig-param">container_version=None</em>, <em class="sig-param">create_timeout=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">discovery_url=None</em>, <em class="sig-param">docker_volume_size=None</em>, <em class="sig-param">fixed_network=None</em>, <em class="sig-param">fixed_subnet=None</em>, <em class="sig-param">flavor=None</em>, <em class="sig-param">keypair=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">master_addresses=None</em>, <em class="sig-param">master_count=None</em>, <em class="sig-param">master_flavor=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">node_addresses=None</em>, <em class="sig-param">node_count=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">stack_id=None</em>, <em class="sig-param">updated_at=None</em>, <em class="sig-param">user_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.containerinfra.GetClusterResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.containerinfra.</code><code class="sig-name descname">GetClusterResult</code><span class="sig-paren">(</span><em class="sig-param">api_address=None</em>, <em class="sig-param">cluster_template_id=None</em>, <em class="sig-param">coe_version=None</em>, <em class="sig-param">container_version=None</em>, <em class="sig-param">create_timeout=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">discovery_url=None</em>, <em class="sig-param">docker_volume_size=None</em>, <em class="sig-param">fixed_network=None</em>, <em class="sig-param">fixed_subnet=None</em>, <em class="sig-param">flavor=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">keypair=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">master_addresses=None</em>, <em class="sig-param">master_count=None</em>, <em class="sig-param">master_flavor=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">node_addresses=None</em>, <em class="sig-param">node_count=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">stack_id=None</em>, <em class="sig-param">updated_at=None</em>, <em class="sig-param">user_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.containerinfra.GetClusterResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getCluster.</p>
 <dl class="attribute">
 <dt id="pulumi_openstack.containerinfra.GetClusterResult.api_address">
@@ -558,6 +552,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.containerinfra.GetClusterResult.flavor">
 <code class="sig-name descname">flavor</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.containerinfra.GetClusterResult.flavor" title="Permalink to this definition">¶</a></dt>
 <dd><p>The flavor for the nodes of the cluster.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.containerinfra.GetClusterResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.containerinfra.GetClusterResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -639,17 +639,11 @@ the cluster.</p>
 <dd><p>The user of the cluster.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_openstack.containerinfra.GetClusterResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.containerinfra.GetClusterResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_openstack.containerinfra.GetClusterTemplateResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.containerinfra.</code><code class="sig-name descname">GetClusterTemplateResult</code><span class="sig-paren">(</span><em class="sig-param">apiserver_port=None</em>, <em class="sig-param">cluster_distro=None</em>, <em class="sig-param">coe=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">dns_nameserver=None</em>, <em class="sig-param">docker_storage_driver=None</em>, <em class="sig-param">docker_volume_size=None</em>, <em class="sig-param">external_network_id=None</em>, <em class="sig-param">fixed_network=None</em>, <em class="sig-param">fixed_subnet=None</em>, <em class="sig-param">flavor=None</em>, <em class="sig-param">floating_ip_enabled=None</em>, <em class="sig-param">http_proxy=None</em>, <em class="sig-param">https_proxy=None</em>, <em class="sig-param">image=None</em>, <em class="sig-param">insecure_registry=None</em>, <em class="sig-param">keypair_id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">master_flavor=None</em>, <em class="sig-param">master_lb_enabled=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_driver=None</em>, <em class="sig-param">no_proxy=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">public=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">registry_enabled=None</em>, <em class="sig-param">server_type=None</em>, <em class="sig-param">tls_disabled=None</em>, <em class="sig-param">updated_at=None</em>, <em class="sig-param">user_id=None</em>, <em class="sig-param">volume_driver=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.containerinfra.GetClusterTemplateResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.containerinfra.</code><code class="sig-name descname">GetClusterTemplateResult</code><span class="sig-paren">(</span><em class="sig-param">apiserver_port=None</em>, <em class="sig-param">cluster_distro=None</em>, <em class="sig-param">coe=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">dns_nameserver=None</em>, <em class="sig-param">docker_storage_driver=None</em>, <em class="sig-param">docker_volume_size=None</em>, <em class="sig-param">external_network_id=None</em>, <em class="sig-param">fixed_network=None</em>, <em class="sig-param">fixed_subnet=None</em>, <em class="sig-param">flavor=None</em>, <em class="sig-param">floating_ip_enabled=None</em>, <em class="sig-param">http_proxy=None</em>, <em class="sig-param">https_proxy=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">image=None</em>, <em class="sig-param">insecure_registry=None</em>, <em class="sig-param">keypair_id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">master_flavor=None</em>, <em class="sig-param">master_lb_enabled=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_driver=None</em>, <em class="sig-param">no_proxy=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">public=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">registry_enabled=None</em>, <em class="sig-param">server_type=None</em>, <em class="sig-param">tls_disabled=None</em>, <em class="sig-param">updated_at=None</em>, <em class="sig-param">user_id=None</em>, <em class="sig-param">volume_driver=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.containerinfra.GetClusterTemplateResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getClusterTemplate.</p>
 <dl class="attribute">
 <dt id="pulumi_openstack.containerinfra.GetClusterTemplateResult.apiserver_port">
@@ -740,6 +734,12 @@ relay them.</p>
 <code class="sig-name descname">https_proxy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.containerinfra.GetClusterTemplateResult.https_proxy" title="Permalink to this definition">¶</a></dt>
 <dd><p>The address of a proxy for receiving all HTTPS requests and
 relay them.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.containerinfra.GetClusterTemplateResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.containerinfra.GetClusterTemplateResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -855,18 +855,15 @@ cluster.</p>
 cluster nodes.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_openstack.containerinfra.GetClusterTemplateResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.containerinfra.GetClusterTemplateResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_openstack.containerinfra.get_cluster">
 <code class="sig-prename descclassname">pulumi_openstack.containerinfra.</code><code class="sig-name descname">get_cluster</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.containerinfra.get_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an available OpenStack Magnum cluster.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/containerinfra_cluster_v1.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/containerinfra_cluster_v1.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -877,9 +874,6 @@ If omitted, the <code class="docutils literal notranslate"><span class="pre">reg
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/containerinfra_cluster_v1.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/containerinfra_cluster_v1.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -887,6 +881,9 @@ If omitted, the <code class="docutils literal notranslate"><span class="pre">reg
 <code class="sig-prename descclassname">pulumi_openstack.containerinfra.</code><code class="sig-name descname">get_cluster_template</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.containerinfra.get_cluster_template" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an available OpenStack Magnum cluster
 template.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/containerinfra_clustertemplate_v1.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/containerinfra_clustertemplate_v1.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -897,9 +894,6 @@ If omitted, the <code class="docutils literal notranslate"><span class="pre">reg
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/containerinfra_clustertemplate_v1.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/containerinfra_clustertemplate_v1.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

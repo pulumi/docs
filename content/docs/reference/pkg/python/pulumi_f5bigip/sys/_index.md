@@ -16,15 +16,23 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="target" id="module-pulumi_f5bigip.sys"></span><dl class="class">
 <dt id="pulumi_f5bigip.sys.BigIpLicense">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_f5bigip.sys.</code><code class="sig-name descname">BigIpLicense</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">command=None</em>, <em class="sig-param">registration_key=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.sys.BigIpLicense" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a BigIpLicense resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a BigIpLicense resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] command: Tmsh command to execute tmsh commands like install
+:param pulumi.Input[str] registration_key: A unique Key F5 provides for Licensing BIG-IP</p>
+<dl class="attribute">
+<dt id="pulumi_f5bigip.sys.BigIpLicense.command">
+<code class="sig-name descname">command</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.sys.BigIpLicense.command" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tmsh command to execute tmsh commands like install</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_f5bigip.sys.BigIpLicense.registration_key">
+<code class="sig-name descname">registration_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.sys.BigIpLicense.registration_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>A unique Key F5 provides for Licensing BIG-IP</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_f5bigip.sys.BigIpLicense.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">command=None</em>, <em class="sig-param">registration_key=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.sys.BigIpLicense.get" title="Permalink to this definition">¶</a></dt>
@@ -36,6 +44,8 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>command</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Tmsh command to execute tmsh commands like install</p></li>
+<li><p><strong>registration_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique Key F5 provides for Licensing BIG-IP</p></li>
 </ul>
 </dd>
 </dl>
@@ -83,20 +93,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_f5bigip.sys.Dns">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_f5bigip.sys.</code><code class="sig-name descname">Dns</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name_servers=None</em>, <em class="sig-param">number_of_dots=None</em>, <em class="sig-param">searches=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.sys.Dns" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">sys.Dns</span></code> Configures DNS server on F5 BIG-IP</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_sys_dns.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_sys_dns.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the Dns Servers</p></li>
 <li><p><strong>name_servers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Name or IP address of the DNS server</p></li>
 <li><p><strong>number_of_dots</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Configures the number of dots needed in a name before an initial absolute query will be made.</p></li>
 <li><p><strong>searches</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Specify what domains you want to search</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/sys_dns.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/sys_dns.html.markdown</a>.</p>
-</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_f5bigip.sys.Dns.description">
+<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.sys.Dns.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the Dns Servers</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_f5bigip.sys.Dns.name_servers">
 <code class="sig-name descname">name_servers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.sys.Dns.name_servers" title="Permalink to this definition">¶</a></dt>
@@ -126,15 +143,13 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the Dns Servers</p></li>
 <li><p><strong>name_servers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Name or IP address of the DNS server</p></li>
 <li><p><strong>number_of_dots</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Configures the number of dots needed in a name before an initial absolute query will be made.</p></li>
 <li><p><strong>searches</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Specify what domains you want to search</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/sys_dns.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/sys_dns.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -179,13 +194,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_f5bigip.sys.IApp">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_f5bigip.sys.</code><code class="sig-name descname">IApp</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">devicegroup=None</em>, <em class="sig-param">execute_action=None</em>, <em class="sig-param">inherited_devicegroup=None</em>, <em class="sig-param">inherited_traffic_group=None</em>, <em class="sig-param">jsonfile=None</em>, <em class="sig-param">lists=None</em>, <em class="sig-param">metadatas=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">partition=None</em>, <em class="sig-param">strict_updates=None</em>, <em class="sig-param">tables=None</em>, <em class="sig-param">template=None</em>, <em class="sig-param">template_modified=None</em>, <em class="sig-param">template_prerequisite_errors=None</em>, <em class="sig-param">traffic_group=None</em>, <em class="sig-param">variables=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.sys.IApp" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">sys.IApp</span></code> resource helps you to deploy Application Services template that can be used to automate and orchestrate Layer 4-7 applications service deployments using F5 Network.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_sys_iapp.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_sys_iapp.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Address of the Iapp which needs to be Iappensed</p></li>
+<li><p><strong>devicegroup</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – BIG-IP password</p></li>
+<li><p><strong>execute_action</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – BIG-IP password</p></li>
+<li><p><strong>inherited_devicegroup</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – BIG-IP password</p></li>
+<li><p><strong>inherited_traffic_group</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – BIG-IP password</p></li>
 <li><p><strong>jsonfile</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Refer to the Json file which will be deployed on F5 BIG-IP.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the iApp.</p></li>
+<li><p><strong>partition</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Address of the Iapp which needs to be Iappensed</p></li>
+<li><p><strong>strict_updates</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – BIG-IP password</p></li>
+<li><p><strong>template</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – BIG-IP password</p></li>
+<li><p><strong>template_modified</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – BIG-IP password</p></li>
+<li><p><strong>template_prerequisite_errors</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – BIG-IP password</p></li>
+<li><p><strong>traffic_group</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – BIG-IP password</p></li>
 </ul>
 </dd>
 </dl>
@@ -216,9 +245,36 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the iApp.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/sys_iapp.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/sys_iapp.html.markdown</a>.</p>
-</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_f5bigip.sys.IApp.description">
+<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.sys.IApp.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Address of the Iapp which needs to be Iappensed</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_f5bigip.sys.IApp.devicegroup">
+<code class="sig-name descname">devicegroup</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.sys.IApp.devicegroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>BIG-IP password</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_f5bigip.sys.IApp.execute_action">
+<code class="sig-name descname">execute_action</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.sys.IApp.execute_action" title="Permalink to this definition">¶</a></dt>
+<dd><p>BIG-IP password</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_f5bigip.sys.IApp.inherited_devicegroup">
+<code class="sig-name descname">inherited_devicegroup</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.sys.IApp.inherited_devicegroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>BIG-IP password</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_f5bigip.sys.IApp.inherited_traffic_group">
+<code class="sig-name descname">inherited_traffic_group</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.sys.IApp.inherited_traffic_group" title="Permalink to this definition">¶</a></dt>
+<dd><p>BIG-IP password</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_f5bigip.sys.IApp.jsonfile">
 <code class="sig-name descname">jsonfile</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.sys.IApp.jsonfile" title="Permalink to this definition">¶</a></dt>
@@ -229,6 +285,42 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_f5bigip.sys.IApp.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.sys.IApp.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Name of the iApp.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_f5bigip.sys.IApp.partition">
+<code class="sig-name descname">partition</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.sys.IApp.partition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Address of the Iapp which needs to be Iappensed</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_f5bigip.sys.IApp.strict_updates">
+<code class="sig-name descname">strict_updates</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.sys.IApp.strict_updates" title="Permalink to this definition">¶</a></dt>
+<dd><p>BIG-IP password</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_f5bigip.sys.IApp.template">
+<code class="sig-name descname">template</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.sys.IApp.template" title="Permalink to this definition">¶</a></dt>
+<dd><p>BIG-IP password</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_f5bigip.sys.IApp.template_modified">
+<code class="sig-name descname">template_modified</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.sys.IApp.template_modified" title="Permalink to this definition">¶</a></dt>
+<dd><p>BIG-IP password</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_f5bigip.sys.IApp.template_prerequisite_errors">
+<code class="sig-name descname">template_prerequisite_errors</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.sys.IApp.template_prerequisite_errors" title="Permalink to this definition">¶</a></dt>
+<dd><p>BIG-IP password</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_f5bigip.sys.IApp.traffic_group">
+<code class="sig-name descname">traffic_group</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.sys.IApp.traffic_group" title="Permalink to this definition">¶</a></dt>
+<dd><p>BIG-IP password</p>
 </dd></dl>
 
 <dl class="method">
@@ -242,8 +334,19 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Address of the Iapp which needs to be Iappensed</p></li>
+<li><p><strong>devicegroup</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – BIG-IP password</p></li>
+<li><p><strong>execute_action</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – BIG-IP password</p></li>
+<li><p><strong>inherited_devicegroup</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – BIG-IP password</p></li>
+<li><p><strong>inherited_traffic_group</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – BIG-IP password</p></li>
 <li><p><strong>jsonfile</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Refer to the Json file which will be deployed on F5 BIG-IP.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the iApp.</p></li>
+<li><p><strong>partition</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Address of the Iapp which needs to be Iappensed</p></li>
+<li><p><strong>strict_updates</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – BIG-IP password</p></li>
+<li><p><strong>template</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – BIG-IP password</p></li>
+<li><p><strong>template_modified</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – BIG-IP password</p></li>
+<li><p><strong>template_prerequisite_errors</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – BIG-IP password</p></li>
+<li><p><strong>traffic_group</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – BIG-IP password</p></li>
 </ul>
 </dd>
 </dl>
@@ -274,9 +377,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the iApp.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/sys_iapp.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/sys_iapp.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -322,19 +422,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_f5bigip.sys.</code><code class="sig-name descname">Ntp</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">servers=None</em>, <em class="sig-param">timezone=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.sys.Ntp" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">sys.Ntp</span></code> provides details about a specific bigip</p>
 <p>This resource is helpful when configuring NTP server on the BIG-IP.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_sys_ntp.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_sys_ntp.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the ntp Servers</p></li>
 <li><p><strong>servers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Adds NTP servers to or deletes NTP servers from the BIG-IP system.</p></li>
 <li><p><strong>timezone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the time zone that you want to use for the system time.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/sys_ntp.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/sys_ntp.html.markdown</a>.</p>
-</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_f5bigip.sys.Ntp.description">
+<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.sys.Ntp.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the ntp Servers</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_f5bigip.sys.Ntp.servers">
 <code class="sig-name descname">servers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.sys.Ntp.servers" title="Permalink to this definition">¶</a></dt>
@@ -358,14 +465,12 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the ntp Servers</p></li>
 <li><p><strong>servers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Adds NTP servers to or deletes NTP servers from the BIG-IP system.</p></li>
 <li><p><strong>timezone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the time zone that you want to use for the system time.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/sys_ntp.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/sys_ntp.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -410,17 +515,59 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_f5bigip.sys.Provision">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_f5bigip.sys.</code><code class="sig-name descname">Provision</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cpu_ratio=None</em>, <em class="sig-param">disk_ratio=None</em>, <em class="sig-param">full_path=None</em>, <em class="sig-param">level=None</em>, <em class="sig-param">memory_ratio=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.sys.Provision" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">sys.Provision</span></code> provides details bout how to enable “ilx”, “asm” “apm” resource on BIG-IP</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_sys_provision.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_sys_provision.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>cpu_ratio</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – cpu Ratio</p></li>
+<li><p><strong>disk_ratio</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – disk Ratio</p></li>
+<li><p><strong>full_path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – path</p></li>
+<li><p><strong>level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – what level nominal or dedicated</p></li>
+<li><p><strong>memory_ratio</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – memory Ratio</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the module to be provisioned</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/sys_provision.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/sys_provision.html.markdown</a>.</p>
-</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_f5bigip.sys.Provision.cpu_ratio">
+<code class="sig-name descname">cpu_ratio</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.sys.Provision.cpu_ratio" title="Permalink to this definition">¶</a></dt>
+<dd><p>cpu Ratio</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_f5bigip.sys.Provision.disk_ratio">
+<code class="sig-name descname">disk_ratio</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.sys.Provision.disk_ratio" title="Permalink to this definition">¶</a></dt>
+<dd><p>disk Ratio</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_f5bigip.sys.Provision.full_path">
+<code class="sig-name descname">full_path</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.sys.Provision.full_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>path</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_f5bigip.sys.Provision.level">
+<code class="sig-name descname">level</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.sys.Provision.level" title="Permalink to this definition">¶</a></dt>
+<dd><p>what level nominal or dedicated</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_f5bigip.sys.Provision.memory_ratio">
+<code class="sig-name descname">memory_ratio</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.sys.Provision.memory_ratio" title="Permalink to this definition">¶</a></dt>
+<dd><p>memory Ratio</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_f5bigip.sys.Provision.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.sys.Provision.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the module to be provisioned</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_f5bigip.sys.Provision.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cpu_ratio=None</em>, <em class="sig-param">disk_ratio=None</em>, <em class="sig-param">full_path=None</em>, <em class="sig-param">level=None</em>, <em class="sig-param">memory_ratio=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.sys.Provision.get" title="Permalink to this definition">¶</a></dt>
@@ -432,12 +579,15 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>cpu_ratio</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – cpu Ratio</p></li>
+<li><p><strong>disk_ratio</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – disk Ratio</p></li>
+<li><p><strong>full_path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – path</p></li>
+<li><p><strong>level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – what level nominal or dedicated</p></li>
+<li><p><strong>memory_ratio</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – memory Ratio</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the module to be provisioned</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/sys_provision.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/sys_provision.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -482,6 +632,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_f5bigip.sys.Snmp">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_f5bigip.sys.</code><code class="sig-name descname">Snmp</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allowedaddresses=None</em>, <em class="sig-param">sys_contact=None</em>, <em class="sig-param">sys_location=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.sys.Snmp" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">sys.Snmp</span></code> provides details bout how to enable “ilx”, “asm” “apm” resource on BIG-IP</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_sys_snmp.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_sys_snmp.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -493,9 +646,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/sys_snmp.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/sys_snmp.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_f5bigip.sys.Snmp.allowedaddresses">
 <code class="sig-name descname">allowedaddresses</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.sys.Snmp.allowedaddresses" title="Permalink to this definition">¶</a></dt>
@@ -531,9 +681,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/sys_snmp.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/sys_snmp.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -578,22 +725,43 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_f5bigip.sys.SnmpTraps">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_f5bigip.sys.</code><code class="sig-name descname">SnmpTraps</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auth_passwordencrypted=None</em>, <em class="sig-param">auth_protocol=None</em>, <em class="sig-param">community=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">engine_id=None</em>, <em class="sig-param">host=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">privacy_password=None</em>, <em class="sig-param">privacy_password_encrypted=None</em>, <em class="sig-param">privacy_protocol=None</em>, <em class="sig-param">security_level=None</em>, <em class="sig-param">security_name=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.sys.SnmpTraps" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">sys.SnmpTraps</span></code> provides details bout how to enable snmp_traps resource on BIG-IP</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_sys_snmp_traps.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_sys_snmp_traps.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>auth_passwordencrypted</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Encrypted password</p></li>
+<li><p><strong>auth_protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the protocol used to authenticate the user.</p></li>
 <li><p><strong>community</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the community string used for this trap.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The port that the trap will be sent to.</p></li>
+<li><p><strong>engine_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the authoritative security engine for SNMPv3.</p></li>
 <li><p><strong>host</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The host the trap will be sent to.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the snmp trap.</p></li>
 <li><p><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – User defined description.</p></li>
+<li><p><strong>privacy_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the clear text password used to encrypt traffic. This field will not be displayed.</p></li>
+<li><p><strong>privacy_password_encrypted</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the encrypted password used to encrypt traffic.</p></li>
+<li><p><strong>privacy_protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the protocol used to encrypt traffic.</p></li>
+<li><p><strong>security_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies whether or not traffic is encrypted and whether or not authentication is required.</p></li>
+<li><p><strong>security_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Security name used in conjunction with SNMPv3.</p></li>
+<li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – SNMP version used for sending the trap.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/sys_snmp_traps.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/sys_snmp_traps.html.markdown</a>.</p>
-</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_f5bigip.sys.SnmpTraps.auth_passwordencrypted">
+<code class="sig-name descname">auth_passwordencrypted</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.sys.SnmpTraps.auth_passwordencrypted" title="Permalink to this definition">¶</a></dt>
+<dd><p>Encrypted password</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_f5bigip.sys.SnmpTraps.auth_protocol">
+<code class="sig-name descname">auth_protocol</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.sys.SnmpTraps.auth_protocol" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the protocol used to authenticate the user.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_f5bigip.sys.SnmpTraps.community">
 <code class="sig-name descname">community</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.sys.SnmpTraps.community" title="Permalink to this definition">¶</a></dt>
@@ -604,6 +772,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_f5bigip.sys.SnmpTraps.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.sys.SnmpTraps.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>The port that the trap will be sent to.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_f5bigip.sys.SnmpTraps.engine_id">
+<code class="sig-name descname">engine_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.sys.SnmpTraps.engine_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the authoritative security engine for SNMPv3.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -624,6 +798,42 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>User defined description.</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_f5bigip.sys.SnmpTraps.privacy_password">
+<code class="sig-name descname">privacy_password</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.sys.SnmpTraps.privacy_password" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the clear text password used to encrypt traffic. This field will not be displayed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_f5bigip.sys.SnmpTraps.privacy_password_encrypted">
+<code class="sig-name descname">privacy_password_encrypted</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.sys.SnmpTraps.privacy_password_encrypted" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the encrypted password used to encrypt traffic.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_f5bigip.sys.SnmpTraps.privacy_protocol">
+<code class="sig-name descname">privacy_protocol</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.sys.SnmpTraps.privacy_protocol" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the protocol used to encrypt traffic.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_f5bigip.sys.SnmpTraps.security_level">
+<code class="sig-name descname">security_level</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.sys.SnmpTraps.security_level" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies whether or not traffic is encrypted and whether or not authentication is required.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_f5bigip.sys.SnmpTraps.security_name">
+<code class="sig-name descname">security_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.sys.SnmpTraps.security_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Security name used in conjunction with SNMPv3.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_f5bigip.sys.SnmpTraps.version">
+<code class="sig-name descname">version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.sys.SnmpTraps.version" title="Permalink to this definition">¶</a></dt>
+<dd><p>SNMP version used for sending the trap.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_f5bigip.sys.SnmpTraps.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auth_passwordencrypted=None</em>, <em class="sig-param">auth_protocol=None</em>, <em class="sig-param">community=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">engine_id=None</em>, <em class="sig-param">host=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">privacy_password=None</em>, <em class="sig-param">privacy_password_encrypted=None</em>, <em class="sig-param">privacy_protocol=None</em>, <em class="sig-param">security_level=None</em>, <em class="sig-param">security_name=None</em>, <em class="sig-param">version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.sys.SnmpTraps.get" title="Permalink to this definition">¶</a></dt>
@@ -635,17 +845,23 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>auth_passwordencrypted</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Encrypted password</p></li>
+<li><p><strong>auth_protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the protocol used to authenticate the user.</p></li>
 <li><p><strong>community</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the community string used for this trap.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The port that the trap will be sent to.</p></li>
+<li><p><strong>engine_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the authoritative security engine for SNMPv3.</p></li>
 <li><p><strong>host</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The host the trap will be sent to.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the snmp trap.</p></li>
 <li><p><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – User defined description.</p></li>
+<li><p><strong>privacy_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the clear text password used to encrypt traffic. This field will not be displayed.</p></li>
+<li><p><strong>privacy_password_encrypted</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the encrypted password used to encrypt traffic.</p></li>
+<li><p><strong>privacy_protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the protocol used to encrypt traffic.</p></li>
+<li><p><strong>security_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies whether or not traffic is encrypted and whether or not authentication is required.</p></li>
+<li><p><strong>security_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Security name used in conjunction with SNMPv3.</p></li>
+<li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – SNMP version used for sending the trap.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/sys_snmp_traps.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/sys_snmp_traps.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
