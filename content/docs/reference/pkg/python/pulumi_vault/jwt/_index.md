@@ -18,6 +18,9 @@ anything, please consult the source <a class="reference external" href="https://
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.jwt.</code><code class="sig-name descname">AuthBackend</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bound_issuer=None</em>, <em class="sig-param">default_role=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">jwks_ca_pem=None</em>, <em class="sig-param">jwks_url=None</em>, <em class="sig-param">jwt_supported_algs=None</em>, <em class="sig-param">jwt_validation_pubkeys=None</em>, <em class="sig-param">oidc_client_id=None</em>, <em class="sig-param">oidc_client_secret=None</em>, <em class="sig-param">oidc_discovery_ca_pem=None</em>, <em class="sig-param">oidc_discovery_url=None</em>, <em class="sig-param">path=None</em>, <em class="sig-param">tune=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.jwt.AuthBackend" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource for managing an
 <a class="reference external" href="https://www.vaultproject.io/docs/auth/jwt.html">JWT auth backend within Vault</a>.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/jwt_auth_backend.html.md">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/jwt_auth_backend.html.md</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -45,14 +48,17 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><code class="docutils literal notranslate"><span class="pre">auditNonHmacRequestKeys</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">auditNonHmacResponseKeys</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">defaultLeaseTtl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">listingVisibility</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">listing_visibility</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxLeaseTtl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">passthroughRequestHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">token_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/jwt_auth_backend.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/jwt_auth_backend.html.markdown</a>.</p>
-</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_vault.jwt.AuthBackend.accessor">
+<code class="sig-name descname">accessor</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.jwt.AuthBackend.accessor" title="Permalink to this definition">¶</a></dt>
+<dd><p>The accessor of the JWT auth backend</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_vault.jwt.AuthBackend.bound_issuer">
 <code class="sig-name descname">bound_issuer</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.jwt.AuthBackend.bound_issuer" title="Permalink to this definition">¶</a></dt>
@@ -142,6 +148,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>accessor</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The accessor of the JWT auth backend</p></li>
 <li><p><strong>bound_issuer</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The value against which to match the iss claim in a JWT</p></li>
 <li><p><strong>default_role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The default role to use if none is provided during login</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the auth backend</p></li>
@@ -164,14 +171,11 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">auditNonHmacRequestKeys</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">auditNonHmacResponseKeys</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">defaultLeaseTtl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">listingVisibility</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">listing_visibility</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxLeaseTtl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">passthroughRequestHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">token_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/jwt_auth_backend.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/jwt_auth_backend.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -218,6 +222,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages an JWT/OIDC auth backend role in a Vault server. See the <a class="reference external" href="https://www.vaultproject.io/docs/auth/jwt.html">Vault
 documentation</a> for more
 information.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/jwt_auth_backend_role.html.md">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/jwt_auth_backend_role.html.md</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -311,9 +318,6 @@ in OIDC responses.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/jwt_auth_backend_role.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/jwt_auth_backend_role.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vault.jwt.AuthBackendRole.allowed_redirect_uris">
 <code class="sig-name descname">allowed_redirect_uris</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.jwt.AuthBackendRole.allowed_redirect_uris" title="Permalink to this definition">¶</a></dt>
@@ -656,9 +660,6 @@ in OIDC responses.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/jwt_auth_backend_role.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/jwt_auth_backend_role.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">

@@ -15,34 +15,25 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_vault.identity"></span><dl class="class">
 <dt id="pulumi_vault.identity.AwaitableGetEntityResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.identity.</code><code class="sig-name descname">AwaitableGetEntityResult</code><span class="sig-paren">(</span><em class="sig-param">alias_id=None</em>, <em class="sig-param">alias_mount_accessor=None</em>, <em class="sig-param">alias_name=None</em>, <em class="sig-param">aliases=None</em>, <em class="sig-param">creation_time=None</em>, <em class="sig-param">data_json=None</em>, <em class="sig-param">direct_group_ids=None</em>, <em class="sig-param">disabled=None</em>, <em class="sig-param">entity_id=None</em>, <em class="sig-param">entity_name=None</em>, <em class="sig-param">group_ids=None</em>, <em class="sig-param">inherited_group_ids=None</em>, <em class="sig-param">last_update_time=None</em>, <em class="sig-param">merged_entity_ids=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">namespace_id=None</em>, <em class="sig-param">policies=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.identity.AwaitableGetEntityResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.identity.</code><code class="sig-name descname">AwaitableGetEntityResult</code><span class="sig-paren">(</span><em class="sig-param">alias_id=None</em>, <em class="sig-param">alias_mount_accessor=None</em>, <em class="sig-param">alias_name=None</em>, <em class="sig-param">aliases=None</em>, <em class="sig-param">creation_time=None</em>, <em class="sig-param">data_json=None</em>, <em class="sig-param">direct_group_ids=None</em>, <em class="sig-param">disabled=None</em>, <em class="sig-param">entity_id=None</em>, <em class="sig-param">entity_name=None</em>, <em class="sig-param">group_ids=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">inherited_group_ids=None</em>, <em class="sig-param">last_update_time=None</em>, <em class="sig-param">merged_entity_ids=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">namespace_id=None</em>, <em class="sig-param">policies=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.identity.AwaitableGetEntityResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_vault.identity.AwaitableGetGroupResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.identity.</code><code class="sig-name descname">AwaitableGetGroupResult</code><span class="sig-paren">(</span><em class="sig-param">alias_canonical_id=None</em>, <em class="sig-param">alias_creation_time=None</em>, <em class="sig-param">alias_id=None</em>, <em class="sig-param">alias_last_update_time=None</em>, <em class="sig-param">alias_merged_from_canonical_ids=None</em>, <em class="sig-param">alias_metadata=None</em>, <em class="sig-param">alias_mount_accessor=None</em>, <em class="sig-param">alias_mount_path=None</em>, <em class="sig-param">alias_mount_type=None</em>, <em class="sig-param">alias_name=None</em>, <em class="sig-param">creation_time=None</em>, <em class="sig-param">data_json=None</em>, <em class="sig-param">group_id=None</em>, <em class="sig-param">group_name=None</em>, <em class="sig-param">last_update_time=None</em>, <em class="sig-param">member_entity_ids=None</em>, <em class="sig-param">member_group_ids=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">modify_index=None</em>, <em class="sig-param">namespace_id=None</em>, <em class="sig-param">parent_group_ids=None</em>, <em class="sig-param">policies=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.identity.AwaitableGetGroupResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.identity.</code><code class="sig-name descname">AwaitableGetGroupResult</code><span class="sig-paren">(</span><em class="sig-param">alias_canonical_id=None</em>, <em class="sig-param">alias_creation_time=None</em>, <em class="sig-param">alias_id=None</em>, <em class="sig-param">alias_last_update_time=None</em>, <em class="sig-param">alias_merged_from_canonical_ids=None</em>, <em class="sig-param">alias_metadata=None</em>, <em class="sig-param">alias_mount_accessor=None</em>, <em class="sig-param">alias_mount_path=None</em>, <em class="sig-param">alias_mount_type=None</em>, <em class="sig-param">alias_name=None</em>, <em class="sig-param">creation_time=None</em>, <em class="sig-param">data_json=None</em>, <em class="sig-param">group_id=None</em>, <em class="sig-param">group_name=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">last_update_time=None</em>, <em class="sig-param">member_entity_ids=None</em>, <em class="sig-param">member_group_ids=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">modify_index=None</em>, <em class="sig-param">namespace_id=None</em>, <em class="sig-param">parent_group_ids=None</em>, <em class="sig-param">policies=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.identity.AwaitableGetGroupResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_vault.identity.Entity">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.identity.</code><code class="sig-name descname">Entity</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">disabled=None</em>, <em class="sig-param">external_policies=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">policies=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.identity.Entity" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Entity resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>disabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – True/false Is this entity currently disabled. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code></p></li>
-<li><p><strong>external_policies</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <code class="docutils literal notranslate"><span class="pre">false</span></code> by default. If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, this resource will ignore any policies return from Vault or specified in the resource. You can use <code class="docutils literal notranslate"><span class="pre">identity.EntityPolicies</span></code> to manage policies for this entity in a decoupled manner.</p></li>
-<li><p><strong>metadata</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A Map of additional metadata to associate with the user.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the identity entity to create.</p></li>
-<li><p><strong>policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of policies to apply to the entity.</p></li>
-</ul>
-</dd>
-</dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_entity.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_entity.html.markdown</a>.</p>
-</div></blockquote>
+<dd><p>Create a Entity resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[bool] disabled: True/false Is this entity currently disabled. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>
+:param pulumi.Input[bool] external_policies: <code class="docutils literal notranslate"><span class="pre">false</span></code> by default. If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, this resource will ignore any policies return from Vault or specified in the resource. You can use <code class="docutils literal notranslate"><span class="pre">identity.EntityPolicies</span></code> to manage policies for this entity in a decoupled manner.
+:param pulumi.Input[dict] metadata: A Map of additional metadata to associate with the user.
+:param pulumi.Input[str] name: Name of the identity entity to create.
+:param pulumi.Input[list] policies: A list of policies to apply to the entity.</p>
 <dl class="attribute">
 <dt id="pulumi_vault.identity.Entity.disabled">
 <code class="sig-name descname">disabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.identity.Entity.disabled" title="Permalink to this definition">¶</a></dt>
@@ -92,9 +83,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_entity.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_entity.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -138,21 +126,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_vault.identity.EntityAlias">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.identity.</code><code class="sig-name descname">EntityAlias</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">canonical_id=None</em>, <em class="sig-param">mount_accessor=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.identity.EntityAlias" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a EntityAlias resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>canonical_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Entity ID to which this alias belongs to.</p></li>
-<li><p><strong>mount_accessor</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Accessor of the mount to which the alias should belong to.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the alias. Name should be the identifier of the client in the authentication source. For example, if the alias belongs to userpass backend, the name should be a valid username within userpass backend. If alias belongs to GitHub, it should be the GitHub username.</p></li>
-</ul>
-</dd>
-</dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_entity_alias.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_entity_alias.html.markdown</a>.</p>
-</div></blockquote>
+<dd><p>Create a EntityAlias resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] canonical_id: Entity ID to which this alias belongs to.
+:param pulumi.Input[str] mount_accessor: Accessor of the mount to which the alias should belong to.
+:param pulumi.Input[str] name: Name of the alias. Name should be the identifier of the client in the authentication source. For example, if the alias belongs to userpass backend, the name should be a valid username within userpass backend. If alias belongs to GitHub, it should be the GitHub username.</p>
 <dl class="attribute">
 <dt id="pulumi_vault.identity.EntityAlias.canonical_id">
 <code class="sig-name descname">canonical_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.identity.EntityAlias.canonical_id" title="Permalink to this definition">¶</a></dt>
@@ -188,9 +167,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_entity_alias.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_entity_alias.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -235,6 +211,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_vault.identity.EntityPolicies">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.identity.</code><code class="sig-name descname">EntityPolicies</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">entity_id=None</em>, <em class="sig-param">exclusive=None</em>, <em class="sig-param">policies=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.identity.EntityPolicies" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages policies for an Identity Entity for Vault. The <a class="reference external" href="https://www.vaultproject.io/docs/secrets/identity/index.html">Identity secrets engine</a> is the identity management solution for Vault.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_entity_policies.html.md">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_entity_policies.html.md</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -246,9 +225,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_entity_policies.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_entity_policies.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vault.identity.EntityPolicies.entity_id">
 <code class="sig-name descname">entity_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.identity.EntityPolicies.entity_id" title="Permalink to this definition">¶</a></dt>
@@ -291,9 +267,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_entity_policies.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_entity_policies.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -336,7 +309,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_vault.identity.GetEntityResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.identity.</code><code class="sig-name descname">GetEntityResult</code><span class="sig-paren">(</span><em class="sig-param">alias_id=None</em>, <em class="sig-param">alias_mount_accessor=None</em>, <em class="sig-param">alias_name=None</em>, <em class="sig-param">aliases=None</em>, <em class="sig-param">creation_time=None</em>, <em class="sig-param">data_json=None</em>, <em class="sig-param">direct_group_ids=None</em>, <em class="sig-param">disabled=None</em>, <em class="sig-param">entity_id=None</em>, <em class="sig-param">entity_name=None</em>, <em class="sig-param">group_ids=None</em>, <em class="sig-param">inherited_group_ids=None</em>, <em class="sig-param">last_update_time=None</em>, <em class="sig-param">merged_entity_ids=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">namespace_id=None</em>, <em class="sig-param">policies=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.identity.GetEntityResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.identity.</code><code class="sig-name descname">GetEntityResult</code><span class="sig-paren">(</span><em class="sig-param">alias_id=None</em>, <em class="sig-param">alias_mount_accessor=None</em>, <em class="sig-param">alias_name=None</em>, <em class="sig-param">aliases=None</em>, <em class="sig-param">creation_time=None</em>, <em class="sig-param">data_json=None</em>, <em class="sig-param">direct_group_ids=None</em>, <em class="sig-param">disabled=None</em>, <em class="sig-param">entity_id=None</em>, <em class="sig-param">entity_name=None</em>, <em class="sig-param">group_ids=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">inherited_group_ids=None</em>, <em class="sig-param">last_update_time=None</em>, <em class="sig-param">merged_entity_ids=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">namespace_id=None</em>, <em class="sig-param">policies=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.identity.GetEntityResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getEntity.</p>
 <dl class="attribute">
 <dt id="pulumi_vault.identity.GetEntityResult.aliases">
@@ -376,6 +349,12 @@ Vault, serialized in JSON format.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_vault.identity.GetEntityResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.identity.GetEntityResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_vault.identity.GetEntityResult.inherited_group_ids">
 <code class="sig-name descname">inherited_group_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.identity.GetEntityResult.inherited_group_ids" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of all Group IDs of which the entity is a member of transitively</p>
@@ -411,17 +390,11 @@ Vault, serialized in JSON format.</p>
 <dd><p>List of policies attached to the entity</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_vault.identity.GetEntityResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.identity.GetEntityResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_vault.identity.GetGroupResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.identity.</code><code class="sig-name descname">GetGroupResult</code><span class="sig-paren">(</span><em class="sig-param">alias_canonical_id=None</em>, <em class="sig-param">alias_creation_time=None</em>, <em class="sig-param">alias_id=None</em>, <em class="sig-param">alias_last_update_time=None</em>, <em class="sig-param">alias_merged_from_canonical_ids=None</em>, <em class="sig-param">alias_metadata=None</em>, <em class="sig-param">alias_mount_accessor=None</em>, <em class="sig-param">alias_mount_path=None</em>, <em class="sig-param">alias_mount_type=None</em>, <em class="sig-param">alias_name=None</em>, <em class="sig-param">creation_time=None</em>, <em class="sig-param">data_json=None</em>, <em class="sig-param">group_id=None</em>, <em class="sig-param">group_name=None</em>, <em class="sig-param">last_update_time=None</em>, <em class="sig-param">member_entity_ids=None</em>, <em class="sig-param">member_group_ids=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">modify_index=None</em>, <em class="sig-param">namespace_id=None</em>, <em class="sig-param">parent_group_ids=None</em>, <em class="sig-param">policies=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.identity.GetGroupResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.identity.</code><code class="sig-name descname">GetGroupResult</code><span class="sig-paren">(</span><em class="sig-param">alias_canonical_id=None</em>, <em class="sig-param">alias_creation_time=None</em>, <em class="sig-param">alias_id=None</em>, <em class="sig-param">alias_last_update_time=None</em>, <em class="sig-param">alias_merged_from_canonical_ids=None</em>, <em class="sig-param">alias_metadata=None</em>, <em class="sig-param">alias_mount_accessor=None</em>, <em class="sig-param">alias_mount_path=None</em>, <em class="sig-param">alias_mount_type=None</em>, <em class="sig-param">alias_name=None</em>, <em class="sig-param">creation_time=None</em>, <em class="sig-param">data_json=None</em>, <em class="sig-param">group_id=None</em>, <em class="sig-param">group_name=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">last_update_time=None</em>, <em class="sig-param">member_entity_ids=None</em>, <em class="sig-param">member_group_ids=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">modify_index=None</em>, <em class="sig-param">namespace_id=None</em>, <em class="sig-param">parent_group_ids=None</em>, <em class="sig-param">policies=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.identity.GetGroupResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getGroup.</p>
 <dl class="attribute">
 <dt id="pulumi_vault.identity.GetGroupResult.alias_canonical_id">
@@ -479,6 +452,12 @@ Vault, serialized in JSON format.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_vault.identity.GetGroupResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.identity.GetGroupResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_vault.identity.GetGroupResult.last_update_time">
 <code class="sig-name descname">last_update_time</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.identity.GetGroupResult.last_update_time" title="Permalink to this definition">¶</a></dt>
 <dd><p>Last updated time of the group</p>
@@ -532,12 +511,6 @@ Vault, serialized in JSON format.</p>
 <dd><p>Type of group</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_vault.identity.GetGroupResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.identity.GetGroupResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
@@ -545,6 +518,9 @@ Vault, serialized in JSON format.</p>
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.identity.</code><code class="sig-name descname">Group</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">external_policies=None</em>, <em class="sig-param">member_entity_ids=None</em>, <em class="sig-param">member_group_ids=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">policies=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.identity.Group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an Identity Group for Vault. The <a class="reference external" href="https://www.vaultproject.io/docs/secrets/identity/index.html">Identity secrets engine</a> is the identity management solution for Vault.</p>
 <p>A group can contain multiple entities as its members. A group can also have subgroups. Policies set on the group is granted to all members of the group. During request time, when the token’s entity ID is being evaluated for the policies that it has access to; along with the policies on the entity itself, policies that are inherited due to group memberships are also granted.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_group.html.md">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_group.html.md</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -560,9 +536,6 @@ Vault, serialized in JSON format.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_group.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_group.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vault.identity.Group.external_policies">
 <code class="sig-name descname">external_policies</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.identity.Group.external_policies" title="Permalink to this definition">¶</a></dt>
@@ -626,9 +599,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_group.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_group.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -674,6 +644,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.identity.</code><code class="sig-name descname">GroupAlias</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">canonical_id=None</em>, <em class="sig-param">mount_accessor=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.identity.GroupAlias" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an Identity Group Alias for Vault. The <a class="reference external" href="https://www.vaultproject.io/docs/secrets/identity/index.html">Identity secrets engine</a> is the identity management solution for Vault.</p>
 <p>Group aliases allows entity membership in external groups to be managed semi-automatically. External group serves as a mapping to a group that is outside of the identity store. External groups can have one (and only one) alias. This alias should map to a notion of group that is outside of the identity store. For example, groups in LDAP, and teams in GitHub. A username in LDAP, belonging to a group in LDAP, can get its entity ID added as a member of a group in Vault automatically during logins and token renewals. This works only if the group in Vault is an external group and has an alias that maps to the group in LDAP. If the user is removed from the group in LDAP, that change gets reflected in Vault only upon the subsequent login or renewal operation.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_group_alias.html.md">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_group_alias.html.md</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -685,9 +658,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_group_alias.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_group_alias.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vault.identity.GroupAlias.canonical_id">
 <code class="sig-name descname">canonical_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.identity.GroupAlias.canonical_id" title="Permalink to this definition">¶</a></dt>
@@ -723,9 +693,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_group_alias.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_group_alias.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -770,6 +737,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_vault.identity.GroupPolicies">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.identity.</code><code class="sig-name descname">GroupPolicies</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">exclusive=None</em>, <em class="sig-param">group_id=None</em>, <em class="sig-param">policies=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.identity.GroupPolicies" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages policies for an Identity Group for Vault. The <a class="reference external" href="https://www.vaultproject.io/docs/secrets/identity/index.html">Identity secrets engine</a> is the identity management solution for Vault.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_group_policies.html.md">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_group_policies.html.md</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -781,9 +751,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_group_policies.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_group_policies.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vault.identity.GroupPolicies.exclusive">
 <code class="sig-name descname">exclusive</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.identity.GroupPolicies.exclusive" title="Permalink to this definition">¶</a></dt>
@@ -826,9 +793,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_group_policies.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_group_policies.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -877,6 +841,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 the clients who are recognized by Vault.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Each Vault server may only have one Identity Tokens Backend configuration. Multiple configurations of the resource against the same Vault server will cause a perpetual difference.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_oidc.html.md">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_oidc.html.md</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -890,9 +855,6 @@ components.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_oidc.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_oidc.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vault.identity.Oidc.issuer">
 <code class="sig-name descname">issuer</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.identity.Oidc.issuer" title="Permalink to this definition">¶</a></dt>
@@ -920,9 +882,6 @@ components.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_oidc.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_oidc.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -966,14 +925,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_vault.identity.OidcKey">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.identity.</code><code class="sig-name descname">OidcKey</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">algorithm=None</em>, <em class="sig-param">allowed_client_ids=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">rotation_period=None</em>, <em class="sig-param">verification_ttl=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.identity.OidcKey" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a OidcKey resource with the given unique name, props, and options.</p>
+<dd><p>Create a OidcKey resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] algorithm: Signing algorithm to use. Signing algorithm to use.</p>
+<blockquote>
+<div><p>Allowed values are: RS256 (default), RS384, RS512, ES256, ES384, ES512, EdDSA.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>algorithm</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Signing algorithm to use. Signing algorithm to use.
-Allowed values are: RS256 (default), RS384, RS512, ES256, ES384, ES512, EdDSA.</p></li>
+<li><p><strong>allowed_client_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Array of role client ids allowed to use this key for signing. If empty, no roles are allowed. If “*”, all roles are
+allowed.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the OIDC Key to create.</p></li>
 <li><p><strong>rotation_period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – How often to generate a new signing key in number of seconds</p></li>
 <li><p><strong>verification_ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – “Controls how long the public portion of a signing key will be
@@ -981,14 +944,18 @@ available for verification after being rotated in seconds.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_oidc_key.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_oidc_key.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vault.identity.OidcKey.algorithm">
 <code class="sig-name descname">algorithm</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.identity.OidcKey.algorithm" title="Permalink to this definition">¶</a></dt>
 <dd><p>Signing algorithm to use. Signing algorithm to use.
 Allowed values are: RS256 (default), RS384, RS512, ES256, ES384, ES512, EdDSA.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vault.identity.OidcKey.allowed_client_ids">
+<code class="sig-name descname">allowed_client_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.identity.OidcKey.allowed_client_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>Array of role client ids allowed to use this key for signing. If empty, no roles are allowed. If “*”, all roles are
+allowed.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1023,6 +990,8 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>algorithm</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Signing algorithm to use. Signing algorithm to use.
 Allowed values are: RS256 (default), RS384, RS512, ES256, ES384, ES512, EdDSA.</p></li>
+<li><p><strong>allowed_client_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Array of role client ids allowed to use this key for signing. If empty, no roles are allowed. If “*”, all roles are
+allowed.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the OIDC Key to create.</p></li>
 <li><p><strong>rotation_period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – How often to generate a new signing key in number of seconds</p></li>
 <li><p><strong>verification_ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – “Controls how long the public portion of a signing key will be
@@ -1030,9 +999,6 @@ available for verification after being rotated in seconds.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_oidc_key.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_oidc_key.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1076,20 +1042,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_vault.identity.OidcKeyAllowedClientID">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.identity.</code><code class="sig-name descname">OidcKeyAllowedClientID</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allowed_client_id=None</em>, <em class="sig-param">key_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.identity.OidcKeyAllowedClientID" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a OidcKeyAllowedClientID resource with the given unique name, props, and options.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>allowed_client_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Client ID to allow usage with the OIDC named key</p></li>
-<li><p><strong>key_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the OIDC Key allow the Client ID.</p></li>
-</ul>
-</dd>
-</dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_oidc_key_allowed_client_id.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_oidc_key_allowed_client_id.html.markdown</a>.</p>
-</div></blockquote>
+<dd><p>Create a OidcKeyAllowedClientID resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] allowed_client_id: Client ID to allow usage with the OIDC named key
+:param pulumi.Input[str] key_name: Name of the OIDC Key allow the Client ID.</p>
 <dl class="attribute">
 <dt id="pulumi_vault.identity.OidcKeyAllowedClientID.allowed_client_id">
 <code class="sig-name descname">allowed_client_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.identity.OidcKeyAllowedClientID.allowed_client_id" title="Permalink to this definition">¶</a></dt>
@@ -1118,9 +1075,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_oidc_key_allowed_client_id.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_oidc_key_allowed_client_id.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1164,14 +1118,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_vault.identity.OidcRole">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.identity.</code><code class="sig-name descname">OidcRole</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">key=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">template=None</em>, <em class="sig-param">ttl=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.identity.OidcRole" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a OidcRole resource with the given unique name, props, and options.</p>
+<dd><p>Create a OidcRole resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] key: A configured named key, the key must already exist</p>
+<blockquote>
+<div><p>before tokens can be issued.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A configured named key, the key must already exist
-before tokens can be issued.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the OIDC Role to create.</p></li>
 <li><p><strong>template</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The template string to use for generating tokens. This may be in
 string-ified JSON or base64 format. See the
@@ -1181,9 +1137,6 @@ for the template format.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_oidc_role.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_oidc_role.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vault.identity.OidcRole.client_id">
 <code class="sig-name descname">client_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.identity.OidcRole.client_id" title="Permalink to this definition">¶</a></dt>
@@ -1244,9 +1197,6 @@ for the template format.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_oidc_role.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_oidc_role.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1304,9 +1254,6 @@ This should be supplied in conjunction with <code class="docutils literal notran
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/d/identity_entity.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/d/identity_entity.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -1326,9 +1273,6 @@ This should be supplied in conjunction with <code class="docutils literal notran
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/d/identity_group.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/d/identity_group.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>
