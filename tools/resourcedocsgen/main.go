@@ -26,8 +26,8 @@ import (
 
 	docsgen "github.com/pulumi/pulumi/pkg/codegen/docs"
 	pschema "github.com/pulumi/pulumi/pkg/codegen/schema"
-	"github.com/pulumi/pulumi/pkg/tools"
-	"github.com/pulumi/pulumi/pkg/util/contract"
+	"github.com/pulumi/pulumi/sdk/go/common/tools"
+	"github.com/pulumi/pulumi/sdk/go/common/util/contract"
 )
 
 func main() {
