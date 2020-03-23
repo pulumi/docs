@@ -11,6 +11,7 @@
     "broken-link-checker": "^0.7.8",
     "clipboard-polyfill": "^2.8.1",
     "cssnano": "^4.1.10",
+    "http-server": "^0.12.1",
     "js-yaml": "^3.13.1",
     "markdownlint": "^0.17.2",
     "postcss-cli": "^6.1.3",
