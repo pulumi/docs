@@ -15,28 +15,34 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_openstack.sharedfilesystem"></span><dl class="class">
 <dt id="pulumi_openstack.sharedfilesystem.AwaitableGetAvailbilityZonesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.sharedfilesystem.</code><code class="sig-name descname">AwaitableGetAvailbilityZonesResult</code><span class="sig-paren">(</span><em class="sig-param">names=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.AwaitableGetAvailbilityZonesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.sharedfilesystem.</code><code class="sig-name descname">AwaitableGetAvailbilityZonesResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">region=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.AwaitableGetAvailbilityZonesResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_openstack.sharedfilesystem.AwaitableGetShareNetworkResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.sharedfilesystem.</code><code class="sig-name descname">AwaitableGetShareNetworkResult</code><span class="sig-paren">(</span><em class="sig-param">cidr=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">ip_version=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_type=None</em>, <em class="sig-param">neutron_net_id=None</em>, <em class="sig-param">neutron_subnet_id=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">security_service_id=None</em>, <em class="sig-param">security_service_ids=None</em>, <em class="sig-param">segmentation_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.AwaitableGetShareNetworkResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.sharedfilesystem.</code><code class="sig-name descname">AwaitableGetShareNetworkResult</code><span class="sig-paren">(</span><em class="sig-param">cidr=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ip_version=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_type=None</em>, <em class="sig-param">neutron_net_id=None</em>, <em class="sig-param">neutron_subnet_id=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">security_service_id=None</em>, <em class="sig-param">security_service_ids=None</em>, <em class="sig-param">segmentation_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.AwaitableGetShareNetworkResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_openstack.sharedfilesystem.AwaitableGetShareResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.sharedfilesystem.</code><code class="sig-name descname">AwaitableGetShareResult</code><span class="sig-paren">(</span><em class="sig-param">availability_zone=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">export_location_path=None</em>, <em class="sig-param">export_locations=None</em>, <em class="sig-param">is_public=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">share_network_id=None</em>, <em class="sig-param">share_proto=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">snapshot_id=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.AwaitableGetShareResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.sharedfilesystem.</code><code class="sig-name descname">AwaitableGetShareResult</code><span class="sig-paren">(</span><em class="sig-param">availability_zone=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">export_location_path=None</em>, <em class="sig-param">export_locations=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">is_public=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">share_network_id=None</em>, <em class="sig-param">share_proto=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">snapshot_id=None</em>, <em class="sig-param">status=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.AwaitableGetShareResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_openstack.sharedfilesystem.AwaitableGetSnapshotResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.sharedfilesystem.</code><code class="sig-name descname">AwaitableGetSnapshotResult</code><span class="sig-paren">(</span><em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">share_id=None</em>, <em class="sig-param">share_proto=None</em>, <em class="sig-param">share_size=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.AwaitableGetSnapshotResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.sharedfilesystem.</code><code class="sig-name descname">AwaitableGetSnapshotResult</code><span class="sig-paren">(</span><em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">share_id=None</em>, <em class="sig-param">share_proto=None</em>, <em class="sig-param">share_size=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">status=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.AwaitableGetSnapshotResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_openstack.sharedfilesystem.GetAvailbilityZonesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.sharedfilesystem.</code><code class="sig-name descname">GetAvailbilityZonesResult</code><span class="sig-paren">(</span><em class="sig-param">names=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.GetAvailbilityZonesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.sharedfilesystem.</code><code class="sig-name descname">GetAvailbilityZonesResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">region=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.GetAvailbilityZonesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getAvailbilityZones.</p>
+<dl class="attribute">
+<dt id="pulumi_openstack.sharedfilesystem.GetAvailbilityZonesResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.GetAvailbilityZonesResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_openstack.sharedfilesystem.GetAvailbilityZonesResult.names">
 <code class="sig-name descname">names</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.GetAvailbilityZonesResult.names" title="Permalink to this definition">¶</a></dt>
@@ -49,17 +55,11 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>See Argument Reference above.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_openstack.sharedfilesystem.GetAvailbilityZonesResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.GetAvailbilityZonesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_openstack.sharedfilesystem.GetShareNetworkResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.sharedfilesystem.</code><code class="sig-name descname">GetShareNetworkResult</code><span class="sig-paren">(</span><em class="sig-param">cidr=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">ip_version=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_type=None</em>, <em class="sig-param">neutron_net_id=None</em>, <em class="sig-param">neutron_subnet_id=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">security_service_id=None</em>, <em class="sig-param">security_service_ids=None</em>, <em class="sig-param">segmentation_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.GetShareNetworkResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.sharedfilesystem.</code><code class="sig-name descname">GetShareNetworkResult</code><span class="sig-paren">(</span><em class="sig-param">cidr=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ip_version=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_type=None</em>, <em class="sig-param">neutron_net_id=None</em>, <em class="sig-param">neutron_subnet_id=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">security_service_id=None</em>, <em class="sig-param">security_service_ids=None</em>, <em class="sig-param">segmentation_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.GetShareNetworkResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getShareNetwork.</p>
 <dl class="attribute">
 <dt id="pulumi_openstack.sharedfilesystem.GetShareNetworkResult.cidr">
@@ -71,6 +71,12 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_openstack.sharedfilesystem.GetShareNetworkResult.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.GetShareNetworkResult.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>See Argument Reference above.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.sharedfilesystem.GetShareNetworkResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.GetShareNetworkResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -134,17 +140,11 @@ the share network.</p>
 <dd><p>See Argument Reference above.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_openstack.sharedfilesystem.GetShareNetworkResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.GetShareNetworkResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_openstack.sharedfilesystem.GetShareResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.sharedfilesystem.</code><code class="sig-name descname">GetShareResult</code><span class="sig-paren">(</span><em class="sig-param">availability_zone=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">export_location_path=None</em>, <em class="sig-param">export_locations=None</em>, <em class="sig-param">is_public=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">share_network_id=None</em>, <em class="sig-param">share_proto=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">snapshot_id=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.GetShareResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.sharedfilesystem.</code><code class="sig-name descname">GetShareResult</code><span class="sig-paren">(</span><em class="sig-param">availability_zone=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">export_location_path=None</em>, <em class="sig-param">export_locations=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">is_public=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">share_network_id=None</em>, <em class="sig-param">share_proto=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">snapshot_id=None</em>, <em class="sig-param">status=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.GetShareResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getShare.</p>
 <dl class="attribute">
 <dt id="pulumi_openstack.sharedfilesystem.GetShareResult.availability_zone">
@@ -170,6 +170,12 @@ the share network.</p>
 <dd><p>A list of export locations. For example, when a share
 server has more than one network interface, it can have multiple export
 locations.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.sharedfilesystem.GetShareResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.GetShareResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -232,22 +238,22 @@ locations.</p>
 <dd><p>See Argument Reference above.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_openstack.sharedfilesystem.GetShareResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.GetShareResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_openstack.sharedfilesystem.GetSnapshotResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.sharedfilesystem.</code><code class="sig-name descname">GetSnapshotResult</code><span class="sig-paren">(</span><em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">share_id=None</em>, <em class="sig-param">share_proto=None</em>, <em class="sig-param">share_size=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.GetSnapshotResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.sharedfilesystem.</code><code class="sig-name descname">GetSnapshotResult</code><span class="sig-paren">(</span><em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">share_id=None</em>, <em class="sig-param">share_proto=None</em>, <em class="sig-param">share_size=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">status=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.GetSnapshotResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getSnapshot.</p>
 <dl class="attribute">
 <dt id="pulumi_openstack.sharedfilesystem.GetSnapshotResult.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.GetSnapshotResult.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>See Argument Reference above.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.sharedfilesystem.GetSnapshotResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.GetSnapshotResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -292,12 +298,6 @@ locations.</p>
 <dd><p>See Argument Reference above.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_openstack.sharedfilesystem.GetSnapshotResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.GetSnapshotResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
@@ -309,6 +309,9 @@ authentication and authorization (AuthN/AuthZ). For example, a share server
 will be the client for an existing service such as LDAP, Kerberos, or
 Microsoft Active Directory.</p>
 <p>Minimum supported Manila microversion is 2.7.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/sharedfilesystem_securityservice_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/sharedfilesystem_securityservice_v2.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -336,9 +339,6 @@ tenant.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/sharedfilesystem_securityservice_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/sharedfilesystem_securityservice_v2.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.sharedfilesystem.SecurityService.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.SecurityService.description" title="Permalink to this definition">¶</a></dt>
@@ -448,9 +448,6 @@ tenant.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/sharedfilesystem_securityservice_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/sharedfilesystem_securityservice_v2.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -495,6 +492,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.sharedfilesystem.Share">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.sharedfilesystem.</code><code class="sig-name descname">Share</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">is_public=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">share_network_id=None</em>, <em class="sig-param">share_proto=None</em>, <em class="sig-param">share_type=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">snapshot_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.Share" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this resource to configure a share.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/sharedfilesystem_share_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/sharedfilesystem_share_v2.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -528,9 +528,6 @@ a new share.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/sharedfilesystem_share_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/sharedfilesystem_share_v2.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.sharedfilesystem.Share.all_metadata">
 <code class="sig-name descname">all_metadata</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.Share.all_metadata" title="Permalink to this definition">¶</a></dt>
@@ -712,9 +709,6 @@ a new share.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">preferred</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/sharedfilesystem_share_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/sharedfilesystem_share_v2.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -758,15 +752,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_openstack.sharedfilesystem.ShareAccess">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.sharedfilesystem.</code><code class="sig-name descname">ShareAccess</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_level=None</em>, <em class="sig-param">access_to=None</em>, <em class="sig-param">access_type=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">share_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.ShareAccess" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a ShareAccess resource with the given unique name, props, and options.</p>
+<dd><p>Create a ShareAccess resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] access_level: The access level to the share. Can either be <code class="docutils literal notranslate"><span class="pre">rw</span></code> or <code class="docutils literal notranslate"><span class="pre">ro</span></code>.
+:param pulumi.Input[str] access_to: The value that defines the access. Can either be an IP</p>
+<blockquote>
+<div><p>address or a username verified by configured Security Service of the Share Network.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>access_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The access level to the share. Can either be <code class="docutils literal notranslate"><span class="pre">rw</span></code> or <code class="docutils literal notranslate"><span class="pre">ro</span></code>.</p></li>
-<li><p><strong>access_to</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The value that defines the access. Can either be an IP
-address or a username verified by configured Security Service of the Share Network.</p></li>
 <li><p><strong>access_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The access rule type. Can either be an ip, user,
 cert, or cephx. cephx support requires an OpenStack environment that supports
 Shared Filesystem microversion 2.13 (Mitaka) or later.</p></li>
@@ -777,9 +773,6 @@ creates a new share access.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/sharedfilesystem_share_access_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/sharedfilesystem_share_access_v2.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.sharedfilesystem.ShareAccess.access_key">
 <code class="sig-name descname">access_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.ShareAccess.access_key" title="Permalink to this definition">¶</a></dt>
@@ -846,9 +839,6 @@ creates a new share access.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/sharedfilesystem_share_access_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/sharedfilesystem_share_access_v2.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -895,6 +885,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Use this resource to configure a share network.</p>
 <p>A share network stores network information that share servers can use when
 shares are created.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/sharedfilesystem_sharenetwork_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/sharedfilesystem_sharenetwork_v2.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -919,9 +912,6 @@ the share network. The security service must be specified by ID and not name.</p
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/sharedfilesystem_sharenetwork_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/sharedfilesystem_sharenetwork_v2.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.sharedfilesystem.ShareNetwork.cidr">
 <code class="sig-name descname">cidr</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.ShareNetwork.cidr" title="Permalink to this definition">¶</a></dt>
@@ -1033,9 +1023,6 @@ the share network. The security service must be specified by ID and not name.</p
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/sharedfilesystem_sharenetwork_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/sharedfilesystem_sharenetwork_v2.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1081,21 +1068,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-prename descclassname">pulumi_openstack.sharedfilesystem.</code><code class="sig-name descname">get_availbility_zones</code><span class="sig-paren">(</span><em class="sig-param">region=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.get_availbility_zones" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get a list of Shared File System availability zones
 from OpenStack</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/sharedfilesystem_availability_zones_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/sharedfilesystem_availability_zones_v2.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>region</strong> (<em>str</em>) – The region in which to obtain the V2 Shared File System
 client. If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used.</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/sharedfilesystem_availability_zones_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/sharedfilesystem_availability_zones_v2.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_openstack.sharedfilesystem.get_share">
 <code class="sig-prename descclassname">pulumi_openstack.sharedfilesystem.</code><code class="sig-name descname">get_share</code><span class="sig-paren">(</span><em class="sig-param">description=None</em>, <em class="sig-param">export_location_path=None</em>, <em class="sig-param">is_public=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">share_network_id=None</em>, <em class="sig-param">snapshot_id=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.get_share" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an available Shared File System share.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/sharedfilesystem_share_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/sharedfilesystem_share_v2.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1117,15 +1107,15 @@ strings.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/sharedfilesystem_share_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/sharedfilesystem_share_v2.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_openstack.sharedfilesystem.get_share_network">
 <code class="sig-prename descclassname">pulumi_openstack.sharedfilesystem.</code><code class="sig-name descname">get_share_network</code><span class="sig-paren">(</span><em class="sig-param">description=None</em>, <em class="sig-param">ip_version=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_type=None</em>, <em class="sig-param">neutron_net_id=None</em>, <em class="sig-param">neutron_subnet_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">security_service_id=None</em>, <em class="sig-param">segmentation_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.get_share_network" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an available Shared File System share network.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/sharedfilesystem_sharenetwork_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/sharedfilesystem_sharenetwork_v2.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1145,15 +1135,15 @@ the share network.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/sharedfilesystem_sharenetwork_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/sharedfilesystem_sharenetwork_v2.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_openstack.sharedfilesystem.get_snapshot">
 <code class="sig-prename descclassname">pulumi_openstack.sharedfilesystem.</code><code class="sig-name descname">get_snapshot</code><span class="sig-paren">(</span><em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">share_id=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.get_snapshot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an available Shared File System snapshot.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/sharedfilesystem_snapshot_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/sharedfilesystem_snapshot_v2.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1166,9 +1156,6 @@ the share network.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/sharedfilesystem_snapshot_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/sharedfilesystem_snapshot_v2.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>
