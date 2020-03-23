@@ -7,25 +7,44 @@ menu:
     weight: 2
 ---
 
-Pulumi offers APIs for working with a wide variety of cloud platforms, as well
-as higher-level APIs that make it easier to deliver cloud applications and
-infrastructure.
+Pulumi offers APIs for working with a wide variety of cloud platforms, as well as
+higher-level APIs that make it easier to deliver cloud applications and infrastructure.
 
-These APIs are available as packages in your chosen language's package manager
----npm for TypeScript/JavaScript and PyPI for Python. There is a dedicated package for
-each cloud that includes access to its full capabilities. In addition, Pulumi
-offers many convenience packages that make common tasks easier, like setting
-up a network, creating a Kubernetes cluster, and building and publishing containers
-to private registries.
+These APIs are available as packages in your chosen language's package manager --- npm for
+TypeScript/JavaScript, PyPI for Python, and the like. There is a dedicated package for
+each cloud that includes access to its full capabilities. In addition, Pulumi offers many
+convenience packages that make common tasks easier, like setting up a network, creating a
+Kubernetes cluster, and building and publishing containers to private registries.
 
-### Choose Your Language
+## Resources by Cloud Provider
+
+Reference documentation and examples for major cloud providers.
+
+<div class="tiles">
+    <a class="tile" href="{{< relref "/docs/reference/pkg/aws" >}}">
+        <img class="h-10 mx-auto" src="/logos/tech/aws.svg" alt="AWS">
+    </a>
+    <a class="tile md:mx-4 my-4 md:my-0" href="{{< relref "/docs/reference/pkg/azure" >}}">
+        <img class="h-10 mx-auto" src="/logos/tech/azure.svg" alt="Azure">
+    </a>
+    <a class="tile" href="{{< relref "/docs/reference/pkg/gcp" >}}">
+        <img class="h-10 mx-auto" src="/logos/tech/gcp.svg" alt="Google Cloud">
+    </a>
+</div>
+
+<hr class="mt-12 mb-8 border-b border-gray-200">
+
+## All Packages by Language
+
+Detailed documentation for general-purpose and cloud-provider packages, organized by language.
 
 {{% chooser language "javascript,typescript,python,go,csharp" / %}}
 
 ### General Purpose Packages
 
-The Pulumi SDK package is used for accessing the core programming model around resources, configuration, and other components
-directly. Additional general purpose packages can be used across all cloud platforms:
+The Pulumi SDK package is used for accessing the core programming model around resources,
+configuration, and other components directly. Additional general-purpose packages can be
+used across all cloud platforms:
 
 {{% choosable language "javascript,typescript" %}}
 * [**Pulumi SDK** (`@pulumi/pulumi`)]({{< relref "nodejs/pulumi/pulumi" >}})
@@ -51,7 +70,7 @@ directly. Additional general purpose packages can be used across all cloud platf
 * [**Random** (`Pulumi.Random`)](/docs/reference/pkg/dotnet/Pulumi.Random/Pulumi.Random.html)
 {{% /choosable %}}
 
-### Cloud Providers
+### Cloud Provider Packages
 
 Each cloud vendor has a dedicated package for deploying resources to it:
 
@@ -211,8 +230,9 @@ Each cloud vendor has a dedicated package for deploying resources to it:
 ### Cloud-Agnostic Packages
 
 {{% choosable language "javascript,typescript" %}}
-Pulumi offers a highly productive, cloud-agnostic package for container and serverless programming in the
-`@pulumi/cloud` package which currently allows writing applications once and deploying to either AWS or Azure.
+Pulumi offers a highly productive, cloud-agnostic package for container and serverless
+programming in the `@pulumi/cloud` package which currently allows writing applications
+once and deploying to either AWS or Azure.
 
 * [**Pulumi Cloud Framework** (`@pulumi/cloud`) <span class="badge badge-preview">PREVIEW</span>]({{< relref "nodejs/pulumi/cloud" >}})
 {{% /choosable %}}

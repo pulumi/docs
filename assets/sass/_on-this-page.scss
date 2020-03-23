@@ -1,8 +1,8 @@
 .on-this-page {
-    @apply mt-2 pt-6 pb-8 hidden;
+    @apply mt-4 py-4 hidden;
 
     h4 {
-        @apply text-gray-600 uppercase tracking-wide font-bold text-sm;
+        @apply text-blue-800 uppercase tracking-wide font-bold text-sm;
     }
 
     ul {
@@ -12,8 +12,16 @@
         li {
             @apply truncate;
 
+            &.active {
+                @apply font-semibold;
+            }
+
             &.h3 {
                 @apply ml-2;
+            }
+
+            a {
+                @apply text-blue-800;
             }
         }
     }

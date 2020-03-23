@@ -1,0 +1,3067 @@
+
+---
+title: "GetPool"
+block_external_search_index: true
+---
+
+Use this data source to access information about an existing Batch pool
+
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.batch.getPool({
+    accountName: "testbatchaccount",
+    name: "testbatchpool",
+    resourceGroupName: "test",
+});
+```
+
+> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/batch_pool.html.markdown.
+
+
+
+
+
+## Using GetPool
+
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+
+
+{{% choosable language typescript %}}
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPool<span class="p">(</span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/batch/#GetPoolArgs">GetPoolArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">pulumi.InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/batch/#GetPoolResult">GetPoolResult</a></span>></span></code></pre></div>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_pool(</span>account_name=None<span class="p">, </span>certificates=None<span class="p">, </span>name=None<span class="p">, </span>network_configuration=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>start_task=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPool<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/batch?tab=doc#LookupPoolArgs">LookupPoolArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/batch?tab=doc#LookupPoolResult">LookupPoolResult</a></span>, error)</span></code></pre></div>
+{{% /choosable %}}
+
+
+{{% choosable language csharp %}}
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetPool </span><span class="p">{</span><span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Batch.GetPoolResult.html">GetPoolResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Batch.Inputs.GetPoolArgs.html">GetPoolArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">Pulumi.InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">}</span></code></pre></div>
+{{% /choosable %}}
+
+
+
+The following arguments are supported:
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Account<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the Batch account.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Certificates</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolcertificate">List&lt;Get<wbr>Pool<wbr>Certificate<wbr>Args&gt;?</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `certificate` blocks that describe the certificates installed on each compute node in the pool.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the endpoint.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Network<wbr>Configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolnetworkconfiguration">Get<wbr>Pool<wbr>Network<wbr>Configuration<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Resource<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Start<wbr>Task</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolstarttask">Get<wbr>Pool<wbr>Start<wbr>Task<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}A `start_task` block that describes the start task settings for the Batch pool.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Account<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the Batch account.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Certificates</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolcertificate">[]Get<wbr>Pool<wbr>Certificate</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `certificate` blocks that describe the certificates installed on each compute node in the pool.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the endpoint.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Network<wbr>Configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolnetworkconfiguration">*Get<wbr>Pool<wbr>Network<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Resource<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Start<wbr>Task</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolstarttask">*Get<wbr>Pool<wbr>Start<wbr>Task</a></span>
+    </dt>
+    <dd>{{% md %}}A `start_task` block that describes the start task settings for the Batch pool.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>account<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the Batch account.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>certificates</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolcertificate">Get<wbr>Pool<wbr>Certificate[]?</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `certificate` blocks that describe the certificates installed on each compute node in the pool.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the endpoint.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>network<wbr>Configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolnetworkconfiguration">Get<wbr>Pool<wbr>Network<wbr>Configuration?</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>resource<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>start<wbr>Task</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolstarttask">Get<wbr>Pool<wbr>Start<wbr>Task?</a></span>
+    </dt>
+    <dd>{{% md %}}A `start_task` block that describes the start task settings for the Batch pool.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>account_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the Batch account.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>certificates</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolcertificate">List[Get<wbr>Pool<wbr>Certificate]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `certificate` blocks that describe the certificates installed on each compute node in the pool.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the endpoint.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>network_<wbr>configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolnetworkconfiguration">Dict[Get<wbr>Pool<wbr>Network<wbr>Configuration]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>resource_<wbr>group_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>start_<wbr>task</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolstarttask">Dict[Get<wbr>Pool<wbr>Start<wbr>Task]</a></span>
+    </dt>
+    <dd>{{% md %}}A `start_task` block that describes the start task settings for the Batch pool.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+
+## GetPool Result
+
+The following output properties are available:
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Account<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the Batch account.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Auto<wbr>Scales</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolautoscale">List&lt;Get<wbr>Pool<wbr>Auto<wbr>Scale&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A `auto_scale` block that describes the scale settings when using auto scale.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Certificates</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolcertificate">List&lt;Get<wbr>Pool<wbr>Certificate&gt;?</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `certificate` blocks that describe the certificates installed on each compute node in the pool.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Container<wbr>Configurations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolcontainerconfiguration">List&lt;Get<wbr>Pool<wbr>Container<wbr>Configuration&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The container configuration used in the pool's VMs.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Display<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Fixed<wbr>Scales</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolfixedscale">List&lt;Get<wbr>Pool<wbr>Fixed<wbr>Scale&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A `fixed_scale` block that describes the scale settings when using fixed scale.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Max<wbr>Tasks<wbr>Per<wbr>Node</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of tasks that can run concurrently on a single compute node in the pool.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Metadata</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary<string, string></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the endpoint.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Network<wbr>Configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolnetworkconfiguration">Get<wbr>Pool<wbr>Network<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Node<wbr>Agent<wbr>Sku<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Sku of the node agents in the Batch pool.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Resource<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Start<wbr>Task</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolstarttask">Get<wbr>Pool<wbr>Start<wbr>Task?</a></span>
+    </dt>
+    <dd>{{% md %}}A `start_task` block that describes the start task settings for the Batch pool.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Storage<wbr>Image<wbr>References</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolstorageimagereference">List&lt;Get<wbr>Pool<wbr>Storage<wbr>Image<wbr>Reference&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The reference of the storage image used by the nodes in the Batch pool.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Vm<wbr>Size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The size of the VM created in the Batch pool.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Account<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the Batch account.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Auto<wbr>Scales</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolautoscale">[]Get<wbr>Pool<wbr>Auto<wbr>Scale</a></span>
+    </dt>
+    <dd>{{% md %}}A `auto_scale` block that describes the scale settings when using auto scale.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Certificates</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolcertificate">[]Get<wbr>Pool<wbr>Certificate</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `certificate` blocks that describe the certificates installed on each compute node in the pool.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Container<wbr>Configurations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolcontainerconfiguration">[]Get<wbr>Pool<wbr>Container<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}The container configuration used in the pool's VMs.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Display<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Fixed<wbr>Scales</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolfixedscale">[]Get<wbr>Pool<wbr>Fixed<wbr>Scale</a></span>
+    </dt>
+    <dd>{{% md %}}A `fixed_scale` block that describes the scale settings when using fixed scale.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Max<wbr>Tasks<wbr>Per<wbr>Node</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of tasks that can run concurrently on a single compute node in the pool.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Metadata</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the endpoint.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Network<wbr>Configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolnetworkconfiguration">Get<wbr>Pool<wbr>Network<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Node<wbr>Agent<wbr>Sku<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Sku of the node agents in the Batch pool.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Resource<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Start<wbr>Task</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolstarttask">*Get<wbr>Pool<wbr>Start<wbr>Task</a></span>
+    </dt>
+    <dd>{{% md %}}A `start_task` block that describes the start task settings for the Batch pool.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Storage<wbr>Image<wbr>References</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolstorageimagereference">[]Get<wbr>Pool<wbr>Storage<wbr>Image<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}The reference of the storage image used by the nodes in the Batch pool.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Vm<wbr>Size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The size of the VM created in the Batch pool.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>account<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the Batch account.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>auto<wbr>Scales</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolautoscale">Get<wbr>Pool<wbr>Auto<wbr>Scale[]</a></span>
+    </dt>
+    <dd>{{% md %}}A `auto_scale` block that describes the scale settings when using auto scale.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>certificates</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolcertificate">Get<wbr>Pool<wbr>Certificate[]?</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `certificate` blocks that describe the certificates installed on each compute node in the pool.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>container<wbr>Configurations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolcontainerconfiguration">Get<wbr>Pool<wbr>Container<wbr>Configuration[]</a></span>
+    </dt>
+    <dd>{{% md %}}The container configuration used in the pool's VMs.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>display<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>fixed<wbr>Scales</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolfixedscale">Get<wbr>Pool<wbr>Fixed<wbr>Scale[]</a></span>
+    </dt>
+    <dd>{{% md %}}A `fixed_scale` block that describes the scale settings when using fixed scale.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>max<wbr>Tasks<wbr>Per<wbr>Node</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of tasks that can run concurrently on a single compute node in the pool.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>metadata</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the endpoint.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>network<wbr>Configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolnetworkconfiguration">Get<wbr>Pool<wbr>Network<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>node<wbr>Agent<wbr>Sku<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Sku of the node agents in the Batch pool.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>resource<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>start<wbr>Task</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolstarttask">Get<wbr>Pool<wbr>Start<wbr>Task?</a></span>
+    </dt>
+    <dd>{{% md %}}A `start_task` block that describes the start task settings for the Batch pool.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>storage<wbr>Image<wbr>References</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolstorageimagereference">Get<wbr>Pool<wbr>Storage<wbr>Image<wbr>Reference[]</a></span>
+    </dt>
+    <dd>{{% md %}}The reference of the storage image used by the nodes in the Batch pool.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>vm<wbr>Size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The size of the VM created in the Batch pool.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>account_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the Batch account.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>auto_<wbr>scales</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolautoscale">List[Get<wbr>Pool<wbr>Auto<wbr>Scale]</a></span>
+    </dt>
+    <dd>{{% md %}}A `auto_scale` block that describes the scale settings when using auto scale.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>certificates</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolcertificate">List[Get<wbr>Pool<wbr>Certificate]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `certificate` blocks that describe the certificates installed on each compute node in the pool.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>container_<wbr>configurations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolcontainerconfiguration">List[Get<wbr>Pool<wbr>Container<wbr>Configuration]</a></span>
+    </dt>
+    <dd>{{% md %}}The container configuration used in the pool's VMs.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>display_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>fixed_<wbr>scales</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolfixedscale">List[Get<wbr>Pool<wbr>Fixed<wbr>Scale]</a></span>
+    </dt>
+    <dd>{{% md %}}A `fixed_scale` block that describes the scale settings when using fixed scale.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>max_<wbr>tasks_<wbr>per_<wbr>node</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of tasks that can run concurrently on a single compute node in the pool.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>metadata</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the endpoint.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>network_<wbr>configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolnetworkconfiguration">Dict[Get<wbr>Pool<wbr>Network<wbr>Configuration]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>node_<wbr>agent_<wbr>sku_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Sku of the node agents in the Batch pool.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>resource_<wbr>group_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>start_<wbr>task</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolstarttask">Dict[Get<wbr>Pool<wbr>Start<wbr>Task]</a></span>
+    </dt>
+    <dd>{{% md %}}A `start_task` block that describes the start task settings for the Batch pool.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>storage_<wbr>image_<wbr>references</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolstorageimagereference">List[Get<wbr>Pool<wbr>Storage<wbr>Image<wbr>Reference]</a></span>
+    </dt>
+    <dd>{{% md %}}The reference of the storage image used by the nodes in the Batch pool.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>vm_<wbr>size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The size of the VM created in the Batch pool.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+
+## Supporting Types
+
+#### Get&lt;wbr&gt;Pool&lt;wbr&gt;Auto&lt;wbr&gt;Scale
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetPoolAutoScale">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/batch?tab=doc#GetPoolAutoScale">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Evaluation<wbr>Interval</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The interval to wait before evaluating if the pool needs to be scaled.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Formula</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The autoscale formula that needs to be used for scaling the Batch pool.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Evaluation<wbr>Interval</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The interval to wait before evaluating if the pool needs to be scaled.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Formula</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The autoscale formula that needs to be used for scaling the Batch pool.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>evaluation<wbr>Interval</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The interval to wait before evaluating if the pool needs to be scaled.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>formula</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The autoscale formula that needs to be used for scaling the Batch pool.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>evaluation<wbr>Interval</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The interval to wait before evaluating if the pool needs to be scaled.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>formula</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The autoscale formula that needs to be used for scaling the Batch pool.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+#### Get&lt;wbr&gt;Pool&lt;wbr&gt;Certificate
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GetPoolCertificate">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetPoolCertificate">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/batch?tab=doc#GetPoolCertificateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/batch?tab=doc#GetPoolCertificate">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The fully qualified ID of the certificate installed on the pool.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Store<wbr>Location</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location of the certificate store on the compute node into which the certificate is installed, either `CurrentUser` or `LocalMachine`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Store<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The name of the certificate store on the compute node into which the certificate is installed.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Visibilities</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List<string>?</span>
+    </dt>
+    <dd>{{% md %}}Which user accounts on the compute node have access to the private data of the certificate.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The fully qualified ID of the certificate installed on the pool.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Store<wbr>Location</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location of the certificate store on the compute node into which the certificate is installed, either `CurrentUser` or `LocalMachine`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Store<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The name of the certificate store on the compute node into which the certificate is installed.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Visibilities</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Which user accounts on the compute node have access to the private data of the certificate.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The fully qualified ID of the certificate installed on the pool.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>store<wbr>Location</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location of the certificate store on the compute node into which the certificate is installed, either `CurrentUser` or `LocalMachine`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>store<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The name of the certificate store on the compute node into which the certificate is installed.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>visibilities</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]?</span>
+    </dt>
+    <dd>{{% md %}}Which user accounts on the compute node have access to the private data of the certificate.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The fully qualified ID of the certificate installed on the pool.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>store<wbr>Location</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The location of the certificate store on the compute node into which the certificate is installed, either `CurrentUser` or `LocalMachine`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>store<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the certificate store on the compute node into which the certificate is installed.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>visibilities</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}Which user accounts on the compute node have access to the private data of the certificate.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+#### Get&lt;wbr&gt;Pool&lt;wbr&gt;Container&lt;wbr&gt;Configuration
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetPoolContainerConfiguration">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/batch?tab=doc#GetPoolContainerConfiguration">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Container<wbr>Registries</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolcontainerconfigurationcontainerregistry">List&lt;Get<wbr>Pool<wbr>Container<wbr>Configuration<wbr>Container<wbr>Registry<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Additional container registries from which container images can be pulled by the pool's VMs.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of container configuration.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Container<wbr>Registries</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolcontainerconfigurationcontainerregistry">[]Get<wbr>Pool<wbr>Container<wbr>Configuration<wbr>Container<wbr>Registry</a></span>
+    </dt>
+    <dd>{{% md %}}Additional container registries from which container images can be pulled by the pool's VMs.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of container configuration.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>container<wbr>Registries</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolcontainerconfigurationcontainerregistry">Get<wbr>Pool<wbr>Container<wbr>Configuration<wbr>Container<wbr>Registry[]</a></span>
+    </dt>
+    <dd>{{% md %}}Additional container registries from which container images can be pulled by the pool's VMs.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of container configuration.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>container<wbr>Registries</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolcontainerconfigurationcontainerregistry">List[Get<wbr>Pool<wbr>Container<wbr>Configuration<wbr>Container<wbr>Registry]</a></span>
+    </dt>
+    <dd>{{% md %}}Additional container registries from which container images can be pulled by the pool's VMs.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of container configuration.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+#### Get&lt;wbr&gt;Pool&lt;wbr&gt;Container&lt;wbr&gt;Configuration&lt;wbr&gt;Container&lt;wbr&gt;Registry
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetPoolContainerConfigurationContainerRegistry">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/batch?tab=doc#GetPoolContainerConfigurationContainerRegistry">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Password</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The password to log into the registry server.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Registry<wbr>Server</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The container registry URL. The default is "docker.io".
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>User<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The user name to log into the registry server.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Password</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The password to log into the registry server.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Registry<wbr>Server</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The container registry URL. The default is "docker.io".
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>User<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The user name to log into the registry server.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>password</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The password to log into the registry server.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>registry<wbr>Server</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The container registry URL. The default is "docker.io".
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>user<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The user name to log into the registry server.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>password</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The password to log into the registry server.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>registry<wbr>Server</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The container registry URL. The default is "docker.io".
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>user<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The user name to log into the registry server.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+#### Get&lt;wbr&gt;Pool&lt;wbr&gt;Fixed&lt;wbr&gt;Scale
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetPoolFixedScale">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/batch?tab=doc#GetPoolFixedScale">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Resize<wbr>Timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timeout for resize operations.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Target<wbr>Dedicated<wbr>Nodes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of nodes in the Batch pool.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Target<wbr>Low<wbr>Priority<wbr>Nodes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of low priority nodes in the Batch pool.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Resize<wbr>Timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timeout for resize operations.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Target<wbr>Dedicated<wbr>Nodes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of nodes in the Batch pool.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Target<wbr>Low<wbr>Priority<wbr>Nodes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of low priority nodes in the Batch pool.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>resize<wbr>Timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timeout for resize operations.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>target<wbr>Dedicated<wbr>Nodes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of nodes in the Batch pool.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>target<wbr>Low<wbr>Priority<wbr>Nodes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of low priority nodes in the Batch pool.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>resize<wbr>Timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The timeout for resize operations.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>target<wbr>Dedicated<wbr>Nodes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The number of nodes in the Batch pool.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>target<wbr>Low<wbr>Priority<wbr>Nodes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The number of low priority nodes in the Batch pool.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+#### Get&lt;wbr&gt;Pool&lt;wbr&gt;Network&lt;wbr&gt;Configuration
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GetPoolNetworkConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetPoolNetworkConfiguration">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/batch?tab=doc#GetPoolNetworkConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/batch?tab=doc#GetPoolNetworkConfiguration">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Endpoint<wbr>Configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolnetworkconfigurationendpointconfiguration">Get<wbr>Pool<wbr>Network<wbr>Configuration<wbr>Endpoint<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The inbound NAT pools that are used to address specific ports on the individual compute node externally.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Subnet<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARM resource identifier of the virtual network subnet which the compute nodes of the pool are joined too.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Endpoint<wbr>Configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolnetworkconfigurationendpointconfiguration">Get<wbr>Pool<wbr>Network<wbr>Configuration<wbr>Endpoint<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}The inbound NAT pools that are used to address specific ports on the individual compute node externally.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Subnet<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARM resource identifier of the virtual network subnet which the compute nodes of the pool are joined too.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>endpoint<wbr>Configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolnetworkconfigurationendpointconfiguration">Get<wbr>Pool<wbr>Network<wbr>Configuration<wbr>Endpoint<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}The inbound NAT pools that are used to address specific ports on the individual compute node externally.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>subnet<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARM resource identifier of the virtual network subnet which the compute nodes of the pool are joined too.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>endpoint<wbr>Configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolnetworkconfigurationendpointconfiguration">Dict[Get<wbr>Pool<wbr>Network<wbr>Configuration<wbr>Endpoint<wbr>Configuration]</a></span>
+    </dt>
+    <dd>{{% md %}}The inbound NAT pools that are used to address specific ports on the individual compute node externally.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>subnet_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARM resource identifier of the virtual network subnet which the compute nodes of the pool are joined too.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+#### Get&lt;wbr&gt;Pool&lt;wbr&gt;Network&lt;wbr&gt;Configuration&lt;wbr&gt;Endpoint&lt;wbr&gt;Configuration
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GetPoolNetworkConfigurationEndpointConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetPoolNetworkConfigurationEndpointConfiguration">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/batch?tab=doc#GetPoolNetworkConfigurationEndpointConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/batch?tab=doc#GetPoolNetworkConfigurationEndpointConfiguration">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Backend<wbr>Port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The port number on the compute node.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Frontend<wbr>Port<wbr>Range</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The range of external ports that are used to provide inbound access to the backendPort on the individual compute nodes in the format of `1000-1100`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the endpoint.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Network<wbr>Security<wbr>Group<wbr>Rules</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolnetworkconfigurationendpointconfigurationnetworksecuritygrouprule">List&lt;Get<wbr>Pool<wbr>Network<wbr>Configuration<wbr>Endpoint<wbr>Configuration<wbr>Network<wbr>Security<wbr>Group<wbr>Rule<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The list of network security group rules that are applied to the endpoint.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Protocol</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The protocol of the endpoint.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Backend<wbr>Port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The port number on the compute node.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Frontend<wbr>Port<wbr>Range</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The range of external ports that are used to provide inbound access to the backendPort on the individual compute nodes in the format of `1000-1100`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the endpoint.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Network<wbr>Security<wbr>Group<wbr>Rules</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolnetworkconfigurationendpointconfigurationnetworksecuritygrouprule">[]Get<wbr>Pool<wbr>Network<wbr>Configuration<wbr>Endpoint<wbr>Configuration<wbr>Network<wbr>Security<wbr>Group<wbr>Rule</a></span>
+    </dt>
+    <dd>{{% md %}}The list of network security group rules that are applied to the endpoint.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Protocol</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The protocol of the endpoint.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>backend<wbr>Port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The port number on the compute node.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>frontend<wbr>Port<wbr>Range</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The range of external ports that are used to provide inbound access to the backendPort on the individual compute nodes in the format of `1000-1100`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the endpoint.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>network<wbr>Security<wbr>Group<wbr>Rules</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolnetworkconfigurationendpointconfigurationnetworksecuritygrouprule">Get<wbr>Pool<wbr>Network<wbr>Configuration<wbr>Endpoint<wbr>Configuration<wbr>Network<wbr>Security<wbr>Group<wbr>Rule[]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of network security group rules that are applied to the endpoint.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>protocol</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The protocol of the endpoint.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>backend_<wbr>port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The port number on the compute node.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>frontend<wbr>Port<wbr>Range</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The range of external ports that are used to provide inbound access to the backendPort on the individual compute nodes in the format of `1000-1100`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the endpoint.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>network<wbr>Security<wbr>Group<wbr>Rules</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolnetworkconfigurationendpointconfigurationnetworksecuritygrouprule">List[Get<wbr>Pool<wbr>Network<wbr>Configuration<wbr>Endpoint<wbr>Configuration<wbr>Network<wbr>Security<wbr>Group<wbr>Rule]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of network security group rules that are applied to the endpoint.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>protocol</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The protocol of the endpoint.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+#### Get&lt;wbr&gt;Pool&lt;wbr&gt;Network&lt;wbr&gt;Configuration&lt;wbr&gt;Endpoint&lt;wbr&gt;Configuration&lt;wbr&gt;Network&lt;wbr&gt;Security&lt;wbr&gt;Group&lt;wbr&gt;Rule
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GetPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRule">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRule">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/batch?tab=doc#GetPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/batch?tab=doc#GetPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRule">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Access</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The action that should be taken for a specified IP address, subnet range or tag.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Priority</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The priority for this rule.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Source<wbr>Address<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The source address prefix or tag to match for the rule.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Access</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The action that should be taken for a specified IP address, subnet range or tag.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Priority</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The priority for this rule.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Source<wbr>Address<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The source address prefix or tag to match for the rule.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>access</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The action that should be taken for a specified IP address, subnet range or tag.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>priority</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The priority for this rule.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>source<wbr>Address<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The source address prefix or tag to match for the rule.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>access</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The action that should be taken for a specified IP address, subnet range or tag.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>priority</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The priority for this rule.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>source_<wbr>address_<wbr>prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The source address prefix or tag to match for the rule.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+#### Get&lt;wbr&gt;Pool&lt;wbr&gt;Start&lt;wbr&gt;Task
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GetPoolStartTask">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetPoolStartTask">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/batch?tab=doc#GetPoolStartTaskArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/batch?tab=doc#GetPoolStartTask">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Command<wbr>Line</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The command line executed by the start task.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Environment</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary<string, string>?</span>
+    </dt>
+    <dd>{{% md %}}A map of strings (key,value) that represents the environment variables to set in the start task.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Max<wbr>Task<wbr>Retry<wbr>Count</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int?</span>
+    </dt>
+    <dd>{{% md %}}The number of retry count.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Resource<wbr>Files</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolstarttaskresourcefile">List&lt;Get<wbr>Pool<wbr>Start<wbr>Task<wbr>Resource<wbr>File<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `resource_file` blocks that describe the files to be downloaded to a compute node.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>User<wbr>Identities</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolstarttaskuseridentity">List&lt;Get<wbr>Pool<wbr>Start<wbr>Task<wbr>User<wbr>Identity<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A `user_identity` block that describes the user identity under which the start task runs.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Wait<wbr>For<wbr>Success</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool?</span>
+    </dt>
+    <dd>{{% md %}}A flag that indicates if the Batch pool should wait for the start task to be completed.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Command<wbr>Line</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The command line executed by the start task.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Environment</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A map of strings (key,value) that represents the environment variables to set in the start task.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Max<wbr>Task<wbr>Retry<wbr>Count</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*int</span>
+    </dt>
+    <dd>{{% md %}}The number of retry count.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Resource<wbr>Files</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolstarttaskresourcefile">[]Get<wbr>Pool<wbr>Start<wbr>Task<wbr>Resource<wbr>File</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `resource_file` blocks that describe the files to be downloaded to a compute node.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>User<wbr>Identities</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolstarttaskuseridentity">[]Get<wbr>Pool<wbr>Start<wbr>Task<wbr>User<wbr>Identity</a></span>
+    </dt>
+    <dd>{{% md %}}A `user_identity` block that describes the user identity under which the start task runs.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Wait<wbr>For<wbr>Success</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*bool</span>
+    </dt>
+    <dd>{{% md %}}A flag that indicates if the Batch pool should wait for the start task to be completed.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>command<wbr>Line</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The command line executed by the start task.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>environment</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}?</span>
+    </dt>
+    <dd>{{% md %}}A map of strings (key,value) that represents the environment variables to set in the start task.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>max<wbr>Task<wbr>Retry<wbr>Count</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number?</span>
+    </dt>
+    <dd>{{% md %}}The number of retry count.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>resource<wbr>Files</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolstarttaskresourcefile">Get<wbr>Pool<wbr>Start<wbr>Task<wbr>Resource<wbr>File[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `resource_file` blocks that describe the files to be downloaded to a compute node.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>user<wbr>Identities</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolstarttaskuseridentity">Get<wbr>Pool<wbr>Start<wbr>Task<wbr>User<wbr>Identity[]</a></span>
+    </dt>
+    <dd>{{% md %}}A `user_identity` block that describes the user identity under which the start task runs.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>wait<wbr>For<wbr>Success</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean?</span>
+    </dt>
+    <dd>{{% md %}}A flag that indicates if the Batch pool should wait for the start task to be completed.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>command<wbr>Line</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The command line executed by the start task.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>environment</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A map of strings (key,value) that represents the environment variables to set in the start task.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>max<wbr>Task<wbr>Retry<wbr>Count</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The number of retry count.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>resource<wbr>Files</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolstarttaskresourcefile">List[Get<wbr>Pool<wbr>Start<wbr>Task<wbr>Resource<wbr>File]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `resource_file` blocks that describe the files to be downloaded to a compute node.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>user<wbr>Identities</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolstarttaskuseridentity">List[Get<wbr>Pool<wbr>Start<wbr>Task<wbr>User<wbr>Identity]</a></span>
+    </dt>
+    <dd>{{% md %}}A `user_identity` block that describes the user identity under which the start task runs.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>wait<wbr>For<wbr>Success</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A flag that indicates if the Batch pool should wait for the start task to be completed.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+#### Get&lt;wbr&gt;Pool&lt;wbr&gt;Start&lt;wbr&gt;Task&lt;wbr&gt;Resource&lt;wbr&gt;File
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GetPoolStartTaskResourceFile">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetPoolStartTaskResourceFile">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/batch?tab=doc#GetPoolStartTaskResourceFileArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/batch?tab=doc#GetPoolStartTaskResourceFile">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Auto<wbr>Storage<wbr>Container<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The storage container name in the auto storage account.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Blob<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The blob prefix used when downloading blobs from an Azure Storage container.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>File<wbr>Mode</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The file permission mode attribute represented as a string in octal format (e.g. `"0644"`).
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>File<wbr>Path</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location on the compute node to which to download the file, relative to the task's working directory. If the `http_url` property is specified, the `file_path` is required and describes the path which the file will be downloaded to, including the filename. Otherwise, if the `auto_storage_container_name` or `storage_container_url` property is specified.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Http<wbr>Url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URL of the file to download. If the URL is Azure Blob Storage, it must be readable using anonymous access.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Storage<wbr>Container<wbr>Url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URL of the blob container within Azure Blob Storage.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Auto<wbr>Storage<wbr>Container<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The storage container name in the auto storage account.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Blob<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The blob prefix used when downloading blobs from an Azure Storage container.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>File<wbr>Mode</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The file permission mode attribute represented as a string in octal format (e.g. `"0644"`).
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>File<wbr>Path</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location on the compute node to which to download the file, relative to the task's working directory. If the `http_url` property is specified, the `file_path` is required and describes the path which the file will be downloaded to, including the filename. Otherwise, if the `auto_storage_container_name` or `storage_container_url` property is specified.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Http<wbr>Url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URL of the file to download. If the URL is Azure Blob Storage, it must be readable using anonymous access.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Storage<wbr>Container<wbr>Url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URL of the blob container within Azure Blob Storage.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>auto<wbr>Storage<wbr>Container<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The storage container name in the auto storage account.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>blob<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The blob prefix used when downloading blobs from an Azure Storage container.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>file<wbr>Mode</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The file permission mode attribute represented as a string in octal format (e.g. `"0644"`).
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>file<wbr>Path</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location on the compute node to which to download the file, relative to the task's working directory. If the `http_url` property is specified, the `file_path` is required and describes the path which the file will be downloaded to, including the filename. Otherwise, if the `auto_storage_container_name` or `storage_container_url` property is specified.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>http<wbr>Url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URL of the file to download. If the URL is Azure Blob Storage, it must be readable using anonymous access.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>storage<wbr>Container<wbr>Url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URL of the blob container within Azure Blob Storage.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>auto<wbr>Storage<wbr>Container<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The storage container name in the auto storage account.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>blob<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The blob prefix used when downloading blobs from an Azure Storage container.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>file<wbr>Mode</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The file permission mode attribute represented as a string in octal format (e.g. `"0644"`).
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>file<wbr>Path</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The location on the compute node to which to download the file, relative to the task's working directory. If the `http_url` property is specified, the `file_path` is required and describes the path which the file will be downloaded to, including the filename. Otherwise, if the `auto_storage_container_name` or `storage_container_url` property is specified.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>http<wbr>Url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The URL of the file to download. If the URL is Azure Blob Storage, it must be readable using anonymous access.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>storage<wbr>Container<wbr>Url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The URL of the blob container within Azure Blob Storage.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+#### Get&lt;wbr&gt;Pool&lt;wbr&gt;Start&lt;wbr&gt;Task&lt;wbr&gt;User&lt;wbr&gt;Identity
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GetPoolStartTaskUserIdentity">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetPoolStartTaskUserIdentity">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/batch?tab=doc#GetPoolStartTaskUserIdentityArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/batch?tab=doc#GetPoolStartTaskUserIdentity">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Auto<wbr>Users</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolstarttaskuseridentityautouser">List&lt;Get<wbr>Pool<wbr>Start<wbr>Task<wbr>User<wbr>Identity<wbr>Auto<wbr>User<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A `auto_user` block that describes the user identity under which the start task runs.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>User<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The user name to log into the registry server.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Auto<wbr>Users</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolstarttaskuseridentityautouser">[]Get<wbr>Pool<wbr>Start<wbr>Task<wbr>User<wbr>Identity<wbr>Auto<wbr>User</a></span>
+    </dt>
+    <dd>{{% md %}}A `auto_user` block that describes the user identity under which the start task runs.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>User<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The user name to log into the registry server.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>auto<wbr>Users</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolstarttaskuseridentityautouser">Get<wbr>Pool<wbr>Start<wbr>Task<wbr>User<wbr>Identity<wbr>Auto<wbr>User[]</a></span>
+    </dt>
+    <dd>{{% md %}}A `auto_user` block that describes the user identity under which the start task runs.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>user<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The user name to log into the registry server.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>auto<wbr>Users</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolstarttaskuseridentityautouser">List[Get<wbr>Pool<wbr>Start<wbr>Task<wbr>User<wbr>Identity<wbr>Auto<wbr>User]</a></span>
+    </dt>
+    <dd>{{% md %}}A `auto_user` block that describes the user identity under which the start task runs.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>user<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The user name to log into the registry server.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+#### Get&lt;wbr&gt;Pool&lt;wbr&gt;Start&lt;wbr&gt;Task&lt;wbr&gt;User&lt;wbr&gt;Identity&lt;wbr&gt;Auto&lt;wbr&gt;User
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GetPoolStartTaskUserIdentityAutoUser">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetPoolStartTaskUserIdentityAutoUser">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/batch?tab=doc#GetPoolStartTaskUserIdentityAutoUserArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/batch?tab=doc#GetPoolStartTaskUserIdentityAutoUser">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Elevation<wbr>Level</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The elevation level of the user identity under which the start task runs.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Scope</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The scope of the user identity under which the start task runs.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Elevation<wbr>Level</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The elevation level of the user identity under which the start task runs.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Scope</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The scope of the user identity under which the start task runs.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>elevation<wbr>Level</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The elevation level of the user identity under which the start task runs.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>scope</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The scope of the user identity under which the start task runs.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>elevation<wbr>Level</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The elevation level of the user identity under which the start task runs.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>scope</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The scope of the user identity under which the start task runs.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+#### Get&lt;wbr&gt;Pool&lt;wbr&gt;Storage&lt;wbr&gt;Image&lt;wbr&gt;Reference
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetPoolStorageImageReference">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/batch?tab=doc#GetPoolStorageImageReference">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The fully qualified ID of the certificate installed on the pool.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Offer</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Publisher</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Sku</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The fully qualified ID of the certificate installed on the pool.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Offer</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Publisher</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Sku</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The fully qualified ID of the certificate installed on the pool.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>offer</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>publisher</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>sku</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The fully qualified ID of the certificate installed on the pool.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>offer</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>publisher</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>sku</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+

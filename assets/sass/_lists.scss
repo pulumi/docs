@@ -1,0 +1,97 @@
+dl {
+
+    &.resources-properties {
+        @apply mb-8 mt-4 p-1 flex flex-col items-start items-stretch bg-gray-100 border rounded border-gray-300 text-sm text-gray-700;
+
+        @screen lg {
+            @apply flex-row flex-wrap;
+
+            dt {
+                @apply w-1/3;
+            }
+
+            dd {
+                @apply w-2/3;
+            }
+        }
+
+        dt {
+            @apply px-4 font-semibold text-gray-700 rounded-none border-gray-400;
+
+            @screen lg {
+                @apply rounded-l;
+            }
+        }
+
+        dd {
+            @apply bg-white rounded-none;
+
+            p {
+                @apply my-0;
+
+                &:not(:first-child) {
+                    @apply mt-4;
+                }
+            }
+
+            @screen lg {
+                @apply rounded-r;
+            }
+        }
+
+        dt, dd {
+            @apply py-4 px-5;
+
+            &:not(:first-of-type) {
+                @apply border-t;
+
+                @screen lg {
+                    @apply border-gray-200;
+                }
+            }
+        }
+
+        dt {
+            @apply text-sm;
+
+            &.property-required, &.property-deprecated {
+                .property-indicator {
+                    @apply ml-1 cursor-pointer;
+                    font-size: 0.6em;
+                }
+            }
+
+            &.property-required {
+                .property-indicator {
+                    @apply text-red-500;
+                    @include fa-glyph("\f069");
+                }
+            }
+
+            &.property-deprecated {
+                ~ dd {
+                    .property-message {
+                        @apply text-yellow-700 py-2 px-4 rounded border border-yellow-600;
+                    }
+                }
+            }
+
+            .property-type {
+                @apply block font-normal font-mono mt-2 text-xs;
+                a {
+                    @apply text-blue-600;
+                }
+            }
+
+            span {
+                vertical-align: middle;
+            }
+        }
+
+        dd {
+            code {
+                @apply bg-white px-0;
+            }
+        }
+    }
+}
