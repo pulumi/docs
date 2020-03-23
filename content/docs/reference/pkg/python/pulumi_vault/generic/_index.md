@@ -15,40 +15,48 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_vault.generic"></span><dl class="class">
 <dt id="pulumi_vault.generic.AwaitableGetSecretResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.generic.</code><code class="sig-name descname">AwaitableGetSecretResult</code><span class="sig-paren">(</span><em class="sig-param">data=None</em>, <em class="sig-param">data_json=None</em>, <em class="sig-param">lease_duration=None</em>, <em class="sig-param">lease_id=None</em>, <em class="sig-param">lease_renewable=None</em>, <em class="sig-param">lease_start_time=None</em>, <em class="sig-param">path=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.generic.AwaitableGetSecretResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.generic.</code><code class="sig-name descname">AwaitableGetSecretResult</code><span class="sig-paren">(</span><em class="sig-param">data=None</em>, <em class="sig-param">data_json=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">lease_duration=None</em>, <em class="sig-param">lease_id=None</em>, <em class="sig-param">lease_renewable=None</em>, <em class="sig-param">lease_start_time=None</em>, <em class="sig-param">path=None</em>, <em class="sig-param">version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.generic.AwaitableGetSecretResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_vault.generic.Endpoint">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.generic.</code><code class="sig-name descname">Endpoint</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">data_json=None</em>, <em class="sig-param">disable_delete=None</em>, <em class="sig-param">disable_read=None</em>, <em class="sig-param">ignore_absent_fields=None</em>, <em class="sig-param">path=None</em>, <em class="sig-param">write_fields=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.generic.Endpoint" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Endpoint resource with the given unique name, props, and options.</p>
+<dd><p>Create a Endpoint resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] data_json: String containing a JSON-encoded object that will be</p>
+<blockquote>
+<div><p>written to the given path as the secret data.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>data_json</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – String containing a JSON-encoded object that will be
-written to the given path as the secret data.</p></li>
+<li><p><strong>disable_delete</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Don’t attempt to delete the path from Vault if true</p></li>
 <li><p><strong>disable_read</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – True/false. Set this to true if your vault
 authentication is not able to read the data or if the endpoint does
 not support the <code class="docutils literal notranslate"><span class="pre">GET</span></code> method. Setting this to <code class="docutils literal notranslate"><span class="pre">true</span></code> will break drift
 detection. You should set this to <code class="docutils literal notranslate"><span class="pre">true</span></code> for endpoints that are
 write-only. Defaults to false.</p></li>
+<li><p><strong>ignore_absent_fields</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – When reading, disregard fields not present in data_json</p></li>
 <li><p><strong>path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The full logical path at which to write the given
 data. Consult each backend’s documentation to see which endpoints
 support the <code class="docutils literal notranslate"><span class="pre">PUT</span></code> methods and to determine whether they also support
 <code class="docutils literal notranslate"><span class="pre">DELETE</span></code> and <code class="docutils literal notranslate"><span class="pre">GET</span></code>.</p></li>
+<li><p><strong>write_fields</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Top-level fields returned by write to persist in state</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/generic_endpoint.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/generic_endpoint.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vault.generic.Endpoint.data_json">
 <code class="sig-name descname">data_json</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.generic.Endpoint.data_json" title="Permalink to this definition">¶</a></dt>
 <dd><p>String containing a JSON-encoded object that will be
 written to the given path as the secret data.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vault.generic.Endpoint.disable_delete">
+<code class="sig-name descname">disable_delete</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.generic.Endpoint.disable_delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Don’t attempt to delete the path from Vault if true</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -62,12 +70,36 @@ write-only. Defaults to false.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_vault.generic.Endpoint.ignore_absent_fields">
+<code class="sig-name descname">ignore_absent_fields</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.generic.Endpoint.ignore_absent_fields" title="Permalink to this definition">¶</a></dt>
+<dd><p>When reading, disregard fields not present in data_json</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_vault.generic.Endpoint.path">
 <code class="sig-name descname">path</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.generic.Endpoint.path" title="Permalink to this definition">¶</a></dt>
 <dd><p>The full logical path at which to write the given
 data. Consult each backend’s documentation to see which endpoints
 support the <code class="docutils literal notranslate"><span class="pre">PUT</span></code> methods and to determine whether they also support
 <code class="docutils literal notranslate"><span class="pre">DELETE</span></code> and <code class="docutils literal notranslate"><span class="pre">GET</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vault.generic.Endpoint.write_data">
+<code class="sig-name descname">write_data</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.generic.Endpoint.write_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Map of strings returned by write operation</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vault.generic.Endpoint.write_data_json">
+<code class="sig-name descname">write_data_json</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.generic.Endpoint.write_data_json" title="Permalink to this definition">¶</a></dt>
+<dd><p>JSON data returned by write operation</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vault.generic.Endpoint.write_fields">
+<code class="sig-name descname">write_fields</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.generic.Endpoint.write_fields" title="Permalink to this definition">¶</a></dt>
+<dd><p>Top-level fields returned by write to persist in state</p>
 </dd></dl>
 
 <dl class="method">
@@ -83,21 +115,23 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>data_json</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – String containing a JSON-encoded object that will be
 written to the given path as the secret data.</p></li>
+<li><p><strong>disable_delete</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Don’t attempt to delete the path from Vault if true</p></li>
 <li><p><strong>disable_read</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – True/false. Set this to true if your vault
 authentication is not able to read the data or if the endpoint does
 not support the <code class="docutils literal notranslate"><span class="pre">GET</span></code> method. Setting this to <code class="docutils literal notranslate"><span class="pre">true</span></code> will break drift
 detection. You should set this to <code class="docutils literal notranslate"><span class="pre">true</span></code> for endpoints that are
 write-only. Defaults to false.</p></li>
+<li><p><strong>ignore_absent_fields</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – When reading, disregard fields not present in data_json</p></li>
 <li><p><strong>path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The full logical path at which to write the given
 data. Consult each backend’s documentation to see which endpoints
 support the <code class="docutils literal notranslate"><span class="pre">PUT</span></code> methods and to determine whether they also support
 <code class="docutils literal notranslate"><span class="pre">DELETE</span></code> and <code class="docutils literal notranslate"><span class="pre">GET</span></code>.</p></li>
+<li><p><strong>write_data</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Map of strings returned by write operation</p></li>
+<li><p><strong>write_data_json</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – JSON data returned by write operation</p></li>
+<li><p><strong>write_fields</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Top-level fields returned by write to persist in state</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/generic_endpoint.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/generic_endpoint.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -140,7 +174,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_vault.generic.GetSecretResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.generic.</code><code class="sig-name descname">GetSecretResult</code><span class="sig-paren">(</span><em class="sig-param">data=None</em>, <em class="sig-param">data_json=None</em>, <em class="sig-param">lease_duration=None</em>, <em class="sig-param">lease_id=None</em>, <em class="sig-param">lease_renewable=None</em>, <em class="sig-param">lease_start_time=None</em>, <em class="sig-param">path=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.generic.GetSecretResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.generic.</code><code class="sig-name descname">GetSecretResult</code><span class="sig-paren">(</span><em class="sig-param">data=None</em>, <em class="sig-param">data_json=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">lease_duration=None</em>, <em class="sig-param">lease_id=None</em>, <em class="sig-param">lease_renewable=None</em>, <em class="sig-param">lease_start_time=None</em>, <em class="sig-param">path=None</em>, <em class="sig-param">version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.generic.GetSecretResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getSecret.</p>
 <dl class="attribute">
 <dt id="pulumi_vault.generic.GetSecretResult.data">
@@ -159,6 +193,12 @@ Vault, serialized in JSON format.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_vault.generic.GetSecretResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.generic.GetSecretResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_vault.generic.GetSecretResult.lease_duration">
 <code class="sig-name descname">lease_duration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.generic.GetSecretResult.lease_duration" title="Permalink to this definition">¶</a></dt>
 <dd><p>The duration of the secret lease, in seconds relative
@@ -172,25 +212,21 @@ generated with this data may fail to apply.</p>
 <dd><p>The lease identifier assigned by Vault, if any.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_vault.generic.GetSecretResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.generic.GetSecretResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_vault.generic.Secret">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.generic.</code><code class="sig-name descname">Secret</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">data_json=None</em>, <em class="sig-param">disable_read=None</em>, <em class="sig-param">path=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.generic.Secret" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Secret resource with the given unique name, props, and options.</p>
+<dd><p>Create a Secret resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] data_json: String containing a JSON-encoded object that will be</p>
+<blockquote>
+<div><p>written as the secret data at the given path.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>data_json</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – String containing a JSON-encoded object that will be
-written as the secret data at the given path.</p></li>
 <li><p><strong>disable_read</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – True/false. Set this to true if your vault
 authentication is not able to read the data. Setting this to <code class="docutils literal notranslate"><span class="pre">true</span></code> will
 break drift detection. Defaults to false.</p></li>
@@ -202,9 +238,6 @@ endpoints support the <code class="docutils literal notranslate"><span class="pr
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/generic_secret.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/generic_secret.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vault.generic.Secret.data">
 <code class="sig-name descname">data</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.generic.Secret.data" title="Permalink to this definition">¶</a></dt>
@@ -267,9 +300,6 @@ endpoints support the <code class="docutils literal notranslate"><span class="pr
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/generic_secret.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/generic_secret.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -323,9 +353,6 @@ with this data source is possible; consult each backend’s documentation
 to see which endpoints support the <code class="docutils literal notranslate"><span class="pre">GET</span></code> method.</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/d/generic_secret.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/d/generic_secret.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

@@ -15,6 +15,7 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <div class="toctree-wrapper compound">
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="alicloud/">alicloud</a></li>
 <li class="toctree-l1"><a class="reference internal" href="app_role/">app_role</a></li>
 <li class="toctree-l1"><a class="reference internal" href="aws/">aws</a></li>
 <li class="toctree-l1"><a class="reference internal" href="azure/">azure</a></li>

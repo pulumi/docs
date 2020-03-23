@@ -19,11 +19,15 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>Manages an Kubernetes auth backend config in a Vault server. See the <a class="reference external" href="https://www.vaultproject.io/docs/auth/kubernetes.html">Vault
 documentation</a> for more
 information.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/kubernetes_auth_backend_config.md">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/kubernetes_auth_backend_config.md</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>backend</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique name of the kubernetes backend to configure.</p></li>
 <li><p><strong>issuer</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Optional JWT issuer. If no issuer is specified, <code class="docutils literal notranslate"><span class="pre">kubernetes.io/serviceaccount</span></code> will be used as the default issuer.</p></li>
 <li><p><strong>kubernetes_ca_cert</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – PEM encoded CA cert for use by the TLS client used to talk with the Kubernetes API.</p></li>
 <li><p><strong>kubernetes_host</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Host must be a host string, a host:port pair, or a URL to the base of the Kubernetes API server.</p></li>
@@ -32,9 +36,12 @@ information.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/kubernetes_auth_backend_config.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/kubernetes_auth_backend_config.html.markdown</a>.</p>
-</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_vault.kubernetes.AuthBackendConfig.backend">
+<code class="sig-name descname">backend</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.kubernetes.AuthBackendConfig.backend" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unique name of the kubernetes backend to configure.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_vault.kubernetes.AuthBackendConfig.issuer">
 <code class="sig-name descname">issuer</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.kubernetes.AuthBackendConfig.issuer" title="Permalink to this definition">¶</a></dt>
@@ -76,6 +83,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>backend</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique name of the kubernetes backend to configure.</p></li>
 <li><p><strong>issuer</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Optional JWT issuer. If no issuer is specified, <code class="docutils literal notranslate"><span class="pre">kubernetes.io/serviceaccount</span></code> will be used as the default issuer.</p></li>
 <li><p><strong>kubernetes_ca_cert</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – PEM encoded CA cert for use by the TLS client used to talk with the Kubernetes API.</p></li>
 <li><p><strong>kubernetes_host</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Host must be a host string, a host:port pair, or a URL to the base of the Kubernetes API server.</p></li>
@@ -84,9 +92,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/kubernetes_auth_backend_config.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/kubernetes_auth_backend_config.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -133,6 +138,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages an Kubernetes auth backend role in a Vault server. See the <a class="reference external" href="https://www.vaultproject.io/docs/auth/kubernetes.html">Vault
 documentation</a> for more
 information.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/kubernetes_auth_backend_role.html.md">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/kubernetes_auth_backend_role.html.md</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -183,9 +191,6 @@ using this role, provided as a number of seconds.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/kubernetes_auth_backend_role.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/kubernetes_auth_backend_role.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vault.kubernetes.AuthBackendRole.audience">
 <code class="sig-name descname">audience</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.kubernetes.AuthBackendRole.audience" title="Permalink to this definition">¶</a></dt>
@@ -388,9 +393,6 @@ using this role, provided as a number of seconds.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/kubernetes_auth_backend_role.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/kubernetes_auth_backend_role.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -433,18 +435,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_vault.kubernetes.AwaitableGetAuthBackendConfigResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.kubernetes.</code><code class="sig-name descname">AwaitableGetAuthBackendConfigResult</code><span class="sig-paren">(</span><em class="sig-param">backend=None</em>, <em class="sig-param">issuer=None</em>, <em class="sig-param">kubernetes_ca_cert=None</em>, <em class="sig-param">kubernetes_host=None</em>, <em class="sig-param">pem_keys=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.kubernetes.AwaitableGetAuthBackendConfigResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.kubernetes.</code><code class="sig-name descname">AwaitableGetAuthBackendConfigResult</code><span class="sig-paren">(</span><em class="sig-param">backend=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">issuer=None</em>, <em class="sig-param">kubernetes_ca_cert=None</em>, <em class="sig-param">kubernetes_host=None</em>, <em class="sig-param">pem_keys=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.kubernetes.AwaitableGetAuthBackendConfigResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_vault.kubernetes.AwaitableGetAuthBackendRoleResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.kubernetes.</code><code class="sig-name descname">AwaitableGetAuthBackendRoleResult</code><span class="sig-paren">(</span><em class="sig-param">audience=None</em>, <em class="sig-param">backend=None</em>, <em class="sig-param">bound_cidrs=None</em>, <em class="sig-param">bound_service_account_names=None</em>, <em class="sig-param">bound_service_account_namespaces=None</em>, <em class="sig-param">max_ttl=None</em>, <em class="sig-param">num_uses=None</em>, <em class="sig-param">period=None</em>, <em class="sig-param">policies=None</em>, <em class="sig-param">role_name=None</em>, <em class="sig-param">token_bound_cidrs=None</em>, <em class="sig-param">token_explicit_max_ttl=None</em>, <em class="sig-param">token_max_ttl=None</em>, <em class="sig-param">token_no_default_policy=None</em>, <em class="sig-param">token_num_uses=None</em>, <em class="sig-param">token_period=None</em>, <em class="sig-param">token_policies=None</em>, <em class="sig-param">token_ttl=None</em>, <em class="sig-param">token_type=None</em>, <em class="sig-param">ttl=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.kubernetes.AwaitableGetAuthBackendRoleResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.kubernetes.</code><code class="sig-name descname">AwaitableGetAuthBackendRoleResult</code><span class="sig-paren">(</span><em class="sig-param">audience=None</em>, <em class="sig-param">backend=None</em>, <em class="sig-param">bound_cidrs=None</em>, <em class="sig-param">bound_service_account_names=None</em>, <em class="sig-param">bound_service_account_namespaces=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">max_ttl=None</em>, <em class="sig-param">num_uses=None</em>, <em class="sig-param">period=None</em>, <em class="sig-param">policies=None</em>, <em class="sig-param">role_name=None</em>, <em class="sig-param">token_bound_cidrs=None</em>, <em class="sig-param">token_explicit_max_ttl=None</em>, <em class="sig-param">token_max_ttl=None</em>, <em class="sig-param">token_no_default_policy=None</em>, <em class="sig-param">token_num_uses=None</em>, <em class="sig-param">token_period=None</em>, <em class="sig-param">token_policies=None</em>, <em class="sig-param">token_ttl=None</em>, <em class="sig-param">token_type=None</em>, <em class="sig-param">ttl=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.kubernetes.AwaitableGetAuthBackendRoleResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_vault.kubernetes.GetAuthBackendConfigResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.kubernetes.</code><code class="sig-name descname">GetAuthBackendConfigResult</code><span class="sig-paren">(</span><em class="sig-param">backend=None</em>, <em class="sig-param">issuer=None</em>, <em class="sig-param">kubernetes_ca_cert=None</em>, <em class="sig-param">kubernetes_host=None</em>, <em class="sig-param">pem_keys=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.kubernetes.GetAuthBackendConfigResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.kubernetes.</code><code class="sig-name descname">GetAuthBackendConfigResult</code><span class="sig-paren">(</span><em class="sig-param">backend=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">issuer=None</em>, <em class="sig-param">kubernetes_ca_cert=None</em>, <em class="sig-param">kubernetes_host=None</em>, <em class="sig-param">pem_keys=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.kubernetes.GetAuthBackendConfigResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getAuthBackendConfig.</p>
+<dl class="attribute">
+<dt id="pulumi_vault.kubernetes.GetAuthBackendConfigResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.kubernetes.GetAuthBackendConfigResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_vault.kubernetes.GetAuthBackendConfigResult.issuer">
 <code class="sig-name descname">issuer</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.kubernetes.GetAuthBackendConfigResult.issuer" title="Permalink to this definition">¶</a></dt>
@@ -469,17 +477,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Optional list of PEM-formatted public keys or certificates used to verify the signatures of Kubernetes service account JWTs. If a certificate is given, its public key will be extracted. Not every installation of Kubernetes exposes these keys.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_vault.kubernetes.GetAuthBackendConfigResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.kubernetes.GetAuthBackendConfigResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_vault.kubernetes.GetAuthBackendRoleResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.kubernetes.</code><code class="sig-name descname">GetAuthBackendRoleResult</code><span class="sig-paren">(</span><em class="sig-param">audience=None</em>, <em class="sig-param">backend=None</em>, <em class="sig-param">bound_cidrs=None</em>, <em class="sig-param">bound_service_account_names=None</em>, <em class="sig-param">bound_service_account_namespaces=None</em>, <em class="sig-param">max_ttl=None</em>, <em class="sig-param">num_uses=None</em>, <em class="sig-param">period=None</em>, <em class="sig-param">policies=None</em>, <em class="sig-param">role_name=None</em>, <em class="sig-param">token_bound_cidrs=None</em>, <em class="sig-param">token_explicit_max_ttl=None</em>, <em class="sig-param">token_max_ttl=None</em>, <em class="sig-param">token_no_default_policy=None</em>, <em class="sig-param">token_num_uses=None</em>, <em class="sig-param">token_period=None</em>, <em class="sig-param">token_policies=None</em>, <em class="sig-param">token_ttl=None</em>, <em class="sig-param">token_type=None</em>, <em class="sig-param">ttl=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.kubernetes.GetAuthBackendRoleResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.kubernetes.</code><code class="sig-name descname">GetAuthBackendRoleResult</code><span class="sig-paren">(</span><em class="sig-param">audience=None</em>, <em class="sig-param">backend=None</em>, <em class="sig-param">bound_cidrs=None</em>, <em class="sig-param">bound_service_account_names=None</em>, <em class="sig-param">bound_service_account_namespaces=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">max_ttl=None</em>, <em class="sig-param">num_uses=None</em>, <em class="sig-param">period=None</em>, <em class="sig-param">policies=None</em>, <em class="sig-param">role_name=None</em>, <em class="sig-param">token_bound_cidrs=None</em>, <em class="sig-param">token_explicit_max_ttl=None</em>, <em class="sig-param">token_max_ttl=None</em>, <em class="sig-param">token_no_default_policy=None</em>, <em class="sig-param">token_num_uses=None</em>, <em class="sig-param">token_period=None</em>, <em class="sig-param">token_policies=None</em>, <em class="sig-param">token_ttl=None</em>, <em class="sig-param">token_type=None</em>, <em class="sig-param">ttl=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.kubernetes.GetAuthBackendRoleResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getAuthBackendRole.</p>
 <dl class="attribute">
 <dt id="pulumi_vault.kubernetes.GetAuthBackendRoleResult.audience">
@@ -497,6 +499,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_vault.kubernetes.GetAuthBackendRoleResult.bound_service_account_namespaces">
 <code class="sig-name descname">bound_service_account_namespaces</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.kubernetes.GetAuthBackendRoleResult.bound_service_account_namespaces" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of namespaces allowed to access this role. If set to “<em>” all namespaces are allowed, both this and bound_service_account_names can not be set to “</em>”.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vault.kubernetes.GetAuthBackendRoleResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.kubernetes.GetAuthBackendRoleResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -571,12 +579,6 @@ Its current value will be referenced at renewal time.</p>
 requests a different type at generation time.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_vault.kubernetes.GetAuthBackendRoleResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.kubernetes.GetAuthBackendRoleResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="function">
@@ -585,15 +587,15 @@ requests a different type at generation time.</p>
 <dd><p>Reads the Role of an Kubernetes from a Vault server. See the <a class="reference external" href="https://www.vaultproject.io/api/auth/kubernetes/index.html#read-config">Vault
 documentation</a> for more
 information.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/d/kubernetes_auth_backend_config.md">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/d/kubernetes_auth_backend_config.md</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>backend</strong> (<em>str</em>) – The unique name for the Kubernetes backend the config to
 retrieve Role attributes for resides in. Defaults to “kubernetes”.</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/d/kubernetes_auth_backend_config.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/d/kubernetes_auth_backend_config.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -602,6 +604,9 @@ retrieve Role attributes for resides in. Defaults to “kubernetes”.</p>
 <dd><p>Reads the Role of an Kubernetes from a Vault server. See the <a class="reference external" href="https://www.vaultproject.io/api/auth/kubernetes/index.html#read-role">Vault
 documentation</a> for more
 information.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/d/kubernetes_auth_backend_role.md">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/d/kubernetes_auth_backend_role.md</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -611,9 +616,6 @@ retrieve Role attributes for resides in. Defaults to “kubernetes”.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/d/kubernetes_auth_backend_role.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/d/kubernetes_auth_backend_role.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

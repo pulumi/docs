@@ -16,14 +16,16 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="target" id="module-pulumi_vault.database"></span><dl class="class">
 <dt id="pulumi_vault.database.SecretBackendConnection">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.database.</code><code class="sig-name descname">SecretBackendConnection</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allowed_roles=None</em>, <em class="sig-param">backend=None</em>, <em class="sig-param">cassandra=None</em>, <em class="sig-param">data=None</em>, <em class="sig-param">hana=None</em>, <em class="sig-param">mongodb=None</em>, <em class="sig-param">mssql=None</em>, <em class="sig-param">mysql=None</em>, <em class="sig-param">mysql_aurora=None</em>, <em class="sig-param">mysql_legacy=None</em>, <em class="sig-param">mysql_rds=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">oracle=None</em>, <em class="sig-param">postgresql=None</em>, <em class="sig-param">root_rotation_statements=None</em>, <em class="sig-param">verify_connection=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.database.SecretBackendConnection" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a SecretBackendConnection resource with the given unique name, props, and options.</p>
+<dd><p>Create a SecretBackendConnection resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[list] allowed_roles: A list of roles that are allowed to use this</p>
+<blockquote>
+<div><p>connection.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>allowed_roles</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of roles that are allowed to use this
-connection.</p></li>
 <li><p><strong>backend</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique name of the Vault mount to configure.</p></li>
 <li><p><strong>cassandra</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested block containing configuration options for Cassandra connections.</p></li>
 <li><p><strong>data</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of sensitive data to pass to the endpoint. Useful for templated connection strings.</p></li>
@@ -48,10 +50,10 @@ initial configuration or not.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">connectTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of seconds to use as a connection
 timeout.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">hosts</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The hosts to connect to.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">insecureTls</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether to skip verification of the server
+<li><p><code class="docutils literal notranslate"><span class="pre">insecure_tls</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether to skip verification of the server
 certificate when using TLS.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The password to authenticate with.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">pemBundle</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Concatenated PEM blocks configuring the certificate
+<li><p><code class="docutils literal notranslate"><span class="pre">pem_bundle</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Concatenated PEM blocks configuring the certificate
 chain.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pemJson</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A JSON structure configuring the certificate chain.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The default port to connect to if no port is specified as
@@ -177,9 +179,6 @@ maintain.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxOpenConnections</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum number of open connections to
 use.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/database_secret_backend_connection.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/database_secret_backend_connection.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vault.database.SecretBackendConnection.allowed_roles">
 <code class="sig-name descname">allowed_roles</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.database.SecretBackendConnection.allowed_roles" title="Permalink to this definition">¶</a></dt>
@@ -201,10 +200,10 @@ connection.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">connectTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of seconds to use as a connection
 timeout.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">hosts</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The hosts to connect to.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">insecureTls</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether to skip verification of the server
+<li><p><code class="docutils literal notranslate"><span class="pre">insecure_tls</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether to skip verification of the server
 certificate when using TLS.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The password to authenticate with.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">pemBundle</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Concatenated PEM blocks configuring the certificate
+<li><p><code class="docutils literal notranslate"><span class="pre">pem_bundle</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Concatenated PEM blocks configuring the certificate
 chain.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pemJson</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A JSON structure configuring the certificate chain.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The default port to connect to if no port is specified as
@@ -439,10 +438,10 @@ initial configuration or not.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">connectTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of seconds to use as a connection
 timeout.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">hosts</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The hosts to connect to.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">insecureTls</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether to skip verification of the server
+<li><p><code class="docutils literal notranslate"><span class="pre">insecure_tls</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether to skip verification of the server
 certificate when using TLS.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The password to authenticate with.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">pemBundle</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Concatenated PEM blocks configuring the certificate
+<li><p><code class="docutils literal notranslate"><span class="pre">pem_bundle</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Concatenated PEM blocks configuring the certificate
 chain.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pemJson</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A JSON structure configuring the certificate chain.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The default port to connect to if no port is specified as
@@ -568,9 +567,6 @@ maintain.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxOpenConnections</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum number of open connections to
 use.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/database_secret_backend_connection.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/database_secret_backend_connection.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -614,15 +610,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_vault.database.SecretBackendRole">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.database.</code><code class="sig-name descname">SecretBackendRole</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">backend=None</em>, <em class="sig-param">creation_statements=None</em>, <em class="sig-param">db_name=None</em>, <em class="sig-param">default_ttl=None</em>, <em class="sig-param">max_ttl=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">renew_statements=None</em>, <em class="sig-param">revocation_statements=None</em>, <em class="sig-param">rollback_statements=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.database.SecretBackendRole" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a SecretBackendRole resource with the given unique name, props, and options.</p>
+<dd><p>Create a SecretBackendRole resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] backend: The unique name of the Vault mount to configure.
+:param pulumi.Input[list] creation_statements: The database statements to execute when</p>
+<blockquote>
+<div><p>creating a user.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>backend</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique name of the Vault mount to configure.</p></li>
-<li><p><strong>creation_statements</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The database statements to execute when
-creating a user.</p></li>
 <li><p><strong>db_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique name of the database connection to use for
 the role.</p></li>
 <li><p><strong>default_ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The default number of seconds for leases for this
@@ -639,9 +637,6 @@ rolling back creation due to an error.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/database_secret_backend_role.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/database_secret_backend_role.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vault.database.SecretBackendRole.backend">
 <code class="sig-name descname">backend</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.database.SecretBackendRole.backend" title="Permalink to this definition">¶</a></dt>
@@ -733,9 +728,6 @@ rolling back creation due to an error.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/database_secret_backend_role.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/database_secret_backend_role.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -782,6 +774,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Creates a Database Secret Backend static role in Vault. Database secret backend
 static roles can be used to manage 1-to-1 mapping of a Vault Role to a user in a
 database for the database.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/database_secret_backend_static_role.md">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/database_secret_backend_static_role.md</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -796,9 +791,6 @@ database for the database.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/database_secret_backend_static_role.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/database_secret_backend_static_role.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vault.database.SecretBackendStaticRole.backend">
 <code class="sig-name descname">backend</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.database.SecretBackendStaticRole.backend" title="Permalink to this definition">¶</a></dt>
@@ -855,9 +847,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/database_secret_backend_static_role.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/database_secret_backend_static_role.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
