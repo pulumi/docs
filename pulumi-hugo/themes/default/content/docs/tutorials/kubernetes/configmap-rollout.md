@@ -30,7 +30,7 @@ For example, in the gif below, we can see how updating one resource (in this cas
 > **IMPORTANT:** This tutorial expects that you have provisioned a Kubernetes cluster and have an
 > active kubeconfig file. If you don't, please follow instructions [here]({{< relref "/docs/intro/cloud-providers/kubernetes" >}}).
 
-1. Install [Node.js][nodejs] version 8 or later.
+1. Install [Node.js][nodejs].
 1. Install a package manager for Node.js, such as [npm] or [Yarn].
 1. Follow the directions [here][install] to install the Pulumi CLI.
 

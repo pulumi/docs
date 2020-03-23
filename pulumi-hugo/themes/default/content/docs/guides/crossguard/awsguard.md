@@ -25,7 +25,7 @@ In this guide, we'll show you how to create a Policy Pack that configures and us
 ### Prerequisites
 
 - [Install Pulumi]({{< relref "/docs/get-started/install" >}})
-- [Install Node.js version 8 or later](https://nodejs.org/en/download/)
+- [Install Node.js](https://nodejs.org/en/download/)
 
 ### Verify your version of the Pulumi CLI
 
