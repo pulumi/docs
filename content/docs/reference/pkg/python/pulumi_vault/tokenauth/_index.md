@@ -19,6 +19,9 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>Manages Token auth backend role in a Vault server. See the <a class="reference external" href="https://www.vaultproject.io/docs/auth/token.html">Vault
 documentation</a> for more
 information.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/token_auth_backend_role.html.md">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/token_auth_backend_role.html.md</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -28,6 +31,7 @@ information.</p>
 <li><p><strong>bound_cidrs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – If set, a list of
 CIDRs valid as the source address for login requests. This value is also encoded into any resulting token.</p></li>
 <li><p><strong>disallowed_policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of disallowed policies for given role.</p></li>
+<li><p><strong>explicit_max_ttl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Number of seconds after which issued tokens can no longer be renewed.</p></li>
 <li><p><strong>orphan</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, tokens created against this policy will be orphan tokens.</p></li>
 <li><p><strong>path_suffix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Tokens created against this role will have the given suffix as part of their path in addition to the role name.</p></li>
 <li><p><strong>period</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – If set, indicates that the
@@ -54,6 +58,7 @@ if any, in number of seconds to set on the token.</p></li>
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token’s TTL will be set to the
 value of this field. Specified in seconds.</p></li>
+<li><p><strong>token_policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Generated Token’s Policies</p></li>
 <li><p><strong>token_ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The incremental lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.</p></li>
 <li><p><strong>token_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of token that should be generated. Can be <code class="docutils literal notranslate"><span class="pre">service</span></code>,
@@ -64,9 +69,6 @@ requests a different type at generation time.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/token_auth_backend_role.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/token_auth_backend_role.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vault.tokenauth.AuthBackendRole.allowed_policies">
 <code class="sig-name descname">allowed_policies</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.tokenauth.AuthBackendRole.allowed_policies" title="Permalink to this definition">¶</a></dt>
@@ -84,6 +86,12 @@ CIDRs valid as the source address for login requests. This value is also encoded
 <dt id="pulumi_vault.tokenauth.AuthBackendRole.disallowed_policies">
 <code class="sig-name descname">disallowed_policies</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.tokenauth.AuthBackendRole.disallowed_policies" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of disallowed policies for given role.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vault.tokenauth.AuthBackendRole.explicit_max_ttl">
+<code class="sig-name descname">explicit_max_ttl</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.tokenauth.AuthBackendRole.explicit_max_ttl" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of seconds after which issued tokens can no longer be renewed.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -168,6 +176,12 @@ value of this field. Specified in seconds.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_vault.tokenauth.AuthBackendRole.token_policies">
+<code class="sig-name descname">token_policies</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.tokenauth.AuthBackendRole.token_policies" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generated Token’s Policies</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_vault.tokenauth.AuthBackendRole.token_ttl">
 <code class="sig-name descname">token_ttl</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.tokenauth.AuthBackendRole.token_ttl" title="Permalink to this definition">¶</a></dt>
 <dd><p>The incremental lifetime for generated tokens in number of seconds.
@@ -199,6 +213,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>bound_cidrs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – If set, a list of
 CIDRs valid as the source address for login requests. This value is also encoded into any resulting token.</p></li>
 <li><p><strong>disallowed_policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of disallowed policies for given role.</p></li>
+<li><p><strong>explicit_max_ttl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Number of seconds after which issued tokens can no longer be renewed.</p></li>
 <li><p><strong>orphan</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, tokens created against this policy will be orphan tokens.</p></li>
 <li><p><strong>path_suffix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Tokens created against this role will have the given suffix as part of their path in addition to the role name.</p></li>
 <li><p><strong>period</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – If set, indicates that the
@@ -227,6 +242,7 @@ if any, in number of seconds to set on the token.</p>
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token’s TTL will be set to the
 value of this field. Specified in seconds.</p></li>
+<li><p><strong>token_policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Generated Token’s Policies</p></li>
 <li><p><strong>token_ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The incremental lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.</p></li>
 <li><p><strong>token_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of token that should be generated. Can be <code class="docutils literal notranslate"><span class="pre">service</span></code>,
@@ -237,9 +253,6 @@ requests a different type at generation time.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/token_auth_backend_role.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/token_auth_backend_role.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">

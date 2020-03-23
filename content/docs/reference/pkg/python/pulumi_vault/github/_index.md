@@ -19,6 +19,9 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>Manages a Github Auth mount in a Vault server. See the <a class="reference external" href="https://www.vaultproject.io/docs/auth/github.html">Vault
 documentation</a> for more
 information.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/github_auth_backend.html.md">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/github_auth_backend.html.md</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -72,7 +75,7 @@ using this role. This must be a valid <a class="reference external" href="https:
 <li><p><code class="docutils literal notranslate"><span class="pre">auditNonHmacRequestKeys</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">auditNonHmacResponseKeys</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">defaultLeaseTtl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">listingVisibility</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">listing_visibility</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxLeaseTtl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">passthroughRequestHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">token_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - (Optional) The type of token that should be generated. Can be <code class="docutils literal notranslate"><span class="pre">service</span></code>,
@@ -81,9 +84,6 @@ using this role. This must be a valid <a class="reference external" href="https:
 <code class="docutils literal notranslate"><span class="pre">default-service</span></code> and <code class="docutils literal notranslate"><span class="pre">default-batch</span></code> which specify the type to return unless the client
 requests a different type at generation time.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/github_auth_backend.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/github_auth_backend.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vault.github.AuthBackend.accessor">
 <code class="sig-name descname">accessor</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.github.AuthBackend.accessor" title="Permalink to this definition">¶</a></dt>
@@ -267,7 +267,7 @@ using this role. This must be a valid <a class="reference external" href="https:
 <li><p><code class="docutils literal notranslate"><span class="pre">auditNonHmacRequestKeys</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">auditNonHmacResponseKeys</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">defaultLeaseTtl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">listingVisibility</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">listing_visibility</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxLeaseTtl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">passthroughRequestHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">token_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - (Optional) The type of token that should be generated. Can be <code class="docutils literal notranslate"><span class="pre">service</span></code>,
@@ -276,9 +276,6 @@ using this role. This must be a valid <a class="reference external" href="https:
 <code class="docutils literal notranslate"><span class="pre">default-service</span></code> and <code class="docutils literal notranslate"><span class="pre">default-batch</span></code> which specify the type to return unless the client
 requests a different type at generation time.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/github_auth_backend.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/github_auth_backend.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -325,6 +322,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages policy mappings for Github Teams authenticated via Github. See the <a class="reference external" href="https://www.vaultproject.io/docs/auth/github.html">Vault
 documentation</a> for more
 information.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/github_team.html.md">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/github_team.html.md</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -334,12 +334,19 @@ information.</p>
 if not specified.</p></li>
 <li><p><strong>policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An array of strings specifying the policies to be set on tokens
 issued using this role.</p></li>
+<li><p><strong>team</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – GitHub team name in “slugified” format.</p></li>
+<li><p><strong>token_bound_cidrs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Specifies the blocks of IP addresses which are allowed to use the generated token</p></li>
+<li><p><strong>token_explicit_max_ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Generated Token’s Explicit Maximum TTL in seconds</p></li>
+<li><p><strong>token_max_ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum lifetime of the generated token</p></li>
+<li><p><strong>token_no_default_policy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, the ‘default’ policy will not automatically be added to generated tokens</p></li>
+<li><p><strong>token_num_uses</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum number of times a token may be used, a value of zero means unlimited</p></li>
+<li><p><strong>token_period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Generated Token’s Period</p></li>
+<li><p><strong>token_policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Generated Token’s Policies</p></li>
+<li><p><strong>token_ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The initial ttl of the token to generate in seconds</p></li>
+<li><p><strong>token_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of token to generate, service or batch</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/github_team.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/github_team.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vault.github.Team.backend">
 <code class="sig-name descname">backend</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.github.Team.backend" title="Permalink to this definition">¶</a></dt>
@@ -352,6 +359,66 @@ if not specified.</p>
 <code class="sig-name descname">policies</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.github.Team.policies" title="Permalink to this definition">¶</a></dt>
 <dd><p>An array of strings specifying the policies to be set on tokens
 issued using this role.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vault.github.Team.team">
+<code class="sig-name descname">team</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.github.Team.team" title="Permalink to this definition">¶</a></dt>
+<dd><p>GitHub team name in “slugified” format.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vault.github.Team.token_bound_cidrs">
+<code class="sig-name descname">token_bound_cidrs</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.github.Team.token_bound_cidrs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the blocks of IP addresses which are allowed to use the generated token</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vault.github.Team.token_explicit_max_ttl">
+<code class="sig-name descname">token_explicit_max_ttl</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.github.Team.token_explicit_max_ttl" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generated Token’s Explicit Maximum TTL in seconds</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vault.github.Team.token_max_ttl">
+<code class="sig-name descname">token_max_ttl</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.github.Team.token_max_ttl" title="Permalink to this definition">¶</a></dt>
+<dd><p>The maximum lifetime of the generated token</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vault.github.Team.token_no_default_policy">
+<code class="sig-name descname">token_no_default_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.github.Team.token_no_default_policy" title="Permalink to this definition">¶</a></dt>
+<dd><p>If true, the ‘default’ policy will not automatically be added to generated tokens</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vault.github.Team.token_num_uses">
+<code class="sig-name descname">token_num_uses</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.github.Team.token_num_uses" title="Permalink to this definition">¶</a></dt>
+<dd><p>The maximum number of times a token may be used, a value of zero means unlimited</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vault.github.Team.token_period">
+<code class="sig-name descname">token_period</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.github.Team.token_period" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generated Token’s Period</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vault.github.Team.token_policies">
+<code class="sig-name descname">token_policies</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.github.Team.token_policies" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generated Token’s Policies</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vault.github.Team.token_ttl">
+<code class="sig-name descname">token_ttl</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.github.Team.token_ttl" title="Permalink to this definition">¶</a></dt>
+<dd><p>The initial ttl of the token to generate in seconds</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vault.github.Team.token_type">
+<code class="sig-name descname">token_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.github.Team.token_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>The type of token to generate, service or batch</p>
 </dd></dl>
 
 <dl class="method">
@@ -369,12 +436,19 @@ properties used to qualify the lookup.</p>
 if not specified.</p></li>
 <li><p><strong>policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An array of strings specifying the policies to be set on tokens
 issued using this role.</p></li>
+<li><p><strong>team</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – GitHub team name in “slugified” format.</p></li>
+<li><p><strong>token_bound_cidrs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Specifies the blocks of IP addresses which are allowed to use the generated token</p></li>
+<li><p><strong>token_explicit_max_ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Generated Token’s Explicit Maximum TTL in seconds</p></li>
+<li><p><strong>token_max_ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum lifetime of the generated token</p></li>
+<li><p><strong>token_no_default_policy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, the ‘default’ policy will not automatically be added to generated tokens</p></li>
+<li><p><strong>token_num_uses</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum number of times a token may be used, a value of zero means unlimited</p></li>
+<li><p><strong>token_period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Generated Token’s Period</p></li>
+<li><p><strong>token_policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Generated Token’s Policies</p></li>
+<li><p><strong>token_ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The initial ttl of the token to generate in seconds</p></li>
+<li><p><strong>token_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of token to generate, service or batch</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/github_team.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/github_team.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -421,6 +495,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages policy mappings for Github Users authenticated via Github. See the <a class="reference external" href="https://www.vaultproject.io/docs/auth/github.html">Vault
 documentation</a> for more
 information.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/github_user.html.md">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/github_user.html.md</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -430,13 +507,19 @@ information.</p>
 if not specified.</p></li>
 <li><p><strong>policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An array of strings specifying the policies to be set on tokens issued
 using this role.</p></li>
+<li><p><strong>token_bound_cidrs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Specifies the blocks of IP addresses which are allowed to use the generated token</p></li>
+<li><p><strong>token_explicit_max_ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Generated Token’s Explicit Maximum TTL in seconds</p></li>
+<li><p><strong>token_max_ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum lifetime of the generated token</p></li>
+<li><p><strong>token_no_default_policy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, the ‘default’ policy will not automatically be added to generated tokens</p></li>
+<li><p><strong>token_num_uses</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum number of times a token may be used, a value of zero means unlimited</p></li>
+<li><p><strong>token_period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Generated Token’s Period</p></li>
+<li><p><strong>token_policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Generated Token’s Policies</p></li>
+<li><p><strong>token_ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The initial ttl of the token to generate in seconds</p></li>
+<li><p><strong>token_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of token to generate, service or batch</p></li>
 <li><p><strong>user</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – GitHub user name.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/github_user.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/github_user.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vault.github.User.backend">
 <code class="sig-name descname">backend</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.github.User.backend" title="Permalink to this definition">¶</a></dt>
@@ -449,6 +532,60 @@ if not specified.</p>
 <code class="sig-name descname">policies</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.github.User.policies" title="Permalink to this definition">¶</a></dt>
 <dd><p>An array of strings specifying the policies to be set on tokens issued
 using this role.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vault.github.User.token_bound_cidrs">
+<code class="sig-name descname">token_bound_cidrs</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.github.User.token_bound_cidrs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the blocks of IP addresses which are allowed to use the generated token</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vault.github.User.token_explicit_max_ttl">
+<code class="sig-name descname">token_explicit_max_ttl</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.github.User.token_explicit_max_ttl" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generated Token’s Explicit Maximum TTL in seconds</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vault.github.User.token_max_ttl">
+<code class="sig-name descname">token_max_ttl</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.github.User.token_max_ttl" title="Permalink to this definition">¶</a></dt>
+<dd><p>The maximum lifetime of the generated token</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vault.github.User.token_no_default_policy">
+<code class="sig-name descname">token_no_default_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.github.User.token_no_default_policy" title="Permalink to this definition">¶</a></dt>
+<dd><p>If true, the ‘default’ policy will not automatically be added to generated tokens</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vault.github.User.token_num_uses">
+<code class="sig-name descname">token_num_uses</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.github.User.token_num_uses" title="Permalink to this definition">¶</a></dt>
+<dd><p>The maximum number of times a token may be used, a value of zero means unlimited</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vault.github.User.token_period">
+<code class="sig-name descname">token_period</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.github.User.token_period" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generated Token’s Period</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vault.github.User.token_policies">
+<code class="sig-name descname">token_policies</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.github.User.token_policies" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generated Token’s Policies</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vault.github.User.token_ttl">
+<code class="sig-name descname">token_ttl</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.github.User.token_ttl" title="Permalink to this definition">¶</a></dt>
+<dd><p>The initial ttl of the token to generate in seconds</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vault.github.User.token_type">
+<code class="sig-name descname">token_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.github.User.token_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>The type of token to generate, service or batch</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -472,13 +609,19 @@ properties used to qualify the lookup.</p>
 if not specified.</p></li>
 <li><p><strong>policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An array of strings specifying the policies to be set on tokens issued
 using this role.</p></li>
+<li><p><strong>token_bound_cidrs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Specifies the blocks of IP addresses which are allowed to use the generated token</p></li>
+<li><p><strong>token_explicit_max_ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Generated Token’s Explicit Maximum TTL in seconds</p></li>
+<li><p><strong>token_max_ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum lifetime of the generated token</p></li>
+<li><p><strong>token_no_default_policy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, the ‘default’ policy will not automatically be added to generated tokens</p></li>
+<li><p><strong>token_num_uses</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum number of times a token may be used, a value of zero means unlimited</p></li>
+<li><p><strong>token_period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Generated Token’s Period</p></li>
+<li><p><strong>token_policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Generated Token’s Policies</p></li>
+<li><p><strong>token_ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The initial ttl of the token to generate in seconds</p></li>
+<li><p><strong>token_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of token to generate, service or batch</p></li>
 <li><p><strong>user</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – GitHub user name.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/github_user.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/github_user.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">

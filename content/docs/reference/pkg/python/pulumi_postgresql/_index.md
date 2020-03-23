@@ -19,6 +19,9 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.Database</span></code> resource creates and manages <a class="reference external" href="https://www.postgresql.org/docs/current/static/managing-databases.html">database
 objects</a>
 within a PostgreSQL server instance.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/postgresql_database.html.markdown">https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/postgresql_database.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -29,9 +32,12 @@ database. The default is <code class="docutils literal notranslate"><span class=
 other mechanisms, such as <code class="docutils literal notranslate"><span class="pre">GRANT</span></code> or <code class="docutils literal notranslate"><span class="pre">REVOKE</span> <span class="pre">CONNECT</span></code>).</p></li>
 <li><p><strong>connection_limit</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – How many concurrent connections can be
 established to this database. <code class="docutils literal notranslate"><span class="pre">-1</span></code> (the default) means no limit.</p></li>
+<li><p><strong>encoding</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Character set encoding to use in the new database</p></li>
 <li><p><strong>is_template</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If <code class="docutils literal notranslate"><span class="pre">true</span></code>, then this database can be cloned by any
 user with <code class="docutils literal notranslate"><span class="pre">CREATEDB</span></code> privileges; if <code class="docutils literal notranslate"><span class="pre">false</span></code> (the default), then only
 superusers or the owner of the database can clone it.</p></li>
+<li><p><strong>lc_collate</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Collation order (LC_COLLATE) to use in the new database</p></li>
+<li><p><strong>lc_ctype</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Character classification (LC_CTYPE) to use in the new database</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the database. Must be unique on the PostgreSQL
 server instance where it is configured.</p></li>
 <li><p><strong>owner</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role name of the user who will own the database, or
@@ -43,12 +49,10 @@ the username in the provider is a superuser.</p></li>
 associated with the database, or <code class="docutils literal notranslate"><span class="pre">DEFAULT</span></code> to use the template database’s
 tablespace.  This tablespace will be the default tablespace used for objects
 created in this database.</p></li>
+<li><p><strong>template</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the template from which to create the new database</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/database.html.markdown">https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/database.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_postgresql.Database.allow_connections">
 <code class="sig-name descname">allow_connections</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_postgresql.Database.allow_connections" title="Permalink to this definition">¶</a></dt>
@@ -65,11 +69,29 @@ established to this database. <code class="docutils literal notranslate"><span c
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_postgresql.Database.encoding">
+<code class="sig-name descname">encoding</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_postgresql.Database.encoding" title="Permalink to this definition">¶</a></dt>
+<dd><p>Character set encoding to use in the new database</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_postgresql.Database.is_template">
 <code class="sig-name descname">is_template</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_postgresql.Database.is_template" title="Permalink to this definition">¶</a></dt>
 <dd><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, then this database can be cloned by any
 user with <code class="docutils literal notranslate"><span class="pre">CREATEDB</span></code> privileges; if <code class="docutils literal notranslate"><span class="pre">false</span></code> (the default), then only
 superusers or the owner of the database can clone it.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_postgresql.Database.lc_collate">
+<code class="sig-name descname">lc_collate</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_postgresql.Database.lc_collate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Collation order (LC_COLLATE) to use in the new database</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_postgresql.Database.lc_ctype">
+<code class="sig-name descname">lc_ctype</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_postgresql.Database.lc_ctype" title="Permalink to this definition">¶</a></dt>
+<dd><p>Character classification (LC_CTYPE) to use in the new database</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -98,6 +120,12 @@ tablespace.  This tablespace will be the default tablespace used for objects
 created in this database.</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_postgresql.Database.template">
+<code class="sig-name descname">template</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_postgresql.Database.template" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the template from which to create the new database</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_postgresql.Database.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allow_connections=None</em>, <em class="sig-param">connection_limit=None</em>, <em class="sig-param">encoding=None</em>, <em class="sig-param">is_template=None</em>, <em class="sig-param">lc_collate=None</em>, <em class="sig-param">lc_ctype=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">owner=None</em>, <em class="sig-param">tablespace_name=None</em>, <em class="sig-param">template=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_postgresql.Database.get" title="Permalink to this definition">¶</a></dt>
@@ -114,9 +142,12 @@ database. The default is <code class="docutils literal notranslate"><span class=
 other mechanisms, such as <code class="docutils literal notranslate"><span class="pre">GRANT</span></code> or <code class="docutils literal notranslate"><span class="pre">REVOKE</span> <span class="pre">CONNECT</span></code>).</p></li>
 <li><p><strong>connection_limit</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – How many concurrent connections can be
 established to this database. <code class="docutils literal notranslate"><span class="pre">-1</span></code> (the default) means no limit.</p></li>
+<li><p><strong>encoding</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Character set encoding to use in the new database</p></li>
 <li><p><strong>is_template</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If <code class="docutils literal notranslate"><span class="pre">true</span></code>, then this database can be cloned by any
 user with <code class="docutils literal notranslate"><span class="pre">CREATEDB</span></code> privileges; if <code class="docutils literal notranslate"><span class="pre">false</span></code> (the default), then only
 superusers or the owner of the database can clone it.</p></li>
+<li><p><strong>lc_collate</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Collation order (LC_COLLATE) to use in the new database</p></li>
+<li><p><strong>lc_ctype</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Character classification (LC_CTYPE) to use in the new database</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the database. Must be unique on the PostgreSQL
 server instance where it is configured.</p></li>
 <li><p><strong>owner</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role name of the user who will own the database, or
@@ -128,12 +159,10 @@ the username in the provider is a superuser.</p></li>
 associated with the database, or <code class="docutils literal notranslate"><span class="pre">DEFAULT</span></code> to use the template database’s
 tablespace.  This tablespace will be the default tablespace used for objects
 created in this database.</p></li>
+<li><p><strong>template</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the template from which to create the new database</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/database.html.markdown">https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/database.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -177,61 +206,49 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_postgresql.DefaultPrivileg">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_postgresql.</code><code class="sig-name descname">DefaultPrivileg</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">database=None</em>, <em class="sig-param">object_type=None</em>, <em class="sig-param">owner=None</em>, <em class="sig-param">privileges=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">schema=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_postgresql.DefaultPrivileg" title="Permalink to this definition">¶</a></dt>
-<dd><p>The <code class="docutils literal notranslate"><span class="pre">.DefaultPrivileg</span></code> resource creates and manages default privileges given to a user for a database schema.</p>
-<blockquote>
-<div><p><strong>Note:</strong> This resource needs Postgresql version 9 or above.</p>
-</div></blockquote>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>database</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The database to grant default privileges for this role.</p></li>
-<li><p><strong>object_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The PostgreSQL object type to set the default privileges on (one of: table, sequence).</p></li>
-<li><p><strong>owner</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Role for which apply default privileges (You can change default privileges only for objects that will be created by yourself or by roles that you are a member of).</p></li>
-<li><p><strong>privileges</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of privileges to apply as default privileges.</p></li>
-<li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the role to which grant default privileges on.</p></li>
-<li><p><strong>schema</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The database schema to set default privileges for this role.</p></li>
-</ul>
-</dd>
-</dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/default_privileges.html.markdown">https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/default_privileges.html.markdown</a>.</p>
-</div></blockquote>
+<dd><p>Create a DefaultPrivileg resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] database: The database to grant default privileges for this role
+:param pulumi.Input[str] object_type: The PostgreSQL object type to set the default privileges on (one of: table, sequence)
+:param pulumi.Input[str] owner: Target role for which to alter default privileges.
+:param pulumi.Input[list] privileges: The list of privileges to apply as default privileges
+:param pulumi.Input[str] role: The name of the role to which grant default privileges on
+:param pulumi.Input[str] schema: The database schema to set default privileges for this role</p>
 <dl class="attribute">
 <dt id="pulumi_postgresql.DefaultPrivileg.database">
 <code class="sig-name descname">database</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_postgresql.DefaultPrivileg.database" title="Permalink to this definition">¶</a></dt>
-<dd><p>The database to grant default privileges for this role.</p>
+<dd><p>The database to grant default privileges for this role</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_postgresql.DefaultPrivileg.object_type">
 <code class="sig-name descname">object_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_postgresql.DefaultPrivileg.object_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>The PostgreSQL object type to set the default privileges on (one of: table, sequence).</p>
+<dd><p>The PostgreSQL object type to set the default privileges on (one of: table, sequence)</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_postgresql.DefaultPrivileg.owner">
 <code class="sig-name descname">owner</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_postgresql.DefaultPrivileg.owner" title="Permalink to this definition">¶</a></dt>
-<dd><p>Role for which apply default privileges (You can change default privileges only for objects that will be created by yourself or by roles that you are a member of).</p>
+<dd><p>Target role for which to alter default privileges.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_postgresql.DefaultPrivileg.privileges">
 <code class="sig-name descname">privileges</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_postgresql.DefaultPrivileg.privileges" title="Permalink to this definition">¶</a></dt>
-<dd><p>The list of privileges to apply as default privileges.</p>
+<dd><p>The list of privileges to apply as default privileges</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_postgresql.DefaultPrivileg.role">
 <code class="sig-name descname">role</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_postgresql.DefaultPrivileg.role" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the role to which grant default privileges on.</p>
+<dd><p>The name of the role to which grant default privileges on</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_postgresql.DefaultPrivileg.schema">
 <code class="sig-name descname">schema</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_postgresql.DefaultPrivileg.schema" title="Permalink to this definition">¶</a></dt>
-<dd><p>The database schema to set default privileges for this role.</p>
+<dd><p>The database schema to set default privileges for this role</p>
 </dd></dl>
 
 <dl class="method">
@@ -245,18 +262,15 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>database</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The database to grant default privileges for this role.</p></li>
-<li><p><strong>object_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The PostgreSQL object type to set the default privileges on (one of: table, sequence).</p></li>
-<li><p><strong>owner</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Role for which apply default privileges (You can change default privileges only for objects that will be created by yourself or by roles that you are a member of).</p></li>
-<li><p><strong>privileges</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of privileges to apply as default privileges.</p></li>
-<li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the role to which grant default privileges on.</p></li>
-<li><p><strong>schema</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The database schema to set default privileges for this role.</p></li>
+<li><p><strong>database</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The database to grant default privileges for this role</p></li>
+<li><p><strong>object_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The PostgreSQL object type to set the default privileges on (one of: table, sequence)</p></li>
+<li><p><strong>owner</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Target role for which to alter default privileges.</p></li>
+<li><p><strong>privileges</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of privileges to apply as default privileges</p></li>
+<li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the role to which grant default privileges on</p></li>
+<li><p><strong>schema</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The database schema to set default privileges for this role</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/default_privileges.html.markdown">https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/default_privileges.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -298,10 +312,131 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_postgresql.DefaultPrivileges">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_postgresql.</code><code class="sig-name descname">DefaultPrivileges</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">database=None</em>, <em class="sig-param">object_type=None</em>, <em class="sig-param">owner=None</em>, <em class="sig-param">privileges=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">schema=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_postgresql.DefaultPrivileges" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">.DefaultPrivileges</span></code> resource creates and manages default privileges given to a user for a database schema.</p>
+<blockquote>
+<div><p><strong>Note:</strong> This resource needs Postgresql version 9 or above.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/postgresql_default_privileges.html.markdown">https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/postgresql_default_privileges.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>database</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The database to grant default privileges for this role.</p></li>
+<li><p><strong>object_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The PostgreSQL object type to set the default privileges on (one of: table, sequence).</p></li>
+<li><p><strong>owner</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Role for which apply default privileges (You can change default privileges only for objects that will be created by yourself or by roles that you are a member of).</p></li>
+<li><p><strong>privileges</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of privileges to apply as default privileges.</p></li>
+<li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the role to which grant default privileges on.</p></li>
+<li><p><strong>schema</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The database schema to set default privileges for this role.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="pulumi_postgresql.DefaultPrivileges.database">
+<code class="sig-name descname">database</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_postgresql.DefaultPrivileges.database" title="Permalink to this definition">¶</a></dt>
+<dd><p>The database to grant default privileges for this role.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_postgresql.DefaultPrivileges.object_type">
+<code class="sig-name descname">object_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_postgresql.DefaultPrivileges.object_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>The PostgreSQL object type to set the default privileges on (one of: table, sequence).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_postgresql.DefaultPrivileges.owner">
+<code class="sig-name descname">owner</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_postgresql.DefaultPrivileges.owner" title="Permalink to this definition">¶</a></dt>
+<dd><p>Role for which apply default privileges (You can change default privileges only for objects that will be created by yourself or by roles that you are a member of).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_postgresql.DefaultPrivileges.privileges">
+<code class="sig-name descname">privileges</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_postgresql.DefaultPrivileges.privileges" title="Permalink to this definition">¶</a></dt>
+<dd><p>The list of privileges to apply as default privileges.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_postgresql.DefaultPrivileges.role">
+<code class="sig-name descname">role</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_postgresql.DefaultPrivileges.role" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the role to which grant default privileges on.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_postgresql.DefaultPrivileges.schema">
+<code class="sig-name descname">schema</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_postgresql.DefaultPrivileges.schema" title="Permalink to this definition">¶</a></dt>
+<dd><p>The database schema to set default privileges for this role.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_postgresql.DefaultPrivileges.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">database=None</em>, <em class="sig-param">object_type=None</em>, <em class="sig-param">owner=None</em>, <em class="sig-param">privileges=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">schema=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_postgresql.DefaultPrivileges.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing DefaultPrivileges resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>database</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The database to grant default privileges for this role.</p></li>
+<li><p><strong>object_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The PostgreSQL object type to set the default privileges on (one of: table, sequence).</p></li>
+<li><p><strong>owner</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Role for which apply default privileges (You can change default privileges only for objects that will be created by yourself or by roles that you are a member of).</p></li>
+<li><p><strong>privileges</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of privileges to apply as default privileges.</p></li>
+<li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the role to which grant default privileges on.</p></li>
+<li><p><strong>schema</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The database schema to set default privileges for this role.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_postgresql.DefaultPrivileges.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_postgresql.DefaultPrivileges.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_postgresql.DefaultPrivileges.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_postgresql.DefaultPrivileges.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_postgresql.Extension">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_postgresql.</code><code class="sig-name descname">Extension</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">database=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">schema=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_postgresql.Extension" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.Extension</span></code> resource creates and manages an extension on a PostgreSQL
 server.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/postgresql_extension.html.markdown">https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/postgresql_extension.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -314,9 +449,6 @@ server.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/extension.html.markdown">https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/extension.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_postgresql.Extension.database">
 <code class="sig-name descname">database</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_postgresql.Extension.database" title="Permalink to this definition">¶</a></dt>
@@ -359,9 +491,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/extension.html.markdown">https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/extension.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -408,6 +537,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.Grant</span></code> resource creates and manages privileges given to a user for a database schema.</p>
 <blockquote>
 <div><p><strong>Note:</strong> This resource needs Postgresql version 9 or above.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/postgresql_grant.html.markdown">https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/postgresql_grant.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -422,9 +552,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/grant.html.markdown">https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/grant.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_postgresql.Grant.database">
 <code class="sig-name descname">database</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_postgresql.Grant.database" title="Permalink to this definition">¶</a></dt>
@@ -474,9 +601,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/grant.html.markdown">https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/grant.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -524,36 +648,30 @@ a format of their choosing before sending those properties to the Pulumi engine.
 settings, however an explicit <code class="docutils literal notranslate"><span class="pre">Provider</span></code> instance may be created and passed during resource
 construction to achieve fine-grained programmatic control over provider settings. See the
 <a class="reference external" href="https://www.pulumi.com/docs/reference/programming-model/#providers">documentation</a> for more information.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/index.html.markdown">https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/index.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>connect_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Maximum wait for connection, in seconds. Zero or not specified means wait indefinitely.</p></li>
+<li><p><strong>database</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the database to connect to in order to conenct to (defaults to <code class="docutils literal notranslate"><span class="pre">postgres</span></code>).</p></li>
+<li><p><strong>database_username</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Database username associated to the connected user (for user name maps)</p></li>
+<li><p><strong>expected_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specify the expected version of PostgreSQL.</p></li>
+<li><p><strong>host</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of PostgreSQL server address to connect to</p></li>
+<li><p><strong>max_connections</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Maximum number of connections to establish to the database. Zero means unlimited.</p></li>
+<li><p><strong>password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Password to be used if the PostgreSQL server demands password authentication</p></li>
+<li><p><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The PostgreSQL port number to connect to at the server host, or socket file name extension for Unix-domain connections</p></li>
+<li><p><strong>sslmode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – This option determines whether or with what priority a secure SSL TCP/IP connection will be negotiated with the
+PostgreSQL server</p></li>
+<li><p><strong>superuser</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specify if the user to connect as is a Postgres superuser or not.If not, some feature might be disabled (e.g.:
+Refreshing state password from Postgres)</p></li>
+<li><p><strong>username</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – PostgreSQL user name to connect as</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/index.html.markdown">https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/index.html.markdown</a>.</p>
-</div></blockquote>
-<dl class="method">
-<dt id="pulumi_postgresql.Provider.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_postgresql.Provider.get" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get an existing Provider resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
-<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-</ul>
-</dd>
-</dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/index.html.markdown">https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/index.html.markdown</a>.</p>
-</div></blockquote>
-</dd></dl>
-
 <dl class="method">
 <dt id="pulumi_postgresql.Provider.translate_output_property">
 <code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_postgresql.Provider.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -609,6 +727,7 @@ and all but the final <code class="docutils literal notranslate"><span class="pr
 <blockquote>
 <div><p><strong>Note:</strong> All arguments including role name and password will be stored in the raw state as plain-text.
 <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/postgresql_role.html.markdown">https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/postgresql_role.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -673,9 +792,6 @@ set to <code class="docutils literal notranslate"><span class="pre">infinity</sp
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/role.html.markdown">https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/role.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_postgresql.Role.bypass_row_level_security">
 <code class="sig-name descname">bypass_row_level_security</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_postgresql.Role.bypass_row_level_security" title="Permalink to this definition">¶</a></dt>
@@ -886,9 +1002,6 @@ set to <code class="docutils literal notranslate"><span class="pre">infinity</sp
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/role.html.markdown">https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/role.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -935,6 +1048,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.Schema</span></code> resource creates and manages <a class="reference external" href="https://www.postgresql.org/docs/current/static/ddl-schemas.html">schema
 objects</a> within
 a PostgreSQL database.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/postgresql_schema.html.markdown">https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/postgresql_schema.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -959,9 +1075,6 @@ policy block supports fields documented below.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">usage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">usageWithGrant</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/schema.html.markdown">https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/schema.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_postgresql.Schema.database">
 <code class="sig-name descname">database</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_postgresql.Schema.database" title="Permalink to this definition">¶</a></dt>
@@ -1037,9 +1150,6 @@ policy block supports fields documented below.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">usage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">usageWithGrant</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/schema.html.markdown">https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/schema.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
