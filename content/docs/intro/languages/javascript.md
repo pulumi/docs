@@ -12,7 +12,7 @@ aliases: ["/docs/reference/javascript/"]
 
 <img src="/logos/tech/logo-nodejs.png" align="right" width="150" style="padding:8px; margin-top: -64px">
 
-Pulumi supports JavaScript programs running on Node.js version 8 and later.
+Pulumi supports JavaScript programs running on Node.js using any of the [Current, Active and Maintenance LTS versions](https://nodejs.org/en/about/releases/).
 
 Because programs are just JavaScript, you may elect to write them in any manner you'd normally write Node.js programs.
 That includes TypeScript, CoffeeScript, or Babel, in addition to your favorite tools such as build systems, linters, or
