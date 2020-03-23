@@ -231,7 +231,7 @@ const zipFunc = new aws.lambda.Function("zipTpsReportsFunc", {
    code: new pulumi.asset.AssetArchive({
       ".": new pulumi.asset.FileArchive("./app"),
    }),
-   runtime: "nodejs8.10",
+   runtime: "nodejs12.x",
    role: zipFuncRole.arn,
 });
 
