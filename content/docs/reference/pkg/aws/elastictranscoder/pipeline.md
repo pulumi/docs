@@ -115,7 +115,7 @@ The AWS Key Management Service (AWS KMS) key that you want to use with this pipe
             <td class="align-top">Content<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#pipelinecontentconfig">Pulumi.<wbr>Aws.<wbr>Elastictranscoder.<wbr>Pipeline<wbr>Content<wbr>Config<wbr>Args?</a></code>
+                <code><a href="#pipelinecontentconfig">Pipeline<wbr>Content<wbr>Config<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -130,7 +130,7 @@ The ContentConfig object specifies information about the Amazon S3 bucket in whi
             <td class="align-top">Content<wbr>Config<wbr>Permissions</td>
             <td class="align-top">
                 
-                <code><a href="#pipelinecontentconfigpermission">List&lt;Pulumi.<wbr>Aws.<wbr>Elastictranscoder.<wbr>Pipeline<wbr>Content<wbr>Config<wbr>Permission<wbr>Args&gt;?</a></code>
+                <code><a href="#pipelinecontentconfigpermission">List&lt;Pipeline<wbr>Content<wbr>Config<wbr>Permission<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -175,7 +175,7 @@ The name of the pipeline. Maximum 40 characters
             <td class="align-top">Notifications</td>
             <td class="align-top">
                 
-                <code><a href="#pipelinenotifications">Pulumi.<wbr>Aws.<wbr>Elastictranscoder.<wbr>Pipeline<wbr>Notifications<wbr>Args?</a></code>
+                <code><a href="#pipelinenotifications">Pipeline<wbr>Notifications<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -220,7 +220,7 @@ The IAM Amazon Resource Name (ARN) for the role that you want Elastic Transcoder
             <td class="align-top">Thumbnail<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#pipelinethumbnailconfig">Pulumi.<wbr>Aws.<wbr>Elastictranscoder.<wbr>Pipeline<wbr>Thumbnail<wbr>Config<wbr>Args?</a></code>
+                <code><a href="#pipelinethumbnailconfig">Pipeline<wbr>Thumbnail<wbr>Config<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -235,7 +235,7 @@ The ThumbnailConfig object specifies information about the Amazon S3 bucket in w
             <td class="align-top">Thumbnail<wbr>Config<wbr>Permissions</td>
             <td class="align-top">
                 
-                <code><a href="#pipelinethumbnailconfigpermission">List&lt;Pulumi.<wbr>Aws.<wbr>Elastictranscoder.<wbr>Pipeline<wbr>Thumbnail<wbr>Config<wbr>Permission<wbr>Args&gt;?</a></code>
+                <code><a href="#pipelinethumbnailconfigpermission">List&lt;Pipeline<wbr>Thumbnail<wbr>Config<wbr>Permission<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -285,7 +285,7 @@ The AWS Key Management Service (AWS KMS) key that you want to use with this pipe
             <td class="align-top">Content<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#pipelinecontentconfig">*elastictranscoder.<wbr>Pipeline<wbr>Content<wbr>Config</a></code>
+                <code><a href="#pipelinecontentconfig">*Pipeline<wbr>Content<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -300,7 +300,7 @@ The ContentConfig object specifies information about the Amazon S3 bucket in whi
             <td class="align-top">Content<wbr>Config<wbr>Permissions</td>
             <td class="align-top">
                 
-                <code><a href="#pipelinecontentconfigpermission">[]elastictranscoder.<wbr>Pipeline<wbr>Content<wbr>Config<wbr>Permission</a></code>
+                <code><a href="#pipelinecontentconfigpermission">[]Pipeline<wbr>Content<wbr>Config<wbr>Permission</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -345,7 +345,7 @@ The name of the pipeline. Maximum 40 characters
             <td class="align-top">Notifications</td>
             <td class="align-top">
                 
-                <code><a href="#pipelinenotifications">*elastictranscoder.<wbr>Pipeline<wbr>Notifications</a></code>
+                <code><a href="#pipelinenotifications">*Pipeline<wbr>Notifications</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -390,7 +390,7 @@ The IAM Amazon Resource Name (ARN) for the role that you want Elastic Transcoder
             <td class="align-top">Thumbnail<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#pipelinethumbnailconfig">*elastictranscoder.<wbr>Pipeline<wbr>Thumbnail<wbr>Config</a></code>
+                <code><a href="#pipelinethumbnailconfig">*Pipeline<wbr>Thumbnail<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -405,7 +405,7 @@ The ThumbnailConfig object specifies information about the Amazon S3 bucket in w
             <td class="align-top">Thumbnail<wbr>Config<wbr>Permissions</td>
             <td class="align-top">
                 
-                <code><a href="#pipelinethumbnailconfigpermission">[]elastictranscoder.<wbr>Pipeline<wbr>Thumbnail<wbr>Config<wbr>Permission</a></code>
+                <code><a href="#pipelinethumbnailconfigpermission">[]Pipeline<wbr>Thumbnail<wbr>Config<wbr>Permission</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -455,7 +455,7 @@ The AWS Key Management Service (AWS KMS) key that you want to use with this pipe
             <td class="align-top">content<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#pipelinecontentconfig">elastictranscoder.<wbr>Pipeline<wbr>Content<wbr>Config?</a></code>
+                <code><a href="#pipelinecontentconfig">Pipeline<wbr>Content<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -470,7 +470,7 @@ The ContentConfig object specifies information about the Amazon S3 bucket in whi
             <td class="align-top">content<wbr>Config<wbr>Permissions</td>
             <td class="align-top">
                 
-                <code><a href="#pipelinecontentconfigpermission">elastictranscoder.<wbr>Pipeline<wbr>Content<wbr>Config<wbr>Permission[]?</a></code>
+                <code><a href="#pipelinecontentconfigpermission">Pipeline<wbr>Content<wbr>Config<wbr>Permission[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -515,7 +515,7 @@ The name of the pipeline. Maximum 40 characters
             <td class="align-top">notifications</td>
             <td class="align-top">
                 
-                <code><a href="#pipelinenotifications">elastictranscoder.<wbr>Pipeline<wbr>Notifications?</a></code>
+                <code><a href="#pipelinenotifications">Pipeline<wbr>Notifications?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -560,7 +560,7 @@ The IAM Amazon Resource Name (ARN) for the role that you want Elastic Transcoder
             <td class="align-top">thumbnail<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#pipelinethumbnailconfig">elastictranscoder.<wbr>Pipeline<wbr>Thumbnail<wbr>Config?</a></code>
+                <code><a href="#pipelinethumbnailconfig">Pipeline<wbr>Thumbnail<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -575,7 +575,7 @@ The ThumbnailConfig object specifies information about the Amazon S3 bucket in w
             <td class="align-top">thumbnail<wbr>Config<wbr>Permissions</td>
             <td class="align-top">
                 
-                <code><a href="#pipelinethumbnailconfigpermission">elastictranscoder.<wbr>Pipeline<wbr>Thumbnail<wbr>Config<wbr>Permission[]?</a></code>
+                <code><a href="#pipelinethumbnailconfigpermission">Pipeline<wbr>Thumbnail<wbr>Config<wbr>Permission[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -819,7 +819,7 @@ The following output properties are available:
             <td class="align-top">Content<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#pipelinecontentconfig">Pulumi.<wbr>Aws.<wbr>Elastictranscoder.<wbr>Pipeline<wbr>Content<wbr>Config</a></code>
+                <code><a href="#pipelinecontentconfig">Pipeline<wbr>Content<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} The ContentConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save transcoded files and playlists. (documented below)
  {{% /md %}}
@@ -832,7 +832,7 @@ The following output properties are available:
             <td class="align-top">Content<wbr>Config<wbr>Permissions</td>
             <td class="align-top">
                 
-                <code><a href="#pipelinecontentconfigpermission">List&lt;Pulumi.<wbr>Aws.<wbr>Elastictranscoder.<wbr>Pipeline<wbr>Content<wbr>Config<wbr>Permission&gt;?</a></code>
+                <code><a href="#pipelinecontentconfigpermission">List&lt;Pipeline<wbr>Content<wbr>Config<wbr>Permission&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} The permissions for the `content_config` object. (documented below)
  {{% /md %}}
@@ -871,7 +871,7 @@ The following output properties are available:
             <td class="align-top">Notifications</td>
             <td class="align-top">
                 
-                <code><a href="#pipelinenotifications">Pulumi.<wbr>Aws.<wbr>Elastictranscoder.<wbr>Pipeline<wbr>Notifications?</a></code>
+                <code><a href="#pipelinenotifications">Pipeline<wbr>Notifications?</a></code>
             </td>
             <td class="align-top">{{% md %}} The Amazon Simple Notification Service (Amazon SNS) topic that you want to notify to report job status. (documented below)
  {{% /md %}}
@@ -910,7 +910,7 @@ The following output properties are available:
             <td class="align-top">Thumbnail<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#pipelinethumbnailconfig">Pulumi.<wbr>Aws.<wbr>Elastictranscoder.<wbr>Pipeline<wbr>Thumbnail<wbr>Config</a></code>
+                <code><a href="#pipelinethumbnailconfig">Pipeline<wbr>Thumbnail<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} The ThumbnailConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save thumbnail files. (documented below)
  {{% /md %}}
@@ -923,7 +923,7 @@ The following output properties are available:
             <td class="align-top">Thumbnail<wbr>Config<wbr>Permissions</td>
             <td class="align-top">
                 
-                <code><a href="#pipelinethumbnailconfigpermission">List&lt;Pulumi.<wbr>Aws.<wbr>Elastictranscoder.<wbr>Pipeline<wbr>Thumbnail<wbr>Config<wbr>Permission&gt;?</a></code>
+                <code><a href="#pipelinethumbnailconfigpermission">List&lt;Pipeline<wbr>Thumbnail<wbr>Config<wbr>Permission&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} The permissions for the `thumbnail_config` object. (documented below)
  {{% /md %}}
@@ -981,7 +981,7 @@ The following output properties are available:
             <td class="align-top">Content<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#pipelinecontentconfig">elastictranscoder.<wbr>Pipeline<wbr>Content<wbr>Config</a></code>
+                <code><a href="#pipelinecontentconfig">Pipeline<wbr>Content<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} The ContentConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save transcoded files and playlists. (documented below)
  {{% /md %}}
@@ -994,7 +994,7 @@ The following output properties are available:
             <td class="align-top">Content<wbr>Config<wbr>Permissions</td>
             <td class="align-top">
                 
-                <code><a href="#pipelinecontentconfigpermission">[]elastictranscoder.<wbr>Pipeline<wbr>Content<wbr>Config<wbr>Permission</a></code>
+                <code><a href="#pipelinecontentconfigpermission">[]Pipeline<wbr>Content<wbr>Config<wbr>Permission</a></code>
             </td>
             <td class="align-top">{{% md %}} The permissions for the `content_config` object. (documented below)
  {{% /md %}}
@@ -1033,7 +1033,7 @@ The following output properties are available:
             <td class="align-top">Notifications</td>
             <td class="align-top">
                 
-                <code><a href="#pipelinenotifications">*elastictranscoder.<wbr>Pipeline<wbr>Notifications</a></code>
+                <code><a href="#pipelinenotifications">*Pipeline<wbr>Notifications</a></code>
             </td>
             <td class="align-top">{{% md %}} The Amazon Simple Notification Service (Amazon SNS) topic that you want to notify to report job status. (documented below)
  {{% /md %}}
@@ -1072,7 +1072,7 @@ The following output properties are available:
             <td class="align-top">Thumbnail<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#pipelinethumbnailconfig">elastictranscoder.<wbr>Pipeline<wbr>Thumbnail<wbr>Config</a></code>
+                <code><a href="#pipelinethumbnailconfig">Pipeline<wbr>Thumbnail<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} The ThumbnailConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save thumbnail files. (documented below)
  {{% /md %}}
@@ -1085,7 +1085,7 @@ The following output properties are available:
             <td class="align-top">Thumbnail<wbr>Config<wbr>Permissions</td>
             <td class="align-top">
                 
-                <code><a href="#pipelinethumbnailconfigpermission">[]elastictranscoder.<wbr>Pipeline<wbr>Thumbnail<wbr>Config<wbr>Permission</a></code>
+                <code><a href="#pipelinethumbnailconfigpermission">[]Pipeline<wbr>Thumbnail<wbr>Config<wbr>Permission</a></code>
             </td>
             <td class="align-top">{{% md %}} The permissions for the `thumbnail_config` object. (documented below)
  {{% /md %}}
@@ -1143,7 +1143,7 @@ The following output properties are available:
             <td class="align-top">content<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#pipelinecontentconfig">elastictranscoder.<wbr>Pipeline<wbr>Content<wbr>Config</a></code>
+                <code><a href="#pipelinecontentconfig">Pipeline<wbr>Content<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} The ContentConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save transcoded files and playlists. (documented below)
  {{% /md %}}
@@ -1156,7 +1156,7 @@ The following output properties are available:
             <td class="align-top">content<wbr>Config<wbr>Permissions</td>
             <td class="align-top">
                 
-                <code><a href="#pipelinecontentconfigpermission">elastictranscoder.<wbr>Pipeline<wbr>Content<wbr>Config<wbr>Permission[]?</a></code>
+                <code><a href="#pipelinecontentconfigpermission">Pipeline<wbr>Content<wbr>Config<wbr>Permission[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} The permissions for the `content_config` object. (documented below)
  {{% /md %}}
@@ -1195,7 +1195,7 @@ The following output properties are available:
             <td class="align-top">notifications</td>
             <td class="align-top">
                 
-                <code><a href="#pipelinenotifications">elastictranscoder.<wbr>Pipeline<wbr>Notifications?</a></code>
+                <code><a href="#pipelinenotifications">Pipeline<wbr>Notifications?</a></code>
             </td>
             <td class="align-top">{{% md %}} The Amazon Simple Notification Service (Amazon SNS) topic that you want to notify to report job status. (documented below)
  {{% /md %}}
@@ -1234,7 +1234,7 @@ The following output properties are available:
             <td class="align-top">thumbnail<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#pipelinethumbnailconfig">elastictranscoder.<wbr>Pipeline<wbr>Thumbnail<wbr>Config</a></code>
+                <code><a href="#pipelinethumbnailconfig">Pipeline<wbr>Thumbnail<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} The ThumbnailConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save thumbnail files. (documented below)
  {{% /md %}}
@@ -1247,7 +1247,7 @@ The following output properties are available:
             <td class="align-top">thumbnail<wbr>Config<wbr>Permissions</td>
             <td class="align-top">
                 
-                <code><a href="#pipelinethumbnailconfigpermission">elastictranscoder.<wbr>Pipeline<wbr>Thumbnail<wbr>Config<wbr>Permission[]?</a></code>
+                <code><a href="#pipelinethumbnailconfigpermission">Pipeline<wbr>Thumbnail<wbr>Config<wbr>Permission[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} The permissions for the `thumbnail_config` object. (documented below)
  {{% /md %}}
@@ -1530,7 +1530,7 @@ The AWS Key Management Service (AWS KMS) key that you want to use with this pipe
             <td class="align-top">Content<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#pipelinecontentconfig">Pulumi.<wbr>Aws.<wbr>Elastictranscoder.<wbr>Pipeline<wbr>Content<wbr>Config<wbr>Args?</a></code>
+                <code><a href="#pipelinecontentconfig">Pipeline<wbr>Content<wbr>Config<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1545,7 +1545,7 @@ The ContentConfig object specifies information about the Amazon S3 bucket in whi
             <td class="align-top">Content<wbr>Config<wbr>Permissions</td>
             <td class="align-top">
                 
-                <code><a href="#pipelinecontentconfigpermission">List&lt;Pulumi.<wbr>Aws.<wbr>Elastictranscoder.<wbr>Pipeline<wbr>Content<wbr>Config<wbr>Permission<wbr>Args&gt;?</a></code>
+                <code><a href="#pipelinecontentconfigpermission">List&lt;Pipeline<wbr>Content<wbr>Config<wbr>Permission<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1590,7 +1590,7 @@ The name of the pipeline. Maximum 40 characters
             <td class="align-top">Notifications</td>
             <td class="align-top">
                 
-                <code><a href="#pipelinenotifications">Pulumi.<wbr>Aws.<wbr>Elastictranscoder.<wbr>Pipeline<wbr>Notifications<wbr>Args?</a></code>
+                <code><a href="#pipelinenotifications">Pipeline<wbr>Notifications<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1635,7 +1635,7 @@ The IAM Amazon Resource Name (ARN) for the role that you want Elastic Transcoder
             <td class="align-top">Thumbnail<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#pipelinethumbnailconfig">Pulumi.<wbr>Aws.<wbr>Elastictranscoder.<wbr>Pipeline<wbr>Thumbnail<wbr>Config<wbr>Args?</a></code>
+                <code><a href="#pipelinethumbnailconfig">Pipeline<wbr>Thumbnail<wbr>Config<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1650,7 +1650,7 @@ The ThumbnailConfig object specifies information about the Amazon S3 bucket in w
             <td class="align-top">Thumbnail<wbr>Config<wbr>Permissions</td>
             <td class="align-top">
                 
-                <code><a href="#pipelinethumbnailconfigpermission">List&lt;Pulumi.<wbr>Aws.<wbr>Elastictranscoder.<wbr>Pipeline<wbr>Thumbnail<wbr>Config<wbr>Permission<wbr>Args&gt;?</a></code>
+                <code><a href="#pipelinethumbnailconfigpermission">List&lt;Pipeline<wbr>Thumbnail<wbr>Config<wbr>Permission<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1714,7 +1714,7 @@ The AWS Key Management Service (AWS KMS) key that you want to use with this pipe
             <td class="align-top">Content<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#pipelinecontentconfig">*elastictranscoder.<wbr>Pipeline<wbr>Content<wbr>Config</a></code>
+                <code><a href="#pipelinecontentconfig">*Pipeline<wbr>Content<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1729,7 +1729,7 @@ The ContentConfig object specifies information about the Amazon S3 bucket in whi
             <td class="align-top">Content<wbr>Config<wbr>Permissions</td>
             <td class="align-top">
                 
-                <code><a href="#pipelinecontentconfigpermission">[]elastictranscoder.<wbr>Pipeline<wbr>Content<wbr>Config<wbr>Permission</a></code>
+                <code><a href="#pipelinecontentconfigpermission">[]Pipeline<wbr>Content<wbr>Config<wbr>Permission</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1774,7 +1774,7 @@ The name of the pipeline. Maximum 40 characters
             <td class="align-top">Notifications</td>
             <td class="align-top">
                 
-                <code><a href="#pipelinenotifications">*elastictranscoder.<wbr>Pipeline<wbr>Notifications</a></code>
+                <code><a href="#pipelinenotifications">*Pipeline<wbr>Notifications</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1819,7 +1819,7 @@ The IAM Amazon Resource Name (ARN) for the role that you want Elastic Transcoder
             <td class="align-top">Thumbnail<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#pipelinethumbnailconfig">*elastictranscoder.<wbr>Pipeline<wbr>Thumbnail<wbr>Config</a></code>
+                <code><a href="#pipelinethumbnailconfig">*Pipeline<wbr>Thumbnail<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1834,7 +1834,7 @@ The ThumbnailConfig object specifies information about the Amazon S3 bucket in w
             <td class="align-top">Thumbnail<wbr>Config<wbr>Permissions</td>
             <td class="align-top">
                 
-                <code><a href="#pipelinethumbnailconfigpermission">[]elastictranscoder.<wbr>Pipeline<wbr>Thumbnail<wbr>Config<wbr>Permission</a></code>
+                <code><a href="#pipelinethumbnailconfigpermission">[]Pipeline<wbr>Thumbnail<wbr>Config<wbr>Permission</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1898,7 +1898,7 @@ The AWS Key Management Service (AWS KMS) key that you want to use with this pipe
             <td class="align-top">content<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#pipelinecontentconfig">elastictranscoder.<wbr>Pipeline<wbr>Content<wbr>Config?</a></code>
+                <code><a href="#pipelinecontentconfig">Pipeline<wbr>Content<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1913,7 +1913,7 @@ The ContentConfig object specifies information about the Amazon S3 bucket in whi
             <td class="align-top">content<wbr>Config<wbr>Permissions</td>
             <td class="align-top">
                 
-                <code><a href="#pipelinecontentconfigpermission">elastictranscoder.<wbr>Pipeline<wbr>Content<wbr>Config<wbr>Permission[]?</a></code>
+                <code><a href="#pipelinecontentconfigpermission">Pipeline<wbr>Content<wbr>Config<wbr>Permission[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1958,7 +1958,7 @@ The name of the pipeline. Maximum 40 characters
             <td class="align-top">notifications</td>
             <td class="align-top">
                 
-                <code><a href="#pipelinenotifications">elastictranscoder.<wbr>Pipeline<wbr>Notifications?</a></code>
+                <code><a href="#pipelinenotifications">Pipeline<wbr>Notifications?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2003,7 +2003,7 @@ The IAM Amazon Resource Name (ARN) for the role that you want Elastic Transcoder
             <td class="align-top">thumbnail<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#pipelinethumbnailconfig">elastictranscoder.<wbr>Pipeline<wbr>Thumbnail<wbr>Config?</a></code>
+                <code><a href="#pipelinethumbnailconfig">Pipeline<wbr>Thumbnail<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2018,7 +2018,7 @@ The ThumbnailConfig object specifies information about the Amazon S3 bucket in w
             <td class="align-top">thumbnail<wbr>Config<wbr>Permissions</td>
             <td class="align-top">
                 
-                <code><a href="#pipelinethumbnailconfigpermission">elastictranscoder.<wbr>Pipeline<wbr>Thumbnail<wbr>Config<wbr>Permission[]?</a></code>
+                <code><a href="#pipelinethumbnailconfigpermission">Pipeline<wbr>Thumbnail<wbr>Config<wbr>Permission[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2486,7 +2486,7 @@ The Amazon S3 storage class, Standard or ReducedRedundancy, that you want Elasti
             <td class="align-top">Accesses</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3329,7 +3329,7 @@ The Amazon S3 storage class, Standard or ReducedRedundancy, that you want Elasti
             <td class="align-top">Accesses</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

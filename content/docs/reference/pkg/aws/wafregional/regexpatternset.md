@@ -109,7 +109,7 @@ The name or description of the Regex Pattern Set.
             <td class="align-top">Regex<wbr>Pattern<wbr>Strings</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -321,7 +321,7 @@ The following output properties are available:
             <td class="align-top">Regex<wbr>Pattern<wbr>Strings</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} A list of regular expression (regex) patterns that you want AWS WAF to search for, such as `B[a@]dB[o0]t`.
  {{% /md %}}
@@ -566,7 +566,7 @@ The name or description of the Regex Pattern Set.
             <td class="align-top">Regex<wbr>Pattern<wbr>Strings</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

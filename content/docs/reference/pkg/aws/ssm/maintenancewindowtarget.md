@@ -162,7 +162,7 @@ The type of target being registered with the Maintenance Window. Possible values
             <td class="align-top">Targets</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtargettarget">List&lt;Pulumi.<wbr>Aws.<wbr>Ssm.<wbr>Maintenance<wbr>Window<wbr>Target<wbr>Target<wbr>Args&gt;</a></code>
+                <code><a href="#maintenancewindowtargettarget">List&lt;Maintenance<wbr>Window<wbr>Target<wbr>Target<wbr>Args&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -272,7 +272,7 @@ The type of target being registered with the Maintenance Window. Possible values
             <td class="align-top">Targets</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtargettarget">[]ssm.<wbr>Maintenance<wbr>Window<wbr>Target<wbr>Target</a></code>
+                <code><a href="#maintenancewindowtargettarget">[]Maintenance<wbr>Window<wbr>Target<wbr>Target</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -382,7 +382,7 @@ The type of target being registered with the Maintenance Window. Possible values
             <td class="align-top">targets</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtargettarget">ssm.<wbr>Maintenance<wbr>Window<wbr>Target<wbr>Target[]</a></code>
+                <code><a href="#maintenancewindowtargettarget">Maintenance<wbr>Window<wbr>Target<wbr>Target[]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -608,7 +608,7 @@ The following output properties are available:
             <td class="align-top">Targets</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtargettarget">List&lt;Pulumi.<wbr>Aws.<wbr>Ssm.<wbr>Maintenance<wbr>Window<wbr>Target<wbr>Target&gt;</a></code>
+                <code><a href="#maintenancewindowtargettarget">List&lt;Maintenance<wbr>Window<wbr>Target<wbr>Target&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} The targets (either instances or tags). Instances are specified using Key=InstanceIds,Values=InstanceId1,InstanceId2. Tags are specified using Key=tag name,Values=tag value.
  {{% /md %}}
@@ -706,7 +706,7 @@ The following output properties are available:
             <td class="align-top">Targets</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtargettarget">[]ssm.<wbr>Maintenance<wbr>Window<wbr>Target<wbr>Target</a></code>
+                <code><a href="#maintenancewindowtargettarget">[]Maintenance<wbr>Window<wbr>Target<wbr>Target</a></code>
             </td>
             <td class="align-top">{{% md %}} The targets (either instances or tags). Instances are specified using Key=InstanceIds,Values=InstanceId1,InstanceId2. Tags are specified using Key=tag name,Values=tag value.
  {{% /md %}}
@@ -804,7 +804,7 @@ The following output properties are available:
             <td class="align-top">targets</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtargettarget">ssm.<wbr>Maintenance<wbr>Window<wbr>Target<wbr>Target[]</a></code>
+                <code><a href="#maintenancewindowtargettarget">Maintenance<wbr>Window<wbr>Target<wbr>Target[]</a></code>
             </td>
             <td class="align-top">{{% md %}} The targets (either instances or tags). Instances are specified using Key=InstanceIds,Values=InstanceId1,InstanceId2. Tags are specified using Key=tag name,Values=tag value.
  {{% /md %}}
@@ -1067,7 +1067,7 @@ The type of target being registered with the Maintenance Window. Possible values
             <td class="align-top">Targets</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtargettarget">List&lt;Pulumi.<wbr>Aws.<wbr>Ssm.<wbr>Maintenance<wbr>Window<wbr>Target<wbr>Target<wbr>Args&gt;?</a></code>
+                <code><a href="#maintenancewindowtargettarget">List&lt;Maintenance<wbr>Window<wbr>Target<wbr>Target<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1177,7 +1177,7 @@ The type of target being registered with the Maintenance Window. Possible values
             <td class="align-top">Targets</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtargettarget">[]ssm.<wbr>Maintenance<wbr>Window<wbr>Target<wbr>Target</a></code>
+                <code><a href="#maintenancewindowtargettarget">[]Maintenance<wbr>Window<wbr>Target<wbr>Target</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1287,7 +1287,7 @@ The type of target being registered with the Maintenance Window. Possible values
             <td class="align-top">targets</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtargettarget">ssm.<wbr>Maintenance<wbr>Window<wbr>Target<wbr>Target[]?</a></code>
+                <code><a href="#maintenancewindowtargettarget">Maintenance<wbr>Window<wbr>Target<wbr>Target[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1489,7 +1489,7 @@ The Id of the maintenance window to register the target with.
             <td class="align-top">Values</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

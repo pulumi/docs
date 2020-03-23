@@ -131,7 +131,7 @@ The following arguments are supported:
             <td class="align-top">Attributes</td>
             <td class="align-top">
                 
-                <code><a href="#tableattribute">List&lt;Pulumi.<wbr>Aws.<wbr>Dynamodb.<wbr>Table<wbr>Attribute<wbr>Args&gt;</a></code>
+                <code><a href="#tableattribute">List&lt;Table<wbr>Attribute<wbr>Args&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -161,7 +161,7 @@ Controls how you are charged for read and write throughput and how you manage ca
             <td class="align-top">Global<wbr>Secondary<wbr>Indexes</td>
             <td class="align-top">
                 
-                <code><a href="#tableglobalsecondaryindex">List&lt;Pulumi.<wbr>Aws.<wbr>Dynamodb.<wbr>Table<wbr>Global<wbr>Secondary<wbr>Index<wbr>Args&gt;?</a></code>
+                <code><a href="#tableglobalsecondaryindex">List&lt;Table<wbr>Global<wbr>Secondary<wbr>Index<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -194,7 +194,7 @@ defined as an attribute in the resource.
             <td class="align-top">Local<wbr>Secondary<wbr>Indexes</td>
             <td class="align-top">
                 
-                <code><a href="#tablelocalsecondaryindex">List&lt;Pulumi.<wbr>Aws.<wbr>Dynamodb.<wbr>Table<wbr>Local<wbr>Secondary<wbr>Index<wbr>Args&gt;?</a></code>
+                <code><a href="#tablelocalsecondaryindex">List&lt;Table<wbr>Local<wbr>Secondary<wbr>Index<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -226,7 +226,7 @@ The name of the index
             <td class="align-top">Point<wbr>In<wbr>Time<wbr>Recovery</td>
             <td class="align-top">
                 
-                <code><a href="#tablepointintimerecovery">Pulumi.<wbr>Aws.<wbr>Dynamodb.<wbr>Table<wbr>Point<wbr>In<wbr>Time<wbr>Recovery<wbr>Args?</a></code>
+                <code><a href="#tablepointintimerecovery">Table<wbr>Point<wbr>In<wbr>Time<wbr>Recovery<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -271,7 +271,7 @@ The number of read units for this index. Must be set if billing_mode is set to P
             <td class="align-top">Server<wbr>Side<wbr>Encryption</td>
             <td class="align-top">
                 
-                <code><a href="#tableserversideencryption">Pulumi.<wbr>Aws.<wbr>Dynamodb.<wbr>Table<wbr>Server<wbr>Side<wbr>Encryption<wbr>Args?</a></code>
+                <code><a href="#tableserversideencryption">Table<wbr>Server<wbr>Side<wbr>Encryption<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -316,7 +316,7 @@ When an item in the table is modified, StreamViewType determines what informatio
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -331,7 +331,7 @@ A map of tags to populate on the created table.
             <td class="align-top">Ttl</td>
             <td class="align-top">
                 
-                <code><a href="#tablettl">Pulumi.<wbr>Aws.<wbr>Dynamodb.<wbr>Table<wbr>Ttl<wbr>Args?</a></code>
+                <code><a href="#tablettl">Table<wbr>Ttl<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -381,7 +381,7 @@ The number of write units for this index. Must be set if billing_mode is set to 
             <td class="align-top">Attributes</td>
             <td class="align-top">
                 
-                <code><a href="#tableattribute">[]dynamodb.<wbr>Table<wbr>Attribute</a></code>
+                <code><a href="#tableattribute">[]Table<wbr>Attribute</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -411,7 +411,7 @@ Controls how you are charged for read and write throughput and how you manage ca
             <td class="align-top">Global<wbr>Secondary<wbr>Indexes</td>
             <td class="align-top">
                 
-                <code><a href="#tableglobalsecondaryindex">[]dynamodb.<wbr>Table<wbr>Global<wbr>Secondary<wbr>Index</a></code>
+                <code><a href="#tableglobalsecondaryindex">[]Table<wbr>Global<wbr>Secondary<wbr>Index</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -444,7 +444,7 @@ defined as an attribute in the resource.
             <td class="align-top">Local<wbr>Secondary<wbr>Indexes</td>
             <td class="align-top">
                 
-                <code><a href="#tablelocalsecondaryindex">[]dynamodb.<wbr>Table<wbr>Local<wbr>Secondary<wbr>Index</a></code>
+                <code><a href="#tablelocalsecondaryindex">[]Table<wbr>Local<wbr>Secondary<wbr>Index</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -476,7 +476,7 @@ The name of the index
             <td class="align-top">Point<wbr>In<wbr>Time<wbr>Recovery</td>
             <td class="align-top">
                 
-                <code><a href="#tablepointintimerecovery">*dynamodb.<wbr>Table<wbr>Point<wbr>In<wbr>Time<wbr>Recovery</a></code>
+                <code><a href="#tablepointintimerecovery">*Table<wbr>Point<wbr>In<wbr>Time<wbr>Recovery</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -521,7 +521,7 @@ The number of read units for this index. Must be set if billing_mode is set to P
             <td class="align-top">Server<wbr>Side<wbr>Encryption</td>
             <td class="align-top">
                 
-                <code><a href="#tableserversideencryption">*dynamodb.<wbr>Table<wbr>Server<wbr>Side<wbr>Encryption</a></code>
+                <code><a href="#tableserversideencryption">*Table<wbr>Server<wbr>Side<wbr>Encryption</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -581,7 +581,7 @@ A map of tags to populate on the created table.
             <td class="align-top">Ttl</td>
             <td class="align-top">
                 
-                <code><a href="#tablettl">*dynamodb.<wbr>Table<wbr>Ttl</a></code>
+                <code><a href="#tablettl">*Table<wbr>Ttl</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -631,7 +631,7 @@ The number of write units for this index. Must be set if billing_mode is set to 
             <td class="align-top">attributes</td>
             <td class="align-top">
                 
-                <code><a href="#tableattribute">dynamodb.<wbr>Table<wbr>Attribute[]</a></code>
+                <code><a href="#tableattribute">Table<wbr>Attribute[]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -661,7 +661,7 @@ Controls how you are charged for read and write throughput and how you manage ca
             <td class="align-top">global<wbr>Secondary<wbr>Indexes</td>
             <td class="align-top">
                 
-                <code><a href="#tableglobalsecondaryindex">dynamodb.<wbr>Table<wbr>Global<wbr>Secondary<wbr>Index[]?</a></code>
+                <code><a href="#tableglobalsecondaryindex">Table<wbr>Global<wbr>Secondary<wbr>Index[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -694,7 +694,7 @@ defined as an attribute in the resource.
             <td class="align-top">local<wbr>Secondary<wbr>Indexes</td>
             <td class="align-top">
                 
-                <code><a href="#tablelocalsecondaryindex">dynamodb.<wbr>Table<wbr>Local<wbr>Secondary<wbr>Index[]?</a></code>
+                <code><a href="#tablelocalsecondaryindex">Table<wbr>Local<wbr>Secondary<wbr>Index[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -726,7 +726,7 @@ The name of the index
             <td class="align-top">point<wbr>In<wbr>Time<wbr>Recovery</td>
             <td class="align-top">
                 
-                <code><a href="#tablepointintimerecovery">dynamodb.<wbr>Table<wbr>Point<wbr>In<wbr>Time<wbr>Recovery?</a></code>
+                <code><a href="#tablepointintimerecovery">Table<wbr>Point<wbr>In<wbr>Time<wbr>Recovery?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -771,7 +771,7 @@ The number of read units for this index. Must be set if billing_mode is set to P
             <td class="align-top">server<wbr>Side<wbr>Encryption</td>
             <td class="align-top">
                 
-                <code><a href="#tableserversideencryption">dynamodb.<wbr>Table<wbr>Server<wbr>Side<wbr>Encryption?</a></code>
+                <code><a href="#tableserversideencryption">Table<wbr>Server<wbr>Side<wbr>Encryption?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -831,7 +831,7 @@ A map of tags to populate on the created table.
             <td class="align-top">ttl</td>
             <td class="align-top">
                 
-                <code><a href="#tablettl">dynamodb.<wbr>Table<wbr>Ttl?</a></code>
+                <code><a href="#tablettl">Table<wbr>Ttl?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1158,7 +1158,7 @@ The following output properties are available:
             <td class="align-top">Attributes</td>
             <td class="align-top">
                 
-                <code><a href="#tableattribute">List&lt;Pulumi.<wbr>Aws.<wbr>Dynamodb.<wbr>Table<wbr>Attribute&gt;</a></code>
+                <code><a href="#tableattribute">List&lt;Table<wbr>Attribute&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} List of nested attribute definitions. Only required for `hash_key` and `range_key` attributes. Each attribute has two properties:
  {{% /md %}}
@@ -1184,7 +1184,7 @@ The following output properties are available:
             <td class="align-top">Global<wbr>Secondary<wbr>Indexes</td>
             <td class="align-top">
                 
-                <code><a href="#tableglobalsecondaryindex">List&lt;Pulumi.<wbr>Aws.<wbr>Dynamodb.<wbr>Table<wbr>Global<wbr>Secondary<wbr>Index&gt;?</a></code>
+                <code><a href="#tableglobalsecondaryindex">List&lt;Table<wbr>Global<wbr>Secondary<wbr>Index&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} Describe a GSI for the table;
 subject to the normal limits on the number of GSIs, projected
@@ -1213,7 +1213,7 @@ defined as an attribute in the resource.
             <td class="align-top">Local<wbr>Secondary<wbr>Indexes</td>
             <td class="align-top">
                 
-                <code><a href="#tablelocalsecondaryindex">List&lt;Pulumi.<wbr>Aws.<wbr>Dynamodb.<wbr>Table<wbr>Local<wbr>Secondary<wbr>Index&gt;?</a></code>
+                <code><a href="#tablelocalsecondaryindex">List&lt;Table<wbr>Local<wbr>Secondary<wbr>Index&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} Describe an LSI on the table;
 these can only be allocated *at creation* so you cannot change this
@@ -1241,7 +1241,7 @@ definition after you have created the resource.
             <td class="align-top">Point<wbr>In<wbr>Time<wbr>Recovery</td>
             <td class="align-top">
                 
-                <code><a href="#tablepointintimerecovery">Pulumi.<wbr>Aws.<wbr>Dynamodb.<wbr>Table<wbr>Point<wbr>In<wbr>Time<wbr>Recovery</a></code>
+                <code><a href="#tablepointintimerecovery">Table<wbr>Point<wbr>In<wbr>Time<wbr>Recovery</a></code>
             </td>
             <td class="align-top">{{% md %}} Point-in-time recovery options.
  {{% /md %}}
@@ -1280,7 +1280,7 @@ definition after you have created the resource.
             <td class="align-top">Server<wbr>Side<wbr>Encryption</td>
             <td class="align-top">
                 
-                <code><a href="#tableserversideencryption">Pulumi.<wbr>Aws.<wbr>Dynamodb.<wbr>Table<wbr>Server<wbr>Side<wbr>Encryption</a></code>
+                <code><a href="#tableserversideencryption">Table<wbr>Server<wbr>Side<wbr>Encryption</a></code>
             </td>
             <td class="align-top">{{% md %}} Encryption at rest options. AWS DynamoDB tables are automatically encrypted at rest with an AWS owned Customer Master Key if this argument isn&#39;t specified.
  {{% /md %}}
@@ -1348,7 +1348,7 @@ It can be used for creating CloudWatch Alarms. Only available when `stream_enabl
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} A map of tags to populate on the created table.
  {{% /md %}}
@@ -1361,7 +1361,7 @@ It can be used for creating CloudWatch Alarms. Only available when `stream_enabl
             <td class="align-top">Ttl</td>
             <td class="align-top">
                 
-                <code><a href="#tablettl">Pulumi.<wbr>Aws.<wbr>Dynamodb.<wbr>Table<wbr>Ttl?</a></code>
+                <code><a href="#tablettl">Table<wbr>Ttl?</a></code>
             </td>
             <td class="align-top">{{% md %}} Defines ttl, has two properties, and can only be specified once:
  {{% /md %}}
@@ -1420,7 +1420,7 @@ It can be used for creating CloudWatch Alarms. Only available when `stream_enabl
             <td class="align-top">Attributes</td>
             <td class="align-top">
                 
-                <code><a href="#tableattribute">[]dynamodb.<wbr>Table<wbr>Attribute</a></code>
+                <code><a href="#tableattribute">[]Table<wbr>Attribute</a></code>
             </td>
             <td class="align-top">{{% md %}} List of nested attribute definitions. Only required for `hash_key` and `range_key` attributes. Each attribute has two properties:
  {{% /md %}}
@@ -1446,7 +1446,7 @@ It can be used for creating CloudWatch Alarms. Only available when `stream_enabl
             <td class="align-top">Global<wbr>Secondary<wbr>Indexes</td>
             <td class="align-top">
                 
-                <code><a href="#tableglobalsecondaryindex">[]dynamodb.<wbr>Table<wbr>Global<wbr>Secondary<wbr>Index</a></code>
+                <code><a href="#tableglobalsecondaryindex">[]Table<wbr>Global<wbr>Secondary<wbr>Index</a></code>
             </td>
             <td class="align-top">{{% md %}} Describe a GSI for the table;
 subject to the normal limits on the number of GSIs, projected
@@ -1475,7 +1475,7 @@ defined as an attribute in the resource.
             <td class="align-top">Local<wbr>Secondary<wbr>Indexes</td>
             <td class="align-top">
                 
-                <code><a href="#tablelocalsecondaryindex">[]dynamodb.<wbr>Table<wbr>Local<wbr>Secondary<wbr>Index</a></code>
+                <code><a href="#tablelocalsecondaryindex">[]Table<wbr>Local<wbr>Secondary<wbr>Index</a></code>
             </td>
             <td class="align-top">{{% md %}} Describe an LSI on the table;
 these can only be allocated *at creation* so you cannot change this
@@ -1503,7 +1503,7 @@ definition after you have created the resource.
             <td class="align-top">Point<wbr>In<wbr>Time<wbr>Recovery</td>
             <td class="align-top">
                 
-                <code><a href="#tablepointintimerecovery">dynamodb.<wbr>Table<wbr>Point<wbr>In<wbr>Time<wbr>Recovery</a></code>
+                <code><a href="#tablepointintimerecovery">Table<wbr>Point<wbr>In<wbr>Time<wbr>Recovery</a></code>
             </td>
             <td class="align-top">{{% md %}} Point-in-time recovery options.
  {{% /md %}}
@@ -1542,7 +1542,7 @@ definition after you have created the resource.
             <td class="align-top">Server<wbr>Side<wbr>Encryption</td>
             <td class="align-top">
                 
-                <code><a href="#tableserversideencryption">dynamodb.<wbr>Table<wbr>Server<wbr>Side<wbr>Encryption</a></code>
+                <code><a href="#tableserversideencryption">Table<wbr>Server<wbr>Side<wbr>Encryption</a></code>
             </td>
             <td class="align-top">{{% md %}} Encryption at rest options. AWS DynamoDB tables are automatically encrypted at rest with an AWS owned Customer Master Key if this argument isn&#39;t specified.
  {{% /md %}}
@@ -1623,7 +1623,7 @@ It can be used for creating CloudWatch Alarms. Only available when `stream_enabl
             <td class="align-top">Ttl</td>
             <td class="align-top">
                 
-                <code><a href="#tablettl">*dynamodb.<wbr>Table<wbr>Ttl</a></code>
+                <code><a href="#tablettl">*Table<wbr>Ttl</a></code>
             </td>
             <td class="align-top">{{% md %}} Defines ttl, has two properties, and can only be specified once:
  {{% /md %}}
@@ -1682,7 +1682,7 @@ It can be used for creating CloudWatch Alarms. Only available when `stream_enabl
             <td class="align-top">attributes</td>
             <td class="align-top">
                 
-                <code><a href="#tableattribute">dynamodb.<wbr>Table<wbr>Attribute[]</a></code>
+                <code><a href="#tableattribute">Table<wbr>Attribute[]</a></code>
             </td>
             <td class="align-top">{{% md %}} List of nested attribute definitions. Only required for `hash_key` and `range_key` attributes. Each attribute has two properties:
  {{% /md %}}
@@ -1708,7 +1708,7 @@ It can be used for creating CloudWatch Alarms. Only available when `stream_enabl
             <td class="align-top">global<wbr>Secondary<wbr>Indexes</td>
             <td class="align-top">
                 
-                <code><a href="#tableglobalsecondaryindex">dynamodb.<wbr>Table<wbr>Global<wbr>Secondary<wbr>Index[]?</a></code>
+                <code><a href="#tableglobalsecondaryindex">Table<wbr>Global<wbr>Secondary<wbr>Index[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} Describe a GSI for the table;
 subject to the normal limits on the number of GSIs, projected
@@ -1737,7 +1737,7 @@ defined as an attribute in the resource.
             <td class="align-top">local<wbr>Secondary<wbr>Indexes</td>
             <td class="align-top">
                 
-                <code><a href="#tablelocalsecondaryindex">dynamodb.<wbr>Table<wbr>Local<wbr>Secondary<wbr>Index[]?</a></code>
+                <code><a href="#tablelocalsecondaryindex">Table<wbr>Local<wbr>Secondary<wbr>Index[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} Describe an LSI on the table;
 these can only be allocated *at creation* so you cannot change this
@@ -1765,7 +1765,7 @@ definition after you have created the resource.
             <td class="align-top">point<wbr>In<wbr>Time<wbr>Recovery</td>
             <td class="align-top">
                 
-                <code><a href="#tablepointintimerecovery">dynamodb.<wbr>Table<wbr>Point<wbr>In<wbr>Time<wbr>Recovery</a></code>
+                <code><a href="#tablepointintimerecovery">Table<wbr>Point<wbr>In<wbr>Time<wbr>Recovery</a></code>
             </td>
             <td class="align-top">{{% md %}} Point-in-time recovery options.
  {{% /md %}}
@@ -1804,7 +1804,7 @@ definition after you have created the resource.
             <td class="align-top">server<wbr>Side<wbr>Encryption</td>
             <td class="align-top">
                 
-                <code><a href="#tableserversideencryption">dynamodb.<wbr>Table<wbr>Server<wbr>Side<wbr>Encryption</a></code>
+                <code><a href="#tableserversideencryption">Table<wbr>Server<wbr>Side<wbr>Encryption</a></code>
             </td>
             <td class="align-top">{{% md %}} Encryption at rest options. AWS DynamoDB tables are automatically encrypted at rest with an AWS owned Customer Master Key if this argument isn&#39;t specified.
  {{% /md %}}
@@ -1885,7 +1885,7 @@ It can be used for creating CloudWatch Alarms. Only available when `stream_enabl
             <td class="align-top">ttl</td>
             <td class="align-top">
                 
-                <code><a href="#tablettl">dynamodb.<wbr>Table<wbr>Ttl?</a></code>
+                <code><a href="#tablettl">Table<wbr>Ttl?</a></code>
             </td>
             <td class="align-top">{{% md %}} Defines ttl, has two properties, and can only be specified once:
  {{% /md %}}
@@ -2267,7 +2267,7 @@ The arn of the table
             <td class="align-top">Attributes</td>
             <td class="align-top">
                 
-                <code><a href="#tableattribute">List&lt;Pulumi.<wbr>Aws.<wbr>Dynamodb.<wbr>Table<wbr>Attribute<wbr>Args&gt;?</a></code>
+                <code><a href="#tableattribute">List&lt;Table<wbr>Attribute<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2297,7 +2297,7 @@ Controls how you are charged for read and write throughput and how you manage ca
             <td class="align-top">Global<wbr>Secondary<wbr>Indexes</td>
             <td class="align-top">
                 
-                <code><a href="#tableglobalsecondaryindex">List&lt;Pulumi.<wbr>Aws.<wbr>Dynamodb.<wbr>Table<wbr>Global<wbr>Secondary<wbr>Index<wbr>Args&gt;?</a></code>
+                <code><a href="#tableglobalsecondaryindex">List&lt;Table<wbr>Global<wbr>Secondary<wbr>Index<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2330,7 +2330,7 @@ defined as an attribute in the resource.
             <td class="align-top">Local<wbr>Secondary<wbr>Indexes</td>
             <td class="align-top">
                 
-                <code><a href="#tablelocalsecondaryindex">List&lt;Pulumi.<wbr>Aws.<wbr>Dynamodb.<wbr>Table<wbr>Local<wbr>Secondary<wbr>Index<wbr>Args&gt;?</a></code>
+                <code><a href="#tablelocalsecondaryindex">List&lt;Table<wbr>Local<wbr>Secondary<wbr>Index<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2362,7 +2362,7 @@ The name of the index
             <td class="align-top">Point<wbr>In<wbr>Time<wbr>Recovery</td>
             <td class="align-top">
                 
-                <code><a href="#tablepointintimerecovery">Pulumi.<wbr>Aws.<wbr>Dynamodb.<wbr>Table<wbr>Point<wbr>In<wbr>Time<wbr>Recovery<wbr>Args?</a></code>
+                <code><a href="#tablepointintimerecovery">Table<wbr>Point<wbr>In<wbr>Time<wbr>Recovery<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2407,7 +2407,7 @@ The number of read units for this index. Must be set if billing_mode is set to P
             <td class="align-top">Server<wbr>Side<wbr>Encryption</td>
             <td class="align-top">
                 
-                <code><a href="#tableserversideencryption">Pulumi.<wbr>Aws.<wbr>Dynamodb.<wbr>Table<wbr>Server<wbr>Side<wbr>Encryption<wbr>Args?</a></code>
+                <code><a href="#tableserversideencryption">Table<wbr>Server<wbr>Side<wbr>Encryption<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2485,7 +2485,7 @@ When an item in the table is modified, StreamViewType determines what informatio
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2500,7 +2500,7 @@ A map of tags to populate on the created table.
             <td class="align-top">Ttl</td>
             <td class="align-top">
                 
-                <code><a href="#tablettl">Pulumi.<wbr>Aws.<wbr>Dynamodb.<wbr>Table<wbr>Ttl<wbr>Args?</a></code>
+                <code><a href="#tablettl">Table<wbr>Ttl<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2565,7 +2565,7 @@ The arn of the table
             <td class="align-top">Attributes</td>
             <td class="align-top">
                 
-                <code><a href="#tableattribute">[]dynamodb.<wbr>Table<wbr>Attribute</a></code>
+                <code><a href="#tableattribute">[]Table<wbr>Attribute</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2595,7 +2595,7 @@ Controls how you are charged for read and write throughput and how you manage ca
             <td class="align-top">Global<wbr>Secondary<wbr>Indexes</td>
             <td class="align-top">
                 
-                <code><a href="#tableglobalsecondaryindex">[]dynamodb.<wbr>Table<wbr>Global<wbr>Secondary<wbr>Index</a></code>
+                <code><a href="#tableglobalsecondaryindex">[]Table<wbr>Global<wbr>Secondary<wbr>Index</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2628,7 +2628,7 @@ defined as an attribute in the resource.
             <td class="align-top">Local<wbr>Secondary<wbr>Indexes</td>
             <td class="align-top">
                 
-                <code><a href="#tablelocalsecondaryindex">[]dynamodb.<wbr>Table<wbr>Local<wbr>Secondary<wbr>Index</a></code>
+                <code><a href="#tablelocalsecondaryindex">[]Table<wbr>Local<wbr>Secondary<wbr>Index</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2660,7 +2660,7 @@ The name of the index
             <td class="align-top">Point<wbr>In<wbr>Time<wbr>Recovery</td>
             <td class="align-top">
                 
-                <code><a href="#tablepointintimerecovery">*dynamodb.<wbr>Table<wbr>Point<wbr>In<wbr>Time<wbr>Recovery</a></code>
+                <code><a href="#tablepointintimerecovery">*Table<wbr>Point<wbr>In<wbr>Time<wbr>Recovery</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2705,7 +2705,7 @@ The number of read units for this index. Must be set if billing_mode is set to P
             <td class="align-top">Server<wbr>Side<wbr>Encryption</td>
             <td class="align-top">
                 
-                <code><a href="#tableserversideencryption">*dynamodb.<wbr>Table<wbr>Server<wbr>Side<wbr>Encryption</a></code>
+                <code><a href="#tableserversideencryption">*Table<wbr>Server<wbr>Side<wbr>Encryption</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2798,7 +2798,7 @@ A map of tags to populate on the created table.
             <td class="align-top">Ttl</td>
             <td class="align-top">
                 
-                <code><a href="#tablettl">*dynamodb.<wbr>Table<wbr>Ttl</a></code>
+                <code><a href="#tablettl">*Table<wbr>Ttl</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2863,7 +2863,7 @@ The arn of the table
             <td class="align-top">attributes</td>
             <td class="align-top">
                 
-                <code><a href="#tableattribute">dynamodb.<wbr>Table<wbr>Attribute[]?</a></code>
+                <code><a href="#tableattribute">Table<wbr>Attribute[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2893,7 +2893,7 @@ Controls how you are charged for read and write throughput and how you manage ca
             <td class="align-top">global<wbr>Secondary<wbr>Indexes</td>
             <td class="align-top">
                 
-                <code><a href="#tableglobalsecondaryindex">dynamodb.<wbr>Table<wbr>Global<wbr>Secondary<wbr>Index[]?</a></code>
+                <code><a href="#tableglobalsecondaryindex">Table<wbr>Global<wbr>Secondary<wbr>Index[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2926,7 +2926,7 @@ defined as an attribute in the resource.
             <td class="align-top">local<wbr>Secondary<wbr>Indexes</td>
             <td class="align-top">
                 
-                <code><a href="#tablelocalsecondaryindex">dynamodb.<wbr>Table<wbr>Local<wbr>Secondary<wbr>Index[]?</a></code>
+                <code><a href="#tablelocalsecondaryindex">Table<wbr>Local<wbr>Secondary<wbr>Index[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2958,7 +2958,7 @@ The name of the index
             <td class="align-top">point<wbr>In<wbr>Time<wbr>Recovery</td>
             <td class="align-top">
                 
-                <code><a href="#tablepointintimerecovery">dynamodb.<wbr>Table<wbr>Point<wbr>In<wbr>Time<wbr>Recovery?</a></code>
+                <code><a href="#tablepointintimerecovery">Table<wbr>Point<wbr>In<wbr>Time<wbr>Recovery?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3003,7 +3003,7 @@ The number of read units for this index. Must be set if billing_mode is set to P
             <td class="align-top">server<wbr>Side<wbr>Encryption</td>
             <td class="align-top">
                 
-                <code><a href="#tableserversideencryption">dynamodb.<wbr>Table<wbr>Server<wbr>Side<wbr>Encryption?</a></code>
+                <code><a href="#tableserversideencryption">Table<wbr>Server<wbr>Side<wbr>Encryption?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3096,7 +3096,7 @@ A map of tags to populate on the created table.
             <td class="align-top">ttl</td>
             <td class="align-top">
                 
-                <code><a href="#tablettl">dynamodb.<wbr>Table<wbr>Ttl?</a></code>
+                <code><a href="#tablettl">Table<wbr>Ttl?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3724,7 +3724,7 @@ The name of the index
             <td class="align-top">Non<wbr>Key<wbr>Attributes</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4257,7 +4257,7 @@ The name of the index
             <td class="align-top">Non<wbr>Key<wbr>Attributes</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

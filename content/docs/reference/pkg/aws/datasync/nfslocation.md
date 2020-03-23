@@ -97,7 +97,7 @@ The following arguments are supported:
             <td class="align-top">On<wbr>Prem<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#nfslocationonpremconfig">Pulumi.<wbr>Aws.<wbr>Datasync.<wbr>Nfs<wbr>Location<wbr>On<wbr>Prem<wbr>Config<wbr>Args</a></code>
+                <code><a href="#nfslocationonpremconfig">Nfs<wbr>Location<wbr>On<wbr>Prem<wbr>Config<wbr>Args</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -142,7 +142,7 @@ Subdirectory to perform actions as source or destination. Should be exported by 
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -177,7 +177,7 @@ Key-value pairs of resource tags to assign to the DataSync Location.
             <td class="align-top">On<wbr>Prem<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#nfslocationonpremconfig">datasync.<wbr>Nfs<wbr>Location<wbr>On<wbr>Prem<wbr>Config</a></code>
+                <code><a href="#nfslocationonpremconfig">Nfs<wbr>Location<wbr>On<wbr>Prem<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -257,7 +257,7 @@ Key-value pairs of resource tags to assign to the DataSync Location.
             <td class="align-top">on<wbr>Prem<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#nfslocationonpremconfig">datasync.<wbr>Nfs<wbr>Location<wbr>On<wbr>Prem<wbr>Config</a></code>
+                <code><a href="#nfslocationonpremconfig">Nfs<wbr>Location<wbr>On<wbr>Prem<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -444,7 +444,7 @@ The following output properties are available:
             <td class="align-top">On<wbr>Prem<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#nfslocationonpremconfig">Pulumi.<wbr>Aws.<wbr>Datasync.<wbr>Nfs<wbr>Location<wbr>On<wbr>Prem<wbr>Config</a></code>
+                <code><a href="#nfslocationonpremconfig">Nfs<wbr>Location<wbr>On<wbr>Prem<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block containing information for connecting to the NFS File System.
  {{% /md %}}
@@ -483,7 +483,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} Key-value pairs of resource tags to assign to the DataSync Location.
  {{% /md %}}
@@ -541,7 +541,7 @@ The following output properties are available:
             <td class="align-top">On<wbr>Prem<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#nfslocationonpremconfig">datasync.<wbr>Nfs<wbr>Location<wbr>On<wbr>Prem<wbr>Config</a></code>
+                <code><a href="#nfslocationonpremconfig">Nfs<wbr>Location<wbr>On<wbr>Prem<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block containing information for connecting to the NFS File System.
  {{% /md %}}
@@ -638,7 +638,7 @@ The following output properties are available:
             <td class="align-top">on<wbr>Prem<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#nfslocationonpremconfig">datasync.<wbr>Nfs<wbr>Location<wbr>On<wbr>Prem<wbr>Config</a></code>
+                <code><a href="#nfslocationonpremconfig">Nfs<wbr>Location<wbr>On<wbr>Prem<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block containing information for connecting to the NFS File System.
  {{% /md %}}
@@ -893,7 +893,7 @@ Amazon Resource Name (ARN) of the DataSync Location.
             <td class="align-top">On<wbr>Prem<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#nfslocationonpremconfig">Pulumi.<wbr>Aws.<wbr>Datasync.<wbr>Nfs<wbr>Location<wbr>On<wbr>Prem<wbr>Config<wbr>Args?</a></code>
+                <code><a href="#nfslocationonpremconfig">Nfs<wbr>Location<wbr>On<wbr>Prem<wbr>Config<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -938,7 +938,7 @@ Subdirectory to perform actions as source or destination. Should be exported by 
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1002,7 +1002,7 @@ Amazon Resource Name (ARN) of the DataSync Location.
             <td class="align-top">On<wbr>Prem<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#nfslocationonpremconfig">*datasync.<wbr>Nfs<wbr>Location<wbr>On<wbr>Prem<wbr>Config</a></code>
+                <code><a href="#nfslocationonpremconfig">*Nfs<wbr>Location<wbr>On<wbr>Prem<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1111,7 +1111,7 @@ Amazon Resource Name (ARN) of the DataSync Location.
             <td class="align-top">on<wbr>Prem<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#nfslocationonpremconfig">datasync.<wbr>Nfs<wbr>Location<wbr>On<wbr>Prem<wbr>Config?</a></code>
+                <code><a href="#nfslocationonpremconfig">Nfs<wbr>Location<wbr>On<wbr>Prem<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1342,7 +1342,7 @@ Key-value pairs of resource tags to assign to the DataSync Location.
             <td class="align-top">Agent<wbr>Arns</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

@@ -40,7 +40,12 @@ const example = aws.acmpca.getCertificateAuthority({
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupCertificateAuthority<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/acmpca?tab=doc#LookupCertificateAuthorityArgs">LookupCertificateAuthorityArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/acmpca?tab=doc#LookupCertificateAuthorityResult">LookupCertificateAuthorityResult</a></span>, error)</span></code></pre></div>
 
 
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Acmpca.GetCertificateAuthorityResult.html">Pulumi.Aws.Acmpca.GetCertificateAuthorityResult</a></span>> <span class="p">GetCertificateAuthority(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Acmpca.GetCertificateAuthorityArgs.html">GetCertificateAuthorityArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight">
+<pre class="chroma">
+<code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetCertificateAuthority </span><span class="p">{</span>
+    <span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Acmpca.GetCertificateAuthorityResult.html">GetCertificateAuthorityResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Acmpca.GetCertificateAuthorityArgs.html">GetCertificateAuthorityArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span>
+<span class="p">}</span></code></pre>
+</div>
 
 
 
@@ -82,7 +87,7 @@ Amazon Resource Name (ARN) of the certificate authority.
             <td class="align-top">Revocation<wbr>Configurations</td>
             <td class="align-top">
                 
-                <code><a href="#getcertificateauthorityrevocationconfiguration">List&lt;Pulumi.<wbr>Aws.<wbr>Acmpca.<wbr>Get<wbr>Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration<wbr>Args&gt;?</a></code>
+                <code><a href="#getcertificateauthorityrevocationconfiguration">List&lt;Get<wbr>Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -96,7 +101,7 @@ Amazon Resource Name (ARN) of the certificate authority.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -145,7 +150,7 @@ Amazon Resource Name (ARN) of the certificate authority.
             <td class="align-top">Revocation<wbr>Configurations</td>
             <td class="align-top">
                 
-                <code><a href="#getcertificateauthorityrevocationconfiguration">[]acmpca.<wbr>Get<wbr>Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration</a></code>
+                <code><a href="#getcertificateauthorityrevocationconfiguration">[]Get<wbr>Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -208,7 +213,7 @@ Amazon Resource Name (ARN) of the certificate authority.
             <td class="align-top">revocation<wbr>Configurations</td>
             <td class="align-top">
                 
-                <code><a href="#getcertificateauthorityrevocationconfiguration">acmpca.<wbr>Get<wbr>Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration[]?</a></code>
+                <code><a href="#getcertificateauthorityrevocationconfiguration">Get<wbr>Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -424,7 +429,7 @@ The following output properties are available:
             <td class="align-top">Revocation<wbr>Configurations</td>
             <td class="align-top">
                 
-                <code><a href="#getcertificateauthorityrevocationconfiguration">List&lt;Pulumi.<wbr>Aws.<wbr>Acmpca.<wbr>Get<wbr>Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration&gt;</a></code>
+                <code><a href="#getcertificateauthorityrevocationconfiguration">List&lt;Get<wbr>Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested attribute containing revocation configuration.
 * `revocation_configuration.0.crl_configuration` - Nested attribute containing configuration of the certificate revocation list (CRL), if any, maintained by the certificate authority.
@@ -468,7 +473,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;</code>
+                <code>Dictionary<string, object></code>
             </td>
             <td class="align-top">{{% md %}} Specifies a key-value map of user-defined tags that are attached to the certificate authority.
  {{% /md %}}
@@ -604,7 +609,7 @@ The following output properties are available:
             <td class="align-top">Revocation<wbr>Configurations</td>
             <td class="align-top">
                 
-                <code><a href="#getcertificateauthorityrevocationconfiguration">[]acmpca.<wbr>Get<wbr>Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration</a></code>
+                <code><a href="#getcertificateauthorityrevocationconfiguration">[]Get<wbr>Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested attribute containing revocation configuration.
 * `revocation_configuration.0.crl_configuration` - Nested attribute containing configuration of the certificate revocation list (CRL), if any, maintained by the certificate authority.
@@ -784,7 +789,7 @@ The following output properties are available:
             <td class="align-top">revocation<wbr>Configurations</td>
             <td class="align-top">
                 
-                <code><a href="#getcertificateauthorityrevocationconfiguration">acmpca.<wbr>Get<wbr>Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration[]</a></code>
+                <code><a href="#getcertificateauthorityrevocationconfiguration">Get<wbr>Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration[]</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested attribute containing revocation configuration.
 * `revocation_configuration.0.crl_configuration` - Nested attribute containing configuration of the certificate revocation list (CRL), if any, maintained by the certificate authority.
@@ -1080,7 +1085,7 @@ The following output properties are available:
             <td class="align-top">Crl<wbr>Configurations</td>
             <td class="align-top">
                 
-                <code><a href="#getcertificateauthorityrevocationconfigurationcrlconfiguration">List&lt;Pulumi.<wbr>Aws.<wbr>Acmpca.<wbr>Get<wbr>Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration<wbr>Crl<wbr>Configuration<wbr>Args&gt;</a></code>
+                <code><a href="#getcertificateauthorityrevocationconfigurationcrlconfiguration">List&lt;Get<wbr>Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration<wbr>Crl<wbr>Configuration<wbr>Args&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1114,7 +1119,7 @@ The following output properties are available:
             <td class="align-top">Crl<wbr>Configurations</td>
             <td class="align-top">
                 
-                <code><a href="#getcertificateauthorityrevocationconfigurationcrlconfiguration">[]acmpca.<wbr>Get<wbr>Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration<wbr>Crl<wbr>Configuration</a></code>
+                <code><a href="#getcertificateauthorityrevocationconfigurationcrlconfiguration">[]Get<wbr>Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration<wbr>Crl<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1148,7 +1153,7 @@ The following output properties are available:
             <td class="align-top">crl<wbr>Configurations</td>
             <td class="align-top">
                 
-                <code><a href="#getcertificateauthorityrevocationconfigurationcrlconfiguration">acmpca.<wbr>Get<wbr>Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration<wbr>Crl<wbr>Configuration[]</a></code>
+                <code><a href="#getcertificateauthorityrevocationconfigurationcrlconfiguration">Get<wbr>Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration<wbr>Crl<wbr>Configuration[]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

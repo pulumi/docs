@@ -107,7 +107,7 @@ The ID of the patch baseline to register the patch group with.
         </tr>
     
         <tr>
-            <td class="align-top">Patch<wbr>Group</td>
+            <td class="align-top">Patch<wbr>Group<wbr>Name</td>
             <td class="align-top">
                 
                 <code>string</code>
@@ -319,7 +319,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">Patch<wbr>Group</td>
+            <td class="align-top">Patch<wbr>Group<wbr>Name</td>
             <td class="align-top">
                 
                 <code>string</code>
@@ -564,7 +564,7 @@ The ID of the patch baseline to register the patch group with.
         </tr>
     
         <tr>
-            <td class="align-top">Patch<wbr>Group</td>
+            <td class="align-top">Patch<wbr>Group<wbr>Name</td>
             <td class="align-top">
                 
                 <code>string?</code>

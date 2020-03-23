@@ -155,7 +155,7 @@ The id of Cloud HSM v2 cluster backup to be restored.
             <td class="align-top">Subnet<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -170,7 +170,7 @@ The IDs of subnets in which cluster will operate.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -459,7 +459,7 @@ The following output properties are available:
             <td class="align-top">Cluster<wbr>Certificates</td>
             <td class="align-top">
                 
-                <code><a href="#clusterclustercertificates">Pulumi.<wbr>Aws.<wbr>Cloudhsmv2.<wbr>Cluster<wbr>Cluster<wbr>Certificates</a></code>
+                <code><a href="#clusterclustercertificates">Cluster<wbr>Cluster<wbr>Certificates</a></code>
             </td>
             <td class="align-top">{{% md %}} The list of cluster certificates.
 * `cluster_certificates.0.cluster_certificate` - The cluster certificate issued (signed) by the issuing certificate authority (CA) of the cluster&#39;s owner.
@@ -487,7 +487,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">Cluster<wbr>State</td>
+            <td class="align-top">State</td>
             <td class="align-top">
                 
                 <code>string</code>
@@ -542,7 +542,7 @@ The following output properties are available:
             <td class="align-top">Subnet<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} The IDs of subnets in which cluster will operate.
  {{% /md %}}
@@ -555,7 +555,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -601,7 +601,7 @@ The following output properties are available:
             <td class="align-top">Cluster<wbr>Certificates</td>
             <td class="align-top">
                 
-                <code><a href="#clusterclustercertificates">cloudhsmv2.<wbr>Cluster<wbr>Cluster<wbr>Certificates</a></code>
+                <code><a href="#clusterclustercertificates">Cluster<wbr>Cluster<wbr>Certificates</a></code>
             </td>
             <td class="align-top">{{% md %}} The list of cluster certificates.
 * `cluster_certificates.0.cluster_certificate` - The cluster certificate issued (signed) by the issuing certificate authority (CA) of the cluster&#39;s owner.
@@ -743,7 +743,7 @@ The following output properties are available:
             <td class="align-top">cluster<wbr>Certificates</td>
             <td class="align-top">
                 
-                <code><a href="#clusterclustercertificates">cloudhsmv2.<wbr>Cluster<wbr>Cluster<wbr>Certificates</a></code>
+                <code><a href="#clusterclustercertificates">Cluster<wbr>Cluster<wbr>Certificates</a></code>
             </td>
             <td class="align-top">{{% md %}} The list of cluster certificates.
 * `cluster_certificates.0.cluster_certificate` - The cluster certificate issued (signed) by the issuing certificate authority (CA) of the cluster&#39;s owner.
@@ -1086,7 +1086,7 @@ The following state arguments are supported:
             <td class="align-top">Cluster<wbr>Certificates</td>
             <td class="align-top">
                 
-                <code><a href="#clusterclustercertificates">Pulumi.<wbr>Aws.<wbr>Cloudhsmv2.<wbr>Cluster<wbr>Cluster<wbr>Certificates<wbr>Args?</a></code>
+                <code><a href="#clusterclustercertificates">Cluster<wbr>Cluster<wbr>Certificates<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1118,7 +1118,7 @@ The id of the CloudHSM cluster.
         </tr>
     
         <tr>
-            <td class="align-top">Cluster<wbr>State</td>
+            <td class="align-top">State</td>
             <td class="align-top">
                 
                 <code>string?</code>
@@ -1181,7 +1181,7 @@ The id of Cloud HSM v2 cluster backup to be restored.
             <td class="align-top">Subnet<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1196,7 +1196,7 @@ The IDs of subnets in which cluster will operate.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1246,7 +1246,7 @@ The id of the VPC that the CloudHSM cluster resides in.
             <td class="align-top">Cluster<wbr>Certificates</td>
             <td class="align-top">
                 
-                <code><a href="#clusterclustercertificates">*cloudhsmv2.<wbr>Cluster<wbr>Cluster<wbr>Certificates</a></code>
+                <code><a href="#clusterclustercertificates">*Cluster<wbr>Cluster<wbr>Certificates</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1406,7 +1406,7 @@ The id of the VPC that the CloudHSM cluster resides in.
             <td class="align-top">cluster<wbr>Certificates</td>
             <td class="align-top">
                 
-                <code><a href="#clusterclustercertificates">cloudhsmv2.<wbr>Cluster<wbr>Cluster<wbr>Certificates?</a></code>
+                <code><a href="#clusterclustercertificates">Cluster<wbr>Cluster<wbr>Certificates?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

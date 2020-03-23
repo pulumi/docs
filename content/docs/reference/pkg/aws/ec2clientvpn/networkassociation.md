@@ -320,7 +320,7 @@ The following output properties are available:
             <td class="align-top">Security<wbr>Groups</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} The IDs of the security groups applied to the target network association.
  {{% /md %}}
@@ -721,7 +721,7 @@ The ID of the Client VPN endpoint.
             <td class="align-top">Security<wbr>Groups</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

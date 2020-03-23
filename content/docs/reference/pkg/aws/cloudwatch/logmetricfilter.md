@@ -113,7 +113,7 @@ The name of the log group to associate the metric filter with.
             <td class="align-top">Metric<wbr>Transformation</td>
             <td class="align-top">
                 
-                <code><a href="#logmetricfiltermetrictransformation">Pulumi.<wbr>Aws.<wbr>Cloudwatch.<wbr>Log<wbr>Metric<wbr>Filter<wbr>Metric<wbr>Transformation<wbr>Args</a></code>
+                <code><a href="#logmetricfiltermetrictransformation">Log<wbr>Metric<wbr>Filter<wbr>Metric<wbr>Transformation<wbr>Args</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -195,7 +195,7 @@ The name of the log group to associate the metric filter with.
             <td class="align-top">Metric<wbr>Transformation</td>
             <td class="align-top">
                 
-                <code><a href="#logmetricfiltermetrictransformation">cloudwatch.<wbr>Log<wbr>Metric<wbr>Filter<wbr>Metric<wbr>Transformation</a></code>
+                <code><a href="#logmetricfiltermetrictransformation">Log<wbr>Metric<wbr>Filter<wbr>Metric<wbr>Transformation</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -277,7 +277,7 @@ The name of the log group to associate the metric filter with.
             <td class="align-top">metric<wbr>Transformation</td>
             <td class="align-top">
                 
-                <code><a href="#logmetricfiltermetrictransformation">cloudwatch.<wbr>Log<wbr>Metric<wbr>Filter<wbr>Metric<wbr>Transformation</a></code>
+                <code><a href="#logmetricfiltermetrictransformation">Log<wbr>Metric<wbr>Filter<wbr>Metric<wbr>Transformation</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -453,7 +453,7 @@ The following output properties are available:
             <td class="align-top">Metric<wbr>Transformation</td>
             <td class="align-top">
                 
-                <code><a href="#logmetricfiltermetrictransformation">Pulumi.<wbr>Aws.<wbr>Cloudwatch.<wbr>Log<wbr>Metric<wbr>Filter<wbr>Metric<wbr>Transformation</a></code>
+                <code><a href="#logmetricfiltermetrictransformation">Log<wbr>Metric<wbr>Filter<wbr>Metric<wbr>Transformation</a></code>
             </td>
             <td class="align-top">{{% md %}} A block defining collection of information
 needed to define how metric data gets emitted. See below.
@@ -527,7 +527,7 @@ for extracting metric data out of ingested log events.
             <td class="align-top">Metric<wbr>Transformation</td>
             <td class="align-top">
                 
-                <code><a href="#logmetricfiltermetrictransformation">cloudwatch.<wbr>Log<wbr>Metric<wbr>Filter<wbr>Metric<wbr>Transformation</a></code>
+                <code><a href="#logmetricfiltermetrictransformation">Log<wbr>Metric<wbr>Filter<wbr>Metric<wbr>Transformation</a></code>
             </td>
             <td class="align-top">{{% md %}} A block defining collection of information
 needed to define how metric data gets emitted. See below.
@@ -601,7 +601,7 @@ for extracting metric data out of ingested log events.
             <td class="align-top">metric<wbr>Transformation</td>
             <td class="align-top">
                 
-                <code><a href="#logmetricfiltermetrictransformation">cloudwatch.<wbr>Log<wbr>Metric<wbr>Filter<wbr>Metric<wbr>Transformation</a></code>
+                <code><a href="#logmetricfiltermetrictransformation">Log<wbr>Metric<wbr>Filter<wbr>Metric<wbr>Transformation</a></code>
             </td>
             <td class="align-top">{{% md %}} A block defining collection of information
 needed to define how metric data gets emitted. See below.
@@ -810,7 +810,7 @@ The name of the log group to associate the metric filter with.
             <td class="align-top">Metric<wbr>Transformation</td>
             <td class="align-top">
                 
-                <code><a href="#logmetricfiltermetrictransformation">Pulumi.<wbr>Aws.<wbr>Cloudwatch.<wbr>Log<wbr>Metric<wbr>Filter<wbr>Metric<wbr>Transformation<wbr>Args?</a></code>
+                <code><a href="#logmetricfiltermetrictransformation">Log<wbr>Metric<wbr>Filter<wbr>Metric<wbr>Transformation<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -892,7 +892,7 @@ The name of the log group to associate the metric filter with.
             <td class="align-top">Metric<wbr>Transformation</td>
             <td class="align-top">
                 
-                <code><a href="#logmetricfiltermetrictransformation">*cloudwatch.<wbr>Log<wbr>Metric<wbr>Filter<wbr>Metric<wbr>Transformation</a></code>
+                <code><a href="#logmetricfiltermetrictransformation">*Log<wbr>Metric<wbr>Filter<wbr>Metric<wbr>Transformation</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -974,7 +974,7 @@ The name of the log group to associate the metric filter with.
             <td class="align-top">metric<wbr>Transformation</td>
             <td class="align-top">
                 
-                <code><a href="#logmetricfiltermetrictransformation">cloudwatch.<wbr>Log<wbr>Metric<wbr>Filter<wbr>Metric<wbr>Transformation?</a></code>
+                <code><a href="#logmetricfiltermetrictransformation">Log<wbr>Metric<wbr>Filter<wbr>Metric<wbr>Transformation?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

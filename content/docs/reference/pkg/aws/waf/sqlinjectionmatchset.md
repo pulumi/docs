@@ -111,7 +111,7 @@ The name or description of the SQL Injection Match Set.
             <td class="align-top">Sql<wbr>Injection<wbr>Match<wbr>Tuples</td>
             <td class="align-top">
                 
-                <code><a href="#sqlinjectionmatchsetsqlinjectionmatchtuple">List&lt;Pulumi.<wbr>Aws.<wbr>Waf.<wbr>Sql<wbr>Injection<wbr>Match<wbr>Set<wbr>Sql<wbr>Injection<wbr>Match<wbr>Tuple<wbr>Args&gt;?</a></code>
+                <code><a href="#sqlinjectionmatchsetsqlinjectionmatchtuple">List&lt;Sql<wbr>Injection<wbr>Match<wbr>Set<wbr>Sql<wbr>Injection<wbr>Match<wbr>Tuple<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -161,7 +161,7 @@ The name or description of the SQL Injection Match Set.
             <td class="align-top">Sql<wbr>Injection<wbr>Match<wbr>Tuples</td>
             <td class="align-top">
                 
-                <code><a href="#sqlinjectionmatchsetsqlinjectionmatchtuple">[]waf.<wbr>Sql<wbr>Injection<wbr>Match<wbr>Set<wbr>Sql<wbr>Injection<wbr>Match<wbr>Tuple</a></code>
+                <code><a href="#sqlinjectionmatchsetsqlinjectionmatchtuple">[]Sql<wbr>Injection<wbr>Match<wbr>Set<wbr>Sql<wbr>Injection<wbr>Match<wbr>Tuple</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -211,7 +211,7 @@ The name or description of the SQL Injection Match Set.
             <td class="align-top">sql<wbr>Injection<wbr>Match<wbr>Tuples</td>
             <td class="align-top">
                 
-                <code><a href="#sqlinjectionmatchsetsqlinjectionmatchtuple">waf.<wbr>Sql<wbr>Injection<wbr>Match<wbr>Set<wbr>Sql<wbr>Injection<wbr>Match<wbr>Tuple[]?</a></code>
+                <code><a href="#sqlinjectionmatchsetsqlinjectionmatchtuple">Sql<wbr>Injection<wbr>Match<wbr>Set<wbr>Sql<wbr>Injection<wbr>Match<wbr>Tuple[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -323,7 +323,7 @@ The following output properties are available:
             <td class="align-top">Sql<wbr>Injection<wbr>Match<wbr>Tuples</td>
             <td class="align-top">
                 
-                <code><a href="#sqlinjectionmatchsetsqlinjectionmatchtuple">List&lt;Pulumi.<wbr>Aws.<wbr>Waf.<wbr>Sql<wbr>Injection<wbr>Match<wbr>Set<wbr>Sql<wbr>Injection<wbr>Match<wbr>Tuple&gt;?</a></code>
+                <code><a href="#sqlinjectionmatchsetsqlinjectionmatchtuple">List&lt;Sql<wbr>Injection<wbr>Match<wbr>Set<wbr>Sql<wbr>Injection<wbr>Match<wbr>Tuple&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} The parts of web requests that you want AWS WAF to inspect for malicious SQL code and, if you want AWS WAF to inspect a header, the name of the header.
  {{% /md %}}
@@ -369,7 +369,7 @@ The following output properties are available:
             <td class="align-top">Sql<wbr>Injection<wbr>Match<wbr>Tuples</td>
             <td class="align-top">
                 
-                <code><a href="#sqlinjectionmatchsetsqlinjectionmatchtuple">[]waf.<wbr>Sql<wbr>Injection<wbr>Match<wbr>Set<wbr>Sql<wbr>Injection<wbr>Match<wbr>Tuple</a></code>
+                <code><a href="#sqlinjectionmatchsetsqlinjectionmatchtuple">[]Sql<wbr>Injection<wbr>Match<wbr>Set<wbr>Sql<wbr>Injection<wbr>Match<wbr>Tuple</a></code>
             </td>
             <td class="align-top">{{% md %}} The parts of web requests that you want AWS WAF to inspect for malicious SQL code and, if you want AWS WAF to inspect a header, the name of the header.
  {{% /md %}}
@@ -415,7 +415,7 @@ The following output properties are available:
             <td class="align-top">sql<wbr>Injection<wbr>Match<wbr>Tuples</td>
             <td class="align-top">
                 
-                <code><a href="#sqlinjectionmatchsetsqlinjectionmatchtuple">waf.<wbr>Sql<wbr>Injection<wbr>Match<wbr>Set<wbr>Sql<wbr>Injection<wbr>Match<wbr>Tuple[]?</a></code>
+                <code><a href="#sqlinjectionmatchsetsqlinjectionmatchtuple">Sql<wbr>Injection<wbr>Match<wbr>Set<wbr>Sql<wbr>Injection<wbr>Match<wbr>Tuple[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} The parts of web requests that you want AWS WAF to inspect for malicious SQL code and, if you want AWS WAF to inspect a header, the name of the header.
  {{% /md %}}
@@ -568,7 +568,7 @@ The name or description of the SQL Injection Match Set.
             <td class="align-top">Sql<wbr>Injection<wbr>Match<wbr>Tuples</td>
             <td class="align-top">
                 
-                <code><a href="#sqlinjectionmatchsetsqlinjectionmatchtuple">List&lt;Pulumi.<wbr>Aws.<wbr>Waf.<wbr>Sql<wbr>Injection<wbr>Match<wbr>Set<wbr>Sql<wbr>Injection<wbr>Match<wbr>Tuple<wbr>Args&gt;?</a></code>
+                <code><a href="#sqlinjectionmatchsetsqlinjectionmatchtuple">List&lt;Sql<wbr>Injection<wbr>Match<wbr>Set<wbr>Sql<wbr>Injection<wbr>Match<wbr>Tuple<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -618,7 +618,7 @@ The name or description of the SQL Injection Match Set.
             <td class="align-top">Sql<wbr>Injection<wbr>Match<wbr>Tuples</td>
             <td class="align-top">
                 
-                <code><a href="#sqlinjectionmatchsetsqlinjectionmatchtuple">[]waf.<wbr>Sql<wbr>Injection<wbr>Match<wbr>Set<wbr>Sql<wbr>Injection<wbr>Match<wbr>Tuple</a></code>
+                <code><a href="#sqlinjectionmatchsetsqlinjectionmatchtuple">[]Sql<wbr>Injection<wbr>Match<wbr>Set<wbr>Sql<wbr>Injection<wbr>Match<wbr>Tuple</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -668,7 +668,7 @@ The name or description of the SQL Injection Match Set.
             <td class="align-top">sql<wbr>Injection<wbr>Match<wbr>Tuples</td>
             <td class="align-top">
                 
-                <code><a href="#sqlinjectionmatchsetsqlinjectionmatchtuple">waf.<wbr>Sql<wbr>Injection<wbr>Match<wbr>Set<wbr>Sql<wbr>Injection<wbr>Match<wbr>Tuple[]?</a></code>
+                <code><a href="#sqlinjectionmatchsetsqlinjectionmatchtuple">Sql<wbr>Injection<wbr>Match<wbr>Set<wbr>Sql<wbr>Injection<wbr>Match<wbr>Tuple[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -781,7 +781,7 @@ The parts of web requests that you want AWS WAF to inspect for malicious SQL cod
             <td class="align-top">Field<wbr>To<wbr>Match</td>
             <td class="align-top">
                 
-                <code><a href="#sqlinjectionmatchsetsqlinjectionmatchtuplefieldtomatch">Pulumi.<wbr>Aws.<wbr>Waf.<wbr>Sql<wbr>Injection<wbr>Match<wbr>Set<wbr>Sql<wbr>Injection<wbr>Match<wbr>Tuple<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></code>
+                <code><a href="#sqlinjectionmatchsetsqlinjectionmatchtuplefieldtomatch">Sql<wbr>Injection<wbr>Match<wbr>Set<wbr>Sql<wbr>Injection<wbr>Match<wbr>Tuple<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -835,7 +835,7 @@ for all supported values.
             <td class="align-top">Field<wbr>To<wbr>Match</td>
             <td class="align-top">
                 
-                <code><a href="#sqlinjectionmatchsetsqlinjectionmatchtuplefieldtomatch">waf.<wbr>Sql<wbr>Injection<wbr>Match<wbr>Set<wbr>Sql<wbr>Injection<wbr>Match<wbr>Tuple<wbr>Field<wbr>To<wbr>Match</a></code>
+                <code><a href="#sqlinjectionmatchsetsqlinjectionmatchtuplefieldtomatch">Sql<wbr>Injection<wbr>Match<wbr>Set<wbr>Sql<wbr>Injection<wbr>Match<wbr>Tuple<wbr>Field<wbr>To<wbr>Match</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -889,7 +889,7 @@ for all supported values.
             <td class="align-top">field<wbr>To<wbr>Match</td>
             <td class="align-top">
                 
-                <code><a href="#sqlinjectionmatchsetsqlinjectionmatchtuplefieldtomatch">waf.<wbr>Sql<wbr>Injection<wbr>Match<wbr>Set<wbr>Sql<wbr>Injection<wbr>Match<wbr>Tuple<wbr>Field<wbr>To<wbr>Match</a></code>
+                <code><a href="#sqlinjectionmatchsetsqlinjectionmatchtuplefieldtomatch">Sql<wbr>Injection<wbr>Match<wbr>Set<wbr>Sql<wbr>Injection<wbr>Match<wbr>Tuple<wbr>Field<wbr>To<wbr>Match</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

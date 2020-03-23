@@ -40,7 +40,12 @@ const ubuntu = aws.ec2.getLaunchConfiguration({
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupLaunchConfiguration<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#LookupLaunchConfigurationArgs">LookupLaunchConfigurationArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#LookupLaunchConfigurationResult">LookupLaunchConfigurationResult</a></span>, error)</span></code></pre></div>
 
 
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.GetLaunchConfigurationResult.html">Pulumi.Aws.Ec2.GetLaunchConfigurationResult</a></span>> <span class="p">GetLaunchConfiguration(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.GetLaunchConfigurationArgs.html">GetLaunchConfigurationArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight">
+<pre class="chroma">
+<code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetLaunchConfiguration </span><span class="p">{</span>
+    <span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.GetLaunchConfigurationResult.html">GetLaunchConfigurationResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.GetLaunchConfigurationArgs.html">GetLaunchConfigurationArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span>
+<span class="p">}</span></code></pre>
+</div>
 
 
 
@@ -248,7 +253,7 @@ The following output properties are available:
             <td class="align-top">Ebs<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#getlaunchconfigurationebsblockdevice">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Get<wbr>Launch<wbr>Configuration<wbr>Ebs<wbr>Block<wbr>Device&gt;</a></code>
+                <code><a href="#getlaunchconfigurationebsblockdevice">List&lt;Get<wbr>Launch<wbr>Configuration<wbr>Ebs<wbr>Block<wbr>Device&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} The EBS Block Devices attached to the instance.
  {{% /md %}}
@@ -287,7 +292,7 @@ The following output properties are available:
             <td class="align-top">Ephemeral<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#getlaunchconfigurationephemeralblockdevice">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Get<wbr>Launch<wbr>Configuration<wbr>Ephemeral<wbr>Block<wbr>Device&gt;</a></code>
+                <code><a href="#getlaunchconfigurationephemeralblockdevice">List&lt;Get<wbr>Launch<wbr>Configuration<wbr>Ephemeral<wbr>Block<wbr>Device&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} The Ephemeral volumes on the instance.
  {{% /md %}}
@@ -391,7 +396,7 @@ The following output properties are available:
             <td class="align-top">Root<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#getlaunchconfigurationrootblockdevice">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Get<wbr>Launch<wbr>Configuration<wbr>Root<wbr>Block<wbr>Device&gt;</a></code>
+                <code><a href="#getlaunchconfigurationrootblockdevice">List&lt;Get<wbr>Launch<wbr>Configuration<wbr>Root<wbr>Block<wbr>Device&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} The Root Block Device of the instance.
  {{% /md %}}
@@ -404,7 +409,7 @@ The following output properties are available:
             <td class="align-top">Security<wbr>Groups</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} A list of associated Security Group IDS.
  {{% /md %}}
@@ -456,7 +461,7 @@ The following output properties are available:
             <td class="align-top">Vpc<wbr>Classic<wbr>Link<wbr>Security<wbr>Groups</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} The IDs of one or more Security Groups for the specified ClassicLink-enabled VPC.
  {{% /md %}}
@@ -515,7 +520,7 @@ The following output properties are available:
             <td class="align-top">Ebs<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#getlaunchconfigurationebsblockdevice">[]ec2.<wbr>Get<wbr>Launch<wbr>Configuration<wbr>Ebs<wbr>Block<wbr>Device</a></code>
+                <code><a href="#getlaunchconfigurationebsblockdevice">[]Get<wbr>Launch<wbr>Configuration<wbr>Ebs<wbr>Block<wbr>Device</a></code>
             </td>
             <td class="align-top">{{% md %}} The EBS Block Devices attached to the instance.
  {{% /md %}}
@@ -554,7 +559,7 @@ The following output properties are available:
             <td class="align-top">Ephemeral<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#getlaunchconfigurationephemeralblockdevice">[]ec2.<wbr>Get<wbr>Launch<wbr>Configuration<wbr>Ephemeral<wbr>Block<wbr>Device</a></code>
+                <code><a href="#getlaunchconfigurationephemeralblockdevice">[]Get<wbr>Launch<wbr>Configuration<wbr>Ephemeral<wbr>Block<wbr>Device</a></code>
             </td>
             <td class="align-top">{{% md %}} The Ephemeral volumes on the instance.
  {{% /md %}}
@@ -658,7 +663,7 @@ The following output properties are available:
             <td class="align-top">Root<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#getlaunchconfigurationrootblockdevice">[]ec2.<wbr>Get<wbr>Launch<wbr>Configuration<wbr>Root<wbr>Block<wbr>Device</a></code>
+                <code><a href="#getlaunchconfigurationrootblockdevice">[]Get<wbr>Launch<wbr>Configuration<wbr>Root<wbr>Block<wbr>Device</a></code>
             </td>
             <td class="align-top">{{% md %}} The Root Block Device of the instance.
  {{% /md %}}
@@ -782,7 +787,7 @@ The following output properties are available:
             <td class="align-top">ebs<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#getlaunchconfigurationebsblockdevice">ec2.<wbr>Get<wbr>Launch<wbr>Configuration<wbr>Ebs<wbr>Block<wbr>Device[]</a></code>
+                <code><a href="#getlaunchconfigurationebsblockdevice">Get<wbr>Launch<wbr>Configuration<wbr>Ebs<wbr>Block<wbr>Device[]</a></code>
             </td>
             <td class="align-top">{{% md %}} The EBS Block Devices attached to the instance.
  {{% /md %}}
@@ -821,7 +826,7 @@ The following output properties are available:
             <td class="align-top">ephemeral<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#getlaunchconfigurationephemeralblockdevice">ec2.<wbr>Get<wbr>Launch<wbr>Configuration<wbr>Ephemeral<wbr>Block<wbr>Device[]</a></code>
+                <code><a href="#getlaunchconfigurationephemeralblockdevice">Get<wbr>Launch<wbr>Configuration<wbr>Ephemeral<wbr>Block<wbr>Device[]</a></code>
             </td>
             <td class="align-top">{{% md %}} The Ephemeral volumes on the instance.
  {{% /md %}}
@@ -925,7 +930,7 @@ The following output properties are available:
             <td class="align-top">root<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#getlaunchconfigurationrootblockdevice">ec2.<wbr>Get<wbr>Launch<wbr>Configuration<wbr>Root<wbr>Block<wbr>Device[]</a></code>
+                <code><a href="#getlaunchconfigurationrootblockdevice">Get<wbr>Launch<wbr>Configuration<wbr>Root<wbr>Block<wbr>Device[]</a></code>
             </td>
             <td class="align-top">{{% md %}} The Root Block Device of the instance.
  {{% /md %}}

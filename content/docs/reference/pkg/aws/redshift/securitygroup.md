@@ -108,7 +108,7 @@ The description of the Redshift security group. Defaults to &#34;Managed by Pulu
             <td class="align-top">Ingress</td>
             <td class="align-top">
                 
-                <code><a href="#securitygroupingress">List&lt;Pulumi.<wbr>Aws.<wbr>Redshift.<wbr>Security<wbr>Group<wbr>Ingress<wbr>Args&gt;</a></code>
+                <code><a href="#securitygroupingress">List&lt;Security<wbr>Group<wbr>Ingress<wbr>Args&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -173,7 +173,7 @@ The description of the Redshift security group. Defaults to &#34;Managed by Pulu
             <td class="align-top">Ingress</td>
             <td class="align-top">
                 
-                <code><a href="#securitygroupingress">[]redshift.<wbr>Security<wbr>Group<wbr>Ingress</a></code>
+                <code><a href="#securitygroupingress">[]Security<wbr>Group<wbr>Ingress</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -238,7 +238,7 @@ The description of the Redshift security group. Defaults to &#34;Managed by Pulu
             <td class="align-top">ingress</td>
             <td class="align-top">
                 
-                <code><a href="#securitygroupingress">redshift.<wbr>Security<wbr>Group<wbr>Ingress[]</a></code>
+                <code><a href="#securitygroupingress">Security<wbr>Group<wbr>Ingress[]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -380,7 +380,7 @@ The following output properties are available:
             <td class="align-top">Ingress</td>
             <td class="align-top">
                 
-                <code><a href="#securitygroupingress">List&lt;Pulumi.<wbr>Aws.<wbr>Redshift.<wbr>Security<wbr>Group<wbr>Ingress&gt;</a></code>
+                <code><a href="#securitygroupingress">List&lt;Security<wbr>Group<wbr>Ingress&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of ingress rules.
  {{% /md %}}
@@ -439,7 +439,7 @@ The following output properties are available:
             <td class="align-top">Ingress</td>
             <td class="align-top">
                 
-                <code><a href="#securitygroupingress">[]redshift.<wbr>Security<wbr>Group<wbr>Ingress</a></code>
+                <code><a href="#securitygroupingress">[]Security<wbr>Group<wbr>Ingress</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of ingress rules.
  {{% /md %}}
@@ -498,7 +498,7 @@ The following output properties are available:
             <td class="align-top">ingress</td>
             <td class="align-top">
                 
-                <code><a href="#securitygroupingress">redshift.<wbr>Security<wbr>Group<wbr>Ingress[]</a></code>
+                <code><a href="#securitygroupingress">Security<wbr>Group<wbr>Ingress[]</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of ingress rules.
  {{% /md %}}
@@ -677,7 +677,7 @@ The description of the Redshift security group. Defaults to &#34;Managed by Pulu
             <td class="align-top">Ingress</td>
             <td class="align-top">
                 
-                <code><a href="#securitygroupingress">List&lt;Pulumi.<wbr>Aws.<wbr>Redshift.<wbr>Security<wbr>Group<wbr>Ingress<wbr>Args&gt;?</a></code>
+                <code><a href="#securitygroupingress">List&lt;Security<wbr>Group<wbr>Ingress<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -742,7 +742,7 @@ The description of the Redshift security group. Defaults to &#34;Managed by Pulu
             <td class="align-top">Ingress</td>
             <td class="align-top">
                 
-                <code><a href="#securitygroupingress">[]redshift.<wbr>Security<wbr>Group<wbr>Ingress</a></code>
+                <code><a href="#securitygroupingress">[]Security<wbr>Group<wbr>Ingress</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -807,7 +807,7 @@ The description of the Redshift security group. Defaults to &#34;Managed by Pulu
             <td class="align-top">ingress</td>
             <td class="align-top">
                 
-                <code><a href="#securitygroupingress">redshift.<wbr>Security<wbr>Group<wbr>Ingress[]?</a></code>
+                <code><a href="#securitygroupingress">Security<wbr>Group<wbr>Ingress[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

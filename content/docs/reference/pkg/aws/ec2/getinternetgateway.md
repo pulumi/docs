@@ -46,7 +46,12 @@ const defaultInternetGateway = aws.ec2.getInternetGateway({
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupInternetGateway<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#LookupInternetGatewayArgs">LookupInternetGatewayArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#LookupInternetGatewayResult">LookupInternetGatewayResult</a></span>, error)</span></code></pre></div>
 
 
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.GetInternetGatewayResult.html">Pulumi.Aws.Ec2.GetInternetGatewayResult</a></span>> <span class="p">GetInternetGateway(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.GetInternetGatewayArgs.html">GetInternetGatewayArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight">
+<pre class="chroma">
+<code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetInternetGateway </span><span class="p">{</span>
+    <span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.GetInternetGatewayResult.html">GetInternetGatewayResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.GetInternetGatewayArgs.html">GetInternetGatewayArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span>
+<span class="p">}</span></code></pre>
+</div>
 
 
 
@@ -73,7 +78,7 @@ The following arguments are supported:
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getinternetgatewayfilter">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Get<wbr>Internet<wbr>Gateway<wbr>Filter<wbr>Args&gt;?</a></code>
+                <code><a href="#getinternetgatewayfilter">List&lt;Get<wbr>Internet<wbr>Gateway<wbr>Filter<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -103,7 +108,7 @@ The id of the specific Internet Gateway to retrieve.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -139,7 +144,7 @@ a pair on the desired Internet Gateway.
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getinternetgatewayfilter">[]ec2.<wbr>Get<wbr>Internet<wbr>Gateway<wbr>Filter</a></code>
+                <code><a href="#getinternetgatewayfilter">[]Get<wbr>Internet<wbr>Gateway<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -205,7 +210,7 @@ a pair on the desired Internet Gateway.
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getinternetgatewayfilter">ec2.<wbr>Get<wbr>Internet<wbr>Gateway<wbr>Filter[]?</a></code>
+                <code><a href="#getinternetgatewayfilter">Get<wbr>Internet<wbr>Gateway<wbr>Filter[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -352,7 +357,7 @@ The following output properties are available:
             <td class="align-top">Attachments</td>
             <td class="align-top">
                 
-                <code><a href="#getinternetgatewayattachment">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Get<wbr>Internet<wbr>Gateway<wbr>Attachment&gt;</a></code>
+                <code><a href="#getinternetgatewayattachment">List&lt;Get<wbr>Internet<wbr>Gateway<wbr>Attachment&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -364,7 +369,7 @@ The following output properties are available:
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getinternetgatewayfilter">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Get<wbr>Internet<wbr>Gateway<wbr>Filter&gt;?</a></code>
+                <code><a href="#getinternetgatewayfilter">List&lt;Get<wbr>Internet<wbr>Gateway<wbr>Filter&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -414,7 +419,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;</code>
+                <code>Dictionary<string, object></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -446,7 +451,7 @@ The following output properties are available:
             <td class="align-top">Attachments</td>
             <td class="align-top">
                 
-                <code><a href="#getinternetgatewayattachment">[]ec2.<wbr>Get<wbr>Internet<wbr>Gateway<wbr>Attachment</a></code>
+                <code><a href="#getinternetgatewayattachment">[]Get<wbr>Internet<wbr>Gateway<wbr>Attachment</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -458,7 +463,7 @@ The following output properties are available:
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getinternetgatewayfilter">[]ec2.<wbr>Get<wbr>Internet<wbr>Gateway<wbr>Filter</a></code>
+                <code><a href="#getinternetgatewayfilter">[]Get<wbr>Internet<wbr>Gateway<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -540,7 +545,7 @@ The following output properties are available:
             <td class="align-top">attachments</td>
             <td class="align-top">
                 
-                <code><a href="#getinternetgatewayattachment">ec2.<wbr>Get<wbr>Internet<wbr>Gateway<wbr>Attachment[]</a></code>
+                <code><a href="#getinternetgatewayattachment">Get<wbr>Internet<wbr>Gateway<wbr>Attachment[]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -552,7 +557,7 @@ The following output properties are available:
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getinternetgatewayfilter">ec2.<wbr>Get<wbr>Internet<wbr>Gateway<wbr>Filter[]?</a></code>
+                <code><a href="#getinternetgatewayfilter">Get<wbr>Internet<wbr>Gateway<wbr>Filter[]?</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -991,7 +996,7 @@ The name of the field to filter by, as defined by
             <td class="align-top">Values</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

@@ -152,7 +152,7 @@ The largest number of records that Lambda will retrieve from your event source a
             <td class="align-top">Destination<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#eventsourcemappingdestinationconfig">Pulumi.<wbr>Aws.<wbr>Lambda.<wbr>Event<wbr>Source<wbr>Mapping<wbr>Destination<wbr>Config<wbr>Args?</a></code>
+                <code><a href="#eventsourcemappingdestinationconfig">Event<wbr>Source<wbr>Mapping<wbr>Destination<wbr>Config<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -352,7 +352,7 @@ The largest number of records that Lambda will retrieve from your event source a
             <td class="align-top">Destination<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#eventsourcemappingdestinationconfig">*lambda.<wbr>Event<wbr>Source<wbr>Mapping<wbr>Destination<wbr>Config</a></code>
+                <code><a href="#eventsourcemappingdestinationconfig">*Event<wbr>Source<wbr>Mapping<wbr>Destination<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -552,7 +552,7 @@ The largest number of records that Lambda will retrieve from your event source a
             <td class="align-top">destination<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#eventsourcemappingdestinationconfig">lambda.<wbr>Event<wbr>Source<wbr>Mapping<wbr>Destination<wbr>Config?</a></code>
+                <code><a href="#eventsourcemappingdestinationconfig">Event<wbr>Source<wbr>Mapping<wbr>Destination<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -962,7 +962,7 @@ The following output properties are available:
             <td class="align-top">Destination<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#eventsourcemappingdestinationconfig">Pulumi.<wbr>Aws.<wbr>Lambda.<wbr>Event<wbr>Source<wbr>Mapping<wbr>Destination<wbr>Config?</a></code>
+                <code><a href="#eventsourcemappingdestinationconfig">Event<wbr>Source<wbr>Mapping<wbr>Destination<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1216,7 +1216,7 @@ The following output properties are available:
             <td class="align-top">Destination<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#eventsourcemappingdestinationconfig">*lambda.<wbr>Event<wbr>Source<wbr>Mapping<wbr>Destination<wbr>Config</a></code>
+                <code><a href="#eventsourcemappingdestinationconfig">*Event<wbr>Source<wbr>Mapping<wbr>Destination<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1470,7 +1470,7 @@ The following output properties are available:
             <td class="align-top">destination<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#eventsourcemappingdestinationconfig">lambda.<wbr>Event<wbr>Source<wbr>Mapping<wbr>Destination<wbr>Config?</a></code>
+                <code><a href="#eventsourcemappingdestinationconfig">Event<wbr>Source<wbr>Mapping<wbr>Destination<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -2041,7 +2041,7 @@ The largest number of records that Lambda will retrieve from your event source a
             <td class="align-top">Destination<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#eventsourcemappingdestinationconfig">Pulumi.<wbr>Aws.<wbr>Lambda.<wbr>Event<wbr>Source<wbr>Mapping<wbr>Destination<wbr>Config<wbr>Args?</a></code>
+                <code><a href="#eventsourcemappingdestinationconfig">Event<wbr>Source<wbr>Mapping<wbr>Destination<wbr>Config<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2331,7 +2331,7 @@ The largest number of records that Lambda will retrieve from your event source a
             <td class="align-top">Destination<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#eventsourcemappingdestinationconfig">*lambda.<wbr>Event<wbr>Source<wbr>Mapping<wbr>Destination<wbr>Config</a></code>
+                <code><a href="#eventsourcemappingdestinationconfig">*Event<wbr>Source<wbr>Mapping<wbr>Destination<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2621,7 +2621,7 @@ The largest number of records that Lambda will retrieve from your event source a
             <td class="align-top">destination<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#eventsourcemappingdestinationconfig">lambda.<wbr>Event<wbr>Source<wbr>Mapping<wbr>Destination<wbr>Config?</a></code>
+                <code><a href="#eventsourcemappingdestinationconfig">Event<wbr>Source<wbr>Mapping<wbr>Destination<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3200,7 +3200,7 @@ The UUID of the created event source mapping.
             <td class="align-top">On<wbr>Failure</td>
             <td class="align-top">
                 
-                <code><a href="#eventsourcemappingdestinationconfigonfailure">Pulumi.<wbr>Aws.<wbr>Lambda.<wbr>Event<wbr>Source<wbr>Mapping<wbr>Destination<wbr>Config<wbr>On<wbr>Failure<wbr>Args?</a></code>
+                <code><a href="#eventsourcemappingdestinationconfigonfailure">Event<wbr>Source<wbr>Mapping<wbr>Destination<wbr>Config<wbr>On<wbr>Failure<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3235,7 +3235,7 @@ The destination configuration for failed invocations. Detailed below.
             <td class="align-top">On<wbr>Failure</td>
             <td class="align-top">
                 
-                <code><a href="#eventsourcemappingdestinationconfigonfailure">*lambda.<wbr>Event<wbr>Source<wbr>Mapping<wbr>Destination<wbr>Config<wbr>On<wbr>Failure</a></code>
+                <code><a href="#eventsourcemappingdestinationconfigonfailure">*Event<wbr>Source<wbr>Mapping<wbr>Destination<wbr>Config<wbr>On<wbr>Failure</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3270,7 +3270,7 @@ The destination configuration for failed invocations. Detailed below.
             <td class="align-top">on<wbr>Failure</td>
             <td class="align-top">
                 
-                <code><a href="#eventsourcemappingdestinationconfigonfailure">lambda.<wbr>Event<wbr>Source<wbr>Mapping<wbr>Destination<wbr>Config<wbr>On<wbr>Failure?</a></code>
+                <code><a href="#eventsourcemappingdestinationconfigonfailure">Event<wbr>Source<wbr>Mapping<wbr>Destination<wbr>Config<wbr>On<wbr>Failure?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

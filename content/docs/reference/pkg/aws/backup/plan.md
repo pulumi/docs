@@ -110,7 +110,7 @@ The display name of a backup plan.
             <td class="align-top">Rules</td>
             <td class="align-top">
                 
-                <code><a href="#planrule">List&lt;Pulumi.<wbr>Aws.<wbr>Backup.<wbr>Plan<wbr>Rule<wbr>Args&gt;</a></code>
+                <code><a href="#planrule">List&lt;Plan<wbr>Rule<wbr>Args&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -125,7 +125,7 @@ A rule object that specifies a scheduled task that is used to back up a selectio
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -175,7 +175,7 @@ The display name of a backup plan.
             <td class="align-top">Rules</td>
             <td class="align-top">
                 
-                <code><a href="#planrule">[]backup.<wbr>Plan<wbr>Rule</a></code>
+                <code><a href="#planrule">[]Plan<wbr>Rule</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -240,7 +240,7 @@ The display name of a backup plan.
             <td class="align-top">rules</td>
             <td class="align-top">
                 
-                <code><a href="#planrule">backup.<wbr>Plan<wbr>Rule[]</a></code>
+                <code><a href="#planrule">Plan<wbr>Rule[]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -395,7 +395,7 @@ The following output properties are available:
             <td class="align-top">Rules</td>
             <td class="align-top">
                 
-                <code><a href="#planrule">List&lt;Pulumi.<wbr>Aws.<wbr>Backup.<wbr>Plan<wbr>Rule&gt;</a></code>
+                <code><a href="#planrule">List&lt;Plan<wbr>Rule&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} A rule object that specifies a scheduled task that is used to back up a selection of resources.
  {{% /md %}}
@@ -408,7 +408,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} Metadata that you can assign to help organize the plans you create.
  {{% /md %}}
@@ -480,7 +480,7 @@ The following output properties are available:
             <td class="align-top">Rules</td>
             <td class="align-top">
                 
-                <code><a href="#planrule">[]backup.<wbr>Plan<wbr>Rule</a></code>
+                <code><a href="#planrule">[]Plan<wbr>Rule</a></code>
             </td>
             <td class="align-top">{{% md %}} A rule object that specifies a scheduled task that is used to back up a selection of resources.
  {{% /md %}}
@@ -565,7 +565,7 @@ The following output properties are available:
             <td class="align-top">rules</td>
             <td class="align-top">
                 
-                <code><a href="#planrule">backup.<wbr>Plan<wbr>Rule[]</a></code>
+                <code><a href="#planrule">Plan<wbr>Rule[]</a></code>
             </td>
             <td class="align-top">{{% md %}} A rule object that specifies a scheduled task that is used to back up a selection of resources.
  {{% /md %}}
@@ -798,7 +798,7 @@ The display name of a backup plan.
             <td class="align-top">Rules</td>
             <td class="align-top">
                 
-                <code><a href="#planrule">List&lt;Pulumi.<wbr>Aws.<wbr>Backup.<wbr>Plan<wbr>Rule<wbr>Args&gt;?</a></code>
+                <code><a href="#planrule">List&lt;Plan<wbr>Rule<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -813,7 +813,7 @@ A rule object that specifies a scheduled task that is used to back up a selectio
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -893,7 +893,7 @@ The display name of a backup plan.
             <td class="align-top">Rules</td>
             <td class="align-top">
                 
-                <code><a href="#planrule">[]backup.<wbr>Plan<wbr>Rule</a></code>
+                <code><a href="#planrule">[]Plan<wbr>Rule</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -988,7 +988,7 @@ The display name of a backup plan.
             <td class="align-top">rules</td>
             <td class="align-top">
                 
-                <code><a href="#planrule">backup.<wbr>Plan<wbr>Rule[]?</a></code>
+                <code><a href="#planrule">Plan<wbr>Rule[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1191,7 +1191,7 @@ The amount of time AWS Backup attempts a backup before canceling the job and ret
             <td class="align-top">Lifecycle</td>
             <td class="align-top">
                 
-                <code><a href="#planrulelifecycle">Pulumi.<wbr>Aws.<wbr>Backup.<wbr>Plan<wbr>Rule<wbr>Lifecycle<wbr>Args?</a></code>
+                <code><a href="#planrulelifecycle">Plan<wbr>Rule<wbr>Lifecycle<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1206,7 +1206,7 @@ The lifecycle defines when a protected resource is transitioned to cold storage 
             <td class="align-top">Recovery<wbr>Point<wbr>Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1316,7 +1316,7 @@ The amount of time AWS Backup attempts a backup before canceling the job and ret
             <td class="align-top">Lifecycle</td>
             <td class="align-top">
                 
-                <code><a href="#planrulelifecycle">*backup.<wbr>Plan<wbr>Rule<wbr>Lifecycle</a></code>
+                <code><a href="#planrulelifecycle">*Plan<wbr>Rule<wbr>Lifecycle</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1441,7 +1441,7 @@ The amount of time AWS Backup attempts a backup before canceling the job and ret
             <td class="align-top">lifecycle</td>
             <td class="align-top">
                 
-                <code><a href="#planrulelifecycle">backup.<wbr>Plan<wbr>Rule<wbr>Lifecycle?</a></code>
+                <code><a href="#planrulelifecycle">Plan<wbr>Rule<wbr>Lifecycle?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

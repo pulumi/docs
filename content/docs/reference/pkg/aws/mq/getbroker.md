@@ -47,7 +47,12 @@ const byName = aws.mq.getBroker({
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupBroker<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/mq?tab=doc#LookupBrokerArgs">LookupBrokerArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/mq?tab=doc#LookupBrokerResult">LookupBrokerResult</a></span>, error)</span></code></pre></div>
 
 
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Mq.GetBrokerResult.html">Pulumi.Aws.Mq.GetBrokerResult</a></span>> <span class="p">GetBroker(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Mq.GetBrokerArgs.html">GetBrokerArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight">
+<pre class="chroma">
+<code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetBroker </span><span class="p">{</span>
+    <span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Mq.GetBrokerResult.html">GetBrokerResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Mq.GetBrokerArgs.html">GetBrokerArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span>
+<span class="p">}</span></code></pre>
+</div>
 
 
 
@@ -104,7 +109,7 @@ The unique name of the mq broker.
             <td class="align-top">Logs</td>
             <td class="align-top">
                 
-                <code><a href="#getbrokerlogs">Pulumi.<wbr>Aws.<wbr>Mq.<wbr>Get<wbr>Broker<wbr>Logs<wbr>Args?</a></code>
+                <code><a href="#getbrokerlogs">Get<wbr>Broker<wbr>Logs<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -118,7 +123,7 @@ The unique name of the mq broker.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -182,7 +187,7 @@ The unique name of the mq broker.
             <td class="align-top">Logs</td>
             <td class="align-top">
                 
-                <code><a href="#getbrokerlogs">*mq.<wbr>Get<wbr>Broker<wbr>Logs</a></code>
+                <code><a href="#getbrokerlogs">*Get<wbr>Broker<wbr>Logs</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -260,7 +265,7 @@ The unique name of the mq broker.
             <td class="align-top">logs</td>
             <td class="align-top">
                 
-                <code><a href="#getbrokerlogs">mq.<wbr>Get<wbr>Broker<wbr>Logs?</a></code>
+                <code><a href="#getbrokerlogs">Get<wbr>Broker<wbr>Logs?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -449,7 +454,7 @@ The following output properties are available:
             <td class="align-top">Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#getbrokerconfiguration">Pulumi.<wbr>Aws.<wbr>Mq.<wbr>Get<wbr>Broker<wbr>Configuration</a></code>
+                <code><a href="#getbrokerconfiguration">Get<wbr>Broker<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -473,7 +478,7 @@ The following output properties are available:
             <td class="align-top">Encryption<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#getbrokerencryptionoption">List&lt;Pulumi.<wbr>Aws.<wbr>Mq.<wbr>Get<wbr>Broker<wbr>Encryption<wbr>Option&gt;</a></code>
+                <code><a href="#getbrokerencryptionoption">List&lt;Get<wbr>Broker<wbr>Encryption<wbr>Option&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -534,7 +539,7 @@ The following output properties are available:
             <td class="align-top">Instances</td>
             <td class="align-top">
                 
-                <code><a href="#getbrokerinstance">List&lt;Pulumi.<wbr>Aws.<wbr>Mq.<wbr>Get<wbr>Broker<wbr>Instance&gt;</a></code>
+                <code><a href="#getbrokerinstance">List&lt;Get<wbr>Broker<wbr>Instance&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -546,7 +551,7 @@ The following output properties are available:
             <td class="align-top">Logs</td>
             <td class="align-top">
                 
-                <code><a href="#getbrokerlogs">Pulumi.<wbr>Aws.<wbr>Mq.<wbr>Get<wbr>Broker<wbr>Logs?</a></code>
+                <code><a href="#getbrokerlogs">Get<wbr>Broker<wbr>Logs?</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -558,7 +563,7 @@ The following output properties are available:
             <td class="align-top">Maintenance<wbr>Window<wbr>Start<wbr>Time</td>
             <td class="align-top">
                 
-                <code><a href="#getbrokermaintenancewindowstarttime">Pulumi.<wbr>Aws.<wbr>Mq.<wbr>Get<wbr>Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time</a></code>
+                <code><a href="#getbrokermaintenancewindowstarttime">Get<wbr>Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -582,7 +587,7 @@ The following output properties are available:
             <td class="align-top">Security<wbr>Groups</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -594,7 +599,7 @@ The following output properties are available:
             <td class="align-top">Subnet<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -606,7 +611,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;</code>
+                <code>Dictionary<string, object></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -618,7 +623,7 @@ The following output properties are available:
             <td class="align-top">Users</td>
             <td class="align-top">
                 
-                <code><a href="#getbrokeruser">List&lt;Pulumi.<wbr>Aws.<wbr>Mq.<wbr>Get<wbr>Broker<wbr>User&gt;</a></code>
+                <code><a href="#getbrokeruser">List&lt;Get<wbr>Broker<wbr>User&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -698,7 +703,7 @@ The following output properties are available:
             <td class="align-top">Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#getbrokerconfiguration">mq.<wbr>Get<wbr>Broker<wbr>Configuration</a></code>
+                <code><a href="#getbrokerconfiguration">Get<wbr>Broker<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -722,7 +727,7 @@ The following output properties are available:
             <td class="align-top">Encryption<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#getbrokerencryptionoption">[]mq.<wbr>Get<wbr>Broker<wbr>Encryption<wbr>Option</a></code>
+                <code><a href="#getbrokerencryptionoption">[]Get<wbr>Broker<wbr>Encryption<wbr>Option</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -783,7 +788,7 @@ The following output properties are available:
             <td class="align-top">Instances</td>
             <td class="align-top">
                 
-                <code><a href="#getbrokerinstance">[]mq.<wbr>Get<wbr>Broker<wbr>Instance</a></code>
+                <code><a href="#getbrokerinstance">[]Get<wbr>Broker<wbr>Instance</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -795,7 +800,7 @@ The following output properties are available:
             <td class="align-top">Logs</td>
             <td class="align-top">
                 
-                <code><a href="#getbrokerlogs">*mq.<wbr>Get<wbr>Broker<wbr>Logs</a></code>
+                <code><a href="#getbrokerlogs">*Get<wbr>Broker<wbr>Logs</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -807,7 +812,7 @@ The following output properties are available:
             <td class="align-top">Maintenance<wbr>Window<wbr>Start<wbr>Time</td>
             <td class="align-top">
                 
-                <code><a href="#getbrokermaintenancewindowstarttime">mq.<wbr>Get<wbr>Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time</a></code>
+                <code><a href="#getbrokermaintenancewindowstarttime">Get<wbr>Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -867,7 +872,7 @@ The following output properties are available:
             <td class="align-top">Users</td>
             <td class="align-top">
                 
-                <code><a href="#getbrokeruser">[]mq.<wbr>Get<wbr>Broker<wbr>User</a></code>
+                <code><a href="#getbrokeruser">[]Get<wbr>Broker<wbr>User</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -947,7 +952,7 @@ The following output properties are available:
             <td class="align-top">configuration</td>
             <td class="align-top">
                 
-                <code><a href="#getbrokerconfiguration">mq.<wbr>Get<wbr>Broker<wbr>Configuration</a></code>
+                <code><a href="#getbrokerconfiguration">Get<wbr>Broker<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -971,7 +976,7 @@ The following output properties are available:
             <td class="align-top">encryption<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#getbrokerencryptionoption">mq.<wbr>Get<wbr>Broker<wbr>Encryption<wbr>Option[]</a></code>
+                <code><a href="#getbrokerencryptionoption">Get<wbr>Broker<wbr>Encryption<wbr>Option[]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1032,7 +1037,7 @@ The following output properties are available:
             <td class="align-top">instances</td>
             <td class="align-top">
                 
-                <code><a href="#getbrokerinstance">mq.<wbr>Get<wbr>Broker<wbr>Instance[]</a></code>
+                <code><a href="#getbrokerinstance">Get<wbr>Broker<wbr>Instance[]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1044,7 +1049,7 @@ The following output properties are available:
             <td class="align-top">logs</td>
             <td class="align-top">
                 
-                <code><a href="#getbrokerlogs">mq.<wbr>Get<wbr>Broker<wbr>Logs?</a></code>
+                <code><a href="#getbrokerlogs">Get<wbr>Broker<wbr>Logs?</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1056,7 +1061,7 @@ The following output properties are available:
             <td class="align-top">maintenance<wbr>Window<wbr>Start<wbr>Time</td>
             <td class="align-top">
                 
-                <code><a href="#getbrokermaintenancewindowstarttime">mq.<wbr>Get<wbr>Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time</a></code>
+                <code><a href="#getbrokermaintenancewindowstarttime">Get<wbr>Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1116,7 +1121,7 @@ The following output properties are available:
             <td class="align-top">users</td>
             <td class="align-top">
                 
-                <code><a href="#getbrokeruser">mq.<wbr>Get<wbr>Broker<wbr>User[]</a></code>
+                <code><a href="#getbrokeruser">Get<wbr>Broker<wbr>User[]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1863,7 +1868,7 @@ The following output properties are available:
             <td class="align-top">Endpoints</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2614,7 +2619,7 @@ The following output properties are available:
             <td class="align-top">Groups</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

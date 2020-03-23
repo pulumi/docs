@@ -90,7 +90,7 @@ The following arguments are supported:
     <tbody>
     
         <tr>
-            <td class="align-top">Account<wbr>Alias</td>
+            <td class="align-top">Alias</td>
             <td class="align-top">
                 
                 <code>string</code>
@@ -244,7 +244,7 @@ The following output properties are available:
     <tbody>
     
         <tr>
-            <td class="align-top">Account<wbr>Alias</td>
+            <td class="align-top">Alias</td>
             <td class="align-top">
                 
                 <code>string</code>
@@ -435,7 +435,7 @@ The following state arguments are supported:
     <tbody>
     
         <tr>
-            <td class="align-top">Account<wbr>Alias</td>
+            <td class="align-top">Alias</td>
             <td class="align-top">
                 
                 <code>string?</code>

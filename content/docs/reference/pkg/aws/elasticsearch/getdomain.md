@@ -40,7 +40,12 @@ const myDomain = aws.elasticsearch.getDomain({
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDomain<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/elasticsearch?tab=doc#LookupDomainArgs">LookupDomainArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/elasticsearch?tab=doc#LookupDomainResult">LookupDomainResult</a></span>, error)</span></code></pre></div>
 
 
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elasticsearch.GetDomainResult.html">Pulumi.Aws.Elasticsearch.GetDomainResult</a></span>> <span class="p">GetDomain(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elasticsearch.GetDomainArgs.html">GetDomainArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight">
+<pre class="chroma">
+<code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetDomain </span><span class="p">{</span>
+    <span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elasticsearch.GetDomainResult.html">GetDomainResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elasticsearch.GetDomainArgs.html">GetDomainArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span>
+<span class="p">}</span></code></pre>
+</div>
 
 
 
@@ -82,7 +87,7 @@ Name of the domain.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -291,7 +296,7 @@ The following output properties are available:
             <td class="align-top">Advanced<wbr>Options</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;</code>
+                <code>Dictionary<string, object></code>
             </td>
             <td class="align-top">{{% md %}} Key-value string pairs to specify advanced configuration options.
  {{% /md %}}
@@ -317,7 +322,7 @@ The following output properties are available:
             <td class="align-top">Cluster<wbr>Configs</td>
             <td class="align-top">
                 
-                <code><a href="#getdomainclusterconfig">List&lt;Pulumi.<wbr>Aws.<wbr>Elasticsearch.<wbr>Get<wbr>Domain<wbr>Cluster<wbr>Config&gt;</a></code>
+                <code><a href="#getdomainclusterconfig">List&lt;Get<wbr>Domain<wbr>Cluster<wbr>Config&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} Cluster configuration of the domain.
  {{% /md %}}
@@ -330,7 +335,7 @@ The following output properties are available:
             <td class="align-top">Cognito<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#getdomaincognitooption">List&lt;Pulumi.<wbr>Aws.<wbr>Elasticsearch.<wbr>Get<wbr>Domain<wbr>Cognito<wbr>Option&gt;</a></code>
+                <code><a href="#getdomaincognitooption">List&lt;Get<wbr>Domain<wbr>Cognito<wbr>Option&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} Domain Amazon Cognito Authentication options for Kibana.
  {{% /md %}}
@@ -394,7 +399,7 @@ The following output properties are available:
             <td class="align-top">Ebs<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#getdomainebsoption">List&lt;Pulumi.<wbr>Aws.<wbr>Elasticsearch.<wbr>Get<wbr>Domain<wbr>Ebs<wbr>Option&gt;</a></code>
+                <code><a href="#getdomainebsoption">List&lt;Get<wbr>Domain<wbr>Ebs<wbr>Option&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} EBS Options for the instances in the domain.
  {{% /md %}}
@@ -420,7 +425,7 @@ The following output properties are available:
             <td class="align-top">Encryption<wbr>At<wbr>Rests</td>
             <td class="align-top">
                 
-                <code><a href="#getdomainencryptionatrest">List&lt;Pulumi.<wbr>Aws.<wbr>Elasticsearch.<wbr>Get<wbr>Domain<wbr>Encryption<wbr>At<wbr>Rest&gt;</a></code>
+                <code><a href="#getdomainencryptionatrest">List&lt;Get<wbr>Domain<wbr>Encryption<wbr>At<wbr>Rest&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} Domain encryption at rest related options.
  {{% /md %}}
@@ -472,7 +477,7 @@ The following output properties are available:
             <td class="align-top">Log<wbr>Publishing<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#getdomainlogpublishingoption">List&lt;Pulumi.<wbr>Aws.<wbr>Elasticsearch.<wbr>Get<wbr>Domain<wbr>Log<wbr>Publishing<wbr>Option&gt;</a></code>
+                <code><a href="#getdomainlogpublishingoption">List&lt;Get<wbr>Domain<wbr>Log<wbr>Publishing<wbr>Option&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} Domain log publishing related options.
  {{% /md %}}
@@ -485,7 +490,7 @@ The following output properties are available:
             <td class="align-top">Node<wbr>To<wbr>Node<wbr>Encryptions</td>
             <td class="align-top">
                 
-                <code><a href="#getdomainnodetonodeencryption">List&lt;Pulumi.<wbr>Aws.<wbr>Elasticsearch.<wbr>Get<wbr>Domain<wbr>Node<wbr>To<wbr>Node<wbr>Encryption&gt;</a></code>
+                <code><a href="#getdomainnodetonodeencryption">List&lt;Get<wbr>Domain<wbr>Node<wbr>To<wbr>Node<wbr>Encryption&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} Domain in transit encryption related options.
  {{% /md %}}
@@ -512,7 +517,7 @@ The following output properties are available:
             <td class="align-top">Snapshot<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#getdomainsnapshotoption">List&lt;Pulumi.<wbr>Aws.<wbr>Elasticsearch.<wbr>Get<wbr>Domain<wbr>Snapshot<wbr>Option&gt;</a></code>
+                <code><a href="#getdomainsnapshotoption">List&lt;Get<wbr>Domain<wbr>Snapshot<wbr>Option&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -524,7 +529,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;</code>
+                <code>Dictionary<string, object></code>
             </td>
             <td class="align-top">{{% md %}} The tags assigned to the domain.
  {{% /md %}}
@@ -537,7 +542,7 @@ The following output properties are available:
             <td class="align-top">Vpc<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#getdomainvpcoption">List&lt;Pulumi.<wbr>Aws.<wbr>Elasticsearch.<wbr>Get<wbr>Domain<wbr>Vpc<wbr>Option&gt;</a></code>
+                <code><a href="#getdomainvpcoption">List&lt;Get<wbr>Domain<wbr>Vpc<wbr>Option&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} VPC Options for private Elasticsearch domains.
  {{% /md %}}
@@ -609,7 +614,7 @@ The following output properties are available:
             <td class="align-top">Cluster<wbr>Configs</td>
             <td class="align-top">
                 
-                <code><a href="#getdomainclusterconfig">[]elasticsearch.<wbr>Get<wbr>Domain<wbr>Cluster<wbr>Config</a></code>
+                <code><a href="#getdomainclusterconfig">[]Get<wbr>Domain<wbr>Cluster<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} Cluster configuration of the domain.
  {{% /md %}}
@@ -622,7 +627,7 @@ The following output properties are available:
             <td class="align-top">Cognito<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#getdomaincognitooption">[]elasticsearch.<wbr>Get<wbr>Domain<wbr>Cognito<wbr>Option</a></code>
+                <code><a href="#getdomaincognitooption">[]Get<wbr>Domain<wbr>Cognito<wbr>Option</a></code>
             </td>
             <td class="align-top">{{% md %}} Domain Amazon Cognito Authentication options for Kibana.
  {{% /md %}}
@@ -686,7 +691,7 @@ The following output properties are available:
             <td class="align-top">Ebs<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#getdomainebsoption">[]elasticsearch.<wbr>Get<wbr>Domain<wbr>Ebs<wbr>Option</a></code>
+                <code><a href="#getdomainebsoption">[]Get<wbr>Domain<wbr>Ebs<wbr>Option</a></code>
             </td>
             <td class="align-top">{{% md %}} EBS Options for the instances in the domain.
  {{% /md %}}
@@ -712,7 +717,7 @@ The following output properties are available:
             <td class="align-top">Encryption<wbr>At<wbr>Rests</td>
             <td class="align-top">
                 
-                <code><a href="#getdomainencryptionatrest">[]elasticsearch.<wbr>Get<wbr>Domain<wbr>Encryption<wbr>At<wbr>Rest</a></code>
+                <code><a href="#getdomainencryptionatrest">[]Get<wbr>Domain<wbr>Encryption<wbr>At<wbr>Rest</a></code>
             </td>
             <td class="align-top">{{% md %}} Domain encryption at rest related options.
  {{% /md %}}
@@ -764,7 +769,7 @@ The following output properties are available:
             <td class="align-top">Log<wbr>Publishing<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#getdomainlogpublishingoption">[]elasticsearch.<wbr>Get<wbr>Domain<wbr>Log<wbr>Publishing<wbr>Option</a></code>
+                <code><a href="#getdomainlogpublishingoption">[]Get<wbr>Domain<wbr>Log<wbr>Publishing<wbr>Option</a></code>
             </td>
             <td class="align-top">{{% md %}} Domain log publishing related options.
  {{% /md %}}
@@ -777,7 +782,7 @@ The following output properties are available:
             <td class="align-top">Node<wbr>To<wbr>Node<wbr>Encryptions</td>
             <td class="align-top">
                 
-                <code><a href="#getdomainnodetonodeencryption">[]elasticsearch.<wbr>Get<wbr>Domain<wbr>Node<wbr>To<wbr>Node<wbr>Encryption</a></code>
+                <code><a href="#getdomainnodetonodeencryption">[]Get<wbr>Domain<wbr>Node<wbr>To<wbr>Node<wbr>Encryption</a></code>
             </td>
             <td class="align-top">{{% md %}} Domain in transit encryption related options.
  {{% /md %}}
@@ -804,7 +809,7 @@ The following output properties are available:
             <td class="align-top">Snapshot<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#getdomainsnapshotoption">[]elasticsearch.<wbr>Get<wbr>Domain<wbr>Snapshot<wbr>Option</a></code>
+                <code><a href="#getdomainsnapshotoption">[]Get<wbr>Domain<wbr>Snapshot<wbr>Option</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -829,7 +834,7 @@ The following output properties are available:
             <td class="align-top">Vpc<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#getdomainvpcoption">[]elasticsearch.<wbr>Get<wbr>Domain<wbr>Vpc<wbr>Option</a></code>
+                <code><a href="#getdomainvpcoption">[]Get<wbr>Domain<wbr>Vpc<wbr>Option</a></code>
             </td>
             <td class="align-top">{{% md %}} VPC Options for private Elasticsearch domains.
  {{% /md %}}
@@ -901,7 +906,7 @@ The following output properties are available:
             <td class="align-top">cluster<wbr>Configs</td>
             <td class="align-top">
                 
-                <code><a href="#getdomainclusterconfig">elasticsearch.<wbr>Get<wbr>Domain<wbr>Cluster<wbr>Config[]</a></code>
+                <code><a href="#getdomainclusterconfig">Get<wbr>Domain<wbr>Cluster<wbr>Config[]</a></code>
             </td>
             <td class="align-top">{{% md %}} Cluster configuration of the domain.
  {{% /md %}}
@@ -914,7 +919,7 @@ The following output properties are available:
             <td class="align-top">cognito<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#getdomaincognitooption">elasticsearch.<wbr>Get<wbr>Domain<wbr>Cognito<wbr>Option[]</a></code>
+                <code><a href="#getdomaincognitooption">Get<wbr>Domain<wbr>Cognito<wbr>Option[]</a></code>
             </td>
             <td class="align-top">{{% md %}} Domain Amazon Cognito Authentication options for Kibana.
  {{% /md %}}
@@ -978,7 +983,7 @@ The following output properties are available:
             <td class="align-top">ebs<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#getdomainebsoption">elasticsearch.<wbr>Get<wbr>Domain<wbr>Ebs<wbr>Option[]</a></code>
+                <code><a href="#getdomainebsoption">Get<wbr>Domain<wbr>Ebs<wbr>Option[]</a></code>
             </td>
             <td class="align-top">{{% md %}} EBS Options for the instances in the domain.
  {{% /md %}}
@@ -1004,7 +1009,7 @@ The following output properties are available:
             <td class="align-top">encryption<wbr>At<wbr>Rests</td>
             <td class="align-top">
                 
-                <code><a href="#getdomainencryptionatrest">elasticsearch.<wbr>Get<wbr>Domain<wbr>Encryption<wbr>At<wbr>Rest[]</a></code>
+                <code><a href="#getdomainencryptionatrest">Get<wbr>Domain<wbr>Encryption<wbr>At<wbr>Rest[]</a></code>
             </td>
             <td class="align-top">{{% md %}} Domain encryption at rest related options.
  {{% /md %}}
@@ -1056,7 +1061,7 @@ The following output properties are available:
             <td class="align-top">log<wbr>Publishing<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#getdomainlogpublishingoption">elasticsearch.<wbr>Get<wbr>Domain<wbr>Log<wbr>Publishing<wbr>Option[]</a></code>
+                <code><a href="#getdomainlogpublishingoption">Get<wbr>Domain<wbr>Log<wbr>Publishing<wbr>Option[]</a></code>
             </td>
             <td class="align-top">{{% md %}} Domain log publishing related options.
  {{% /md %}}
@@ -1069,7 +1074,7 @@ The following output properties are available:
             <td class="align-top">node<wbr>To<wbr>Node<wbr>Encryptions</td>
             <td class="align-top">
                 
-                <code><a href="#getdomainnodetonodeencryption">elasticsearch.<wbr>Get<wbr>Domain<wbr>Node<wbr>To<wbr>Node<wbr>Encryption[]</a></code>
+                <code><a href="#getdomainnodetonodeencryption">Get<wbr>Domain<wbr>Node<wbr>To<wbr>Node<wbr>Encryption[]</a></code>
             </td>
             <td class="align-top">{{% md %}} Domain in transit encryption related options.
  {{% /md %}}
@@ -1096,7 +1101,7 @@ The following output properties are available:
             <td class="align-top">snapshot<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#getdomainsnapshotoption">elasticsearch.<wbr>Get<wbr>Domain<wbr>Snapshot<wbr>Option[]</a></code>
+                <code><a href="#getdomainsnapshotoption">Get<wbr>Domain<wbr>Snapshot<wbr>Option[]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1121,7 +1126,7 @@ The following output properties are available:
             <td class="align-top">vpc<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#getdomainvpcoption">elasticsearch.<wbr>Get<wbr>Domain<wbr>Vpc<wbr>Option[]</a></code>
+                <code><a href="#getdomainvpcoption">Get<wbr>Domain<wbr>Vpc<wbr>Option[]</a></code>
             </td>
             <td class="align-top">{{% md %}} VPC Options for private Elasticsearch domains.
  {{% /md %}}
@@ -1547,7 +1552,7 @@ Instance type of data nodes in the cluster.
             <td class="align-top">Zone<wbr>Awareness<wbr>Configs</td>
             <td class="align-top">
                 
-                <code><a href="#getdomainclusterconfigzoneawarenessconfig">List&lt;Pulumi.<wbr>Aws.<wbr>Elasticsearch.<wbr>Get<wbr>Domain<wbr>Cluster<wbr>Config<wbr>Zone<wbr>Awareness<wbr>Config<wbr>Args&gt;</a></code>
+                <code><a href="#getdomainclusterconfigzoneawarenessconfig">List&lt;Get<wbr>Domain<wbr>Cluster<wbr>Config<wbr>Zone<wbr>Awareness<wbr>Config<wbr>Args&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1672,7 +1677,7 @@ Instance type of data nodes in the cluster.
             <td class="align-top">Zone<wbr>Awareness<wbr>Configs</td>
             <td class="align-top">
                 
-                <code><a href="#getdomainclusterconfigzoneawarenessconfig">[]elasticsearch.<wbr>Get<wbr>Domain<wbr>Cluster<wbr>Config<wbr>Zone<wbr>Awareness<wbr>Config</a></code>
+                <code><a href="#getdomainclusterconfigzoneawarenessconfig">[]Get<wbr>Domain<wbr>Cluster<wbr>Config<wbr>Zone<wbr>Awareness<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1797,7 +1802,7 @@ Instance type of data nodes in the cluster.
             <td class="align-top">zone<wbr>Awareness<wbr>Configs</td>
             <td class="align-top">
                 
-                <code><a href="#getdomainclusterconfigzoneawarenessconfig">elasticsearch.<wbr>Get<wbr>Domain<wbr>Cluster<wbr>Config<wbr>Zone<wbr>Awareness<wbr>Config[]</a></code>
+                <code><a href="#getdomainclusterconfigzoneawarenessconfig">Get<wbr>Domain<wbr>Cluster<wbr>Config<wbr>Zone<wbr>Awareness<wbr>Config[]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -3668,7 +3673,7 @@ snapshot of the indices in the domain.
             <td class="align-top">Availability<wbr>Zones</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -3683,7 +3688,7 @@ The availability zones used by the domain.
             <td class="align-top">Security<wbr>Group<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -3698,7 +3703,7 @@ The security groups used by the domain.
             <td class="align-top">Subnet<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

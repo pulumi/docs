@@ -319,7 +319,7 @@ The following output properties are available:
             <td class="align-top">Availability<wbr>Zones</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} List of EC2 Availability Zones that instances in the DB cluster snapshot can be restored in.
  {{% /md %}}
@@ -1232,7 +1232,7 @@ Specifies the allocated storage size in gigabytes (GB).
             <td class="align-top">Availability<wbr>Zones</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

@@ -158,7 +158,7 @@ A JSON string for supplying list of configurations specific to the EMR instance 
             <td class="align-top">Ebs<wbr>Configs</td>
             <td class="align-top">
                 
-                <code><a href="#instancegroupebsconfig">List&lt;Pulumi.<wbr>Aws.<wbr>Emr.<wbr>Instance<wbr>Group<wbr>Ebs<wbr>Config<wbr>Args&gt;?</a></code>
+                <code><a href="#instancegroupebsconfig">List&lt;Instance<wbr>Group<wbr>Ebs<wbr>Config<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -313,7 +313,7 @@ A JSON string for supplying list of configurations specific to the EMR instance 
             <td class="align-top">Ebs<wbr>Configs</td>
             <td class="align-top">
                 
-                <code><a href="#instancegroupebsconfig">[]emr.<wbr>Instance<wbr>Group<wbr>Ebs<wbr>Config</a></code>
+                <code><a href="#instancegroupebsconfig">[]Instance<wbr>Group<wbr>Ebs<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -468,7 +468,7 @@ A JSON string for supplying list of configurations specific to the EMR instance 
             <td class="align-top">ebs<wbr>Configs</td>
             <td class="align-top">
                 
-                <code><a href="#instancegroupebsconfig">emr.<wbr>Instance<wbr>Group<wbr>Ebs<wbr>Config[]?</a></code>
+                <code><a href="#instancegroupebsconfig">Instance<wbr>Group<wbr>Ebs<wbr>Config[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -784,7 +784,7 @@ The following output properties are available:
             <td class="align-top">Ebs<wbr>Configs</td>
             <td class="align-top">
                 
-                <code><a href="#instancegroupebsconfig">List&lt;Pulumi.<wbr>Aws.<wbr>Emr.<wbr>Instance<wbr>Group<wbr>Ebs<wbr>Config&gt;</a></code>
+                <code><a href="#instancegroupebsconfig">List&lt;Instance<wbr>Group<wbr>Ebs<wbr>Config&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} One or more `ebs_config` blocks as defined below. Changing this forces a new resource to be created.
  {{% /md %}}
@@ -945,7 +945,7 @@ The following output properties are available:
             <td class="align-top">Ebs<wbr>Configs</td>
             <td class="align-top">
                 
-                <code><a href="#instancegroupebsconfig">[]emr.<wbr>Instance<wbr>Group<wbr>Ebs<wbr>Config</a></code>
+                <code><a href="#instancegroupebsconfig">[]Instance<wbr>Group<wbr>Ebs<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} One or more `ebs_config` blocks as defined below. Changing this forces a new resource to be created.
  {{% /md %}}
@@ -1106,7 +1106,7 @@ The following output properties are available:
             <td class="align-top">ebs<wbr>Configs</td>
             <td class="align-top">
                 
-                <code><a href="#instancegroupebsconfig">emr.<wbr>Instance<wbr>Group<wbr>Ebs<wbr>Config[]</a></code>
+                <code><a href="#instancegroupebsconfig">Instance<wbr>Group<wbr>Ebs<wbr>Config[]</a></code>
             </td>
             <td class="align-top">{{% md %}} One or more `ebs_config` blocks as defined below. Changing this forces a new resource to be created.
  {{% /md %}}
@@ -1495,7 +1495,7 @@ A JSON string for supplying list of configurations specific to the EMR instance 
             <td class="align-top">Ebs<wbr>Configs</td>
             <td class="align-top">
                 
-                <code><a href="#instancegroupebsconfig">List&lt;Pulumi.<wbr>Aws.<wbr>Emr.<wbr>Instance<wbr>Group<wbr>Ebs<wbr>Config<wbr>Args&gt;?</a></code>
+                <code><a href="#instancegroupebsconfig">List&lt;Instance<wbr>Group<wbr>Ebs<wbr>Config<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1678,7 +1678,7 @@ A JSON string for supplying list of configurations specific to the EMR instance 
             <td class="align-top">Ebs<wbr>Configs</td>
             <td class="align-top">
                 
-                <code><a href="#instancegroupebsconfig">[]emr.<wbr>Instance<wbr>Group<wbr>Ebs<wbr>Config</a></code>
+                <code><a href="#instancegroupebsconfig">[]Instance<wbr>Group<wbr>Ebs<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1861,7 +1861,7 @@ A JSON string for supplying list of configurations specific to the EMR instance 
             <td class="align-top">ebs<wbr>Configs</td>
             <td class="align-top">
                 
-                <code><a href="#instancegroupebsconfig">emr.<wbr>Instance<wbr>Group<wbr>Ebs<wbr>Config[]?</a></code>
+                <code><a href="#instancegroupebsconfig">Instance<wbr>Group<wbr>Ebs<wbr>Config[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

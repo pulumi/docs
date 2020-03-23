@@ -108,7 +108,7 @@ The following arguments are supported:
             <td class="align-top">Groups</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -322,7 +322,7 @@ The following output properties are available:
             <td class="align-top">Groups</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} A list of [IAM Groups][1] to add the user to
  {{% /md %}}
@@ -565,7 +565,7 @@ The following state arguments are supported:
             <td class="align-top">Groups</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

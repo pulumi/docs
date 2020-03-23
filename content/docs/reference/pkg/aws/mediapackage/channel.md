@@ -122,7 +122,7 @@ A description of the channel
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -405,7 +405,7 @@ The following output properties are available:
             <td class="align-top">Hls<wbr>Ingests</td>
             <td class="align-top">
                 
-                <code><a href="#channelhlsingest">List&lt;Pulumi.<wbr>Aws.<wbr>Mediapackage.<wbr>Channel<wbr>Hls<wbr>Ingest&gt;</a></code>
+                <code><a href="#channelhlsingest">List&lt;Channel<wbr>Hls<wbr>Ingest&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} A single item list of HLS ingest information
  {{% /md %}}
@@ -418,7 +418,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -490,7 +490,7 @@ The following output properties are available:
             <td class="align-top">Hls<wbr>Ingests</td>
             <td class="align-top">
                 
-                <code><a href="#channelhlsingest">[]mediapackage.<wbr>Channel<wbr>Hls<wbr>Ingest</a></code>
+                <code><a href="#channelhlsingest">[]Channel<wbr>Hls<wbr>Ingest</a></code>
             </td>
             <td class="align-top">{{% md %}} A single item list of HLS ingest information
  {{% /md %}}
@@ -575,7 +575,7 @@ The following output properties are available:
             <td class="align-top">hls<wbr>Ingests</td>
             <td class="align-top">
                 
-                <code><a href="#channelhlsingest">mediapackage.<wbr>Channel<wbr>Hls<wbr>Ingest[]</a></code>
+                <code><a href="#channelhlsingest">Channel<wbr>Hls<wbr>Ingest[]</a></code>
             </td>
             <td class="align-top">{{% md %}} A single item list of HLS ingest information
  {{% /md %}}
@@ -810,7 +810,7 @@ A description of the channel
             <td class="align-top">Hls<wbr>Ingests</td>
             <td class="align-top">
                 
-                <code><a href="#channelhlsingest">List&lt;Pulumi.<wbr>Aws.<wbr>Mediapackage.<wbr>Channel<wbr>Hls<wbr>Ingest<wbr>Args&gt;?</a></code>
+                <code><a href="#channelhlsingest">List&lt;Channel<wbr>Hls<wbr>Ingest<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -825,7 +825,7 @@ A single item list of HLS ingest information
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -905,7 +905,7 @@ A description of the channel
             <td class="align-top">Hls<wbr>Ingests</td>
             <td class="align-top">
                 
-                <code><a href="#channelhlsingest">[]mediapackage.<wbr>Channel<wbr>Hls<wbr>Ingest</a></code>
+                <code><a href="#channelhlsingest">[]Channel<wbr>Hls<wbr>Ingest</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1000,7 +1000,7 @@ A description of the channel
             <td class="align-top">hls<wbr>Ingests</td>
             <td class="align-top">
                 
-                <code><a href="#channelhlsingest">mediapackage.<wbr>Channel<wbr>Hls<wbr>Ingest[]?</a></code>
+                <code><a href="#channelhlsingest">Channel<wbr>Hls<wbr>Ingest[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1173,7 +1173,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">Ingest<wbr>Endpoints</td>
             <td class="align-top">
                 
-                <code><a href="#channelhlsingestingestendpoint">List&lt;Pulumi.<wbr>Aws.<wbr>Mediapackage.<wbr>Channel<wbr>Hls<wbr>Ingest<wbr>Ingest<wbr>Endpoint<wbr>Args&gt;?</a></code>
+                <code><a href="#channelhlsingestingestendpoint">List&lt;Channel<wbr>Hls<wbr>Ingest<wbr>Ingest<wbr>Endpoint<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1208,7 +1208,7 @@ A list of the ingest endpoints
             <td class="align-top">Ingest<wbr>Endpoints</td>
             <td class="align-top">
                 
-                <code><a href="#channelhlsingestingestendpoint">[]mediapackage.<wbr>Channel<wbr>Hls<wbr>Ingest<wbr>Ingest<wbr>Endpoint</a></code>
+                <code><a href="#channelhlsingestingestendpoint">[]Channel<wbr>Hls<wbr>Ingest<wbr>Ingest<wbr>Endpoint</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1243,7 +1243,7 @@ A list of the ingest endpoints
             <td class="align-top">ingest<wbr>Endpoints</td>
             <td class="align-top">
                 
-                <code><a href="#channelhlsingestingestendpoint">mediapackage.<wbr>Channel<wbr>Hls<wbr>Ingest<wbr>Ingest<wbr>Endpoint[]?</a></code>
+                <code><a href="#channelhlsingestingestendpoint">Channel<wbr>Hls<wbr>Ingest<wbr>Ingest<wbr>Endpoint[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

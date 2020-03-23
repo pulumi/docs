@@ -251,7 +251,7 @@ The ARN of the policy that is used to set the permissions boundary for the role.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -442,7 +442,7 @@ Key-value mapping of tags for the IAM role
             <td class="align-top">assume<wbr>Role<wbr>Policy</td>
             <td class="align-top">
                 
-                <code>string | Policy<wbr>Document</code>
+                <code>string | PolicyDocument</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -899,7 +899,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} Key-value mapping of tags for the IAM role
  {{% /md %}}
@@ -1686,7 +1686,7 @@ The ARN of the policy that is used to set the permissions boundary for the role.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1952,7 +1952,7 @@ The Amazon Resource Name (ARN) specifying the role.
             <td class="align-top">assume<wbr>Role<wbr>Policy</td>
             <td class="align-top">
                 
-                <code>string | Policy<wbr>Document</code>
+                <code>string | PolicyDocument</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

@@ -172,7 +172,7 @@ The following arguments are supported:
             <td class="align-top">Egress</td>
             <td class="align-top">
                 
-                <code><a href="#defaultsecuritygroupegress">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Default<wbr>Security<wbr>Group<wbr>Egress<wbr>Args&gt;?</a></code>
+                <code><a href="#defaultsecuritygroupegress">List&lt;Default<wbr>Security<wbr>Group<wbr>Egress<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -188,7 +188,7 @@ egress rule. Each egress block supports fields documented below.
             <td class="align-top">Ingress</td>
             <td class="align-top">
                 
-                <code><a href="#defaultsecuritygroupingress">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Default<wbr>Security<wbr>Group<wbr>Ingress<wbr>Args&gt;?</a></code>
+                <code><a href="#defaultsecuritygroupingress">List&lt;Default<wbr>Security<wbr>Group<wbr>Ingress<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -218,7 +218,7 @@ ingress rule. Each ingress block supports fields documented below.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -270,7 +270,7 @@ modified, added, or removed.** It will be left in its current state
             <td class="align-top">Egress</td>
             <td class="align-top">
                 
-                <code><a href="#defaultsecuritygroupegress">[]ec2.<wbr>Default<wbr>Security<wbr>Group<wbr>Egress</a></code>
+                <code><a href="#defaultsecuritygroupegress">[]Default<wbr>Security<wbr>Group<wbr>Egress</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -286,7 +286,7 @@ egress rule. Each egress block supports fields documented below.
             <td class="align-top">Ingress</td>
             <td class="align-top">
                 
-                <code><a href="#defaultsecuritygroupingress">[]ec2.<wbr>Default<wbr>Security<wbr>Group<wbr>Ingress</a></code>
+                <code><a href="#defaultsecuritygroupingress">[]Default<wbr>Security<wbr>Group<wbr>Ingress</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -368,7 +368,7 @@ modified, added, or removed.** It will be left in its current state
             <td class="align-top">egress</td>
             <td class="align-top">
                 
-                <code><a href="#defaultsecuritygroupegress">ec2.<wbr>Default<wbr>Security<wbr>Group<wbr>Egress[]?</a></code>
+                <code><a href="#defaultsecuritygroupegress">Default<wbr>Security<wbr>Group<wbr>Egress[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -384,7 +384,7 @@ egress rule. Each egress block supports fields documented below.
             <td class="align-top">ingress</td>
             <td class="align-top">
                 
-                <code><a href="#defaultsecuritygroupingress">ec2.<wbr>Default<wbr>Security<wbr>Group<wbr>Ingress[]?</a></code>
+                <code><a href="#defaultsecuritygroupingress">Default<wbr>Security<wbr>Group<wbr>Ingress[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -603,7 +603,7 @@ The following output properties are available:
             <td class="align-top">Egress</td>
             <td class="align-top">
                 
-                <code><a href="#defaultsecuritygroupegress">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Default<wbr>Security<wbr>Group<wbr>Egress&gt;?</a></code>
+                <code><a href="#defaultsecuritygroupegress">List&lt;Default<wbr>Security<wbr>Group<wbr>Egress&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} Can be specified multiple times for each
 egress rule. Each egress block supports fields documented below.
@@ -617,7 +617,7 @@ egress rule. Each egress block supports fields documented below.
             <td class="align-top">Ingress</td>
             <td class="align-top">
                 
-                <code><a href="#defaultsecuritygroupingress">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Default<wbr>Security<wbr>Group<wbr>Ingress&gt;?</a></code>
+                <code><a href="#defaultsecuritygroupingress">List&lt;Default<wbr>Security<wbr>Group<wbr>Ingress&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} Can be specified multiple times for each
 ingress rule. Each ingress block supports fields documented below.
@@ -669,7 +669,7 @@ ingress rule. Each ingress block supports fields documented below.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -742,7 +742,7 @@ modified, added, or removed.** It will be left in its current state
             <td class="align-top">Egress</td>
             <td class="align-top">
                 
-                <code><a href="#defaultsecuritygroupegress">[]ec2.<wbr>Default<wbr>Security<wbr>Group<wbr>Egress</a></code>
+                <code><a href="#defaultsecuritygroupegress">[]Default<wbr>Security<wbr>Group<wbr>Egress</a></code>
             </td>
             <td class="align-top">{{% md %}} Can be specified multiple times for each
 egress rule. Each egress block supports fields documented below.
@@ -756,7 +756,7 @@ egress rule. Each egress block supports fields documented below.
             <td class="align-top">Ingress</td>
             <td class="align-top">
                 
-                <code><a href="#defaultsecuritygroupingress">[]ec2.<wbr>Default<wbr>Security<wbr>Group<wbr>Ingress</a></code>
+                <code><a href="#defaultsecuritygroupingress">[]Default<wbr>Security<wbr>Group<wbr>Ingress</a></code>
             </td>
             <td class="align-top">{{% md %}} Can be specified multiple times for each
 ingress rule. Each ingress block supports fields documented below.
@@ -881,7 +881,7 @@ modified, added, or removed.** It will be left in its current state
             <td class="align-top">egress</td>
             <td class="align-top">
                 
-                <code><a href="#defaultsecuritygroupegress">ec2.<wbr>Default<wbr>Security<wbr>Group<wbr>Egress[]?</a></code>
+                <code><a href="#defaultsecuritygroupegress">Default<wbr>Security<wbr>Group<wbr>Egress[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} Can be specified multiple times for each
 egress rule. Each egress block supports fields documented below.
@@ -895,7 +895,7 @@ egress rule. Each egress block supports fields documented below.
             <td class="align-top">ingress</td>
             <td class="align-top">
                 
-                <code><a href="#defaultsecuritygroupingress">ec2.<wbr>Default<wbr>Security<wbr>Group<wbr>Ingress[]?</a></code>
+                <code><a href="#defaultsecuritygroupingress">Default<wbr>Security<wbr>Group<wbr>Ingress[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} Can be specified multiple times for each
 ingress rule. Each ingress block supports fields documented below.
@@ -1222,7 +1222,7 @@ The description of the security group
             <td class="align-top">Egress</td>
             <td class="align-top">
                 
-                <code><a href="#defaultsecuritygroupegress">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Default<wbr>Security<wbr>Group<wbr>Egress<wbr>Args&gt;?</a></code>
+                <code><a href="#defaultsecuritygroupegress">List&lt;Default<wbr>Security<wbr>Group<wbr>Egress<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1238,7 +1238,7 @@ egress rule. Each egress block supports fields documented below.
             <td class="align-top">Ingress</td>
             <td class="align-top">
                 
-                <code><a href="#defaultsecuritygroupingress">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Default<wbr>Security<wbr>Group<wbr>Ingress<wbr>Args&gt;?</a></code>
+                <code><a href="#defaultsecuritygroupingress">List&lt;Default<wbr>Security<wbr>Group<wbr>Ingress<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1298,7 +1298,7 @@ The owner ID.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1379,7 +1379,7 @@ The description of the security group
             <td class="align-top">Egress</td>
             <td class="align-top">
                 
-                <code><a href="#defaultsecuritygroupegress">[]ec2.<wbr>Default<wbr>Security<wbr>Group<wbr>Egress</a></code>
+                <code><a href="#defaultsecuritygroupegress">[]Default<wbr>Security<wbr>Group<wbr>Egress</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1395,7 +1395,7 @@ egress rule. Each egress block supports fields documented below.
             <td class="align-top">Ingress</td>
             <td class="align-top">
                 
-                <code><a href="#defaultsecuritygroupingress">[]ec2.<wbr>Default<wbr>Security<wbr>Group<wbr>Ingress</a></code>
+                <code><a href="#defaultsecuritygroupingress">[]Default<wbr>Security<wbr>Group<wbr>Ingress</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1536,7 +1536,7 @@ The description of the security group
             <td class="align-top">egress</td>
             <td class="align-top">
                 
-                <code><a href="#defaultsecuritygroupegress">ec2.<wbr>Default<wbr>Security<wbr>Group<wbr>Egress[]?</a></code>
+                <code><a href="#defaultsecuritygroupegress">Default<wbr>Security<wbr>Group<wbr>Egress[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1552,7 +1552,7 @@ egress rule. Each egress block supports fields documented below.
             <td class="align-top">ingress</td>
             <td class="align-top">
                 
-                <code><a href="#defaultsecuritygroupingress">ec2.<wbr>Default<wbr>Security<wbr>Group<wbr>Ingress[]?</a></code>
+                <code><a href="#defaultsecuritygroupingress">Default<wbr>Security<wbr>Group<wbr>Ingress[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1849,7 +1849,7 @@ modified, added, or removed.** It will be left in its current state
             <td class="align-top">Cidr<wbr>Blocks</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1892,7 +1892,7 @@ The description of the security group
             <td class="align-top">Ipv6Cidr<wbr>Blocks</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1906,7 +1906,7 @@ The description of the security group
             <td class="align-top">Prefix<wbr>List<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1934,7 +1934,7 @@ The description of the security group
             <td class="align-top">Security<wbr>Groups</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2458,7 +2458,7 @@ The description of the security group
             <td class="align-top">Cidr<wbr>Blocks</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2501,7 +2501,7 @@ The description of the security group
             <td class="align-top">Ipv6Cidr<wbr>Blocks</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2515,7 +2515,7 @@ The description of the security group
             <td class="align-top">Prefix<wbr>List<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2543,7 +2543,7 @@ The description of the security group
             <td class="align-top">Security<wbr>Groups</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

@@ -97,7 +97,7 @@ The following arguments are supported:
             <td class="align-top">Agent<wbr>Arns</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -127,7 +127,7 @@ The name of the Windows domain the SMB server belongs to.
             <td class="align-top">Mount<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#locationsmbmountoptions">Pulumi.<wbr>Aws.<wbr>Datasync.<wbr>Location<wbr>Smb<wbr>Mount<wbr>Options<wbr>Args?</a></code>
+                <code><a href="#locationsmbmountoptions">Location<wbr>Smb<wbr>Mount<wbr>Options<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -187,7 +187,7 @@ Subdirectory to perform actions as source or destination. Should be exported by 
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -267,7 +267,7 @@ The name of the Windows domain the SMB server belongs to.
             <td class="align-top">Mount<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#locationsmbmountoptions">*datasync.<wbr>Location<wbr>Smb<wbr>Mount<wbr>Options</a></code>
+                <code><a href="#locationsmbmountoptions">*Location<wbr>Smb<wbr>Mount<wbr>Options</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -407,7 +407,7 @@ The name of the Windows domain the SMB server belongs to.
             <td class="align-top">mount<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#locationsmbmountoptions">datasync.<wbr>Location<wbr>Smb<wbr>Mount<wbr>Options?</a></code>
+                <code><a href="#locationsmbmountoptions">Location<wbr>Smb<wbr>Mount<wbr>Options?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -671,7 +671,7 @@ The following output properties are available:
             <td class="align-top">Agent<wbr>Arns</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} A list of DataSync Agent ARNs with which this location will be associated.
  {{% /md %}}
@@ -710,7 +710,7 @@ The following output properties are available:
             <td class="align-top">Mount<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#locationsmbmountoptions">Pulumi.<wbr>Aws.<wbr>Datasync.<wbr>Location<wbr>Smb<wbr>Mount<wbr>Options?</a></code>
+                <code><a href="#locationsmbmountoptions">Location<wbr>Smb<wbr>Mount<wbr>Options?</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block containing mount options used by DataSync to access the SMB Server. Can be `AUTOMATIC`, `SMB2`, or `SMB3`.
  {{% /md %}}
@@ -762,7 +762,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} Key-value pairs of resource tags to assign to the DataSync Location.
  {{% /md %}}
@@ -859,7 +859,7 @@ The following output properties are available:
             <td class="align-top">Mount<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#locationsmbmountoptions">*datasync.<wbr>Location<wbr>Smb<wbr>Mount<wbr>Options</a></code>
+                <code><a href="#locationsmbmountoptions">*Location<wbr>Smb<wbr>Mount<wbr>Options</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block containing mount options used by DataSync to access the SMB Server. Can be `AUTOMATIC`, `SMB2`, or `SMB3`.
  {{% /md %}}
@@ -1008,7 +1008,7 @@ The following output properties are available:
             <td class="align-top">mount<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#locationsmbmountoptions">datasync.<wbr>Location<wbr>Smb<wbr>Mount<wbr>Options?</a></code>
+                <code><a href="#locationsmbmountoptions">Location<wbr>Smb<wbr>Mount<wbr>Options?</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block containing mount options used by DataSync to access the SMB Server. Can be `AUTOMATIC`, `SMB2`, or `SMB3`.
  {{% /md %}}
@@ -1326,7 +1326,7 @@ The following state arguments are supported:
             <td class="align-top">Agent<wbr>Arns</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1371,7 +1371,7 @@ The name of the Windows domain the SMB server belongs to.
             <td class="align-top">Mount<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#locationsmbmountoptions">Pulumi.<wbr>Aws.<wbr>Datasync.<wbr>Location<wbr>Smb<wbr>Mount<wbr>Options<wbr>Args?</a></code>
+                <code><a href="#locationsmbmountoptions">Location<wbr>Smb<wbr>Mount<wbr>Options<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1431,7 +1431,7 @@ Subdirectory to perform actions as source or destination. Should be exported by 
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1540,7 +1540,7 @@ The name of the Windows domain the SMB server belongs to.
             <td class="align-top">Mount<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#locationsmbmountoptions">*datasync.<wbr>Location<wbr>Smb<wbr>Mount<wbr>Options</a></code>
+                <code><a href="#locationsmbmountoptions">*Location<wbr>Smb<wbr>Mount<wbr>Options</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1709,7 +1709,7 @@ The name of the Windows domain the SMB server belongs to.
             <td class="align-top">mount<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#locationsmbmountoptions">datasync.<wbr>Location<wbr>Smb<wbr>Mount<wbr>Options?</a></code>
+                <code><a href="#locationsmbmountoptions">Location<wbr>Smb<wbr>Mount<wbr>Options?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

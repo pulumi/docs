@@ -187,7 +187,7 @@ The following arguments are supported:
             <td class="align-top">Actions</td>
             <td class="align-top">
                 
-                <code><a href="#listenerruleaction">List&lt;Pulumi.<wbr>Aws.<wbr>Elasticloadbalancingv2.<wbr>Listener<wbr>Rule<wbr>Action<wbr>Args&gt;</a></code>
+                <code><a href="#listenerruleaction">List&lt;Listener<wbr>Rule<wbr>Action<wbr>Args&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -202,7 +202,7 @@ An Action block. Action blocks are documented below.
             <td class="align-top">Conditions</td>
             <td class="align-top">
                 
-                <code><a href="#listenerrulecondition">List&lt;Pulumi.<wbr>Aws.<wbr>Elasticloadbalancingv2.<wbr>Listener<wbr>Rule<wbr>Condition<wbr>Args&gt;</a></code>
+                <code><a href="#listenerrulecondition">List&lt;Listener<wbr>Rule<wbr>Condition<wbr>Args&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -267,7 +267,7 @@ The priority for the rule between `1` and `50000`. Leaving it unset will automat
             <td class="align-top">Actions</td>
             <td class="align-top">
                 
-                <code><a href="#listenerruleaction">[]elasticloadbalancingv2.<wbr>Listener<wbr>Rule<wbr>Action</a></code>
+                <code><a href="#listenerruleaction">[]Listener<wbr>Rule<wbr>Action</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -282,7 +282,7 @@ An Action block. Action blocks are documented below.
             <td class="align-top">Conditions</td>
             <td class="align-top">
                 
-                <code><a href="#listenerrulecondition">[]elasticloadbalancingv2.<wbr>Listener<wbr>Rule<wbr>Condition</a></code>
+                <code><a href="#listenerrulecondition">[]Listener<wbr>Rule<wbr>Condition</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -347,7 +347,7 @@ The priority for the rule between `1` and `50000`. Leaving it unset will automat
             <td class="align-top">actions</td>
             <td class="align-top">
                 
-                <code><a href="#listenerruleaction">elasticloadbalancingv2.<wbr>Listener<wbr>Rule<wbr>Action[]</a></code>
+                <code><a href="#listenerruleaction">Listener<wbr>Rule<wbr>Action[]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -362,7 +362,7 @@ An Action block. Action blocks are documented below.
             <td class="align-top">conditions</td>
             <td class="align-top">
                 
-                <code><a href="#listenerrulecondition">elasticloadbalancingv2.<wbr>Listener<wbr>Rule<wbr>Condition[]</a></code>
+                <code><a href="#listenerrulecondition">Listener<wbr>Rule<wbr>Condition[]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -521,7 +521,7 @@ The following output properties are available:
             <td class="align-top">Actions</td>
             <td class="align-top">
                 
-                <code><a href="#listenerruleaction">List&lt;Pulumi.<wbr>Aws.<wbr>Elasticloadbalancingv2.<wbr>Listener<wbr>Rule<wbr>Action&gt;</a></code>
+                <code><a href="#listenerruleaction">List&lt;Listener<wbr>Rule<wbr>Action&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} An Action block. Action blocks are documented below.
  {{% /md %}}
@@ -547,7 +547,7 @@ The following output properties are available:
             <td class="align-top">Conditions</td>
             <td class="align-top">
                 
-                <code><a href="#listenerrulecondition">List&lt;Pulumi.<wbr>Aws.<wbr>Elasticloadbalancingv2.<wbr>Listener<wbr>Rule<wbr>Condition&gt;</a></code>
+                <code><a href="#listenerrulecondition">List&lt;Listener<wbr>Rule<wbr>Condition&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} A Condition block. Multiple condition blocks of different types can be set and all must be satisfied for the rule to match. Condition blocks are documented below.
  {{% /md %}}
@@ -606,7 +606,7 @@ The following output properties are available:
             <td class="align-top">Actions</td>
             <td class="align-top">
                 
-                <code><a href="#listenerruleaction">[]elasticloadbalancingv2.<wbr>Listener<wbr>Rule<wbr>Action</a></code>
+                <code><a href="#listenerruleaction">[]Listener<wbr>Rule<wbr>Action</a></code>
             </td>
             <td class="align-top">{{% md %}} An Action block. Action blocks are documented below.
  {{% /md %}}
@@ -632,7 +632,7 @@ The following output properties are available:
             <td class="align-top">Conditions</td>
             <td class="align-top">
                 
-                <code><a href="#listenerrulecondition">[]elasticloadbalancingv2.<wbr>Listener<wbr>Rule<wbr>Condition</a></code>
+                <code><a href="#listenerrulecondition">[]Listener<wbr>Rule<wbr>Condition</a></code>
             </td>
             <td class="align-top">{{% md %}} A Condition block. Multiple condition blocks of different types can be set and all must be satisfied for the rule to match. Condition blocks are documented below.
  {{% /md %}}
@@ -691,7 +691,7 @@ The following output properties are available:
             <td class="align-top">actions</td>
             <td class="align-top">
                 
-                <code><a href="#listenerruleaction">elasticloadbalancingv2.<wbr>Listener<wbr>Rule<wbr>Action[]</a></code>
+                <code><a href="#listenerruleaction">Listener<wbr>Rule<wbr>Action[]</a></code>
             </td>
             <td class="align-top">{{% md %}} An Action block. Action blocks are documented below.
  {{% /md %}}
@@ -717,7 +717,7 @@ The following output properties are available:
             <td class="align-top">conditions</td>
             <td class="align-top">
                 
-                <code><a href="#listenerrulecondition">elasticloadbalancingv2.<wbr>Listener<wbr>Rule<wbr>Condition[]</a></code>
+                <code><a href="#listenerrulecondition">Listener<wbr>Rule<wbr>Condition[]</a></code>
             </td>
             <td class="align-top">{{% md %}} A Condition block. Multiple condition blocks of different types can be set and all must be satisfied for the rule to match. Condition blocks are documented below.
  {{% /md %}}
@@ -920,7 +920,7 @@ The following state arguments are supported:
             <td class="align-top">Actions</td>
             <td class="align-top">
                 
-                <code><a href="#listenerruleaction">List&lt;Pulumi.<wbr>Aws.<wbr>Elasticloadbalancingv2.<wbr>Listener<wbr>Rule<wbr>Action<wbr>Args&gt;?</a></code>
+                <code><a href="#listenerruleaction">List&lt;Listener<wbr>Rule<wbr>Action<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -950,7 +950,7 @@ The ARN of the rule (matches `id`)
             <td class="align-top">Conditions</td>
             <td class="align-top">
                 
-                <code><a href="#listenerrulecondition">List&lt;Pulumi.<wbr>Aws.<wbr>Elasticloadbalancingv2.<wbr>Listener<wbr>Rule<wbr>Condition<wbr>Args&gt;?</a></code>
+                <code><a href="#listenerrulecondition">List&lt;Listener<wbr>Rule<wbr>Condition<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1015,7 +1015,7 @@ The priority for the rule between `1` and `50000`. Leaving it unset will automat
             <td class="align-top">Actions</td>
             <td class="align-top">
                 
-                <code><a href="#listenerruleaction">[]elasticloadbalancingv2.<wbr>Listener<wbr>Rule<wbr>Action</a></code>
+                <code><a href="#listenerruleaction">[]Listener<wbr>Rule<wbr>Action</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1045,7 +1045,7 @@ The ARN of the rule (matches `id`)
             <td class="align-top">Conditions</td>
             <td class="align-top">
                 
-                <code><a href="#listenerrulecondition">[]elasticloadbalancingv2.<wbr>Listener<wbr>Rule<wbr>Condition</a></code>
+                <code><a href="#listenerrulecondition">[]Listener<wbr>Rule<wbr>Condition</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1110,7 +1110,7 @@ The priority for the rule between `1` and `50000`. Leaving it unset will automat
             <td class="align-top">actions</td>
             <td class="align-top">
                 
-                <code><a href="#listenerruleaction">elasticloadbalancingv2.<wbr>Listener<wbr>Rule<wbr>Action[]?</a></code>
+                <code><a href="#listenerruleaction">Listener<wbr>Rule<wbr>Action[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1140,7 +1140,7 @@ The ARN of the rule (matches `id`)
             <td class="align-top">conditions</td>
             <td class="align-top">
                 
-                <code><a href="#listenerrulecondition">elasticloadbalancingv2.<wbr>Listener<wbr>Rule<wbr>Condition[]?</a></code>
+                <code><a href="#listenerrulecondition">Listener<wbr>Rule<wbr>Condition[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1328,7 +1328,7 @@ The priority for the rule between `1` and `50000`. Leaving it unset will automat
             <td class="align-top">Authenticate<wbr>Cognito</td>
             <td class="align-top">
                 
-                <code><a href="#listenerruleactionauthenticatecognito">Pulumi.<wbr>Aws.<wbr>Elasticloadbalancingv2.<wbr>Listener<wbr>Rule<wbr>Action<wbr>Authenticate<wbr>Cognito<wbr>Args?</a></code>
+                <code><a href="#listenerruleactionauthenticatecognito">Listener<wbr>Rule<wbr>Action<wbr>Authenticate<wbr>Cognito<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1343,7 +1343,7 @@ Information for creating an authenticate action using Cognito. Required if `type
             <td class="align-top">Authenticate<wbr>Oidc</td>
             <td class="align-top">
                 
-                <code><a href="#listenerruleactionauthenticateoidc">Pulumi.<wbr>Aws.<wbr>Elasticloadbalancingv2.<wbr>Listener<wbr>Rule<wbr>Action<wbr>Authenticate<wbr>Oidc<wbr>Args?</a></code>
+                <code><a href="#listenerruleactionauthenticateoidc">Listener<wbr>Rule<wbr>Action<wbr>Authenticate<wbr>Oidc<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1358,7 +1358,7 @@ Information for creating an authenticate action using OIDC. Required if `type` i
             <td class="align-top">Fixed<wbr>Response</td>
             <td class="align-top">
                 
-                <code><a href="#listenerruleactionfixedresponse">Pulumi.<wbr>Aws.<wbr>Elasticloadbalancingv2.<wbr>Listener<wbr>Rule<wbr>Action<wbr>Fixed<wbr>Response<wbr>Args?</a></code>
+                <code><a href="#listenerruleactionfixedresponse">Listener<wbr>Rule<wbr>Action<wbr>Fixed<wbr>Response<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1387,7 +1387,7 @@ Information for creating an action that returns a custom HTTP response. Required
             <td class="align-top">Redirect</td>
             <td class="align-top">
                 
-                <code><a href="#listenerruleactionredirect">Pulumi.<wbr>Aws.<wbr>Elasticloadbalancingv2.<wbr>Listener<wbr>Rule<wbr>Action<wbr>Redirect<wbr>Args?</a></code>
+                <code><a href="#listenerruleactionredirect">Listener<wbr>Rule<wbr>Action<wbr>Redirect<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1452,7 +1452,7 @@ The type of routing action. Valid values are `forward`, `redirect`, `fixed-respo
             <td class="align-top">Authenticate<wbr>Cognito</td>
             <td class="align-top">
                 
-                <code><a href="#listenerruleactionauthenticatecognito">*elasticloadbalancingv2.<wbr>Listener<wbr>Rule<wbr>Action<wbr>Authenticate<wbr>Cognito</a></code>
+                <code><a href="#listenerruleactionauthenticatecognito">*Listener<wbr>Rule<wbr>Action<wbr>Authenticate<wbr>Cognito</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1467,7 +1467,7 @@ Information for creating an authenticate action using Cognito. Required if `type
             <td class="align-top">Authenticate<wbr>Oidc</td>
             <td class="align-top">
                 
-                <code><a href="#listenerruleactionauthenticateoidc">*elasticloadbalancingv2.<wbr>Listener<wbr>Rule<wbr>Action<wbr>Authenticate<wbr>Oidc</a></code>
+                <code><a href="#listenerruleactionauthenticateoidc">*Listener<wbr>Rule<wbr>Action<wbr>Authenticate<wbr>Oidc</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1482,7 +1482,7 @@ Information for creating an authenticate action using OIDC. Required if `type` i
             <td class="align-top">Fixed<wbr>Response</td>
             <td class="align-top">
                 
-                <code><a href="#listenerruleactionfixedresponse">*elasticloadbalancingv2.<wbr>Listener<wbr>Rule<wbr>Action<wbr>Fixed<wbr>Response</a></code>
+                <code><a href="#listenerruleactionfixedresponse">*Listener<wbr>Rule<wbr>Action<wbr>Fixed<wbr>Response</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1511,7 +1511,7 @@ Information for creating an action that returns a custom HTTP response. Required
             <td class="align-top">Redirect</td>
             <td class="align-top">
                 
-                <code><a href="#listenerruleactionredirect">*elasticloadbalancingv2.<wbr>Listener<wbr>Rule<wbr>Action<wbr>Redirect</a></code>
+                <code><a href="#listenerruleactionredirect">*Listener<wbr>Rule<wbr>Action<wbr>Redirect</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1576,7 +1576,7 @@ The type of routing action. Valid values are `forward`, `redirect`, `fixed-respo
             <td class="align-top">authenticate<wbr>Cognito</td>
             <td class="align-top">
                 
-                <code><a href="#listenerruleactionauthenticatecognito">elasticloadbalancingv2.<wbr>Listener<wbr>Rule<wbr>Action<wbr>Authenticate<wbr>Cognito?</a></code>
+                <code><a href="#listenerruleactionauthenticatecognito">Listener<wbr>Rule<wbr>Action<wbr>Authenticate<wbr>Cognito?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1591,7 +1591,7 @@ Information for creating an authenticate action using Cognito. Required if `type
             <td class="align-top">authenticate<wbr>Oidc</td>
             <td class="align-top">
                 
-                <code><a href="#listenerruleactionauthenticateoidc">elasticloadbalancingv2.<wbr>Listener<wbr>Rule<wbr>Action<wbr>Authenticate<wbr>Oidc?</a></code>
+                <code><a href="#listenerruleactionauthenticateoidc">Listener<wbr>Rule<wbr>Action<wbr>Authenticate<wbr>Oidc?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1606,7 +1606,7 @@ Information for creating an authenticate action using OIDC. Required if `type` i
             <td class="align-top">fixed<wbr>Response</td>
             <td class="align-top">
                 
-                <code><a href="#listenerruleactionfixedresponse">elasticloadbalancingv2.<wbr>Listener<wbr>Rule<wbr>Action<wbr>Fixed<wbr>Response?</a></code>
+                <code><a href="#listenerruleactionfixedresponse">Listener<wbr>Rule<wbr>Action<wbr>Fixed<wbr>Response?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1635,7 +1635,7 @@ Information for creating an action that returns a custom HTTP response. Required
             <td class="align-top">redirect</td>
             <td class="align-top">
                 
-                <code><a href="#listenerruleactionredirect">elasticloadbalancingv2.<wbr>Listener<wbr>Rule<wbr>Action<wbr>Redirect?</a></code>
+                <code><a href="#listenerruleactionredirect">Listener<wbr>Rule<wbr>Action<wbr>Redirect?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1845,7 +1845,7 @@ The type of routing action. Valid values are `forward`, `redirect`, `fixed-respo
             <td class="align-top">Authentication<wbr>Request<wbr>Extra<wbr>Params</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2426,7 +2426,7 @@ The domain prefix or fully-qualified domain name of the Cognito user pool.
             <td class="align-top">Authentication<wbr>Request<wbr>Extra<wbr>Params</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3944,7 +3944,7 @@ The type of condition. Valid values are `host-header` or `path-pattern`. Must al
             <td class="align-top">Host<wbr>Header</td>
             <td class="align-top">
                 
-                <code><a href="#listenerruleconditionhostheader">Pulumi.<wbr>Aws.<wbr>Elasticloadbalancingv2.<wbr>Listener<wbr>Rule<wbr>Condition<wbr>Host<wbr>Header<wbr>Args?</a></code>
+                <code><a href="#listenerruleconditionhostheader">Listener<wbr>Rule<wbr>Condition<wbr>Host<wbr>Header<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3959,7 +3959,7 @@ Contains a single `values` item which is a list of host header patterns to match
             <td class="align-top">Http<wbr>Header</td>
             <td class="align-top">
                 
-                <code><a href="#listenerruleconditionhttpheader">Pulumi.<wbr>Aws.<wbr>Elasticloadbalancingv2.<wbr>Listener<wbr>Rule<wbr>Condition<wbr>Http<wbr>Header<wbr>Args?</a></code>
+                <code><a href="#listenerruleconditionhttpheader">Listener<wbr>Rule<wbr>Condition<wbr>Http<wbr>Header<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3974,7 +3974,7 @@ HTTP headers to match. HTTP Header block fields documented below.
             <td class="align-top">Http<wbr>Request<wbr>Method</td>
             <td class="align-top">
                 
-                <code><a href="#listenerruleconditionhttprequestmethod">Pulumi.<wbr>Aws.<wbr>Elasticloadbalancingv2.<wbr>Listener<wbr>Rule<wbr>Condition<wbr>Http<wbr>Request<wbr>Method<wbr>Args?</a></code>
+                <code><a href="#listenerruleconditionhttprequestmethod">Listener<wbr>Rule<wbr>Condition<wbr>Http<wbr>Request<wbr>Method<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3989,7 +3989,7 @@ Contains a single `values` item which is a list of HTTP request methods or verbs
             <td class="align-top">Path<wbr>Pattern</td>
             <td class="align-top">
                 
-                <code><a href="#listenerruleconditionpathpattern">Pulumi.<wbr>Aws.<wbr>Elasticloadbalancingv2.<wbr>Listener<wbr>Rule<wbr>Condition<wbr>Path<wbr>Pattern<wbr>Args?</a></code>
+                <code><a href="#listenerruleconditionpathpattern">Listener<wbr>Rule<wbr>Condition<wbr>Path<wbr>Pattern<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4004,7 +4004,7 @@ Contains a single `values` item which is a list of path patterns to match agains
             <td class="align-top">Query<wbr>Strings</td>
             <td class="align-top">
                 
-                <code><a href="#listenerruleconditionquerystring">List&lt;Pulumi.<wbr>Aws.<wbr>Elasticloadbalancingv2.<wbr>Listener<wbr>Rule<wbr>Condition<wbr>Query<wbr>String<wbr>Args&gt;?</a></code>
+                <code><a href="#listenerruleconditionquerystring">List&lt;Listener<wbr>Rule<wbr>Condition<wbr>Query<wbr>String<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4019,7 +4019,7 @@ Query strings to match. Query String block fields documented below.
             <td class="align-top">Source<wbr>Ip</td>
             <td class="align-top">
                 
-                <code><a href="#listenerruleconditionsourceip">Pulumi.<wbr>Aws.<wbr>Elasticloadbalancingv2.<wbr>Listener<wbr>Rule<wbr>Condition<wbr>Source<wbr>Ip<wbr>Args?</a></code>
+                <code><a href="#listenerruleconditionsourceip">Listener<wbr>Rule<wbr>Condition<wbr>Source<wbr>Ip<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4084,7 +4084,7 @@ The type of condition. Valid values are `host-header` or `path-pattern`. Must al
             <td class="align-top">Host<wbr>Header</td>
             <td class="align-top">
                 
-                <code><a href="#listenerruleconditionhostheader">*elasticloadbalancingv2.<wbr>Listener<wbr>Rule<wbr>Condition<wbr>Host<wbr>Header</a></code>
+                <code><a href="#listenerruleconditionhostheader">*Listener<wbr>Rule<wbr>Condition<wbr>Host<wbr>Header</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4099,7 +4099,7 @@ Contains a single `values` item which is a list of host header patterns to match
             <td class="align-top">Http<wbr>Header</td>
             <td class="align-top">
                 
-                <code><a href="#listenerruleconditionhttpheader">*elasticloadbalancingv2.<wbr>Listener<wbr>Rule<wbr>Condition<wbr>Http<wbr>Header</a></code>
+                <code><a href="#listenerruleconditionhttpheader">*Listener<wbr>Rule<wbr>Condition<wbr>Http<wbr>Header</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4114,7 +4114,7 @@ HTTP headers to match. HTTP Header block fields documented below.
             <td class="align-top">Http<wbr>Request<wbr>Method</td>
             <td class="align-top">
                 
-                <code><a href="#listenerruleconditionhttprequestmethod">*elasticloadbalancingv2.<wbr>Listener<wbr>Rule<wbr>Condition<wbr>Http<wbr>Request<wbr>Method</a></code>
+                <code><a href="#listenerruleconditionhttprequestmethod">*Listener<wbr>Rule<wbr>Condition<wbr>Http<wbr>Request<wbr>Method</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4129,7 +4129,7 @@ Contains a single `values` item which is a list of HTTP request methods or verbs
             <td class="align-top">Path<wbr>Pattern</td>
             <td class="align-top">
                 
-                <code><a href="#listenerruleconditionpathpattern">*elasticloadbalancingv2.<wbr>Listener<wbr>Rule<wbr>Condition<wbr>Path<wbr>Pattern</a></code>
+                <code><a href="#listenerruleconditionpathpattern">*Listener<wbr>Rule<wbr>Condition<wbr>Path<wbr>Pattern</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4144,7 +4144,7 @@ Contains a single `values` item which is a list of path patterns to match agains
             <td class="align-top">Query<wbr>Strings</td>
             <td class="align-top">
                 
-                <code><a href="#listenerruleconditionquerystring">[]elasticloadbalancingv2.<wbr>Listener<wbr>Rule<wbr>Condition<wbr>Query<wbr>String</a></code>
+                <code><a href="#listenerruleconditionquerystring">[]Listener<wbr>Rule<wbr>Condition<wbr>Query<wbr>String</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4159,7 +4159,7 @@ Query strings to match. Query String block fields documented below.
             <td class="align-top">Source<wbr>Ip</td>
             <td class="align-top">
                 
-                <code><a href="#listenerruleconditionsourceip">*elasticloadbalancingv2.<wbr>Listener<wbr>Rule<wbr>Condition<wbr>Source<wbr>Ip</a></code>
+                <code><a href="#listenerruleconditionsourceip">*Listener<wbr>Rule<wbr>Condition<wbr>Source<wbr>Ip</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4224,7 +4224,7 @@ The type of condition. Valid values are `host-header` or `path-pattern`. Must al
             <td class="align-top">host<wbr>Header</td>
             <td class="align-top">
                 
-                <code><a href="#listenerruleconditionhostheader">elasticloadbalancingv2.<wbr>Listener<wbr>Rule<wbr>Condition<wbr>Host<wbr>Header?</a></code>
+                <code><a href="#listenerruleconditionhostheader">Listener<wbr>Rule<wbr>Condition<wbr>Host<wbr>Header?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4239,7 +4239,7 @@ Contains a single `values` item which is a list of host header patterns to match
             <td class="align-top">http<wbr>Header</td>
             <td class="align-top">
                 
-                <code><a href="#listenerruleconditionhttpheader">elasticloadbalancingv2.<wbr>Listener<wbr>Rule<wbr>Condition<wbr>Http<wbr>Header?</a></code>
+                <code><a href="#listenerruleconditionhttpheader">Listener<wbr>Rule<wbr>Condition<wbr>Http<wbr>Header?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4254,7 +4254,7 @@ HTTP headers to match. HTTP Header block fields documented below.
             <td class="align-top">http<wbr>Request<wbr>Method</td>
             <td class="align-top">
                 
-                <code><a href="#listenerruleconditionhttprequestmethod">elasticloadbalancingv2.<wbr>Listener<wbr>Rule<wbr>Condition<wbr>Http<wbr>Request<wbr>Method?</a></code>
+                <code><a href="#listenerruleconditionhttprequestmethod">Listener<wbr>Rule<wbr>Condition<wbr>Http<wbr>Request<wbr>Method?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4269,7 +4269,7 @@ Contains a single `values` item which is a list of HTTP request methods or verbs
             <td class="align-top">path<wbr>Pattern</td>
             <td class="align-top">
                 
-                <code><a href="#listenerruleconditionpathpattern">elasticloadbalancingv2.<wbr>Listener<wbr>Rule<wbr>Condition<wbr>Path<wbr>Pattern?</a></code>
+                <code><a href="#listenerruleconditionpathpattern">Listener<wbr>Rule<wbr>Condition<wbr>Path<wbr>Pattern?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4284,7 +4284,7 @@ Contains a single `values` item which is a list of path patterns to match agains
             <td class="align-top">query<wbr>Strings</td>
             <td class="align-top">
                 
-                <code><a href="#listenerruleconditionquerystring">elasticloadbalancingv2.<wbr>Listener<wbr>Rule<wbr>Condition<wbr>Query<wbr>String[]?</a></code>
+                <code><a href="#listenerruleconditionquerystring">Listener<wbr>Rule<wbr>Condition<wbr>Query<wbr>String[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4299,7 +4299,7 @@ Query strings to match. Query String block fields documented below.
             <td class="align-top">source<wbr>Ip</td>
             <td class="align-top">
                 
-                <code><a href="#listenerruleconditionsourceip">elasticloadbalancingv2.<wbr>Listener<wbr>Rule<wbr>Condition<wbr>Source<wbr>Ip?</a></code>
+                <code><a href="#listenerruleconditionsourceip">Listener<wbr>Rule<wbr>Condition<wbr>Source<wbr>Ip?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4510,7 +4510,7 @@ Query string pairs or values to match. Query String Value blocks documented belo
             <td class="align-top">Values</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4686,7 +4686,7 @@ Name of HTTP header to search. The maximum size is 40 characters. Comparison is 
             <td class="align-top">Values</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -4892,7 +4892,7 @@ Query string pairs or values to match. Query String Value blocks documented belo
             <td class="align-top">Values</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -5053,7 +5053,7 @@ Query string pairs or values to match. Query String Value blocks documented belo
             <td class="align-top">Values</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5435,7 +5435,7 @@ Query string value pattern to match.
             <td class="align-top">Values</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

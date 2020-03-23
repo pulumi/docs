@@ -166,7 +166,7 @@ The following arguments are supported:
             <td class="align-top">Default<wbr>Action</td>
             <td class="align-top">
                 
-                <code><a href="#webacldefaultaction">Pulumi.<wbr>Aws.<wbr>Wafregional.<wbr>Web<wbr>Acl<wbr>Default<wbr>Action<wbr>Args</a></code>
+                <code><a href="#webacldefaultaction">Web<wbr>Acl<wbr>Default<wbr>Action<wbr>Args</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -181,7 +181,7 @@ The action that you want AWS WAF Regional to take when a request doesn&#39;t mat
             <td class="align-top">Logging<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#webaclloggingconfiguration">Pulumi.<wbr>Aws.<wbr>Wafregional.<wbr>Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Args?</a></code>
+                <code><a href="#webaclloggingconfiguration">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -226,7 +226,7 @@ The name or description of the web ACL.
             <td class="align-top">Rules</td>
             <td class="align-top">
                 
-                <code><a href="#webaclrule">List&lt;Pulumi.<wbr>Aws.<wbr>Wafregional.<wbr>Web<wbr>Acl<wbr>Rule<wbr>Args&gt;?</a></code>
+                <code><a href="#webaclrule">List&lt;Web<wbr>Acl<wbr>Rule<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -241,7 +241,7 @@ Set of configuration blocks containing rules for the web ACL. Detailed below.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -276,7 +276,7 @@ Key-value mapping of resource tags
             <td class="align-top">Default<wbr>Action</td>
             <td class="align-top">
                 
-                <code><a href="#webacldefaultaction">wafregional.<wbr>Web<wbr>Acl<wbr>Default<wbr>Action</a></code>
+                <code><a href="#webacldefaultaction">Web<wbr>Acl<wbr>Default<wbr>Action</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -291,7 +291,7 @@ The action that you want AWS WAF Regional to take when a request doesn&#39;t mat
             <td class="align-top">Logging<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#webaclloggingconfiguration">*wafregional.<wbr>Web<wbr>Acl<wbr>Logging<wbr>Configuration</a></code>
+                <code><a href="#webaclloggingconfiguration">*Web<wbr>Acl<wbr>Logging<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -336,7 +336,7 @@ The name or description of the web ACL.
             <td class="align-top">Rules</td>
             <td class="align-top">
                 
-                <code><a href="#webaclrule">[]wafregional.<wbr>Web<wbr>Acl<wbr>Rule</a></code>
+                <code><a href="#webaclrule">[]Web<wbr>Acl<wbr>Rule</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -386,7 +386,7 @@ Key-value mapping of resource tags
             <td class="align-top">default<wbr>Action</td>
             <td class="align-top">
                 
-                <code><a href="#webacldefaultaction">wafregional.<wbr>Web<wbr>Acl<wbr>Default<wbr>Action</a></code>
+                <code><a href="#webacldefaultaction">Web<wbr>Acl<wbr>Default<wbr>Action</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -401,7 +401,7 @@ The action that you want AWS WAF Regional to take when a request doesn&#39;t mat
             <td class="align-top">logging<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#webaclloggingconfiguration">wafregional.<wbr>Web<wbr>Acl<wbr>Logging<wbr>Configuration?</a></code>
+                <code><a href="#webaclloggingconfiguration">Web<wbr>Acl<wbr>Logging<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -446,7 +446,7 @@ The name or description of the web ACL.
             <td class="align-top">rules</td>
             <td class="align-top">
                 
-                <code><a href="#webaclrule">wafregional.<wbr>Web<wbr>Acl<wbr>Rule[]?</a></code>
+                <code><a href="#webaclrule">Web<wbr>Acl<wbr>Rule[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -633,7 +633,7 @@ The following output properties are available:
             <td class="align-top">Default<wbr>Action</td>
             <td class="align-top">
                 
-                <code><a href="#webacldefaultaction">Pulumi.<wbr>Aws.<wbr>Wafregional.<wbr>Web<wbr>Acl<wbr>Default<wbr>Action</a></code>
+                <code><a href="#webacldefaultaction">Web<wbr>Acl<wbr>Default<wbr>Action</a></code>
             </td>
             <td class="align-top">{{% md %}} The action that you want AWS WAF Regional to take when a request doesn&#39;t match the criteria in any of the rules that are associated with the web ACL.
  {{% /md %}}
@@ -646,7 +646,7 @@ The following output properties are available:
             <td class="align-top">Logging<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#webaclloggingconfiguration">Pulumi.<wbr>Aws.<wbr>Wafregional.<wbr>Web<wbr>Acl<wbr>Logging<wbr>Configuration?</a></code>
+                <code><a href="#webaclloggingconfiguration">Web<wbr>Acl<wbr>Logging<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block to enable WAF logging. Detailed below.
  {{% /md %}}
@@ -685,7 +685,7 @@ The following output properties are available:
             <td class="align-top">Rules</td>
             <td class="align-top">
                 
-                <code><a href="#webaclrule">List&lt;Pulumi.<wbr>Aws.<wbr>Wafregional.<wbr>Web<wbr>Acl<wbr>Rule&gt;?</a></code>
+                <code><a href="#webaclrule">List&lt;Web<wbr>Acl<wbr>Rule&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} Set of configuration blocks containing rules for the web ACL. Detailed below.
  {{% /md %}}
@@ -698,7 +698,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} Key-value mapping of resource tags
  {{% /md %}}
@@ -744,7 +744,7 @@ The following output properties are available:
             <td class="align-top">Default<wbr>Action</td>
             <td class="align-top">
                 
-                <code><a href="#webacldefaultaction">wafregional.<wbr>Web<wbr>Acl<wbr>Default<wbr>Action</a></code>
+                <code><a href="#webacldefaultaction">Web<wbr>Acl<wbr>Default<wbr>Action</a></code>
             </td>
             <td class="align-top">{{% md %}} The action that you want AWS WAF Regional to take when a request doesn&#39;t match the criteria in any of the rules that are associated with the web ACL.
  {{% /md %}}
@@ -757,7 +757,7 @@ The following output properties are available:
             <td class="align-top">Logging<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#webaclloggingconfiguration">*wafregional.<wbr>Web<wbr>Acl<wbr>Logging<wbr>Configuration</a></code>
+                <code><a href="#webaclloggingconfiguration">*Web<wbr>Acl<wbr>Logging<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block to enable WAF logging. Detailed below.
  {{% /md %}}
@@ -796,7 +796,7 @@ The following output properties are available:
             <td class="align-top">Rules</td>
             <td class="align-top">
                 
-                <code><a href="#webaclrule">[]wafregional.<wbr>Web<wbr>Acl<wbr>Rule</a></code>
+                <code><a href="#webaclrule">[]Web<wbr>Acl<wbr>Rule</a></code>
             </td>
             <td class="align-top">{{% md %}} Set of configuration blocks containing rules for the web ACL. Detailed below.
  {{% /md %}}
@@ -855,7 +855,7 @@ The following output properties are available:
             <td class="align-top">default<wbr>Action</td>
             <td class="align-top">
                 
-                <code><a href="#webacldefaultaction">wafregional.<wbr>Web<wbr>Acl<wbr>Default<wbr>Action</a></code>
+                <code><a href="#webacldefaultaction">Web<wbr>Acl<wbr>Default<wbr>Action</a></code>
             </td>
             <td class="align-top">{{% md %}} The action that you want AWS WAF Regional to take when a request doesn&#39;t match the criteria in any of the rules that are associated with the web ACL.
  {{% /md %}}
@@ -868,7 +868,7 @@ The following output properties are available:
             <td class="align-top">logging<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#webaclloggingconfiguration">wafregional.<wbr>Web<wbr>Acl<wbr>Logging<wbr>Configuration?</a></code>
+                <code><a href="#webaclloggingconfiguration">Web<wbr>Acl<wbr>Logging<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block to enable WAF logging. Detailed below.
  {{% /md %}}
@@ -907,7 +907,7 @@ The following output properties are available:
             <td class="align-top">rules</td>
             <td class="align-top">
                 
-                <code><a href="#webaclrule">wafregional.<wbr>Web<wbr>Acl<wbr>Rule[]?</a></code>
+                <code><a href="#webaclrule">Web<wbr>Acl<wbr>Rule[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} Set of configuration blocks containing rules for the web ACL. Detailed below.
  {{% /md %}}
@@ -1138,7 +1138,7 @@ Amazon Resource Name (ARN) of the WAF Regional WebACL.
             <td class="align-top">Default<wbr>Action</td>
             <td class="align-top">
                 
-                <code><a href="#webacldefaultaction">Pulumi.<wbr>Aws.<wbr>Wafregional.<wbr>Web<wbr>Acl<wbr>Default<wbr>Action<wbr>Args?</a></code>
+                <code><a href="#webacldefaultaction">Web<wbr>Acl<wbr>Default<wbr>Action<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1153,7 +1153,7 @@ The action that you want AWS WAF Regional to take when a request doesn&#39;t mat
             <td class="align-top">Logging<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#webaclloggingconfiguration">Pulumi.<wbr>Aws.<wbr>Wafregional.<wbr>Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Args?</a></code>
+                <code><a href="#webaclloggingconfiguration">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1198,7 +1198,7 @@ The name or description of the web ACL.
             <td class="align-top">Rules</td>
             <td class="align-top">
                 
-                <code><a href="#webaclrule">List&lt;Pulumi.<wbr>Aws.<wbr>Wafregional.<wbr>Web<wbr>Acl<wbr>Rule<wbr>Args&gt;?</a></code>
+                <code><a href="#webaclrule">List&lt;Web<wbr>Acl<wbr>Rule<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1213,7 +1213,7 @@ Set of configuration blocks containing rules for the web ACL. Detailed below.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1263,7 +1263,7 @@ Amazon Resource Name (ARN) of the WAF Regional WebACL.
             <td class="align-top">Default<wbr>Action</td>
             <td class="align-top">
                 
-                <code><a href="#webacldefaultaction">*wafregional.<wbr>Web<wbr>Acl<wbr>Default<wbr>Action</a></code>
+                <code><a href="#webacldefaultaction">*Web<wbr>Acl<wbr>Default<wbr>Action</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1278,7 +1278,7 @@ The action that you want AWS WAF Regional to take when a request doesn&#39;t mat
             <td class="align-top">Logging<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#webaclloggingconfiguration">*wafregional.<wbr>Web<wbr>Acl<wbr>Logging<wbr>Configuration</a></code>
+                <code><a href="#webaclloggingconfiguration">*Web<wbr>Acl<wbr>Logging<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1323,7 +1323,7 @@ The name or description of the web ACL.
             <td class="align-top">Rules</td>
             <td class="align-top">
                 
-                <code><a href="#webaclrule">[]wafregional.<wbr>Web<wbr>Acl<wbr>Rule</a></code>
+                <code><a href="#webaclrule">[]Web<wbr>Acl<wbr>Rule</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1388,7 +1388,7 @@ Amazon Resource Name (ARN) of the WAF Regional WebACL.
             <td class="align-top">default<wbr>Action</td>
             <td class="align-top">
                 
-                <code><a href="#webacldefaultaction">wafregional.<wbr>Web<wbr>Acl<wbr>Default<wbr>Action?</a></code>
+                <code><a href="#webacldefaultaction">Web<wbr>Acl<wbr>Default<wbr>Action?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1403,7 +1403,7 @@ The action that you want AWS WAF Regional to take when a request doesn&#39;t mat
             <td class="align-top">logging<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#webaclloggingconfiguration">wafregional.<wbr>Web<wbr>Acl<wbr>Logging<wbr>Configuration?</a></code>
+                <code><a href="#webaclloggingconfiguration">Web<wbr>Acl<wbr>Logging<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1448,7 +1448,7 @@ The name or description of the web ACL.
             <td class="align-top">rules</td>
             <td class="align-top">
                 
-                <code><a href="#webaclrule">wafregional.<wbr>Web<wbr>Acl<wbr>Rule[]?</a></code>
+                <code><a href="#webaclrule">Web<wbr>Acl<wbr>Rule[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1827,7 +1827,7 @@ Amazon Resource Name (ARN) of Kinesis Firehose Delivery Stream
             <td class="align-top">Redacted<wbr>Fields</td>
             <td class="align-top">
                 
-                <code><a href="#webaclloggingconfigurationredactedfields">Pulumi.<wbr>Aws.<wbr>Wafregional.<wbr>Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Fields<wbr>Args?</a></code>
+                <code><a href="#webaclloggingconfigurationredactedfields">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Fields<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1877,7 +1877,7 @@ Amazon Resource Name (ARN) of Kinesis Firehose Delivery Stream
             <td class="align-top">Redacted<wbr>Fields</td>
             <td class="align-top">
                 
-                <code><a href="#webaclloggingconfigurationredactedfields">*wafregional.<wbr>Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Fields</a></code>
+                <code><a href="#webaclloggingconfigurationredactedfields">*Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Fields</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1927,7 +1927,7 @@ Amazon Resource Name (ARN) of Kinesis Firehose Delivery Stream
             <td class="align-top">redacted<wbr>Fields</td>
             <td class="align-top">
                 
-                <code><a href="#webaclloggingconfigurationredactedfields">wafregional.<wbr>Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Fields?</a></code>
+                <code><a href="#webaclloggingconfigurationredactedfields">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Fields?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2033,7 +2033,7 @@ Configuration block containing parts of the request that you want redacted from 
             <td class="align-top">Field<wbr>To<wbr>Matches</td>
             <td class="align-top">
                 
-                <code><a href="#webaclloggingconfigurationredactedfieldsfieldtomatch">List&lt;Pulumi.<wbr>Aws.<wbr>Wafregional.<wbr>Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Fields<wbr>Field<wbr>To<wbr>Match<wbr>Args&gt;</a></code>
+                <code><a href="#webaclloggingconfigurationredactedfieldsfieldtomatch">List&lt;Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Fields<wbr>Field<wbr>To<wbr>Match<wbr>Args&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2068,7 +2068,7 @@ Set of configuration blocks for fields to redact. Detailed below.
             <td class="align-top">Field<wbr>To<wbr>Matches</td>
             <td class="align-top">
                 
-                <code><a href="#webaclloggingconfigurationredactedfieldsfieldtomatch">[]wafregional.<wbr>Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Fields<wbr>Field<wbr>To<wbr>Match</a></code>
+                <code><a href="#webaclloggingconfigurationredactedfieldsfieldtomatch">[]Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Fields<wbr>Field<wbr>To<wbr>Match</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2103,7 +2103,7 @@ Set of configuration blocks for fields to redact. Detailed below.
             <td class="align-top">field<wbr>To<wbr>Matches</td>
             <td class="align-top">
                 
-                <code><a href="#webaclloggingconfigurationredactedfieldsfieldtomatch">wafregional.<wbr>Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Fields<wbr>Field<wbr>To<wbr>Match[]</a></code>
+                <code><a href="#webaclloggingconfigurationredactedfieldsfieldtomatch">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Fields<wbr>Field<wbr>To<wbr>Match[]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2415,7 +2415,7 @@ Specifies how you want AWS WAF Regional to respond to requests that match the se
             <td class="align-top">Action</td>
             <td class="align-top">
                 
-                <code><a href="#webaclruleaction">Pulumi.<wbr>Aws.<wbr>Wafregional.<wbr>Web<wbr>Acl<wbr>Rule<wbr>Action<wbr>Args?</a></code>
+                <code><a href="#webaclruleaction">Web<wbr>Acl<wbr>Rule<wbr>Action<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2430,7 +2430,7 @@ Configuration block of the action that CloudFront or AWS WAF takes when a web re
             <td class="align-top">Override<wbr>Action</td>
             <td class="align-top">
                 
-                <code><a href="#webaclruleoverrideaction">Pulumi.<wbr>Aws.<wbr>Wafregional.<wbr>Web<wbr>Acl<wbr>Rule<wbr>Override<wbr>Action<wbr>Args?</a></code>
+                <code><a href="#webaclruleoverrideaction">Web<wbr>Acl<wbr>Rule<wbr>Override<wbr>Action<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2511,7 +2511,7 @@ Specifies how you want AWS WAF Regional to respond to requests that match the se
             <td class="align-top">Action</td>
             <td class="align-top">
                 
-                <code><a href="#webaclruleaction">*wafregional.<wbr>Web<wbr>Acl<wbr>Rule<wbr>Action</a></code>
+                <code><a href="#webaclruleaction">*Web<wbr>Acl<wbr>Rule<wbr>Action</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2526,7 +2526,7 @@ Configuration block of the action that CloudFront or AWS WAF takes when a web re
             <td class="align-top">Override<wbr>Action</td>
             <td class="align-top">
                 
-                <code><a href="#webaclruleoverrideaction">*wafregional.<wbr>Web<wbr>Acl<wbr>Rule<wbr>Override<wbr>Action</a></code>
+                <code><a href="#webaclruleoverrideaction">*Web<wbr>Acl<wbr>Rule<wbr>Override<wbr>Action</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2607,7 +2607,7 @@ Specifies how you want AWS WAF Regional to respond to requests that match the se
             <td class="align-top">action</td>
             <td class="align-top">
                 
-                <code><a href="#webaclruleaction">wafregional.<wbr>Web<wbr>Acl<wbr>Rule<wbr>Action?</a></code>
+                <code><a href="#webaclruleaction">Web<wbr>Acl<wbr>Rule<wbr>Action?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2622,7 +2622,7 @@ Configuration block of the action that CloudFront or AWS WAF takes when a web re
             <td class="align-top">override<wbr>Action</td>
             <td class="align-top">
                 
-                <code><a href="#webaclruleoverrideaction">wafregional.<wbr>Web<wbr>Acl<wbr>Rule<wbr>Override<wbr>Action?</a></code>
+                <code><a href="#webaclruleoverrideaction">Web<wbr>Acl<wbr>Rule<wbr>Override<wbr>Action?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

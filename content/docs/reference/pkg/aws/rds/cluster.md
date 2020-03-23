@@ -201,7 +201,7 @@ are applied immediately, or during the next maintenance window. Default is
             <td class="align-top">Availability<wbr>Zones</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -276,7 +276,7 @@ Creates a unique cluster identifier beginning with the specified prefix. Conflic
             <td class="align-top">Cluster<wbr>Members</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -381,7 +381,7 @@ Enable HTTP endpoint (data API). Only valid when `engine_mode` is set to `server
             <td class="align-top">Enabled<wbr>Cloudwatch<wbr>Logs<wbr>Exports</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -489,7 +489,7 @@ Specifies whether or mappings of AWS Identity and Access Management (IAM) accoun
             <td class="align-top">Iam<wbr>Roles</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -611,7 +611,7 @@ ARN of a source DB cluster or DB instance if this DB cluster is to be created as
             <td class="align-top">S3Import</td>
             <td class="align-top">
                 
-                <code><a href="#clusters3import">Pulumi.<wbr>Aws.<wbr>Rds.<wbr>Cluster<wbr>S3Import<wbr>Args?</a></code>
+                <code><a href="#clusters3import">Cluster<wbr>S3Import<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -625,7 +625,7 @@ ARN of a source DB cluster or DB instance if this DB cluster is to be created as
             <td class="align-top">Scaling<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#clusterscalingconfiguration">Pulumi.<wbr>Aws.<wbr>Rds.<wbr>Cluster<wbr>Scaling<wbr>Configuration<wbr>Args?</a></code>
+                <code><a href="#clusterscalingconfiguration">Cluster<wbr>Scaling<wbr>Configuration<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -700,7 +700,7 @@ Specifies whether the DB cluster is encrypted. The default is `false` for `provi
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -715,7 +715,7 @@ A mapping of tags to assign to the DB cluster.
             <td class="align-top">Vpc<wbr>Security<wbr>Group<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1178,7 +1178,7 @@ ARN of a source DB cluster or DB instance if this DB cluster is to be created as
             <td class="align-top">S3Import</td>
             <td class="align-top">
                 
-                <code><a href="#clusters3import">*rds.<wbr>Cluster<wbr>S3Import</a></code>
+                <code><a href="#clusters3import">*Cluster<wbr>S3Import</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1192,7 +1192,7 @@ ARN of a source DB cluster or DB instance if this DB cluster is to be created as
             <td class="align-top">Scaling<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#clusterscalingconfiguration">*rds.<wbr>Cluster<wbr>Scaling<wbr>Configuration</a></code>
+                <code><a href="#clusterscalingconfiguration">*Cluster<wbr>Scaling<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1531,7 +1531,7 @@ The following log types are supported: `audit`, `error`, `general`, `slowquery`,
             <td class="align-top">engine</td>
             <td class="align-top">
                 
-                <code>Engine<wbr>Type?</code>
+                <code>EngineType?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1546,7 +1546,7 @@ The name of the database engine to be used for this DB cluster. Defaults to `aur
             <td class="align-top">engine<wbr>Mode</td>
             <td class="align-top">
                 
-                <code>Engine<wbr>Mode?</code>
+                <code>EngineMode?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1745,7 +1745,7 @@ ARN of a source DB cluster or DB instance if this DB cluster is to be created as
             <td class="align-top">s3Import</td>
             <td class="align-top">
                 
-                <code><a href="#clusters3import">rds.<wbr>Cluster<wbr>S3Import?</a></code>
+                <code><a href="#clusters3import">Cluster<wbr>S3Import?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1759,7 +1759,7 @@ ARN of a source DB cluster or DB instance if this DB cluster is to be created as
             <td class="align-top">scaling<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#clusterscalingconfiguration">rds.<wbr>Cluster<wbr>Scaling<wbr>Configuration?</a></code>
+                <code><a href="#clusterscalingconfiguration">Cluster<wbr>Scaling<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2494,7 +2494,7 @@ are applied immediately, or during the next maintenance window. Default is
             <td class="align-top">Availability<wbr>Zones</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} A list of EC2 Availability Zones for the DB cluster storage where DB cluster instances can be created. RDS automatically assigns 3 AZs if less than 3 AZs are configured, which will show as a difference requiring resource recreation next deployment. It is recommended to specify 3 AZs or use `ignore_changes` if necessary.
  {{% /md %}}
@@ -2559,7 +2559,7 @@ are applied immediately, or during the next maintenance window. Default is
             <td class="align-top">Cluster<wbr>Members</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} List of RDS Instances that are a part of this cluster
  {{% /md %}}
@@ -2663,7 +2663,7 @@ are applied immediately, or during the next maintenance window. Default is
             <td class="align-top">Enabled<wbr>Cloudwatch<wbr>Logs<wbr>Exports</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} List of log types to export to cloudwatch. If omitted, no logs will be exported.
 The following log types are supported: `audit`, `error`, `general`, `slowquery`, `postgresql` (PostgreSQL).
@@ -2783,7 +2783,7 @@ made.
             <td class="align-top">Iam<wbr>Roles</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} A List of ARNs for the IAM roles to associate to the RDS Cluster.
  {{% /md %}}
@@ -2903,7 +2903,7 @@ load-balanced across replicas
             <td class="align-top">S3Import</td>
             <td class="align-top">
                 
-                <code><a href="#clusters3import">Pulumi.<wbr>Aws.<wbr>Rds.<wbr>Cluster<wbr>S3Import?</a></code>
+                <code><a href="#clusters3import">Cluster<wbr>S3Import?</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -2915,7 +2915,7 @@ load-balanced across replicas
             <td class="align-top">Scaling<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#clusterscalingconfiguration">Pulumi.<wbr>Aws.<wbr>Rds.<wbr>Cluster<wbr>Scaling<wbr>Configuration?</a></code>
+                <code><a href="#clusterscalingconfiguration">Cluster<wbr>Scaling<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested attribute with scaling properties. Only valid when `engine_mode` is set to `serverless`. More details below.
  {{% /md %}}
@@ -2980,7 +2980,7 @@ load-balanced across replicas
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the DB cluster.
  {{% /md %}}
@@ -2993,7 +2993,7 @@ load-balanced across replicas
             <td class="align-top">Vpc<wbr>Security<wbr>Group<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} List of VPC security groups to associate
 with the Cluster
@@ -3464,7 +3464,7 @@ load-balanced across replicas
             <td class="align-top">S3Import</td>
             <td class="align-top">
                 
-                <code><a href="#clusters3import">*rds.<wbr>Cluster<wbr>S3Import</a></code>
+                <code><a href="#clusters3import">*Cluster<wbr>S3Import</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -3476,7 +3476,7 @@ load-balanced across replicas
             <td class="align-top">Scaling<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#clusterscalingconfiguration">*rds.<wbr>Cluster<wbr>Scaling<wbr>Configuration</a></code>
+                <code><a href="#clusterscalingconfiguration">*Cluster<wbr>Scaling<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested attribute with scaling properties. Only valid when `engine_mode` is set to `serverless`. More details below.
  {{% /md %}}
@@ -3812,7 +3812,7 @@ The following log types are supported: `audit`, `error`, `general`, `slowquery`,
             <td class="align-top">engine</td>
             <td class="align-top">
                 
-                <code>Engine<wbr>Type?</code>
+                <code>EngineType?</code>
             </td>
             <td class="align-top">{{% md %}} The name of the database engine to be used for this DB cluster. Defaults to `aurora`. Valid Values: `aurora`, `aurora-mysql`, `aurora-postgresql`
  {{% /md %}}
@@ -3825,7 +3825,7 @@ The following log types are supported: `audit`, `error`, `general`, `slowquery`,
             <td class="align-top">engine<wbr>Mode</td>
             <td class="align-top">
                 
-                <code>Engine<wbr>Mode?</code>
+                <code>EngineMode?</code>
             </td>
             <td class="align-top">{{% md %}} The database engine mode. Valid values: `global`, `multimaster`, `parallelquery`, `provisioned`, `serverless`. Defaults to: `provisioned`. See the [RDS User Guide](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/aurora-serverless.html) for limitations when using `serverless`.
  {{% /md %}}
@@ -4025,7 +4025,7 @@ load-balanced across replicas
             <td class="align-top">s3Import</td>
             <td class="align-top">
                 
-                <code><a href="#clusters3import">rds.<wbr>Cluster<wbr>S3Import?</a></code>
+                <code><a href="#clusters3import">Cluster<wbr>S3Import?</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -4037,7 +4037,7 @@ load-balanced across replicas
             <td class="align-top">scaling<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#clusterscalingconfiguration">rds.<wbr>Cluster<wbr>Scaling<wbr>Configuration?</a></code>
+                <code><a href="#clusterscalingconfiguration">Cluster<wbr>Scaling<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested attribute with scaling properties. Only valid when `engine_mode` is set to `serverless`. More details below.
  {{% /md %}}
@@ -4801,7 +4801,7 @@ Amazon Resource Name (ARN) of cluster
             <td class="align-top">Availability<wbr>Zones</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4876,7 +4876,7 @@ Creates a unique cluster identifier beginning with the specified prefix. Conflic
             <td class="align-top">Cluster<wbr>Members</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4996,7 +4996,7 @@ Enable HTTP endpoint (data API). Only valid when `engine_mode` is set to `server
             <td class="align-top">Enabled<wbr>Cloudwatch<wbr>Logs<wbr>Exports</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5134,7 +5134,7 @@ Specifies whether or mappings of AWS Identity and Access Management (IAM) accoun
             <td class="align-top">Iam<wbr>Roles</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5272,7 +5272,7 @@ ARN of a source DB cluster or DB instance if this DB cluster is to be created as
             <td class="align-top">S3Import</td>
             <td class="align-top">
                 
-                <code><a href="#clusters3import">Pulumi.<wbr>Aws.<wbr>Rds.<wbr>Cluster<wbr>S3Import<wbr>Args?</a></code>
+                <code><a href="#clusters3import">Cluster<wbr>S3Import<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5286,7 +5286,7 @@ ARN of a source DB cluster or DB instance if this DB cluster is to be created as
             <td class="align-top">Scaling<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#clusterscalingconfiguration">Pulumi.<wbr>Aws.<wbr>Rds.<wbr>Cluster<wbr>Scaling<wbr>Configuration<wbr>Args?</a></code>
+                <code><a href="#clusterscalingconfiguration">Cluster<wbr>Scaling<wbr>Configuration<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5361,7 +5361,7 @@ Specifies whether the DB cluster is encrypted. The default is `false` for `provi
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5376,7 +5376,7 @@ A mapping of tags to assign to the DB cluster.
             <td class="align-top">Vpc<wbr>Security<wbr>Group<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5915,7 +5915,7 @@ ARN of a source DB cluster or DB instance if this DB cluster is to be created as
             <td class="align-top">S3Import</td>
             <td class="align-top">
                 
-                <code><a href="#clusters3import">*rds.<wbr>Cluster<wbr>S3Import</a></code>
+                <code><a href="#clusters3import">*Cluster<wbr>S3Import</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5929,7 +5929,7 @@ ARN of a source DB cluster or DB instance if this DB cluster is to be created as
             <td class="align-top">Scaling<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#clusterscalingconfiguration">*rds.<wbr>Cluster<wbr>Scaling<wbr>Configuration</a></code>
+                <code><a href="#clusterscalingconfiguration">*Cluster<wbr>Scaling<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6313,7 +6313,7 @@ The DNS address of the RDS instance
             <td class="align-top">engine</td>
             <td class="align-top">
                 
-                <code>Engine<wbr>Type?</code>
+                <code>EngineType?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6328,7 +6328,7 @@ The name of the database engine to be used for this DB cluster. Defaults to `aur
             <td class="align-top">engine<wbr>Mode</td>
             <td class="align-top">
                 
-                <code>Engine<wbr>Mode?</code>
+                <code>EngineMode?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6558,7 +6558,7 @@ ARN of a source DB cluster or DB instance if this DB cluster is to be created as
             <td class="align-top">s3Import</td>
             <td class="align-top">
                 
-                <code><a href="#clusters3import">rds.<wbr>Cluster<wbr>S3Import?</a></code>
+                <code><a href="#clusters3import">Cluster<wbr>S3Import?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6572,7 +6572,7 @@ ARN of a source DB cluster or DB instance if this DB cluster is to be created as
             <td class="align-top">scaling<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#clusterscalingconfiguration">rds.<wbr>Cluster<wbr>Scaling<wbr>Configuration?</a></code>
+                <code><a href="#clusterscalingconfiguration">Cluster<wbr>Scaling<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

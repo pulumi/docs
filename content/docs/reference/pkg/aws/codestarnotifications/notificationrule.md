@@ -95,7 +95,7 @@ The level of detail to include in the notifications for this resource. Possible 
             <td class="align-top">Event<wbr>Type<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -156,7 +156,7 @@ The status of the notification rule. Possible values are `ENABLED` and `DISABLED
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -171,7 +171,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">Targets</td>
             <td class="align-top">
                 
-                <code><a href="#notificationruletarget">List&lt;Pulumi.<wbr>Aws.<wbr>Codestarnotifications.<wbr>Notification<wbr>Rule<wbr>Target<wbr>Args&gt;?</a></code>
+                <code><a href="#notificationruletarget">List&lt;Notification<wbr>Rule<wbr>Target<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -297,7 +297,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">Targets</td>
             <td class="align-top">
                 
-                <code><a href="#notificationruletarget">[]codestarnotifications.<wbr>Notification<wbr>Rule<wbr>Target</a></code>
+                <code><a href="#notificationruletarget">[]Notification<wbr>Rule<wbr>Target</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -423,7 +423,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">targets</td>
             <td class="align-top">
                 
-                <code><a href="#notificationruletarget">codestarnotifications.<wbr>Notification<wbr>Rule<wbr>Target[]?</a></code>
+                <code><a href="#notificationruletarget">Notification<wbr>Rule<wbr>Target[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -624,7 +624,7 @@ The following output properties are available:
             <td class="align-top">Event<wbr>Type<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} A list of event types associated with this notification rule.
 For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notifications/latest/userguide/concepts.html#concepts-api).
@@ -677,7 +677,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -690,7 +690,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
             <td class="align-top">Targets</td>
             <td class="align-top">
                 
-                <code><a href="#notificationruletarget">List&lt;Pulumi.<wbr>Aws.<wbr>Codestarnotifications.<wbr>Notification<wbr>Rule<wbr>Target&gt;?</a></code>
+                <code><a href="#notificationruletarget">List&lt;Notification<wbr>Rule<wbr>Target&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration blocks containing notification target information. Can be specified multiple times. At least one target must be specified on creation.
  {{% /md %}}
@@ -815,7 +815,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
             <td class="align-top">Targets</td>
             <td class="align-top">
                 
-                <code><a href="#notificationruletarget">[]codestarnotifications.<wbr>Notification<wbr>Rule<wbr>Target</a></code>
+                <code><a href="#notificationruletarget">[]Notification<wbr>Rule<wbr>Target</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration blocks containing notification target information. Can be specified multiple times. At least one target must be specified on creation.
  {{% /md %}}
@@ -940,7 +940,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
             <td class="align-top">targets</td>
             <td class="align-top">
                 
-                <code><a href="#notificationruletarget">codestarnotifications.<wbr>Notification<wbr>Rule<wbr>Target[]?</a></code>
+                <code><a href="#notificationruletarget">Notification<wbr>Rule<wbr>Target[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration blocks containing notification target information. Can be specified multiple times. At least one target must be specified on creation.
  {{% /md %}}
@@ -1187,7 +1187,7 @@ The level of detail to include in the notifications for this resource. Possible 
             <td class="align-top">Event<wbr>Type<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1248,7 +1248,7 @@ The status of the notification rule. Possible values are `ENABLED` and `DISABLED
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1263,7 +1263,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">Targets</td>
             <td class="align-top">
                 
-                <code><a href="#notificationruletarget">List&lt;Pulumi.<wbr>Aws.<wbr>Codestarnotifications.<wbr>Notification<wbr>Rule<wbr>Target<wbr>Args&gt;?</a></code>
+                <code><a href="#notificationruletarget">List&lt;Notification<wbr>Rule<wbr>Target<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1404,7 +1404,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">Targets</td>
             <td class="align-top">
                 
-                <code><a href="#notificationruletarget">[]codestarnotifications.<wbr>Notification<wbr>Rule<wbr>Target</a></code>
+                <code><a href="#notificationruletarget">[]Notification<wbr>Rule<wbr>Target</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1545,7 +1545,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">targets</td>
             <td class="align-top">
                 
-                <code><a href="#notificationruletarget">codestarnotifications.<wbr>Notification<wbr>Rule<wbr>Target[]?</a></code>
+                <code><a href="#notificationruletarget">Notification<wbr>Rule<wbr>Target[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

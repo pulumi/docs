@@ -150,7 +150,7 @@ The following arguments are supported:
             <td class="align-top">Command</td>
             <td class="align-top">
                 
-                <code><a href="#jobcommand">Pulumi.<wbr>Aws.<wbr>Glue.<wbr>Job<wbr>Command<wbr>Args</a></code>
+                <code><a href="#jobcommand">Job<wbr>Command<wbr>Args</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -165,7 +165,7 @@ The command of the job. Defined below.
             <td class="align-top">Connections</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -180,7 +180,7 @@ The list of connections used for this job.
             <td class="align-top">Default<wbr>Arguments</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -210,7 +210,7 @@ Description of the job.
             <td class="align-top">Execution<wbr>Property</td>
             <td class="align-top">
                 
-                <code><a href="#jobexecutionproperty">Pulumi.<wbr>Aws.<wbr>Glue.<wbr>Job<wbr>Execution<wbr>Property<wbr>Args?</a></code>
+                <code><a href="#jobexecutionproperty">Job<wbr>Execution<wbr>Property<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -285,7 +285,7 @@ The name of the job command. Defaults to `glueetl`. Use `pythonshell` for Python
             <td class="align-top">Notification<wbr>Property</td>
             <td class="align-top">
                 
-                <code><a href="#jobnotificationproperty">Pulumi.<wbr>Aws.<wbr>Glue.<wbr>Job<wbr>Notification<wbr>Property<wbr>Args?</a></code>
+                <code><a href="#jobnotificationproperty">Job<wbr>Notification<wbr>Property<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -345,7 +345,7 @@ The name of the Security Configuration to be associated with the job.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -425,7 +425,7 @@ The type of predefined worker that is allocated when a job runs. Accepts a value
             <td class="align-top">Command</td>
             <td class="align-top">
                 
-                <code><a href="#jobcommand">glue.<wbr>Job<wbr>Command</a></code>
+                <code><a href="#jobcommand">Job<wbr>Command</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -485,7 +485,7 @@ Description of the job.
             <td class="align-top">Execution<wbr>Property</td>
             <td class="align-top">
                 
-                <code><a href="#jobexecutionproperty">*glue.<wbr>Job<wbr>Execution<wbr>Property</a></code>
+                <code><a href="#jobexecutionproperty">*Job<wbr>Execution<wbr>Property</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -560,7 +560,7 @@ The name of the job command. Defaults to `glueetl`. Use `pythonshell` for Python
             <td class="align-top">Notification<wbr>Property</td>
             <td class="align-top">
                 
-                <code><a href="#jobnotificationproperty">*glue.<wbr>Job<wbr>Notification<wbr>Property</a></code>
+                <code><a href="#jobnotificationproperty">*Job<wbr>Notification<wbr>Property</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -700,7 +700,7 @@ The type of predefined worker that is allocated when a job runs. Accepts a value
             <td class="align-top">command</td>
             <td class="align-top">
                 
-                <code><a href="#jobcommand">glue.<wbr>Job<wbr>Command</a></code>
+                <code><a href="#jobcommand">Job<wbr>Command</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -760,7 +760,7 @@ Description of the job.
             <td class="align-top">execution<wbr>Property</td>
             <td class="align-top">
                 
-                <code><a href="#jobexecutionproperty">glue.<wbr>Job<wbr>Execution<wbr>Property?</a></code>
+                <code><a href="#jobexecutionproperty">Job<wbr>Execution<wbr>Property?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -835,7 +835,7 @@ The name of the job command. Defaults to `glueetl`. Use `pythonshell` for Python
             <td class="align-top">notification<wbr>Property</td>
             <td class="align-top">
                 
-                <code><a href="#jobnotificationproperty">glue.<wbr>Job<wbr>Notification<wbr>Property?</a></code>
+                <code><a href="#jobnotificationproperty">Job<wbr>Notification<wbr>Property?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1275,7 +1275,7 @@ The following output properties are available:
             <td class="align-top">Command</td>
             <td class="align-top">
                 
-                <code><a href="#jobcommand">Pulumi.<wbr>Aws.<wbr>Glue.<wbr>Job<wbr>Command</a></code>
+                <code><a href="#jobcommand">Job<wbr>Command</a></code>
             </td>
             <td class="align-top">{{% md %}} The command of the job. Defined below.
  {{% /md %}}
@@ -1288,7 +1288,7 @@ The following output properties are available:
             <td class="align-top">Connections</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} The list of connections used for this job.
  {{% /md %}}
@@ -1301,7 +1301,7 @@ The following output properties are available:
             <td class="align-top">Default<wbr>Arguments</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} The map of default arguments for this job. You can specify arguments here that your own job-execution script consumes, as well as arguments that AWS Glue itself consumes. For information about how to specify and consume your own Job arguments, see the [Calling AWS Glue APIs in Python](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-python-calling.html) topic in the developer guide. For information about the key-value pairs that AWS Glue consumes to set up your job, see the [Special Parameters Used by AWS Glue](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-python-glue-arguments.html) topic in the developer guide.
  {{% /md %}}
@@ -1327,7 +1327,7 @@ The following output properties are available:
             <td class="align-top">Execution<wbr>Property</td>
             <td class="align-top">
                 
-                <code><a href="#jobexecutionproperty">Pulumi.<wbr>Aws.<wbr>Glue.<wbr>Job<wbr>Execution<wbr>Property</a></code>
+                <code><a href="#jobexecutionproperty">Job<wbr>Execution<wbr>Property</a></code>
             </td>
             <td class="align-top">{{% md %}} Execution property of the job. Defined below.
  {{% /md %}}
@@ -1392,7 +1392,7 @@ The following output properties are available:
             <td class="align-top">Notification<wbr>Property</td>
             <td class="align-top">
                 
-                <code><a href="#jobnotificationproperty">Pulumi.<wbr>Aws.<wbr>Glue.<wbr>Job<wbr>Notification<wbr>Property</a></code>
+                <code><a href="#jobnotificationproperty">Job<wbr>Notification<wbr>Property</a></code>
             </td>
             <td class="align-top">{{% md %}} Notification property of the job. Defined below.
  {{% /md %}}
@@ -1444,7 +1444,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} Key-value mapping of resource tags
  {{% /md %}}
@@ -1529,7 +1529,7 @@ The following output properties are available:
             <td class="align-top">Command</td>
             <td class="align-top">
                 
-                <code><a href="#jobcommand">glue.<wbr>Job<wbr>Command</a></code>
+                <code><a href="#jobcommand">Job<wbr>Command</a></code>
             </td>
             <td class="align-top">{{% md %}} The command of the job. Defined below.
  {{% /md %}}
@@ -1581,7 +1581,7 @@ The following output properties are available:
             <td class="align-top">Execution<wbr>Property</td>
             <td class="align-top">
                 
-                <code><a href="#jobexecutionproperty">glue.<wbr>Job<wbr>Execution<wbr>Property</a></code>
+                <code><a href="#jobexecutionproperty">Job<wbr>Execution<wbr>Property</a></code>
             </td>
             <td class="align-top">{{% md %}} Execution property of the job. Defined below.
  {{% /md %}}
@@ -1646,7 +1646,7 @@ The following output properties are available:
             <td class="align-top">Notification<wbr>Property</td>
             <td class="align-top">
                 
-                <code><a href="#jobnotificationproperty">glue.<wbr>Job<wbr>Notification<wbr>Property</a></code>
+                <code><a href="#jobnotificationproperty">Job<wbr>Notification<wbr>Property</a></code>
             </td>
             <td class="align-top">{{% md %}} Notification property of the job. Defined below.
  {{% /md %}}
@@ -1783,7 +1783,7 @@ The following output properties are available:
             <td class="align-top">command</td>
             <td class="align-top">
                 
-                <code><a href="#jobcommand">glue.<wbr>Job<wbr>Command</a></code>
+                <code><a href="#jobcommand">Job<wbr>Command</a></code>
             </td>
             <td class="align-top">{{% md %}} The command of the job. Defined below.
  {{% /md %}}
@@ -1835,7 +1835,7 @@ The following output properties are available:
             <td class="align-top">execution<wbr>Property</td>
             <td class="align-top">
                 
-                <code><a href="#jobexecutionproperty">glue.<wbr>Job<wbr>Execution<wbr>Property</a></code>
+                <code><a href="#jobexecutionproperty">Job<wbr>Execution<wbr>Property</a></code>
             </td>
             <td class="align-top">{{% md %}} Execution property of the job. Defined below.
  {{% /md %}}
@@ -1900,7 +1900,7 @@ The following output properties are available:
             <td class="align-top">notification<wbr>Property</td>
             <td class="align-top">
                 
-                <code><a href="#jobnotificationproperty">glue.<wbr>Job<wbr>Notification<wbr>Property</a></code>
+                <code><a href="#jobnotificationproperty">Job<wbr>Notification<wbr>Property</a></code>
             </td>
             <td class="align-top">{{% md %}} Notification property of the job. Defined below.
  {{% /md %}}
@@ -2354,7 +2354,7 @@ Amazon Resource Name (ARN) of Glue Job
             <td class="align-top">Command</td>
             <td class="align-top">
                 
-                <code><a href="#jobcommand">Pulumi.<wbr>Aws.<wbr>Glue.<wbr>Job<wbr>Command<wbr>Args?</a></code>
+                <code><a href="#jobcommand">Job<wbr>Command<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2369,7 +2369,7 @@ The command of the job. Defined below.
             <td class="align-top">Connections</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2384,7 +2384,7 @@ The list of connections used for this job.
             <td class="align-top">Default<wbr>Arguments</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2414,7 +2414,7 @@ Description of the job.
             <td class="align-top">Execution<wbr>Property</td>
             <td class="align-top">
                 
-                <code><a href="#jobexecutionproperty">Pulumi.<wbr>Aws.<wbr>Glue.<wbr>Job<wbr>Execution<wbr>Property<wbr>Args?</a></code>
+                <code><a href="#jobexecutionproperty">Job<wbr>Execution<wbr>Property<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2489,7 +2489,7 @@ The name of the job command. Defaults to `glueetl`. Use `pythonshell` for Python
             <td class="align-top">Notification<wbr>Property</td>
             <td class="align-top">
                 
-                <code><a href="#jobnotificationproperty">Pulumi.<wbr>Aws.<wbr>Glue.<wbr>Job<wbr>Notification<wbr>Property<wbr>Args?</a></code>
+                <code><a href="#jobnotificationproperty">Job<wbr>Notification<wbr>Property<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2549,7 +2549,7 @@ The name of the Security Configuration to be associated with the job.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2644,7 +2644,7 @@ Amazon Resource Name (ARN) of Glue Job
             <td class="align-top">Command</td>
             <td class="align-top">
                 
-                <code><a href="#jobcommand">*glue.<wbr>Job<wbr>Command</a></code>
+                <code><a href="#jobcommand">*Job<wbr>Command</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2704,7 +2704,7 @@ Description of the job.
             <td class="align-top">Execution<wbr>Property</td>
             <td class="align-top">
                 
-                <code><a href="#jobexecutionproperty">*glue.<wbr>Job<wbr>Execution<wbr>Property</a></code>
+                <code><a href="#jobexecutionproperty">*Job<wbr>Execution<wbr>Property</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2779,7 +2779,7 @@ The name of the job command. Defaults to `glueetl`. Use `pythonshell` for Python
             <td class="align-top">Notification<wbr>Property</td>
             <td class="align-top">
                 
-                <code><a href="#jobnotificationproperty">*glue.<wbr>Job<wbr>Notification<wbr>Property</a></code>
+                <code><a href="#jobnotificationproperty">*Job<wbr>Notification<wbr>Property</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2934,7 +2934,7 @@ Amazon Resource Name (ARN) of Glue Job
             <td class="align-top">command</td>
             <td class="align-top">
                 
-                <code><a href="#jobcommand">glue.<wbr>Job<wbr>Command?</a></code>
+                <code><a href="#jobcommand">Job<wbr>Command?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2994,7 +2994,7 @@ Description of the job.
             <td class="align-top">execution<wbr>Property</td>
             <td class="align-top">
                 
-                <code><a href="#jobexecutionproperty">glue.<wbr>Job<wbr>Execution<wbr>Property?</a></code>
+                <code><a href="#jobexecutionproperty">Job<wbr>Execution<wbr>Property?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3069,7 +3069,7 @@ The name of the job command. Defaults to `glueetl`. Use `pythonshell` for Python
             <td class="align-top">notification<wbr>Property</td>
             <td class="align-top">
                 
-                <code><a href="#jobnotificationproperty">glue.<wbr>Job<wbr>Notification<wbr>Property?</a></code>
+                <code><a href="#jobnotificationproperty">Job<wbr>Notification<wbr>Property?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

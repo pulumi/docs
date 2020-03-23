@@ -64,7 +64,12 @@ const snsTopicPolicyTopicPolicy = new aws.sns.TopicPolicy("sns_topic_policy", {
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupOrganization<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/organizations?tab=doc#LookupOrganizationResult">LookupOrganizationResult</a></span>, error)</span></code></pre></div>
 
 
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Organizations.GetOrganizationResult.html">Pulumi.Aws.Organizations.GetOrganizationResult</a></span>> <span class="p">GetOrganization(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight">
+<pre class="chroma">
+<code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetOrganization </span><span class="p">{</span>
+    <span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Organizations.GetOrganizationResult.html">GetOrganizationResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span>
+<span class="p">}</span></code></pre>
+</div>
 
 
 
@@ -95,7 +100,7 @@ The following output properties are available:
             <td class="align-top">Accounts</td>
             <td class="align-top">
                 
-                <code><a href="#getorganizationaccount">List&lt;Pulumi.<wbr>Aws.<wbr>Organizations.<wbr>Get<wbr>Organization<wbr>Account&gt;</a></code>
+                <code><a href="#getorganizationaccount">List&lt;Get<wbr>Organization<wbr>Account&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} List of organization accounts including the master account. For a list excluding the master account, see the `non_master_accounts` attribute. All elements have these attributes:
  {{% /md %}}
@@ -121,7 +126,7 @@ The following output properties are available:
             <td class="align-top">Aws<wbr>Service<wbr>Access<wbr>Principals</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} A list of AWS service principal names that have integration enabled with your organization. Organization must have `feature_set` set to `ALL`. For additional information, see the [AWS Organizations User Guide](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html).
  {{% /md %}}
@@ -134,7 +139,7 @@ The following output properties are available:
             <td class="align-top">Enabled<wbr>Policy<wbr>Types</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} A list of Organizations policy types that are enabled in the Organization Root. Organization must have `feature_set` set to `ALL`. For additional information about valid policy types (e.g. `SERVICE_CONTROL_POLICY`), see the [AWS Organizations API Reference](https://docs.aws.amazon.com/organizations/latest/APIReference/API_EnablePolicyType.html).
  {{% /md %}}
@@ -212,7 +217,7 @@ The following output properties are available:
             <td class="align-top">Non<wbr>Master<wbr>Accounts</td>
             <td class="align-top">
                 
-                <code><a href="#getorganizationnonmasteraccount">List&lt;Pulumi.<wbr>Aws.<wbr>Organizations.<wbr>Get<wbr>Organization<wbr>Non<wbr>Master<wbr>Account&gt;</a></code>
+                <code><a href="#getorganizationnonmasteraccount">List&lt;Get<wbr>Organization<wbr>Non<wbr>Master<wbr>Account&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} List of organization accounts excluding the master account. For a list including the master account, see the `accounts` attribute. All elements have these attributes:
  {{% /md %}}
@@ -225,7 +230,7 @@ The following output properties are available:
             <td class="align-top">Roots</td>
             <td class="align-top">
                 
-                <code><a href="#getorganizationroot">List&lt;Pulumi.<wbr>Aws.<wbr>Organizations.<wbr>Get<wbr>Organization<wbr>Root&gt;</a></code>
+                <code><a href="#getorganizationroot">List&lt;Get<wbr>Organization<wbr>Root&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} List of organization roots. All elements have these attributes:
  {{% /md %}}
@@ -258,7 +263,7 @@ The following output properties are available:
             <td class="align-top">Accounts</td>
             <td class="align-top">
                 
-                <code><a href="#getorganizationaccount">[]organizations.<wbr>Get<wbr>Organization<wbr>Account</a></code>
+                <code><a href="#getorganizationaccount">[]Get<wbr>Organization<wbr>Account</a></code>
             </td>
             <td class="align-top">{{% md %}} List of organization accounts including the master account. For a list excluding the master account, see the `non_master_accounts` attribute. All elements have these attributes:
  {{% /md %}}
@@ -375,7 +380,7 @@ The following output properties are available:
             <td class="align-top">Non<wbr>Master<wbr>Accounts</td>
             <td class="align-top">
                 
-                <code><a href="#getorganizationnonmasteraccount">[]organizations.<wbr>Get<wbr>Organization<wbr>Non<wbr>Master<wbr>Account</a></code>
+                <code><a href="#getorganizationnonmasteraccount">[]Get<wbr>Organization<wbr>Non<wbr>Master<wbr>Account</a></code>
             </td>
             <td class="align-top">{{% md %}} List of organization accounts excluding the master account. For a list including the master account, see the `accounts` attribute. All elements have these attributes:
  {{% /md %}}
@@ -388,7 +393,7 @@ The following output properties are available:
             <td class="align-top">Roots</td>
             <td class="align-top">
                 
-                <code><a href="#getorganizationroot">[]organizations.<wbr>Get<wbr>Organization<wbr>Root</a></code>
+                <code><a href="#getorganizationroot">[]Get<wbr>Organization<wbr>Root</a></code>
             </td>
             <td class="align-top">{{% md %}} List of organization roots. All elements have these attributes:
  {{% /md %}}
@@ -421,7 +426,7 @@ The following output properties are available:
             <td class="align-top">accounts</td>
             <td class="align-top">
                 
-                <code><a href="#getorganizationaccount">organizations.<wbr>Get<wbr>Organization<wbr>Account[]</a></code>
+                <code><a href="#getorganizationaccount">Get<wbr>Organization<wbr>Account[]</a></code>
             </td>
             <td class="align-top">{{% md %}} List of organization accounts including the master account. For a list excluding the master account, see the `non_master_accounts` attribute. All elements have these attributes:
  {{% /md %}}
@@ -538,7 +543,7 @@ The following output properties are available:
             <td class="align-top">non<wbr>Master<wbr>Accounts</td>
             <td class="align-top">
                 
-                <code><a href="#getorganizationnonmasteraccount">organizations.<wbr>Get<wbr>Organization<wbr>Non<wbr>Master<wbr>Account[]</a></code>
+                <code><a href="#getorganizationnonmasteraccount">Get<wbr>Organization<wbr>Non<wbr>Master<wbr>Account[]</a></code>
             </td>
             <td class="align-top">{{% md %}} List of organization accounts excluding the master account. For a list including the master account, see the `accounts` attribute. All elements have these attributes:
  {{% /md %}}
@@ -551,7 +556,7 @@ The following output properties are available:
             <td class="align-top">roots</td>
             <td class="align-top">
                 
-                <code><a href="#getorganizationroot">organizations.<wbr>Get<wbr>Organization<wbr>Root[]</a></code>
+                <code><a href="#getorganizationroot">Get<wbr>Organization<wbr>Root[]</a></code>
             </td>
             <td class="align-top">{{% md %}} List of organization roots. All elements have these attributes:
  {{% /md %}}
@@ -1620,7 +1625,7 @@ The name of the policy type
             <td class="align-top">Policy<wbr>Types</td>
             <td class="align-top">
                 
-                <code><a href="#getorganizationrootpolicytype">List&lt;Pulumi.<wbr>Aws.<wbr>Organizations.<wbr>Get<wbr>Organization<wbr>Root<wbr>Policy<wbr>Type<wbr>Args&gt;</a></code>
+                <code><a href="#getorganizationrootpolicytype">List&lt;Get<wbr>Organization<wbr>Root<wbr>Policy<wbr>Type<wbr>Args&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1700,7 +1705,7 @@ The name of the policy type
             <td class="align-top">Policy<wbr>Types</td>
             <td class="align-top">
                 
-                <code><a href="#getorganizationrootpolicytype">[]organizations.<wbr>Get<wbr>Organization<wbr>Root<wbr>Policy<wbr>Type</a></code>
+                <code><a href="#getorganizationrootpolicytype">[]Get<wbr>Organization<wbr>Root<wbr>Policy<wbr>Type</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1780,7 +1785,7 @@ The name of the policy type
             <td class="align-top">policy<wbr>Types</td>
             <td class="align-top">
                 
-                <code><a href="#getorganizationrootpolicytype">organizations.<wbr>Get<wbr>Organization<wbr>Root<wbr>Policy<wbr>Type[]</a></code>
+                <code><a href="#getorganizationrootpolicytype">Get<wbr>Organization<wbr>Root<wbr>Policy<wbr>Type[]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

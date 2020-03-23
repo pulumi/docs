@@ -94,7 +94,7 @@ The following arguments are supported:
             <td class="align-top">Image<wbr>Scanning<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#repositoryimagescanningconfiguration">Pulumi.<wbr>Aws.<wbr>Ecr.<wbr>Repository<wbr>Image<wbr>Scanning<wbr>Configuration<wbr>Args?</a></code>
+                <code><a href="#repositoryimagescanningconfiguration">Repository<wbr>Image<wbr>Scanning<wbr>Configuration<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -139,7 +139,7 @@ Name of the repository.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -174,7 +174,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">Image<wbr>Scanning<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#repositoryimagescanningconfiguration">*ecr.<wbr>Repository<wbr>Image<wbr>Scanning<wbr>Configuration</a></code>
+                <code><a href="#repositoryimagescanningconfiguration">*Repository<wbr>Image<wbr>Scanning<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -254,7 +254,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">image<wbr>Scanning<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#repositoryimagescanningconfiguration">ecr.<wbr>Repository<wbr>Image<wbr>Scanning<wbr>Configuration?</a></code>
+                <code><a href="#repositoryimagescanningconfiguration">Repository<wbr>Image<wbr>Scanning<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -441,7 +441,7 @@ The following output properties are available:
             <td class="align-top">Image<wbr>Scanning<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#repositoryimagescanningconfiguration">Pulumi.<wbr>Aws.<wbr>Ecr.<wbr>Repository<wbr>Image<wbr>Scanning<wbr>Configuration?</a></code>
+                <code><a href="#repositoryimagescanningconfiguration">Repository<wbr>Image<wbr>Scanning<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block that defines image scanning configuration for the repository. By default, image scanning must be manually triggered. See the [ECR User Guide](https://docs.aws.amazon.com/AmazonECR/latest/userguide/image-scanning.html) for more information about image scanning.
  {{% /md %}}
@@ -506,7 +506,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -552,7 +552,7 @@ The following output properties are available:
             <td class="align-top">Image<wbr>Scanning<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#repositoryimagescanningconfiguration">*ecr.<wbr>Repository<wbr>Image<wbr>Scanning<wbr>Configuration</a></code>
+                <code><a href="#repositoryimagescanningconfiguration">*Repository<wbr>Image<wbr>Scanning<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block that defines image scanning configuration for the repository. By default, image scanning must be manually triggered. See the [ECR User Guide](https://docs.aws.amazon.com/AmazonECR/latest/userguide/image-scanning.html) for more information about image scanning.
  {{% /md %}}
@@ -663,7 +663,7 @@ The following output properties are available:
             <td class="align-top">image<wbr>Scanning<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#repositoryimagescanningconfiguration">ecr.<wbr>Repository<wbr>Image<wbr>Scanning<wbr>Configuration?</a></code>
+                <code><a href="#repositoryimagescanningconfiguration">Repository<wbr>Image<wbr>Scanning<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block that defines image scanning configuration for the repository. By default, image scanning must be manually triggered. See the [ECR User Guide](https://docs.aws.amazon.com/AmazonECR/latest/userguide/image-scanning.html) for more information about image scanning.
  {{% /md %}}
@@ -946,7 +946,7 @@ Full ARN of the repository.
             <td class="align-top">Image<wbr>Scanning<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#repositoryimagescanningconfiguration">Pulumi.<wbr>Aws.<wbr>Ecr.<wbr>Repository<wbr>Image<wbr>Scanning<wbr>Configuration<wbr>Args?</a></code>
+                <code><a href="#repositoryimagescanningconfiguration">Repository<wbr>Image<wbr>Scanning<wbr>Configuration<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1021,7 +1021,7 @@ The URL of the repository (in the form `aws_account_id.dkr.ecr.region.amazonaws.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1071,7 +1071,7 @@ Full ARN of the repository.
             <td class="align-top">Image<wbr>Scanning<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#repositoryimagescanningconfiguration">*ecr.<wbr>Repository<wbr>Image<wbr>Scanning<wbr>Configuration</a></code>
+                <code><a href="#repositoryimagescanningconfiguration">*Repository<wbr>Image<wbr>Scanning<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1196,7 +1196,7 @@ Full ARN of the repository.
             <td class="align-top">image<wbr>Scanning<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#repositoryimagescanningconfiguration">ecr.<wbr>Repository<wbr>Image<wbr>Scanning<wbr>Configuration?</a></code>
+                <code><a href="#repositoryimagescanningconfiguration">Repository<wbr>Image<wbr>Scanning<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

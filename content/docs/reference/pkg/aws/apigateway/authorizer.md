@@ -244,7 +244,7 @@ The name of the authorizer
             <td class="align-top">Provider<wbr>Arns</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -590,7 +590,7 @@ Each element is of this format: `arn:aws:cognito-idp:{region}:{account_id}:userp
             <td class="align-top">rest<wbr>Api</td>
             <td class="align-top">
                 
-                <code>string | Rest<wbr>Api</code>
+                <code>string | RestApi</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -906,7 +906,7 @@ the client receives a 401 Unauthorized response.
             <td class="align-top">Provider<wbr>Arns</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} A list of the Amazon Cognito user pool ARNs.
 Each element is of this format: `arn:aws:cognito-idp:{region}:{account_id}:userpool/{user_pool_id}`.
@@ -1565,7 +1565,7 @@ The name of the authorizer
             <td class="align-top">Provider<wbr>Arns</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1911,7 +1911,7 @@ Each element is of this format: `arn:aws:cognito-idp:{region}:{account_id}:userp
             <td class="align-top">rest<wbr>Api</td>
             <td class="align-top">
                 
-                <code>string | Rest<wbr>Api</code>
+                <code>string | RestApi</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

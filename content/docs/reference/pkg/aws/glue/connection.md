@@ -134,7 +134,7 @@ The ID of the Data Catalog in which to create the connection. If none is supplie
             <td class="align-top">Connection<wbr>Properties</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;</code>
+                <code>Dictionary<string, object></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -179,7 +179,7 @@ Description of the connection.
             <td class="align-top">Match<wbr>Criterias</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -209,7 +209,7 @@ The name of the connection.
             <td class="align-top">Physical<wbr>Connection<wbr>Requirements</td>
             <td class="align-top">
                 
-                <code><a href="#connectionphysicalconnectionrequirements">Pulumi.<wbr>Aws.<wbr>Glue.<wbr>Connection<wbr>Physical<wbr>Connection<wbr>Requirements<wbr>Args?</a></code>
+                <code><a href="#connectionphysicalconnectionrequirements">Connection<wbr>Physical<wbr>Connection<wbr>Requirements<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -334,7 +334,7 @@ The name of the connection.
             <td class="align-top">Physical<wbr>Connection<wbr>Requirements</td>
             <td class="align-top">
                 
-                <code><a href="#connectionphysicalconnectionrequirements">*glue.<wbr>Connection<wbr>Physical<wbr>Connection<wbr>Requirements</a></code>
+                <code><a href="#connectionphysicalconnectionrequirements">*Connection<wbr>Physical<wbr>Connection<wbr>Requirements</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -459,7 +459,7 @@ The name of the connection.
             <td class="align-top">physical<wbr>Connection<wbr>Requirements</td>
             <td class="align-top">
                 
-                <code><a href="#connectionphysicalconnectionrequirements">glue.<wbr>Connection<wbr>Physical<wbr>Connection<wbr>Requirements?</a></code>
+                <code><a href="#connectionphysicalconnectionrequirements">Connection<wbr>Physical<wbr>Connection<wbr>Requirements?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -646,7 +646,7 @@ The following output properties are available:
             <td class="align-top">Connection<wbr>Properties</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;</code>
+                <code>Dictionary<string, object></code>
             </td>
             <td class="align-top">{{% md %}} A map of key-value pairs used as parameters for this connection.
  {{% /md %}}
@@ -685,7 +685,7 @@ The following output properties are available:
             <td class="align-top">Match<wbr>Criterias</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} A list of criteria that can be used in selecting this connection.
  {{% /md %}}
@@ -711,7 +711,7 @@ The following output properties are available:
             <td class="align-top">Physical<wbr>Connection<wbr>Requirements</td>
             <td class="align-top">
                 
-                <code><a href="#connectionphysicalconnectionrequirements">Pulumi.<wbr>Aws.<wbr>Glue.<wbr>Connection<wbr>Physical<wbr>Connection<wbr>Requirements?</a></code>
+                <code><a href="#connectionphysicalconnectionrequirements">Connection<wbr>Physical<wbr>Connection<wbr>Requirements?</a></code>
             </td>
             <td class="align-top">{{% md %}} A map of physical connection requirements, such as VPC and SecurityGroup. Defined below.
  {{% /md %}}
@@ -822,7 +822,7 @@ The following output properties are available:
             <td class="align-top">Physical<wbr>Connection<wbr>Requirements</td>
             <td class="align-top">
                 
-                <code><a href="#connectionphysicalconnectionrequirements">*glue.<wbr>Connection<wbr>Physical<wbr>Connection<wbr>Requirements</a></code>
+                <code><a href="#connectionphysicalconnectionrequirements">*Connection<wbr>Physical<wbr>Connection<wbr>Requirements</a></code>
             </td>
             <td class="align-top">{{% md %}} A map of physical connection requirements, such as VPC and SecurityGroup. Defined below.
  {{% /md %}}
@@ -933,7 +933,7 @@ The following output properties are available:
             <td class="align-top">physical<wbr>Connection<wbr>Requirements</td>
             <td class="align-top">
                 
-                <code><a href="#connectionphysicalconnectionrequirements">glue.<wbr>Connection<wbr>Physical<wbr>Connection<wbr>Requirements?</a></code>
+                <code><a href="#connectionphysicalconnectionrequirements">Connection<wbr>Physical<wbr>Connection<wbr>Requirements?</a></code>
             </td>
             <td class="align-top">{{% md %}} A map of physical connection requirements, such as VPC and SecurityGroup. Defined below.
  {{% /md %}}
@@ -1151,7 +1151,7 @@ The ID of the Data Catalog in which to create the connection. If none is supplie
             <td class="align-top">Connection<wbr>Properties</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1196,7 +1196,7 @@ Description of the connection.
             <td class="align-top">Match<wbr>Criterias</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1226,7 +1226,7 @@ The name of the connection.
             <td class="align-top">Physical<wbr>Connection<wbr>Requirements</td>
             <td class="align-top">
                 
-                <code><a href="#connectionphysicalconnectionrequirements">Pulumi.<wbr>Aws.<wbr>Glue.<wbr>Connection<wbr>Physical<wbr>Connection<wbr>Requirements<wbr>Args?</a></code>
+                <code><a href="#connectionphysicalconnectionrequirements">Connection<wbr>Physical<wbr>Connection<wbr>Requirements<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1351,7 +1351,7 @@ The name of the connection.
             <td class="align-top">Physical<wbr>Connection<wbr>Requirements</td>
             <td class="align-top">
                 
-                <code><a href="#connectionphysicalconnectionrequirements">*glue.<wbr>Connection<wbr>Physical<wbr>Connection<wbr>Requirements</a></code>
+                <code><a href="#connectionphysicalconnectionrequirements">*Connection<wbr>Physical<wbr>Connection<wbr>Requirements</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1476,7 +1476,7 @@ The name of the connection.
             <td class="align-top">physical<wbr>Connection<wbr>Requirements</td>
             <td class="align-top">
                 
-                <code><a href="#connectionphysicalconnectionrequirements">glue.<wbr>Connection<wbr>Physical<wbr>Connection<wbr>Requirements?</a></code>
+                <code><a href="#connectionphysicalconnectionrequirements">Connection<wbr>Physical<wbr>Connection<wbr>Requirements?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1679,7 +1679,7 @@ The availability zone of the connection. This field is redundant and implied by 
             <td class="align-top">Security<wbr>Group<wbr>Id<wbr>Lists</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

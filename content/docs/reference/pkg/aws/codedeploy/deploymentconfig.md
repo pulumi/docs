@@ -184,7 +184,7 @@ The name of the deployment config.
             <td class="align-top">Minimum<wbr>Healthy<wbr>Hosts</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentconfigminimumhealthyhosts">Pulumi.<wbr>Aws.<wbr>Codedeploy.<wbr>Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts<wbr>Args?</a></code>
+                <code><a href="#deploymentconfigminimumhealthyhosts">Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -199,7 +199,7 @@ A minimum_healthy_hosts block. Required for `Server` compute platform. Minimum H
             <td class="align-top">Traffic<wbr>Routing<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentconfigtrafficroutingconfig">Pulumi.<wbr>Aws.<wbr>Codedeploy.<wbr>Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Args?</a></code>
+                <code><a href="#deploymentconfigtrafficroutingconfig">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -264,7 +264,7 @@ The name of the deployment config.
             <td class="align-top">Minimum<wbr>Healthy<wbr>Hosts</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentconfigminimumhealthyhosts">*codedeploy.<wbr>Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts</a></code>
+                <code><a href="#deploymentconfigminimumhealthyhosts">*Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -279,7 +279,7 @@ A minimum_healthy_hosts block. Required for `Server` compute platform. Minimum H
             <td class="align-top">Traffic<wbr>Routing<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentconfigtrafficroutingconfig">*codedeploy.<wbr>Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config</a></code>
+                <code><a href="#deploymentconfigtrafficroutingconfig">*Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -344,7 +344,7 @@ The name of the deployment config.
             <td class="align-top">minimum<wbr>Healthy<wbr>Hosts</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentconfigminimumhealthyhosts">codedeploy.<wbr>Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts?</a></code>
+                <code><a href="#deploymentconfigminimumhealthyhosts">Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -359,7 +359,7 @@ A minimum_healthy_hosts block. Required for `Server` compute platform. Minimum H
             <td class="align-top">traffic<wbr>Routing<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentconfigtrafficroutingconfig">codedeploy.<wbr>Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config?</a></code>
+                <code><a href="#deploymentconfigtrafficroutingconfig">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -527,7 +527,7 @@ The following output properties are available:
             <td class="align-top">Minimum<wbr>Healthy<wbr>Hosts</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentconfigminimumhealthyhosts">Pulumi.<wbr>Aws.<wbr>Codedeploy.<wbr>Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts?</a></code>
+                <code><a href="#deploymentconfigminimumhealthyhosts">Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts?</a></code>
             </td>
             <td class="align-top">{{% md %}} A minimum_healthy_hosts block. Required for `Server` compute platform. Minimum Healthy Hosts are documented below.
  {{% /md %}}
@@ -540,7 +540,7 @@ The following output properties are available:
             <td class="align-top">Traffic<wbr>Routing<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentconfigtrafficroutingconfig">Pulumi.<wbr>Aws.<wbr>Codedeploy.<wbr>Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config?</a></code>
+                <code><a href="#deploymentconfigtrafficroutingconfig">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} A traffic_routing_config block. Traffic Routing Config is documented below.
  {{% /md %}}
@@ -612,7 +612,7 @@ The following output properties are available:
             <td class="align-top">Minimum<wbr>Healthy<wbr>Hosts</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentconfigminimumhealthyhosts">*codedeploy.<wbr>Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts</a></code>
+                <code><a href="#deploymentconfigminimumhealthyhosts">*Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts</a></code>
             </td>
             <td class="align-top">{{% md %}} A minimum_healthy_hosts block. Required for `Server` compute platform. Minimum Healthy Hosts are documented below.
  {{% /md %}}
@@ -625,7 +625,7 @@ The following output properties are available:
             <td class="align-top">Traffic<wbr>Routing<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentconfigtrafficroutingconfig">*codedeploy.<wbr>Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config</a></code>
+                <code><a href="#deploymentconfigtrafficroutingconfig">*Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} A traffic_routing_config block. Traffic Routing Config is documented below.
  {{% /md %}}
@@ -697,7 +697,7 @@ The following output properties are available:
             <td class="align-top">minimum<wbr>Healthy<wbr>Hosts</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentconfigminimumhealthyhosts">codedeploy.<wbr>Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts?</a></code>
+                <code><a href="#deploymentconfigminimumhealthyhosts">Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts?</a></code>
             </td>
             <td class="align-top">{{% md %}} A minimum_healthy_hosts block. Required for `Server` compute platform. Minimum Healthy Hosts are documented below.
  {{% /md %}}
@@ -710,7 +710,7 @@ The following output properties are available:
             <td class="align-top">traffic<wbr>Routing<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentconfigtrafficroutingconfig">codedeploy.<wbr>Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config?</a></code>
+                <code><a href="#deploymentconfigtrafficroutingconfig">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} A traffic_routing_config block. Traffic Routing Config is documented below.
  {{% /md %}}
@@ -932,7 +932,7 @@ The name of the deployment config.
             <td class="align-top">Minimum<wbr>Healthy<wbr>Hosts</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentconfigminimumhealthyhosts">Pulumi.<wbr>Aws.<wbr>Codedeploy.<wbr>Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts<wbr>Args?</a></code>
+                <code><a href="#deploymentconfigminimumhealthyhosts">Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -947,7 +947,7 @@ A minimum_healthy_hosts block. Required for `Server` compute platform. Minimum H
             <td class="align-top">Traffic<wbr>Routing<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentconfigtrafficroutingconfig">Pulumi.<wbr>Aws.<wbr>Codedeploy.<wbr>Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Args?</a></code>
+                <code><a href="#deploymentconfigtrafficroutingconfig">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1027,7 +1027,7 @@ The name of the deployment config.
             <td class="align-top">Minimum<wbr>Healthy<wbr>Hosts</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentconfigminimumhealthyhosts">*codedeploy.<wbr>Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts</a></code>
+                <code><a href="#deploymentconfigminimumhealthyhosts">*Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1042,7 +1042,7 @@ A minimum_healthy_hosts block. Required for `Server` compute platform. Minimum H
             <td class="align-top">Traffic<wbr>Routing<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentconfigtrafficroutingconfig">*codedeploy.<wbr>Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config</a></code>
+                <code><a href="#deploymentconfigtrafficroutingconfig">*Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1122,7 +1122,7 @@ The name of the deployment config.
             <td class="align-top">minimum<wbr>Healthy<wbr>Hosts</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentconfigminimumhealthyhosts">codedeploy.<wbr>Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts?</a></code>
+                <code><a href="#deploymentconfigminimumhealthyhosts">Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1137,7 +1137,7 @@ A minimum_healthy_hosts block. Required for `Server` compute platform. Minimum H
             <td class="align-top">traffic<wbr>Routing<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentconfigtrafficroutingconfig">codedeploy.<wbr>Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config?</a></code>
+                <code><a href="#deploymentconfigtrafficroutingconfig">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1508,7 +1508,7 @@ A traffic_routing_config block. Traffic Routing Config is documented below.
             <td class="align-top">Time<wbr>Based<wbr>Canary</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentconfigtrafficroutingconfigtimebasedcanary">Pulumi.<wbr>Aws.<wbr>Codedeploy.<wbr>Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Canary<wbr>Args?</a></code>
+                <code><a href="#deploymentconfigtrafficroutingconfigtimebasedcanary">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Canary<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1522,7 +1522,7 @@ A traffic_routing_config block. Traffic Routing Config is documented below.
             <td class="align-top">Time<wbr>Based<wbr>Linear</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentconfigtrafficroutingconfigtimebasedlinear">Pulumi.<wbr>Aws.<wbr>Codedeploy.<wbr>Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Linear<wbr>Args?</a></code>
+                <code><a href="#deploymentconfigtrafficroutingconfigtimebasedlinear">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Linear<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1570,7 +1570,7 @@ A traffic_routing_config block. Traffic Routing Config is documented below.
             <td class="align-top">Time<wbr>Based<wbr>Canary</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentconfigtrafficroutingconfigtimebasedcanary">*codedeploy.<wbr>Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Canary</a></code>
+                <code><a href="#deploymentconfigtrafficroutingconfigtimebasedcanary">*Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Canary</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1584,7 +1584,7 @@ A traffic_routing_config block. Traffic Routing Config is documented below.
             <td class="align-top">Time<wbr>Based<wbr>Linear</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentconfigtrafficroutingconfigtimebasedlinear">*codedeploy.<wbr>Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Linear</a></code>
+                <code><a href="#deploymentconfigtrafficroutingconfigtimebasedlinear">*Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Linear</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1632,7 +1632,7 @@ A traffic_routing_config block. Traffic Routing Config is documented below.
             <td class="align-top">time<wbr>Based<wbr>Canary</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentconfigtrafficroutingconfigtimebasedcanary">codedeploy.<wbr>Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Canary?</a></code>
+                <code><a href="#deploymentconfigtrafficroutingconfigtimebasedcanary">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Canary?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1646,7 +1646,7 @@ A traffic_routing_config block. Traffic Routing Config is documented below.
             <td class="align-top">time<wbr>Based<wbr>Linear</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentconfigtrafficroutingconfigtimebasedlinear">codedeploy.<wbr>Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Linear?</a></code>
+                <code><a href="#deploymentconfigtrafficroutingconfigtimebasedlinear">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Linear?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

@@ -112,7 +112,7 @@ The following arguments are supported:
             <td class="align-top">Instance<wbr>Ports</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -334,7 +334,7 @@ The following output properties are available:
             <td class="align-top">Instance<wbr>Ports</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} List of instance ports to which the policy
 should be applied. This can be specified if the protocol is SSL or TCP.
@@ -585,7 +585,7 @@ The following state arguments are supported:
             <td class="align-top">Instance<wbr>Ports</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

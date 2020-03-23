@@ -201,7 +201,7 @@ ARN for the KMS Key to encrypt the file system at rest. Defaults to an AWS manag
             <td class="align-top">Security<wbr>Group<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -216,7 +216,7 @@ A list of IDs for the security groups that apply to the specified network interf
             <td class="align-top">Self<wbr>Managed<wbr>Active<wbr>Directory</td>
             <td class="align-top">
                 
-                <code><a href="#windowsfilesystemselfmanagedactivedirectory">Pulumi.<wbr>Aws.<wbr>Fsx.<wbr>Windows<wbr>File<wbr>System<wbr>Self<wbr>Managed<wbr>Active<wbr>Directory<wbr>Args?</a></code>
+                <code><a href="#windowsfilesystemselfmanagedactivedirectory">Windows<wbr>File<wbr>System<wbr>Self<wbr>Managed<wbr>Active<wbr>Directory<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -276,7 +276,7 @@ A list of IDs for the subnets that the file system will be accessible from. File
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -431,7 +431,7 @@ A list of IDs for the security groups that apply to the specified network interf
             <td class="align-top">Self<wbr>Managed<wbr>Active<wbr>Directory</td>
             <td class="align-top">
                 
-                <code><a href="#windowsfilesystemselfmanagedactivedirectory">*fsx.<wbr>Windows<wbr>File<wbr>System<wbr>Self<wbr>Managed<wbr>Active<wbr>Directory</a></code>
+                <code><a href="#windowsfilesystemselfmanagedactivedirectory">*Windows<wbr>File<wbr>System<wbr>Self<wbr>Managed<wbr>Active<wbr>Directory</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -646,7 +646,7 @@ A list of IDs for the security groups that apply to the specified network interf
             <td class="align-top">self<wbr>Managed<wbr>Active<wbr>Directory</td>
             <td class="align-top">
                 
-                <code><a href="#windowsfilesystemselfmanagedactivedirectory">fsx.<wbr>Windows<wbr>File<wbr>System<wbr>Self<wbr>Managed<wbr>Active<wbr>Directory?</a></code>
+                <code><a href="#windowsfilesystemselfmanagedactivedirectory">Windows<wbr>File<wbr>System<wbr>Self<wbr>Managed<wbr>Active<wbr>Directory?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1091,7 +1091,7 @@ The following output properties are available:
             <td class="align-top">Network<wbr>Interface<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} Set of Elastic Network Interface identifiers from which the file system is accessible.
  {{% /md %}}
@@ -1117,7 +1117,7 @@ The following output properties are available:
             <td class="align-top">Security<wbr>Group<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} A list of IDs for the security groups that apply to the specified network interfaces created for file system access. These security groups will apply to all network interfaces.
  {{% /md %}}
@@ -1130,7 +1130,7 @@ The following output properties are available:
             <td class="align-top">Self<wbr>Managed<wbr>Active<wbr>Directory</td>
             <td class="align-top">
                 
-                <code><a href="#windowsfilesystemselfmanagedactivedirectory">Pulumi.<wbr>Aws.<wbr>Fsx.<wbr>Windows<wbr>File<wbr>System<wbr>Self<wbr>Managed<wbr>Active<wbr>Directory?</a></code>
+                <code><a href="#windowsfilesystemselfmanagedactivedirectory">Windows<wbr>File<wbr>System<wbr>Self<wbr>Managed<wbr>Active<wbr>Directory?</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block that Amazon FSx uses to join the Windows File Server instance to your self-managed (including on-premises) Microsoft Active Directory (AD) directory. Cannot be specified with `active_directory_id`. Detailed below.
  {{% /md %}}
@@ -1182,7 +1182,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the file system.
  {{% /md %}}
@@ -1384,7 +1384,7 @@ The following output properties are available:
             <td class="align-top">Self<wbr>Managed<wbr>Active<wbr>Directory</td>
             <td class="align-top">
                 
-                <code><a href="#windowsfilesystemselfmanagedactivedirectory">*fsx.<wbr>Windows<wbr>File<wbr>System<wbr>Self<wbr>Managed<wbr>Active<wbr>Directory</a></code>
+                <code><a href="#windowsfilesystemselfmanagedactivedirectory">*Windows<wbr>File<wbr>System<wbr>Self<wbr>Managed<wbr>Active<wbr>Directory</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block that Amazon FSx uses to join the Windows File Server instance to your self-managed (including on-premises) Microsoft Active Directory (AD) directory. Cannot be specified with `active_directory_id`. Detailed below.
  {{% /md %}}
@@ -1638,7 +1638,7 @@ The following output properties are available:
             <td class="align-top">self<wbr>Managed<wbr>Active<wbr>Directory</td>
             <td class="align-top">
                 
-                <code><a href="#windowsfilesystemselfmanagedactivedirectory">fsx.<wbr>Windows<wbr>File<wbr>System<wbr>Self<wbr>Managed<wbr>Active<wbr>Directory?</a></code>
+                <code><a href="#windowsfilesystemselfmanagedactivedirectory">Windows<wbr>File<wbr>System<wbr>Self<wbr>Managed<wbr>Active<wbr>Directory?</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block that Amazon FSx uses to join the Windows File Server instance to your self-managed (including on-premises) Microsoft Active Directory (AD) directory. Cannot be specified with `active_directory_id`. Detailed below.
  {{% /md %}}
@@ -2180,7 +2180,7 @@ ARN for the KMS Key to encrypt the file system at rest. Defaults to an AWS manag
             <td class="align-top">Network<wbr>Interface<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2210,7 +2210,7 @@ AWS account identifier that created the file system.
             <td class="align-top">Security<wbr>Group<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2225,7 +2225,7 @@ A list of IDs for the security groups that apply to the specified network interf
             <td class="align-top">Self<wbr>Managed<wbr>Active<wbr>Directory</td>
             <td class="align-top">
                 
-                <code><a href="#windowsfilesystemselfmanagedactivedirectory">Pulumi.<wbr>Aws.<wbr>Fsx.<wbr>Windows<wbr>File<wbr>System<wbr>Self<wbr>Managed<wbr>Active<wbr>Directory<wbr>Args?</a></code>
+                <code><a href="#windowsfilesystemselfmanagedactivedirectory">Windows<wbr>File<wbr>System<wbr>Self<wbr>Managed<wbr>Active<wbr>Directory<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2285,7 +2285,7 @@ A list of IDs for the subnets that the file system will be accessible from. File
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2515,7 +2515,7 @@ A list of IDs for the security groups that apply to the specified network interf
             <td class="align-top">Self<wbr>Managed<wbr>Active<wbr>Directory</td>
             <td class="align-top">
                 
-                <code><a href="#windowsfilesystemselfmanagedactivedirectory">*fsx.<wbr>Windows<wbr>File<wbr>System<wbr>Self<wbr>Managed<wbr>Active<wbr>Directory</a></code>
+                <code><a href="#windowsfilesystemselfmanagedactivedirectory">*Windows<wbr>File<wbr>System<wbr>Self<wbr>Managed<wbr>Active<wbr>Directory</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2805,7 +2805,7 @@ A list of IDs for the security groups that apply to the specified network interf
             <td class="align-top">self<wbr>Managed<wbr>Active<wbr>Directory</td>
             <td class="align-top">
                 
-                <code><a href="#windowsfilesystemselfmanagedactivedirectory">fsx.<wbr>Windows<wbr>File<wbr>System<wbr>Self<wbr>Managed<wbr>Active<wbr>Directory?</a></code>
+                <code><a href="#windowsfilesystemselfmanagedactivedirectory">Windows<wbr>File<wbr>System<wbr>Self<wbr>Managed<wbr>Active<wbr>Directory?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3263,7 +3263,7 @@ The preferred start time (in `d:HH:MM` format) to perform weekly maintenance, in
             <td class="align-top">Dns<wbr>Ips</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

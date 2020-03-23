@@ -40,7 +40,12 @@ const myCluster = aws.elasticache.getCluster({
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupCluster<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/elasticache?tab=doc#LookupClusterArgs">LookupClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/elasticache?tab=doc#LookupClusterResult">LookupClusterResult</a></span>, error)</span></code></pre></div>
 
 
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elasticache.GetClusterResult.html">Pulumi.Aws.Elasticache.GetClusterResult</a></span>> <span class="p">GetCluster(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elasticache.GetClusterArgs.html">GetClusterArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight">
+<pre class="chroma">
+<code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetCluster </span><span class="p">{</span>
+    <span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elasticache.GetClusterResult.html">GetClusterResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elasticache.GetClusterArgs.html">GetClusterArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span>
+<span class="p">}</span></code></pre>
+</div>
 
 
 
@@ -82,7 +87,7 @@ Group identifier.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -303,7 +308,7 @@ The following output properties are available:
             <td class="align-top">Cache<wbr>Nodes</td>
             <td class="align-top">
                 
-                <code><a href="#getclustercachenode">List&lt;Pulumi.<wbr>Aws.<wbr>Elasticache.<wbr>Get<wbr>Cluster<wbr>Cache<wbr>Node&gt;</a></code>
+                <code><a href="#getclustercachenode">List&lt;Get<wbr>Cluster<wbr>Cache<wbr>Node&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} List of node objects including `id`, `address`, `port` and `availability_zone`.
 Referenceable e.g. as `${data.aws_elasticache_cluster.bar.cache_nodes.0.address}`
@@ -488,7 +493,7 @@ accept connections.
             <td class="align-top">Security<wbr>Group<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} List VPC security groups associated with the cache cluster.
  {{% /md %}}
@@ -501,7 +506,7 @@ accept connections.
             <td class="align-top">Security<wbr>Group<wbr>Names</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} List of security group names associated with this cache cluster.
  {{% /md %}}
@@ -555,7 +560,7 @@ begin taking a daily snapshot of the cache cluster.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;</code>
+                <code>Dictionary<string, object></code>
             </td>
             <td class="align-top">{{% md %}} The tags assigned to the resource
  {{% /md %}}
@@ -613,7 +618,7 @@ begin taking a daily snapshot of the cache cluster.
             <td class="align-top">Cache<wbr>Nodes</td>
             <td class="align-top">
                 
-                <code><a href="#getclustercachenode">[]elasticache.<wbr>Get<wbr>Cluster<wbr>Cache<wbr>Node</a></code>
+                <code><a href="#getclustercachenode">[]Get<wbr>Cluster<wbr>Cache<wbr>Node</a></code>
             </td>
             <td class="align-top">{{% md %}} List of node objects including `id`, `address`, `port` and `availability_zone`.
 Referenceable e.g. as `${data.aws_elasticache_cluster.bar.cache_nodes.0.address}`
@@ -923,7 +928,7 @@ begin taking a daily snapshot of the cache cluster.
             <td class="align-top">cache<wbr>Nodes</td>
             <td class="align-top">
                 
-                <code><a href="#getclustercachenode">elasticache.<wbr>Get<wbr>Cluster<wbr>Cache<wbr>Node[]</a></code>
+                <code><a href="#getclustercachenode">Get<wbr>Cluster<wbr>Cache<wbr>Node[]</a></code>
             </td>
             <td class="align-top">{{% md %}} List of node objects including `id`, `address`, `port` and `availability_zone`.
 Referenceable e.g. as `${data.aws_elasticache_cluster.bar.cache_nodes.0.address}`

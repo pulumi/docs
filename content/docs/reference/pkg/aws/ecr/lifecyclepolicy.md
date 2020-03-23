@@ -244,7 +244,7 @@ Name of the repository to apply the policy.
             <td class="align-top">policy</td>
             <td class="align-top">
                 
-                <code>string | Lifecycle<wbr>Policy<wbr>Document</code>
+                <code>string | LifecyclePolicyDocument</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -775,7 +775,7 @@ Name of the repository to apply the policy.
             <td class="align-top">policy</td>
             <td class="align-top">
                 
-                <code>string | Lifecycle<wbr>Policy<wbr>Document</code>
+                <code>string | LifecyclePolicyDocument</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

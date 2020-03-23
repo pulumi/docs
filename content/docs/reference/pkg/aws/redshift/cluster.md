@@ -205,7 +205,7 @@ The specific revision number of the database in the cluster
             <td class="align-top">Cluster<wbr>Security<wbr>Groups</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -357,7 +357,7 @@ The identifier of the final snapshot that is to be created immediately before de
             <td class="align-top">Iam<wbr>Roles</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -387,7 +387,7 @@ The ARN for the KMS encryption key. When specifying `kms_key_id`, `encrypted` ne
             <td class="align-top">Logging</td>
             <td class="align-top">
                 
-                <code><a href="#clusterlogging">Pulumi.<wbr>Aws.<wbr>Redshift.<wbr>Cluster<wbr>Logging<wbr>Args?</a></code>
+                <code><a href="#clusterlogging">Cluster<wbr>Logging<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -556,7 +556,7 @@ The name of the cluster the source snapshot was created from.
             <td class="align-top">Snapshot<wbr>Copy</td>
             <td class="align-top">
                 
-                <code><a href="#clustersnapshotcopy">Pulumi.<wbr>Aws.<wbr>Redshift.<wbr>Cluster<wbr>Snapshot<wbr>Copy<wbr>Args?</a></code>
+                <code><a href="#clustersnapshotcopy">Cluster<wbr>Snapshot<wbr>Copy<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -586,7 +586,7 @@ The name of the snapshot from which to create the new cluster.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -601,7 +601,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">Vpc<wbr>Security<wbr>Group<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -924,7 +924,7 @@ The ARN for the KMS encryption key. When specifying `kms_key_id`, `encrypted` ne
             <td class="align-top">Logging</td>
             <td class="align-top">
                 
-                <code><a href="#clusterlogging">*redshift.<wbr>Cluster<wbr>Logging</a></code>
+                <code><a href="#clusterlogging">*Cluster<wbr>Logging</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1093,7 +1093,7 @@ The name of the cluster the source snapshot was created from.
             <td class="align-top">Snapshot<wbr>Copy</td>
             <td class="align-top">
                 
-                <code><a href="#clustersnapshotcopy">*redshift.<wbr>Cluster<wbr>Snapshot<wbr>Copy</a></code>
+                <code><a href="#clustersnapshotcopy">*Cluster<wbr>Snapshot<wbr>Copy</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1461,7 +1461,7 @@ The ARN for the KMS encryption key. When specifying `kms_key_id`, `encrypted` ne
             <td class="align-top">logging</td>
             <td class="align-top">
                 
-                <code><a href="#clusterlogging">redshift.<wbr>Cluster<wbr>Logging?</a></code>
+                <code><a href="#clusterlogging">Cluster<wbr>Logging?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1630,7 +1630,7 @@ The name of the cluster the source snapshot was created from.
             <td class="align-top">snapshot<wbr>Copy</td>
             <td class="align-top">
                 
-                <code><a href="#clustersnapshotcopy">redshift.<wbr>Cluster<wbr>Snapshot<wbr>Copy?</a></code>
+                <code><a href="#clustersnapshotcopy">Cluster<wbr>Snapshot<wbr>Copy?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2366,7 +2366,7 @@ string.
             <td class="align-top">Cluster<wbr>Security<wbr>Groups</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} A list of security groups to be associated with this cluster.
  {{% /md %}}
@@ -2511,7 +2511,7 @@ If you do not provide a name, Amazon Redshift will create a default database cal
             <td class="align-top">Iam<wbr>Roles</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} A list of IAM Role ARNs to associate with the cluster. A Maximum of 10 can be associated to the cluster at any time.
  {{% /md %}}
@@ -2537,7 +2537,7 @@ If you do not provide a name, Amazon Redshift will create a default database cal
             <td class="align-top">Logging</td>
             <td class="align-top">
                 
-                <code><a href="#clusterlogging">Pulumi.<wbr>Aws.<wbr>Redshift.<wbr>Cluster<wbr>Logging?</a></code>
+                <code><a href="#clusterlogging">Cluster<wbr>Logging?</a></code>
             </td>
             <td class="align-top">{{% md %}} Logging, documented below.
  {{% /md %}}
@@ -2684,7 +2684,7 @@ Format: ddd:hh24:mi-ddd:hh24:mi
             <td class="align-top">Snapshot<wbr>Copy</td>
             <td class="align-top">
                 
-                <code><a href="#clustersnapshotcopy">Pulumi.<wbr>Aws.<wbr>Redshift.<wbr>Cluster<wbr>Snapshot<wbr>Copy?</a></code>
+                <code><a href="#clustersnapshotcopy">Cluster<wbr>Snapshot<wbr>Copy?</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration of automatic copy of snapshots from one region to another. Documented below.
  {{% /md %}}
@@ -2710,7 +2710,7 @@ Format: ddd:hh24:mi-ddd:hh24:mi
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -2723,7 +2723,7 @@ Format: ddd:hh24:mi-ddd:hh24:mi
             <td class="align-top">Vpc<wbr>Security<wbr>Group<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} A list of Virtual Private Cloud (VPC) security groups to be associated with the cluster.
  {{% /md %}}
@@ -3032,7 +3032,7 @@ If you do not provide a name, Amazon Redshift will create a default database cal
             <td class="align-top">Logging</td>
             <td class="align-top">
                 
-                <code><a href="#clusterlogging">*redshift.<wbr>Cluster<wbr>Logging</a></code>
+                <code><a href="#clusterlogging">*Cluster<wbr>Logging</a></code>
             </td>
             <td class="align-top">{{% md %}} Logging, documented below.
  {{% /md %}}
@@ -3179,7 +3179,7 @@ Format: ddd:hh24:mi-ddd:hh24:mi
             <td class="align-top">Snapshot<wbr>Copy</td>
             <td class="align-top">
                 
-                <code><a href="#clustersnapshotcopy">*redshift.<wbr>Cluster<wbr>Snapshot<wbr>Copy</a></code>
+                <code><a href="#clustersnapshotcopy">*Cluster<wbr>Snapshot<wbr>Copy</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration of automatic copy of snapshots from one region to another. Documented below.
  {{% /md %}}
@@ -3527,7 +3527,7 @@ If you do not provide a name, Amazon Redshift will create a default database cal
             <td class="align-top">logging</td>
             <td class="align-top">
                 
-                <code><a href="#clusterlogging">redshift.<wbr>Cluster<wbr>Logging?</a></code>
+                <code><a href="#clusterlogging">Cluster<wbr>Logging?</a></code>
             </td>
             <td class="align-top">{{% md %}} Logging, documented below.
  {{% /md %}}
@@ -3674,7 +3674,7 @@ Format: ddd:hh24:mi-ddd:hh24:mi
             <td class="align-top">snapshot<wbr>Copy</td>
             <td class="align-top">
                 
-                <code><a href="#clustersnapshotcopy">redshift.<wbr>Cluster<wbr>Snapshot<wbr>Copy?</a></code>
+                <code><a href="#clustersnapshotcopy">Cluster<wbr>Snapshot<wbr>Copy?</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration of automatic copy of snapshots from one region to another. Documented below.
  {{% /md %}}
@@ -4421,7 +4421,7 @@ The specific revision number of the database in the cluster
             <td class="align-top">Cluster<wbr>Security<wbr>Groups</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4588,7 +4588,7 @@ The identifier of the final snapshot that is to be created immediately before de
             <td class="align-top">Iam<wbr>Roles</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4618,7 +4618,7 @@ The ARN for the KMS encryption key. When specifying `kms_key_id`, `encrypted` ne
             <td class="align-top">Logging</td>
             <td class="align-top">
                 
-                <code><a href="#clusterlogging">Pulumi.<wbr>Aws.<wbr>Redshift.<wbr>Cluster<wbr>Logging<wbr>Args?</a></code>
+                <code><a href="#clusterlogging">Cluster<wbr>Logging<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4787,7 +4787,7 @@ The name of the cluster the source snapshot was created from.
             <td class="align-top">Snapshot<wbr>Copy</td>
             <td class="align-top">
                 
-                <code><a href="#clustersnapshotcopy">Pulumi.<wbr>Aws.<wbr>Redshift.<wbr>Cluster<wbr>Snapshot<wbr>Copy<wbr>Args?</a></code>
+                <code><a href="#clustersnapshotcopy">Cluster<wbr>Snapshot<wbr>Copy<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4817,7 +4817,7 @@ The name of the snapshot from which to create the new cluster.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4832,7 +4832,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">Vpc<wbr>Security<wbr>Group<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5185,7 +5185,7 @@ The ARN for the KMS encryption key. When specifying `kms_key_id`, `encrypted` ne
             <td class="align-top">Logging</td>
             <td class="align-top">
                 
-                <code><a href="#clusterlogging">*redshift.<wbr>Cluster<wbr>Logging</a></code>
+                <code><a href="#clusterlogging">*Cluster<wbr>Logging</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5354,7 +5354,7 @@ The name of the cluster the source snapshot was created from.
             <td class="align-top">Snapshot<wbr>Copy</td>
             <td class="align-top">
                 
-                <code><a href="#clustersnapshotcopy">*redshift.<wbr>Cluster<wbr>Snapshot<wbr>Copy</a></code>
+                <code><a href="#clustersnapshotcopy">*Cluster<wbr>Snapshot<wbr>Copy</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5752,7 +5752,7 @@ The ARN for the KMS encryption key. When specifying `kms_key_id`, `encrypted` ne
             <td class="align-top">logging</td>
             <td class="align-top">
                 
-                <code><a href="#clusterlogging">redshift.<wbr>Cluster<wbr>Logging?</a></code>
+                <code><a href="#clusterlogging">Cluster<wbr>Logging?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5921,7 +5921,7 @@ The name of the cluster the source snapshot was created from.
             <td class="align-top">snapshot<wbr>Copy</td>
             <td class="align-top">
                 
-                <code><a href="#clustersnapshotcopy">redshift.<wbr>Cluster<wbr>Snapshot<wbr>Copy?</a></code>
+                <code><a href="#clustersnapshotcopy">Cluster<wbr>Snapshot<wbr>Copy?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

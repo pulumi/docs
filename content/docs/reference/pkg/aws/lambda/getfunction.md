@@ -43,7 +43,12 @@ const existing = aws.lambda.getFunction({
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupFunction<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/lambda?tab=doc#LookupFunctionArgs">LookupFunctionArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/lambda?tab=doc#LookupFunctionResult">LookupFunctionResult</a></span>, error)</span></code></pre></div>
 
 
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lambda.GetFunctionResult.html">Pulumi.Aws.Lambda.GetFunctionResult</a></span>> <span class="p">GetFunction(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lambda.GetFunctionArgs.html">GetFunctionArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight">
+<pre class="chroma">
+<code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetFunction </span><span class="p">{</span>
+    <span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lambda.GetFunctionResult.html">GetFunctionResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lambda.GetFunctionArgs.html">GetFunctionArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span>
+<span class="p">}</span></code></pre>
+</div>
 
 
 
@@ -100,7 +105,7 @@ Alias name or version number of the lambda function. e.g. `$LATEST`, `my-alias`,
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -354,7 +359,7 @@ The following output properties are available:
             <td class="align-top">Dead<wbr>Letter<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#getfunctiondeadletterconfig">Pulumi.<wbr>Aws.<wbr>Lambda.<wbr>Get<wbr>Function<wbr>Dead<wbr>Letter<wbr>Config</a></code>
+                <code><a href="#getfunctiondeadletterconfig">Get<wbr>Function<wbr>Dead<wbr>Letter<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} Configure the function&#39;s *dead letter queue*.
  {{% /md %}}
@@ -380,7 +385,7 @@ The following output properties are available:
             <td class="align-top">Environment</td>
             <td class="align-top">
                 
-                <code><a href="#getfunctionenvironment">Pulumi.<wbr>Aws.<wbr>Lambda.<wbr>Get<wbr>Function<wbr>Environment</a></code>
+                <code><a href="#getfunctionenvironment">Get<wbr>Function<wbr>Environment</a></code>
             </td>
             <td class="align-top">{{% md %}} The Lambda environment&#39;s configuration settings.
  {{% /md %}}
@@ -470,7 +475,7 @@ The following output properties are available:
             <td class="align-top">Layers</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} A list of Lambda Layer ARNs attached to your Lambda Function.
  {{% /md %}}
@@ -586,7 +591,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;</code>
+                <code>Dictionary<string, object></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -611,7 +616,7 @@ The following output properties are available:
             <td class="align-top">Tracing<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#getfunctiontracingconfig">Pulumi.<wbr>Aws.<wbr>Lambda.<wbr>Get<wbr>Function<wbr>Tracing<wbr>Config</a></code>
+                <code><a href="#getfunctiontracingconfig">Get<wbr>Function<wbr>Tracing<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} Tracing settings of the function.
  {{% /md %}}
@@ -637,7 +642,7 @@ The following output properties are available:
             <td class="align-top">Vpc<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#getfunctionvpcconfig">Pulumi.<wbr>Aws.<wbr>Lambda.<wbr>Get<wbr>Function<wbr>Vpc<wbr>Config</a></code>
+                <code><a href="#getfunctionvpcconfig">Get<wbr>Function<wbr>Vpc<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} VPC configuration associated with your Lambda function.
  {{% /md %}}
@@ -683,7 +688,7 @@ The following output properties are available:
             <td class="align-top">Dead<wbr>Letter<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#getfunctiondeadletterconfig">lambda.<wbr>Get<wbr>Function<wbr>Dead<wbr>Letter<wbr>Config</a></code>
+                <code><a href="#getfunctiondeadletterconfig">Get<wbr>Function<wbr>Dead<wbr>Letter<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} Configure the function&#39;s *dead letter queue*.
  {{% /md %}}
@@ -709,7 +714,7 @@ The following output properties are available:
             <td class="align-top">Environment</td>
             <td class="align-top">
                 
-                <code><a href="#getfunctionenvironment">lambda.<wbr>Get<wbr>Function<wbr>Environment</a></code>
+                <code><a href="#getfunctionenvironment">Get<wbr>Function<wbr>Environment</a></code>
             </td>
             <td class="align-top">{{% md %}} The Lambda environment&#39;s configuration settings.
  {{% /md %}}
@@ -940,7 +945,7 @@ The following output properties are available:
             <td class="align-top">Tracing<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#getfunctiontracingconfig">lambda.<wbr>Get<wbr>Function<wbr>Tracing<wbr>Config</a></code>
+                <code><a href="#getfunctiontracingconfig">Get<wbr>Function<wbr>Tracing<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} Tracing settings of the function.
  {{% /md %}}
@@ -966,7 +971,7 @@ The following output properties are available:
             <td class="align-top">Vpc<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#getfunctionvpcconfig">lambda.<wbr>Get<wbr>Function<wbr>Vpc<wbr>Config</a></code>
+                <code><a href="#getfunctionvpcconfig">Get<wbr>Function<wbr>Vpc<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} VPC configuration associated with your Lambda function.
  {{% /md %}}
@@ -1012,7 +1017,7 @@ The following output properties are available:
             <td class="align-top">dead<wbr>Letter<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#getfunctiondeadletterconfig">lambda.<wbr>Get<wbr>Function<wbr>Dead<wbr>Letter<wbr>Config</a></code>
+                <code><a href="#getfunctiondeadletterconfig">Get<wbr>Function<wbr>Dead<wbr>Letter<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} Configure the function&#39;s *dead letter queue*.
  {{% /md %}}
@@ -1038,7 +1043,7 @@ The following output properties are available:
             <td class="align-top">environment</td>
             <td class="align-top">
                 
-                <code><a href="#getfunctionenvironment">lambda.<wbr>Get<wbr>Function<wbr>Environment</a></code>
+                <code><a href="#getfunctionenvironment">Get<wbr>Function<wbr>Environment</a></code>
             </td>
             <td class="align-top">{{% md %}} The Lambda environment&#39;s configuration settings.
  {{% /md %}}
@@ -1269,7 +1274,7 @@ The following output properties are available:
             <td class="align-top">tracing<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#getfunctiontracingconfig">lambda.<wbr>Get<wbr>Function<wbr>Tracing<wbr>Config</a></code>
+                <code><a href="#getfunctiontracingconfig">Get<wbr>Function<wbr>Tracing<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} Tracing settings of the function.
  {{% /md %}}
@@ -1295,7 +1300,7 @@ The following output properties are available:
             <td class="align-top">vpc<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#getfunctionvpcconfig">lambda.<wbr>Get<wbr>Function<wbr>Vpc<wbr>Config</a></code>
+                <code><a href="#getfunctionvpcconfig">Get<wbr>Function<wbr>Vpc<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} VPC configuration associated with your Lambda function.
  {{% /md %}}
@@ -1840,7 +1845,7 @@ The following output properties are available:
             <td class="align-top">Variables</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, string&gt;</code>
+                <code>Dictionary<string, string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2154,7 +2159,7 @@ The following output properties are available:
             <td class="align-top">Security<wbr>Group<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2168,7 +2173,7 @@ The following output properties are available:
             <td class="align-top">Subnet<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

@@ -104,7 +104,7 @@ The following arguments are supported:
             <td class="align-top">Destinations</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -134,7 +134,7 @@ Name of the session queue.
             <td class="align-top">Player<wbr>Latency<wbr>Policies</td>
             <td class="align-top">
                 
-                <code><a href="#gamesessionqueueplayerlatencypolicy">List&lt;Pulumi.<wbr>Aws.<wbr>Gamelift.<wbr>Game<wbr>Session<wbr>Queue<wbr>Player<wbr>Latency<wbr>Policy<wbr>Args&gt;?</a></code>
+                <code><a href="#gamesessionqueueplayerlatencypolicy">List&lt;Game<wbr>Session<wbr>Queue<wbr>Player<wbr>Latency<wbr>Policy<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -149,7 +149,7 @@ One or more policies used to choose fleet based on player latency. See below.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -229,7 +229,7 @@ Name of the session queue.
             <td class="align-top">Player<wbr>Latency<wbr>Policies</td>
             <td class="align-top">
                 
-                <code><a href="#gamesessionqueueplayerlatencypolicy">[]gamelift.<wbr>Game<wbr>Session<wbr>Queue<wbr>Player<wbr>Latency<wbr>Policy</a></code>
+                <code><a href="#gamesessionqueueplayerlatencypolicy">[]Game<wbr>Session<wbr>Queue<wbr>Player<wbr>Latency<wbr>Policy</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -324,7 +324,7 @@ Name of the session queue.
             <td class="align-top">player<wbr>Latency<wbr>Policies</td>
             <td class="align-top">
                 
-                <code><a href="#gamesessionqueueplayerlatencypolicy">gamelift.<wbr>Game<wbr>Session<wbr>Queue<wbr>Player<wbr>Latency<wbr>Policy[]?</a></code>
+                <code><a href="#gamesessionqueueplayerlatencypolicy">Game<wbr>Session<wbr>Queue<wbr>Player<wbr>Latency<wbr>Policy[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -511,7 +511,7 @@ The following output properties are available:
             <td class="align-top">Destinations</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} List of fleet/alias ARNs used by session queue for placing game sessions.
  {{% /md %}}
@@ -537,7 +537,7 @@ The following output properties are available:
             <td class="align-top">Player<wbr>Latency<wbr>Policies</td>
             <td class="align-top">
                 
-                <code><a href="#gamesessionqueueplayerlatencypolicy">List&lt;Pulumi.<wbr>Aws.<wbr>Gamelift.<wbr>Game<wbr>Session<wbr>Queue<wbr>Player<wbr>Latency<wbr>Policy&gt;?</a></code>
+                <code><a href="#gamesessionqueueplayerlatencypolicy">List&lt;Game<wbr>Session<wbr>Queue<wbr>Player<wbr>Latency<wbr>Policy&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} One or more policies used to choose fleet based on player latency. See below.
  {{% /md %}}
@@ -550,7 +550,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} Key-value mapping of resource tags
  {{% /md %}}
@@ -635,7 +635,7 @@ The following output properties are available:
             <td class="align-top">Player<wbr>Latency<wbr>Policies</td>
             <td class="align-top">
                 
-                <code><a href="#gamesessionqueueplayerlatencypolicy">[]gamelift.<wbr>Game<wbr>Session<wbr>Queue<wbr>Player<wbr>Latency<wbr>Policy</a></code>
+                <code><a href="#gamesessionqueueplayerlatencypolicy">[]Game<wbr>Session<wbr>Queue<wbr>Player<wbr>Latency<wbr>Policy</a></code>
             </td>
             <td class="align-top">{{% md %}} One or more policies used to choose fleet based on player latency. See below.
  {{% /md %}}
@@ -733,7 +733,7 @@ The following output properties are available:
             <td class="align-top">player<wbr>Latency<wbr>Policies</td>
             <td class="align-top">
                 
-                <code><a href="#gamesessionqueueplayerlatencypolicy">gamelift.<wbr>Game<wbr>Session<wbr>Queue<wbr>Player<wbr>Latency<wbr>Policy[]?</a></code>
+                <code><a href="#gamesessionqueueplayerlatencypolicy">Game<wbr>Session<wbr>Queue<wbr>Player<wbr>Latency<wbr>Policy[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} One or more policies used to choose fleet based on player latency. See below.
  {{% /md %}}
@@ -964,7 +964,7 @@ Game Session Queue ARN.
             <td class="align-top">Destinations</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -994,7 +994,7 @@ Name of the session queue.
             <td class="align-top">Player<wbr>Latency<wbr>Policies</td>
             <td class="align-top">
                 
-                <code><a href="#gamesessionqueueplayerlatencypolicy">List&lt;Pulumi.<wbr>Aws.<wbr>Gamelift.<wbr>Game<wbr>Session<wbr>Queue<wbr>Player<wbr>Latency<wbr>Policy<wbr>Args&gt;?</a></code>
+                <code><a href="#gamesessionqueueplayerlatencypolicy">List&lt;Game<wbr>Session<wbr>Queue<wbr>Player<wbr>Latency<wbr>Policy<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1009,7 +1009,7 @@ One or more policies used to choose fleet based on player latency. See below.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1104,7 +1104,7 @@ Name of the session queue.
             <td class="align-top">Player<wbr>Latency<wbr>Policies</td>
             <td class="align-top">
                 
-                <code><a href="#gamesessionqueueplayerlatencypolicy">[]gamelift.<wbr>Game<wbr>Session<wbr>Queue<wbr>Player<wbr>Latency<wbr>Policy</a></code>
+                <code><a href="#gamesessionqueueplayerlatencypolicy">[]Game<wbr>Session<wbr>Queue<wbr>Player<wbr>Latency<wbr>Policy</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1214,7 +1214,7 @@ Name of the session queue.
             <td class="align-top">player<wbr>Latency<wbr>Policies</td>
             <td class="align-top">
                 
-                <code><a href="#gamesessionqueueplayerlatencypolicy">gamelift.<wbr>Game<wbr>Session<wbr>Queue<wbr>Player<wbr>Latency<wbr>Policy[]?</a></code>
+                <code><a href="#gamesessionqueueplayerlatencypolicy">Game<wbr>Session<wbr>Queue<wbr>Player<wbr>Latency<wbr>Policy[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

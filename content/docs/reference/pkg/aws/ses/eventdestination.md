@@ -142,7 +142,7 @@ The following arguments are supported:
             <td class="align-top">Cloudwatch<wbr>Destinations</td>
             <td class="align-top">
                 
-                <code><a href="#eventdestinationcloudwatchdestination">List&lt;Pulumi.<wbr>Aws.<wbr>Ses.<wbr>Event<wbr>Destination<wbr>Cloudwatch<wbr>Destination<wbr>Args&gt;?</a></code>
+                <code><a href="#eventdestinationcloudwatchdestination">List&lt;Event<wbr>Destination<wbr>Cloudwatch<wbr>Destination<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -187,7 +187,7 @@ If true, the event destination will be enabled
             <td class="align-top">Kinesis<wbr>Destination</td>
             <td class="align-top">
                 
-                <code><a href="#eventdestinationkinesisdestination">Pulumi.<wbr>Aws.<wbr>Ses.<wbr>Event<wbr>Destination<wbr>Kinesis<wbr>Destination<wbr>Args?</a></code>
+                <code><a href="#eventdestinationkinesisdestination">Event<wbr>Destination<wbr>Kinesis<wbr>Destination<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -202,7 +202,7 @@ Send the events to a kinesis firehose destination
             <td class="align-top">Matching<wbr>Types</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -232,7 +232,7 @@ The name of the event destination
             <td class="align-top">Sns<wbr>Destination</td>
             <td class="align-top">
                 
-                <code><a href="#eventdestinationsnsdestination">Pulumi.<wbr>Aws.<wbr>Ses.<wbr>Event<wbr>Destination<wbr>Sns<wbr>Destination<wbr>Args?</a></code>
+                <code><a href="#eventdestinationsnsdestination">Event<wbr>Destination<wbr>Sns<wbr>Destination<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -267,7 +267,7 @@ Send the events to an SNS Topic destination
             <td class="align-top">Cloudwatch<wbr>Destinations</td>
             <td class="align-top">
                 
-                <code><a href="#eventdestinationcloudwatchdestination">[]ses.<wbr>Event<wbr>Destination<wbr>Cloudwatch<wbr>Destination</a></code>
+                <code><a href="#eventdestinationcloudwatchdestination">[]Event<wbr>Destination<wbr>Cloudwatch<wbr>Destination</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -312,7 +312,7 @@ If true, the event destination will be enabled
             <td class="align-top">Kinesis<wbr>Destination</td>
             <td class="align-top">
                 
-                <code><a href="#eventdestinationkinesisdestination">*ses.<wbr>Event<wbr>Destination<wbr>Kinesis<wbr>Destination</a></code>
+                <code><a href="#eventdestinationkinesisdestination">*Event<wbr>Destination<wbr>Kinesis<wbr>Destination</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -357,7 +357,7 @@ The name of the event destination
             <td class="align-top">Sns<wbr>Destination</td>
             <td class="align-top">
                 
-                <code><a href="#eventdestinationsnsdestination">*ses.<wbr>Event<wbr>Destination<wbr>Sns<wbr>Destination</a></code>
+                <code><a href="#eventdestinationsnsdestination">*Event<wbr>Destination<wbr>Sns<wbr>Destination</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -392,7 +392,7 @@ Send the events to an SNS Topic destination
             <td class="align-top">cloudwatch<wbr>Destinations</td>
             <td class="align-top">
                 
-                <code><a href="#eventdestinationcloudwatchdestination">ses.<wbr>Event<wbr>Destination<wbr>Cloudwatch<wbr>Destination[]?</a></code>
+                <code><a href="#eventdestinationcloudwatchdestination">Event<wbr>Destination<wbr>Cloudwatch<wbr>Destination[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -437,7 +437,7 @@ If true, the event destination will be enabled
             <td class="align-top">kinesis<wbr>Destination</td>
             <td class="align-top">
                 
-                <code><a href="#eventdestinationkinesisdestination">ses.<wbr>Event<wbr>Destination<wbr>Kinesis<wbr>Destination?</a></code>
+                <code><a href="#eventdestinationkinesisdestination">Event<wbr>Destination<wbr>Kinesis<wbr>Destination?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -482,7 +482,7 @@ The name of the event destination
             <td class="align-top">sns<wbr>Destination</td>
             <td class="align-top">
                 
-                <code><a href="#eventdestinationsnsdestination">ses.<wbr>Event<wbr>Destination<wbr>Sns<wbr>Destination?</a></code>
+                <code><a href="#eventdestinationsnsdestination">Event<wbr>Destination<wbr>Sns<wbr>Destination?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -656,7 +656,7 @@ The following output properties are available:
             <td class="align-top">Cloudwatch<wbr>Destinations</td>
             <td class="align-top">
                 
-                <code><a href="#eventdestinationcloudwatchdestination">List&lt;Pulumi.<wbr>Aws.<wbr>Ses.<wbr>Event<wbr>Destination<wbr>Cloudwatch<wbr>Destination&gt;?</a></code>
+                <code><a href="#eventdestinationcloudwatchdestination">List&lt;Event<wbr>Destination<wbr>Cloudwatch<wbr>Destination&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} CloudWatch destination for the events
  {{% /md %}}
@@ -695,7 +695,7 @@ The following output properties are available:
             <td class="align-top">Kinesis<wbr>Destination</td>
             <td class="align-top">
                 
-                <code><a href="#eventdestinationkinesisdestination">Pulumi.<wbr>Aws.<wbr>Ses.<wbr>Event<wbr>Destination<wbr>Kinesis<wbr>Destination?</a></code>
+                <code><a href="#eventdestinationkinesisdestination">Event<wbr>Destination<wbr>Kinesis<wbr>Destination?</a></code>
             </td>
             <td class="align-top">{{% md %}} Send the events to a kinesis firehose destination
  {{% /md %}}
@@ -708,7 +708,7 @@ The following output properties are available:
             <td class="align-top">Matching<wbr>Types</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} A list of matching types. May be any of `&#34;send&#34;`, `&#34;reject&#34;`, `&#34;bounce&#34;`, `&#34;complaint&#34;`, `&#34;delivery&#34;`, `&#34;open&#34;`, `&#34;click&#34;`, or `&#34;renderingFailure&#34;`.
  {{% /md %}}
@@ -734,7 +734,7 @@ The following output properties are available:
             <td class="align-top">Sns<wbr>Destination</td>
             <td class="align-top">
                 
-                <code><a href="#eventdestinationsnsdestination">Pulumi.<wbr>Aws.<wbr>Ses.<wbr>Event<wbr>Destination<wbr>Sns<wbr>Destination?</a></code>
+                <code><a href="#eventdestinationsnsdestination">Event<wbr>Destination<wbr>Sns<wbr>Destination?</a></code>
             </td>
             <td class="align-top">{{% md %}} Send the events to an SNS Topic destination
  {{% /md %}}
@@ -767,7 +767,7 @@ The following output properties are available:
             <td class="align-top">Cloudwatch<wbr>Destinations</td>
             <td class="align-top">
                 
-                <code><a href="#eventdestinationcloudwatchdestination">[]ses.<wbr>Event<wbr>Destination<wbr>Cloudwatch<wbr>Destination</a></code>
+                <code><a href="#eventdestinationcloudwatchdestination">[]Event<wbr>Destination<wbr>Cloudwatch<wbr>Destination</a></code>
             </td>
             <td class="align-top">{{% md %}} CloudWatch destination for the events
  {{% /md %}}
@@ -806,7 +806,7 @@ The following output properties are available:
             <td class="align-top">Kinesis<wbr>Destination</td>
             <td class="align-top">
                 
-                <code><a href="#eventdestinationkinesisdestination">*ses.<wbr>Event<wbr>Destination<wbr>Kinesis<wbr>Destination</a></code>
+                <code><a href="#eventdestinationkinesisdestination">*Event<wbr>Destination<wbr>Kinesis<wbr>Destination</a></code>
             </td>
             <td class="align-top">{{% md %}} Send the events to a kinesis firehose destination
  {{% /md %}}
@@ -845,7 +845,7 @@ The following output properties are available:
             <td class="align-top">Sns<wbr>Destination</td>
             <td class="align-top">
                 
-                <code><a href="#eventdestinationsnsdestination">*ses.<wbr>Event<wbr>Destination<wbr>Sns<wbr>Destination</a></code>
+                <code><a href="#eventdestinationsnsdestination">*Event<wbr>Destination<wbr>Sns<wbr>Destination</a></code>
             </td>
             <td class="align-top">{{% md %}} Send the events to an SNS Topic destination
  {{% /md %}}
@@ -878,7 +878,7 @@ The following output properties are available:
             <td class="align-top">cloudwatch<wbr>Destinations</td>
             <td class="align-top">
                 
-                <code><a href="#eventdestinationcloudwatchdestination">ses.<wbr>Event<wbr>Destination<wbr>Cloudwatch<wbr>Destination[]?</a></code>
+                <code><a href="#eventdestinationcloudwatchdestination">Event<wbr>Destination<wbr>Cloudwatch<wbr>Destination[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} CloudWatch destination for the events
  {{% /md %}}
@@ -917,7 +917,7 @@ The following output properties are available:
             <td class="align-top">kinesis<wbr>Destination</td>
             <td class="align-top">
                 
-                <code><a href="#eventdestinationkinesisdestination">ses.<wbr>Event<wbr>Destination<wbr>Kinesis<wbr>Destination?</a></code>
+                <code><a href="#eventdestinationkinesisdestination">Event<wbr>Destination<wbr>Kinesis<wbr>Destination?</a></code>
             </td>
             <td class="align-top">{{% md %}} Send the events to a kinesis firehose destination
  {{% /md %}}
@@ -956,7 +956,7 @@ The following output properties are available:
             <td class="align-top">sns<wbr>Destination</td>
             <td class="align-top">
                 
-                <code><a href="#eventdestinationsnsdestination">ses.<wbr>Event<wbr>Destination<wbr>Sns<wbr>Destination?</a></code>
+                <code><a href="#eventdestinationsnsdestination">Event<wbr>Destination<wbr>Sns<wbr>Destination?</a></code>
             </td>
             <td class="align-top">{{% md %}} Send the events to an SNS Topic destination
  {{% /md %}}
@@ -1159,7 +1159,7 @@ The following state arguments are supported:
             <td class="align-top">Cloudwatch<wbr>Destinations</td>
             <td class="align-top">
                 
-                <code><a href="#eventdestinationcloudwatchdestination">List&lt;Pulumi.<wbr>Aws.<wbr>Ses.<wbr>Event<wbr>Destination<wbr>Cloudwatch<wbr>Destination<wbr>Args&gt;?</a></code>
+                <code><a href="#eventdestinationcloudwatchdestination">List&lt;Event<wbr>Destination<wbr>Cloudwatch<wbr>Destination<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1204,7 +1204,7 @@ If true, the event destination will be enabled
             <td class="align-top">Kinesis<wbr>Destination</td>
             <td class="align-top">
                 
-                <code><a href="#eventdestinationkinesisdestination">Pulumi.<wbr>Aws.<wbr>Ses.<wbr>Event<wbr>Destination<wbr>Kinesis<wbr>Destination<wbr>Args?</a></code>
+                <code><a href="#eventdestinationkinesisdestination">Event<wbr>Destination<wbr>Kinesis<wbr>Destination<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1219,7 +1219,7 @@ Send the events to a kinesis firehose destination
             <td class="align-top">Matching<wbr>Types</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1249,7 +1249,7 @@ The name of the event destination
             <td class="align-top">Sns<wbr>Destination</td>
             <td class="align-top">
                 
-                <code><a href="#eventdestinationsnsdestination">Pulumi.<wbr>Aws.<wbr>Ses.<wbr>Event<wbr>Destination<wbr>Sns<wbr>Destination<wbr>Args?</a></code>
+                <code><a href="#eventdestinationsnsdestination">Event<wbr>Destination<wbr>Sns<wbr>Destination<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1284,7 +1284,7 @@ Send the events to an SNS Topic destination
             <td class="align-top">Cloudwatch<wbr>Destinations</td>
             <td class="align-top">
                 
-                <code><a href="#eventdestinationcloudwatchdestination">[]ses.<wbr>Event<wbr>Destination<wbr>Cloudwatch<wbr>Destination</a></code>
+                <code><a href="#eventdestinationcloudwatchdestination">[]Event<wbr>Destination<wbr>Cloudwatch<wbr>Destination</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1329,7 +1329,7 @@ If true, the event destination will be enabled
             <td class="align-top">Kinesis<wbr>Destination</td>
             <td class="align-top">
                 
-                <code><a href="#eventdestinationkinesisdestination">*ses.<wbr>Event<wbr>Destination<wbr>Kinesis<wbr>Destination</a></code>
+                <code><a href="#eventdestinationkinesisdestination">*Event<wbr>Destination<wbr>Kinesis<wbr>Destination</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1374,7 +1374,7 @@ The name of the event destination
             <td class="align-top">Sns<wbr>Destination</td>
             <td class="align-top">
                 
-                <code><a href="#eventdestinationsnsdestination">*ses.<wbr>Event<wbr>Destination<wbr>Sns<wbr>Destination</a></code>
+                <code><a href="#eventdestinationsnsdestination">*Event<wbr>Destination<wbr>Sns<wbr>Destination</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1409,7 +1409,7 @@ Send the events to an SNS Topic destination
             <td class="align-top">cloudwatch<wbr>Destinations</td>
             <td class="align-top">
                 
-                <code><a href="#eventdestinationcloudwatchdestination">ses.<wbr>Event<wbr>Destination<wbr>Cloudwatch<wbr>Destination[]?</a></code>
+                <code><a href="#eventdestinationcloudwatchdestination">Event<wbr>Destination<wbr>Cloudwatch<wbr>Destination[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1454,7 +1454,7 @@ If true, the event destination will be enabled
             <td class="align-top">kinesis<wbr>Destination</td>
             <td class="align-top">
                 
-                <code><a href="#eventdestinationkinesisdestination">ses.<wbr>Event<wbr>Destination<wbr>Kinesis<wbr>Destination?</a></code>
+                <code><a href="#eventdestinationkinesisdestination">Event<wbr>Destination<wbr>Kinesis<wbr>Destination?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1499,7 +1499,7 @@ The name of the event destination
             <td class="align-top">sns<wbr>Destination</td>
             <td class="align-top">
                 
-                <code><a href="#eventdestinationsnsdestination">ses.<wbr>Event<wbr>Destination<wbr>Sns<wbr>Destination?</a></code>
+                <code><a href="#eventdestinationsnsdestination">Event<wbr>Destination<wbr>Sns<wbr>Destination?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

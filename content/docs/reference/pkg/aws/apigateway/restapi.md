@@ -121,7 +121,7 @@ The source of the API key for requests. Valid values are HEADER (default) and AU
             <td class="align-top">Binary<wbr>Media<wbr>Types</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -166,7 +166,7 @@ The description of the REST API
             <td class="align-top">Endpoint<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#restapiendpointconfiguration">Pulumi.<wbr>Aws.<wbr>Apigateway.<wbr>Rest<wbr>Api<wbr>Endpoint<wbr>Configuration<wbr>Args?</a></code>
+                <code><a href="#restapiendpointconfiguration">Rest<wbr>Api<wbr>Endpoint<wbr>Configuration<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -225,7 +225,7 @@ The name of the REST API
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -320,7 +320,7 @@ The description of the REST API
             <td class="align-top">Endpoint<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#restapiendpointconfiguration">*apigateway.<wbr>Rest<wbr>Api<wbr>Endpoint<wbr>Configuration</a></code>
+                <code><a href="#restapiendpointconfiguration">*Rest<wbr>Api<wbr>Endpoint<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -474,7 +474,7 @@ The description of the REST API
             <td class="align-top">endpoint<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#restapiendpointconfiguration">apigateway.<wbr>Rest<wbr>Api<wbr>Endpoint<wbr>Configuration?</a></code>
+                <code><a href="#restapiendpointconfiguration">Rest<wbr>Api<wbr>Endpoint<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -762,7 +762,7 @@ The following output properties are available:
             <td class="align-top">Binary<wbr>Media<wbr>Types</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} The list of binary media types supported by the RestApi. By default, the RestApi supports only UTF-8-encoded text payloads.
  {{% /md %}}
@@ -814,7 +814,7 @@ The following output properties are available:
             <td class="align-top">Endpoint<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#restapiendpointconfiguration">Pulumi.<wbr>Aws.<wbr>Apigateway.<wbr>Rest<wbr>Api<wbr>Endpoint<wbr>Configuration</a></code>
+                <code><a href="#restapiendpointconfiguration">Rest<wbr>Api<wbr>Endpoint<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested argument defining API endpoint configuration including endpoint type. Defined below.
  {{% /md %}}
@@ -893,7 +893,7 @@ e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j`, which can be conca
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} Key-value mapping of resource tags
  {{% /md %}}
@@ -1004,7 +1004,7 @@ e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j`, which can be conca
             <td class="align-top">Endpoint<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#restapiendpointconfiguration">apigateway.<wbr>Rest<wbr>Api<wbr>Endpoint<wbr>Configuration</a></code>
+                <code><a href="#restapiendpointconfiguration">Rest<wbr>Api<wbr>Endpoint<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested argument defining API endpoint configuration including endpoint type. Defined below.
  {{% /md %}}
@@ -1194,7 +1194,7 @@ e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j`, which can be conca
             <td class="align-top">endpoint<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#restapiendpointconfiguration">apigateway.<wbr>Rest<wbr>Api<wbr>Endpoint<wbr>Configuration</a></code>
+                <code><a href="#restapiendpointconfiguration">Rest<wbr>Api<wbr>Endpoint<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested argument defining API endpoint configuration including endpoint type. Defined below.
  {{% /md %}}
@@ -1585,7 +1585,7 @@ Amazon Resource Name (ARN)
             <td class="align-top">Binary<wbr>Media<wbr>Types</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1645,7 +1645,7 @@ The description of the REST API
             <td class="align-top">Endpoint<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#restapiendpointconfiguration">Pulumi.<wbr>Aws.<wbr>Apigateway.<wbr>Rest<wbr>Api<wbr>Endpoint<wbr>Configuration<wbr>Args?</a></code>
+                <code><a href="#restapiendpointconfiguration">Rest<wbr>Api<wbr>Endpoint<wbr>Configuration<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1736,7 +1736,7 @@ The resource ID of the REST API&#39;s root
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1861,7 +1861,7 @@ The description of the REST API
             <td class="align-top">Endpoint<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#restapiendpointconfiguration">*apigateway.<wbr>Rest<wbr>Api<wbr>Endpoint<wbr>Configuration</a></code>
+                <code><a href="#restapiendpointconfiguration">*Rest<wbr>Api<wbr>Endpoint<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2077,7 +2077,7 @@ The description of the REST API
             <td class="align-top">endpoint<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#restapiendpointconfiguration">apigateway.<wbr>Rest<wbr>Api<wbr>Endpoint<wbr>Configuration?</a></code>
+                <code><a href="#restapiendpointconfiguration">Rest<wbr>Api<wbr>Endpoint<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2462,7 +2462,7 @@ A list of endpoint types. This resource currently only supports managing a singl
             <td class="align-top">Vpc<wbr>Endpoint<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

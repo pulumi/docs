@@ -229,7 +229,7 @@ The instance type for which to reserve capacity.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -569,7 +569,7 @@ Indicates the type of instance launches that the Capacity Reservation accepts. S
             <td class="align-top">instance<wbr>Platform</td>
             <td class="align-top">
                 
-                <code>Instance<wbr>Platform</code>
+                <code>InstancePlatform</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -584,7 +584,7 @@ The type of operating system for which to reserve capacity. Valid options are `L
             <td class="align-top">instance<wbr>Type</td>
             <td class="align-top">
                 
-                <code>Instance<wbr>Type</code>
+                <code>InstanceType</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -965,7 +965,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -1265,7 +1265,7 @@ The following output properties are available:
             <td class="align-top">instance<wbr>Platform</td>
             <td class="align-top">
                 
-                <code>Instance<wbr>Platform</code>
+                <code>InstancePlatform</code>
             </td>
             <td class="align-top">{{% md %}} The type of operating system for which to reserve capacity. Valid options are `Linux/UNIX`, `Red Hat Enterprise Linux`, `SUSE Linux`, `Windows`, `Windows with SQL Server`, `Windows with SQL Server Enterprise`, `Windows with SQL Server Standard` or `Windows with SQL Server Web`.
  {{% /md %}}
@@ -1278,7 +1278,7 @@ The following output properties are available:
             <td class="align-top">instance<wbr>Type</td>
             <td class="align-top">
                 
-                <code>Instance<wbr>Type</code>
+                <code>InstanceType</code>
             </td>
             <td class="align-top">{{% md %}} The instance type for which to reserve capacity.
  {{% /md %}}
@@ -1694,7 +1694,7 @@ The instance type for which to reserve capacity.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2034,7 +2034,7 @@ Indicates the type of instance launches that the Capacity Reservation accepts. S
             <td class="align-top">instance<wbr>Platform</td>
             <td class="align-top">
                 
-                <code>Instance<wbr>Platform?</code>
+                <code>InstancePlatform?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2049,7 +2049,7 @@ The type of operating system for which to reserve capacity. Valid options are `L
             <td class="align-top">instance<wbr>Type</td>
             <td class="align-top">
                 
-                <code>Instance<wbr>Type?</code>
+                <code>InstanceType?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

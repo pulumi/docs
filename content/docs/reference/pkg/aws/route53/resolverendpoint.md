@@ -124,7 +124,7 @@ or `OUTBOUND` (resolver forwards DNS queries from the DNS service for a VPC to y
             <td class="align-top">Ip<wbr>Addresses</td>
             <td class="align-top">
                 
-                <code><a href="#resolverendpointipaddress">List&lt;Pulumi.<wbr>Aws.<wbr>Route53.<wbr>Resolver<wbr>Endpoint<wbr>Ip<wbr>Address<wbr>Args&gt;</a></code>
+                <code><a href="#resolverendpointipaddress">List&lt;Resolver<wbr>Endpoint<wbr>Ip<wbr>Address<wbr>Args&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -155,7 +155,7 @@ The friendly name of the Route 53 Resolver endpoint.
             <td class="align-top">Security<wbr>Group<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -170,7 +170,7 @@ The ID of one or more security groups that you want to use to control access to 
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -222,7 +222,7 @@ or `OUTBOUND` (resolver forwards DNS queries from the DNS service for a VPC to y
             <td class="align-top">Ip<wbr>Addresses</td>
             <td class="align-top">
                 
-                <code><a href="#resolverendpointipaddress">[]route53.<wbr>Resolver<wbr>Endpoint<wbr>Ip<wbr>Address</a></code>
+                <code><a href="#resolverendpointipaddress">[]Resolver<wbr>Endpoint<wbr>Ip<wbr>Address</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -320,7 +320,7 @@ or `OUTBOUND` (resolver forwards DNS queries from the DNS service for a VPC to y
             <td class="align-top">ip<wbr>Addresses</td>
             <td class="align-top">
                 
-                <code><a href="#resolverendpointipaddress">route53.<wbr>Resolver<wbr>Endpoint<wbr>Ip<wbr>Address[]</a></code>
+                <code><a href="#resolverendpointipaddress">Resolver<wbr>Endpoint<wbr>Ip<wbr>Address[]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -554,7 +554,7 @@ or `OUTBOUND` (resolver forwards DNS queries from the DNS service for a VPC to y
             <td class="align-top">Ip<wbr>Addresses</td>
             <td class="align-top">
                 
-                <code><a href="#resolverendpointipaddress">List&lt;Pulumi.<wbr>Aws.<wbr>Route53.<wbr>Resolver<wbr>Endpoint<wbr>Ip<wbr>Address&gt;</a></code>
+                <code><a href="#resolverendpointipaddress">List&lt;Resolver<wbr>Endpoint<wbr>Ip<wbr>Address&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} The subnets and IP addresses in your VPC that you want DNS queries to pass through on the way from your VPCs
 to your network (for outbound endpoints) or on the way from your network to your VPCs (for inbound endpoints). Described below.
@@ -581,7 +581,7 @@ to your network (for outbound endpoints) or on the way from your network to your
             <td class="align-top">Security<wbr>Group<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} The ID of one or more security groups that you want to use to control access to this VPC.
  {{% /md %}}
@@ -594,7 +594,7 @@ to your network (for outbound endpoints) or on the way from your network to your
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -668,7 +668,7 @@ or `OUTBOUND` (resolver forwards DNS queries from the DNS service for a VPC to y
             <td class="align-top">Ip<wbr>Addresses</td>
             <td class="align-top">
                 
-                <code><a href="#resolverendpointipaddress">[]route53.<wbr>Resolver<wbr>Endpoint<wbr>Ip<wbr>Address</a></code>
+                <code><a href="#resolverendpointipaddress">[]Resolver<wbr>Endpoint<wbr>Ip<wbr>Address</a></code>
             </td>
             <td class="align-top">{{% md %}} The subnets and IP addresses in your VPC that you want DNS queries to pass through on the way from your VPCs
 to your network (for outbound endpoints) or on the way from your network to your VPCs (for inbound endpoints). Described below.
@@ -782,7 +782,7 @@ or `OUTBOUND` (resolver forwards DNS queries from the DNS service for a VPC to y
             <td class="align-top">ip<wbr>Addresses</td>
             <td class="align-top">
                 
-                <code><a href="#resolverendpointipaddress">route53.<wbr>Resolver<wbr>Endpoint<wbr>Ip<wbr>Address[]</a></code>
+                <code><a href="#resolverendpointipaddress">Resolver<wbr>Endpoint<wbr>Ip<wbr>Address[]</a></code>
             </td>
             <td class="align-top">{{% md %}} The subnets and IP addresses in your VPC that you want DNS queries to pass through on the way from your VPCs
 to your network (for outbound endpoints) or on the way from your network to your VPCs (for inbound endpoints). Described below.
@@ -1075,7 +1075,7 @@ The ID of the VPC that you want to create the resolver endpoint in.
             <td class="align-top">Ip<wbr>Addresses</td>
             <td class="align-top">
                 
-                <code><a href="#resolverendpointipaddress">List&lt;Pulumi.<wbr>Aws.<wbr>Route53.<wbr>Resolver<wbr>Endpoint<wbr>Ip<wbr>Address<wbr>Args&gt;?</a></code>
+                <code><a href="#resolverendpointipaddress">List&lt;Resolver<wbr>Endpoint<wbr>Ip<wbr>Address<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1106,7 +1106,7 @@ The friendly name of the Route 53 Resolver endpoint.
             <td class="align-top">Security<wbr>Group<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1121,7 +1121,7 @@ The ID of one or more security groups that you want to use to control access to 
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1203,7 +1203,7 @@ The ID of the VPC that you want to create the resolver endpoint in.
             <td class="align-top">Ip<wbr>Addresses</td>
             <td class="align-top">
                 
-                <code><a href="#resolverendpointipaddress">[]route53.<wbr>Resolver<wbr>Endpoint<wbr>Ip<wbr>Address</a></code>
+                <code><a href="#resolverendpointipaddress">[]Resolver<wbr>Endpoint<wbr>Ip<wbr>Address</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1331,7 +1331,7 @@ The ID of the VPC that you want to create the resolver endpoint in.
             <td class="align-top">ip<wbr>Addresses</td>
             <td class="align-top">
                 
-                <code><a href="#resolverendpointipaddress">route53.<wbr>Resolver<wbr>Endpoint<wbr>Ip<wbr>Address[]?</a></code>
+                <code><a href="#resolverendpointipaddress">Resolver<wbr>Endpoint<wbr>Ip<wbr>Address[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

@@ -51,7 +51,12 @@ const test = aws.lb.getLoadBalancer({
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupLoadBalancer<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/applicationloadbalancing?tab=doc#LookupLoadBalancerArgs">LookupLoadBalancerArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/applicationloadbalancing?tab=doc#LookupLoadBalancerResult">LookupLoadBalancerResult</a></span>, error)</span></code></pre></div>
 
 
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Applicationloadbalancing.GetLoadBalancerResult.html">Pulumi.Aws.Applicationloadbalancing.GetLoadBalancerResult</a></span>> <span class="p">GetLoadBalancer(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Applicationloadbalancing.GetLoadBalancerArgs.html">GetLoadBalancerArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight">
+<pre class="chroma">
+<code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetLoadBalancer </span><span class="p">{</span>
+    <span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Applicationloadbalancing.GetLoadBalancerResult.html">GetLoadBalancerResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Applicationloadbalancing.GetLoadBalancerArgs.html">GetLoadBalancerArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span>
+<span class="p">}</span></code></pre>
+</div>
 
 
 
@@ -108,7 +113,7 @@ The unique name of the load balancer.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -349,7 +354,7 @@ The following output properties are available:
             <td class="align-top">Access<wbr>Logs</td>
             <td class="align-top">
                 
-                <code><a href="#getloadbalanceraccesslogs">Pulumi.<wbr>Aws.<wbr>Applicationloadbalancing.<wbr>Get<wbr>Load<wbr>Balancer<wbr>Access<wbr>Logs</a></code>
+                <code><a href="#getloadbalanceraccesslogs">Get<wbr>Load<wbr>Balancer<wbr>Access<wbr>Logs</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -470,7 +475,7 @@ The following output properties are available:
             <td class="align-top">Security<wbr>Groups</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -482,7 +487,7 @@ The following output properties are available:
             <td class="align-top">Subnet<wbr>Mappings</td>
             <td class="align-top">
                 
-                <code><a href="#getloadbalancersubnetmapping">List&lt;Pulumi.<wbr>Aws.<wbr>Applicationloadbalancing.<wbr>Get<wbr>Load<wbr>Balancer<wbr>Subnet<wbr>Mapping&gt;</a></code>
+                <code><a href="#getloadbalancersubnetmapping">List&lt;Get<wbr>Load<wbr>Balancer<wbr>Subnet<wbr>Mapping&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -494,7 +499,7 @@ The following output properties are available:
             <td class="align-top">Subnets</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -506,7 +511,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;</code>
+                <code>Dictionary<string, object></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -562,7 +567,7 @@ The following output properties are available:
             <td class="align-top">Access<wbr>Logs</td>
             <td class="align-top">
                 
-                <code><a href="#getloadbalanceraccesslogs">applicationloadbalancing.<wbr>Get<wbr>Load<wbr>Balancer<wbr>Access<wbr>Logs</a></code>
+                <code><a href="#getloadbalanceraccesslogs">Get<wbr>Load<wbr>Balancer<wbr>Access<wbr>Logs</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -695,7 +700,7 @@ The following output properties are available:
             <td class="align-top">Subnet<wbr>Mappings</td>
             <td class="align-top">
                 
-                <code><a href="#getloadbalancersubnetmapping">[]applicationloadbalancing.<wbr>Get<wbr>Load<wbr>Balancer<wbr>Subnet<wbr>Mapping</a></code>
+                <code><a href="#getloadbalancersubnetmapping">[]Get<wbr>Load<wbr>Balancer<wbr>Subnet<wbr>Mapping</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -775,7 +780,7 @@ The following output properties are available:
             <td class="align-top">access<wbr>Logs</td>
             <td class="align-top">
                 
-                <code><a href="#getloadbalanceraccesslogs">applicationloadbalancing.<wbr>Get<wbr>Load<wbr>Balancer<wbr>Access<wbr>Logs</a></code>
+                <code><a href="#getloadbalanceraccesslogs">Get<wbr>Load<wbr>Balancer<wbr>Access<wbr>Logs</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -908,7 +913,7 @@ The following output properties are available:
             <td class="align-top">subnet<wbr>Mappings</td>
             <td class="align-top">
                 
-                <code><a href="#getloadbalancersubnetmapping">applicationloadbalancing.<wbr>Get<wbr>Load<wbr>Balancer<wbr>Subnet<wbr>Mapping[]</a></code>
+                <code><a href="#getloadbalancersubnetmapping">Get<wbr>Load<wbr>Balancer<wbr>Subnet<wbr>Mapping[]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 

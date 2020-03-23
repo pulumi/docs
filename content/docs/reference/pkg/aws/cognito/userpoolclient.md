@@ -108,7 +108,7 @@ The following arguments are supported:
             <td class="align-top">Allowed<wbr>Oauth<wbr>Flows</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -138,7 +138,7 @@ Whether the client is allowed to follow the OAuth protocol when interacting with
             <td class="align-top">Allowed<wbr>Oauth<wbr>Scopes</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -153,7 +153,7 @@ List of allowed OAuth scopes (phone, email, openid, profile, and aws.cognito.sig
             <td class="align-top">Callback<wbr>Urls</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -183,7 +183,7 @@ The default redirect URI. Must be in the list of callback URLs.
             <td class="align-top">Explicit<wbr>Auth<wbr>Flows</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -213,7 +213,7 @@ Should an application secret be generated.
             <td class="align-top">Logout<wbr>Urls</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -243,7 +243,7 @@ The name of the application client.
             <td class="align-top">Read<wbr>Attributes</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -273,7 +273,7 @@ The time limit in days refresh tokens are valid for.
             <td class="align-top">Supported<wbr>Identity<wbr>Providers</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -303,7 +303,7 @@ The user pool the client belongs to.
             <td class="align-top">Write<wbr>Attributes</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1042,7 +1042,7 @@ The following output properties are available:
             <td class="align-top">Allowed<wbr>Oauth<wbr>Flows</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} List of allowed OAuth flows (code, implicit, client_credentials).
  {{% /md %}}
@@ -1068,7 +1068,7 @@ The following output properties are available:
             <td class="align-top">Allowed<wbr>Oauth<wbr>Scopes</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} List of allowed OAuth scopes (phone, email, openid, profile, and aws.cognito.signin.user.admin).
  {{% /md %}}
@@ -1081,7 +1081,7 @@ The following output properties are available:
             <td class="align-top">Callback<wbr>Urls</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} List of allowed callback URLs for the identity providers.
  {{% /md %}}
@@ -1120,7 +1120,7 @@ The following output properties are available:
             <td class="align-top">Explicit<wbr>Auth<wbr>Flows</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} List of authentication flows (ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY,  USER_PASSWORD_AUTH, ALLOW_ADMIN_USER_PASSWORD_AUTH, ALLOW_CUSTOM_AUTH, ALLOW_USER_PASSWORD_AUTH, ALLOW_USER_SRP_AUTH, ALLOW_REFRESH_TOKEN_AUTH).
  {{% /md %}}
@@ -1146,7 +1146,7 @@ The following output properties are available:
             <td class="align-top">Logout<wbr>Urls</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} List of allowed logout URLs for the identity providers.
  {{% /md %}}
@@ -1172,7 +1172,7 @@ The following output properties are available:
             <td class="align-top">Read<wbr>Attributes</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} List of user pool attributes the application client can read from.
  {{% /md %}}
@@ -1198,7 +1198,7 @@ The following output properties are available:
             <td class="align-top">Supported<wbr>Identity<wbr>Providers</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} List of provider names for the identity providers that are supported on this client.
  {{% /md %}}
@@ -1224,7 +1224,7 @@ The following output properties are available:
             <td class="align-top">Write<wbr>Attributes</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} List of user pool attributes the application client can write to.
  {{% /md %}}
@@ -1961,7 +1961,7 @@ The following state arguments are supported:
             <td class="align-top">Allowed<wbr>Oauth<wbr>Flows</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1991,7 +1991,7 @@ Whether the client is allowed to follow the OAuth protocol when interacting with
             <td class="align-top">Allowed<wbr>Oauth<wbr>Scopes</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2006,7 +2006,7 @@ List of allowed OAuth scopes (phone, email, openid, profile, and aws.cognito.sig
             <td class="align-top">Callback<wbr>Urls</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2051,7 +2051,7 @@ The default redirect URI. Must be in the list of callback URLs.
             <td class="align-top">Explicit<wbr>Auth<wbr>Flows</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2081,7 +2081,7 @@ Should an application secret be generated.
             <td class="align-top">Logout<wbr>Urls</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2111,7 +2111,7 @@ The name of the application client.
             <td class="align-top">Read<wbr>Attributes</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2141,7 +2141,7 @@ The time limit in days refresh tokens are valid for.
             <td class="align-top">Supported<wbr>Identity<wbr>Providers</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2171,7 +2171,7 @@ The user pool the client belongs to.
             <td class="align-top">Write<wbr>Attributes</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

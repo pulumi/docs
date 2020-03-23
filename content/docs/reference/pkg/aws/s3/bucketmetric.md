@@ -128,7 +128,7 @@ The name of the bucket to put metric configuration.
             <td class="align-top">Filter</td>
             <td class="align-top">
                 
-                <code><a href="#bucketmetricfilter">Pulumi.<wbr>Aws.<wbr>S3.<wbr>Bucket<wbr>Metric<wbr>Filter<wbr>Args?</a></code>
+                <code><a href="#bucketmetricfilter">Bucket<wbr>Metric<wbr>Filter<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -193,7 +193,7 @@ The name of the bucket to put metric configuration.
             <td class="align-top">Filter</td>
             <td class="align-top">
                 
-                <code><a href="#bucketmetricfilter">*s3.<wbr>Bucket<wbr>Metric<wbr>Filter</a></code>
+                <code><a href="#bucketmetricfilter">*Bucket<wbr>Metric<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -258,7 +258,7 @@ The name of the bucket to put metric configuration.
             <td class="align-top">filter</td>
             <td class="align-top">
                 
-                <code><a href="#bucketmetricfilter">s3.<wbr>Bucket<wbr>Metric<wbr>Filter?</a></code>
+                <code><a href="#bucketmetricfilter">Bucket<wbr>Metric<wbr>Filter?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -400,7 +400,7 @@ The following output properties are available:
             <td class="align-top">Filter</td>
             <td class="align-top">
                 
-                <code><a href="#bucketmetricfilter">Pulumi.<wbr>Aws.<wbr>S3.<wbr>Bucket<wbr>Metric<wbr>Filter?</a></code>
+                <code><a href="#bucketmetricfilter">Bucket<wbr>Metric<wbr>Filter?</a></code>
             </td>
             <td class="align-top">{{% md %}} [Object filtering](http://docs.aws.amazon.com/AmazonS3/latest/dev/metrics-configurations.html#metrics-configurations-filter) that accepts a prefix, tags, or a logical AND of prefix and tags (documented below).
  {{% /md %}}
@@ -459,7 +459,7 @@ The following output properties are available:
             <td class="align-top">Filter</td>
             <td class="align-top">
                 
-                <code><a href="#bucketmetricfilter">*s3.<wbr>Bucket<wbr>Metric<wbr>Filter</a></code>
+                <code><a href="#bucketmetricfilter">*Bucket<wbr>Metric<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}} [Object filtering](http://docs.aws.amazon.com/AmazonS3/latest/dev/metrics-configurations.html#metrics-configurations-filter) that accepts a prefix, tags, or a logical AND of prefix and tags (documented below).
  {{% /md %}}
@@ -518,7 +518,7 @@ The following output properties are available:
             <td class="align-top">filter</td>
             <td class="align-top">
                 
-                <code><a href="#bucketmetricfilter">s3.<wbr>Bucket<wbr>Metric<wbr>Filter?</a></code>
+                <code><a href="#bucketmetricfilter">Bucket<wbr>Metric<wbr>Filter?</a></code>
             </td>
             <td class="align-top">{{% md %}} [Object filtering](http://docs.aws.amazon.com/AmazonS3/latest/dev/metrics-configurations.html#metrics-configurations-filter) that accepts a prefix, tags, or a logical AND of prefix and tags (documented below).
  {{% /md %}}
@@ -697,7 +697,7 @@ The name of the bucket to put metric configuration.
             <td class="align-top">Filter</td>
             <td class="align-top">
                 
-                <code><a href="#bucketmetricfilter">Pulumi.<wbr>Aws.<wbr>S3.<wbr>Bucket<wbr>Metric<wbr>Filter<wbr>Args?</a></code>
+                <code><a href="#bucketmetricfilter">Bucket<wbr>Metric<wbr>Filter<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -762,7 +762,7 @@ The name of the bucket to put metric configuration.
             <td class="align-top">Filter</td>
             <td class="align-top">
                 
-                <code><a href="#bucketmetricfilter">*s3.<wbr>Bucket<wbr>Metric<wbr>Filter</a></code>
+                <code><a href="#bucketmetricfilter">*Bucket<wbr>Metric<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -827,7 +827,7 @@ The name of the bucket to put metric configuration.
             <td class="align-top">filter</td>
             <td class="align-top">
                 
-                <code><a href="#bucketmetricfilter">s3.<wbr>Bucket<wbr>Metric<wbr>Filter?</a></code>
+                <code><a href="#bucketmetricfilter">Bucket<wbr>Metric<wbr>Filter?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -985,7 +985,7 @@ Object prefix for filtering (singular).
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

@@ -210,7 +210,7 @@ The ARN of the certificate that is being validated.
             <td class="align-top">Validation<wbr>Record<wbr>Fqdns</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -422,7 +422,7 @@ The following output properties are available:
             <td class="align-top">Validation<wbr>Record<wbr>Fqdns</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} List of FQDNs that implement the validation. Only valid for DNS validation method ACM certificates. If this is set, the resource can implement additional sanity checks and has an explicit dependency on the resource that is implementing the validation
  {{% /md %}}
@@ -667,7 +667,7 @@ The ARN of the certificate that is being validated.
             <td class="align-top">Validation<wbr>Record<wbr>Fqdns</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

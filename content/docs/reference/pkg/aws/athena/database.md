@@ -108,7 +108,7 @@ Name of s3 bucket to save the results of the query execution.
             <td class="align-top">Encryption<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#databaseencryptionconfiguration">Pulumi.<wbr>Aws.<wbr>Athena.<wbr>Database<wbr>Encryption<wbr>Configuration<wbr>Args?</a></code>
+                <code><a href="#databaseencryptionconfiguration">Database<wbr>Encryption<wbr>Configuration<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -188,7 +188,7 @@ Name of s3 bucket to save the results of the query execution.
             <td class="align-top">Encryption<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#databaseencryptionconfiguration">*athena.<wbr>Database<wbr>Encryption<wbr>Configuration</a></code>
+                <code><a href="#databaseencryptionconfiguration">*Database<wbr>Encryption<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -268,7 +268,7 @@ Name of s3 bucket to save the results of the query execution.
             <td class="align-top">encryption<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#databaseencryptionconfiguration">athena.<wbr>Database<wbr>Encryption<wbr>Configuration?</a></code>
+                <code><a href="#databaseencryptionconfiguration">Database<wbr>Encryption<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -440,7 +440,7 @@ The following output properties are available:
             <td class="align-top">Encryption<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#databaseencryptionconfiguration">Pulumi.<wbr>Aws.<wbr>Athena.<wbr>Database<wbr>Encryption<wbr>Configuration?</a></code>
+                <code><a href="#databaseencryptionconfiguration">Database<wbr>Encryption<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} The encryption key block AWS Athena uses to decrypt the data in S3, such as an AWS Key Management Service (AWS KMS) key. An `encryption_configuration` block is documented below.
  {{% /md %}}
@@ -512,7 +512,7 @@ The following output properties are available:
             <td class="align-top">Encryption<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#databaseencryptionconfiguration">*athena.<wbr>Database<wbr>Encryption<wbr>Configuration</a></code>
+                <code><a href="#databaseencryptionconfiguration">*Database<wbr>Encryption<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} The encryption key block AWS Athena uses to decrypt the data in S3, such as an AWS Key Management Service (AWS KMS) key. An `encryption_configuration` block is documented below.
  {{% /md %}}
@@ -584,7 +584,7 @@ The following output properties are available:
             <td class="align-top">encryption<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#databaseencryptionconfiguration">athena.<wbr>Database<wbr>Encryption<wbr>Configuration?</a></code>
+                <code><a href="#databaseencryptionconfiguration">Database<wbr>Encryption<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} The encryption key block AWS Athena uses to decrypt the data in S3, such as an AWS Key Management Service (AWS KMS) key. An `encryption_configuration` block is documented below.
  {{% /md %}}
@@ -789,7 +789,7 @@ Name of s3 bucket to save the results of the query execution.
             <td class="align-top">Encryption<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#databaseencryptionconfiguration">Pulumi.<wbr>Aws.<wbr>Athena.<wbr>Database<wbr>Encryption<wbr>Configuration<wbr>Args?</a></code>
+                <code><a href="#databaseencryptionconfiguration">Database<wbr>Encryption<wbr>Configuration<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -869,7 +869,7 @@ Name of s3 bucket to save the results of the query execution.
             <td class="align-top">Encryption<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#databaseencryptionconfiguration">*athena.<wbr>Database<wbr>Encryption<wbr>Configuration</a></code>
+                <code><a href="#databaseencryptionconfiguration">*Database<wbr>Encryption<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -949,7 +949,7 @@ Name of s3 bucket to save the results of the query execution.
             <td class="align-top">encryption<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#databaseencryptionconfiguration">athena.<wbr>Database<wbr>Encryption<wbr>Configuration?</a></code>
+                <code><a href="#databaseencryptionconfiguration">Database<wbr>Encryption<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

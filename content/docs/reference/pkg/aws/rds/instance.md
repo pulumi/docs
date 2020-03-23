@@ -385,7 +385,7 @@ The name of the IAM role to be used when making API calls to the Directory Servi
             <td class="align-top">Enabled<wbr>Cloudwatch<wbr>Logs<wbr>Exports</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -814,7 +814,7 @@ for more information on using Replication.
             <td class="align-top">S3Import</td>
             <td class="align-top">
                 
-                <code><a href="#instances3import">Pulumi.<wbr>Aws.<wbr>Rds.<wbr>Instance<wbr>S3Import<wbr>Args?</a></code>
+                <code><a href="#instances3import">Instance<wbr>S3Import<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -829,7 +829,7 @@ Restore from a Percona Xtrabackup in S3.  See [Importing Data into an Amazon RDS
             <td class="align-top">Security<wbr>Group<wbr>Names</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -917,7 +917,7 @@ specified, &#34;gp2&#34; if not.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -967,7 +967,7 @@ is provided) Username for the master DB user.
             <td class="align-top">Vpc<wbr>Security<wbr>Group<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1677,7 +1677,7 @@ for more information on using Replication.
             <td class="align-top">S3Import</td>
             <td class="align-top">
                 
-                <code><a href="#instances3import">*rds.<wbr>Instance<wbr>S3Import</a></code>
+                <code><a href="#instances3import">*Instance<wbr>S3Import</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2231,7 +2231,7 @@ identifier beginning with the specified prefix. Conflicts with `identifier`.
             <td class="align-top">instance<wbr>Class</td>
             <td class="align-top">
                 
-                <code>string | Instance<wbr>Type</code>
+                <code>string | InstanceType</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2540,7 +2540,7 @@ for more information on using Replication.
             <td class="align-top">s3Import</td>
             <td class="align-top">
                 
-                <code><a href="#instances3import">rds.<wbr>Instance<wbr>S3Import?</a></code>
+                <code><a href="#instances3import">Instance<wbr>S3Import?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2626,7 +2626,7 @@ default is `false` if not specified.
             <td class="align-top">storage<wbr>Type</td>
             <td class="align-top">
                 
-                <code>string | Storage<wbr>Type</code>
+                <code>string | StorageType</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3847,7 +3847,7 @@ for additional read replica contraints.
             <td class="align-top">Enabled<wbr>Cloudwatch<wbr>Logs<wbr>Exports</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} List of log types to enable for exporting to CloudWatch logs. If omitted, no logs will be exported. Valid values (depending on `engine`): `agent` (MSSQL), `alert`, `audit`, `error`, `general`, `listener`, `slowquery`, `trace`, `postgresql` (PostgreSQL), `upgrade` (PostgreSQL).
  {{% /md %}}
@@ -4232,7 +4232,7 @@ accessible. Default is `false`.
             <td class="align-top">Replicas</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -4276,7 +4276,7 @@ for more information on using Replication.
             <td class="align-top">S3Import</td>
             <td class="align-top">
                 
-                <code><a href="#instances3import">Pulumi.<wbr>Aws.<wbr>Rds.<wbr>Instance<wbr>S3Import?</a></code>
+                <code><a href="#instances3import">Instance<wbr>S3Import?</a></code>
             </td>
             <td class="align-top">{{% md %}} Restore from a Percona Xtrabackup in S3.  See [Importing Data into an Amazon RDS MySQL DB Instance](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MySQL.Procedural.Importing.html)
  {{% /md %}}
@@ -4289,7 +4289,7 @@ for more information on using Replication.
             <td class="align-top">Security<wbr>Group<wbr>Names</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} List of DB Security Groups to
 associate. Only used for [DB Instances on the _EC2-Classic_
@@ -4380,7 +4380,7 @@ specified, &#34;gp2&#34; if not.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -4424,7 +4424,7 @@ is provided) Username for the master DB user.
             <td class="align-top">Vpc<wbr>Security<wbr>Group<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} List of VPC security groups to
 associate.
@@ -5128,7 +5128,7 @@ for more information on using Replication.
             <td class="align-top">S3Import</td>
             <td class="align-top">
                 
-                <code><a href="#instances3import">*rds.<wbr>Instance<wbr>S3Import</a></code>
+                <code><a href="#instances3import">*Instance<wbr>S3Import</a></code>
             </td>
             <td class="align-top">{{% md %}} Restore from a Percona Xtrabackup in S3.  See [Importing Data into an Amazon RDS MySQL DB Instance](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MySQL.Procedural.Importing.html)
  {{% /md %}}
@@ -5980,7 +5980,7 @@ for more information on using Replication.
             <td class="align-top">s3Import</td>
             <td class="align-top">
                 
-                <code><a href="#instances3import">rds.<wbr>Instance<wbr>S3Import?</a></code>
+                <code><a href="#instances3import">Instance<wbr>S3Import?</a></code>
             </td>
             <td class="align-top">{{% md %}} Restore from a Percona Xtrabackup in S3.  See [Importing Data into an Amazon RDS MySQL DB Instance](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MySQL.Procedural.Importing.html)
  {{% /md %}}
@@ -7348,7 +7348,7 @@ The name of the IAM role to be used when making API calls to the Directory Servi
             <td class="align-top">Enabled<wbr>Cloudwatch<wbr>Logs<wbr>Exports</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -7787,7 +7787,7 @@ accessible. Default is `false`.
             <td class="align-top">Replicas</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -7837,7 +7837,7 @@ The RDS Resource ID of this instance.
             <td class="align-top">S3Import</td>
             <td class="align-top">
                 
-                <code><a href="#instances3import">Pulumi.<wbr>Aws.<wbr>Rds.<wbr>Instance<wbr>S3Import<wbr>Args?</a></code>
+                <code><a href="#instances3import">Instance<wbr>S3Import<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -7852,7 +7852,7 @@ Restore from a Percona Xtrabackup in S3.  See [Importing Data into an Amazon RDS
             <td class="align-top">Security<wbr>Group<wbr>Names</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -7955,7 +7955,7 @@ specified, &#34;gp2&#34; if not.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -8005,7 +8005,7 @@ is provided) Username for the master DB user.
             <td class="align-top">Vpc<wbr>Security<wbr>Group<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -8805,7 +8805,7 @@ The RDS Resource ID of this instance.
             <td class="align-top">S3Import</td>
             <td class="align-top">
                 
-                <code><a href="#instances3import">*rds.<wbr>Instance<wbr>S3Import</a></code>
+                <code><a href="#instances3import">*Instance<wbr>S3Import</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -9435,7 +9435,7 @@ identifier beginning with the specified prefix. Conflicts with `identifier`.
             <td class="align-top">instance<wbr>Class</td>
             <td class="align-top">
                 
-                <code>string | Instance<wbr>Type</code>
+                <code>string | InstanceType</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -9773,7 +9773,7 @@ The RDS Resource ID of this instance.
             <td class="align-top">s3Import</td>
             <td class="align-top">
                 
-                <code><a href="#instances3import">rds.<wbr>Instance<wbr>S3Import?</a></code>
+                <code><a href="#instances3import">Instance<wbr>S3Import?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -9874,7 +9874,7 @@ default is `false` if not specified.
             <td class="align-top">storage<wbr>Type</td>
             <td class="align-top">
                 
-                <code>string | Storage<wbr>Type</code>
+                <code>string | StorageType</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

@@ -56,7 +56,12 @@ const selected443 = aws.lb.getListener({
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupListener<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/applicationloadbalancing?tab=doc#LookupListenerArgs">LookupListenerArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/applicationloadbalancing?tab=doc#LookupListenerResult">LookupListenerResult</a></span>, error)</span></code></pre></div>
 
 
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Applicationloadbalancing.GetListenerResult.html">Pulumi.Aws.Applicationloadbalancing.GetListenerResult</a></span>> <span class="p">GetListener(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Applicationloadbalancing.GetListenerArgs.html">GetListenerArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight">
+<pre class="chroma">
+<code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetListener </span><span class="p">{</span>
+    <span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Applicationloadbalancing.GetListenerResult.html">GetListenerResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Applicationloadbalancing.GetListenerArgs.html">GetListenerArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span>
+<span class="p">}</span></code></pre>
+</div>
 
 
 
@@ -382,7 +387,7 @@ The following output properties are available:
             <td class="align-top">Default<wbr>Actions</td>
             <td class="align-top">
                 
-                <code><a href="#getlistenerdefaultaction">List&lt;Pulumi.<wbr>Aws.<wbr>Applicationloadbalancing.<wbr>Get<wbr>Listener<wbr>Default<wbr>Action&gt;</a></code>
+                <code><a href="#getlistenerdefaultaction">List&lt;Get<wbr>Listener<wbr>Default<wbr>Action&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -499,7 +504,7 @@ The following output properties are available:
             <td class="align-top">Default<wbr>Actions</td>
             <td class="align-top">
                 
-                <code><a href="#getlistenerdefaultaction">[]applicationloadbalancing.<wbr>Get<wbr>Listener<wbr>Default<wbr>Action</a></code>
+                <code><a href="#getlistenerdefaultaction">[]Get<wbr>Listener<wbr>Default<wbr>Action</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -616,7 +621,7 @@ The following output properties are available:
             <td class="align-top">default<wbr>Actions</td>
             <td class="align-top">
                 
-                <code><a href="#getlistenerdefaultaction">applicationloadbalancing.<wbr>Get<wbr>Listener<wbr>Default<wbr>Action[]</a></code>
+                <code><a href="#getlistenerdefaultaction">Get<wbr>Listener<wbr>Default<wbr>Action[]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -852,7 +857,7 @@ The following output properties are available:
             <td class="align-top">Authenticate<wbr>Cognitos</td>
             <td class="align-top">
                 
-                <code><a href="#getlistenerdefaultactionauthenticatecognito">List&lt;Pulumi.<wbr>Aws.<wbr>Applicationloadbalancing.<wbr>Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Cognito<wbr>Args&gt;</a></code>
+                <code><a href="#getlistenerdefaultactionauthenticatecognito">List&lt;Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Cognito<wbr>Args&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -866,7 +871,7 @@ The following output properties are available:
             <td class="align-top">Authenticate<wbr>Oidcs</td>
             <td class="align-top">
                 
-                <code><a href="#getlistenerdefaultactionauthenticateoidc">List&lt;Pulumi.<wbr>Aws.<wbr>Applicationloadbalancing.<wbr>Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Oidc<wbr>Args&gt;</a></code>
+                <code><a href="#getlistenerdefaultactionauthenticateoidc">List&lt;Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Oidc<wbr>Args&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -880,7 +885,7 @@ The following output properties are available:
             <td class="align-top">Fixed<wbr>Responses</td>
             <td class="align-top">
                 
-                <code><a href="#getlistenerdefaultactionfixedresponse">List&lt;Pulumi.<wbr>Aws.<wbr>Applicationloadbalancing.<wbr>Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Fixed<wbr>Response<wbr>Args&gt;</a></code>
+                <code><a href="#getlistenerdefaultactionfixedresponse">List&lt;Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Fixed<wbr>Response<wbr>Args&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -908,7 +913,7 @@ The following output properties are available:
             <td class="align-top">Redirects</td>
             <td class="align-top">
                 
-                <code><a href="#getlistenerdefaultactionredirect">List&lt;Pulumi.<wbr>Aws.<wbr>Applicationloadbalancing.<wbr>Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Redirect<wbr>Args&gt;</a></code>
+                <code><a href="#getlistenerdefaultactionredirect">List&lt;Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Redirect<wbr>Args&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -970,7 +975,7 @@ The following output properties are available:
             <td class="align-top">Authenticate<wbr>Cognitos</td>
             <td class="align-top">
                 
-                <code><a href="#getlistenerdefaultactionauthenticatecognito">[]applicationloadbalancing.<wbr>Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Cognito</a></code>
+                <code><a href="#getlistenerdefaultactionauthenticatecognito">[]Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Cognito</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -984,7 +989,7 @@ The following output properties are available:
             <td class="align-top">Authenticate<wbr>Oidcs</td>
             <td class="align-top">
                 
-                <code><a href="#getlistenerdefaultactionauthenticateoidc">[]applicationloadbalancing.<wbr>Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Oidc</a></code>
+                <code><a href="#getlistenerdefaultactionauthenticateoidc">[]Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Oidc</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -998,7 +1003,7 @@ The following output properties are available:
             <td class="align-top">Fixed<wbr>Responses</td>
             <td class="align-top">
                 
-                <code><a href="#getlistenerdefaultactionfixedresponse">[]applicationloadbalancing.<wbr>Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Fixed<wbr>Response</a></code>
+                <code><a href="#getlistenerdefaultactionfixedresponse">[]Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Fixed<wbr>Response</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1026,7 +1031,7 @@ The following output properties are available:
             <td class="align-top">Redirects</td>
             <td class="align-top">
                 
-                <code><a href="#getlistenerdefaultactionredirect">[]applicationloadbalancing.<wbr>Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Redirect</a></code>
+                <code><a href="#getlistenerdefaultactionredirect">[]Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Redirect</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1088,7 +1093,7 @@ The following output properties are available:
             <td class="align-top">authenticate<wbr>Cognitos</td>
             <td class="align-top">
                 
-                <code><a href="#getlistenerdefaultactionauthenticatecognito">applicationloadbalancing.<wbr>Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Cognito[]</a></code>
+                <code><a href="#getlistenerdefaultactionauthenticatecognito">Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Cognito[]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1102,7 +1107,7 @@ The following output properties are available:
             <td class="align-top">authenticate<wbr>Oidcs</td>
             <td class="align-top">
                 
-                <code><a href="#getlistenerdefaultactionauthenticateoidc">applicationloadbalancing.<wbr>Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Oidc[]</a></code>
+                <code><a href="#getlistenerdefaultactionauthenticateoidc">Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Oidc[]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1116,7 +1121,7 @@ The following output properties are available:
             <td class="align-top">fixed<wbr>Responses</td>
             <td class="align-top">
                 
-                <code><a href="#getlistenerdefaultactionfixedresponse">applicationloadbalancing.<wbr>Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Fixed<wbr>Response[]</a></code>
+                <code><a href="#getlistenerdefaultactionfixedresponse">Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Fixed<wbr>Response[]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1144,7 +1149,7 @@ The following output properties are available:
             <td class="align-top">redirects</td>
             <td class="align-top">
                 
-                <code><a href="#getlistenerdefaultactionredirect">applicationloadbalancing.<wbr>Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Redirect[]</a></code>
+                <code><a href="#getlistenerdefaultactionredirect">Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Redirect[]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1345,7 +1350,7 @@ The following output properties are available:
             <td class="align-top">Authentication<wbr>Request<wbr>Extra<wbr>Params</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;</code>
+                <code>Dictionary<string, object></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1894,7 +1899,7 @@ The following output properties are available:
             <td class="align-top">Authentication<wbr>Request<wbr>Extra<wbr>Params</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;</code>
+                <code>Dictionary<string, object></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

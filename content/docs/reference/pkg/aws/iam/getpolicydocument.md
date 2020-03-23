@@ -26,7 +26,12 @@ table td p { margin-top: 0; margin-bottom: 0; }
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPolicyDocument<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/iam?tab=doc#LookupPolicyDocumentArgs">LookupPolicyDocumentArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/iam?tab=doc#LookupPolicyDocumentResult">LookupPolicyDocumentResult</a></span>, error)</span></code></pre></div>
 
 
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iam.GetPolicyDocumentResult.html">Pulumi.Aws.Iam.GetPolicyDocumentResult</a></span>> <span class="p">GetPolicyDocument(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iam.GetPolicyDocumentArgs.html">GetPolicyDocumentArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight">
+<pre class="chroma">
+<code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetPolicyDocument </span><span class="p">{</span>
+    <span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iam.GetPolicyDocumentResult.html">GetPolicyDocumentResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iam.GetPolicyDocumentArgs.html">GetPolicyDocumentArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span>
+<span class="p">}</span></code></pre>
+</div>
 
 
 
@@ -104,7 +109,7 @@ json.  Statements without an `sid` cannot be overwritten.
             <td class="align-top">Statements</td>
             <td class="align-top">
                 
-                <code><a href="#getpolicydocumentstatement">List&lt;Pulumi.<wbr>Aws.<wbr>Iam.<wbr>Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Args&gt;?</a></code>
+                <code><a href="#getpolicydocumentstatement">List&lt;Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -206,7 +211,7 @@ json.  Statements without an `sid` cannot be overwritten.
             <td class="align-top">Statements</td>
             <td class="align-top">
                 
-                <code><a href="#getpolicydocumentstatement">[]iam.<wbr>Get<wbr>Policy<wbr>Document<wbr>Statement</a></code>
+                <code><a href="#getpolicydocumentstatement">[]Get<wbr>Policy<wbr>Document<wbr>Statement</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -308,7 +313,7 @@ json.  Statements without an `sid` cannot be overwritten.
             <td class="align-top">statements</td>
             <td class="align-top">
                 
-                <code><a href="#getpolicydocumentstatement">iam.<wbr>Get<wbr>Policy<wbr>Document<wbr>Statement[]?</a></code>
+                <code><a href="#getpolicydocumentstatement">Get<wbr>Policy<wbr>Document<wbr>Statement[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -538,7 +543,7 @@ The following output properties are available:
             <td class="align-top">Statements</td>
             <td class="align-top">
                 
-                <code><a href="#getpolicydocumentstatement">List&lt;Pulumi.<wbr>Aws.<wbr>Iam.<wbr>Get<wbr>Policy<wbr>Document<wbr>Statement&gt;?</a></code>
+                <code><a href="#getpolicydocumentstatement">List&lt;Get<wbr>Policy<wbr>Document<wbr>Statement&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -644,7 +649,7 @@ The following output properties are available:
             <td class="align-top">Statements</td>
             <td class="align-top">
                 
-                <code><a href="#getpolicydocumentstatement">[]iam.<wbr>Get<wbr>Policy<wbr>Document<wbr>Statement</a></code>
+                <code><a href="#getpolicydocumentstatement">[]Get<wbr>Policy<wbr>Document<wbr>Statement</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -750,7 +755,7 @@ The following output properties are available:
             <td class="align-top">statements</td>
             <td class="align-top">
                 
-                <code><a href="#getpolicydocumentstatement">iam.<wbr>Get<wbr>Policy<wbr>Document<wbr>Statement[]?</a></code>
+                <code><a href="#getpolicydocumentstatement">Get<wbr>Policy<wbr>Document<wbr>Statement[]?</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -926,7 +931,7 @@ The following output properties are available:
             <td class="align-top">Actions</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -942,7 +947,7 @@ or denies. For example, ``[&#34;ec2:RunInstances&#34;, &#34;s3:*&#34;]``.
             <td class="align-top">Conditions</td>
             <td class="align-top">
                 
-                <code><a href="#getpolicydocumentstatementcondition">List&lt;Pulumi.<wbr>Aws.<wbr>Iam.<wbr>Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Condition<wbr>Args&gt;?</a></code>
+                <code><a href="#getpolicydocumentstatementcondition">List&lt;Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Condition<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -975,7 +980,7 @@ statement allows or denies the given actions. The default is &#34;Allow&#34;.
             <td class="align-top">Not<wbr>Actions</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -992,7 +997,7 @@ listed.
             <td class="align-top">Not<wbr>Principals</td>
             <td class="align-top">
                 
-                <code><a href="#getpolicydocumentstatementnotprincipal">List&lt;Pulumi.<wbr>Aws.<wbr>Iam.<wbr>Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Not<wbr>Principal<wbr>Args&gt;?</a></code>
+                <code><a href="#getpolicydocumentstatementnotprincipal">List&lt;Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Not<wbr>Principal<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1008,7 +1013,7 @@ the statement does *not* apply to.
             <td class="align-top">Not<wbr>Resources</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1025,7 +1030,7 @@ does *not* apply to. Used to apply a policy statement to all resources
             <td class="align-top">Principals</td>
             <td class="align-top">
                 
-                <code><a href="#getpolicydocumentstatementprincipal">List&lt;Pulumi.<wbr>Aws.<wbr>Iam.<wbr>Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Principal<wbr>Args&gt;?</a></code>
+                <code><a href="#getpolicydocumentstatementprincipal">List&lt;Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Principal<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1041,7 +1046,7 @@ specifying a resource (or resource pattern) to which this statement applies.
             <td class="align-top">Resources</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1108,7 +1113,7 @@ or denies. For example, ``[&#34;ec2:RunInstances&#34;, &#34;s3:*&#34;]``.
             <td class="align-top">Conditions</td>
             <td class="align-top">
                 
-                <code><a href="#getpolicydocumentstatementcondition">[]iam.<wbr>Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Condition</a></code>
+                <code><a href="#getpolicydocumentstatementcondition">[]Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Condition</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1158,7 +1163,7 @@ listed.
             <td class="align-top">Not<wbr>Principals</td>
             <td class="align-top">
                 
-                <code><a href="#getpolicydocumentstatementnotprincipal">[]iam.<wbr>Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Not<wbr>Principal</a></code>
+                <code><a href="#getpolicydocumentstatementnotprincipal">[]Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Not<wbr>Principal</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1191,7 +1196,7 @@ does *not* apply to. Used to apply a policy statement to all resources
             <td class="align-top">Principals</td>
             <td class="align-top">
                 
-                <code><a href="#getpolicydocumentstatementprincipal">[]iam.<wbr>Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Principal</a></code>
+                <code><a href="#getpolicydocumentstatementprincipal">[]Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Principal</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1274,7 +1279,7 @@ or denies. For example, ``[&#34;ec2:RunInstances&#34;, &#34;s3:*&#34;]``.
             <td class="align-top">conditions</td>
             <td class="align-top">
                 
-                <code><a href="#getpolicydocumentstatementcondition">iam.<wbr>Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Condition[]?</a></code>
+                <code><a href="#getpolicydocumentstatementcondition">Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Condition[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1324,7 +1329,7 @@ listed.
             <td class="align-top">not<wbr>Principals</td>
             <td class="align-top">
                 
-                <code><a href="#getpolicydocumentstatementnotprincipal">iam.<wbr>Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Not<wbr>Principal[]?</a></code>
+                <code><a href="#getpolicydocumentstatementnotprincipal">Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Not<wbr>Principal[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1357,7 +1362,7 @@ does *not* apply to. Used to apply a policy statement to all resources
             <td class="align-top">principals</td>
             <td class="align-top">
                 
-                <code><a href="#getpolicydocumentstatementprincipal">iam.<wbr>Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Principal[]?</a></code>
+                <code><a href="#getpolicydocumentstatementprincipal">Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Principal[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1628,7 +1633,7 @@ to evaluate.
             <td class="align-top">Values</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1924,7 +1929,7 @@ the service name.
             <td class="align-top">Identifiers</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2149,7 +2154,7 @@ The type of principal. For AWS ARNs this is &#34;AWS&#34;.  For AWS services (e.
             <td class="align-top">Identifiers</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

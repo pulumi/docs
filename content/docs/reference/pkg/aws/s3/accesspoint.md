@@ -136,7 +136,7 @@ A valid JSON document that specifies the policy that you want to apply to this a
             <td class="align-top">Public<wbr>Access<wbr>Block<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#accesspointpublicaccessblockconfiguration">Pulumi.<wbr>Aws.<wbr>S3.<wbr>Access<wbr>Point<wbr>Public<wbr>Access<wbr>Block<wbr>Configuration<wbr>Args?</a></code>
+                <code><a href="#accesspointpublicaccessblockconfiguration">Access<wbr>Point<wbr>Public<wbr>Access<wbr>Block<wbr>Configuration<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -151,7 +151,7 @@ Configuration block to manage the `PublicAccessBlock` configuration that you wan
             <td class="align-top">Vpc<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#accesspointvpcconfiguration">Pulumi.<wbr>Aws.<wbr>S3.<wbr>Access<wbr>Point<wbr>Vpc<wbr>Configuration<wbr>Args?</a></code>
+                <code><a href="#accesspointvpcconfiguration">Access<wbr>Point<wbr>Vpc<wbr>Configuration<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -245,7 +245,7 @@ A valid JSON document that specifies the policy that you want to apply to this a
             <td class="align-top">Public<wbr>Access<wbr>Block<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#accesspointpublicaccessblockconfiguration">*s3.<wbr>Access<wbr>Point<wbr>Public<wbr>Access<wbr>Block<wbr>Configuration</a></code>
+                <code><a href="#accesspointpublicaccessblockconfiguration">*Access<wbr>Point<wbr>Public<wbr>Access<wbr>Block<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -260,7 +260,7 @@ Configuration block to manage the `PublicAccessBlock` configuration that you wan
             <td class="align-top">Vpc<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#accesspointvpcconfiguration">*s3.<wbr>Access<wbr>Point<wbr>Vpc<wbr>Configuration</a></code>
+                <code><a href="#accesspointvpcconfiguration">*Access<wbr>Point<wbr>Vpc<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -354,7 +354,7 @@ A valid JSON document that specifies the policy that you want to apply to this a
             <td class="align-top">public<wbr>Access<wbr>Block<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#accesspointpublicaccessblockconfiguration">s3.<wbr>Access<wbr>Point<wbr>Public<wbr>Access<wbr>Block<wbr>Configuration?</a></code>
+                <code><a href="#accesspointpublicaccessblockconfiguration">Access<wbr>Point<wbr>Public<wbr>Access<wbr>Block<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -369,7 +369,7 @@ Configuration block to manage the `PublicAccessBlock` configuration that you wan
             <td class="align-top">vpc<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#accesspointvpcconfiguration">s3.<wbr>Access<wbr>Point<wbr>Vpc<wbr>Configuration?</a></code>
+                <code><a href="#accesspointvpcconfiguration">Access<wbr>Point<wbr>Vpc<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -631,7 +631,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn&#39;t suppo
             <td class="align-top">Public<wbr>Access<wbr>Block<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#accesspointpublicaccessblockconfiguration">Pulumi.<wbr>Aws.<wbr>S3.<wbr>Access<wbr>Point<wbr>Public<wbr>Access<wbr>Block<wbr>Configuration?</a></code>
+                <code><a href="#accesspointpublicaccessblockconfiguration">Access<wbr>Point<wbr>Public<wbr>Access<wbr>Block<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block to manage the `PublicAccessBlock` configuration that you want to apply to this Amazon S3 bucket. You can enable the configuration options in any combination. Detailed below.
  {{% /md %}}
@@ -644,7 +644,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn&#39;t suppo
             <td class="align-top">Vpc<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#accesspointvpcconfiguration">Pulumi.<wbr>Aws.<wbr>S3.<wbr>Access<wbr>Point<wbr>Vpc<wbr>Configuration?</a></code>
+                <code><a href="#accesspointvpcconfiguration">Access<wbr>Point<wbr>Vpc<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block to restrict access to this access point to requests from the specified Virtual Private Cloud (VPC). Detailed below.
  {{% /md %}}
@@ -781,7 +781,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn&#39;t suppo
             <td class="align-top">Public<wbr>Access<wbr>Block<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#accesspointpublicaccessblockconfiguration">*s3.<wbr>Access<wbr>Point<wbr>Public<wbr>Access<wbr>Block<wbr>Configuration</a></code>
+                <code><a href="#accesspointpublicaccessblockconfiguration">*Access<wbr>Point<wbr>Public<wbr>Access<wbr>Block<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block to manage the `PublicAccessBlock` configuration that you want to apply to this Amazon S3 bucket. You can enable the configuration options in any combination. Detailed below.
  {{% /md %}}
@@ -794,7 +794,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn&#39;t suppo
             <td class="align-top">Vpc<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#accesspointvpcconfiguration">*s3.<wbr>Access<wbr>Point<wbr>Vpc<wbr>Configuration</a></code>
+                <code><a href="#accesspointvpcconfiguration">*Access<wbr>Point<wbr>Vpc<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block to restrict access to this access point to requests from the specified Virtual Private Cloud (VPC). Detailed below.
  {{% /md %}}
@@ -931,7 +931,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn&#39;t suppo
             <td class="align-top">public<wbr>Access<wbr>Block<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#accesspointpublicaccessblockconfiguration">s3.<wbr>Access<wbr>Point<wbr>Public<wbr>Access<wbr>Block<wbr>Configuration?</a></code>
+                <code><a href="#accesspointpublicaccessblockconfiguration">Access<wbr>Point<wbr>Public<wbr>Access<wbr>Block<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block to manage the `PublicAccessBlock` configuration that you want to apply to this Amazon S3 bucket. You can enable the configuration options in any combination. Detailed below.
  {{% /md %}}
@@ -944,7 +944,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn&#39;t suppo
             <td class="align-top">vpc<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#accesspointvpcconfiguration">s3.<wbr>Access<wbr>Point<wbr>Vpc<wbr>Configuration?</a></code>
+                <code><a href="#accesspointvpcconfiguration">Access<wbr>Point<wbr>Vpc<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block to restrict access to this access point to requests from the specified Virtual Private Cloud (VPC). Detailed below.
  {{% /md %}}
@@ -1306,7 +1306,7 @@ A valid JSON document that specifies the policy that you want to apply to this a
             <td class="align-top">Public<wbr>Access<wbr>Block<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#accesspointpublicaccessblockconfiguration">Pulumi.<wbr>Aws.<wbr>S3.<wbr>Access<wbr>Point<wbr>Public<wbr>Access<wbr>Block<wbr>Configuration<wbr>Args?</a></code>
+                <code><a href="#accesspointpublicaccessblockconfiguration">Access<wbr>Point<wbr>Public<wbr>Access<wbr>Block<wbr>Configuration<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1321,7 +1321,7 @@ Configuration block to manage the `PublicAccessBlock` configuration that you wan
             <td class="align-top">Vpc<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#accesspointvpcconfiguration">Pulumi.<wbr>Aws.<wbr>S3.<wbr>Access<wbr>Point<wbr>Vpc<wbr>Configuration<wbr>Args?</a></code>
+                <code><a href="#accesspointvpcconfiguration">Access<wbr>Point<wbr>Vpc<wbr>Configuration<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1476,7 +1476,7 @@ A valid JSON document that specifies the policy that you want to apply to this a
             <td class="align-top">Public<wbr>Access<wbr>Block<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#accesspointpublicaccessblockconfiguration">*s3.<wbr>Access<wbr>Point<wbr>Public<wbr>Access<wbr>Block<wbr>Configuration</a></code>
+                <code><a href="#accesspointpublicaccessblockconfiguration">*Access<wbr>Point<wbr>Public<wbr>Access<wbr>Block<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1491,7 +1491,7 @@ Configuration block to manage the `PublicAccessBlock` configuration that you wan
             <td class="align-top">Vpc<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#accesspointvpcconfiguration">*s3.<wbr>Access<wbr>Point<wbr>Vpc<wbr>Configuration</a></code>
+                <code><a href="#accesspointvpcconfiguration">*Access<wbr>Point<wbr>Vpc<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1646,7 +1646,7 @@ A valid JSON document that specifies the policy that you want to apply to this a
             <td class="align-top">public<wbr>Access<wbr>Block<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#accesspointpublicaccessblockconfiguration">s3.<wbr>Access<wbr>Point<wbr>Public<wbr>Access<wbr>Block<wbr>Configuration?</a></code>
+                <code><a href="#accesspointpublicaccessblockconfiguration">Access<wbr>Point<wbr>Public<wbr>Access<wbr>Block<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1661,7 +1661,7 @@ Configuration block to manage the `PublicAccessBlock` configuration that you wan
             <td class="align-top">vpc<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#accesspointvpcconfiguration">s3.<wbr>Access<wbr>Point<wbr>Vpc<wbr>Configuration?</a></code>
+                <code><a href="#accesspointvpcconfiguration">Access<wbr>Point<wbr>Vpc<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

@@ -219,7 +219,7 @@ The description of the maintenance window task.
             <td class="align-top">Logging<wbr>Info</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasklogginginfo">Pulumi.<wbr>Aws.<wbr>Ssm.<wbr>Maintenance<wbr>Window<wbr>Task<wbr>Logging<wbr>Info<wbr>Args?</a></code>
+                <code><a href="#maintenancewindowtasklogginginfo">Maintenance<wbr>Window<wbr>Task<wbr>Logging<wbr>Info<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -309,7 +309,7 @@ The IAM service role to assume during task execution.
             <td class="align-top">Targets</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasktarget">List&lt;Pulumi.<wbr>Aws.<wbr>Ssm.<wbr>Maintenance<wbr>Window<wbr>Task<wbr>Target<wbr>Args&gt;</a></code>
+                <code><a href="#maintenancewindowtasktarget">List&lt;Maintenance<wbr>Window<wbr>Task<wbr>Target<wbr>Args&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -339,7 +339,7 @@ The ARN of the task to execute.
             <td class="align-top">Task<wbr>Invocation<wbr>Parameters</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasktaskinvocationparameters">Pulumi.<wbr>Aws.<wbr>Ssm.<wbr>Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Args?</a></code>
+                <code><a href="#maintenancewindowtasktaskinvocationparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -354,7 +354,7 @@ The parameters for task execution. This argument is conflict with `task_paramete
             <td class="align-top">Task<wbr>Parameters</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasktaskparameter">List&lt;Pulumi.<wbr>Aws.<wbr>Ssm.<wbr>Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Parameter<wbr>Args&gt;?</a></code>
+                <code><a href="#maintenancewindowtasktaskparameter">List&lt;Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Parameter<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -434,7 +434,7 @@ The description of the maintenance window task.
             <td class="align-top">Logging<wbr>Info</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasklogginginfo">*ssm.<wbr>Maintenance<wbr>Window<wbr>Task<wbr>Logging<wbr>Info</a></code>
+                <code><a href="#maintenancewindowtasklogginginfo">*Maintenance<wbr>Window<wbr>Task<wbr>Logging<wbr>Info</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -524,7 +524,7 @@ The IAM service role to assume during task execution.
             <td class="align-top">Targets</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasktarget">[]ssm.<wbr>Maintenance<wbr>Window<wbr>Task<wbr>Target</a></code>
+                <code><a href="#maintenancewindowtasktarget">[]Maintenance<wbr>Window<wbr>Task<wbr>Target</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -554,7 +554,7 @@ The ARN of the task to execute.
             <td class="align-top">Task<wbr>Invocation<wbr>Parameters</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasktaskinvocationparameters">*ssm.<wbr>Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters</a></code>
+                <code><a href="#maintenancewindowtasktaskinvocationparameters">*Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -569,7 +569,7 @@ The parameters for task execution. This argument is conflict with `task_paramete
             <td class="align-top">Task<wbr>Parameters</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasktaskparameter">[]ssm.<wbr>Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Parameter</a></code>
+                <code><a href="#maintenancewindowtasktaskparameter">[]Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Parameter</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -649,7 +649,7 @@ The description of the maintenance window task.
             <td class="align-top">logging<wbr>Info</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasklogginginfo">ssm.<wbr>Maintenance<wbr>Window<wbr>Task<wbr>Logging<wbr>Info?</a></code>
+                <code><a href="#maintenancewindowtasklogginginfo">Maintenance<wbr>Window<wbr>Task<wbr>Logging<wbr>Info?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -739,7 +739,7 @@ The IAM service role to assume during task execution.
             <td class="align-top">targets</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasktarget">ssm.<wbr>Maintenance<wbr>Window<wbr>Task<wbr>Target[]</a></code>
+                <code><a href="#maintenancewindowtasktarget">Maintenance<wbr>Window<wbr>Task<wbr>Target[]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -769,7 +769,7 @@ The ARN of the task to execute.
             <td class="align-top">task<wbr>Invocation<wbr>Parameters</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasktaskinvocationparameters">ssm.<wbr>Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters?</a></code>
+                <code><a href="#maintenancewindowtasktaskinvocationparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -784,7 +784,7 @@ The parameters for task execution. This argument is conflict with `task_paramete
             <td class="align-top">task<wbr>Parameters</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasktaskparameter">ssm.<wbr>Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Parameter[]?</a></code>
+                <code><a href="#maintenancewindowtasktaskparameter">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Parameter[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1091,7 +1091,7 @@ The following output properties are available:
             <td class="align-top">Logging<wbr>Info</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasklogginginfo">Pulumi.<wbr>Aws.<wbr>Ssm.<wbr>Maintenance<wbr>Window<wbr>Task<wbr>Logging<wbr>Info?</a></code>
+                <code><a href="#maintenancewindowtasklogginginfo">Maintenance<wbr>Window<wbr>Task<wbr>Logging<wbr>Info?</a></code>
             </td>
             <td class="align-top">{{% md %}} A structure containing information about an Amazon S3 bucket to write instance-level logs to. Use `task_invocation_parameters` configuration block `run_command_parameters` configuration block `output_s3_*` arguments instead. Conflicts with `task_invocation_parameters`. Documented below.
  {{% /md %}}
@@ -1169,7 +1169,7 @@ The following output properties are available:
             <td class="align-top">Targets</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasktarget">List&lt;Pulumi.<wbr>Aws.<wbr>Ssm.<wbr>Maintenance<wbr>Window<wbr>Task<wbr>Target&gt;</a></code>
+                <code><a href="#maintenancewindowtasktarget">List&lt;Maintenance<wbr>Window<wbr>Task<wbr>Target&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} The targets (either instances or window target ids). Instances are specified using Key=InstanceIds,Values=instanceid1,instanceid2. Window target ids are specified using Key=WindowTargetIds,Values=window target id1, window target id2.
  {{% /md %}}
@@ -1195,7 +1195,7 @@ The following output properties are available:
             <td class="align-top">Task<wbr>Invocation<wbr>Parameters</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasktaskinvocationparameters">Pulumi.<wbr>Aws.<wbr>Ssm.<wbr>Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters?</a></code>
+                <code><a href="#maintenancewindowtasktaskinvocationparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters?</a></code>
             </td>
             <td class="align-top">{{% md %}} The parameters for task execution. This argument is conflict with `task_parameters` and `logging_info`.
  {{% /md %}}
@@ -1208,7 +1208,7 @@ The following output properties are available:
             <td class="align-top">Task<wbr>Parameters</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasktaskparameter">List&lt;Pulumi.<wbr>Aws.<wbr>Ssm.<wbr>Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Parameter&gt;?</a></code>
+                <code><a href="#maintenancewindowtasktaskparameter">List&lt;Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Parameter&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} A structure containing information about parameters required by the particular `task_arn`. Use `parameter` configuration blocks under the `task_invocation_parameters` configuration block instead. Conflicts with `task_invocation_parameters`. Documented below.
  {{% /md %}}
@@ -1280,7 +1280,7 @@ The following output properties are available:
             <td class="align-top">Logging<wbr>Info</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasklogginginfo">*ssm.<wbr>Maintenance<wbr>Window<wbr>Task<wbr>Logging<wbr>Info</a></code>
+                <code><a href="#maintenancewindowtasklogginginfo">*Maintenance<wbr>Window<wbr>Task<wbr>Logging<wbr>Info</a></code>
             </td>
             <td class="align-top">{{% md %}} A structure containing information about an Amazon S3 bucket to write instance-level logs to. Use `task_invocation_parameters` configuration block `run_command_parameters` configuration block `output_s3_*` arguments instead. Conflicts with `task_invocation_parameters`. Documented below.
  {{% /md %}}
@@ -1358,7 +1358,7 @@ The following output properties are available:
             <td class="align-top">Targets</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasktarget">[]ssm.<wbr>Maintenance<wbr>Window<wbr>Task<wbr>Target</a></code>
+                <code><a href="#maintenancewindowtasktarget">[]Maintenance<wbr>Window<wbr>Task<wbr>Target</a></code>
             </td>
             <td class="align-top">{{% md %}} The targets (either instances or window target ids). Instances are specified using Key=InstanceIds,Values=instanceid1,instanceid2. Window target ids are specified using Key=WindowTargetIds,Values=window target id1, window target id2.
  {{% /md %}}
@@ -1384,7 +1384,7 @@ The following output properties are available:
             <td class="align-top">Task<wbr>Invocation<wbr>Parameters</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasktaskinvocationparameters">*ssm.<wbr>Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters</a></code>
+                <code><a href="#maintenancewindowtasktaskinvocationparameters">*Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters</a></code>
             </td>
             <td class="align-top">{{% md %}} The parameters for task execution. This argument is conflict with `task_parameters` and `logging_info`.
  {{% /md %}}
@@ -1397,7 +1397,7 @@ The following output properties are available:
             <td class="align-top">Task<wbr>Parameters</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasktaskparameter">[]ssm.<wbr>Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Parameter</a></code>
+                <code><a href="#maintenancewindowtasktaskparameter">[]Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Parameter</a></code>
             </td>
             <td class="align-top">{{% md %}} A structure containing information about parameters required by the particular `task_arn`. Use `parameter` configuration blocks under the `task_invocation_parameters` configuration block instead. Conflicts with `task_invocation_parameters`. Documented below.
  {{% /md %}}
@@ -1469,7 +1469,7 @@ The following output properties are available:
             <td class="align-top">logging<wbr>Info</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasklogginginfo">ssm.<wbr>Maintenance<wbr>Window<wbr>Task<wbr>Logging<wbr>Info?</a></code>
+                <code><a href="#maintenancewindowtasklogginginfo">Maintenance<wbr>Window<wbr>Task<wbr>Logging<wbr>Info?</a></code>
             </td>
             <td class="align-top">{{% md %}} A structure containing information about an Amazon S3 bucket to write instance-level logs to. Use `task_invocation_parameters` configuration block `run_command_parameters` configuration block `output_s3_*` arguments instead. Conflicts with `task_invocation_parameters`. Documented below.
  {{% /md %}}
@@ -1547,7 +1547,7 @@ The following output properties are available:
             <td class="align-top">targets</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasktarget">ssm.<wbr>Maintenance<wbr>Window<wbr>Task<wbr>Target[]</a></code>
+                <code><a href="#maintenancewindowtasktarget">Maintenance<wbr>Window<wbr>Task<wbr>Target[]</a></code>
             </td>
             <td class="align-top">{{% md %}} The targets (either instances or window target ids). Instances are specified using Key=InstanceIds,Values=instanceid1,instanceid2. Window target ids are specified using Key=WindowTargetIds,Values=window target id1, window target id2.
  {{% /md %}}
@@ -1573,7 +1573,7 @@ The following output properties are available:
             <td class="align-top">task<wbr>Invocation<wbr>Parameters</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasktaskinvocationparameters">ssm.<wbr>Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters?</a></code>
+                <code><a href="#maintenancewindowtasktaskinvocationparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters?</a></code>
             </td>
             <td class="align-top">{{% md %}} The parameters for task execution. This argument is conflict with `task_parameters` and `logging_info`.
  {{% /md %}}
@@ -1586,7 +1586,7 @@ The following output properties are available:
             <td class="align-top">task<wbr>Parameters</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasktaskparameter">ssm.<wbr>Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Parameter[]?</a></code>
+                <code><a href="#maintenancewindowtasktaskparameter">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Parameter[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} A structure containing information about parameters required by the particular `task_arn`. Use `parameter` configuration blocks under the `task_invocation_parameters` configuration block instead. Conflicts with `task_invocation_parameters`. Documented below.
  {{% /md %}}
@@ -1908,7 +1908,7 @@ The description of the maintenance window task.
             <td class="align-top">Logging<wbr>Info</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasklogginginfo">Pulumi.<wbr>Aws.<wbr>Ssm.<wbr>Maintenance<wbr>Window<wbr>Task<wbr>Logging<wbr>Info<wbr>Args?</a></code>
+                <code><a href="#maintenancewindowtasklogginginfo">Maintenance<wbr>Window<wbr>Task<wbr>Logging<wbr>Info<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1998,7 +1998,7 @@ The IAM service role to assume during task execution.
             <td class="align-top">Targets</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasktarget">List&lt;Pulumi.<wbr>Aws.<wbr>Ssm.<wbr>Maintenance<wbr>Window<wbr>Task<wbr>Target<wbr>Args&gt;?</a></code>
+                <code><a href="#maintenancewindowtasktarget">List&lt;Maintenance<wbr>Window<wbr>Task<wbr>Target<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2028,7 +2028,7 @@ The ARN of the task to execute.
             <td class="align-top">Task<wbr>Invocation<wbr>Parameters</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasktaskinvocationparameters">Pulumi.<wbr>Aws.<wbr>Ssm.<wbr>Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Args?</a></code>
+                <code><a href="#maintenancewindowtasktaskinvocationparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2043,7 +2043,7 @@ The parameters for task execution. This argument is conflict with `task_paramete
             <td class="align-top">Task<wbr>Parameters</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasktaskparameter">List&lt;Pulumi.<wbr>Aws.<wbr>Ssm.<wbr>Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Parameter<wbr>Args&gt;?</a></code>
+                <code><a href="#maintenancewindowtasktaskparameter">List&lt;Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Parameter<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2123,7 +2123,7 @@ The description of the maintenance window task.
             <td class="align-top">Logging<wbr>Info</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasklogginginfo">*ssm.<wbr>Maintenance<wbr>Window<wbr>Task<wbr>Logging<wbr>Info</a></code>
+                <code><a href="#maintenancewindowtasklogginginfo">*Maintenance<wbr>Window<wbr>Task<wbr>Logging<wbr>Info</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2213,7 +2213,7 @@ The IAM service role to assume during task execution.
             <td class="align-top">Targets</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasktarget">[]ssm.<wbr>Maintenance<wbr>Window<wbr>Task<wbr>Target</a></code>
+                <code><a href="#maintenancewindowtasktarget">[]Maintenance<wbr>Window<wbr>Task<wbr>Target</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2243,7 +2243,7 @@ The ARN of the task to execute.
             <td class="align-top">Task<wbr>Invocation<wbr>Parameters</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasktaskinvocationparameters">*ssm.<wbr>Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters</a></code>
+                <code><a href="#maintenancewindowtasktaskinvocationparameters">*Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2258,7 +2258,7 @@ The parameters for task execution. This argument is conflict with `task_paramete
             <td class="align-top">Task<wbr>Parameters</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasktaskparameter">[]ssm.<wbr>Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Parameter</a></code>
+                <code><a href="#maintenancewindowtasktaskparameter">[]Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Parameter</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2338,7 +2338,7 @@ The description of the maintenance window task.
             <td class="align-top">logging<wbr>Info</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasklogginginfo">ssm.<wbr>Maintenance<wbr>Window<wbr>Task<wbr>Logging<wbr>Info?</a></code>
+                <code><a href="#maintenancewindowtasklogginginfo">Maintenance<wbr>Window<wbr>Task<wbr>Logging<wbr>Info?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2428,7 +2428,7 @@ The IAM service role to assume during task execution.
             <td class="align-top">targets</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasktarget">ssm.<wbr>Maintenance<wbr>Window<wbr>Task<wbr>Target[]?</a></code>
+                <code><a href="#maintenancewindowtasktarget">Maintenance<wbr>Window<wbr>Task<wbr>Target[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2458,7 +2458,7 @@ The ARN of the task to execute.
             <td class="align-top">task<wbr>Invocation<wbr>Parameters</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasktaskinvocationparameters">ssm.<wbr>Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters?</a></code>
+                <code><a href="#maintenancewindowtasktaskinvocationparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2473,7 +2473,7 @@ The parameters for task execution. This argument is conflict with `task_paramete
             <td class="align-top">task<wbr>Parameters</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasktaskparameter">ssm.<wbr>Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Parameter[]?</a></code>
+                <code><a href="#maintenancewindowtasktaskparameter">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Parameter[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3064,7 +3064,7 @@ The Id of the maintenance window to register the task with.
             <td class="align-top">Values</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -3267,7 +3267,7 @@ The array of strings.
             <td class="align-top">Automation<wbr>Parameters</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasktaskinvocationparametersautomationparameters">Pulumi.<wbr>Aws.<wbr>Ssm.<wbr>Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Automation<wbr>Parameters<wbr>Args?</a></code>
+                <code><a href="#maintenancewindowtasktaskinvocationparametersautomationparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Automation<wbr>Parameters<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3282,7 +3282,7 @@ The parameters for an AUTOMATION task type. Documented below.
             <td class="align-top">Lambda<wbr>Parameters</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasktaskinvocationparameterslambdaparameters">Pulumi.<wbr>Aws.<wbr>Ssm.<wbr>Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Lambda<wbr>Parameters<wbr>Args?</a></code>
+                <code><a href="#maintenancewindowtasktaskinvocationparameterslambdaparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Lambda<wbr>Parameters<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3297,7 +3297,7 @@ The parameters for a LAMBDA task type. Documented below.
             <td class="align-top">Run<wbr>Command<wbr>Parameters</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasktaskinvocationparametersruncommandparameters">Pulumi.<wbr>Aws.<wbr>Ssm.<wbr>Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Run<wbr>Command<wbr>Parameters<wbr>Args?</a></code>
+                <code><a href="#maintenancewindowtasktaskinvocationparametersruncommandparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Run<wbr>Command<wbr>Parameters<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3312,7 +3312,7 @@ The parameters for a RUN_COMMAND task type. Documented below.
             <td class="align-top">Step<wbr>Functions<wbr>Parameters</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasktaskinvocationparametersstepfunctionsparameters">Pulumi.<wbr>Aws.<wbr>Ssm.<wbr>Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Step<wbr>Functions<wbr>Parameters<wbr>Args?</a></code>
+                <code><a href="#maintenancewindowtasktaskinvocationparametersstepfunctionsparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Step<wbr>Functions<wbr>Parameters<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3347,7 +3347,7 @@ The parameters for a STEP_FUNCTIONS task type. Documented below.
             <td class="align-top">Automation<wbr>Parameters</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasktaskinvocationparametersautomationparameters">*ssm.<wbr>Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Automation<wbr>Parameters</a></code>
+                <code><a href="#maintenancewindowtasktaskinvocationparametersautomationparameters">*Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Automation<wbr>Parameters</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3362,7 +3362,7 @@ The parameters for an AUTOMATION task type. Documented below.
             <td class="align-top">Lambda<wbr>Parameters</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasktaskinvocationparameterslambdaparameters">*ssm.<wbr>Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Lambda<wbr>Parameters</a></code>
+                <code><a href="#maintenancewindowtasktaskinvocationparameterslambdaparameters">*Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Lambda<wbr>Parameters</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3377,7 +3377,7 @@ The parameters for a LAMBDA task type. Documented below.
             <td class="align-top">Run<wbr>Command<wbr>Parameters</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasktaskinvocationparametersruncommandparameters">*ssm.<wbr>Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Run<wbr>Command<wbr>Parameters</a></code>
+                <code><a href="#maintenancewindowtasktaskinvocationparametersruncommandparameters">*Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Run<wbr>Command<wbr>Parameters</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3392,7 +3392,7 @@ The parameters for a RUN_COMMAND task type. Documented below.
             <td class="align-top">Step<wbr>Functions<wbr>Parameters</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasktaskinvocationparametersstepfunctionsparameters">*ssm.<wbr>Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Step<wbr>Functions<wbr>Parameters</a></code>
+                <code><a href="#maintenancewindowtasktaskinvocationparametersstepfunctionsparameters">*Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Step<wbr>Functions<wbr>Parameters</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3427,7 +3427,7 @@ The parameters for a STEP_FUNCTIONS task type. Documented below.
             <td class="align-top">automation<wbr>Parameters</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasktaskinvocationparametersautomationparameters">ssm.<wbr>Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Automation<wbr>Parameters?</a></code>
+                <code><a href="#maintenancewindowtasktaskinvocationparametersautomationparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Automation<wbr>Parameters?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3442,7 +3442,7 @@ The parameters for an AUTOMATION task type. Documented below.
             <td class="align-top">lambda<wbr>Parameters</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasktaskinvocationparameterslambdaparameters">ssm.<wbr>Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Lambda<wbr>Parameters?</a></code>
+                <code><a href="#maintenancewindowtasktaskinvocationparameterslambdaparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Lambda<wbr>Parameters?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3457,7 +3457,7 @@ The parameters for a LAMBDA task type. Documented below.
             <td class="align-top">run<wbr>Command<wbr>Parameters</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasktaskinvocationparametersruncommandparameters">ssm.<wbr>Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Run<wbr>Command<wbr>Parameters?</a></code>
+                <code><a href="#maintenancewindowtasktaskinvocationparametersruncommandparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Run<wbr>Command<wbr>Parameters?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3472,7 +3472,7 @@ The parameters for a RUN_COMMAND task type. Documented below.
             <td class="align-top">step<wbr>Functions<wbr>Parameters</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasktaskinvocationparametersstepfunctionsparameters">ssm.<wbr>Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Step<wbr>Functions<wbr>Parameters?</a></code>
+                <code><a href="#maintenancewindowtasktaskinvocationparametersstepfunctionsparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Step<wbr>Functions<wbr>Parameters?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3623,7 +3623,7 @@ The version of an Automation document to use during task execution.
             <td class="align-top">Parameters</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasktaskinvocationparametersautomationparametersparameter">List&lt;Pulumi.<wbr>Aws.<wbr>Ssm.<wbr>Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Automation<wbr>Parameters<wbr>Parameter<wbr>Args&gt;?</a></code>
+                <code><a href="#maintenancewindowtasktaskinvocationparametersautomationparametersparameter">List&lt;Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Automation<wbr>Parameters<wbr>Parameter<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3673,7 +3673,7 @@ The version of an Automation document to use during task execution.
             <td class="align-top">Parameters</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasktaskinvocationparametersautomationparametersparameter">[]ssm.<wbr>Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Automation<wbr>Parameters<wbr>Parameter</a></code>
+                <code><a href="#maintenancewindowtasktaskinvocationparametersautomationparametersparameter">[]Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Automation<wbr>Parameters<wbr>Parameter</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3723,7 +3723,7 @@ The version of an Automation document to use during task execution.
             <td class="align-top">parameters</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasktaskinvocationparametersautomationparametersparameter">ssm.<wbr>Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Automation<wbr>Parameters<wbr>Parameter[]?</a></code>
+                <code><a href="#maintenancewindowtasktaskinvocationparametersautomationparametersparameter">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Automation<wbr>Parameters<wbr>Parameter[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3844,7 +3844,7 @@ The parameter name.
             <td class="align-top">Values</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -4376,7 +4376,7 @@ SHA-256 or SHA-1. SHA-1 hashes have been deprecated. Valid values: `Sha256` and 
             <td class="align-top">Notification<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasktaskinvocationparametersruncommandparametersnotificationconfig">Pulumi.<wbr>Aws.<wbr>Ssm.<wbr>Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Run<wbr>Command<wbr>Parameters<wbr>Notification<wbr>Config<wbr>Args?</a></code>
+                <code><a href="#maintenancewindowtasktaskinvocationparametersruncommandparametersnotificationconfig">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Run<wbr>Command<wbr>Parameters<wbr>Notification<wbr>Config<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4421,7 +4421,7 @@ The Amazon S3 bucket subfolder.
             <td class="align-top">Parameters</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasktaskinvocationparametersruncommandparametersparameter">List&lt;Pulumi.<wbr>Aws.<wbr>Ssm.<wbr>Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Run<wbr>Command<wbr>Parameters<wbr>Parameter<wbr>Args&gt;?</a></code>
+                <code><a href="#maintenancewindowtasktaskinvocationparametersruncommandparametersparameter">List&lt;Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Run<wbr>Command<wbr>Parameters<wbr>Parameter<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4531,7 +4531,7 @@ SHA-256 or SHA-1. SHA-1 hashes have been deprecated. Valid values: `Sha256` and 
             <td class="align-top">Notification<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasktaskinvocationparametersruncommandparametersnotificationconfig">*ssm.<wbr>Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Run<wbr>Command<wbr>Parameters<wbr>Notification<wbr>Config</a></code>
+                <code><a href="#maintenancewindowtasktaskinvocationparametersruncommandparametersnotificationconfig">*Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Run<wbr>Command<wbr>Parameters<wbr>Notification<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4576,7 +4576,7 @@ The Amazon S3 bucket subfolder.
             <td class="align-top">Parameters</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasktaskinvocationparametersruncommandparametersparameter">[]ssm.<wbr>Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Run<wbr>Command<wbr>Parameters<wbr>Parameter</a></code>
+                <code><a href="#maintenancewindowtasktaskinvocationparametersruncommandparametersparameter">[]Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Run<wbr>Command<wbr>Parameters<wbr>Parameter</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4686,7 +4686,7 @@ SHA-256 or SHA-1. SHA-1 hashes have been deprecated. Valid values: `Sha256` and 
             <td class="align-top">notification<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasktaskinvocationparametersruncommandparametersnotificationconfig">ssm.<wbr>Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Run<wbr>Command<wbr>Parameters<wbr>Notification<wbr>Config?</a></code>
+                <code><a href="#maintenancewindowtasktaskinvocationparametersruncommandparametersnotificationconfig">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Run<wbr>Command<wbr>Parameters<wbr>Notification<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4731,7 +4731,7 @@ The Amazon S3 bucket subfolder.
             <td class="align-top">parameters</td>
             <td class="align-top">
                 
-                <code><a href="#maintenancewindowtasktaskinvocationparametersruncommandparametersparameter">ssm.<wbr>Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Run<wbr>Command<wbr>Parameters<wbr>Parameter[]?</a></code>
+                <code><a href="#maintenancewindowtasktaskinvocationparametersruncommandparametersparameter">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Run<wbr>Command<wbr>Parameters<wbr>Parameter[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4987,7 +4987,7 @@ An Amazon Resource Name (ARN) for a Simple Notification Service (SNS) topic. Run
             <td class="align-top">Notification<wbr>Events</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5268,7 +5268,7 @@ The parameter name.
             <td class="align-top">Values</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -5710,7 +5710,7 @@ The parameter name.
             <td class="align-top">Values</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

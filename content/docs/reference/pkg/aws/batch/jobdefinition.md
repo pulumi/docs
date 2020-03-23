@@ -166,7 +166,7 @@ Specifies the name of the job definition.
             <td class="align-top">Parameters</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, string&gt;?</code>
+                <code>Dictionary<string, string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -181,7 +181,7 @@ Specifies the parameter substitution placeholders to set in the job definition.
             <td class="align-top">Retry<wbr>Strategy</td>
             <td class="align-top">
                 
-                <code><a href="#jobdefinitionretrystrategy">Pulumi.<wbr>Aws.<wbr>Batch.<wbr>Job<wbr>Definition<wbr>Retry<wbr>Strategy<wbr>Args?</a></code>
+                <code><a href="#jobdefinitionretrystrategy">Job<wbr>Definition<wbr>Retry<wbr>Strategy<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -197,7 +197,7 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
             <td class="align-top">Timeout</td>
             <td class="align-top">
                 
-                <code><a href="#jobdefinitiontimeout">Pulumi.<wbr>Aws.<wbr>Batch.<wbr>Job<wbr>Definition<wbr>Timeout<wbr>Args?</a></code>
+                <code><a href="#jobdefinitiontimeout">Job<wbr>Definition<wbr>Timeout<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -293,7 +293,7 @@ Specifies the parameter substitution placeholders to set in the job definition.
             <td class="align-top">Retry<wbr>Strategy</td>
             <td class="align-top">
                 
-                <code><a href="#jobdefinitionretrystrategy">*batch.<wbr>Job<wbr>Definition<wbr>Retry<wbr>Strategy</a></code>
+                <code><a href="#jobdefinitionretrystrategy">*Job<wbr>Definition<wbr>Retry<wbr>Strategy</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -309,7 +309,7 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
             <td class="align-top">Timeout</td>
             <td class="align-top">
                 
-                <code><a href="#jobdefinitiontimeout">*batch.<wbr>Job<wbr>Definition<wbr>Timeout</a></code>
+                <code><a href="#jobdefinitiontimeout">*Job<wbr>Definition<wbr>Timeout</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -405,7 +405,7 @@ Specifies the parameter substitution placeholders to set in the job definition.
             <td class="align-top">retry<wbr>Strategy</td>
             <td class="align-top">
                 
-                <code><a href="#jobdefinitionretrystrategy">batch.<wbr>Job<wbr>Definition<wbr>Retry<wbr>Strategy?</a></code>
+                <code><a href="#jobdefinitionretrystrategy">Job<wbr>Definition<wbr>Retry<wbr>Strategy?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -421,7 +421,7 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
             <td class="align-top">timeout</td>
             <td class="align-top">
                 
-                <code><a href="#jobdefinitiontimeout">batch.<wbr>Job<wbr>Definition<wbr>Timeout?</a></code>
+                <code><a href="#jobdefinitiontimeout">Job<wbr>Definition<wbr>Timeout?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -637,7 +637,7 @@ provided as a single valid JSON document. This parameter is required if the `typ
             <td class="align-top">Parameters</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, string&gt;?</code>
+                <code>Dictionary<string, string>?</code>
             </td>
             <td class="align-top">{{% md %}} Specifies the parameter substitution placeholders to set in the job definition.
  {{% /md %}}
@@ -650,7 +650,7 @@ provided as a single valid JSON document. This parameter is required if the `typ
             <td class="align-top">Retry<wbr>Strategy</td>
             <td class="align-top">
                 
-                <code><a href="#jobdefinitionretrystrategy">Pulumi.<wbr>Aws.<wbr>Batch.<wbr>Job<wbr>Definition<wbr>Retry<wbr>Strategy?</a></code>
+                <code><a href="#jobdefinitionretrystrategy">Job<wbr>Definition<wbr>Retry<wbr>Strategy?</a></code>
             </td>
             <td class="align-top">{{% md %}} Specifies the retry strategy to use for failed jobs that are submitted with this job definition.
 Maximum number of `retry_strategy` is `1`.  Defined below.
@@ -677,7 +677,7 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
             <td class="align-top">Timeout</td>
             <td class="align-top">
                 
-                <code><a href="#jobdefinitiontimeout">Pulumi.<wbr>Aws.<wbr>Batch.<wbr>Job<wbr>Definition<wbr>Timeout?</a></code>
+                <code><a href="#jobdefinitiontimeout">Job<wbr>Definition<wbr>Timeout?</a></code>
             </td>
             <td class="align-top">{{% md %}} Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of `timeout` is `1`. Defined below.
  {{% /md %}}
@@ -776,7 +776,7 @@ provided as a single valid JSON document. This parameter is required if the `typ
             <td class="align-top">Retry<wbr>Strategy</td>
             <td class="align-top">
                 
-                <code><a href="#jobdefinitionretrystrategy">*batch.<wbr>Job<wbr>Definition<wbr>Retry<wbr>Strategy</a></code>
+                <code><a href="#jobdefinitionretrystrategy">*Job<wbr>Definition<wbr>Retry<wbr>Strategy</a></code>
             </td>
             <td class="align-top">{{% md %}} Specifies the retry strategy to use for failed jobs that are submitted with this job definition.
 Maximum number of `retry_strategy` is `1`.  Defined below.
@@ -803,7 +803,7 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
             <td class="align-top">Timeout</td>
             <td class="align-top">
                 
-                <code><a href="#jobdefinitiontimeout">*batch.<wbr>Job<wbr>Definition<wbr>Timeout</a></code>
+                <code><a href="#jobdefinitiontimeout">*Job<wbr>Definition<wbr>Timeout</a></code>
             </td>
             <td class="align-top">{{% md %}} Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of `timeout` is `1`. Defined below.
  {{% /md %}}
@@ -902,7 +902,7 @@ provided as a single valid JSON document. This parameter is required if the `typ
             <td class="align-top">retry<wbr>Strategy</td>
             <td class="align-top">
                 
-                <code><a href="#jobdefinitionretrystrategy">batch.<wbr>Job<wbr>Definition<wbr>Retry<wbr>Strategy?</a></code>
+                <code><a href="#jobdefinitionretrystrategy">Job<wbr>Definition<wbr>Retry<wbr>Strategy?</a></code>
             </td>
             <td class="align-top">{{% md %}} Specifies the retry strategy to use for failed jobs that are submitted with this job definition.
 Maximum number of `retry_strategy` is `1`.  Defined below.
@@ -929,7 +929,7 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
             <td class="align-top">timeout</td>
             <td class="align-top">
                 
-                <code><a href="#jobdefinitiontimeout">batch.<wbr>Job<wbr>Definition<wbr>Timeout?</a></code>
+                <code><a href="#jobdefinitiontimeout">Job<wbr>Definition<wbr>Timeout?</a></code>
             </td>
             <td class="align-top">{{% md %}} Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of `timeout` is `1`. Defined below.
  {{% /md %}}
@@ -1206,7 +1206,7 @@ Specifies the name of the job definition.
             <td class="align-top">Parameters</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, string&gt;?</code>
+                <code>Dictionary<string, string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1221,7 +1221,7 @@ Specifies the parameter substitution placeholders to set in the job definition.
             <td class="align-top">Retry<wbr>Strategy</td>
             <td class="align-top">
                 
-                <code><a href="#jobdefinitionretrystrategy">Pulumi.<wbr>Aws.<wbr>Batch.<wbr>Job<wbr>Definition<wbr>Retry<wbr>Strategy<wbr>Args?</a></code>
+                <code><a href="#jobdefinitionretrystrategy">Job<wbr>Definition<wbr>Retry<wbr>Strategy<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1252,7 +1252,7 @@ The revision of the job definition.
             <td class="align-top">Timeout</td>
             <td class="align-top">
                 
-                <code><a href="#jobdefinitiontimeout">Pulumi.<wbr>Aws.<wbr>Batch.<wbr>Job<wbr>Definition<wbr>Timeout<wbr>Args?</a></code>
+                <code><a href="#jobdefinitiontimeout">Job<wbr>Definition<wbr>Timeout<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1363,7 +1363,7 @@ Specifies the parameter substitution placeholders to set in the job definition.
             <td class="align-top">Retry<wbr>Strategy</td>
             <td class="align-top">
                 
-                <code><a href="#jobdefinitionretrystrategy">*batch.<wbr>Job<wbr>Definition<wbr>Retry<wbr>Strategy</a></code>
+                <code><a href="#jobdefinitionretrystrategy">*Job<wbr>Definition<wbr>Retry<wbr>Strategy</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1394,7 +1394,7 @@ The revision of the job definition.
             <td class="align-top">Timeout</td>
             <td class="align-top">
                 
-                <code><a href="#jobdefinitiontimeout">*batch.<wbr>Job<wbr>Definition<wbr>Timeout</a></code>
+                <code><a href="#jobdefinitiontimeout">*Job<wbr>Definition<wbr>Timeout</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1505,7 +1505,7 @@ Specifies the parameter substitution placeholders to set in the job definition.
             <td class="align-top">retry<wbr>Strategy</td>
             <td class="align-top">
                 
-                <code><a href="#jobdefinitionretrystrategy">batch.<wbr>Job<wbr>Definition<wbr>Retry<wbr>Strategy?</a></code>
+                <code><a href="#jobdefinitionretrystrategy">Job<wbr>Definition<wbr>Retry<wbr>Strategy?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1536,7 +1536,7 @@ The revision of the job definition.
             <td class="align-top">timeout</td>
             <td class="align-top">
                 
-                <code><a href="#jobdefinitiontimeout">batch.<wbr>Job<wbr>Definition<wbr>Timeout?</a></code>
+                <code><a href="#jobdefinitiontimeout">Job<wbr>Definition<wbr>Timeout?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

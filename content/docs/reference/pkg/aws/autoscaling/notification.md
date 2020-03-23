@@ -108,7 +108,7 @@ The following arguments are supported:
             <td class="align-top">Group<wbr>Names</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -123,7 +123,7 @@ A list of AutoScaling Group Names
             <td class="align-top">Notifications</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -255,7 +255,7 @@ A list of AutoScaling Group Names
             <td class="align-top">notifications</td>
             <td class="align-top">
                 
-                <code>Notification<wbr>Type[]</code>
+                <code>NotificationType[]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -321,7 +321,7 @@ A list of AutoScaling Group Names
             <td class="align-top">notifications</td>
             <td class="align-top">
                 
-                <code>List[Notification<wbr>Type]</code>
+                <code>List[NotificationType]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -386,7 +386,7 @@ The following output properties are available:
             <td class="align-top">Group<wbr>Names</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} A list of AutoScaling Group Names
  {{% /md %}}
@@ -399,7 +399,7 @@ The following output properties are available:
             <td class="align-top">Notifications</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} A list of Notification Types that trigger
 notifications. Acceptable values are documented [in the AWS documentation here][1]
@@ -519,7 +519,7 @@ notifications. Acceptable values are documented [in the AWS documentation here][
             <td class="align-top">notifications</td>
             <td class="align-top">
                 
-                <code>Notification<wbr>Type[]</code>
+                <code>NotificationType[]</code>
             </td>
             <td class="align-top">{{% md %}} A list of Notification Types that trigger
 notifications. Acceptable values are documented [in the AWS documentation here][1]
@@ -579,7 +579,7 @@ notifications. Acceptable values are documented [in the AWS documentation here][
             <td class="align-top">notifications</td>
             <td class="align-top">
                 
-                <code>List[Notification<wbr>Type]</code>
+                <code>List[NotificationType]</code>
             </td>
             <td class="align-top">{{% md %}} A list of Notification Types that trigger
 notifications. Acceptable values are documented [in the AWS documentation here][1]
@@ -685,7 +685,7 @@ The following state arguments are supported:
             <td class="align-top">Group<wbr>Names</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -700,7 +700,7 @@ A list of AutoScaling Group Names
             <td class="align-top">Notifications</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -832,7 +832,7 @@ A list of AutoScaling Group Names
             <td class="align-top">notifications</td>
             <td class="align-top">
                 
-                <code>Notification<wbr>Type[]?</code>
+                <code>NotificationType[]?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -898,7 +898,7 @@ A list of AutoScaling Group Names
             <td class="align-top">notifications</td>
             <td class="align-top">
                 
-                <code>List[Notification<wbr>Type]</code>
+                <code>List[NotificationType]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

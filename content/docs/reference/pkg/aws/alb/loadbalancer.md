@@ -145,7 +145,7 @@ The following arguments are supported:
             <td class="align-top">Access<wbr>Logs</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalanceraccesslogs">Pulumi.<wbr>Aws.<wbr>Alb.<wbr>Load<wbr>Balancer<wbr>Access<wbr>Logs<wbr>Args?</a></code>
+                <code><a href="#loadbalanceraccesslogs">Load<wbr>Balancer<wbr>Access<wbr>Logs<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -299,7 +299,7 @@ Creates a unique name beginning with the specified prefix. Conflicts with `name`
             <td class="align-top">Security<wbr>Groups</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -314,7 +314,7 @@ A list of security group IDs to assign to the LB. Only valid for Load Balancers 
             <td class="align-top">Subnet<wbr>Mappings</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalancersubnetmapping">List&lt;Pulumi.<wbr>Aws.<wbr>Alb.<wbr>Load<wbr>Balancer<wbr>Subnet<wbr>Mapping<wbr>Args&gt;?</a></code>
+                <code><a href="#loadbalancersubnetmapping">List&lt;Load<wbr>Balancer<wbr>Subnet<wbr>Mapping<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -329,7 +329,7 @@ A subnet mapping block as documented below.
             <td class="align-top">Subnets</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -346,7 +346,7 @@ for load balancers of type `network` will force a recreation of the resource.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -381,7 +381,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">Access<wbr>Logs</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalanceraccesslogs">*alb.<wbr>Load<wbr>Balancer<wbr>Access<wbr>Logs</a></code>
+                <code><a href="#loadbalanceraccesslogs">*Load<wbr>Balancer<wbr>Access<wbr>Logs</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -550,7 +550,7 @@ A list of security group IDs to assign to the LB. Only valid for Load Balancers 
             <td class="align-top">Subnet<wbr>Mappings</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalancersubnetmapping">[]alb.<wbr>Load<wbr>Balancer<wbr>Subnet<wbr>Mapping</a></code>
+                <code><a href="#loadbalancersubnetmapping">[]Load<wbr>Balancer<wbr>Subnet<wbr>Mapping</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -617,7 +617,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">access<wbr>Logs</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalanceraccesslogs">alb.<wbr>Load<wbr>Balancer<wbr>Access<wbr>Logs?</a></code>
+                <code><a href="#loadbalanceraccesslogs">Load<wbr>Balancer<wbr>Access<wbr>Logs?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -709,7 +709,7 @@ If true, the LB will be internal.
             <td class="align-top">ip<wbr>Address<wbr>Type</td>
             <td class="align-top">
                 
-                <code>Ip<wbr>Address<wbr>Type?</code>
+                <code>IpAddressType?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -724,7 +724,7 @@ The type of IP addresses used by the subnets for your load balancer. The possibl
             <td class="align-top">load<wbr>Balancer<wbr>Type</td>
             <td class="align-top">
                 
-                <code>Load<wbr>Balancer<wbr>Type?</code>
+                <code>LoadBalancerType?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -786,7 +786,7 @@ A list of security group IDs to assign to the LB. Only valid for Load Balancers 
             <td class="align-top">subnet<wbr>Mappings</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalancersubnetmapping">alb.<wbr>Load<wbr>Balancer<wbr>Subnet<wbr>Mapping[]?</a></code>
+                <code><a href="#loadbalancersubnetmapping">Load<wbr>Balancer<wbr>Subnet<wbr>Mapping[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1103,7 +1103,7 @@ The following output properties are available:
             <td class="align-top">Access<wbr>Logs</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalanceraccesslogs">Pulumi.<wbr>Aws.<wbr>Alb.<wbr>Load<wbr>Balancer<wbr>Access<wbr>Logs?</a></code>
+                <code><a href="#loadbalanceraccesslogs">Load<wbr>Balancer<wbr>Access<wbr>Logs?</a></code>
             </td>
             <td class="align-top">{{% md %}} An Access Logs block. Access Logs documented below.
  {{% /md %}}
@@ -1276,7 +1276,7 @@ this provider will autogenerate a name beginning with `tf-lb`.
             <td class="align-top">Security<wbr>Groups</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} A list of security group IDs to assign to the LB. Only valid for Load Balancers of type `application`.
  {{% /md %}}
@@ -1289,7 +1289,7 @@ this provider will autogenerate a name beginning with `tf-lb`.
             <td class="align-top">Subnet<wbr>Mappings</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalancersubnetmapping">List&lt;Pulumi.<wbr>Aws.<wbr>Alb.<wbr>Load<wbr>Balancer<wbr>Subnet<wbr>Mapping&gt;</a></code>
+                <code><a href="#loadbalancersubnetmapping">List&lt;Load<wbr>Balancer<wbr>Subnet<wbr>Mapping&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} A subnet mapping block as documented below.
  {{% /md %}}
@@ -1302,7 +1302,7 @@ this provider will autogenerate a name beginning with `tf-lb`.
             <td class="align-top">Subnets</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} A list of subnet IDs to attach to the LB. Subnets
 cannot be updated for Load Balancers of type `network`. Changing this value
@@ -1317,7 +1317,7 @@ for load balancers of type `network` will force a recreation of the resource.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -1375,7 +1375,7 @@ for load balancers of type `network` will force a recreation of the resource.
             <td class="align-top">Access<wbr>Logs</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalanceraccesslogs">*alb.<wbr>Load<wbr>Balancer<wbr>Access<wbr>Logs</a></code>
+                <code><a href="#loadbalanceraccesslogs">*Load<wbr>Balancer<wbr>Access<wbr>Logs</a></code>
             </td>
             <td class="align-top">{{% md %}} An Access Logs block. Access Logs documented below.
  {{% /md %}}
@@ -1561,7 +1561,7 @@ this provider will autogenerate a name beginning with `tf-lb`.
             <td class="align-top">Subnet<wbr>Mappings</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalancersubnetmapping">[]alb.<wbr>Load<wbr>Balancer<wbr>Subnet<wbr>Mapping</a></code>
+                <code><a href="#loadbalancersubnetmapping">[]Load<wbr>Balancer<wbr>Subnet<wbr>Mapping</a></code>
             </td>
             <td class="align-top">{{% md %}} A subnet mapping block as documented below.
  {{% /md %}}
@@ -1647,7 +1647,7 @@ for load balancers of type `network` will force a recreation of the resource.
             <td class="align-top">access<wbr>Logs</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalanceraccesslogs">alb.<wbr>Load<wbr>Balancer<wbr>Access<wbr>Logs?</a></code>
+                <code><a href="#loadbalanceraccesslogs">Load<wbr>Balancer<wbr>Access<wbr>Logs?</a></code>
             </td>
             <td class="align-top">{{% md %}} An Access Logs block. Access Logs documented below.
  {{% /md %}}
@@ -1766,7 +1766,7 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
             <td class="align-top">ip<wbr>Address<wbr>Type</td>
             <td class="align-top">
                 
-                <code>Ip<wbr>Address<wbr>Type</code>
+                <code>IpAddressType</code>
             </td>
             <td class="align-top">{{% md %}} The type of IP addresses used by the subnets for your load balancer. The possible values are `ipv4` and `dualstack`
  {{% /md %}}
@@ -1779,7 +1779,7 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
             <td class="align-top">load<wbr>Balancer<wbr>Type</td>
             <td class="align-top">
                 
-                <code>Load<wbr>Balancer<wbr>Type?</code>
+                <code>LoadBalancerType?</code>
             </td>
             <td class="align-top">{{% md %}} The type of load balancer to create. Possible values are `application` or `network`. The default value is `application`.
  {{% /md %}}
@@ -1833,7 +1833,7 @@ this provider will autogenerate a name beginning with `tf-lb`.
             <td class="align-top">subnet<wbr>Mappings</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalancersubnetmapping">alb.<wbr>Load<wbr>Balancer<wbr>Subnet<wbr>Mapping[]</a></code>
+                <code><a href="#loadbalancersubnetmapping">Load<wbr>Balancer<wbr>Subnet<wbr>Mapping[]</a></code>
             </td>
             <td class="align-top">{{% md %}} A subnet mapping block as documented below.
  {{% /md %}}
@@ -2250,7 +2250,7 @@ The following state arguments are supported:
             <td class="align-top">Access<wbr>Logs</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalanceraccesslogs">Pulumi.<wbr>Aws.<wbr>Alb.<wbr>Load<wbr>Balancer<wbr>Access<wbr>Logs<wbr>Args?</a></code>
+                <code><a href="#loadbalanceraccesslogs">Load<wbr>Balancer<wbr>Access<wbr>Logs<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2449,7 +2449,7 @@ Creates a unique name beginning with the specified prefix. Conflicts with `name`
             <td class="align-top">Security<wbr>Groups</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2464,7 +2464,7 @@ A list of security group IDs to assign to the LB. Only valid for Load Balancers 
             <td class="align-top">Subnet<wbr>Mappings</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalancersubnetmapping">List&lt;Pulumi.<wbr>Aws.<wbr>Alb.<wbr>Load<wbr>Balancer<wbr>Subnet<wbr>Mapping<wbr>Args&gt;?</a></code>
+                <code><a href="#loadbalancersubnetmapping">List&lt;Load<wbr>Balancer<wbr>Subnet<wbr>Mapping<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2479,7 +2479,7 @@ A subnet mapping block as documented below.
             <td class="align-top">Subnets</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2496,7 +2496,7 @@ for load balancers of type `network` will force a recreation of the resource.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2560,7 +2560,7 @@ The canonical hosted zone ID of the load balancer (to be used in a Route 53 Alia
             <td class="align-top">Access<wbr>Logs</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalanceraccesslogs">*alb.<wbr>Load<wbr>Balancer<wbr>Access<wbr>Logs</a></code>
+                <code><a href="#loadbalanceraccesslogs">*Load<wbr>Balancer<wbr>Access<wbr>Logs</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2774,7 +2774,7 @@ A list of security group IDs to assign to the LB. Only valid for Load Balancers 
             <td class="align-top">Subnet<wbr>Mappings</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalancersubnetmapping">[]alb.<wbr>Load<wbr>Balancer<wbr>Subnet<wbr>Mapping</a></code>
+                <code><a href="#loadbalancersubnetmapping">[]Load<wbr>Balancer<wbr>Subnet<wbr>Mapping</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2870,7 +2870,7 @@ The canonical hosted zone ID of the load balancer (to be used in a Route 53 Alia
             <td class="align-top">access<wbr>Logs</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalanceraccesslogs">alb.<wbr>Load<wbr>Balancer<wbr>Access<wbr>Logs?</a></code>
+                <code><a href="#loadbalanceraccesslogs">Load<wbr>Balancer<wbr>Access<wbr>Logs?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3007,7 +3007,7 @@ If true, the LB will be internal.
             <td class="align-top">ip<wbr>Address<wbr>Type</td>
             <td class="align-top">
                 
-                <code>Ip<wbr>Address<wbr>Type?</code>
+                <code>IpAddressType?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3022,7 +3022,7 @@ The type of IP addresses used by the subnets for your load balancer. The possibl
             <td class="align-top">load<wbr>Balancer<wbr>Type</td>
             <td class="align-top">
                 
-                <code>Load<wbr>Balancer<wbr>Type?</code>
+                <code>LoadBalancerType?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3084,7 +3084,7 @@ A list of security group IDs to assign to the LB. Only valid for Load Balancers 
             <td class="align-top">subnet<wbr>Mappings</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalancersubnetmapping">alb.<wbr>Load<wbr>Balancer<wbr>Subnet<wbr>Mapping[]?</a></code>
+                <code><a href="#loadbalancersubnetmapping">Load<wbr>Balancer<wbr>Subnet<wbr>Mapping[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

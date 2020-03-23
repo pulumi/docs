@@ -115,7 +115,7 @@ The name of the policy.
         </tr>
     
         <tr>
-            <td class="align-top">Policy</td>
+            <td class="align-top">Policy<wbr>Document</td>
             <td class="align-top">
                 
                 <code>string</code>
@@ -353,7 +353,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">Policy</td>
+            <td class="align-top">Policy<wbr>Document</td>
             <td class="align-top">
                 
                 <code>string</code>
@@ -706,7 +706,7 @@ The name of the policy.
         </tr>
     
         <tr>
-            <td class="align-top">Policy</td>
+            <td class="align-top">Policy<wbr>Document</td>
             <td class="align-top">
                 
                 <code>string?</code>

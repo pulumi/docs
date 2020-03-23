@@ -142,7 +142,7 @@ The following arguments are supported:
             <td class="align-top">Audio</td>
             <td class="align-top">
                 
-                <code><a href="#presetaudio">Pulumi.<wbr>Aws.<wbr>Elastictranscoder.<wbr>Preset<wbr>Audio<wbr>Args?</a></code>
+                <code><a href="#presetaudio">Preset<wbr>Audio<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -157,7 +157,7 @@ Audio parameters object (documented below).
             <td class="align-top">Audio<wbr>Codec<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#presetaudiocodecoptions">Pulumi.<wbr>Aws.<wbr>Elastictranscoder.<wbr>Preset<wbr>Audio<wbr>Codec<wbr>Options<wbr>Args?</a></code>
+                <code><a href="#presetaudiocodecoptions">Preset<wbr>Audio<wbr>Codec<wbr>Options<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -217,7 +217,7 @@ The name of the preset. (maximum 40 characters)
             <td class="align-top">Thumbnails</td>
             <td class="align-top">
                 
-                <code><a href="#presetthumbnails">Pulumi.<wbr>Aws.<wbr>Elastictranscoder.<wbr>Preset<wbr>Thumbnails<wbr>Args?</a></code>
+                <code><a href="#presetthumbnails">Preset<wbr>Thumbnails<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -246,7 +246,7 @@ Thumbnail parameters object (documented below)
             <td class="align-top">Video</td>
             <td class="align-top">
                 
-                <code><a href="#presetvideo">Pulumi.<wbr>Aws.<wbr>Elastictranscoder.<wbr>Preset<wbr>Video<wbr>Args?</a></code>
+                <code><a href="#presetvideo">Preset<wbr>Video<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -261,7 +261,7 @@ Video parameters object (documented below)
             <td class="align-top">Video<wbr>Codec<wbr>Options</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -275,7 +275,7 @@ Video parameters object (documented below)
             <td class="align-top">Video<wbr>Watermarks</td>
             <td class="align-top">
                 
-                <code><a href="#presetvideowatermark">List&lt;Pulumi.<wbr>Aws.<wbr>Elastictranscoder.<wbr>Preset<wbr>Video<wbr>Watermark<wbr>Args&gt;?</a></code>
+                <code><a href="#presetvideowatermark">List&lt;Preset<wbr>Video<wbr>Watermark<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -311,7 +311,7 @@ Watermark parameters for the video parameters (documented below)
             <td class="align-top">Audio</td>
             <td class="align-top">
                 
-                <code><a href="#presetaudio">*elastictranscoder.<wbr>Preset<wbr>Audio</a></code>
+                <code><a href="#presetaudio">*Preset<wbr>Audio</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -326,7 +326,7 @@ Audio parameters object (documented below).
             <td class="align-top">Audio<wbr>Codec<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#presetaudiocodecoptions">*elastictranscoder.<wbr>Preset<wbr>Audio<wbr>Codec<wbr>Options</a></code>
+                <code><a href="#presetaudiocodecoptions">*Preset<wbr>Audio<wbr>Codec<wbr>Options</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -386,7 +386,7 @@ The name of the preset. (maximum 40 characters)
             <td class="align-top">Thumbnails</td>
             <td class="align-top">
                 
-                <code><a href="#presetthumbnails">*elastictranscoder.<wbr>Preset<wbr>Thumbnails</a></code>
+                <code><a href="#presetthumbnails">*Preset<wbr>Thumbnails</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -415,7 +415,7 @@ Thumbnail parameters object (documented below)
             <td class="align-top">Video</td>
             <td class="align-top">
                 
-                <code><a href="#presetvideo">*elastictranscoder.<wbr>Preset<wbr>Video</a></code>
+                <code><a href="#presetvideo">*Preset<wbr>Video</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -444,7 +444,7 @@ Video parameters object (documented below)
             <td class="align-top">Video<wbr>Watermarks</td>
             <td class="align-top">
                 
-                <code><a href="#presetvideowatermark">[]elastictranscoder.<wbr>Preset<wbr>Video<wbr>Watermark</a></code>
+                <code><a href="#presetvideowatermark">[]Preset<wbr>Video<wbr>Watermark</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -480,7 +480,7 @@ Watermark parameters for the video parameters (documented below)
             <td class="align-top">audio</td>
             <td class="align-top">
                 
-                <code><a href="#presetaudio">elastictranscoder.<wbr>Preset<wbr>Audio?</a></code>
+                <code><a href="#presetaudio">Preset<wbr>Audio?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -495,7 +495,7 @@ Audio parameters object (documented below).
             <td class="align-top">audio<wbr>Codec<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#presetaudiocodecoptions">elastictranscoder.<wbr>Preset<wbr>Audio<wbr>Codec<wbr>Options?</a></code>
+                <code><a href="#presetaudiocodecoptions">Preset<wbr>Audio<wbr>Codec<wbr>Options?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -555,7 +555,7 @@ The name of the preset. (maximum 40 characters)
             <td class="align-top">thumbnails</td>
             <td class="align-top">
                 
-                <code><a href="#presetthumbnails">elastictranscoder.<wbr>Preset<wbr>Thumbnails?</a></code>
+                <code><a href="#presetthumbnails">Preset<wbr>Thumbnails?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -584,7 +584,7 @@ Thumbnail parameters object (documented below)
             <td class="align-top">video</td>
             <td class="align-top">
                 
-                <code><a href="#presetvideo">elastictranscoder.<wbr>Preset<wbr>Video?</a></code>
+                <code><a href="#presetvideo">Preset<wbr>Video?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -613,7 +613,7 @@ Video parameters object (documented below)
             <td class="align-top">video<wbr>Watermarks</td>
             <td class="align-top">
                 
-                <code><a href="#presetvideowatermark">elastictranscoder.<wbr>Preset<wbr>Video<wbr>Watermark[]?</a></code>
+                <code><a href="#presetvideowatermark">Preset<wbr>Video<wbr>Watermark[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -844,7 +844,7 @@ The following output properties are available:
             <td class="align-top">Audio</td>
             <td class="align-top">
                 
-                <code><a href="#presetaudio">Pulumi.<wbr>Aws.<wbr>Elastictranscoder.<wbr>Preset<wbr>Audio?</a></code>
+                <code><a href="#presetaudio">Preset<wbr>Audio?</a></code>
             </td>
             <td class="align-top">{{% md %}} Audio parameters object (documented below).
  {{% /md %}}
@@ -857,7 +857,7 @@ The following output properties are available:
             <td class="align-top">Audio<wbr>Codec<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#presetaudiocodecoptions">Pulumi.<wbr>Aws.<wbr>Elastictranscoder.<wbr>Preset<wbr>Audio<wbr>Codec<wbr>Options?</a></code>
+                <code><a href="#presetaudiocodecoptions">Preset<wbr>Audio<wbr>Codec<wbr>Options?</a></code>
             </td>
             <td class="align-top">{{% md %}} Codec options for the audio parameters (documented below)
  {{% /md %}}
@@ -909,7 +909,7 @@ The following output properties are available:
             <td class="align-top">Thumbnails</td>
             <td class="align-top">
                 
-                <code><a href="#presetthumbnails">Pulumi.<wbr>Aws.<wbr>Elastictranscoder.<wbr>Preset<wbr>Thumbnails?</a></code>
+                <code><a href="#presetthumbnails">Preset<wbr>Thumbnails?</a></code>
             </td>
             <td class="align-top">{{% md %}} Thumbnail parameters object (documented below)
  {{% /md %}}
@@ -934,7 +934,7 @@ The following output properties are available:
             <td class="align-top">Video</td>
             <td class="align-top">
                 
-                <code><a href="#presetvideo">Pulumi.<wbr>Aws.<wbr>Elastictranscoder.<wbr>Preset<wbr>Video?</a></code>
+                <code><a href="#presetvideo">Preset<wbr>Video?</a></code>
             </td>
             <td class="align-top">{{% md %}} Video parameters object (documented below)
  {{% /md %}}
@@ -947,7 +947,7 @@ The following output properties are available:
             <td class="align-top">Video<wbr>Codec<wbr>Options</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -959,7 +959,7 @@ The following output properties are available:
             <td class="align-top">Video<wbr>Watermarks</td>
             <td class="align-top">
                 
-                <code><a href="#presetvideowatermark">List&lt;Pulumi.<wbr>Aws.<wbr>Elastictranscoder.<wbr>Preset<wbr>Video<wbr>Watermark&gt;?</a></code>
+                <code><a href="#presetvideowatermark">List&lt;Preset<wbr>Video<wbr>Watermark&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} Watermark parameters for the video parameters (documented below)
 * `video_codec_options` (Optional, Forces new resource) Codec options for the video parameters
@@ -1005,7 +1005,7 @@ The following output properties are available:
             <td class="align-top">Audio</td>
             <td class="align-top">
                 
-                <code><a href="#presetaudio">*elastictranscoder.<wbr>Preset<wbr>Audio</a></code>
+                <code><a href="#presetaudio">*Preset<wbr>Audio</a></code>
             </td>
             <td class="align-top">{{% md %}} Audio parameters object (documented below).
  {{% /md %}}
@@ -1018,7 +1018,7 @@ The following output properties are available:
             <td class="align-top">Audio<wbr>Codec<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#presetaudiocodecoptions">*elastictranscoder.<wbr>Preset<wbr>Audio<wbr>Codec<wbr>Options</a></code>
+                <code><a href="#presetaudiocodecoptions">*Preset<wbr>Audio<wbr>Codec<wbr>Options</a></code>
             </td>
             <td class="align-top">{{% md %}} Codec options for the audio parameters (documented below)
  {{% /md %}}
@@ -1070,7 +1070,7 @@ The following output properties are available:
             <td class="align-top">Thumbnails</td>
             <td class="align-top">
                 
-                <code><a href="#presetthumbnails">*elastictranscoder.<wbr>Preset<wbr>Thumbnails</a></code>
+                <code><a href="#presetthumbnails">*Preset<wbr>Thumbnails</a></code>
             </td>
             <td class="align-top">{{% md %}} Thumbnail parameters object (documented below)
  {{% /md %}}
@@ -1095,7 +1095,7 @@ The following output properties are available:
             <td class="align-top">Video</td>
             <td class="align-top">
                 
-                <code><a href="#presetvideo">*elastictranscoder.<wbr>Preset<wbr>Video</a></code>
+                <code><a href="#presetvideo">*Preset<wbr>Video</a></code>
             </td>
             <td class="align-top">{{% md %}} Video parameters object (documented below)
  {{% /md %}}
@@ -1120,7 +1120,7 @@ The following output properties are available:
             <td class="align-top">Video<wbr>Watermarks</td>
             <td class="align-top">
                 
-                <code><a href="#presetvideowatermark">[]elastictranscoder.<wbr>Preset<wbr>Video<wbr>Watermark</a></code>
+                <code><a href="#presetvideowatermark">[]Preset<wbr>Video<wbr>Watermark</a></code>
             </td>
             <td class="align-top">{{% md %}} Watermark parameters for the video parameters (documented below)
 * `video_codec_options` (Optional, Forces new resource) Codec options for the video parameters
@@ -1166,7 +1166,7 @@ The following output properties are available:
             <td class="align-top">audio</td>
             <td class="align-top">
                 
-                <code><a href="#presetaudio">elastictranscoder.<wbr>Preset<wbr>Audio?</a></code>
+                <code><a href="#presetaudio">Preset<wbr>Audio?</a></code>
             </td>
             <td class="align-top">{{% md %}} Audio parameters object (documented below).
  {{% /md %}}
@@ -1179,7 +1179,7 @@ The following output properties are available:
             <td class="align-top">audio<wbr>Codec<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#presetaudiocodecoptions">elastictranscoder.<wbr>Preset<wbr>Audio<wbr>Codec<wbr>Options?</a></code>
+                <code><a href="#presetaudiocodecoptions">Preset<wbr>Audio<wbr>Codec<wbr>Options?</a></code>
             </td>
             <td class="align-top">{{% md %}} Codec options for the audio parameters (documented below)
  {{% /md %}}
@@ -1231,7 +1231,7 @@ The following output properties are available:
             <td class="align-top">thumbnails</td>
             <td class="align-top">
                 
-                <code><a href="#presetthumbnails">elastictranscoder.<wbr>Preset<wbr>Thumbnails?</a></code>
+                <code><a href="#presetthumbnails">Preset<wbr>Thumbnails?</a></code>
             </td>
             <td class="align-top">{{% md %}} Thumbnail parameters object (documented below)
  {{% /md %}}
@@ -1256,7 +1256,7 @@ The following output properties are available:
             <td class="align-top">video</td>
             <td class="align-top">
                 
-                <code><a href="#presetvideo">elastictranscoder.<wbr>Preset<wbr>Video?</a></code>
+                <code><a href="#presetvideo">Preset<wbr>Video?</a></code>
             </td>
             <td class="align-top">{{% md %}} Video parameters object (documented below)
  {{% /md %}}
@@ -1281,7 +1281,7 @@ The following output properties are available:
             <td class="align-top">video<wbr>Watermarks</td>
             <td class="align-top">
                 
-                <code><a href="#presetvideowatermark">elastictranscoder.<wbr>Preset<wbr>Video<wbr>Watermark[]?</a></code>
+                <code><a href="#presetvideowatermark">Preset<wbr>Video<wbr>Watermark[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} Watermark parameters for the video parameters (documented below)
 * `video_codec_options` (Optional, Forces new resource) Codec options for the video parameters
@@ -1549,7 +1549,7 @@ The following state arguments are supported:
             <td class="align-top">Audio</td>
             <td class="align-top">
                 
-                <code><a href="#presetaudio">Pulumi.<wbr>Aws.<wbr>Elastictranscoder.<wbr>Preset<wbr>Audio<wbr>Args?</a></code>
+                <code><a href="#presetaudio">Preset<wbr>Audio<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1564,7 +1564,7 @@ Audio parameters object (documented below).
             <td class="align-top">Audio<wbr>Codec<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#presetaudiocodecoptions">Pulumi.<wbr>Aws.<wbr>Elastictranscoder.<wbr>Preset<wbr>Audio<wbr>Codec<wbr>Options<wbr>Args?</a></code>
+                <code><a href="#presetaudiocodecoptions">Preset<wbr>Audio<wbr>Codec<wbr>Options<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1624,7 +1624,7 @@ The name of the preset. (maximum 40 characters)
             <td class="align-top">Thumbnails</td>
             <td class="align-top">
                 
-                <code><a href="#presetthumbnails">Pulumi.<wbr>Aws.<wbr>Elastictranscoder.<wbr>Preset<wbr>Thumbnails<wbr>Args?</a></code>
+                <code><a href="#presetthumbnails">Preset<wbr>Thumbnails<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1653,7 +1653,7 @@ Thumbnail parameters object (documented below)
             <td class="align-top">Video</td>
             <td class="align-top">
                 
-                <code><a href="#presetvideo">Pulumi.<wbr>Aws.<wbr>Elastictranscoder.<wbr>Preset<wbr>Video<wbr>Args?</a></code>
+                <code><a href="#presetvideo">Preset<wbr>Video<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1668,7 +1668,7 @@ Video parameters object (documented below)
             <td class="align-top">Video<wbr>Codec<wbr>Options</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1682,7 +1682,7 @@ Video parameters object (documented below)
             <td class="align-top">Video<wbr>Watermarks</td>
             <td class="align-top">
                 
-                <code><a href="#presetvideowatermark">List&lt;Pulumi.<wbr>Aws.<wbr>Elastictranscoder.<wbr>Preset<wbr>Video<wbr>Watermark<wbr>Args&gt;?</a></code>
+                <code><a href="#presetvideowatermark">List&lt;Preset<wbr>Video<wbr>Watermark<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1732,7 +1732,7 @@ Watermark parameters for the video parameters (documented below)
             <td class="align-top">Audio</td>
             <td class="align-top">
                 
-                <code><a href="#presetaudio">*elastictranscoder.<wbr>Preset<wbr>Audio</a></code>
+                <code><a href="#presetaudio">*Preset<wbr>Audio</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1747,7 +1747,7 @@ Audio parameters object (documented below).
             <td class="align-top">Audio<wbr>Codec<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#presetaudiocodecoptions">*elastictranscoder.<wbr>Preset<wbr>Audio<wbr>Codec<wbr>Options</a></code>
+                <code><a href="#presetaudiocodecoptions">*Preset<wbr>Audio<wbr>Codec<wbr>Options</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1807,7 +1807,7 @@ The name of the preset. (maximum 40 characters)
             <td class="align-top">Thumbnails</td>
             <td class="align-top">
                 
-                <code><a href="#presetthumbnails">*elastictranscoder.<wbr>Preset<wbr>Thumbnails</a></code>
+                <code><a href="#presetthumbnails">*Preset<wbr>Thumbnails</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1836,7 +1836,7 @@ Thumbnail parameters object (documented below)
             <td class="align-top">Video</td>
             <td class="align-top">
                 
-                <code><a href="#presetvideo">*elastictranscoder.<wbr>Preset<wbr>Video</a></code>
+                <code><a href="#presetvideo">*Preset<wbr>Video</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1865,7 +1865,7 @@ Video parameters object (documented below)
             <td class="align-top">Video<wbr>Watermarks</td>
             <td class="align-top">
                 
-                <code><a href="#presetvideowatermark">[]elastictranscoder.<wbr>Preset<wbr>Video<wbr>Watermark</a></code>
+                <code><a href="#presetvideowatermark">[]Preset<wbr>Video<wbr>Watermark</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1915,7 +1915,7 @@ Watermark parameters for the video parameters (documented below)
             <td class="align-top">audio</td>
             <td class="align-top">
                 
-                <code><a href="#presetaudio">elastictranscoder.<wbr>Preset<wbr>Audio?</a></code>
+                <code><a href="#presetaudio">Preset<wbr>Audio?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1930,7 +1930,7 @@ Audio parameters object (documented below).
             <td class="align-top">audio<wbr>Codec<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#presetaudiocodecoptions">elastictranscoder.<wbr>Preset<wbr>Audio<wbr>Codec<wbr>Options?</a></code>
+                <code><a href="#presetaudiocodecoptions">Preset<wbr>Audio<wbr>Codec<wbr>Options?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1990,7 +1990,7 @@ The name of the preset. (maximum 40 characters)
             <td class="align-top">thumbnails</td>
             <td class="align-top">
                 
-                <code><a href="#presetthumbnails">elastictranscoder.<wbr>Preset<wbr>Thumbnails?</a></code>
+                <code><a href="#presetthumbnails">Preset<wbr>Thumbnails?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2019,7 +2019,7 @@ Thumbnail parameters object (documented below)
             <td class="align-top">video</td>
             <td class="align-top">
                 
-                <code><a href="#presetvideo">elastictranscoder.<wbr>Preset<wbr>Video?</a></code>
+                <code><a href="#presetvideo">Preset<wbr>Video?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2048,7 +2048,7 @@ Video parameters object (documented below)
             <td class="align-top">video<wbr>Watermarks</td>
             <td class="align-top">
                 
-                <code><a href="#presetvideowatermark">elastictranscoder.<wbr>Preset<wbr>Video<wbr>Watermark[]?</a></code>
+                <code><a href="#presetvideowatermark">Preset<wbr>Video<wbr>Watermark[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

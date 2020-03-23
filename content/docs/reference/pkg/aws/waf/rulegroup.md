@@ -101,7 +101,7 @@ The following arguments are supported:
             <td class="align-top">Activated<wbr>Rules</td>
             <td class="align-top">
                 
-                <code><a href="#rulegroupactivatedrule">List&lt;Pulumi.<wbr>Aws.<wbr>Waf.<wbr>Rule<wbr>Group<wbr>Activated<wbr>Rule<wbr>Args&gt;?</a></code>
+                <code><a href="#rulegroupactivatedrule">List&lt;Rule<wbr>Group<wbr>Activated<wbr>Rule<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -146,7 +146,7 @@ A friendly name of the rule group
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -181,7 +181,7 @@ Key-value mapping of resource tags
             <td class="align-top">Activated<wbr>Rules</td>
             <td class="align-top">
                 
-                <code><a href="#rulegroupactivatedrule">[]waf.<wbr>Rule<wbr>Group<wbr>Activated<wbr>Rule</a></code>
+                <code><a href="#rulegroupactivatedrule">[]Rule<wbr>Group<wbr>Activated<wbr>Rule</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -261,7 +261,7 @@ Key-value mapping of resource tags
             <td class="align-top">activated<wbr>Rules</td>
             <td class="align-top">
                 
-                <code><a href="#rulegroupactivatedrule">waf.<wbr>Rule<wbr>Group<wbr>Activated<wbr>Rule[]?</a></code>
+                <code><a href="#rulegroupactivatedrule">Rule<wbr>Group<wbr>Activated<wbr>Rule[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -435,7 +435,7 @@ The following output properties are available:
             <td class="align-top">Activated<wbr>Rules</td>
             <td class="align-top">
                 
-                <code><a href="#rulegroupactivatedrule">List&lt;Pulumi.<wbr>Aws.<wbr>Waf.<wbr>Rule<wbr>Group<wbr>Activated<wbr>Rule&gt;?</a></code>
+                <code><a href="#rulegroupactivatedrule">List&lt;Rule<wbr>Group<wbr>Activated<wbr>Rule&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of activated rules, see below
  {{% /md %}}
@@ -487,7 +487,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} Key-value mapping of resource tags
  {{% /md %}}
@@ -520,7 +520,7 @@ The following output properties are available:
             <td class="align-top">Activated<wbr>Rules</td>
             <td class="align-top">
                 
-                <code><a href="#rulegroupactivatedrule">[]waf.<wbr>Rule<wbr>Group<wbr>Activated<wbr>Rule</a></code>
+                <code><a href="#rulegroupactivatedrule">[]Rule<wbr>Group<wbr>Activated<wbr>Rule</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of activated rules, see below
  {{% /md %}}
@@ -605,7 +605,7 @@ The following output properties are available:
             <td class="align-top">activated<wbr>Rules</td>
             <td class="align-top">
                 
-                <code><a href="#rulegroupactivatedrule">waf.<wbr>Rule<wbr>Group<wbr>Activated<wbr>Rule[]?</a></code>
+                <code><a href="#rulegroupactivatedrule">Rule<wbr>Group<wbr>Activated<wbr>Rule[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of activated rules, see below
  {{% /md %}}
@@ -834,7 +834,7 @@ The following state arguments are supported:
             <td class="align-top">Activated<wbr>Rules</td>
             <td class="align-top">
                 
-                <code><a href="#rulegroupactivatedrule">List&lt;Pulumi.<wbr>Aws.<wbr>Waf.<wbr>Rule<wbr>Group<wbr>Activated<wbr>Rule<wbr>Args&gt;?</a></code>
+                <code><a href="#rulegroupactivatedrule">List&lt;Rule<wbr>Group<wbr>Activated<wbr>Rule<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -894,7 +894,7 @@ A friendly name of the rule group
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -929,7 +929,7 @@ Key-value mapping of resource tags
             <td class="align-top">Activated<wbr>Rules</td>
             <td class="align-top">
                 
-                <code><a href="#rulegroupactivatedrule">[]waf.<wbr>Rule<wbr>Group<wbr>Activated<wbr>Rule</a></code>
+                <code><a href="#rulegroupactivatedrule">[]Rule<wbr>Group<wbr>Activated<wbr>Rule</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1024,7 +1024,7 @@ Key-value mapping of resource tags
             <td class="align-top">activated<wbr>Rules</td>
             <td class="align-top">
                 
-                <code><a href="#rulegroupactivatedrule">waf.<wbr>Rule<wbr>Group<wbr>Activated<wbr>Rule[]?</a></code>
+                <code><a href="#rulegroupactivatedrule">Rule<wbr>Group<wbr>Activated<wbr>Rule[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1242,7 +1242,7 @@ Key-value mapping of resource tags
             <td class="align-top">Action</td>
             <td class="align-top">
                 
-                <code><a href="#rulegroupactivatedruleaction">Pulumi.<wbr>Aws.<wbr>Waf.<wbr>Rule<wbr>Group<wbr>Activated<wbr>Rule<wbr>Action<wbr>Args</a></code>
+                <code><a href="#rulegroupactivatedruleaction">Rule<wbr>Group<wbr>Activated<wbr>Rule<wbr>Action<wbr>Args</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1322,7 +1322,7 @@ The rule type, either [`REGULAR`](https://www.terraform.io/docs/providers/aws/r/
             <td class="align-top">Action</td>
             <td class="align-top">
                 
-                <code><a href="#rulegroupactivatedruleaction">waf.<wbr>Rule<wbr>Group<wbr>Activated<wbr>Rule<wbr>Action</a></code>
+                <code><a href="#rulegroupactivatedruleaction">Rule<wbr>Group<wbr>Activated<wbr>Rule<wbr>Action</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1402,7 +1402,7 @@ The rule type, either [`REGULAR`](https://www.terraform.io/docs/providers/aws/r/
             <td class="align-top">action</td>
             <td class="align-top">
                 
-                <code><a href="#rulegroupactivatedruleaction">waf.<wbr>Rule<wbr>Group<wbr>Activated<wbr>Rule<wbr>Action</a></code>
+                <code><a href="#rulegroupactivatedruleaction">Rule<wbr>Group<wbr>Activated<wbr>Rule<wbr>Action</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

@@ -236,7 +236,7 @@ use the default behavior, which is an exponential backoff
             <td class="align-top">Settings</td>
             <td class="align-top">
                 
-                <code><a href="#environmentsetting">List&lt;Pulumi.<wbr>Aws.<wbr>Elasticbeanstalk.<wbr>Environment<wbr>Setting<wbr>Args&gt;?</a></code>
+                <code><a href="#environmentsetting">List&lt;Environment<wbr>Setting<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -269,7 +269,7 @@ off of. Example stacks can be found in the [Amazon API documentation][1]
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -467,7 +467,7 @@ use the default behavior, which is an exponential backoff
             <td class="align-top">Settings</td>
             <td class="align-top">
                 
-                <code><a href="#environmentsetting">[]elasticbeanstalk.<wbr>Environment<wbr>Setting</a></code>
+                <code><a href="#environmentsetting">[]Environment<wbr>Setting</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -698,7 +698,7 @@ use the default behavior, which is an exponential backoff
             <td class="align-top">settings</td>
             <td class="align-top">
                 
-                <code><a href="#environmentsetting">elasticbeanstalk.<wbr>Environment<wbr>Setting[]?</a></code>
+                <code><a href="#environmentsetting">Environment<wbr>Setting[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -778,7 +778,7 @@ or `WebServer`. If tier is left blank `WebServer` will be used.
             <td class="align-top">version</td>
             <td class="align-top">
                 
-                <code>Application<wbr>Version?</code>
+                <code>ApplicationVersion?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1077,7 +1077,7 @@ The following output properties are available:
             <td class="align-top">All<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#environmentallsetting">List&lt;Pulumi.<wbr>Aws.<wbr>Elasticbeanstalk.<wbr>Environment<wbr>All<wbr>Setting&gt;</a></code>
+                <code><a href="#environmentallsetting">List&lt;Environment<wbr>All<wbr>Setting&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} List of all option settings configured in this Environment. These
 are a combination of default settings and their overrides from `setting` in
@@ -1118,7 +1118,7 @@ to be deployed
             <td class="align-top">Autoscaling<wbr>Groups</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} The autoscaling groups used by this Environment.
  {{% /md %}}
@@ -1184,7 +1184,7 @@ the Environment.
             <td class="align-top">Instances</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} Instances used by this Environment.
  {{% /md %}}
@@ -1197,7 +1197,7 @@ the Environment.
             <td class="align-top">Launch<wbr>Configurations</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} Launch configurations in use by this Environment.
  {{% /md %}}
@@ -1210,7 +1210,7 @@ the Environment.
             <td class="align-top">Load<wbr>Balancers</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} Elastic load balancers in use by this Environment.
  {{% /md %}}
@@ -1267,7 +1267,7 @@ use the default behavior, which is an exponential backoff
             <td class="align-top">Queues</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} SQS queues in use by this Environment.
  {{% /md %}}
@@ -1280,7 +1280,7 @@ use the default behavior, which is an exponential backoff
             <td class="align-top">Settings</td>
             <td class="align-top">
                 
-                <code><a href="#environmentsetting">List&lt;Pulumi.<wbr>Aws.<wbr>Elasticbeanstalk.<wbr>Environment<wbr>Setting&gt;?</a></code>
+                <code><a href="#environmentsetting">List&lt;Environment<wbr>Setting&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} Option settings to configure the new Environment. These
 override specific values that are set as defaults. The format is detailed
@@ -1309,7 +1309,7 @@ off of. Example stacks can be found in the [Amazon API documentation][1]
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} A set of tags to apply to the Environment.
  {{% /md %}}
@@ -1350,7 +1350,7 @@ or `WebServer`. If tier is left blank `WebServer` will be used.
             <td class="align-top">Triggers</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} Autoscaling triggers in use by this Environment.
  {{% /md %}}
@@ -1413,7 +1413,7 @@ out.
             <td class="align-top">All<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#environmentallsetting">[]elasticbeanstalk.<wbr>Environment<wbr>All<wbr>Setting</a></code>
+                <code><a href="#environmentallsetting">[]Environment<wbr>All<wbr>Setting</a></code>
             </td>
             <td class="align-top">{{% md %}} List of all option settings configured in this Environment. These
 are a combination of default settings and their overrides from `setting` in
@@ -1616,7 +1616,7 @@ use the default behavior, which is an exponential backoff
             <td class="align-top">Settings</td>
             <td class="align-top">
                 
-                <code><a href="#environmentsetting">[]elasticbeanstalk.<wbr>Environment<wbr>Setting</a></code>
+                <code><a href="#environmentsetting">[]Environment<wbr>Setting</a></code>
             </td>
             <td class="align-top">{{% md %}} Option settings to configure the new Environment. These
 override specific values that are set as defaults. The format is detailed
@@ -1749,7 +1749,7 @@ out.
             <td class="align-top">all<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#environmentallsetting">elasticbeanstalk.<wbr>Environment<wbr>All<wbr>Setting[]</a></code>
+                <code><a href="#environmentallsetting">Environment<wbr>All<wbr>Setting[]</a></code>
             </td>
             <td class="align-top">{{% md %}} List of all option settings configured in this Environment. These
 are a combination of default settings and their overrides from `setting` in
@@ -1952,7 +1952,7 @@ use the default behavior, which is an exponential backoff
             <td class="align-top">settings</td>
             <td class="align-top">
                 
-                <code><a href="#environmentsetting">elasticbeanstalk.<wbr>Environment<wbr>Setting[]?</a></code>
+                <code><a href="#environmentsetting">Environment<wbr>Setting[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} Option settings to configure the new Environment. These
 override specific values that are set as defaults. The format is detailed
@@ -2035,7 +2035,7 @@ or `WebServer`. If tier is left blank `WebServer` will be used.
             <td class="align-top">version</td>
             <td class="align-top">
                 
-                <code>Application<wbr>Version</code>
+                <code>ApplicationVersion</code>
             </td>
             <td class="align-top">{{% md %}} The name of the Elastic Beanstalk Application Version
 to use in deployment.
@@ -2480,7 +2480,7 @@ The following state arguments are supported:
             <td class="align-top">All<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#environmentallsetting">List&lt;Pulumi.<wbr>Aws.<wbr>Elasticbeanstalk.<wbr>Environment<wbr>All<wbr>Setting<wbr>Args&gt;?</a></code>
+                <code><a href="#environmentallsetting">List&lt;Environment<wbr>All<wbr>Setting<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2527,7 +2527,7 @@ to be deployed
             <td class="align-top">Autoscaling<wbr>Groups</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2603,7 +2603,7 @@ The URL to the Load Balancer for this Environment
             <td class="align-top">Instances</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2618,7 +2618,7 @@ Instances used by this Environment.
             <td class="align-top">Launch<wbr>Configurations</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2633,7 +2633,7 @@ Launch configurations in use by this Environment.
             <td class="align-top">Load<wbr>Balancers</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2698,7 +2698,7 @@ use the default behavior, which is an exponential backoff
             <td class="align-top">Queues</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2713,7 +2713,7 @@ SQS queues in use by this Environment.
             <td class="align-top">Settings</td>
             <td class="align-top">
                 
-                <code><a href="#environmentsetting">List&lt;Pulumi.<wbr>Aws.<wbr>Elasticbeanstalk.<wbr>Environment<wbr>Setting<wbr>Args&gt;?</a></code>
+                <code><a href="#environmentsetting">List&lt;Environment<wbr>Setting<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2746,7 +2746,7 @@ off of. Example stacks can be found in the [Amazon API documentation][1]
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2793,7 +2793,7 @@ or `WebServer`. If tier is left blank `WebServer` will be used.
             <td class="align-top">Triggers</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2862,7 +2862,7 @@ out.
             <td class="align-top">All<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#environmentallsetting">[]elasticbeanstalk.<wbr>Environment<wbr>All<wbr>Setting</a></code>
+                <code><a href="#environmentallsetting">[]Environment<wbr>All<wbr>Setting</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3095,7 +3095,7 @@ SQS queues in use by this Environment.
             <td class="align-top">Settings</td>
             <td class="align-top">
                 
-                <code><a href="#environmentsetting">[]elasticbeanstalk.<wbr>Environment<wbr>Setting</a></code>
+                <code><a href="#environmentsetting">[]Environment<wbr>Setting</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3244,7 +3244,7 @@ out.
             <td class="align-top">all<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#environmentallsetting">elasticbeanstalk.<wbr>Environment<wbr>All<wbr>Setting[]?</a></code>
+                <code><a href="#environmentallsetting">Environment<wbr>All<wbr>Setting[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3477,7 +3477,7 @@ SQS queues in use by this Environment.
             <td class="align-top">settings</td>
             <td class="align-top">
                 
-                <code><a href="#environmentsetting">elasticbeanstalk.<wbr>Environment<wbr>Setting[]?</a></code>
+                <code><a href="#environmentsetting">Environment<wbr>Setting[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3572,7 +3572,7 @@ Autoscaling triggers in use by this Environment.
             <td class="align-top">version</td>
             <td class="align-top">
                 
-                <code>Application<wbr>Version?</code>
+                <code>ApplicationVersion?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

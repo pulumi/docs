@@ -91,7 +91,7 @@ The following arguments are supported:
             <td class="align-top">Admin<wbr>Create<wbr>User<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#userpooladmincreateuserconfig">Pulumi.<wbr>Aws.<wbr>Cognito.<wbr>User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config<wbr>Args?</a></code>
+                <code><a href="#userpooladmincreateuserconfig">User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -106,7 +106,7 @@ The configuration for AdminCreateUser requests.
             <td class="align-top">Alias<wbr>Attributes</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -121,7 +121,7 @@ Attributes supported as an alias for this user pool. Possible values: phone_numb
             <td class="align-top">Auto<wbr>Verified<wbr>Attributes</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -136,7 +136,7 @@ The attributes to be auto-verified. Possible values: email, phone_number.
             <td class="align-top">Device<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#userpooldeviceconfiguration">Pulumi.<wbr>Aws.<wbr>Cognito.<wbr>User<wbr>Pool<wbr>Device<wbr>Configuration<wbr>Args?</a></code>
+                <code><a href="#userpooldeviceconfiguration">User<wbr>Pool<wbr>Device<wbr>Configuration<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -151,7 +151,7 @@ The configuration for the user pool&#39;s device tracking.
             <td class="align-top">Email<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolemailconfiguration">Pulumi.<wbr>Aws.<wbr>Cognito.<wbr>User<wbr>Pool<wbr>Email<wbr>Configuration<wbr>Args?</a></code>
+                <code><a href="#userpoolemailconfiguration">User<wbr>Pool<wbr>Email<wbr>Configuration<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -196,7 +196,7 @@ A string representing the email verification subject. Conflicts with `verificati
             <td class="align-top">Lambda<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#userpoollambdaconfig">Pulumi.<wbr>Aws.<wbr>Cognito.<wbr>User<wbr>Pool<wbr>Lambda<wbr>Config<wbr>Args?</a></code>
+                <code><a href="#userpoollambdaconfig">User<wbr>Pool<wbr>Lambda<wbr>Config<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -241,7 +241,7 @@ The name of the attribute.
             <td class="align-top">Password<wbr>Policy</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolpasswordpolicy">Pulumi.<wbr>Aws.<wbr>Cognito.<wbr>User<wbr>Pool<wbr>Password<wbr>Policy<wbr>Args?</a></code>
+                <code><a href="#userpoolpasswordpolicy">User<wbr>Pool<wbr>Password<wbr>Policy<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -256,7 +256,7 @@ A container for information about the user pool password policy.
             <td class="align-top">Schemas</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolschema">List&lt;Pulumi.<wbr>Aws.<wbr>Cognito.<wbr>User<wbr>Pool<wbr>Schema<wbr>Args&gt;?</a></code>
+                <code><a href="#userpoolschema">List&lt;User<wbr>Pool<wbr>Schema<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -286,7 +286,7 @@ A string representing the SMS authentication message.
             <td class="align-top">Sms<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolsmsconfiguration">Pulumi.<wbr>Aws.<wbr>Cognito.<wbr>User<wbr>Pool<wbr>Sms<wbr>Configuration<wbr>Args?</a></code>
+                <code><a href="#userpoolsmsconfiguration">User<wbr>Pool<wbr>Sms<wbr>Configuration<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -316,7 +316,7 @@ A string representing the SMS verification message. Conflicts with `verification
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -331,7 +331,7 @@ A mapping of tags to assign to the User Pool.
             <td class="align-top">User<wbr>Pool<wbr>Add<wbr>Ons</td>
             <td class="align-top">
                 
-                <code><a href="#userpooluserpooladdons">Pulumi.<wbr>Aws.<wbr>Cognito.<wbr>User<wbr>Pool<wbr>User<wbr>Pool<wbr>Add<wbr>Ons<wbr>Args?</a></code>
+                <code><a href="#userpooluserpooladdons">User<wbr>Pool<wbr>User<wbr>Pool<wbr>Add<wbr>Ons<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -346,7 +346,7 @@ Configuration block for user pool add-ons to enable user pool advanced security 
             <td class="align-top">Username<wbr>Attributes</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -361,7 +361,7 @@ Specifies whether email addresses or phone numbers can be specified as usernames
             <td class="align-top">Verification<wbr>Message<wbr>Template</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolverificationmessagetemplate">Pulumi.<wbr>Aws.<wbr>Cognito.<wbr>User<wbr>Pool<wbr>Verification<wbr>Message<wbr>Template<wbr>Args?</a></code>
+                <code><a href="#userpoolverificationmessagetemplate">User<wbr>Pool<wbr>Verification<wbr>Message<wbr>Template<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -396,7 +396,7 @@ The verification message templates configuration.
             <td class="align-top">Admin<wbr>Create<wbr>User<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#userpooladmincreateuserconfig">*cognito.<wbr>User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config</a></code>
+                <code><a href="#userpooladmincreateuserconfig">*User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -441,7 +441,7 @@ The attributes to be auto-verified. Possible values: email, phone_number.
             <td class="align-top">Device<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#userpooldeviceconfiguration">*cognito.<wbr>User<wbr>Pool<wbr>Device<wbr>Configuration</a></code>
+                <code><a href="#userpooldeviceconfiguration">*User<wbr>Pool<wbr>Device<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -456,7 +456,7 @@ The configuration for the user pool&#39;s device tracking.
             <td class="align-top">Email<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolemailconfiguration">*cognito.<wbr>User<wbr>Pool<wbr>Email<wbr>Configuration</a></code>
+                <code><a href="#userpoolemailconfiguration">*User<wbr>Pool<wbr>Email<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -501,7 +501,7 @@ A string representing the email verification subject. Conflicts with `verificati
             <td class="align-top">Lambda<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#userpoollambdaconfig">*cognito.<wbr>User<wbr>Pool<wbr>Lambda<wbr>Config</a></code>
+                <code><a href="#userpoollambdaconfig">*User<wbr>Pool<wbr>Lambda<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -546,7 +546,7 @@ The name of the attribute.
             <td class="align-top">Password<wbr>Policy</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolpasswordpolicy">*cognito.<wbr>User<wbr>Pool<wbr>Password<wbr>Policy</a></code>
+                <code><a href="#userpoolpasswordpolicy">*User<wbr>Pool<wbr>Password<wbr>Policy</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -561,7 +561,7 @@ A container for information about the user pool password policy.
             <td class="align-top">Schemas</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolschema">[]cognito.<wbr>User<wbr>Pool<wbr>Schema</a></code>
+                <code><a href="#userpoolschema">[]User<wbr>Pool<wbr>Schema</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -591,7 +591,7 @@ A string representing the SMS authentication message.
             <td class="align-top">Sms<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolsmsconfiguration">*cognito.<wbr>User<wbr>Pool<wbr>Sms<wbr>Configuration</a></code>
+                <code><a href="#userpoolsmsconfiguration">*User<wbr>Pool<wbr>Sms<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -636,7 +636,7 @@ A mapping of tags to assign to the User Pool.
             <td class="align-top">User<wbr>Pool<wbr>Add<wbr>Ons</td>
             <td class="align-top">
                 
-                <code><a href="#userpooluserpooladdons">*cognito.<wbr>User<wbr>Pool<wbr>User<wbr>Pool<wbr>Add<wbr>Ons</a></code>
+                <code><a href="#userpooluserpooladdons">*User<wbr>Pool<wbr>User<wbr>Pool<wbr>Add<wbr>Ons</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -666,7 +666,7 @@ Specifies whether email addresses or phone numbers can be specified as usernames
             <td class="align-top">Verification<wbr>Message<wbr>Template</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolverificationmessagetemplate">*cognito.<wbr>User<wbr>Pool<wbr>Verification<wbr>Message<wbr>Template</a></code>
+                <code><a href="#userpoolverificationmessagetemplate">*User<wbr>Pool<wbr>Verification<wbr>Message<wbr>Template</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -701,7 +701,7 @@ The verification message templates configuration.
             <td class="align-top">admin<wbr>Create<wbr>User<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#userpooladmincreateuserconfig">cognito.<wbr>User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config?</a></code>
+                <code><a href="#userpooladmincreateuserconfig">User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -746,7 +746,7 @@ The attributes to be auto-verified. Possible values: email, phone_number.
             <td class="align-top">device<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#userpooldeviceconfiguration">cognito.<wbr>User<wbr>Pool<wbr>Device<wbr>Configuration?</a></code>
+                <code><a href="#userpooldeviceconfiguration">User<wbr>Pool<wbr>Device<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -761,7 +761,7 @@ The configuration for the user pool&#39;s device tracking.
             <td class="align-top">email<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolemailconfiguration">cognito.<wbr>User<wbr>Pool<wbr>Email<wbr>Configuration?</a></code>
+                <code><a href="#userpoolemailconfiguration">User<wbr>Pool<wbr>Email<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -806,7 +806,7 @@ A string representing the email verification subject. Conflicts with `verificati
             <td class="align-top">lambda<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#userpoollambdaconfig">cognito.<wbr>User<wbr>Pool<wbr>Lambda<wbr>Config?</a></code>
+                <code><a href="#userpoollambdaconfig">User<wbr>Pool<wbr>Lambda<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -851,7 +851,7 @@ The name of the attribute.
             <td class="align-top">password<wbr>Policy</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolpasswordpolicy">cognito.<wbr>User<wbr>Pool<wbr>Password<wbr>Policy?</a></code>
+                <code><a href="#userpoolpasswordpolicy">User<wbr>Pool<wbr>Password<wbr>Policy?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -866,7 +866,7 @@ A container for information about the user pool password policy.
             <td class="align-top">schemas</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolschema">cognito.<wbr>User<wbr>Pool<wbr>Schema[]?</a></code>
+                <code><a href="#userpoolschema">User<wbr>Pool<wbr>Schema[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -896,7 +896,7 @@ A string representing the SMS authentication message.
             <td class="align-top">sms<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolsmsconfiguration">cognito.<wbr>User<wbr>Pool<wbr>Sms<wbr>Configuration?</a></code>
+                <code><a href="#userpoolsmsconfiguration">User<wbr>Pool<wbr>Sms<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -941,7 +941,7 @@ A mapping of tags to assign to the User Pool.
             <td class="align-top">user<wbr>Pool<wbr>Add<wbr>Ons</td>
             <td class="align-top">
                 
-                <code><a href="#userpooluserpooladdons">cognito.<wbr>User<wbr>Pool<wbr>User<wbr>Pool<wbr>Add<wbr>Ons?</a></code>
+                <code><a href="#userpooluserpooladdons">User<wbr>Pool<wbr>User<wbr>Pool<wbr>Add<wbr>Ons?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -971,7 +971,7 @@ Specifies whether email addresses or phone numbers can be specified as usernames
             <td class="align-top">verification<wbr>Message<wbr>Template</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolverificationmessagetemplate">cognito.<wbr>User<wbr>Pool<wbr>Verification<wbr>Message<wbr>Template?</a></code>
+                <code><a href="#userpoolverificationmessagetemplate">User<wbr>Pool<wbr>Verification<wbr>Message<wbr>Template?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1325,7 +1325,7 @@ The following output properties are available:
             <td class="align-top">Admin<wbr>Create<wbr>User<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#userpooladmincreateuserconfig">Pulumi.<wbr>Aws.<wbr>Cognito.<wbr>User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config</a></code>
+                <code><a href="#userpooladmincreateuserconfig">User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} The configuration for AdminCreateUser requests.
  {{% /md %}}
@@ -1338,7 +1338,7 @@ The following output properties are available:
             <td class="align-top">Alias<wbr>Attributes</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} Attributes supported as an alias for this user pool. Possible values: phone_number, email, or preferred_username. Conflicts with `username_attributes`.
  {{% /md %}}
@@ -1364,7 +1364,7 @@ The following output properties are available:
             <td class="align-top">Auto<wbr>Verified<wbr>Attributes</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} The attributes to be auto-verified. Possible values: email, phone_number.
  {{% /md %}}
@@ -1390,7 +1390,7 @@ The following output properties are available:
             <td class="align-top">Device<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#userpooldeviceconfiguration">Pulumi.<wbr>Aws.<wbr>Cognito.<wbr>User<wbr>Pool<wbr>Device<wbr>Configuration?</a></code>
+                <code><a href="#userpooldeviceconfiguration">User<wbr>Pool<wbr>Device<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} The configuration for the user pool&#39;s device tracking.
  {{% /md %}}
@@ -1403,7 +1403,7 @@ The following output properties are available:
             <td class="align-top">Email<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolemailconfiguration">Pulumi.<wbr>Aws.<wbr>Cognito.<wbr>User<wbr>Pool<wbr>Email<wbr>Configuration?</a></code>
+                <code><a href="#userpoolemailconfiguration">User<wbr>Pool<wbr>Email<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} The Email Configuration.
  {{% /md %}}
@@ -1455,7 +1455,7 @@ The following output properties are available:
             <td class="align-top">Lambda<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#userpoollambdaconfig">Pulumi.<wbr>Aws.<wbr>Cognito.<wbr>User<wbr>Pool<wbr>Lambda<wbr>Config</a></code>
+                <code><a href="#userpoollambdaconfig">User<wbr>Pool<wbr>Lambda<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} A container for the AWS Lambda triggers associated with the user pool.
  {{% /md %}}
@@ -1507,7 +1507,7 @@ The following output properties are available:
             <td class="align-top">Password<wbr>Policy</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolpasswordpolicy">Pulumi.<wbr>Aws.<wbr>Cognito.<wbr>User<wbr>Pool<wbr>Password<wbr>Policy</a></code>
+                <code><a href="#userpoolpasswordpolicy">User<wbr>Pool<wbr>Password<wbr>Policy</a></code>
             </td>
             <td class="align-top">{{% md %}} A container for information about the user pool password policy.
  {{% /md %}}
@@ -1520,7 +1520,7 @@ The following output properties are available:
             <td class="align-top">Schemas</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolschema">List&lt;Pulumi.<wbr>Aws.<wbr>Cognito.<wbr>User<wbr>Pool<wbr>Schema&gt;?</a></code>
+                <code><a href="#userpoolschema">List&lt;User<wbr>Pool<wbr>Schema&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} A container with the schema attributes of a user pool. Schema attributes from the [standard attribute set](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-attributes.html#cognito-user-pools-standard-attributes) only need to be specified if they are different from the default configuration. Maximum of 50 attributes.
  {{% /md %}}
@@ -1546,7 +1546,7 @@ The following output properties are available:
             <td class="align-top">Sms<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolsmsconfiguration">Pulumi.<wbr>Aws.<wbr>Cognito.<wbr>User<wbr>Pool<wbr>Sms<wbr>Configuration?</a></code>
+                <code><a href="#userpoolsmsconfiguration">User<wbr>Pool<wbr>Sms<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} The SMS Configuration.
  {{% /md %}}
@@ -1572,7 +1572,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the User Pool.
  {{% /md %}}
@@ -1585,7 +1585,7 @@ The following output properties are available:
             <td class="align-top">User<wbr>Pool<wbr>Add<wbr>Ons</td>
             <td class="align-top">
                 
-                <code><a href="#userpooluserpooladdons">Pulumi.<wbr>Aws.<wbr>Cognito.<wbr>User<wbr>Pool<wbr>User<wbr>Pool<wbr>Add<wbr>Ons?</a></code>
+                <code><a href="#userpooluserpooladdons">User<wbr>Pool<wbr>User<wbr>Pool<wbr>Add<wbr>Ons?</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block for user pool add-ons to enable user pool advanced security mode features.
  {{% /md %}}
@@ -1598,7 +1598,7 @@ The following output properties are available:
             <td class="align-top">Username<wbr>Attributes</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} Specifies whether email addresses or phone numbers can be specified as usernames when a user signs up. Conflicts with `alias_attributes`.
  {{% /md %}}
@@ -1611,7 +1611,7 @@ The following output properties are available:
             <td class="align-top">Verification<wbr>Message<wbr>Template</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolverificationmessagetemplate">Pulumi.<wbr>Aws.<wbr>Cognito.<wbr>User<wbr>Pool<wbr>Verification<wbr>Message<wbr>Template</a></code>
+                <code><a href="#userpoolverificationmessagetemplate">User<wbr>Pool<wbr>Verification<wbr>Message<wbr>Template</a></code>
             </td>
             <td class="align-top">{{% md %}} The verification message templates configuration.
  {{% /md %}}
@@ -1644,7 +1644,7 @@ The following output properties are available:
             <td class="align-top">Admin<wbr>Create<wbr>User<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#userpooladmincreateuserconfig">cognito.<wbr>User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config</a></code>
+                <code><a href="#userpooladmincreateuserconfig">User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} The configuration for AdminCreateUser requests.
  {{% /md %}}
@@ -1709,7 +1709,7 @@ The following output properties are available:
             <td class="align-top">Device<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#userpooldeviceconfiguration">*cognito.<wbr>User<wbr>Pool<wbr>Device<wbr>Configuration</a></code>
+                <code><a href="#userpooldeviceconfiguration">*User<wbr>Pool<wbr>Device<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} The configuration for the user pool&#39;s device tracking.
  {{% /md %}}
@@ -1722,7 +1722,7 @@ The following output properties are available:
             <td class="align-top">Email<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolemailconfiguration">*cognito.<wbr>User<wbr>Pool<wbr>Email<wbr>Configuration</a></code>
+                <code><a href="#userpoolemailconfiguration">*User<wbr>Pool<wbr>Email<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} The Email Configuration.
  {{% /md %}}
@@ -1774,7 +1774,7 @@ The following output properties are available:
             <td class="align-top">Lambda<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#userpoollambdaconfig">cognito.<wbr>User<wbr>Pool<wbr>Lambda<wbr>Config</a></code>
+                <code><a href="#userpoollambdaconfig">User<wbr>Pool<wbr>Lambda<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} A container for the AWS Lambda triggers associated with the user pool.
  {{% /md %}}
@@ -1826,7 +1826,7 @@ The following output properties are available:
             <td class="align-top">Password<wbr>Policy</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolpasswordpolicy">cognito.<wbr>User<wbr>Pool<wbr>Password<wbr>Policy</a></code>
+                <code><a href="#userpoolpasswordpolicy">User<wbr>Pool<wbr>Password<wbr>Policy</a></code>
             </td>
             <td class="align-top">{{% md %}} A container for information about the user pool password policy.
  {{% /md %}}
@@ -1839,7 +1839,7 @@ The following output properties are available:
             <td class="align-top">Schemas</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolschema">[]cognito.<wbr>User<wbr>Pool<wbr>Schema</a></code>
+                <code><a href="#userpoolschema">[]User<wbr>Pool<wbr>Schema</a></code>
             </td>
             <td class="align-top">{{% md %}} A container with the schema attributes of a user pool. Schema attributes from the [standard attribute set](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-attributes.html#cognito-user-pools-standard-attributes) only need to be specified if they are different from the default configuration. Maximum of 50 attributes.
  {{% /md %}}
@@ -1865,7 +1865,7 @@ The following output properties are available:
             <td class="align-top">Sms<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolsmsconfiguration">*cognito.<wbr>User<wbr>Pool<wbr>Sms<wbr>Configuration</a></code>
+                <code><a href="#userpoolsmsconfiguration">*User<wbr>Pool<wbr>Sms<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} The SMS Configuration.
  {{% /md %}}
@@ -1904,7 +1904,7 @@ The following output properties are available:
             <td class="align-top">User<wbr>Pool<wbr>Add<wbr>Ons</td>
             <td class="align-top">
                 
-                <code><a href="#userpooluserpooladdons">*cognito.<wbr>User<wbr>Pool<wbr>User<wbr>Pool<wbr>Add<wbr>Ons</a></code>
+                <code><a href="#userpooluserpooladdons">*User<wbr>Pool<wbr>User<wbr>Pool<wbr>Add<wbr>Ons</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block for user pool add-ons to enable user pool advanced security mode features.
  {{% /md %}}
@@ -1930,7 +1930,7 @@ The following output properties are available:
             <td class="align-top">Verification<wbr>Message<wbr>Template</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolverificationmessagetemplate">cognito.<wbr>User<wbr>Pool<wbr>Verification<wbr>Message<wbr>Template</a></code>
+                <code><a href="#userpoolverificationmessagetemplate">User<wbr>Pool<wbr>Verification<wbr>Message<wbr>Template</a></code>
             </td>
             <td class="align-top">{{% md %}} The verification message templates configuration.
  {{% /md %}}
@@ -1963,7 +1963,7 @@ The following output properties are available:
             <td class="align-top">admin<wbr>Create<wbr>User<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#userpooladmincreateuserconfig">cognito.<wbr>User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config</a></code>
+                <code><a href="#userpooladmincreateuserconfig">User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} The configuration for AdminCreateUser requests.
  {{% /md %}}
@@ -2028,7 +2028,7 @@ The following output properties are available:
             <td class="align-top">device<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#userpooldeviceconfiguration">cognito.<wbr>User<wbr>Pool<wbr>Device<wbr>Configuration?</a></code>
+                <code><a href="#userpooldeviceconfiguration">User<wbr>Pool<wbr>Device<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} The configuration for the user pool&#39;s device tracking.
  {{% /md %}}
@@ -2041,7 +2041,7 @@ The following output properties are available:
             <td class="align-top">email<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolemailconfiguration">cognito.<wbr>User<wbr>Pool<wbr>Email<wbr>Configuration?</a></code>
+                <code><a href="#userpoolemailconfiguration">User<wbr>Pool<wbr>Email<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} The Email Configuration.
  {{% /md %}}
@@ -2093,7 +2093,7 @@ The following output properties are available:
             <td class="align-top">lambda<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#userpoollambdaconfig">cognito.<wbr>User<wbr>Pool<wbr>Lambda<wbr>Config</a></code>
+                <code><a href="#userpoollambdaconfig">User<wbr>Pool<wbr>Lambda<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} A container for the AWS Lambda triggers associated with the user pool.
  {{% /md %}}
@@ -2145,7 +2145,7 @@ The following output properties are available:
             <td class="align-top">password<wbr>Policy</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolpasswordpolicy">cognito.<wbr>User<wbr>Pool<wbr>Password<wbr>Policy</a></code>
+                <code><a href="#userpoolpasswordpolicy">User<wbr>Pool<wbr>Password<wbr>Policy</a></code>
             </td>
             <td class="align-top">{{% md %}} A container for information about the user pool password policy.
  {{% /md %}}
@@ -2158,7 +2158,7 @@ The following output properties are available:
             <td class="align-top">schemas</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolschema">cognito.<wbr>User<wbr>Pool<wbr>Schema[]?</a></code>
+                <code><a href="#userpoolschema">User<wbr>Pool<wbr>Schema[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} A container with the schema attributes of a user pool. Schema attributes from the [standard attribute set](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-attributes.html#cognito-user-pools-standard-attributes) only need to be specified if they are different from the default configuration. Maximum of 50 attributes.
  {{% /md %}}
@@ -2184,7 +2184,7 @@ The following output properties are available:
             <td class="align-top">sms<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolsmsconfiguration">cognito.<wbr>User<wbr>Pool<wbr>Sms<wbr>Configuration?</a></code>
+                <code><a href="#userpoolsmsconfiguration">User<wbr>Pool<wbr>Sms<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} The SMS Configuration.
  {{% /md %}}
@@ -2223,7 +2223,7 @@ The following output properties are available:
             <td class="align-top">user<wbr>Pool<wbr>Add<wbr>Ons</td>
             <td class="align-top">
                 
-                <code><a href="#userpooluserpooladdons">cognito.<wbr>User<wbr>Pool<wbr>User<wbr>Pool<wbr>Add<wbr>Ons?</a></code>
+                <code><a href="#userpooluserpooladdons">User<wbr>Pool<wbr>User<wbr>Pool<wbr>Add<wbr>Ons?</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block for user pool add-ons to enable user pool advanced security mode features.
  {{% /md %}}
@@ -2249,7 +2249,7 @@ The following output properties are available:
             <td class="align-top">verification<wbr>Message<wbr>Template</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolverificationmessagetemplate">cognito.<wbr>User<wbr>Pool<wbr>Verification<wbr>Message<wbr>Template</a></code>
+                <code><a href="#userpoolverificationmessagetemplate">User<wbr>Pool<wbr>Verification<wbr>Message<wbr>Template</a></code>
             </td>
             <td class="align-top">{{% md %}} The verification message templates configuration.
  {{% /md %}}
@@ -2660,7 +2660,7 @@ The following state arguments are supported:
             <td class="align-top">Admin<wbr>Create<wbr>User<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#userpooladmincreateuserconfig">Pulumi.<wbr>Aws.<wbr>Cognito.<wbr>User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config<wbr>Args?</a></code>
+                <code><a href="#userpooladmincreateuserconfig">User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2675,7 +2675,7 @@ The configuration for AdminCreateUser requests.
             <td class="align-top">Alias<wbr>Attributes</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2705,7 +2705,7 @@ The ARN of the user pool.
             <td class="align-top">Auto<wbr>Verified<wbr>Attributes</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2735,7 +2735,7 @@ The date the user pool was created.
             <td class="align-top">Device<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#userpooldeviceconfiguration">Pulumi.<wbr>Aws.<wbr>Cognito.<wbr>User<wbr>Pool<wbr>Device<wbr>Configuration<wbr>Args?</a></code>
+                <code><a href="#userpooldeviceconfiguration">User<wbr>Pool<wbr>Device<wbr>Configuration<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2750,7 +2750,7 @@ The configuration for the user pool&#39;s device tracking.
             <td class="align-top">Email<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolemailconfiguration">Pulumi.<wbr>Aws.<wbr>Cognito.<wbr>User<wbr>Pool<wbr>Email<wbr>Configuration<wbr>Args?</a></code>
+                <code><a href="#userpoolemailconfiguration">User<wbr>Pool<wbr>Email<wbr>Configuration<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2810,7 +2810,7 @@ The endpoint name of the user pool. Example format: cognito-idp.REGION.amazonaws
             <td class="align-top">Lambda<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#userpoollambdaconfig">Pulumi.<wbr>Aws.<wbr>Cognito.<wbr>User<wbr>Pool<wbr>Lambda<wbr>Config<wbr>Args?</a></code>
+                <code><a href="#userpoollambdaconfig">User<wbr>Pool<wbr>Lambda<wbr>Config<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2870,7 +2870,7 @@ The name of the attribute.
             <td class="align-top">Password<wbr>Policy</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolpasswordpolicy">Pulumi.<wbr>Aws.<wbr>Cognito.<wbr>User<wbr>Pool<wbr>Password<wbr>Policy<wbr>Args?</a></code>
+                <code><a href="#userpoolpasswordpolicy">User<wbr>Pool<wbr>Password<wbr>Policy<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2885,7 +2885,7 @@ A container for information about the user pool password policy.
             <td class="align-top">Schemas</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolschema">List&lt;Pulumi.<wbr>Aws.<wbr>Cognito.<wbr>User<wbr>Pool<wbr>Schema<wbr>Args&gt;?</a></code>
+                <code><a href="#userpoolschema">List&lt;User<wbr>Pool<wbr>Schema<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2915,7 +2915,7 @@ A string representing the SMS authentication message.
             <td class="align-top">Sms<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolsmsconfiguration">Pulumi.<wbr>Aws.<wbr>Cognito.<wbr>User<wbr>Pool<wbr>Sms<wbr>Configuration<wbr>Args?</a></code>
+                <code><a href="#userpoolsmsconfiguration">User<wbr>Pool<wbr>Sms<wbr>Configuration<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2945,7 +2945,7 @@ A string representing the SMS verification message. Conflicts with `verification
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2960,7 +2960,7 @@ A mapping of tags to assign to the User Pool.
             <td class="align-top">User<wbr>Pool<wbr>Add<wbr>Ons</td>
             <td class="align-top">
                 
-                <code><a href="#userpooluserpooladdons">Pulumi.<wbr>Aws.<wbr>Cognito.<wbr>User<wbr>Pool<wbr>User<wbr>Pool<wbr>Add<wbr>Ons<wbr>Args?</a></code>
+                <code><a href="#userpooluserpooladdons">User<wbr>Pool<wbr>User<wbr>Pool<wbr>Add<wbr>Ons<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2975,7 +2975,7 @@ Configuration block for user pool add-ons to enable user pool advanced security 
             <td class="align-top">Username<wbr>Attributes</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2990,7 +2990,7 @@ Specifies whether email addresses or phone numbers can be specified as usernames
             <td class="align-top">Verification<wbr>Message<wbr>Template</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolverificationmessagetemplate">Pulumi.<wbr>Aws.<wbr>Cognito.<wbr>User<wbr>Pool<wbr>Verification<wbr>Message<wbr>Template<wbr>Args?</a></code>
+                <code><a href="#userpoolverificationmessagetemplate">User<wbr>Pool<wbr>Verification<wbr>Message<wbr>Template<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3025,7 +3025,7 @@ The verification message templates configuration.
             <td class="align-top">Admin<wbr>Create<wbr>User<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#userpooladmincreateuserconfig">*cognito.<wbr>User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config</a></code>
+                <code><a href="#userpooladmincreateuserconfig">*User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3100,7 +3100,7 @@ The date the user pool was created.
             <td class="align-top">Device<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#userpooldeviceconfiguration">*cognito.<wbr>User<wbr>Pool<wbr>Device<wbr>Configuration</a></code>
+                <code><a href="#userpooldeviceconfiguration">*User<wbr>Pool<wbr>Device<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3115,7 +3115,7 @@ The configuration for the user pool&#39;s device tracking.
             <td class="align-top">Email<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolemailconfiguration">*cognito.<wbr>User<wbr>Pool<wbr>Email<wbr>Configuration</a></code>
+                <code><a href="#userpoolemailconfiguration">*User<wbr>Pool<wbr>Email<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3175,7 +3175,7 @@ The endpoint name of the user pool. Example format: cognito-idp.REGION.amazonaws
             <td class="align-top">Lambda<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#userpoollambdaconfig">*cognito.<wbr>User<wbr>Pool<wbr>Lambda<wbr>Config</a></code>
+                <code><a href="#userpoollambdaconfig">*User<wbr>Pool<wbr>Lambda<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3235,7 +3235,7 @@ The name of the attribute.
             <td class="align-top">Password<wbr>Policy</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolpasswordpolicy">*cognito.<wbr>User<wbr>Pool<wbr>Password<wbr>Policy</a></code>
+                <code><a href="#userpoolpasswordpolicy">*User<wbr>Pool<wbr>Password<wbr>Policy</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3250,7 +3250,7 @@ A container for information about the user pool password policy.
             <td class="align-top">Schemas</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolschema">[]cognito.<wbr>User<wbr>Pool<wbr>Schema</a></code>
+                <code><a href="#userpoolschema">[]User<wbr>Pool<wbr>Schema</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3280,7 +3280,7 @@ A string representing the SMS authentication message.
             <td class="align-top">Sms<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolsmsconfiguration">*cognito.<wbr>User<wbr>Pool<wbr>Sms<wbr>Configuration</a></code>
+                <code><a href="#userpoolsmsconfiguration">*User<wbr>Pool<wbr>Sms<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3325,7 +3325,7 @@ A mapping of tags to assign to the User Pool.
             <td class="align-top">User<wbr>Pool<wbr>Add<wbr>Ons</td>
             <td class="align-top">
                 
-                <code><a href="#userpooluserpooladdons">*cognito.<wbr>User<wbr>Pool<wbr>User<wbr>Pool<wbr>Add<wbr>Ons</a></code>
+                <code><a href="#userpooluserpooladdons">*User<wbr>Pool<wbr>User<wbr>Pool<wbr>Add<wbr>Ons</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3355,7 +3355,7 @@ Specifies whether email addresses or phone numbers can be specified as usernames
             <td class="align-top">Verification<wbr>Message<wbr>Template</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolverificationmessagetemplate">*cognito.<wbr>User<wbr>Pool<wbr>Verification<wbr>Message<wbr>Template</a></code>
+                <code><a href="#userpoolverificationmessagetemplate">*User<wbr>Pool<wbr>Verification<wbr>Message<wbr>Template</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3390,7 +3390,7 @@ The verification message templates configuration.
             <td class="align-top">admin<wbr>Create<wbr>User<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#userpooladmincreateuserconfig">cognito.<wbr>User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config?</a></code>
+                <code><a href="#userpooladmincreateuserconfig">User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3465,7 +3465,7 @@ The date the user pool was created.
             <td class="align-top">device<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#userpooldeviceconfiguration">cognito.<wbr>User<wbr>Pool<wbr>Device<wbr>Configuration?</a></code>
+                <code><a href="#userpooldeviceconfiguration">User<wbr>Pool<wbr>Device<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3480,7 +3480,7 @@ The configuration for the user pool&#39;s device tracking.
             <td class="align-top">email<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolemailconfiguration">cognito.<wbr>User<wbr>Pool<wbr>Email<wbr>Configuration?</a></code>
+                <code><a href="#userpoolemailconfiguration">User<wbr>Pool<wbr>Email<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3540,7 +3540,7 @@ The endpoint name of the user pool. Example format: cognito-idp.REGION.amazonaws
             <td class="align-top">lambda<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#userpoollambdaconfig">cognito.<wbr>User<wbr>Pool<wbr>Lambda<wbr>Config?</a></code>
+                <code><a href="#userpoollambdaconfig">User<wbr>Pool<wbr>Lambda<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3600,7 +3600,7 @@ The name of the attribute.
             <td class="align-top">password<wbr>Policy</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolpasswordpolicy">cognito.<wbr>User<wbr>Pool<wbr>Password<wbr>Policy?</a></code>
+                <code><a href="#userpoolpasswordpolicy">User<wbr>Pool<wbr>Password<wbr>Policy?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3615,7 +3615,7 @@ A container for information about the user pool password policy.
             <td class="align-top">schemas</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolschema">cognito.<wbr>User<wbr>Pool<wbr>Schema[]?</a></code>
+                <code><a href="#userpoolschema">User<wbr>Pool<wbr>Schema[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3645,7 +3645,7 @@ A string representing the SMS authentication message.
             <td class="align-top">sms<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolsmsconfiguration">cognito.<wbr>User<wbr>Pool<wbr>Sms<wbr>Configuration?</a></code>
+                <code><a href="#userpoolsmsconfiguration">User<wbr>Pool<wbr>Sms<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3690,7 +3690,7 @@ A mapping of tags to assign to the User Pool.
             <td class="align-top">user<wbr>Pool<wbr>Add<wbr>Ons</td>
             <td class="align-top">
                 
-                <code><a href="#userpooluserpooladdons">cognito.<wbr>User<wbr>Pool<wbr>User<wbr>Pool<wbr>Add<wbr>Ons?</a></code>
+                <code><a href="#userpooluserpooladdons">User<wbr>Pool<wbr>User<wbr>Pool<wbr>Add<wbr>Ons?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3720,7 +3720,7 @@ Specifies whether email addresses or phone numbers can be specified as usernames
             <td class="align-top">verification<wbr>Message<wbr>Template</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolverificationmessagetemplate">cognito.<wbr>User<wbr>Pool<wbr>Verification<wbr>Message<wbr>Template?</a></code>
+                <code><a href="#userpoolverificationmessagetemplate">User<wbr>Pool<wbr>Verification<wbr>Message<wbr>Template?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4163,7 +4163,7 @@ Set to True if only the administrator is allowed to create user profiles. Set to
             <td class="align-top">Invite<wbr>Message<wbr>Template</td>
             <td class="align-top">
                 
-                <code><a href="#userpooladmincreateuserconfiginvitemessagetemplate">Pulumi.<wbr>Aws.<wbr>Cognito.<wbr>User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config<wbr>Invite<wbr>Message<wbr>Template<wbr>Args?</a></code>
+                <code><a href="#userpooladmincreateuserconfiginvitemessagetemplate">User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config<wbr>Invite<wbr>Message<wbr>Template<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4228,7 +4228,7 @@ Set to True if only the administrator is allowed to create user profiles. Set to
             <td class="align-top">Invite<wbr>Message<wbr>Template</td>
             <td class="align-top">
                 
-                <code><a href="#userpooladmincreateuserconfiginvitemessagetemplate">*cognito.<wbr>User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config<wbr>Invite<wbr>Message<wbr>Template</a></code>
+                <code><a href="#userpooladmincreateuserconfiginvitemessagetemplate">*User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config<wbr>Invite<wbr>Message<wbr>Template</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4293,7 +4293,7 @@ Set to True if only the administrator is allowed to create user profiles. Set to
             <td class="align-top">invite<wbr>Message<wbr>Template</td>
             <td class="align-top">
                 
-                <code><a href="#userpooladmincreateuserconfiginvitemessagetemplate">cognito.<wbr>User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config<wbr>Invite<wbr>Message<wbr>Template?</a></code>
+                <code><a href="#userpooladmincreateuserconfiginvitemessagetemplate">User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config<wbr>Invite<wbr>Message<wbr>Template?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6434,7 +6434,7 @@ The name of the attribute.
             <td class="align-top">Number<wbr>Attribute<wbr>Constraints</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolschemanumberattributeconstraints">Pulumi.<wbr>Aws.<wbr>Cognito.<wbr>User<wbr>Pool<wbr>Schema<wbr>Number<wbr>Attribute<wbr>Constraints<wbr>Args?</a></code>
+                <code><a href="#userpoolschemanumberattributeconstraints">User<wbr>Pool<wbr>Schema<wbr>Number<wbr>Attribute<wbr>Constraints<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6464,7 +6464,7 @@ Specifies whether a user pool attribute is required. If the attribute is require
             <td class="align-top">String<wbr>Attribute<wbr>Constraints</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolschemastringattributeconstraints">Pulumi.<wbr>Aws.<wbr>Cognito.<wbr>User<wbr>Pool<wbr>Schema<wbr>String<wbr>Attribute<wbr>Constraints<wbr>Args?</a></code>
+                <code><a href="#userpoolschemastringattributeconstraints">User<wbr>Pool<wbr>Schema<wbr>String<wbr>Attribute<wbr>Constraints<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6559,7 +6559,7 @@ The name of the attribute.
             <td class="align-top">Number<wbr>Attribute<wbr>Constraints</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolschemanumberattributeconstraints">*cognito.<wbr>User<wbr>Pool<wbr>Schema<wbr>Number<wbr>Attribute<wbr>Constraints</a></code>
+                <code><a href="#userpoolschemanumberattributeconstraints">*User<wbr>Pool<wbr>Schema<wbr>Number<wbr>Attribute<wbr>Constraints</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6589,7 +6589,7 @@ Specifies whether a user pool attribute is required. If the attribute is require
             <td class="align-top">String<wbr>Attribute<wbr>Constraints</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolschemastringattributeconstraints">*cognito.<wbr>User<wbr>Pool<wbr>Schema<wbr>String<wbr>Attribute<wbr>Constraints</a></code>
+                <code><a href="#userpoolschemastringattributeconstraints">*User<wbr>Pool<wbr>Schema<wbr>String<wbr>Attribute<wbr>Constraints</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6684,7 +6684,7 @@ The name of the attribute.
             <td class="align-top">number<wbr>Attribute<wbr>Constraints</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolschemanumberattributeconstraints">cognito.<wbr>User<wbr>Pool<wbr>Schema<wbr>Number<wbr>Attribute<wbr>Constraints?</a></code>
+                <code><a href="#userpoolschemanumberattributeconstraints">User<wbr>Pool<wbr>Schema<wbr>Number<wbr>Attribute<wbr>Constraints?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6714,7 +6714,7 @@ Specifies whether a user pool attribute is required. If the attribute is require
             <td class="align-top">string<wbr>Attribute<wbr>Constraints</td>
             <td class="align-top">
                 
-                <code><a href="#userpoolschemastringattributeconstraints">cognito.<wbr>User<wbr>Pool<wbr>Schema<wbr>String<wbr>Attribute<wbr>Constraints?</a></code>
+                <code><a href="#userpoolschemastringattributeconstraints">User<wbr>Pool<wbr>Schema<wbr>String<wbr>Attribute<wbr>Constraints?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

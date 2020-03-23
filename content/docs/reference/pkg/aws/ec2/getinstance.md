@@ -51,7 +51,12 @@ const foo = aws.ec2.getInstance({
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupInstance<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#LookupInstanceArgs">LookupInstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#LookupInstanceResult">LookupInstanceResult</a></span>, error)</span></code></pre></div>
 
 
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.GetInstanceResult.html">Pulumi.Aws.Ec2.GetInstanceResult</a></span>> <span class="p">GetInstance(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.GetInstanceArgs.html">GetInstanceArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight">
+<pre class="chroma">
+<code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetInstance </span><span class="p">{</span>
+    <span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.GetInstanceResult.html">GetInstanceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.GetInstanceArgs.html">GetInstanceArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span>
+<span class="p">}</span></code></pre>
+</div>
 
 
 
@@ -78,7 +83,7 @@ The following arguments are supported:
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getinstancefilter">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Get<wbr>Instance<wbr>Filter<wbr>Args&gt;?</a></code>
+                <code><a href="#getinstancefilter">List&lt;Get<wbr>Instance<wbr>Filter<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -140,7 +145,7 @@ Specify the exact Instance ID with which to populate the data source.
             <td class="align-top">Instance<wbr>Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -156,7 +161,7 @@ exactly match a pair on the desired Instance.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -190,7 +195,7 @@ exactly match a pair on the desired Instance.
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getinstancefilter">[]ec2.<wbr>Get<wbr>Instance<wbr>Filter</a></code>
+                <code><a href="#getinstancefilter">[]Get<wbr>Instance<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -302,7 +307,7 @@ exactly match a pair on the desired Instance.
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getinstancefilter">ec2.<wbr>Get<wbr>Instance<wbr>Filter[]?</a></code>
+                <code><a href="#getinstancefilter">Get<wbr>Instance<wbr>Filter[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -593,7 +598,7 @@ The following output properties are available:
             <td class="align-top">Credit<wbr>Specifications</td>
             <td class="align-top">
                 
-                <code><a href="#getinstancecreditspecification">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Get<wbr>Instance<wbr>Credit<wbr>Specification&gt;</a></code>
+                <code><a href="#getinstancecreditspecification">List&lt;Get<wbr>Instance<wbr>Credit<wbr>Specification&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} The credit specification of the Instance.
  {{% /md %}}
@@ -618,7 +623,7 @@ The following output properties are available:
             <td class="align-top">Ebs<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#getinstanceebsblockdevice">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Get<wbr>Instance<wbr>Ebs<wbr>Block<wbr>Device&gt;</a></code>
+                <code><a href="#getinstanceebsblockdevice">List&lt;Get<wbr>Instance<wbr>Ebs<wbr>Block<wbr>Device&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} The EBS block device mappings of the Instance.
  {{% /md %}}
@@ -644,7 +649,7 @@ The following output properties are available:
             <td class="align-top">Ephemeral<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#getinstanceephemeralblockdevice">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Get<wbr>Instance<wbr>Ephemeral<wbr>Block<wbr>Device&gt;</a></code>
+                <code><a href="#getinstanceephemeralblockdevice">List&lt;Get<wbr>Instance<wbr>Ephemeral<wbr>Block<wbr>Device&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} The ephemeral block device mappings of the Instance.
  {{% /md %}}
@@ -657,7 +662,7 @@ The following output properties are available:
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getinstancefilter">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Get<wbr>Instance<wbr>Filter&gt;?</a></code>
+                <code><a href="#getinstancefilter">List&lt;Get<wbr>Instance<wbr>Filter&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -757,7 +762,7 @@ The following output properties are available:
             <td class="align-top">Instance<wbr>Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;</code>
+                <code>Dictionary<string, object></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -905,7 +910,7 @@ is only available if you&#39;ve enabled DNS hostnames for your VPC.
             <td class="align-top">Root<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#getinstancerootblockdevice">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Get<wbr>Instance<wbr>Root<wbr>Block<wbr>Device&gt;</a></code>
+                <code><a href="#getinstancerootblockdevice">List&lt;Get<wbr>Instance<wbr>Root<wbr>Block<wbr>Device&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} The root block device mappings of the Instance
  {{% /md %}}
@@ -918,7 +923,7 @@ is only available if you&#39;ve enabled DNS hostnames for your VPC.
             <td class="align-top">Security<wbr>Groups</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} The associated security groups.
  {{% /md %}}
@@ -957,7 +962,7 @@ is only available if you&#39;ve enabled DNS hostnames for your VPC.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;</code>
+                <code>Dictionary<string, object></code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags assigned to the Instance.
  {{% /md %}}
@@ -1009,7 +1014,7 @@ is only available if you&#39;ve enabled DNS hostnames for your VPC.
             <td class="align-top">Vpc<wbr>Security<wbr>Group<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} The associated security groups in a non-default VPC.
  {{% /md %}}
@@ -1094,7 +1099,7 @@ is only available if you&#39;ve enabled DNS hostnames for your VPC.
             <td class="align-top">Credit<wbr>Specifications</td>
             <td class="align-top">
                 
-                <code><a href="#getinstancecreditspecification">[]ec2.<wbr>Get<wbr>Instance<wbr>Credit<wbr>Specification</a></code>
+                <code><a href="#getinstancecreditspecification">[]Get<wbr>Instance<wbr>Credit<wbr>Specification</a></code>
             </td>
             <td class="align-top">{{% md %}} The credit specification of the Instance.
  {{% /md %}}
@@ -1119,7 +1124,7 @@ is only available if you&#39;ve enabled DNS hostnames for your VPC.
             <td class="align-top">Ebs<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#getinstanceebsblockdevice">[]ec2.<wbr>Get<wbr>Instance<wbr>Ebs<wbr>Block<wbr>Device</a></code>
+                <code><a href="#getinstanceebsblockdevice">[]Get<wbr>Instance<wbr>Ebs<wbr>Block<wbr>Device</a></code>
             </td>
             <td class="align-top">{{% md %}} The EBS block device mappings of the Instance.
  {{% /md %}}
@@ -1145,7 +1150,7 @@ is only available if you&#39;ve enabled DNS hostnames for your VPC.
             <td class="align-top">Ephemeral<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#getinstanceephemeralblockdevice">[]ec2.<wbr>Get<wbr>Instance<wbr>Ephemeral<wbr>Block<wbr>Device</a></code>
+                <code><a href="#getinstanceephemeralblockdevice">[]Get<wbr>Instance<wbr>Ephemeral<wbr>Block<wbr>Device</a></code>
             </td>
             <td class="align-top">{{% md %}} The ephemeral block device mappings of the Instance.
  {{% /md %}}
@@ -1158,7 +1163,7 @@ is only available if you&#39;ve enabled DNS hostnames for your VPC.
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getinstancefilter">[]ec2.<wbr>Get<wbr>Instance<wbr>Filter</a></code>
+                <code><a href="#getinstancefilter">[]Get<wbr>Instance<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1406,7 +1411,7 @@ is only available if you&#39;ve enabled DNS hostnames for your VPC.
             <td class="align-top">Root<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#getinstancerootblockdevice">[]ec2.<wbr>Get<wbr>Instance<wbr>Root<wbr>Block<wbr>Device</a></code>
+                <code><a href="#getinstancerootblockdevice">[]Get<wbr>Instance<wbr>Root<wbr>Block<wbr>Device</a></code>
             </td>
             <td class="align-top">{{% md %}} The root block device mappings of the Instance
  {{% /md %}}
@@ -1595,7 +1600,7 @@ is only available if you&#39;ve enabled DNS hostnames for your VPC.
             <td class="align-top">credit<wbr>Specifications</td>
             <td class="align-top">
                 
-                <code><a href="#getinstancecreditspecification">ec2.<wbr>Get<wbr>Instance<wbr>Credit<wbr>Specification[]</a></code>
+                <code><a href="#getinstancecreditspecification">Get<wbr>Instance<wbr>Credit<wbr>Specification[]</a></code>
             </td>
             <td class="align-top">{{% md %}} The credit specification of the Instance.
  {{% /md %}}
@@ -1620,7 +1625,7 @@ is only available if you&#39;ve enabled DNS hostnames for your VPC.
             <td class="align-top">ebs<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#getinstanceebsblockdevice">ec2.<wbr>Get<wbr>Instance<wbr>Ebs<wbr>Block<wbr>Device[]</a></code>
+                <code><a href="#getinstanceebsblockdevice">Get<wbr>Instance<wbr>Ebs<wbr>Block<wbr>Device[]</a></code>
             </td>
             <td class="align-top">{{% md %}} The EBS block device mappings of the Instance.
  {{% /md %}}
@@ -1646,7 +1651,7 @@ is only available if you&#39;ve enabled DNS hostnames for your VPC.
             <td class="align-top">ephemeral<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#getinstanceephemeralblockdevice">ec2.<wbr>Get<wbr>Instance<wbr>Ephemeral<wbr>Block<wbr>Device[]</a></code>
+                <code><a href="#getinstanceephemeralblockdevice">Get<wbr>Instance<wbr>Ephemeral<wbr>Block<wbr>Device[]</a></code>
             </td>
             <td class="align-top">{{% md %}} The ephemeral block device mappings of the Instance.
  {{% /md %}}
@@ -1659,7 +1664,7 @@ is only available if you&#39;ve enabled DNS hostnames for your VPC.
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getinstancefilter">ec2.<wbr>Get<wbr>Instance<wbr>Filter[]?</a></code>
+                <code><a href="#getinstancefilter">Get<wbr>Instance<wbr>Filter[]?</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1907,7 +1912,7 @@ is only available if you&#39;ve enabled DNS hostnames for your VPC.
             <td class="align-top">root<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#getinstancerootblockdevice">ec2.<wbr>Get<wbr>Instance<wbr>Root<wbr>Block<wbr>Device[]</a></code>
+                <code><a href="#getinstancerootblockdevice">Get<wbr>Instance<wbr>Root<wbr>Block<wbr>Device[]</a></code>
             </td>
             <td class="align-top">{{% md %}} The root block device mappings of the Instance
  {{% /md %}}
@@ -3656,7 +3661,7 @@ The virtual device name.
             <td class="align-top">Values</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

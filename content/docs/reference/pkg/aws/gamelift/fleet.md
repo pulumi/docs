@@ -129,7 +129,7 @@ Human-readable description of the fleet.
             <td class="align-top">Ec2Inbound<wbr>Permissions</td>
             <td class="align-top">
                 
-                <code><a href="#fleetec2inboundpermission">List&lt;Pulumi.<wbr>Aws.<wbr>Gamelift.<wbr>Fleet<wbr>Ec2Inbound<wbr>Permission<wbr>Args&gt;?</a></code>
+                <code><a href="#fleetec2inboundpermission">List&lt;Fleet<wbr>Ec2Inbound<wbr>Permission<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -189,7 +189,7 @@ ARN of an IAM role that instances in the fleet can assume.
             <td class="align-top">Metric<wbr>Groups</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -234,7 +234,7 @@ Game session protection policy to apply to all instances in this fleet. e.g. `Fu
             <td class="align-top">Resource<wbr>Creation<wbr>Limit<wbr>Policy</td>
             <td class="align-top">
                 
-                <code><a href="#fleetresourcecreationlimitpolicy">Pulumi.<wbr>Aws.<wbr>Gamelift.<wbr>Fleet<wbr>Resource<wbr>Creation<wbr>Limit<wbr>Policy<wbr>Args?</a></code>
+                <code><a href="#fleetresourcecreationlimitpolicy">Fleet<wbr>Resource<wbr>Creation<wbr>Limit<wbr>Policy<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -249,7 +249,7 @@ Policy that limits the number of game sessions an individual player can create o
             <td class="align-top">Runtime<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#fleetruntimeconfiguration">Pulumi.<wbr>Aws.<wbr>Gamelift.<wbr>Fleet<wbr>Runtime<wbr>Configuration<wbr>Args?</a></code>
+                <code><a href="#fleetruntimeconfiguration">Fleet<wbr>Runtime<wbr>Configuration<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -264,7 +264,7 @@ Instructions for launching server processes on each instance in the fleet. See b
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -329,7 +329,7 @@ Human-readable description of the fleet.
             <td class="align-top">Ec2Inbound<wbr>Permissions</td>
             <td class="align-top">
                 
-                <code><a href="#fleetec2inboundpermission">[]gamelift.<wbr>Fleet<wbr>Ec2Inbound<wbr>Permission</a></code>
+                <code><a href="#fleetec2inboundpermission">[]Fleet<wbr>Ec2Inbound<wbr>Permission</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -434,7 +434,7 @@ Game session protection policy to apply to all instances in this fleet. e.g. `Fu
             <td class="align-top">Resource<wbr>Creation<wbr>Limit<wbr>Policy</td>
             <td class="align-top">
                 
-                <code><a href="#fleetresourcecreationlimitpolicy">*gamelift.<wbr>Fleet<wbr>Resource<wbr>Creation<wbr>Limit<wbr>Policy</a></code>
+                <code><a href="#fleetresourcecreationlimitpolicy">*Fleet<wbr>Resource<wbr>Creation<wbr>Limit<wbr>Policy</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -449,7 +449,7 @@ Policy that limits the number of game sessions an individual player can create o
             <td class="align-top">Runtime<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#fleetruntimeconfiguration">*gamelift.<wbr>Fleet<wbr>Runtime<wbr>Configuration</a></code>
+                <code><a href="#fleetruntimeconfiguration">*Fleet<wbr>Runtime<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -529,7 +529,7 @@ Human-readable description of the fleet.
             <td class="align-top">ec2Inbound<wbr>Permissions</td>
             <td class="align-top">
                 
-                <code><a href="#fleetec2inboundpermission">gamelift.<wbr>Fleet<wbr>Ec2Inbound<wbr>Permission[]?</a></code>
+                <code><a href="#fleetec2inboundpermission">Fleet<wbr>Ec2Inbound<wbr>Permission[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -634,7 +634,7 @@ Game session protection policy to apply to all instances in this fleet. e.g. `Fu
             <td class="align-top">resource<wbr>Creation<wbr>Limit<wbr>Policy</td>
             <td class="align-top">
                 
-                <code><a href="#fleetresourcecreationlimitpolicy">gamelift.<wbr>Fleet<wbr>Resource<wbr>Creation<wbr>Limit<wbr>Policy?</a></code>
+                <code><a href="#fleetresourcecreationlimitpolicy">Fleet<wbr>Resource<wbr>Creation<wbr>Limit<wbr>Policy?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -649,7 +649,7 @@ Policy that limits the number of game sessions an individual player can create o
             <td class="align-top">runtime<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#fleetruntimeconfiguration">gamelift.<wbr>Fleet<wbr>Runtime<wbr>Configuration?</a></code>
+                <code><a href="#fleetruntimeconfiguration">Fleet<wbr>Runtime<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -952,7 +952,7 @@ The following output properties are available:
             <td class="align-top">Ec2Inbound<wbr>Permissions</td>
             <td class="align-top">
                 
-                <code><a href="#fleetec2inboundpermission">List&lt;Pulumi.<wbr>Aws.<wbr>Gamelift.<wbr>Fleet<wbr>Ec2Inbound<wbr>Permission&gt;?</a></code>
+                <code><a href="#fleetec2inboundpermission">List&lt;Fleet<wbr>Ec2Inbound<wbr>Permission&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} Range of IP addresses and port settings that permit inbound traffic to access server processes running on the fleet. See below.
  {{% /md %}}
@@ -1004,7 +1004,7 @@ The following output properties are available:
             <td class="align-top">Log<wbr>Paths</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1016,7 +1016,7 @@ The following output properties are available:
             <td class="align-top">Metric<wbr>Groups</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} List of names of metric groups to add this fleet to. A metric group tracks metrics across all fleets in the group. Defaults to `default`.
  {{% /md %}}
@@ -1068,7 +1068,7 @@ The following output properties are available:
             <td class="align-top">Resource<wbr>Creation<wbr>Limit<wbr>Policy</td>
             <td class="align-top">
                 
-                <code><a href="#fleetresourcecreationlimitpolicy">Pulumi.<wbr>Aws.<wbr>Gamelift.<wbr>Fleet<wbr>Resource<wbr>Creation<wbr>Limit<wbr>Policy?</a></code>
+                <code><a href="#fleetresourcecreationlimitpolicy">Fleet<wbr>Resource<wbr>Creation<wbr>Limit<wbr>Policy?</a></code>
             </td>
             <td class="align-top">{{% md %}} Policy that limits the number of game sessions an individual player can create over a span of time for this fleet. See below.
  {{% /md %}}
@@ -1081,7 +1081,7 @@ The following output properties are available:
             <td class="align-top">Runtime<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#fleetruntimeconfiguration">Pulumi.<wbr>Aws.<wbr>Gamelift.<wbr>Fleet<wbr>Runtime<wbr>Configuration?</a></code>
+                <code><a href="#fleetruntimeconfiguration">Fleet<wbr>Runtime<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} Instructions for launching server processes on each instance in the fleet. See below.
  {{% /md %}}
@@ -1094,7 +1094,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} Key-value mapping of resource tags
  {{% /md %}}
@@ -1166,7 +1166,7 @@ The following output properties are available:
             <td class="align-top">Ec2Inbound<wbr>Permissions</td>
             <td class="align-top">
                 
-                <code><a href="#fleetec2inboundpermission">[]gamelift.<wbr>Fleet<wbr>Ec2Inbound<wbr>Permission</a></code>
+                <code><a href="#fleetec2inboundpermission">[]Fleet<wbr>Ec2Inbound<wbr>Permission</a></code>
             </td>
             <td class="align-top">{{% md %}} Range of IP addresses and port settings that permit inbound traffic to access server processes running on the fleet. See below.
  {{% /md %}}
@@ -1282,7 +1282,7 @@ The following output properties are available:
             <td class="align-top">Resource<wbr>Creation<wbr>Limit<wbr>Policy</td>
             <td class="align-top">
                 
-                <code><a href="#fleetresourcecreationlimitpolicy">*gamelift.<wbr>Fleet<wbr>Resource<wbr>Creation<wbr>Limit<wbr>Policy</a></code>
+                <code><a href="#fleetresourcecreationlimitpolicy">*Fleet<wbr>Resource<wbr>Creation<wbr>Limit<wbr>Policy</a></code>
             </td>
             <td class="align-top">{{% md %}} Policy that limits the number of game sessions an individual player can create over a span of time for this fleet. See below.
  {{% /md %}}
@@ -1295,7 +1295,7 @@ The following output properties are available:
             <td class="align-top">Runtime<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#fleetruntimeconfiguration">*gamelift.<wbr>Fleet<wbr>Runtime<wbr>Configuration</a></code>
+                <code><a href="#fleetruntimeconfiguration">*Fleet<wbr>Runtime<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} Instructions for launching server processes on each instance in the fleet. See below.
  {{% /md %}}
@@ -1380,7 +1380,7 @@ The following output properties are available:
             <td class="align-top">ec2Inbound<wbr>Permissions</td>
             <td class="align-top">
                 
-                <code><a href="#fleetec2inboundpermission">gamelift.<wbr>Fleet<wbr>Ec2Inbound<wbr>Permission[]?</a></code>
+                <code><a href="#fleetec2inboundpermission">Fleet<wbr>Ec2Inbound<wbr>Permission[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} Range of IP addresses and port settings that permit inbound traffic to access server processes running on the fleet. See below.
  {{% /md %}}
@@ -1496,7 +1496,7 @@ The following output properties are available:
             <td class="align-top">resource<wbr>Creation<wbr>Limit<wbr>Policy</td>
             <td class="align-top">
                 
-                <code><a href="#fleetresourcecreationlimitpolicy">gamelift.<wbr>Fleet<wbr>Resource<wbr>Creation<wbr>Limit<wbr>Policy?</a></code>
+                <code><a href="#fleetresourcecreationlimitpolicy">Fleet<wbr>Resource<wbr>Creation<wbr>Limit<wbr>Policy?</a></code>
             </td>
             <td class="align-top">{{% md %}} Policy that limits the number of game sessions an individual player can create over a span of time for this fleet. See below.
  {{% /md %}}
@@ -1509,7 +1509,7 @@ The following output properties are available:
             <td class="align-top">runtime<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#fleetruntimeconfiguration">gamelift.<wbr>Fleet<wbr>Runtime<wbr>Configuration?</a></code>
+                <code><a href="#fleetruntimeconfiguration">Fleet<wbr>Runtime<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} Instructions for launching server processes on each instance in the fleet. See below.
  {{% /md %}}
@@ -1873,7 +1873,7 @@ Human-readable description of the fleet.
             <td class="align-top">Ec2Inbound<wbr>Permissions</td>
             <td class="align-top">
                 
-                <code><a href="#fleetec2inboundpermission">List&lt;Pulumi.<wbr>Aws.<wbr>Gamelift.<wbr>Fleet<wbr>Ec2Inbound<wbr>Permission<wbr>Args&gt;?</a></code>
+                <code><a href="#fleetec2inboundpermission">List&lt;Fleet<wbr>Ec2Inbound<wbr>Permission<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1933,7 +1933,7 @@ ARN of an IAM role that instances in the fleet can assume.
             <td class="align-top">Log<wbr>Paths</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1947,7 +1947,7 @@ ARN of an IAM role that instances in the fleet can assume.
             <td class="align-top">Metric<wbr>Groups</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2007,7 +2007,7 @@ Operating system of the fleet&#39;s computing resources.
             <td class="align-top">Resource<wbr>Creation<wbr>Limit<wbr>Policy</td>
             <td class="align-top">
                 
-                <code><a href="#fleetresourcecreationlimitpolicy">Pulumi.<wbr>Aws.<wbr>Gamelift.<wbr>Fleet<wbr>Resource<wbr>Creation<wbr>Limit<wbr>Policy<wbr>Args?</a></code>
+                <code><a href="#fleetresourcecreationlimitpolicy">Fleet<wbr>Resource<wbr>Creation<wbr>Limit<wbr>Policy<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2022,7 +2022,7 @@ Policy that limits the number of game sessions an individual player can create o
             <td class="align-top">Runtime<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#fleetruntimeconfiguration">Pulumi.<wbr>Aws.<wbr>Gamelift.<wbr>Fleet<wbr>Runtime<wbr>Configuration<wbr>Args?</a></code>
+                <code><a href="#fleetruntimeconfiguration">Fleet<wbr>Runtime<wbr>Configuration<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2037,7 +2037,7 @@ Instructions for launching server processes on each instance in the fleet. See b
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2117,7 +2117,7 @@ Human-readable description of the fleet.
             <td class="align-top">Ec2Inbound<wbr>Permissions</td>
             <td class="align-top">
                 
-                <code><a href="#fleetec2inboundpermission">[]gamelift.<wbr>Fleet<wbr>Ec2Inbound<wbr>Permission</a></code>
+                <code><a href="#fleetec2inboundpermission">[]Fleet<wbr>Ec2Inbound<wbr>Permission</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2251,7 +2251,7 @@ Operating system of the fleet&#39;s computing resources.
             <td class="align-top">Resource<wbr>Creation<wbr>Limit<wbr>Policy</td>
             <td class="align-top">
                 
-                <code><a href="#fleetresourcecreationlimitpolicy">*gamelift.<wbr>Fleet<wbr>Resource<wbr>Creation<wbr>Limit<wbr>Policy</a></code>
+                <code><a href="#fleetresourcecreationlimitpolicy">*Fleet<wbr>Resource<wbr>Creation<wbr>Limit<wbr>Policy</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2266,7 +2266,7 @@ Policy that limits the number of game sessions an individual player can create o
             <td class="align-top">Runtime<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#fleetruntimeconfiguration">*gamelift.<wbr>Fleet<wbr>Runtime<wbr>Configuration</a></code>
+                <code><a href="#fleetruntimeconfiguration">*Fleet<wbr>Runtime<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2361,7 +2361,7 @@ Human-readable description of the fleet.
             <td class="align-top">ec2Inbound<wbr>Permissions</td>
             <td class="align-top">
                 
-                <code><a href="#fleetec2inboundpermission">gamelift.<wbr>Fleet<wbr>Ec2Inbound<wbr>Permission[]?</a></code>
+                <code><a href="#fleetec2inboundpermission">Fleet<wbr>Ec2Inbound<wbr>Permission[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2495,7 +2495,7 @@ Operating system of the fleet&#39;s computing resources.
             <td class="align-top">resource<wbr>Creation<wbr>Limit<wbr>Policy</td>
             <td class="align-top">
                 
-                <code><a href="#fleetresourcecreationlimitpolicy">gamelift.<wbr>Fleet<wbr>Resource<wbr>Creation<wbr>Limit<wbr>Policy?</a></code>
+                <code><a href="#fleetresourcecreationlimitpolicy">Fleet<wbr>Resource<wbr>Creation<wbr>Limit<wbr>Policy?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2510,7 +2510,7 @@ Policy that limits the number of game sessions an individual player can create o
             <td class="align-top">runtime<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#fleetruntimeconfiguration">gamelift.<wbr>Fleet<wbr>Runtime<wbr>Configuration?</a></code>
+                <code><a href="#fleetruntimeconfiguration">Fleet<wbr>Runtime<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3424,7 +3424,7 @@ Maximum number of game sessions with status `ACTIVATING` to allow on an instance
             <td class="align-top">Server<wbr>Processes</td>
             <td class="align-top">
                 
-                <code><a href="#fleetruntimeconfigurationserverprocess">List&lt;Pulumi.<wbr>Aws.<wbr>Gamelift.<wbr>Fleet<wbr>Runtime<wbr>Configuration<wbr>Server<wbr>Process<wbr>Args&gt;?</a></code>
+                <code><a href="#fleetruntimeconfigurationserverprocess">List&lt;Fleet<wbr>Runtime<wbr>Configuration<wbr>Server<wbr>Process<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3489,7 +3489,7 @@ Maximum number of game sessions with status `ACTIVATING` to allow on an instance
             <td class="align-top">Server<wbr>Processes</td>
             <td class="align-top">
                 
-                <code><a href="#fleetruntimeconfigurationserverprocess">[]gamelift.<wbr>Fleet<wbr>Runtime<wbr>Configuration<wbr>Server<wbr>Process</a></code>
+                <code><a href="#fleetruntimeconfigurationserverprocess">[]Fleet<wbr>Runtime<wbr>Configuration<wbr>Server<wbr>Process</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3554,7 +3554,7 @@ Maximum number of game sessions with status `ACTIVATING` to allow on an instance
             <td class="align-top">server<wbr>Processes</td>
             <td class="align-top">
                 
-                <code><a href="#fleetruntimeconfigurationserverprocess">gamelift.<wbr>Fleet<wbr>Runtime<wbr>Configuration<wbr>Server<wbr>Process[]?</a></code>
+                <code><a href="#fleetruntimeconfigurationserverprocess">Fleet<wbr>Runtime<wbr>Configuration<wbr>Server<wbr>Process[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

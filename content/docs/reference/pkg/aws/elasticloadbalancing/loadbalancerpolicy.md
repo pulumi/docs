@@ -177,7 +177,7 @@ The load balancer on which the policy is defined.
             <td class="align-top">Policy<wbr>Attributes</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalancerpolicypolicyattribute">List&lt;Pulumi.<wbr>Aws.<wbr>Elasticloadbalancing.<wbr>Load<wbr>Balancer<wbr>Policy<wbr>Policy<wbr>Attribute<wbr>Args&gt;?</a></code>
+                <code><a href="#loadbalancerpolicypolicyattribute">List&lt;Load<wbr>Balancer<wbr>Policy<wbr>Policy<wbr>Attribute<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -257,7 +257,7 @@ The load balancer on which the policy is defined.
             <td class="align-top">Policy<wbr>Attributes</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalancerpolicypolicyattribute">[]elasticloadbalancing.<wbr>Load<wbr>Balancer<wbr>Policy<wbr>Policy<wbr>Attribute</a></code>
+                <code><a href="#loadbalancerpolicypolicyattribute">[]Load<wbr>Balancer<wbr>Policy<wbr>Policy<wbr>Attribute</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -337,7 +337,7 @@ The load balancer on which the policy is defined.
             <td class="align-top">policy<wbr>Attributes</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalancerpolicypolicyattribute">elasticloadbalancing.<wbr>Load<wbr>Balancer<wbr>Policy<wbr>Policy<wbr>Attribute[]?</a></code>
+                <code><a href="#loadbalancerpolicypolicyattribute">Load<wbr>Balancer<wbr>Policy<wbr>Policy<wbr>Attribute[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -509,7 +509,7 @@ The following output properties are available:
             <td class="align-top">Policy<wbr>Attributes</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalancerpolicypolicyattribute">List&lt;Pulumi.<wbr>Aws.<wbr>Elasticloadbalancing.<wbr>Load<wbr>Balancer<wbr>Policy<wbr>Policy<wbr>Attribute&gt;?</a></code>
+                <code><a href="#loadbalancerpolicypolicyattribute">List&lt;Load<wbr>Balancer<wbr>Policy<wbr>Policy<wbr>Attribute&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} Policy attribute to apply to the policy.
  {{% /md %}}
@@ -581,7 +581,7 @@ The following output properties are available:
             <td class="align-top">Policy<wbr>Attributes</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalancerpolicypolicyattribute">[]elasticloadbalancing.<wbr>Load<wbr>Balancer<wbr>Policy<wbr>Policy<wbr>Attribute</a></code>
+                <code><a href="#loadbalancerpolicypolicyattribute">[]Load<wbr>Balancer<wbr>Policy<wbr>Policy<wbr>Attribute</a></code>
             </td>
             <td class="align-top">{{% md %}} Policy attribute to apply to the policy.
  {{% /md %}}
@@ -653,7 +653,7 @@ The following output properties are available:
             <td class="align-top">policy<wbr>Attributes</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalancerpolicypolicyattribute">elasticloadbalancing.<wbr>Load<wbr>Balancer<wbr>Policy<wbr>Policy<wbr>Attribute[]?</a></code>
+                <code><a href="#loadbalancerpolicypolicyattribute">Load<wbr>Balancer<wbr>Policy<wbr>Policy<wbr>Attribute[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} Policy attribute to apply to the policy.
  {{% /md %}}
@@ -858,7 +858,7 @@ The load balancer on which the policy is defined.
             <td class="align-top">Policy<wbr>Attributes</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalancerpolicypolicyattribute">List&lt;Pulumi.<wbr>Aws.<wbr>Elasticloadbalancing.<wbr>Load<wbr>Balancer<wbr>Policy<wbr>Policy<wbr>Attribute<wbr>Args&gt;?</a></code>
+                <code><a href="#loadbalancerpolicypolicyattribute">List&lt;Load<wbr>Balancer<wbr>Policy<wbr>Policy<wbr>Attribute<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -938,7 +938,7 @@ The load balancer on which the policy is defined.
             <td class="align-top">Policy<wbr>Attributes</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalancerpolicypolicyattribute">[]elasticloadbalancing.<wbr>Load<wbr>Balancer<wbr>Policy<wbr>Policy<wbr>Attribute</a></code>
+                <code><a href="#loadbalancerpolicypolicyattribute">[]Load<wbr>Balancer<wbr>Policy<wbr>Policy<wbr>Attribute</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1018,7 +1018,7 @@ The load balancer on which the policy is defined.
             <td class="align-top">policy<wbr>Attributes</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalancerpolicypolicyattribute">elasticloadbalancing.<wbr>Load<wbr>Balancer<wbr>Policy<wbr>Policy<wbr>Attribute[]?</a></code>
+                <code><a href="#loadbalancerpolicypolicyattribute">Load<wbr>Balancer<wbr>Policy<wbr>Policy<wbr>Attribute[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

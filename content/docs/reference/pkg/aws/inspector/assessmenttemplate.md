@@ -128,7 +128,7 @@ The name of the assessment template.
             <td class="align-top">Rules<wbr>Package<wbr>Arns</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -471,7 +471,7 @@ The following output properties are available:
             <td class="align-top">Rules<wbr>Package<wbr>Arns</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} The rules to be used during the run.
  {{% /md %}}
@@ -876,7 +876,7 @@ The name of the assessment template.
             <td class="align-top">Rules<wbr>Package<wbr>Arns</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

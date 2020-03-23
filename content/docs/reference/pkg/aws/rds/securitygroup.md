@@ -111,7 +111,7 @@ The description of the DB security group. Defaults to &#34;Managed by Pulumi&#34
             <td class="align-top">Ingress</td>
             <td class="align-top">
                 
-                <code><a href="#securitygroupingress">List&lt;Pulumi.<wbr>Aws.<wbr>Rds.<wbr>Security<wbr>Group<wbr>Ingress<wbr>Args&gt;</a></code>
+                <code><a href="#securitygroupingress">List&lt;Security<wbr>Group<wbr>Ingress<wbr>Args&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -141,7 +141,7 @@ The name of the DB security group.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -191,7 +191,7 @@ The description of the DB security group. Defaults to &#34;Managed by Pulumi&#34
             <td class="align-top">Ingress</td>
             <td class="align-top">
                 
-                <code><a href="#securitygroupingress">[]rds.<wbr>Security<wbr>Group<wbr>Ingress</a></code>
+                <code><a href="#securitygroupingress">[]Security<wbr>Group<wbr>Ingress</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -271,7 +271,7 @@ The description of the DB security group. Defaults to &#34;Managed by Pulumi&#34
             <td class="align-top">ingress</td>
             <td class="align-top">
                 
-                <code><a href="#securitygroupingress">rds.<wbr>Security<wbr>Group<wbr>Ingress[]</a></code>
+                <code><a href="#securitygroupingress">Security<wbr>Group<wbr>Ingress[]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -456,7 +456,7 @@ The following output properties are available:
             <td class="align-top">Ingress</td>
             <td class="align-top">
                 
-                <code><a href="#securitygroupingress">List&lt;Pulumi.<wbr>Aws.<wbr>Rds.<wbr>Security<wbr>Group<wbr>Ingress&gt;</a></code>
+                <code><a href="#securitygroupingress">List&lt;Security<wbr>Group<wbr>Ingress&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of ingress rules.
  {{% /md %}}
@@ -482,7 +482,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -541,7 +541,7 @@ The following output properties are available:
             <td class="align-top">Ingress</td>
             <td class="align-top">
                 
-                <code><a href="#securitygroupingress">[]rds.<wbr>Security<wbr>Group<wbr>Ingress</a></code>
+                <code><a href="#securitygroupingress">[]Security<wbr>Group<wbr>Ingress</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of ingress rules.
  {{% /md %}}
@@ -626,7 +626,7 @@ The following output properties are available:
             <td class="align-top">ingress</td>
             <td class="align-top">
                 
-                <code><a href="#securitygroupingress">rds.<wbr>Security<wbr>Group<wbr>Ingress[]</a></code>
+                <code><a href="#securitygroupingress">Security<wbr>Group<wbr>Ingress[]</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of ingress rules.
  {{% /md %}}
@@ -859,7 +859,7 @@ The description of the DB security group. Defaults to &#34;Managed by Pulumi&#34
             <td class="align-top">Ingress</td>
             <td class="align-top">
                 
-                <code><a href="#securitygroupingress">List&lt;Pulumi.<wbr>Aws.<wbr>Rds.<wbr>Security<wbr>Group<wbr>Ingress<wbr>Args&gt;?</a></code>
+                <code><a href="#securitygroupingress">List&lt;Security<wbr>Group<wbr>Ingress<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -889,7 +889,7 @@ The name of the DB security group.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -954,7 +954,7 @@ The description of the DB security group. Defaults to &#34;Managed by Pulumi&#34
             <td class="align-top">Ingress</td>
             <td class="align-top">
                 
-                <code><a href="#securitygroupingress">[]rds.<wbr>Security<wbr>Group<wbr>Ingress</a></code>
+                <code><a href="#securitygroupingress">[]Security<wbr>Group<wbr>Ingress</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1049,7 +1049,7 @@ The description of the DB security group. Defaults to &#34;Managed by Pulumi&#34
             <td class="align-top">ingress</td>
             <td class="align-top">
                 
-                <code><a href="#securitygroupingress">rds.<wbr>Security<wbr>Group<wbr>Ingress[]?</a></code>
+                <code><a href="#securitygroupingress">Security<wbr>Group<wbr>Ingress[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

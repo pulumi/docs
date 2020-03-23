@@ -206,7 +206,7 @@ The alias for the directory (must be unique amongst all aliases in AWS). Require
             <td class="align-top">Connect<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#directoryconnectsettings">Pulumi.<wbr>Aws.<wbr>Directoryservice.<wbr>Directory<wbr>Connect<wbr>Settings<wbr>Args?</a></code>
+                <code><a href="#directoryconnectsettings">Directory<wbr>Connect<wbr>Settings<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -326,7 +326,7 @@ The size of the directory (`Small` or `Large` are accepted values).
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -356,7 +356,7 @@ The directory type (`SimpleAD`, `ADConnector` or `MicrosoftAD` are accepted valu
             <td class="align-top">Vpc<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#directoryvpcsettings">Pulumi.<wbr>Aws.<wbr>Directoryservice.<wbr>Directory<wbr>Vpc<wbr>Settings<wbr>Args?</a></code>
+                <code><a href="#directoryvpcsettings">Directory<wbr>Vpc<wbr>Settings<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -406,7 +406,7 @@ The alias for the directory (must be unique amongst all aliases in AWS). Require
             <td class="align-top">Connect<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#directoryconnectsettings">*directoryservice.<wbr>Directory<wbr>Connect<wbr>Settings</a></code>
+                <code><a href="#directoryconnectsettings">*Directory<wbr>Connect<wbr>Settings</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -556,7 +556,7 @@ The directory type (`SimpleAD`, `ADConnector` or `MicrosoftAD` are accepted valu
             <td class="align-top">Vpc<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#directoryvpcsettings">*directoryservice.<wbr>Directory<wbr>Vpc<wbr>Settings</a></code>
+                <code><a href="#directoryvpcsettings">*Directory<wbr>Vpc<wbr>Settings</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -606,7 +606,7 @@ The alias for the directory (must be unique amongst all aliases in AWS). Require
             <td class="align-top">connect<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#directoryconnectsettings">directoryservice.<wbr>Directory<wbr>Connect<wbr>Settings?</a></code>
+                <code><a href="#directoryconnectsettings">Directory<wbr>Connect<wbr>Settings?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -756,7 +756,7 @@ The directory type (`SimpleAD`, `ADConnector` or `MicrosoftAD` are accepted valu
             <td class="align-top">vpc<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#directoryvpcsettings">directoryservice.<wbr>Directory<wbr>Vpc<wbr>Settings?</a></code>
+                <code><a href="#directoryvpcsettings">Directory<wbr>Vpc<wbr>Settings?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1031,7 +1031,7 @@ The following output properties are available:
             <td class="align-top">Connect<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#directoryconnectsettings">Pulumi.<wbr>Aws.<wbr>Directoryservice.<wbr>Directory<wbr>Connect<wbr>Settings?</a></code>
+                <code><a href="#directoryconnectsettings">Directory<wbr>Connect<wbr>Settings?</a></code>
             </td>
             <td class="align-top">{{% md %}} Connector related information about the directory. Fields documented below.
  {{% /md %}}
@@ -1057,7 +1057,7 @@ The following output properties are available:
             <td class="align-top">Dns<wbr>Ip<wbr>Addresses</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} A list of IP addresses of the DNS servers for the directory or connector.
  {{% /md %}}
@@ -1161,7 +1161,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -1187,7 +1187,7 @@ The following output properties are available:
             <td class="align-top">Vpc<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#directoryvpcsettings">Pulumi.<wbr>Aws.<wbr>Directoryservice.<wbr>Directory<wbr>Vpc<wbr>Settings?</a></code>
+                <code><a href="#directoryvpcsettings">Directory<wbr>Vpc<wbr>Settings?</a></code>
             </td>
             <td class="align-top">{{% md %}} VPC related information about the directory. Fields documented below.
  {{% /md %}}
@@ -1246,7 +1246,7 @@ The following output properties are available:
             <td class="align-top">Connect<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#directoryconnectsettings">*directoryservice.<wbr>Directory<wbr>Connect<wbr>Settings</a></code>
+                <code><a href="#directoryconnectsettings">*Directory<wbr>Connect<wbr>Settings</a></code>
             </td>
             <td class="align-top">{{% md %}} Connector related information about the directory. Fields documented below.
  {{% /md %}}
@@ -1402,7 +1402,7 @@ The following output properties are available:
             <td class="align-top">Vpc<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#directoryvpcsettings">*directoryservice.<wbr>Directory<wbr>Vpc<wbr>Settings</a></code>
+                <code><a href="#directoryvpcsettings">*Directory<wbr>Vpc<wbr>Settings</a></code>
             </td>
             <td class="align-top">{{% md %}} VPC related information about the directory. Fields documented below.
  {{% /md %}}
@@ -1461,7 +1461,7 @@ The following output properties are available:
             <td class="align-top">connect<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#directoryconnectsettings">directoryservice.<wbr>Directory<wbr>Connect<wbr>Settings?</a></code>
+                <code><a href="#directoryconnectsettings">Directory<wbr>Connect<wbr>Settings?</a></code>
             </td>
             <td class="align-top">{{% md %}} Connector related information about the directory. Fields documented below.
  {{% /md %}}
@@ -1617,7 +1617,7 @@ The following output properties are available:
             <td class="align-top">vpc<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#directoryvpcsettings">directoryservice.<wbr>Directory<wbr>Vpc<wbr>Settings?</a></code>
+                <code><a href="#directoryvpcsettings">Directory<wbr>Vpc<wbr>Settings?</a></code>
             </td>
             <td class="align-top">{{% md %}} VPC related information about the directory. Fields documented below.
  {{% /md %}}
@@ -1954,7 +1954,7 @@ The alias for the directory (must be unique amongst all aliases in AWS). Require
             <td class="align-top">Connect<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#directoryconnectsettings">Pulumi.<wbr>Aws.<wbr>Directoryservice.<wbr>Directory<wbr>Connect<wbr>Settings<wbr>Args?</a></code>
+                <code><a href="#directoryconnectsettings">Directory<wbr>Connect<wbr>Settings<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1984,7 +1984,7 @@ A textual description for the directory.
             <td class="align-top">Dns<wbr>Ip<wbr>Addresses</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2104,7 +2104,7 @@ The size of the directory (`Small` or `Large` are accepted values).
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2134,7 +2134,7 @@ The directory type (`SimpleAD`, `ADConnector` or `MicrosoftAD` are accepted valu
             <td class="align-top">Vpc<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#directoryvpcsettings">Pulumi.<wbr>Aws.<wbr>Directoryservice.<wbr>Directory<wbr>Vpc<wbr>Settings<wbr>Args?</a></code>
+                <code><a href="#directoryvpcsettings">Directory<wbr>Vpc<wbr>Settings<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2199,7 +2199,7 @@ The alias for the directory (must be unique amongst all aliases in AWS). Require
             <td class="align-top">Connect<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#directoryconnectsettings">*directoryservice.<wbr>Directory<wbr>Connect<wbr>Settings</a></code>
+                <code><a href="#directoryconnectsettings">*Directory<wbr>Connect<wbr>Settings</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2379,7 +2379,7 @@ The directory type (`SimpleAD`, `ADConnector` or `MicrosoftAD` are accepted valu
             <td class="align-top">Vpc<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#directoryvpcsettings">*directoryservice.<wbr>Directory<wbr>Vpc<wbr>Settings</a></code>
+                <code><a href="#directoryvpcsettings">*Directory<wbr>Vpc<wbr>Settings</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2444,7 +2444,7 @@ The alias for the directory (must be unique amongst all aliases in AWS). Require
             <td class="align-top">connect<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#directoryconnectsettings">directoryservice.<wbr>Directory<wbr>Connect<wbr>Settings?</a></code>
+                <code><a href="#directoryconnectsettings">Directory<wbr>Connect<wbr>Settings?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2624,7 +2624,7 @@ The directory type (`SimpleAD`, `ADConnector` or `MicrosoftAD` are accepted valu
             <td class="align-top">vpc<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#directoryvpcsettings">directoryservice.<wbr>Directory<wbr>Vpc<wbr>Settings?</a></code>
+                <code><a href="#directoryvpcsettings">Directory<wbr>Vpc<wbr>Settings?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2932,7 +2932,7 @@ VPC related information about the directory. Fields documented below.
             <td class="align-top">Customer<wbr>Dns<wbr>Ips</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2962,7 +2962,7 @@ The username corresponding to the password provided.
             <td class="align-top">Subnet<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -3273,7 +3273,7 @@ The identifier of the VPC that the directory is in.
             <td class="align-top">Subnet<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

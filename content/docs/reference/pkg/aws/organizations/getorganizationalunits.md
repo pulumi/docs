@@ -29,7 +29,12 @@ Get all direct child organizational units under a parent organizational unit. Th
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupOrganizationalUnits<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/organizations?tab=doc#LookupOrganizationalUnitsArgs">LookupOrganizationalUnitsArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/organizations?tab=doc#LookupOrganizationalUnitsResult">LookupOrganizationalUnitsResult</a></span>, error)</span></code></pre></div>
 
 
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Organizations.GetOrganizationalUnitsResult.html">Pulumi.Aws.Organizations.GetOrganizationalUnitsResult</a></span>> <span class="p">GetOrganizationalUnits(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Organizations.GetOrganizationalUnitsArgs.html">GetOrganizationalUnitsArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight">
+<pre class="chroma">
+<code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetOrganizationalUnits </span><span class="p">{</span>
+    <span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Organizations.GetOrganizationalUnitsResult.html">GetOrganizationalUnitsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Organizations.GetOrganizationalUnitsArgs.html">GetOrganizationalUnitsArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span>
+<span class="p">}</span></code></pre>
+</div>
 
 
 
@@ -211,7 +216,7 @@ The following output properties are available:
             <td class="align-top">Childrens</td>
             <td class="align-top">
                 
-                <code><a href="#getorganizationalunitschildren">List&lt;Pulumi.<wbr>Aws.<wbr>Organizations.<wbr>Get<wbr>Organizational<wbr>Units<wbr>Children&gt;</a></code>
+                <code><a href="#getorganizationalunitschildren">List&lt;Get<wbr>Organizational<wbr>Units<wbr>Children&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} List of child organizational units, which have the following attributes:
  {{% /md %}}
@@ -269,7 +274,7 @@ The following output properties are available:
             <td class="align-top">Childrens</td>
             <td class="align-top">
                 
-                <code><a href="#getorganizationalunitschildren">[]organizations.<wbr>Get<wbr>Organizational<wbr>Units<wbr>Children</a></code>
+                <code><a href="#getorganizationalunitschildren">[]Get<wbr>Organizational<wbr>Units<wbr>Children</a></code>
             </td>
             <td class="align-top">{{% md %}} List of child organizational units, which have the following attributes:
  {{% /md %}}
@@ -327,7 +332,7 @@ The following output properties are available:
             <td class="align-top">childrens</td>
             <td class="align-top">
                 
-                <code><a href="#getorganizationalunitschildren">organizations.<wbr>Get<wbr>Organizational<wbr>Units<wbr>Children[]</a></code>
+                <code><a href="#getorganizationalunitschildren">Get<wbr>Organizational<wbr>Units<wbr>Children[]</a></code>
             </td>
             <td class="align-top">{{% md %}} List of child organizational units, which have the following attributes:
  {{% /md %}}

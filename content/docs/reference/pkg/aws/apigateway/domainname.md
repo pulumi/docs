@@ -300,7 +300,7 @@ domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint c
         </tr>
     
         <tr>
-            <td class="align-top">Domain<wbr>Name</td>
+            <td class="align-top">Domain</td>
             <td class="align-top">
                 
                 <code>string</code>
@@ -318,7 +318,7 @@ The fully-qualified domain name to register
             <td class="align-top">Endpoint<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#domainnameendpointconfiguration">Pulumi.<wbr>Aws.<wbr>Apigateway.<wbr>Domain<wbr>Name<wbr>Endpoint<wbr>Configuration<wbr>Args?</a></code>
+                <code><a href="#domainnameendpointconfiguration">Domain<wbr>Name<wbr>Endpoint<wbr>Configuration<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -379,7 +379,7 @@ The Transport Layer Security (TLS) version &#43; cipher suite for this DomainNam
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -512,7 +512,7 @@ The fully-qualified domain name to register
             <td class="align-top">Endpoint<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#domainnameendpointconfiguration">*apigateway.<wbr>Domain<wbr>Name<wbr>Endpoint<wbr>Configuration</a></code>
+                <code><a href="#domainnameendpointconfiguration">*Domain<wbr>Name<wbr>Endpoint<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -706,7 +706,7 @@ The fully-qualified domain name to register
             <td class="align-top">endpoint<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#domainnameendpointconfiguration">apigateway.<wbr>Domain<wbr>Name<wbr>Endpoint<wbr>Configuration?</a></code>
+                <code><a href="#domainnameendpointconfiguration">Domain<wbr>Name<wbr>Endpoint<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1134,7 +1134,7 @@ that can be used to create a Route53 alias record for the distribution.
         </tr>
     
         <tr>
-            <td class="align-top">Domain<wbr>Name</td>
+            <td class="align-top">Domain</td>
             <td class="align-top">
                 
                 <code>string</code>
@@ -1150,7 +1150,7 @@ that can be used to create a Route53 alias record for the distribution.
             <td class="align-top">Endpoint<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#domainnameendpointconfiguration">Pulumi.<wbr>Aws.<wbr>Apigateway.<wbr>Domain<wbr>Name<wbr>Endpoint<wbr>Configuration</a></code>
+                <code><a href="#domainnameendpointconfiguration">Domain<wbr>Name<wbr>Endpoint<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block defining API endpoint information including type. Defined below.
  {{% /md %}}
@@ -1229,7 +1229,7 @@ that can be used to create a Route53 alias record for the distribution.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} Key-value mapping of resource tags
  {{% /md %}}
@@ -1402,7 +1402,7 @@ that can be used to create a Route53 alias record for the distribution.
             <td class="align-top">Endpoint<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#domainnameendpointconfiguration">apigateway.<wbr>Domain<wbr>Name<wbr>Endpoint<wbr>Configuration</a></code>
+                <code><a href="#domainnameendpointconfiguration">Domain<wbr>Name<wbr>Endpoint<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block defining API endpoint information including type. Defined below.
  {{% /md %}}
@@ -1654,7 +1654,7 @@ that can be used to create a Route53 alias record for the distribution.
             <td class="align-top">endpoint<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#domainnameendpointconfiguration">apigateway.<wbr>Domain<wbr>Name<wbr>Endpoint<wbr>Configuration</a></code>
+                <code><a href="#domainnameendpointconfiguration">Domain<wbr>Name<wbr>Endpoint<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block defining API endpoint information including type. Defined below.
  {{% /md %}}
@@ -2219,7 +2219,7 @@ that can be used to create a Route53 alias record for the distribution.
         </tr>
     
         <tr>
-            <td class="align-top">Domain<wbr>Name</td>
+            <td class="align-top">Domain</td>
             <td class="align-top">
                 
                 <code>string?</code>
@@ -2237,7 +2237,7 @@ The fully-qualified domain name to register
             <td class="align-top">Endpoint<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#domainnameendpointconfiguration">Pulumi.<wbr>Aws.<wbr>Apigateway.<wbr>Domain<wbr>Name<wbr>Endpoint<wbr>Configuration<wbr>Args?</a></code>
+                <code><a href="#domainnameendpointconfiguration">Domain<wbr>Name<wbr>Endpoint<wbr>Configuration<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2328,7 +2328,7 @@ The Transport Layer Security (TLS) version &#43; cipher suite for this DomainNam
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2523,7 +2523,7 @@ The fully-qualified domain name to register
             <td class="align-top">Endpoint<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#domainnameendpointconfiguration">*apigateway.<wbr>Domain<wbr>Name<wbr>Endpoint<wbr>Configuration</a></code>
+                <code><a href="#domainnameendpointconfiguration">*Domain<wbr>Name<wbr>Endpoint<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2809,7 +2809,7 @@ The fully-qualified domain name to register
             <td class="align-top">endpoint<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#domainnameendpointconfiguration">apigateway.<wbr>Domain<wbr>Name<wbr>Endpoint<wbr>Configuration?</a></code>
+                <code><a href="#domainnameendpointconfiguration">Domain<wbr>Name<wbr>Endpoint<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

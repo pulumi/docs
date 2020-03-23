@@ -363,7 +363,7 @@ use the exported `arn` attribute:
             <td class="align-top">Metadata</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, string&gt;?</code>
+                <code>Dictionary<string, string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -438,7 +438,7 @@ Specifies server-side encryption of the object in S3. Valid values are &#34;`AES
             <td class="align-top">Source</td>
             <td class="align-top">
                 
-                <code>Asset<wbr>Or<wbr>Archive?</code>
+                <code>AssetOrArchive?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -469,7 +469,7 @@ for the object. Can be either &#34;`STANDARD`&#34;, &#34;`REDUCED_REDUNDANCY`&#3
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -794,7 +794,7 @@ Specifies server-side encryption of the object in S3. Valid values are &#34;`AES
             <td class="align-top">Source</td>
             <td class="align-top">
                 
-                <code>pulumi.<wbr>Asset<wbr>Or<wbr>Archive</code>
+                <code>pulumi.AssetOrArchive</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1150,7 +1150,7 @@ Specifies server-side encryption of the object in S3. Valid values are &#34;`AES
             <td class="align-top">source</td>
             <td class="align-top">
                 
-                <code>pulumi.asset.<wbr>Asset | pulumi.asset.<wbr>Archive?</code>
+                <code>pulumi.asset.Asset | pulumi.asset.Archive?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1506,7 +1506,7 @@ Specifies server-side encryption of the object in S3. Valid values are &#34;`AES
             <td class="align-top">source</td>
             <td class="align-top">
                 
-                <code>Union[pulumi.<wbr>Asset, pulumi.<wbr>Archive]</code>
+                <code>Union[pulumi.Asset, pulumi.Archive]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1775,7 +1775,7 @@ use the exported `arn` attribute:
             <td class="align-top">Metadata</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, string&gt;?</code>
+                <code>Dictionary<string, string>?</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of keys/values to provision metadata (will be automatically prefixed by `x-amz-meta-`, note that only lowercase label are currently supported by the AWS Go API).
  {{% /md %}}
@@ -1840,7 +1840,7 @@ use the exported `arn` attribute:
             <td class="align-top">Source</td>
             <td class="align-top">
                 
-                <code>Asset<wbr>Or<wbr>Archive?</code>
+                <code>AssetOrArchive?</code>
             </td>
             <td class="align-top">{{% md %}} The path to a file that will be read and uploaded as raw bytes for the object content.
  {{% /md %}}
@@ -1867,7 +1867,7 @@ for the object. Can be either &#34;`STANDARD`&#34;, &#34;`REDUCED_REDUNDANCY`&#3
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the object.
  {{% /md %}}
@@ -2166,7 +2166,7 @@ use the exported `arn` attribute:
             <td class="align-top">Source</td>
             <td class="align-top">
                 
-                <code>pulumi.<wbr>Asset<wbr>Or<wbr>Archive</code>
+                <code>pulumi.AssetOrArchive</code>
             </td>
             <td class="align-top">{{% md %}} The path to a file that will be read and uploaded as raw bytes for the object content.
  {{% /md %}}
@@ -2492,7 +2492,7 @@ use the exported `arn` attribute:
             <td class="align-top">source</td>
             <td class="align-top">
                 
-                <code>pulumi.asset.<wbr>Asset | pulumi.asset.<wbr>Archive?</code>
+                <code>pulumi.asset.Asset | pulumi.asset.Archive?</code>
             </td>
             <td class="align-top">{{% md %}} The path to a file that will be read and uploaded as raw bytes for the object content.
  {{% /md %}}
@@ -2818,7 +2818,7 @@ use the exported `arn` attribute:
             <td class="align-top">source</td>
             <td class="align-top">
                 
-                <code>Union[pulumi.<wbr>Asset, pulumi.<wbr>Archive]</code>
+                <code>Union[pulumi.Asset, pulumi.Archive]</code>
             </td>
             <td class="align-top">{{% md %}} The path to a file that will be read and uploaded as raw bytes for the object content.
  {{% /md %}}
@@ -3164,7 +3164,7 @@ use the exported `arn` attribute:
             <td class="align-top">Metadata</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, string&gt;?</code>
+                <code>Dictionary<string, string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3239,7 +3239,7 @@ Specifies server-side encryption of the object in S3. Valid values are &#34;`AES
             <td class="align-top">Source</td>
             <td class="align-top">
                 
-                <code>Asset<wbr>Or<wbr>Archive?</code>
+                <code>AssetOrArchive?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3270,7 +3270,7 @@ for the object. Can be either &#34;`STANDARD`&#34;, &#34;`REDUCED_REDUNDANCY`&#3
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3611,7 +3611,7 @@ Specifies server-side encryption of the object in S3. Valid values are &#34;`AES
             <td class="align-top">Source</td>
             <td class="align-top">
                 
-                <code>pulumi.<wbr>Asset<wbr>Or<wbr>Archive</code>
+                <code>pulumi.AssetOrArchive</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3983,7 +3983,7 @@ Specifies server-side encryption of the object in S3. Valid values are &#34;`AES
             <td class="align-top">source</td>
             <td class="align-top">
                 
-                <code>pulumi.asset.<wbr>Asset | pulumi.asset.<wbr>Archive?</code>
+                <code>pulumi.asset.Asset | pulumi.asset.Archive?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4355,7 +4355,7 @@ Specifies server-side encryption of the object in S3. Valid values are &#34;`AES
             <td class="align-top">source</td>
             <td class="align-top">
                 
-                <code>Union[pulumi.<wbr>Asset, pulumi.<wbr>Archive]</code>
+                <code>Union[pulumi.Asset, pulumi.Archive]</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

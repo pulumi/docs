@@ -95,7 +95,7 @@ The following arguments are supported:
             <td class="align-top">Aws<wbr>Service<wbr>Access<wbr>Principals</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -110,7 +110,7 @@ List of AWS service principal names for which you want to enable integration wit
             <td class="align-top">Enabled<wbr>Policy<wbr>Types</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -369,7 +369,7 @@ The following output properties are available:
             <td class="align-top">Accounts</td>
             <td class="align-top">
                 
-                <code><a href="#organizationaccount">List&lt;Pulumi.<wbr>Aws.<wbr>Organizations.<wbr>Organization<wbr>Account&gt;</a></code>
+                <code><a href="#organizationaccount">List&lt;Organization<wbr>Account&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} List of organization accounts including the master account. For a list excluding the master account, see the `non_master_accounts` attribute. All elements have these attributes:
  {{% /md %}}
@@ -395,7 +395,7 @@ The following output properties are available:
             <td class="align-top">Aws<wbr>Service<wbr>Access<wbr>Principals</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} List of AWS service principal names for which you want to enable integration with your organization. This is typically in the form of a URL, such as service-abbreviation.amazonaws.com. Organization must have `feature_set` set to `ALL`. For additional information, see the [AWS Organizations User Guide](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html).
  {{% /md %}}
@@ -408,7 +408,7 @@ The following output properties are available:
             <td class="align-top">Enabled<wbr>Policy<wbr>Types</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} List of Organizations policy types to enable in the Organization Root. Organization must have `feature_set` set to `ALL`. For additional information about valid policy types (e.g. `SERVICE_CONTROL_POLICY` and `TAG_POLICY`), see the [AWS Organizations API Reference](https://docs.aws.amazon.com/organizations/latest/APIReference/API_EnablePolicyType.html).
  {{% /md %}}
@@ -473,7 +473,7 @@ The following output properties are available:
             <td class="align-top">Non<wbr>Master<wbr>Accounts</td>
             <td class="align-top">
                 
-                <code><a href="#organizationnonmasteraccount">List&lt;Pulumi.<wbr>Aws.<wbr>Organizations.<wbr>Organization<wbr>Non<wbr>Master<wbr>Account&gt;</a></code>
+                <code><a href="#organizationnonmasteraccount">List&lt;Organization<wbr>Non<wbr>Master<wbr>Account&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} List of organization accounts excluding the master account. For a list including the master account, see the `accounts` attribute. All elements have these attributes:
  {{% /md %}}
@@ -486,7 +486,7 @@ The following output properties are available:
             <td class="align-top">Roots</td>
             <td class="align-top">
                 
-                <code><a href="#organizationroot">List&lt;Pulumi.<wbr>Aws.<wbr>Organizations.<wbr>Organization<wbr>Root&gt;</a></code>
+                <code><a href="#organizationroot">List&lt;Organization<wbr>Root&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} List of organization roots. All elements have these attributes:
  {{% /md %}}
@@ -519,7 +519,7 @@ The following output properties are available:
             <td class="align-top">Accounts</td>
             <td class="align-top">
                 
-                <code><a href="#organizationaccount">[]organizations.<wbr>Organization<wbr>Account</a></code>
+                <code><a href="#organizationaccount">[]Organization<wbr>Account</a></code>
             </td>
             <td class="align-top">{{% md %}} List of organization accounts including the master account. For a list excluding the master account, see the `non_master_accounts` attribute. All elements have these attributes:
  {{% /md %}}
@@ -623,7 +623,7 @@ The following output properties are available:
             <td class="align-top">Non<wbr>Master<wbr>Accounts</td>
             <td class="align-top">
                 
-                <code><a href="#organizationnonmasteraccount">[]organizations.<wbr>Organization<wbr>Non<wbr>Master<wbr>Account</a></code>
+                <code><a href="#organizationnonmasteraccount">[]Organization<wbr>Non<wbr>Master<wbr>Account</a></code>
             </td>
             <td class="align-top">{{% md %}} List of organization accounts excluding the master account. For a list including the master account, see the `accounts` attribute. All elements have these attributes:
  {{% /md %}}
@@ -636,7 +636,7 @@ The following output properties are available:
             <td class="align-top">Roots</td>
             <td class="align-top">
                 
-                <code><a href="#organizationroot">[]organizations.<wbr>Organization<wbr>Root</a></code>
+                <code><a href="#organizationroot">[]Organization<wbr>Root</a></code>
             </td>
             <td class="align-top">{{% md %}} List of organization roots. All elements have these attributes:
  {{% /md %}}
@@ -669,7 +669,7 @@ The following output properties are available:
             <td class="align-top">accounts</td>
             <td class="align-top">
                 
-                <code><a href="#organizationaccount">organizations.<wbr>Organization<wbr>Account[]</a></code>
+                <code><a href="#organizationaccount">Organization<wbr>Account[]</a></code>
             </td>
             <td class="align-top">{{% md %}} List of organization accounts including the master account. For a list excluding the master account, see the `non_master_accounts` attribute. All elements have these attributes:
  {{% /md %}}
@@ -773,7 +773,7 @@ The following output properties are available:
             <td class="align-top">non<wbr>Master<wbr>Accounts</td>
             <td class="align-top">
                 
-                <code><a href="#organizationnonmasteraccount">organizations.<wbr>Organization<wbr>Non<wbr>Master<wbr>Account[]</a></code>
+                <code><a href="#organizationnonmasteraccount">Organization<wbr>Non<wbr>Master<wbr>Account[]</a></code>
             </td>
             <td class="align-top">{{% md %}} List of organization accounts excluding the master account. For a list including the master account, see the `accounts` attribute. All elements have these attributes:
  {{% /md %}}
@@ -786,7 +786,7 @@ The following output properties are available:
             <td class="align-top">roots</td>
             <td class="align-top">
                 
-                <code><a href="#organizationroot">organizations.<wbr>Organization<wbr>Root[]</a></code>
+                <code><a href="#organizationroot">Organization<wbr>Root[]</a></code>
             </td>
             <td class="align-top">{{% md %}} List of organization roots. All elements have these attributes:
  {{% /md %}}
@@ -1028,7 +1028,7 @@ The following state arguments are supported:
             <td class="align-top">Accounts</td>
             <td class="align-top">
                 
-                <code><a href="#organizationaccount">List&lt;Pulumi.<wbr>Aws.<wbr>Organizations.<wbr>Organization<wbr>Account<wbr>Args&gt;?</a></code>
+                <code><a href="#organizationaccount">List&lt;Organization<wbr>Account<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1058,7 +1058,7 @@ ARN of the root
             <td class="align-top">Aws<wbr>Service<wbr>Access<wbr>Principals</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1073,7 +1073,7 @@ List of AWS service principal names for which you want to enable integration wit
             <td class="align-top">Enabled<wbr>Policy<wbr>Types</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1148,7 +1148,7 @@ Identifier of the master account
             <td class="align-top">Non<wbr>Master<wbr>Accounts</td>
             <td class="align-top">
                 
-                <code><a href="#organizationnonmasteraccount">List&lt;Pulumi.<wbr>Aws.<wbr>Organizations.<wbr>Organization<wbr>Non<wbr>Master<wbr>Account<wbr>Args&gt;?</a></code>
+                <code><a href="#organizationnonmasteraccount">List&lt;Organization<wbr>Non<wbr>Master<wbr>Account<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1163,7 +1163,7 @@ List of organization accounts excluding the master account. For a list including
             <td class="align-top">Roots</td>
             <td class="align-top">
                 
-                <code><a href="#organizationroot">List&lt;Pulumi.<wbr>Aws.<wbr>Organizations.<wbr>Organization<wbr>Root<wbr>Args&gt;?</a></code>
+                <code><a href="#organizationroot">List&lt;Organization<wbr>Root<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1198,7 +1198,7 @@ List of organization roots. All elements have these attributes:
             <td class="align-top">Accounts</td>
             <td class="align-top">
                 
-                <code><a href="#organizationaccount">[]organizations.<wbr>Organization<wbr>Account</a></code>
+                <code><a href="#organizationaccount">[]Organization<wbr>Account</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1318,7 +1318,7 @@ Identifier of the master account
             <td class="align-top">Non<wbr>Master<wbr>Accounts</td>
             <td class="align-top">
                 
-                <code><a href="#organizationnonmasteraccount">[]organizations.<wbr>Organization<wbr>Non<wbr>Master<wbr>Account</a></code>
+                <code><a href="#organizationnonmasteraccount">[]Organization<wbr>Non<wbr>Master<wbr>Account</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1333,7 +1333,7 @@ List of organization accounts excluding the master account. For a list including
             <td class="align-top">Roots</td>
             <td class="align-top">
                 
-                <code><a href="#organizationroot">[]organizations.<wbr>Organization<wbr>Root</a></code>
+                <code><a href="#organizationroot">[]Organization<wbr>Root</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1368,7 +1368,7 @@ List of organization roots. All elements have these attributes:
             <td class="align-top">accounts</td>
             <td class="align-top">
                 
-                <code><a href="#organizationaccount">organizations.<wbr>Organization<wbr>Account[]?</a></code>
+                <code><a href="#organizationaccount">Organization<wbr>Account[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1488,7 +1488,7 @@ Identifier of the master account
             <td class="align-top">non<wbr>Master<wbr>Accounts</td>
             <td class="align-top">
                 
-                <code><a href="#organizationnonmasteraccount">organizations.<wbr>Organization<wbr>Non<wbr>Master<wbr>Account[]?</a></code>
+                <code><a href="#organizationnonmasteraccount">Organization<wbr>Non<wbr>Master<wbr>Account[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1503,7 +1503,7 @@ List of organization accounts excluding the master account. For a list including
             <td class="align-top">roots</td>
             <td class="align-top">
                 
-                <code><a href="#organizationroot">organizations.<wbr>Organization<wbr>Root[]?</a></code>
+                <code><a href="#organizationroot">Organization<wbr>Root[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2583,7 +2583,7 @@ The name of the policy type
             <td class="align-top">Policy<wbr>Types</td>
             <td class="align-top">
                 
-                <code><a href="#organizationrootpolicytype">List&lt;Pulumi.<wbr>Aws.<wbr>Organizations.<wbr>Organization<wbr>Root<wbr>Policy<wbr>Type<wbr>Args&gt;?</a></code>
+                <code><a href="#organizationrootpolicytype">List&lt;Organization<wbr>Root<wbr>Policy<wbr>Type<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2663,7 +2663,7 @@ The name of the policy type
             <td class="align-top">Policy<wbr>Types</td>
             <td class="align-top">
                 
-                <code><a href="#organizationrootpolicytype">[]organizations.<wbr>Organization<wbr>Root<wbr>Policy<wbr>Type</a></code>
+                <code><a href="#organizationrootpolicytype">[]Organization<wbr>Root<wbr>Policy<wbr>Type</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2743,7 +2743,7 @@ The name of the policy type
             <td class="align-top">policy<wbr>Types</td>
             <td class="align-top">
                 
-                <code><a href="#organizationrootpolicytype">organizations.<wbr>Organization<wbr>Root<wbr>Policy<wbr>Type[]?</a></code>
+                <code><a href="#organizationrootpolicytype">Organization<wbr>Root<wbr>Policy<wbr>Type[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

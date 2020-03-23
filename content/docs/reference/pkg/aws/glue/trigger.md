@@ -175,7 +175,7 @@ The following arguments are supported:
             <td class="align-top">Actions</td>
             <td class="align-top">
                 
-                <code><a href="#triggeraction">List&lt;Pulumi.<wbr>Aws.<wbr>Glue.<wbr>Trigger<wbr>Action<wbr>Args&gt;</a></code>
+                <code><a href="#triggeraction">List&lt;Trigger<wbr>Action<wbr>Args&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -235,7 +235,7 @@ The name of the trigger.
             <td class="align-top">Predicate</td>
             <td class="align-top">
                 
-                <code><a href="#triggerpredicate">Pulumi.<wbr>Aws.<wbr>Glue.<wbr>Trigger<wbr>Predicate<wbr>Args?</a></code>
+                <code><a href="#triggerpredicate">Trigger<wbr>Predicate<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -265,7 +265,7 @@ A cron expression used to specify the schedule. [Time-Based Schedules for Jobs a
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -330,7 +330,7 @@ A workflow to which the trigger should be associated to. Every workflow graph (D
             <td class="align-top">Actions</td>
             <td class="align-top">
                 
-                <code><a href="#triggeraction">[]glue.<wbr>Trigger<wbr>Action</a></code>
+                <code><a href="#triggeraction">[]Trigger<wbr>Action</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -390,7 +390,7 @@ The name of the trigger.
             <td class="align-top">Predicate</td>
             <td class="align-top">
                 
-                <code><a href="#triggerpredicate">*glue.<wbr>Trigger<wbr>Predicate</a></code>
+                <code><a href="#triggerpredicate">*Trigger<wbr>Predicate</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -485,7 +485,7 @@ A workflow to which the trigger should be associated to. Every workflow graph (D
             <td class="align-top">actions</td>
             <td class="align-top">
                 
-                <code><a href="#triggeraction">glue.<wbr>Trigger<wbr>Action[]</a></code>
+                <code><a href="#triggeraction">Trigger<wbr>Action[]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -545,7 +545,7 @@ The name of the trigger.
             <td class="align-top">predicate</td>
             <td class="align-top">
                 
-                <code><a href="#triggerpredicate">glue.<wbr>Trigger<wbr>Predicate?</a></code>
+                <code><a href="#triggerpredicate">Trigger<wbr>Predicate?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -809,7 +809,7 @@ The following output properties are available:
             <td class="align-top">Actions</td>
             <td class="align-top">
                 
-                <code><a href="#triggeraction">List&lt;Pulumi.<wbr>Aws.<wbr>Glue.<wbr>Trigger<wbr>Action&gt;</a></code>
+                <code><a href="#triggeraction">List&lt;Trigger<wbr>Action&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} List of actions initiated by this trigger when it fires. Defined below.
  {{% /md %}}
@@ -874,7 +874,7 @@ The following output properties are available:
             <td class="align-top">Predicate</td>
             <td class="align-top">
                 
-                <code><a href="#triggerpredicate">Pulumi.<wbr>Aws.<wbr>Glue.<wbr>Trigger<wbr>Predicate?</a></code>
+                <code><a href="#triggerpredicate">Trigger<wbr>Predicate?</a></code>
             </td>
             <td class="align-top">{{% md %}} A predicate to specify when the new trigger should fire. Required when trigger type is `CONDITIONAL`. Defined below.
  {{% /md %}}
@@ -900,7 +900,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} Key-value mapping of resource tags
  {{% /md %}}
@@ -959,7 +959,7 @@ The following output properties are available:
             <td class="align-top">Actions</td>
             <td class="align-top">
                 
-                <code><a href="#triggeraction">[]glue.<wbr>Trigger<wbr>Action</a></code>
+                <code><a href="#triggeraction">[]Trigger<wbr>Action</a></code>
             </td>
             <td class="align-top">{{% md %}} List of actions initiated by this trigger when it fires. Defined below.
  {{% /md %}}
@@ -1024,7 +1024,7 @@ The following output properties are available:
             <td class="align-top">Predicate</td>
             <td class="align-top">
                 
-                <code><a href="#triggerpredicate">*glue.<wbr>Trigger<wbr>Predicate</a></code>
+                <code><a href="#triggerpredicate">*Trigger<wbr>Predicate</a></code>
             </td>
             <td class="align-top">{{% md %}} A predicate to specify when the new trigger should fire. Required when trigger type is `CONDITIONAL`. Defined below.
  {{% /md %}}
@@ -1109,7 +1109,7 @@ The following output properties are available:
             <td class="align-top">actions</td>
             <td class="align-top">
                 
-                <code><a href="#triggeraction">glue.<wbr>Trigger<wbr>Action[]</a></code>
+                <code><a href="#triggeraction">Trigger<wbr>Action[]</a></code>
             </td>
             <td class="align-top">{{% md %}} List of actions initiated by this trigger when it fires. Defined below.
  {{% /md %}}
@@ -1174,7 +1174,7 @@ The following output properties are available:
             <td class="align-top">predicate</td>
             <td class="align-top">
                 
-                <code><a href="#triggerpredicate">glue.<wbr>Trigger<wbr>Predicate?</a></code>
+                <code><a href="#triggerpredicate">Trigger<wbr>Predicate?</a></code>
             </td>
             <td class="align-top">{{% md %}} A predicate to specify when the new trigger should fire. Required when trigger type is `CONDITIONAL`. Defined below.
  {{% /md %}}
@@ -1468,7 +1468,7 @@ The following state arguments are supported:
             <td class="align-top">Actions</td>
             <td class="align-top">
                 
-                <code><a href="#triggeraction">List&lt;Pulumi.<wbr>Aws.<wbr>Glue.<wbr>Trigger<wbr>Action<wbr>Args&gt;?</a></code>
+                <code><a href="#triggeraction">List&lt;Trigger<wbr>Action<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1543,7 +1543,7 @@ The name of the trigger.
             <td class="align-top">Predicate</td>
             <td class="align-top">
                 
-                <code><a href="#triggerpredicate">Pulumi.<wbr>Aws.<wbr>Glue.<wbr>Trigger<wbr>Predicate<wbr>Args?</a></code>
+                <code><a href="#triggerpredicate">Trigger<wbr>Predicate<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1573,7 +1573,7 @@ A cron expression used to specify the schedule. [Time-Based Schedules for Jobs a
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1638,7 +1638,7 @@ A workflow to which the trigger should be associated to. Every workflow graph (D
             <td class="align-top">Actions</td>
             <td class="align-top">
                 
-                <code><a href="#triggeraction">[]glue.<wbr>Trigger<wbr>Action</a></code>
+                <code><a href="#triggeraction">[]Trigger<wbr>Action</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1713,7 +1713,7 @@ The name of the trigger.
             <td class="align-top">Predicate</td>
             <td class="align-top">
                 
-                <code><a href="#triggerpredicate">*glue.<wbr>Trigger<wbr>Predicate</a></code>
+                <code><a href="#triggerpredicate">*Trigger<wbr>Predicate</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1808,7 +1808,7 @@ A workflow to which the trigger should be associated to. Every workflow graph (D
             <td class="align-top">actions</td>
             <td class="align-top">
                 
-                <code><a href="#triggeraction">glue.<wbr>Trigger<wbr>Action[]?</a></code>
+                <code><a href="#triggeraction">Trigger<wbr>Action[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1883,7 +1883,7 @@ The name of the trigger.
             <td class="align-top">predicate</td>
             <td class="align-top">
                 
-                <code><a href="#triggerpredicate">glue.<wbr>Trigger<wbr>Predicate?</a></code>
+                <code><a href="#triggerpredicate">Trigger<wbr>Predicate?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2176,7 +2176,7 @@ A workflow to which the trigger should be associated to. Every workflow graph (D
             <td class="align-top">Arguments</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2517,7 +2517,7 @@ The job run timeout in minutes. It overrides the timeout value of the job.
             <td class="align-top">Conditions</td>
             <td class="align-top">
                 
-                <code><a href="#triggerpredicatecondition">List&lt;Pulumi.<wbr>Aws.<wbr>Glue.<wbr>Trigger<wbr>Predicate<wbr>Condition<wbr>Args&gt;</a></code>
+                <code><a href="#triggerpredicatecondition">List&lt;Trigger<wbr>Predicate<wbr>Condition<wbr>Args&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2567,7 +2567,7 @@ How to handle multiple conditions. Defaults to `AND`. Valid values are `AND` or 
             <td class="align-top">Conditions</td>
             <td class="align-top">
                 
-                <code><a href="#triggerpredicatecondition">[]glue.<wbr>Trigger<wbr>Predicate<wbr>Condition</a></code>
+                <code><a href="#triggerpredicatecondition">[]Trigger<wbr>Predicate<wbr>Condition</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2617,7 +2617,7 @@ How to handle multiple conditions. Defaults to `AND`. Valid values are `AND` or 
             <td class="align-top">conditions</td>
             <td class="align-top">
                 
-                <code><a href="#triggerpredicatecondition">glue.<wbr>Trigger<wbr>Predicate<wbr>Condition[]</a></code>
+                <code><a href="#triggerpredicatecondition">Trigger<wbr>Predicate<wbr>Condition[]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

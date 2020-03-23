@@ -122,7 +122,7 @@ The placement strategy.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -237,7 +237,7 @@ The name of the placement group.
             <td class="align-top">strategy</td>
             <td class="align-top">
                 
-                <code>Placement<wbr>Strategy</code>
+                <code>PlacementStrategy</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -405,7 +405,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} Key-value mapping of resource tags.
  {{% /md %}}
@@ -536,7 +536,7 @@ The following output properties are available:
             <td class="align-top">strategy</td>
             <td class="align-top">
                 
-                <code>Placement<wbr>Strategy</code>
+                <code>PlacementStrategy</code>
             </td>
             <td class="align-top">{{% md %}} The placement strategy.
  {{% /md %}}
@@ -758,7 +758,7 @@ The placement strategy.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -903,7 +903,7 @@ The ID of the placement group.
             <td class="align-top">strategy</td>
             <td class="align-top">
                 
-                <code>Placement<wbr>Strategy?</code>
+                <code>PlacementStrategy?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

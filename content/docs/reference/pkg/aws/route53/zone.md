@@ -198,7 +198,7 @@ This is the name of the hosted zone.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -213,7 +213,7 @@ A mapping of tags to assign to the zone.
             <td class="align-top">Vpcs</td>
             <td class="align-top">
                 
-                <code><a href="#zonevpc">List&lt;Pulumi.<wbr>Aws.<wbr>Route53.<wbr>Zone<wbr>Vpc<wbr>Args&gt;?</a></code>
+                <code><a href="#zonevpc">List&lt;Zone<wbr>Vpc<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -323,7 +323,7 @@ A mapping of tags to assign to the zone.
             <td class="align-top">Vpcs</td>
             <td class="align-top">
                 
-                <code><a href="#zonevpc">[]route53.<wbr>Zone<wbr>Vpc</a></code>
+                <code><a href="#zonevpc">[]Zone<wbr>Vpc</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -433,7 +433,7 @@ A mapping of tags to assign to the zone.
             <td class="align-top">vpcs</td>
             <td class="align-top">
                 
-                <code><a href="#zonevpc">route53.<wbr>Zone<wbr>Vpc[]?</a></code>
+                <code><a href="#zonevpc">Zone<wbr>Vpc[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -644,7 +644,7 @@ The following output properties are available:
             <td class="align-top">Name<wbr>Servers</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} A list of name servers in associated (or default) delegation set.
 Find more about delegation sets in [AWS docs](https://docs.aws.amazon.com/Route53/latest/APIReference/actions-on-reusable-delegation-sets.html).
@@ -658,7 +658,7 @@ Find more about delegation sets in [AWS docs](https://docs.aws.amazon.com/Route5
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the zone.
  {{% /md %}}
@@ -671,7 +671,7 @@ Find more about delegation sets in [AWS docs](https://docs.aws.amazon.com/Route5
             <td class="align-top">Vpcs</td>
             <td class="align-top">
                 
-                <code><a href="#zonevpc">List&lt;Pulumi.<wbr>Aws.<wbr>Route53.<wbr>Zone<wbr>Vpc&gt;?</a></code>
+                <code><a href="#zonevpc">List&lt;Zone<wbr>Vpc&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block(s) specifying VPC(s) to associate with a private hosted zone. Conflicts with the `delegation_set_id` argument in this resource and any [`aws.route53.ZoneAssociation` resource](https://www.terraform.io/docs/providers/aws/r/route53_zone_association.html) specifying the same zone ID. Detailed below.
  {{% /md %}}
@@ -796,7 +796,7 @@ Find more about delegation sets in [AWS docs](https://docs.aws.amazon.com/Route5
             <td class="align-top">Vpcs</td>
             <td class="align-top">
                 
-                <code><a href="#zonevpc">[]route53.<wbr>Zone<wbr>Vpc</a></code>
+                <code><a href="#zonevpc">[]Zone<wbr>Vpc</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block(s) specifying VPC(s) to associate with a private hosted zone. Conflicts with the `delegation_set_id` argument in this resource and any [`aws.route53.ZoneAssociation` resource](https://www.terraform.io/docs/providers/aws/r/route53_zone_association.html) specifying the same zone ID. Detailed below.
  {{% /md %}}
@@ -921,7 +921,7 @@ Find more about delegation sets in [AWS docs](https://docs.aws.amazon.com/Route5
             <td class="align-top">vpcs</td>
             <td class="align-top">
                 
-                <code><a href="#zonevpc">route53.<wbr>Zone<wbr>Vpc[]?</a></code>
+                <code><a href="#zonevpc">Zone<wbr>Vpc[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block(s) specifying VPC(s) to associate with a private hosted zone. Conflicts with the `delegation_set_id` argument in this resource and any [`aws.route53.ZoneAssociation` resource](https://www.terraform.io/docs/providers/aws/r/route53_zone_association.html) specifying the same zone ID. Detailed below.
  {{% /md %}}
@@ -1211,7 +1211,7 @@ This is the name of the hosted zone.
             <td class="align-top">Name<wbr>Servers</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1227,7 +1227,7 @@ Find more about delegation sets in [AWS docs](https://docs.aws.amazon.com/Route5
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1242,7 +1242,7 @@ A mapping of tags to assign to the zone.
             <td class="align-top">Vpcs</td>
             <td class="align-top">
                 
-                <code><a href="#zonevpc">List&lt;Pulumi.<wbr>Aws.<wbr>Route53.<wbr>Zone<wbr>Vpc<wbr>Args&gt;?</a></code>
+                <code><a href="#zonevpc">List&lt;Zone<wbr>Vpc<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1383,7 +1383,7 @@ A mapping of tags to assign to the zone.
             <td class="align-top">Vpcs</td>
             <td class="align-top">
                 
-                <code><a href="#zonevpc">[]route53.<wbr>Zone<wbr>Vpc</a></code>
+                <code><a href="#zonevpc">[]Zone<wbr>Vpc</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1524,7 +1524,7 @@ A mapping of tags to assign to the zone.
             <td class="align-top">vpcs</td>
             <td class="align-top">
                 
-                <code><a href="#zonevpc">route53.<wbr>Zone<wbr>Vpc[]?</a></code>
+                <code><a href="#zonevpc">Zone<wbr>Vpc[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

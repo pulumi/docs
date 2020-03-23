@@ -241,7 +241,7 @@ The following arguments are supported:
             <td class="align-top">Cache<wbr>Key<wbr>Parameters</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -381,7 +381,7 @@ The integration passthrough behavior (`WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEV
             <td class="align-top">Request<wbr>Parameters</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, string&gt;?</code>
+                <code>Dictionary<string, string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -397,7 +397,7 @@ For example: `request_parameters = { &#34;integration.request.header.X-Some-Othe
             <td class="align-top">Request<wbr>Templates</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, string&gt;?</code>
+                <code>Dictionary<string, string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -963,7 +963,7 @@ The API resource ID.
             <td class="align-top">rest<wbr>Api</td>
             <td class="align-top">
                 
-                <code>string | Rest<wbr>Api</code>
+                <code>string | RestApi</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1327,7 +1327,7 @@ The following output properties are available:
             <td class="align-top">Cache<wbr>Key<wbr>Parameters</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} A list of cache key parameters for the integration.
  {{% /md %}}
@@ -1449,7 +1449,7 @@ e.g. Lambda function [can only be invoked](https://github.com/awslabs/aws-apigat
             <td class="align-top">Request<wbr>Parameters</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, string&gt;?</code>
+                <code>Dictionary<string, string>?</code>
             </td>
             <td class="align-top">{{% md %}} A map of request query string parameters and headers that should be passed to the backend responder.
 For example: `request_parameters = { &#34;integration.request.header.X-Some-Other-Header&#34; = &#34;method.request.header.X-Some-Header&#34; }`
@@ -1463,7 +1463,7 @@ For example: `request_parameters = { &#34;integration.request.header.X-Some-Othe
             <td class="align-top">Request<wbr>Templates</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, string&gt;?</code>
+                <code>Dictionary<string, string>?</code>
             </td>
             <td class="align-top">{{% md %}} A map of the integration&#39;s request templates.
  {{% /md %}}
@@ -2330,7 +2330,7 @@ The following state arguments are supported:
             <td class="align-top">Cache<wbr>Key<wbr>Parameters</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2470,7 +2470,7 @@ The integration passthrough behavior (`WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEV
             <td class="align-top">Request<wbr>Parameters</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, string&gt;?</code>
+                <code>Dictionary<string, string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2486,7 +2486,7 @@ For example: `request_parameters = { &#34;integration.request.header.X-Some-Othe
             <td class="align-top">Request<wbr>Templates</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, string&gt;?</code>
+                <code>Dictionary<string, string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3052,7 +3052,7 @@ The API resource ID.
             <td class="align-top">rest<wbr>Api</td>
             <td class="align-top">
                 
-                <code>string | Rest<wbr>Api</code>
+                <code>string | RestApi</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

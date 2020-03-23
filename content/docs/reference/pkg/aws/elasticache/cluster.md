@@ -332,7 +332,7 @@ The port number on which each of the cache nodes will accept connections. For Me
             <td class="align-top">Preferred<wbr>Availability<wbr>Zones</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -362,7 +362,7 @@ The ID of the replication group to which this cluster should belong. If this par
             <td class="align-top">Security<wbr>Group<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -378,7 +378,7 @@ with the cache cluster
             <td class="align-top">Security<wbr>Group<wbr>Names</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -394,7 +394,7 @@ names to associate with this cache cluster
             <td class="align-top">Snapshot<wbr>Arns</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -477,7 +477,7 @@ for the cache cluster.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1711,7 +1711,7 @@ are applied immediately, or during the next maintenance window. Default is
             <td class="align-top">Cache<wbr>Nodes</td>
             <td class="align-top">
                 
-                <code><a href="#clustercachenode">List&lt;Pulumi.<wbr>Aws.<wbr>Elasticache.<wbr>Cluster<wbr>Cache<wbr>Node&gt;</a></code>
+                <code><a href="#clustercachenode">List&lt;Cluster<wbr>Cache<wbr>Node&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} List of node objects including `id`, `address`, `port` and `availability_zone`.
 Referenceable e.g. as `${aws_elasticache_cluster.bar.cache_nodes.0.address}`
@@ -1882,7 +1882,7 @@ with this cache cluster
             <td class="align-top">Preferred<wbr>Availability<wbr>Zones</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} A list of the Availability Zones in which cache nodes are created. If you are creating your cluster in an Amazon VPC you can only locate nodes in Availability Zones that are associated with the subnets in the selected subnet group. The number of Availability Zones listed must equal the value of `num_cache_nodes`. If you want all the nodes in the same Availability Zone, use `availability_zone` instead, or repeat the Availability Zone multiple times in the list. Default: System chosen Availability Zones. Detecting drift of existing node availability zone is not currently supported. Updating this argument by itself to migrate existing node availability zones is not currently supported and will show a perpetual difference.
  {{% /md %}}
@@ -1908,7 +1908,7 @@ with this cache cluster
             <td class="align-top">Security<wbr>Group<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} One or more VPC security groups associated
 with the cache cluster
@@ -1922,7 +1922,7 @@ with the cache cluster
             <td class="align-top">Security<wbr>Group<wbr>Names</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} List of security group
 names to associate with this cache cluster
@@ -1936,7 +1936,7 @@ names to associate with this cache cluster
             <td class="align-top">Snapshot<wbr>Arns</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} A single-element string list containing an
 Amazon Resource Name (ARN) of a Redis RDB snapshot file stored in Amazon S3.
@@ -2009,7 +2009,7 @@ for the cache cluster.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource
  {{% /md %}}
@@ -2096,7 +2096,7 @@ are applied immediately, or during the next maintenance window. Default is
             <td class="align-top">Cache<wbr>Nodes</td>
             <td class="align-top">
                 
-                <code><a href="#clustercachenode">[]elasticache.<wbr>Cluster<wbr>Cache<wbr>Node</a></code>
+                <code><a href="#clustercachenode">[]Cluster<wbr>Cache<wbr>Node</a></code>
             </td>
             <td class="align-top">{{% md %}} List of node objects including `id`, `address`, `port` and `availability_zone`.
 Referenceable e.g. as `${aws_elasticache_cluster.bar.cache_nodes.0.address}`
@@ -2481,7 +2481,7 @@ are applied immediately, or during the next maintenance window. Default is
             <td class="align-top">cache<wbr>Nodes</td>
             <td class="align-top">
                 
-                <code><a href="#clustercachenode">elasticache.<wbr>Cluster<wbr>Cache<wbr>Node[]</a></code>
+                <code><a href="#clustercachenode">Cluster<wbr>Cache<wbr>Node[]</a></code>
             </td>
             <td class="align-top">{{% md %}} List of node objects including `id`, `address`, `port` and `availability_zone`.
 Referenceable e.g. as `${aws_elasticache_cluster.bar.cache_nodes.0.address}`
@@ -3318,7 +3318,7 @@ Specifies whether the nodes in this Memcached node group are created in a single
             <td class="align-top">Cache<wbr>Nodes</td>
             <td class="align-top">
                 
-                <code><a href="#clustercachenode">List&lt;Pulumi.<wbr>Aws.<wbr>Elasticache.<wbr>Cluster<wbr>Cache<wbr>Node<wbr>Args&gt;?</a></code>
+                <code><a href="#clustercachenode">List&lt;Cluster<wbr>Cache<wbr>Node<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3513,7 +3513,7 @@ The port number on which each of the cache nodes will accept connections. For Me
             <td class="align-top">Preferred<wbr>Availability<wbr>Zones</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3543,7 +3543,7 @@ The ID of the replication group to which this cluster should belong. If this par
             <td class="align-top">Security<wbr>Group<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3559,7 +3559,7 @@ with the cache cluster
             <td class="align-top">Security<wbr>Group<wbr>Names</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3575,7 +3575,7 @@ names to associate with this cache cluster
             <td class="align-top">Snapshot<wbr>Arns</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3658,7 +3658,7 @@ for the cache cluster.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3755,7 +3755,7 @@ Specifies whether the nodes in this Memcached node group are created in a single
             <td class="align-top">Cache<wbr>Nodes</td>
             <td class="align-top">
                 
-                <code><a href="#clustercachenode">[]elasticache.<wbr>Cluster<wbr>Cache<wbr>Node</a></code>
+                <code><a href="#clustercachenode">[]Cluster<wbr>Cache<wbr>Node</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4192,7 +4192,7 @@ Specifies whether the nodes in this Memcached node group are created in a single
             <td class="align-top">cache<wbr>Nodes</td>
             <td class="align-top">
                 
-                <code><a href="#clustercachenode">elasticache.<wbr>Cluster<wbr>Cache<wbr>Node[]?</a></code>
+                <code><a href="#clustercachenode">Cluster<wbr>Cache<wbr>Node[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

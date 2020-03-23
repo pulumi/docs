@@ -148,7 +148,7 @@ The name of the ElastiCache parameter.
             <td class="align-top">Parameters</td>
             <td class="align-top">
                 
-                <code><a href="#parametergroupparameter">List&lt;Pulumi.<wbr>Aws.<wbr>Elasticache.<wbr>Parameter<wbr>Group<wbr>Parameter<wbr>Args&gt;?</a></code>
+                <code><a href="#parametergroupparameter">List&lt;Parameter<wbr>Group<wbr>Parameter<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -228,7 +228,7 @@ The name of the ElastiCache parameter.
             <td class="align-top">Parameters</td>
             <td class="align-top">
                 
-                <code><a href="#parametergroupparameter">[]elasticache.<wbr>Parameter<wbr>Group<wbr>Parameter</a></code>
+                <code><a href="#parametergroupparameter">[]Parameter<wbr>Group<wbr>Parameter</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -308,7 +308,7 @@ The name of the ElastiCache parameter.
             <td class="align-top">parameters</td>
             <td class="align-top">
                 
-                <code><a href="#parametergroupparameter">elasticache.<wbr>Parameter<wbr>Group<wbr>Parameter[]?</a></code>
+                <code><a href="#parametergroupparameter">Parameter<wbr>Group<wbr>Parameter[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -476,7 +476,7 @@ The following output properties are available:
             <td class="align-top">Parameters</td>
             <td class="align-top">
                 
-                <code><a href="#parametergroupparameter">List&lt;Pulumi.<wbr>Aws.<wbr>Elasticache.<wbr>Parameter<wbr>Group<wbr>Parameter&gt;?</a></code>
+                <code><a href="#parametergroupparameter">List&lt;Parameter<wbr>Group<wbr>Parameter&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of ElastiCache parameters to apply.
  {{% /md %}}
@@ -548,7 +548,7 @@ The following output properties are available:
             <td class="align-top">Parameters</td>
             <td class="align-top">
                 
-                <code><a href="#parametergroupparameter">[]elasticache.<wbr>Parameter<wbr>Group<wbr>Parameter</a></code>
+                <code><a href="#parametergroupparameter">[]Parameter<wbr>Group<wbr>Parameter</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of ElastiCache parameters to apply.
  {{% /md %}}
@@ -620,7 +620,7 @@ The following output properties are available:
             <td class="align-top">parameters</td>
             <td class="align-top">
                 
-                <code><a href="#parametergroupparameter">elasticache.<wbr>Parameter<wbr>Group<wbr>Parameter[]?</a></code>
+                <code><a href="#parametergroupparameter">Parameter<wbr>Group<wbr>Parameter[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of ElastiCache parameters to apply.
  {{% /md %}}
@@ -829,7 +829,7 @@ The name of the ElastiCache parameter.
             <td class="align-top">Parameters</td>
             <td class="align-top">
                 
-                <code><a href="#parametergroupparameter">List&lt;Pulumi.<wbr>Aws.<wbr>Elasticache.<wbr>Parameter<wbr>Group<wbr>Parameter<wbr>Args&gt;?</a></code>
+                <code><a href="#parametergroupparameter">List&lt;Parameter<wbr>Group<wbr>Parameter<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -909,7 +909,7 @@ The name of the ElastiCache parameter.
             <td class="align-top">Parameters</td>
             <td class="align-top">
                 
-                <code><a href="#parametergroupparameter">[]elasticache.<wbr>Parameter<wbr>Group<wbr>Parameter</a></code>
+                <code><a href="#parametergroupparameter">[]Parameter<wbr>Group<wbr>Parameter</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -989,7 +989,7 @@ The name of the ElastiCache parameter.
             <td class="align-top">parameters</td>
             <td class="align-top">
                 
-                <code><a href="#parametergroupparameter">elasticache.<wbr>Parameter<wbr>Group<wbr>Parameter[]?</a></code>
+                <code><a href="#parametergroupparameter">Parameter<wbr>Group<wbr>Parameter[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

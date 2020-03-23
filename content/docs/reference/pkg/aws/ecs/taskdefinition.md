@@ -231,7 +231,7 @@ The process namespace to use for the containers in the task. The valid values ar
             <td class="align-top">Placement<wbr>Constraints</td>
             <td class="align-top">
                 
-                <code><a href="#taskdefinitionplacementconstraint">List&lt;Pulumi.<wbr>Aws.<wbr>Ecs.<wbr>Task<wbr>Definition<wbr>Placement<wbr>Constraint<wbr>Args&gt;?</a></code>
+                <code><a href="#taskdefinitionplacementconstraint">List&lt;Task<wbr>Definition<wbr>Placement<wbr>Constraint<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -246,7 +246,7 @@ A set of placement constraints rules that are taken into consideration during ta
             <td class="align-top">Proxy<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#taskdefinitionproxyconfiguration">Pulumi.<wbr>Aws.<wbr>Ecs.<wbr>Task<wbr>Definition<wbr>Proxy<wbr>Configuration<wbr>Args?</a></code>
+                <code><a href="#taskdefinitionproxyconfiguration">Task<wbr>Definition<wbr>Proxy<wbr>Configuration<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -261,7 +261,7 @@ The proxy configuration details for the App Mesh proxy.
             <td class="align-top">Requires<wbr>Compatibilities</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -276,7 +276,7 @@ A set of launch types required by the task. The valid values are `EC2` and `FARG
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -306,7 +306,7 @@ The ARN of IAM role that allows your Amazon ECS container task to make calls to 
             <td class="align-top">Volumes</td>
             <td class="align-top">
                 
-                <code><a href="#taskdefinitionvolume">List&lt;Pulumi.<wbr>Aws.<wbr>Ecs.<wbr>Task<wbr>Definition<wbr>Volume<wbr>Args&gt;?</a></code>
+                <code><a href="#taskdefinitionvolume">List&lt;Task<wbr>Definition<wbr>Volume<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -466,7 +466,7 @@ The process namespace to use for the containers in the task. The valid values ar
             <td class="align-top">Placement<wbr>Constraints</td>
             <td class="align-top">
                 
-                <code><a href="#taskdefinitionplacementconstraint">[]ecs.<wbr>Task<wbr>Definition<wbr>Placement<wbr>Constraint</a></code>
+                <code><a href="#taskdefinitionplacementconstraint">[]Task<wbr>Definition<wbr>Placement<wbr>Constraint</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -481,7 +481,7 @@ A set of placement constraints rules that are taken into consideration during ta
             <td class="align-top">Proxy<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#taskdefinitionproxyconfiguration">*ecs.<wbr>Task<wbr>Definition<wbr>Proxy<wbr>Configuration</a></code>
+                <code><a href="#taskdefinitionproxyconfiguration">*Task<wbr>Definition<wbr>Proxy<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -541,7 +541,7 @@ The ARN of IAM role that allows your Amazon ECS container task to make calls to 
             <td class="align-top">Volumes</td>
             <td class="align-top">
                 
-                <code><a href="#taskdefinitionvolume">[]ecs.<wbr>Task<wbr>Definition<wbr>Volume</a></code>
+                <code><a href="#taskdefinitionvolume">[]Task<wbr>Definition<wbr>Volume</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -701,7 +701,7 @@ The process namespace to use for the containers in the task. The valid values ar
             <td class="align-top">placement<wbr>Constraints</td>
             <td class="align-top">
                 
-                <code><a href="#taskdefinitionplacementconstraint">ecs.<wbr>Task<wbr>Definition<wbr>Placement<wbr>Constraint[]?</a></code>
+                <code><a href="#taskdefinitionplacementconstraint">Task<wbr>Definition<wbr>Placement<wbr>Constraint[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -716,7 +716,7 @@ A set of placement constraints rules that are taken into consideration during ta
             <td class="align-top">proxy<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#taskdefinitionproxyconfiguration">ecs.<wbr>Task<wbr>Definition<wbr>Proxy<wbr>Configuration?</a></code>
+                <code><a href="#taskdefinitionproxyconfiguration">Task<wbr>Definition<wbr>Proxy<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -776,7 +776,7 @@ The ARN of IAM role that allows your Amazon ECS container task to make calls to 
             <td class="align-top">volumes</td>
             <td class="align-top">
                 
-                <code><a href="#taskdefinitionvolume">ecs.<wbr>Task<wbr>Definition<wbr>Volume[]?</a></code>
+                <code><a href="#taskdefinitionvolume">Task<wbr>Definition<wbr>Volume[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1182,7 +1182,7 @@ official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/develope
             <td class="align-top">Placement<wbr>Constraints</td>
             <td class="align-top">
                 
-                <code><a href="#taskdefinitionplacementconstraint">List&lt;Pulumi.<wbr>Aws.<wbr>Ecs.<wbr>Task<wbr>Definition<wbr>Placement<wbr>Constraint&gt;?</a></code>
+                <code><a href="#taskdefinitionplacementconstraint">List&lt;Task<wbr>Definition<wbr>Placement<wbr>Constraint&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} A set of placement constraints rules that are taken into consideration during task placement. Maximum number of `placement_constraints` is `10`.
  {{% /md %}}
@@ -1195,7 +1195,7 @@ official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/develope
             <td class="align-top">Proxy<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#taskdefinitionproxyconfiguration">Pulumi.<wbr>Aws.<wbr>Ecs.<wbr>Task<wbr>Definition<wbr>Proxy<wbr>Configuration?</a></code>
+                <code><a href="#taskdefinitionproxyconfiguration">Task<wbr>Definition<wbr>Proxy<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} The proxy configuration details for the App Mesh proxy.
  {{% /md %}}
@@ -1208,7 +1208,7 @@ official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/develope
             <td class="align-top">Requires<wbr>Compatibilities</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} A set of launch types required by the task. The valid values are `EC2` and `FARGATE`.
  {{% /md %}}
@@ -1234,7 +1234,7 @@ official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/develope
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} Key-value mapping of resource tags
  {{% /md %}}
@@ -1260,7 +1260,7 @@ official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/develope
             <td class="align-top">Volumes</td>
             <td class="align-top">
                 
-                <code><a href="#taskdefinitionvolume">List&lt;Pulumi.<wbr>Aws.<wbr>Ecs.<wbr>Task<wbr>Definition<wbr>Volume&gt;?</a></code>
+                <code><a href="#taskdefinitionvolume">List&lt;Task<wbr>Definition<wbr>Volume&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} A set of volume blocks that containers in your task may use.
  {{% /md %}}
@@ -1415,7 +1415,7 @@ official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/develope
             <td class="align-top">Placement<wbr>Constraints</td>
             <td class="align-top">
                 
-                <code><a href="#taskdefinitionplacementconstraint">[]ecs.<wbr>Task<wbr>Definition<wbr>Placement<wbr>Constraint</a></code>
+                <code><a href="#taskdefinitionplacementconstraint">[]Task<wbr>Definition<wbr>Placement<wbr>Constraint</a></code>
             </td>
             <td class="align-top">{{% md %}} A set of placement constraints rules that are taken into consideration during task placement. Maximum number of `placement_constraints` is `10`.
  {{% /md %}}
@@ -1428,7 +1428,7 @@ official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/develope
             <td class="align-top">Proxy<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#taskdefinitionproxyconfiguration">*ecs.<wbr>Task<wbr>Definition<wbr>Proxy<wbr>Configuration</a></code>
+                <code><a href="#taskdefinitionproxyconfiguration">*Task<wbr>Definition<wbr>Proxy<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} The proxy configuration details for the App Mesh proxy.
  {{% /md %}}
@@ -1493,7 +1493,7 @@ official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/develope
             <td class="align-top">Volumes</td>
             <td class="align-top">
                 
-                <code><a href="#taskdefinitionvolume">[]ecs.<wbr>Task<wbr>Definition<wbr>Volume</a></code>
+                <code><a href="#taskdefinitionvolume">[]Task<wbr>Definition<wbr>Volume</a></code>
             </td>
             <td class="align-top">{{% md %}} A set of volume blocks that containers in your task may use.
  {{% /md %}}
@@ -1648,7 +1648,7 @@ official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/develope
             <td class="align-top">placement<wbr>Constraints</td>
             <td class="align-top">
                 
-                <code><a href="#taskdefinitionplacementconstraint">ecs.<wbr>Task<wbr>Definition<wbr>Placement<wbr>Constraint[]?</a></code>
+                <code><a href="#taskdefinitionplacementconstraint">Task<wbr>Definition<wbr>Placement<wbr>Constraint[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} A set of placement constraints rules that are taken into consideration during task placement. Maximum number of `placement_constraints` is `10`.
  {{% /md %}}
@@ -1661,7 +1661,7 @@ official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/develope
             <td class="align-top">proxy<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#taskdefinitionproxyconfiguration">ecs.<wbr>Task<wbr>Definition<wbr>Proxy<wbr>Configuration?</a></code>
+                <code><a href="#taskdefinitionproxyconfiguration">Task<wbr>Definition<wbr>Proxy<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} The proxy configuration details for the App Mesh proxy.
  {{% /md %}}
@@ -1726,7 +1726,7 @@ official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/develope
             <td class="align-top">volumes</td>
             <td class="align-top">
                 
-                <code><a href="#taskdefinitionvolume">ecs.<wbr>Task<wbr>Definition<wbr>Volume[]?</a></code>
+                <code><a href="#taskdefinitionvolume">Task<wbr>Definition<wbr>Volume[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} A set of volume blocks that containers in your task may use.
  {{% /md %}}
@@ -2191,7 +2191,7 @@ The process namespace to use for the containers in the task. The valid values ar
             <td class="align-top">Placement<wbr>Constraints</td>
             <td class="align-top">
                 
-                <code><a href="#taskdefinitionplacementconstraint">List&lt;Pulumi.<wbr>Aws.<wbr>Ecs.<wbr>Task<wbr>Definition<wbr>Placement<wbr>Constraint<wbr>Args&gt;?</a></code>
+                <code><a href="#taskdefinitionplacementconstraint">List&lt;Task<wbr>Definition<wbr>Placement<wbr>Constraint<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2206,7 +2206,7 @@ A set of placement constraints rules that are taken into consideration during ta
             <td class="align-top">Proxy<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#taskdefinitionproxyconfiguration">Pulumi.<wbr>Aws.<wbr>Ecs.<wbr>Task<wbr>Definition<wbr>Proxy<wbr>Configuration<wbr>Args?</a></code>
+                <code><a href="#taskdefinitionproxyconfiguration">Task<wbr>Definition<wbr>Proxy<wbr>Configuration<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2221,7 +2221,7 @@ The proxy configuration details for the App Mesh proxy.
             <td class="align-top">Requires<wbr>Compatibilities</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2251,7 +2251,7 @@ The revision of the task in a particular family.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2281,7 +2281,7 @@ The ARN of IAM role that allows your Amazon ECS container task to make calls to 
             <td class="align-top">Volumes</td>
             <td class="align-top">
                 
-                <code><a href="#taskdefinitionvolume">List&lt;Pulumi.<wbr>Aws.<wbr>Ecs.<wbr>Task<wbr>Definition<wbr>Volume<wbr>Args&gt;?</a></code>
+                <code><a href="#taskdefinitionvolume">List&lt;Task<wbr>Definition<wbr>Volume<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2456,7 +2456,7 @@ The process namespace to use for the containers in the task. The valid values ar
             <td class="align-top">Placement<wbr>Constraints</td>
             <td class="align-top">
                 
-                <code><a href="#taskdefinitionplacementconstraint">[]ecs.<wbr>Task<wbr>Definition<wbr>Placement<wbr>Constraint</a></code>
+                <code><a href="#taskdefinitionplacementconstraint">[]Task<wbr>Definition<wbr>Placement<wbr>Constraint</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2471,7 +2471,7 @@ A set of placement constraints rules that are taken into consideration during ta
             <td class="align-top">Proxy<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#taskdefinitionproxyconfiguration">*ecs.<wbr>Task<wbr>Definition<wbr>Proxy<wbr>Configuration</a></code>
+                <code><a href="#taskdefinitionproxyconfiguration">*Task<wbr>Definition<wbr>Proxy<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2546,7 +2546,7 @@ The ARN of IAM role that allows your Amazon ECS container task to make calls to 
             <td class="align-top">Volumes</td>
             <td class="align-top">
                 
-                <code><a href="#taskdefinitionvolume">[]ecs.<wbr>Task<wbr>Definition<wbr>Volume</a></code>
+                <code><a href="#taskdefinitionvolume">[]Task<wbr>Definition<wbr>Volume</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2721,7 +2721,7 @@ The process namespace to use for the containers in the task. The valid values ar
             <td class="align-top">placement<wbr>Constraints</td>
             <td class="align-top">
                 
-                <code><a href="#taskdefinitionplacementconstraint">ecs.<wbr>Task<wbr>Definition<wbr>Placement<wbr>Constraint[]?</a></code>
+                <code><a href="#taskdefinitionplacementconstraint">Task<wbr>Definition<wbr>Placement<wbr>Constraint[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2736,7 +2736,7 @@ A set of placement constraints rules that are taken into consideration during ta
             <td class="align-top">proxy<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#taskdefinitionproxyconfiguration">ecs.<wbr>Task<wbr>Definition<wbr>Proxy<wbr>Configuration?</a></code>
+                <code><a href="#taskdefinitionproxyconfiguration">Task<wbr>Definition<wbr>Proxy<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2811,7 +2811,7 @@ The ARN of IAM role that allows your Amazon ECS container task to make calls to 
             <td class="align-top">volumes</td>
             <td class="align-top">
                 
-                <code><a href="#taskdefinitionvolume">ecs.<wbr>Task<wbr>Definition<wbr>Volume[]?</a></code>
+                <code><a href="#taskdefinitionvolume">Task<wbr>Definition<wbr>Volume[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3387,7 +3387,7 @@ The name of the container that will serve as the App Mesh proxy.
             <td class="align-top">Properties</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, string&gt;?</code>
+                <code>Dictionary<string, string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3653,7 +3653,7 @@ The proxy type. The default value is `APPMESH`. The only supported value is `APP
             <td class="align-top">Docker<wbr>Volume<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#taskdefinitionvolumedockervolumeconfiguration">Pulumi.<wbr>Aws.<wbr>Ecs.<wbr>Task<wbr>Definition<wbr>Volume<wbr>Docker<wbr>Volume<wbr>Configuration<wbr>Args?</a></code>
+                <code><a href="#taskdefinitionvolumedockervolumeconfiguration">Task<wbr>Definition<wbr>Volume<wbr>Docker<wbr>Volume<wbr>Configuration<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3668,7 +3668,7 @@ Used to configure a docker volume
             <td class="align-top">Efs<wbr>Volume<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#taskdefinitionvolumeefsvolumeconfiguration">Pulumi.<wbr>Aws.<wbr>Ecs.<wbr>Task<wbr>Definition<wbr>Volume<wbr>Efs<wbr>Volume<wbr>Configuration<wbr>Args?</a></code>
+                <code><a href="#taskdefinitionvolumeefsvolumeconfiguration">Task<wbr>Definition<wbr>Volume<wbr>Efs<wbr>Volume<wbr>Configuration<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3734,7 +3734,7 @@ parameter of container definition in the `mountPoints` section.
             <td class="align-top">Docker<wbr>Volume<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#taskdefinitionvolumedockervolumeconfiguration">*ecs.<wbr>Task<wbr>Definition<wbr>Volume<wbr>Docker<wbr>Volume<wbr>Configuration</a></code>
+                <code><a href="#taskdefinitionvolumedockervolumeconfiguration">*Task<wbr>Definition<wbr>Volume<wbr>Docker<wbr>Volume<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3749,7 +3749,7 @@ Used to configure a docker volume
             <td class="align-top">Efs<wbr>Volume<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#taskdefinitionvolumeefsvolumeconfiguration">*ecs.<wbr>Task<wbr>Definition<wbr>Volume<wbr>Efs<wbr>Volume<wbr>Configuration</a></code>
+                <code><a href="#taskdefinitionvolumeefsvolumeconfiguration">*Task<wbr>Definition<wbr>Volume<wbr>Efs<wbr>Volume<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3815,7 +3815,7 @@ parameter of container definition in the `mountPoints` section.
             <td class="align-top">docker<wbr>Volume<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#taskdefinitionvolumedockervolumeconfiguration">ecs.<wbr>Task<wbr>Definition<wbr>Volume<wbr>Docker<wbr>Volume<wbr>Configuration?</a></code>
+                <code><a href="#taskdefinitionvolumedockervolumeconfiguration">Task<wbr>Definition<wbr>Volume<wbr>Docker<wbr>Volume<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3830,7 +3830,7 @@ Used to configure a docker volume
             <td class="align-top">efs<wbr>Volume<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#taskdefinitionvolumeefsvolumeconfiguration">ecs.<wbr>Task<wbr>Definition<wbr>Volume<wbr>Efs<wbr>Volume<wbr>Configuration?</a></code>
+                <code><a href="#taskdefinitionvolumeefsvolumeconfiguration">Task<wbr>Definition<wbr>Volume<wbr>Efs<wbr>Volume<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4028,7 +4028,7 @@ The Docker volume driver to use. The driver value must match the driver name pro
             <td class="align-top">Driver<wbr>Opts</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, string&gt;?</code>
+                <code>Dictionary<string, string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4043,7 +4043,7 @@ A map of Docker driver specific options.
             <td class="align-top">Labels</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, string&gt;?</code>
+                <code>Dictionary<string, string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

@@ -480,7 +480,7 @@ The following output properties are available:
         </tr>
     
         <tr>
-            <td class="align-top">Hsm<wbr>State</td>
+            <td class="align-top">State</td>
             <td class="align-top">
                 
                 <code>string</code>
@@ -991,7 +991,7 @@ The id of the HSM module.
         </tr>
     
         <tr>
-            <td class="align-top">Hsm<wbr>State</td>
+            <td class="align-top">State</td>
             <td class="align-top">
                 
                 <code>string?</code>

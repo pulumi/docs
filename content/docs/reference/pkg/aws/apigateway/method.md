@@ -167,7 +167,7 @@ The type of authorization used for the method (`NONE`, `CUSTOM`, `AWS_IAM`, `COG
             <td class="align-top">Authorization<wbr>Scopes</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -212,7 +212,7 @@ The HTTP Method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
             <td class="align-top">Request<wbr>Models</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, string&gt;?</code>
+                <code>Dictionary<string, string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -229,7 +229,7 @@ and value is either `Error`, `Empty` (built-in models) or `aws.apigateway.Model`
             <td class="align-top">Request<wbr>Parameters</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, bool&gt;?</code>
+                <code>Dictionary<string, bool>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -621,7 +621,7 @@ The API resource ID
             <td class="align-top">rest<wbr>Api</td>
             <td class="align-top">
                 
-                <code>string | Rest<wbr>Api</code>
+                <code>string | RestApi</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -869,7 +869,7 @@ The following output properties are available:
             <td class="align-top">Authorization<wbr>Scopes</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} The authorization scopes used when the authorization is `COGNITO_USER_POOLS`
  {{% /md %}}
@@ -908,7 +908,7 @@ The following output properties are available:
             <td class="align-top">Request<wbr>Models</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, string&gt;?</code>
+                <code>Dictionary<string, string>?</code>
             </td>
             <td class="align-top">{{% md %}} A map of the API models used for the request&#39;s content type
 where key is the content type (e.g. `application/json`)
@@ -923,7 +923,7 @@ and value is either `Error`, `Empty` (built-in models) or `aws.apigateway.Model`
             <td class="align-top">Request<wbr>Parameters</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, bool&gt;?</code>
+                <code>Dictionary<string, bool>?</code>
             </td>
             <td class="align-top">{{% md %}} A map of request parameters (from the path, query string and headers) that should be passed to the integration. The boolean value indicates whether the parameter is required (`true`) or optional (`false`).
 For example: `request_parameters = {&#34;method.request.header.X-Some-Header&#34; = true &#34;method.request.querystring.some-query-param&#34; = true}` would define that the header `X-Some-Header` and the query string `some-query-param` must be provided in the request.
@@ -1544,7 +1544,7 @@ The type of authorization used for the method (`NONE`, `CUSTOM`, `AWS_IAM`, `COG
             <td class="align-top">Authorization<wbr>Scopes</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1589,7 +1589,7 @@ The HTTP Method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
             <td class="align-top">Request<wbr>Models</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, string&gt;?</code>
+                <code>Dictionary<string, string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1606,7 +1606,7 @@ and value is either `Error`, `Empty` (built-in models) or `aws.apigateway.Model`
             <td class="align-top">Request<wbr>Parameters</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, bool&gt;?</code>
+                <code>Dictionary<string, bool>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1998,7 +1998,7 @@ The API resource ID
             <td class="align-top">rest<wbr>Api</td>
             <td class="align-top">
                 
-                <code>string | Rest<wbr>Api</code>
+                <code>string | RestApi</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

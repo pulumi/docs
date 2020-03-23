@@ -232,7 +232,7 @@ The following arguments are supported:
             <td class="align-top">Alarm<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupalarmconfiguration">Pulumi.<wbr>Aws.<wbr>Codedeploy.<wbr>Deployment<wbr>Group<wbr>Alarm<wbr>Configuration<wbr>Args?</a></code>
+                <code><a href="#deploymentgroupalarmconfiguration">Deployment<wbr>Group<wbr>Alarm<wbr>Configuration<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -262,7 +262,7 @@ The name of the application.
             <td class="align-top">Auto<wbr>Rollback<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupautorollbackconfiguration">Pulumi.<wbr>Aws.<wbr>Codedeploy.<wbr>Deployment<wbr>Group<wbr>Auto<wbr>Rollback<wbr>Configuration<wbr>Args?</a></code>
+                <code><a href="#deploymentgroupautorollbackconfiguration">Deployment<wbr>Group<wbr>Auto<wbr>Rollback<wbr>Configuration<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -277,7 +277,7 @@ Configuration block of the automatic rollback configuration associated with the 
             <td class="align-top">Autoscaling<wbr>Groups</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -292,7 +292,7 @@ Autoscaling groups associated with the deployment group.
             <td class="align-top">Blue<wbr>Green<wbr>Deployment<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupbluegreendeploymentconfig">Pulumi.<wbr>Aws.<wbr>Codedeploy.<wbr>Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Args?</a></code>
+                <code><a href="#deploymentgroupbluegreendeploymentconfig">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -337,7 +337,7 @@ The name of the deployment group.
             <td class="align-top">Deployment<wbr>Style</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupdeploymentstyle">Pulumi.<wbr>Aws.<wbr>Codedeploy.<wbr>Deployment<wbr>Group<wbr>Deployment<wbr>Style<wbr>Args?</a></code>
+                <code><a href="#deploymentgroupdeploymentstyle">Deployment<wbr>Group<wbr>Deployment<wbr>Style<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -352,7 +352,7 @@ Configuration block of the type of deployment, either in-place or blue/green, yo
             <td class="align-top">Ec2Tag<wbr>Filters</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupec2tagfilter">List&lt;Pulumi.<wbr>Aws.<wbr>Codedeploy.<wbr>Deployment<wbr>Group<wbr>Ec2Tag<wbr>Filter<wbr>Args&gt;?</a></code>
+                <code><a href="#deploymentgroupec2tagfilter">List&lt;Deployment<wbr>Group<wbr>Ec2Tag<wbr>Filter<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -367,7 +367,7 @@ Tag filters associated with the deployment group. See the AWS docs for details.
             <td class="align-top">Ec2Tag<wbr>Sets</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupec2tagset">List&lt;Pulumi.<wbr>Aws.<wbr>Codedeploy.<wbr>Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set<wbr>Args&gt;?</a></code>
+                <code><a href="#deploymentgroupec2tagset">List&lt;Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -382,7 +382,7 @@ Configuration block(s) of Tag filters associated with the deployment group, whic
             <td class="align-top">Ecs<wbr>Service</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupecsservice">Pulumi.<wbr>Aws.<wbr>Codedeploy.<wbr>Deployment<wbr>Group<wbr>Ecs<wbr>Service<wbr>Args?</a></code>
+                <code><a href="#deploymentgroupecsservice">Deployment<wbr>Group<wbr>Ecs<wbr>Service<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -397,7 +397,7 @@ Configuration block(s) of the ECS services for a deployment group (documented be
             <td class="align-top">Load<wbr>Balancer<wbr>Info</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgrouploadbalancerinfo">Pulumi.<wbr>Aws.<wbr>Codedeploy.<wbr>Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Args?</a></code>
+                <code><a href="#deploymentgrouploadbalancerinfo">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -412,7 +412,7 @@ Single configuration block of the load balancer to use in a blue/green deploymen
             <td class="align-top">On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filters</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgrouponpremisesinstancetagfilter">List&lt;Pulumi.<wbr>Aws.<wbr>Codedeploy.<wbr>Deployment<wbr>Group<wbr>On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filter<wbr>Args&gt;?</a></code>
+                <code><a href="#deploymentgrouponpremisesinstancetagfilter">List&lt;Deployment<wbr>Group<wbr>On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filter<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -442,7 +442,7 @@ The service role ARN that allows deployments.
             <td class="align-top">Trigger<wbr>Configurations</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgrouptriggerconfiguration">List&lt;Pulumi.<wbr>Aws.<wbr>Codedeploy.<wbr>Deployment<wbr>Group<wbr>Trigger<wbr>Configuration<wbr>Args&gt;?</a></code>
+                <code><a href="#deploymentgrouptriggerconfiguration">List&lt;Deployment<wbr>Group<wbr>Trigger<wbr>Configuration<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -477,7 +477,7 @@ Configuration block(s) of the triggers for the deployment group (documented belo
             <td class="align-top">Alarm<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupalarmconfiguration">*codedeploy.<wbr>Deployment<wbr>Group<wbr>Alarm<wbr>Configuration</a></code>
+                <code><a href="#deploymentgroupalarmconfiguration">*Deployment<wbr>Group<wbr>Alarm<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -507,7 +507,7 @@ The name of the application.
             <td class="align-top">Auto<wbr>Rollback<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupautorollbackconfiguration">*codedeploy.<wbr>Deployment<wbr>Group<wbr>Auto<wbr>Rollback<wbr>Configuration</a></code>
+                <code><a href="#deploymentgroupautorollbackconfiguration">*Deployment<wbr>Group<wbr>Auto<wbr>Rollback<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -537,7 +537,7 @@ Autoscaling groups associated with the deployment group.
             <td class="align-top">Blue<wbr>Green<wbr>Deployment<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupbluegreendeploymentconfig">*codedeploy.<wbr>Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config</a></code>
+                <code><a href="#deploymentgroupbluegreendeploymentconfig">*Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -582,7 +582,7 @@ The name of the deployment group.
             <td class="align-top">Deployment<wbr>Style</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupdeploymentstyle">*codedeploy.<wbr>Deployment<wbr>Group<wbr>Deployment<wbr>Style</a></code>
+                <code><a href="#deploymentgroupdeploymentstyle">*Deployment<wbr>Group<wbr>Deployment<wbr>Style</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -597,7 +597,7 @@ Configuration block of the type of deployment, either in-place or blue/green, yo
             <td class="align-top">Ec2Tag<wbr>Filters</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupec2tagfilter">[]codedeploy.<wbr>Deployment<wbr>Group<wbr>Ec2Tag<wbr>Filter</a></code>
+                <code><a href="#deploymentgroupec2tagfilter">[]Deployment<wbr>Group<wbr>Ec2Tag<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -612,7 +612,7 @@ Tag filters associated with the deployment group. See the AWS docs for details.
             <td class="align-top">Ec2Tag<wbr>Sets</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupec2tagset">[]codedeploy.<wbr>Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set</a></code>
+                <code><a href="#deploymentgroupec2tagset">[]Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -627,7 +627,7 @@ Configuration block(s) of Tag filters associated with the deployment group, whic
             <td class="align-top">Ecs<wbr>Service</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupecsservice">*codedeploy.<wbr>Deployment<wbr>Group<wbr>Ecs<wbr>Service</a></code>
+                <code><a href="#deploymentgroupecsservice">*Deployment<wbr>Group<wbr>Ecs<wbr>Service</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -642,7 +642,7 @@ Configuration block(s) of the ECS services for a deployment group (documented be
             <td class="align-top">Load<wbr>Balancer<wbr>Info</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgrouploadbalancerinfo">*codedeploy.<wbr>Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info</a></code>
+                <code><a href="#deploymentgrouploadbalancerinfo">*Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -657,7 +657,7 @@ Single configuration block of the load balancer to use in a blue/green deploymen
             <td class="align-top">On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filters</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgrouponpremisesinstancetagfilter">[]codedeploy.<wbr>Deployment<wbr>Group<wbr>On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filter</a></code>
+                <code><a href="#deploymentgrouponpremisesinstancetagfilter">[]Deployment<wbr>Group<wbr>On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -687,7 +687,7 @@ The service role ARN that allows deployments.
             <td class="align-top">Trigger<wbr>Configurations</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgrouptriggerconfiguration">[]codedeploy.<wbr>Deployment<wbr>Group<wbr>Trigger<wbr>Configuration</a></code>
+                <code><a href="#deploymentgrouptriggerconfiguration">[]Deployment<wbr>Group<wbr>Trigger<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -722,7 +722,7 @@ Configuration block(s) of the triggers for the deployment group (documented belo
             <td class="align-top">alarm<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupalarmconfiguration">codedeploy.<wbr>Deployment<wbr>Group<wbr>Alarm<wbr>Configuration?</a></code>
+                <code><a href="#deploymentgroupalarmconfiguration">Deployment<wbr>Group<wbr>Alarm<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -752,7 +752,7 @@ The name of the application.
             <td class="align-top">auto<wbr>Rollback<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupautorollbackconfiguration">codedeploy.<wbr>Deployment<wbr>Group<wbr>Auto<wbr>Rollback<wbr>Configuration?</a></code>
+                <code><a href="#deploymentgroupautorollbackconfiguration">Deployment<wbr>Group<wbr>Auto<wbr>Rollback<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -782,7 +782,7 @@ Autoscaling groups associated with the deployment group.
             <td class="align-top">blue<wbr>Green<wbr>Deployment<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupbluegreendeploymentconfig">codedeploy.<wbr>Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config?</a></code>
+                <code><a href="#deploymentgroupbluegreendeploymentconfig">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -827,7 +827,7 @@ The name of the deployment group.
             <td class="align-top">deployment<wbr>Style</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupdeploymentstyle">codedeploy.<wbr>Deployment<wbr>Group<wbr>Deployment<wbr>Style?</a></code>
+                <code><a href="#deploymentgroupdeploymentstyle">Deployment<wbr>Group<wbr>Deployment<wbr>Style?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -842,7 +842,7 @@ Configuration block of the type of deployment, either in-place or blue/green, yo
             <td class="align-top">ec2Tag<wbr>Filters</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupec2tagfilter">codedeploy.<wbr>Deployment<wbr>Group<wbr>Ec2Tag<wbr>Filter[]?</a></code>
+                <code><a href="#deploymentgroupec2tagfilter">Deployment<wbr>Group<wbr>Ec2Tag<wbr>Filter[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -857,7 +857,7 @@ Tag filters associated with the deployment group. See the AWS docs for details.
             <td class="align-top">ec2Tag<wbr>Sets</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupec2tagset">codedeploy.<wbr>Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set[]?</a></code>
+                <code><a href="#deploymentgroupec2tagset">Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -872,7 +872,7 @@ Configuration block(s) of Tag filters associated with the deployment group, whic
             <td class="align-top">ecs<wbr>Service</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupecsservice">codedeploy.<wbr>Deployment<wbr>Group<wbr>Ecs<wbr>Service?</a></code>
+                <code><a href="#deploymentgroupecsservice">Deployment<wbr>Group<wbr>Ecs<wbr>Service?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -887,7 +887,7 @@ Configuration block(s) of the ECS services for a deployment group (documented be
             <td class="align-top">load<wbr>Balancer<wbr>Info</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgrouploadbalancerinfo">codedeploy.<wbr>Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info?</a></code>
+                <code><a href="#deploymentgrouploadbalancerinfo">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -902,7 +902,7 @@ Single configuration block of the load balancer to use in a blue/green deploymen
             <td class="align-top">on<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filters</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgrouponpremisesinstancetagfilter">codedeploy.<wbr>Deployment<wbr>Group<wbr>On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filter[]?</a></code>
+                <code><a href="#deploymentgrouponpremisesinstancetagfilter">Deployment<wbr>Group<wbr>On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filter[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -932,7 +932,7 @@ The service role ARN that allows deployments.
             <td class="align-top">trigger<wbr>Configurations</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgrouptriggerconfiguration">codedeploy.<wbr>Deployment<wbr>Group<wbr>Trigger<wbr>Configuration[]?</a></code>
+                <code><a href="#deploymentgrouptriggerconfiguration">Deployment<wbr>Group<wbr>Trigger<wbr>Configuration[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1226,7 +1226,7 @@ The following output properties are available:
             <td class="align-top">Alarm<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupalarmconfiguration">Pulumi.<wbr>Aws.<wbr>Codedeploy.<wbr>Deployment<wbr>Group<wbr>Alarm<wbr>Configuration?</a></code>
+                <code><a href="#deploymentgroupalarmconfiguration">Deployment<wbr>Group<wbr>Alarm<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block of alarms associated with the deployment group (documented below).
  {{% /md %}}
@@ -1252,7 +1252,7 @@ The following output properties are available:
             <td class="align-top">Auto<wbr>Rollback<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupautorollbackconfiguration">Pulumi.<wbr>Aws.<wbr>Codedeploy.<wbr>Deployment<wbr>Group<wbr>Auto<wbr>Rollback<wbr>Configuration?</a></code>
+                <code><a href="#deploymentgroupautorollbackconfiguration">Deployment<wbr>Group<wbr>Auto<wbr>Rollback<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block of the automatic rollback configuration associated with the deployment group (documented below).
  {{% /md %}}
@@ -1265,7 +1265,7 @@ The following output properties are available:
             <td class="align-top">Autoscaling<wbr>Groups</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} Autoscaling groups associated with the deployment group.
  {{% /md %}}
@@ -1278,7 +1278,7 @@ The following output properties are available:
             <td class="align-top">Blue<wbr>Green<wbr>Deployment<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupbluegreendeploymentconfig">Pulumi.<wbr>Aws.<wbr>Codedeploy.<wbr>Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config</a></code>
+                <code><a href="#deploymentgroupbluegreendeploymentconfig">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block of the blue/green deployment options for a deployment group (documented below).
  {{% /md %}}
@@ -1317,7 +1317,7 @@ The following output properties are available:
             <td class="align-top">Deployment<wbr>Style</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupdeploymentstyle">Pulumi.<wbr>Aws.<wbr>Codedeploy.<wbr>Deployment<wbr>Group<wbr>Deployment<wbr>Style?</a></code>
+                <code><a href="#deploymentgroupdeploymentstyle">Deployment<wbr>Group<wbr>Deployment<wbr>Style?</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block of the type of deployment, either in-place or blue/green, you want to run and whether to route deployment traffic behind a load balancer (documented below).
  {{% /md %}}
@@ -1330,7 +1330,7 @@ The following output properties are available:
             <td class="align-top">Ec2Tag<wbr>Filters</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupec2tagfilter">List&lt;Pulumi.<wbr>Aws.<wbr>Codedeploy.<wbr>Deployment<wbr>Group<wbr>Ec2Tag<wbr>Filter&gt;?</a></code>
+                <code><a href="#deploymentgroupec2tagfilter">List&lt;Deployment<wbr>Group<wbr>Ec2Tag<wbr>Filter&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} Tag filters associated with the deployment group. See the AWS docs for details.
  {{% /md %}}
@@ -1343,7 +1343,7 @@ The following output properties are available:
             <td class="align-top">Ec2Tag<wbr>Sets</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupec2tagset">List&lt;Pulumi.<wbr>Aws.<wbr>Codedeploy.<wbr>Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set&gt;?</a></code>
+                <code><a href="#deploymentgroupec2tagset">List&lt;Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block(s) of Tag filters associated with the deployment group, which are also referred to as tag groups (documented below). See the AWS docs for details.
  {{% /md %}}
@@ -1356,7 +1356,7 @@ The following output properties are available:
             <td class="align-top">Ecs<wbr>Service</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupecsservice">Pulumi.<wbr>Aws.<wbr>Codedeploy.<wbr>Deployment<wbr>Group<wbr>Ecs<wbr>Service?</a></code>
+                <code><a href="#deploymentgroupecsservice">Deployment<wbr>Group<wbr>Ecs<wbr>Service?</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block(s) of the ECS services for a deployment group (documented below).
  {{% /md %}}
@@ -1369,7 +1369,7 @@ The following output properties are available:
             <td class="align-top">Load<wbr>Balancer<wbr>Info</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgrouploadbalancerinfo">Pulumi.<wbr>Aws.<wbr>Codedeploy.<wbr>Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info?</a></code>
+                <code><a href="#deploymentgrouploadbalancerinfo">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info?</a></code>
             </td>
             <td class="align-top">{{% md %}} Single configuration block of the load balancer to use in a blue/green deployment (documented below).
  {{% /md %}}
@@ -1382,7 +1382,7 @@ The following output properties are available:
             <td class="align-top">On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filters</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgrouponpremisesinstancetagfilter">List&lt;Pulumi.<wbr>Aws.<wbr>Codedeploy.<wbr>Deployment<wbr>Group<wbr>On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filter&gt;?</a></code>
+                <code><a href="#deploymentgrouponpremisesinstancetagfilter">List&lt;Deployment<wbr>Group<wbr>On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filter&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} On premise tag filters associated with the group. See the AWS docs for details.
  {{% /md %}}
@@ -1408,7 +1408,7 @@ The following output properties are available:
             <td class="align-top">Trigger<wbr>Configurations</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgrouptriggerconfiguration">List&lt;Pulumi.<wbr>Aws.<wbr>Codedeploy.<wbr>Deployment<wbr>Group<wbr>Trigger<wbr>Configuration&gt;?</a></code>
+                <code><a href="#deploymentgrouptriggerconfiguration">List&lt;Deployment<wbr>Group<wbr>Trigger<wbr>Configuration&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block(s) of the triggers for the deployment group (documented below).
  {{% /md %}}
@@ -1441,7 +1441,7 @@ The following output properties are available:
             <td class="align-top">Alarm<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupalarmconfiguration">*codedeploy.<wbr>Deployment<wbr>Group<wbr>Alarm<wbr>Configuration</a></code>
+                <code><a href="#deploymentgroupalarmconfiguration">*Deployment<wbr>Group<wbr>Alarm<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block of alarms associated with the deployment group (documented below).
  {{% /md %}}
@@ -1467,7 +1467,7 @@ The following output properties are available:
             <td class="align-top">Auto<wbr>Rollback<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupautorollbackconfiguration">*codedeploy.<wbr>Deployment<wbr>Group<wbr>Auto<wbr>Rollback<wbr>Configuration</a></code>
+                <code><a href="#deploymentgroupautorollbackconfiguration">*Deployment<wbr>Group<wbr>Auto<wbr>Rollback<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block of the automatic rollback configuration associated with the deployment group (documented below).
  {{% /md %}}
@@ -1493,7 +1493,7 @@ The following output properties are available:
             <td class="align-top">Blue<wbr>Green<wbr>Deployment<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupbluegreendeploymentconfig">codedeploy.<wbr>Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config</a></code>
+                <code><a href="#deploymentgroupbluegreendeploymentconfig">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block of the blue/green deployment options for a deployment group (documented below).
  {{% /md %}}
@@ -1532,7 +1532,7 @@ The following output properties are available:
             <td class="align-top">Deployment<wbr>Style</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupdeploymentstyle">*codedeploy.<wbr>Deployment<wbr>Group<wbr>Deployment<wbr>Style</a></code>
+                <code><a href="#deploymentgroupdeploymentstyle">*Deployment<wbr>Group<wbr>Deployment<wbr>Style</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block of the type of deployment, either in-place or blue/green, you want to run and whether to route deployment traffic behind a load balancer (documented below).
  {{% /md %}}
@@ -1545,7 +1545,7 @@ The following output properties are available:
             <td class="align-top">Ec2Tag<wbr>Filters</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupec2tagfilter">[]codedeploy.<wbr>Deployment<wbr>Group<wbr>Ec2Tag<wbr>Filter</a></code>
+                <code><a href="#deploymentgroupec2tagfilter">[]Deployment<wbr>Group<wbr>Ec2Tag<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}} Tag filters associated with the deployment group. See the AWS docs for details.
  {{% /md %}}
@@ -1558,7 +1558,7 @@ The following output properties are available:
             <td class="align-top">Ec2Tag<wbr>Sets</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupec2tagset">[]codedeploy.<wbr>Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set</a></code>
+                <code><a href="#deploymentgroupec2tagset">[]Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block(s) of Tag filters associated with the deployment group, which are also referred to as tag groups (documented below). See the AWS docs for details.
  {{% /md %}}
@@ -1571,7 +1571,7 @@ The following output properties are available:
             <td class="align-top">Ecs<wbr>Service</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupecsservice">*codedeploy.<wbr>Deployment<wbr>Group<wbr>Ecs<wbr>Service</a></code>
+                <code><a href="#deploymentgroupecsservice">*Deployment<wbr>Group<wbr>Ecs<wbr>Service</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block(s) of the ECS services for a deployment group (documented below).
  {{% /md %}}
@@ -1584,7 +1584,7 @@ The following output properties are available:
             <td class="align-top">Load<wbr>Balancer<wbr>Info</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgrouploadbalancerinfo">*codedeploy.<wbr>Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info</a></code>
+                <code><a href="#deploymentgrouploadbalancerinfo">*Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info</a></code>
             </td>
             <td class="align-top">{{% md %}} Single configuration block of the load balancer to use in a blue/green deployment (documented below).
  {{% /md %}}
@@ -1597,7 +1597,7 @@ The following output properties are available:
             <td class="align-top">On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filters</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgrouponpremisesinstancetagfilter">[]codedeploy.<wbr>Deployment<wbr>Group<wbr>On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filter</a></code>
+                <code><a href="#deploymentgrouponpremisesinstancetagfilter">[]Deployment<wbr>Group<wbr>On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}} On premise tag filters associated with the group. See the AWS docs for details.
  {{% /md %}}
@@ -1623,7 +1623,7 @@ The following output properties are available:
             <td class="align-top">Trigger<wbr>Configurations</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgrouptriggerconfiguration">[]codedeploy.<wbr>Deployment<wbr>Group<wbr>Trigger<wbr>Configuration</a></code>
+                <code><a href="#deploymentgrouptriggerconfiguration">[]Deployment<wbr>Group<wbr>Trigger<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block(s) of the triggers for the deployment group (documented below).
  {{% /md %}}
@@ -1656,7 +1656,7 @@ The following output properties are available:
             <td class="align-top">alarm<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupalarmconfiguration">codedeploy.<wbr>Deployment<wbr>Group<wbr>Alarm<wbr>Configuration?</a></code>
+                <code><a href="#deploymentgroupalarmconfiguration">Deployment<wbr>Group<wbr>Alarm<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block of alarms associated with the deployment group (documented below).
  {{% /md %}}
@@ -1682,7 +1682,7 @@ The following output properties are available:
             <td class="align-top">auto<wbr>Rollback<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupautorollbackconfiguration">codedeploy.<wbr>Deployment<wbr>Group<wbr>Auto<wbr>Rollback<wbr>Configuration?</a></code>
+                <code><a href="#deploymentgroupautorollbackconfiguration">Deployment<wbr>Group<wbr>Auto<wbr>Rollback<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block of the automatic rollback configuration associated with the deployment group (documented below).
  {{% /md %}}
@@ -1708,7 +1708,7 @@ The following output properties are available:
             <td class="align-top">blue<wbr>Green<wbr>Deployment<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupbluegreendeploymentconfig">codedeploy.<wbr>Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config</a></code>
+                <code><a href="#deploymentgroupbluegreendeploymentconfig">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block of the blue/green deployment options for a deployment group (documented below).
  {{% /md %}}
@@ -1747,7 +1747,7 @@ The following output properties are available:
             <td class="align-top">deployment<wbr>Style</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupdeploymentstyle">codedeploy.<wbr>Deployment<wbr>Group<wbr>Deployment<wbr>Style?</a></code>
+                <code><a href="#deploymentgroupdeploymentstyle">Deployment<wbr>Group<wbr>Deployment<wbr>Style?</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block of the type of deployment, either in-place or blue/green, you want to run and whether to route deployment traffic behind a load balancer (documented below).
  {{% /md %}}
@@ -1760,7 +1760,7 @@ The following output properties are available:
             <td class="align-top">ec2Tag<wbr>Filters</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupec2tagfilter">codedeploy.<wbr>Deployment<wbr>Group<wbr>Ec2Tag<wbr>Filter[]?</a></code>
+                <code><a href="#deploymentgroupec2tagfilter">Deployment<wbr>Group<wbr>Ec2Tag<wbr>Filter[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} Tag filters associated with the deployment group. See the AWS docs for details.
  {{% /md %}}
@@ -1773,7 +1773,7 @@ The following output properties are available:
             <td class="align-top">ec2Tag<wbr>Sets</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupec2tagset">codedeploy.<wbr>Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set[]?</a></code>
+                <code><a href="#deploymentgroupec2tagset">Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block(s) of Tag filters associated with the deployment group, which are also referred to as tag groups (documented below). See the AWS docs for details.
  {{% /md %}}
@@ -1786,7 +1786,7 @@ The following output properties are available:
             <td class="align-top">ecs<wbr>Service</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupecsservice">codedeploy.<wbr>Deployment<wbr>Group<wbr>Ecs<wbr>Service?</a></code>
+                <code><a href="#deploymentgroupecsservice">Deployment<wbr>Group<wbr>Ecs<wbr>Service?</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block(s) of the ECS services for a deployment group (documented below).
  {{% /md %}}
@@ -1799,7 +1799,7 @@ The following output properties are available:
             <td class="align-top">load<wbr>Balancer<wbr>Info</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgrouploadbalancerinfo">codedeploy.<wbr>Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info?</a></code>
+                <code><a href="#deploymentgrouploadbalancerinfo">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info?</a></code>
             </td>
             <td class="align-top">{{% md %}} Single configuration block of the load balancer to use in a blue/green deployment (documented below).
  {{% /md %}}
@@ -1812,7 +1812,7 @@ The following output properties are available:
             <td class="align-top">on<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filters</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgrouponpremisesinstancetagfilter">codedeploy.<wbr>Deployment<wbr>Group<wbr>On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filter[]?</a></code>
+                <code><a href="#deploymentgrouponpremisesinstancetagfilter">Deployment<wbr>Group<wbr>On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filter[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} On premise tag filters associated with the group. See the AWS docs for details.
  {{% /md %}}
@@ -1838,7 +1838,7 @@ The following output properties are available:
             <td class="align-top">trigger<wbr>Configurations</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgrouptriggerconfiguration">codedeploy.<wbr>Deployment<wbr>Group<wbr>Trigger<wbr>Configuration[]?</a></code>
+                <code><a href="#deploymentgrouptriggerconfiguration">Deployment<wbr>Group<wbr>Trigger<wbr>Configuration[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block(s) of the triggers for the deployment group (documented below).
  {{% /md %}}
@@ -2145,7 +2145,7 @@ The following state arguments are supported:
             <td class="align-top">Alarm<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupalarmconfiguration">Pulumi.<wbr>Aws.<wbr>Codedeploy.<wbr>Deployment<wbr>Group<wbr>Alarm<wbr>Configuration<wbr>Args?</a></code>
+                <code><a href="#deploymentgroupalarmconfiguration">Deployment<wbr>Group<wbr>Alarm<wbr>Configuration<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2175,7 +2175,7 @@ The name of the application.
             <td class="align-top">Auto<wbr>Rollback<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupautorollbackconfiguration">Pulumi.<wbr>Aws.<wbr>Codedeploy.<wbr>Deployment<wbr>Group<wbr>Auto<wbr>Rollback<wbr>Configuration<wbr>Args?</a></code>
+                <code><a href="#deploymentgroupautorollbackconfiguration">Deployment<wbr>Group<wbr>Auto<wbr>Rollback<wbr>Configuration<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2190,7 +2190,7 @@ Configuration block of the automatic rollback configuration associated with the 
             <td class="align-top">Autoscaling<wbr>Groups</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2205,7 +2205,7 @@ Autoscaling groups associated with the deployment group.
             <td class="align-top">Blue<wbr>Green<wbr>Deployment<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupbluegreendeploymentconfig">Pulumi.<wbr>Aws.<wbr>Codedeploy.<wbr>Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Args?</a></code>
+                <code><a href="#deploymentgroupbluegreendeploymentconfig">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2250,7 +2250,7 @@ The name of the deployment group.
             <td class="align-top">Deployment<wbr>Style</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupdeploymentstyle">Pulumi.<wbr>Aws.<wbr>Codedeploy.<wbr>Deployment<wbr>Group<wbr>Deployment<wbr>Style<wbr>Args?</a></code>
+                <code><a href="#deploymentgroupdeploymentstyle">Deployment<wbr>Group<wbr>Deployment<wbr>Style<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2265,7 +2265,7 @@ Configuration block of the type of deployment, either in-place or blue/green, yo
             <td class="align-top">Ec2Tag<wbr>Filters</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupec2tagfilter">List&lt;Pulumi.<wbr>Aws.<wbr>Codedeploy.<wbr>Deployment<wbr>Group<wbr>Ec2Tag<wbr>Filter<wbr>Args&gt;?</a></code>
+                <code><a href="#deploymentgroupec2tagfilter">List&lt;Deployment<wbr>Group<wbr>Ec2Tag<wbr>Filter<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2280,7 +2280,7 @@ Tag filters associated with the deployment group. See the AWS docs for details.
             <td class="align-top">Ec2Tag<wbr>Sets</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupec2tagset">List&lt;Pulumi.<wbr>Aws.<wbr>Codedeploy.<wbr>Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set<wbr>Args&gt;?</a></code>
+                <code><a href="#deploymentgroupec2tagset">List&lt;Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2295,7 +2295,7 @@ Configuration block(s) of Tag filters associated with the deployment group, whic
             <td class="align-top">Ecs<wbr>Service</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupecsservice">Pulumi.<wbr>Aws.<wbr>Codedeploy.<wbr>Deployment<wbr>Group<wbr>Ecs<wbr>Service<wbr>Args?</a></code>
+                <code><a href="#deploymentgroupecsservice">Deployment<wbr>Group<wbr>Ecs<wbr>Service<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2310,7 +2310,7 @@ Configuration block(s) of the ECS services for a deployment group (documented be
             <td class="align-top">Load<wbr>Balancer<wbr>Info</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgrouploadbalancerinfo">Pulumi.<wbr>Aws.<wbr>Codedeploy.<wbr>Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Args?</a></code>
+                <code><a href="#deploymentgrouploadbalancerinfo">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2325,7 +2325,7 @@ Single configuration block of the load balancer to use in a blue/green deploymen
             <td class="align-top">On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filters</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgrouponpremisesinstancetagfilter">List&lt;Pulumi.<wbr>Aws.<wbr>Codedeploy.<wbr>Deployment<wbr>Group<wbr>On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filter<wbr>Args&gt;?</a></code>
+                <code><a href="#deploymentgrouponpremisesinstancetagfilter">List&lt;Deployment<wbr>Group<wbr>On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filter<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2355,7 +2355,7 @@ The service role ARN that allows deployments.
             <td class="align-top">Trigger<wbr>Configurations</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgrouptriggerconfiguration">List&lt;Pulumi.<wbr>Aws.<wbr>Codedeploy.<wbr>Deployment<wbr>Group<wbr>Trigger<wbr>Configuration<wbr>Args&gt;?</a></code>
+                <code><a href="#deploymentgrouptriggerconfiguration">List&lt;Deployment<wbr>Group<wbr>Trigger<wbr>Configuration<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2390,7 +2390,7 @@ Configuration block(s) of the triggers for the deployment group (documented belo
             <td class="align-top">Alarm<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupalarmconfiguration">*codedeploy.<wbr>Deployment<wbr>Group<wbr>Alarm<wbr>Configuration</a></code>
+                <code><a href="#deploymentgroupalarmconfiguration">*Deployment<wbr>Group<wbr>Alarm<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2420,7 +2420,7 @@ The name of the application.
             <td class="align-top">Auto<wbr>Rollback<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupautorollbackconfiguration">*codedeploy.<wbr>Deployment<wbr>Group<wbr>Auto<wbr>Rollback<wbr>Configuration</a></code>
+                <code><a href="#deploymentgroupautorollbackconfiguration">*Deployment<wbr>Group<wbr>Auto<wbr>Rollback<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2450,7 +2450,7 @@ Autoscaling groups associated with the deployment group.
             <td class="align-top">Blue<wbr>Green<wbr>Deployment<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupbluegreendeploymentconfig">*codedeploy.<wbr>Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config</a></code>
+                <code><a href="#deploymentgroupbluegreendeploymentconfig">*Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2495,7 +2495,7 @@ The name of the deployment group.
             <td class="align-top">Deployment<wbr>Style</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupdeploymentstyle">*codedeploy.<wbr>Deployment<wbr>Group<wbr>Deployment<wbr>Style</a></code>
+                <code><a href="#deploymentgroupdeploymentstyle">*Deployment<wbr>Group<wbr>Deployment<wbr>Style</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2510,7 +2510,7 @@ Configuration block of the type of deployment, either in-place or blue/green, yo
             <td class="align-top">Ec2Tag<wbr>Filters</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupec2tagfilter">[]codedeploy.<wbr>Deployment<wbr>Group<wbr>Ec2Tag<wbr>Filter</a></code>
+                <code><a href="#deploymentgroupec2tagfilter">[]Deployment<wbr>Group<wbr>Ec2Tag<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2525,7 +2525,7 @@ Tag filters associated with the deployment group. See the AWS docs for details.
             <td class="align-top">Ec2Tag<wbr>Sets</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupec2tagset">[]codedeploy.<wbr>Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set</a></code>
+                <code><a href="#deploymentgroupec2tagset">[]Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2540,7 +2540,7 @@ Configuration block(s) of Tag filters associated with the deployment group, whic
             <td class="align-top">Ecs<wbr>Service</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupecsservice">*codedeploy.<wbr>Deployment<wbr>Group<wbr>Ecs<wbr>Service</a></code>
+                <code><a href="#deploymentgroupecsservice">*Deployment<wbr>Group<wbr>Ecs<wbr>Service</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2555,7 +2555,7 @@ Configuration block(s) of the ECS services for a deployment group (documented be
             <td class="align-top">Load<wbr>Balancer<wbr>Info</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgrouploadbalancerinfo">*codedeploy.<wbr>Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info</a></code>
+                <code><a href="#deploymentgrouploadbalancerinfo">*Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2570,7 +2570,7 @@ Single configuration block of the load balancer to use in a blue/green deploymen
             <td class="align-top">On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filters</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgrouponpremisesinstancetagfilter">[]codedeploy.<wbr>Deployment<wbr>Group<wbr>On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filter</a></code>
+                <code><a href="#deploymentgrouponpremisesinstancetagfilter">[]Deployment<wbr>Group<wbr>On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2600,7 +2600,7 @@ The service role ARN that allows deployments.
             <td class="align-top">Trigger<wbr>Configurations</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgrouptriggerconfiguration">[]codedeploy.<wbr>Deployment<wbr>Group<wbr>Trigger<wbr>Configuration</a></code>
+                <code><a href="#deploymentgrouptriggerconfiguration">[]Deployment<wbr>Group<wbr>Trigger<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2635,7 +2635,7 @@ Configuration block(s) of the triggers for the deployment group (documented belo
             <td class="align-top">alarm<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupalarmconfiguration">codedeploy.<wbr>Deployment<wbr>Group<wbr>Alarm<wbr>Configuration?</a></code>
+                <code><a href="#deploymentgroupalarmconfiguration">Deployment<wbr>Group<wbr>Alarm<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2665,7 +2665,7 @@ The name of the application.
             <td class="align-top">auto<wbr>Rollback<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupautorollbackconfiguration">codedeploy.<wbr>Deployment<wbr>Group<wbr>Auto<wbr>Rollback<wbr>Configuration?</a></code>
+                <code><a href="#deploymentgroupautorollbackconfiguration">Deployment<wbr>Group<wbr>Auto<wbr>Rollback<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2695,7 +2695,7 @@ Autoscaling groups associated with the deployment group.
             <td class="align-top">blue<wbr>Green<wbr>Deployment<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupbluegreendeploymentconfig">codedeploy.<wbr>Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config?</a></code>
+                <code><a href="#deploymentgroupbluegreendeploymentconfig">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2740,7 +2740,7 @@ The name of the deployment group.
             <td class="align-top">deployment<wbr>Style</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupdeploymentstyle">codedeploy.<wbr>Deployment<wbr>Group<wbr>Deployment<wbr>Style?</a></code>
+                <code><a href="#deploymentgroupdeploymentstyle">Deployment<wbr>Group<wbr>Deployment<wbr>Style?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2755,7 +2755,7 @@ Configuration block of the type of deployment, either in-place or blue/green, yo
             <td class="align-top">ec2Tag<wbr>Filters</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupec2tagfilter">codedeploy.<wbr>Deployment<wbr>Group<wbr>Ec2Tag<wbr>Filter[]?</a></code>
+                <code><a href="#deploymentgroupec2tagfilter">Deployment<wbr>Group<wbr>Ec2Tag<wbr>Filter[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2770,7 +2770,7 @@ Tag filters associated with the deployment group. See the AWS docs for details.
             <td class="align-top">ec2Tag<wbr>Sets</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupec2tagset">codedeploy.<wbr>Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set[]?</a></code>
+                <code><a href="#deploymentgroupec2tagset">Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2785,7 +2785,7 @@ Configuration block(s) of Tag filters associated with the deployment group, whic
             <td class="align-top">ecs<wbr>Service</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupecsservice">codedeploy.<wbr>Deployment<wbr>Group<wbr>Ecs<wbr>Service?</a></code>
+                <code><a href="#deploymentgroupecsservice">Deployment<wbr>Group<wbr>Ecs<wbr>Service?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2800,7 +2800,7 @@ Configuration block(s) of the ECS services for a deployment group (documented be
             <td class="align-top">load<wbr>Balancer<wbr>Info</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgrouploadbalancerinfo">codedeploy.<wbr>Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info?</a></code>
+                <code><a href="#deploymentgrouploadbalancerinfo">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2815,7 +2815,7 @@ Single configuration block of the load balancer to use in a blue/green deploymen
             <td class="align-top">on<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filters</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgrouponpremisesinstancetagfilter">codedeploy.<wbr>Deployment<wbr>Group<wbr>On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filter[]?</a></code>
+                <code><a href="#deploymentgrouponpremisesinstancetagfilter">Deployment<wbr>Group<wbr>On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filter[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2845,7 +2845,7 @@ The service role ARN that allows deployments.
             <td class="align-top">trigger<wbr>Configurations</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgrouptriggerconfiguration">codedeploy.<wbr>Deployment<wbr>Group<wbr>Trigger<wbr>Configuration[]?</a></code>
+                <code><a href="#deploymentgrouptriggerconfiguration">Deployment<wbr>Group<wbr>Trigger<wbr>Configuration[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3153,7 +3153,7 @@ Configuration block(s) of the triggers for the deployment group (documented belo
             <td class="align-top">Alarms</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3457,7 +3457,7 @@ Indicates whether a defined automatic rollback configuration is currently enable
             <td class="align-top">Events</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3663,7 +3663,7 @@ The event type or types that trigger a rollback. Supported types are `DEPLOYMENT
             <td class="align-top">Deployment<wbr>Ready<wbr>Option</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupbluegreendeploymentconfigdeploymentreadyoption">Pulumi.<wbr>Aws.<wbr>Codedeploy.<wbr>Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Deployment<wbr>Ready<wbr>Option<wbr>Args?</a></code>
+                <code><a href="#deploymentgroupbluegreendeploymentconfigdeploymentreadyoption">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Deployment<wbr>Ready<wbr>Option<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3678,7 +3678,7 @@ Information about the action to take when newly provisioned instances are ready 
             <td class="align-top">Green<wbr>Fleet<wbr>Provisioning<wbr>Option</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupbluegreendeploymentconfiggreenfleetprovisioningoption">Pulumi.<wbr>Aws.<wbr>Codedeploy.<wbr>Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Green<wbr>Fleet<wbr>Provisioning<wbr>Option<wbr>Args?</a></code>
+                <code><a href="#deploymentgroupbluegreendeploymentconfiggreenfleetprovisioningoption">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Green<wbr>Fleet<wbr>Provisioning<wbr>Option<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3693,7 +3693,7 @@ Information about how instances are provisioned for a replacement environment in
             <td class="align-top">Terminate<wbr>Blue<wbr>Instances<wbr>On<wbr>Deployment<wbr>Success</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupbluegreendeploymentconfigterminateblueinstancesondeploymentsuccess">Pulumi.<wbr>Aws.<wbr>Codedeploy.<wbr>Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Terminate<wbr>Blue<wbr>Instances<wbr>On<wbr>Deployment<wbr>Success<wbr>Args?</a></code>
+                <code><a href="#deploymentgroupbluegreendeploymentconfigterminateblueinstancesondeploymentsuccess">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Terminate<wbr>Blue<wbr>Instances<wbr>On<wbr>Deployment<wbr>Success<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3728,7 +3728,7 @@ Information about whether to terminate instances in the original fleet during a 
             <td class="align-top">Deployment<wbr>Ready<wbr>Option</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupbluegreendeploymentconfigdeploymentreadyoption">*codedeploy.<wbr>Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Deployment<wbr>Ready<wbr>Option</a></code>
+                <code><a href="#deploymentgroupbluegreendeploymentconfigdeploymentreadyoption">*Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Deployment<wbr>Ready<wbr>Option</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3743,7 +3743,7 @@ Information about the action to take when newly provisioned instances are ready 
             <td class="align-top">Green<wbr>Fleet<wbr>Provisioning<wbr>Option</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupbluegreendeploymentconfiggreenfleetprovisioningoption">*codedeploy.<wbr>Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Green<wbr>Fleet<wbr>Provisioning<wbr>Option</a></code>
+                <code><a href="#deploymentgroupbluegreendeploymentconfiggreenfleetprovisioningoption">*Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Green<wbr>Fleet<wbr>Provisioning<wbr>Option</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3758,7 +3758,7 @@ Information about how instances are provisioned for a replacement environment in
             <td class="align-top">Terminate<wbr>Blue<wbr>Instances<wbr>On<wbr>Deployment<wbr>Success</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupbluegreendeploymentconfigterminateblueinstancesondeploymentsuccess">*codedeploy.<wbr>Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Terminate<wbr>Blue<wbr>Instances<wbr>On<wbr>Deployment<wbr>Success</a></code>
+                <code><a href="#deploymentgroupbluegreendeploymentconfigterminateblueinstancesondeploymentsuccess">*Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Terminate<wbr>Blue<wbr>Instances<wbr>On<wbr>Deployment<wbr>Success</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3793,7 +3793,7 @@ Information about whether to terminate instances in the original fleet during a 
             <td class="align-top">deployment<wbr>Ready<wbr>Option</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupbluegreendeploymentconfigdeploymentreadyoption">codedeploy.<wbr>Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Deployment<wbr>Ready<wbr>Option?</a></code>
+                <code><a href="#deploymentgroupbluegreendeploymentconfigdeploymentreadyoption">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Deployment<wbr>Ready<wbr>Option?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3808,7 +3808,7 @@ Information about the action to take when newly provisioned instances are ready 
             <td class="align-top">green<wbr>Fleet<wbr>Provisioning<wbr>Option</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupbluegreendeploymentconfiggreenfleetprovisioningoption">codedeploy.<wbr>Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Green<wbr>Fleet<wbr>Provisioning<wbr>Option?</a></code>
+                <code><a href="#deploymentgroupbluegreendeploymentconfiggreenfleetprovisioningoption">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Green<wbr>Fleet<wbr>Provisioning<wbr>Option?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3823,7 +3823,7 @@ Information about how instances are provisioned for a replacement environment in
             <td class="align-top">terminate<wbr>Blue<wbr>Instances<wbr>On<wbr>Deployment<wbr>Success</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupbluegreendeploymentconfigterminateblueinstancesondeploymentsuccess">codedeploy.<wbr>Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Terminate<wbr>Blue<wbr>Instances<wbr>On<wbr>Deployment<wbr>Success?</a></code>
+                <code><a href="#deploymentgroupbluegreendeploymentconfigterminateblueinstancesondeploymentsuccess">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Terminate<wbr>Blue<wbr>Instances<wbr>On<wbr>Deployment<wbr>Success?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5073,7 +5073,7 @@ The value of the tag filter.
             <td class="align-top">Ec2Tag<wbr>Filters</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupec2tagsetec2tagfilter">List&lt;Pulumi.<wbr>Aws.<wbr>Codedeploy.<wbr>Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set<wbr>Ec2Tag<wbr>Filter<wbr>Args&gt;?</a></code>
+                <code><a href="#deploymentgroupec2tagsetec2tagfilter">List&lt;Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set<wbr>Ec2Tag<wbr>Filter<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5108,7 +5108,7 @@ Tag filters associated with the deployment group. See the AWS docs for details.
             <td class="align-top">Ec2Tag<wbr>Filters</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupec2tagsetec2tagfilter">[]codedeploy.<wbr>Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set<wbr>Ec2Tag<wbr>Filter</a></code>
+                <code><a href="#deploymentgroupec2tagsetec2tagfilter">[]Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set<wbr>Ec2Tag<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5143,7 +5143,7 @@ Tag filters associated with the deployment group. See the AWS docs for details.
             <td class="align-top">ec2Tag<wbr>Filters</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgroupec2tagsetec2tagfilter">codedeploy.<wbr>Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set<wbr>Ec2Tag<wbr>Filter[]?</a></code>
+                <code><a href="#deploymentgroupec2tagsetec2tagfilter">Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set<wbr>Ec2Tag<wbr>Filter[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5736,7 +5736,7 @@ The name of the ECS service.
             <td class="align-top">Elb<wbr>Infos</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgrouploadbalancerinfoelbinfo">List&lt;Pulumi.<wbr>Aws.<wbr>Codedeploy.<wbr>Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Elb<wbr>Info<wbr>Args&gt;?</a></code>
+                <code><a href="#deploymentgrouploadbalancerinfoelbinfo">List&lt;Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Elb<wbr>Info<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5751,7 +5751,7 @@ The Classic Elastic Load Balancer to use in a deployment. Conflicts with `target
             <td class="align-top">Target<wbr>Group<wbr>Infos</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgrouploadbalancerinfotargetgroupinfo">List&lt;Pulumi.<wbr>Aws.<wbr>Codedeploy.<wbr>Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Info<wbr>Args&gt;?</a></code>
+                <code><a href="#deploymentgrouploadbalancerinfotargetgroupinfo">List&lt;Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Info<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5766,7 +5766,7 @@ The (Application/Network Load Balancer) target group to use in a deployment. Con
             <td class="align-top">Target<wbr>Group<wbr>Pair<wbr>Info</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfo">Pulumi.<wbr>Aws.<wbr>Codedeploy.<wbr>Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Args?</a></code>
+                <code><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfo">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5801,7 +5801,7 @@ The (Application/Network Load Balancer) target group pair to use in a deployment
             <td class="align-top">Elb<wbr>Infos</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgrouploadbalancerinfoelbinfo">[]codedeploy.<wbr>Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Elb<wbr>Info</a></code>
+                <code><a href="#deploymentgrouploadbalancerinfoelbinfo">[]Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Elb<wbr>Info</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5816,7 +5816,7 @@ The Classic Elastic Load Balancer to use in a deployment. Conflicts with `target
             <td class="align-top">Target<wbr>Group<wbr>Infos</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgrouploadbalancerinfotargetgroupinfo">[]codedeploy.<wbr>Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Info</a></code>
+                <code><a href="#deploymentgrouploadbalancerinfotargetgroupinfo">[]Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Info</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5831,7 +5831,7 @@ The (Application/Network Load Balancer) target group to use in a deployment. Con
             <td class="align-top">Target<wbr>Group<wbr>Pair<wbr>Info</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfo">*codedeploy.<wbr>Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info</a></code>
+                <code><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfo">*Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5866,7 +5866,7 @@ The (Application/Network Load Balancer) target group pair to use in a deployment
             <td class="align-top">elb<wbr>Infos</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgrouploadbalancerinfoelbinfo">codedeploy.<wbr>Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Elb<wbr>Info[]?</a></code>
+                <code><a href="#deploymentgrouploadbalancerinfoelbinfo">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Elb<wbr>Info[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5881,7 +5881,7 @@ The Classic Elastic Load Balancer to use in a deployment. Conflicts with `target
             <td class="align-top">target<wbr>Group<wbr>Infos</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgrouploadbalancerinfotargetgroupinfo">codedeploy.<wbr>Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Info[]?</a></code>
+                <code><a href="#deploymentgrouploadbalancerinfotargetgroupinfo">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Info[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5896,7 +5896,7 @@ The (Application/Network Load Balancer) target group to use in a deployment. Con
             <td class="align-top">target<wbr>Group<wbr>Pair<wbr>Info</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfo">codedeploy.<wbr>Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info?</a></code>
+                <code><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfo">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6339,7 +6339,7 @@ Name of the target group.
             <td class="align-top">Prod<wbr>Traffic<wbr>Route</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfoprodtrafficroute">Pulumi.<wbr>Aws.<wbr>Codedeploy.<wbr>Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Prod<wbr>Traffic<wbr>Route<wbr>Args</a></code>
+                <code><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfoprodtrafficroute">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Prod<wbr>Traffic<wbr>Route<wbr>Args</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -6354,7 +6354,7 @@ Configuration block for the production traffic route (documented below).
             <td class="align-top">Target<wbr>Groups</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfotargetgroup">List&lt;Pulumi.<wbr>Aws.<wbr>Codedeploy.<wbr>Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Target<wbr>Group<wbr>Args&gt;</a></code>
+                <code><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfotargetgroup">List&lt;Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Target<wbr>Group<wbr>Args&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -6369,7 +6369,7 @@ Configuration blocks for a target group within a target group pair (documented b
             <td class="align-top">Test<wbr>Traffic<wbr>Route</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfotesttrafficroute">Pulumi.<wbr>Aws.<wbr>Codedeploy.<wbr>Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Test<wbr>Traffic<wbr>Route<wbr>Args?</a></code>
+                <code><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfotesttrafficroute">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Test<wbr>Traffic<wbr>Route<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6404,7 +6404,7 @@ Configuration block for the test traffic route (documented below).
             <td class="align-top">Prod<wbr>Traffic<wbr>Route</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfoprodtrafficroute">codedeploy.<wbr>Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Prod<wbr>Traffic<wbr>Route</a></code>
+                <code><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfoprodtrafficroute">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Prod<wbr>Traffic<wbr>Route</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -6419,7 +6419,7 @@ Configuration block for the production traffic route (documented below).
             <td class="align-top">Target<wbr>Groups</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfotargetgroup">[]codedeploy.<wbr>Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Target<wbr>Group</a></code>
+                <code><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfotargetgroup">[]Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Target<wbr>Group</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -6434,7 +6434,7 @@ Configuration blocks for a target group within a target group pair (documented b
             <td class="align-top">Test<wbr>Traffic<wbr>Route</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfotesttrafficroute">*codedeploy.<wbr>Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Test<wbr>Traffic<wbr>Route</a></code>
+                <code><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfotesttrafficroute">*Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Test<wbr>Traffic<wbr>Route</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6469,7 +6469,7 @@ Configuration block for the test traffic route (documented below).
             <td class="align-top">prod<wbr>Traffic<wbr>Route</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfoprodtrafficroute">codedeploy.<wbr>Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Prod<wbr>Traffic<wbr>Route</a></code>
+                <code><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfoprodtrafficroute">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Prod<wbr>Traffic<wbr>Route</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -6484,7 +6484,7 @@ Configuration block for the production traffic route (documented below).
             <td class="align-top">target<wbr>Groups</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfotargetgroup">codedeploy.<wbr>Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Target<wbr>Group[]</a></code>
+                <code><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfotargetgroup">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Target<wbr>Group[]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -6499,7 +6499,7 @@ Configuration blocks for a target group within a target group pair (documented b
             <td class="align-top">test<wbr>Traffic<wbr>Route</td>
             <td class="align-top">
                 
-                <code><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfotesttrafficroute">codedeploy.<wbr>Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Test<wbr>Traffic<wbr>Route?</a></code>
+                <code><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfotesttrafficroute">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Test<wbr>Traffic<wbr>Route?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6620,7 +6620,7 @@ Configuration block for the test traffic route (documented below).
             <td class="align-top">Listener<wbr>Arns</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -6942,7 +6942,7 @@ Name of the target group.
             <td class="align-top">Listener<wbr>Arns</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -7384,7 +7384,7 @@ The value of the tag filter.
             <td class="align-top">Trigger<wbr>Events</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

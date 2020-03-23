@@ -148,7 +148,7 @@ The description of the service.
             <td class="align-top">Dns<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#servicednsconfig">Pulumi.<wbr>Aws.<wbr>Servicediscovery.<wbr>Service<wbr>Dns<wbr>Config<wbr>Args?</a></code>
+                <code><a href="#servicednsconfig">Service<wbr>Dns<wbr>Config<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -163,7 +163,7 @@ A complex type that contains information about the resource record sets that you
             <td class="align-top">Health<wbr>Check<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#servicehealthcheckconfig">Pulumi.<wbr>Aws.<wbr>Servicediscovery.<wbr>Service<wbr>Health<wbr>Check<wbr>Config<wbr>Args?</a></code>
+                <code><a href="#servicehealthcheckconfig">Service<wbr>Health<wbr>Check<wbr>Config<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -178,7 +178,7 @@ A complex type that contains settings for an optional health check. Only for Pub
             <td class="align-top">Health<wbr>Check<wbr>Custom<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#servicehealthcheckcustomconfig">Pulumi.<wbr>Aws.<wbr>Servicediscovery.<wbr>Service<wbr>Health<wbr>Check<wbr>Custom<wbr>Config<wbr>Args?</a></code>
+                <code><a href="#servicehealthcheckcustomconfig">Service<wbr>Health<wbr>Check<wbr>Custom<wbr>Config<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -258,7 +258,7 @@ The description of the service.
             <td class="align-top">Dns<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#servicednsconfig">*servicediscovery.<wbr>Service<wbr>Dns<wbr>Config</a></code>
+                <code><a href="#servicednsconfig">*Service<wbr>Dns<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -273,7 +273,7 @@ A complex type that contains information about the resource record sets that you
             <td class="align-top">Health<wbr>Check<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#servicehealthcheckconfig">*servicediscovery.<wbr>Service<wbr>Health<wbr>Check<wbr>Config</a></code>
+                <code><a href="#servicehealthcheckconfig">*Service<wbr>Health<wbr>Check<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -288,7 +288,7 @@ A complex type that contains settings for an optional health check. Only for Pub
             <td class="align-top">Health<wbr>Check<wbr>Custom<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#servicehealthcheckcustomconfig">*servicediscovery.<wbr>Service<wbr>Health<wbr>Check<wbr>Custom<wbr>Config</a></code>
+                <code><a href="#servicehealthcheckcustomconfig">*Service<wbr>Health<wbr>Check<wbr>Custom<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -368,7 +368,7 @@ The description of the service.
             <td class="align-top">dns<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#servicednsconfig">servicediscovery.<wbr>Service<wbr>Dns<wbr>Config?</a></code>
+                <code><a href="#servicednsconfig">Service<wbr>Dns<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -383,7 +383,7 @@ A complex type that contains information about the resource record sets that you
             <td class="align-top">health<wbr>Check<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#servicehealthcheckconfig">servicediscovery.<wbr>Service<wbr>Health<wbr>Check<wbr>Config?</a></code>
+                <code><a href="#servicehealthcheckconfig">Service<wbr>Health<wbr>Check<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -398,7 +398,7 @@ A complex type that contains settings for an optional health check. Only for Pub
             <td class="align-top">health<wbr>Check<wbr>Custom<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#servicehealthcheckcustomconfig">servicediscovery.<wbr>Service<wbr>Health<wbr>Check<wbr>Custom<wbr>Config?</a></code>
+                <code><a href="#servicehealthcheckcustomconfig">Service<wbr>Health<wbr>Check<wbr>Custom<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -613,7 +613,7 @@ The following output properties are available:
             <td class="align-top">Dns<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#servicednsconfig">Pulumi.<wbr>Aws.<wbr>Servicediscovery.<wbr>Service<wbr>Dns<wbr>Config?</a></code>
+                <code><a href="#servicednsconfig">Service<wbr>Dns<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} A complex type that contains information about the resource record sets that you want Amazon Route 53 to create when you register an instance.
  {{% /md %}}
@@ -626,7 +626,7 @@ The following output properties are available:
             <td class="align-top">Health<wbr>Check<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#servicehealthcheckconfig">Pulumi.<wbr>Aws.<wbr>Servicediscovery.<wbr>Service<wbr>Health<wbr>Check<wbr>Config?</a></code>
+                <code><a href="#servicehealthcheckconfig">Service<wbr>Health<wbr>Check<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} A complex type that contains settings for an optional health check. Only for Public DNS namespaces.
  {{% /md %}}
@@ -639,7 +639,7 @@ The following output properties are available:
             <td class="align-top">Health<wbr>Check<wbr>Custom<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#servicehealthcheckcustomconfig">Pulumi.<wbr>Aws.<wbr>Servicediscovery.<wbr>Service<wbr>Health<wbr>Check<wbr>Custom<wbr>Config?</a></code>
+                <code><a href="#servicehealthcheckcustomconfig">Service<wbr>Health<wbr>Check<wbr>Custom<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} A complex type that contains settings for ECS managed health checks.
  {{% /md %}}
@@ -724,7 +724,7 @@ The following output properties are available:
             <td class="align-top">Dns<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#servicednsconfig">*servicediscovery.<wbr>Service<wbr>Dns<wbr>Config</a></code>
+                <code><a href="#servicednsconfig">*Service<wbr>Dns<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} A complex type that contains information about the resource record sets that you want Amazon Route 53 to create when you register an instance.
  {{% /md %}}
@@ -737,7 +737,7 @@ The following output properties are available:
             <td class="align-top">Health<wbr>Check<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#servicehealthcheckconfig">*servicediscovery.<wbr>Service<wbr>Health<wbr>Check<wbr>Config</a></code>
+                <code><a href="#servicehealthcheckconfig">*Service<wbr>Health<wbr>Check<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} A complex type that contains settings for an optional health check. Only for Public DNS namespaces.
  {{% /md %}}
@@ -750,7 +750,7 @@ The following output properties are available:
             <td class="align-top">Health<wbr>Check<wbr>Custom<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#servicehealthcheckcustomconfig">*servicediscovery.<wbr>Service<wbr>Health<wbr>Check<wbr>Custom<wbr>Config</a></code>
+                <code><a href="#servicehealthcheckcustomconfig">*Service<wbr>Health<wbr>Check<wbr>Custom<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} A complex type that contains settings for ECS managed health checks.
  {{% /md %}}
@@ -835,7 +835,7 @@ The following output properties are available:
             <td class="align-top">dns<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#servicednsconfig">servicediscovery.<wbr>Service<wbr>Dns<wbr>Config?</a></code>
+                <code><a href="#servicednsconfig">Service<wbr>Dns<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} A complex type that contains information about the resource record sets that you want Amazon Route 53 to create when you register an instance.
  {{% /md %}}
@@ -848,7 +848,7 @@ The following output properties are available:
             <td class="align-top">health<wbr>Check<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#servicehealthcheckconfig">servicediscovery.<wbr>Service<wbr>Health<wbr>Check<wbr>Config?</a></code>
+                <code><a href="#servicehealthcheckconfig">Service<wbr>Health<wbr>Check<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} A complex type that contains settings for an optional health check. Only for Public DNS namespaces.
  {{% /md %}}
@@ -861,7 +861,7 @@ The following output properties are available:
             <td class="align-top">health<wbr>Check<wbr>Custom<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#servicehealthcheckcustomconfig">servicediscovery.<wbr>Service<wbr>Health<wbr>Check<wbr>Custom<wbr>Config?</a></code>
+                <code><a href="#servicehealthcheckcustomconfig">Service<wbr>Health<wbr>Check<wbr>Custom<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} A complex type that contains settings for ECS managed health checks.
  {{% /md %}}
@@ -1120,7 +1120,7 @@ The description of the service.
             <td class="align-top">Dns<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#servicednsconfig">Pulumi.<wbr>Aws.<wbr>Servicediscovery.<wbr>Service<wbr>Dns<wbr>Config<wbr>Args?</a></code>
+                <code><a href="#servicednsconfig">Service<wbr>Dns<wbr>Config<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1135,7 +1135,7 @@ A complex type that contains information about the resource record sets that you
             <td class="align-top">Health<wbr>Check<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#servicehealthcheckconfig">Pulumi.<wbr>Aws.<wbr>Servicediscovery.<wbr>Service<wbr>Health<wbr>Check<wbr>Config<wbr>Args?</a></code>
+                <code><a href="#servicehealthcheckconfig">Service<wbr>Health<wbr>Check<wbr>Config<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1150,7 +1150,7 @@ A complex type that contains settings for an optional health check. Only for Pub
             <td class="align-top">Health<wbr>Check<wbr>Custom<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#servicehealthcheckcustomconfig">Pulumi.<wbr>Aws.<wbr>Servicediscovery.<wbr>Service<wbr>Health<wbr>Check<wbr>Custom<wbr>Config<wbr>Args?</a></code>
+                <code><a href="#servicehealthcheckcustomconfig">Service<wbr>Health<wbr>Check<wbr>Custom<wbr>Config<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1245,7 +1245,7 @@ The description of the service.
             <td class="align-top">Dns<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#servicednsconfig">*servicediscovery.<wbr>Service<wbr>Dns<wbr>Config</a></code>
+                <code><a href="#servicednsconfig">*Service<wbr>Dns<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1260,7 +1260,7 @@ A complex type that contains information about the resource record sets that you
             <td class="align-top">Health<wbr>Check<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#servicehealthcheckconfig">*servicediscovery.<wbr>Service<wbr>Health<wbr>Check<wbr>Config</a></code>
+                <code><a href="#servicehealthcheckconfig">*Service<wbr>Health<wbr>Check<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1275,7 +1275,7 @@ A complex type that contains settings for an optional health check. Only for Pub
             <td class="align-top">Health<wbr>Check<wbr>Custom<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#servicehealthcheckcustomconfig">*servicediscovery.<wbr>Service<wbr>Health<wbr>Check<wbr>Custom<wbr>Config</a></code>
+                <code><a href="#servicehealthcheckcustomconfig">*Service<wbr>Health<wbr>Check<wbr>Custom<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1370,7 +1370,7 @@ The description of the service.
             <td class="align-top">dns<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#servicednsconfig">servicediscovery.<wbr>Service<wbr>Dns<wbr>Config?</a></code>
+                <code><a href="#servicednsconfig">Service<wbr>Dns<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1385,7 +1385,7 @@ A complex type that contains information about the resource record sets that you
             <td class="align-top">health<wbr>Check<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#servicehealthcheckconfig">servicediscovery.<wbr>Service<wbr>Health<wbr>Check<wbr>Config?</a></code>
+                <code><a href="#servicehealthcheckconfig">Service<wbr>Health<wbr>Check<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1400,7 +1400,7 @@ A complex type that contains settings for an optional health check. Only for Pub
             <td class="align-top">health<wbr>Check<wbr>Custom<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#servicehealthcheckcustomconfig">servicediscovery.<wbr>Service<wbr>Health<wbr>Check<wbr>Custom<wbr>Config?</a></code>
+                <code><a href="#servicehealthcheckcustomconfig">Service<wbr>Health<wbr>Check<wbr>Custom<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1618,7 +1618,7 @@ The ID of the namespace to use for DNS configuration.
             <td class="align-top">Dns<wbr>Records</td>
             <td class="align-top">
                 
-                <code><a href="#servicednsconfigdnsrecord">List&lt;Pulumi.<wbr>Aws.<wbr>Servicediscovery.<wbr>Service<wbr>Dns<wbr>Config<wbr>Dns<wbr>Record<wbr>Args&gt;</a></code>
+                <code><a href="#servicednsconfigdnsrecord">List&lt;Service<wbr>Dns<wbr>Config<wbr>Dns<wbr>Record<wbr>Args&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1683,7 +1683,7 @@ The routing policy that you want to apply to all records that Route 53 creates w
             <td class="align-top">Dns<wbr>Records</td>
             <td class="align-top">
                 
-                <code><a href="#servicednsconfigdnsrecord">[]servicediscovery.<wbr>Service<wbr>Dns<wbr>Config<wbr>Dns<wbr>Record</a></code>
+                <code><a href="#servicednsconfigdnsrecord">[]Service<wbr>Dns<wbr>Config<wbr>Dns<wbr>Record</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1748,7 +1748,7 @@ The routing policy that you want to apply to all records that Route 53 creates w
             <td class="align-top">dns<wbr>Records</td>
             <td class="align-top">
                 
-                <code><a href="#servicednsconfigdnsrecord">servicediscovery.<wbr>Service<wbr>Dns<wbr>Config<wbr>Dns<wbr>Record[]</a></code>
+                <code><a href="#servicednsconfigdnsrecord">Service<wbr>Dns<wbr>Config<wbr>Dns<wbr>Record[]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

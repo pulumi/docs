@@ -56,7 +56,12 @@ for (let i = 0; i < rts.ids.length; i++) {
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupRouteTables<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#LookupRouteTablesArgs">LookupRouteTablesArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#LookupRouteTablesResult">LookupRouteTablesResult</a></span>, error)</span></code></pre></div>
 
 
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.GetRouteTablesResult.html">Pulumi.Aws.Ec2.GetRouteTablesResult</a></span>> <span class="p">GetRouteTables(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.GetRouteTablesArgs.html">GetRouteTablesArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight">
+<pre class="chroma">
+<code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetRouteTables </span><span class="p">{</span>
+    <span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.GetRouteTablesResult.html">GetRouteTablesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.GetRouteTablesArgs.html">GetRouteTablesArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span>
+<span class="p">}</span></code></pre>
+</div>
 
 
 
@@ -83,7 +88,7 @@ The following arguments are supported:
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getroutetablesfilter">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Get<wbr>Route<wbr>Tables<wbr>Filter<wbr>Args&gt;?</a></code>
+                <code><a href="#getroutetablesfilter">List&lt;Get<wbr>Route<wbr>Tables<wbr>Filter<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -98,7 +103,7 @@ Custom filter block as described below.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -149,7 +154,7 @@ The VPC ID that you want to filter from.
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getroutetablesfilter">[]ec2.<wbr>Get<wbr>Route<wbr>Tables<wbr>Filter</a></code>
+                <code><a href="#getroutetablesfilter">[]Get<wbr>Route<wbr>Tables<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -215,7 +220,7 @@ The VPC ID that you want to filter from.
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getroutetablesfilter">ec2.<wbr>Get<wbr>Route<wbr>Tables<wbr>Filter[]?</a></code>
+                <code><a href="#getroutetablesfilter">Get<wbr>Route<wbr>Tables<wbr>Filter[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -362,7 +367,7 @@ The following output properties are available:
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getroutetablesfilter">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Get<wbr>Route<wbr>Tables<wbr>Filter&gt;?</a></code>
+                <code><a href="#getroutetablesfilter">List&lt;Get<wbr>Route<wbr>Tables<wbr>Filter&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -387,7 +392,7 @@ The following output properties are available:
             <td class="align-top">Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} A list of all the route table ids found. This data source will fail if none are found.
  {{% /md %}}
@@ -400,7 +405,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;</code>
+                <code>Dictionary<string, object></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -444,7 +449,7 @@ The following output properties are available:
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getroutetablesfilter">[]ec2.<wbr>Get<wbr>Route<wbr>Tables<wbr>Filter</a></code>
+                <code><a href="#getroutetablesfilter">[]Get<wbr>Route<wbr>Tables<wbr>Filter</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -526,7 +531,7 @@ The following output properties are available:
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getroutetablesfilter">ec2.<wbr>Get<wbr>Route<wbr>Tables<wbr>Filter[]?</a></code>
+                <code><a href="#getroutetablesfilter">Get<wbr>Route<wbr>Tables<wbr>Filter[]?</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -732,7 +737,7 @@ The name of the field to filter by, as defined by
             <td class="align-top">Values</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

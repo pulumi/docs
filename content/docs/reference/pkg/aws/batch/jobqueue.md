@@ -96,7 +96,7 @@ The following arguments are supported:
             <td class="align-top">Compute<wbr>Environments</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -459,7 +459,7 @@ The following output properties are available:
             <td class="align-top">Compute<wbr>Environments</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} Specifies the set of compute environments
 mapped to a job queue and their order.  The position of the compute environments
@@ -876,7 +876,7 @@ The Amazon Resource Name of the job queue.
             <td class="align-top">Compute<wbr>Environments</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

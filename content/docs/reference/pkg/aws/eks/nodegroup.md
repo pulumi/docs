@@ -137,7 +137,7 @@ Name of the EKS Cluster.
             <td class="align-top">Labels</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, string&gt;?</code>
+                <code>Dictionary<string, string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -197,7 +197,7 @@ AMI version of the EKS Node Group. Defaults to latest version for Kubernetes ver
             <td class="align-top">Remote<wbr>Access</td>
             <td class="align-top">
                 
-                <code><a href="#nodegroupremoteaccess">Pulumi.<wbr>Aws.<wbr>Eks.<wbr>Node<wbr>Group<wbr>Remote<wbr>Access<wbr>Args?</a></code>
+                <code><a href="#nodegroupremoteaccess">Node<wbr>Group<wbr>Remote<wbr>Access<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -212,7 +212,7 @@ Configuration block with remote access settings. Detailed below.
             <td class="align-top">Scaling<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#nodegroupscalingconfig">Pulumi.<wbr>Aws.<wbr>Eks.<wbr>Node<wbr>Group<wbr>Scaling<wbr>Config<wbr>Args</a></code>
+                <code><a href="#nodegroupscalingconfig">Node<wbr>Group<wbr>Scaling<wbr>Config<wbr>Args</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -227,7 +227,7 @@ Configuration block with scaling settings. Detailed below.
             <td class="align-top">Subnet<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -242,7 +242,7 @@ Identifiers of EC2 Subnets to associate with the EKS Node Group. These subnets m
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -408,7 +408,7 @@ AMI version of the EKS Node Group. Defaults to latest version for Kubernetes ver
             <td class="align-top">Remote<wbr>Access</td>
             <td class="align-top">
                 
-                <code><a href="#nodegroupremoteaccess">*eks.<wbr>Node<wbr>Group<wbr>Remote<wbr>Access</a></code>
+                <code><a href="#nodegroupremoteaccess">*Node<wbr>Group<wbr>Remote<wbr>Access</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -423,7 +423,7 @@ Configuration block with remote access settings. Detailed below.
             <td class="align-top">Scaling<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#nodegroupscalingconfig">eks.<wbr>Node<wbr>Group<wbr>Scaling<wbr>Config</a></code>
+                <code><a href="#nodegroupscalingconfig">Node<wbr>Group<wbr>Scaling<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -619,7 +619,7 @@ AMI version of the EKS Node Group. Defaults to latest version for Kubernetes ver
             <td class="align-top">remote<wbr>Access</td>
             <td class="align-top">
                 
-                <code><a href="#nodegroupremoteaccess">eks.<wbr>Node<wbr>Group<wbr>Remote<wbr>Access?</a></code>
+                <code><a href="#nodegroupremoteaccess">Node<wbr>Group<wbr>Remote<wbr>Access?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -634,7 +634,7 @@ Configuration block with remote access settings. Detailed below.
             <td class="align-top">scaling<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#nodegroupscalingconfig">eks.<wbr>Node<wbr>Group<wbr>Scaling<wbr>Config</a></code>
+                <code><a href="#nodegroupscalingconfig">Node<wbr>Group<wbr>Scaling<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1000,7 +1000,7 @@ The following output properties are available:
             <td class="align-top">Labels</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, string&gt;?</code>
+                <code>Dictionary<string, string>?</code>
             </td>
             <td class="align-top">{{% md %}} Key-value mapping of Kubernetes labels. Only labels that are applied with the EKS API are managed by this argument. Other Kubernetes labels applied to the EKS Node Group will not be managed.
  {{% /md %}}
@@ -1052,7 +1052,7 @@ The following output properties are available:
             <td class="align-top">Remote<wbr>Access</td>
             <td class="align-top">
                 
-                <code><a href="#nodegroupremoteaccess">Pulumi.<wbr>Aws.<wbr>Eks.<wbr>Node<wbr>Group<wbr>Remote<wbr>Access?</a></code>
+                <code><a href="#nodegroupremoteaccess">Node<wbr>Group<wbr>Remote<wbr>Access?</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block with remote access settings. Detailed below.
  {{% /md %}}
@@ -1065,7 +1065,7 @@ The following output properties are available:
             <td class="align-top">Resources</td>
             <td class="align-top">
                 
-                <code><a href="#nodegroupresource">List&lt;Pulumi.<wbr>Aws.<wbr>Eks.<wbr>Node<wbr>Group<wbr>Resource&gt;</a></code>
+                <code><a href="#nodegroupresource">List&lt;Node<wbr>Group<wbr>Resource&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} List of objects containing information about underlying resources.
  {{% /md %}}
@@ -1078,7 +1078,7 @@ The following output properties are available:
             <td class="align-top">Scaling<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#nodegroupscalingconfig">Pulumi.<wbr>Aws.<wbr>Eks.<wbr>Node<wbr>Group<wbr>Scaling<wbr>Config</a></code>
+                <code><a href="#nodegroupscalingconfig">Node<wbr>Group<wbr>Scaling<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block with scaling settings. Detailed below.
  {{% /md %}}
@@ -1104,7 +1104,7 @@ The following output properties are available:
             <td class="align-top">Subnet<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} Identifiers of EC2 Subnets to associate with the EKS Node Group. These subnets must have the following resource tag: `kubernetes.io/cluster/CLUSTER_NAME` (where `CLUSTER_NAME` is replaced with the name of the EKS Cluster).
  {{% /md %}}
@@ -1117,7 +1117,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} Key-value mapping of resource tags.
  {{% /md %}}
@@ -1276,7 +1276,7 @@ The following output properties are available:
             <td class="align-top">Remote<wbr>Access</td>
             <td class="align-top">
                 
-                <code><a href="#nodegroupremoteaccess">*eks.<wbr>Node<wbr>Group<wbr>Remote<wbr>Access</a></code>
+                <code><a href="#nodegroupremoteaccess">*Node<wbr>Group<wbr>Remote<wbr>Access</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block with remote access settings. Detailed below.
  {{% /md %}}
@@ -1289,7 +1289,7 @@ The following output properties are available:
             <td class="align-top">Resources</td>
             <td class="align-top">
                 
-                <code><a href="#nodegroupresource">[]eks.<wbr>Node<wbr>Group<wbr>Resource</a></code>
+                <code><a href="#nodegroupresource">[]Node<wbr>Group<wbr>Resource</a></code>
             </td>
             <td class="align-top">{{% md %}} List of objects containing information about underlying resources.
  {{% /md %}}
@@ -1302,7 +1302,7 @@ The following output properties are available:
             <td class="align-top">Scaling<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#nodegroupscalingconfig">eks.<wbr>Node<wbr>Group<wbr>Scaling<wbr>Config</a></code>
+                <code><a href="#nodegroupscalingconfig">Node<wbr>Group<wbr>Scaling<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block with scaling settings. Detailed below.
  {{% /md %}}
@@ -1500,7 +1500,7 @@ The following output properties are available:
             <td class="align-top">remote<wbr>Access</td>
             <td class="align-top">
                 
-                <code><a href="#nodegroupremoteaccess">eks.<wbr>Node<wbr>Group<wbr>Remote<wbr>Access?</a></code>
+                <code><a href="#nodegroupremoteaccess">Node<wbr>Group<wbr>Remote<wbr>Access?</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block with remote access settings. Detailed below.
  {{% /md %}}
@@ -1513,7 +1513,7 @@ The following output properties are available:
             <td class="align-top">resources</td>
             <td class="align-top">
                 
-                <code><a href="#nodegroupresource">eks.<wbr>Node<wbr>Group<wbr>Resource[]</a></code>
+                <code><a href="#nodegroupresource">Node<wbr>Group<wbr>Resource[]</a></code>
             </td>
             <td class="align-top">{{% md %}} List of objects containing information about underlying resources.
  {{% /md %}}
@@ -1526,7 +1526,7 @@ The following output properties are available:
             <td class="align-top">scaling<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#nodegroupscalingconfig">eks.<wbr>Node<wbr>Group<wbr>Scaling<wbr>Config</a></code>
+                <code><a href="#nodegroupscalingconfig">Node<wbr>Group<wbr>Scaling<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block with scaling settings. Detailed below.
  {{% /md %}}
@@ -1965,7 +1965,7 @@ Name of the EKS Cluster.
             <td class="align-top">Labels</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, string&gt;?</code>
+                <code>Dictionary<string, string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2025,7 +2025,7 @@ AMI version of the EKS Node Group. Defaults to latest version for Kubernetes ver
             <td class="align-top">Remote<wbr>Access</td>
             <td class="align-top">
                 
-                <code><a href="#nodegroupremoteaccess">Pulumi.<wbr>Aws.<wbr>Eks.<wbr>Node<wbr>Group<wbr>Remote<wbr>Access<wbr>Args?</a></code>
+                <code><a href="#nodegroupremoteaccess">Node<wbr>Group<wbr>Remote<wbr>Access<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2040,7 +2040,7 @@ Configuration block with remote access settings. Detailed below.
             <td class="align-top">Resources</td>
             <td class="align-top">
                 
-                <code><a href="#nodegroupresource">List&lt;Pulumi.<wbr>Aws.<wbr>Eks.<wbr>Node<wbr>Group<wbr>Resource<wbr>Args&gt;?</a></code>
+                <code><a href="#nodegroupresource">List&lt;Node<wbr>Group<wbr>Resource<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2055,7 +2055,7 @@ List of objects containing information about underlying resources.
             <td class="align-top">Scaling<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#nodegroupscalingconfig">Pulumi.<wbr>Aws.<wbr>Eks.<wbr>Node<wbr>Group<wbr>Scaling<wbr>Config<wbr>Args?</a></code>
+                <code><a href="#nodegroupscalingconfig">Node<wbr>Group<wbr>Scaling<wbr>Config<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2085,7 +2085,7 @@ Status of the EKS Node Group.
             <td class="align-top">Subnet<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2100,7 +2100,7 @@ Identifiers of EC2 Subnets to associate with the EKS Node Group. These subnets m
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2281,7 +2281,7 @@ AMI version of the EKS Node Group. Defaults to latest version for Kubernetes ver
             <td class="align-top">Remote<wbr>Access</td>
             <td class="align-top">
                 
-                <code><a href="#nodegroupremoteaccess">*eks.<wbr>Node<wbr>Group<wbr>Remote<wbr>Access</a></code>
+                <code><a href="#nodegroupremoteaccess">*Node<wbr>Group<wbr>Remote<wbr>Access</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2296,7 +2296,7 @@ Configuration block with remote access settings. Detailed below.
             <td class="align-top">Resources</td>
             <td class="align-top">
                 
-                <code><a href="#nodegroupresource">[]eks.<wbr>Node<wbr>Group<wbr>Resource</a></code>
+                <code><a href="#nodegroupresource">[]Node<wbr>Group<wbr>Resource</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2311,7 +2311,7 @@ List of objects containing information about underlying resources.
             <td class="align-top">Scaling<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#nodegroupscalingconfig">*eks.<wbr>Node<wbr>Group<wbr>Scaling<wbr>Config</a></code>
+                <code><a href="#nodegroupscalingconfig">*Node<wbr>Group<wbr>Scaling<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2537,7 +2537,7 @@ AMI version of the EKS Node Group. Defaults to latest version for Kubernetes ver
             <td class="align-top">remote<wbr>Access</td>
             <td class="align-top">
                 
-                <code><a href="#nodegroupremoteaccess">eks.<wbr>Node<wbr>Group<wbr>Remote<wbr>Access?</a></code>
+                <code><a href="#nodegroupremoteaccess">Node<wbr>Group<wbr>Remote<wbr>Access?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2552,7 +2552,7 @@ Configuration block with remote access settings. Detailed below.
             <td class="align-top">resources</td>
             <td class="align-top">
                 
-                <code><a href="#nodegroupresource">eks.<wbr>Node<wbr>Group<wbr>Resource[]?</a></code>
+                <code><a href="#nodegroupresource">Node<wbr>Group<wbr>Resource[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2567,7 +2567,7 @@ List of objects containing information about underlying resources.
             <td class="align-top">scaling<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#nodegroupscalingconfig">eks.<wbr>Node<wbr>Group<wbr>Scaling<wbr>Config?</a></code>
+                <code><a href="#nodegroupscalingconfig">Node<wbr>Group<wbr>Scaling<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2960,7 +2960,7 @@ EC2 Key Pair name that provides access for SSH communication with the worker nod
             <td class="align-top">Source<wbr>Security<wbr>Group<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3166,7 +3166,7 @@ Set of EC2 Security Group IDs to allow SSH access (port 22) from on the worker n
             <td class="align-top">Autoscaling<wbr>Groups</td>
             <td class="align-top">
                 
-                <code><a href="#nodegroupresourceautoscalinggroup">List&lt;Pulumi.<wbr>Aws.<wbr>Eks.<wbr>Node<wbr>Group<wbr>Resource<wbr>Autoscaling<wbr>Group<wbr>Args&gt;?</a></code>
+                <code><a href="#nodegroupresourceautoscalinggroup">List&lt;Node<wbr>Group<wbr>Resource<wbr>Autoscaling<wbr>Group<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3216,7 +3216,7 @@ Identifier of the remote access EC2 Security Group.
             <td class="align-top">Autoscaling<wbr>Groups</td>
             <td class="align-top">
                 
-                <code><a href="#nodegroupresourceautoscalinggroup">[]eks.<wbr>Node<wbr>Group<wbr>Resource<wbr>Autoscaling<wbr>Group</a></code>
+                <code><a href="#nodegroupresourceautoscalinggroup">[]Node<wbr>Group<wbr>Resource<wbr>Autoscaling<wbr>Group</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3266,7 +3266,7 @@ Identifier of the remote access EC2 Security Group.
             <td class="align-top">autoscaling<wbr>Groups</td>
             <td class="align-top">
                 
-                <code><a href="#nodegroupresourceautoscalinggroup">eks.<wbr>Node<wbr>Group<wbr>Resource<wbr>Autoscaling<wbr>Group[]?</a></code>
+                <code><a href="#nodegroupresourceautoscalinggroup">Node<wbr>Group<wbr>Resource<wbr>Autoscaling<wbr>Group[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
