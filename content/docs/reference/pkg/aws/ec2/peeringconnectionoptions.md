@@ -171,7 +171,7 @@ The following arguments are supported:
             <td class="align-top">Accepter</td>
             <td class="align-top">
                 
-                <code><a href="#peeringconnectionoptionsaccepter">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Peering<wbr>Connection<wbr>Options<wbr>Accepter<wbr>Args?</a></code>
+                <code><a href="#peeringconnectionoptionsaccepter">Peering<wbr>Connection<wbr>Options<wbr>Accepter<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -188,7 +188,7 @@ the peering connection (a maximum of one).
             <td class="align-top">Requester</td>
             <td class="align-top">
                 
-                <code><a href="#peeringconnectionoptionsrequester">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Peering<wbr>Connection<wbr>Options<wbr>Requester<wbr>Args?</a></code>
+                <code><a href="#peeringconnectionoptionsrequester">Peering<wbr>Connection<wbr>Options<wbr>Requester<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -309,7 +309,7 @@ The ID of the requester VPC peering connection.
             <td class="align-top">accepter</td>
             <td class="align-top">
                 
-                <code><a href="#peeringconnectionoptionsaccepter">ec2.<wbr>Peering<wbr>Connection<wbr>Options<wbr>Accepter?</a></code>
+                <code><a href="#peeringconnectionoptionsaccepter">Peering<wbr>Connection<wbr>Options<wbr>Accepter?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -326,7 +326,7 @@ the peering connection (a maximum of one).
             <td class="align-top">requester</td>
             <td class="align-top">
                 
-                <code><a href="#peeringconnectionoptionsrequester">ec2.<wbr>Peering<wbr>Connection<wbr>Options<wbr>Requester?</a></code>
+                <code><a href="#peeringconnectionoptionsrequester">Peering<wbr>Connection<wbr>Options<wbr>Requester?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -461,7 +461,7 @@ The following output properties are available:
             <td class="align-top">Accepter</td>
             <td class="align-top">
                 
-                <code><a href="#peeringconnectionoptionsaccepter">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Peering<wbr>Connection<wbr>Options<wbr>Accepter</a></code>
+                <code><a href="#peeringconnectionoptionsaccepter">Peering<wbr>Connection<wbr>Options<wbr>Accepter</a></code>
             </td>
             <td class="align-top">{{% md %}} An optional configuration block that allows for [VPC Peering Connection]
 (http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide) options to be set for the VPC that accepts
@@ -476,7 +476,7 @@ the peering connection (a maximum of one).
             <td class="align-top">Requester</td>
             <td class="align-top">
                 
-                <code><a href="#peeringconnectionoptionsrequester">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Peering<wbr>Connection<wbr>Options<wbr>Requester</a></code>
+                <code><a href="#peeringconnectionoptionsrequester">Peering<wbr>Connection<wbr>Options<wbr>Requester</a></code>
             </td>
             <td class="align-top">{{% md %}} A optional configuration block that allows for [VPC Peering Connection]
 (http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide) options to be set for the VPC that requests
@@ -587,7 +587,7 @@ the peering connection (a maximum of one).
             <td class="align-top">accepter</td>
             <td class="align-top">
                 
-                <code><a href="#peeringconnectionoptionsaccepter">ec2.<wbr>Peering<wbr>Connection<wbr>Options<wbr>Accepter</a></code>
+                <code><a href="#peeringconnectionoptionsaccepter">Peering<wbr>Connection<wbr>Options<wbr>Accepter</a></code>
             </td>
             <td class="align-top">{{% md %}} An optional configuration block that allows for [VPC Peering Connection]
 (http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide) options to be set for the VPC that accepts
@@ -602,7 +602,7 @@ the peering connection (a maximum of one).
             <td class="align-top">requester</td>
             <td class="align-top">
                 
-                <code><a href="#peeringconnectionoptionsrequester">ec2.<wbr>Peering<wbr>Connection<wbr>Options<wbr>Requester</a></code>
+                <code><a href="#peeringconnectionoptionsrequester">Peering<wbr>Connection<wbr>Options<wbr>Requester</a></code>
             </td>
             <td class="align-top">{{% md %}} A optional configuration block that allows for [VPC Peering Connection]
 (http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide) options to be set for the VPC that requests
@@ -772,7 +772,7 @@ The following state arguments are supported:
             <td class="align-top">Accepter</td>
             <td class="align-top">
                 
-                <code><a href="#peeringconnectionoptionsaccepter">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Peering<wbr>Connection<wbr>Options<wbr>Accepter<wbr>Args?</a></code>
+                <code><a href="#peeringconnectionoptionsaccepter">Peering<wbr>Connection<wbr>Options<wbr>Accepter<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -789,7 +789,7 @@ the peering connection (a maximum of one).
             <td class="align-top">Requester</td>
             <td class="align-top">
                 
-                <code><a href="#peeringconnectionoptionsrequester">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Peering<wbr>Connection<wbr>Options<wbr>Requester<wbr>Args?</a></code>
+                <code><a href="#peeringconnectionoptionsrequester">Peering<wbr>Connection<wbr>Options<wbr>Requester<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -910,7 +910,7 @@ The ID of the requester VPC peering connection.
             <td class="align-top">accepter</td>
             <td class="align-top">
                 
-                <code><a href="#peeringconnectionoptionsaccepter">ec2.<wbr>Peering<wbr>Connection<wbr>Options<wbr>Accepter?</a></code>
+                <code><a href="#peeringconnectionoptionsaccepter">Peering<wbr>Connection<wbr>Options<wbr>Accepter?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -927,7 +927,7 @@ the peering connection (a maximum of one).
             <td class="align-top">requester</td>
             <td class="align-top">
                 
-                <code><a href="#peeringconnectionoptionsrequester">ec2.<wbr>Peering<wbr>Connection<wbr>Options<wbr>Requester?</a></code>
+                <code><a href="#peeringconnectionoptionsrequester">Peering<wbr>Connection<wbr>Options<wbr>Requester?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

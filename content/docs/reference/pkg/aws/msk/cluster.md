@@ -150,7 +150,7 @@ The following arguments are supported:
             <td class="align-top">Broker<wbr>Node<wbr>Group<wbr>Info</td>
             <td class="align-top">
                 
-                <code><a href="#clusterbrokernodegroupinfo">Pulumi.<wbr>Aws.<wbr>Msk.<wbr>Cluster<wbr>Broker<wbr>Node<wbr>Group<wbr>Info<wbr>Args</a></code>
+                <code><a href="#clusterbrokernodegroupinfo">Cluster<wbr>Broker<wbr>Node<wbr>Group<wbr>Info<wbr>Args</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -165,7 +165,7 @@ Configuration block for the broker nodes of the Kafka cluster.
             <td class="align-top">Client<wbr>Authentication</td>
             <td class="align-top">
                 
-                <code><a href="#clusterclientauthentication">Pulumi.<wbr>Aws.<wbr>Msk.<wbr>Cluster<wbr>Client<wbr>Authentication<wbr>Args?</a></code>
+                <code><a href="#clusterclientauthentication">Cluster<wbr>Client<wbr>Authentication<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -195,7 +195,7 @@ Name of the MSK cluster.
             <td class="align-top">Configuration<wbr>Info</td>
             <td class="align-top">
                 
-                <code><a href="#clusterconfigurationinfo">Pulumi.<wbr>Aws.<wbr>Msk.<wbr>Cluster<wbr>Configuration<wbr>Info<wbr>Args?</a></code>
+                <code><a href="#clusterconfigurationinfo">Cluster<wbr>Configuration<wbr>Info<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -210,7 +210,7 @@ Configuration block for specifying a MSK Configuration to attach to Kafka broker
             <td class="align-top">Encryption<wbr>Info</td>
             <td class="align-top">
                 
-                <code><a href="#clusterencryptioninfo">Pulumi.<wbr>Aws.<wbr>Msk.<wbr>Cluster<wbr>Encryption<wbr>Info<wbr>Args?</a></code>
+                <code><a href="#clusterencryptioninfo">Cluster<wbr>Encryption<wbr>Info<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -270,7 +270,7 @@ The desired total number of broker nodes in the kafka cluster.  It must be a mul
             <td class="align-top">Open<wbr>Monitoring</td>
             <td class="align-top">
                 
-                <code><a href="#clusteropenmonitoring">Pulumi.<wbr>Aws.<wbr>Msk.<wbr>Cluster<wbr>Open<wbr>Monitoring<wbr>Args?</a></code>
+                <code><a href="#clusteropenmonitoring">Cluster<wbr>Open<wbr>Monitoring<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -285,7 +285,7 @@ Configuration block for JMX and Node monitoring for the MSK cluster. See below.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -490,7 +490,7 @@ A mapping of tags to assign to the resource
             <td class="align-top">broker<wbr>Node<wbr>Group<wbr>Info</td>
             <td class="align-top">
                 
-                <code><a href="#clusterbrokernodegroupinfo">msk.<wbr>Cluster<wbr>Broker<wbr>Node<wbr>Group<wbr>Info</a></code>
+                <code><a href="#clusterbrokernodegroupinfo">Cluster<wbr>Broker<wbr>Node<wbr>Group<wbr>Info</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -505,7 +505,7 @@ Configuration block for the broker nodes of the Kafka cluster.
             <td class="align-top">client<wbr>Authentication</td>
             <td class="align-top">
                 
-                <code><a href="#clusterclientauthentication">msk.<wbr>Cluster<wbr>Client<wbr>Authentication?</a></code>
+                <code><a href="#clusterclientauthentication">Cluster<wbr>Client<wbr>Authentication?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -535,7 +535,7 @@ Name of the MSK cluster.
             <td class="align-top">configuration<wbr>Info</td>
             <td class="align-top">
                 
-                <code><a href="#clusterconfigurationinfo">msk.<wbr>Cluster<wbr>Configuration<wbr>Info?</a></code>
+                <code><a href="#clusterconfigurationinfo">Cluster<wbr>Configuration<wbr>Info?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -550,7 +550,7 @@ Configuration block for specifying a MSK Configuration to attach to Kafka broker
             <td class="align-top">encryption<wbr>Info</td>
             <td class="align-top">
                 
-                <code><a href="#clusterencryptioninfo">msk.<wbr>Cluster<wbr>Encryption<wbr>Info?</a></code>
+                <code><a href="#clusterencryptioninfo">Cluster<wbr>Encryption<wbr>Info?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -610,7 +610,7 @@ The desired total number of broker nodes in the kafka cluster.  It must be a mul
             <td class="align-top">open<wbr>Monitoring</td>
             <td class="align-top">
                 
-                <code><a href="#clusteropenmonitoring">msk.<wbr>Cluster<wbr>Open<wbr>Monitoring?</a></code>
+                <code><a href="#clusteropenmonitoring">Cluster<wbr>Open<wbr>Monitoring?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -883,7 +883,7 @@ The following output properties are available:
             <td class="align-top">Broker<wbr>Node<wbr>Group<wbr>Info</td>
             <td class="align-top">
                 
-                <code><a href="#clusterbrokernodegroupinfo">Pulumi.<wbr>Aws.<wbr>Msk.<wbr>Cluster<wbr>Broker<wbr>Node<wbr>Group<wbr>Info</a></code>
+                <code><a href="#clusterbrokernodegroupinfo">Cluster<wbr>Broker<wbr>Node<wbr>Group<wbr>Info</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block for the broker nodes of the Kafka cluster.
  {{% /md %}}
@@ -896,7 +896,7 @@ The following output properties are available:
             <td class="align-top">Client<wbr>Authentication</td>
             <td class="align-top">
                 
-                <code><a href="#clusterclientauthentication">Pulumi.<wbr>Aws.<wbr>Msk.<wbr>Cluster<wbr>Client<wbr>Authentication?</a></code>
+                <code><a href="#clusterclientauthentication">Cluster<wbr>Client<wbr>Authentication?</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block for specifying a client authentication. See below.
  {{% /md %}}
@@ -922,7 +922,7 @@ The following output properties are available:
             <td class="align-top">Configuration<wbr>Info</td>
             <td class="align-top">
                 
-                <code><a href="#clusterconfigurationinfo">Pulumi.<wbr>Aws.<wbr>Msk.<wbr>Cluster<wbr>Configuration<wbr>Info?</a></code>
+                <code><a href="#clusterconfigurationinfo">Cluster<wbr>Configuration<wbr>Info?</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block for specifying a MSK Configuration to attach to Kafka brokers. See below.
  {{% /md %}}
@@ -949,7 +949,7 @@ The following output properties are available:
             <td class="align-top">Encryption<wbr>Info</td>
             <td class="align-top">
                 
-                <code><a href="#clusterencryptioninfo">Pulumi.<wbr>Aws.<wbr>Msk.<wbr>Cluster<wbr>Encryption<wbr>Info?</a></code>
+                <code><a href="#clusterencryptioninfo">Cluster<wbr>Encryption<wbr>Info?</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block for specifying encryption. See below.
  {{% /md %}}
@@ -1001,7 +1001,7 @@ The following output properties are available:
             <td class="align-top">Open<wbr>Monitoring</td>
             <td class="align-top">
                 
-                <code><a href="#clusteropenmonitoring">Pulumi.<wbr>Aws.<wbr>Msk.<wbr>Cluster<wbr>Open<wbr>Monitoring?</a></code>
+                <code><a href="#clusteropenmonitoring">Cluster<wbr>Open<wbr>Monitoring?</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block for JMX and Node monitoring for the MSK cluster. See below.
  {{% /md %}}
@@ -1014,7 +1014,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource
  {{% /md %}}
@@ -1315,7 +1315,7 @@ The following output properties are available:
             <td class="align-top">broker<wbr>Node<wbr>Group<wbr>Info</td>
             <td class="align-top">
                 
-                <code><a href="#clusterbrokernodegroupinfo">msk.<wbr>Cluster<wbr>Broker<wbr>Node<wbr>Group<wbr>Info</a></code>
+                <code><a href="#clusterbrokernodegroupinfo">Cluster<wbr>Broker<wbr>Node<wbr>Group<wbr>Info</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block for the broker nodes of the Kafka cluster.
  {{% /md %}}
@@ -1328,7 +1328,7 @@ The following output properties are available:
             <td class="align-top">client<wbr>Authentication</td>
             <td class="align-top">
                 
-                <code><a href="#clusterclientauthentication">msk.<wbr>Cluster<wbr>Client<wbr>Authentication?</a></code>
+                <code><a href="#clusterclientauthentication">Cluster<wbr>Client<wbr>Authentication?</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block for specifying a client authentication. See below.
  {{% /md %}}
@@ -1354,7 +1354,7 @@ The following output properties are available:
             <td class="align-top">configuration<wbr>Info</td>
             <td class="align-top">
                 
-                <code><a href="#clusterconfigurationinfo">msk.<wbr>Cluster<wbr>Configuration<wbr>Info?</a></code>
+                <code><a href="#clusterconfigurationinfo">Cluster<wbr>Configuration<wbr>Info?</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block for specifying a MSK Configuration to attach to Kafka brokers. See below.
  {{% /md %}}
@@ -1381,7 +1381,7 @@ The following output properties are available:
             <td class="align-top">encryption<wbr>Info</td>
             <td class="align-top">
                 
-                <code><a href="#clusterencryptioninfo">msk.<wbr>Cluster<wbr>Encryption<wbr>Info?</a></code>
+                <code><a href="#clusterencryptioninfo">Cluster<wbr>Encryption<wbr>Info?</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block for specifying encryption. See below.
  {{% /md %}}
@@ -1433,7 +1433,7 @@ The following output properties are available:
             <td class="align-top">open<wbr>Monitoring</td>
             <td class="align-top">
                 
-                <code><a href="#clusteropenmonitoring">msk.<wbr>Cluster<wbr>Open<wbr>Monitoring?</a></code>
+                <code><a href="#clusteropenmonitoring">Cluster<wbr>Open<wbr>Monitoring?</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block for JMX and Node monitoring for the MSK cluster. See below.
  {{% /md %}}
@@ -1812,7 +1812,7 @@ A comma separated list of one or more DNS names (or IPs) and TLS port pairs kafk
             <td class="align-top">Broker<wbr>Node<wbr>Group<wbr>Info</td>
             <td class="align-top">
                 
-                <code><a href="#clusterbrokernodegroupinfo">Pulumi.<wbr>Aws.<wbr>Msk.<wbr>Cluster<wbr>Broker<wbr>Node<wbr>Group<wbr>Info<wbr>Args?</a></code>
+                <code><a href="#clusterbrokernodegroupinfo">Cluster<wbr>Broker<wbr>Node<wbr>Group<wbr>Info<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1827,7 +1827,7 @@ Configuration block for the broker nodes of the Kafka cluster.
             <td class="align-top">Client<wbr>Authentication</td>
             <td class="align-top">
                 
-                <code><a href="#clusterclientauthentication">Pulumi.<wbr>Aws.<wbr>Msk.<wbr>Cluster<wbr>Client<wbr>Authentication<wbr>Args?</a></code>
+                <code><a href="#clusterclientauthentication">Cluster<wbr>Client<wbr>Authentication<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1857,7 +1857,7 @@ Name of the MSK cluster.
             <td class="align-top">Configuration<wbr>Info</td>
             <td class="align-top">
                 
-                <code><a href="#clusterconfigurationinfo">Pulumi.<wbr>Aws.<wbr>Msk.<wbr>Cluster<wbr>Configuration<wbr>Info<wbr>Args?</a></code>
+                <code><a href="#clusterconfigurationinfo">Cluster<wbr>Configuration<wbr>Info<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1888,7 +1888,7 @@ Current version of the MSK Cluster used for updates, e.g. `K13V1IB3VIYZZH`
             <td class="align-top">Encryption<wbr>Info</td>
             <td class="align-top">
                 
-                <code><a href="#clusterencryptioninfo">Pulumi.<wbr>Aws.<wbr>Msk.<wbr>Cluster<wbr>Encryption<wbr>Info<wbr>Args?</a></code>
+                <code><a href="#clusterencryptioninfo">Cluster<wbr>Encryption<wbr>Info<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1948,7 +1948,7 @@ The desired total number of broker nodes in the kafka cluster.  It must be a mul
             <td class="align-top">Open<wbr>Monitoring</td>
             <td class="align-top">
                 
-                <code><a href="#clusteropenmonitoring">Pulumi.<wbr>Aws.<wbr>Msk.<wbr>Cluster<wbr>Open<wbr>Monitoring<wbr>Args?</a></code>
+                <code><a href="#clusteropenmonitoring">Cluster<wbr>Open<wbr>Monitoring<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1963,7 +1963,7 @@ Configuration block for JMX and Node monitoring for the MSK cluster. See below.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2304,7 +2304,7 @@ A comma separated list of one or more DNS names (or IPs) and TLS port pairs kafk
             <td class="align-top">broker<wbr>Node<wbr>Group<wbr>Info</td>
             <td class="align-top">
                 
-                <code><a href="#clusterbrokernodegroupinfo">msk.<wbr>Cluster<wbr>Broker<wbr>Node<wbr>Group<wbr>Info?</a></code>
+                <code><a href="#clusterbrokernodegroupinfo">Cluster<wbr>Broker<wbr>Node<wbr>Group<wbr>Info?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2319,7 +2319,7 @@ Configuration block for the broker nodes of the Kafka cluster.
             <td class="align-top">client<wbr>Authentication</td>
             <td class="align-top">
                 
-                <code><a href="#clusterclientauthentication">msk.<wbr>Cluster<wbr>Client<wbr>Authentication?</a></code>
+                <code><a href="#clusterclientauthentication">Cluster<wbr>Client<wbr>Authentication?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2349,7 +2349,7 @@ Name of the MSK cluster.
             <td class="align-top">configuration<wbr>Info</td>
             <td class="align-top">
                 
-                <code><a href="#clusterconfigurationinfo">msk.<wbr>Cluster<wbr>Configuration<wbr>Info?</a></code>
+                <code><a href="#clusterconfigurationinfo">Cluster<wbr>Configuration<wbr>Info?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2380,7 +2380,7 @@ Current version of the MSK Cluster used for updates, e.g. `K13V1IB3VIYZZH`
             <td class="align-top">encryption<wbr>Info</td>
             <td class="align-top">
                 
-                <code><a href="#clusterencryptioninfo">msk.<wbr>Cluster<wbr>Encryption<wbr>Info?</a></code>
+                <code><a href="#clusterencryptioninfo">Cluster<wbr>Encryption<wbr>Info?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2440,7 +2440,7 @@ The desired total number of broker nodes in the kafka cluster.  It must be a mul
             <td class="align-top">open<wbr>Monitoring</td>
             <td class="align-top">
                 
-                <code><a href="#clusteropenmonitoring">msk.<wbr>Cluster<wbr>Open<wbr>Monitoring?</a></code>
+                <code><a href="#clusteropenmonitoring">Cluster<wbr>Open<wbr>Monitoring?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2794,7 +2794,7 @@ The distribution of broker nodes across availability zones ([documentation](http
             <td class="align-top">Client<wbr>Subnets</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2839,7 +2839,7 @@ Specify the instance type to use for the kafka brokers. e.g. kafka.m5.large. ([P
             <td class="align-top">Security<wbr>Groups</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -3180,7 +3180,7 @@ A list of the security groups to associate with the elastic network interfaces t
             <td class="align-top">Tls</td>
             <td class="align-top">
                 
-                <code><a href="#clusterclientauthenticationtls">Pulumi.<wbr>Aws.<wbr>Msk.<wbr>Cluster<wbr>Client<wbr>Authentication<wbr>Tls<wbr>Args?</a></code>
+                <code><a href="#clusterclientauthenticationtls">Cluster<wbr>Client<wbr>Authentication<wbr>Tls<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3250,7 +3250,7 @@ Configuration block for specifying TLS client authentication. See below.
             <td class="align-top">tls</td>
             <td class="align-top">
                 
-                <code><a href="#clusterclientauthenticationtls">msk.<wbr>Cluster<wbr>Client<wbr>Authentication<wbr>Tls?</a></code>
+                <code><a href="#clusterclientauthenticationtls">Cluster<wbr>Client<wbr>Authentication<wbr>Tls?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3341,7 +3341,7 @@ Configuration block for specifying TLS client authentication. See below.
             <td class="align-top">Certificate<wbr>Authority<wbr>Arns</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3738,7 +3738,7 @@ You may specify a KMS key short ID or ARN (it will always output an ARN) to use 
             <td class="align-top">Encryption<wbr>In<wbr>Transit</td>
             <td class="align-top">
                 
-                <code><a href="#clusterencryptioninfoencryptionintransit">Pulumi.<wbr>Aws.<wbr>Msk.<wbr>Cluster<wbr>Encryption<wbr>Info<wbr>Encryption<wbr>In<wbr>Transit<wbr>Args?</a></code>
+                <code><a href="#clusterencryptioninfoencryptionintransit">Cluster<wbr>Encryption<wbr>Info<wbr>Encryption<wbr>In<wbr>Transit<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3838,7 +3838,7 @@ You may specify a KMS key short ID or ARN (it will always output an ARN) to use 
             <td class="align-top">encryption<wbr>In<wbr>Transit</td>
             <td class="align-top">
                 
-                <code><a href="#clusterencryptioninfoencryptionintransit">msk.<wbr>Cluster<wbr>Encryption<wbr>Info<wbr>Encryption<wbr>In<wbr>Transit?</a></code>
+                <code><a href="#clusterencryptioninfoencryptionintransit">Cluster<wbr>Encryption<wbr>Info<wbr>Encryption<wbr>In<wbr>Transit?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4165,7 +4165,7 @@ Whether data communication among broker nodes is encrypted. Default value: `true
             <td class="align-top">Prometheus</td>
             <td class="align-top">
                 
-                <code><a href="#clusteropenmonitoringprometheus">Pulumi.<wbr>Aws.<wbr>Msk.<wbr>Cluster<wbr>Open<wbr>Monitoring<wbr>Prometheus<wbr>Args</a></code>
+                <code><a href="#clusteropenmonitoringprometheus">Cluster<wbr>Open<wbr>Monitoring<wbr>Prometheus<wbr>Args</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -4235,7 +4235,7 @@ Configuration block for Prometheus settings for open monitoring. See below.
             <td class="align-top">prometheus</td>
             <td class="align-top">
                 
-                <code><a href="#clusteropenmonitoringprometheus">msk.<wbr>Cluster<wbr>Open<wbr>Monitoring<wbr>Prometheus</a></code>
+                <code><a href="#clusteropenmonitoringprometheus">Cluster<wbr>Open<wbr>Monitoring<wbr>Prometheus</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -4326,7 +4326,7 @@ Configuration block for Prometheus settings for open monitoring. See below.
             <td class="align-top">Jmx<wbr>Exporter</td>
             <td class="align-top">
                 
-                <code><a href="#clusteropenmonitoringprometheusjmxexporter">Pulumi.<wbr>Aws.<wbr>Msk.<wbr>Cluster<wbr>Open<wbr>Monitoring<wbr>Prometheus<wbr>Jmx<wbr>Exporter<wbr>Args?</a></code>
+                <code><a href="#clusteropenmonitoringprometheusjmxexporter">Cluster<wbr>Open<wbr>Monitoring<wbr>Prometheus<wbr>Jmx<wbr>Exporter<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4341,7 +4341,7 @@ Configuration block for JMX Exporter. See below.
             <td class="align-top">Node<wbr>Exporter</td>
             <td class="align-top">
                 
-                <code><a href="#clusteropenmonitoringprometheusnodeexporter">Pulumi.<wbr>Aws.<wbr>Msk.<wbr>Cluster<wbr>Open<wbr>Monitoring<wbr>Prometheus<wbr>Node<wbr>Exporter<wbr>Args?</a></code>
+                <code><a href="#clusteropenmonitoringprometheusnodeexporter">Cluster<wbr>Open<wbr>Monitoring<wbr>Prometheus<wbr>Node<wbr>Exporter<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4426,7 +4426,7 @@ Configuration block for Node Exporter. See below.
             <td class="align-top">jmx<wbr>Exporter</td>
             <td class="align-top">
                 
-                <code><a href="#clusteropenmonitoringprometheusjmxexporter">msk.<wbr>Cluster<wbr>Open<wbr>Monitoring<wbr>Prometheus<wbr>Jmx<wbr>Exporter?</a></code>
+                <code><a href="#clusteropenmonitoringprometheusjmxexporter">Cluster<wbr>Open<wbr>Monitoring<wbr>Prometheus<wbr>Jmx<wbr>Exporter?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4441,7 +4441,7 @@ Configuration block for JMX Exporter. See below.
             <td class="align-top">node<wbr>Exporter</td>
             <td class="align-top">
                 
-                <code><a href="#clusteropenmonitoringprometheusnodeexporter">msk.<wbr>Cluster<wbr>Open<wbr>Monitoring<wbr>Prometheus<wbr>Node<wbr>Exporter?</a></code>
+                <code><a href="#clusteropenmonitoringprometheusnodeexporter">Cluster<wbr>Open<wbr>Monitoring<wbr>Prometheus<wbr>Node<wbr>Exporter?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

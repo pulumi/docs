@@ -228,7 +228,7 @@ The ARN of the default SSL server certificate. Exactly one certificate is requir
             <td class="align-top">Default<wbr>Actions</td>
             <td class="align-top">
                 
-                <code><a href="#listenerdefaultaction">List&lt;Pulumi.<wbr>Aws.<wbr>Lb.<wbr>Listener<wbr>Default<wbr>Action<wbr>Args&gt;</a></code>
+                <code><a href="#listenerdefaultaction">List&lt;Listener<wbr>Default<wbr>Action<wbr>Args&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -448,7 +448,7 @@ The ARN of the default SSL server certificate. Exactly one certificate is requir
             <td class="align-top">default<wbr>Actions</td>
             <td class="align-top">
                 
-                <code><a href="#listenerdefaultaction">lb.<wbr>Listener<wbr>Default<wbr>Action[]</a></code>
+                <code><a href="#listenerdefaultaction">Listener<wbr>Default<wbr>Action[]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -693,7 +693,7 @@ The following output properties are available:
             <td class="align-top">Default<wbr>Actions</td>
             <td class="align-top">
                 
-                <code><a href="#listenerdefaultaction">List&lt;Pulumi.<wbr>Aws.<wbr>Lb.<wbr>Listener<wbr>Default<wbr>Action&gt;</a></code>
+                <code><a href="#listenerdefaultaction">List&lt;Listener<wbr>Default<wbr>Action&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} An Action block. Action blocks are documented below.
  {{% /md %}}
@@ -915,7 +915,7 @@ The following output properties are available:
             <td class="align-top">default<wbr>Actions</td>
             <td class="align-top">
                 
-                <code><a href="#listenerdefaultaction">lb.<wbr>Listener<wbr>Default<wbr>Action[]</a></code>
+                <code><a href="#listenerdefaultaction">Listener<wbr>Default<wbr>Action[]</a></code>
             </td>
             <td class="align-top">{{% md %}} An Action block. Action blocks are documented below.
  {{% /md %}}
@@ -1200,7 +1200,7 @@ The ARN of the default SSL server certificate. Exactly one certificate is requir
             <td class="align-top">Default<wbr>Actions</td>
             <td class="align-top">
                 
-                <code><a href="#listenerdefaultaction">List&lt;Pulumi.<wbr>Aws.<wbr>Lb.<wbr>Listener<wbr>Default<wbr>Action<wbr>Args&gt;?</a></code>
+                <code><a href="#listenerdefaultaction">List&lt;Listener<wbr>Default<wbr>Action<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1450,7 +1450,7 @@ The ARN of the default SSL server certificate. Exactly one certificate is requir
             <td class="align-top">default<wbr>Actions</td>
             <td class="align-top">
                 
-                <code><a href="#listenerdefaultaction">lb.<wbr>Listener<wbr>Default<wbr>Action[]?</a></code>
+                <code><a href="#listenerdefaultaction">Listener<wbr>Default<wbr>Action[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1698,7 +1698,7 @@ The name of the SSL Policy for the listener. Required if `protocol` is `HTTPS` o
             <td class="align-top">Authenticate<wbr>Cognito</td>
             <td class="align-top">
                 
-                <code><a href="#listenerdefaultactionauthenticatecognito">Pulumi.<wbr>Aws.<wbr>Lb.<wbr>Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Cognito<wbr>Args?</a></code>
+                <code><a href="#listenerdefaultactionauthenticatecognito">Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Cognito<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1712,7 +1712,7 @@ The name of the SSL Policy for the listener. Required if `protocol` is `HTTPS` o
             <td class="align-top">Authenticate<wbr>Oidc</td>
             <td class="align-top">
                 
-                <code><a href="#listenerdefaultactionauthenticateoidc">Pulumi.<wbr>Aws.<wbr>Lb.<wbr>Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Oidc<wbr>Args?</a></code>
+                <code><a href="#listenerdefaultactionauthenticateoidc">Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Oidc<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1726,7 +1726,7 @@ The name of the SSL Policy for the listener. Required if `protocol` is `HTTPS` o
             <td class="align-top">Fixed<wbr>Response</td>
             <td class="align-top">
                 
-                <code><a href="#listenerdefaultactionfixedresponse">Pulumi.<wbr>Aws.<wbr>Lb.<wbr>Listener<wbr>Default<wbr>Action<wbr>Fixed<wbr>Response<wbr>Args?</a></code>
+                <code><a href="#listenerdefaultactionfixedresponse">Listener<wbr>Default<wbr>Action<wbr>Fixed<wbr>Response<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1755,7 +1755,7 @@ Information for creating an action that returns a custom HTTP response. Required
             <td class="align-top">Redirect</td>
             <td class="align-top">
                 
-                <code><a href="#listenerdefaultactionredirect">Pulumi.<wbr>Aws.<wbr>Lb.<wbr>Listener<wbr>Default<wbr>Action<wbr>Redirect<wbr>Args?</a></code>
+                <code><a href="#listenerdefaultactionredirect">Listener<wbr>Default<wbr>Action<wbr>Redirect<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1942,7 +1942,7 @@ The type of routing action. Valid values are `forward`, `redirect`, `fixed-respo
             <td class="align-top">authenticate<wbr>Cognito</td>
             <td class="align-top">
                 
-                <code><a href="#listenerdefaultactionauthenticatecognito">lb.<wbr>Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Cognito?</a></code>
+                <code><a href="#listenerdefaultactionauthenticatecognito">Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Cognito?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1956,7 +1956,7 @@ The type of routing action. Valid values are `forward`, `redirect`, `fixed-respo
             <td class="align-top">authenticate<wbr>Oidc</td>
             <td class="align-top">
                 
-                <code><a href="#listenerdefaultactionauthenticateoidc">lb.<wbr>Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Oidc?</a></code>
+                <code><a href="#listenerdefaultactionauthenticateoidc">Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Oidc?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1970,7 +1970,7 @@ The type of routing action. Valid values are `forward`, `redirect`, `fixed-respo
             <td class="align-top">fixed<wbr>Response</td>
             <td class="align-top">
                 
-                <code><a href="#listenerdefaultactionfixedresponse">lb.<wbr>Listener<wbr>Default<wbr>Action<wbr>Fixed<wbr>Response?</a></code>
+                <code><a href="#listenerdefaultactionfixedresponse">Listener<wbr>Default<wbr>Action<wbr>Fixed<wbr>Response?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1999,7 +1999,7 @@ Information for creating an action that returns a custom HTTP response. Required
             <td class="align-top">redirect</td>
             <td class="align-top">
                 
-                <code><a href="#listenerdefaultactionredirect">lb.<wbr>Listener<wbr>Default<wbr>Action<wbr>Redirect?</a></code>
+                <code><a href="#listenerdefaultactionredirect">Listener<wbr>Default<wbr>Action<wbr>Redirect?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2207,7 +2207,7 @@ The type of routing action. Valid values are `forward`, `redirect`, `fixed-respo
             <td class="align-top">Authentication<wbr>Request<wbr>Extra<wbr>Params</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2788,7 +2788,7 @@ The domain prefix or fully-qualified domain name of the Cognito user pool.
             <td class="align-top">Authentication<wbr>Request<wbr>Extra<wbr>Params</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

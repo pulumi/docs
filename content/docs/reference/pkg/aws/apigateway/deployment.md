@@ -178,7 +178,7 @@ The name of the stage. If the specified stage already exists, it will be updated
             <td class="align-top">Variables</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, string&gt;?</code>
+                <code>Dictionary<string, string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -323,7 +323,7 @@ The description of the deployment
             <td class="align-top">rest<wbr>Api</td>
             <td class="align-top">
                 
-                <code>string | Rest<wbr>Api</code>
+                <code>string | RestApi</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -606,7 +606,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
             <td class="align-top">Variables</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, string&gt;?</code>
+                <code>Dictionary<string, string>?</code>
             </td>
             <td class="align-top">{{% md %}} A map that defines variables for the stage
  {{% /md %}}
@@ -1187,7 +1187,7 @@ The name of the stage. If the specified stage already exists, it will be updated
             <td class="align-top">Variables</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, string&gt;?</code>
+                <code>Dictionary<string, string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1428,7 +1428,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
             <td class="align-top">rest<wbr>Api</td>
             <td class="align-top">
                 
-                <code>string | Rest<wbr>Api</code>
+                <code>string | RestApi</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

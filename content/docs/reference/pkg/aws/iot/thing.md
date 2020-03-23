@@ -93,7 +93,7 @@ The following arguments are supported:
             <td class="align-top">Attributes</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -380,7 +380,7 @@ The following output properties are available:
             <td class="align-top">Attributes</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} Map of attributes of the thing.
  {{% /md %}}
@@ -833,7 +833,7 @@ The ARN of the thing.
             <td class="align-top">Attributes</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

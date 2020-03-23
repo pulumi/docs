@@ -100,7 +100,7 @@ The following arguments are supported:
             <td class="align-top">Response<wbr>Parameters</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, string&gt;?</code>
+                <code>Dictionary<string, string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -115,7 +115,7 @@ A map specifying the parameters (paths, query strings and headers) of the Gatewa
             <td class="align-top">Response<wbr>Templates</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, string&gt;?</code>
+                <code>Dictionary<string, string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -494,7 +494,7 @@ The following output properties are available:
             <td class="align-top">Response<wbr>Parameters</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, string&gt;?</code>
+                <code>Dictionary<string, string>?</code>
             </td>
             <td class="align-top">{{% md %}} A map specifying the parameters (paths, query strings and headers) of the Gateway Response.
  {{% /md %}}
@@ -507,7 +507,7 @@ The following output properties are available:
             <td class="align-top">Response<wbr>Templates</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, string&gt;?</code>
+                <code>Dictionary<string, string>?</code>
             </td>
             <td class="align-top">{{% md %}} A map specifying the templates used to transform the response body.
  {{% /md %}}
@@ -893,7 +893,7 @@ The following state arguments are supported:
             <td class="align-top">Response<wbr>Parameters</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, string&gt;?</code>
+                <code>Dictionary<string, string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -908,7 +908,7 @@ A map specifying the parameters (paths, query strings and headers) of the Gatewa
             <td class="align-top">Response<wbr>Templates</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, string&gt;?</code>
+                <code>Dictionary<string, string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

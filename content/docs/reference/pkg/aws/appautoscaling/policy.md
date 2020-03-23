@@ -282,7 +282,7 @@ The AWS service namespace of the scalable target. Documentation can be found in 
             <td class="align-top">Step<wbr>Scaling<wbr>Policy<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#policystepscalingpolicyconfiguration">Pulumi.<wbr>Aws.<wbr>Appautoscaling.<wbr>Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Args?</a></code>
+                <code><a href="#policystepscalingpolicyconfiguration">Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -297,7 +297,7 @@ Step scaling policy configuration, requires `policy_type = &#34;StepScaling&#34;
             <td class="align-top">Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#policytargettrackingscalingpolicyconfiguration">Pulumi.<wbr>Aws.<wbr>Appautoscaling.<wbr>Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Args?</a></code>
+                <code><a href="#policytargettrackingscalingpolicyconfiguration">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -532,7 +532,7 @@ The AWS service namespace of the scalable target. Documentation can be found in 
             <td class="align-top">step<wbr>Scaling<wbr>Policy<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#policystepscalingpolicyconfiguration">appautoscaling.<wbr>Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration?</a></code>
+                <code><a href="#policystepscalingpolicyconfiguration">Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -547,7 +547,7 @@ Step scaling policy configuration, requires `policy_type = &#34;StepScaling&#34;
             <td class="align-top">target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#policytargettrackingscalingpolicyconfiguration">appautoscaling.<wbr>Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration?</a></code>
+                <code><a href="#policytargettrackingscalingpolicyconfiguration">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -799,7 +799,7 @@ The following output properties are available:
             <td class="align-top">Step<wbr>Scaling<wbr>Policy<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#policystepscalingpolicyconfiguration">Pulumi.<wbr>Aws.<wbr>Appautoscaling.<wbr>Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration?</a></code>
+                <code><a href="#policystepscalingpolicyconfiguration">Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} Step scaling policy configuration, requires `policy_type = &#34;StepScaling&#34;` (default). See supported fields below.
  {{% /md %}}
@@ -812,7 +812,7 @@ The following output properties are available:
             <td class="align-top">Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#policytargettrackingscalingpolicyconfiguration">Pulumi.<wbr>Aws.<wbr>Appautoscaling.<wbr>Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration?</a></code>
+                <code><a href="#policytargettrackingscalingpolicyconfiguration">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} A target tracking policy, requires `policy_type = &#34;TargetTrackingScaling&#34;`. See supported fields below.
  {{% /md %}}
@@ -1047,7 +1047,7 @@ The following output properties are available:
             <td class="align-top">step<wbr>Scaling<wbr>Policy<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#policystepscalingpolicyconfiguration">appautoscaling.<wbr>Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration?</a></code>
+                <code><a href="#policystepscalingpolicyconfiguration">Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} Step scaling policy configuration, requires `policy_type = &#34;StepScaling&#34;` (default). See supported fields below.
  {{% /md %}}
@@ -1060,7 +1060,7 @@ The following output properties are available:
             <td class="align-top">target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#policytargettrackingscalingpolicyconfiguration">appautoscaling.<wbr>Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration?</a></code>
+                <code><a href="#policytargettrackingscalingpolicyconfiguration">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} A target tracking policy, requires `policy_type = &#34;TargetTrackingScaling&#34;`. See supported fields below.
  {{% /md %}}
@@ -1366,7 +1366,7 @@ The AWS service namespace of the scalable target. Documentation can be found in 
             <td class="align-top">Step<wbr>Scaling<wbr>Policy<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#policystepscalingpolicyconfiguration">Pulumi.<wbr>Aws.<wbr>Appautoscaling.<wbr>Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Args?</a></code>
+                <code><a href="#policystepscalingpolicyconfiguration">Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1381,7 +1381,7 @@ Step scaling policy configuration, requires `policy_type = &#34;StepScaling&#34;
             <td class="align-top">Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#policytargettrackingscalingpolicyconfiguration">Pulumi.<wbr>Aws.<wbr>Appautoscaling.<wbr>Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Args?</a></code>
+                <code><a href="#policytargettrackingscalingpolicyconfiguration">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1646,7 +1646,7 @@ The AWS service namespace of the scalable target. Documentation can be found in 
             <td class="align-top">step<wbr>Scaling<wbr>Policy<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#policystepscalingpolicyconfiguration">appautoscaling.<wbr>Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration?</a></code>
+                <code><a href="#policystepscalingpolicyconfiguration">Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1661,7 +1661,7 @@ Step scaling policy configuration, requires `policy_type = &#34;StepScaling&#34;
             <td class="align-top">target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#policytargettrackingscalingpolicyconfiguration">appautoscaling.<wbr>Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration?</a></code>
+                <code><a href="#policytargettrackingscalingpolicyconfiguration">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1920,7 +1920,7 @@ A target tracking policy, requires `policy_type = &#34;TargetTrackingScaling&#34
             <td class="align-top">Step<wbr>Adjustments</td>
             <td class="align-top">
                 
-                <code><a href="#policystepscalingpolicyconfigurationstepadjustment">List&lt;Pulumi.<wbr>Aws.<wbr>Appautoscaling.<wbr>Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Step<wbr>Adjustment<wbr>Args&gt;?</a></code>
+                <code><a href="#policystepscalingpolicyconfigurationstepadjustment">List&lt;Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Step<wbr>Adjustment<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2100,7 +2100,7 @@ A target tracking policy, requires `policy_type = &#34;TargetTrackingScaling&#34
             <td class="align-top">step<wbr>Adjustments</td>
             <td class="align-top">
                 
-                <code><a href="#policystepscalingpolicyconfigurationstepadjustment">appautoscaling.<wbr>Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Step<wbr>Adjustment[]?</a></code>
+                <code><a href="#policystepscalingpolicyconfigurationstepadjustment">Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Step<wbr>Adjustment[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2514,7 +2514,7 @@ A target tracking policy, requires `policy_type = &#34;TargetTrackingScaling&#34
             <td class="align-top">Customized<wbr>Metric<wbr>Specification</td>
             <td class="align-top">
                 
-                <code><a href="#policytargettrackingscalingpolicyconfigurationcustomizedmetricspecification">Pulumi.<wbr>Aws.<wbr>Appautoscaling.<wbr>Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Args?</a></code>
+                <code><a href="#policytargettrackingscalingpolicyconfigurationcustomizedmetricspecification">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2542,7 +2542,7 @@ A target tracking policy, requires `policy_type = &#34;TargetTrackingScaling&#34
             <td class="align-top">Predefined<wbr>Metric<wbr>Specification</td>
             <td class="align-top">
                 
-                <code><a href="#policytargettrackingscalingpolicyconfigurationpredefinedmetricspecification">Pulumi.<wbr>Aws.<wbr>Appautoscaling.<wbr>Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Predefined<wbr>Metric<wbr>Specification<wbr>Args?</a></code>
+                <code><a href="#policytargettrackingscalingpolicyconfigurationpredefinedmetricspecification">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Predefined<wbr>Metric<wbr>Specification<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2722,7 +2722,7 @@ A target tracking policy, requires `policy_type = &#34;TargetTrackingScaling&#34
             <td class="align-top">customized<wbr>Metric<wbr>Specification</td>
             <td class="align-top">
                 
-                <code><a href="#policytargettrackingscalingpolicyconfigurationcustomizedmetricspecification">appautoscaling.<wbr>Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification?</a></code>
+                <code><a href="#policytargettrackingscalingpolicyconfigurationcustomizedmetricspecification">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2750,7 +2750,7 @@ A target tracking policy, requires `policy_type = &#34;TargetTrackingScaling&#34
             <td class="align-top">predefined<wbr>Metric<wbr>Specification</td>
             <td class="align-top">
                 
-                <code><a href="#policytargettrackingscalingpolicyconfigurationpredefinedmetricspecification">appautoscaling.<wbr>Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Predefined<wbr>Metric<wbr>Specification?</a></code>
+                <code><a href="#policytargettrackingscalingpolicyconfigurationpredefinedmetricspecification">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Predefined<wbr>Metric<wbr>Specification?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2951,7 +2951,7 @@ A target tracking policy, requires `policy_type = &#34;TargetTrackingScaling&#34
             <td class="align-top">Dimensions</td>
             <td class="align-top">
                 
-                <code><a href="#policytargettrackingscalingpolicyconfigurationcustomizedmetricspecificationdimension">List&lt;Pulumi.<wbr>Aws.<wbr>Appautoscaling.<wbr>Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Dimension<wbr>Args&gt;?</a></code>
+                <code><a href="#policytargettrackingscalingpolicyconfigurationcustomizedmetricspecificationdimension">List&lt;Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Dimension<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3131,7 +3131,7 @@ A target tracking policy, requires `policy_type = &#34;TargetTrackingScaling&#34
             <td class="align-top">dimensions</td>
             <td class="align-top">
                 
-                <code><a href="#policytargettrackingscalingpolicyconfigurationcustomizedmetricspecificationdimension">appautoscaling.<wbr>Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Dimension[]?</a></code>
+                <code><a href="#policytargettrackingscalingpolicyconfigurationcustomizedmetricspecificationdimension">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Dimension[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

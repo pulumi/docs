@@ -174,7 +174,7 @@ The rule type. Valid values are `FORWARD`, `SYSTEM` and `RECURSIVE`.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -189,7 +189,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">Target<wbr>Ips</td>
             <td class="align-top">
                 
-                <code><a href="#resolverruletargetip">List&lt;Pulumi.<wbr>Aws.<wbr>Route53.<wbr>Resolver<wbr>Rule<wbr>Target<wbr>Ip<wbr>Args&gt;?</a></code>
+                <code><a href="#resolverruletargetip">List&lt;Resolver<wbr>Rule<wbr>Target<wbr>Ip<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -413,7 +413,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">target<wbr>Ips</td>
             <td class="align-top">
                 
-                <code><a href="#resolverruletargetip">route53.<wbr>Resolver<wbr>Rule<wbr>Target<wbr>Ip[]?</a></code>
+                <code><a href="#resolverruletargetip">Resolver<wbr>Rule<wbr>Target<wbr>Ip[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -668,7 +668,7 @@ Values are `NOT_SHARED`, `SHARED_BY_ME` or `SHARED_WITH_ME`
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -681,7 +681,7 @@ Values are `NOT_SHARED`, `SHARED_BY_ME` or `SHARED_WITH_ME`
             <td class="align-top">Target<wbr>Ips</td>
             <td class="align-top">
                 
-                <code><a href="#resolverruletargetip">List&lt;Pulumi.<wbr>Aws.<wbr>Route53.<wbr>Resolver<wbr>Rule<wbr>Target<wbr>Ip&gt;?</a></code>
+                <code><a href="#resolverruletargetip">List&lt;Resolver<wbr>Rule<wbr>Target<wbr>Ip&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block(s) indicating the IPs that you want Resolver to forward DNS queries to (documented below).
 This argument should only be specified for `FORWARD` type rules.
@@ -961,7 +961,7 @@ Values are `NOT_SHARED`, `SHARED_BY_ME` or `SHARED_WITH_ME`
             <td class="align-top">target<wbr>Ips</td>
             <td class="align-top">
                 
-                <code><a href="#resolverruletargetip">route53.<wbr>Resolver<wbr>Rule<wbr>Target<wbr>Ip[]?</a></code>
+                <code><a href="#resolverruletargetip">Resolver<wbr>Rule<wbr>Target<wbr>Ip[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block(s) indicating the IPs that you want Resolver to forward DNS queries to (documented below).
 This argument should only be specified for `FORWARD` type rules.
@@ -1301,7 +1301,7 @@ Values are `NOT_SHARED`, `SHARED_BY_ME` or `SHARED_WITH_ME`
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1316,7 +1316,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">Target<wbr>Ips</td>
             <td class="align-top">
                 
-                <code><a href="#resolverruletargetip">List&lt;Pulumi.<wbr>Aws.<wbr>Route53.<wbr>Resolver<wbr>Rule<wbr>Target<wbr>Ip<wbr>Args&gt;?</a></code>
+                <code><a href="#resolverruletargetip">List&lt;Resolver<wbr>Rule<wbr>Target<wbr>Ip<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1632,7 +1632,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">target<wbr>Ips</td>
             <td class="align-top">
                 
-                <code><a href="#resolverruletargetip">route53.<wbr>Resolver<wbr>Rule<wbr>Target<wbr>Ip[]?</a></code>
+                <code><a href="#resolverruletargetip">Resolver<wbr>Rule<wbr>Target<wbr>Ip[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

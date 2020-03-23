@@ -164,7 +164,7 @@ The name of the broker.
             <td class="align-top">Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#brokerconfiguration">Pulumi.<wbr>Aws.<wbr>Mq.<wbr>Broker<wbr>Configuration<wbr>Args?</a></code>
+                <code><a href="#brokerconfiguration">Broker<wbr>Configuration<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -194,7 +194,7 @@ The deployment mode of the broker. Supported: `SINGLE_INSTANCE` and `ACTIVE_STAN
             <td class="align-top">Encryption<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#brokerencryptionoptions">Pulumi.<wbr>Aws.<wbr>Mq.<wbr>Broker<wbr>Encryption<wbr>Options<wbr>Args?</a></code>
+                <code><a href="#brokerencryptionoptions">Broker<wbr>Encryption<wbr>Options<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -254,7 +254,7 @@ The broker&#39;s instance type. e.g. `mq.t2.micro` or `mq.m4.large`
             <td class="align-top">Logs</td>
             <td class="align-top">
                 
-                <code><a href="#brokerlogs">Pulumi.<wbr>Aws.<wbr>Mq.<wbr>Broker<wbr>Logs<wbr>Args?</a></code>
+                <code><a href="#brokerlogs">Broker<wbr>Logs<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -269,7 +269,7 @@ Logging configuration of the broker. See below.
             <td class="align-top">Maintenance<wbr>Window<wbr>Start<wbr>Time</td>
             <td class="align-top">
                 
-                <code><a href="#brokermaintenancewindowstarttime">Pulumi.<wbr>Aws.<wbr>Mq.<wbr>Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time<wbr>Args?</a></code>
+                <code><a href="#brokermaintenancewindowstarttime">Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -299,7 +299,7 @@ Whether to enable connections from applications outside of the VPC that hosts th
             <td class="align-top">Security<wbr>Groups</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -314,7 +314,7 @@ The list of security group IDs assigned to the broker.
             <td class="align-top">Subnet<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -329,7 +329,7 @@ The list of subnet IDs in which to launch the broker. A `SINGLE_INSTANCE` deploy
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -344,7 +344,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">Users</td>
             <td class="align-top">
                 
-                <code><a href="#brokeruser">List&lt;Pulumi.<wbr>Aws.<wbr>Mq.<wbr>Broker<wbr>User<wbr>Args&gt;</a></code>
+                <code><a href="#brokeruser">List&lt;Broker<wbr>User<wbr>Args&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -686,7 +686,7 @@ The name of the broker.
             <td class="align-top">configuration</td>
             <td class="align-top">
                 
-                <code><a href="#brokerconfiguration">mq.<wbr>Broker<wbr>Configuration?</a></code>
+                <code><a href="#brokerconfiguration">Broker<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -716,7 +716,7 @@ The deployment mode of the broker. Supported: `SINGLE_INSTANCE` and `ACTIVE_STAN
             <td class="align-top">encryption<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#brokerencryptionoptions">mq.<wbr>Broker<wbr>Encryption<wbr>Options?</a></code>
+                <code><a href="#brokerencryptionoptions">Broker<wbr>Encryption<wbr>Options?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -776,7 +776,7 @@ The broker&#39;s instance type. e.g. `mq.t2.micro` or `mq.m4.large`
             <td class="align-top">logs</td>
             <td class="align-top">
                 
-                <code><a href="#brokerlogs">mq.<wbr>Broker<wbr>Logs?</a></code>
+                <code><a href="#brokerlogs">Broker<wbr>Logs?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -791,7 +791,7 @@ Logging configuration of the broker. See below.
             <td class="align-top">maintenance<wbr>Window<wbr>Start<wbr>Time</td>
             <td class="align-top">
                 
-                <code><a href="#brokermaintenancewindowstarttime">mq.<wbr>Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time?</a></code>
+                <code><a href="#brokermaintenancewindowstarttime">Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -866,7 +866,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">users</td>
             <td class="align-top">
                 
-                <code><a href="#brokeruser">mq.<wbr>Broker<wbr>User[]</a></code>
+                <code><a href="#brokeruser">Broker<wbr>User[]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1229,7 +1229,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             <td class="align-top">Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#brokerconfiguration">Pulumi.<wbr>Aws.<wbr>Mq.<wbr>Broker<wbr>Configuration</a></code>
+                <code><a href="#brokerconfiguration">Broker<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration of the broker. See below.
  {{% /md %}}
@@ -1255,7 +1255,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             <td class="align-top">Encryption<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#brokerencryptionoptions">Pulumi.<wbr>Aws.<wbr>Mq.<wbr>Broker<wbr>Encryption<wbr>Options?</a></code>
+                <code><a href="#brokerencryptionoptions">Broker<wbr>Encryption<wbr>Options?</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block containing encryption options. See below.
  {{% /md %}}
@@ -1307,7 +1307,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             <td class="align-top">Instances</td>
             <td class="align-top">
                 
-                <code><a href="#brokerinstance">List&lt;Pulumi.<wbr>Aws.<wbr>Mq.<wbr>Broker<wbr>Instance&gt;</a></code>
+                <code><a href="#brokerinstance">List&lt;Broker<wbr>Instance&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of information about allocated brokers (both active &amp; standby).
 * `instances.0.console_url` - The URL of the broker&#39;s [ActiveMQ Web Console](http://activemq.apache.org/web-console.html).
@@ -1328,7 +1328,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             <td class="align-top">Logs</td>
             <td class="align-top">
                 
-                <code><a href="#brokerlogs">Pulumi.<wbr>Aws.<wbr>Mq.<wbr>Broker<wbr>Logs?</a></code>
+                <code><a href="#brokerlogs">Broker<wbr>Logs?</a></code>
             </td>
             <td class="align-top">{{% md %}} Logging configuration of the broker. See below.
  {{% /md %}}
@@ -1341,7 +1341,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             <td class="align-top">Maintenance<wbr>Window<wbr>Start<wbr>Time</td>
             <td class="align-top">
                 
-                <code><a href="#brokermaintenancewindowstarttime">Pulumi.<wbr>Aws.<wbr>Mq.<wbr>Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time</a></code>
+                <code><a href="#brokermaintenancewindowstarttime">Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time</a></code>
             </td>
             <td class="align-top">{{% md %}} Maintenance window start time. See below.
  {{% /md %}}
@@ -1367,7 +1367,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             <td class="align-top">Security<wbr>Groups</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} The list of security group IDs assigned to the broker.
  {{% /md %}}
@@ -1380,7 +1380,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             <td class="align-top">Subnet<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} The list of subnet IDs in which to launch the broker. A `SINGLE_INSTANCE` deployment requires one subnet. An `ACTIVE_STANDBY_MULTI_AZ` deployment requires two subnets.
  {{% /md %}}
@@ -1393,7 +1393,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -1406,7 +1406,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             <td class="align-top">Users</td>
             <td class="align-top">
                 
-                <code><a href="#brokeruser">List&lt;Pulumi.<wbr>Aws.<wbr>Mq.<wbr>Broker<wbr>User&gt;</a></code>
+                <code><a href="#brokeruser">List&lt;Broker<wbr>User&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} The list of all ActiveMQ usernames for the specified broker. See below.
  {{% /md %}}
@@ -1755,7 +1755,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             <td class="align-top">configuration</td>
             <td class="align-top">
                 
-                <code><a href="#brokerconfiguration">mq.<wbr>Broker<wbr>Configuration</a></code>
+                <code><a href="#brokerconfiguration">Broker<wbr>Configuration</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration of the broker. See below.
  {{% /md %}}
@@ -1781,7 +1781,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             <td class="align-top">encryption<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#brokerencryptionoptions">mq.<wbr>Broker<wbr>Encryption<wbr>Options?</a></code>
+                <code><a href="#brokerencryptionoptions">Broker<wbr>Encryption<wbr>Options?</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block containing encryption options. See below.
  {{% /md %}}
@@ -1833,7 +1833,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             <td class="align-top">instances</td>
             <td class="align-top">
                 
-                <code><a href="#brokerinstance">mq.<wbr>Broker<wbr>Instance[]</a></code>
+                <code><a href="#brokerinstance">Broker<wbr>Instance[]</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of information about allocated brokers (both active &amp; standby).
 * `instances.0.console_url` - The URL of the broker&#39;s [ActiveMQ Web Console](http://activemq.apache.org/web-console.html).
@@ -1854,7 +1854,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             <td class="align-top">logs</td>
             <td class="align-top">
                 
-                <code><a href="#brokerlogs">mq.<wbr>Broker<wbr>Logs?</a></code>
+                <code><a href="#brokerlogs">Broker<wbr>Logs?</a></code>
             </td>
             <td class="align-top">{{% md %}} Logging configuration of the broker. See below.
  {{% /md %}}
@@ -1867,7 +1867,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             <td class="align-top">maintenance<wbr>Window<wbr>Start<wbr>Time</td>
             <td class="align-top">
                 
-                <code><a href="#brokermaintenancewindowstarttime">mq.<wbr>Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time</a></code>
+                <code><a href="#brokermaintenancewindowstarttime">Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time</a></code>
             </td>
             <td class="align-top">{{% md %}} Maintenance window start time. See below.
  {{% /md %}}
@@ -1932,7 +1932,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             <td class="align-top">users</td>
             <td class="align-top">
                 
-                <code><a href="#brokeruser">mq.<wbr>Broker<wbr>User[]</a></code>
+                <code><a href="#brokeruser">Broker<wbr>User[]</a></code>
             </td>
             <td class="align-top">{{% md %}} The list of all ActiveMQ usernames for the specified broker. See below.
  {{% /md %}}
@@ -2348,7 +2348,7 @@ The name of the broker.
             <td class="align-top">Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#brokerconfiguration">Pulumi.<wbr>Aws.<wbr>Mq.<wbr>Broker<wbr>Configuration<wbr>Args?</a></code>
+                <code><a href="#brokerconfiguration">Broker<wbr>Configuration<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2378,7 +2378,7 @@ The deployment mode of the broker. Supported: `SINGLE_INSTANCE` and `ACTIVE_STAN
             <td class="align-top">Encryption<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#brokerencryptionoptions">Pulumi.<wbr>Aws.<wbr>Mq.<wbr>Broker<wbr>Encryption<wbr>Options<wbr>Args?</a></code>
+                <code><a href="#brokerencryptionoptions">Broker<wbr>Encryption<wbr>Options<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2438,7 +2438,7 @@ The broker&#39;s instance type. e.g. `mq.t2.micro` or `mq.m4.large`
             <td class="align-top">Instances</td>
             <td class="align-top">
                 
-                <code><a href="#brokerinstance">List&lt;Pulumi.<wbr>Aws.<wbr>Mq.<wbr>Broker<wbr>Instance<wbr>Args&gt;?</a></code>
+                <code><a href="#brokerinstance">List&lt;Broker<wbr>Instance<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2461,7 +2461,7 @@ A list of information about allocated brokers (both active &amp; standby).
             <td class="align-top">Logs</td>
             <td class="align-top">
                 
-                <code><a href="#brokerlogs">Pulumi.<wbr>Aws.<wbr>Mq.<wbr>Broker<wbr>Logs<wbr>Args?</a></code>
+                <code><a href="#brokerlogs">Broker<wbr>Logs<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2476,7 +2476,7 @@ Logging configuration of the broker. See below.
             <td class="align-top">Maintenance<wbr>Window<wbr>Start<wbr>Time</td>
             <td class="align-top">
                 
-                <code><a href="#brokermaintenancewindowstarttime">Pulumi.<wbr>Aws.<wbr>Mq.<wbr>Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time<wbr>Args?</a></code>
+                <code><a href="#brokermaintenancewindowstarttime">Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2506,7 +2506,7 @@ Whether to enable connections from applications outside of the VPC that hosts th
             <td class="align-top">Security<wbr>Groups</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2521,7 +2521,7 @@ The list of security group IDs assigned to the broker.
             <td class="align-top">Subnet<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2536,7 +2536,7 @@ The list of subnet IDs in which to launch the broker. A `SINGLE_INSTANCE` deploy
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2551,7 +2551,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">Users</td>
             <td class="align-top">
                 
-                <code><a href="#brokeruser">List&lt;Pulumi.<wbr>Aws.<wbr>Mq.<wbr>Broker<wbr>User<wbr>Args&gt;?</a></code>
+                <code><a href="#brokeruser">List&lt;Broker<wbr>User<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2946,7 +2946,7 @@ The name of the broker.
             <td class="align-top">configuration</td>
             <td class="align-top">
                 
-                <code><a href="#brokerconfiguration">mq.<wbr>Broker<wbr>Configuration?</a></code>
+                <code><a href="#brokerconfiguration">Broker<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2976,7 +2976,7 @@ The deployment mode of the broker. Supported: `SINGLE_INSTANCE` and `ACTIVE_STAN
             <td class="align-top">encryption<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#brokerencryptionoptions">mq.<wbr>Broker<wbr>Encryption<wbr>Options?</a></code>
+                <code><a href="#brokerencryptionoptions">Broker<wbr>Encryption<wbr>Options?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3036,7 +3036,7 @@ The broker&#39;s instance type. e.g. `mq.t2.micro` or `mq.m4.large`
             <td class="align-top">instances</td>
             <td class="align-top">
                 
-                <code><a href="#brokerinstance">mq.<wbr>Broker<wbr>Instance[]?</a></code>
+                <code><a href="#brokerinstance">Broker<wbr>Instance[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3059,7 +3059,7 @@ A list of information about allocated brokers (both active &amp; standby).
             <td class="align-top">logs</td>
             <td class="align-top">
                 
-                <code><a href="#brokerlogs">mq.<wbr>Broker<wbr>Logs?</a></code>
+                <code><a href="#brokerlogs">Broker<wbr>Logs?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3074,7 +3074,7 @@ Logging configuration of the broker. See below.
             <td class="align-top">maintenance<wbr>Window<wbr>Start<wbr>Time</td>
             <td class="align-top">
                 
-                <code><a href="#brokermaintenancewindowstarttime">mq.<wbr>Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time?</a></code>
+                <code><a href="#brokermaintenancewindowstarttime">Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3149,7 +3149,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">users</td>
             <td class="align-top">
                 
-                <code><a href="#brokeruser">mq.<wbr>Broker<wbr>User[]?</a></code>
+                <code><a href="#brokeruser">Broker<wbr>User[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3967,7 +3967,7 @@ Boolean to enable an AWS owned Key Management Service (KMS) Customer Master Key 
             <td class="align-top">Endpoints</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4739,7 +4739,7 @@ Whether to enable access to the [ActiveMQ Web Console](http://activemq.apache.or
             <td class="align-top">Groups</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

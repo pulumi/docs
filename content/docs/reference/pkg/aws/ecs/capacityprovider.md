@@ -77,7 +77,7 @@ The following arguments are supported:
             <td class="align-top">Auto<wbr>Scaling<wbr>Group<wbr>Provider</td>
             <td class="align-top">
                 
-                <code><a href="#capacityproviderautoscalinggroupprovider">Pulumi.<wbr>Aws.<wbr>Ecs.<wbr>Capacity<wbr>Provider<wbr>Auto<wbr>Scaling<wbr>Group<wbr>Provider<wbr>Args</a></code>
+                <code><a href="#capacityproviderautoscalinggroupprovider">Capacity<wbr>Provider<wbr>Auto<wbr>Scaling<wbr>Group<wbr>Provider<wbr>Args</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -107,7 +107,7 @@ The name of the capacity provider.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -207,7 +207,7 @@ Key-value mapping of resource tags.
             <td class="align-top">auto<wbr>Scaling<wbr>Group<wbr>Provider</td>
             <td class="align-top">
                 
-                <code><a href="#capacityproviderautoscalinggroupprovider">ecs.<wbr>Capacity<wbr>Provider<wbr>Auto<wbr>Scaling<wbr>Group<wbr>Provider</a></code>
+                <code><a href="#capacityproviderautoscalinggroupprovider">Capacity<wbr>Provider<wbr>Auto<wbr>Scaling<wbr>Group<wbr>Provider</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -364,7 +364,7 @@ The following output properties are available:
             <td class="align-top">Auto<wbr>Scaling<wbr>Group<wbr>Provider</td>
             <td class="align-top">
                 
-                <code><a href="#capacityproviderautoscalinggroupprovider">Pulumi.<wbr>Aws.<wbr>Ecs.<wbr>Capacity<wbr>Provider<wbr>Auto<wbr>Scaling<wbr>Group<wbr>Provider</a></code>
+                <code><a href="#capacityproviderautoscalinggroupprovider">Capacity<wbr>Provider<wbr>Auto<wbr>Scaling<wbr>Group<wbr>Provider</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested argument defining the provider for the ECS auto scaling group. Defined below.
  {{% /md %}}
@@ -390,7 +390,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} Key-value mapping of resource tags.
  {{% /md %}}
@@ -508,7 +508,7 @@ The following output properties are available:
             <td class="align-top">auto<wbr>Scaling<wbr>Group<wbr>Provider</td>
             <td class="align-top">
                 
-                <code><a href="#capacityproviderautoscalinggroupprovider">ecs.<wbr>Capacity<wbr>Provider<wbr>Auto<wbr>Scaling<wbr>Group<wbr>Provider</a></code>
+                <code><a href="#capacityproviderautoscalinggroupprovider">Capacity<wbr>Provider<wbr>Auto<wbr>Scaling<wbr>Group<wbr>Provider</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested argument defining the provider for the ECS auto scaling group. Defined below.
  {{% /md %}}
@@ -713,7 +713,7 @@ The Amazon Resource Name (ARN) that identifies the capacity provider.
             <td class="align-top">Auto<wbr>Scaling<wbr>Group<wbr>Provider</td>
             <td class="align-top">
                 
-                <code><a href="#capacityproviderautoscalinggroupprovider">Pulumi.<wbr>Aws.<wbr>Ecs.<wbr>Capacity<wbr>Provider<wbr>Auto<wbr>Scaling<wbr>Group<wbr>Provider<wbr>Args?</a></code>
+                <code><a href="#capacityproviderautoscalinggroupprovider">Capacity<wbr>Provider<wbr>Auto<wbr>Scaling<wbr>Group<wbr>Provider<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -743,7 +743,7 @@ The name of the capacity provider.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -873,7 +873,7 @@ The Amazon Resource Name (ARN) that identifies the capacity provider.
             <td class="align-top">auto<wbr>Scaling<wbr>Group<wbr>Provider</td>
             <td class="align-top">
                 
-                <code><a href="#capacityproviderautoscalinggroupprovider">ecs.<wbr>Capacity<wbr>Provider<wbr>Auto<wbr>Scaling<wbr>Group<wbr>Provider?</a></code>
+                <code><a href="#capacityproviderautoscalinggroupprovider">Capacity<wbr>Provider<wbr>Auto<wbr>Scaling<wbr>Group<wbr>Provider?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1060,7 +1060,7 @@ Key-value mapping of resource tags.
             <td class="align-top">Managed<wbr>Scaling</td>
             <td class="align-top">
                 
-                <code><a href="#capacityproviderautoscalinggroupprovidermanagedscaling">Pulumi.<wbr>Aws.<wbr>Ecs.<wbr>Capacity<wbr>Provider<wbr>Auto<wbr>Scaling<wbr>Group<wbr>Provider<wbr>Managed<wbr>Scaling<wbr>Args?</a></code>
+                <code><a href="#capacityproviderautoscalinggroupprovidermanagedscaling">Capacity<wbr>Provider<wbr>Auto<wbr>Scaling<wbr>Group<wbr>Provider<wbr>Managed<wbr>Scaling<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1184,7 +1184,7 @@ Key-value mapping of resource tags.
             <td class="align-top">managed<wbr>Scaling</td>
             <td class="align-top">
                 
-                <code><a href="#capacityproviderautoscalinggroupprovidermanagedscaling">ecs.<wbr>Capacity<wbr>Provider<wbr>Auto<wbr>Scaling<wbr>Group<wbr>Provider<wbr>Managed<wbr>Scaling?</a></code>
+                <code><a href="#capacityproviderautoscalinggroupprovidermanagedscaling">Capacity<wbr>Provider<wbr>Auto<wbr>Scaling<wbr>Group<wbr>Provider<wbr>Managed<wbr>Scaling?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

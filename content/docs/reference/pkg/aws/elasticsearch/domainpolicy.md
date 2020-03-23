@@ -209,7 +209,7 @@ Name of the domain.
             <td class="align-top">access<wbr>Policies</td>
             <td class="align-top">
                 
-                <code>string | Policy<wbr>Document</code>
+                <code>string | PolicyDocument</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -666,7 +666,7 @@ Name of the domain.
             <td class="align-top">access<wbr>Policies</td>
             <td class="align-top">
                 
-                <code>string | Policy<wbr>Document</code>
+                <code>string | PolicyDocument</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

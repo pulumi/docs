@@ -44,7 +44,7 @@ const test_queue = aws.batch.getJobQueue({
 <div class="highlight">
 <pre class="chroma">
 <code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetJobQueue </span><span class="p">{</span>
-    <span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Batch.GetJobQueueResult.html">Pulumi.Aws.Batch.GetJobQueueResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Batch.GetJobQueueArgs.html">GetJobQueueArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span>
+    <span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Batch.GetJobQueueResult.html">GetJobQueueResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Batch.GetJobQueueArgs.html">GetJobQueueArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span>
 <span class="p">}</span></code></pre>
 </div>
 
@@ -241,7 +241,7 @@ The following output properties are available:
             <td class="align-top">Compute<wbr>Environment<wbr>Orders</td>
             <td class="align-top">
                 
-                <code><a href="#getjobqueuecomputeenvironmentorder">List&lt;Pulumi.<wbr>Aws.<wbr>Batch.<wbr>Get<wbr>Job<wbr>Queue<wbr>Compute<wbr>Environment<wbr>Order&gt;</a></code>
+                <code><a href="#getjobqueuecomputeenvironmentorder">List&lt;Get<wbr>Job<wbr>Queue<wbr>Compute<wbr>Environment<wbr>Order&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} The compute environments that are attached to the job queue and the order in
 which job placement is preferred. Compute environments are selected for job placement in ascending order.
@@ -497,7 +497,7 @@ of the job queue.
             <td class="align-top">compute<wbr>Environment<wbr>Orders</td>
             <td class="align-top">
                 
-                <code><a href="#getjobqueuecomputeenvironmentorder">batch.<wbr>Get<wbr>Job<wbr>Queue<wbr>Compute<wbr>Environment<wbr>Order[]</a></code>
+                <code><a href="#getjobqueuecomputeenvironmentorder">Get<wbr>Job<wbr>Queue<wbr>Compute<wbr>Environment<wbr>Order[]</a></code>
             </td>
             <td class="align-top">{{% md %}} The compute environments that are attached to the job queue and the order in
 which job placement is preferred. Compute environments are selected for job placement in ascending order.

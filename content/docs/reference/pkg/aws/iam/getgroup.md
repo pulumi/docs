@@ -45,7 +45,7 @@ const example = aws.iam.getGroup({
 <div class="highlight">
 <pre class="chroma">
 <code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetGroup </span><span class="p">{</span>
-    <span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iam.GetGroupResult.html">Pulumi.Aws.Iam.GetGroupResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iam.GetGroupArgs.html">GetGroupArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span>
+    <span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iam.GetGroupResult.html">GetGroupResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iam.GetGroupArgs.html">GetGroupArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span>
 <span class="p">}</span></code></pre>
 </div>
 
@@ -293,7 +293,7 @@ The following output properties are available:
             <td class="align-top">Users</td>
             <td class="align-top">
                 
-                <code><a href="#getgroupuser">List&lt;Pulumi.<wbr>Aws.<wbr>Iam.<wbr>Get<wbr>Group<wbr>User&gt;</a></code>
+                <code><a href="#getgroupuser">List&lt;Get<wbr>Group<wbr>User&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} List of objects containing group member information. See supported fields below.
  {{% /md %}}
@@ -487,7 +487,7 @@ The following output properties are available:
             <td class="align-top">users</td>
             <td class="align-top">
                 
-                <code><a href="#getgroupuser">iam.<wbr>Get<wbr>Group<wbr>User[]</a></code>
+                <code><a href="#getgroupuser">Get<wbr>Group<wbr>User[]</a></code>
             </td>
             <td class="align-top">{{% md %}} List of objects containing group member information. See supported fields below.
  {{% /md %}}

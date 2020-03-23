@@ -98,7 +98,7 @@ The following arguments are supported:
             <td class="align-top">Accepter</td>
             <td class="align-top">
                 
-                <code><a href="#vpcpeeringconnectionaccepter">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Accepter<wbr>Args?</a></code>
+                <code><a href="#vpcpeeringconnectionaccepter">Vpc<wbr>Peering<wbr>Connection<wbr>Accepter<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -177,7 +177,7 @@ The ID of the VPC with which you are creating the VPC Peering Connection.
             <td class="align-top">Requester</td>
             <td class="align-top">
                 
-                <code><a href="#vpcpeeringconnectionrequester">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Requester<wbr>Args?</a></code>
+                <code><a href="#vpcpeeringconnectionrequester">Vpc<wbr>Peering<wbr>Connection<wbr>Requester<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -194,7 +194,7 @@ the peering connection (a maximum of one).
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -390,7 +390,7 @@ The ID of the requester VPC.
             <td class="align-top">accepter</td>
             <td class="align-top">
                 
-                <code><a href="#vpcpeeringconnectionaccepter">ec2.<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Accepter?</a></code>
+                <code><a href="#vpcpeeringconnectionaccepter">Vpc<wbr>Peering<wbr>Connection<wbr>Accepter?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -469,7 +469,7 @@ The ID of the VPC with which you are creating the VPC Peering Connection.
             <td class="align-top">requester</td>
             <td class="align-top">
                 
-                <code><a href="#vpcpeeringconnectionrequester">ec2.<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Requester?</a></code>
+                <code><a href="#vpcpeeringconnectionrequester">Vpc<wbr>Peering<wbr>Connection<wbr>Requester?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -709,7 +709,7 @@ The following output properties are available:
             <td class="align-top">Accepter</td>
             <td class="align-top">
                 
-                <code><a href="#vpcpeeringconnectionaccepter">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Accepter</a></code>
+                <code><a href="#vpcpeeringconnectionaccepter">Vpc<wbr>Peering<wbr>Connection<wbr>Accepter</a></code>
             </td>
             <td class="align-top">{{% md %}} An optional configuration block that allows for [VPC Peering Connection]
 (http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide) options to be set for the VPC that accepts
@@ -778,7 +778,7 @@ and use the `aws.ec2.VpcPeeringConnectionAccepter` to manage the accepter side.
             <td class="align-top">Requester</td>
             <td class="align-top">
                 
-                <code><a href="#vpcpeeringconnectionrequester">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Requester</a></code>
+                <code><a href="#vpcpeeringconnectionrequester">Vpc<wbr>Peering<wbr>Connection<wbr>Requester</a></code>
             </td>
             <td class="align-top">{{% md %}} A optional configuration block that allows for [VPC Peering Connection]
 (http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide) options to be set for the VPC that requests
@@ -793,7 +793,7 @@ the peering connection (a maximum of one).
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -995,7 +995,7 @@ the peering connection (a maximum of one).
             <td class="align-top">accepter</td>
             <td class="align-top">
                 
-                <code><a href="#vpcpeeringconnectionaccepter">ec2.<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Accepter</a></code>
+                <code><a href="#vpcpeeringconnectionaccepter">Vpc<wbr>Peering<wbr>Connection<wbr>Accepter</a></code>
             </td>
             <td class="align-top">{{% md %}} An optional configuration block that allows for [VPC Peering Connection]
 (http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide) options to be set for the VPC that accepts
@@ -1064,7 +1064,7 @@ and use the `aws.ec2.VpcPeeringConnectionAccepter` to manage the accepter side.
             <td class="align-top">requester</td>
             <td class="align-top">
                 
-                <code><a href="#vpcpeeringconnectionrequester">ec2.<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Requester</a></code>
+                <code><a href="#vpcpeeringconnectionrequester">Vpc<wbr>Peering<wbr>Connection<wbr>Requester</a></code>
             </td>
             <td class="align-top">{{% md %}} A optional configuration block that allows for [VPC Peering Connection]
 (http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide) options to be set for the VPC that requests
@@ -1342,7 +1342,7 @@ The status of the VPC Peering Connection request.
             <td class="align-top">Accepter</td>
             <td class="align-top">
                 
-                <code><a href="#vpcpeeringconnectionaccepter">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Accepter<wbr>Args?</a></code>
+                <code><a href="#vpcpeeringconnectionaccepter">Vpc<wbr>Peering<wbr>Connection<wbr>Accepter<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1421,7 +1421,7 @@ The ID of the VPC with which you are creating the VPC Peering Connection.
             <td class="align-top">Requester</td>
             <td class="align-top">
                 
-                <code><a href="#vpcpeeringconnectionrequester">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Requester<wbr>Args?</a></code>
+                <code><a href="#vpcpeeringconnectionrequester">Vpc<wbr>Peering<wbr>Connection<wbr>Requester<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1438,7 +1438,7 @@ the peering connection (a maximum of one).
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1664,7 +1664,7 @@ The status of the VPC Peering Connection request.
             <td class="align-top">accepter</td>
             <td class="align-top">
                 
-                <code><a href="#vpcpeeringconnectionaccepter">ec2.<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Accepter?</a></code>
+                <code><a href="#vpcpeeringconnectionaccepter">Vpc<wbr>Peering<wbr>Connection<wbr>Accepter?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1743,7 +1743,7 @@ The ID of the VPC with which you are creating the VPC Peering Connection.
             <td class="align-top">requester</td>
             <td class="align-top">
                 
-                <code><a href="#vpcpeeringconnectionrequester">ec2.<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Requester?</a></code>
+                <code><a href="#vpcpeeringconnectionrequester">Vpc<wbr>Peering<wbr>Connection<wbr>Requester?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

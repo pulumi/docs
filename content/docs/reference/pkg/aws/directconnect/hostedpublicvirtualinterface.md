@@ -221,7 +221,7 @@ The AWS account that will own the new virtual interface.
             <td class="align-top">Route<wbr>Filter<wbr>Prefixes</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -937,7 +937,7 @@ The following output properties are available:
             <td class="align-top">Route<wbr>Filter<wbr>Prefixes</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} A list of routes to be advertised to the AWS network in this region.
  {{% /md %}}
@@ -1770,7 +1770,7 @@ The AWS account that will own the new virtual interface.
             <td class="align-top">Route<wbr>Filter<wbr>Prefixes</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

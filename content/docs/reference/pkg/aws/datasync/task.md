@@ -140,7 +140,7 @@ Name of the DataSync Task.
             <td class="align-top">Options</td>
             <td class="align-top">
                 
-                <code><a href="#taskoptions">Pulumi.<wbr>Aws.<wbr>Datasync.<wbr>Task<wbr>Options<wbr>Args?</a></code>
+                <code><a href="#taskoptions">Task<wbr>Options<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -170,7 +170,7 @@ Amazon Resource Name (ARN) of source DataSync Location.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -360,7 +360,7 @@ Name of the DataSync Task.
             <td class="align-top">options</td>
             <td class="align-top">
                 
-                <code><a href="#taskoptions">datasync.<wbr>Task<wbr>Options?</a></code>
+                <code><a href="#taskoptions">Task<wbr>Options?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -601,7 +601,7 @@ The following output properties are available:
             <td class="align-top">Options</td>
             <td class="align-top">
                 
-                <code><a href="#taskoptions">Pulumi.<wbr>Aws.<wbr>Datasync.<wbr>Task<wbr>Options?</a></code>
+                <code><a href="#taskoptions">Task<wbr>Options?</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block containing option that controls the default behavior when you start an execution of this DataSync Task. For each individual task execution, you can override these options by specifying an overriding configuration in those executions.
  {{% /md %}}
@@ -627,7 +627,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} Key-value pairs of resource tags to assign to the DataSync Task.
  {{% /md %}}
@@ -823,7 +823,7 @@ The following output properties are available:
             <td class="align-top">options</td>
             <td class="align-top">
                 
-                <code><a href="#taskoptions">datasync.<wbr>Task<wbr>Options?</a></code>
+                <code><a href="#taskoptions">Task<wbr>Options?</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block containing option that controls the default behavior when you start an execution of this DataSync Task. For each individual task execution, you can override these options by specifying an overriding configuration in those executions.
  {{% /md %}}
@@ -1112,7 +1112,7 @@ Name of the DataSync Task.
             <td class="align-top">Options</td>
             <td class="align-top">
                 
-                <code><a href="#taskoptions">Pulumi.<wbr>Aws.<wbr>Datasync.<wbr>Task<wbr>Options<wbr>Args?</a></code>
+                <code><a href="#taskoptions">Task<wbr>Options<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1142,7 +1142,7 @@ Amazon Resource Name (ARN) of source DataSync Location.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1362,7 +1362,7 @@ Name of the DataSync Task.
             <td class="align-top">options</td>
             <td class="align-top">
                 
-                <code><a href="#taskoptions">datasync.<wbr>Task<wbr>Options?</a></code>
+                <code><a href="#taskoptions">Task<wbr>Options?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

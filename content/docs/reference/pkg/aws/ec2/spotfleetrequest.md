@@ -256,7 +256,7 @@ the number of Spot pools that you specify.
             <td class="align-top">Launch<wbr>Specifications</td>
             <td class="align-top">
                 
-                <code><a href="#spotfleetrequestlaunchspecification">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Args&gt;</a></code>
+                <code><a href="#spotfleetrequestlaunchspecification">List&lt;Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Args&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -273,7 +273,7 @@ across different markets and instance types.
             <td class="align-top">Load<wbr>Balancers</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -335,7 +335,7 @@ important to your application workload, such as vCPUs, memory, or I/O.
             <td class="align-top">Target<wbr>Group<wbr>Arns</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -818,7 +818,7 @@ the number of Spot pools that you specify.
             <td class="align-top">launch<wbr>Specifications</td>
             <td class="align-top">
                 
-                <code><a href="#spotfleetrequestlaunchspecification">ec2.<wbr>Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification[]</a></code>
+                <code><a href="#spotfleetrequestlaunchspecification">Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification[]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1394,7 +1394,7 @@ the number of Spot pools that you specify.
             <td class="align-top">Launch<wbr>Specifications</td>
             <td class="align-top">
                 
-                <code><a href="#spotfleetrequestlaunchspecification">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification&gt;</a></code>
+                <code><a href="#spotfleetrequestlaunchspecification">List&lt;Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} Used to define the launch configuration of the
 spot-fleet request. Can be specified multiple times to define different bids
@@ -1409,7 +1409,7 @@ across different markets and instance types.
             <td class="align-top">Load<wbr>Balancers</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} A list of elastic load balancer names to add to the Spot fleet.
  {{% /md %}}
@@ -1476,7 +1476,7 @@ important to your application workload, such as vCPUs, memory, or I/O.
             <td class="align-top">Target<wbr>Group<wbr>Arns</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} A list of `aws.alb.TargetGroup` ARNs, for use with Application Load Balancing.
  {{% /md %}}
@@ -1942,7 +1942,7 @@ the number of Spot pools that you specify.
             <td class="align-top">launch<wbr>Specifications</td>
             <td class="align-top">
                 
-                <code><a href="#spotfleetrequestlaunchspecification">ec2.<wbr>Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification[]</a></code>
+                <code><a href="#spotfleetrequestlaunchspecification">Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification[]</a></code>
             </td>
             <td class="align-top">{{% md %}} Used to define the launch configuration of the
 spot-fleet request. Can be specified multiple times to define different bids
@@ -2563,7 +2563,7 @@ the number of Spot pools that you specify.
             <td class="align-top">Launch<wbr>Specifications</td>
             <td class="align-top">
                 
-                <code><a href="#spotfleetrequestlaunchspecification">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Args&gt;?</a></code>
+                <code><a href="#spotfleetrequestlaunchspecification">List&lt;Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2580,7 +2580,7 @@ across different markets and instance types.
             <td class="align-top">Load<wbr>Balancers</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2657,7 +2657,7 @@ important to your application workload, such as vCPUs, memory, or I/O.
             <td class="align-top">Target<wbr>Group<wbr>Arns</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3183,7 +3183,7 @@ the number of Spot pools that you specify.
             <td class="align-top">launch<wbr>Specifications</td>
             <td class="align-top">
                 
-                <code><a href="#spotfleetrequestlaunchspecification">ec2.<wbr>Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification[]?</a></code>
+                <code><a href="#spotfleetrequestlaunchspecification">Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3755,7 +3755,7 @@ timeout of 10m is reached.
             <td class="align-top">Ebs<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#spotfleetrequestlaunchspecificationebsblockdevice">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args&gt;?</a></code>
+                <code><a href="#spotfleetrequestlaunchspecificationebsblockdevice">List&lt;Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3783,7 +3783,7 @@ timeout of 10m is reached.
             <td class="align-top">Ephemeral<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#spotfleetrequestlaunchspecificationephemeralblockdevice">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args&gt;?</a></code>
+                <code><a href="#spotfleetrequestlaunchspecificationephemeralblockdevice">List&lt;Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3895,7 +3895,7 @@ timeout of 10m is reached.
             <td class="align-top">Root<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#spotfleetrequestlaunchspecificationrootblockdevice">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Root<wbr>Block<wbr>Device<wbr>Args&gt;?</a></code>
+                <code><a href="#spotfleetrequestlaunchspecificationrootblockdevice">List&lt;Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Root<wbr>Block<wbr>Device<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3938,7 +3938,7 @@ The maximum bid price per unit hour.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3967,7 +3967,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">Vpc<wbr>Security<wbr>Group<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4359,7 +4359,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">ebs<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#spotfleetrequestlaunchspecificationebsblockdevice">ec2.<wbr>Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Ebs<wbr>Block<wbr>Device[]?</a></code>
+                <code><a href="#spotfleetrequestlaunchspecificationebsblockdevice">Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Ebs<wbr>Block<wbr>Device[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4387,7 +4387,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">ephemeral<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#spotfleetrequestlaunchspecificationephemeralblockdevice">ec2.<wbr>Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Ephemeral<wbr>Block<wbr>Device[]?</a></code>
+                <code><a href="#spotfleetrequestlaunchspecificationephemeralblockdevice">Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Ephemeral<wbr>Block<wbr>Device[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4499,7 +4499,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">root<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#spotfleetrequestlaunchspecificationrootblockdevice">ec2.<wbr>Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Root<wbr>Block<wbr>Device[]?</a></code>
+                <code><a href="#spotfleetrequestlaunchspecificationrootblockdevice">Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Root<wbr>Block<wbr>Device[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

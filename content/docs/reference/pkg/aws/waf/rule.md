@@ -132,7 +132,7 @@ The name or description of the rule.
             <td class="align-top">Predicates</td>
             <td class="align-top">
                 
-                <code><a href="#rulepredicate">List&lt;Pulumi.<wbr>Aws.<wbr>Waf.<wbr>Rule<wbr>Predicate<wbr>Args&gt;?</a></code>
+                <code><a href="#rulepredicate">List&lt;Rule<wbr>Predicate<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -147,7 +147,7 @@ The objects to include in a rule (documented below).
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -292,7 +292,7 @@ The name or description of the rule.
             <td class="align-top">predicates</td>
             <td class="align-top">
                 
-                <code><a href="#rulepredicate">waf.<wbr>Rule<wbr>Predicate[]?</a></code>
+                <code><a href="#rulepredicate">Rule<wbr>Predicate[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -475,7 +475,7 @@ The following output properties are available:
             <td class="align-top">Predicates</td>
             <td class="align-top">
                 
-                <code><a href="#rulepredicate">List&lt;Pulumi.<wbr>Aws.<wbr>Waf.<wbr>Rule<wbr>Predicate&gt;?</a></code>
+                <code><a href="#rulepredicate">List&lt;Rule<wbr>Predicate&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} The objects to include in a rule (documented below).
  {{% /md %}}
@@ -488,7 +488,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} Key-value mapping of resource tags
  {{% /md %}}
@@ -645,7 +645,7 @@ The following output properties are available:
             <td class="align-top">predicates</td>
             <td class="align-top">
                 
-                <code><a href="#rulepredicate">waf.<wbr>Rule<wbr>Predicate[]?</a></code>
+                <code><a href="#rulepredicate">Rule<wbr>Predicate[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} The objects to include in a rule (documented below).
  {{% /md %}}
@@ -880,7 +880,7 @@ The name or description of the rule.
             <td class="align-top">Predicates</td>
             <td class="align-top">
                 
-                <code><a href="#rulepredicate">List&lt;Pulumi.<wbr>Aws.<wbr>Waf.<wbr>Rule<wbr>Predicate<wbr>Args&gt;?</a></code>
+                <code><a href="#rulepredicate">List&lt;Rule<wbr>Predicate<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -895,7 +895,7 @@ The objects to include in a rule (documented below).
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1070,7 +1070,7 @@ The name or description of the rule.
             <td class="align-top">predicates</td>
             <td class="align-top">
                 
-                <code><a href="#rulepredicate">waf.<wbr>Rule<wbr>Predicate[]?</a></code>
+                <code><a href="#rulepredicate">Rule<wbr>Predicate[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

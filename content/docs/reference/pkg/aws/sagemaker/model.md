@@ -108,7 +108,7 @@ The following arguments are supported:
             <td class="align-top">Containers</td>
             <td class="align-top">
                 
-                <code><a href="#modelcontainer">List&lt;Pulumi.<wbr>Aws.<wbr>Sagemaker.<wbr>Model<wbr>Container<wbr>Args&gt;?</a></code>
+                <code><a href="#modelcontainer">List&lt;Model<wbr>Container<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -168,7 +168,7 @@ The name of the model (must be unique). If omitted, this provider will assign a 
             <td class="align-top">Primary<wbr>Container</td>
             <td class="align-top">
                 
-                <code><a href="#modelprimarycontainer">Pulumi.<wbr>Aws.<wbr>Sagemaker.<wbr>Model<wbr>Primary<wbr>Container<wbr>Args?</a></code>
+                <code><a href="#modelprimarycontainer">Model<wbr>Primary<wbr>Container<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -183,7 +183,7 @@ The primary docker image containing inference code that is used when the model i
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -198,7 +198,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">Vpc<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#modelvpcconfig">Pulumi.<wbr>Aws.<wbr>Sagemaker.<wbr>Model<wbr>Vpc<wbr>Config<wbr>Args?</a></code>
+                <code><a href="#modelvpcconfig">Model<wbr>Vpc<wbr>Config<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -358,7 +358,7 @@ Specifies the VPC that you want your model to connect to. VpcConfig is used in h
             <td class="align-top">containers</td>
             <td class="align-top">
                 
-                <code><a href="#modelcontainer">sagemaker.<wbr>Model<wbr>Container[]?</a></code>
+                <code><a href="#modelcontainer">Model<wbr>Container[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -418,7 +418,7 @@ The name of the model (must be unique). If omitted, this provider will assign a 
             <td class="align-top">primary<wbr>Container</td>
             <td class="align-top">
                 
-                <code><a href="#modelprimarycontainer">sagemaker.<wbr>Model<wbr>Primary<wbr>Container?</a></code>
+                <code><a href="#modelprimarycontainer">Model<wbr>Primary<wbr>Container?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -448,7 +448,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">vpc<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#modelvpcconfig">sagemaker.<wbr>Model<wbr>Vpc<wbr>Config?</a></code>
+                <code><a href="#modelvpcconfig">Model<wbr>Vpc<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -635,7 +635,7 @@ The following output properties are available:
             <td class="align-top">Containers</td>
             <td class="align-top">
                 
-                <code><a href="#modelcontainer">List&lt;Pulumi.<wbr>Aws.<wbr>Sagemaker.<wbr>Model<wbr>Container&gt;?</a></code>
+                <code><a href="#modelcontainer">List&lt;Model<wbr>Container&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} Specifies containers in the inference pipeline. If not specified, the `primary_container` argument is required. Fields are documented below.
  {{% /md %}}
@@ -687,7 +687,7 @@ The following output properties are available:
             <td class="align-top">Primary<wbr>Container</td>
             <td class="align-top">
                 
-                <code><a href="#modelprimarycontainer">Pulumi.<wbr>Aws.<wbr>Sagemaker.<wbr>Model<wbr>Primary<wbr>Container?</a></code>
+                <code><a href="#modelprimarycontainer">Model<wbr>Primary<wbr>Container?</a></code>
             </td>
             <td class="align-top">{{% md %}} The primary docker image containing inference code that is used when the model is deployed for predictions.  If not specified, the `container` argument is required. Fields are documented below.
  {{% /md %}}
@@ -700,7 +700,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -713,7 +713,7 @@ The following output properties are available:
             <td class="align-top">Vpc<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#modelvpcconfig">Pulumi.<wbr>Aws.<wbr>Sagemaker.<wbr>Model<wbr>Vpc<wbr>Config?</a></code>
+                <code><a href="#modelvpcconfig">Model<wbr>Vpc<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} Specifies the VPC that you want your model to connect to. VpcConfig is used in hosting services and in batch transform.
  {{% /md %}}
@@ -883,7 +883,7 @@ The following output properties are available:
             <td class="align-top">containers</td>
             <td class="align-top">
                 
-                <code><a href="#modelcontainer">sagemaker.<wbr>Model<wbr>Container[]?</a></code>
+                <code><a href="#modelcontainer">Model<wbr>Container[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} Specifies containers in the inference pipeline. If not specified, the `primary_container` argument is required. Fields are documented below.
  {{% /md %}}
@@ -935,7 +935,7 @@ The following output properties are available:
             <td class="align-top">primary<wbr>Container</td>
             <td class="align-top">
                 
-                <code><a href="#modelprimarycontainer">sagemaker.<wbr>Model<wbr>Primary<wbr>Container?</a></code>
+                <code><a href="#modelprimarycontainer">Model<wbr>Primary<wbr>Container?</a></code>
             </td>
             <td class="align-top">{{% md %}} The primary docker image containing inference code that is used when the model is deployed for predictions.  If not specified, the `container` argument is required. Fields are documented below.
  {{% /md %}}
@@ -961,7 +961,7 @@ The following output properties are available:
             <td class="align-top">vpc<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#modelvpcconfig">sagemaker.<wbr>Model<wbr>Vpc<wbr>Config?</a></code>
+                <code><a href="#modelvpcconfig">Model<wbr>Vpc<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} Specifies the VPC that you want your model to connect to. VpcConfig is used in hosting services and in batch transform.
  {{% /md %}}
@@ -1192,7 +1192,7 @@ The Amazon Resource Name (ARN) assigned by AWS to this model.
             <td class="align-top">Containers</td>
             <td class="align-top">
                 
-                <code><a href="#modelcontainer">List&lt;Pulumi.<wbr>Aws.<wbr>Sagemaker.<wbr>Model<wbr>Container<wbr>Args&gt;?</a></code>
+                <code><a href="#modelcontainer">List&lt;Model<wbr>Container<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1252,7 +1252,7 @@ The name of the model (must be unique). If omitted, this provider will assign a 
             <td class="align-top">Primary<wbr>Container</td>
             <td class="align-top">
                 
-                <code><a href="#modelprimarycontainer">Pulumi.<wbr>Aws.<wbr>Sagemaker.<wbr>Model<wbr>Primary<wbr>Container<wbr>Args?</a></code>
+                <code><a href="#modelprimarycontainer">Model<wbr>Primary<wbr>Container<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1267,7 +1267,7 @@ The primary docker image containing inference code that is used when the model i
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1282,7 +1282,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">Vpc<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#modelvpcconfig">Pulumi.<wbr>Aws.<wbr>Sagemaker.<wbr>Model<wbr>Vpc<wbr>Config<wbr>Args?</a></code>
+                <code><a href="#modelvpcconfig">Model<wbr>Vpc<wbr>Config<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1472,7 +1472,7 @@ The Amazon Resource Name (ARN) assigned by AWS to this model.
             <td class="align-top">containers</td>
             <td class="align-top">
                 
-                <code><a href="#modelcontainer">sagemaker.<wbr>Model<wbr>Container[]?</a></code>
+                <code><a href="#modelcontainer">Model<wbr>Container[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1532,7 +1532,7 @@ The name of the model (must be unique). If omitted, this provider will assign a 
             <td class="align-top">primary<wbr>Container</td>
             <td class="align-top">
                 
-                <code><a href="#modelprimarycontainer">sagemaker.<wbr>Model<wbr>Primary<wbr>Container?</a></code>
+                <code><a href="#modelprimarycontainer">Model<wbr>Primary<wbr>Container?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1562,7 +1562,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">vpc<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#modelvpcconfig">sagemaker.<wbr>Model<wbr>Vpc<wbr>Config?</a></code>
+                <code><a href="#modelvpcconfig">Model<wbr>Vpc<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1779,7 +1779,7 @@ Specifies the VPC that you want your model to connect to. VpcConfig is used in h
             <td class="align-top">Environment</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2104,7 +2104,7 @@ Specifies the VPC that you want your model to connect to. VpcConfig is used in h
             <td class="align-top">Environment</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2415,7 +2415,7 @@ Specifies the VPC that you want your model to connect to. VpcConfig is used in h
             <td class="align-top">Security<wbr>Group<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2429,7 +2429,7 @@ Specifies the VPC that you want your model to connect to. VpcConfig is used in h
             <td class="align-top">Subnets</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

@@ -111,7 +111,7 @@ The following arguments are supported:
             <td class="align-top">Default<wbr>Run<wbr>Properties</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -385,7 +385,7 @@ The following output properties are available:
             <td class="align-top">Default<wbr>Run<wbr>Properties</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} A map of default run properties for this workflow. These properties are passed to all jobs associated to the workflow.
  {{% /md %}}
@@ -680,7 +680,7 @@ The following state arguments are supported:
             <td class="align-top">Default<wbr>Run<wbr>Properties</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

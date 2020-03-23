@@ -92,7 +92,7 @@ A description of the filter.
             <td class="align-top">Network<wbr>Services</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -304,7 +304,7 @@ The following output properties are available:
             <td class="align-top">Network<wbr>Services</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} List of amazon network services that should be mirrored. Valid values: amazon-dns
  {{% /md %}}
@@ -549,7 +549,7 @@ A description of the filter.
             <td class="align-top">Network<wbr>Services</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

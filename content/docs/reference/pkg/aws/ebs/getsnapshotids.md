@@ -54,7 +54,7 @@ const ebsVolumes = aws.ebs.getSnapshotIds({
 <div class="highlight">
 <pre class="chroma">
 <code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetSnapshotIds </span><span class="p">{</span>
-    <span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ebs.GetSnapshotIdsResult.html">Pulumi.Aws.Ebs.GetSnapshotIdsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ebs.GetSnapshotIdsArgs.html">GetSnapshotIdsArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span>
+    <span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ebs.GetSnapshotIdsResult.html">GetSnapshotIdsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ebs.GetSnapshotIdsArgs.html">GetSnapshotIdsArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span>
 <span class="p">}</span></code></pre>
 </div>
 
@@ -83,7 +83,7 @@ The following arguments are supported:
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getsnapshotidsfilter">List&lt;Pulumi.<wbr>Aws.<wbr>Ebs.<wbr>Get<wbr>Snapshot<wbr>Ids<wbr>Filter<wbr>Args&gt;?</a></code>
+                <code><a href="#getsnapshotidsfilter">List&lt;Get<wbr>Snapshot<wbr>Ids<wbr>Filter<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -100,7 +100,7 @@ several valid keys, for a full reference, check out
             <td class="align-top">Owners</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -115,7 +115,7 @@ Returns the snapshots owned by the specified owner id. Multiple owners can be sp
             <td class="align-top">Restorable<wbr>By<wbr>User<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -217,7 +217,7 @@ One or more AWS accounts IDs that can create volumes from the snapshot.
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getsnapshotidsfilter">ebs.<wbr>Get<wbr>Snapshot<wbr>Ids<wbr>Filter[]?</a></code>
+                <code><a href="#getsnapshotidsfilter">Get<wbr>Snapshot<wbr>Ids<wbr>Filter[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -366,7 +366,7 @@ The following output properties are available:
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getsnapshotidsfilter">List&lt;Pulumi.<wbr>Aws.<wbr>Ebs.<wbr>Get<wbr>Snapshot<wbr>Ids<wbr>Filter&gt;?</a></code>
+                <code><a href="#getsnapshotidsfilter">List&lt;Get<wbr>Snapshot<wbr>Ids<wbr>Filter&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -391,7 +391,7 @@ The following output properties are available:
             <td class="align-top">Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -403,7 +403,7 @@ The following output properties are available:
             <td class="align-top">Owners</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -415,7 +415,7 @@ The following output properties are available:
             <td class="align-top">Restorable<wbr>By<wbr>User<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -528,7 +528,7 @@ The following output properties are available:
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getsnapshotidsfilter">ebs.<wbr>Get<wbr>Snapshot<wbr>Ids<wbr>Filter[]?</a></code>
+                <code><a href="#getsnapshotidsfilter">Get<wbr>Snapshot<wbr>Ids<wbr>Filter[]?</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -730,7 +730,7 @@ The following output properties are available:
             <td class="align-top">Values</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

@@ -123,7 +123,7 @@ Specifies whether any cluster modifications are applied immediately, or during t
             <td class="align-top">Availability<wbr>Zones</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -197,7 +197,7 @@ Creates a unique cluster identifier beginning with the specified prefix. Conflic
             <td class="align-top">Enable<wbr>Cloudwatch<wbr>Logs<wbr>Exports</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -272,7 +272,7 @@ Specifies whether or mappings of AWS Identity and Access Management (IAM) accoun
             <td class="align-top">Iam<wbr>Roles</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -437,7 +437,7 @@ Specifies whether the Neptune cluster is encrypted. The default is `false` if no
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -452,7 +452,7 @@ A mapping of tags to assign to the Neptune cluster.
             <td class="align-top">Vpc<wbr>Security<wbr>Group<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1664,7 +1664,7 @@ The following output properties are available:
             <td class="align-top">Availability<wbr>Zones</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} A list of EC2 Availability Zones that instances in the Neptune cluster can be created in.
  {{% /md %}}
@@ -1716,7 +1716,7 @@ The following output properties are available:
             <td class="align-top">Cluster<wbr>Members</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} List of Neptune Instances that are a part of this cluster
  {{% /md %}}
@@ -1754,7 +1754,7 @@ The following output properties are available:
             <td class="align-top">Enable<wbr>Cloudwatch<wbr>Logs<wbr>Exports</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} A list of the log types this DB cluster is configured to export to Cloudwatch Logs. Currently only supports `audit`.
  {{% /md %}}
@@ -1845,7 +1845,7 @@ The following output properties are available:
             <td class="align-top">Iam<wbr>Roles</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} A List of ARNs for the IAM roles to associate to the Neptune Cluster.
  {{% /md %}}
@@ -2001,7 +2001,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the Neptune cluster.
  {{% /md %}}
@@ -2014,7 +2014,7 @@ The following output properties are available:
             <td class="align-top">Vpc<wbr>Security<wbr>Group<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} List of VPC security groups to associate with the Cluster
  {{% /md %}}
@@ -3363,7 +3363,7 @@ The Neptune Cluster Amazon Resource Name (ARN)
             <td class="align-top">Availability<wbr>Zones</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3423,7 +3423,7 @@ Creates a unique cluster identifier beginning with the specified prefix. Conflic
             <td class="align-top">Cluster<wbr>Members</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3467,7 +3467,7 @@ The Neptune Cluster Resource ID
             <td class="align-top">Enable<wbr>Cloudwatch<wbr>Logs<wbr>Exports</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3572,7 +3572,7 @@ Specifies whether or mappings of AWS Identity and Access Management (IAM) accoun
             <td class="align-top">Iam<wbr>Roles</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3752,7 +3752,7 @@ Specifies whether the Neptune cluster is encrypted. The default is `false` if no
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3767,7 +3767,7 @@ A mapping of tags to assign to the Neptune cluster.
             <td class="align-top">Vpc<wbr>Security<wbr>Group<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

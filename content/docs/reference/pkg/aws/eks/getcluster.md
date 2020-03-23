@@ -48,7 +48,7 @@ export const identity_oidc_issuer = example.identities[0].oidcs[0].issuer;
 <div class="highlight">
 <pre class="chroma">
 <code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetCluster </span><span class="p">{</span>
-    <span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Eks.GetClusterResult.html">Pulumi.Aws.Eks.GetClusterResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Eks.GetClusterArgs.html">GetClusterArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span>
+    <span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Eks.GetClusterResult.html">GetClusterResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Eks.GetClusterArgs.html">GetClusterArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span>
 <span class="p">}</span></code></pre>
 </div>
 
@@ -92,7 +92,7 @@ The name of the cluster
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -301,7 +301,7 @@ The following output properties are available:
             <td class="align-top">Certificate<wbr>Authority</td>
             <td class="align-top">
                 
-                <code><a href="#getclustercertificateauthority">Pulumi.<wbr>Aws.<wbr>Eks.<wbr>Get<wbr>Cluster<wbr>Certificate<wbr>Authority</a></code>
+                <code><a href="#getclustercertificateauthority">Get<wbr>Cluster<wbr>Certificate<wbr>Authority</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested attribute containing `certificate-authority-data` for your cluster.
  {{% /md %}}
@@ -327,7 +327,7 @@ The following output properties are available:
             <td class="align-top">Enabled<wbr>Cluster<wbr>Log<wbr>Types</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} The enabled control plane logs.
  {{% /md %}}
@@ -366,7 +366,7 @@ The following output properties are available:
             <td class="align-top">Identities</td>
             <td class="align-top">
                 
-                <code><a href="#getclusteridentity">List&lt;Pulumi.<wbr>Aws.<wbr>Eks.<wbr>Get<wbr>Cluster<wbr>Identity&gt;</a></code>
+                <code><a href="#getclusteridentity">List&lt;Get<wbr>Cluster<wbr>Identity&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested attribute containing identity provider information for your cluster. Only available on Kubernetes version 1.13 and 1.14 clusters created or upgraded on or after September 3, 2019. For an example using this information to enable IAM Roles for Service Accounts, see the [`aws.eks.Cluster` resource documentation](https://www.terraform.io/docs/providers/aws/r/eks_cluster.html).
  {{% /md %}}
@@ -430,7 +430,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;</code>
+                <code>Dictionary<string, object></code>
             </td>
             <td class="align-top">{{% md %}} Key-value mapping of resource tags.
  {{% /md %}}
@@ -456,7 +456,7 @@ The following output properties are available:
             <td class="align-top">Vpc<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#getclustervpcconfig">Pulumi.<wbr>Aws.<wbr>Eks.<wbr>Get<wbr>Cluster<wbr>Vpc<wbr>Config</a></code>
+                <code><a href="#getclustervpcconfig">Get<wbr>Cluster<wbr>Vpc<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested list containing VPC configuration for the cluster.
  {{% /md %}}
@@ -703,7 +703,7 @@ The following output properties are available:
             <td class="align-top">certificate<wbr>Authority</td>
             <td class="align-top">
                 
-                <code><a href="#getclustercertificateauthority">eks.<wbr>Get<wbr>Cluster<wbr>Certificate<wbr>Authority</a></code>
+                <code><a href="#getclustercertificateauthority">Get<wbr>Cluster<wbr>Certificate<wbr>Authority</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested attribute containing `certificate-authority-data` for your cluster.
  {{% /md %}}
@@ -768,7 +768,7 @@ The following output properties are available:
             <td class="align-top">identities</td>
             <td class="align-top">
                 
-                <code><a href="#getclusteridentity">eks.<wbr>Get<wbr>Cluster<wbr>Identity[]</a></code>
+                <code><a href="#getclusteridentity">Get<wbr>Cluster<wbr>Identity[]</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested attribute containing identity provider information for your cluster. Only available on Kubernetes version 1.13 and 1.14 clusters created or upgraded on or after September 3, 2019. For an example using this information to enable IAM Roles for Service Accounts, see the [`aws.eks.Cluster` resource documentation](https://www.terraform.io/docs/providers/aws/r/eks_cluster.html).
  {{% /md %}}
@@ -858,7 +858,7 @@ The following output properties are available:
             <td class="align-top">vpc<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#getclustervpcconfig">eks.<wbr>Get<wbr>Cluster<wbr>Vpc<wbr>Config</a></code>
+                <code><a href="#getclustervpcconfig">Get<wbr>Cluster<wbr>Vpc<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested list containing VPC configuration for the cluster.
  {{% /md %}}
@@ -1279,7 +1279,7 @@ The base64 encoded certificate data required to communicate with your cluster. A
             <td class="align-top">Oidcs</td>
             <td class="align-top">
                 
-                <code><a href="#getclusteridentityoidc">List&lt;Pulumi.<wbr>Aws.<wbr>Eks.<wbr>Get<wbr>Cluster<wbr>Identity<wbr>Oidc<wbr>Args&gt;</a></code>
+                <code><a href="#getclusteridentityoidc">List&lt;Get<wbr>Cluster<wbr>Identity<wbr>Oidc<wbr>Args&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1349,7 +1349,7 @@ Nested attribute containing [OpenID Connect](https://openid.net/connect/) identi
             <td class="align-top">oidcs</td>
             <td class="align-top">
                 
-                <code><a href="#getclusteridentityoidc">eks.<wbr>Get<wbr>Cluster<wbr>Identity<wbr>Oidc[]</a></code>
+                <code><a href="#getclusteridentityoidc">Get<wbr>Cluster<wbr>Identity<wbr>Oidc[]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1646,7 +1646,7 @@ Indicates whether or not the Amazon EKS public API server endpoint is enabled.
             <td class="align-top">Public<wbr>Access<wbr>Cidrs</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1661,7 +1661,7 @@ List of CIDR blocks. Indicates which CIDR blocks can access the Amazon EKS publi
             <td class="align-top">Security<wbr>Group<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1676,7 +1676,7 @@ List of security group IDs
             <td class="align-top">Subnet<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

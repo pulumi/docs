@@ -114,7 +114,7 @@ Description of the rule
             <td class="align-top">Excluded<wbr>Accounts</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -189,7 +189,7 @@ Identifier of the AWS resource to evaluate
             <td class="align-top">Resource<wbr>Types<wbr>Scopes</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -819,7 +819,7 @@ The following output properties are available:
             <td class="align-top">Excluded<wbr>Accounts</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} List of AWS account identifiers to exclude from the rule
  {{% /md %}}
@@ -884,7 +884,7 @@ The following output properties are available:
             <td class="align-top">Resource<wbr>Types<wbr>Scopes</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} List of types of AWS resources to evaluate
  {{% /md %}}
@@ -1534,7 +1534,7 @@ Description of the rule
             <td class="align-top">Excluded<wbr>Accounts</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1609,7 +1609,7 @@ Identifier of the AWS resource to evaluate
             <td class="align-top">Resource<wbr>Types<wbr>Scopes</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

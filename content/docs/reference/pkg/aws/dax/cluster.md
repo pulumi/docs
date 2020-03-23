@@ -94,7 +94,7 @@ The following arguments are supported:
             <td class="align-top">Availability<wbr>Zones</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -242,7 +242,7 @@ replicas
             <td class="align-top">Security<wbr>Group<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -258,7 +258,7 @@ with the cluster
             <td class="align-top">Server<wbr>Side<wbr>Encryption</td>
             <td class="align-top">
                 
-                <code><a href="#clusterserversideencryption">Pulumi.<wbr>Aws.<wbr>Dax.<wbr>Cluster<wbr>Server<wbr>Side<wbr>Encryption<wbr>Args?</a></code>
+                <code><a href="#clusterserversideencryption">Cluster<wbr>Server<wbr>Side<wbr>Encryption<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -289,7 +289,7 @@ cluster
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -718,7 +718,7 @@ with the cluster
             <td class="align-top">server<wbr>Side<wbr>Encryption</td>
             <td class="align-top">
                 
-                <code><a href="#clusterserversideencryption">dax.<wbr>Cluster<wbr>Server<wbr>Side<wbr>Encryption?</a></code>
+                <code><a href="#clusterserversideencryption">Cluster<wbr>Server<wbr>Side<wbr>Encryption?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1041,7 +1041,7 @@ The following output properties are available:
             <td class="align-top">Availability<wbr>Zones</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} List of Availability Zones in which the
 nodes will be created
@@ -1154,7 +1154,7 @@ maintenance on the cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi`
             <td class="align-top">Nodes</td>
             <td class="align-top">
                 
-                <code><a href="#clusternode">List&lt;Pulumi.<wbr>Aws.<wbr>Dax.<wbr>Cluster<wbr>Node&gt;</a></code>
+                <code><a href="#clusternode">List&lt;Cluster<wbr>Node&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} List of node objects including `id`, `address`, `port` and
 `availability_zone`. Referenceable e.g. as
@@ -1226,7 +1226,7 @@ replicas
             <td class="align-top">Security<wbr>Group<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} One or more VPC security groups associated
 with the cluster
@@ -1240,7 +1240,7 @@ with the cluster
             <td class="align-top">Server<wbr>Side<wbr>Encryption</td>
             <td class="align-top">
                 
-                <code><a href="#clusterserversideencryption">Pulumi.<wbr>Aws.<wbr>Dax.<wbr>Cluster<wbr>Server<wbr>Side<wbr>Encryption?</a></code>
+                <code><a href="#clusterserversideencryption">Cluster<wbr>Server<wbr>Side<wbr>Encryption?</a></code>
             </td>
             <td class="align-top">{{% md %}} Encrypt at rest options
  {{% /md %}}
@@ -1267,7 +1267,7 @@ cluster
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource
  {{% /md %}}
@@ -1698,7 +1698,7 @@ maintenance on the cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi`
             <td class="align-top">nodes</td>
             <td class="align-top">
                 
-                <code><a href="#clusternode">dax.<wbr>Cluster<wbr>Node[]</a></code>
+                <code><a href="#clusternode">Cluster<wbr>Node[]</a></code>
             </td>
             <td class="align-top">{{% md %}} List of node objects including `id`, `address`, `port` and
 `availability_zone`. Referenceable e.g. as
@@ -1784,7 +1784,7 @@ with the cluster
             <td class="align-top">server<wbr>Side<wbr>Encryption</td>
             <td class="align-top">
                 
-                <code><a href="#clusterserversideencryption">dax.<wbr>Cluster<wbr>Server<wbr>Side<wbr>Encryption?</a></code>
+                <code><a href="#clusterserversideencryption">Cluster<wbr>Server<wbr>Side<wbr>Encryption?</a></code>
             </td>
             <td class="align-top">{{% md %}} Encrypt at rest options
  {{% /md %}}
@@ -2190,7 +2190,7 @@ The ARN of the DAX cluster
             <td class="align-top">Availability<wbr>Zones</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2319,7 +2319,7 @@ The compute and memory capacity of the nodes. See
             <td class="align-top">Nodes</td>
             <td class="align-top">
                 
-                <code><a href="#clusternode">List&lt;Pulumi.<wbr>Aws.<wbr>Dax.<wbr>Cluster<wbr>Node<wbr>Args&gt;?</a></code>
+                <code><a href="#clusternode">List&lt;Cluster<wbr>Node<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2401,7 +2401,7 @@ replicas
             <td class="align-top">Security<wbr>Group<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2417,7 +2417,7 @@ with the cluster
             <td class="align-top">Server<wbr>Side<wbr>Encryption</td>
             <td class="align-top">
                 
-                <code><a href="#clusterserversideencryption">Pulumi.<wbr>Aws.<wbr>Dax.<wbr>Cluster<wbr>Server<wbr>Side<wbr>Encryption<wbr>Args?</a></code>
+                <code><a href="#clusterserversideencryption">Cluster<wbr>Server<wbr>Side<wbr>Encryption<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2448,7 +2448,7 @@ cluster
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2935,7 +2935,7 @@ The compute and memory capacity of the nodes. See
             <td class="align-top">nodes</td>
             <td class="align-top">
                 
-                <code><a href="#clusternode">dax.<wbr>Cluster<wbr>Node[]?</a></code>
+                <code><a href="#clusternode">Cluster<wbr>Node[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3033,7 +3033,7 @@ with the cluster
             <td class="align-top">server<wbr>Side<wbr>Encryption</td>
             <td class="align-top">
                 
-                <code><a href="#clusterserversideencryption">dax.<wbr>Cluster<wbr>Server<wbr>Side<wbr>Encryption?</a></code>
+                <code><a href="#clusterserversideencryption">Cluster<wbr>Server<wbr>Side<wbr>Encryption?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

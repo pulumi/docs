@@ -134,7 +134,7 @@ Specifies whether the pricing plan for the queue is on-demand or reserved. Valid
             <td class="align-top">Reservation<wbr>Plan<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#queuereservationplansettings">Pulumi.<wbr>Aws.<wbr>Mediaconvert.<wbr>Queue<wbr>Reservation<wbr>Plan<wbr>Settings<wbr>Args?</a></code>
+                <code><a href="#queuereservationplansettings">Queue<wbr>Reservation<wbr>Plan<wbr>Settings<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -164,7 +164,7 @@ A status of the queue. Valid values are `ACTIVE` or `RESERVED`. Default to `PAUS
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -354,7 +354,7 @@ Specifies whether the pricing plan for the queue is on-demand or reserved. Valid
             <td class="align-top">reservation<wbr>Plan<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#queuereservationplansettings">mediaconvert.<wbr>Queue<wbr>Reservation<wbr>Plan<wbr>Settings?</a></code>
+                <code><a href="#queuereservationplansettings">Queue<wbr>Reservation<wbr>Plan<wbr>Settings?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -595,7 +595,7 @@ The following output properties are available:
             <td class="align-top">Reservation<wbr>Plan<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#queuereservationplansettings">Pulumi.<wbr>Aws.<wbr>Mediaconvert.<wbr>Queue<wbr>Reservation<wbr>Plan<wbr>Settings</a></code>
+                <code><a href="#queuereservationplansettings">Queue<wbr>Reservation<wbr>Plan<wbr>Settings</a></code>
             </td>
             <td class="align-top">{{% md %}} A detail pricing plan of the  reserved queue. See below.
  {{% /md %}}
@@ -621,7 +621,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -817,7 +817,7 @@ The following output properties are available:
             <td class="align-top">reservation<wbr>Plan<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#queuereservationplansettings">mediaconvert.<wbr>Queue<wbr>Reservation<wbr>Plan<wbr>Settings</a></code>
+                <code><a href="#queuereservationplansettings">Queue<wbr>Reservation<wbr>Plan<wbr>Settings</a></code>
             </td>
             <td class="align-top">{{% md %}} A detail pricing plan of the  reserved queue. See below.
  {{% /md %}}
@@ -1106,7 +1106,7 @@ Specifies whether the pricing plan for the queue is on-demand or reserved. Valid
             <td class="align-top">Reservation<wbr>Plan<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#queuereservationplansettings">Pulumi.<wbr>Aws.<wbr>Mediaconvert.<wbr>Queue<wbr>Reservation<wbr>Plan<wbr>Settings<wbr>Args?</a></code>
+                <code><a href="#queuereservationplansettings">Queue<wbr>Reservation<wbr>Plan<wbr>Settings<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1136,7 +1136,7 @@ A status of the queue. Valid values are `ACTIVE` or `RESERVED`. Default to `PAUS
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1356,7 +1356,7 @@ Specifies whether the pricing plan for the queue is on-demand or reserved. Valid
             <td class="align-top">reservation<wbr>Plan<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#queuereservationplansettings">mediaconvert.<wbr>Queue<wbr>Reservation<wbr>Plan<wbr>Settings?</a></code>
+                <code><a href="#queuereservationplansettings">Queue<wbr>Reservation<wbr>Plan<wbr>Settings?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

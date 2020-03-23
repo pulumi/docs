@@ -56,7 +56,7 @@ const by_name = aws.secretsmanager.getSecret({
 <div class="highlight">
 <pre class="chroma">
 <code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetSecret </span><span class="p">{</span>
-    <span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Secretsmanager.GetSecretResult.html">Pulumi.Aws.Secretsmanager.GetSecretResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Secretsmanager.GetSecretArgs.html">GetSecretArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span>
+    <span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Secretsmanager.GetSecretResult.html">GetSecretResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Secretsmanager.GetSecretArgs.html">GetSecretArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span>
 <span class="p">}</span></code></pre>
 </div>
 
@@ -403,7 +403,7 @@ The following output properties are available:
             <td class="align-top">Rotation<wbr>Rules</td>
             <td class="align-top">
                 
-                <code><a href="#getsecretrotationrule">List&lt;Pulumi.<wbr>Aws.<wbr>Secretsmanager.<wbr>Get<wbr>Secret<wbr>Rotation<wbr>Rule&gt;</a></code>
+                <code><a href="#getsecretrotationrule">List&lt;Get<wbr>Secret<wbr>Rotation<wbr>Rule&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} Rotation rules if rotation is enabled.
  {{% /md %}}
@@ -416,7 +416,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;</code>
+                <code>Dictionary<string, object></code>
             </td>
             <td class="align-top">{{% md %}} Tags of the secret.
  {{% /md %}}
@@ -701,7 +701,7 @@ The following output properties are available:
             <td class="align-top">rotation<wbr>Rules</td>
             <td class="align-top">
                 
-                <code><a href="#getsecretrotationrule">secretsmanager.<wbr>Get<wbr>Secret<wbr>Rotation<wbr>Rule[]</a></code>
+                <code><a href="#getsecretrotationrule">Get<wbr>Secret<wbr>Rotation<wbr>Rule[]</a></code>
             </td>
             <td class="align-top">{{% md %}} Rotation rules if rotation is enabled.
  {{% /md %}}

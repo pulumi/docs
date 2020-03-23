@@ -214,7 +214,7 @@ The name of the SSM document to apply.
             <td class="align-top">Output<wbr>Location</td>
             <td class="align-top">
                 
-                <code><a href="#associationoutputlocation">Pulumi.<wbr>Aws.<wbr>Ssm.<wbr>Association<wbr>Output<wbr>Location<wbr>Args?</a></code>
+                <code><a href="#associationoutputlocation">Association<wbr>Output<wbr>Location<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -229,7 +229,7 @@ An output location block. Output Location is documented below.
             <td class="align-top">Parameters</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -259,7 +259,7 @@ A cron expression when the association will be applied to the target(s).
             <td class="align-top">Targets</td>
             <td class="align-top">
                 
-                <code><a href="#associationtarget">List&lt;Pulumi.<wbr>Aws.<wbr>Ssm.<wbr>Association<wbr>Target<wbr>Args&gt;?</a></code>
+                <code><a href="#associationtarget">List&lt;Association<wbr>Target<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -614,7 +614,7 @@ The name of the SSM document to apply.
             <td class="align-top">output<wbr>Location</td>
             <td class="align-top">
                 
-                <code><a href="#associationoutputlocation">ssm.<wbr>Association<wbr>Output<wbr>Location?</a></code>
+                <code><a href="#associationoutputlocation">Association<wbr>Output<wbr>Location?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -659,7 +659,7 @@ A cron expression when the association will be applied to the target(s).
             <td class="align-top">targets</td>
             <td class="align-top">
                 
-                <code><a href="#associationtarget">ssm.<wbr>Association<wbr>Target[]?</a></code>
+                <code><a href="#associationtarget">Association<wbr>Target[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1025,7 +1025,7 @@ The following output properties are available:
             <td class="align-top">Output<wbr>Location</td>
             <td class="align-top">
                 
-                <code><a href="#associationoutputlocation">Pulumi.<wbr>Aws.<wbr>Ssm.<wbr>Association<wbr>Output<wbr>Location?</a></code>
+                <code><a href="#associationoutputlocation">Association<wbr>Output<wbr>Location?</a></code>
             </td>
             <td class="align-top">{{% md %}} An output location block. Output Location is documented below.
  {{% /md %}}
@@ -1038,7 +1038,7 @@ The following output properties are available:
             <td class="align-top">Parameters</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;</code>
+                <code>Dictionary<string, object></code>
             </td>
             <td class="align-top">{{% md %}} A block of arbitrary string parameters to pass to the SSM document.
  {{% /md %}}
@@ -1064,7 +1064,7 @@ The following output properties are available:
             <td class="align-top">Targets</td>
             <td class="align-top">
                 
-                <code><a href="#associationtarget">List&lt;Pulumi.<wbr>Aws.<wbr>Ssm.<wbr>Association<wbr>Target&gt;</a></code>
+                <code><a href="#associationtarget">List&lt;Association<wbr>Target&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} A block containing the targets of the SSM association. Targets are documented below. AWS currently supports a maximum of 5 targets.
  {{% /md %}}
@@ -1403,7 +1403,7 @@ The following output properties are available:
             <td class="align-top">output<wbr>Location</td>
             <td class="align-top">
                 
-                <code><a href="#associationoutputlocation">ssm.<wbr>Association<wbr>Output<wbr>Location?</a></code>
+                <code><a href="#associationoutputlocation">Association<wbr>Output<wbr>Location?</a></code>
             </td>
             <td class="align-top">{{% md %}} An output location block. Output Location is documented below.
  {{% /md %}}
@@ -1442,7 +1442,7 @@ The following output properties are available:
             <td class="align-top">targets</td>
             <td class="align-top">
                 
-                <code><a href="#associationtarget">ssm.<wbr>Association<wbr>Target[]</a></code>
+                <code><a href="#associationtarget">Association<wbr>Target[]</a></code>
             </td>
             <td class="align-top">{{% md %}} A block containing the targets of the SSM association. Targets are documented below. AWS currently supports a maximum of 5 targets.
  {{% /md %}}
@@ -1858,7 +1858,7 @@ The name of the SSM document to apply.
             <td class="align-top">Output<wbr>Location</td>
             <td class="align-top">
                 
-                <code><a href="#associationoutputlocation">Pulumi.<wbr>Aws.<wbr>Ssm.<wbr>Association<wbr>Output<wbr>Location<wbr>Args?</a></code>
+                <code><a href="#associationoutputlocation">Association<wbr>Output<wbr>Location<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1873,7 +1873,7 @@ An output location block. Output Location is documented below.
             <td class="align-top">Parameters</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1903,7 +1903,7 @@ A cron expression when the association will be applied to the target(s).
             <td class="align-top">Targets</td>
             <td class="align-top">
                 
-                <code><a href="#associationtarget">List&lt;Pulumi.<wbr>Aws.<wbr>Ssm.<wbr>Association<wbr>Target<wbr>Args&gt;?</a></code>
+                <code><a href="#associationtarget">List&lt;Association<wbr>Target<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2288,7 +2288,7 @@ The name of the SSM document to apply.
             <td class="align-top">output<wbr>Location</td>
             <td class="align-top">
                 
-                <code><a href="#associationoutputlocation">ssm.<wbr>Association<wbr>Output<wbr>Location?</a></code>
+                <code><a href="#associationoutputlocation">Association<wbr>Output<wbr>Location?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2333,7 +2333,7 @@ A cron expression when the association will be applied to the target(s).
             <td class="align-top">targets</td>
             <td class="align-top">
                 
-                <code><a href="#associationtarget">ssm.<wbr>Association<wbr>Target[]?</a></code>
+                <code><a href="#associationtarget">Association<wbr>Target[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2847,7 +2847,7 @@ Either `InstanceIds` or `tag:Tag Name` to specify an EC2 tag.
             <td class="align-top">Values</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

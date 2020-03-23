@@ -43,7 +43,7 @@ const database = aws.rds.getInstance({
 <div class="highlight">
 <pre class="chroma">
 <code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetInstance </span><span class="p">{</span>
-    <span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Rds.GetInstanceResult.html">Pulumi.Aws.Rds.GetInstanceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Rds.GetInstanceArgs.html">GetInstanceArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span>
+    <span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Rds.GetInstanceResult.html">GetInstanceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Rds.GetInstanceArgs.html">GetInstanceArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span>
 <span class="p">}</span></code></pre>
 </div>
 
@@ -87,7 +87,7 @@ The name of the RDS instance
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -438,7 +438,7 @@ The following output properties are available:
             <td class="align-top">Db<wbr>Parameter<wbr>Groups</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} Provides the list of DB parameter groups applied to this DB instance.
  {{% /md %}}
@@ -451,7 +451,7 @@ The following output properties are available:
             <td class="align-top">Db<wbr>Security<wbr>Groups</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} Provides List of DB security groups associated to this DB instance.
  {{% /md %}}
@@ -477,7 +477,7 @@ The following output properties are available:
             <td class="align-top">Enabled<wbr>Cloudwatch<wbr>Logs<wbr>Exports</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} List of log types to export to cloudwatch.
  {{% /md %}}
@@ -646,7 +646,7 @@ The following output properties are available:
             <td class="align-top">Option<wbr>Group<wbr>Memberships</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} Provides the list of option group memberships for this DB instance.
  {{% /md %}}
@@ -763,7 +763,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;</code>
+                <code>Dictionary<string, object></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -788,7 +788,7 @@ The following output properties are available:
             <td class="align-top">Vpc<wbr>Security<wbr>Groups</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} Provides a list of VPC security group elements that the DB instance belongs to.
  {{% /md %}}

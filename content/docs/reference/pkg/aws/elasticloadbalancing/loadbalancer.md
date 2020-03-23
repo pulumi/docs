@@ -148,7 +148,7 @@ The following arguments are supported:
             <td class="align-top">Access<wbr>Logs</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalanceraccesslogs">Pulumi.<wbr>Aws.<wbr>Elasticloadbalancing.<wbr>Load<wbr>Balancer<wbr>Access<wbr>Logs<wbr>Args?</a></code>
+                <code><a href="#loadbalanceraccesslogs">Load<wbr>Balancer<wbr>Access<wbr>Logs<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -163,7 +163,7 @@ An Access Logs block. Access Logs documented below.
             <td class="align-top">Availability<wbr>Zones</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -223,7 +223,7 @@ Enable cross-zone load balancing. Default: `true`
             <td class="align-top">Health<wbr>Check</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalancerhealthcheck">Pulumi.<wbr>Aws.<wbr>Elasticloadbalancing.<wbr>Load<wbr>Balancer<wbr>Health<wbr>Check<wbr>Args?</a></code>
+                <code><a href="#loadbalancerhealthcheck">Load<wbr>Balancer<wbr>Health<wbr>Check<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -253,7 +253,7 @@ The time in seconds that the connection is allowed to be idle. Default: `60`
             <td class="align-top">Instances</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -283,7 +283,7 @@ If true, ELB will be an internal ELB.
             <td class="align-top">Listeners</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalancerlistener">List&lt;Pulumi.<wbr>Aws.<wbr>Elasticloadbalancing.<wbr>Load<wbr>Balancer<wbr>Listener<wbr>Args&gt;</a></code>
+                <code><a href="#loadbalancerlistener">List&lt;Load<wbr>Balancer<wbr>Listener<wbr>Args&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -329,7 +329,7 @@ prefix. Conflicts with `name`.
             <td class="align-top">Security<wbr>Groups</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -362,7 +362,7 @@ instances. Use this for Classic or Default VPC only.
             <td class="align-top">Subnets</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -377,7 +377,7 @@ A list of subnet IDs to attach to the ELB.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -676,7 +676,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">access<wbr>Logs</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalanceraccesslogs">elasticloadbalancing.<wbr>Load<wbr>Balancer<wbr>Access<wbr>Logs?</a></code>
+                <code><a href="#loadbalanceraccesslogs">Load<wbr>Balancer<wbr>Access<wbr>Logs?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -751,7 +751,7 @@ Enable cross-zone load balancing. Default: `true`
             <td class="align-top">health<wbr>Check</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalancerhealthcheck">elasticloadbalancing.<wbr>Load<wbr>Balancer<wbr>Health<wbr>Check?</a></code>
+                <code><a href="#loadbalancerhealthcheck">Load<wbr>Balancer<wbr>Health<wbr>Check?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -811,7 +811,7 @@ If true, ELB will be an internal ELB.
             <td class="align-top">listeners</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalancerlistener">elasticloadbalancing.<wbr>Load<wbr>Balancer<wbr>Listener[]</a></code>
+                <code><a href="#loadbalancerlistener">Load<wbr>Balancer<wbr>Listener[]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1218,7 +1218,7 @@ The following output properties are available:
             <td class="align-top">Access<wbr>Logs</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalanceraccesslogs">Pulumi.<wbr>Aws.<wbr>Elasticloadbalancing.<wbr>Load<wbr>Balancer<wbr>Access<wbr>Logs?</a></code>
+                <code><a href="#loadbalanceraccesslogs">Load<wbr>Balancer<wbr>Access<wbr>Logs?</a></code>
             </td>
             <td class="align-top">{{% md %}} An Access Logs block. Access Logs documented below.
  {{% /md %}}
@@ -1244,7 +1244,7 @@ The following output properties are available:
             <td class="align-top">Availability<wbr>Zones</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} The AZ&#39;s to serve traffic in.
  {{% /md %}}
@@ -1309,7 +1309,7 @@ The following output properties are available:
             <td class="align-top">Health<wbr>Check</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalancerhealthcheck">Pulumi.<wbr>Aws.<wbr>Elasticloadbalancing.<wbr>Load<wbr>Balancer<wbr>Health<wbr>Check</a></code>
+                <code><a href="#loadbalancerhealthcheck">Load<wbr>Balancer<wbr>Health<wbr>Check</a></code>
             </td>
             <td class="align-top">{{% md %}} A health_check block. Health Check documented below.
  {{% /md %}}
@@ -1335,7 +1335,7 @@ The following output properties are available:
             <td class="align-top">Instances</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} A list of instance ids to place in the ELB pool.
  {{% /md %}}
@@ -1361,7 +1361,7 @@ The following output properties are available:
             <td class="align-top">Listeners</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalancerlistener">List&lt;Pulumi.<wbr>Aws.<wbr>Elasticloadbalancing.<wbr>Load<wbr>Balancer<wbr>Listener&gt;</a></code>
+                <code><a href="#loadbalancerlistener">List&lt;Load<wbr>Balancer<wbr>Listener&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of listener blocks. Listeners documented below.
  {{% /md %}}
@@ -1401,7 +1401,7 @@ prefix. Conflicts with `name`.
             <td class="align-top">Security<wbr>Groups</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} A list of security group IDs to assign to the ELB.
 Only valid if creating an ELB within a VPC
@@ -1445,7 +1445,7 @@ instances. Only available on ELBs launched in a VPC.
             <td class="align-top">Subnets</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} A list of subnet IDs to attach to the ELB.
  {{% /md %}}
@@ -1458,7 +1458,7 @@ instances. Only available on ELBs launched in a VPC.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -1790,7 +1790,7 @@ instances. Only available on ELBs launched in a VPC.
             <td class="align-top">access<wbr>Logs</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalanceraccesslogs">elasticloadbalancing.<wbr>Load<wbr>Balancer<wbr>Access<wbr>Logs?</a></code>
+                <code><a href="#loadbalanceraccesslogs">Load<wbr>Balancer<wbr>Access<wbr>Logs?</a></code>
             </td>
             <td class="align-top">{{% md %}} An Access Logs block. Access Logs documented below.
  {{% /md %}}
@@ -1881,7 +1881,7 @@ instances. Only available on ELBs launched in a VPC.
             <td class="align-top">health<wbr>Check</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalancerhealthcheck">elasticloadbalancing.<wbr>Load<wbr>Balancer<wbr>Health<wbr>Check</a></code>
+                <code><a href="#loadbalancerhealthcheck">Load<wbr>Balancer<wbr>Health<wbr>Check</a></code>
             </td>
             <td class="align-top">{{% md %}} A health_check block. Health Check documented below.
  {{% /md %}}
@@ -1933,7 +1933,7 @@ instances. Only available on ELBs launched in a VPC.
             <td class="align-top">listeners</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalancerlistener">elasticloadbalancing.<wbr>Load<wbr>Balancer<wbr>Listener[]</a></code>
+                <code><a href="#loadbalancerlistener">Load<wbr>Balancer<wbr>Listener[]</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of listener blocks. Listeners documented below.
  {{% /md %}}
@@ -2421,7 +2421,7 @@ The following state arguments are supported:
             <td class="align-top">Access<wbr>Logs</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalanceraccesslogs">Pulumi.<wbr>Aws.<wbr>Elasticloadbalancing.<wbr>Load<wbr>Balancer<wbr>Access<wbr>Logs<wbr>Args?</a></code>
+                <code><a href="#loadbalanceraccesslogs">Load<wbr>Balancer<wbr>Access<wbr>Logs<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2451,7 +2451,7 @@ The ARN of the ELB
             <td class="align-top">Availability<wbr>Zones</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2526,7 +2526,7 @@ The DNS name of the ELB
             <td class="align-top">Health<wbr>Check</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalancerhealthcheck">Pulumi.<wbr>Aws.<wbr>Elasticloadbalancing.<wbr>Load<wbr>Balancer<wbr>Health<wbr>Check<wbr>Args?</a></code>
+                <code><a href="#loadbalancerhealthcheck">Load<wbr>Balancer<wbr>Health<wbr>Check<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2556,7 +2556,7 @@ The time in seconds that the connection is allowed to be idle. Default: `60`
             <td class="align-top">Instances</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2586,7 +2586,7 @@ If true, ELB will be an internal ELB.
             <td class="align-top">Listeners</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalancerlistener">List&lt;Pulumi.<wbr>Aws.<wbr>Elasticloadbalancing.<wbr>Load<wbr>Balancer<wbr>Listener<wbr>Args&gt;?</a></code>
+                <code><a href="#loadbalancerlistener">List&lt;Load<wbr>Balancer<wbr>Listener<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2632,7 +2632,7 @@ prefix. Conflicts with `name`.
             <td class="align-top">Security<wbr>Groups</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2682,7 +2682,7 @@ instances. Only available on ELBs launched in a VPC.
             <td class="align-top">Subnets</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2697,7 +2697,7 @@ A list of subnet IDs to attach to the ELB.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3073,7 +3073,7 @@ The canonical hosted zone ID of the ELB (to be used in a Route 53 Alias record)
             <td class="align-top">access<wbr>Logs</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalanceraccesslogs">elasticloadbalancing.<wbr>Load<wbr>Balancer<wbr>Access<wbr>Logs?</a></code>
+                <code><a href="#loadbalanceraccesslogs">Load<wbr>Balancer<wbr>Access<wbr>Logs?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3178,7 +3178,7 @@ The DNS name of the ELB
             <td class="align-top">health<wbr>Check</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalancerhealthcheck">elasticloadbalancing.<wbr>Load<wbr>Balancer<wbr>Health<wbr>Check?</a></code>
+                <code><a href="#loadbalancerhealthcheck">Load<wbr>Balancer<wbr>Health<wbr>Check?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3238,7 +3238,7 @@ If true, ELB will be an internal ELB.
             <td class="align-top">listeners</td>
             <td class="align-top">
                 
-                <code><a href="#loadbalancerlistener">elasticloadbalancing.<wbr>Load<wbr>Balancer<wbr>Listener[]?</a></code>
+                <code><a href="#loadbalancerlistener">Load<wbr>Balancer<wbr>Listener[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

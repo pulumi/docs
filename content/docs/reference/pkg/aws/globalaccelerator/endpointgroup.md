@@ -95,7 +95,7 @@ The following arguments are supported:
             <td class="align-top">Endpoint<wbr>Configurations</td>
             <td class="align-top">
                 
-                <code><a href="#endpointgroupendpointconfiguration">List&lt;Pulumi.<wbr>Aws.<wbr>Globalaccelerator.<wbr>Endpoint<wbr>Group<wbr>Endpoint<wbr>Configuration<wbr>Args&gt;?</a></code>
+                <code><a href="#endpointgroupendpointconfiguration">List&lt;Endpoint<wbr>Group<wbr>Endpoint<wbr>Configuration<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -405,7 +405,7 @@ The percentage of traffic to send to an AWS Region. Additional traffic is distri
             <td class="align-top">endpoint<wbr>Configurations</td>
             <td class="align-top">
                 
-                <code><a href="#endpointgroupendpointconfiguration">globalaccelerator.<wbr>Endpoint<wbr>Group<wbr>Endpoint<wbr>Configuration[]?</a></code>
+                <code><a href="#endpointgroupendpointconfiguration">Endpoint<wbr>Group<wbr>Endpoint<wbr>Configuration[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -729,7 +729,7 @@ The following output properties are available:
             <td class="align-top">Endpoint<wbr>Configurations</td>
             <td class="align-top">
                 
-                <code><a href="#endpointgroupendpointconfiguration">List&lt;Pulumi.<wbr>Aws.<wbr>Globalaccelerator.<wbr>Endpoint<wbr>Group<wbr>Endpoint<wbr>Configuration&gt;?</a></code>
+                <code><a href="#endpointgroupendpointconfiguration">List&lt;Endpoint<wbr>Group<wbr>Endpoint<wbr>Configuration&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} The list of endpoint objects. Fields documented below.
  {{% /md %}}
@@ -1003,7 +1003,7 @@ The following output properties are available:
             <td class="align-top">endpoint<wbr>Configurations</td>
             <td class="align-top">
                 
-                <code><a href="#endpointgroupendpointconfiguration">globalaccelerator.<wbr>Endpoint<wbr>Group<wbr>Endpoint<wbr>Configuration[]?</a></code>
+                <code><a href="#endpointgroupendpointconfiguration">Endpoint<wbr>Group<wbr>Endpoint<wbr>Configuration[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} The list of endpoint objects. Fields documented below.
  {{% /md %}}
@@ -1336,7 +1336,7 @@ The following state arguments are supported:
             <td class="align-top">Endpoint<wbr>Configurations</td>
             <td class="align-top">
                 
-                <code><a href="#endpointgroupendpointconfiguration">List&lt;Pulumi.<wbr>Aws.<wbr>Globalaccelerator.<wbr>Endpoint<wbr>Group<wbr>Endpoint<wbr>Configuration<wbr>Args&gt;?</a></code>
+                <code><a href="#endpointgroupendpointconfiguration">List&lt;Endpoint<wbr>Group<wbr>Endpoint<wbr>Configuration<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1646,7 +1646,7 @@ The percentage of traffic to send to an AWS Region. Additional traffic is distri
             <td class="align-top">endpoint<wbr>Configurations</td>
             <td class="align-top">
                 
-                <code><a href="#endpointgroupendpointconfiguration">globalaccelerator.<wbr>Endpoint<wbr>Group<wbr>Endpoint<wbr>Configuration[]?</a></code>
+                <code><a href="#endpointgroupendpointconfiguration">Endpoint<wbr>Group<wbr>Endpoint<wbr>Configuration[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

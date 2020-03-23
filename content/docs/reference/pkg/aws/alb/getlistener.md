@@ -59,7 +59,7 @@ const selected443 = aws.lb.getListener({
 <div class="highlight">
 <pre class="chroma">
 <code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetListener </span><span class="p">{</span>
-    <span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Alb.GetListenerResult.html">Pulumi.Aws.Alb.GetListenerResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Alb.GetListenerArgs.html">GetListenerArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span>
+    <span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Alb.GetListenerResult.html">GetListenerResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Alb.GetListenerArgs.html">GetListenerArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span>
 <span class="p">}</span></code></pre>
 </div>
 
@@ -387,7 +387,7 @@ The following output properties are available:
             <td class="align-top">Default<wbr>Actions</td>
             <td class="align-top">
                 
-                <code><a href="#getlistenerdefaultaction">List&lt;Pulumi.<wbr>Aws.<wbr>Alb.<wbr>Get<wbr>Listener<wbr>Default<wbr>Action&gt;</a></code>
+                <code><a href="#getlistenerdefaultaction">List&lt;Get<wbr>Listener<wbr>Default<wbr>Action&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -621,7 +621,7 @@ The following output properties are available:
             <td class="align-top">default<wbr>Actions</td>
             <td class="align-top">
                 
-                <code><a href="#getlistenerdefaultaction">alb.<wbr>Get<wbr>Listener<wbr>Default<wbr>Action[]</a></code>
+                <code><a href="#getlistenerdefaultaction">Get<wbr>Listener<wbr>Default<wbr>Action[]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -857,7 +857,7 @@ The following output properties are available:
             <td class="align-top">Authenticate<wbr>Cognitos</td>
             <td class="align-top">
                 
-                <code><a href="#getlistenerdefaultactionauthenticatecognito">List&lt;Pulumi.<wbr>Aws.<wbr>Alb.<wbr>Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Cognito<wbr>Args&gt;</a></code>
+                <code><a href="#getlistenerdefaultactionauthenticatecognito">List&lt;Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Cognito<wbr>Args&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -871,7 +871,7 @@ The following output properties are available:
             <td class="align-top">Authenticate<wbr>Oidcs</td>
             <td class="align-top">
                 
-                <code><a href="#getlistenerdefaultactionauthenticateoidc">List&lt;Pulumi.<wbr>Aws.<wbr>Alb.<wbr>Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Oidc<wbr>Args&gt;</a></code>
+                <code><a href="#getlistenerdefaultactionauthenticateoidc">List&lt;Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Oidc<wbr>Args&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -885,7 +885,7 @@ The following output properties are available:
             <td class="align-top">Fixed<wbr>Responses</td>
             <td class="align-top">
                 
-                <code><a href="#getlistenerdefaultactionfixedresponse">List&lt;Pulumi.<wbr>Aws.<wbr>Alb.<wbr>Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Fixed<wbr>Response<wbr>Args&gt;</a></code>
+                <code><a href="#getlistenerdefaultactionfixedresponse">List&lt;Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Fixed<wbr>Response<wbr>Args&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -913,7 +913,7 @@ The following output properties are available:
             <td class="align-top">Redirects</td>
             <td class="align-top">
                 
-                <code><a href="#getlistenerdefaultactionredirect">List&lt;Pulumi.<wbr>Aws.<wbr>Alb.<wbr>Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Redirect<wbr>Args&gt;</a></code>
+                <code><a href="#getlistenerdefaultactionredirect">List&lt;Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Redirect<wbr>Args&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1093,7 +1093,7 @@ The following output properties are available:
             <td class="align-top">authenticate<wbr>Cognitos</td>
             <td class="align-top">
                 
-                <code><a href="#getlistenerdefaultactionauthenticatecognito">alb.<wbr>Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Cognito[]</a></code>
+                <code><a href="#getlistenerdefaultactionauthenticatecognito">Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Cognito[]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1107,7 +1107,7 @@ The following output properties are available:
             <td class="align-top">authenticate<wbr>Oidcs</td>
             <td class="align-top">
                 
-                <code><a href="#getlistenerdefaultactionauthenticateoidc">alb.<wbr>Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Oidc[]</a></code>
+                <code><a href="#getlistenerdefaultactionauthenticateoidc">Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Oidc[]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1121,7 +1121,7 @@ The following output properties are available:
             <td class="align-top">fixed<wbr>Responses</td>
             <td class="align-top">
                 
-                <code><a href="#getlistenerdefaultactionfixedresponse">alb.<wbr>Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Fixed<wbr>Response[]</a></code>
+                <code><a href="#getlistenerdefaultactionfixedresponse">Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Fixed<wbr>Response[]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1149,7 +1149,7 @@ The following output properties are available:
             <td class="align-top">redirects</td>
             <td class="align-top">
                 
-                <code><a href="#getlistenerdefaultactionredirect">alb.<wbr>Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Redirect[]</a></code>
+                <code><a href="#getlistenerdefaultactionredirect">Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Redirect[]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1350,7 +1350,7 @@ The following output properties are available:
             <td class="align-top">Authentication<wbr>Request<wbr>Extra<wbr>Params</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;</code>
+                <code>Dictionary<string, object></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1899,7 +1899,7 @@ The following output properties are available:
             <td class="align-top">Authentication<wbr>Request<wbr>Extra<wbr>Params</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;</code>
+                <code>Dictionary<string, object></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

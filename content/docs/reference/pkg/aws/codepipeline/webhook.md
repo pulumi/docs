@@ -95,7 +95,7 @@ The type of authentication  to use. One of `IP`, `GITHUB_HMAC`, or `UNAUTHENTICA
             <td class="align-top">Authentication<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#webhookauthenticationconfiguration">Pulumi.<wbr>Aws.<wbr>Codepipeline.<wbr>Webhook<wbr>Authentication<wbr>Configuration<wbr>Args?</a></code>
+                <code><a href="#webhookauthenticationconfiguration">Webhook<wbr>Authentication<wbr>Configuration<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -110,7 +110,7 @@ An `auth` block. Required for `IP` and `GITHUB_HMAC`. Auth blocks are documented
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#webhookfilter">List&lt;Pulumi.<wbr>Aws.<wbr>Codepipeline.<wbr>Webhook<wbr>Filter<wbr>Args&gt;</a></code>
+                <code><a href="#webhookfilter">List&lt;Webhook<wbr>Filter<wbr>Args&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -140,7 +140,7 @@ The name of the webhook.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -345,7 +345,7 @@ The type of authentication  to use. One of `IP`, `GITHUB_HMAC`, or `UNAUTHENTICA
             <td class="align-top">authentication<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#webhookauthenticationconfiguration">codepipeline.<wbr>Webhook<wbr>Authentication<wbr>Configuration?</a></code>
+                <code><a href="#webhookauthenticationconfiguration">Webhook<wbr>Authentication<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -360,7 +360,7 @@ An `auth` block. Required for `IP` and `GITHUB_HMAC`. Auth blocks are documented
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#webhookfilter">codepipeline.<wbr>Webhook<wbr>Filter[]</a></code>
+                <code><a href="#webhookfilter">Webhook<wbr>Filter[]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -607,7 +607,7 @@ The following output properties are available:
             <td class="align-top">Authentication<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#webhookauthenticationconfiguration">Pulumi.<wbr>Aws.<wbr>Codepipeline.<wbr>Webhook<wbr>Authentication<wbr>Configuration?</a></code>
+                <code><a href="#webhookauthenticationconfiguration">Webhook<wbr>Authentication<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} An `auth` block. Required for `IP` and `GITHUB_HMAC`. Auth blocks are documented below.
  {{% /md %}}
@@ -620,7 +620,7 @@ The following output properties are available:
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#webhookfilter">List&lt;Pulumi.<wbr>Aws.<wbr>Codepipeline.<wbr>Webhook<wbr>Filter&gt;</a></code>
+                <code><a href="#webhookfilter">List&lt;Webhook<wbr>Filter&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} One or more `filter` blocks. Filter blocks are documented below.
  {{% /md %}}
@@ -646,7 +646,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -855,7 +855,7 @@ The following output properties are available:
             <td class="align-top">authentication<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#webhookauthenticationconfiguration">codepipeline.<wbr>Webhook<wbr>Authentication<wbr>Configuration?</a></code>
+                <code><a href="#webhookauthenticationconfiguration">Webhook<wbr>Authentication<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} An `auth` block. Required for `IP` and `GITHUB_HMAC`. Auth blocks are documented below.
  {{% /md %}}
@@ -868,7 +868,7 @@ The following output properties are available:
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#webhookfilter">codepipeline.<wbr>Webhook<wbr>Filter[]</a></code>
+                <code><a href="#webhookfilter">Webhook<wbr>Filter[]</a></code>
             </td>
             <td class="align-top">{{% md %}} One or more `filter` blocks. Filter blocks are documented below.
  {{% /md %}}
@@ -1164,7 +1164,7 @@ The type of authentication  to use. One of `IP`, `GITHUB_HMAC`, or `UNAUTHENTICA
             <td class="align-top">Authentication<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#webhookauthenticationconfiguration">Pulumi.<wbr>Aws.<wbr>Codepipeline.<wbr>Webhook<wbr>Authentication<wbr>Configuration<wbr>Args?</a></code>
+                <code><a href="#webhookauthenticationconfiguration">Webhook<wbr>Authentication<wbr>Configuration<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1179,7 +1179,7 @@ An `auth` block. Required for `IP` and `GITHUB_HMAC`. Auth blocks are documented
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#webhookfilter">List&lt;Pulumi.<wbr>Aws.<wbr>Codepipeline.<wbr>Webhook<wbr>Filter<wbr>Args&gt;?</a></code>
+                <code><a href="#webhookfilter">List&lt;Webhook<wbr>Filter<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1209,7 +1209,7 @@ The name of the webhook.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1444,7 +1444,7 @@ The type of authentication  to use. One of `IP`, `GITHUB_HMAC`, or `UNAUTHENTICA
             <td class="align-top">authentication<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#webhookauthenticationconfiguration">codepipeline.<wbr>Webhook<wbr>Authentication<wbr>Configuration?</a></code>
+                <code><a href="#webhookauthenticationconfiguration">Webhook<wbr>Authentication<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1459,7 +1459,7 @@ An `auth` block. Required for `IP` and `GITHUB_HMAC`. Auth blocks are documented
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#webhookfilter">codepipeline.<wbr>Webhook<wbr>Filter[]?</a></code>
+                <code><a href="#webhookfilter">Webhook<wbr>Filter[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

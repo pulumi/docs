@@ -80,7 +80,7 @@ The following arguments are supported:
             <td class="align-top">Block<wbr>Device<wbr>Mappings</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplateblockdevicemapping">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping<wbr>Args&gt;?</a></code>
+                <code><a href="#launchtemplateblockdevicemapping">List&lt;Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -96,7 +96,7 @@ See Block Devices below for details.
             <td class="align-top">Capacity<wbr>Reservation<wbr>Specification</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplatecapacityreservationspecification">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Args?</a></code>
+                <code><a href="#launchtemplatecapacityreservationspecification">Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -111,7 +111,7 @@ Targeting for EC2 capacity reservations. See Capacity Reservation Specification 
             <td class="align-top">Cpu<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplatecpuoptions">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Launch<wbr>Template<wbr>Cpu<wbr>Options<wbr>Args?</a></code>
+                <code><a href="#launchtemplatecpuoptions">Launch<wbr>Template<wbr>Cpu<wbr>Options<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -126,7 +126,7 @@ The CPU options for the instance. See CPU Options below for more details.
             <td class="align-top">Credit<wbr>Specification</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplatecreditspecification">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Launch<wbr>Template<wbr>Credit<wbr>Specification<wbr>Args?</a></code>
+                <code><a href="#launchtemplatecreditspecification">Launch<wbr>Template<wbr>Credit<wbr>Specification<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -188,7 +188,7 @@ If `true`, the launched EC2 instance will be EBS-optimized.
             <td class="align-top">Elastic<wbr>Gpu<wbr>Specifications</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplateelasticgpuspecification">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Launch<wbr>Template<wbr>Elastic<wbr>Gpu<wbr>Specification<wbr>Args&gt;?</a></code>
+                <code><a href="#launchtemplateelasticgpuspecification">List&lt;Launch<wbr>Template<wbr>Elastic<wbr>Gpu<wbr>Specification<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -204,7 +204,7 @@ below for more details.
             <td class="align-top">Elastic<wbr>Inference<wbr>Accelerator</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplateelasticinferenceaccelerator">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Launch<wbr>Template<wbr>Elastic<wbr>Inference<wbr>Accelerator<wbr>Args?</a></code>
+                <code><a href="#launchtemplateelasticinferenceaccelerator">Launch<wbr>Template<wbr>Elastic<wbr>Inference<wbr>Accelerator<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -219,7 +219,7 @@ Configuration block containing an Elastic Inference Accelerator to attach to the
             <td class="align-top">Iam<wbr>Instance<wbr>Profile</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplateiaminstanceprofile">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile<wbr>Args?</a></code>
+                <code><a href="#launchtemplateiaminstanceprofile">Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -266,7 +266,7 @@ Shutdown behavior for the instance. Can be `stop` or `terminate`.
             <td class="align-top">Instance<wbr>Market<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplateinstancemarketoptions">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options<wbr>Args?</a></code>
+                <code><a href="#launchtemplateinstancemarketoptions">Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -327,7 +327,7 @@ The key name to use for the instance.
             <td class="align-top">License<wbr>Specifications</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplatelicensespecification">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Launch<wbr>Template<wbr>License<wbr>Specification<wbr>Args&gt;?</a></code>
+                <code><a href="#launchtemplatelicensespecification">List&lt;Launch<wbr>Template<wbr>License<wbr>Specification<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -342,7 +342,7 @@ A list of license specifications to associate with. See License Specification be
             <td class="align-top">Monitoring</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplatemonitoring">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Launch<wbr>Template<wbr>Monitoring<wbr>Args?</a></code>
+                <code><a href="#launchtemplatemonitoring">Launch<wbr>Template<wbr>Monitoring<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -387,7 +387,7 @@ Creates a unique name beginning with the specified prefix. Conflicts with `name`
             <td class="align-top">Network<wbr>Interfaces</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplatenetworkinterface">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Launch<wbr>Template<wbr>Network<wbr>Interface<wbr>Args&gt;?</a></code>
+                <code><a href="#launchtemplatenetworkinterface">List&lt;Launch<wbr>Template<wbr>Network<wbr>Interface<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -403,7 +403,7 @@ Interfaces below for more details.
             <td class="align-top">Placement</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplateplacement">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Launch<wbr>Template<wbr>Placement<wbr>Args?</a></code>
+                <code><a href="#launchtemplateplacement">Launch<wbr>Template<wbr>Placement<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -433,7 +433,7 @@ The ID of the RAM disk.
             <td class="align-top">Security<wbr>Group<wbr>Names</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -449,7 +449,7 @@ A list of security group names to associate with. If you are creating Instances 
             <td class="align-top">Tag<wbr>Specifications</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplatetagspecification">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Launch<wbr>Template<wbr>Tag<wbr>Specification<wbr>Args&gt;?</a></code>
+                <code><a href="#launchtemplatetagspecification">List&lt;Launch<wbr>Template<wbr>Tag<wbr>Specification<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -464,7 +464,7 @@ The tags to apply to the resources during launch. See Tag Specifications below f
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -494,7 +494,7 @@ The Base64-encoded user data to provide when launching the instance.
             <td class="align-top">Vpc<wbr>Security<wbr>Group<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -978,7 +978,7 @@ A list of security group IDs to associate with.
             <td class="align-top">block<wbr>Device<wbr>Mappings</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplateblockdevicemapping">ec2.<wbr>Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping[]?</a></code>
+                <code><a href="#launchtemplateblockdevicemapping">Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -994,7 +994,7 @@ See Block Devices below for details.
             <td class="align-top">capacity<wbr>Reservation<wbr>Specification</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplatecapacityreservationspecification">ec2.<wbr>Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification?</a></code>
+                <code><a href="#launchtemplatecapacityreservationspecification">Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1009,7 +1009,7 @@ Targeting for EC2 capacity reservations. See Capacity Reservation Specification 
             <td class="align-top">cpu<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplatecpuoptions">ec2.<wbr>Launch<wbr>Template<wbr>Cpu<wbr>Options?</a></code>
+                <code><a href="#launchtemplatecpuoptions">Launch<wbr>Template<wbr>Cpu<wbr>Options?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1024,7 +1024,7 @@ The CPU options for the instance. See CPU Options below for more details.
             <td class="align-top">credit<wbr>Specification</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplatecreditspecification">ec2.<wbr>Launch<wbr>Template<wbr>Credit<wbr>Specification?</a></code>
+                <code><a href="#launchtemplatecreditspecification">Launch<wbr>Template<wbr>Credit<wbr>Specification?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1086,7 +1086,7 @@ If `true`, the launched EC2 instance will be EBS-optimized.
             <td class="align-top">elastic<wbr>Gpu<wbr>Specifications</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplateelasticgpuspecification">ec2.<wbr>Launch<wbr>Template<wbr>Elastic<wbr>Gpu<wbr>Specification[]?</a></code>
+                <code><a href="#launchtemplateelasticgpuspecification">Launch<wbr>Template<wbr>Elastic<wbr>Gpu<wbr>Specification[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1102,7 +1102,7 @@ below for more details.
             <td class="align-top">elastic<wbr>Inference<wbr>Accelerator</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplateelasticinferenceaccelerator">ec2.<wbr>Launch<wbr>Template<wbr>Elastic<wbr>Inference<wbr>Accelerator?</a></code>
+                <code><a href="#launchtemplateelasticinferenceaccelerator">Launch<wbr>Template<wbr>Elastic<wbr>Inference<wbr>Accelerator?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1117,7 +1117,7 @@ Configuration block containing an Elastic Inference Accelerator to attach to the
             <td class="align-top">iam<wbr>Instance<wbr>Profile</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplateiaminstanceprofile">ec2.<wbr>Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile?</a></code>
+                <code><a href="#launchtemplateiaminstanceprofile">Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1164,7 +1164,7 @@ Shutdown behavior for the instance. Can be `stop` or `terminate`.
             <td class="align-top">instance<wbr>Market<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplateinstancemarketoptions">ec2.<wbr>Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options?</a></code>
+                <code><a href="#launchtemplateinstancemarketoptions">Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1225,7 +1225,7 @@ The key name to use for the instance.
             <td class="align-top">license<wbr>Specifications</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplatelicensespecification">ec2.<wbr>Launch<wbr>Template<wbr>License<wbr>Specification[]?</a></code>
+                <code><a href="#launchtemplatelicensespecification">Launch<wbr>Template<wbr>License<wbr>Specification[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1240,7 +1240,7 @@ A list of license specifications to associate with. See License Specification be
             <td class="align-top">monitoring</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplatemonitoring">ec2.<wbr>Launch<wbr>Template<wbr>Monitoring?</a></code>
+                <code><a href="#launchtemplatemonitoring">Launch<wbr>Template<wbr>Monitoring?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1285,7 +1285,7 @@ Creates a unique name beginning with the specified prefix. Conflicts with `name`
             <td class="align-top">network<wbr>Interfaces</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplatenetworkinterface">ec2.<wbr>Launch<wbr>Template<wbr>Network<wbr>Interface[]?</a></code>
+                <code><a href="#launchtemplatenetworkinterface">Launch<wbr>Template<wbr>Network<wbr>Interface[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1301,7 +1301,7 @@ Interfaces below for more details.
             <td class="align-top">placement</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplateplacement">ec2.<wbr>Launch<wbr>Template<wbr>Placement?</a></code>
+                <code><a href="#launchtemplateplacement">Launch<wbr>Template<wbr>Placement?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1347,7 +1347,7 @@ A list of security group names to associate with. If you are creating Instances 
             <td class="align-top">tag<wbr>Specifications</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplatetagspecification">ec2.<wbr>Launch<wbr>Template<wbr>Tag<wbr>Specification[]?</a></code>
+                <code><a href="#launchtemplatetagspecification">Launch<wbr>Template<wbr>Tag<wbr>Specification[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1903,7 +1903,7 @@ The following output properties are available:
             <td class="align-top">Block<wbr>Device<wbr>Mappings</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplateblockdevicemapping">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping&gt;?</a></code>
+                <code><a href="#launchtemplateblockdevicemapping">List&lt;Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} Specify volumes to attach to the instance besides the volumes specified by the AMI.
 See Block Devices below for details.
@@ -1917,7 +1917,7 @@ See Block Devices below for details.
             <td class="align-top">Capacity<wbr>Reservation<wbr>Specification</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplatecapacityreservationspecification">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification?</a></code>
+                <code><a href="#launchtemplatecapacityreservationspecification">Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification?</a></code>
             </td>
             <td class="align-top">{{% md %}} Targeting for EC2 capacity reservations. See Capacity Reservation Specification below for more details.
  {{% /md %}}
@@ -1930,7 +1930,7 @@ See Block Devices below for details.
             <td class="align-top">Cpu<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplatecpuoptions">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Launch<wbr>Template<wbr>Cpu<wbr>Options?</a></code>
+                <code><a href="#launchtemplatecpuoptions">Launch<wbr>Template<wbr>Cpu<wbr>Options?</a></code>
             </td>
             <td class="align-top">{{% md %}} The CPU options for the instance. See CPU Options below for more details.
  {{% /md %}}
@@ -1943,7 +1943,7 @@ See Block Devices below for details.
             <td class="align-top">Credit<wbr>Specification</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplatecreditspecification">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Launch<wbr>Template<wbr>Credit<wbr>Specification?</a></code>
+                <code><a href="#launchtemplatecreditspecification">Launch<wbr>Template<wbr>Credit<wbr>Specification?</a></code>
             </td>
             <td class="align-top">{{% md %}} Customize the credit specification of the instance. See Credit
 Specification below for more details.
@@ -2010,7 +2010,7 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
             <td class="align-top">Elastic<wbr>Gpu<wbr>Specifications</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplateelasticgpuspecification">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Launch<wbr>Template<wbr>Elastic<wbr>Gpu<wbr>Specification&gt;?</a></code>
+                <code><a href="#launchtemplateelasticgpuspecification">List&lt;Launch<wbr>Template<wbr>Elastic<wbr>Gpu<wbr>Specification&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} The elastic GPU to attach to the instance. See Elastic GPU
 below for more details.
@@ -2024,7 +2024,7 @@ below for more details.
             <td class="align-top">Elastic<wbr>Inference<wbr>Accelerator</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplateelasticinferenceaccelerator">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Launch<wbr>Template<wbr>Elastic<wbr>Inference<wbr>Accelerator?</a></code>
+                <code><a href="#launchtemplateelasticinferenceaccelerator">Launch<wbr>Template<wbr>Elastic<wbr>Inference<wbr>Accelerator?</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block containing an Elastic Inference Accelerator to attach to the instance. See Elastic Inference Accelerator below for more details.
  {{% /md %}}
@@ -2037,7 +2037,7 @@ below for more details.
             <td class="align-top">Iam<wbr>Instance<wbr>Profile</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplateiaminstanceprofile">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile?</a></code>
+                <code><a href="#launchtemplateiaminstanceprofile">Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile?</a></code>
             </td>
             <td class="align-top">{{% md %}} The IAM Instance Profile to launch the instance with. See Instance Profile
 below for more details.
@@ -2078,7 +2078,7 @@ below for more details.
             <td class="align-top">Instance<wbr>Market<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplateinstancemarketoptions">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options?</a></code>
+                <code><a href="#launchtemplateinstancemarketoptions">Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options?</a></code>
             </td>
             <td class="align-top">{{% md %}} The market (purchasing) option for the instance. See Market Options
 below for details.
@@ -2144,7 +2144,7 @@ below for details.
             <td class="align-top">License<wbr>Specifications</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplatelicensespecification">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Launch<wbr>Template<wbr>License<wbr>Specification&gt;?</a></code>
+                <code><a href="#launchtemplatelicensespecification">List&lt;Launch<wbr>Template<wbr>License<wbr>Specification&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of license specifications to associate with. See License Specification below for more details.
  {{% /md %}}
@@ -2157,7 +2157,7 @@ below for details.
             <td class="align-top">Monitoring</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplatemonitoring">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Launch<wbr>Template<wbr>Monitoring?</a></code>
+                <code><a href="#launchtemplatemonitoring">Launch<wbr>Template<wbr>Monitoring?</a></code>
             </td>
             <td class="align-top">{{% md %}} The monitoring option for the instance. See Monitoring below for more details.
  {{% /md %}}
@@ -2196,7 +2196,7 @@ below for details.
             <td class="align-top">Network<wbr>Interfaces</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplatenetworkinterface">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Launch<wbr>Template<wbr>Network<wbr>Interface&gt;?</a></code>
+                <code><a href="#launchtemplatenetworkinterface">List&lt;Launch<wbr>Template<wbr>Network<wbr>Interface&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} Customize network interfaces to be attached at instance boot time. See Network
 Interfaces below for more details.
@@ -2210,7 +2210,7 @@ Interfaces below for more details.
             <td class="align-top">Placement</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplateplacement">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Launch<wbr>Template<wbr>Placement?</a></code>
+                <code><a href="#launchtemplateplacement">Launch<wbr>Template<wbr>Placement?</a></code>
             </td>
             <td class="align-top">{{% md %}} The placement of the instance. See Placement below for more details.
  {{% /md %}}
@@ -2236,7 +2236,7 @@ Interfaces below for more details.
             <td class="align-top">Security<wbr>Group<wbr>Names</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} A list of security group names to associate with. If you are creating Instances in a VPC, use
 `vpc_security_group_ids` instead.
@@ -2250,7 +2250,7 @@ Interfaces below for more details.
             <td class="align-top">Tag<wbr>Specifications</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplatetagspecification">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Launch<wbr>Template<wbr>Tag<wbr>Specification&gt;?</a></code>
+                <code><a href="#launchtemplatetagspecification">List&lt;Launch<wbr>Template<wbr>Tag<wbr>Specification&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} The tags to apply to the resources during launch. See Tag Specifications below for more details.
  {{% /md %}}
@@ -2263,7 +2263,7 @@ Interfaces below for more details.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the launch template.
  {{% /md %}}
@@ -2289,7 +2289,7 @@ Interfaces below for more details.
             <td class="align-top">Vpc<wbr>Security<wbr>Group<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} A list of security group IDs to associate with.
  {{% /md %}}
@@ -2767,7 +2767,7 @@ Interfaces below for more details.
             <td class="align-top">block<wbr>Device<wbr>Mappings</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplateblockdevicemapping">ec2.<wbr>Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping[]?</a></code>
+                <code><a href="#launchtemplateblockdevicemapping">Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} Specify volumes to attach to the instance besides the volumes specified by the AMI.
 See Block Devices below for details.
@@ -2781,7 +2781,7 @@ See Block Devices below for details.
             <td class="align-top">capacity<wbr>Reservation<wbr>Specification</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplatecapacityreservationspecification">ec2.<wbr>Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification?</a></code>
+                <code><a href="#launchtemplatecapacityreservationspecification">Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification?</a></code>
             </td>
             <td class="align-top">{{% md %}} Targeting for EC2 capacity reservations. See Capacity Reservation Specification below for more details.
  {{% /md %}}
@@ -2794,7 +2794,7 @@ See Block Devices below for details.
             <td class="align-top">cpu<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplatecpuoptions">ec2.<wbr>Launch<wbr>Template<wbr>Cpu<wbr>Options?</a></code>
+                <code><a href="#launchtemplatecpuoptions">Launch<wbr>Template<wbr>Cpu<wbr>Options?</a></code>
             </td>
             <td class="align-top">{{% md %}} The CPU options for the instance. See CPU Options below for more details.
  {{% /md %}}
@@ -2807,7 +2807,7 @@ See Block Devices below for details.
             <td class="align-top">credit<wbr>Specification</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplatecreditspecification">ec2.<wbr>Launch<wbr>Template<wbr>Credit<wbr>Specification?</a></code>
+                <code><a href="#launchtemplatecreditspecification">Launch<wbr>Template<wbr>Credit<wbr>Specification?</a></code>
             </td>
             <td class="align-top">{{% md %}} Customize the credit specification of the instance. See Credit
 Specification below for more details.
@@ -2874,7 +2874,7 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
             <td class="align-top">elastic<wbr>Gpu<wbr>Specifications</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplateelasticgpuspecification">ec2.<wbr>Launch<wbr>Template<wbr>Elastic<wbr>Gpu<wbr>Specification[]?</a></code>
+                <code><a href="#launchtemplateelasticgpuspecification">Launch<wbr>Template<wbr>Elastic<wbr>Gpu<wbr>Specification[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} The elastic GPU to attach to the instance. See Elastic GPU
 below for more details.
@@ -2888,7 +2888,7 @@ below for more details.
             <td class="align-top">elastic<wbr>Inference<wbr>Accelerator</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplateelasticinferenceaccelerator">ec2.<wbr>Launch<wbr>Template<wbr>Elastic<wbr>Inference<wbr>Accelerator?</a></code>
+                <code><a href="#launchtemplateelasticinferenceaccelerator">Launch<wbr>Template<wbr>Elastic<wbr>Inference<wbr>Accelerator?</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block containing an Elastic Inference Accelerator to attach to the instance. See Elastic Inference Accelerator below for more details.
  {{% /md %}}
@@ -2901,7 +2901,7 @@ below for more details.
             <td class="align-top">iam<wbr>Instance<wbr>Profile</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplateiaminstanceprofile">ec2.<wbr>Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile?</a></code>
+                <code><a href="#launchtemplateiaminstanceprofile">Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile?</a></code>
             </td>
             <td class="align-top">{{% md %}} The IAM Instance Profile to launch the instance with. See Instance Profile
 below for more details.
@@ -2942,7 +2942,7 @@ below for more details.
             <td class="align-top">instance<wbr>Market<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplateinstancemarketoptions">ec2.<wbr>Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options?</a></code>
+                <code><a href="#launchtemplateinstancemarketoptions">Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options?</a></code>
             </td>
             <td class="align-top">{{% md %}} The market (purchasing) option for the instance. See Market Options
 below for details.
@@ -3008,7 +3008,7 @@ below for details.
             <td class="align-top">license<wbr>Specifications</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplatelicensespecification">ec2.<wbr>Launch<wbr>Template<wbr>License<wbr>Specification[]?</a></code>
+                <code><a href="#launchtemplatelicensespecification">Launch<wbr>Template<wbr>License<wbr>Specification[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of license specifications to associate with. See License Specification below for more details.
  {{% /md %}}
@@ -3021,7 +3021,7 @@ below for details.
             <td class="align-top">monitoring</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplatemonitoring">ec2.<wbr>Launch<wbr>Template<wbr>Monitoring?</a></code>
+                <code><a href="#launchtemplatemonitoring">Launch<wbr>Template<wbr>Monitoring?</a></code>
             </td>
             <td class="align-top">{{% md %}} The monitoring option for the instance. See Monitoring below for more details.
  {{% /md %}}
@@ -3060,7 +3060,7 @@ below for details.
             <td class="align-top">network<wbr>Interfaces</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplatenetworkinterface">ec2.<wbr>Launch<wbr>Template<wbr>Network<wbr>Interface[]?</a></code>
+                <code><a href="#launchtemplatenetworkinterface">Launch<wbr>Template<wbr>Network<wbr>Interface[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} Customize network interfaces to be attached at instance boot time. See Network
 Interfaces below for more details.
@@ -3074,7 +3074,7 @@ Interfaces below for more details.
             <td class="align-top">placement</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplateplacement">ec2.<wbr>Launch<wbr>Template<wbr>Placement?</a></code>
+                <code><a href="#launchtemplateplacement">Launch<wbr>Template<wbr>Placement?</a></code>
             </td>
             <td class="align-top">{{% md %}} The placement of the instance. See Placement below for more details.
  {{% /md %}}
@@ -3114,7 +3114,7 @@ Interfaces below for more details.
             <td class="align-top">tag<wbr>Specifications</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplatetagspecification">ec2.<wbr>Launch<wbr>Template<wbr>Tag<wbr>Specification[]?</a></code>
+                <code><a href="#launchtemplatetagspecification">Launch<wbr>Template<wbr>Tag<wbr>Specification[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} The tags to apply to the resources during launch. See Tag Specifications below for more details.
  {{% /md %}}
@@ -3692,7 +3692,7 @@ Amazon Resource Name (ARN) of the launch template.
             <td class="align-top">Block<wbr>Device<wbr>Mappings</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplateblockdevicemapping">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping<wbr>Args&gt;?</a></code>
+                <code><a href="#launchtemplateblockdevicemapping">List&lt;Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3708,7 +3708,7 @@ See Block Devices below for details.
             <td class="align-top">Capacity<wbr>Reservation<wbr>Specification</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplatecapacityreservationspecification">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Args?</a></code>
+                <code><a href="#launchtemplatecapacityreservationspecification">Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3723,7 +3723,7 @@ Targeting for EC2 capacity reservations. See Capacity Reservation Specification 
             <td class="align-top">Cpu<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplatecpuoptions">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Launch<wbr>Template<wbr>Cpu<wbr>Options<wbr>Args?</a></code>
+                <code><a href="#launchtemplatecpuoptions">Launch<wbr>Template<wbr>Cpu<wbr>Options<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3738,7 +3738,7 @@ The CPU options for the instance. See CPU Options below for more details.
             <td class="align-top">Credit<wbr>Specification</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplatecreditspecification">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Launch<wbr>Template<wbr>Credit<wbr>Specification<wbr>Args?</a></code>
+                <code><a href="#launchtemplatecreditspecification">Launch<wbr>Template<wbr>Credit<wbr>Specification<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3815,7 +3815,7 @@ If `true`, the launched EC2 instance will be EBS-optimized.
             <td class="align-top">Elastic<wbr>Gpu<wbr>Specifications</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplateelasticgpuspecification">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Launch<wbr>Template<wbr>Elastic<wbr>Gpu<wbr>Specification<wbr>Args&gt;?</a></code>
+                <code><a href="#launchtemplateelasticgpuspecification">List&lt;Launch<wbr>Template<wbr>Elastic<wbr>Gpu<wbr>Specification<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3831,7 +3831,7 @@ below for more details.
             <td class="align-top">Elastic<wbr>Inference<wbr>Accelerator</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplateelasticinferenceaccelerator">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Launch<wbr>Template<wbr>Elastic<wbr>Inference<wbr>Accelerator<wbr>Args?</a></code>
+                <code><a href="#launchtemplateelasticinferenceaccelerator">Launch<wbr>Template<wbr>Elastic<wbr>Inference<wbr>Accelerator<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3846,7 +3846,7 @@ Configuration block containing an Elastic Inference Accelerator to attach to the
             <td class="align-top">Iam<wbr>Instance<wbr>Profile</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplateiaminstanceprofile">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile<wbr>Args?</a></code>
+                <code><a href="#launchtemplateiaminstanceprofile">Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3893,7 +3893,7 @@ Shutdown behavior for the instance. Can be `stop` or `terminate`.
             <td class="align-top">Instance<wbr>Market<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplateinstancemarketoptions">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options<wbr>Args?</a></code>
+                <code><a href="#launchtemplateinstancemarketoptions">Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3969,7 +3969,7 @@ The latest version of the launch template.
             <td class="align-top">License<wbr>Specifications</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplatelicensespecification">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Launch<wbr>Template<wbr>License<wbr>Specification<wbr>Args&gt;?</a></code>
+                <code><a href="#launchtemplatelicensespecification">List&lt;Launch<wbr>Template<wbr>License<wbr>Specification<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3984,7 +3984,7 @@ A list of license specifications to associate with. See License Specification be
             <td class="align-top">Monitoring</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplatemonitoring">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Launch<wbr>Template<wbr>Monitoring<wbr>Args?</a></code>
+                <code><a href="#launchtemplatemonitoring">Launch<wbr>Template<wbr>Monitoring<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4029,7 +4029,7 @@ Creates a unique name beginning with the specified prefix. Conflicts with `name`
             <td class="align-top">Network<wbr>Interfaces</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplatenetworkinterface">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Launch<wbr>Template<wbr>Network<wbr>Interface<wbr>Args&gt;?</a></code>
+                <code><a href="#launchtemplatenetworkinterface">List&lt;Launch<wbr>Template<wbr>Network<wbr>Interface<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4045,7 +4045,7 @@ Interfaces below for more details.
             <td class="align-top">Placement</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplateplacement">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Launch<wbr>Template<wbr>Placement<wbr>Args?</a></code>
+                <code><a href="#launchtemplateplacement">Launch<wbr>Template<wbr>Placement<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4075,7 +4075,7 @@ The ID of the RAM disk.
             <td class="align-top">Security<wbr>Group<wbr>Names</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4091,7 +4091,7 @@ A list of security group names to associate with. If you are creating Instances 
             <td class="align-top">Tag<wbr>Specifications</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplatetagspecification">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Launch<wbr>Template<wbr>Tag<wbr>Specification<wbr>Args&gt;?</a></code>
+                <code><a href="#launchtemplatetagspecification">List&lt;Launch<wbr>Template<wbr>Tag<wbr>Specification<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4106,7 +4106,7 @@ The tags to apply to the resources during launch. See Tag Specifications below f
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4136,7 +4136,7 @@ The Base64-encoded user data to provide when launching the instance.
             <td class="align-top">Vpc<wbr>Security<wbr>Group<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4680,7 +4680,7 @@ Amazon Resource Name (ARN) of the launch template.
             <td class="align-top">block<wbr>Device<wbr>Mappings</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplateblockdevicemapping">ec2.<wbr>Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping[]?</a></code>
+                <code><a href="#launchtemplateblockdevicemapping">Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4696,7 +4696,7 @@ See Block Devices below for details.
             <td class="align-top">capacity<wbr>Reservation<wbr>Specification</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplatecapacityreservationspecification">ec2.<wbr>Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification?</a></code>
+                <code><a href="#launchtemplatecapacityreservationspecification">Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4711,7 +4711,7 @@ Targeting for EC2 capacity reservations. See Capacity Reservation Specification 
             <td class="align-top">cpu<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplatecpuoptions">ec2.<wbr>Launch<wbr>Template<wbr>Cpu<wbr>Options?</a></code>
+                <code><a href="#launchtemplatecpuoptions">Launch<wbr>Template<wbr>Cpu<wbr>Options?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4726,7 +4726,7 @@ The CPU options for the instance. See CPU Options below for more details.
             <td class="align-top">credit<wbr>Specification</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplatecreditspecification">ec2.<wbr>Launch<wbr>Template<wbr>Credit<wbr>Specification?</a></code>
+                <code><a href="#launchtemplatecreditspecification">Launch<wbr>Template<wbr>Credit<wbr>Specification?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4803,7 +4803,7 @@ If `true`, the launched EC2 instance will be EBS-optimized.
             <td class="align-top">elastic<wbr>Gpu<wbr>Specifications</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplateelasticgpuspecification">ec2.<wbr>Launch<wbr>Template<wbr>Elastic<wbr>Gpu<wbr>Specification[]?</a></code>
+                <code><a href="#launchtemplateelasticgpuspecification">Launch<wbr>Template<wbr>Elastic<wbr>Gpu<wbr>Specification[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4819,7 +4819,7 @@ below for more details.
             <td class="align-top">elastic<wbr>Inference<wbr>Accelerator</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplateelasticinferenceaccelerator">ec2.<wbr>Launch<wbr>Template<wbr>Elastic<wbr>Inference<wbr>Accelerator?</a></code>
+                <code><a href="#launchtemplateelasticinferenceaccelerator">Launch<wbr>Template<wbr>Elastic<wbr>Inference<wbr>Accelerator?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4834,7 +4834,7 @@ Configuration block containing an Elastic Inference Accelerator to attach to the
             <td class="align-top">iam<wbr>Instance<wbr>Profile</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplateiaminstanceprofile">ec2.<wbr>Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile?</a></code>
+                <code><a href="#launchtemplateiaminstanceprofile">Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4881,7 +4881,7 @@ Shutdown behavior for the instance. Can be `stop` or `terminate`.
             <td class="align-top">instance<wbr>Market<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplateinstancemarketoptions">ec2.<wbr>Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options?</a></code>
+                <code><a href="#launchtemplateinstancemarketoptions">Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4957,7 +4957,7 @@ The latest version of the launch template.
             <td class="align-top">license<wbr>Specifications</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplatelicensespecification">ec2.<wbr>Launch<wbr>Template<wbr>License<wbr>Specification[]?</a></code>
+                <code><a href="#launchtemplatelicensespecification">Launch<wbr>Template<wbr>License<wbr>Specification[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4972,7 +4972,7 @@ A list of license specifications to associate with. See License Specification be
             <td class="align-top">monitoring</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplatemonitoring">ec2.<wbr>Launch<wbr>Template<wbr>Monitoring?</a></code>
+                <code><a href="#launchtemplatemonitoring">Launch<wbr>Template<wbr>Monitoring?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5017,7 +5017,7 @@ Creates a unique name beginning with the specified prefix. Conflicts with `name`
             <td class="align-top">network<wbr>Interfaces</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplatenetworkinterface">ec2.<wbr>Launch<wbr>Template<wbr>Network<wbr>Interface[]?</a></code>
+                <code><a href="#launchtemplatenetworkinterface">Launch<wbr>Template<wbr>Network<wbr>Interface[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5033,7 +5033,7 @@ Interfaces below for more details.
             <td class="align-top">placement</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplateplacement">ec2.<wbr>Launch<wbr>Template<wbr>Placement?</a></code>
+                <code><a href="#launchtemplateplacement">Launch<wbr>Template<wbr>Placement?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5079,7 +5079,7 @@ A list of security group names to associate with. If you are creating Instances 
             <td class="align-top">tag<wbr>Specifications</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplatetagspecification">ec2.<wbr>Launch<wbr>Template<wbr>Tag<wbr>Specification[]?</a></code>
+                <code><a href="#launchtemplatetagspecification">Launch<wbr>Template<wbr>Tag<wbr>Specification[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5696,7 +5696,7 @@ The name of the device to mount.
             <td class="align-top">Ebs</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplateblockdevicemappingebs">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping<wbr>Ebs<wbr>Args?</a></code>
+                <code><a href="#launchtemplateblockdevicemappingebs">Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping<wbr>Ebs<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5860,7 +5860,7 @@ The name of the device to mount.
             <td class="align-top">ebs</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplateblockdevicemappingebs">ec2.<wbr>Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping<wbr>Ebs?</a></code>
+                <code><a href="#launchtemplateblockdevicemappingebs">Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping<wbr>Ebs?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6537,7 +6537,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
             <td class="align-top">Capacity<wbr>Reservation<wbr>Target</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplatecapacityreservationspecificationcapacityreservationtarget">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Capacity<wbr>Reservation<wbr>Target<wbr>Args?</a></code>
+                <code><a href="#launchtemplatecapacityreservationspecificationcapacityreservationtarget">Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Capacity<wbr>Reservation<wbr>Target<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6633,7 +6633,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
             <td class="align-top">capacity<wbr>Reservation<wbr>Target</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplatecapacityreservationspecificationcapacityreservationtarget">ec2.<wbr>Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Capacity<wbr>Reservation<wbr>Target?</a></code>
+                <code><a href="#launchtemplatecapacityreservationspecificationcapacityreservationtarget">Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Capacity<wbr>Reservation<wbr>Target?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -7820,7 +7820,7 @@ The name of the launch template. If you leave this blank, this provider will aut
             <td class="align-top">Spot<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplateinstancemarketoptionsspotoptions">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options<wbr>Spot<wbr>Options<wbr>Args?</a></code>
+                <code><a href="#launchtemplateinstancemarketoptionsspotoptions">Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options<wbr>Spot<wbr>Options<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -7916,7 +7916,7 @@ The name of the launch template. If you leave this blank, this provider will aut
             <td class="align-top">spot<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#launchtemplateinstancemarketoptionsspotoptions">ec2.<wbr>Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options<wbr>Spot<wbr>Options?</a></code>
+                <code><a href="#launchtemplateinstancemarketoptionsspotoptions">Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options<wbr>Spot<wbr>Options?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -8785,7 +8785,7 @@ Description of the launch template.
             <td class="align-top">Ipv4Addresses</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -8813,7 +8813,7 @@ Description of the launch template.
             <td class="align-top">Ipv6Addresses</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -8855,7 +8855,7 @@ Description of the launch template.
             <td class="align-top">Security<wbr>Groups</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -9942,7 +9942,7 @@ Description of the launch template.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

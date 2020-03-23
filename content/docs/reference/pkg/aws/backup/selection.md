@@ -195,7 +195,7 @@ The backup plan ID to be associated with the selection of resources.
             <td class="align-top">Resources</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -210,7 +210,7 @@ An array of strings that either contain Amazon Resource Names (ARNs) or match pa
             <td class="align-top">Selection<wbr>Tags</td>
             <td class="align-top">
                 
-                <code><a href="#selectionselectiontag">List&lt;Pulumi.<wbr>Aws.<wbr>Backup.<wbr>Selection<wbr>Selection<wbr>Tag<wbr>Args&gt;?</a></code>
+                <code><a href="#selectionselectiontag">List&lt;Selection<wbr>Selection<wbr>Tag<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -400,7 +400,7 @@ An array of strings that either contain Amazon Resource Names (ARNs) or match pa
             <td class="align-top">selection<wbr>Tags</td>
             <td class="align-top">
                 
-                <code><a href="#selectionselectiontag">backup.<wbr>Selection<wbr>Selection<wbr>Tag[]?</a></code>
+                <code><a href="#selectionselectiontag">Selection<wbr>Selection<wbr>Tag[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -583,7 +583,7 @@ The following output properties are available:
             <td class="align-top">Resources</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} An array of strings that either contain Amazon Resource Names (ARNs) or match patterns of resources to assign to a backup plan..
  {{% /md %}}
@@ -596,7 +596,7 @@ The following output properties are available:
             <td class="align-top">Selection<wbr>Tags</td>
             <td class="align-top">
                 
-                <code><a href="#selectionselectiontag">List&lt;Pulumi.<wbr>Aws.<wbr>Backup.<wbr>Selection<wbr>Selection<wbr>Tag&gt;?</a></code>
+                <code><a href="#selectionselectiontag">List&lt;Selection<wbr>Selection<wbr>Tag&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} Tag-based conditions used to specify a set of resources to assign to a backup plan.
  {{% /md %}}
@@ -766,7 +766,7 @@ The following output properties are available:
             <td class="align-top">selection<wbr>Tags</td>
             <td class="align-top">
                 
-                <code><a href="#selectionselectiontag">backup.<wbr>Selection<wbr>Selection<wbr>Tag[]?</a></code>
+                <code><a href="#selectionselectiontag">Selection<wbr>Selection<wbr>Tag[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} Tag-based conditions used to specify a set of resources to assign to a backup plan.
  {{% /md %}}
@@ -988,7 +988,7 @@ The backup plan ID to be associated with the selection of resources.
             <td class="align-top">Resources</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1003,7 +1003,7 @@ An array of strings that either contain Amazon Resource Names (ARNs) or match pa
             <td class="align-top">Selection<wbr>Tags</td>
             <td class="align-top">
                 
-                <code><a href="#selectionselectiontag">List&lt;Pulumi.<wbr>Aws.<wbr>Backup.<wbr>Selection<wbr>Selection<wbr>Tag<wbr>Args&gt;?</a></code>
+                <code><a href="#selectionselectiontag">List&lt;Selection<wbr>Selection<wbr>Tag<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1193,7 +1193,7 @@ An array of strings that either contain Amazon Resource Names (ARNs) or match pa
             <td class="align-top">selection<wbr>Tags</td>
             <td class="align-top">
                 
-                <code><a href="#selectionselectiontag">backup.<wbr>Selection<wbr>Selection<wbr>Tag[]?</a></code>
+                <code><a href="#selectionselectiontag">Selection<wbr>Selection<wbr>Tag[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

@@ -117,7 +117,7 @@ The following arguments are supported:
             <td class="align-top">Egress</td>
             <td class="align-top">
                 
-                <code><a href="#networkaclegress">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Network<wbr>Acl<wbr>Egress<wbr>Args&gt;?</a></code>
+                <code><a href="#networkaclegress">List&lt;Network<wbr>Acl<wbr>Egress<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -133,7 +133,7 @@ This argument is processed in [attribute-as-blocks mode](https://www.terraform.i
             <td class="align-top">Ingress</td>
             <td class="align-top">
                 
-                <code><a href="#networkaclingress">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Network<wbr>Acl<wbr>Ingress<wbr>Args&gt;?</a></code>
+                <code><a href="#networkaclingress">List&lt;Network<wbr>Acl<wbr>Ingress<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -149,7 +149,7 @@ This argument is processed in [attribute-as-blocks mode](https://www.terraform.i
             <td class="align-top">Subnet<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -164,7 +164,7 @@ A list of Subnet IDs to apply the ACL to
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -311,7 +311,7 @@ The ID of the associated VPC.
             <td class="align-top">egress</td>
             <td class="align-top">
                 
-                <code><a href="#networkaclegress">ec2.<wbr>Network<wbr>Acl<wbr>Egress[]?</a></code>
+                <code><a href="#networkaclegress">Network<wbr>Acl<wbr>Egress[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -327,7 +327,7 @@ This argument is processed in [attribute-as-blocks mode](https://www.terraform.i
             <td class="align-top">ingress</td>
             <td class="align-top">
                 
-                <code><a href="#networkaclingress">ec2.<wbr>Network<wbr>Acl<wbr>Ingress[]?</a></code>
+                <code><a href="#networkaclingress">Network<wbr>Acl<wbr>Ingress[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -519,7 +519,7 @@ The following output properties are available:
             <td class="align-top">Egress</td>
             <td class="align-top">
                 
-                <code><a href="#networkaclegress">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Network<wbr>Acl<wbr>Egress&gt;</a></code>
+                <code><a href="#networkaclegress">List&lt;Network<wbr>Acl<wbr>Egress&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} Specifies an egress rule. Parameters defined below.
 This argument is processed in [attribute-as-blocks mode](https://www.terraform.io/docs/configuration/attr-as-blocks.html).
@@ -533,7 +533,7 @@ This argument is processed in [attribute-as-blocks mode](https://www.terraform.i
             <td class="align-top">Ingress</td>
             <td class="align-top">
                 
-                <code><a href="#networkaclingress">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Network<wbr>Acl<wbr>Ingress&gt;</a></code>
+                <code><a href="#networkaclingress">List&lt;Network<wbr>Acl<wbr>Ingress&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} Specifies an ingress rule. Parameters defined below.
 This argument is processed in [attribute-as-blocks mode](https://www.terraform.io/docs/configuration/attr-as-blocks.html).
@@ -560,7 +560,7 @@ This argument is processed in [attribute-as-blocks mode](https://www.terraform.i
             <td class="align-top">Subnet<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} A list of Subnet IDs to apply the ACL to
  {{% /md %}}
@@ -573,7 +573,7 @@ This argument is processed in [attribute-as-blocks mode](https://www.terraform.i
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -719,7 +719,7 @@ This argument is processed in [attribute-as-blocks mode](https://www.terraform.i
             <td class="align-top">egress</td>
             <td class="align-top">
                 
-                <code><a href="#networkaclegress">ec2.<wbr>Network<wbr>Acl<wbr>Egress[]</a></code>
+                <code><a href="#networkaclegress">Network<wbr>Acl<wbr>Egress[]</a></code>
             </td>
             <td class="align-top">{{% md %}} Specifies an egress rule. Parameters defined below.
 This argument is processed in [attribute-as-blocks mode](https://www.terraform.io/docs/configuration/attr-as-blocks.html).
@@ -733,7 +733,7 @@ This argument is processed in [attribute-as-blocks mode](https://www.terraform.i
             <td class="align-top">ingress</td>
             <td class="align-top">
                 
-                <code><a href="#networkaclingress">ec2.<wbr>Network<wbr>Acl<wbr>Ingress[]</a></code>
+                <code><a href="#networkaclingress">Network<wbr>Acl<wbr>Ingress[]</a></code>
             </td>
             <td class="align-top">{{% md %}} Specifies an ingress rule. Parameters defined below.
 This argument is processed in [attribute-as-blocks mode](https://www.terraform.io/docs/configuration/attr-as-blocks.html).
@@ -978,7 +978,7 @@ The following state arguments are supported:
             <td class="align-top">Egress</td>
             <td class="align-top">
                 
-                <code><a href="#networkaclegress">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Network<wbr>Acl<wbr>Egress<wbr>Args&gt;?</a></code>
+                <code><a href="#networkaclegress">List&lt;Network<wbr>Acl<wbr>Egress<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -994,7 +994,7 @@ This argument is processed in [attribute-as-blocks mode](https://www.terraform.i
             <td class="align-top">Ingress</td>
             <td class="align-top">
                 
-                <code><a href="#networkaclingress">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Network<wbr>Acl<wbr>Ingress<wbr>Args&gt;?</a></code>
+                <code><a href="#networkaclingress">List&lt;Network<wbr>Acl<wbr>Ingress<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1025,7 +1025,7 @@ The ID of the AWS account that owns the network ACL.
             <td class="align-top">Subnet<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1040,7 +1040,7 @@ A list of Subnet IDs to apply the ACL to
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1202,7 +1202,7 @@ The ID of the associated VPC.
             <td class="align-top">egress</td>
             <td class="align-top">
                 
-                <code><a href="#networkaclegress">ec2.<wbr>Network<wbr>Acl<wbr>Egress[]?</a></code>
+                <code><a href="#networkaclegress">Network<wbr>Acl<wbr>Egress[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1218,7 +1218,7 @@ This argument is processed in [attribute-as-blocks mode](https://www.terraform.i
             <td class="align-top">ingress</td>
             <td class="align-top">
                 
-                <code><a href="#networkaclingress">ec2.<wbr>Network<wbr>Acl<wbr>Ingress[]?</a></code>
+                <code><a href="#networkaclingress">Network<wbr>Acl<wbr>Ingress[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

@@ -151,7 +151,7 @@ The name of the database.
             <td class="align-top">Parameters</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, string&gt;?</code>
+                <code>Dictionary<string, string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -537,7 +537,7 @@ The following output properties are available:
             <td class="align-top">Parameters</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, string&gt;?</code>
+                <code>Dictionary<string, string>?</code>
             </td>
             <td class="align-top">{{% md %}} A list of key-value pairs that define parameters and properties of the database.
  {{% /md %}}
@@ -944,7 +944,7 @@ The name of the database.
             <td class="align-top">Parameters</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, string&gt;?</code>
+                <code>Dictionary<string, string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

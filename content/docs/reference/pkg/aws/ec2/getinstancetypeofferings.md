@@ -56,7 +56,7 @@ const example = aws.Ec2InstanceTypeOfferings({
 <div class="highlight">
 <pre class="chroma">
 <code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetInstanceTypeOfferings </span><span class="p">{</span>
-    <span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.GetInstanceTypeOfferingsResult.html">Pulumi.Aws.Ec2.GetInstanceTypeOfferingsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.GetInstanceTypeOfferingsArgs.html">GetInstanceTypeOfferingsArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span>
+    <span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.GetInstanceTypeOfferingsResult.html">GetInstanceTypeOfferingsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.GetInstanceTypeOfferingsArgs.html">GetInstanceTypeOfferingsArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span>
 <span class="p">}</span></code></pre>
 </div>
 
@@ -85,7 +85,7 @@ The following arguments are supported:
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getinstancetypeofferingsfilter">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Get<wbr>Instance<wbr>Type<wbr>Offerings<wbr>Filter<wbr>Args&gt;?</a></code>
+                <code><a href="#getinstancetypeofferingsfilter">List&lt;Get<wbr>Instance<wbr>Type<wbr>Offerings<wbr>Filter<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -185,7 +185,7 @@ Location type. Defaults to `region`. Valid values: `availability-zone`, `availab
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getinstancetypeofferingsfilter">ec2.<wbr>Get<wbr>Instance<wbr>Type<wbr>Offerings<wbr>Filter[]?</a></code>
+                <code><a href="#getinstancetypeofferingsfilter">Get<wbr>Instance<wbr>Type<wbr>Offerings<wbr>Filter[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -300,7 +300,7 @@ The following output properties are available:
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getinstancetypeofferingsfilter">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Get<wbr>Instance<wbr>Type<wbr>Offerings<wbr>Filter&gt;?</a></code>
+                <code><a href="#getinstancetypeofferingsfilter">List&lt;Get<wbr>Instance<wbr>Type<wbr>Offerings<wbr>Filter&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -325,7 +325,7 @@ The following output properties are available:
             <td class="align-top">Instance<wbr>Types</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} Set of EC2 Instance Types.
  {{% /md %}}
@@ -440,7 +440,7 @@ The following output properties are available:
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getinstancetypeofferingsfilter">ec2.<wbr>Get<wbr>Instance<wbr>Type<wbr>Offerings<wbr>Filter[]?</a></code>
+                <code><a href="#getinstancetypeofferingsfilter">Get<wbr>Instance<wbr>Type<wbr>Offerings<wbr>Filter[]?</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -621,7 +621,7 @@ Name of the filter. The `location` filter depends on the top-level `location_typ
             <td class="align-top">Values</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

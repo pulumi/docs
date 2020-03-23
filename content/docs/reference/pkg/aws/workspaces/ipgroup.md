@@ -121,7 +121,7 @@ The name of the IP group.
             <td class="align-top">Rules</td>
             <td class="align-top">
                 
-                <code><a href="#ipgrouprule">List&lt;Pulumi.<wbr>Aws.<wbr>Workspaces.<wbr>Ip<wbr>Group<wbr>Rule<wbr>Args&gt;?</a></code>
+                <code><a href="#ipgrouprule">List&lt;Ip<wbr>Group<wbr>Rule<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -136,7 +136,7 @@ One or more pairs specifying the IP group rule (in CIDR format) from which web r
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -279,7 +279,7 @@ The name of the IP group.
             <td class="align-top">rules</td>
             <td class="align-top">
                 
-                <code><a href="#ipgrouprule">workspaces.<wbr>Ip<wbr>Group<wbr>Rule[]?</a></code>
+                <code><a href="#ipgrouprule">Ip<wbr>Group<wbr>Rule[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -447,7 +447,7 @@ The following output properties are available:
             <td class="align-top">Rules</td>
             <td class="align-top">
                 
-                <code><a href="#ipgrouprule">List&lt;Pulumi.<wbr>Aws.<wbr>Workspaces.<wbr>Ip<wbr>Group<wbr>Rule&gt;?</a></code>
+                <code><a href="#ipgrouprule">List&lt;Ip<wbr>Group<wbr>Rule&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} One or more pairs specifying the IP group rule (in CIDR format) from which web requests originate.
  {{% /md %}}
@@ -460,7 +460,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -589,7 +589,7 @@ The following output properties are available:
             <td class="align-top">rules</td>
             <td class="align-top">
                 
-                <code><a href="#ipgrouprule">workspaces.<wbr>Ip<wbr>Group<wbr>Rule[]?</a></code>
+                <code><a href="#ipgrouprule">Ip<wbr>Group<wbr>Rule[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} One or more pairs specifying the IP group rule (in CIDR format) from which web requests originate.
  {{% /md %}}
@@ -794,7 +794,7 @@ The name of the IP group.
             <td class="align-top">Rules</td>
             <td class="align-top">
                 
-                <code><a href="#ipgrouprule">List&lt;Pulumi.<wbr>Aws.<wbr>Workspaces.<wbr>Ip<wbr>Group<wbr>Rule<wbr>Args&gt;?</a></code>
+                <code><a href="#ipgrouprule">List&lt;Ip<wbr>Group<wbr>Rule<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -809,7 +809,7 @@ One or more pairs specifying the IP group rule (in CIDR format) from which web r
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -952,7 +952,7 @@ The name of the IP group.
             <td class="align-top">rules</td>
             <td class="align-top">
                 
-                <code><a href="#ipgrouprule">workspaces.<wbr>Ip<wbr>Group<wbr>Rule[]?</a></code>
+                <code><a href="#ipgrouprule">Ip<wbr>Group<wbr>Rule[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

@@ -403,7 +403,7 @@ details on controlling this property.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -920,7 +920,7 @@ A DB subnet group to associate with this DB instance. **NOTE:** This must match 
             <td class="align-top">engine</td>
             <td class="align-top">
                 
-                <code>Engine<wbr>Type?</code>
+                <code>EngineType?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -983,7 +983,7 @@ Creates a unique identifier beginning with the specified prefix. Conflicts with 
             <td class="align-top">instance<wbr>Class</td>
             <td class="align-top">
                 
-                <code>string | Instance<wbr>Type</code>
+                <code>string | InstanceType</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1897,7 +1897,7 @@ details on controlling this property.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the instance.
  {{% /md %}}
@@ -2495,7 +2495,7 @@ are applied immediately, or during the next maintenance window. Default is`false
             <td class="align-top">engine</td>
             <td class="align-top">
                 
-                <code>Engine<wbr>Type?</code>
+                <code>EngineType?</code>
             </td>
             <td class="align-top">{{% md %}} The name of the database engine to be used for the RDS instance. Defaults to `aurora`. Valid Values: `aurora`, `aurora-mysql`, `aurora-postgresql`.
 For information on the difference between the available Aurora MySQL engines
@@ -3642,7 +3642,7 @@ Specifies whether the DB cluster is encrypted.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4324,7 +4324,7 @@ The DNS address for this instance. May not be writable
             <td class="align-top">engine</td>
             <td class="align-top">
                 
-                <code>Engine<wbr>Type?</code>
+                <code>EngineType?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4387,7 +4387,7 @@ Creates a unique identifier beginning with the specified prefix. Conflicts with 
             <td class="align-top">instance<wbr>Class</td>
             <td class="align-top">
                 
-                <code>string | Instance<wbr>Type</code>
+                <code>string | InstanceType</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

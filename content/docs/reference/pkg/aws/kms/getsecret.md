@@ -32,7 +32,7 @@ table td p { margin-top: 0; margin-bottom: 0; }
 <div class="highlight">
 <pre class="chroma">
 <code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetSecret </span><span class="p">{</span>
-    <span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kms.GetSecretResult.html">Pulumi.Aws.Kms.GetSecretResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kms.GetSecretArgs.html">GetSecretArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span>
+    <span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kms.GetSecretResult.html">GetSecretResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kms.GetSecretArgs.html">GetSecretArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span>
 <span class="p">}</span></code></pre>
 </div>
 
@@ -61,7 +61,7 @@ The following arguments are supported:
             <td class="align-top">Secrets</td>
             <td class="align-top">
                 
-                <code><a href="#getsecretsecret">List&lt;Pulumi.<wbr>Aws.<wbr>Kms.<wbr>Get<wbr>Secret<wbr>Secret<wbr>Args&gt;</a></code>
+                <code><a href="#getsecretsecret">List&lt;Get<wbr>Secret<wbr>Secret<wbr>Args&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -129,7 +129,7 @@ The following arguments are supported:
             <td class="align-top">secrets</td>
             <td class="align-top">
                 
-                <code><a href="#getsecretsecret">kms.<wbr>Get<wbr>Secret<wbr>Secret[]</a></code>
+                <code><a href="#getsecretsecret">Get<wbr>Secret<wbr>Secret[]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -225,7 +225,7 @@ The following output properties are available:
             <td class="align-top">Secrets</td>
             <td class="align-top">
                 
-                <code><a href="#getsecretsecret">List&lt;Pulumi.<wbr>Aws.<wbr>Kms.<wbr>Get<wbr>Secret<wbr>Secret&gt;</a></code>
+                <code><a href="#getsecretsecret">List&lt;Get<wbr>Secret<wbr>Secret&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -315,7 +315,7 @@ The following output properties are available:
             <td class="align-top">secrets</td>
             <td class="align-top">
                 
-                <code><a href="#getsecretsecret">kms.<wbr>Get<wbr>Secret<wbr>Secret[]</a></code>
+                <code><a href="#getsecretsecret">Get<wbr>Secret<wbr>Secret[]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -418,7 +418,7 @@ The following output properties are available:
             <td class="align-top">Context</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, string&gt;?</code>
+                <code>Dictionary<string, string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -432,7 +432,7 @@ The following output properties are available:
             <td class="align-top">Grant<wbr>Tokens</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

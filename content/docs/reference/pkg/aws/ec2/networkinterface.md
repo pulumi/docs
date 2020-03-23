@@ -97,7 +97,7 @@ The following arguments are supported:
             <td class="align-top">Attachments</td>
             <td class="align-top">
                 
-                <code><a href="#networkinterfaceattachment">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Network<wbr>Interface<wbr>Attachment<wbr>Args&gt;?</a></code>
+                <code><a href="#networkinterfaceattachment">List&lt;Network<wbr>Interface<wbr>Attachment<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -141,7 +141,7 @@ A description for the network interface.
             <td class="align-top">Private<wbr>Ips</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -171,7 +171,7 @@ Number of secondary private IPs to assign to the ENI. The total number of privat
             <td class="align-top">Security<wbr>Groups</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -216,7 +216,7 @@ Subnet ID to create the ENI in.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -405,7 +405,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">attachments</td>
             <td class="align-top">
                 
-                <code><a href="#networkinterfaceattachment">ec2.<wbr>Network<wbr>Interface<wbr>Attachment[]?</a></code>
+                <code><a href="#networkinterfaceattachment">Network<wbr>Interface<wbr>Attachment[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -727,7 +727,7 @@ The following output properties are available:
             <td class="align-top">Attachments</td>
             <td class="align-top">
                 
-                <code><a href="#networkinterfaceattachment">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Network<wbr>Interface<wbr>Attachment&gt;</a></code>
+                <code><a href="#networkinterfaceattachment">List&lt;Network<wbr>Interface<wbr>Attachment&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} Block to define the attachment of the ENI. Documented below.
  {{% /md %}}
@@ -791,7 +791,7 @@ The following output properties are available:
             <td class="align-top">Private<wbr>Ips</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} List of private IPs to assign to the ENI.
  {{% /md %}}
@@ -817,7 +817,7 @@ The following output properties are available:
             <td class="align-top">Security<wbr>Groups</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} List of security group IDs to assign to the ENI.
  {{% /md %}}
@@ -856,7 +856,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -1051,7 +1051,7 @@ The following output properties are available:
             <td class="align-top">attachments</td>
             <td class="align-top">
                 
-                <code><a href="#networkinterfaceattachment">ec2.<wbr>Network<wbr>Interface<wbr>Attachment[]</a></code>
+                <code><a href="#networkinterfaceattachment">Network<wbr>Interface<wbr>Attachment[]</a></code>
             </td>
             <td class="align-top">{{% md %}} Block to define the attachment of the ENI. Documented below.
  {{% /md %}}
@@ -1434,7 +1434,7 @@ The following state arguments are supported:
             <td class="align-top">Attachments</td>
             <td class="align-top">
                 
-                <code><a href="#networkinterfaceattachment">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Network<wbr>Interface<wbr>Attachment<wbr>Args&gt;?</a></code>
+                <code><a href="#networkinterfaceattachment">List&lt;Network<wbr>Interface<wbr>Attachment<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1508,7 +1508,7 @@ The private DNS name of the network interface (IPv4).
             <td class="align-top">Private<wbr>Ips</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1538,7 +1538,7 @@ Number of secondary private IPs to assign to the ENI. The total number of privat
             <td class="align-top">Security<wbr>Groups</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1583,7 +1583,7 @@ Subnet ID to create the ENI in.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1802,7 +1802,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">attachments</td>
             <td class="align-top">
                 
-                <code><a href="#networkinterfaceattachment">ec2.<wbr>Network<wbr>Interface<wbr>Attachment[]?</a></code>
+                <code><a href="#networkinterfaceattachment">Network<wbr>Interface<wbr>Attachment[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

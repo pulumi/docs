@@ -117,7 +117,7 @@ The following arguments are supported:
             <td class="align-top">App<wbr>Sources</td>
             <td class="align-top">
                 
-                <code><a href="#applicationappsource">List&lt;Pulumi.<wbr>Aws.<wbr>Opsworks.<wbr>Application<wbr>App<wbr>Source<wbr>Args&gt;?</a></code>
+                <code><a href="#applicationappsource">List&lt;Application<wbr>App<wbr>Source<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -237,7 +237,7 @@ Subfolder for the document root for application of type `rails`.
             <td class="align-top">Domains</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -267,7 +267,7 @@ Whether to enable SSL for the app. This must be set in order to let `ssl_configu
             <td class="align-top">Environments</td>
             <td class="align-top">
                 
-                <code><a href="#applicationenvironment">List&lt;Pulumi.<wbr>Aws.<wbr>Opsworks.<wbr>Application<wbr>Environment<wbr>Args&gt;?</a></code>
+                <code><a href="#applicationenvironment">List&lt;Application<wbr>Environment<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -327,7 +327,7 @@ A short, machine-readable name for the application. This can only be defined on 
             <td class="align-top">Ssl<wbr>Configurations</td>
             <td class="align-top">
                 
-                <code><a href="#applicationsslconfiguration">List&lt;Pulumi.<wbr>Aws.<wbr>Opsworks.<wbr>Application<wbr>Ssl<wbr>Configuration<wbr>Args&gt;?</a></code>
+                <code><a href="#applicationsslconfiguration">List&lt;Application<wbr>Ssl<wbr>Configuration<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -667,7 +667,7 @@ The type of source to use. For example, &#34;archive&#34;.
             <td class="align-top">app<wbr>Sources</td>
             <td class="align-top">
                 
-                <code><a href="#applicationappsource">opsworks.<wbr>Application<wbr>App<wbr>Source[]?</a></code>
+                <code><a href="#applicationappsource">Application<wbr>App<wbr>Source[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -817,7 +817,7 @@ Whether to enable SSL for the app. This must be set in order to let `ssl_configu
             <td class="align-top">environments</td>
             <td class="align-top">
                 
-                <code><a href="#applicationenvironment">opsworks.<wbr>Application<wbr>Environment[]?</a></code>
+                <code><a href="#applicationenvironment">Application<wbr>Environment[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -877,7 +877,7 @@ A short, machine-readable name for the application. This can only be defined on 
             <td class="align-top">ssl<wbr>Configurations</td>
             <td class="align-top">
                 
-                <code><a href="#applicationsslconfiguration">opsworks.<wbr>Application<wbr>Ssl<wbr>Configuration[]?</a></code>
+                <code><a href="#applicationsslconfiguration">Application<wbr>Ssl<wbr>Configuration[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1231,7 +1231,7 @@ The following output properties are available:
             <td class="align-top">App<wbr>Sources</td>
             <td class="align-top">
                 
-                <code><a href="#applicationappsource">List&lt;Pulumi.<wbr>Aws.<wbr>Opsworks.<wbr>Application<wbr>App<wbr>Source&gt;</a></code>
+                <code><a href="#applicationappsource">List&lt;Application<wbr>App<wbr>Source&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} SCM configuration of the app as described below.
  {{% /md %}}
@@ -1335,7 +1335,7 @@ The following output properties are available:
             <td class="align-top">Domains</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} A list of virtual host alias.
  {{% /md %}}
@@ -1361,7 +1361,7 @@ The following output properties are available:
             <td class="align-top">Environments</td>
             <td class="align-top">
                 
-                <code><a href="#applicationenvironment">List&lt;Pulumi.<wbr>Aws.<wbr>Opsworks.<wbr>Application<wbr>Environment&gt;?</a></code>
+                <code><a href="#applicationenvironment">List&lt;Application<wbr>Environment&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} Object to define environment variables.  Object is described below.
  {{% /md %}}
@@ -1413,7 +1413,7 @@ The following output properties are available:
             <td class="align-top">Ssl<wbr>Configurations</td>
             <td class="align-top">
                 
-                <code><a href="#applicationsslconfiguration">List&lt;Pulumi.<wbr>Aws.<wbr>Opsworks.<wbr>Application<wbr>Ssl<wbr>Configuration&gt;?</a></code>
+                <code><a href="#applicationsslconfiguration">List&lt;Application<wbr>Ssl<wbr>Configuration&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} The SSL configuration of the app. Object is described below.
  {{% /md %}}
@@ -1713,7 +1713,7 @@ The following output properties are available:
             <td class="align-top">app<wbr>Sources</td>
             <td class="align-top">
                 
-                <code><a href="#applicationappsource">opsworks.<wbr>Application<wbr>App<wbr>Source[]</a></code>
+                <code><a href="#applicationappsource">Application<wbr>App<wbr>Source[]</a></code>
             </td>
             <td class="align-top">{{% md %}} SCM configuration of the app as described below.
  {{% /md %}}
@@ -1843,7 +1843,7 @@ The following output properties are available:
             <td class="align-top">environments</td>
             <td class="align-top">
                 
-                <code><a href="#applicationenvironment">opsworks.<wbr>Application<wbr>Environment[]?</a></code>
+                <code><a href="#applicationenvironment">Application<wbr>Environment[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} Object to define environment variables.  Object is described below.
  {{% /md %}}
@@ -1895,7 +1895,7 @@ The following output properties are available:
             <td class="align-top">ssl<wbr>Configurations</td>
             <td class="align-top">
                 
-                <code><a href="#applicationsslconfiguration">opsworks.<wbr>Application<wbr>Ssl<wbr>Configuration[]?</a></code>
+                <code><a href="#applicationsslconfiguration">Application<wbr>Ssl<wbr>Configuration[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} The SSL configuration of the app. Object is described below.
  {{% /md %}}
@@ -2254,7 +2254,7 @@ The following state arguments are supported:
             <td class="align-top">App<wbr>Sources</td>
             <td class="align-top">
                 
-                <code><a href="#applicationappsource">List&lt;Pulumi.<wbr>Aws.<wbr>Opsworks.<wbr>Application<wbr>App<wbr>Source<wbr>Args&gt;?</a></code>
+                <code><a href="#applicationappsource">List&lt;Application<wbr>App<wbr>Source<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2374,7 +2374,7 @@ Subfolder for the document root for application of type `rails`.
             <td class="align-top">Domains</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2404,7 +2404,7 @@ Whether to enable SSL for the app. This must be set in order to let `ssl_configu
             <td class="align-top">Environments</td>
             <td class="align-top">
                 
-                <code><a href="#applicationenvironment">List&lt;Pulumi.<wbr>Aws.<wbr>Opsworks.<wbr>Application<wbr>Environment<wbr>Args&gt;?</a></code>
+                <code><a href="#applicationenvironment">List&lt;Application<wbr>Environment<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2464,7 +2464,7 @@ A short, machine-readable name for the application. This can only be defined on 
             <td class="align-top">Ssl<wbr>Configurations</td>
             <td class="align-top">
                 
-                <code><a href="#applicationsslconfiguration">List&lt;Pulumi.<wbr>Aws.<wbr>Opsworks.<wbr>Application<wbr>Ssl<wbr>Configuration<wbr>Args&gt;?</a></code>
+                <code><a href="#applicationsslconfiguration">List&lt;Application<wbr>Ssl<wbr>Configuration<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2804,7 +2804,7 @@ The type of source to use. For example, &#34;archive&#34;.
             <td class="align-top">app<wbr>Sources</td>
             <td class="align-top">
                 
-                <code><a href="#applicationappsource">opsworks.<wbr>Application<wbr>App<wbr>Source[]?</a></code>
+                <code><a href="#applicationappsource">Application<wbr>App<wbr>Source[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2954,7 +2954,7 @@ Whether to enable SSL for the app. This must be set in order to let `ssl_configu
             <td class="align-top">environments</td>
             <td class="align-top">
                 
-                <code><a href="#applicationenvironment">opsworks.<wbr>Application<wbr>Environment[]?</a></code>
+                <code><a href="#applicationenvironment">Application<wbr>Environment[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3014,7 +3014,7 @@ A short, machine-readable name for the application. This can only be defined on 
             <td class="align-top">ssl<wbr>Configurations</td>
             <td class="align-top">
                 
-                <code><a href="#applicationsslconfiguration">opsworks.<wbr>Application<wbr>Ssl<wbr>Configuration[]?</a></code>
+                <code><a href="#applicationsslconfiguration">Application<wbr>Ssl<wbr>Configuration[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

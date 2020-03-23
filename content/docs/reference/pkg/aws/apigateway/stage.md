@@ -148,7 +148,7 @@ The following arguments are supported:
             <td class="align-top">Access<wbr>Log<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#stageaccesslogsettings">Pulumi.<wbr>Aws.<wbr>Apigateway.<wbr>Stage<wbr>Access<wbr>Log<wbr>Settings<wbr>Args?</a></code>
+                <code><a href="#stageaccesslogsettings">Stage<wbr>Access<wbr>Log<wbr>Settings<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -284,7 +284,7 @@ The name of the stage
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -299,7 +299,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">Variables</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -550,7 +550,7 @@ Whether active tracing with X-ray is enabled. Defaults to `false`.
             <td class="align-top">access<wbr>Log<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#stageaccesslogsettings">apigateway.<wbr>Stage<wbr>Access<wbr>Log<wbr>Settings?</a></code>
+                <code><a href="#stageaccesslogsettings">Stage<wbr>Access<wbr>Log<wbr>Settings?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -656,7 +656,7 @@ The version of the associated API documentation
             <td class="align-top">rest<wbr>Api</td>
             <td class="align-top">
                 
-                <code>string | Rest<wbr>Api</code>
+                <code>string | RestApi</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -966,7 +966,7 @@ The following output properties are available:
             <td class="align-top">Access<wbr>Log<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#stageaccesslogsettings">Pulumi.<wbr>Aws.<wbr>Apigateway.<wbr>Stage<wbr>Access<wbr>Log<wbr>Settings?</a></code>
+                <code><a href="#stageaccesslogsettings">Stage<wbr>Access<wbr>Log<wbr>Settings?</a></code>
             </td>
             <td class="align-top">{{% md %}} Enables access logs for the API stage. Detailed below.
  {{% /md %}}
@@ -1126,7 +1126,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -1139,7 +1139,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
             <td class="align-top">Variables</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} A map that defines the stage variables
  {{% /md %}}
@@ -1404,7 +1404,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
             <td class="align-top">access<wbr>Log<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#stageaccesslogsettings">apigateway.<wbr>Stage<wbr>Access<wbr>Log<wbr>Settings?</a></code>
+                <code><a href="#stageaccesslogsettings">Stage<wbr>Access<wbr>Log<wbr>Settings?</a></code>
             </td>
             <td class="align-top">{{% md %}} Enables access logs for the API stage. Detailed below.
  {{% /md %}}
@@ -1901,7 +1901,7 @@ The following state arguments are supported:
             <td class="align-top">Access<wbr>Log<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#stageaccesslogsettings">Pulumi.<wbr>Aws.<wbr>Apigateway.<wbr>Stage<wbr>Access<wbr>Log<wbr>Settings<wbr>Args?</a></code>
+                <code><a href="#stageaccesslogsettings">Stage<wbr>Access<wbr>Log<wbr>Settings<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2085,7 +2085,7 @@ The name of the stage
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2100,7 +2100,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">Variables</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2399,7 +2399,7 @@ Whether active tracing with X-ray is enabled. Defaults to `false`.
             <td class="align-top">access<wbr>Log<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#stageaccesslogsettings">apigateway.<wbr>Stage<wbr>Access<wbr>Log<wbr>Settings?</a></code>
+                <code><a href="#stageaccesslogsettings">Stage<wbr>Access<wbr>Log<wbr>Settings?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2553,7 +2553,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
             <td class="align-top">rest<wbr>Api</td>
             <td class="align-top">
                 
-                <code>string | Rest<wbr>Api</code>
+                <code>string | RestApi</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

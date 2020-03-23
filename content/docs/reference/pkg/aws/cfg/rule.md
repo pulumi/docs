@@ -218,7 +218,7 @@ The name of the rule
             <td class="align-top">Scope</td>
             <td class="align-top">
                 
-                <code><a href="#rulescope">Pulumi.<wbr>Aws.<wbr>Cfg.<wbr>Rule<wbr>Scope<wbr>Args?</a></code>
+                <code><a href="#rulescope">Rule<wbr>Scope<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -233,7 +233,7 @@ Scope defines which resources can trigger an evaluation for the rule as document
             <td class="align-top">Source</td>
             <td class="align-top">
                 
-                <code><a href="#rulesource">Pulumi.<wbr>Aws.<wbr>Cfg.<wbr>Rule<wbr>Source<wbr>Args</a></code>
+                <code><a href="#rulesource">Rule<wbr>Source<wbr>Args</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -249,7 +249,7 @@ the function to evaluate your AWS resources as documented below.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -472,7 +472,7 @@ The name of the rule
             <td class="align-top">scope</td>
             <td class="align-top">
                 
-                <code><a href="#rulescope">cfg.<wbr>Rule<wbr>Scope?</a></code>
+                <code><a href="#rulescope">Rule<wbr>Scope?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -487,7 +487,7 @@ Scope defines which resources can trigger an evaluation for the rule as document
             <td class="align-top">source</td>
             <td class="align-top">
                 
-                <code><a href="#rulesource">cfg.<wbr>Rule<wbr>Source</a></code>
+                <code><a href="#rulesource">Rule<wbr>Source</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -758,7 +758,7 @@ is triggered periodically. If specified, requires `message_type` to be `Schedule
             <td class="align-top">Scope</td>
             <td class="align-top">
                 
-                <code><a href="#rulescope">Pulumi.<wbr>Aws.<wbr>Cfg.<wbr>Rule<wbr>Scope?</a></code>
+                <code><a href="#rulescope">Rule<wbr>Scope?</a></code>
             </td>
             <td class="align-top">{{% md %}} Scope defines which resources can trigger an evaluation for the rule as documented below.
  {{% /md %}}
@@ -771,7 +771,7 @@ is triggered periodically. If specified, requires `message_type` to be `Schedule
             <td class="align-top">Source</td>
             <td class="align-top">
                 
-                <code><a href="#rulesource">Pulumi.<wbr>Aws.<wbr>Cfg.<wbr>Rule<wbr>Source</a></code>
+                <code><a href="#rulesource">Rule<wbr>Source</a></code>
             </td>
             <td class="align-top">{{% md %}} Source specifies the rule owner, the rule identifier, and the notifications that cause
 the function to evaluate your AWS resources as documented below.
@@ -785,7 +785,7 @@ the function to evaluate your AWS resources as documented below.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -1036,7 +1036,7 @@ is triggered periodically. If specified, requires `message_type` to be `Schedule
             <td class="align-top">scope</td>
             <td class="align-top">
                 
-                <code><a href="#rulescope">cfg.<wbr>Rule<wbr>Scope?</a></code>
+                <code><a href="#rulescope">Rule<wbr>Scope?</a></code>
             </td>
             <td class="align-top">{{% md %}} Scope defines which resources can trigger an evaluation for the rule as documented below.
  {{% /md %}}
@@ -1049,7 +1049,7 @@ is triggered periodically. If specified, requires `message_type` to be `Schedule
             <td class="align-top">source</td>
             <td class="align-top">
                 
-                <code><a href="#rulesource">cfg.<wbr>Rule<wbr>Source</a></code>
+                <code><a href="#rulesource">Rule<wbr>Source</a></code>
             </td>
             <td class="align-top">{{% md %}} Source specifies the rule owner, the rule identifier, and the notifications that cause
 the function to evaluate your AWS resources as documented below.
@@ -1385,7 +1385,7 @@ The ID of the config rule
             <td class="align-top">Scope</td>
             <td class="align-top">
                 
-                <code><a href="#rulescope">Pulumi.<wbr>Aws.<wbr>Cfg.<wbr>Rule<wbr>Scope<wbr>Args?</a></code>
+                <code><a href="#rulescope">Rule<wbr>Scope<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1400,7 +1400,7 @@ Scope defines which resources can trigger an evaluation for the rule as document
             <td class="align-top">Source</td>
             <td class="align-top">
                 
-                <code><a href="#rulesource">Pulumi.<wbr>Aws.<wbr>Cfg.<wbr>Rule<wbr>Source<wbr>Args?</a></code>
+                <code><a href="#rulesource">Rule<wbr>Source<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1416,7 +1416,7 @@ the function to evaluate your AWS resources as documented below.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1699,7 +1699,7 @@ The ID of the config rule
             <td class="align-top">scope</td>
             <td class="align-top">
                 
-                <code><a href="#rulescope">cfg.<wbr>Rule<wbr>Scope?</a></code>
+                <code><a href="#rulescope">Rule<wbr>Scope?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1714,7 +1714,7 @@ Scope defines which resources can trigger an evaluation for the rule as document
             <td class="align-top">source</td>
             <td class="align-top">
                 
-                <code><a href="#rulesource">cfg.<wbr>Rule<wbr>Source?</a></code>
+                <code><a href="#rulesource">Rule<wbr>Source?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1966,7 +1966,7 @@ If you specify a resource ID, you must specify one resource type for `compliance
             <td class="align-top">Compliance<wbr>Resource<wbr>Types</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2322,7 +2322,7 @@ Indicates whether AWS or the customer owns and manages the AWS Config rule. Vali
             <td class="align-top">Source<wbr>Details</td>
             <td class="align-top">
                 
-                <code><a href="#rulesourcesourcedetail">List&lt;Pulumi.<wbr>Aws.<wbr>Cfg.<wbr>Rule<wbr>Source<wbr>Source<wbr>Detail<wbr>Args&gt;?</a></code>
+                <code><a href="#rulesourcesourcedetail">List&lt;Rule<wbr>Source<wbr>Source<wbr>Detail<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2452,7 +2452,7 @@ Indicates whether AWS or the customer owns and manages the AWS Config rule. Vali
             <td class="align-top">source<wbr>Details</td>
             <td class="align-top">
                 
-                <code><a href="#rulesourcesourcedetail">cfg.<wbr>Rule<wbr>Source<wbr>Source<wbr>Detail[]?</a></code>
+                <code><a href="#rulesourcesourcedetail">Rule<wbr>Source<wbr>Source<wbr>Detail[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

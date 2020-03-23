@@ -124,7 +124,7 @@ The name of the recorder. Defaults to `default`. Changing it recreates the resou
             <td class="align-top">Recording<wbr>Group</td>
             <td class="align-top">
                 
-                <code><a href="#recorderrecordinggroup">Pulumi.<wbr>Aws.<wbr>Cfg.<wbr>Recorder<wbr>Recording<wbr>Group<wbr>Args?</a></code>
+                <code><a href="#recorderrecordinggroup">Recorder<wbr>Recording<wbr>Group<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -258,7 +258,7 @@ The name of the recorder. Defaults to `default`. Changing it recreates the resou
             <td class="align-top">recording<wbr>Group</td>
             <td class="align-top">
                 
-                <code><a href="#recorderrecordinggroup">cfg.<wbr>Recorder<wbr>Recording<wbr>Group?</a></code>
+                <code><a href="#recorderrecordinggroup">Recorder<wbr>Recording<wbr>Group?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -404,7 +404,7 @@ The following output properties are available:
             <td class="align-top">Recording<wbr>Group</td>
             <td class="align-top">
                 
-                <code><a href="#recorderrecordinggroup">Pulumi.<wbr>Aws.<wbr>Cfg.<wbr>Recorder<wbr>Recording<wbr>Group</a></code>
+                <code><a href="#recorderrecordinggroup">Recorder<wbr>Recording<wbr>Group</a></code>
             </td>
             <td class="align-top">{{% md %}} Recording group - see below.
  {{% /md %}}
@@ -526,7 +526,7 @@ See [AWS Docs](http://docs.aws.amazon.com/config/latest/developerguide/iamrole-p
             <td class="align-top">recording<wbr>Group</td>
             <td class="align-top">
                 
-                <code><a href="#recorderrecordinggroup">cfg.<wbr>Recorder<wbr>Recording<wbr>Group</a></code>
+                <code><a href="#recorderrecordinggroup">Recorder<wbr>Recording<wbr>Group</a></code>
             </td>
             <td class="align-top">{{% md %}} Recording group - see below.
  {{% /md %}}
@@ -709,7 +709,7 @@ The name of the recorder. Defaults to `default`. Changing it recreates the resou
             <td class="align-top">Recording<wbr>Group</td>
             <td class="align-top">
                 
-                <code><a href="#recorderrecordinggroup">Pulumi.<wbr>Aws.<wbr>Cfg.<wbr>Recorder<wbr>Recording<wbr>Group<wbr>Args?</a></code>
+                <code><a href="#recorderrecordinggroup">Recorder<wbr>Recording<wbr>Group<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -843,7 +843,7 @@ The name of the recorder. Defaults to `default`. Changing it recreates the resou
             <td class="align-top">recording<wbr>Group</td>
             <td class="align-top">
                 
-                <code><a href="#recorderrecordinggroup">cfg.<wbr>Recorder<wbr>Recording<wbr>Group?</a></code>
+                <code><a href="#recorderrecordinggroup">Recorder<wbr>Recording<wbr>Group?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1023,7 +1023,7 @@ with the resources that it records. Requires `all_supported = true`. Conflicts w
             <td class="align-top">Resource<wbr>Types</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

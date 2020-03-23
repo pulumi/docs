@@ -144,7 +144,7 @@ The API resource ID
             <td class="align-top">Response<wbr>Models</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, string&gt;?</code>
+                <code>Dictionary<string, string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -159,7 +159,7 @@ A map of the API models used for the response&#39;s content type
             <td class="align-top">Response<wbr>Parameters</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, bool&gt;?</code>
+                <code>Dictionary<string, bool>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -400,7 +400,7 @@ would define that the header `X-Some-Header` can be provided on the response.
             <td class="align-top">rest<wbr>Api</td>
             <td class="align-top">
                 
-                <code>string | Rest<wbr>Api</code>
+                <code>string | RestApi</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -602,7 +602,7 @@ The following output properties are available:
             <td class="align-top">Response<wbr>Models</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, string&gt;?</code>
+                <code>Dictionary<string, string>?</code>
             </td>
             <td class="align-top">{{% md %}} A map of the API models used for the response&#39;s content type
  {{% /md %}}
@@ -615,7 +615,7 @@ The following output properties are available:
             <td class="align-top">Response<wbr>Parameters</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, bool&gt;?</code>
+                <code>Dictionary<string, bool>?</code>
             </td>
             <td class="align-top">{{% md %}} A map of response parameters that can be sent to the caller.
 For example: `response_parameters = { &#34;method.response.header.X-Some-Header&#34; = true }`
@@ -1065,7 +1065,7 @@ The API resource ID
             <td class="align-top">Response<wbr>Models</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, string&gt;?</code>
+                <code>Dictionary<string, string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1080,7 +1080,7 @@ A map of the API models used for the response&#39;s content type
             <td class="align-top">Response<wbr>Parameters</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, bool&gt;?</code>
+                <code>Dictionary<string, bool>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1321,7 +1321,7 @@ would define that the header `X-Some-Header` can be provided on the response.
             <td class="align-top">rest<wbr>Api</td>
             <td class="align-top">
                 
-                <code>string | Rest<wbr>Api</code>
+                <code>string | RestApi</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

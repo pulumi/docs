@@ -150,7 +150,7 @@ Target AWS Account ID to create a Stack based on the StackSet. Defaults to curre
             <td class="align-top">Parameter<wbr>Overrides</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, string&gt;?</code>
+                <code>Dictionary<string, string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -542,7 +542,7 @@ The following output properties are available:
             <td class="align-top">Parameter<wbr>Overrides</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, string&gt;?</code>
+                <code>Dictionary<string, string>?</code>
             </td>
             <td class="align-top">{{% md %}} Key-value map of input parameters to override from the StackSet for this Instance.
  {{% /md %}}
@@ -995,7 +995,7 @@ Target AWS Account ID to create a Stack based on the StackSet. Defaults to curre
             <td class="align-top">Parameter<wbr>Overrides</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, string&gt;?</code>
+                <code>Dictionary<string, string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

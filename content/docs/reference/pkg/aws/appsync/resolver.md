@@ -214,7 +214,7 @@ The resolver type. Valid values are `UNIT` and `PIPELINE`.
             <td class="align-top">Pipeline<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#resolverpipelineconfig">Pulumi.<wbr>Aws.<wbr>Appsync.<wbr>Resolver<wbr>Pipeline<wbr>Config<wbr>Args?</a></code>
+                <code><a href="#resolverpipelineconfig">Resolver<wbr>Pipeline<wbr>Config<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -494,7 +494,7 @@ The resolver type. Valid values are `UNIT` and `PIPELINE`.
             <td class="align-top">pipeline<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#resolverpipelineconfig">appsync.<wbr>Resolver<wbr>Pipeline<wbr>Config?</a></code>
+                <code><a href="#resolverpipelineconfig">Resolver<wbr>Pipeline<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -793,7 +793,7 @@ The following output properties are available:
             <td class="align-top">Pipeline<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#resolverpipelineconfig">Pulumi.<wbr>Aws.<wbr>Appsync.<wbr>Resolver<wbr>Pipeline<wbr>Config?</a></code>
+                <code><a href="#resolverpipelineconfig">Resolver<wbr>Pipeline<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} The PipelineConfig. A `pipeline_config` block is documented below.
  {{% /md %}}
@@ -1067,7 +1067,7 @@ The following output properties are available:
             <td class="align-top">pipeline<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#resolverpipelineconfig">appsync.<wbr>Resolver<wbr>Pipeline<wbr>Config?</a></code>
+                <code><a href="#resolverpipelineconfig">Resolver<wbr>Pipeline<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} The PipelineConfig. A `pipeline_config` block is documented below.
  {{% /md %}}
@@ -1410,7 +1410,7 @@ The resolver type. Valid values are `UNIT` and `PIPELINE`.
             <td class="align-top">Pipeline<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#resolverpipelineconfig">Pulumi.<wbr>Aws.<wbr>Appsync.<wbr>Resolver<wbr>Pipeline<wbr>Config<wbr>Args?</a></code>
+                <code><a href="#resolverpipelineconfig">Resolver<wbr>Pipeline<wbr>Config<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1720,7 +1720,7 @@ The resolver type. Valid values are `UNIT` and `PIPELINE`.
             <td class="align-top">pipeline<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#resolverpipelineconfig">appsync.<wbr>Resolver<wbr>Pipeline<wbr>Config?</a></code>
+                <code><a href="#resolverpipelineconfig">Resolver<wbr>Pipeline<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1983,7 +1983,7 @@ The type name from the schema defined in the GraphQL API.
             <td class="align-top">Functions</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

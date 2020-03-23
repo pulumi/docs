@@ -360,7 +360,7 @@ A valid CloudWatch Logs filter pattern for subscribing to a filtered stream of l
             <td class="align-top">log<wbr>Group</td>
             <td class="align-top">
                 
-                <code>string | Log<wbr>Group</code>
+                <code>string | LogGroup</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1265,7 +1265,7 @@ A valid CloudWatch Logs filter pattern for subscribing to a filtered stream of l
             <td class="align-top">log<wbr>Group</td>
             <td class="align-top">
                 
-                <code>string | Log<wbr>Group</code>
+                <code>string | LogGroup</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

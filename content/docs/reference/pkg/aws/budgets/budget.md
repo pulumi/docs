@@ -221,7 +221,7 @@ Whether this budget tracks monetary cost or usage.
             <td class="align-top">Cost<wbr>Filters</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -236,7 +236,7 @@ Map of CostFilters key/value pairs to apply to the budget.
             <td class="align-top">Cost<wbr>Types</td>
             <td class="align-top">
                 
-                <code><a href="#budgetcosttypes">Pulumi.<wbr>Aws.<wbr>Budgets.<wbr>Budget<wbr>Cost<wbr>Types<wbr>Args?</a></code>
+                <code><a href="#budgetcosttypes">Budget<wbr>Cost<wbr>Types<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -311,7 +311,7 @@ The prefix of the name of a budget. Unique within accounts.
             <td class="align-top">Notifications</td>
             <td class="align-top">
                 
-                <code><a href="#budgetnotification">List&lt;Pulumi.<wbr>Aws.<wbr>Budgets.<wbr>Budget<wbr>Notification<wbr>Args&gt;?</a></code>
+                <code><a href="#budgetnotification">List&lt;Budget<wbr>Notification<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -636,7 +636,7 @@ Map of CostFilters key/value pairs to apply to the budget.
             <td class="align-top">cost<wbr>Types</td>
             <td class="align-top">
                 
-                <code><a href="#budgetcosttypes">budgets.<wbr>Budget<wbr>Cost<wbr>Types?</a></code>
+                <code><a href="#budgetcosttypes">Budget<wbr>Cost<wbr>Types?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -711,7 +711,7 @@ The prefix of the name of a budget. Unique within accounts.
             <td class="align-top">notifications</td>
             <td class="align-top">
                 
-                <code><a href="#budgetnotification">budgets.<wbr>Budget<wbr>Notification[]?</a></code>
+                <code><a href="#budgetnotification">Budget<wbr>Notification[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1031,7 +1031,7 @@ The following output properties are available:
             <td class="align-top">Cost<wbr>Filters</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;</code>
+                <code>Dictionary<string, object></code>
             </td>
             <td class="align-top">{{% md %}} Map of CostFilters key/value pairs to apply to the budget.
  {{% /md %}}
@@ -1044,7 +1044,7 @@ The following output properties are available:
             <td class="align-top">Cost<wbr>Types</td>
             <td class="align-top">
                 
-                <code><a href="#budgetcosttypes">Pulumi.<wbr>Aws.<wbr>Budgets.<wbr>Budget<wbr>Cost<wbr>Types</a></code>
+                <code><a href="#budgetcosttypes">Budget<wbr>Cost<wbr>Types</a></code>
             </td>
             <td class="align-top">{{% md %}} Object containing CostTypes The types of cost included in a budget, such as tax and subscriptions..
  {{% /md %}}
@@ -1109,7 +1109,7 @@ The following output properties are available:
             <td class="align-top">Notifications</td>
             <td class="align-top">
                 
-                <code><a href="#budgetnotification">List&lt;Pulumi.<wbr>Aws.<wbr>Budgets.<wbr>Budget<wbr>Notification&gt;?</a></code>
+                <code><a href="#budgetnotification">List&lt;Budget<wbr>Notification&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} Object containing Budget Notifications. Can be used multiple times to define more than one budget notification
  {{% /md %}}
@@ -1396,7 +1396,7 @@ The following output properties are available:
             <td class="align-top">cost<wbr>Types</td>
             <td class="align-top">
                 
-                <code><a href="#budgetcosttypes">budgets.<wbr>Budget<wbr>Cost<wbr>Types</a></code>
+                <code><a href="#budgetcosttypes">Budget<wbr>Cost<wbr>Types</a></code>
             </td>
             <td class="align-top">{{% md %}} Object containing CostTypes The types of cost included in a budget, such as tax and subscriptions..
  {{% /md %}}
@@ -1461,7 +1461,7 @@ The following output properties are available:
             <td class="align-top">notifications</td>
             <td class="align-top">
                 
-                <code><a href="#budgetnotification">budgets.<wbr>Budget<wbr>Notification[]?</a></code>
+                <code><a href="#budgetnotification">Budget<wbr>Notification[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} Object containing Budget Notifications. Can be used multiple times to define more than one budget notification
  {{% /md %}}
@@ -1798,7 +1798,7 @@ Whether this budget tracks monetary cost or usage.
             <td class="align-top">Cost<wbr>Filters</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1813,7 +1813,7 @@ Map of CostFilters key/value pairs to apply to the budget.
             <td class="align-top">Cost<wbr>Types</td>
             <td class="align-top">
                 
-                <code><a href="#budgetcosttypes">Pulumi.<wbr>Aws.<wbr>Budgets.<wbr>Budget<wbr>Cost<wbr>Types<wbr>Args?</a></code>
+                <code><a href="#budgetcosttypes">Budget<wbr>Cost<wbr>Types<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1888,7 +1888,7 @@ The prefix of the name of a budget. Unique within accounts.
             <td class="align-top">Notifications</td>
             <td class="align-top">
                 
-                <code><a href="#budgetnotification">List&lt;Pulumi.<wbr>Aws.<wbr>Budgets.<wbr>Budget<wbr>Notification<wbr>Args&gt;?</a></code>
+                <code><a href="#budgetnotification">List&lt;Budget<wbr>Notification<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2213,7 +2213,7 @@ Map of CostFilters key/value pairs to apply to the budget.
             <td class="align-top">cost<wbr>Types</td>
             <td class="align-top">
                 
-                <code><a href="#budgetcosttypes">budgets.<wbr>Budget<wbr>Cost<wbr>Types?</a></code>
+                <code><a href="#budgetcosttypes">Budget<wbr>Cost<wbr>Types?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2288,7 +2288,7 @@ The prefix of the name of a budget. Unique within accounts.
             <td class="align-top">notifications</td>
             <td class="align-top">
                 
-                <code><a href="#budgetnotification">budgets.<wbr>Budget<wbr>Notification[]?</a></code>
+                <code><a href="#budgetnotification">Budget<wbr>Notification[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3387,7 +3387,7 @@ A boolean value whether to use blended costs in the cost budget. Defaults to `fa
             <td class="align-top">Subscriber<wbr>Email<wbr>Addresses</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3402,7 +3402,7 @@ A boolean value whether to use blended costs in the cost budget. Defaults to `fa
             <td class="align-top">Subscriber<wbr>Sns<wbr>Topic<wbr>Arns</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

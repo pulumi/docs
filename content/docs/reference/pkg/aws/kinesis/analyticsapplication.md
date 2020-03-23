@@ -121,7 +121,7 @@ The following arguments are supported:
             <td class="align-top">Cloudwatch<wbr>Logging<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationcloudwatchloggingoptions">Pulumi.<wbr>Aws.<wbr>Kinesis.<wbr>Analytics<wbr>Application<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args?</a></code>
+                <code><a href="#analyticsapplicationcloudwatchloggingoptions">Analytics<wbr>Application<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -167,7 +167,7 @@ Description of the application.
             <td class="align-top">Inputs</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationinputs">Pulumi.<wbr>Aws.<wbr>Kinesis.<wbr>Analytics<wbr>Application<wbr>Inputs<wbr>Args?</a></code>
+                <code><a href="#analyticsapplicationinputs">Analytics<wbr>Application<wbr>Inputs<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -197,7 +197,7 @@ Name of the Kinesis Analytics Application.
             <td class="align-top">Outputs</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationoutput">List&lt;Pulumi.<wbr>Aws.<wbr>Kinesis.<wbr>Analytics<wbr>Application<wbr>Output<wbr>Args&gt;?</a></code>
+                <code><a href="#analyticsapplicationoutput">List&lt;Analytics<wbr>Application<wbr>Output<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -212,7 +212,7 @@ Output destination configuration of the application. See Outputs below for more 
             <td class="align-top">Reference<wbr>Data<wbr>Sources</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationreferencedatasources">Pulumi.<wbr>Aws.<wbr>Kinesis.<wbr>Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Args?</a></code>
+                <code><a href="#analyticsapplicationreferencedatasources">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -228,7 +228,7 @@ See Reference Data Sources below for more details.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -405,7 +405,7 @@ Key-value mapping of tags for the Kinesis Analytics Application.
             <td class="align-top">cloudwatch<wbr>Logging<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationcloudwatchloggingoptions">kinesis.<wbr>Analytics<wbr>Application<wbr>Cloudwatch<wbr>Logging<wbr>Options?</a></code>
+                <code><a href="#analyticsapplicationcloudwatchloggingoptions">Analytics<wbr>Application<wbr>Cloudwatch<wbr>Logging<wbr>Options?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -451,7 +451,7 @@ Description of the application.
             <td class="align-top">inputs</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationinputs">kinesis.<wbr>Analytics<wbr>Application<wbr>Inputs?</a></code>
+                <code><a href="#analyticsapplicationinputs">Analytics<wbr>Application<wbr>Inputs?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -481,7 +481,7 @@ Name of the Kinesis Analytics Application.
             <td class="align-top">outputs</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationoutput">kinesis.<wbr>Analytics<wbr>Application<wbr>Output[]?</a></code>
+                <code><a href="#analyticsapplicationoutput">Analytics<wbr>Application<wbr>Output[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -496,7 +496,7 @@ Output destination configuration of the application. See Outputs below for more 
             <td class="align-top">reference<wbr>Data<wbr>Sources</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationreferencedatasources">kinesis.<wbr>Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources?</a></code>
+                <code><a href="#analyticsapplicationreferencedatasources">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -716,7 +716,7 @@ The following output properties are available:
             <td class="align-top">Cloudwatch<wbr>Logging<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationcloudwatchloggingoptions">Pulumi.<wbr>Aws.<wbr>Kinesis.<wbr>Analytics<wbr>Application<wbr>Cloudwatch<wbr>Logging<wbr>Options?</a></code>
+                <code><a href="#analyticsapplicationcloudwatchloggingoptions">Analytics<wbr>Application<wbr>Cloudwatch<wbr>Logging<wbr>Options?</a></code>
             </td>
             <td class="align-top">{{% md %}} The CloudWatch log stream options to monitor application errors.
 See CloudWatch Logging Options below for more details.
@@ -769,7 +769,7 @@ See CloudWatch Logging Options below for more details.
             <td class="align-top">Inputs</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationinputs">Pulumi.<wbr>Aws.<wbr>Kinesis.<wbr>Analytics<wbr>Application<wbr>Inputs?</a></code>
+                <code><a href="#analyticsapplicationinputs">Analytics<wbr>Application<wbr>Inputs?</a></code>
             </td>
             <td class="align-top">{{% md %}} Input configuration of the application. See Inputs below for more details.
  {{% /md %}}
@@ -808,7 +808,7 @@ See CloudWatch Logging Options below for more details.
             <td class="align-top">Outputs</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationoutput">List&lt;Pulumi.<wbr>Aws.<wbr>Kinesis.<wbr>Analytics<wbr>Application<wbr>Output&gt;?</a></code>
+                <code><a href="#analyticsapplicationoutput">List&lt;Analytics<wbr>Application<wbr>Output&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} Output destination configuration of the application. See Outputs below for more details.
  {{% /md %}}
@@ -821,7 +821,7 @@ See CloudWatch Logging Options below for more details.
             <td class="align-top">Reference<wbr>Data<wbr>Sources</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationreferencedatasources">Pulumi.<wbr>Aws.<wbr>Kinesis.<wbr>Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources?</a></code>
+                <code><a href="#analyticsapplicationreferencedatasources">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources?</a></code>
             </td>
             <td class="align-top">{{% md %}} An S3 Reference Data Source for the application.
 See Reference Data Sources below for more details.
@@ -848,7 +848,7 @@ See Reference Data Sources below for more details.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} Key-value mapping of tags for the Kinesis Analytics Application.
  {{% /md %}}
@@ -1098,7 +1098,7 @@ See Reference Data Sources below for more details.
             <td class="align-top">cloudwatch<wbr>Logging<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationcloudwatchloggingoptions">kinesis.<wbr>Analytics<wbr>Application<wbr>Cloudwatch<wbr>Logging<wbr>Options?</a></code>
+                <code><a href="#analyticsapplicationcloudwatchloggingoptions">Analytics<wbr>Application<wbr>Cloudwatch<wbr>Logging<wbr>Options?</a></code>
             </td>
             <td class="align-top">{{% md %}} The CloudWatch log stream options to monitor application errors.
 See CloudWatch Logging Options below for more details.
@@ -1151,7 +1151,7 @@ See CloudWatch Logging Options below for more details.
             <td class="align-top">inputs</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationinputs">kinesis.<wbr>Analytics<wbr>Application<wbr>Inputs?</a></code>
+                <code><a href="#analyticsapplicationinputs">Analytics<wbr>Application<wbr>Inputs?</a></code>
             </td>
             <td class="align-top">{{% md %}} Input configuration of the application. See Inputs below for more details.
  {{% /md %}}
@@ -1190,7 +1190,7 @@ See CloudWatch Logging Options below for more details.
             <td class="align-top">outputs</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationoutput">kinesis.<wbr>Analytics<wbr>Application<wbr>Output[]?</a></code>
+                <code><a href="#analyticsapplicationoutput">Analytics<wbr>Application<wbr>Output[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} Output destination configuration of the application. See Outputs below for more details.
  {{% /md %}}
@@ -1203,7 +1203,7 @@ See CloudWatch Logging Options below for more details.
             <td class="align-top">reference<wbr>Data<wbr>Sources</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationreferencedatasources">kinesis.<wbr>Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources?</a></code>
+                <code><a href="#analyticsapplicationreferencedatasources">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources?</a></code>
             </td>
             <td class="align-top">{{% md %}} An S3 Reference Data Source for the application.
 See Reference Data Sources below for more details.
@@ -1541,7 +1541,7 @@ The ARN of the Kinesis Analytics Appliation.
             <td class="align-top">Cloudwatch<wbr>Logging<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationcloudwatchloggingoptions">Pulumi.<wbr>Aws.<wbr>Kinesis.<wbr>Analytics<wbr>Application<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args?</a></code>
+                <code><a href="#analyticsapplicationcloudwatchloggingoptions">Analytics<wbr>Application<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1602,7 +1602,7 @@ Description of the application.
             <td class="align-top">Inputs</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationinputs">Pulumi.<wbr>Aws.<wbr>Kinesis.<wbr>Analytics<wbr>Application<wbr>Inputs<wbr>Args?</a></code>
+                <code><a href="#analyticsapplicationinputs">Analytics<wbr>Application<wbr>Inputs<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1647,7 +1647,7 @@ Name of the Kinesis Analytics Application.
             <td class="align-top">Outputs</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationoutput">List&lt;Pulumi.<wbr>Aws.<wbr>Kinesis.<wbr>Analytics<wbr>Application<wbr>Output<wbr>Args&gt;?</a></code>
+                <code><a href="#analyticsapplicationoutput">List&lt;Analytics<wbr>Application<wbr>Output<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1662,7 +1662,7 @@ Output destination configuration of the application. See Outputs below for more 
             <td class="align-top">Reference<wbr>Data<wbr>Sources</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationreferencedatasources">Pulumi.<wbr>Aws.<wbr>Kinesis.<wbr>Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Args?</a></code>
+                <code><a href="#analyticsapplicationreferencedatasources">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1693,7 +1693,7 @@ The Status of the application.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1975,7 +1975,7 @@ The ARN of the Kinesis Analytics Appliation.
             <td class="align-top">cloudwatch<wbr>Logging<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationcloudwatchloggingoptions">kinesis.<wbr>Analytics<wbr>Application<wbr>Cloudwatch<wbr>Logging<wbr>Options?</a></code>
+                <code><a href="#analyticsapplicationcloudwatchloggingoptions">Analytics<wbr>Application<wbr>Cloudwatch<wbr>Logging<wbr>Options?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2036,7 +2036,7 @@ Description of the application.
             <td class="align-top">inputs</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationinputs">kinesis.<wbr>Analytics<wbr>Application<wbr>Inputs?</a></code>
+                <code><a href="#analyticsapplicationinputs">Analytics<wbr>Application<wbr>Inputs?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2081,7 +2081,7 @@ Name of the Kinesis Analytics Application.
             <td class="align-top">outputs</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationoutput">kinesis.<wbr>Analytics<wbr>Application<wbr>Output[]?</a></code>
+                <code><a href="#analyticsapplicationoutput">Analytics<wbr>Application<wbr>Output[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2096,7 +2096,7 @@ Output destination configuration of the application. See Outputs below for more 
             <td class="align-top">reference<wbr>Data<wbr>Sources</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationreferencedatasources">kinesis.<wbr>Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources?</a></code>
+                <code><a href="#analyticsapplicationreferencedatasources">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2710,7 +2710,7 @@ The ARN of the Kinesis Analytics Application.
             <td class="align-top">Kinesis<wbr>Firehose</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationinputskinesisfirehose">Pulumi.<wbr>Aws.<wbr>Kinesis.<wbr>Analytics<wbr>Application<wbr>Inputs<wbr>Kinesis<wbr>Firehose<wbr>Args?</a></code>
+                <code><a href="#analyticsapplicationinputskinesisfirehose">Analytics<wbr>Application<wbr>Inputs<wbr>Kinesis<wbr>Firehose<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2724,7 +2724,7 @@ The ARN of the Kinesis Analytics Application.
             <td class="align-top">Kinesis<wbr>Stream</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationinputskinesisstream">Pulumi.<wbr>Aws.<wbr>Kinesis.<wbr>Analytics<wbr>Application<wbr>Inputs<wbr>Kinesis<wbr>Stream<wbr>Args?</a></code>
+                <code><a href="#analyticsapplicationinputskinesisstream">Analytics<wbr>Application<wbr>Inputs<wbr>Kinesis<wbr>Stream<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2752,7 +2752,7 @@ The ARN of the Kinesis Analytics Application.
             <td class="align-top">Parallelism</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationinputsparallelism">Pulumi.<wbr>Aws.<wbr>Kinesis.<wbr>Analytics<wbr>Application<wbr>Inputs<wbr>Parallelism<wbr>Args?</a></code>
+                <code><a href="#analyticsapplicationinputsparallelism">Analytics<wbr>Application<wbr>Inputs<wbr>Parallelism<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2766,7 +2766,7 @@ The ARN of the Kinesis Analytics Application.
             <td class="align-top">Processing<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationinputsprocessingconfiguration">Pulumi.<wbr>Aws.<wbr>Kinesis.<wbr>Analytics<wbr>Application<wbr>Inputs<wbr>Processing<wbr>Configuration<wbr>Args?</a></code>
+                <code><a href="#analyticsapplicationinputsprocessingconfiguration">Analytics<wbr>Application<wbr>Inputs<wbr>Processing<wbr>Configuration<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2780,7 +2780,7 @@ The ARN of the Kinesis Analytics Application.
             <td class="align-top">Schema</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationinputsschema">Pulumi.<wbr>Aws.<wbr>Kinesis.<wbr>Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Args</a></code>
+                <code><a href="#analyticsapplicationinputsschema">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Args</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2794,7 +2794,7 @@ The ARN of the Kinesis Analytics Application.
             <td class="align-top">Starting<wbr>Position<wbr>Configurations</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationinputsstartingpositionconfiguration">List&lt;Pulumi.<wbr>Aws.<wbr>Kinesis.<wbr>Analytics<wbr>Application<wbr>Inputs<wbr>Starting<wbr>Position<wbr>Configuration<wbr>Args&gt;?</a></code>
+                <code><a href="#analyticsapplicationinputsstartingpositionconfiguration">List&lt;Analytics<wbr>Application<wbr>Inputs<wbr>Starting<wbr>Position<wbr>Configuration<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2808,7 +2808,7 @@ The ARN of the Kinesis Analytics Application.
             <td class="align-top">Stream<wbr>Names</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3004,7 +3004,7 @@ The ARN of the Kinesis Analytics Application.
             <td class="align-top">kinesis<wbr>Firehose</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationinputskinesisfirehose">kinesis.<wbr>Analytics<wbr>Application<wbr>Inputs<wbr>Kinesis<wbr>Firehose?</a></code>
+                <code><a href="#analyticsapplicationinputskinesisfirehose">Analytics<wbr>Application<wbr>Inputs<wbr>Kinesis<wbr>Firehose?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3018,7 +3018,7 @@ The ARN of the Kinesis Analytics Application.
             <td class="align-top">kinesis<wbr>Stream</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationinputskinesisstream">kinesis.<wbr>Analytics<wbr>Application<wbr>Inputs<wbr>Kinesis<wbr>Stream?</a></code>
+                <code><a href="#analyticsapplicationinputskinesisstream">Analytics<wbr>Application<wbr>Inputs<wbr>Kinesis<wbr>Stream?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3046,7 +3046,7 @@ The ARN of the Kinesis Analytics Application.
             <td class="align-top">parallelism</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationinputsparallelism">kinesis.<wbr>Analytics<wbr>Application<wbr>Inputs<wbr>Parallelism?</a></code>
+                <code><a href="#analyticsapplicationinputsparallelism">Analytics<wbr>Application<wbr>Inputs<wbr>Parallelism?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3060,7 +3060,7 @@ The ARN of the Kinesis Analytics Application.
             <td class="align-top">processing<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationinputsprocessingconfiguration">kinesis.<wbr>Analytics<wbr>Application<wbr>Inputs<wbr>Processing<wbr>Configuration?</a></code>
+                <code><a href="#analyticsapplicationinputsprocessingconfiguration">Analytics<wbr>Application<wbr>Inputs<wbr>Processing<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3074,7 +3074,7 @@ The ARN of the Kinesis Analytics Application.
             <td class="align-top">schema</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationinputsschema">kinesis.<wbr>Analytics<wbr>Application<wbr>Inputs<wbr>Schema</a></code>
+                <code><a href="#analyticsapplicationinputsschema">Analytics<wbr>Application<wbr>Inputs<wbr>Schema</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -3088,7 +3088,7 @@ The ARN of the Kinesis Analytics Application.
             <td class="align-top">starting<wbr>Position<wbr>Configurations</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationinputsstartingpositionconfiguration">kinesis.<wbr>Analytics<wbr>Application<wbr>Inputs<wbr>Starting<wbr>Position<wbr>Configuration[]?</a></code>
+                <code><a href="#analyticsapplicationinputsstartingpositionconfiguration">Analytics<wbr>Application<wbr>Inputs<wbr>Starting<wbr>Position<wbr>Configuration[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3887,7 +3887,7 @@ The ARN of the Kinesis Analytics Application.
             <td class="align-top">Lambda</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationinputsprocessingconfigurationlambda">Pulumi.<wbr>Aws.<wbr>Kinesis.<wbr>Analytics<wbr>Application<wbr>Inputs<wbr>Processing<wbr>Configuration<wbr>Lambda<wbr>Args</a></code>
+                <code><a href="#analyticsapplicationinputsprocessingconfigurationlambda">Analytics<wbr>Application<wbr>Inputs<wbr>Processing<wbr>Configuration<wbr>Lambda<wbr>Args</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -3955,7 +3955,7 @@ The ARN of the Kinesis Analytics Application.
             <td class="align-top">lambda</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationinputsprocessingconfigurationlambda">kinesis.<wbr>Analytics<wbr>Application<wbr>Inputs<wbr>Processing<wbr>Configuration<wbr>Lambda</a></code>
+                <code><a href="#analyticsapplicationinputsprocessingconfigurationlambda">Analytics<wbr>Application<wbr>Inputs<wbr>Processing<wbr>Configuration<wbr>Lambda</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -4257,7 +4257,7 @@ The ARN of the Kinesis Analytics Application.
             <td class="align-top">Record<wbr>Columns</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationinputsschemarecordcolumn">List&lt;Pulumi.<wbr>Aws.<wbr>Kinesis.<wbr>Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Column<wbr>Args&gt;</a></code>
+                <code><a href="#analyticsapplicationinputsschemarecordcolumn">List&lt;Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Column<wbr>Args&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -4285,7 +4285,7 @@ The ARN of the Kinesis Analytics Application.
             <td class="align-top">Record<wbr>Format</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationinputsschemarecordformat">Pulumi.<wbr>Aws.<wbr>Kinesis.<wbr>Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Args</a></code>
+                <code><a href="#analyticsapplicationinputsschemarecordformat">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Args</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -4381,7 +4381,7 @@ The ARN of the Kinesis Analytics Application.
             <td class="align-top">record<wbr>Columns</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationinputsschemarecordcolumn">kinesis.<wbr>Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Column[]</a></code>
+                <code><a href="#analyticsapplicationinputsschemarecordcolumn">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Column[]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -4409,7 +4409,7 @@ The ARN of the Kinesis Analytics Application.
             <td class="align-top">record<wbr>Format</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationinputsschemarecordformat">kinesis.<wbr>Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format</a></code>
+                <code><a href="#analyticsapplicationinputsschemarecordformat">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -4799,7 +4799,7 @@ Name of the Kinesis Analytics Application.
             <td class="align-top">Mapping<wbr>Parameters</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationinputsschemarecordformatmappingparameters">Pulumi.<wbr>Aws.<wbr>Kinesis.<wbr>Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Args?</a></code>
+                <code><a href="#analyticsapplicationinputsschemarecordformatmappingparameters">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4895,7 +4895,7 @@ Name of the Kinesis Analytics Application.
             <td class="align-top">mapping<wbr>Parameters</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationinputsschemarecordformatmappingparameters">kinesis.<wbr>Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters?</a></code>
+                <code><a href="#analyticsapplicationinputsschemarecordformatmappingparameters">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5012,7 +5012,7 @@ Name of the Kinesis Analytics Application.
             <td class="align-top">Csv</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationinputsschemarecordformatmappingparameterscsv">Pulumi.<wbr>Aws.<wbr>Kinesis.<wbr>Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv<wbr>Args?</a></code>
+                <code><a href="#analyticsapplicationinputsschemarecordformatmappingparameterscsv">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5026,7 +5026,7 @@ Name of the Kinesis Analytics Application.
             <td class="align-top">Json</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationinputsschemarecordformatmappingparametersjson">Pulumi.<wbr>Aws.<wbr>Kinesis.<wbr>Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json<wbr>Args?</a></code>
+                <code><a href="#analyticsapplicationinputsschemarecordformatmappingparametersjson">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5108,7 +5108,7 @@ Name of the Kinesis Analytics Application.
             <td class="align-top">csv</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationinputsschemarecordformatmappingparameterscsv">kinesis.<wbr>Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv?</a></code>
+                <code><a href="#analyticsapplicationinputsschemarecordformatmappingparameterscsv">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5122,7 +5122,7 @@ Name of the Kinesis Analytics Application.
             <td class="align-top">json</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationinputsschemarecordformatmappingparametersjson">kinesis.<wbr>Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json?</a></code>
+                <code><a href="#analyticsapplicationinputsschemarecordformatmappingparametersjson">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5767,7 +5767,7 @@ The ARN of the Kinesis Analytics Application.
             <td class="align-top">Kinesis<wbr>Firehose</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationoutputkinesisfirehose">Pulumi.<wbr>Aws.<wbr>Kinesis.<wbr>Analytics<wbr>Application<wbr>Output<wbr>Kinesis<wbr>Firehose<wbr>Args?</a></code>
+                <code><a href="#analyticsapplicationoutputkinesisfirehose">Analytics<wbr>Application<wbr>Output<wbr>Kinesis<wbr>Firehose<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5781,7 +5781,7 @@ The ARN of the Kinesis Analytics Application.
             <td class="align-top">Kinesis<wbr>Stream</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationoutputkinesisstream">Pulumi.<wbr>Aws.<wbr>Kinesis.<wbr>Analytics<wbr>Application<wbr>Output<wbr>Kinesis<wbr>Stream<wbr>Args?</a></code>
+                <code><a href="#analyticsapplicationoutputkinesisstream">Analytics<wbr>Application<wbr>Output<wbr>Kinesis<wbr>Stream<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5795,7 +5795,7 @@ The ARN of the Kinesis Analytics Application.
             <td class="align-top">Lambda</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationoutputlambda">Pulumi.<wbr>Aws.<wbr>Kinesis.<wbr>Analytics<wbr>Application<wbr>Output<wbr>Lambda<wbr>Args?</a></code>
+                <code><a href="#analyticsapplicationoutputlambda">Analytics<wbr>Application<wbr>Output<wbr>Lambda<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5824,7 +5824,7 @@ Name of the Kinesis Analytics Application.
             <td class="align-top">Schema</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationoutputschema">Pulumi.<wbr>Aws.<wbr>Kinesis.<wbr>Analytics<wbr>Application<wbr>Output<wbr>Schema<wbr>Args</a></code>
+                <code><a href="#analyticsapplicationoutputschema">Analytics<wbr>Application<wbr>Output<wbr>Schema<wbr>Args</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -5979,7 +5979,7 @@ The ARN of the Kinesis Analytics Application.
             <td class="align-top">kinesis<wbr>Firehose</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationoutputkinesisfirehose">kinesis.<wbr>Analytics<wbr>Application<wbr>Output<wbr>Kinesis<wbr>Firehose?</a></code>
+                <code><a href="#analyticsapplicationoutputkinesisfirehose">Analytics<wbr>Application<wbr>Output<wbr>Kinesis<wbr>Firehose?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5993,7 +5993,7 @@ The ARN of the Kinesis Analytics Application.
             <td class="align-top">kinesis<wbr>Stream</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationoutputkinesisstream">kinesis.<wbr>Analytics<wbr>Application<wbr>Output<wbr>Kinesis<wbr>Stream?</a></code>
+                <code><a href="#analyticsapplicationoutputkinesisstream">Analytics<wbr>Application<wbr>Output<wbr>Kinesis<wbr>Stream?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6007,7 +6007,7 @@ The ARN of the Kinesis Analytics Application.
             <td class="align-top">lambda</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationoutputlambda">kinesis.<wbr>Analytics<wbr>Application<wbr>Output<wbr>Lambda?</a></code>
+                <code><a href="#analyticsapplicationoutputlambda">Analytics<wbr>Application<wbr>Output<wbr>Lambda?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6036,7 +6036,7 @@ Name of the Kinesis Analytics Application.
             <td class="align-top">schema</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationoutputschema">kinesis.<wbr>Analytics<wbr>Application<wbr>Output<wbr>Schema</a></code>
+                <code><a href="#analyticsapplicationoutputschema">Analytics<wbr>Application<wbr>Output<wbr>Schema</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -7008,7 +7008,7 @@ The ARN of the Kinesis Analytics Application.
             <td class="align-top">S3</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationreferencedatasourcess3">Pulumi.<wbr>Aws.<wbr>Kinesis.<wbr>Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>S3Args</a></code>
+                <code><a href="#analyticsapplicationreferencedatasourcess3">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>S3Args</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -7022,7 +7022,7 @@ The ARN of the Kinesis Analytics Application.
             <td class="align-top">Schema</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationreferencedatasourcesschema">Pulumi.<wbr>Aws.<wbr>Kinesis.<wbr>Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Args</a></code>
+                <code><a href="#analyticsapplicationreferencedatasourcesschema">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Args</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -7162,7 +7162,7 @@ The ARN of the Kinesis Analytics Application.
             <td class="align-top">s3</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationreferencedatasourcess3">kinesis.<wbr>Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>S3</a></code>
+                <code><a href="#analyticsapplicationreferencedatasourcess3">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>S3</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -7176,7 +7176,7 @@ The ARN of the Kinesis Analytics Application.
             <td class="align-top">schema</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationreferencedatasourcesschema">kinesis.<wbr>Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema</a></code>
+                <code><a href="#analyticsapplicationreferencedatasourcesschema">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -7591,7 +7591,7 @@ The ARN of the Kinesis Analytics Application.
             <td class="align-top">Record<wbr>Columns</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationreferencedatasourcesschemarecordcolumn">List&lt;Pulumi.<wbr>Aws.<wbr>Kinesis.<wbr>Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Column<wbr>Args&gt;</a></code>
+                <code><a href="#analyticsapplicationreferencedatasourcesschemarecordcolumn">List&lt;Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Column<wbr>Args&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -7619,7 +7619,7 @@ The ARN of the Kinesis Analytics Application.
             <td class="align-top">Record<wbr>Format</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationreferencedatasourcesschemarecordformat">Pulumi.<wbr>Aws.<wbr>Kinesis.<wbr>Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Args</a></code>
+                <code><a href="#analyticsapplicationreferencedatasourcesschemarecordformat">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Args</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -7715,7 +7715,7 @@ The ARN of the Kinesis Analytics Application.
             <td class="align-top">record<wbr>Columns</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationreferencedatasourcesschemarecordcolumn">kinesis.<wbr>Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Column[]</a></code>
+                <code><a href="#analyticsapplicationreferencedatasourcesschemarecordcolumn">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Column[]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -7743,7 +7743,7 @@ The ARN of the Kinesis Analytics Application.
             <td class="align-top">record<wbr>Format</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationreferencedatasourcesschemarecordformat">kinesis.<wbr>Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format</a></code>
+                <code><a href="#analyticsapplicationreferencedatasourcesschemarecordformat">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -8133,7 +8133,7 @@ Name of the Kinesis Analytics Application.
             <td class="align-top">Mapping<wbr>Parameters</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparameters">Pulumi.<wbr>Aws.<wbr>Kinesis.<wbr>Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Args?</a></code>
+                <code><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparameters">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -8229,7 +8229,7 @@ Name of the Kinesis Analytics Application.
             <td class="align-top">mapping<wbr>Parameters</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparameters">kinesis.<wbr>Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters?</a></code>
+                <code><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparameters">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -8346,7 +8346,7 @@ Name of the Kinesis Analytics Application.
             <td class="align-top">Csv</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparameterscsv">Pulumi.<wbr>Aws.<wbr>Kinesis.<wbr>Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv<wbr>Args?</a></code>
+                <code><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparameterscsv">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -8360,7 +8360,7 @@ Name of the Kinesis Analytics Application.
             <td class="align-top">Json</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparametersjson">Pulumi.<wbr>Aws.<wbr>Kinesis.<wbr>Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json<wbr>Args?</a></code>
+                <code><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparametersjson">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -8442,7 +8442,7 @@ Name of the Kinesis Analytics Application.
             <td class="align-top">csv</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparameterscsv">kinesis.<wbr>Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv?</a></code>
+                <code><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparameterscsv">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -8456,7 +8456,7 @@ Name of the Kinesis Analytics Application.
             <td class="align-top">json</td>
             <td class="align-top">
                 
-                <code><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparametersjson">kinesis.<wbr>Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json?</a></code>
+                <code><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparametersjson">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

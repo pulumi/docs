@@ -132,7 +132,7 @@ The name of the endpoint configuration. If omitted, this provider will assign a 
             <td class="align-top">Production<wbr>Variants</td>
             <td class="align-top">
                 
-                <code><a href="#endpointconfigurationproductionvariant">List&lt;Pulumi.<wbr>Aws.<wbr>Sagemaker.<wbr>Endpoint<wbr>Configuration<wbr>Production<wbr>Variant<wbr>Args&gt;</a></code>
+                <code><a href="#endpointconfigurationproductionvariant">List&lt;Endpoint<wbr>Configuration<wbr>Production<wbr>Variant<wbr>Args&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -147,7 +147,7 @@ Fields are documented below.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -292,7 +292,7 @@ The name of the endpoint configuration. If omitted, this provider will assign a 
             <td class="align-top">production<wbr>Variants</td>
             <td class="align-top">
                 
-                <code><a href="#endpointconfigurationproductionvariant">sagemaker.<wbr>Endpoint<wbr>Configuration<wbr>Production<wbr>Variant[]</a></code>
+                <code><a href="#endpointconfigurationproductionvariant">Endpoint<wbr>Configuration<wbr>Production<wbr>Variant[]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -475,7 +475,7 @@ The following output properties are available:
             <td class="align-top">Production<wbr>Variants</td>
             <td class="align-top">
                 
-                <code><a href="#endpointconfigurationproductionvariant">List&lt;Pulumi.<wbr>Aws.<wbr>Sagemaker.<wbr>Endpoint<wbr>Configuration<wbr>Production<wbr>Variant&gt;</a></code>
+                <code><a href="#endpointconfigurationproductionvariant">List&lt;Endpoint<wbr>Configuration<wbr>Production<wbr>Variant&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} Fields are documented below.
  {{% /md %}}
@@ -488,7 +488,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -645,7 +645,7 @@ The following output properties are available:
             <td class="align-top">production<wbr>Variants</td>
             <td class="align-top">
                 
-                <code><a href="#endpointconfigurationproductionvariant">sagemaker.<wbr>Endpoint<wbr>Configuration<wbr>Production<wbr>Variant[]</a></code>
+                <code><a href="#endpointconfigurationproductionvariant">Endpoint<wbr>Configuration<wbr>Production<wbr>Variant[]</a></code>
             </td>
             <td class="align-top">{{% md %}} Fields are documented below.
  {{% /md %}}
@@ -880,7 +880,7 @@ The name of the endpoint configuration. If omitted, this provider will assign a 
             <td class="align-top">Production<wbr>Variants</td>
             <td class="align-top">
                 
-                <code><a href="#endpointconfigurationproductionvariant">List&lt;Pulumi.<wbr>Aws.<wbr>Sagemaker.<wbr>Endpoint<wbr>Configuration<wbr>Production<wbr>Variant<wbr>Args&gt;?</a></code>
+                <code><a href="#endpointconfigurationproductionvariant">List&lt;Endpoint<wbr>Configuration<wbr>Production<wbr>Variant<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -895,7 +895,7 @@ Fields are documented below.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1070,7 +1070,7 @@ The name of the endpoint configuration. If omitted, this provider will assign a 
             <td class="align-top">production<wbr>Variants</td>
             <td class="align-top">
                 
-                <code><a href="#endpointconfigurationproductionvariant">sagemaker.<wbr>Endpoint<wbr>Configuration<wbr>Production<wbr>Variant[]?</a></code>
+                <code><a href="#endpointconfigurationproductionvariant">Endpoint<wbr>Configuration<wbr>Production<wbr>Variant[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

@@ -65,7 +65,7 @@ const example = aws.ec2.getVpcDhcpOptions({
 <div class="highlight">
 <pre class="chroma">
 <code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetVpcDhcpOptions </span><span class="p">{</span>
-    <span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.GetVpcDhcpOptionsResult.html">Pulumi.Aws.Ec2.GetVpcDhcpOptionsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.GetVpcDhcpOptionsArgs.html">GetVpcDhcpOptionsArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span>
+    <span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.GetVpcDhcpOptionsResult.html">GetVpcDhcpOptionsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.GetVpcDhcpOptionsArgs.html">GetVpcDhcpOptionsArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span>
 <span class="p">}</span></code></pre>
 </div>
 
@@ -109,7 +109,7 @@ The EC2 DHCP Options ID.
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getvpcdhcpoptionsfilter">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Get<wbr>Vpc<wbr>Dhcp<wbr>Options<wbr>Filter<wbr>Args&gt;?</a></code>
+                <code><a href="#getvpcdhcpoptionsfilter">List&lt;Get<wbr>Vpc<wbr>Dhcp<wbr>Options<wbr>Filter<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -124,7 +124,7 @@ List of custom filters as described below.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -237,7 +237,7 @@ The EC2 DHCP Options ID.
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getvpcdhcpoptionsfilter">ec2.<wbr>Get<wbr>Vpc<wbr>Dhcp<wbr>Options<wbr>Filter[]?</a></code>
+                <code><a href="#getvpcdhcpoptionsfilter">Get<wbr>Vpc<wbr>Dhcp<wbr>Options<wbr>Filter[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -391,7 +391,7 @@ The following output properties are available:
             <td class="align-top">Domain<wbr>Name<wbr>Servers</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} List of name servers.
  {{% /md %}}
@@ -404,7 +404,7 @@ The following output properties are available:
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getvpcdhcpoptionsfilter">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Get<wbr>Vpc<wbr>Dhcp<wbr>Options<wbr>Filter&gt;?</a></code>
+                <code><a href="#getvpcdhcpoptionsfilter">List&lt;Get<wbr>Vpc<wbr>Dhcp<wbr>Options<wbr>Filter&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -429,7 +429,7 @@ The following output properties are available:
             <td class="align-top">Netbios<wbr>Name<wbr>Servers</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} List of NETBIOS name servers.
  {{% /md %}}
@@ -455,7 +455,7 @@ The following output properties are available:
             <td class="align-top">Ntp<wbr>Servers</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} List of NTP servers.
  {{% /md %}}
@@ -481,7 +481,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;</code>
+                <code>Dictionary<string, object></code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags assigned to the resource.
  {{% /md %}}
@@ -702,7 +702,7 @@ The following output properties are available:
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getvpcdhcpoptionsfilter">ec2.<wbr>Get<wbr>Vpc<wbr>Dhcp<wbr>Options<wbr>Filter[]?</a></code>
+                <code><a href="#getvpcdhcpoptionsfilter">Get<wbr>Vpc<wbr>Dhcp<wbr>Options<wbr>Filter[]?</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1002,7 +1002,7 @@ The name of the field to filter.
             <td class="align-top">Values</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

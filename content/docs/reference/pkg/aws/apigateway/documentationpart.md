@@ -98,7 +98,7 @@ The following arguments are supported:
             <td class="align-top">Location</td>
             <td class="align-top">
                 
-                <code><a href="#documentationpartlocation">Pulumi.<wbr>Aws.<wbr>Apigateway.<wbr>Documentation<wbr>Part<wbr>Location<wbr>Args</a></code>
+                <code><a href="#documentationpartlocation">Documentation<wbr>Part<wbr>Location<wbr>Args</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -228,7 +228,7 @@ The ID of the associated Rest API
             <td class="align-top">location</td>
             <td class="align-top">
                 
-                <code><a href="#documentationpartlocation">apigateway.<wbr>Documentation<wbr>Part<wbr>Location</a></code>
+                <code><a href="#documentationpartlocation">Documentation<wbr>Part<wbr>Location</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -372,7 +372,7 @@ The following output properties are available:
             <td class="align-top">Location</td>
             <td class="align-top">
                 
-                <code><a href="#documentationpartlocation">Pulumi.<wbr>Aws.<wbr>Apigateway.<wbr>Documentation<wbr>Part<wbr>Location</a></code>
+                <code><a href="#documentationpartlocation">Documentation<wbr>Part<wbr>Location</a></code>
             </td>
             <td class="align-top">{{% md %}} The location of the targeted API entity of the to-be-created documentation part. See below.
  {{% /md %}}
@@ -490,7 +490,7 @@ The following output properties are available:
             <td class="align-top">location</td>
             <td class="align-top">
                 
-                <code><a href="#documentationpartlocation">apigateway.<wbr>Documentation<wbr>Part<wbr>Location</a></code>
+                <code><a href="#documentationpartlocation">Documentation<wbr>Part<wbr>Location</a></code>
             </td>
             <td class="align-top">{{% md %}} The location of the targeted API entity of the to-be-created documentation part. See below.
  {{% /md %}}
@@ -667,7 +667,7 @@ The following state arguments are supported:
             <td class="align-top">Location</td>
             <td class="align-top">
                 
-                <code><a href="#documentationpartlocation">Pulumi.<wbr>Aws.<wbr>Apigateway.<wbr>Documentation<wbr>Part<wbr>Location<wbr>Args?</a></code>
+                <code><a href="#documentationpartlocation">Documentation<wbr>Part<wbr>Location<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -797,7 +797,7 @@ The ID of the associated Rest API
             <td class="align-top">location</td>
             <td class="align-top">
                 
-                <code><a href="#documentationpartlocation">apigateway.<wbr>Documentation<wbr>Part<wbr>Location?</a></code>
+                <code><a href="#documentationpartlocation">Documentation<wbr>Part<wbr>Location?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

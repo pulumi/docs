@@ -268,7 +268,7 @@ The name of the request validator
             <td class="align-top">rest<wbr>Api</td>
             <td class="align-top">
                 
-                <code>string | Rest<wbr>Api</code>
+                <code>string | RestApi</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -949,7 +949,7 @@ The name of the request validator
             <td class="align-top">rest<wbr>Api</td>
             <td class="align-top">
                 
-                <code>string | Rest<wbr>Api</code>
+                <code>string | RestApi</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

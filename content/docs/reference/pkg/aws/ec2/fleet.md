@@ -115,7 +115,7 @@ Whether running instances should be terminated if the total target capacity of t
             <td class="align-top">Launch<wbr>Template<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#fleetlaunchtemplateconfig">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Fleet<wbr>Launch<wbr>Template<wbr>Config<wbr>Args</a></code>
+                <code><a href="#fleetlaunchtemplateconfig">Fleet<wbr>Launch<wbr>Template<wbr>Config<wbr>Args</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -130,7 +130,7 @@ Nested argument containing EC2 Launch Template configurations. Defined below.
             <td class="align-top">On<wbr>Demand<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#fleetondemandoptions">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Fleet<wbr>On<wbr>Demand<wbr>Options<wbr>Args?</a></code>
+                <code><a href="#fleetondemandoptions">Fleet<wbr>On<wbr>Demand<wbr>Options<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -160,7 +160,7 @@ Whether EC2 Fleet should replace unhealthy instances. Defaults to `false`.
             <td class="align-top">Spot<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#fleetspotoptions">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Fleet<wbr>Spot<wbr>Options<wbr>Args?</a></code>
+                <code><a href="#fleetspotoptions">Fleet<wbr>Spot<wbr>Options<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -175,7 +175,7 @@ Nested argument containing Spot configurations. Defined below.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -190,7 +190,7 @@ Map of Fleet tags. To tag instances at launch, specify the tags in the Launch Te
             <td class="align-top">Target<wbr>Capacity<wbr>Specification</td>
             <td class="align-top">
                 
-                <code><a href="#fleettargetcapacityspecification">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Fleet<wbr>Target<wbr>Capacity<wbr>Specification<wbr>Args</a></code>
+                <code><a href="#fleettargetcapacityspecification">Fleet<wbr>Target<wbr>Capacity<wbr>Specification<wbr>Args</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -455,7 +455,7 @@ Whether running instances should be terminated if the total target capacity of t
             <td class="align-top">launch<wbr>Template<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#fleetlaunchtemplateconfig">ec2.<wbr>Fleet<wbr>Launch<wbr>Template<wbr>Config</a></code>
+                <code><a href="#fleetlaunchtemplateconfig">Fleet<wbr>Launch<wbr>Template<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -470,7 +470,7 @@ Nested argument containing EC2 Launch Template configurations. Defined below.
             <td class="align-top">on<wbr>Demand<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#fleetondemandoptions">ec2.<wbr>Fleet<wbr>On<wbr>Demand<wbr>Options?</a></code>
+                <code><a href="#fleetondemandoptions">Fleet<wbr>On<wbr>Demand<wbr>Options?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -500,7 +500,7 @@ Whether EC2 Fleet should replace unhealthy instances. Defaults to `false`.
             <td class="align-top">spot<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#fleetspotoptions">ec2.<wbr>Fleet<wbr>Spot<wbr>Options?</a></code>
+                <code><a href="#fleetspotoptions">Fleet<wbr>Spot<wbr>Options?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -530,7 +530,7 @@ Map of Fleet tags. To tag instances at launch, specify the tags in the Launch Te
             <td class="align-top">target<wbr>Capacity<wbr>Specification</td>
             <td class="align-top">
                 
-                <code><a href="#fleettargetcapacityspecification">ec2.<wbr>Fleet<wbr>Target<wbr>Capacity<wbr>Specification</a></code>
+                <code><a href="#fleettargetcapacityspecification">Fleet<wbr>Target<wbr>Capacity<wbr>Specification</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -807,7 +807,7 @@ The following output properties are available:
             <td class="align-top">Launch<wbr>Template<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#fleetlaunchtemplateconfig">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Fleet<wbr>Launch<wbr>Template<wbr>Config</a></code>
+                <code><a href="#fleetlaunchtemplateconfig">Fleet<wbr>Launch<wbr>Template<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested argument containing EC2 Launch Template configurations. Defined below.
  {{% /md %}}
@@ -820,7 +820,7 @@ The following output properties are available:
             <td class="align-top">On<wbr>Demand<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#fleetondemandoptions">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Fleet<wbr>On<wbr>Demand<wbr>Options?</a></code>
+                <code><a href="#fleetondemandoptions">Fleet<wbr>On<wbr>Demand<wbr>Options?</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested argument containing On-Demand configurations. Defined below.
  {{% /md %}}
@@ -846,7 +846,7 @@ The following output properties are available:
             <td class="align-top">Spot<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#fleetspotoptions">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Fleet<wbr>Spot<wbr>Options?</a></code>
+                <code><a href="#fleetspotoptions">Fleet<wbr>Spot<wbr>Options?</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested argument containing Spot configurations. Defined below.
  {{% /md %}}
@@ -859,7 +859,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} Map of Fleet tags. To tag instances at launch, specify the tags in the Launch Template.
  {{% /md %}}
@@ -872,7 +872,7 @@ The following output properties are available:
             <td class="align-top">Target<wbr>Capacity<wbr>Specification</td>
             <td class="align-top">
                 
-                <code><a href="#fleettargetcapacityspecification">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Fleet<wbr>Target<wbr>Capacity<wbr>Specification</a></code>
+                <code><a href="#fleettargetcapacityspecification">Fleet<wbr>Target<wbr>Capacity<wbr>Specification</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested argument containing target capacity configurations. Defined below.
  {{% /md %}}
@@ -1107,7 +1107,7 @@ The following output properties are available:
             <td class="align-top">launch<wbr>Template<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#fleetlaunchtemplateconfig">ec2.<wbr>Fleet<wbr>Launch<wbr>Template<wbr>Config</a></code>
+                <code><a href="#fleetlaunchtemplateconfig">Fleet<wbr>Launch<wbr>Template<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested argument containing EC2 Launch Template configurations. Defined below.
  {{% /md %}}
@@ -1120,7 +1120,7 @@ The following output properties are available:
             <td class="align-top">on<wbr>Demand<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#fleetondemandoptions">ec2.<wbr>Fleet<wbr>On<wbr>Demand<wbr>Options?</a></code>
+                <code><a href="#fleetondemandoptions">Fleet<wbr>On<wbr>Demand<wbr>Options?</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested argument containing On-Demand configurations. Defined below.
  {{% /md %}}
@@ -1146,7 +1146,7 @@ The following output properties are available:
             <td class="align-top">spot<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#fleetspotoptions">ec2.<wbr>Fleet<wbr>Spot<wbr>Options?</a></code>
+                <code><a href="#fleetspotoptions">Fleet<wbr>Spot<wbr>Options?</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested argument containing Spot configurations. Defined below.
  {{% /md %}}
@@ -1172,7 +1172,7 @@ The following output properties are available:
             <td class="align-top">target<wbr>Capacity<wbr>Specification</td>
             <td class="align-top">
                 
-                <code><a href="#fleettargetcapacityspecification">ec2.<wbr>Fleet<wbr>Target<wbr>Capacity<wbr>Specification</a></code>
+                <code><a href="#fleettargetcapacityspecification">Fleet<wbr>Target<wbr>Capacity<wbr>Specification</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested argument containing target capacity configurations. Defined below.
  {{% /md %}}
@@ -1468,7 +1468,7 @@ Whether running instances should be terminated if the total target capacity of t
             <td class="align-top">Launch<wbr>Template<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#fleetlaunchtemplateconfig">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Fleet<wbr>Launch<wbr>Template<wbr>Config<wbr>Args?</a></code>
+                <code><a href="#fleetlaunchtemplateconfig">Fleet<wbr>Launch<wbr>Template<wbr>Config<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1483,7 +1483,7 @@ Nested argument containing EC2 Launch Template configurations. Defined below.
             <td class="align-top">On<wbr>Demand<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#fleetondemandoptions">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Fleet<wbr>On<wbr>Demand<wbr>Options<wbr>Args?</a></code>
+                <code><a href="#fleetondemandoptions">Fleet<wbr>On<wbr>Demand<wbr>Options<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1513,7 +1513,7 @@ Whether EC2 Fleet should replace unhealthy instances. Defaults to `false`.
             <td class="align-top">Spot<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#fleetspotoptions">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Fleet<wbr>Spot<wbr>Options<wbr>Args?</a></code>
+                <code><a href="#fleetspotoptions">Fleet<wbr>Spot<wbr>Options<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1528,7 +1528,7 @@ Nested argument containing Spot configurations. Defined below.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1543,7 +1543,7 @@ Map of Fleet tags. To tag instances at launch, specify the tags in the Launch Te
             <td class="align-top">Target<wbr>Capacity<wbr>Specification</td>
             <td class="align-top">
                 
-                <code><a href="#fleettargetcapacityspecification">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Fleet<wbr>Target<wbr>Capacity<wbr>Specification<wbr>Args?</a></code>
+                <code><a href="#fleettargetcapacityspecification">Fleet<wbr>Target<wbr>Capacity<wbr>Specification<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1808,7 +1808,7 @@ Whether running instances should be terminated if the total target capacity of t
             <td class="align-top">launch<wbr>Template<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#fleetlaunchtemplateconfig">ec2.<wbr>Fleet<wbr>Launch<wbr>Template<wbr>Config?</a></code>
+                <code><a href="#fleetlaunchtemplateconfig">Fleet<wbr>Launch<wbr>Template<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1823,7 +1823,7 @@ Nested argument containing EC2 Launch Template configurations. Defined below.
             <td class="align-top">on<wbr>Demand<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#fleetondemandoptions">ec2.<wbr>Fleet<wbr>On<wbr>Demand<wbr>Options?</a></code>
+                <code><a href="#fleetondemandoptions">Fleet<wbr>On<wbr>Demand<wbr>Options?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1853,7 +1853,7 @@ Whether EC2 Fleet should replace unhealthy instances. Defaults to `false`.
             <td class="align-top">spot<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#fleetspotoptions">ec2.<wbr>Fleet<wbr>Spot<wbr>Options?</a></code>
+                <code><a href="#fleetspotoptions">Fleet<wbr>Spot<wbr>Options?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1883,7 +1883,7 @@ Map of Fleet tags. To tag instances at launch, specify the tags in the Launch Te
             <td class="align-top">target<wbr>Capacity<wbr>Specification</td>
             <td class="align-top">
                 
-                <code><a href="#fleettargetcapacityspecification">ec2.<wbr>Fleet<wbr>Target<wbr>Capacity<wbr>Specification?</a></code>
+                <code><a href="#fleettargetcapacityspecification">Fleet<wbr>Target<wbr>Capacity<wbr>Specification?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2161,7 +2161,7 @@ The type of request. Indicates whether the EC2 Fleet only requests the target ca
             <td class="align-top">Launch<wbr>Template<wbr>Specification</td>
             <td class="align-top">
                 
-                <code><a href="#fleetlaunchtemplateconfiglaunchtemplatespecification">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Fleet<wbr>Launch<wbr>Template<wbr>Config<wbr>Launch<wbr>Template<wbr>Specification<wbr>Args</a></code>
+                <code><a href="#fleetlaunchtemplateconfiglaunchtemplatespecification">Fleet<wbr>Launch<wbr>Template<wbr>Config<wbr>Launch<wbr>Template<wbr>Specification<wbr>Args</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2176,7 +2176,7 @@ Nested argument containing EC2 Launch Template to use. Defined below.
             <td class="align-top">Overrides</td>
             <td class="align-top">
                 
-                <code><a href="#fleetlaunchtemplateconfigoverride">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Fleet<wbr>Launch<wbr>Template<wbr>Config<wbr>Override<wbr>Args&gt;?</a></code>
+                <code><a href="#fleetlaunchtemplateconfigoverride">List&lt;Fleet<wbr>Launch<wbr>Template<wbr>Config<wbr>Override<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2261,7 +2261,7 @@ Nested argument(s) containing parameters to override the same parameters in the 
             <td class="align-top">launch<wbr>Template<wbr>Specification</td>
             <td class="align-top">
                 
-                <code><a href="#fleetlaunchtemplateconfiglaunchtemplatespecification">ec2.<wbr>Fleet<wbr>Launch<wbr>Template<wbr>Config<wbr>Launch<wbr>Template<wbr>Specification</a></code>
+                <code><a href="#fleetlaunchtemplateconfiglaunchtemplatespecification">Fleet<wbr>Launch<wbr>Template<wbr>Config<wbr>Launch<wbr>Template<wbr>Specification</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2276,7 +2276,7 @@ Nested argument containing EC2 Launch Template to use. Defined below.
             <td class="align-top">overrides</td>
             <td class="align-top">
                 
-                <code><a href="#fleetlaunchtemplateconfigoverride">ec2.<wbr>Fleet<wbr>Launch<wbr>Template<wbr>Config<wbr>Override[]?</a></code>
+                <code><a href="#fleetlaunchtemplateconfigoverride">Fleet<wbr>Launch<wbr>Template<wbr>Config<wbr>Override[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

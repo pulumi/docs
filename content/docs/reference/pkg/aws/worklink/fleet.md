@@ -164,7 +164,7 @@ The name of the fleet.
             <td class="align-top">Identity<wbr>Provider</td>
             <td class="align-top">
                 
-                <code><a href="#fleetidentityprovider">Pulumi.<wbr>Aws.<wbr>Worklink.<wbr>Fleet<wbr>Identity<wbr>Provider<wbr>Args?</a></code>
+                <code><a href="#fleetidentityprovider">Fleet<wbr>Identity<wbr>Provider<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -194,7 +194,7 @@ A region-unique name for the AMI.
             <td class="align-top">Network</td>
             <td class="align-top">
                 
-                <code><a href="#fleetnetwork">Pulumi.<wbr>Aws.<wbr>Worklink.<wbr>Fleet<wbr>Network<wbr>Args?</a></code>
+                <code><a href="#fleetnetwork">Fleet<wbr>Network<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -414,7 +414,7 @@ The name of the fleet.
             <td class="align-top">identity<wbr>Provider</td>
             <td class="align-top">
                 
-                <code><a href="#fleetidentityprovider">worklink.<wbr>Fleet<wbr>Identity<wbr>Provider?</a></code>
+                <code><a href="#fleetidentityprovider">Fleet<wbr>Identity<wbr>Provider?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -444,7 +444,7 @@ A region-unique name for the AMI.
             <td class="align-top">network</td>
             <td class="align-top">
                 
-                <code><a href="#fleetnetwork">worklink.<wbr>Fleet<wbr>Network?</a></code>
+                <code><a href="#fleetnetwork">Fleet<wbr>Network?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -711,7 +711,7 @@ The following output properties are available:
             <td class="align-top">Identity<wbr>Provider</td>
             <td class="align-top">
                 
-                <code><a href="#fleetidentityprovider">Pulumi.<wbr>Aws.<wbr>Worklink.<wbr>Fleet<wbr>Identity<wbr>Provider?</a></code>
+                <code><a href="#fleetidentityprovider">Fleet<wbr>Identity<wbr>Provider?</a></code>
             </td>
             <td class="align-top">{{% md %}} Provide this to allow manage the identity provider configuration for the fleet. Fields documented below.
  {{% /md %}}
@@ -750,7 +750,7 @@ The following output properties are available:
             <td class="align-top">Network</td>
             <td class="align-top">
                 
-                <code><a href="#fleetnetwork">Pulumi.<wbr>Aws.<wbr>Worklink.<wbr>Fleet<wbr>Network?</a></code>
+                <code><a href="#fleetnetwork">Fleet<wbr>Network?</a></code>
             </td>
             <td class="align-top">{{% md %}} Provide this to allow manage the company network configuration for the fleet. Fields documented below.
  {{% /md %}}
@@ -1037,7 +1037,7 @@ The following output properties are available:
             <td class="align-top">identity<wbr>Provider</td>
             <td class="align-top">
                 
-                <code><a href="#fleetidentityprovider">worklink.<wbr>Fleet<wbr>Identity<wbr>Provider?</a></code>
+                <code><a href="#fleetidentityprovider">Fleet<wbr>Identity<wbr>Provider?</a></code>
             </td>
             <td class="align-top">{{% md %}} Provide this to allow manage the identity provider configuration for the fleet. Fields documented below.
  {{% /md %}}
@@ -1076,7 +1076,7 @@ The following output properties are available:
             <td class="align-top">network</td>
             <td class="align-top">
                 
-                <code><a href="#fleetnetwork">worklink.<wbr>Fleet<wbr>Network?</a></code>
+                <code><a href="#fleetnetwork">Fleet<wbr>Network?</a></code>
             </td>
             <td class="align-top">{{% md %}} Provide this to allow manage the company network configuration for the fleet. Fields documented below.
  {{% /md %}}
@@ -1434,7 +1434,7 @@ The name of the fleet.
             <td class="align-top">Identity<wbr>Provider</td>
             <td class="align-top">
                 
-                <code><a href="#fleetidentityprovider">Pulumi.<wbr>Aws.<wbr>Worklink.<wbr>Fleet<wbr>Identity<wbr>Provider<wbr>Args?</a></code>
+                <code><a href="#fleetidentityprovider">Fleet<wbr>Identity<wbr>Provider<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1479,7 +1479,7 @@ A region-unique name for the AMI.
             <td class="align-top">Network</td>
             <td class="align-top">
                 
-                <code><a href="#fleetnetwork">Pulumi.<wbr>Aws.<wbr>Worklink.<wbr>Fleet<wbr>Network<wbr>Args?</a></code>
+                <code><a href="#fleetnetwork">Fleet<wbr>Network<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1804,7 +1804,7 @@ The name of the fleet.
             <td class="align-top">identity<wbr>Provider</td>
             <td class="align-top">
                 
-                <code><a href="#fleetidentityprovider">worklink.<wbr>Fleet<wbr>Identity<wbr>Provider?</a></code>
+                <code><a href="#fleetidentityprovider">Fleet<wbr>Identity<wbr>Provider?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1849,7 +1849,7 @@ A region-unique name for the AMI.
             <td class="align-top">network</td>
             <td class="align-top">
                 
-                <code><a href="#fleetnetwork">worklink.<wbr>Fleet<wbr>Network?</a></code>
+                <code><a href="#fleetnetwork">Fleet<wbr>Network?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2333,7 +2333,7 @@ The type of identity provider.
             <td class="align-top">Security<wbr>Group<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2348,7 +2348,7 @@ A list of security group IDs associated with access to the provided subnets.
             <td class="align-top">Subnet<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

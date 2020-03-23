@@ -193,7 +193,7 @@ Creates a unique compute environment name beginning with the specified prefix. C
             <td class="align-top">Compute<wbr>Resources</td>
             <td class="align-top">
                 
-                <code><a href="#computeenvironmentcomputeresources">Pulumi.<wbr>Aws.<wbr>Batch.<wbr>Compute<wbr>Environment<wbr>Compute<wbr>Resources<wbr>Args?</a></code>
+                <code><a href="#computeenvironmentcomputeresources">Compute<wbr>Environment<wbr>Compute<wbr>Resources<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -411,7 +411,7 @@ Creates a unique compute environment name beginning with the specified prefix. C
             <td class="align-top">compute<wbr>Resources</td>
             <td class="align-top">
                 
-                <code><a href="#computeenvironmentcomputeresources">batch.<wbr>Compute<wbr>Environment<wbr>Compute<wbr>Resources?</a></code>
+                <code><a href="#computeenvironmentcomputeresources">Compute<wbr>Environment<wbr>Compute<wbr>Resources?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -652,7 +652,7 @@ The following output properties are available:
             <td class="align-top">Compute<wbr>Resources</td>
             <td class="align-top">
                 
-                <code><a href="#computeenvironmentcomputeresources">Pulumi.<wbr>Aws.<wbr>Batch.<wbr>Compute<wbr>Environment<wbr>Compute<wbr>Resources?</a></code>
+                <code><a href="#computeenvironmentcomputeresources">Compute<wbr>Environment<wbr>Compute<wbr>Resources?</a></code>
             </td>
             <td class="align-top">{{% md %}} Details of the compute resources managed by the compute environment. This parameter is required for managed compute environments. See details below.
  {{% /md %}}
@@ -950,7 +950,7 @@ The following output properties are available:
             <td class="align-top">compute<wbr>Resources</td>
             <td class="align-top">
                 
-                <code><a href="#computeenvironmentcomputeresources">batch.<wbr>Compute<wbr>Environment<wbr>Compute<wbr>Resources?</a></code>
+                <code><a href="#computeenvironmentcomputeresources">Compute<wbr>Environment<wbr>Compute<wbr>Resources?</a></code>
             </td>
             <td class="align-top">{{% md %}} Details of the compute resources managed by the compute environment. This parameter is required for managed compute environments. See details below.
  {{% /md %}}
@@ -1313,7 +1313,7 @@ Creates a unique compute environment name beginning with the specified prefix. C
             <td class="align-top">Compute<wbr>Resources</td>
             <td class="align-top">
                 
-                <code><a href="#computeenvironmentcomputeresources">Pulumi.<wbr>Aws.<wbr>Batch.<wbr>Compute<wbr>Environment<wbr>Compute<wbr>Resources<wbr>Args?</a></code>
+                <code><a href="#computeenvironmentcomputeresources">Compute<wbr>Environment<wbr>Compute<wbr>Resources<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1651,7 +1651,7 @@ Creates a unique compute environment name beginning with the specified prefix. C
             <td class="align-top">compute<wbr>Resources</td>
             <td class="align-top">
                 
-                <code><a href="#computeenvironmentcomputeresources">batch.<wbr>Compute<wbr>Environment<wbr>Compute<wbr>Resources?</a></code>
+                <code><a href="#computeenvironmentcomputeresources">Compute<wbr>Environment<wbr>Compute<wbr>Resources?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2063,7 +2063,7 @@ The Amazon ECS instance role applied to Amazon EC2 instances in a compute enviro
             <td class="align-top">Instance<wbr>Types</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2078,7 +2078,7 @@ A list of instance types that may be launched.
             <td class="align-top">Launch<wbr>Template</td>
             <td class="align-top">
                 
-                <code><a href="#computeenvironmentcomputeresourceslaunchtemplate">Pulumi.<wbr>Aws.<wbr>Batch.<wbr>Compute<wbr>Environment<wbr>Compute<wbr>Resources<wbr>Launch<wbr>Template<wbr>Args?</a></code>
+                <code><a href="#computeenvironmentcomputeresourceslaunchtemplate">Compute<wbr>Environment<wbr>Compute<wbr>Resources<wbr>Launch<wbr>Template<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2123,7 +2123,7 @@ The minimum number of EC2 vCPUs that an environment should maintain.
             <td class="align-top">Security<wbr>Group<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2153,7 +2153,7 @@ The Amazon Resource Name (ARN) of the Amazon EC2 Spot Fleet IAM role applied to 
             <td class="align-top">Subnets</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2168,7 +2168,7 @@ A list of VPC subnets into which the compute resources are launched.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2568,7 +2568,7 @@ A list of instance types that may be launched.
             <td class="align-top">launch<wbr>Template</td>
             <td class="align-top">
                 
-                <code><a href="#computeenvironmentcomputeresourceslaunchtemplate">batch.<wbr>Compute<wbr>Environment<wbr>Compute<wbr>Resources<wbr>Launch<wbr>Template?</a></code>
+                <code><a href="#computeenvironmentcomputeresourceslaunchtemplate">Compute<wbr>Environment<wbr>Compute<wbr>Resources<wbr>Launch<wbr>Template?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

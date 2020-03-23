@@ -113,7 +113,7 @@ The name or description of the Size Constraint Set.
             <td class="align-top">Size<wbr>Constraints</td>
             <td class="align-top">
                 
-                <code><a href="#sizeconstraintsetsizeconstraint">List&lt;Pulumi.<wbr>Aws.<wbr>Wafregional.<wbr>Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint<wbr>Args&gt;?</a></code>
+                <code><a href="#sizeconstraintsetsizeconstraint">List&lt;Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -213,7 +213,7 @@ The name or description of the Size Constraint Set.
             <td class="align-top">size<wbr>Constraints</td>
             <td class="align-top">
                 
-                <code><a href="#sizeconstraintsetsizeconstraint">wafregional.<wbr>Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint[]?</a></code>
+                <code><a href="#sizeconstraintsetsizeconstraint">Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -337,7 +337,7 @@ The following output properties are available:
             <td class="align-top">Size<wbr>Constraints</td>
             <td class="align-top">
                 
-                <code><a href="#sizeconstraintsetsizeconstraint">List&lt;Pulumi.<wbr>Aws.<wbr>Wafregional.<wbr>Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint&gt;?</a></code>
+                <code><a href="#sizeconstraintsetsizeconstraint">List&lt;Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} Specifies the parts of web requests that you want to inspect the size of.
  {{% /md %}}
@@ -453,7 +453,7 @@ The following output properties are available:
             <td class="align-top">size<wbr>Constraints</td>
             <td class="align-top">
                 
-                <code><a href="#sizeconstraintsetsizeconstraint">wafregional.<wbr>Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint[]?</a></code>
+                <code><a href="#sizeconstraintsetsizeconstraint">Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} Specifies the parts of web requests that you want to inspect the size of.
  {{% /md %}}
@@ -632,7 +632,7 @@ The name or description of the Size Constraint Set.
             <td class="align-top">Size<wbr>Constraints</td>
             <td class="align-top">
                 
-                <code><a href="#sizeconstraintsetsizeconstraint">List&lt;Pulumi.<wbr>Aws.<wbr>Wafregional.<wbr>Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint<wbr>Args&gt;?</a></code>
+                <code><a href="#sizeconstraintsetsizeconstraint">List&lt;Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -760,7 +760,7 @@ The name or description of the Size Constraint Set.
             <td class="align-top">size<wbr>Constraints</td>
             <td class="align-top">
                 
-                <code><a href="#sizeconstraintsetsizeconstraint">wafregional.<wbr>Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint[]?</a></code>
+                <code><a href="#sizeconstraintsetsizeconstraint">Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -904,7 +904,7 @@ See [docs](http://docs.aws.amazon.com/waf/latest/APIReference/API_SizeConstraint
             <td class="align-top">Field<wbr>To<wbr>Match</td>
             <td class="align-top">
                 
-                <code><a href="#sizeconstraintsetsizeconstraintfieldtomatch">Pulumi.<wbr>Aws.<wbr>Wafregional.<wbr>Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></code>
+                <code><a href="#sizeconstraintsetsizeconstraintfieldtomatch">Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1080,7 +1080,7 @@ See [docs](http://docs.aws.amazon.com/waf/latest/APIReference/API_SizeConstraint
             <td class="align-top">field<wbr>To<wbr>Match</td>
             <td class="align-top">
                 
-                <code><a href="#sizeconstraintsetsizeconstraintfieldtomatch">wafregional.<wbr>Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint<wbr>Field<wbr>To<wbr>Match</a></code>
+                <code><a href="#sizeconstraintsetsizeconstraintfieldtomatch">Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint<wbr>Field<wbr>To<wbr>Match</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

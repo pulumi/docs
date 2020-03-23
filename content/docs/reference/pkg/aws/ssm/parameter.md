@@ -215,7 +215,7 @@ Overwrite an existing parameter. If not specified, will default to `false` if th
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -585,7 +585,7 @@ The tier of the parameter. If not specified, will default to `Standard`. Valid t
             <td class="align-top">type</td>
             <td class="align-top">
                 
-                <code>Parameter<wbr>Type</code>
+                <code>ParameterType</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -897,7 +897,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the object.
  {{% /md %}}
@@ -1249,7 +1249,7 @@ The following output properties are available:
             <td class="align-top">type</td>
             <td class="align-top">
                 
-                <code>Parameter<wbr>Type</code>
+                <code>ParameterType</code>
             </td>
             <td class="align-top">{{% md %}} The type of the parameter. Valid types are `String`, `StringList` and `SecureString`.
  {{% /md %}}
@@ -1620,7 +1620,7 @@ Overwrite an existing parameter. If not specified, will default to `false` if th
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2020,7 +2020,7 @@ The tier of the parameter. If not specified, will default to `Standard`. Valid t
             <td class="align-top">type</td>
             <td class="align-top">
                 
-                <code>Parameter<wbr>Type?</code>
+                <code>ParameterType?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

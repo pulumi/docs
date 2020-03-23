@@ -52,7 +52,7 @@ const test = aws.elb.getLoadBalancer({
 <div class="highlight">
 <pre class="chroma">
 <code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetLoadBalancer </span><span class="p">{</span>
-    <span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elasticloadbalancing.GetLoadBalancerResult.html">Pulumi.Aws.Elasticloadbalancing.GetLoadBalancerResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elasticloadbalancing.GetLoadBalancerArgs.html">GetLoadBalancerArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span>
+    <span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elasticloadbalancing.GetLoadBalancerResult.html">GetLoadBalancerResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elasticloadbalancing.GetLoadBalancerArgs.html">GetLoadBalancerArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span>
 <span class="p">}</span></code></pre>
 </div>
 
@@ -96,7 +96,7 @@ The unique name of the load balancer.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -292,7 +292,7 @@ The following output properties are available:
             <td class="align-top">Access<wbr>Logs</td>
             <td class="align-top">
                 
-                <code><a href="#getloadbalanceraccesslogs">Pulumi.<wbr>Aws.<wbr>Elasticloadbalancing.<wbr>Get<wbr>Load<wbr>Balancer<wbr>Access<wbr>Logs</a></code>
+                <code><a href="#getloadbalanceraccesslogs">Get<wbr>Load<wbr>Balancer<wbr>Access<wbr>Logs</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -316,7 +316,7 @@ The following output properties are available:
             <td class="align-top">Availability<wbr>Zones</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -376,7 +376,7 @@ The following output properties are available:
             <td class="align-top">Health<wbr>Check</td>
             <td class="align-top">
                 
-                <code><a href="#getloadbalancerhealthcheck">Pulumi.<wbr>Aws.<wbr>Elasticloadbalancing.<wbr>Get<wbr>Load<wbr>Balancer<wbr>Health<wbr>Check</a></code>
+                <code><a href="#getloadbalancerhealthcheck">Get<wbr>Load<wbr>Balancer<wbr>Health<wbr>Check</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -413,7 +413,7 @@ The following output properties are available:
             <td class="align-top">Instances</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -437,7 +437,7 @@ The following output properties are available:
             <td class="align-top">Listeners</td>
             <td class="align-top">
                 
-                <code><a href="#getloadbalancerlistener">List&lt;Pulumi.<wbr>Aws.<wbr>Elasticloadbalancing.<wbr>Get<wbr>Load<wbr>Balancer<wbr>Listener&gt;</a></code>
+                <code><a href="#getloadbalancerlistener">List&lt;Get<wbr>Load<wbr>Balancer<wbr>Listener&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -461,7 +461,7 @@ The following output properties are available:
             <td class="align-top">Security<wbr>Groups</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -497,7 +497,7 @@ The following output properties are available:
             <td class="align-top">Subnets</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -509,7 +509,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;</code>
+                <code>Dictionary<string, object></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -814,7 +814,7 @@ The following output properties are available:
             <td class="align-top">access<wbr>Logs</td>
             <td class="align-top">
                 
-                <code><a href="#getloadbalanceraccesslogs">elasticloadbalancing.<wbr>Get<wbr>Load<wbr>Balancer<wbr>Access<wbr>Logs</a></code>
+                <code><a href="#getloadbalanceraccesslogs">Get<wbr>Load<wbr>Balancer<wbr>Access<wbr>Logs</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -898,7 +898,7 @@ The following output properties are available:
             <td class="align-top">health<wbr>Check</td>
             <td class="align-top">
                 
-                <code><a href="#getloadbalancerhealthcheck">elasticloadbalancing.<wbr>Get<wbr>Load<wbr>Balancer<wbr>Health<wbr>Check</a></code>
+                <code><a href="#getloadbalancerhealthcheck">Get<wbr>Load<wbr>Balancer<wbr>Health<wbr>Check</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -959,7 +959,7 @@ The following output properties are available:
             <td class="align-top">listeners</td>
             <td class="align-top">
                 
-                <code><a href="#getloadbalancerlistener">elasticloadbalancing.<wbr>Get<wbr>Load<wbr>Balancer<wbr>Listener[]</a></code>
+                <code><a href="#getloadbalancerlistener">Get<wbr>Load<wbr>Balancer<wbr>Listener[]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 

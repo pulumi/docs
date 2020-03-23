@@ -156,7 +156,7 @@ Creates a unique name beginning with the specified prefix. Conflicts with `name`
             <td class="align-top">Parameters</td>
             <td class="align-top">
                 
-                <code><a href="#clusterparametergroupparameter">List&lt;Pulumi.<wbr>Aws.<wbr>Docdb.<wbr>Cluster<wbr>Parameter<wbr>Group<wbr>Parameter<wbr>Args&gt;?</a></code>
+                <code><a href="#clusterparametergroupparameter">List&lt;Cluster<wbr>Parameter<wbr>Group<wbr>Parameter<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -171,7 +171,7 @@ A list of documentDB parameters to apply.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -376,7 +376,7 @@ Creates a unique name beginning with the specified prefix. Conflicts with `name`
             <td class="align-top">parameters</td>
             <td class="align-top">
                 
-                <code><a href="#clusterparametergroupparameter">docdb.<wbr>Cluster<wbr>Parameter<wbr>Group<wbr>Parameter[]?</a></code>
+                <code><a href="#clusterparametergroupparameter">Cluster<wbr>Parameter<wbr>Group<wbr>Parameter[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -615,7 +615,7 @@ The following output properties are available:
             <td class="align-top">Parameters</td>
             <td class="align-top">
                 
-                <code><a href="#clusterparametergroupparameter">List&lt;Pulumi.<wbr>Aws.<wbr>Docdb.<wbr>Cluster<wbr>Parameter<wbr>Group<wbr>Parameter&gt;?</a></code>
+                <code><a href="#clusterparametergroupparameter">List&lt;Cluster<wbr>Parameter<wbr>Group<wbr>Parameter&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of documentDB parameters to apply.
  {{% /md %}}
@@ -628,7 +628,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -837,7 +837,7 @@ The following output properties are available:
             <td class="align-top">parameters</td>
             <td class="align-top">
                 
-                <code><a href="#clusterparametergroupparameter">docdb.<wbr>Cluster<wbr>Parameter<wbr>Group<wbr>Parameter[]?</a></code>
+                <code><a href="#clusterparametergroupparameter">Cluster<wbr>Parameter<wbr>Group<wbr>Parameter[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of documentDB parameters to apply.
  {{% /md %}}
@@ -1128,7 +1128,7 @@ Creates a unique name beginning with the specified prefix. Conflicts with `name`
             <td class="align-top">Parameters</td>
             <td class="align-top">
                 
-                <code><a href="#clusterparametergroupparameter">List&lt;Pulumi.<wbr>Aws.<wbr>Docdb.<wbr>Cluster<wbr>Parameter<wbr>Group<wbr>Parameter<wbr>Args&gt;?</a></code>
+                <code><a href="#clusterparametergroupparameter">List&lt;Cluster<wbr>Parameter<wbr>Group<wbr>Parameter<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1143,7 +1143,7 @@ A list of documentDB parameters to apply.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1378,7 +1378,7 @@ Creates a unique name beginning with the specified prefix. Conflicts with `name`
             <td class="align-top">parameters</td>
             <td class="align-top">
                 
-                <code><a href="#clusterparametergroupparameter">docdb.<wbr>Cluster<wbr>Parameter<wbr>Group<wbr>Parameter[]?</a></code>
+                <code><a href="#clusterparametergroupparameter">Cluster<wbr>Parameter<wbr>Group<wbr>Parameter[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

@@ -129,7 +129,7 @@ Whether the identity pool supports unauthenticated logins or not.
             <td class="align-top">Cognito<wbr>Identity<wbr>Providers</td>
             <td class="align-top">
                 
-                <code><a href="#identitypoolcognitoidentityprovider">List&lt;Pulumi.<wbr>Aws.<wbr>Cognito.<wbr>Identity<wbr>Pool<wbr>Cognito<wbr>Identity<wbr>Provider<wbr>Args&gt;?</a></code>
+                <code><a href="#identitypoolcognitoidentityprovider">List&lt;Identity<wbr>Pool<wbr>Cognito<wbr>Identity<wbr>Provider<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -175,7 +175,7 @@ The Cognito Identity Pool name.
             <td class="align-top">Openid<wbr>Connect<wbr>Provider<wbr>Arns</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -190,7 +190,7 @@ A list of OpendID Connect provider ARNs.
             <td class="align-top">Saml<wbr>Provider<wbr>Arns</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -205,7 +205,7 @@ An array of Amazon Resource Names (ARNs) of the SAML provider for your identity.
             <td class="align-top">Supported<wbr>Login<wbr>Providers</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, string&gt;?</code>
+                <code>Dictionary<string, string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -220,7 +220,7 @@ Key-Value pairs mapping provider names to provider app IDs.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -411,7 +411,7 @@ Whether the identity pool supports unauthenticated logins or not.
             <td class="align-top">cognito<wbr>Identity<wbr>Providers</td>
             <td class="align-top">
                 
-                <code><a href="#identitypoolcognitoidentityprovider">cognito.<wbr>Identity<wbr>Pool<wbr>Cognito<wbr>Identity<wbr>Provider[]?</a></code>
+                <code><a href="#identitypoolcognitoidentityprovider">Identity<wbr>Pool<wbr>Cognito<wbr>Identity<wbr>Provider[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -718,7 +718,7 @@ The following output properties are available:
             <td class="align-top">Cognito<wbr>Identity<wbr>Providers</td>
             <td class="align-top">
                 
-                <code><a href="#identitypoolcognitoidentityprovider">List&lt;Pulumi.<wbr>Aws.<wbr>Cognito.<wbr>Identity<wbr>Pool<wbr>Cognito<wbr>Identity<wbr>Provider&gt;?</a></code>
+                <code><a href="#identitypoolcognitoidentityprovider">List&lt;Identity<wbr>Pool<wbr>Cognito<wbr>Identity<wbr>Provider&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} An array of Amazon Cognito Identity user pools and their client IDs.
  {{% /md %}}
@@ -758,7 +758,7 @@ backend and the Cognito service to communicate about the developer provider.
             <td class="align-top">Openid<wbr>Connect<wbr>Provider<wbr>Arns</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} A list of OpendID Connect provider ARNs.
  {{% /md %}}
@@ -771,7 +771,7 @@ backend and the Cognito service to communicate about the developer provider.
             <td class="align-top">Saml<wbr>Provider<wbr>Arns</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} An array of Amazon Resource Names (ARNs) of the SAML provider for your identity.
  {{% /md %}}
@@ -784,7 +784,7 @@ backend and the Cognito service to communicate about the developer provider.
             <td class="align-top">Supported<wbr>Login<wbr>Providers</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, string&gt;?</code>
+                <code>Dictionary<string, string>?</code>
             </td>
             <td class="align-top">{{% md %}} Key-Value pairs mapping provider names to provider app IDs.
  {{% /md %}}
@@ -797,7 +797,7 @@ backend and the Cognito service to communicate about the developer provider.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the Identity Pool.
  {{% /md %}}
@@ -994,7 +994,7 @@ backend and the Cognito service to communicate about the developer provider.
             <td class="align-top">cognito<wbr>Identity<wbr>Providers</td>
             <td class="align-top">
                 
-                <code><a href="#identitypoolcognitoidentityprovider">cognito.<wbr>Identity<wbr>Pool<wbr>Cognito<wbr>Identity<wbr>Provider[]?</a></code>
+                <code><a href="#identitypoolcognitoidentityprovider">Identity<wbr>Pool<wbr>Cognito<wbr>Identity<wbr>Provider[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} An array of Amazon Cognito Identity user pools and their client IDs.
  {{% /md %}}
@@ -1333,7 +1333,7 @@ The ARN of the identity pool.
             <td class="align-top">Cognito<wbr>Identity<wbr>Providers</td>
             <td class="align-top">
                 
-                <code><a href="#identitypoolcognitoidentityprovider">List&lt;Pulumi.<wbr>Aws.<wbr>Cognito.<wbr>Identity<wbr>Pool<wbr>Cognito<wbr>Identity<wbr>Provider<wbr>Args&gt;?</a></code>
+                <code><a href="#identitypoolcognitoidentityprovider">List&lt;Identity<wbr>Pool<wbr>Cognito<wbr>Identity<wbr>Provider<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1379,7 +1379,7 @@ The Cognito Identity Pool name.
             <td class="align-top">Openid<wbr>Connect<wbr>Provider<wbr>Arns</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1394,7 +1394,7 @@ A list of OpendID Connect provider ARNs.
             <td class="align-top">Saml<wbr>Provider<wbr>Arns</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1409,7 +1409,7 @@ An array of Amazon Resource Names (ARNs) of the SAML provider for your identity.
             <td class="align-top">Supported<wbr>Login<wbr>Providers</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, string&gt;?</code>
+                <code>Dictionary<string, string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1424,7 +1424,7 @@ Key-Value pairs mapping provider names to provider app IDs.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1645,7 +1645,7 @@ The ARN of the identity pool.
             <td class="align-top">cognito<wbr>Identity<wbr>Providers</td>
             <td class="align-top">
                 
-                <code><a href="#identitypoolcognitoidentityprovider">cognito.<wbr>Identity<wbr>Pool<wbr>Cognito<wbr>Identity<wbr>Provider[]?</a></code>
+                <code><a href="#identitypoolcognitoidentityprovider">Identity<wbr>Pool<wbr>Cognito<wbr>Identity<wbr>Provider[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

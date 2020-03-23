@@ -137,7 +137,7 @@ attribute is exported from `aws.ec2.Vpc`, or manually found via the AWS Console.
             <td class="align-top">Egress</td>
             <td class="align-top">
                 
-                <code><a href="#defaultnetworkaclegress">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Default<wbr>Network<wbr>Acl<wbr>Egress<wbr>Args&gt;?</a></code>
+                <code><a href="#defaultnetworkaclegress">List&lt;Default<wbr>Network<wbr>Acl<wbr>Egress<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -152,7 +152,7 @@ Specifies an egress rule. Parameters defined below.
             <td class="align-top">Ingress</td>
             <td class="align-top">
                 
-                <code><a href="#defaultnetworkaclingress">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Default<wbr>Network<wbr>Acl<wbr>Ingress<wbr>Args&gt;?</a></code>
+                <code><a href="#defaultnetworkaclingress">List&lt;Default<wbr>Network<wbr>Acl<wbr>Ingress<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -167,7 +167,7 @@ Specifies an ingress rule. Parameters defined below.
             <td class="align-top">Subnet<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -183,7 +183,7 @@ notes below on managing Subnets in the Default Network ACL
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -331,7 +331,7 @@ attribute is exported from `aws.ec2.Vpc`, or manually found via the AWS Console.
             <td class="align-top">egress</td>
             <td class="align-top">
                 
-                <code><a href="#defaultnetworkaclegress">ec2.<wbr>Default<wbr>Network<wbr>Acl<wbr>Egress[]?</a></code>
+                <code><a href="#defaultnetworkaclegress">Default<wbr>Network<wbr>Acl<wbr>Egress[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -346,7 +346,7 @@ Specifies an egress rule. Parameters defined below.
             <td class="align-top">ingress</td>
             <td class="align-top">
                 
-                <code><a href="#defaultnetworkaclingress">ec2.<wbr>Default<wbr>Network<wbr>Acl<wbr>Ingress[]?</a></code>
+                <code><a href="#defaultnetworkaclingress">Default<wbr>Network<wbr>Acl<wbr>Ingress[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -537,7 +537,7 @@ attribute is exported from `aws.ec2.Vpc`, or manually found via the AWS Console.
             <td class="align-top">Egress</td>
             <td class="align-top">
                 
-                <code><a href="#defaultnetworkaclegress">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Default<wbr>Network<wbr>Acl<wbr>Egress&gt;?</a></code>
+                <code><a href="#defaultnetworkaclegress">List&lt;Default<wbr>Network<wbr>Acl<wbr>Egress&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} Specifies an egress rule. Parameters defined below.
  {{% /md %}}
@@ -550,7 +550,7 @@ attribute is exported from `aws.ec2.Vpc`, or manually found via the AWS Console.
             <td class="align-top">Ingress</td>
             <td class="align-top">
                 
-                <code><a href="#defaultnetworkaclingress">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Default<wbr>Network<wbr>Acl<wbr>Ingress&gt;?</a></code>
+                <code><a href="#defaultnetworkaclingress">List&lt;Default<wbr>Network<wbr>Acl<wbr>Ingress&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} Specifies an ingress rule. Parameters defined below.
  {{% /md %}}
@@ -576,7 +576,7 @@ attribute is exported from `aws.ec2.Vpc`, or manually found via the AWS Console.
             <td class="align-top">Subnet<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} A list of Subnet IDs to apply the ACL to. See the
 notes below on managing Subnets in the Default Network ACL
@@ -590,7 +590,7 @@ notes below on managing Subnets in the Default Network ACL
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -763,7 +763,7 @@ attribute is exported from `aws.ec2.Vpc`, or manually found via the AWS Console.
             <td class="align-top">egress</td>
             <td class="align-top">
                 
-                <code><a href="#defaultnetworkaclegress">ec2.<wbr>Default<wbr>Network<wbr>Acl<wbr>Egress[]?</a></code>
+                <code><a href="#defaultnetworkaclegress">Default<wbr>Network<wbr>Acl<wbr>Egress[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} Specifies an egress rule. Parameters defined below.
  {{% /md %}}
@@ -776,7 +776,7 @@ attribute is exported from `aws.ec2.Vpc`, or manually found via the AWS Console.
             <td class="align-top">ingress</td>
             <td class="align-top">
                 
-                <code><a href="#defaultnetworkaclingress">ec2.<wbr>Default<wbr>Network<wbr>Acl<wbr>Ingress[]?</a></code>
+                <code><a href="#defaultnetworkaclingress">Default<wbr>Network<wbr>Acl<wbr>Ingress[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} Specifies an ingress rule. Parameters defined below.
  {{% /md %}}
@@ -1050,7 +1050,7 @@ attribute is exported from `aws.ec2.Vpc`, or manually found via the AWS Console.
             <td class="align-top">Egress</td>
             <td class="align-top">
                 
-                <code><a href="#defaultnetworkaclegress">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Default<wbr>Network<wbr>Acl<wbr>Egress<wbr>Args&gt;?</a></code>
+                <code><a href="#defaultnetworkaclegress">List&lt;Default<wbr>Network<wbr>Acl<wbr>Egress<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1065,7 +1065,7 @@ Specifies an egress rule. Parameters defined below.
             <td class="align-top">Ingress</td>
             <td class="align-top">
                 
-                <code><a href="#defaultnetworkaclingress">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Default<wbr>Network<wbr>Acl<wbr>Ingress<wbr>Args&gt;?</a></code>
+                <code><a href="#defaultnetworkaclingress">List&lt;Default<wbr>Network<wbr>Acl<wbr>Ingress<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1095,7 +1095,7 @@ The ID of the AWS account that owns the Default Network ACL
             <td class="align-top">Subnet<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1111,7 +1111,7 @@ notes below on managing Subnets in the Default Network ACL
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1304,7 +1304,7 @@ attribute is exported from `aws.ec2.Vpc`, or manually found via the AWS Console.
             <td class="align-top">egress</td>
             <td class="align-top">
                 
-                <code><a href="#defaultnetworkaclegress">ec2.<wbr>Default<wbr>Network<wbr>Acl<wbr>Egress[]?</a></code>
+                <code><a href="#defaultnetworkaclegress">Default<wbr>Network<wbr>Acl<wbr>Egress[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1319,7 +1319,7 @@ Specifies an egress rule. Parameters defined below.
             <td class="align-top">ingress</td>
             <td class="align-top">
                 
-                <code><a href="#defaultnetworkaclingress">ec2.<wbr>Default<wbr>Network<wbr>Acl<wbr>Ingress[]?</a></code>
+                <code><a href="#defaultnetworkaclingress">Default<wbr>Network<wbr>Acl<wbr>Ingress[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

@@ -97,7 +97,7 @@ The following arguments are supported:
             <td class="align-top">Attributes</td>
             <td class="align-top">
                 
-                <code><a href="#acceleratorattributes">Pulumi.<wbr>Aws.<wbr>Globalaccelerator.<wbr>Accelerator<wbr>Attributes<wbr>Args?</a></code>
+                <code><a href="#acceleratorattributes">Accelerator<wbr>Attributes<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -257,7 +257,7 @@ The name of the accelerator.
             <td class="align-top">attributes</td>
             <td class="align-top">
                 
-                <code><a href="#acceleratorattributes">globalaccelerator.<wbr>Accelerator<wbr>Attributes?</a></code>
+                <code><a href="#acceleratorattributes">Accelerator<wbr>Attributes?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -431,7 +431,7 @@ The following output properties are available:
             <td class="align-top">Attributes</td>
             <td class="align-top">
                 
-                <code><a href="#acceleratorattributes">Pulumi.<wbr>Aws.<wbr>Globalaccelerator.<wbr>Accelerator<wbr>Attributes?</a></code>
+                <code><a href="#acceleratorattributes">Accelerator<wbr>Attributes?</a></code>
             </td>
             <td class="align-top">{{% md %}} The attributes of the accelerator. Fields documented below.
  {{% /md %}}
@@ -498,7 +498,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
             <td class="align-top">Ip<wbr>Sets</td>
             <td class="align-top">
                 
-                <code><a href="#acceleratoripset">List&lt;Pulumi.<wbr>Aws.<wbr>Globalaccelerator.<wbr>Accelerator<wbr>Ip<wbr>Set&gt;</a></code>
+                <code><a href="#acceleratoripset">List&lt;Accelerator<wbr>Ip<wbr>Set&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} IP address set associated with the accelerator.
  {{% /md %}}
@@ -657,7 +657,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
             <td class="align-top">attributes</td>
             <td class="align-top">
                 
-                <code><a href="#acceleratorattributes">globalaccelerator.<wbr>Accelerator<wbr>Attributes?</a></code>
+                <code><a href="#acceleratorattributes">Accelerator<wbr>Attributes?</a></code>
             </td>
             <td class="align-top">{{% md %}} The attributes of the accelerator. Fields documented below.
  {{% /md %}}
@@ -724,7 +724,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
             <td class="align-top">ip<wbr>Sets</td>
             <td class="align-top">
                 
-                <code><a href="#acceleratoripset">globalaccelerator.<wbr>Accelerator<wbr>Ip<wbr>Set[]</a></code>
+                <code><a href="#acceleratoripset">Accelerator<wbr>Ip<wbr>Set[]</a></code>
             </td>
             <td class="align-top">{{% md %}} IP address set associated with the accelerator.
  {{% /md %}}
@@ -942,7 +942,7 @@ The following state arguments are supported:
             <td class="align-top">Attributes</td>
             <td class="align-top">
                 
-                <code><a href="#acceleratorattributes">Pulumi.<wbr>Aws.<wbr>Globalaccelerator.<wbr>Accelerator<wbr>Attributes<wbr>Args?</a></code>
+                <code><a href="#acceleratorattributes">Accelerator<wbr>Attributes<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1019,7 +1019,7 @@ The value for the address type must be `IPV4`.
             <td class="align-top">Ip<wbr>Sets</td>
             <td class="align-top">
                 
-                <code><a href="#acceleratoripset">List&lt;Pulumi.<wbr>Aws.<wbr>Globalaccelerator.<wbr>Accelerator<wbr>Ip<wbr>Set<wbr>Args&gt;?</a></code>
+                <code><a href="#acceleratoripset">List&lt;Accelerator<wbr>Ip<wbr>Set<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1196,7 +1196,7 @@ The name of the accelerator.
             <td class="align-top">attributes</td>
             <td class="align-top">
                 
-                <code><a href="#acceleratorattributes">globalaccelerator.<wbr>Accelerator<wbr>Attributes?</a></code>
+                <code><a href="#acceleratorattributes">Accelerator<wbr>Attributes?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1273,7 +1273,7 @@ The value for the address type must be `IPV4`.
             <td class="align-top">ip<wbr>Sets</td>
             <td class="align-top">
                 
-                <code><a href="#acceleratoripset">globalaccelerator.<wbr>Accelerator<wbr>Ip<wbr>Set[]?</a></code>
+                <code><a href="#acceleratoripset">Accelerator<wbr>Ip<wbr>Set[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1759,7 +1759,7 @@ The prefix for the location in the Amazon S3 bucket for the flow logs.
             <td class="align-top">Ip<wbr>Addresses</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

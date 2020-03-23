@@ -125,7 +125,7 @@ Name of the alias.
             <td class="align-top">Routing<wbr>Strategy</td>
             <td class="align-top">
                 
-                <code><a href="#aliasroutingstrategy">Pulumi.<wbr>Aws.<wbr>Gamelift.<wbr>Alias<wbr>Routing<wbr>Strategy<wbr>Args</a></code>
+                <code><a href="#aliasroutingstrategy">Alias<wbr>Routing<wbr>Strategy<wbr>Args</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -140,7 +140,7 @@ Specifies the fleet and/or routing type to use for the alias.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -285,7 +285,7 @@ Name of the alias.
             <td class="align-top">routing<wbr>Strategy</td>
             <td class="align-top">
                 
-                <code><a href="#aliasroutingstrategy">gamelift.<wbr>Alias<wbr>Routing<wbr>Strategy</a></code>
+                <code><a href="#aliasroutingstrategy">Alias<wbr>Routing<wbr>Strategy</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -468,7 +468,7 @@ The following output properties are available:
             <td class="align-top">Routing<wbr>Strategy</td>
             <td class="align-top">
                 
-                <code><a href="#aliasroutingstrategy">Pulumi.<wbr>Aws.<wbr>Gamelift.<wbr>Alias<wbr>Routing<wbr>Strategy</a></code>
+                <code><a href="#aliasroutingstrategy">Alias<wbr>Routing<wbr>Strategy</a></code>
             </td>
             <td class="align-top">{{% md %}} Specifies the fleet and/or routing type to use for the alias.
  {{% /md %}}
@@ -481,7 +481,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} Key-value mapping of resource tags
  {{% /md %}}
@@ -638,7 +638,7 @@ The following output properties are available:
             <td class="align-top">routing<wbr>Strategy</td>
             <td class="align-top">
                 
-                <code><a href="#aliasroutingstrategy">gamelift.<wbr>Alias<wbr>Routing<wbr>Strategy</a></code>
+                <code><a href="#aliasroutingstrategy">Alias<wbr>Routing<wbr>Strategy</a></code>
             </td>
             <td class="align-top">{{% md %}} Specifies the fleet and/or routing type to use for the alias.
  {{% /md %}}
@@ -873,7 +873,7 @@ Name of the alias.
             <td class="align-top">Routing<wbr>Strategy</td>
             <td class="align-top">
                 
-                <code><a href="#aliasroutingstrategy">Pulumi.<wbr>Aws.<wbr>Gamelift.<wbr>Alias<wbr>Routing<wbr>Strategy<wbr>Args?</a></code>
+                <code><a href="#aliasroutingstrategy">Alias<wbr>Routing<wbr>Strategy<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -888,7 +888,7 @@ Specifies the fleet and/or routing type to use for the alias.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1063,7 +1063,7 @@ Name of the alias.
             <td class="align-top">routing<wbr>Strategy</td>
             <td class="align-top">
                 
-                <code><a href="#aliasroutingstrategy">gamelift.<wbr>Alias<wbr>Routing<wbr>Strategy?</a></code>
+                <code><a href="#aliasroutingstrategy">Alias<wbr>Routing<wbr>Strategy?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

@@ -162,7 +162,7 @@ Whether the VPN connection uses static routes exclusively. Static routes must be
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -852,7 +852,7 @@ The following output properties are available:
             <td class="align-top">Routes</td>
             <td class="align-top">
                 
-                <code><a href="#vpnconnectionroute">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Vpn<wbr>Connection<wbr>Route&gt;</a></code>
+                <code><a href="#vpnconnectionroute">List&lt;Vpn<wbr>Connection<wbr>Route&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -877,7 +877,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} Tags to apply to the connection.
  {{% /md %}}
@@ -1111,7 +1111,7 @@ The following output properties are available:
             <td class="align-top">Vgw<wbr>Telemetries</td>
             <td class="align-top">
                 
-                <code><a href="#vpnconnectionvgwtelemetry">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Vpn<wbr>Connection<wbr>Vgw<wbr>Telemetry&gt;</a></code>
+                <code><a href="#vpnconnectionvgwtelemetry">List&lt;Vpn<wbr>Connection<wbr>Vgw<wbr>Telemetry&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1512,7 +1512,7 @@ The following output properties are available:
             <td class="align-top">routes</td>
             <td class="align-top">
                 
-                <code><a href="#vpnconnectionroute">ec2.<wbr>Vpn<wbr>Connection<wbr>Route[]</a></code>
+                <code><a href="#vpnconnectionroute">Vpn<wbr>Connection<wbr>Route[]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1771,7 +1771,7 @@ The following output properties are available:
             <td class="align-top">vgw<wbr>Telemetries</td>
             <td class="align-top">
                 
-                <code><a href="#vpnconnectionvgwtelemetry">ec2.<wbr>Vpn<wbr>Connection<wbr>Vgw<wbr>Telemetry[]</a></code>
+                <code><a href="#vpnconnectionvgwtelemetry">Vpn<wbr>Connection<wbr>Vgw<wbr>Telemetry[]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -2235,7 +2235,7 @@ The ID of the customer gateway.
             <td class="align-top">Routes</td>
             <td class="align-top">
                 
-                <code><a href="#vpnconnectionroute">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Vpn<wbr>Connection<wbr>Route<wbr>Args&gt;?</a></code>
+                <code><a href="#vpnconnectionroute">List&lt;Vpn<wbr>Connection<wbr>Route<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2264,7 +2264,7 @@ Whether the VPN connection uses static routes exclusively. Static routes must be
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2534,7 +2534,7 @@ The type of VPN connection. The only type AWS supports at this time is &#34;ipse
             <td class="align-top">Vgw<wbr>Telemetries</td>
             <td class="align-top">
                 
-                <code><a href="#vpnconnectionvgwtelemetry">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Vpn<wbr>Connection<wbr>Vgw<wbr>Telemetry<wbr>Args&gt;?</a></code>
+                <code><a href="#vpnconnectionvgwtelemetry">List&lt;Vpn<wbr>Connection<wbr>Vgw<wbr>Telemetry<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2991,7 +2991,7 @@ The ID of the customer gateway.
             <td class="align-top">routes</td>
             <td class="align-top">
                 
-                <code><a href="#vpnconnectionroute">ec2.<wbr>Vpn<wbr>Connection<wbr>Route[]?</a></code>
+                <code><a href="#vpnconnectionroute">Vpn<wbr>Connection<wbr>Route[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3290,7 +3290,7 @@ The type of VPN connection. The only type AWS supports at this time is &#34;ipse
             <td class="align-top">vgw<wbr>Telemetries</td>
             <td class="align-top">
                 
-                <code><a href="#vpnconnectionvgwtelemetry">ec2.<wbr>Vpn<wbr>Connection<wbr>Vgw<wbr>Telemetry[]?</a></code>
+                <code><a href="#vpnconnectionvgwtelemetry">Vpn<wbr>Connection<wbr>Vgw<wbr>Telemetry[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

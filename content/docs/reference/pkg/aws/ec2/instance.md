@@ -187,7 +187,7 @@ If set to to 1, hyperthreading is disabled on the launched instance. Defaults to
             <td class="align-top">Credit<wbr>Specification</td>
             <td class="align-top">
                 
-                <code><a href="#instancecreditspecification">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Instance<wbr>Credit<wbr>Specification<wbr>Args?</a></code>
+                <code><a href="#instancecreditspecification">Instance<wbr>Credit<wbr>Specification<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -218,7 +218,7 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
             <td class="align-top">Ebs<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#instanceebsblockdevice">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Instance<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args&gt;?</a></code>
+                <code><a href="#instanceebsblockdevice">List&lt;Instance<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -253,7 +253,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
             <td class="align-top">Ephemeral<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#instanceephemeralblockdevice">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Instance<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args&gt;?</a></code>
+                <code><a href="#instanceephemeralblockdevice">List&lt;Instance<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -378,7 +378,7 @@ The type of instance to start. Updates to this field will trigger a stop/start o
             <td class="align-top">Ipv6Addresses</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -423,7 +423,7 @@ If true, the launched EC2 instance will have detailed monitoring enabled. (Avail
             <td class="align-top">Network<wbr>Interfaces</td>
             <td class="align-top">
                 
-                <code><a href="#instancenetworkinterface">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Instance<wbr>Network<wbr>Interface<wbr>Args&gt;?</a></code>
+                <code><a href="#instancenetworkinterface">List&lt;Instance<wbr>Network<wbr>Interface<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -469,7 +469,7 @@ instance in a VPC.
             <td class="align-top">Root<wbr>Block<wbr>Device</td>
             <td class="align-top">
                 
-                <code><a href="#instancerootblockdevice">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Instance<wbr>Root<wbr>Block<wbr>Device<wbr>Args?</a></code>
+                <code><a href="#instancerootblockdevice">Instance<wbr>Root<wbr>Block<wbr>Device<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -485,7 +485,7 @@ device of the instance. See Block Devices below for details.
             <td class="align-top">Security<wbr>Groups</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -531,7 +531,7 @@ The VPC Subnet ID to launch in.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -591,7 +591,7 @@ Can be used instead of `user_data` to pass base64-encoded binary data directly. 
             <td class="align-top">Volume<wbr>Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -606,7 +606,7 @@ A mapping of tags to assign to the devices created by the instance at launch tim
             <td class="align-top">Vpc<wbr>Security<wbr>Group<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1249,7 +1249,7 @@ If set to to 1, hyperthreading is disabled on the launched instance. Defaults to
             <td class="align-top">credit<wbr>Specification</td>
             <td class="align-top">
                 
-                <code><a href="#instancecreditspecification">ec2.<wbr>Instance<wbr>Credit<wbr>Specification?</a></code>
+                <code><a href="#instancecreditspecification">Instance<wbr>Credit<wbr>Specification?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1280,7 +1280,7 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
             <td class="align-top">ebs<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#instanceebsblockdevice">ec2.<wbr>Instance<wbr>Ebs<wbr>Block<wbr>Device[]?</a></code>
+                <code><a href="#instanceebsblockdevice">Instance<wbr>Ebs<wbr>Block<wbr>Device[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1315,7 +1315,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
             <td class="align-top">ephemeral<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#instanceephemeralblockdevice">ec2.<wbr>Instance<wbr>Ephemeral<wbr>Block<wbr>Device[]?</a></code>
+                <code><a href="#instanceephemeralblockdevice">Instance<wbr>Ephemeral<wbr>Block<wbr>Device[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1376,7 +1376,7 @@ The Id of a dedicated host that the instance will be assigned to. Use when an in
             <td class="align-top">iam<wbr>Instance<wbr>Profile</td>
             <td class="align-top">
                 
-                <code>string | Instance<wbr>Profile</code>
+                <code>string | InstanceProfile</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1411,7 +1411,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             <td class="align-top">instance<wbr>Type</td>
             <td class="align-top">
                 
-                <code>Instance<wbr>Type</code>
+                <code>InstanceType</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1485,7 +1485,7 @@ If true, the launched EC2 instance will have detailed monitoring enabled. (Avail
             <td class="align-top">network<wbr>Interfaces</td>
             <td class="align-top">
                 
-                <code><a href="#instancenetworkinterface">ec2.<wbr>Instance<wbr>Network<wbr>Interface[]?</a></code>
+                <code><a href="#instancenetworkinterface">Instance<wbr>Network<wbr>Interface[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1531,7 +1531,7 @@ instance in a VPC.
             <td class="align-top">root<wbr>Block<wbr>Device</td>
             <td class="align-top">
                 
-                <code><a href="#instancerootblockdevice">ec2.<wbr>Instance<wbr>Root<wbr>Block<wbr>Device?</a></code>
+                <code><a href="#instancerootblockdevice">Instance<wbr>Root<wbr>Block<wbr>Device?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2328,7 +2328,7 @@ only supported on creation of instance type that support CPU Options
             <td class="align-top">Credit<wbr>Specification</td>
             <td class="align-top">
                 
-                <code><a href="#instancecreditspecification">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Instance<wbr>Credit<wbr>Specification?</a></code>
+                <code><a href="#instancecreditspecification">Instance<wbr>Credit<wbr>Specification?</a></code>
             </td>
             <td class="align-top">{{% md %}} Customize the credit specification of the instance. See Credit Specification below for more details.
  {{% /md %}}
@@ -2355,7 +2355,7 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
             <td class="align-top">Ebs<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#instanceebsblockdevice">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Instance<wbr>Ebs<wbr>Block<wbr>Device&gt;</a></code>
+                <code><a href="#instanceebsblockdevice">List&lt;Instance<wbr>Ebs<wbr>Block<wbr>Device&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} Additional EBS block devices to attach to the
 instance.  Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection.
@@ -2386,7 +2386,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
             <td class="align-top">Ephemeral<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#instanceephemeralblockdevice">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Instance<wbr>Ephemeral<wbr>Block<wbr>Device&gt;</a></code>
+                <code><a href="#instanceephemeralblockdevice">List&lt;Instance<wbr>Ephemeral<wbr>Block<wbr>Device&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} Customize Ephemeral (also known as
 &#34;Instance Store&#34;) volumes on the instance. See Block Devices below for details.
@@ -2508,7 +2508,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             <td class="align-top">Ipv6Addresses</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} Specify one or more IPv6 addresses from the range of the subnet to associate with the primary network interface
  {{% /md %}}
@@ -2547,7 +2547,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             <td class="align-top">Network<wbr>Interfaces</td>
             <td class="align-top">
                 
-                <code><a href="#instancenetworkinterface">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Instance<wbr>Network<wbr>Interface&gt;</a></code>
+                <code><a href="#instancenetworkinterface">List&lt;Instance<wbr>Network<wbr>Interface&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} Customize network interfaces to be attached at instance boot time. See Network Interfaces below for more details.
  {{% /md %}}
@@ -2659,7 +2659,7 @@ is only available if you&#39;ve enabled DNS hostnames for your VPC
             <td class="align-top">Root<wbr>Block<wbr>Device</td>
             <td class="align-top">
                 
-                <code><a href="#instancerootblockdevice">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Instance<wbr>Root<wbr>Block<wbr>Device</a></code>
+                <code><a href="#instancerootblockdevice">Instance<wbr>Root<wbr>Block<wbr>Device</a></code>
             </td>
             <td class="align-top">{{% md %}} Customize details about the root block
 device of the instance. See Block Devices below for details.
@@ -2673,7 +2673,7 @@ device of the instance. See Block Devices below for details.
             <td class="align-top">Security<wbr>Groups</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} A list of security group names (EC2-Classic) or IDs (default VPC) to associate with.
  {{% /md %}}
@@ -2713,7 +2713,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -2765,7 +2765,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             <td class="align-top">Volume<wbr>Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;</code>
+                <code>Dictionary<string, object></code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the devices created by the instance at launch time.
  {{% /md %}}
@@ -2778,7 +2778,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             <td class="align-top">Vpc<wbr>Security<wbr>Group<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} A list of security group IDs to associate with.
  {{% /md %}}
@@ -3454,7 +3454,7 @@ only supported on creation of instance type that support CPU Options
             <td class="align-top">credit<wbr>Specification</td>
             <td class="align-top">
                 
-                <code><a href="#instancecreditspecification">ec2.<wbr>Instance<wbr>Credit<wbr>Specification?</a></code>
+                <code><a href="#instancecreditspecification">Instance<wbr>Credit<wbr>Specification?</a></code>
             </td>
             <td class="align-top">{{% md %}} Customize the credit specification of the instance. See Credit Specification below for more details.
  {{% /md %}}
@@ -3481,7 +3481,7 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
             <td class="align-top">ebs<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#instanceebsblockdevice">ec2.<wbr>Instance<wbr>Ebs<wbr>Block<wbr>Device[]</a></code>
+                <code><a href="#instanceebsblockdevice">Instance<wbr>Ebs<wbr>Block<wbr>Device[]</a></code>
             </td>
             <td class="align-top">{{% md %}} Additional EBS block devices to attach to the
 instance.  Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection.
@@ -3512,7 +3512,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
             <td class="align-top">ephemeral<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#instanceephemeralblockdevice">ec2.<wbr>Instance<wbr>Ephemeral<wbr>Block<wbr>Device[]</a></code>
+                <code><a href="#instanceephemeralblockdevice">Instance<wbr>Ephemeral<wbr>Block<wbr>Device[]</a></code>
             </td>
             <td class="align-top">{{% md %}} Customize Ephemeral (also known as
 &#34;Instance Store&#34;) volumes on the instance. See Block Devices below for details.
@@ -3609,7 +3609,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             <td class="align-top">instance<wbr>Type</td>
             <td class="align-top">
                 
-                <code>Instance<wbr>Type</code>
+                <code>InstanceType</code>
             </td>
             <td class="align-top">{{% md %}} The type of instance to start. Updates to this field will trigger a stop/start of the EC2 instance.
  {{% /md %}}
@@ -3673,7 +3673,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             <td class="align-top">network<wbr>Interfaces</td>
             <td class="align-top">
                 
-                <code><a href="#instancenetworkinterface">ec2.<wbr>Instance<wbr>Network<wbr>Interface[]</a></code>
+                <code><a href="#instancenetworkinterface">Instance<wbr>Network<wbr>Interface[]</a></code>
             </td>
             <td class="align-top">{{% md %}} Customize network interfaces to be attached at instance boot time. See Network Interfaces below for more details.
  {{% /md %}}
@@ -3785,7 +3785,7 @@ is only available if you&#39;ve enabled DNS hostnames for your VPC
             <td class="align-top">root<wbr>Block<wbr>Device</td>
             <td class="align-top">
                 
-                <code><a href="#instancerootblockdevice">ec2.<wbr>Instance<wbr>Root<wbr>Block<wbr>Device</a></code>
+                <code><a href="#instancerootblockdevice">Instance<wbr>Root<wbr>Block<wbr>Device</a></code>
             </td>
             <td class="align-top">{{% md %}} Customize details about the root block
 device of the instance. See Block Devices below for details.
@@ -4651,7 +4651,7 @@ If set to to 1, hyperthreading is disabled on the launched instance. Defaults to
             <td class="align-top">Credit<wbr>Specification</td>
             <td class="align-top">
                 
-                <code><a href="#instancecreditspecification">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Instance<wbr>Credit<wbr>Specification<wbr>Args?</a></code>
+                <code><a href="#instancecreditspecification">Instance<wbr>Credit<wbr>Specification<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4682,7 +4682,7 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
             <td class="align-top">Ebs<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#instanceebsblockdevice">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Instance<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args&gt;?</a></code>
+                <code><a href="#instanceebsblockdevice">List&lt;Instance<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4717,7 +4717,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
             <td class="align-top">Ephemeral<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#instanceephemeralblockdevice">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Instance<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args&gt;?</a></code>
+                <code><a href="#instanceephemeralblockdevice">List&lt;Instance<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4857,7 +4857,7 @@ The type of instance to start. Updates to this field will trigger a stop/start o
             <td class="align-top">Ipv6Addresses</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4902,7 +4902,7 @@ If true, the launched EC2 instance will have detailed monitoring enabled. (Avail
             <td class="align-top">Network<wbr>Interfaces</td>
             <td class="align-top">
                 
-                <code><a href="#instancenetworkinterface">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Instance<wbr>Network<wbr>Interface<wbr>Args&gt;?</a></code>
+                <code><a href="#instancenetworkinterface">List&lt;Instance<wbr>Network<wbr>Interface<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5030,7 +5030,7 @@ The public IP address assigned to the instance, if applicable. **NOTE**: If you 
             <td class="align-top">Root<wbr>Block<wbr>Device</td>
             <td class="align-top">
                 
-                <code><a href="#instancerootblockdevice">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Instance<wbr>Root<wbr>Block<wbr>Device<wbr>Args?</a></code>
+                <code><a href="#instancerootblockdevice">Instance<wbr>Root<wbr>Block<wbr>Device<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5046,7 +5046,7 @@ device of the instance. See Block Devices below for details.
             <td class="align-top">Security<wbr>Groups</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5092,7 +5092,7 @@ The VPC Subnet ID to launch in.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5152,7 +5152,7 @@ Can be used instead of `user_data` to pass base64-encoded binary data directly. 
             <td class="align-top">Volume<wbr>Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5167,7 +5167,7 @@ A mapping of tags to assign to the devices created by the instance at launch tim
             <td class="align-top">Vpc<wbr>Security<wbr>Group<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5937,7 +5937,7 @@ If set to to 1, hyperthreading is disabled on the launched instance. Defaults to
             <td class="align-top">credit<wbr>Specification</td>
             <td class="align-top">
                 
-                <code><a href="#instancecreditspecification">ec2.<wbr>Instance<wbr>Credit<wbr>Specification?</a></code>
+                <code><a href="#instancecreditspecification">Instance<wbr>Credit<wbr>Specification?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5968,7 +5968,7 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
             <td class="align-top">ebs<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#instanceebsblockdevice">ec2.<wbr>Instance<wbr>Ebs<wbr>Block<wbr>Device[]?</a></code>
+                <code><a href="#instanceebsblockdevice">Instance<wbr>Ebs<wbr>Block<wbr>Device[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6003,7 +6003,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
             <td class="align-top">ephemeral<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#instanceephemeralblockdevice">ec2.<wbr>Instance<wbr>Ephemeral<wbr>Block<wbr>Device[]?</a></code>
+                <code><a href="#instanceephemeralblockdevice">Instance<wbr>Ephemeral<wbr>Block<wbr>Device[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6064,7 +6064,7 @@ The Id of a dedicated host that the instance will be assigned to. Use when an in
             <td class="align-top">iam<wbr>Instance<wbr>Profile</td>
             <td class="align-top">
                 
-                <code>string | Instance<wbr>Profile</code>
+                <code>string | InstanceProfile</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6114,7 +6114,7 @@ The state of the instance. One of: `pending`, `running`, `shutting-down`, `termi
             <td class="align-top">instance<wbr>Type</td>
             <td class="align-top">
                 
-                <code>Instance<wbr>Type?</code>
+                <code>InstanceType?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6188,7 +6188,7 @@ If true, the launched EC2 instance will have detailed monitoring enabled. (Avail
             <td class="align-top">network<wbr>Interfaces</td>
             <td class="align-top">
                 
-                <code><a href="#instancenetworkinterface">ec2.<wbr>Instance<wbr>Network<wbr>Interface[]?</a></code>
+                <code><a href="#instancenetworkinterface">Instance<wbr>Network<wbr>Interface[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6316,7 +6316,7 @@ The public IP address assigned to the instance, if applicable. **NOTE**: If you 
             <td class="align-top">root<wbr>Block<wbr>Device</td>
             <td class="align-top">
                 
-                <code><a href="#instancerootblockdevice">ec2.<wbr>Instance<wbr>Root<wbr>Block<wbr>Device?</a></code>
+                <code><a href="#instancerootblockdevice">Instance<wbr>Root<wbr>Block<wbr>Device?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

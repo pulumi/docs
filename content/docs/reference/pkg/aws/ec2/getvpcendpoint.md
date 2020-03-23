@@ -50,7 +50,7 @@ const privateS3 = new aws.ec2.VpcEndpointRouteTableAssociation("private_s3", {
 <div class="highlight">
 <pre class="chroma">
 <code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetVpcEndpoint </span><span class="p">{</span>
-    <span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.GetVpcEndpointResult.html">Pulumi.Aws.Ec2.GetVpcEndpointResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.GetVpcEndpointArgs.html">GetVpcEndpointArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span>
+    <span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.GetVpcEndpointResult.html">GetVpcEndpointResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.GetVpcEndpointArgs.html">GetVpcEndpointArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span>
 <span class="p">}</span></code></pre>
 </div>
 
@@ -79,7 +79,7 @@ The following arguments are supported:
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getvpcendpointfilter">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Get<wbr>Vpc<wbr>Endpoint<wbr>Filter<wbr>Args&gt;?</a></code>
+                <code><a href="#getvpcendpointfilter">List&lt;Get<wbr>Vpc<wbr>Endpoint<wbr>Filter<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -139,7 +139,7 @@ The state of the specific VPC Endpoint to retrieve.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -301,7 +301,7 @@ The ID of the VPC in which the specific VPC Endpoint is used.
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getvpcendpointfilter">ec2.<wbr>Get<wbr>Vpc<wbr>Endpoint<wbr>Filter[]?</a></code>
+                <code><a href="#getvpcendpointfilter">Get<wbr>Vpc<wbr>Endpoint<wbr>Filter[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -538,7 +538,7 @@ The following output properties are available:
             <td class="align-top">Cidr<wbr>Blocks</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} The list of CIDR blocks for the exposed AWS service. Applicable for endpoints of type `Gateway`.
  {{% /md %}}
@@ -551,7 +551,7 @@ The following output properties are available:
             <td class="align-top">Dns<wbr>Entries</td>
             <td class="align-top">
                 
-                <code><a href="#getvpcendpointdnsentry">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Get<wbr>Vpc<wbr>Endpoint<wbr>Dns<wbr>Entry&gt;</a></code>
+                <code><a href="#getvpcendpointdnsentry">List&lt;Get<wbr>Vpc<wbr>Endpoint<wbr>Dns<wbr>Entry&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} The DNS entries for the VPC Endpoint. Applicable for endpoints of type `Interface`. DNS blocks are documented below.
  {{% /md %}}
@@ -564,7 +564,7 @@ The following output properties are available:
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getvpcendpointfilter">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Get<wbr>Vpc<wbr>Endpoint<wbr>Filter&gt;?</a></code>
+                <code><a href="#getvpcendpointfilter">List&lt;Get<wbr>Vpc<wbr>Endpoint<wbr>Filter&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -588,7 +588,7 @@ The following output properties are available:
             <td class="align-top">Network<wbr>Interface<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} One or more network interfaces for the VPC Endpoint. Applicable for endpoints of type `Interface`.
  {{% /md %}}
@@ -666,7 +666,7 @@ The following output properties are available:
             <td class="align-top">Route<wbr>Table<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} One or more route tables associated with the VPC Endpoint. Applicable for endpoints of type `Gateway`.
  {{% /md %}}
@@ -679,7 +679,7 @@ The following output properties are available:
             <td class="align-top">Security<wbr>Group<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} One or more security groups associated with the network interfaces. Applicable for endpoints of type `Interface`.
  {{% /md %}}
@@ -716,7 +716,7 @@ The following output properties are available:
             <td class="align-top">Subnet<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} One or more subnets in which the VPC Endpoint is located. Applicable for endpoints of type `Interface`.
  {{% /md %}}
@@ -729,7 +729,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;</code>
+                <code>Dictionary<string, object></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1047,7 +1047,7 @@ The following output properties are available:
             <td class="align-top">dns<wbr>Entries</td>
             <td class="align-top">
                 
-                <code><a href="#getvpcendpointdnsentry">ec2.<wbr>Get<wbr>Vpc<wbr>Endpoint<wbr>Dns<wbr>Entry[]</a></code>
+                <code><a href="#getvpcendpointdnsentry">Get<wbr>Vpc<wbr>Endpoint<wbr>Dns<wbr>Entry[]</a></code>
             </td>
             <td class="align-top">{{% md %}} The DNS entries for the VPC Endpoint. Applicable for endpoints of type `Interface`. DNS blocks are documented below.
  {{% /md %}}
@@ -1060,7 +1060,7 @@ The following output properties are available:
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getvpcendpointfilter">ec2.<wbr>Get<wbr>Vpc<wbr>Endpoint<wbr>Filter[]?</a></code>
+                <code><a href="#getvpcendpointfilter">Get<wbr>Vpc<wbr>Endpoint<wbr>Filter[]?</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1793,7 +1793,7 @@ The name of the field to filter by, as defined by
             <td class="align-top">Values</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

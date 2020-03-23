@@ -256,7 +256,7 @@ The last path segment of this API resource.
             <td class="align-top">rest<wbr>Api</td>
             <td class="align-top">
                 
-                <code>string | Rest<wbr>Api</code>
+                <code>string | RestApi</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -922,7 +922,7 @@ The last path segment of this API resource.
             <td class="align-top">rest<wbr>Api</td>
             <td class="align-top">
                 
-                <code>string | Rest<wbr>Api</code>
+                <code>string | RestApi</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

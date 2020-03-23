@@ -114,7 +114,7 @@ The following arguments are supported:
             <td class="align-top">Cidr<wbr>Blocks</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -159,7 +159,7 @@ The start port (or ICMP type number if protocol is &#34;icmp&#34; or &#34;icmpv6
             <td class="align-top">Ipv6Cidr<wbr>Blocks</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -174,7 +174,7 @@ List of IPv6 CIDR blocks.
             <td class="align-top">Prefix<wbr>List<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -884,7 +884,7 @@ The following output properties are available:
             <td class="align-top">Cidr<wbr>Blocks</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} List of CIDR blocks. Cannot be specified with `source_security_group_id`.
  {{% /md %}}
@@ -923,7 +923,7 @@ The following output properties are available:
             <td class="align-top">Ipv6Cidr<wbr>Blocks</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} List of IPv6 CIDR blocks.
  {{% /md %}}
@@ -936,7 +936,7 @@ The following output properties are available:
             <td class="align-top">Prefix<wbr>List<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} List of prefix list IDs (for allowing access to VPC endpoints).
 Only valid with `egress`.
@@ -1611,7 +1611,7 @@ The following state arguments are supported:
             <td class="align-top">Cidr<wbr>Blocks</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1656,7 +1656,7 @@ The start port (or ICMP type number if protocol is &#34;icmp&#34; or &#34;icmpv6
             <td class="align-top">Ipv6Cidr<wbr>Blocks</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1671,7 +1671,7 @@ List of IPv6 CIDR blocks.
             <td class="align-top">Prefix<wbr>List<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

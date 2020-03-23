@@ -142,7 +142,7 @@ A name for the resource server.
             <td class="align-top">Scopes</td>
             <td class="align-top">
                 
-                <code><a href="#resourceserverscope">List&lt;Pulumi.<wbr>Aws.<wbr>Cognito.<wbr>Resource<wbr>Server<wbr>Scope<wbr>Args&gt;?</a></code>
+                <code><a href="#resourceserverscope">List&lt;Resource<wbr>Server<wbr>Scope<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -300,7 +300,7 @@ A name for the resource server.
             <td class="align-top">scopes</td>
             <td class="align-top">
                 
-                <code><a href="#resourceserverscope">cognito.<wbr>Resource<wbr>Server<wbr>Scope[]?</a></code>
+                <code><a href="#resourceserverscope">Resource<wbr>Server<wbr>Scope[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -468,7 +468,7 @@ The following output properties are available:
             <td class="align-top">Scope<wbr>Identifiers</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} A list of all scopes configured for this resource server in the format identifier/scope_name.
  {{% /md %}}
@@ -481,7 +481,7 @@ The following output properties are available:
             <td class="align-top">Scopes</td>
             <td class="align-top">
                 
-                <code><a href="#resourceserverscope">List&lt;Pulumi.<wbr>Aws.<wbr>Cognito.<wbr>Resource<wbr>Server<wbr>Scope&gt;?</a></code>
+                <code><a href="#resourceserverscope">List&lt;Resource<wbr>Server<wbr>Scope&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of Authorization Scope.
  {{% /md %}}
@@ -649,7 +649,7 @@ The following output properties are available:
             <td class="align-top">scopes</td>
             <td class="align-top">
                 
-                <code><a href="#resourceserverscope">cognito.<wbr>Resource<wbr>Server<wbr>Scope[]?</a></code>
+                <code><a href="#resourceserverscope">Resource<wbr>Server<wbr>Scope[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of Authorization Scope.
  {{% /md %}}
@@ -867,7 +867,7 @@ A name for the resource server.
             <td class="align-top">Scope<wbr>Identifiers</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -882,7 +882,7 @@ A list of all scopes configured for this resource server in the format identifie
             <td class="align-top">Scopes</td>
             <td class="align-top">
                 
-                <code><a href="#resourceserverscope">List&lt;Pulumi.<wbr>Aws.<wbr>Cognito.<wbr>Resource<wbr>Server<wbr>Scope<wbr>Args&gt;?</a></code>
+                <code><a href="#resourceserverscope">List&lt;Resource<wbr>Server<wbr>Scope<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1070,7 +1070,7 @@ A list of all scopes configured for this resource server in the format identifie
             <td class="align-top">scopes</td>
             <td class="align-top">
                 
-                <code><a href="#resourceserverscope">cognito.<wbr>Resource<wbr>Server<wbr>Scope[]?</a></code>
+                <code><a href="#resourceserverscope">Resource<wbr>Server<wbr>Scope[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

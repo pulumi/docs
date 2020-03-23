@@ -110,7 +110,7 @@ Amazon Resource Name (ARN) of the S3 Bucket.
             <td class="align-top">S3Config</td>
             <td class="align-top">
                 
-                <code><a href="#s3locations3config">Pulumi.<wbr>Aws.<wbr>Datasync.<wbr>S3Location<wbr>S3Config<wbr>Args</a></code>
+                <code><a href="#s3locations3config">S3Location<wbr>S3Config<wbr>Args</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -140,7 +140,7 @@ Prefix to perform actions as source or destination.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -270,7 +270,7 @@ Amazon Resource Name (ARN) of the S3 Bucket.
             <td class="align-top">s3Config</td>
             <td class="align-top">
                 
-                <code><a href="#s3locations3config">datasync.<wbr>S3Location<wbr>S3Config</a></code>
+                <code><a href="#s3locations3config">S3Location<wbr>S3Config</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -455,7 +455,7 @@ The following output properties are available:
             <td class="align-top">S3Config</td>
             <td class="align-top">
                 
-                <code><a href="#s3locations3config">Pulumi.<wbr>Aws.<wbr>Datasync.<wbr>S3Location<wbr>S3Config</a></code>
+                <code><a href="#s3locations3config">S3Location<wbr>S3Config</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block containing information for connecting to S3.
  {{% /md %}}
@@ -481,7 +481,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} Key-value pairs of resource tags to assign to the DataSync Location.
  {{% /md %}}
@@ -649,7 +649,7 @@ The following output properties are available:
             <td class="align-top">s3Config</td>
             <td class="align-top">
                 
-                <code><a href="#s3locations3config">datasync.<wbr>S3Location<wbr>S3Config</a></code>
+                <code><a href="#s3locations3config">S3Location<wbr>S3Config</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block containing information for connecting to S3.
  {{% /md %}}
@@ -906,7 +906,7 @@ Amazon Resource Name (ARN) of the S3 Bucket.
             <td class="align-top">S3Config</td>
             <td class="align-top">
                 
-                <code><a href="#s3locations3config">Pulumi.<wbr>Aws.<wbr>Datasync.<wbr>S3Location<wbr>S3Config<wbr>Args?</a></code>
+                <code><a href="#s3locations3config">S3Location<wbr>S3Config<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -936,7 +936,7 @@ Prefix to perform actions as source or destination.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1124,7 +1124,7 @@ Amazon Resource Name (ARN) of the S3 Bucket.
             <td class="align-top">s3Config</td>
             <td class="align-top">
                 
-                <code><a href="#s3locations3config">datasync.<wbr>S3Location<wbr>S3Config?</a></code>
+                <code><a href="#s3locations3config">S3Location<wbr>S3Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

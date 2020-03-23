@@ -101,7 +101,7 @@ The following arguments are supported:
             <td class="align-top">Appversion<wbr>Lifecycle</td>
             <td class="align-top">
                 
-                <code><a href="#applicationappversionlifecycle">Pulumi.<wbr>Aws.<wbr>Elasticbeanstalk.<wbr>Application<wbr>Appversion<wbr>Lifecycle<wbr>Args?</a></code>
+                <code><a href="#applicationappversionlifecycle">Application<wbr>Appversion<wbr>Lifecycle<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -145,7 +145,7 @@ The name of the application, must be unique within your account
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -259,7 +259,7 @@ Key-value mapping of tags for the Elastic Beanstalk Application.
             <td class="align-top">appversion<wbr>Lifecycle</td>
             <td class="align-top">
                 
-                <code><a href="#applicationappversionlifecycle">elasticbeanstalk.<wbr>Application<wbr>Appversion<wbr>Lifecycle?</a></code>
+                <code><a href="#applicationappversionlifecycle">Application<wbr>Appversion<wbr>Lifecycle?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -431,7 +431,7 @@ The following output properties are available:
             <td class="align-top">Appversion<wbr>Lifecycle</td>
             <td class="align-top">
                 
-                <code><a href="#applicationappversionlifecycle">Pulumi.<wbr>Aws.<wbr>Elasticbeanstalk.<wbr>Application<wbr>Appversion<wbr>Lifecycle?</a></code>
+                <code><a href="#applicationappversionlifecycle">Application<wbr>Appversion<wbr>Lifecycle?</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -482,7 +482,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} Key-value mapping of tags for the Elastic Beanstalk Application.
  {{% /md %}}
@@ -599,7 +599,7 @@ The following output properties are available:
             <td class="align-top">appversion<wbr>Lifecycle</td>
             <td class="align-top">
                 
-                <code><a href="#applicationappversionlifecycle">elasticbeanstalk.<wbr>Application<wbr>Appversion<wbr>Lifecycle?</a></code>
+                <code><a href="#applicationappversionlifecycle">Application<wbr>Appversion<wbr>Lifecycle?</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -826,7 +826,7 @@ The following state arguments are supported:
             <td class="align-top">Appversion<wbr>Lifecycle</td>
             <td class="align-top">
                 
-                <code><a href="#applicationappversionlifecycle">Pulumi.<wbr>Aws.<wbr>Elasticbeanstalk.<wbr>Application<wbr>Appversion<wbr>Lifecycle<wbr>Args?</a></code>
+                <code><a href="#applicationappversionlifecycle">Application<wbr>Appversion<wbr>Lifecycle<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -885,7 +885,7 @@ The name of the application, must be unique within your account
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1014,7 +1014,7 @@ Key-value mapping of tags for the Elastic Beanstalk Application.
             <td class="align-top">appversion<wbr>Lifecycle</td>
             <td class="align-top">
                 
-                <code><a href="#applicationappversionlifecycle">elasticbeanstalk.<wbr>Application<wbr>Appversion<wbr>Lifecycle?</a></code>
+                <code><a href="#applicationappversionlifecycle">Application<wbr>Appversion<wbr>Lifecycle?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

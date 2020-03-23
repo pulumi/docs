@@ -60,7 +60,7 @@ const tagFilter = aws.ram.getResourceShare({
 <div class="highlight">
 <pre class="chroma">
 <code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetResourceShare </span><span class="p">{</span>
-    <span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ram.GetResourceShareResult.html">Pulumi.Aws.Ram.GetResourceShareResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ram.GetResourceShareArgs.html">GetResourceShareArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span>
+    <span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ram.GetResourceShareResult.html">GetResourceShareResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ram.GetResourceShareArgs.html">GetResourceShareArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span>
 <span class="p">}</span></code></pre>
 </div>
 
@@ -89,7 +89,7 @@ The following arguments are supported:
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getresourcesharefilter">List&lt;Pulumi.<wbr>Aws.<wbr>Ram.<wbr>Get<wbr>Resource<wbr>Share<wbr>Filter<wbr>Args&gt;?</a></code>
+                <code><a href="#getresourcesharefilter">List&lt;Get<wbr>Resource<wbr>Share<wbr>Filter<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -134,7 +134,7 @@ The owner of the resource share. Valid values are SELF or OTHER-ACCOUNTS
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -247,7 +247,7 @@ The owner of the resource share. Valid values are SELF or OTHER-ACCOUNTS
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getresourcesharefilter">ram.<wbr>Get<wbr>Resource<wbr>Share<wbr>Filter[]?</a></code>
+                <code><a href="#getresourcesharefilter">Get<wbr>Resource<wbr>Share<wbr>Filter[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -433,7 +433,7 @@ The following output properties are available:
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getresourcesharefilter">List&lt;Pulumi.<wbr>Aws.<wbr>Ram.<wbr>Get<wbr>Resource<wbr>Share<wbr>Filter&gt;?</a></code>
+                <code><a href="#getresourcesharefilter">List&lt;Get<wbr>Resource<wbr>Share<wbr>Filter&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -495,7 +495,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;</code>
+                <code>Dictionary<string, object></code>
             </td>
             <td class="align-top">{{% md %}} The Tags attached to the RAM share
  {{% /md %}}
@@ -649,7 +649,7 @@ The following output properties are available:
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getresourcesharefilter">ram.<wbr>Get<wbr>Resource<wbr>Share<wbr>Filter[]?</a></code>
+                <code><a href="#getresourcesharefilter">Get<wbr>Resource<wbr>Share<wbr>Filter[]?</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -893,7 +893,7 @@ The name of the tag key to filter on.
             <td class="align-top">Values</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

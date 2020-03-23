@@ -122,7 +122,7 @@ The path to the function&#39;s deployment package within the local filesystem. I
             <td class="align-top">Compatible<wbr>Runtimes</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -262,7 +262,7 @@ Used to trigger updates. Must be set to a base64-encoded SHA256 hash of the pack
             <td class="align-top">Code</td>
             <td class="align-top">
                 
-                <code>pulumi.<wbr>Archive</code>
+                <code>pulumi.Archive</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -417,7 +417,7 @@ Used to trigger updates. Must be set to a base64-encoded SHA256 hash of the pack
             <td class="align-top">code</td>
             <td class="align-top">
                 
-                <code>pulumi.asset.<wbr>Archive?</code>
+                <code>pulumi.asset.Archive?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -572,7 +572,7 @@ Used to trigger updates. Must be set to a base64-encoded SHA256 hash of the pack
             <td class="align-top">code</td>
             <td class="align-top">
                 
-                <code>pulumi.<wbr>Archive</code>
+                <code>pulumi.Archive</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -767,7 +767,7 @@ The following output properties are available:
             <td class="align-top">Compatible<wbr>Runtimes</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} A list of [Runtimes][2] this layer is compatible with. Up to 5 runtimes can be specified.
  {{% /md %}}
@@ -956,7 +956,7 @@ The following output properties are available:
             <td class="align-top">Code</td>
             <td class="align-top">
                 
-                <code>pulumi.<wbr>Archive</code>
+                <code>pulumi.Archive</code>
             </td>
             <td class="align-top">{{% md %}} The path to the function&#39;s deployment package within the local filesystem. If defined, The `s3_`-prefixed options cannot be used.
  {{% /md %}}
@@ -1158,7 +1158,7 @@ The following output properties are available:
             <td class="align-top">code</td>
             <td class="align-top">
                 
-                <code>pulumi.asset.<wbr>Archive?</code>
+                <code>pulumi.asset.Archive?</code>
             </td>
             <td class="align-top">{{% md %}} The path to the function&#39;s deployment package within the local filesystem. If defined, The `s3_`-prefixed options cannot be used.
  {{% /md %}}
@@ -1360,7 +1360,7 @@ The following output properties are available:
             <td class="align-top">code</td>
             <td class="align-top">
                 
-                <code>pulumi.<wbr>Archive</code>
+                <code>pulumi.Archive</code>
             </td>
             <td class="align-top">{{% md %}} The path to the function&#39;s deployment package within the local filesystem. If defined, The `s3_`-prefixed options cannot be used.
  {{% /md %}}
@@ -1638,7 +1638,7 @@ The path to the function&#39;s deployment package within the local filesystem. I
             <td class="align-top">Compatible<wbr>Runtimes</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1853,7 +1853,7 @@ The Amazon Resource Name (ARN) of the Lambda Layer with version.
             <td class="align-top">Code</td>
             <td class="align-top">
                 
-                <code>pulumi.<wbr>Archive</code>
+                <code>pulumi.Archive</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2083,7 +2083,7 @@ The Amazon Resource Name (ARN) of the Lambda Layer with version.
             <td class="align-top">code</td>
             <td class="align-top">
                 
-                <code>pulumi.asset.<wbr>Archive?</code>
+                <code>pulumi.asset.Archive?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2313,7 +2313,7 @@ The Amazon Resource Name (ARN) of the Lambda Layer with version.
             <td class="align-top">code</td>
             <td class="align-top">
                 
-                <code>pulumi.<wbr>Archive</code>
+                <code>pulumi.Archive</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

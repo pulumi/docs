@@ -161,7 +161,7 @@ Name for the alias you are creating. Pattern: `(?!^[0-9]&#43;$)([a-zA-Z0-9-_]&#4
             <td class="align-top">Routing<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#aliasroutingconfig">Pulumi.<wbr>Aws.<wbr>Lambda.<wbr>Alias<wbr>Routing<wbr>Config<wbr>Args?</a></code>
+                <code><a href="#aliasroutingconfig">Alias<wbr>Routing<wbr>Config<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -351,7 +351,7 @@ Name for the alias you are creating. Pattern: `(?!^[0-9]&#43;$)([a-zA-Z0-9-_]&#4
             <td class="align-top">routing<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#aliasroutingconfig">lambda.<wbr>Alias<wbr>Routing<wbr>Config?</a></code>
+                <code><a href="#aliasroutingconfig">Alias<wbr>Routing<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -573,7 +573,7 @@ The following output properties are available:
             <td class="align-top">Routing<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#aliasroutingconfig">Pulumi.<wbr>Aws.<wbr>Lambda.<wbr>Alias<wbr>Routing<wbr>Config?</a></code>
+                <code><a href="#aliasroutingconfig">Alias<wbr>Routing<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} The Lambda alias&#39; route configuration settings. Fields documented below
  {{% /md %}}
@@ -795,7 +795,7 @@ The following output properties are available:
             <td class="align-top">routing<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#aliasroutingconfig">lambda.<wbr>Alias<wbr>Routing<wbr>Config?</a></code>
+                <code><a href="#aliasroutingconfig">Alias<wbr>Routing<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} The Lambda alias&#39; route configuration settings. Fields documented below
  {{% /md %}}
@@ -1088,7 +1088,7 @@ Name for the alias you are creating. Pattern: `(?!^[0-9]&#43;$)([a-zA-Z0-9-_]&#4
             <td class="align-top">Routing<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#aliasroutingconfig">Pulumi.<wbr>Aws.<wbr>Lambda.<wbr>Alias<wbr>Routing<wbr>Config<wbr>Args?</a></code>
+                <code><a href="#aliasroutingconfig">Alias<wbr>Routing<wbr>Config<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1338,7 +1338,7 @@ Name for the alias you are creating. Pattern: `(?!^[0-9]&#43;$)([a-zA-Z0-9-_]&#4
             <td class="align-top">routing<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#aliasroutingconfig">lambda.<wbr>Alias<wbr>Routing<wbr>Config?</a></code>
+                <code><a href="#aliasroutingconfig">Alias<wbr>Routing<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1526,7 +1526,7 @@ The Lambda alias&#39; route configuration settings. Fields documented below
             <td class="align-top">Additional<wbr>Version<wbr>Weights</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, double&gt;?</code>
+                <code>Dictionary<string, double>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

@@ -136,7 +136,7 @@ Direct all requests from a user to the same endpoint. Valid values are `NONE`, `
             <td class="align-top">Port<wbr>Ranges</td>
             <td class="align-top">
                 
-                <code><a href="#listenerportrange">List&lt;Pulumi.<wbr>Aws.<wbr>Globalaccelerator.<wbr>Listener<wbr>Port<wbr>Range<wbr>Args&gt;</a></code>
+                <code><a href="#listenerportrange">List&lt;Listener<wbr>Port<wbr>Range<wbr>Args&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -296,7 +296,7 @@ Direct all requests from a user to the same endpoint. Valid values are `NONE`, `
             <td class="align-top">port<wbr>Ranges</td>
             <td class="align-top">
                 
-                <code><a href="#listenerportrange">globalaccelerator.<wbr>Listener<wbr>Port<wbr>Range[]</a></code>
+                <code><a href="#listenerportrange">Listener<wbr>Port<wbr>Range[]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -466,7 +466,7 @@ The following output properties are available:
             <td class="align-top">Port<wbr>Ranges</td>
             <td class="align-top">
                 
-                <code><a href="#listenerportrange">List&lt;Pulumi.<wbr>Aws.<wbr>Globalaccelerator.<wbr>Listener<wbr>Port<wbr>Range&gt;</a></code>
+                <code><a href="#listenerportrange">List&lt;Listener<wbr>Port<wbr>Range&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} The list of port ranges for the connections from clients to the accelerator. Fields documented below.
  {{% /md %}}
@@ -610,7 +610,7 @@ The following output properties are available:
             <td class="align-top">port<wbr>Ranges</td>
             <td class="align-top">
                 
-                <code><a href="#listenerportrange">globalaccelerator.<wbr>Listener<wbr>Port<wbr>Range[]</a></code>
+                <code><a href="#listenerportrange">Listener<wbr>Port<wbr>Range[]</a></code>
             </td>
             <td class="align-top">{{% md %}} The list of port ranges for the connections from clients to the accelerator. Fields documented below.
  {{% /md %}}
@@ -817,7 +817,7 @@ Direct all requests from a user to the same endpoint. Valid values are `NONE`, `
             <td class="align-top">Port<wbr>Ranges</td>
             <td class="align-top">
                 
-                <code><a href="#listenerportrange">List&lt;Pulumi.<wbr>Aws.<wbr>Globalaccelerator.<wbr>Listener<wbr>Port<wbr>Range<wbr>Args&gt;?</a></code>
+                <code><a href="#listenerportrange">List&lt;Listener<wbr>Port<wbr>Range<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -977,7 +977,7 @@ Direct all requests from a user to the same endpoint. Valid values are `NONE`, `
             <td class="align-top">port<wbr>Ranges</td>
             <td class="align-top">
                 
-                <code><a href="#listenerportrange">globalaccelerator.<wbr>Listener<wbr>Port<wbr>Range[]?</a></code>
+                <code><a href="#listenerportrange">Listener<wbr>Port<wbr>Range[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

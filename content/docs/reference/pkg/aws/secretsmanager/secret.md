@@ -215,7 +215,7 @@ Specifies the ARN of the Lambda function that can rotate the secret.
             <td class="align-top">Rotation<wbr>Rules</td>
             <td class="align-top">
                 
-                <code><a href="#secretrotationrules">Pulumi.<wbr>Aws.<wbr>Secretsmanager.<wbr>Secret<wbr>Rotation<wbr>Rules<wbr>Args?</a></code>
+                <code><a href="#secretrotationrules">Secret<wbr>Rotation<wbr>Rules<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -230,7 +230,7 @@ A structure that defines the rotation configuration for this secret. Defined bel
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -523,7 +523,7 @@ Specifies the ARN of the Lambda function that can rotate the secret.
             <td class="align-top">rotation<wbr>Rules</td>
             <td class="align-top">
                 
-                <code><a href="#secretrotationrules">secretsmanager.<wbr>Secret<wbr>Rotation<wbr>Rules?</a></code>
+                <code><a href="#secretrotationrules">Secret<wbr>Rotation<wbr>Rules?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -857,7 +857,7 @@ The following output properties are available:
             <td class="align-top">Rotation<wbr>Rules</td>
             <td class="align-top">
                 
-                <code><a href="#secretrotationrules">Pulumi.<wbr>Aws.<wbr>Secretsmanager.<wbr>Secret<wbr>Rotation<wbr>Rules?</a></code>
+                <code><a href="#secretrotationrules">Secret<wbr>Rotation<wbr>Rules?</a></code>
             </td>
             <td class="align-top">{{% md %}} A structure that defines the rotation configuration for this secret. Defined below.
  {{% /md %}}
@@ -870,7 +870,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} Specifies a key-value map of user-defined tags that are attached to the secret.
  {{% /md %}}
@@ -1181,7 +1181,7 @@ The following output properties are available:
             <td class="align-top">rotation<wbr>Rules</td>
             <td class="align-top">
                 
-                <code><a href="#secretrotationrules">secretsmanager.<wbr>Secret<wbr>Rotation<wbr>Rules?</a></code>
+                <code><a href="#secretrotationrules">Secret<wbr>Rotation<wbr>Rules?</a></code>
             </td>
             <td class="align-top">{{% md %}} A structure that defines the rotation configuration for this secret. Defined below.
  {{% /md %}}
@@ -1582,7 +1582,7 @@ Specifies the ARN of the Lambda function that can rotate the secret.
             <td class="align-top">Rotation<wbr>Rules</td>
             <td class="align-top">
                 
-                <code><a href="#secretrotationrules">Pulumi.<wbr>Aws.<wbr>Secretsmanager.<wbr>Secret<wbr>Rotation<wbr>Rules<wbr>Args?</a></code>
+                <code><a href="#secretrotationrules">Secret<wbr>Rotation<wbr>Rules<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1597,7 +1597,7 @@ A structure that defines the rotation configuration for this secret. Defined bel
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1950,7 +1950,7 @@ Specifies the ARN of the Lambda function that can rotate the secret.
             <td class="align-top">rotation<wbr>Rules</td>
             <td class="align-top">
                 
-                <code><a href="#secretrotationrules">secretsmanager.<wbr>Secret<wbr>Rotation<wbr>Rules?</a></code>
+                <code><a href="#secretrotationrules">Secret<wbr>Rotation<wbr>Rules?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

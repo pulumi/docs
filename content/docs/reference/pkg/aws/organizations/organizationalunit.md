@@ -305,7 +305,7 @@ The following output properties are available:
             <td class="align-top">Accounts</td>
             <td class="align-top">
                 
-                <code><a href="#organizationalunitaccount">List&lt;Pulumi.<wbr>Aws.<wbr>Organizations.<wbr>Organizational<wbr>Unit<wbr>Account&gt;</a></code>
+                <code><a href="#organizationalunitaccount">List&lt;Organizational<wbr>Unit<wbr>Account&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} List of child accounts for this Organizational Unit. Does not return account information for child Organizational Units. All elements have these attributes:
  {{% /md %}}
@@ -449,7 +449,7 @@ The following output properties are available:
             <td class="align-top">accounts</td>
             <td class="align-top">
                 
-                <code><a href="#organizationalunitaccount">organizations.<wbr>Organizational<wbr>Unit<wbr>Account[]</a></code>
+                <code><a href="#organizationalunitaccount">Organizational<wbr>Unit<wbr>Account[]</a></code>
             </td>
             <td class="align-top">{{% md %}} List of child accounts for this Organizational Unit. Does not return account information for child Organizational Units. All elements have these attributes:
  {{% /md %}}
@@ -652,7 +652,7 @@ The following state arguments are supported:
             <td class="align-top">Accounts</td>
             <td class="align-top">
                 
-                <code><a href="#organizationalunitaccount">List&lt;Pulumi.<wbr>Aws.<wbr>Organizations.<wbr>Organizational<wbr>Unit<wbr>Account<wbr>Args&gt;?</a></code>
+                <code><a href="#organizationalunitaccount">List&lt;Organizational<wbr>Unit<wbr>Account<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -812,7 +812,7 @@ ID of the parent organizational unit, which may be the root
             <td class="align-top">accounts</td>
             <td class="align-top">
                 
-                <code><a href="#organizationalunitaccount">organizations.<wbr>Organizational<wbr>Unit<wbr>Account[]?</a></code>
+                <code><a href="#organizationalunitaccount">Organizational<wbr>Unit<wbr>Account[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

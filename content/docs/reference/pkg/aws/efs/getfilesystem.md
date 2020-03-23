@@ -46,7 +46,7 @@ const byId = aws.efs.getFileSystem({
 <div class="highlight">
 <pre class="chroma">
 <code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetFileSystem </span><span class="p">{</span>
-    <span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Efs.GetFileSystemResult.html">Pulumi.Aws.Efs.GetFileSystemResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Efs.GetFileSystemArgs.html">GetFileSystemArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span>
+    <span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Efs.GetFileSystemResult.html">GetFileSystemResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Efs.GetFileSystemArgs.html">GetFileSystemArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span>
 <span class="p">}</span></code></pre>
 </div>
 
@@ -105,7 +105,7 @@ The ID that identifies the file system (e.g. fs-ccfc0d65).
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -435,7 +435,7 @@ The following output properties are available:
             <td class="align-top">Lifecycle<wbr>Policy</td>
             <td class="align-top">
                 
-                <code><a href="#getfilesystemlifecyclepolicy">Pulumi.<wbr>Aws.<wbr>Efs.<wbr>Get<wbr>File<wbr>System<wbr>Lifecycle<wbr>Policy</a></code>
+                <code><a href="#getfilesystemlifecyclepolicy">Get<wbr>File<wbr>System<wbr>Lifecycle<wbr>Policy</a></code>
             </td>
             <td class="align-top">{{% md %}} A file system [lifecycle policy](https://docs.aws.amazon.com/efs/latest/ug/API_LifecyclePolicy.html) object.
  {{% /md %}}
@@ -475,7 +475,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;</code>
+                <code>Dictionary<string, object></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -783,7 +783,7 @@ The following output properties are available:
             <td class="align-top">lifecycle<wbr>Policy</td>
             <td class="align-top">
                 
-                <code><a href="#getfilesystemlifecyclepolicy">efs.<wbr>Get<wbr>File<wbr>System<wbr>Lifecycle<wbr>Policy</a></code>
+                <code><a href="#getfilesystemlifecyclepolicy">Get<wbr>File<wbr>System<wbr>Lifecycle<wbr>Policy</a></code>
             </td>
             <td class="align-top">{{% md %}} A file system [lifecycle policy](https://docs.aws.amazon.com/efs/latest/ug/API_LifecyclePolicy.html) object.
  {{% /md %}}

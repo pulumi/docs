@@ -294,7 +294,7 @@ The Amazon Resource Name (ARN) associated of the target.
             <td class="align-top">Batch<wbr>Target</td>
             <td class="align-top">
                 
-                <code><a href="#eventtargetbatchtarget">Pulumi.<wbr>Aws.<wbr>Cloudwatch.<wbr>Event<wbr>Target<wbr>Batch<wbr>Target<wbr>Args?</a></code>
+                <code><a href="#eventtargetbatchtarget">Event<wbr>Target<wbr>Batch<wbr>Target<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -309,7 +309,7 @@ Parameters used when you are using the rule to invoke an Amazon Batch Job. Docum
             <td class="align-top">Ecs<wbr>Target</td>
             <td class="align-top">
                 
-                <code><a href="#eventtargetecstarget">Pulumi.<wbr>Aws.<wbr>Cloudwatch.<wbr>Event<wbr>Target<wbr>Ecs<wbr>Target<wbr>Args?</a></code>
+                <code><a href="#eventtargetecstarget">Event<wbr>Target<wbr>Ecs<wbr>Target<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -355,7 +355,7 @@ that is used for extracting part of the matched event when passing it to the tar
             <td class="align-top">Input<wbr>Transformer</td>
             <td class="align-top">
                 
-                <code><a href="#eventtargetinputtransformer">Pulumi.<wbr>Aws.<wbr>Cloudwatch.<wbr>Event<wbr>Target<wbr>Input<wbr>Transformer<wbr>Args?</a></code>
+                <code><a href="#eventtargetinputtransformer">Event<wbr>Target<wbr>Input<wbr>Transformer<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -370,7 +370,7 @@ Parameters used when you are providing a custom input to a target based on certa
             <td class="align-top">Kinesis<wbr>Target</td>
             <td class="align-top">
                 
-                <code><a href="#eventtargetkinesistarget">Pulumi.<wbr>Aws.<wbr>Cloudwatch.<wbr>Event<wbr>Target<wbr>Kinesis<wbr>Target<wbr>Args?</a></code>
+                <code><a href="#eventtargetkinesistarget">Event<wbr>Target<wbr>Kinesis<wbr>Target<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -415,7 +415,7 @@ The name of the rule you want to add targets to.
             <td class="align-top">Run<wbr>Command<wbr>Targets</td>
             <td class="align-top">
                 
-                <code><a href="#eventtargetruncommandtarget">List&lt;Pulumi.<wbr>Aws.<wbr>Cloudwatch.<wbr>Event<wbr>Target<wbr>Run<wbr>Command<wbr>Target<wbr>Args&gt;?</a></code>
+                <code><a href="#eventtargetruncommandtarget">List&lt;Event<wbr>Target<wbr>Run<wbr>Command<wbr>Target<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -430,7 +430,7 @@ Parameters used when you are using the rule to invoke Amazon EC2 Run Command. Do
             <td class="align-top">Sqs<wbr>Target</td>
             <td class="align-top">
                 
-                <code><a href="#eventtargetsqstarget">Pulumi.<wbr>Aws.<wbr>Cloudwatch.<wbr>Event<wbr>Target<wbr>Sqs<wbr>Target<wbr>Args?</a></code>
+                <code><a href="#eventtargetsqstarget">Event<wbr>Target<wbr>Sqs<wbr>Target<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -696,7 +696,7 @@ The Amazon Resource Name (ARN) associated of the target.
             <td class="align-top">batch<wbr>Target</td>
             <td class="align-top">
                 
-                <code><a href="#eventtargetbatchtarget">cloudwatch.<wbr>Event<wbr>Target<wbr>Batch<wbr>Target?</a></code>
+                <code><a href="#eventtargetbatchtarget">Event<wbr>Target<wbr>Batch<wbr>Target?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -711,7 +711,7 @@ Parameters used when you are using the rule to invoke an Amazon Batch Job. Docum
             <td class="align-top">ecs<wbr>Target</td>
             <td class="align-top">
                 
-                <code><a href="#eventtargetecstarget">cloudwatch.<wbr>Event<wbr>Target<wbr>Ecs<wbr>Target?</a></code>
+                <code><a href="#eventtargetecstarget">Event<wbr>Target<wbr>Ecs<wbr>Target?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -757,7 +757,7 @@ that is used for extracting part of the matched event when passing it to the tar
             <td class="align-top">input<wbr>Transformer</td>
             <td class="align-top">
                 
-                <code><a href="#eventtargetinputtransformer">cloudwatch.<wbr>Event<wbr>Target<wbr>Input<wbr>Transformer?</a></code>
+                <code><a href="#eventtargetinputtransformer">Event<wbr>Target<wbr>Input<wbr>Transformer?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -772,7 +772,7 @@ Parameters used when you are providing a custom input to a target based on certa
             <td class="align-top">kinesis<wbr>Target</td>
             <td class="align-top">
                 
-                <code><a href="#eventtargetkinesistarget">cloudwatch.<wbr>Event<wbr>Target<wbr>Kinesis<wbr>Target?</a></code>
+                <code><a href="#eventtargetkinesistarget">Event<wbr>Target<wbr>Kinesis<wbr>Target?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -817,7 +817,7 @@ The name of the rule you want to add targets to.
             <td class="align-top">run<wbr>Command<wbr>Targets</td>
             <td class="align-top">
                 
-                <code><a href="#eventtargetruncommandtarget">cloudwatch.<wbr>Event<wbr>Target<wbr>Run<wbr>Command<wbr>Target[]?</a></code>
+                <code><a href="#eventtargetruncommandtarget">Event<wbr>Target<wbr>Run<wbr>Command<wbr>Target[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -832,7 +832,7 @@ Parameters used when you are using the rule to invoke Amazon EC2 Run Command. Do
             <td class="align-top">sqs<wbr>Target</td>
             <td class="align-top">
                 
-                <code><a href="#eventtargetsqstarget">cloudwatch.<wbr>Event<wbr>Target<wbr>Sqs<wbr>Target?</a></code>
+                <code><a href="#eventtargetsqstarget">Event<wbr>Target<wbr>Sqs<wbr>Target?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1110,7 +1110,7 @@ The following output properties are available:
             <td class="align-top">Batch<wbr>Target</td>
             <td class="align-top">
                 
-                <code><a href="#eventtargetbatchtarget">Pulumi.<wbr>Aws.<wbr>Cloudwatch.<wbr>Event<wbr>Target<wbr>Batch<wbr>Target?</a></code>
+                <code><a href="#eventtargetbatchtarget">Event<wbr>Target<wbr>Batch<wbr>Target?</a></code>
             </td>
             <td class="align-top">{{% md %}} Parameters used when you are using the rule to invoke an Amazon Batch Job. Documented below. A maximum of 1 are allowed.
  {{% /md %}}
@@ -1123,7 +1123,7 @@ The following output properties are available:
             <td class="align-top">Ecs<wbr>Target</td>
             <td class="align-top">
                 
-                <code><a href="#eventtargetecstarget">Pulumi.<wbr>Aws.<wbr>Cloudwatch.<wbr>Event<wbr>Target<wbr>Ecs<wbr>Target?</a></code>
+                <code><a href="#eventtargetecstarget">Event<wbr>Target<wbr>Ecs<wbr>Target?</a></code>
             </td>
             <td class="align-top">{{% md %}} Parameters used when you are using the rule to invoke Amazon ECS Task. Documented below. A maximum of 1 are allowed.
  {{% /md %}}
@@ -1163,7 +1163,7 @@ that is used for extracting part of the matched event when passing it to the tar
             <td class="align-top">Input<wbr>Transformer</td>
             <td class="align-top">
                 
-                <code><a href="#eventtargetinputtransformer">Pulumi.<wbr>Aws.<wbr>Cloudwatch.<wbr>Event<wbr>Target<wbr>Input<wbr>Transformer?</a></code>
+                <code><a href="#eventtargetinputtransformer">Event<wbr>Target<wbr>Input<wbr>Transformer?</a></code>
             </td>
             <td class="align-top">{{% md %}} Parameters used when you are providing a custom input to a target based on certain event data.
  {{% /md %}}
@@ -1176,7 +1176,7 @@ that is used for extracting part of the matched event when passing it to the tar
             <td class="align-top">Kinesis<wbr>Target</td>
             <td class="align-top">
                 
-                <code><a href="#eventtargetkinesistarget">Pulumi.<wbr>Aws.<wbr>Cloudwatch.<wbr>Event<wbr>Target<wbr>Kinesis<wbr>Target?</a></code>
+                <code><a href="#eventtargetkinesistarget">Event<wbr>Target<wbr>Kinesis<wbr>Target?</a></code>
             </td>
             <td class="align-top">{{% md %}} Parameters used when you are using the rule to invoke an Amazon Kinesis Stream. Documented below. A maximum of 1 are allowed.
  {{% /md %}}
@@ -1215,7 +1215,7 @@ that is used for extracting part of the matched event when passing it to the tar
             <td class="align-top">Run<wbr>Command<wbr>Targets</td>
             <td class="align-top">
                 
-                <code><a href="#eventtargetruncommandtarget">List&lt;Pulumi.<wbr>Aws.<wbr>Cloudwatch.<wbr>Event<wbr>Target<wbr>Run<wbr>Command<wbr>Target&gt;?</a></code>
+                <code><a href="#eventtargetruncommandtarget">List&lt;Event<wbr>Target<wbr>Run<wbr>Command<wbr>Target&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} Parameters used when you are using the rule to invoke Amazon EC2 Run Command. Documented below. A maximum of 5 are allowed.
  {{% /md %}}
@@ -1228,7 +1228,7 @@ that is used for extracting part of the matched event when passing it to the tar
             <td class="align-top">Sqs<wbr>Target</td>
             <td class="align-top">
                 
-                <code><a href="#eventtargetsqstarget">Pulumi.<wbr>Aws.<wbr>Cloudwatch.<wbr>Event<wbr>Target<wbr>Sqs<wbr>Target?</a></code>
+                <code><a href="#eventtargetsqstarget">Event<wbr>Target<wbr>Sqs<wbr>Target?</a></code>
             </td>
             <td class="align-top">{{% md %}} Parameters used when you are using the rule to invoke an Amazon SQS Queue. Documented below. A maximum of 1 are allowed.
  {{% /md %}}
@@ -1464,7 +1464,7 @@ that is used for extracting part of the matched event when passing it to the tar
             <td class="align-top">batch<wbr>Target</td>
             <td class="align-top">
                 
-                <code><a href="#eventtargetbatchtarget">cloudwatch.<wbr>Event<wbr>Target<wbr>Batch<wbr>Target?</a></code>
+                <code><a href="#eventtargetbatchtarget">Event<wbr>Target<wbr>Batch<wbr>Target?</a></code>
             </td>
             <td class="align-top">{{% md %}} Parameters used when you are using the rule to invoke an Amazon Batch Job. Documented below. A maximum of 1 are allowed.
  {{% /md %}}
@@ -1477,7 +1477,7 @@ that is used for extracting part of the matched event when passing it to the tar
             <td class="align-top">ecs<wbr>Target</td>
             <td class="align-top">
                 
-                <code><a href="#eventtargetecstarget">cloudwatch.<wbr>Event<wbr>Target<wbr>Ecs<wbr>Target?</a></code>
+                <code><a href="#eventtargetecstarget">Event<wbr>Target<wbr>Ecs<wbr>Target?</a></code>
             </td>
             <td class="align-top">{{% md %}} Parameters used when you are using the rule to invoke Amazon ECS Task. Documented below. A maximum of 1 are allowed.
  {{% /md %}}
@@ -1517,7 +1517,7 @@ that is used for extracting part of the matched event when passing it to the tar
             <td class="align-top">input<wbr>Transformer</td>
             <td class="align-top">
                 
-                <code><a href="#eventtargetinputtransformer">cloudwatch.<wbr>Event<wbr>Target<wbr>Input<wbr>Transformer?</a></code>
+                <code><a href="#eventtargetinputtransformer">Event<wbr>Target<wbr>Input<wbr>Transformer?</a></code>
             </td>
             <td class="align-top">{{% md %}} Parameters used when you are providing a custom input to a target based on certain event data.
  {{% /md %}}
@@ -1530,7 +1530,7 @@ that is used for extracting part of the matched event when passing it to the tar
             <td class="align-top">kinesis<wbr>Target</td>
             <td class="align-top">
                 
-                <code><a href="#eventtargetkinesistarget">cloudwatch.<wbr>Event<wbr>Target<wbr>Kinesis<wbr>Target?</a></code>
+                <code><a href="#eventtargetkinesistarget">Event<wbr>Target<wbr>Kinesis<wbr>Target?</a></code>
             </td>
             <td class="align-top">{{% md %}} Parameters used when you are using the rule to invoke an Amazon Kinesis Stream. Documented below. A maximum of 1 are allowed.
  {{% /md %}}
@@ -1569,7 +1569,7 @@ that is used for extracting part of the matched event when passing it to the tar
             <td class="align-top">run<wbr>Command<wbr>Targets</td>
             <td class="align-top">
                 
-                <code><a href="#eventtargetruncommandtarget">cloudwatch.<wbr>Event<wbr>Target<wbr>Run<wbr>Command<wbr>Target[]?</a></code>
+                <code><a href="#eventtargetruncommandtarget">Event<wbr>Target<wbr>Run<wbr>Command<wbr>Target[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} Parameters used when you are using the rule to invoke Amazon EC2 Run Command. Documented below. A maximum of 5 are allowed.
  {{% /md %}}
@@ -1582,7 +1582,7 @@ that is used for extracting part of the matched event when passing it to the tar
             <td class="align-top">sqs<wbr>Target</td>
             <td class="align-top">
                 
-                <code><a href="#eventtargetsqstarget">cloudwatch.<wbr>Event<wbr>Target<wbr>Sqs<wbr>Target?</a></code>
+                <code><a href="#eventtargetsqstarget">Event<wbr>Target<wbr>Sqs<wbr>Target?</a></code>
             </td>
             <td class="align-top">{{% md %}} Parameters used when you are using the rule to invoke an Amazon SQS Queue. Documented below. A maximum of 1 are allowed.
  {{% /md %}}
@@ -1879,7 +1879,7 @@ The Amazon Resource Name (ARN) associated of the target.
             <td class="align-top">Batch<wbr>Target</td>
             <td class="align-top">
                 
-                <code><a href="#eventtargetbatchtarget">Pulumi.<wbr>Aws.<wbr>Cloudwatch.<wbr>Event<wbr>Target<wbr>Batch<wbr>Target<wbr>Args?</a></code>
+                <code><a href="#eventtargetbatchtarget">Event<wbr>Target<wbr>Batch<wbr>Target<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1894,7 +1894,7 @@ Parameters used when you are using the rule to invoke an Amazon Batch Job. Docum
             <td class="align-top">Ecs<wbr>Target</td>
             <td class="align-top">
                 
-                <code><a href="#eventtargetecstarget">Pulumi.<wbr>Aws.<wbr>Cloudwatch.<wbr>Event<wbr>Target<wbr>Ecs<wbr>Target<wbr>Args?</a></code>
+                <code><a href="#eventtargetecstarget">Event<wbr>Target<wbr>Ecs<wbr>Target<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1940,7 +1940,7 @@ that is used for extracting part of the matched event when passing it to the tar
             <td class="align-top">Input<wbr>Transformer</td>
             <td class="align-top">
                 
-                <code><a href="#eventtargetinputtransformer">Pulumi.<wbr>Aws.<wbr>Cloudwatch.<wbr>Event<wbr>Target<wbr>Input<wbr>Transformer<wbr>Args?</a></code>
+                <code><a href="#eventtargetinputtransformer">Event<wbr>Target<wbr>Input<wbr>Transformer<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1955,7 +1955,7 @@ Parameters used when you are providing a custom input to a target based on certa
             <td class="align-top">Kinesis<wbr>Target</td>
             <td class="align-top">
                 
-                <code><a href="#eventtargetkinesistarget">Pulumi.<wbr>Aws.<wbr>Cloudwatch.<wbr>Event<wbr>Target<wbr>Kinesis<wbr>Target<wbr>Args?</a></code>
+                <code><a href="#eventtargetkinesistarget">Event<wbr>Target<wbr>Kinesis<wbr>Target<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2000,7 +2000,7 @@ The name of the rule you want to add targets to.
             <td class="align-top">Run<wbr>Command<wbr>Targets</td>
             <td class="align-top">
                 
-                <code><a href="#eventtargetruncommandtarget">List&lt;Pulumi.<wbr>Aws.<wbr>Cloudwatch.<wbr>Event<wbr>Target<wbr>Run<wbr>Command<wbr>Target<wbr>Args&gt;?</a></code>
+                <code><a href="#eventtargetruncommandtarget">List&lt;Event<wbr>Target<wbr>Run<wbr>Command<wbr>Target<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2015,7 +2015,7 @@ Parameters used when you are using the rule to invoke Amazon EC2 Run Command. Do
             <td class="align-top">Sqs<wbr>Target</td>
             <td class="align-top">
                 
-                <code><a href="#eventtargetsqstarget">Pulumi.<wbr>Aws.<wbr>Cloudwatch.<wbr>Event<wbr>Target<wbr>Sqs<wbr>Target<wbr>Args?</a></code>
+                <code><a href="#eventtargetsqstarget">Event<wbr>Target<wbr>Sqs<wbr>Target<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2281,7 +2281,7 @@ The Amazon Resource Name (ARN) associated of the target.
             <td class="align-top">batch<wbr>Target</td>
             <td class="align-top">
                 
-                <code><a href="#eventtargetbatchtarget">cloudwatch.<wbr>Event<wbr>Target<wbr>Batch<wbr>Target?</a></code>
+                <code><a href="#eventtargetbatchtarget">Event<wbr>Target<wbr>Batch<wbr>Target?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2296,7 +2296,7 @@ Parameters used when you are using the rule to invoke an Amazon Batch Job. Docum
             <td class="align-top">ecs<wbr>Target</td>
             <td class="align-top">
                 
-                <code><a href="#eventtargetecstarget">cloudwatch.<wbr>Event<wbr>Target<wbr>Ecs<wbr>Target?</a></code>
+                <code><a href="#eventtargetecstarget">Event<wbr>Target<wbr>Ecs<wbr>Target?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2342,7 +2342,7 @@ that is used for extracting part of the matched event when passing it to the tar
             <td class="align-top">input<wbr>Transformer</td>
             <td class="align-top">
                 
-                <code><a href="#eventtargetinputtransformer">cloudwatch.<wbr>Event<wbr>Target<wbr>Input<wbr>Transformer?</a></code>
+                <code><a href="#eventtargetinputtransformer">Event<wbr>Target<wbr>Input<wbr>Transformer?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2357,7 +2357,7 @@ Parameters used when you are providing a custom input to a target based on certa
             <td class="align-top">kinesis<wbr>Target</td>
             <td class="align-top">
                 
-                <code><a href="#eventtargetkinesistarget">cloudwatch.<wbr>Event<wbr>Target<wbr>Kinesis<wbr>Target?</a></code>
+                <code><a href="#eventtargetkinesistarget">Event<wbr>Target<wbr>Kinesis<wbr>Target?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2402,7 +2402,7 @@ The name of the rule you want to add targets to.
             <td class="align-top">run<wbr>Command<wbr>Targets</td>
             <td class="align-top">
                 
-                <code><a href="#eventtargetruncommandtarget">cloudwatch.<wbr>Event<wbr>Target<wbr>Run<wbr>Command<wbr>Target[]?</a></code>
+                <code><a href="#eventtargetruncommandtarget">Event<wbr>Target<wbr>Run<wbr>Command<wbr>Target[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2417,7 +2417,7 @@ Parameters used when you are using the rule to invoke Amazon EC2 Run Command. Do
             <td class="align-top">sqs<wbr>Target</td>
             <td class="align-top">
                 
-                <code><a href="#eventtargetsqstarget">cloudwatch.<wbr>Event<wbr>Target<wbr>Sqs<wbr>Target?</a></code>
+                <code><a href="#eventtargetsqstarget">Event<wbr>Target<wbr>Sqs<wbr>Target?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3067,7 +3067,7 @@ Specifies the launch type on which your task is running. The launch type that yo
             <td class="align-top">Network<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#eventtargetecstargetnetworkconfiguration">Pulumi.<wbr>Aws.<wbr>Cloudwatch.<wbr>Event<wbr>Target<wbr>Ecs<wbr>Target<wbr>Network<wbr>Configuration<wbr>Args?</a></code>
+                <code><a href="#eventtargetecstargetnetworkconfiguration">Event<wbr>Target<wbr>Ecs<wbr>Target<wbr>Network<wbr>Configuration<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3287,7 +3287,7 @@ Specifies the launch type on which your task is running. The launch type that yo
             <td class="align-top">network<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code><a href="#eventtargetecstargetnetworkconfiguration">cloudwatch.<wbr>Event<wbr>Target<wbr>Ecs<wbr>Target<wbr>Network<wbr>Configuration?</a></code>
+                <code><a href="#eventtargetecstargetnetworkconfiguration">Event<wbr>Target<wbr>Ecs<wbr>Target<wbr>Network<wbr>Configuration?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3513,7 +3513,7 @@ Assign a public IP address to the ENI (Fargate launch type only). Valid values a
             <td class="align-top">Security<wbr>Groups</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3528,7 +3528,7 @@ The security groups associated with the task or service. If you do not specify a
             <td class="align-top">Subnets</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -3779,7 +3779,7 @@ The subnets associated with the task or service.
             <td class="align-top">Input<wbr>Paths</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4176,7 +4176,7 @@ Can be either `tag:tag-key` or `InstanceIds`.
             <td class="align-top">Values</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

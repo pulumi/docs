@@ -46,7 +46,7 @@ export const description = example.description;
 <div class="highlight">
 <pre class="chroma">
 <code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetApplication </span><span class="p">{</span>
-    <span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elasticbeanstalk.GetApplicationResult.html">Pulumi.Aws.Elasticbeanstalk.GetApplicationResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elasticbeanstalk.GetApplicationArgs.html">GetApplicationArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span>
+    <span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elasticbeanstalk.GetApplicationResult.html">GetApplicationResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elasticbeanstalk.GetApplicationArgs.html">GetApplicationArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span>
 <span class="p">}</span></code></pre>
 </div>
 
@@ -230,7 +230,7 @@ The following output properties are available:
             <td class="align-top">Appversion<wbr>Lifecycle</td>
             <td class="align-top">
                 
-                <code><a href="#getapplicationappversionlifecycle">Pulumi.<wbr>Aws.<wbr>Elasticbeanstalk.<wbr>Get<wbr>Application<wbr>Appversion<wbr>Lifecycle</a></code>
+                <code><a href="#getapplicationappversionlifecycle">Get<wbr>Application<wbr>Appversion<wbr>Lifecycle</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -396,7 +396,7 @@ The following output properties are available:
             <td class="align-top">appversion<wbr>Lifecycle</td>
             <td class="align-top">
                 
-                <code><a href="#getapplicationappversionlifecycle">elasticbeanstalk.<wbr>Get<wbr>Application<wbr>Appversion<wbr>Lifecycle</a></code>
+                <code><a href="#getapplicationappversionlifecycle">Get<wbr>Application<wbr>Appversion<wbr>Lifecycle</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 

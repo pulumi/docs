@@ -131,7 +131,7 @@ Whether or not VPC endpoint connection requests to the service must be accepted 
             <td class="align-top">Allowed<wbr>Principals</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -146,7 +146,7 @@ The ARNs of one or more principals allowed to discover the endpoint service.
             <td class="align-top">Network<wbr>Load<wbr>Balancer<wbr>Arns</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -161,7 +161,7 @@ The ARNs of one or more Network Load Balancers for the endpoint service.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -463,7 +463,7 @@ The following output properties are available:
             <td class="align-top">Allowed<wbr>Principals</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} The ARNs of one or more principals allowed to discover the endpoint service.
  {{% /md %}}
@@ -476,7 +476,7 @@ The following output properties are available:
             <td class="align-top">Availability<wbr>Zones</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} The Availability Zones in which the service is available.
  {{% /md %}}
@@ -489,7 +489,7 @@ The following output properties are available:
             <td class="align-top">Base<wbr>Endpoint<wbr>Dns<wbr>Names</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} The DNS names for the service.
  {{% /md %}}
@@ -515,7 +515,7 @@ The following output properties are available:
             <td class="align-top">Network<wbr>Load<wbr>Balancer<wbr>Arns</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} The ARNs of one or more Network Load Balancers for the endpoint service.
  {{% /md %}}
@@ -580,7 +580,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -1176,7 +1176,7 @@ Whether or not VPC endpoint connection requests to the service must be accepted 
             <td class="align-top">Allowed<wbr>Principals</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1191,7 +1191,7 @@ The ARNs of one or more principals allowed to discover the endpoint service.
             <td class="align-top">Availability<wbr>Zones</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1206,7 +1206,7 @@ The Availability Zones in which the service is available.
             <td class="align-top">Base<wbr>Endpoint<wbr>Dns<wbr>Names</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1236,7 +1236,7 @@ Whether or not the service manages its VPC endpoints - `true` or `false`.
             <td class="align-top">Network<wbr>Load<wbr>Balancer<wbr>Arns</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1311,7 +1311,7 @@ The state of the VPC endpoint service.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

@@ -111,7 +111,7 @@ Description of the configuration.
             <td class="align-top">Kafka<wbr>Versions</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -456,7 +456,7 @@ The following output properties are available:
             <td class="align-top">Kafka<wbr>Versions</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} List of Apache Kafka versions which can use this configuration.
  {{% /md %}}
@@ -911,7 +911,7 @@ Description of the configuration.
             <td class="align-top">Kafka<wbr>Versions</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

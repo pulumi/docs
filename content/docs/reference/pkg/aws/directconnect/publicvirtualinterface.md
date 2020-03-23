@@ -205,7 +205,7 @@ The name for the virtual interface.
             <td class="align-top">Route<wbr>Filter<wbr>Prefixes</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -220,7 +220,7 @@ A list of routes to be advertised to the AWS network in this region.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -923,7 +923,7 @@ The following output properties are available:
             <td class="align-top">Route<wbr>Filter<wbr>Prefixes</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} A list of routes to be advertised to the AWS network in this region.
  {{% /md %}}
@@ -936,7 +936,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -1754,7 +1754,7 @@ The name for the virtual interface.
             <td class="align-top">Route<wbr>Filter<wbr>Prefixes</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1769,7 +1769,7 @@ A list of routes to be advertised to the AWS network in this region.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

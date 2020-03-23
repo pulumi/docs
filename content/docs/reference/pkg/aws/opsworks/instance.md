@@ -267,7 +267,7 @@ by default.
             <td class="align-top">Ebs<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#instanceebsblockdevice">List&lt;Pulumi.<wbr>Aws.<wbr>Opsworks.<wbr>Instance<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args&gt;?</a></code>
+                <code><a href="#instanceebsblockdevice">List&lt;Instance<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -326,7 +326,7 @@ If true, the launched EC2 instance will be EBS-optimized.
             <td class="align-top">Ephemeral<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#instanceephemeralblockdevice">List&lt;Pulumi.<wbr>Aws.<wbr>Opsworks.<wbr>Instance<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args&gt;?</a></code>
+                <code><a href="#instanceephemeralblockdevice">List&lt;Instance<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -429,7 +429,7 @@ The type of instance to start
             <td class="align-top">Layer<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -606,7 +606,7 @@ The public IP address assigned to the instance, if applicable.
             <td class="align-top">Root<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#instancerootblockdevice">List&lt;Pulumi.<wbr>Aws.<wbr>Opsworks.<wbr>Instance<wbr>Root<wbr>Block<wbr>Device<wbr>Args&gt;?</a></code>
+                <code><a href="#instancerootblockdevice">List&lt;Instance<wbr>Root<wbr>Block<wbr>Device<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -651,7 +651,7 @@ Name of the type of root device instances will have by default.  Can be either `
             <td class="align-top">Security<wbr>Group<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1607,7 +1607,7 @@ by default.
             <td class="align-top">ebs<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#instanceebsblockdevice">opsworks.<wbr>Instance<wbr>Ebs<wbr>Block<wbr>Device[]?</a></code>
+                <code><a href="#instanceebsblockdevice">Instance<wbr>Ebs<wbr>Block<wbr>Device[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1666,7 +1666,7 @@ If true, the launched EC2 instance will be EBS-optimized.
             <td class="align-top">ephemeral<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#instanceephemeralblockdevice">opsworks.<wbr>Instance<wbr>Ephemeral<wbr>Block<wbr>Device[]?</a></code>
+                <code><a href="#instanceephemeralblockdevice">Instance<wbr>Ephemeral<wbr>Block<wbr>Device[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1946,7 +1946,7 @@ The public IP address assigned to the instance, if applicable.
             <td class="align-top">root<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#instancerootblockdevice">opsworks.<wbr>Instance<wbr>Root<wbr>Block<wbr>Device[]?</a></code>
+                <code><a href="#instancerootblockdevice">Instance<wbr>Root<wbr>Block<wbr>Device[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2945,7 +2945,7 @@ by default.
             <td class="align-top">Ebs<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#instanceebsblockdevice">List&lt;Pulumi.<wbr>Aws.<wbr>Opsworks.<wbr>Instance<wbr>Ebs<wbr>Block<wbr>Device&gt;</a></code>
+                <code><a href="#instanceebsblockdevice">List&lt;Instance<wbr>Ebs<wbr>Block<wbr>Device&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} Additional EBS block devices to attach to the
 instance.  See Block Devices below for details.
@@ -3009,7 +3009,7 @@ instance.  See Block Devices below for details.
             <td class="align-top">Ephemeral<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#instanceephemeralblockdevice">List&lt;Pulumi.<wbr>Aws.<wbr>Opsworks.<wbr>Instance<wbr>Ephemeral<wbr>Block<wbr>Device&gt;</a></code>
+                <code><a href="#instanceephemeralblockdevice">List&lt;Instance<wbr>Ephemeral<wbr>Block<wbr>Device&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} Customize Ephemeral (also known as
 &#34;Instance Store&#34;) volumes on the instance. See Block Devices below for details.
@@ -3098,7 +3098,7 @@ instance.  See Block Devices below for details.
             <td class="align-top">Layer<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} The ids of the layers the instance will belong to.
  {{% /md %}}
@@ -3251,7 +3251,7 @@ is only available if you&#39;ve enabled DNS hostnames for your VPC
             <td class="align-top">Root<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#instancerootblockdevice">List&lt;Pulumi.<wbr>Aws.<wbr>Opsworks.<wbr>Instance<wbr>Root<wbr>Block<wbr>Device&gt;</a></code>
+                <code><a href="#instancerootblockdevice">List&lt;Instance<wbr>Root<wbr>Block<wbr>Device&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} Customize details about the root block
 device of the instance. See Block Devices below for details.
@@ -3290,7 +3290,7 @@ device of the instance. See Block Devices below for details.
             <td class="align-top">Security<wbr>Group<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} The associated security groups.
  {{% /md %}}
@@ -4135,7 +4135,7 @@ by default.
             <td class="align-top">ebs<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#instanceebsblockdevice">opsworks.<wbr>Instance<wbr>Ebs<wbr>Block<wbr>Device[]</a></code>
+                <code><a href="#instanceebsblockdevice">Instance<wbr>Ebs<wbr>Block<wbr>Device[]</a></code>
             </td>
             <td class="align-top">{{% md %}} Additional EBS block devices to attach to the
 instance.  See Block Devices below for details.
@@ -4199,7 +4199,7 @@ instance.  See Block Devices below for details.
             <td class="align-top">ephemeral<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#instanceephemeralblockdevice">opsworks.<wbr>Instance<wbr>Ephemeral<wbr>Block<wbr>Device[]</a></code>
+                <code><a href="#instanceephemeralblockdevice">Instance<wbr>Ephemeral<wbr>Block<wbr>Device[]</a></code>
             </td>
             <td class="align-top">{{% md %}} Customize Ephemeral (also known as
 &#34;Instance Store&#34;) volumes on the instance. See Block Devices below for details.
@@ -4441,7 +4441,7 @@ is only available if you&#39;ve enabled DNS hostnames for your VPC
             <td class="align-top">root<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#instancerootblockdevice">opsworks.<wbr>Instance<wbr>Root<wbr>Block<wbr>Device[]</a></code>
+                <code><a href="#instancerootblockdevice">Instance<wbr>Root<wbr>Block<wbr>Device[]</a></code>
             </td>
             <td class="align-top">{{% md %}} Customize details about the root block
 device of the instance. See Block Devices below for details.
@@ -5400,7 +5400,7 @@ by default.
             <td class="align-top">Ebs<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#instanceebsblockdevice">List&lt;Pulumi.<wbr>Aws.<wbr>Opsworks.<wbr>Instance<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args&gt;?</a></code>
+                <code><a href="#instanceebsblockdevice">List&lt;Instance<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5474,7 +5474,7 @@ EC2 instance ID
             <td class="align-top">Ephemeral<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#instanceephemeralblockdevice">List&lt;Pulumi.<wbr>Aws.<wbr>Opsworks.<wbr>Instance<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args&gt;?</a></code>
+                <code><a href="#instanceephemeralblockdevice">List&lt;Instance<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5577,7 +5577,7 @@ The type of instance to start
             <td class="align-top">Layer<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5754,7 +5754,7 @@ The public IP address assigned to the instance, if applicable.
             <td class="align-top">Root<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#instancerootblockdevice">List&lt;Pulumi.<wbr>Aws.<wbr>Opsworks.<wbr>Instance<wbr>Root<wbr>Block<wbr>Device<wbr>Args&gt;?</a></code>
+                <code><a href="#instancerootblockdevice">List&lt;Instance<wbr>Root<wbr>Block<wbr>Device<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5799,7 +5799,7 @@ Name of the type of root device instances will have by default.  Can be either `
             <td class="align-top">Security<wbr>Group<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6770,7 +6770,7 @@ by default.
             <td class="align-top">ebs<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#instanceebsblockdevice">opsworks.<wbr>Instance<wbr>Ebs<wbr>Block<wbr>Device[]?</a></code>
+                <code><a href="#instanceebsblockdevice">Instance<wbr>Ebs<wbr>Block<wbr>Device[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -6844,7 +6844,7 @@ EC2 instance ID
             <td class="align-top">ephemeral<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#instanceephemeralblockdevice">opsworks.<wbr>Instance<wbr>Ephemeral<wbr>Block<wbr>Device[]?</a></code>
+                <code><a href="#instanceephemeralblockdevice">Instance<wbr>Ephemeral<wbr>Block<wbr>Device[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -7124,7 +7124,7 @@ The public IP address assigned to the instance, if applicable.
             <td class="align-top">root<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#instancerootblockdevice">opsworks.<wbr>Instance<wbr>Root<wbr>Block<wbr>Device[]?</a></code>
+                <code><a href="#instancerootblockdevice">Instance<wbr>Root<wbr>Block<wbr>Device[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

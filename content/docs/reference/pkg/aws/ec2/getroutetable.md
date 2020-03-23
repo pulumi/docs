@@ -58,7 +58,7 @@ const route = new aws.ec2.Route("route", {
 <div class="highlight">
 <pre class="chroma">
 <code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetRouteTable </span><span class="p">{</span>
-    <span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.GetRouteTableResult.html">Pulumi.Aws.Ec2.GetRouteTableResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.GetRouteTableArgs.html">GetRouteTableArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span>
+    <span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.GetRouteTableResult.html">GetRouteTableResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.GetRouteTableArgs.html">GetRouteTableArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span>
 <span class="p">}</span></code></pre>
 </div>
 
@@ -87,7 +87,7 @@ The following arguments are supported:
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getroutetablefilter">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Get<wbr>Route<wbr>Table<wbr>Filter<wbr>Args&gt;?</a></code>
+                <code><a href="#getroutetablefilter">List&lt;Get<wbr>Route<wbr>Table<wbr>Filter<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -147,7 +147,7 @@ The id of a Subnet which is connected to the Route Table (not exported if not pa
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -309,7 +309,7 @@ The id of the VPC that the desired Route Table belongs to.
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getroutetablefilter">ec2.<wbr>Get<wbr>Route<wbr>Table<wbr>Filter[]?</a></code>
+                <code><a href="#getroutetablefilter">Get<wbr>Route<wbr>Table<wbr>Filter[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -546,7 +546,7 @@ The following output properties are available:
             <td class="align-top">Associations</td>
             <td class="align-top">
                 
-                <code><a href="#getroutetableassociation">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Get<wbr>Route<wbr>Table<wbr>Association&gt;</a></code>
+                <code><a href="#getroutetableassociation">List&lt;Get<wbr>Route<wbr>Table<wbr>Association&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -558,7 +558,7 @@ The following output properties are available:
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getroutetablefilter">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Get<wbr>Route<wbr>Table<wbr>Filter&gt;?</a></code>
+                <code><a href="#getroutetablefilter">List&lt;Get<wbr>Route<wbr>Table<wbr>Filter&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -622,7 +622,7 @@ The following output properties are available:
             <td class="align-top">Routes</td>
             <td class="align-top">
                 
-                <code><a href="#getroutetableroute">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Get<wbr>Route<wbr>Table<wbr>Route&gt;</a></code>
+                <code><a href="#getroutetableroute">List&lt;Get<wbr>Route<wbr>Table<wbr>Route&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -647,7 +647,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;</code>
+                <code>Dictionary<string, object></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -836,7 +836,7 @@ The following output properties are available:
             <td class="align-top">associations</td>
             <td class="align-top">
                 
-                <code><a href="#getroutetableassociation">ec2.<wbr>Get<wbr>Route<wbr>Table<wbr>Association[]</a></code>
+                <code><a href="#getroutetableassociation">Get<wbr>Route<wbr>Table<wbr>Association[]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -848,7 +848,7 @@ The following output properties are available:
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getroutetablefilter">ec2.<wbr>Get<wbr>Route<wbr>Table<wbr>Filter[]?</a></code>
+                <code><a href="#getroutetablefilter">Get<wbr>Route<wbr>Table<wbr>Filter[]?</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -912,7 +912,7 @@ The following output properties are available:
             <td class="align-top">routes</td>
             <td class="align-top">
                 
-                <code><a href="#getroutetableroute">ec2.<wbr>Get<wbr>Route<wbr>Table<wbr>Route[]</a></code>
+                <code><a href="#getroutetableroute">Get<wbr>Route<wbr>Table<wbr>Route[]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1569,7 +1569,7 @@ The name of the field to filter by, as defined by
             <td class="align-top">Values</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

@@ -143,7 +143,7 @@ The name of the global table. Must match underlying DynamoDB Table names in all 
             <td class="align-top">Replicas</td>
             <td class="align-top">
                 
-                <code><a href="#globaltablereplica">List&lt;Pulumi.<wbr>Aws.<wbr>Dynamodb.<wbr>Global<wbr>Table<wbr>Replica<wbr>Args&gt;</a></code>
+                <code><a href="#globaltablereplica">List&lt;Global<wbr>Table<wbr>Replica<wbr>Args&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -243,7 +243,7 @@ The name of the global table. Must match underlying DynamoDB Table names in all 
             <td class="align-top">replicas</td>
             <td class="align-top">
                 
-                <code><a href="#globaltablereplica">dynamodb.<wbr>Global<wbr>Table<wbr>Replica[]</a></code>
+                <code><a href="#globaltablereplica">Global<wbr>Table<wbr>Replica[]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -368,7 +368,7 @@ The following output properties are available:
             <td class="align-top">Replicas</td>
             <td class="align-top">
                 
-                <code><a href="#globaltablereplica">List&lt;Pulumi.<wbr>Aws.<wbr>Dynamodb.<wbr>Global<wbr>Table<wbr>Replica&gt;</a></code>
+                <code><a href="#globaltablereplica">List&lt;Global<wbr>Table<wbr>Replica&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} Underlying DynamoDB Table. At least 1 replica must be defined. See below.
  {{% /md %}}
@@ -486,7 +486,7 @@ The following output properties are available:
             <td class="align-top">replicas</td>
             <td class="align-top">
                 
-                <code><a href="#globaltablereplica">dynamodb.<wbr>Global<wbr>Table<wbr>Replica[]</a></code>
+                <code><a href="#globaltablereplica">Global<wbr>Table<wbr>Replica[]</a></code>
             </td>
             <td class="align-top">{{% md %}} Underlying DynamoDB Table. At least 1 replica must be defined. See below.
  {{% /md %}}
@@ -667,7 +667,7 @@ The name of the global table. Must match underlying DynamoDB Table names in all 
             <td class="align-top">Replicas</td>
             <td class="align-top">
                 
-                <code><a href="#globaltablereplica">List&lt;Pulumi.<wbr>Aws.<wbr>Dynamodb.<wbr>Global<wbr>Table<wbr>Replica<wbr>Args&gt;?</a></code>
+                <code><a href="#globaltablereplica">List&lt;Global<wbr>Table<wbr>Replica<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -797,7 +797,7 @@ The name of the global table. Must match underlying DynamoDB Table names in all 
             <td class="align-top">replicas</td>
             <td class="align-top">
                 
-                <code><a href="#globaltablereplica">dynamodb.<wbr>Global<wbr>Table<wbr>Replica[]?</a></code>
+                <code><a href="#globaltablereplica">Global<wbr>Table<wbr>Replica[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

@@ -36,7 +36,7 @@ VPC.
 <div class="highlight">
 <pre class="chroma">
 <code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetVpc </span><span class="p">{</span>
-    <span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.GetVpcResult.html">Pulumi.Aws.Ec2.GetVpcResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.GetVpcArgs.html">GetVpcArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span>
+    <span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.GetVpcResult.html">GetVpcResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.GetVpcArgs.html">GetVpcArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span>
 <span class="p">}</span></code></pre>
 </div>
 
@@ -111,7 +111,7 @@ The DHCP options id of the desired VPC.
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getvpcfilter">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Get<wbr>Vpc<wbr>Filter<wbr>Args&gt;?</a></code>
+                <code><a href="#getvpcfilter">List&lt;Get<wbr>Vpc<wbr>Filter<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -157,7 +157,7 @@ Can be either `&#34;pending&#34;` or `&#34;available&#34;`.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -367,7 +367,7 @@ The DHCP options id of the desired VPC.
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getvpcfilter">ec2.<wbr>Get<wbr>Vpc<wbr>Filter[]?</a></code>
+                <code><a href="#getvpcfilter">Get<wbr>Vpc<wbr>Filter[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -618,7 +618,7 @@ The following output properties are available:
             <td class="align-top">Cidr<wbr>Block<wbr>Associations</td>
             <td class="align-top">
                 
-                <code><a href="#getvpccidrblockassociation">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Get<wbr>Vpc<wbr>Cidr<wbr>Block<wbr>Association&gt;</a></code>
+                <code><a href="#getvpccidrblockassociation">List&lt;Get<wbr>Vpc<wbr>Cidr<wbr>Block<wbr>Association&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -680,7 +680,7 @@ The following output properties are available:
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getvpcfilter">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Get<wbr>Vpc<wbr>Filter&gt;?</a></code>
+                <code><a href="#getvpcfilter">List&lt;Get<wbr>Vpc<wbr>Filter&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -783,7 +783,7 @@ selected VPC. May be any of `&#34;default&#34;`, `&#34;dedicated&#34;`, or `&#34
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;</code>
+                <code>Dictionary<string, object></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1064,7 +1064,7 @@ selected VPC. May be any of `&#34;default&#34;`, `&#34;dedicated&#34;`, or `&#34
             <td class="align-top">cidr<wbr>Block<wbr>Associations</td>
             <td class="align-top">
                 
-                <code><a href="#getvpccidrblockassociation">ec2.<wbr>Get<wbr>Vpc<wbr>Cidr<wbr>Block<wbr>Association[]</a></code>
+                <code><a href="#getvpccidrblockassociation">Get<wbr>Vpc<wbr>Cidr<wbr>Block<wbr>Association[]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1126,7 +1126,7 @@ selected VPC. May be any of `&#34;default&#34;`, `&#34;dedicated&#34;`, or `&#34
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getvpcfilter">ec2.<wbr>Get<wbr>Vpc<wbr>Filter[]?</a></code>
+                <code><a href="#getvpcfilter">Get<wbr>Vpc<wbr>Filter[]?</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1811,7 +1811,7 @@ The name of the field to filter by, as defined by
             <td class="align-top">Values</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

@@ -43,7 +43,7 @@ const example = aws.workspaces.getBundle({
 <div class="highlight">
 <pre class="chroma">
 <code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetBundle </span><span class="p">{</span>
-    <span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Workspaces.GetBundleResult.html">Pulumi.Aws.Workspaces.GetBundleResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Workspaces.GetBundleArgs.html">GetBundleArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span>
+    <span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Workspaces.GetBundleResult.html">GetBundleResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Workspaces.GetBundleArgs.html">GetBundleArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span>
 <span class="p">}</span></code></pre>
 </div>
 
@@ -239,7 +239,7 @@ The following output properties are available:
             <td class="align-top">Compute<wbr>Types</td>
             <td class="align-top">
                 
-                <code><a href="#getbundlecomputetype">List&lt;Pulumi.<wbr>Aws.<wbr>Workspaces.<wbr>Get<wbr>Bundle<wbr>Compute<wbr>Type&gt;</a></code>
+                <code><a href="#getbundlecomputetype">List&lt;Get<wbr>Bundle<wbr>Compute<wbr>Type&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} The compute type. See supported fields below.
  {{% /md %}}
@@ -304,7 +304,7 @@ The following output properties are available:
             <td class="align-top">Root<wbr>Storages</td>
             <td class="align-top">
                 
-                <code><a href="#getbundlerootstorage">List&lt;Pulumi.<wbr>Aws.<wbr>Workspaces.<wbr>Get<wbr>Bundle<wbr>Root<wbr>Storage&gt;</a></code>
+                <code><a href="#getbundlerootstorage">List&lt;Get<wbr>Bundle<wbr>Root<wbr>Storage&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} The root volume. See supported fields below.
  {{% /md %}}
@@ -317,7 +317,7 @@ The following output properties are available:
             <td class="align-top">User<wbr>Storages</td>
             <td class="align-top">
                 
-                <code><a href="#getbundleuserstorage">List&lt;Pulumi.<wbr>Aws.<wbr>Workspaces.<wbr>Get<wbr>Bundle<wbr>User<wbr>Storage&gt;</a></code>
+                <code><a href="#getbundleuserstorage">List&lt;Get<wbr>Bundle<wbr>User<wbr>Storage&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} The user storage. See supported fields below.
  {{% /md %}}
@@ -485,7 +485,7 @@ The following output properties are available:
             <td class="align-top">compute<wbr>Types</td>
             <td class="align-top">
                 
-                <code><a href="#getbundlecomputetype">workspaces.<wbr>Get<wbr>Bundle<wbr>Compute<wbr>Type[]</a></code>
+                <code><a href="#getbundlecomputetype">Get<wbr>Bundle<wbr>Compute<wbr>Type[]</a></code>
             </td>
             <td class="align-top">{{% md %}} The compute type. See supported fields below.
  {{% /md %}}
@@ -550,7 +550,7 @@ The following output properties are available:
             <td class="align-top">root<wbr>Storages</td>
             <td class="align-top">
                 
-                <code><a href="#getbundlerootstorage">workspaces.<wbr>Get<wbr>Bundle<wbr>Root<wbr>Storage[]</a></code>
+                <code><a href="#getbundlerootstorage">Get<wbr>Bundle<wbr>Root<wbr>Storage[]</a></code>
             </td>
             <td class="align-top">{{% md %}} The root volume. See supported fields below.
  {{% /md %}}
@@ -563,7 +563,7 @@ The following output properties are available:
             <td class="align-top">user<wbr>Storages</td>
             <td class="align-top">
                 
-                <code><a href="#getbundleuserstorage">workspaces.<wbr>Get<wbr>Bundle<wbr>User<wbr>Storage[]</a></code>
+                <code><a href="#getbundleuserstorage">Get<wbr>Bundle<wbr>User<wbr>Storage[]</a></code>
             </td>
             <td class="align-top">{{% md %}} The user storage. See supported fields below.
  {{% /md %}}

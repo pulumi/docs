@@ -135,7 +135,7 @@ The name to identify the Group Membership
             <td class="align-top">Users</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -405,7 +405,7 @@ The following output properties are available:
             <td class="align-top">Users</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} A list of IAM User names to associate with the Group
  {{% /md %}}
@@ -704,7 +704,7 @@ The name to identify the Group Membership
             <td class="align-top">Users</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

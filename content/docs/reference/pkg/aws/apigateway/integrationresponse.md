@@ -177,7 +177,7 @@ The API resource ID
             <td class="align-top">Response<wbr>Parameters</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, string&gt;?</code>
+                <code>Dictionary<string, string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -193,7 +193,7 @@ For example: `response_parameters = { &#34;method.response.header.X-Some-Header&
             <td class="align-top">Response<wbr>Templates</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, string&gt;?</code>
+                <code>Dictionary<string, string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -496,7 +496,7 @@ A map specifying the templates used to transform the integration response body
             <td class="align-top">rest<wbr>Api</td>
             <td class="align-top">
                 
-                <code>string | Rest<wbr>Api</code>
+                <code>string | RestApi</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -761,7 +761,7 @@ The following output properties are available:
             <td class="align-top">Response<wbr>Parameters</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, string&gt;?</code>
+                <code>Dictionary<string, string>?</code>
             </td>
             <td class="align-top">{{% md %}} A map of response parameters that can be read from the backend response.
 For example: `response_parameters = { &#34;method.response.header.X-Some-Header&#34; = &#34;integration.response.header.X-Some-Other-Header&#34; }`
@@ -775,7 +775,7 @@ For example: `response_parameters = { &#34;method.response.header.X-Some-Header&
             <td class="align-top">Response<wbr>Templates</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, string&gt;?</code>
+                <code>Dictionary<string, string>?</code>
             </td>
             <td class="align-top">{{% md %}} A map specifying the templates used to transform the integration response body
  {{% /md %}}
@@ -1338,7 +1338,7 @@ The API resource ID
             <td class="align-top">Response<wbr>Parameters</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, string&gt;?</code>
+                <code>Dictionary<string, string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1354,7 +1354,7 @@ For example: `response_parameters = { &#34;method.response.header.X-Some-Header&
             <td class="align-top">Response<wbr>Templates</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, string&gt;?</code>
+                <code>Dictionary<string, string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1657,7 +1657,7 @@ A map specifying the templates used to transform the integration response body
             <td class="align-top">rest<wbr>Api</td>
             <td class="align-top">
                 
-                <code>string | Rest<wbr>Api</code>
+                <code>string | RestApi</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

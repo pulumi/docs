@@ -223,7 +223,7 @@ Owner of the table.
             <td class="align-top">Parameters</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, string&gt;?</code>
+                <code>Dictionary<string, string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -238,7 +238,7 @@ A map of initialization parameters for the SerDe, in key-value form.
             <td class="align-top">Partition<wbr>Keys</td>
             <td class="align-top">
                 
-                <code><a href="#catalogtablepartitionkey">List&lt;Pulumi.<wbr>Aws.<wbr>Glue.<wbr>Catalog<wbr>Table<wbr>Partition<wbr>Key<wbr>Args&gt;?</a></code>
+                <code><a href="#catalogtablepartitionkey">List&lt;Catalog<wbr>Table<wbr>Partition<wbr>Key<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -268,7 +268,7 @@ Retention time for this table.
             <td class="align-top">Storage<wbr>Descriptor</td>
             <td class="align-top">
                 
-                <code><a href="#catalogtablestoragedescriptor">Pulumi.<wbr>Aws.<wbr>Glue.<wbr>Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Args?</a></code>
+                <code><a href="#catalogtablestoragedescriptor">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -638,7 +638,7 @@ A map of initialization parameters for the SerDe, in key-value form.
             <td class="align-top">partition<wbr>Keys</td>
             <td class="align-top">
                 
-                <code><a href="#catalogtablepartitionkey">glue.<wbr>Catalog<wbr>Table<wbr>Partition<wbr>Key[]?</a></code>
+                <code><a href="#catalogtablepartitionkey">Catalog<wbr>Table<wbr>Partition<wbr>Key[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -668,7 +668,7 @@ Retention time for this table.
             <td class="align-top">storage<wbr>Descriptor</td>
             <td class="align-top">
                 
-                <code><a href="#catalogtablestoragedescriptor">glue.<wbr>Catalog<wbr>Table<wbr>Storage<wbr>Descriptor?</a></code>
+                <code><a href="#catalogtablestoragedescriptor">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1027,7 +1027,7 @@ The following output properties are available:
             <td class="align-top">Parameters</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, string&gt;?</code>
+                <code>Dictionary<string, string>?</code>
             </td>
             <td class="align-top">{{% md %}} A map of initialization parameters for the SerDe, in key-value form.
  {{% /md %}}
@@ -1040,7 +1040,7 @@ The following output properties are available:
             <td class="align-top">Partition<wbr>Keys</td>
             <td class="align-top">
                 
-                <code><a href="#catalogtablepartitionkey">List&lt;Pulumi.<wbr>Aws.<wbr>Glue.<wbr>Catalog<wbr>Table<wbr>Partition<wbr>Key&gt;?</a></code>
+                <code><a href="#catalogtablepartitionkey">List&lt;Catalog<wbr>Table<wbr>Partition<wbr>Key&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of columns by which the table is partitioned. Only primitive types are supported as partition keys.
  {{% /md %}}
@@ -1066,7 +1066,7 @@ The following output properties are available:
             <td class="align-top">Storage<wbr>Descriptor</td>
             <td class="align-top">
                 
-                <code><a href="#catalogtablestoragedescriptor">Pulumi.<wbr>Aws.<wbr>Glue.<wbr>Catalog<wbr>Table<wbr>Storage<wbr>Descriptor?</a></code>
+                <code><a href="#catalogtablestoragedescriptor">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor?</a></code>
             </td>
             <td class="align-top">{{% md %}} A storage descriptor object containing information about the physical storage of this table. You can refer to the [Glue Developer Guide](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-StorageDescriptor) for a full explanation of this object.
  {{% /md %}}
@@ -1392,7 +1392,7 @@ The following output properties are available:
             <td class="align-top">partition<wbr>Keys</td>
             <td class="align-top">
                 
-                <code><a href="#catalogtablepartitionkey">glue.<wbr>Catalog<wbr>Table<wbr>Partition<wbr>Key[]?</a></code>
+                <code><a href="#catalogtablepartitionkey">Catalog<wbr>Table<wbr>Partition<wbr>Key[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of columns by which the table is partitioned. Only primitive types are supported as partition keys.
  {{% /md %}}
@@ -1418,7 +1418,7 @@ The following output properties are available:
             <td class="align-top">storage<wbr>Descriptor</td>
             <td class="align-top">
                 
-                <code><a href="#catalogtablestoragedescriptor">glue.<wbr>Catalog<wbr>Table<wbr>Storage<wbr>Descriptor?</a></code>
+                <code><a href="#catalogtablestoragedescriptor">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor?</a></code>
             </td>
             <td class="align-top">{{% md %}} A storage descriptor object containing information about the physical storage of this table. You can refer to the [Glue Developer Guide](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-StorageDescriptor) for a full explanation of this object.
  {{% /md %}}
@@ -1800,7 +1800,7 @@ Owner of the table.
             <td class="align-top">Parameters</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, string&gt;?</code>
+                <code>Dictionary<string, string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1815,7 +1815,7 @@ A map of initialization parameters for the SerDe, in key-value form.
             <td class="align-top">Partition<wbr>Keys</td>
             <td class="align-top">
                 
-                <code><a href="#catalogtablepartitionkey">List&lt;Pulumi.<wbr>Aws.<wbr>Glue.<wbr>Catalog<wbr>Table<wbr>Partition<wbr>Key<wbr>Args&gt;?</a></code>
+                <code><a href="#catalogtablepartitionkey">List&lt;Catalog<wbr>Table<wbr>Partition<wbr>Key<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1845,7 +1845,7 @@ Retention time for this table.
             <td class="align-top">Storage<wbr>Descriptor</td>
             <td class="align-top">
                 
-                <code><a href="#catalogtablestoragedescriptor">Pulumi.<wbr>Aws.<wbr>Glue.<wbr>Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Args?</a></code>
+                <code><a href="#catalogtablestoragedescriptor">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2215,7 +2215,7 @@ A map of initialization parameters for the SerDe, in key-value form.
             <td class="align-top">partition<wbr>Keys</td>
             <td class="align-top">
                 
-                <code><a href="#catalogtablepartitionkey">glue.<wbr>Catalog<wbr>Table<wbr>Partition<wbr>Key[]?</a></code>
+                <code><a href="#catalogtablepartitionkey">Catalog<wbr>Table<wbr>Partition<wbr>Key[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2245,7 +2245,7 @@ Retention time for this table.
             <td class="align-top">storage<wbr>Descriptor</td>
             <td class="align-top">
                 
-                <code><a href="#catalogtablestoragedescriptor">glue.<wbr>Catalog<wbr>Table<wbr>Storage<wbr>Descriptor?</a></code>
+                <code><a href="#catalogtablestoragedescriptor">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2834,7 +2834,7 @@ The datatype of data in the Column.
             <td class="align-top">Bucket<wbr>Columns</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2849,7 +2849,7 @@ A list of reducer grouping columns, clustering columns, and bucketing columns in
             <td class="align-top">Columns</td>
             <td class="align-top">
                 
-                <code><a href="#catalogtablestoragedescriptorcolumn">List&lt;Pulumi.<wbr>Aws.<wbr>Glue.<wbr>Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Column<wbr>Args&gt;?</a></code>
+                <code><a href="#catalogtablestoragedescriptorcolumn">List&lt;Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Column<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2939,7 +2939,7 @@ The output format: SequenceFileOutputFormat (binary), or IgnoreKeyTextOutputForm
             <td class="align-top">Parameters</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, string&gt;?</code>
+                <code>Dictionary<string, string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2954,7 +2954,7 @@ A map of initialization parameters for the SerDe, in key-value form.
             <td class="align-top">Ser<wbr>De<wbr>Info</td>
             <td class="align-top">
                 
-                <code><a href="#catalogtablestoragedescriptorserdeinfo">Pulumi.<wbr>Aws.<wbr>Glue.<wbr>Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Ser<wbr>De<wbr>Info<wbr>Args?</a></code>
+                <code><a href="#catalogtablestoragedescriptorserdeinfo">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Ser<wbr>De<wbr>Info<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2969,7 +2969,7 @@ Serialization/deserialization (SerDe) information.
             <td class="align-top">Skewed<wbr>Info</td>
             <td class="align-top">
                 
-                <code><a href="#catalogtablestoragedescriptorskewedinfo">Pulumi.<wbr>Aws.<wbr>Glue.<wbr>Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Skewed<wbr>Info<wbr>Args?</a></code>
+                <code><a href="#catalogtablestoragedescriptorskewedinfo">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Skewed<wbr>Info<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2984,7 +2984,7 @@ Information about values that appear very frequently in a column (skewed values)
             <td class="align-top">Sort<wbr>Columns</td>
             <td class="align-top">
                 
-                <code><a href="#catalogtablestoragedescriptorsortcolumn">List&lt;Pulumi.<wbr>Aws.<wbr>Glue.<wbr>Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Sort<wbr>Column<wbr>Args&gt;?</a></code>
+                <code><a href="#catalogtablestoragedescriptorsortcolumn">List&lt;Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Sort<wbr>Column<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3249,7 +3249,7 @@ A list of reducer grouping columns, clustering columns, and bucketing columns in
             <td class="align-top">columns</td>
             <td class="align-top">
                 
-                <code><a href="#catalogtablestoragedescriptorcolumn">glue.<wbr>Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Column[]?</a></code>
+                <code><a href="#catalogtablestoragedescriptorcolumn">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Column[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3354,7 +3354,7 @@ A map of initialization parameters for the SerDe, in key-value form.
             <td class="align-top">ser<wbr>De<wbr>Info</td>
             <td class="align-top">
                 
-                <code><a href="#catalogtablestoragedescriptorserdeinfo">glue.<wbr>Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Ser<wbr>De<wbr>Info?</a></code>
+                <code><a href="#catalogtablestoragedescriptorserdeinfo">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Ser<wbr>De<wbr>Info?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3369,7 +3369,7 @@ Serialization/deserialization (SerDe) information.
             <td class="align-top">skewed<wbr>Info</td>
             <td class="align-top">
                 
-                <code><a href="#catalogtablestoragedescriptorskewedinfo">glue.<wbr>Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Skewed<wbr>Info?</a></code>
+                <code><a href="#catalogtablestoragedescriptorskewedinfo">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Skewed<wbr>Info?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3384,7 +3384,7 @@ Information about values that appear very frequently in a column (skewed values)
             <td class="align-top">sort<wbr>Columns</td>
             <td class="align-top">
                 
-                <code><a href="#catalogtablestoragedescriptorsortcolumn">glue.<wbr>Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Sort<wbr>Column[]?</a></code>
+                <code><a href="#catalogtablestoragedescriptorsortcolumn">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Sort<wbr>Column[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3951,7 +3951,7 @@ Name of the SerDe.
             <td class="align-top">Parameters</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, string&gt;?</code>
+                <code>Dictionary<string, string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4217,7 +4217,7 @@ Usually the class that implements the SerDe. An example is: org.apache.hadoop.hi
             <td class="align-top">Skewed<wbr>Column<wbr>Names</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4232,7 +4232,7 @@ A list of names of columns that contain skewed values.
             <td class="align-top">Skewed<wbr>Column<wbr>Value<wbr>Location<wbr>Maps</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, string&gt;?</code>
+                <code>Dictionary<string, string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4247,7 +4247,7 @@ A list of values that appear so frequently as to be considered skewed.
             <td class="align-top">Skewed<wbr>Column<wbr>Values</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

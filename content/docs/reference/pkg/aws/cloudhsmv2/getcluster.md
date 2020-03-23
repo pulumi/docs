@@ -43,7 +43,7 @@ const cluster = aws.cloudhsmv2.getCluster({
 <div class="highlight">
 <pre class="chroma">
 <code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetCluster </span><span class="p">{</span>
-    <span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cloudhsmv2.GetClusterResult.html">Pulumi.Aws.Cloudhsmv2.GetClusterResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cloudhsmv2.GetClusterArgs.html">GetClusterArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span>
+    <span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cloudhsmv2.GetClusterResult.html">GetClusterResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cloudhsmv2.GetClusterArgs.html">GetClusterArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span>
 <span class="p">}</span></code></pre>
 </div>
 
@@ -287,7 +287,7 @@ The following output properties are available:
             <td class="align-top">Cluster<wbr>Certificates</td>
             <td class="align-top">
                 
-                <code><a href="#getclusterclustercertificates">Pulumi.<wbr>Aws.<wbr>Cloudhsmv2.<wbr>Get<wbr>Cluster<wbr>Cluster<wbr>Certificates</a></code>
+                <code><a href="#getclusterclustercertificates">Get<wbr>Cluster<wbr>Cluster<wbr>Certificates</a></code>
             </td>
             <td class="align-top">{{% md %}} The list of cluster certificates.
 * `cluster_certificates.0.cluster_certificate` - The cluster certificate issued (signed) by the issuing certificate authority (CA) of the cluster&#39;s owner.
@@ -356,7 +356,7 @@ The number of available cluster certificates may vary depending on state of the 
             <td class="align-top">Subnet<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} The IDs of subnets in which cluster operates.
  {{% /md %}}
@@ -517,7 +517,7 @@ The number of available cluster certificates may vary depending on state of the 
             <td class="align-top">cluster<wbr>Certificates</td>
             <td class="align-top">
                 
-                <code><a href="#getclusterclustercertificates">cloudhsmv2.<wbr>Get<wbr>Cluster<wbr>Cluster<wbr>Certificates</a></code>
+                <code><a href="#getclusterclustercertificates">Get<wbr>Cluster<wbr>Cluster<wbr>Certificates</a></code>
             </td>
             <td class="align-top">{{% md %}} The list of cluster certificates.
 * `cluster_certificates.0.cluster_certificate` - The cluster certificate issued (signed) by the issuing certificate authority (CA) of the cluster&#39;s owner.

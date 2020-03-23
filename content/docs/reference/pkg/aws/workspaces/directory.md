@@ -134,7 +134,7 @@ The directory identifier for registration in WorkSpaces service.
             <td class="align-top">Self<wbr>Service<wbr>Permissions</td>
             <td class="align-top">
                 
-                <code><a href="#directoryselfservicepermissions">Pulumi.<wbr>Aws.<wbr>Workspaces.<wbr>Directory<wbr>Self<wbr>Service<wbr>Permissions<wbr>Args?</a></code>
+                <code><a href="#directoryselfservicepermissions">Directory<wbr>Self<wbr>Service<wbr>Permissions<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -149,7 +149,7 @@ The permissions to enable or disable self-service capabilities.
             <td class="align-top">Subnet<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -164,7 +164,7 @@ The identifiers of the subnets where the directory resides.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -294,7 +294,7 @@ The directory identifier for registration in WorkSpaces service.
             <td class="align-top">self<wbr>Service<wbr>Permissions</td>
             <td class="align-top">
                 
-                <code><a href="#directoryselfservicepermissions">workspaces.<wbr>Directory<wbr>Self<wbr>Service<wbr>Permissions?</a></code>
+                <code><a href="#directoryselfservicepermissions">Directory<wbr>Self<wbr>Service<wbr>Permissions?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -466,7 +466,7 @@ The following output properties are available:
             <td class="align-top">Self<wbr>Service<wbr>Permissions</td>
             <td class="align-top">
                 
-                <code><a href="#directoryselfservicepermissions">Pulumi.<wbr>Aws.<wbr>Workspaces.<wbr>Directory<wbr>Self<wbr>Service<wbr>Permissions</a></code>
+                <code><a href="#directoryselfservicepermissions">Directory<wbr>Self<wbr>Service<wbr>Permissions</a></code>
             </td>
             <td class="align-top">{{% md %}} The permissions to enable or disable self-service capabilities.
  {{% /md %}}
@@ -479,7 +479,7 @@ The following output properties are available:
             <td class="align-top">Subnet<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} The identifiers of the subnets where the directory resides.
  {{% /md %}}
@@ -492,7 +492,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags assigned to the WorkSpaces directory.
  {{% /md %}}
@@ -610,7 +610,7 @@ The following output properties are available:
             <td class="align-top">self<wbr>Service<wbr>Permissions</td>
             <td class="align-top">
                 
-                <code><a href="#directoryselfservicepermissions">workspaces.<wbr>Directory<wbr>Self<wbr>Service<wbr>Permissions</a></code>
+                <code><a href="#directoryselfservicepermissions">Directory<wbr>Self<wbr>Service<wbr>Permissions</a></code>
             </td>
             <td class="align-top">{{% md %}} The permissions to enable or disable self-service capabilities.
  {{% /md %}}
@@ -815,7 +815,7 @@ The directory identifier for registration in WorkSpaces service.
             <td class="align-top">Self<wbr>Service<wbr>Permissions</td>
             <td class="align-top">
                 
-                <code><a href="#directoryselfservicepermissions">Pulumi.<wbr>Aws.<wbr>Workspaces.<wbr>Directory<wbr>Self<wbr>Service<wbr>Permissions<wbr>Args?</a></code>
+                <code><a href="#directoryselfservicepermissions">Directory<wbr>Self<wbr>Service<wbr>Permissions<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -830,7 +830,7 @@ The permissions to enable or disable self-service capabilities.
             <td class="align-top">Subnet<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -845,7 +845,7 @@ The identifiers of the subnets where the directory resides.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -975,7 +975,7 @@ The directory identifier for registration in WorkSpaces service.
             <td class="align-top">self<wbr>Service<wbr>Permissions</td>
             <td class="align-top">
                 
-                <code><a href="#directoryselfservicepermissions">workspaces.<wbr>Directory<wbr>Self<wbr>Service<wbr>Permissions?</a></code>
+                <code><a href="#directoryselfservicepermissions">Directory<wbr>Self<wbr>Service<wbr>Permissions?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

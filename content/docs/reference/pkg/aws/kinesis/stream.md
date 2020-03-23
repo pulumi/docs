@@ -208,7 +208,7 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
             <td class="align-top">Shard<wbr>Level<wbr>Metrics</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -223,7 +223,7 @@ A list of shard-level CloudWatch metrics which can be enabled for the stream. Se
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -832,7 +832,7 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
             <td class="align-top">Shard<wbr>Level<wbr>Metrics</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} A list of shard-level CloudWatch metrics which can be enabled for the stream. See [Monitoring with CloudWatch][3] for more. Note that the value ALL should not be used; instead you should provide an explicit list of metrics you wish to enable.
  {{% /md %}}
@@ -845,7 +845,7 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -1457,7 +1457,7 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
             <td class="align-top">Shard<wbr>Level<wbr>Metrics</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1472,7 +1472,7 @@ A list of shard-level CloudWatch metrics which can be enabled for the stream. Se
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

@@ -154,7 +154,7 @@ The following arguments are supported:
             <td class="align-top">Allowed<wbr>Prefixes</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -624,7 +624,7 @@ The following output properties are available:
             <td class="align-top">Allowed<wbr>Prefixes</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} VPC prefixes (CIDRs) to advertise to the Direct Connect gateway. Defaults to the CIDR block of the VPC associated with the Virtual Gateway. To enable drift detection, must be configured.
  {{% /md %}}
@@ -1247,7 +1247,7 @@ The following state arguments are supported:
             <td class="align-top">Allowed<wbr>Prefixes</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

@@ -105,7 +105,7 @@ The following arguments are supported:
             <td class="align-top">Attribute<wbr>Mapping</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -120,7 +120,7 @@ The map of attribute mapping of user pool attributes. [AttributeMapping in AWS A
             <td class="align-top">Idp<wbr>Identifiers</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -135,7 +135,7 @@ The list of identity providers.
             <td class="align-top">Provider<wbr>Details</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;</code>
+                <code>Dictionary<string, object></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -559,7 +559,7 @@ The following output properties are available:
             <td class="align-top">Attribute<wbr>Mapping</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} The map of attribute mapping of user pool attributes. [AttributeMapping in AWS API documentation](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateIdentityProvider.html#CognitoUserPools-CreateIdentityProvider-request-AttributeMapping)
  {{% /md %}}
@@ -572,7 +572,7 @@ The following output properties are available:
             <td class="align-top">Idp<wbr>Identifiers</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} The list of identity providers.
  {{% /md %}}
@@ -585,7 +585,7 @@ The following output properties are available:
             <td class="align-top">Provider<wbr>Details</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;</code>
+                <code>Dictionary<string, object></code>
             </td>
             <td class="align-top">{{% md %}} The map of identity details, such as access token
  {{% /md %}}
@@ -1010,7 +1010,7 @@ The following state arguments are supported:
             <td class="align-top">Attribute<wbr>Mapping</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1025,7 +1025,7 @@ The map of attribute mapping of user pool attributes. [AttributeMapping in AWS A
             <td class="align-top">Idp<wbr>Identifiers</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1040,7 +1040,7 @@ The list of identity providers.
             <td class="align-top">Provider<wbr>Details</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

@@ -137,7 +137,7 @@ A longer, human-readable description for the AMI.
             <td class="align-top">Ebs<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#amiebsblockdevice">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Ami<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args&gt;?</a></code>
+                <code><a href="#amiebsblockdevice">List&lt;Ami<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -168,7 +168,7 @@ Specifies whether enhanced networking with ENA is enabled. Defaults to `false`.
             <td class="align-top">Ephemeral<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#amiephemeralblockdevice">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Ami<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args&gt;?</a></code>
+                <code><a href="#amiephemeralblockdevice">List&lt;Ami<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -278,7 +278,7 @@ for created instances. No other value is supported at this time.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -583,7 +583,7 @@ A longer, human-readable description for the AMI.
             <td class="align-top">ebs<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#amiebsblockdevice">ec2.<wbr>Ami<wbr>Ebs<wbr>Block<wbr>Device[]?</a></code>
+                <code><a href="#amiebsblockdevice">Ami<wbr>Ebs<wbr>Block<wbr>Device[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -614,7 +614,7 @@ Specifies whether enhanced networking with ENA is enabled. Defaults to `false`.
             <td class="align-top">ephemeral<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#amiephemeralblockdevice">ec2.<wbr>Ami<wbr>Ephemeral<wbr>Block<wbr>Device[]?</a></code>
+                <code><a href="#amiephemeralblockdevice">Ami<wbr>Ephemeral<wbr>Block<wbr>Device[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1039,7 +1039,7 @@ The following output properties are available:
             <td class="align-top">Ebs<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#amiebsblockdevice">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Ami<wbr>Ebs<wbr>Block<wbr>Device&gt;</a></code>
+                <code><a href="#amiebsblockdevice">List&lt;Ami<wbr>Ebs<wbr>Block<wbr>Device&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested block describing an EBS block device that should be
 attached to created instances. The structure of this block is described below.
@@ -1066,7 +1066,7 @@ attached to created instances. The structure of this block is described below.
             <td class="align-top">Ephemeral<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#amiephemeralblockdevice">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Ami<wbr>Ephemeral<wbr>Block<wbr>Device&gt;</a></code>
+                <code><a href="#amiephemeralblockdevice">List&lt;Ami<wbr>Ephemeral<wbr>Block<wbr>Device&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested block describing an ephemeral block device that
 should be attached to created instances. The structure of this block is described below.
@@ -1187,7 +1187,7 @@ for created instances. No other value is supported at this time.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -1483,7 +1483,7 @@ changes the set of further arguments that are required, as described below.
             <td class="align-top">ebs<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#amiebsblockdevice">ec2.<wbr>Ami<wbr>Ebs<wbr>Block<wbr>Device[]</a></code>
+                <code><a href="#amiebsblockdevice">Ami<wbr>Ebs<wbr>Block<wbr>Device[]</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested block describing an EBS block device that should be
 attached to created instances. The structure of this block is described below.
@@ -1510,7 +1510,7 @@ attached to created instances. The structure of this block is described below.
             <td class="align-top">ephemeral<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#amiephemeralblockdevice">ec2.<wbr>Ami<wbr>Ephemeral<wbr>Block<wbr>Device[]</a></code>
+                <code><a href="#amiephemeralblockdevice">Ami<wbr>Ephemeral<wbr>Block<wbr>Device[]</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested block describing an ephemeral block device that
 should be attached to created instances. The structure of this block is described below.
@@ -1990,7 +1990,7 @@ A longer, human-readable description for the AMI.
             <td class="align-top">Ebs<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#amiebsblockdevice">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Ami<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args&gt;?</a></code>
+                <code><a href="#amiebsblockdevice">List&lt;Ami<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2021,7 +2021,7 @@ Specifies whether enhanced networking with ENA is enabled. Defaults to `false`.
             <td class="align-top">Ephemeral<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#amiephemeralblockdevice">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Ami<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args&gt;?</a></code>
+                <code><a href="#amiephemeralblockdevice">List&lt;Ami<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2160,7 +2160,7 @@ for created instances. No other value is supported at this time.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2494,7 +2494,7 @@ A longer, human-readable description for the AMI.
             <td class="align-top">ebs<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#amiebsblockdevice">ec2.<wbr>Ami<wbr>Ebs<wbr>Block<wbr>Device[]?</a></code>
+                <code><a href="#amiebsblockdevice">Ami<wbr>Ebs<wbr>Block<wbr>Device[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2525,7 +2525,7 @@ Specifies whether enhanced networking with ENA is enabled. Defaults to `false`.
             <td class="align-top">ephemeral<wbr>Block<wbr>Devices</td>
             <td class="align-top">
                 
-                <code><a href="#amiephemeralblockdevice">ec2.<wbr>Ami<wbr>Ephemeral<wbr>Block<wbr>Device[]?</a></code>
+                <code><a href="#amiephemeralblockdevice">Ami<wbr>Ephemeral<wbr>Block<wbr>Device[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

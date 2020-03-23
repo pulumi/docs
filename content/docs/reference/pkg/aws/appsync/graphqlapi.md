@@ -199,7 +199,7 @@ The following arguments are supported:
             <td class="align-top">Additional<wbr>Authentication<wbr>Providers</td>
             <td class="align-top">
                 
-                <code><a href="#graphqlapiadditionalauthenticationprovider">List&lt;Pulumi.<wbr>Aws.<wbr>Appsync.<wbr>Graph<wbr>QLApi<wbr>Additional<wbr>Authentication<wbr>Provider<wbr>Args&gt;?</a></code>
+                <code><a href="#graphqlapiadditionalauthenticationprovider">List&lt;Graph<wbr>QLApi<wbr>Additional<wbr>Authentication<wbr>Provider<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -229,7 +229,7 @@ The authentication type. Valid values: `API_KEY`, `AWS_IAM`, `AMAZON_COGNITO_USE
             <td class="align-top">Log<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#graphqlapilogconfig">Pulumi.<wbr>Aws.<wbr>Appsync.<wbr>Graph<wbr>QLApi<wbr>Log<wbr>Config<wbr>Args?</a></code>
+                <code><a href="#graphqlapilogconfig">Graph<wbr>QLApi<wbr>Log<wbr>Config<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -259,7 +259,7 @@ A user-supplied name for the GraphqlApi.
             <td class="align-top">Openid<wbr>Connect<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#graphqlapiopenidconnectconfig">Pulumi.<wbr>Aws.<wbr>Appsync.<wbr>Graph<wbr>QLApi<wbr>Openid<wbr>Connect<wbr>Config<wbr>Args?</a></code>
+                <code><a href="#graphqlapiopenidconnectconfig">Graph<wbr>QLApi<wbr>Openid<wbr>Connect<wbr>Config<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -289,7 +289,7 @@ The schema definition, in GraphQL schema language format. This provider cannot p
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -304,7 +304,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">User<wbr>Pool<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#graphqlapiuserpoolconfig">Pulumi.<wbr>Aws.<wbr>Appsync.<wbr>Graph<wbr>QLApi<wbr>User<wbr>Pool<wbr>Config<wbr>Args?</a></code>
+                <code><a href="#graphqlapiuserpoolconfig">Graph<wbr>QLApi<wbr>User<wbr>Pool<wbr>Config<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -479,7 +479,7 @@ The Amazon Cognito User Pool configuration. Defined below.
             <td class="align-top">additional<wbr>Authentication<wbr>Providers</td>
             <td class="align-top">
                 
-                <code><a href="#graphqlapiadditionalauthenticationprovider">appsync.<wbr>Graph<wbr>QLApi<wbr>Additional<wbr>Authentication<wbr>Provider[]?</a></code>
+                <code><a href="#graphqlapiadditionalauthenticationprovider">Graph<wbr>QLApi<wbr>Additional<wbr>Authentication<wbr>Provider[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -509,7 +509,7 @@ The authentication type. Valid values: `API_KEY`, `AWS_IAM`, `AMAZON_COGNITO_USE
             <td class="align-top">log<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#graphqlapilogconfig">appsync.<wbr>Graph<wbr>QLApi<wbr>Log<wbr>Config?</a></code>
+                <code><a href="#graphqlapilogconfig">Graph<wbr>QLApi<wbr>Log<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -539,7 +539,7 @@ A user-supplied name for the GraphqlApi.
             <td class="align-top">openid<wbr>Connect<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#graphqlapiopenidconnectconfig">appsync.<wbr>Graph<wbr>QLApi<wbr>Openid<wbr>Connect<wbr>Config?</a></code>
+                <code><a href="#graphqlapiopenidconnectconfig">Graph<wbr>QLApi<wbr>Openid<wbr>Connect<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -584,7 +584,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">user<wbr>Pool<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#graphqlapiuserpoolconfig">appsync.<wbr>Graph<wbr>QLApi<wbr>User<wbr>Pool<wbr>Config?</a></code>
+                <code><a href="#graphqlapiuserpoolconfig">Graph<wbr>QLApi<wbr>User<wbr>Pool<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -773,7 +773,7 @@ The following output properties are available:
             <td class="align-top">Additional<wbr>Authentication<wbr>Providers</td>
             <td class="align-top">
                 
-                <code><a href="#graphqlapiadditionalauthenticationprovider">List&lt;Pulumi.<wbr>Aws.<wbr>Appsync.<wbr>Graph<wbr>QLApi<wbr>Additional<wbr>Authentication<wbr>Provider&gt;?</a></code>
+                <code><a href="#graphqlapiadditionalauthenticationprovider">List&lt;Graph<wbr>QLApi<wbr>Additional<wbr>Authentication<wbr>Provider&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} One or more additional authentication providers for the GraphqlApi. Defined below.
  {{% /md %}}
@@ -812,7 +812,7 @@ The following output properties are available:
             <td class="align-top">Log<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#graphqlapilogconfig">Pulumi.<wbr>Aws.<wbr>Appsync.<wbr>Graph<wbr>QLApi<wbr>Log<wbr>Config?</a></code>
+                <code><a href="#graphqlapilogconfig">Graph<wbr>QLApi<wbr>Log<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested argument containing logging configuration. Defined below.
  {{% /md %}}
@@ -838,7 +838,7 @@ The following output properties are available:
             <td class="align-top">Openid<wbr>Connect<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#graphqlapiopenidconnectconfig">Pulumi.<wbr>Aws.<wbr>Appsync.<wbr>Graph<wbr>QLApi<wbr>Openid<wbr>Connect<wbr>Config?</a></code>
+                <code><a href="#graphqlapiopenidconnectconfig">Graph<wbr>QLApi<wbr>Openid<wbr>Connect<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested argument containing OpenID Connect configuration. Defined below.
  {{% /md %}}
@@ -864,7 +864,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -877,7 +877,7 @@ The following output properties are available:
             <td class="align-top">Uris</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, string&gt;</code>
+                <code>Dictionary<string, string></code>
             </td>
             <td class="align-top">{{% md %}} Map of URIs associated with the API. e.g. `uris[&#34;GRAPHQL&#34;] = https://ID.appsync-api.REGION.amazonaws.com/graphql`
  {{% /md %}}
@@ -890,7 +890,7 @@ The following output properties are available:
             <td class="align-top">User<wbr>Pool<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#graphqlapiuserpoolconfig">Pulumi.<wbr>Aws.<wbr>Appsync.<wbr>Graph<wbr>QLApi<wbr>User<wbr>Pool<wbr>Config?</a></code>
+                <code><a href="#graphqlapiuserpoolconfig">Graph<wbr>QLApi<wbr>User<wbr>Pool<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} The Amazon Cognito User Pool configuration. Defined below.
  {{% /md %}}
@@ -1073,7 +1073,7 @@ The following output properties are available:
             <td class="align-top">additional<wbr>Authentication<wbr>Providers</td>
             <td class="align-top">
                 
-                <code><a href="#graphqlapiadditionalauthenticationprovider">appsync.<wbr>Graph<wbr>QLApi<wbr>Additional<wbr>Authentication<wbr>Provider[]?</a></code>
+                <code><a href="#graphqlapiadditionalauthenticationprovider">Graph<wbr>QLApi<wbr>Additional<wbr>Authentication<wbr>Provider[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} One or more additional authentication providers for the GraphqlApi. Defined below.
  {{% /md %}}
@@ -1112,7 +1112,7 @@ The following output properties are available:
             <td class="align-top">log<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#graphqlapilogconfig">appsync.<wbr>Graph<wbr>QLApi<wbr>Log<wbr>Config?</a></code>
+                <code><a href="#graphqlapilogconfig">Graph<wbr>QLApi<wbr>Log<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested argument containing logging configuration. Defined below.
  {{% /md %}}
@@ -1138,7 +1138,7 @@ The following output properties are available:
             <td class="align-top">openid<wbr>Connect<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#graphqlapiopenidconnectconfig">appsync.<wbr>Graph<wbr>QLApi<wbr>Openid<wbr>Connect<wbr>Config?</a></code>
+                <code><a href="#graphqlapiopenidconnectconfig">Graph<wbr>QLApi<wbr>Openid<wbr>Connect<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested argument containing OpenID Connect configuration. Defined below.
  {{% /md %}}
@@ -1190,7 +1190,7 @@ The following output properties are available:
             <td class="align-top">user<wbr>Pool<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#graphqlapiuserpoolconfig">appsync.<wbr>Graph<wbr>QLApi<wbr>User<wbr>Pool<wbr>Config?</a></code>
+                <code><a href="#graphqlapiuserpoolconfig">Graph<wbr>QLApi<wbr>User<wbr>Pool<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} The Amazon Cognito User Pool configuration. Defined below.
  {{% /md %}}
@@ -1432,7 +1432,7 @@ The following state arguments are supported:
             <td class="align-top">Additional<wbr>Authentication<wbr>Providers</td>
             <td class="align-top">
                 
-                <code><a href="#graphqlapiadditionalauthenticationprovider">List&lt;Pulumi.<wbr>Aws.<wbr>Appsync.<wbr>Graph<wbr>QLApi<wbr>Additional<wbr>Authentication<wbr>Provider<wbr>Args&gt;?</a></code>
+                <code><a href="#graphqlapiadditionalauthenticationprovider">List&lt;Graph<wbr>QLApi<wbr>Additional<wbr>Authentication<wbr>Provider<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1477,7 +1477,7 @@ The authentication type. Valid values: `API_KEY`, `AWS_IAM`, `AMAZON_COGNITO_USE
             <td class="align-top">Log<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#graphqlapilogconfig">Pulumi.<wbr>Aws.<wbr>Appsync.<wbr>Graph<wbr>QLApi<wbr>Log<wbr>Config<wbr>Args?</a></code>
+                <code><a href="#graphqlapilogconfig">Graph<wbr>QLApi<wbr>Log<wbr>Config<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1507,7 +1507,7 @@ A user-supplied name for the GraphqlApi.
             <td class="align-top">Openid<wbr>Connect<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#graphqlapiopenidconnectconfig">Pulumi.<wbr>Aws.<wbr>Appsync.<wbr>Graph<wbr>QLApi<wbr>Openid<wbr>Connect<wbr>Config<wbr>Args?</a></code>
+                <code><a href="#graphqlapiopenidconnectconfig">Graph<wbr>QLApi<wbr>Openid<wbr>Connect<wbr>Config<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1537,7 +1537,7 @@ The schema definition, in GraphQL schema language format. This provider cannot p
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1552,7 +1552,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">Uris</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, string&gt;?</code>
+                <code>Dictionary<string, string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1567,7 +1567,7 @@ Map of URIs associated with the API. e.g. `uris[&#34;GRAPHQL&#34;] = https://ID.
             <td class="align-top">User<wbr>Pool<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#graphqlapiuserpoolconfig">Pulumi.<wbr>Aws.<wbr>Appsync.<wbr>Graph<wbr>QLApi<wbr>User<wbr>Pool<wbr>Config<wbr>Args?</a></code>
+                <code><a href="#graphqlapiuserpoolconfig">Graph<wbr>QLApi<wbr>User<wbr>Pool<wbr>Config<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1772,7 +1772,7 @@ The Amazon Cognito User Pool configuration. Defined below.
             <td class="align-top">additional<wbr>Authentication<wbr>Providers</td>
             <td class="align-top">
                 
-                <code><a href="#graphqlapiadditionalauthenticationprovider">appsync.<wbr>Graph<wbr>QLApi<wbr>Additional<wbr>Authentication<wbr>Provider[]?</a></code>
+                <code><a href="#graphqlapiadditionalauthenticationprovider">Graph<wbr>QLApi<wbr>Additional<wbr>Authentication<wbr>Provider[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1817,7 +1817,7 @@ The authentication type. Valid values: `API_KEY`, `AWS_IAM`, `AMAZON_COGNITO_USE
             <td class="align-top">log<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#graphqlapilogconfig">appsync.<wbr>Graph<wbr>QLApi<wbr>Log<wbr>Config?</a></code>
+                <code><a href="#graphqlapilogconfig">Graph<wbr>QLApi<wbr>Log<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1847,7 +1847,7 @@ A user-supplied name for the GraphqlApi.
             <td class="align-top">openid<wbr>Connect<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#graphqlapiopenidconnectconfig">appsync.<wbr>Graph<wbr>QLApi<wbr>Openid<wbr>Connect<wbr>Config?</a></code>
+                <code><a href="#graphqlapiopenidconnectconfig">Graph<wbr>QLApi<wbr>Openid<wbr>Connect<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1907,7 +1907,7 @@ Map of URIs associated with the API. e.g. `uris[&#34;GRAPHQL&#34;] = https://ID.
             <td class="align-top">user<wbr>Pool<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#graphqlapiuserpoolconfig">appsync.<wbr>Graph<wbr>QLApi<wbr>User<wbr>Pool<wbr>Config?</a></code>
+                <code><a href="#graphqlapiuserpoolconfig">Graph<wbr>QLApi<wbr>User<wbr>Pool<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2155,7 +2155,7 @@ The authentication type. Valid values: `API_KEY`, `AWS_IAM`, `AMAZON_COGNITO_USE
             <td class="align-top">Openid<wbr>Connect<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#graphqlapiadditionalauthenticationprovideropenidconnectconfig">Pulumi.<wbr>Aws.<wbr>Appsync.<wbr>Graph<wbr>QLApi<wbr>Additional<wbr>Authentication<wbr>Provider<wbr>Openid<wbr>Connect<wbr>Config<wbr>Args?</a></code>
+                <code><a href="#graphqlapiadditionalauthenticationprovideropenidconnectconfig">Graph<wbr>QLApi<wbr>Additional<wbr>Authentication<wbr>Provider<wbr>Openid<wbr>Connect<wbr>Config<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2170,7 +2170,7 @@ Nested argument containing OpenID Connect configuration. Defined below.
             <td class="align-top">User<wbr>Pool<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#graphqlapiadditionalauthenticationprovideruserpoolconfig">Pulumi.<wbr>Aws.<wbr>Appsync.<wbr>Graph<wbr>QLApi<wbr>Additional<wbr>Authentication<wbr>Provider<wbr>User<wbr>Pool<wbr>Config<wbr>Args?</a></code>
+                <code><a href="#graphqlapiadditionalauthenticationprovideruserpoolconfig">Graph<wbr>QLApi<wbr>Additional<wbr>Authentication<wbr>Provider<wbr>User<wbr>Pool<wbr>Config<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2285,7 +2285,7 @@ The authentication type. Valid values: `API_KEY`, `AWS_IAM`, `AMAZON_COGNITO_USE
             <td class="align-top">openid<wbr>Connect<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#graphqlapiadditionalauthenticationprovideropenidconnectconfig">appsync.<wbr>Graph<wbr>QLApi<wbr>Additional<wbr>Authentication<wbr>Provider<wbr>Openid<wbr>Connect<wbr>Config?</a></code>
+                <code><a href="#graphqlapiadditionalauthenticationprovideropenidconnectconfig">Graph<wbr>QLApi<wbr>Additional<wbr>Authentication<wbr>Provider<wbr>Openid<wbr>Connect<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2300,7 +2300,7 @@ Nested argument containing OpenID Connect configuration. Defined below.
             <td class="align-top">user<wbr>Pool<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#graphqlapiadditionalauthenticationprovideruserpoolconfig">appsync.<wbr>Graph<wbr>QLApi<wbr>Additional<wbr>Authentication<wbr>Provider<wbr>User<wbr>Pool<wbr>Config?</a></code>
+                <code><a href="#graphqlapiadditionalauthenticationprovideruserpoolconfig">Graph<wbr>QLApi<wbr>Additional<wbr>Authentication<wbr>Provider<wbr>User<wbr>Pool<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

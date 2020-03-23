@@ -259,7 +259,7 @@ The name to use for the virtual node.
             <td class="align-top">Spec</td>
             <td class="align-top">
                 
-                <code><a href="#virtualnodespec">Pulumi.<wbr>Aws.<wbr>Appmesh.<wbr>Virtual<wbr>Node<wbr>Spec<wbr>Args</a></code>
+                <code><a href="#virtualnodespec">Virtual<wbr>Node<wbr>Spec<wbr>Args</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -274,7 +274,7 @@ The virtual node specification to apply.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -419,7 +419,7 @@ The name to use for the virtual node.
             <td class="align-top">spec</td>
             <td class="align-top">
                 
-                <code><a href="#virtualnodespec">appmesh.<wbr>Virtual<wbr>Node<wbr>Spec</a></code>
+                <code><a href="#virtualnodespec">Virtual<wbr>Node<wbr>Spec</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -628,7 +628,7 @@ The following output properties are available:
             <td class="align-top">Spec</td>
             <td class="align-top">
                 
-                <code><a href="#virtualnodespec">Pulumi.<wbr>Aws.<wbr>Appmesh.<wbr>Virtual<wbr>Node<wbr>Spec</a></code>
+                <code><a href="#virtualnodespec">Virtual<wbr>Node<wbr>Spec</a></code>
             </td>
             <td class="align-top">{{% md %}} The virtual node specification to apply.
  {{% /md %}}
@@ -641,7 +641,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -850,7 +850,7 @@ The following output properties are available:
             <td class="align-top">spec</td>
             <td class="align-top">
                 
-                <code><a href="#virtualnodespec">appmesh.<wbr>Virtual<wbr>Node<wbr>Spec</a></code>
+                <code><a href="#virtualnodespec">Virtual<wbr>Node<wbr>Spec</a></code>
             </td>
             <td class="align-top">{{% md %}} The virtual node specification to apply.
  {{% /md %}}
@@ -1141,7 +1141,7 @@ The name to use for the virtual node.
             <td class="align-top">Spec</td>
             <td class="align-top">
                 
-                <code><a href="#virtualnodespec">Pulumi.<wbr>Aws.<wbr>Appmesh.<wbr>Virtual<wbr>Node<wbr>Spec<wbr>Args?</a></code>
+                <code><a href="#virtualnodespec">Virtual<wbr>Node<wbr>Spec<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1156,7 +1156,7 @@ The virtual node specification to apply.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1391,7 +1391,7 @@ The name to use for the virtual node.
             <td class="align-top">spec</td>
             <td class="align-top">
                 
-                <code><a href="#virtualnodespec">appmesh.<wbr>Virtual<wbr>Node<wbr>Spec?</a></code>
+                <code><a href="#virtualnodespec">Virtual<wbr>Node<wbr>Spec?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1594,7 +1594,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">Backends</td>
             <td class="align-top">
                 
-                <code><a href="#virtualnodespecbackend">List&lt;Pulumi.<wbr>Aws.<wbr>Appmesh.<wbr>Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Args&gt;?</a></code>
+                <code><a href="#virtualnodespecbackend">List&lt;Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1609,7 +1609,7 @@ The backends to which the virtual node is expected to send outbound traffic.
             <td class="align-top">Listener</td>
             <td class="align-top">
                 
-                <code><a href="#virtualnodespeclistener">Pulumi.<wbr>Aws.<wbr>Appmesh.<wbr>Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Args?</a></code>
+                <code><a href="#virtualnodespeclistener">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1624,7 +1624,7 @@ The listeners from which the virtual node is expected to receive inbound traffic
             <td class="align-top">Logging</td>
             <td class="align-top">
                 
-                <code><a href="#virtualnodespeclogging">Pulumi.<wbr>Aws.<wbr>Appmesh.<wbr>Virtual<wbr>Node<wbr>Spec<wbr>Logging<wbr>Args?</a></code>
+                <code><a href="#virtualnodespeclogging">Virtual<wbr>Node<wbr>Spec<wbr>Logging<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1639,7 +1639,7 @@ The inbound and outbound access logging information for the virtual node.
             <td class="align-top">Service<wbr>Discovery</td>
             <td class="align-top">
                 
-                <code><a href="#virtualnodespecservicediscovery">Pulumi.<wbr>Aws.<wbr>Appmesh.<wbr>Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery<wbr>Args?</a></code>
+                <code><a href="#virtualnodespecservicediscovery">Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1754,7 +1754,7 @@ The service discovery information for the virtual node.
             <td class="align-top">backends</td>
             <td class="align-top">
                 
-                <code><a href="#virtualnodespecbackend">appmesh.<wbr>Virtual<wbr>Node<wbr>Spec<wbr>Backend[]?</a></code>
+                <code><a href="#virtualnodespecbackend">Virtual<wbr>Node<wbr>Spec<wbr>Backend[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1769,7 +1769,7 @@ The backends to which the virtual node is expected to send outbound traffic.
             <td class="align-top">listener</td>
             <td class="align-top">
                 
-                <code><a href="#virtualnodespeclistener">appmesh.<wbr>Virtual<wbr>Node<wbr>Spec<wbr>Listener?</a></code>
+                <code><a href="#virtualnodespeclistener">Virtual<wbr>Node<wbr>Spec<wbr>Listener?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1784,7 +1784,7 @@ The listeners from which the virtual node is expected to receive inbound traffic
             <td class="align-top">logging</td>
             <td class="align-top">
                 
-                <code><a href="#virtualnodespeclogging">appmesh.<wbr>Virtual<wbr>Node<wbr>Spec<wbr>Logging?</a></code>
+                <code><a href="#virtualnodespeclogging">Virtual<wbr>Node<wbr>Spec<wbr>Logging?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1799,7 +1799,7 @@ The inbound and outbound access logging information for the virtual node.
             <td class="align-top">service<wbr>Discovery</td>
             <td class="align-top">
                 
-                <code><a href="#virtualnodespecservicediscovery">appmesh.<wbr>Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery?</a></code>
+                <code><a href="#virtualnodespecservicediscovery">Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1935,7 +1935,7 @@ The service discovery information for the virtual node.
             <td class="align-top">Virtual<wbr>Service</td>
             <td class="align-top">
                 
-                <code><a href="#virtualnodespecbackendvirtualservice">Pulumi.<wbr>Aws.<wbr>Appmesh.<wbr>Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Args?</a></code>
+                <code><a href="#virtualnodespecbackendvirtualservice">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2005,7 +2005,7 @@ Specifies a virtual service to use as a backend for a virtual node.
             <td class="align-top">virtual<wbr>Service</td>
             <td class="align-top">
                 
-                <code><a href="#virtualnodespecbackendvirtualservice">appmesh.<wbr>Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service?</a></code>
+                <code><a href="#virtualnodespecbackendvirtualservice">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2257,7 +2257,7 @@ The name of the virtual service that is acting as a virtual node backend.
             <td class="align-top">Health<wbr>Check</td>
             <td class="align-top">
                 
-                <code><a href="#virtualnodespeclistenerhealthcheck">Pulumi.<wbr>Aws.<wbr>Appmesh.<wbr>Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Health<wbr>Check<wbr>Args?</a></code>
+                <code><a href="#virtualnodespeclistenerhealthcheck">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Health<wbr>Check<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2272,7 +2272,7 @@ The health check information for the listener.
             <td class="align-top">Port<wbr>Mapping</td>
             <td class="align-top">
                 
-                <code><a href="#virtualnodespeclistenerportmapping">Pulumi.<wbr>Aws.<wbr>Appmesh.<wbr>Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Port<wbr>Mapping<wbr>Args</a></code>
+                <code><a href="#virtualnodespeclistenerportmapping">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Port<wbr>Mapping<wbr>Args</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2357,7 +2357,7 @@ The port mapping information for the listener.
             <td class="align-top">health<wbr>Check</td>
             <td class="align-top">
                 
-                <code><a href="#virtualnodespeclistenerhealthcheck">appmesh.<wbr>Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Health<wbr>Check?</a></code>
+                <code><a href="#virtualnodespeclistenerhealthcheck">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Health<wbr>Check?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2372,7 +2372,7 @@ The health check information for the listener.
             <td class="align-top">port<wbr>Mapping</td>
             <td class="align-top">
                 
-                <code><a href="#virtualnodespeclistenerportmapping">appmesh.<wbr>Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Port<wbr>Mapping</a></code>
+                <code><a href="#virtualnodespeclistenerportmapping">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Port<wbr>Mapping</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -3220,7 +3220,7 @@ The protocol for the health check request. Valid values are `http` and `tcp`.
             <td class="align-top">Access<wbr>Log</td>
             <td class="align-top">
                 
-                <code><a href="#virtualnodespecloggingaccesslog">Pulumi.<wbr>Aws.<wbr>Appmesh.<wbr>Virtual<wbr>Node<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log<wbr>Args?</a></code>
+                <code><a href="#virtualnodespecloggingaccesslog">Virtual<wbr>Node<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3290,7 +3290,7 @@ The access log configuration for a virtual node.
             <td class="align-top">access<wbr>Log</td>
             <td class="align-top">
                 
-                <code><a href="#virtualnodespecloggingaccesslog">appmesh.<wbr>Virtual<wbr>Node<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log?</a></code>
+                <code><a href="#virtualnodespecloggingaccesslog">Virtual<wbr>Node<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3381,7 +3381,7 @@ The access log configuration for a virtual node.
             <td class="align-top">File</td>
             <td class="align-top">
                 
-                <code><a href="#virtualnodespecloggingaccesslogfile">Pulumi.<wbr>Aws.<wbr>Appmesh.<wbr>Virtual<wbr>Node<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log<wbr>File<wbr>Args?</a></code>
+                <code><a href="#virtualnodespecloggingaccesslogfile">Virtual<wbr>Node<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log<wbr>File<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3451,7 +3451,7 @@ The file object to send virtual node access logs to.
             <td class="align-top">file</td>
             <td class="align-top">
                 
-                <code><a href="#virtualnodespecloggingaccesslogfile">appmesh.<wbr>Virtual<wbr>Node<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log<wbr>File?</a></code>
+                <code><a href="#virtualnodespecloggingaccesslogfile">Virtual<wbr>Node<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log<wbr>File?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3703,7 +3703,7 @@ The destination path for the health check request. This is only required if the 
             <td class="align-top">Aws<wbr>Cloud<wbr>Map</td>
             <td class="align-top">
                 
-                <code><a href="#virtualnodespecservicediscoveryawscloudmap">Pulumi.<wbr>Aws.<wbr>Appmesh.<wbr>Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery<wbr>Aws<wbr>Cloud<wbr>Map<wbr>Args?</a></code>
+                <code><a href="#virtualnodespecservicediscoveryawscloudmap">Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery<wbr>Aws<wbr>Cloud<wbr>Map<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3718,7 +3718,7 @@ Specifies any AWS Cloud Map information for the virtual node.
             <td class="align-top">Dns</td>
             <td class="align-top">
                 
-                <code><a href="#virtualnodespecservicediscoverydns">Pulumi.<wbr>Aws.<wbr>Appmesh.<wbr>Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery<wbr>Dns<wbr>Args?</a></code>
+                <code><a href="#virtualnodespecservicediscoverydns">Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery<wbr>Dns<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3803,7 +3803,7 @@ Specifies the DNS service name for the virtual node.
             <td class="align-top">aws<wbr>Cloud<wbr>Map</td>
             <td class="align-top">
                 
-                <code><a href="#virtualnodespecservicediscoveryawscloudmap">appmesh.<wbr>Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery<wbr>Aws<wbr>Cloud<wbr>Map?</a></code>
+                <code><a href="#virtualnodespecservicediscoveryawscloudmap">Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery<wbr>Aws<wbr>Cloud<wbr>Map?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3818,7 +3818,7 @@ Specifies any AWS Cloud Map information for the virtual node.
             <td class="align-top">dns</td>
             <td class="align-top">
                 
-                <code><a href="#virtualnodespecservicediscoverydns">appmesh.<wbr>Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery<wbr>Dns?</a></code>
+                <code><a href="#virtualnodespecservicediscoverydns">Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery<wbr>Dns?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3924,7 +3924,7 @@ Specifies the DNS service name for the virtual node.
             <td class="align-top">Attributes</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, string&gt;?</code>
+                <code>Dictionary<string, string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

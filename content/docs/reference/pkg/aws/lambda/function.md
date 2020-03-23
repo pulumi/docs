@@ -92,7 +92,7 @@ The path to the function&#39;s deployment package within the local filesystem. I
             <td class="align-top">Dead<wbr>Letter<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#functiondeadletterconfig">Pulumi.<wbr>Aws.<wbr>Lambda.<wbr>Function<wbr>Dead<wbr>Letter<wbr>Config<wbr>Args?</a></code>
+                <code><a href="#functiondeadletterconfig">Function<wbr>Dead<wbr>Letter<wbr>Config<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -122,7 +122,7 @@ Description of what your Lambda Function does.
             <td class="align-top">Environment</td>
             <td class="align-top">
                 
-                <code><a href="#functionenvironment">Pulumi.<wbr>Aws.<wbr>Lambda.<wbr>Function<wbr>Environment<wbr>Args?</a></code>
+                <code><a href="#functionenvironment">Function<wbr>Environment<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -167,7 +167,7 @@ The ARN for the KMS encryption key.
             <td class="align-top">Layers</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -332,7 +332,7 @@ Used to trigger updates. Must be set to a base64-encoded SHA256 hash of the pack
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -362,7 +362,7 @@ The amount of time your Lambda Function has to run in seconds. Defaults to `3`. 
             <td class="align-top">Tracing<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#functiontracingconfig">Pulumi.<wbr>Aws.<wbr>Lambda.<wbr>Function<wbr>Tracing<wbr>Config<wbr>Args?</a></code>
+                <code><a href="#functiontracingconfig">Function<wbr>Tracing<wbr>Config<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -376,7 +376,7 @@ The amount of time your Lambda Function has to run in seconds. Defaults to `3`. 
             <td class="align-top">Vpc<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#functionvpcconfig">Pulumi.<wbr>Aws.<wbr>Lambda.<wbr>Function<wbr>Vpc<wbr>Config<wbr>Args?</a></code>
+                <code><a href="#functionvpcconfig">Function<wbr>Vpc<wbr>Config<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -411,7 +411,7 @@ Provide this to allow your function to access your VPC. Fields documented below.
             <td class="align-top">Code</td>
             <td class="align-top">
                 
-                <code>pulumi.<wbr>Archive</code>
+                <code>pulumi.Archive</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -745,7 +745,7 @@ Provide this to allow your function to access your VPC. Fields documented below.
             <td class="align-top">code</td>
             <td class="align-top">
                 
-                <code>pulumi.asset.<wbr>Archive?</code>
+                <code>pulumi.asset.Archive?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -760,7 +760,7 @@ The path to the function&#39;s deployment package within the local filesystem. I
             <td class="align-top">dead<wbr>Letter<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#functiondeadletterconfig">lambda.<wbr>Function<wbr>Dead<wbr>Letter<wbr>Config?</a></code>
+                <code><a href="#functiondeadletterconfig">Function<wbr>Dead<wbr>Letter<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -790,7 +790,7 @@ Description of what your Lambda Function does.
             <td class="align-top">environment</td>
             <td class="align-top">
                 
-                <code><a href="#functionenvironment">lambda.<wbr>Function<wbr>Environment?</a></code>
+                <code><a href="#functionenvironment">Function<wbr>Environment?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1030,7 +1030,7 @@ The amount of time your Lambda Function has to run in seconds. Defaults to `3`. 
             <td class="align-top">tracing<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#functiontracingconfig">lambda.<wbr>Function<wbr>Tracing<wbr>Config?</a></code>
+                <code><a href="#functiontracingconfig">Function<wbr>Tracing<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1044,7 +1044,7 @@ The amount of time your Lambda Function has to run in seconds. Defaults to `3`. 
             <td class="align-top">vpc<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#functionvpcconfig">lambda.<wbr>Function<wbr>Vpc<wbr>Config?</a></code>
+                <code><a href="#functionvpcconfig">Function<wbr>Vpc<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1079,7 +1079,7 @@ Provide this to allow your function to access your VPC. Fields documented below.
             <td class="align-top">code</td>
             <td class="align-top">
                 
-                <code>pulumi.<wbr>Archive</code>
+                <code>pulumi.Archive</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1453,7 +1453,7 @@ The following output properties are available:
             <td class="align-top">Dead<wbr>Letter<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#functiondeadletterconfig">Pulumi.<wbr>Aws.<wbr>Lambda.<wbr>Function<wbr>Dead<wbr>Letter<wbr>Config?</a></code>
+                <code><a href="#functiondeadletterconfig">Function<wbr>Dead<wbr>Letter<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested block to configure the function&#39;s *dead letter queue*. See details below.
  {{% /md %}}
@@ -1479,7 +1479,7 @@ The following output properties are available:
             <td class="align-top">Environment</td>
             <td class="align-top">
                 
-                <code><a href="#functionenvironment">Pulumi.<wbr>Aws.<wbr>Lambda.<wbr>Function<wbr>Environment?</a></code>
+                <code><a href="#functionenvironment">Function<wbr>Environment?</a></code>
             </td>
             <td class="align-top">{{% md %}} The Lambda environment&#39;s configuration settings. Fields documented below.
  {{% /md %}}
@@ -1544,7 +1544,7 @@ The following output properties are available:
             <td class="align-top">Layers</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} List of Lambda Layer Version ARNs (maximum of 5) to attach to your Lambda Function. See [Lambda Layers][10]
  {{% /md %}}
@@ -1714,7 +1714,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the object.
  {{% /md %}}
@@ -1740,7 +1740,7 @@ The following output properties are available:
             <td class="align-top">Tracing<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#functiontracingconfig">Pulumi.<wbr>Aws.<wbr>Lambda.<wbr>Function<wbr>Tracing<wbr>Config</a></code>
+                <code><a href="#functiontracingconfig">Function<wbr>Tracing<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1765,7 +1765,7 @@ The following output properties are available:
             <td class="align-top">Vpc<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#functionvpcconfig">Pulumi.<wbr>Aws.<wbr>Lambda.<wbr>Function<wbr>Vpc<wbr>Config?</a></code>
+                <code><a href="#functionvpcconfig">Function<wbr>Vpc<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} Provide this to allow your function to access your VPC. Fields documented below. See [Lambda in VPC][7]
  {{% /md %}}
@@ -1811,7 +1811,7 @@ The following output properties are available:
             <td class="align-top">Code</td>
             <td class="align-top">
                 
-                <code>pulumi.<wbr>Archive</code>
+                <code>pulumi.Archive</code>
             </td>
             <td class="align-top">{{% md %}} The path to the function&#39;s deployment package within the local filesystem. If defined, The `s3_`-prefixed options cannot be used.
  {{% /md %}}
@@ -2182,7 +2182,7 @@ The following output properties are available:
             <td class="align-top">code</td>
             <td class="align-top">
                 
-                <code>pulumi.asset.<wbr>Archive?</code>
+                <code>pulumi.asset.Archive?</code>
             </td>
             <td class="align-top">{{% md %}} The path to the function&#39;s deployment package within the local filesystem. If defined, The `s3_`-prefixed options cannot be used.
  {{% /md %}}
@@ -2195,7 +2195,7 @@ The following output properties are available:
             <td class="align-top">dead<wbr>Letter<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#functiondeadletterconfig">lambda.<wbr>Function<wbr>Dead<wbr>Letter<wbr>Config?</a></code>
+                <code><a href="#functiondeadletterconfig">Function<wbr>Dead<wbr>Letter<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested block to configure the function&#39;s *dead letter queue*. See details below.
  {{% /md %}}
@@ -2221,7 +2221,7 @@ The following output properties are available:
             <td class="align-top">environment</td>
             <td class="align-top">
                 
-                <code><a href="#functionenvironment">lambda.<wbr>Function<wbr>Environment?</a></code>
+                <code><a href="#functionenvironment">Function<wbr>Environment?</a></code>
             </td>
             <td class="align-top">{{% md %}} The Lambda environment&#39;s configuration settings. Fields documented below.
  {{% /md %}}
@@ -2482,7 +2482,7 @@ The following output properties are available:
             <td class="align-top">tracing<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#functiontracingconfig">lambda.<wbr>Function<wbr>Tracing<wbr>Config</a></code>
+                <code><a href="#functiontracingconfig">Function<wbr>Tracing<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -2507,7 +2507,7 @@ The following output properties are available:
             <td class="align-top">vpc<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#functionvpcconfig">lambda.<wbr>Function<wbr>Vpc<wbr>Config?</a></code>
+                <code><a href="#functionvpcconfig">Function<wbr>Vpc<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} Provide this to allow your function to access your VPC. Fields documented below. See [Lambda in VPC][7]
  {{% /md %}}
@@ -2553,7 +2553,7 @@ The following output properties are available:
             <td class="align-top">code</td>
             <td class="align-top">
                 
-                <code>pulumi.<wbr>Archive</code>
+                <code>pulumi.Archive</code>
             </td>
             <td class="align-top">{{% md %}} The path to the function&#39;s deployment package within the local filesystem. If defined, The `s3_`-prefixed options cannot be used.
  {{% /md %}}
@@ -3000,7 +3000,7 @@ The path to the function&#39;s deployment package within the local filesystem. I
             <td class="align-top">Dead<wbr>Letter<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#functiondeadletterconfig">Pulumi.<wbr>Aws.<wbr>Lambda.<wbr>Function<wbr>Dead<wbr>Letter<wbr>Config<wbr>Args?</a></code>
+                <code><a href="#functiondeadletterconfig">Function<wbr>Dead<wbr>Letter<wbr>Config<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3030,7 +3030,7 @@ Description of what your Lambda Function does.
             <td class="align-top">Environment</td>
             <td class="align-top">
                 
-                <code><a href="#functionenvironment">Pulumi.<wbr>Aws.<wbr>Lambda.<wbr>Function<wbr>Environment<wbr>Args?</a></code>
+                <code><a href="#functionenvironment">Function<wbr>Environment<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3105,7 +3105,7 @@ The date this resource was last modified.
             <td class="align-top">Layers</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3301,7 +3301,7 @@ The size in bytes of the function .zip file.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3331,7 +3331,7 @@ The amount of time your Lambda Function has to run in seconds. Defaults to `3`. 
             <td class="align-top">Tracing<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#functiontracingconfig">Pulumi.<wbr>Aws.<wbr>Lambda.<wbr>Function<wbr>Tracing<wbr>Config<wbr>Args?</a></code>
+                <code><a href="#functiontracingconfig">Function<wbr>Tracing<wbr>Config<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3360,7 +3360,7 @@ Latest published version of your Lambda Function.
             <td class="align-top">Vpc<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#functionvpcconfig">Pulumi.<wbr>Aws.<wbr>Lambda.<wbr>Function<wbr>Vpc<wbr>Config<wbr>Args?</a></code>
+                <code><a href="#functionvpcconfig">Function<wbr>Vpc<wbr>Config<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3410,7 +3410,7 @@ The Amazon Resource Name (ARN) identifying your Lambda Function.
             <td class="align-top">Code</td>
             <td class="align-top">
                 
-                <code>pulumi.<wbr>Archive</code>
+                <code>pulumi.Archive</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3835,7 +3835,7 @@ The Amazon Resource Name (ARN) identifying your Lambda Function.
             <td class="align-top">code</td>
             <td class="align-top">
                 
-                <code>pulumi.asset.<wbr>Archive?</code>
+                <code>pulumi.asset.Archive?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3850,7 +3850,7 @@ The path to the function&#39;s deployment package within the local filesystem. I
             <td class="align-top">dead<wbr>Letter<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#functiondeadletterconfig">lambda.<wbr>Function<wbr>Dead<wbr>Letter<wbr>Config?</a></code>
+                <code><a href="#functiondeadletterconfig">Function<wbr>Dead<wbr>Letter<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3880,7 +3880,7 @@ Description of what your Lambda Function does.
             <td class="align-top">environment</td>
             <td class="align-top">
                 
-                <code><a href="#functionenvironment">lambda.<wbr>Function<wbr>Environment?</a></code>
+                <code><a href="#functionenvironment">Function<wbr>Environment?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4181,7 +4181,7 @@ The amount of time your Lambda Function has to run in seconds. Defaults to `3`. 
             <td class="align-top">tracing<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#functiontracingconfig">lambda.<wbr>Function<wbr>Tracing<wbr>Config?</a></code>
+                <code><a href="#functiontracingconfig">Function<wbr>Tracing<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4210,7 +4210,7 @@ Latest published version of your Lambda Function.
             <td class="align-top">vpc<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#functionvpcconfig">lambda.<wbr>Function<wbr>Vpc<wbr>Config?</a></code>
+                <code><a href="#functionvpcconfig">Function<wbr>Vpc<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4260,7 +4260,7 @@ The Amazon Resource Name (ARN) identifying your Lambda Function.
             <td class="align-top">code</td>
             <td class="align-top">
                 
-                <code>pulumi.<wbr>Archive</code>
+                <code>pulumi.Archive</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4871,7 +4871,7 @@ which service is targeted.
             <td class="align-top">Variables</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, string&gt;?</code>
+                <code>Dictionary<string, string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5209,7 +5209,7 @@ X-Ray for a tracing decision.
             <td class="align-top">Security<wbr>Group<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -5224,7 +5224,7 @@ A list of security group IDs associated with the Lambda function.
             <td class="align-top">Subnet<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

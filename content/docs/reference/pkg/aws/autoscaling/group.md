@@ -286,7 +286,7 @@ The following arguments are supported:
             <td class="align-top">Availability<wbr>Zones</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -333,7 +333,7 @@ Capacity below.)
             <td class="align-top">Enabled<wbr>Metrics</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -402,7 +402,7 @@ Time (in seconds) after instance comes into service before checking health.
             <td class="align-top">Initial<wbr>Lifecycle<wbr>Hooks</td>
             <td class="align-top">
                 
-                <code><a href="#groupinitiallifecyclehook">List&lt;Pulumi.<wbr>Aws.<wbr>Autoscaling.<wbr>Group<wbr>Initial<wbr>Lifecycle<wbr>Hook<wbr>Args&gt;?</a></code>
+                <code><a href="#groupinitiallifecyclehook">List&lt;Group<wbr>Initial<wbr>Lifecycle<wbr>Hook<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -438,7 +438,7 @@ The name of the launch configuration to use.
             <td class="align-top">Launch<wbr>Template</td>
             <td class="align-top">
                 
-                <code><a href="#grouplaunchtemplate">Pulumi.<wbr>Aws.<wbr>Autoscaling.<wbr>Group<wbr>Launch<wbr>Template<wbr>Args?</a></code>
+                <code><a href="#grouplaunchtemplate">Group<wbr>Launch<wbr>Template<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -453,7 +453,7 @@ Nested argument containing launch template settings along with the overrides to 
             <td class="align-top">Load<wbr>Balancers</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -548,7 +548,7 @@ The minimum size of the auto scale group.
             <td class="align-top">Mixed<wbr>Instances<wbr>Policy</td>
             <td class="align-top">
                 
-                <code><a href="#groupmixedinstancespolicy">Pulumi.<wbr>Aws.<wbr>Autoscaling.<wbr>Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Args?</a></code>
+                <code><a href="#groupmixedinstancespolicy">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -641,7 +641,7 @@ The ARN of the service-linked role that the ASG will use to call other AWS servi
             <td class="align-top">Suspended<wbr>Processes</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -657,7 +657,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code><a href="#grouptag">List&lt;Pulumi.<wbr>Aws.<wbr>Autoscaling.<wbr>Group<wbr>Tag<wbr>Args&gt;?</a></code>
+                <code><a href="#grouptag">List&lt;Group<wbr>Tag<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -672,7 +672,7 @@ A list of tag blocks. Tags documented below.
             <td class="align-top">Tags<wbr>Collection</td>
             <td class="align-top">
                 
-                <code>List&lt;Immutable<wbr>Dictionary&lt;string, object&gt;&gt;?</code>
+                <code>List<ImmutableDictionary<string, object>>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -687,7 +687,7 @@ A list of tag blocks (maps). Tags documented below.
             <td class="align-top">Target<wbr>Group<wbr>Arns</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -702,7 +702,7 @@ A list of `aws.alb.TargetGroup` ARNs, for use with Application or Network Load B
             <td class="align-top">Termination<wbr>Policies</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -717,7 +717,7 @@ A list of policies to decide how the instances in the auto scale group should be
             <td class="align-top">Vpc<wbr>Zone<wbr>Identifiers</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1400,7 +1400,7 @@ Time (in seconds) after instance comes into service before checking health.
             <td class="align-top">initial<wbr>Lifecycle<wbr>Hooks</td>
             <td class="align-top">
                 
-                <code><a href="#groupinitiallifecyclehook">autoscaling.<wbr>Group<wbr>Initial<wbr>Lifecycle<wbr>Hook[]?</a></code>
+                <code><a href="#groupinitiallifecyclehook">Group<wbr>Initial<wbr>Lifecycle<wbr>Hook[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1421,7 +1421,7 @@ a new autoscaling group. For all other use-cases, please use `aws.autoscaling.Li
             <td class="align-top">launch<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code>string | Launch<wbr>Configuration</code>
+                <code>string | LaunchConfiguration</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1436,7 +1436,7 @@ The name of the launch configuration to use.
             <td class="align-top">launch<wbr>Template</td>
             <td class="align-top">
                 
-                <code><a href="#grouplaunchtemplate">autoscaling.<wbr>Group<wbr>Launch<wbr>Template?</a></code>
+                <code><a href="#grouplaunchtemplate">Group<wbr>Launch<wbr>Template?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1497,7 +1497,7 @@ The maximum size of the auto scale group.
             <td class="align-top">metrics<wbr>Granularity</td>
             <td class="align-top">
                 
-                <code>string | Metrics<wbr>Granularity</code>
+                <code>string | MetricsGranularity</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1546,7 +1546,7 @@ The minimum size of the auto scale group.
             <td class="align-top">mixed<wbr>Instances<wbr>Policy</td>
             <td class="align-top">
                 
-                <code><a href="#groupmixedinstancespolicy">autoscaling.<wbr>Group<wbr>Mixed<wbr>Instances<wbr>Policy?</a></code>
+                <code><a href="#groupmixedinstancespolicy">Group<wbr>Mixed<wbr>Instances<wbr>Policy?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1592,7 +1592,7 @@ prefix. Conflicts with `name`.
             <td class="align-top">placement<wbr>Group</td>
             <td class="align-top">
                 
-                <code>string | Placement<wbr>Group</code>
+                <code>string | PlacementGroup</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1655,7 +1655,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code><a href="#grouptag">autoscaling.<wbr>Group<wbr>Tag[]?</a></code>
+                <code><a href="#grouptag">Group<wbr>Tag[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2309,7 +2309,7 @@ The following output properties are available:
             <td class="align-top">Availability<wbr>Zones</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} A list of one or more availability zones for the group. This parameter should not be specified when using `vpc_zone_identifier`.
  {{% /md %}}
@@ -2350,7 +2350,7 @@ Capacity below.)
             <td class="align-top">Enabled<wbr>Metrics</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} A list of metrics to collect. The allowed values are `GroupDesiredCapacity`, `GroupInServiceCapacity`, `GroupPendingCapacity`, `GroupMinSize`, `GroupMaxSize`, `GroupInServiceInstances`, `GroupPendingInstances`, `GroupStandbyInstances`, `GroupStandbyCapacity`, `GroupTerminatingCapacity`, `GroupTerminatingInstances`, `GroupTotalCapacity`, `GroupTotalInstances`.
 * `wait_for_capacity_timeout` (Default: &#34;10m&#34;) A maximum
@@ -2411,7 +2411,7 @@ behavior and potentially leaves resources dangling.
             <td class="align-top">Initial<wbr>Lifecycle<wbr>Hooks</td>
             <td class="align-top">
                 
-                <code><a href="#groupinitiallifecyclehook">List&lt;Pulumi.<wbr>Aws.<wbr>Autoscaling.<wbr>Group<wbr>Initial<wbr>Lifecycle<wbr>Hook&gt;?</a></code>
+                <code><a href="#groupinitiallifecyclehook">List&lt;Group<wbr>Initial<wbr>Lifecycle<wbr>Hook&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} One or more
 [Lifecycle Hooks](http://docs.aws.amazon.com/autoscaling/latest/userguide/lifecycle-hooks.html)
@@ -2443,7 +2443,7 @@ a new autoscaling group. For all other use-cases, please use `aws.autoscaling.Li
             <td class="align-top">Launch<wbr>Template</td>
             <td class="align-top">
                 
-                <code><a href="#grouplaunchtemplate">Pulumi.<wbr>Aws.<wbr>Autoscaling.<wbr>Group<wbr>Launch<wbr>Template?</a></code>
+                <code><a href="#grouplaunchtemplate">Group<wbr>Launch<wbr>Template?</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested argument containing launch template settings along with the overrides to specify multiple instance types and weights. Defined below.
  {{% /md %}}
@@ -2456,7 +2456,7 @@ a new autoscaling group. For all other use-cases, please use `aws.autoscaling.Li
             <td class="align-top">Load<wbr>Balancers</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} A list of elastic load balancer names to add to the autoscaling
 group names. Only valid for classic load balancers. For ALBs, use `target_group_arns` instead.
@@ -2539,7 +2539,7 @@ ELB only on creation. Updates will not wait on ELB instance number changes.
             <td class="align-top">Mixed<wbr>Instances<wbr>Policy</td>
             <td class="align-top">
                 
-                <code><a href="#groupmixedinstancespolicy">Pulumi.<wbr>Aws.<wbr>Autoscaling.<wbr>Group<wbr>Mixed<wbr>Instances<wbr>Policy?</a></code>
+                <code><a href="#groupmixedinstancespolicy">Group<wbr>Mixed<wbr>Instances<wbr>Policy?</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block containing settings to define launch targets for Auto Scaling groups. Defined below.
  {{% /md %}}
@@ -2620,7 +2620,7 @@ during scale in events.
             <td class="align-top">Suspended<wbr>Processes</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} A list of processes to suspend for the AutoScaling Group. The allowed values are `Launch`, `Terminate`, `HealthCheck`, `ReplaceUnhealthy`, `AZRebalance`, `AlarmNotification`, `ScheduledActions`, `AddToLoadBalancer`.
 Note that if you suspend either the `Launch` or `Terminate` process types, it can prevent your autoscaling group from functioning properly.
@@ -2634,7 +2634,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code><a href="#grouptag">List&lt;Pulumi.<wbr>Aws.<wbr>Autoscaling.<wbr>Group<wbr>Tag&gt;?</a></code>
+                <code><a href="#grouptag">List&lt;Group<wbr>Tag&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of tag blocks. Tags documented below.
  {{% /md %}}
@@ -2647,7 +2647,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
             <td class="align-top">Tags<wbr>Collection</td>
             <td class="align-top">
                 
-                <code>List&lt;Immutable<wbr>Dictionary&lt;string, object&gt;&gt;?</code>
+                <code>List<ImmutableDictionary<string, object>>?</code>
             </td>
             <td class="align-top">{{% md %}} A list of tag blocks (maps). Tags documented below.
  {{% /md %}}
@@ -2660,7 +2660,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
             <td class="align-top">Target<wbr>Group<wbr>Arns</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} A list of `aws.alb.TargetGroup` ARNs, for use with Application or Network Load Balancing.
  {{% /md %}}
@@ -2673,7 +2673,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
             <td class="align-top">Termination<wbr>Policies</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} A list of policies to decide how the instances in the auto scale group should be terminated. The allowed values are `OldestInstance`, `NewestInstance`, `OldestLaunchConfiguration`, `ClosestToNextInstanceHour`, `OldestLaunchTemplate`, `AllocationStrategy`, `Default`.
  {{% /md %}}
@@ -2686,7 +2686,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
             <td class="align-top">Vpc<wbr>Zone<wbr>Identifiers</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} A list of subnet IDs to launch resources in.
  {{% /md %}}
@@ -3315,7 +3315,7 @@ behavior and potentially leaves resources dangling.
             <td class="align-top">initial<wbr>Lifecycle<wbr>Hooks</td>
             <td class="align-top">
                 
-                <code><a href="#groupinitiallifecyclehook">autoscaling.<wbr>Group<wbr>Initial<wbr>Lifecycle<wbr>Hook[]?</a></code>
+                <code><a href="#groupinitiallifecyclehook">Group<wbr>Initial<wbr>Lifecycle<wbr>Hook[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} One or more
 [Lifecycle Hooks](http://docs.aws.amazon.com/autoscaling/latest/userguide/lifecycle-hooks.html)
@@ -3347,7 +3347,7 @@ a new autoscaling group. For all other use-cases, please use `aws.autoscaling.Li
             <td class="align-top">launch<wbr>Template</td>
             <td class="align-top">
                 
-                <code><a href="#grouplaunchtemplate">autoscaling.<wbr>Group<wbr>Launch<wbr>Template?</a></code>
+                <code><a href="#grouplaunchtemplate">Group<wbr>Launch<wbr>Template?</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested argument containing launch template settings along with the overrides to specify multiple instance types and weights. Defined below.
  {{% /md %}}
@@ -3443,7 +3443,7 @@ ELB only on creation. Updates will not wait on ELB instance number changes.
             <td class="align-top">mixed<wbr>Instances<wbr>Policy</td>
             <td class="align-top">
                 
-                <code><a href="#groupmixedinstancespolicy">autoscaling.<wbr>Group<wbr>Mixed<wbr>Instances<wbr>Policy?</a></code>
+                <code><a href="#groupmixedinstancespolicy">Group<wbr>Mixed<wbr>Instances<wbr>Policy?</a></code>
             </td>
             <td class="align-top">{{% md %}} Configuration block containing settings to define launch targets for Auto Scaling groups. Defined below.
  {{% /md %}}
@@ -3538,7 +3538,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code><a href="#grouptag">autoscaling.<wbr>Group<wbr>Tag[]?</a></code>
+                <code><a href="#grouptag">Group<wbr>Tag[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of tag blocks. Tags documented below.
  {{% /md %}}
@@ -4178,7 +4178,7 @@ The ARN for this AutoScaling Group
             <td class="align-top">Availability<wbr>Zones</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4225,7 +4225,7 @@ Capacity below.)
             <td class="align-top">Enabled<wbr>Metrics</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4294,7 +4294,7 @@ Time (in seconds) after instance comes into service before checking health.
             <td class="align-top">Initial<wbr>Lifecycle<wbr>Hooks</td>
             <td class="align-top">
                 
-                <code><a href="#groupinitiallifecyclehook">List&lt;Pulumi.<wbr>Aws.<wbr>Autoscaling.<wbr>Group<wbr>Initial<wbr>Lifecycle<wbr>Hook<wbr>Args&gt;?</a></code>
+                <code><a href="#groupinitiallifecyclehook">List&lt;Group<wbr>Initial<wbr>Lifecycle<wbr>Hook<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4330,7 +4330,7 @@ The name of the launch configuration to use.
             <td class="align-top">Launch<wbr>Template</td>
             <td class="align-top">
                 
-                <code><a href="#grouplaunchtemplate">Pulumi.<wbr>Aws.<wbr>Autoscaling.<wbr>Group<wbr>Launch<wbr>Template<wbr>Args?</a></code>
+                <code><a href="#grouplaunchtemplate">Group<wbr>Launch<wbr>Template<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4345,7 +4345,7 @@ Nested argument containing launch template settings along with the overrides to 
             <td class="align-top">Load<wbr>Balancers</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4440,7 +4440,7 @@ The minimum size of the auto scale group.
             <td class="align-top">Mixed<wbr>Instances<wbr>Policy</td>
             <td class="align-top">
                 
-                <code><a href="#groupmixedinstancespolicy">Pulumi.<wbr>Aws.<wbr>Autoscaling.<wbr>Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Args?</a></code>
+                <code><a href="#groupmixedinstancespolicy">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4533,7 +4533,7 @@ The ARN of the service-linked role that the ASG will use to call other AWS servi
             <td class="align-top">Suspended<wbr>Processes</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4549,7 +4549,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code><a href="#grouptag">List&lt;Pulumi.<wbr>Aws.<wbr>Autoscaling.<wbr>Group<wbr>Tag<wbr>Args&gt;?</a></code>
+                <code><a href="#grouptag">List&lt;Group<wbr>Tag<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4564,7 +4564,7 @@ A list of tag blocks. Tags documented below.
             <td class="align-top">Tags<wbr>Collection</td>
             <td class="align-top">
                 
-                <code>List&lt;Immutable<wbr>Dictionary&lt;string, object&gt;&gt;?</code>
+                <code>List<ImmutableDictionary<string, object>>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4579,7 +4579,7 @@ A list of tag blocks (maps). Tags documented below.
             <td class="align-top">Target<wbr>Group<wbr>Arns</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4594,7 +4594,7 @@ A list of `aws.alb.TargetGroup` ARNs, for use with Application or Network Load B
             <td class="align-top">Termination<wbr>Policies</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4609,7 +4609,7 @@ A list of policies to decide how the instances in the auto scale group should be
             <td class="align-top">Vpc<wbr>Zone<wbr>Identifiers</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5322,7 +5322,7 @@ Time (in seconds) after instance comes into service before checking health.
             <td class="align-top">initial<wbr>Lifecycle<wbr>Hooks</td>
             <td class="align-top">
                 
-                <code><a href="#groupinitiallifecyclehook">autoscaling.<wbr>Group<wbr>Initial<wbr>Lifecycle<wbr>Hook[]?</a></code>
+                <code><a href="#groupinitiallifecyclehook">Group<wbr>Initial<wbr>Lifecycle<wbr>Hook[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5343,7 +5343,7 @@ a new autoscaling group. For all other use-cases, please use `aws.autoscaling.Li
             <td class="align-top">launch<wbr>Configuration</td>
             <td class="align-top">
                 
-                <code>string | Launch<wbr>Configuration</code>
+                <code>string | LaunchConfiguration</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5358,7 +5358,7 @@ The name of the launch configuration to use.
             <td class="align-top">launch<wbr>Template</td>
             <td class="align-top">
                 
-                <code><a href="#grouplaunchtemplate">autoscaling.<wbr>Group<wbr>Launch<wbr>Template?</a></code>
+                <code><a href="#grouplaunchtemplate">Group<wbr>Launch<wbr>Template?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5419,7 +5419,7 @@ The maximum size of the auto scale group.
             <td class="align-top">metrics<wbr>Granularity</td>
             <td class="align-top">
                 
-                <code>string | Metrics<wbr>Granularity</code>
+                <code>string | MetricsGranularity</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5468,7 +5468,7 @@ The minimum size of the auto scale group.
             <td class="align-top">mixed<wbr>Instances<wbr>Policy</td>
             <td class="align-top">
                 
-                <code><a href="#groupmixedinstancespolicy">autoscaling.<wbr>Group<wbr>Mixed<wbr>Instances<wbr>Policy?</a></code>
+                <code><a href="#groupmixedinstancespolicy">Group<wbr>Mixed<wbr>Instances<wbr>Policy?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5514,7 +5514,7 @@ prefix. Conflicts with `name`.
             <td class="align-top">placement<wbr>Group</td>
             <td class="align-top">
                 
-                <code>string | Placement<wbr>Group</code>
+                <code>string | PlacementGroup</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5577,7 +5577,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
             <td class="align-top">tags</td>
             <td class="align-top">
                 
-                <code><a href="#grouptag">autoscaling.<wbr>Group<wbr>Tag[]?</a></code>
+                <code><a href="#grouptag">Group<wbr>Tag[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -7025,7 +7025,7 @@ Template version. Can be version number, `$Latest`, or `$Default`. (Default: `$D
             <td class="align-top">Instances<wbr>Distribution</td>
             <td class="align-top">
                 
-                <code><a href="#groupmixedinstancespolicyinstancesdistribution">Pulumi.<wbr>Aws.<wbr>Autoscaling.<wbr>Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Instances<wbr>Distribution<wbr>Args?</a></code>
+                <code><a href="#groupmixedinstancespolicyinstancesdistribution">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Instances<wbr>Distribution<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -7040,7 +7040,7 @@ Nested argument containing settings on how to mix on-demand and Spot instances i
             <td class="align-top">Launch<wbr>Template</td>
             <td class="align-top">
                 
-                <code><a href="#groupmixedinstancespolicylaunchtemplate">Pulumi.<wbr>Aws.<wbr>Autoscaling.<wbr>Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Args</a></code>
+                <code><a href="#groupmixedinstancespolicylaunchtemplate">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Args</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -7125,7 +7125,7 @@ Nested argument containing launch template settings along with the overrides to 
             <td class="align-top">instances<wbr>Distribution</td>
             <td class="align-top">
                 
-                <code><a href="#groupmixedinstancespolicyinstancesdistribution">autoscaling.<wbr>Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Instances<wbr>Distribution?</a></code>
+                <code><a href="#groupmixedinstancespolicyinstancesdistribution">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Instances<wbr>Distribution?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -7140,7 +7140,7 @@ Nested argument containing settings on how to mix on-demand and Spot instances i
             <td class="align-top">launch<wbr>Template</td>
             <td class="align-top">
                 
-                <code><a href="#groupmixedinstancespolicylaunchtemplate">autoscaling.<wbr>Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template</a></code>
+                <code><a href="#groupmixedinstancespolicylaunchtemplate">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -7707,7 +7707,7 @@ Maximum price per unit hour that the user is willing to pay for the Spot instanc
             <td class="align-top">Launch<wbr>Template<wbr>Specification</td>
             <td class="align-top">
                 
-                <code><a href="#groupmixedinstancespolicylaunchtemplatelaunchtemplatespecification">Pulumi.<wbr>Aws.<wbr>Autoscaling.<wbr>Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Launch<wbr>Template<wbr>Specification<wbr>Args</a></code>
+                <code><a href="#groupmixedinstancespolicylaunchtemplatelaunchtemplatespecification">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Launch<wbr>Template<wbr>Specification<wbr>Args</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -7722,7 +7722,7 @@ Nested argument defines the Launch Template. Defined below.
             <td class="align-top">Overrides</td>
             <td class="align-top">
                 
-                <code><a href="#groupmixedinstancespolicylaunchtemplateoverride">List&lt;Pulumi.<wbr>Aws.<wbr>Autoscaling.<wbr>Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Override<wbr>Args&gt;?</a></code>
+                <code><a href="#groupmixedinstancespolicylaunchtemplateoverride">List&lt;Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Override<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -7807,7 +7807,7 @@ List of nested arguments provides the ability to specify multiple instance types
             <td class="align-top">launch<wbr>Template<wbr>Specification</td>
             <td class="align-top">
                 
-                <code><a href="#groupmixedinstancespolicylaunchtemplatelaunchtemplatespecification">autoscaling.<wbr>Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Launch<wbr>Template<wbr>Specification</a></code>
+                <code><a href="#groupmixedinstancespolicylaunchtemplatelaunchtemplatespecification">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Launch<wbr>Template<wbr>Specification</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -7822,7 +7822,7 @@ Nested argument defines the Launch Template. Defined below.
             <td class="align-top">overrides</td>
             <td class="align-top">
                 
-                <code><a href="#groupmixedinstancespolicylaunchtemplateoverride">autoscaling.<wbr>Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Override[]?</a></code>
+                <code><a href="#groupmixedinstancespolicylaunchtemplateoverride">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Override[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

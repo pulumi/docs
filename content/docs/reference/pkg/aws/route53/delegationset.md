@@ -255,7 +255,7 @@ The following output properties are available:
             <td class="align-top">Name<wbr>Servers</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} A list of authoritative name servers for the hosted zone
 (effectively a list of NS records).
@@ -506,7 +506,7 @@ The following state arguments are supported:
             <td class="align-top">Name<wbr>Servers</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

@@ -103,7 +103,7 @@ The following arguments are supported:
             <td class="align-top">Authentication<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#endpointauthenticationoptions">Pulumi.<wbr>Aws.<wbr>Ec2clientvpn.<wbr>Endpoint<wbr>Authentication<wbr>Options<wbr>Args</a></code>
+                <code><a href="#endpointauthenticationoptions">Endpoint<wbr>Authentication<wbr>Options<wbr>Args</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -133,7 +133,7 @@ The IPv4 address range, in CIDR notation, from which to assign client IP address
             <td class="align-top">Connection<wbr>Log<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#endpointconnectionlogoptions">Pulumi.<wbr>Aws.<wbr>Ec2clientvpn.<wbr>Endpoint<wbr>Connection<wbr>Log<wbr>Options<wbr>Args</a></code>
+                <code><a href="#endpointconnectionlogoptions">Endpoint<wbr>Connection<wbr>Log<wbr>Options<wbr>Args</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -163,7 +163,7 @@ Name of the repository.
             <td class="align-top">Dns<wbr>Servers</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -208,7 +208,7 @@ Indicates whether split-tunnel is enabled on VPN endpoint. Default value is `fal
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -413,7 +413,7 @@ The transport protocol to be used by the VPN session. Default value is `udp`.
             <td class="align-top">authentication<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#endpointauthenticationoptions">ec2clientvpn.<wbr>Endpoint<wbr>Authentication<wbr>Options</a></code>
+                <code><a href="#endpointauthenticationoptions">Endpoint<wbr>Authentication<wbr>Options</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -443,7 +443,7 @@ The IPv4 address range, in CIDR notation, from which to assign client IP address
             <td class="align-top">connection<wbr>Log<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#endpointconnectionlogoptions">ec2clientvpn.<wbr>Endpoint<wbr>Connection<wbr>Log<wbr>Options</a></code>
+                <code><a href="#endpointconnectionlogoptions">Endpoint<wbr>Connection<wbr>Log<wbr>Options</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -737,7 +737,7 @@ The following output properties are available:
             <td class="align-top">Authentication<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#endpointauthenticationoptions">Pulumi.<wbr>Aws.<wbr>Ec2clientvpn.<wbr>Endpoint<wbr>Authentication<wbr>Options</a></code>
+                <code><a href="#endpointauthenticationoptions">Endpoint<wbr>Authentication<wbr>Options</a></code>
             </td>
             <td class="align-top">{{% md %}} Information about the authentication method to be used to authenticate clients.
  {{% /md %}}
@@ -763,7 +763,7 @@ The following output properties are available:
             <td class="align-top">Connection<wbr>Log<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#endpointconnectionlogoptions">Pulumi.<wbr>Aws.<wbr>Ec2clientvpn.<wbr>Endpoint<wbr>Connection<wbr>Log<wbr>Options</a></code>
+                <code><a href="#endpointconnectionlogoptions">Endpoint<wbr>Connection<wbr>Log<wbr>Options</a></code>
             </td>
             <td class="align-top">{{% md %}} Information about the client connection logging options.
  {{% /md %}}
@@ -802,7 +802,7 @@ The following output properties are available:
             <td class="align-top">Dns<wbr>Servers</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} Information about the DNS servers to be used for DNS resolution. A Client VPN endpoint can have up to two DNS servers. If no DNS server is specified, the DNS address of the VPC that is to be associated with Client VPN endpoint is used as the DNS server.
  {{% /md %}}
@@ -854,7 +854,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -1063,7 +1063,7 @@ The following output properties are available:
             <td class="align-top">authentication<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#endpointauthenticationoptions">ec2clientvpn.<wbr>Endpoint<wbr>Authentication<wbr>Options</a></code>
+                <code><a href="#endpointauthenticationoptions">Endpoint<wbr>Authentication<wbr>Options</a></code>
             </td>
             <td class="align-top">{{% md %}} Information about the authentication method to be used to authenticate clients.
  {{% /md %}}
@@ -1089,7 +1089,7 @@ The following output properties are available:
             <td class="align-top">connection<wbr>Log<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#endpointconnectionlogoptions">ec2clientvpn.<wbr>Endpoint<wbr>Connection<wbr>Log<wbr>Options</a></code>
+                <code><a href="#endpointconnectionlogoptions">Endpoint<wbr>Connection<wbr>Log<wbr>Options</a></code>
             </td>
             <td class="align-top">{{% md %}} Information about the client connection logging options.
  {{% /md %}}
@@ -1448,7 +1448,7 @@ The following state arguments are supported:
             <td class="align-top">Authentication<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#endpointauthenticationoptions">Pulumi.<wbr>Aws.<wbr>Ec2clientvpn.<wbr>Endpoint<wbr>Authentication<wbr>Options<wbr>Args?</a></code>
+                <code><a href="#endpointauthenticationoptions">Endpoint<wbr>Authentication<wbr>Options<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1478,7 +1478,7 @@ The IPv4 address range, in CIDR notation, from which to assign client IP address
             <td class="align-top">Connection<wbr>Log<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#endpointconnectionlogoptions">Pulumi.<wbr>Aws.<wbr>Ec2clientvpn.<wbr>Endpoint<wbr>Connection<wbr>Log<wbr>Options<wbr>Args?</a></code>
+                <code><a href="#endpointconnectionlogoptions">Endpoint<wbr>Connection<wbr>Log<wbr>Options<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1523,7 +1523,7 @@ The DNS name to be used by clients when establishing their VPN session.
             <td class="align-top">Dns<wbr>Servers</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1583,7 +1583,7 @@ The current state of the Client VPN endpoint.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1818,7 +1818,7 @@ The transport protocol to be used by the VPN session. Default value is `udp`.
             <td class="align-top">authentication<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#endpointauthenticationoptions">ec2clientvpn.<wbr>Endpoint<wbr>Authentication<wbr>Options?</a></code>
+                <code><a href="#endpointauthenticationoptions">Endpoint<wbr>Authentication<wbr>Options?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1848,7 +1848,7 @@ The IPv4 address range, in CIDR notation, from which to assign client IP address
             <td class="align-top">connection<wbr>Log<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#endpointconnectionlogoptions">ec2clientvpn.<wbr>Endpoint<wbr>Connection<wbr>Log<wbr>Options?</a></code>
+                <code><a href="#endpointconnectionlogoptions">Endpoint<wbr>Connection<wbr>Log<wbr>Options?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

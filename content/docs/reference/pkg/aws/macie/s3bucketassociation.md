@@ -112,7 +112,7 @@ The name of the S3 bucket that you want to associate with Amazon Macie.
             <td class="align-top">Classification<wbr>Type</td>
             <td class="align-top">
                 
-                <code><a href="#s3bucketassociationclassificationtype">Pulumi.<wbr>Aws.<wbr>Macie.<wbr>S3Bucket<wbr>Association<wbr>Classification<wbr>Type<wbr>Args?</a></code>
+                <code><a href="#s3bucketassociationclassificationtype">S3Bucket<wbr>Association<wbr>Classification<wbr>Type<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -272,7 +272,7 @@ The name of the S3 bucket that you want to associate with Amazon Macie.
             <td class="align-top">classification<wbr>Type</td>
             <td class="align-top">
                 
-                <code><a href="#s3bucketassociationclassificationtype">macie.<wbr>S3Bucket<wbr>Association<wbr>Classification<wbr>Type?</a></code>
+                <code><a href="#s3bucketassociationclassificationtype">S3Bucket<wbr>Association<wbr>Classification<wbr>Type?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -444,7 +444,7 @@ The following output properties are available:
             <td class="align-top">Classification<wbr>Type</td>
             <td class="align-top">
                 
-                <code><a href="#s3bucketassociationclassificationtype">Pulumi.<wbr>Aws.<wbr>Macie.<wbr>S3Bucket<wbr>Association<wbr>Classification<wbr>Type</a></code>
+                <code><a href="#s3bucketassociationclassificationtype">S3Bucket<wbr>Association<wbr>Classification<wbr>Type</a></code>
             </td>
             <td class="align-top">{{% md %}} The configuration of how Amazon Macie classifies the S3 objects.
  {{% /md %}}
@@ -588,7 +588,7 @@ The following output properties are available:
             <td class="align-top">classification<wbr>Type</td>
             <td class="align-top">
                 
-                <code><a href="#s3bucketassociationclassificationtype">macie.<wbr>S3Bucket<wbr>Association<wbr>Classification<wbr>Type</a></code>
+                <code><a href="#s3bucketassociationclassificationtype">S3Bucket<wbr>Association<wbr>Classification<wbr>Type</a></code>
             </td>
             <td class="align-top">{{% md %}} The configuration of how Amazon Macie classifies the S3 objects.
  {{% /md %}}
@@ -793,7 +793,7 @@ The name of the S3 bucket that you want to associate with Amazon Macie.
             <td class="align-top">Classification<wbr>Type</td>
             <td class="align-top">
                 
-                <code><a href="#s3bucketassociationclassificationtype">Pulumi.<wbr>Aws.<wbr>Macie.<wbr>S3Bucket<wbr>Association<wbr>Classification<wbr>Type<wbr>Args?</a></code>
+                <code><a href="#s3bucketassociationclassificationtype">S3Bucket<wbr>Association<wbr>Classification<wbr>Type<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -953,7 +953,7 @@ The name of the S3 bucket that you want to associate with Amazon Macie.
             <td class="align-top">classification<wbr>Type</td>
             <td class="align-top">
                 
-                <code><a href="#s3bucketassociationclassificationtype">macie.<wbr>S3Bucket<wbr>Association<wbr>Classification<wbr>Type?</a></code>
+                <code><a href="#s3bucketassociationclassificationtype">S3Bucket<wbr>Association<wbr>Classification<wbr>Type?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

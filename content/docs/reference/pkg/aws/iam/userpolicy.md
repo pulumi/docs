@@ -298,7 +298,7 @@ Creates a unique name beginning with the specified prefix. Conflicts with `name`
             <td class="align-top">policy</td>
             <td class="align-top">
                 
-                <code>string | Policy<wbr>Document</code>
+                <code>string | PolicyDocument</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -971,7 +971,7 @@ Creates a unique name beginning with the specified prefix. Conflicts with `name`
             <td class="align-top">policy</td>
             <td class="align-top">
                 
-                <code>string | Policy<wbr>Document</code>
+                <code>string | PolicyDocument</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

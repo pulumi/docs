@@ -257,7 +257,7 @@ IAM policy document specifying the access policies for the domain
             <td class="align-top">Advanced<wbr>Options</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -275,7 +275,7 @@ domain on every apply.
             <td class="align-top">Cluster<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#domainclusterconfig">Pulumi.<wbr>Aws.<wbr>Elasticsearch.<wbr>Domain<wbr>Cluster<wbr>Config<wbr>Args?</a></code>
+                <code><a href="#domainclusterconfig">Domain<wbr>Cluster<wbr>Config<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -290,7 +290,7 @@ Cluster configuration of the domain, see below.
             <td class="align-top">Cognito<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#domaincognitooptions">Pulumi.<wbr>Aws.<wbr>Elasticsearch.<wbr>Domain<wbr>Cognito<wbr>Options<wbr>Args?</a></code>
+                <code><a href="#domaincognitooptions">Domain<wbr>Cognito<wbr>Options<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -304,7 +304,7 @@ Cluster configuration of the domain, see below.
             <td class="align-top">Domain<wbr>Endpoint<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#domaindomainendpointoptions">Pulumi.<wbr>Aws.<wbr>Elasticsearch.<wbr>Domain<wbr>Domain<wbr>Endpoint<wbr>Options<wbr>Args?</a></code>
+                <code><a href="#domaindomainendpointoptions">Domain<wbr>Domain<wbr>Endpoint<wbr>Options<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -334,7 +334,7 @@ Name of the domain.
             <td class="align-top">Ebs<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#domainebsoptions">Pulumi.<wbr>Aws.<wbr>Elasticsearch.<wbr>Domain<wbr>Ebs<wbr>Options<wbr>Args?</a></code>
+                <code><a href="#domainebsoptions">Domain<wbr>Ebs<wbr>Options<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -364,7 +364,7 @@ The version of Elasticsearch to deploy. Defaults to `1.5`
             <td class="align-top">Encrypt<wbr>At<wbr>Rest</td>
             <td class="align-top">
                 
-                <code><a href="#domainencryptatrest">Pulumi.<wbr>Aws.<wbr>Elasticsearch.<wbr>Domain<wbr>Encrypt<wbr>At<wbr>Rest<wbr>Args?</a></code>
+                <code><a href="#domainencryptatrest">Domain<wbr>Encrypt<wbr>At<wbr>Rest<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -379,7 +379,7 @@ Encrypt at rest options. Only available for [certain instance types](http://docs
             <td class="align-top">Log<wbr>Publishing<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#domainlogpublishingoption">List&lt;Pulumi.<wbr>Aws.<wbr>Elasticsearch.<wbr>Domain<wbr>Log<wbr>Publishing<wbr>Option<wbr>Args&gt;?</a></code>
+                <code><a href="#domainlogpublishingoption">List&lt;Domain<wbr>Log<wbr>Publishing<wbr>Option<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -394,7 +394,7 @@ Options for publishing slow logs to CloudWatch Logs.
             <td class="align-top">Node<wbr>To<wbr>Node<wbr>Encryption</td>
             <td class="align-top">
                 
-                <code><a href="#domainnodetonodeencryption">Pulumi.<wbr>Aws.<wbr>Elasticsearch.<wbr>Domain<wbr>Node<wbr>To<wbr>Node<wbr>Encryption<wbr>Args?</a></code>
+                <code><a href="#domainnodetonodeencryption">Domain<wbr>Node<wbr>To<wbr>Node<wbr>Encryption<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -409,7 +409,7 @@ Node-to-node encryption options. See below.
             <td class="align-top">Snapshot<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#domainsnapshotoptions">Pulumi.<wbr>Aws.<wbr>Elasticsearch.<wbr>Domain<wbr>Snapshot<wbr>Options<wbr>Args?</a></code>
+                <code><a href="#domainsnapshotoptions">Domain<wbr>Snapshot<wbr>Options<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -424,7 +424,7 @@ Snapshot related options, see below.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -439,7 +439,7 @@ A mapping of tags to assign to the resource
             <td class="align-top">Vpc<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#domainvpcoptions">Pulumi.<wbr>Aws.<wbr>Elasticsearch.<wbr>Domain<wbr>Vpc<wbr>Options<wbr>Args?</a></code>
+                <code><a href="#domainvpcoptions">Domain<wbr>Vpc<wbr>Options<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -706,7 +706,7 @@ VPC related options, see below. Adding or removing this configuration forces a n
             <td class="align-top">access<wbr>Policies</td>
             <td class="align-top">
                 
-                <code>string | Policy<wbr>Document</code>
+                <code>string | PolicyDocument</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -739,7 +739,7 @@ domain on every apply.
             <td class="align-top">cluster<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#domainclusterconfig">elasticsearch.<wbr>Domain<wbr>Cluster<wbr>Config?</a></code>
+                <code><a href="#domainclusterconfig">Domain<wbr>Cluster<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -754,7 +754,7 @@ Cluster configuration of the domain, see below.
             <td class="align-top">cognito<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#domaincognitooptions">elasticsearch.<wbr>Domain<wbr>Cognito<wbr>Options?</a></code>
+                <code><a href="#domaincognitooptions">Domain<wbr>Cognito<wbr>Options?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -768,7 +768,7 @@ Cluster configuration of the domain, see below.
             <td class="align-top">domain<wbr>Endpoint<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#domaindomainendpointoptions">elasticsearch.<wbr>Domain<wbr>Domain<wbr>Endpoint<wbr>Options?</a></code>
+                <code><a href="#domaindomainendpointoptions">Domain<wbr>Domain<wbr>Endpoint<wbr>Options?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -798,7 +798,7 @@ Name of the domain.
             <td class="align-top">ebs<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#domainebsoptions">elasticsearch.<wbr>Domain<wbr>Ebs<wbr>Options?</a></code>
+                <code><a href="#domainebsoptions">Domain<wbr>Ebs<wbr>Options?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -828,7 +828,7 @@ The version of Elasticsearch to deploy. Defaults to `1.5`
             <td class="align-top">encrypt<wbr>At<wbr>Rest</td>
             <td class="align-top">
                 
-                <code><a href="#domainencryptatrest">elasticsearch.<wbr>Domain<wbr>Encrypt<wbr>At<wbr>Rest?</a></code>
+                <code><a href="#domainencryptatrest">Domain<wbr>Encrypt<wbr>At<wbr>Rest?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -843,7 +843,7 @@ Encrypt at rest options. Only available for [certain instance types](http://docs
             <td class="align-top">log<wbr>Publishing<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#domainlogpublishingoption">elasticsearch.<wbr>Domain<wbr>Log<wbr>Publishing<wbr>Option[]?</a></code>
+                <code><a href="#domainlogpublishingoption">Domain<wbr>Log<wbr>Publishing<wbr>Option[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -858,7 +858,7 @@ Options for publishing slow logs to CloudWatch Logs.
             <td class="align-top">node<wbr>To<wbr>Node<wbr>Encryption</td>
             <td class="align-top">
                 
-                <code><a href="#domainnodetonodeencryption">elasticsearch.<wbr>Domain<wbr>Node<wbr>To<wbr>Node<wbr>Encryption?</a></code>
+                <code><a href="#domainnodetonodeencryption">Domain<wbr>Node<wbr>To<wbr>Node<wbr>Encryption?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -873,7 +873,7 @@ Node-to-node encryption options. See below.
             <td class="align-top">snapshot<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#domainsnapshotoptions">elasticsearch.<wbr>Domain<wbr>Snapshot<wbr>Options?</a></code>
+                <code><a href="#domainsnapshotoptions">Domain<wbr>Snapshot<wbr>Options?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -903,7 +903,7 @@ A mapping of tags to assign to the resource
             <td class="align-top">vpc<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#domainvpcoptions">elasticsearch.<wbr>Domain<wbr>Vpc<wbr>Options?</a></code>
+                <code><a href="#domainvpcoptions">Domain<wbr>Vpc<wbr>Options?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1197,7 +1197,7 @@ The following output properties are available:
             <td class="align-top">Advanced<wbr>Options</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;</code>
+                <code>Dictionary<string, object></code>
             </td>
             <td class="align-top">{{% md %}} Key-value string pairs to specify advanced configuration options.
 Note that the values for these configuration options must be strings (wrapped in quotes) or they
@@ -1226,7 +1226,7 @@ domain on every apply.
             <td class="align-top">Cluster<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#domainclusterconfig">Pulumi.<wbr>Aws.<wbr>Elasticsearch.<wbr>Domain<wbr>Cluster<wbr>Config</a></code>
+                <code><a href="#domainclusterconfig">Domain<wbr>Cluster<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} Cluster configuration of the domain, see below.
  {{% /md %}}
@@ -1239,7 +1239,7 @@ domain on every apply.
             <td class="align-top">Cognito<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#domaincognitooptions">Pulumi.<wbr>Aws.<wbr>Elasticsearch.<wbr>Domain<wbr>Cognito<wbr>Options?</a></code>
+                <code><a href="#domaincognitooptions">Domain<wbr>Cognito<wbr>Options?</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1251,7 +1251,7 @@ domain on every apply.
             <td class="align-top">Domain<wbr>Endpoint<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#domaindomainendpointoptions">Pulumi.<wbr>Aws.<wbr>Elasticsearch.<wbr>Domain<wbr>Domain<wbr>Endpoint<wbr>Options</a></code>
+                <code><a href="#domaindomainendpointoptions">Domain<wbr>Domain<wbr>Endpoint<wbr>Options</a></code>
             </td>
             <td class="align-top">{{% md %}} Domain endpoint HTTP(S) related options. See below.
  {{% /md %}}
@@ -1290,7 +1290,7 @@ domain on every apply.
             <td class="align-top">Ebs<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#domainebsoptions">Pulumi.<wbr>Aws.<wbr>Elasticsearch.<wbr>Domain<wbr>Ebs<wbr>Options</a></code>
+                <code><a href="#domainebsoptions">Domain<wbr>Ebs<wbr>Options</a></code>
             </td>
             <td class="align-top">{{% md %}} EBS related options, may be required based on chosen [instance size](https://aws.amazon.com/elasticsearch-service/pricing/). See below.
  {{% /md %}}
@@ -1316,7 +1316,7 @@ domain on every apply.
             <td class="align-top">Encrypt<wbr>At<wbr>Rest</td>
             <td class="align-top">
                 
-                <code><a href="#domainencryptatrest">Pulumi.<wbr>Aws.<wbr>Elasticsearch.<wbr>Domain<wbr>Encrypt<wbr>At<wbr>Rest</a></code>
+                <code><a href="#domainencryptatrest">Domain<wbr>Encrypt<wbr>At<wbr>Rest</a></code>
             </td>
             <td class="align-top">{{% md %}} Encrypt at rest options. Only available for [certain instance types](http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/aes-supported-instance-types.html). See below.
  {{% /md %}}
@@ -1357,7 +1357,7 @@ domain on every apply.
             <td class="align-top">Log<wbr>Publishing<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#domainlogpublishingoption">List&lt;Pulumi.<wbr>Aws.<wbr>Elasticsearch.<wbr>Domain<wbr>Log<wbr>Publishing<wbr>Option&gt;?</a></code>
+                <code><a href="#domainlogpublishingoption">List&lt;Domain<wbr>Log<wbr>Publishing<wbr>Option&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} Options for publishing slow logs to CloudWatch Logs.
  {{% /md %}}
@@ -1370,7 +1370,7 @@ domain on every apply.
             <td class="align-top">Node<wbr>To<wbr>Node<wbr>Encryption</td>
             <td class="align-top">
                 
-                <code><a href="#domainnodetonodeencryption">Pulumi.<wbr>Aws.<wbr>Elasticsearch.<wbr>Domain<wbr>Node<wbr>To<wbr>Node<wbr>Encryption</a></code>
+                <code><a href="#domainnodetonodeencryption">Domain<wbr>Node<wbr>To<wbr>Node<wbr>Encryption</a></code>
             </td>
             <td class="align-top">{{% md %}} Node-to-node encryption options. See below.
  {{% /md %}}
@@ -1383,7 +1383,7 @@ domain on every apply.
             <td class="align-top">Snapshot<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#domainsnapshotoptions">Pulumi.<wbr>Aws.<wbr>Elasticsearch.<wbr>Domain<wbr>Snapshot<wbr>Options?</a></code>
+                <code><a href="#domainsnapshotoptions">Domain<wbr>Snapshot<wbr>Options?</a></code>
             </td>
             <td class="align-top">{{% md %}} Snapshot related options, see below.
  {{% /md %}}
@@ -1396,7 +1396,7 @@ domain on every apply.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource
  {{% /md %}}
@@ -1409,7 +1409,7 @@ domain on every apply.
             <td class="align-top">Vpc<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#domainvpcoptions">Pulumi.<wbr>Aws.<wbr>Elasticsearch.<wbr>Domain<wbr>Vpc<wbr>Options?</a></code>
+                <code><a href="#domainvpcoptions">Domain<wbr>Vpc<wbr>Options?</a></code>
             </td>
             <td class="align-top">{{% md %}} VPC related options, see below. Adding or removing this configuration forces a new resource ([documentation](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-vpc.html#es-vpc-limitations)).
  {{% /md %}}
@@ -1742,7 +1742,7 @@ domain on every apply.
             <td class="align-top">cluster<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#domainclusterconfig">elasticsearch.<wbr>Domain<wbr>Cluster<wbr>Config</a></code>
+                <code><a href="#domainclusterconfig">Domain<wbr>Cluster<wbr>Config</a></code>
             </td>
             <td class="align-top">{{% md %}} Cluster configuration of the domain, see below.
  {{% /md %}}
@@ -1755,7 +1755,7 @@ domain on every apply.
             <td class="align-top">cognito<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#domaincognitooptions">elasticsearch.<wbr>Domain<wbr>Cognito<wbr>Options?</a></code>
+                <code><a href="#domaincognitooptions">Domain<wbr>Cognito<wbr>Options?</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1767,7 +1767,7 @@ domain on every apply.
             <td class="align-top">domain<wbr>Endpoint<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#domaindomainendpointoptions">elasticsearch.<wbr>Domain<wbr>Domain<wbr>Endpoint<wbr>Options</a></code>
+                <code><a href="#domaindomainendpointoptions">Domain<wbr>Domain<wbr>Endpoint<wbr>Options</a></code>
             </td>
             <td class="align-top">{{% md %}} Domain endpoint HTTP(S) related options. See below.
  {{% /md %}}
@@ -1806,7 +1806,7 @@ domain on every apply.
             <td class="align-top">ebs<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#domainebsoptions">elasticsearch.<wbr>Domain<wbr>Ebs<wbr>Options</a></code>
+                <code><a href="#domainebsoptions">Domain<wbr>Ebs<wbr>Options</a></code>
             </td>
             <td class="align-top">{{% md %}} EBS related options, may be required based on chosen [instance size](https://aws.amazon.com/elasticsearch-service/pricing/). See below.
  {{% /md %}}
@@ -1832,7 +1832,7 @@ domain on every apply.
             <td class="align-top">encrypt<wbr>At<wbr>Rest</td>
             <td class="align-top">
                 
-                <code><a href="#domainencryptatrest">elasticsearch.<wbr>Domain<wbr>Encrypt<wbr>At<wbr>Rest</a></code>
+                <code><a href="#domainencryptatrest">Domain<wbr>Encrypt<wbr>At<wbr>Rest</a></code>
             </td>
             <td class="align-top">{{% md %}} Encrypt at rest options. Only available for [certain instance types](http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/aes-supported-instance-types.html). See below.
  {{% /md %}}
@@ -1873,7 +1873,7 @@ domain on every apply.
             <td class="align-top">log<wbr>Publishing<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#domainlogpublishingoption">elasticsearch.<wbr>Domain<wbr>Log<wbr>Publishing<wbr>Option[]?</a></code>
+                <code><a href="#domainlogpublishingoption">Domain<wbr>Log<wbr>Publishing<wbr>Option[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} Options for publishing slow logs to CloudWatch Logs.
  {{% /md %}}
@@ -1886,7 +1886,7 @@ domain on every apply.
             <td class="align-top">node<wbr>To<wbr>Node<wbr>Encryption</td>
             <td class="align-top">
                 
-                <code><a href="#domainnodetonodeencryption">elasticsearch.<wbr>Domain<wbr>Node<wbr>To<wbr>Node<wbr>Encryption</a></code>
+                <code><a href="#domainnodetonodeencryption">Domain<wbr>Node<wbr>To<wbr>Node<wbr>Encryption</a></code>
             </td>
             <td class="align-top">{{% md %}} Node-to-node encryption options. See below.
  {{% /md %}}
@@ -1899,7 +1899,7 @@ domain on every apply.
             <td class="align-top">snapshot<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#domainsnapshotoptions">elasticsearch.<wbr>Domain<wbr>Snapshot<wbr>Options?</a></code>
+                <code><a href="#domainsnapshotoptions">Domain<wbr>Snapshot<wbr>Options?</a></code>
             </td>
             <td class="align-top">{{% md %}} Snapshot related options, see below.
  {{% /md %}}
@@ -1925,7 +1925,7 @@ domain on every apply.
             <td class="align-top">vpc<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#domainvpcoptions">elasticsearch.<wbr>Domain<wbr>Vpc<wbr>Options?</a></code>
+                <code><a href="#domainvpcoptions">Domain<wbr>Vpc<wbr>Options?</a></code>
             </td>
             <td class="align-top">{{% md %}} VPC related options, see below. Adding or removing this configuration forces a new resource ([documentation](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-vpc.html#es-vpc-limitations)).
  {{% /md %}}
@@ -2290,7 +2290,7 @@ IAM policy document specifying the access policies for the domain
             <td class="align-top">Advanced<wbr>Options</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2323,7 +2323,7 @@ Amazon Resource Name (ARN) of the domain.
             <td class="align-top">Cluster<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#domainclusterconfig">Pulumi.<wbr>Aws.<wbr>Elasticsearch.<wbr>Domain<wbr>Cluster<wbr>Config<wbr>Args?</a></code>
+                <code><a href="#domainclusterconfig">Domain<wbr>Cluster<wbr>Config<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2338,7 +2338,7 @@ Cluster configuration of the domain, see below.
             <td class="align-top">Cognito<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#domaincognitooptions">Pulumi.<wbr>Aws.<wbr>Elasticsearch.<wbr>Domain<wbr>Cognito<wbr>Options<wbr>Args?</a></code>
+                <code><a href="#domaincognitooptions">Domain<wbr>Cognito<wbr>Options<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2352,7 +2352,7 @@ Cluster configuration of the domain, see below.
             <td class="align-top">Domain<wbr>Endpoint<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#domaindomainendpointoptions">Pulumi.<wbr>Aws.<wbr>Elasticsearch.<wbr>Domain<wbr>Domain<wbr>Endpoint<wbr>Options<wbr>Args?</a></code>
+                <code><a href="#domaindomainendpointoptions">Domain<wbr>Domain<wbr>Endpoint<wbr>Options<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2397,7 +2397,7 @@ Name of the domain.
             <td class="align-top">Ebs<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#domainebsoptions">Pulumi.<wbr>Aws.<wbr>Elasticsearch.<wbr>Domain<wbr>Ebs<wbr>Options<wbr>Args?</a></code>
+                <code><a href="#domainebsoptions">Domain<wbr>Ebs<wbr>Options<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2427,7 +2427,7 @@ The version of Elasticsearch to deploy. Defaults to `1.5`
             <td class="align-top">Encrypt<wbr>At<wbr>Rest</td>
             <td class="align-top">
                 
-                <code><a href="#domainencryptatrest">Pulumi.<wbr>Aws.<wbr>Elasticsearch.<wbr>Domain<wbr>Encrypt<wbr>At<wbr>Rest<wbr>Args?</a></code>
+                <code><a href="#domainencryptatrest">Domain<wbr>Encrypt<wbr>At<wbr>Rest<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2474,7 +2474,7 @@ Domain-specific endpoint for kibana without https scheme.
             <td class="align-top">Log<wbr>Publishing<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#domainlogpublishingoption">List&lt;Pulumi.<wbr>Aws.<wbr>Elasticsearch.<wbr>Domain<wbr>Log<wbr>Publishing<wbr>Option<wbr>Args&gt;?</a></code>
+                <code><a href="#domainlogpublishingoption">List&lt;Domain<wbr>Log<wbr>Publishing<wbr>Option<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2489,7 +2489,7 @@ Options for publishing slow logs to CloudWatch Logs.
             <td class="align-top">Node<wbr>To<wbr>Node<wbr>Encryption</td>
             <td class="align-top">
                 
-                <code><a href="#domainnodetonodeencryption">Pulumi.<wbr>Aws.<wbr>Elasticsearch.<wbr>Domain<wbr>Node<wbr>To<wbr>Node<wbr>Encryption<wbr>Args?</a></code>
+                <code><a href="#domainnodetonodeencryption">Domain<wbr>Node<wbr>To<wbr>Node<wbr>Encryption<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2504,7 +2504,7 @@ Node-to-node encryption options. See below.
             <td class="align-top">Snapshot<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#domainsnapshotoptions">Pulumi.<wbr>Aws.<wbr>Elasticsearch.<wbr>Domain<wbr>Snapshot<wbr>Options<wbr>Args?</a></code>
+                <code><a href="#domainsnapshotoptions">Domain<wbr>Snapshot<wbr>Options<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2519,7 +2519,7 @@ Snapshot related options, see below.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2534,7 +2534,7 @@ A mapping of tags to assign to the resource
             <td class="align-top">Vpc<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#domainvpcoptions">Pulumi.<wbr>Aws.<wbr>Elasticsearch.<wbr>Domain<wbr>Vpc<wbr>Options<wbr>Args?</a></code>
+                <code><a href="#domainvpcoptions">Domain<wbr>Vpc<wbr>Options<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2863,7 +2863,7 @@ VPC related options, see below. Adding or removing this configuration forces a n
             <td class="align-top">access<wbr>Policies</td>
             <td class="align-top">
                 
-                <code>string | Policy<wbr>Document</code>
+                <code>string | PolicyDocument</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2911,7 +2911,7 @@ Amazon Resource Name (ARN) of the domain.
             <td class="align-top">cluster<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#domainclusterconfig">elasticsearch.<wbr>Domain<wbr>Cluster<wbr>Config?</a></code>
+                <code><a href="#domainclusterconfig">Domain<wbr>Cluster<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2926,7 +2926,7 @@ Cluster configuration of the domain, see below.
             <td class="align-top">cognito<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#domaincognitooptions">elasticsearch.<wbr>Domain<wbr>Cognito<wbr>Options?</a></code>
+                <code><a href="#domaincognitooptions">Domain<wbr>Cognito<wbr>Options?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2940,7 +2940,7 @@ Cluster configuration of the domain, see below.
             <td class="align-top">domain<wbr>Endpoint<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#domaindomainendpointoptions">elasticsearch.<wbr>Domain<wbr>Domain<wbr>Endpoint<wbr>Options?</a></code>
+                <code><a href="#domaindomainendpointoptions">Domain<wbr>Domain<wbr>Endpoint<wbr>Options?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2985,7 +2985,7 @@ Name of the domain.
             <td class="align-top">ebs<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#domainebsoptions">elasticsearch.<wbr>Domain<wbr>Ebs<wbr>Options?</a></code>
+                <code><a href="#domainebsoptions">Domain<wbr>Ebs<wbr>Options?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3015,7 +3015,7 @@ The version of Elasticsearch to deploy. Defaults to `1.5`
             <td class="align-top">encrypt<wbr>At<wbr>Rest</td>
             <td class="align-top">
                 
-                <code><a href="#domainencryptatrest">elasticsearch.<wbr>Domain<wbr>Encrypt<wbr>At<wbr>Rest?</a></code>
+                <code><a href="#domainencryptatrest">Domain<wbr>Encrypt<wbr>At<wbr>Rest?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3062,7 +3062,7 @@ Domain-specific endpoint for kibana without https scheme.
             <td class="align-top">log<wbr>Publishing<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#domainlogpublishingoption">elasticsearch.<wbr>Domain<wbr>Log<wbr>Publishing<wbr>Option[]?</a></code>
+                <code><a href="#domainlogpublishingoption">Domain<wbr>Log<wbr>Publishing<wbr>Option[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3077,7 +3077,7 @@ Options for publishing slow logs to CloudWatch Logs.
             <td class="align-top">node<wbr>To<wbr>Node<wbr>Encryption</td>
             <td class="align-top">
                 
-                <code><a href="#domainnodetonodeencryption">elasticsearch.<wbr>Domain<wbr>Node<wbr>To<wbr>Node<wbr>Encryption?</a></code>
+                <code><a href="#domainnodetonodeencryption">Domain<wbr>Node<wbr>To<wbr>Node<wbr>Encryption?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3092,7 +3092,7 @@ Node-to-node encryption options. See below.
             <td class="align-top">snapshot<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#domainsnapshotoptions">elasticsearch.<wbr>Domain<wbr>Snapshot<wbr>Options?</a></code>
+                <code><a href="#domainsnapshotoptions">Domain<wbr>Snapshot<wbr>Options?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3122,7 +3122,7 @@ A mapping of tags to assign to the resource
             <td class="align-top">vpc<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#domainvpcoptions">elasticsearch.<wbr>Domain<wbr>Vpc<wbr>Options?</a></code>
+                <code><a href="#domainvpcoptions">Domain<wbr>Vpc<wbr>Options?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3554,7 +3554,7 @@ Instance type of data nodes in the cluster.
             <td class="align-top">Zone<wbr>Awareness<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#domainclusterconfigzoneawarenessconfig">Pulumi.<wbr>Aws.<wbr>Elasticsearch.<wbr>Domain<wbr>Cluster<wbr>Config<wbr>Zone<wbr>Awareness<wbr>Config<wbr>Args?</a></code>
+                <code><a href="#domainclusterconfigzoneawarenessconfig">Domain<wbr>Cluster<wbr>Config<wbr>Zone<wbr>Awareness<wbr>Config<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3804,7 +3804,7 @@ Instance type of data nodes in the cluster.
             <td class="align-top">zone<wbr>Awareness<wbr>Config</td>
             <td class="align-top">
                 
-                <code><a href="#domainclusterconfigzoneawarenessconfig">elasticsearch.<wbr>Domain<wbr>Cluster<wbr>Config<wbr>Zone<wbr>Awareness<wbr>Config?</a></code>
+                <code><a href="#domainclusterconfigzoneawarenessconfig">Domain<wbr>Cluster<wbr>Config<wbr>Zone<wbr>Awareness<wbr>Config?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5896,7 +5896,7 @@ snapshot of the indices in the domain.
             <td class="align-top">Availability<wbr>Zones</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5910,7 +5910,7 @@ snapshot of the indices in the domain.
             <td class="align-top">Security<wbr>Group<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -5925,7 +5925,7 @@ List of VPC Security Group IDs to be applied to the Elasticsearch domain endpoin
             <td class="align-top">Subnet<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

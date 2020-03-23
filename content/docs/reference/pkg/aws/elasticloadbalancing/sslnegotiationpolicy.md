@@ -132,7 +132,7 @@ The following arguments are supported:
             <td class="align-top">Attributes</td>
             <td class="align-top">
                 
-                <code><a href="#sslnegotiationpolicyattribute">List&lt;Pulumi.<wbr>Aws.<wbr>Elasticloadbalancing.<wbr>Ssl<wbr>Negotiation<wbr>Policy<wbr>Attribute<wbr>Args&gt;?</a></code>
+                <code><a href="#sslnegotiationpolicyattribute">List&lt;Ssl<wbr>Negotiation<wbr>Policy<wbr>Attribute<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -298,7 +298,7 @@ The name of the attribute
             <td class="align-top">attributes</td>
             <td class="align-top">
                 
-                <code><a href="#sslnegotiationpolicyattribute">elasticloadbalancing.<wbr>Ssl<wbr>Negotiation<wbr>Policy<wbr>Attribute[]?</a></code>
+                <code><a href="#sslnegotiationpolicyattribute">Ssl<wbr>Negotiation<wbr>Policy<wbr>Attribute[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -478,7 +478,7 @@ The following output properties are available:
             <td class="align-top">Attributes</td>
             <td class="align-top">
                 
-                <code><a href="#sslnegotiationpolicyattribute">List&lt;Pulumi.<wbr>Aws.<wbr>Elasticloadbalancing.<wbr>Ssl<wbr>Negotiation<wbr>Policy<wbr>Attribute&gt;?</a></code>
+                <code><a href="#sslnegotiationpolicyattribute">List&lt;Ssl<wbr>Negotiation<wbr>Policy<wbr>Attribute&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} An SSL Negotiation policy attribute. Each has two properties:
  {{% /md %}}
@@ -628,7 +628,7 @@ should be attached.
             <td class="align-top">attributes</td>
             <td class="align-top">
                 
-                <code><a href="#sslnegotiationpolicyattribute">elasticloadbalancing.<wbr>Ssl<wbr>Negotiation<wbr>Policy<wbr>Attribute[]?</a></code>
+                <code><a href="#sslnegotiationpolicyattribute">Ssl<wbr>Negotiation<wbr>Policy<wbr>Attribute[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} An SSL Negotiation policy attribute. Each has two properties:
  {{% /md %}}
@@ -837,7 +837,7 @@ The following state arguments are supported:
             <td class="align-top">Attributes</td>
             <td class="align-top">
                 
-                <code><a href="#sslnegotiationpolicyattribute">List&lt;Pulumi.<wbr>Aws.<wbr>Elasticloadbalancing.<wbr>Ssl<wbr>Negotiation<wbr>Policy<wbr>Attribute<wbr>Args&gt;?</a></code>
+                <code><a href="#sslnegotiationpolicyattribute">List&lt;Ssl<wbr>Negotiation<wbr>Policy<wbr>Attribute<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1003,7 +1003,7 @@ The name of the attribute
             <td class="align-top">attributes</td>
             <td class="align-top">
                 
-                <code><a href="#sslnegotiationpolicyattribute">elasticloadbalancing.<wbr>Ssl<wbr>Negotiation<wbr>Policy<wbr>Attribute[]?</a></code>
+                <code><a href="#sslnegotiationpolicyattribute">Ssl<wbr>Negotiation<wbr>Policy<wbr>Attribute[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

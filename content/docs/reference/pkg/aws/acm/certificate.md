@@ -210,7 +210,7 @@ A domain name for which the certificate should be issued
             <td class="align-top">Options</td>
             <td class="align-top">
                 
-                <code><a href="#certificateoptions">Pulumi.<wbr>Aws.<wbr>Acm.<wbr>Certificate<wbr>Options<wbr>Args?</a></code>
+                <code><a href="#certificateoptions">Certificate<wbr>Options<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -239,7 +239,7 @@ The certificate&#39;s PEM-formatted private key
             <td class="align-top">Subject<wbr>Alternative<wbr>Names</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -254,7 +254,7 @@ A list of domains that should be SANs in the issued certificate
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -522,7 +522,7 @@ A domain name for which the certificate should be issued
             <td class="align-top">options</td>
             <td class="align-top">
                 
-                <code><a href="#certificateoptions">acm.<wbr>Certificate<wbr>Options?</a></code>
+                <code><a href="#certificateoptions">Certificate<wbr>Options?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -853,7 +853,7 @@ The following output properties are available:
             <td class="align-top">Domain<wbr>Validation<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#certificatedomainvalidationoption">List&lt;Pulumi.<wbr>Aws.<wbr>Acm.<wbr>Certificate<wbr>Domain<wbr>Validation<wbr>Option&gt;</a></code>
+                <code><a href="#certificatedomainvalidationoption">List&lt;Certificate<wbr>Domain<wbr>Validation<wbr>Option&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of attributes to feed into other resources to complete certificate validation. Can have more than one element, e.g. if SANs are defined. Only set if `DNS`-validation was used.
  {{% /md %}}
@@ -866,7 +866,7 @@ The following output properties are available:
             <td class="align-top">Options</td>
             <td class="align-top">
                 
-                <code><a href="#certificateoptions">Pulumi.<wbr>Aws.<wbr>Acm.<wbr>Certificate<wbr>Options?</a></code>
+                <code><a href="#certificateoptions">Certificate<wbr>Options?</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -891,7 +891,7 @@ The following output properties are available:
             <td class="align-top">Subject<wbr>Alternative<wbr>Names</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} A list of domains that should be SANs in the issued certificate
  {{% /md %}}
@@ -904,7 +904,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -917,7 +917,7 @@ The following output properties are available:
             <td class="align-top">Validation<wbr>Emails</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} A list of addresses that received a validation E-Mail. Only set if `EMAIL`-validation was used.
  {{% /md %}}
@@ -1207,7 +1207,7 @@ The following output properties are available:
             <td class="align-top">domain<wbr>Validation<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#certificatedomainvalidationoption">acm.<wbr>Certificate<wbr>Domain<wbr>Validation<wbr>Option[]</a></code>
+                <code><a href="#certificatedomainvalidationoption">Certificate<wbr>Domain<wbr>Validation<wbr>Option[]</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of attributes to feed into other resources to complete certificate validation. Can have more than one element, e.g. if SANs are defined. Only set if `DNS`-validation was used.
  {{% /md %}}
@@ -1220,7 +1220,7 @@ The following output properties are available:
             <td class="align-top">options</td>
             <td class="align-top">
                 
-                <code><a href="#certificateoptions">acm.<wbr>Certificate<wbr>Options?</a></code>
+                <code><a href="#certificateoptions">Certificate<wbr>Options?</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1630,7 +1630,7 @@ A domain name for which the certificate should be issued
             <td class="align-top">Domain<wbr>Validation<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#certificatedomainvalidationoption">List&lt;Pulumi.<wbr>Aws.<wbr>Acm.<wbr>Certificate<wbr>Domain<wbr>Validation<wbr>Option<wbr>Args&gt;?</a></code>
+                <code><a href="#certificatedomainvalidationoption">List&lt;Certificate<wbr>Domain<wbr>Validation<wbr>Option<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1645,7 +1645,7 @@ A list of attributes to feed into other resources to complete certificate valida
             <td class="align-top">Options</td>
             <td class="align-top">
                 
-                <code><a href="#certificateoptions">Pulumi.<wbr>Aws.<wbr>Acm.<wbr>Certificate<wbr>Options<wbr>Args?</a></code>
+                <code><a href="#certificateoptions">Certificate<wbr>Options<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1674,7 +1674,7 @@ The certificate&#39;s PEM-formatted private key
             <td class="align-top">Subject<wbr>Alternative<wbr>Names</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1689,7 +1689,7 @@ A list of domains that should be SANs in the issued certificate
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1704,7 +1704,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">Validation<wbr>Emails</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2032,7 +2032,7 @@ A domain name for which the certificate should be issued
             <td class="align-top">domain<wbr>Validation<wbr>Options</td>
             <td class="align-top">
                 
-                <code><a href="#certificatedomainvalidationoption">acm.<wbr>Certificate<wbr>Domain<wbr>Validation<wbr>Option[]?</a></code>
+                <code><a href="#certificatedomainvalidationoption">Certificate<wbr>Domain<wbr>Validation<wbr>Option[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2047,7 +2047,7 @@ A list of attributes to feed into other resources to complete certificate valida
             <td class="align-top">options</td>
             <td class="align-top">
                 
-                <code><a href="#certificateoptions">acm.<wbr>Certificate<wbr>Options?</a></code>
+                <code><a href="#certificateoptions">Certificate<wbr>Options?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

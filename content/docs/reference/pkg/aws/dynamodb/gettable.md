@@ -43,7 +43,7 @@ const tableName = aws.dynamodb.getTable({
 <div class="highlight">
 <pre class="chroma">
 <code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetTable </span><span class="p">{</span>
-    <span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Dynamodb.GetTableResult.html">Pulumi.Aws.Dynamodb.GetTableResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Dynamodb.GetTableArgs.html">GetTableArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span>
+    <span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Dynamodb.GetTableResult.html">GetTableResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Dynamodb.GetTableArgs.html">GetTableArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span>
 <span class="p">}</span></code></pre>
 </div>
 
@@ -87,7 +87,7 @@ The name of the DynamoDB table.
             <td class="align-top">Server<wbr>Side<wbr>Encryption</td>
             <td class="align-top">
                 
-                <code><a href="#gettableserversideencryption">Pulumi.<wbr>Aws.<wbr>Dynamodb.<wbr>Get<wbr>Table<wbr>Server<wbr>Side<wbr>Encryption<wbr>Args?</a></code>
+                <code><a href="#gettableserversideencryption">Get<wbr>Table<wbr>Server<wbr>Side<wbr>Encryption<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -101,7 +101,7 @@ The name of the DynamoDB table.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -213,7 +213,7 @@ The name of the DynamoDB table.
             <td class="align-top">server<wbr>Side<wbr>Encryption</td>
             <td class="align-top">
                 
-                <code><a href="#gettableserversideencryption">dynamodb.<wbr>Get<wbr>Table<wbr>Server<wbr>Side<wbr>Encryption?</a></code>
+                <code><a href="#gettableserversideencryption">Get<wbr>Table<wbr>Server<wbr>Side<wbr>Encryption?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -351,7 +351,7 @@ The following output properties are available:
             <td class="align-top">Attributes</td>
             <td class="align-top">
                 
-                <code><a href="#gettableattribute">List&lt;Pulumi.<wbr>Aws.<wbr>Dynamodb.<wbr>Get<wbr>Table<wbr>Attribute&gt;</a></code>
+                <code><a href="#gettableattribute">List&lt;Get<wbr>Table<wbr>Attribute&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -375,7 +375,7 @@ The following output properties are available:
             <td class="align-top">Global<wbr>Secondary<wbr>Indexes</td>
             <td class="align-top">
                 
-                <code><a href="#gettableglobalsecondaryindex">List&lt;Pulumi.<wbr>Aws.<wbr>Dynamodb.<wbr>Get<wbr>Table<wbr>Global<wbr>Secondary<wbr>Index&gt;</a></code>
+                <code><a href="#gettableglobalsecondaryindex">List&lt;Get<wbr>Table<wbr>Global<wbr>Secondary<wbr>Index&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -412,7 +412,7 @@ The following output properties are available:
             <td class="align-top">Local<wbr>Secondary<wbr>Indexes</td>
             <td class="align-top">
                 
-                <code><a href="#gettablelocalsecondaryindex">List&lt;Pulumi.<wbr>Aws.<wbr>Dynamodb.<wbr>Get<wbr>Table<wbr>Local<wbr>Secondary<wbr>Index&gt;</a></code>
+                <code><a href="#gettablelocalsecondaryindex">List&lt;Get<wbr>Table<wbr>Local<wbr>Secondary<wbr>Index&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -436,7 +436,7 @@ The following output properties are available:
             <td class="align-top">Point<wbr>In<wbr>Time<wbr>Recovery</td>
             <td class="align-top">
                 
-                <code><a href="#gettablepointintimerecovery">Pulumi.<wbr>Aws.<wbr>Dynamodb.<wbr>Get<wbr>Table<wbr>Point<wbr>In<wbr>Time<wbr>Recovery</a></code>
+                <code><a href="#gettablepointintimerecovery">Get<wbr>Table<wbr>Point<wbr>In<wbr>Time<wbr>Recovery</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -472,7 +472,7 @@ The following output properties are available:
             <td class="align-top">Server<wbr>Side<wbr>Encryption</td>
             <td class="align-top">
                 
-                <code><a href="#gettableserversideencryption">Pulumi.<wbr>Aws.<wbr>Dynamodb.<wbr>Get<wbr>Table<wbr>Server<wbr>Side<wbr>Encryption</a></code>
+                <code><a href="#gettableserversideencryption">Get<wbr>Table<wbr>Server<wbr>Side<wbr>Encryption</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -532,7 +532,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;</code>
+                <code>Dictionary<string, object></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -544,7 +544,7 @@ The following output properties are available:
             <td class="align-top">Ttl</td>
             <td class="align-top">
                 
-                <code><a href="#gettablettl">Pulumi.<wbr>Aws.<wbr>Dynamodb.<wbr>Get<wbr>Table<wbr>Ttl</a></code>
+                <code><a href="#gettablettl">Get<wbr>Table<wbr>Ttl</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -849,7 +849,7 @@ The following output properties are available:
             <td class="align-top">attributes</td>
             <td class="align-top">
                 
-                <code><a href="#gettableattribute">dynamodb.<wbr>Get<wbr>Table<wbr>Attribute[]</a></code>
+                <code><a href="#gettableattribute">Get<wbr>Table<wbr>Attribute[]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -873,7 +873,7 @@ The following output properties are available:
             <td class="align-top">global<wbr>Secondary<wbr>Indexes</td>
             <td class="align-top">
                 
-                <code><a href="#gettableglobalsecondaryindex">dynamodb.<wbr>Get<wbr>Table<wbr>Global<wbr>Secondary<wbr>Index[]</a></code>
+                <code><a href="#gettableglobalsecondaryindex">Get<wbr>Table<wbr>Global<wbr>Secondary<wbr>Index[]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -910,7 +910,7 @@ The following output properties are available:
             <td class="align-top">local<wbr>Secondary<wbr>Indexes</td>
             <td class="align-top">
                 
-                <code><a href="#gettablelocalsecondaryindex">dynamodb.<wbr>Get<wbr>Table<wbr>Local<wbr>Secondary<wbr>Index[]</a></code>
+                <code><a href="#gettablelocalsecondaryindex">Get<wbr>Table<wbr>Local<wbr>Secondary<wbr>Index[]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -934,7 +934,7 @@ The following output properties are available:
             <td class="align-top">point<wbr>In<wbr>Time<wbr>Recovery</td>
             <td class="align-top">
                 
-                <code><a href="#gettablepointintimerecovery">dynamodb.<wbr>Get<wbr>Table<wbr>Point<wbr>In<wbr>Time<wbr>Recovery</a></code>
+                <code><a href="#gettablepointintimerecovery">Get<wbr>Table<wbr>Point<wbr>In<wbr>Time<wbr>Recovery</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -970,7 +970,7 @@ The following output properties are available:
             <td class="align-top">server<wbr>Side<wbr>Encryption</td>
             <td class="align-top">
                 
-                <code><a href="#gettableserversideencryption">dynamodb.<wbr>Get<wbr>Table<wbr>Server<wbr>Side<wbr>Encryption</a></code>
+                <code><a href="#gettableserversideencryption">Get<wbr>Table<wbr>Server<wbr>Side<wbr>Encryption</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1042,7 +1042,7 @@ The following output properties are available:
             <td class="align-top">ttl</td>
             <td class="align-top">
                 
-                <code><a href="#gettablettl">dynamodb.<wbr>Get<wbr>Table<wbr>Ttl</a></code>
+                <code><a href="#gettablettl">Get<wbr>Table<wbr>Ttl</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1607,7 +1607,7 @@ The name of the DynamoDB table.
             <td class="align-top">Non<wbr>Key<wbr>Attributes</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2090,7 +2090,7 @@ The name of the DynamoDB table.
             <td class="align-top">Non<wbr>Key<wbr>Attributes</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

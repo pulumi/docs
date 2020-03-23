@@ -99,7 +99,7 @@ The following arguments are supported:
             <td class="align-top">Byte<wbr>Match<wbr>Tuples</td>
             <td class="align-top">
                 
-                <code><a href="#bytematchsetbytematchtuple">List&lt;Pulumi.<wbr>Aws.<wbr>Waf.<wbr>Byte<wbr>Match<wbr>Set<wbr>Byte<wbr>Match<wbr>Tuple<wbr>Args&gt;?</a></code>
+                <code><a href="#bytematchsetbytematchtuple">List&lt;Byte<wbr>Match<wbr>Set<wbr>Byte<wbr>Match<wbr>Tuple<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -203,7 +203,7 @@ The name or description of the Byte Match Set.
             <td class="align-top">byte<wbr>Match<wbr>Tuples</td>
             <td class="align-top">
                 
-                <code><a href="#bytematchsetbytematchtuple">waf.<wbr>Byte<wbr>Match<wbr>Set<wbr>Byte<wbr>Match<wbr>Tuple[]?</a></code>
+                <code><a href="#bytematchsetbytematchtuple">Byte<wbr>Match<wbr>Set<wbr>Byte<wbr>Match<wbr>Tuple[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -321,7 +321,7 @@ The following output properties are available:
             <td class="align-top">Byte<wbr>Match<wbr>Tuples</td>
             <td class="align-top">
                 
-                <code><a href="#bytematchsetbytematchtuple">List&lt;Pulumi.<wbr>Aws.<wbr>Waf.<wbr>Byte<wbr>Match<wbr>Set<wbr>Byte<wbr>Match<wbr>Tuple&gt;?</a></code>
+                <code><a href="#bytematchsetbytematchtuple">List&lt;Byte<wbr>Match<wbr>Set<wbr>Byte<wbr>Match<wbr>Tuple&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} Specifies the bytes (typically a string that corresponds
 with ASCII characters) that you want to search for in web requests,
@@ -417,7 +417,7 @@ the location in requests that you want to search, and other settings.
             <td class="align-top">byte<wbr>Match<wbr>Tuples</td>
             <td class="align-top">
                 
-                <code><a href="#bytematchsetbytematchtuple">waf.<wbr>Byte<wbr>Match<wbr>Set<wbr>Byte<wbr>Match<wbr>Tuple[]?</a></code>
+                <code><a href="#bytematchsetbytematchtuple">Byte<wbr>Match<wbr>Set<wbr>Byte<wbr>Match<wbr>Tuple[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} Specifies the bytes (typically a string that corresponds
 with ASCII characters) that you want to search for in web requests,
@@ -572,7 +572,7 @@ The following state arguments are supported:
             <td class="align-top">Byte<wbr>Match<wbr>Tuples</td>
             <td class="align-top">
                 
-                <code><a href="#bytematchsetbytematchtuple">List&lt;Pulumi.<wbr>Aws.<wbr>Waf.<wbr>Byte<wbr>Match<wbr>Set<wbr>Byte<wbr>Match<wbr>Tuple<wbr>Args&gt;?</a></code>
+                <code><a href="#bytematchsetbytematchtuple">List&lt;Byte<wbr>Match<wbr>Set<wbr>Byte<wbr>Match<wbr>Tuple<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -676,7 +676,7 @@ The name or description of the Byte Match Set.
             <td class="align-top">byte<wbr>Match<wbr>Tuples</td>
             <td class="align-top">
                 
-                <code><a href="#bytematchsetbytematchtuple">waf.<wbr>Byte<wbr>Match<wbr>Set<wbr>Byte<wbr>Match<wbr>Tuple[]?</a></code>
+                <code><a href="#bytematchsetbytematchtuple">Byte<wbr>Match<wbr>Set<wbr>Byte<wbr>Match<wbr>Tuple[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -808,7 +808,7 @@ The name or description of the Byte Match Set.
             <td class="align-top">Field<wbr>To<wbr>Match</td>
             <td class="align-top">
                 
-                <code><a href="#bytematchsetbytematchtuplefieldtomatch">Pulumi.<wbr>Aws.<wbr>Waf.<wbr>Byte<wbr>Match<wbr>Set<wbr>Byte<wbr>Match<wbr>Tuple<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></code>
+                <code><a href="#bytematchsetbytematchtuplefieldtomatch">Byte<wbr>Match<wbr>Set<wbr>Byte<wbr>Match<wbr>Tuple<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -988,7 +988,7 @@ for all supported values.
             <td class="align-top">field<wbr>To<wbr>Match</td>
             <td class="align-top">
                 
-                <code><a href="#bytematchsetbytematchtuplefieldtomatch">waf.<wbr>Byte<wbr>Match<wbr>Set<wbr>Byte<wbr>Match<wbr>Tuple<wbr>Field<wbr>To<wbr>Match</a></code>
+                <code><a href="#bytematchsetbytematchtuplefieldtomatch">Byte<wbr>Match<wbr>Set<wbr>Byte<wbr>Match<wbr>Tuple<wbr>Field<wbr>To<wbr>Match</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

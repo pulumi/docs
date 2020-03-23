@@ -224,7 +224,7 @@ export const scalaCode = example.scalaCode;
 <div class="highlight">
 <pre class="chroma">
 <code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetScript </span><span class="p">{</span>
-    <span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.GetScriptResult.html">Pulumi.Aws.Glue.GetScriptResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.GetScriptArgs.html">GetScriptArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span>
+    <span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.GetScriptResult.html">GetScriptResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.GetScriptArgs.html">GetScriptArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span>
 <span class="p">}</span></code></pre>
 </div>
 
@@ -253,7 +253,7 @@ The following arguments are supported:
             <td class="align-top">Dag<wbr>Edges</td>
             <td class="align-top">
                 
-                <code><a href="#getscriptdagedge">List&lt;Pulumi.<wbr>Aws.<wbr>Glue.<wbr>Get<wbr>Script<wbr>Dag<wbr>Edge<wbr>Args&gt;</a></code>
+                <code><a href="#getscriptdagedge">List&lt;Get<wbr>Script<wbr>Dag<wbr>Edge<wbr>Args&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -268,7 +268,7 @@ A list of the edges in the DAG. Defined below.
             <td class="align-top">Dag<wbr>Nodes</td>
             <td class="align-top">
                 
-                <code><a href="#getscriptdagnode">List&lt;Pulumi.<wbr>Aws.<wbr>Glue.<wbr>Get<wbr>Script<wbr>Dag<wbr>Node<wbr>Args&gt;</a></code>
+                <code><a href="#getscriptdagnode">List&lt;Get<wbr>Script<wbr>Dag<wbr>Node<wbr>Args&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -383,7 +383,7 @@ The programming language of the resulting code from the DAG. Defaults to `PYTHON
             <td class="align-top">dag<wbr>Edges</td>
             <td class="align-top">
                 
-                <code><a href="#getscriptdagedge">glue.<wbr>Get<wbr>Script<wbr>Dag<wbr>Edge[]</a></code>
+                <code><a href="#getscriptdagedge">Get<wbr>Script<wbr>Dag<wbr>Edge[]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -398,7 +398,7 @@ A list of the edges in the DAG. Defined below.
             <td class="align-top">dag<wbr>Nodes</td>
             <td class="align-top">
                 
-                <code><a href="#getscriptdagnode">glue.<wbr>Get<wbr>Script<wbr>Dag<wbr>Node[]</a></code>
+                <code><a href="#getscriptdagnode">Get<wbr>Script<wbr>Dag<wbr>Node[]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -528,7 +528,7 @@ The following output properties are available:
             <td class="align-top">Dag<wbr>Edges</td>
             <td class="align-top">
                 
-                <code><a href="#getscriptdagedge">List&lt;Pulumi.<wbr>Aws.<wbr>Glue.<wbr>Get<wbr>Script<wbr>Dag<wbr>Edge&gt;</a></code>
+                <code><a href="#getscriptdagedge">List&lt;Get<wbr>Script<wbr>Dag<wbr>Edge&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -540,7 +540,7 @@ The following output properties are available:
             <td class="align-top">Dag<wbr>Nodes</td>
             <td class="align-top">
                 
-                <code><a href="#getscriptdagnode">List&lt;Pulumi.<wbr>Aws.<wbr>Glue.<wbr>Get<wbr>Script<wbr>Dag<wbr>Node&gt;</a></code>
+                <code><a href="#getscriptdagnode">List&lt;Get<wbr>Script<wbr>Dag<wbr>Node&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -718,7 +718,7 @@ The following output properties are available:
             <td class="align-top">dag<wbr>Edges</td>
             <td class="align-top">
                 
-                <code><a href="#getscriptdagedge">glue.<wbr>Get<wbr>Script<wbr>Dag<wbr>Edge[]</a></code>
+                <code><a href="#getscriptdagedge">Get<wbr>Script<wbr>Dag<wbr>Edge[]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -730,7 +730,7 @@ The following output properties are available:
             <td class="align-top">dag<wbr>Nodes</td>
             <td class="align-top">
                 
-                <code><a href="#getscriptdagnode">glue.<wbr>Get<wbr>Script<wbr>Dag<wbr>Node[]</a></code>
+                <code><a href="#getscriptdagnode">Get<wbr>Script<wbr>Dag<wbr>Node[]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1215,7 +1215,7 @@ The target of the edge.
             <td class="align-top">Args</td>
             <td class="align-top">
                 
-                <code><a href="#getscriptdagnodearg">List&lt;Pulumi.<wbr>Aws.<wbr>Glue.<wbr>Get<wbr>Script<wbr>Dag<wbr>Node<wbr>Arg<wbr>Args&gt;</a></code>
+                <code><a href="#getscriptdagnodearg">List&lt;Get<wbr>Script<wbr>Dag<wbr>Node<wbr>Arg<wbr>Args&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1375,7 +1375,7 @@ The type of node this is.
             <td class="align-top">args</td>
             <td class="align-top">
                 
-                <code><a href="#getscriptdagnodearg">glue.<wbr>Get<wbr>Script<wbr>Dag<wbr>Node<wbr>Arg[]</a></code>
+                <code><a href="#getscriptdagnodearg">Get<wbr>Script<wbr>Dag<wbr>Node<wbr>Arg[]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

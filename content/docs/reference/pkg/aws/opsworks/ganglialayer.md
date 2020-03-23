@@ -137,7 +137,7 @@ Whether to enable auto-healing for the layer.
             <td class="align-top">Custom<wbr>Configure<wbr>Recipes</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -151,7 +151,7 @@ Whether to enable auto-healing for the layer.
             <td class="align-top">Custom<wbr>Deploy<wbr>Recipes</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -195,7 +195,7 @@ Custom JSON attributes to apply to the layer.
             <td class="align-top">Custom<wbr>Security<wbr>Group<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -210,7 +210,7 @@ Ids for a set of security groups to apply to the layer&#39;s instances.
             <td class="align-top">Custom<wbr>Setup<wbr>Recipes</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -224,7 +224,7 @@ Ids for a set of security groups to apply to the layer&#39;s instances.
             <td class="align-top">Custom<wbr>Shutdown<wbr>Recipes</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -238,7 +238,7 @@ Ids for a set of security groups to apply to the layer&#39;s instances.
             <td class="align-top">Custom<wbr>Undeploy<wbr>Recipes</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -267,7 +267,7 @@ Whether to enable Elastic Load Balancing connection draining.
             <td class="align-top">Ebs<wbr>Volumes</td>
             <td class="align-top">
                 
-                <code><a href="#ganglialayerebsvolume">List&lt;Pulumi.<wbr>Aws.<wbr>Opsworks.<wbr>Ganglia<wbr>Layer<wbr>Ebs<wbr>Volume<wbr>Args&gt;?</a></code>
+                <code><a href="#ganglialayerebsvolume">List&lt;Ganglia<wbr>Layer<wbr>Ebs<wbr>Volume<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -372,7 +372,7 @@ The id of the stack the layer will belong to.
             <td class="align-top">System<wbr>Packages</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -987,7 +987,7 @@ Whether to enable Elastic Load Balancing connection draining.
             <td class="align-top">ebs<wbr>Volumes</td>
             <td class="align-top">
                 
-                <code><a href="#ganglialayerebsvolume">opsworks.<wbr>Ganglia<wbr>Layer<wbr>Ebs<wbr>Volume[]?</a></code>
+                <code><a href="#ganglialayerebsvolume">Ganglia<wbr>Layer<wbr>Ebs<wbr>Volume[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1585,7 +1585,7 @@ The following output properties are available:
             <td class="align-top">Custom<wbr>Configure<wbr>Recipes</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1597,7 +1597,7 @@ The following output properties are available:
             <td class="align-top">Custom<wbr>Deploy<wbr>Recipes</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1635,7 +1635,7 @@ The following output properties are available:
             <td class="align-top">Custom<wbr>Security<wbr>Group<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} Ids for a set of security groups to apply to the layer&#39;s instances.
  {{% /md %}}
@@ -1648,7 +1648,7 @@ The following output properties are available:
             <td class="align-top">Custom<wbr>Setup<wbr>Recipes</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1660,7 +1660,7 @@ The following output properties are available:
             <td class="align-top">Custom<wbr>Shutdown<wbr>Recipes</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1672,7 +1672,7 @@ The following output properties are available:
             <td class="align-top">Custom<wbr>Undeploy<wbr>Recipes</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1697,7 +1697,7 @@ The following output properties are available:
             <td class="align-top">Ebs<wbr>Volumes</td>
             <td class="align-top">
                 
-                <code><a href="#ganglialayerebsvolume">List&lt;Pulumi.<wbr>Aws.<wbr>Opsworks.<wbr>Ganglia<wbr>Layer<wbr>Ebs<wbr>Volume&gt;?</a></code>
+                <code><a href="#ganglialayerebsvolume">List&lt;Ganglia<wbr>Layer<wbr>Ebs<wbr>Volume&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} `ebs_volume` blocks, as described below, will each create an EBS volume and connect it to the layer&#39;s instances.
  {{% /md %}}
@@ -1788,7 +1788,7 @@ The following output properties are available:
             <td class="align-top">System<wbr>Packages</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} Names of a set of system packages to install on the layer&#39;s instances.
  {{% /md %}}
@@ -2325,7 +2325,7 @@ The following output properties are available:
             <td class="align-top">ebs<wbr>Volumes</td>
             <td class="align-top">
                 
-                <code><a href="#ganglialayerebsvolume">opsworks.<wbr>Ganglia<wbr>Layer<wbr>Ebs<wbr>Volume[]?</a></code>
+                <code><a href="#ganglialayerebsvolume">Ganglia<wbr>Layer<wbr>Ebs<wbr>Volume[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} `ebs_volume` blocks, as described below, will each create an EBS volume and connect it to the layer&#39;s instances.
  {{% /md %}}
@@ -2906,7 +2906,7 @@ Whether to enable auto-healing for the layer.
             <td class="align-top">Custom<wbr>Configure<wbr>Recipes</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2920,7 +2920,7 @@ Whether to enable auto-healing for the layer.
             <td class="align-top">Custom<wbr>Deploy<wbr>Recipes</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2964,7 +2964,7 @@ Custom JSON attributes to apply to the layer.
             <td class="align-top">Custom<wbr>Security<wbr>Group<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2979,7 +2979,7 @@ Ids for a set of security groups to apply to the layer&#39;s instances.
             <td class="align-top">Custom<wbr>Setup<wbr>Recipes</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2993,7 +2993,7 @@ Ids for a set of security groups to apply to the layer&#39;s instances.
             <td class="align-top">Custom<wbr>Shutdown<wbr>Recipes</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3007,7 +3007,7 @@ Ids for a set of security groups to apply to the layer&#39;s instances.
             <td class="align-top">Custom<wbr>Undeploy<wbr>Recipes</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3036,7 +3036,7 @@ Whether to enable Elastic Load Balancing connection draining.
             <td class="align-top">Ebs<wbr>Volumes</td>
             <td class="align-top">
                 
-                <code><a href="#ganglialayerebsvolume">List&lt;Pulumi.<wbr>Aws.<wbr>Opsworks.<wbr>Ganglia<wbr>Layer<wbr>Ebs<wbr>Volume<wbr>Args&gt;?</a></code>
+                <code><a href="#ganglialayerebsvolume">List&lt;Ganglia<wbr>Layer<wbr>Ebs<wbr>Volume<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3141,7 +3141,7 @@ The id of the stack the layer will belong to.
             <td class="align-top">System<wbr>Packages</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3756,7 +3756,7 @@ Whether to enable Elastic Load Balancing connection draining.
             <td class="align-top">ebs<wbr>Volumes</td>
             <td class="align-top">
                 
-                <code><a href="#ganglialayerebsvolume">opsworks.<wbr>Ganglia<wbr>Layer<wbr>Ebs<wbr>Volume[]?</a></code>
+                <code><a href="#ganglialayerebsvolume">Ganglia<wbr>Layer<wbr>Ebs<wbr>Volume[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

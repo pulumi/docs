@@ -94,7 +94,7 @@ The following arguments are supported:
             <td class="align-top">Client<wbr>Lists</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -199,7 +199,7 @@ The ARN of the backed storage used for storing file data.
             <td class="align-top">Nfs<wbr>File<wbr>Share<wbr>Defaults</td>
             <td class="align-top">
                 
-                <code><a href="#nfsfilesharenfsfilesharedefaults">Pulumi.<wbr>Aws.<wbr>Storagegateway.<wbr>Nfs<wbr>File<wbr>Share<wbr>Nfs<wbr>File<wbr>Share<wbr>Defaults<wbr>Args?</a></code>
+                <code><a href="#nfsfilesharenfsfilesharedefaults">Nfs<wbr>File<wbr>Share<wbr>Nfs<wbr>File<wbr>Share<wbr>Defaults<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -289,7 +289,7 @@ Maps a user to anonymous user. Defaults to `RootSquash`. Valid values: `RootSqua
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -659,7 +659,7 @@ The ARN of the backed storage used for storing file data.
             <td class="align-top">nfs<wbr>File<wbr>Share<wbr>Defaults</td>
             <td class="align-top">
                 
-                <code><a href="#nfsfilesharenfsfilesharedefaults">storagegateway.<wbr>Nfs<wbr>File<wbr>Share<wbr>Nfs<wbr>File<wbr>Share<wbr>Defaults?</a></code>
+                <code><a href="#nfsfilesharenfsfilesharedefaults">Nfs<wbr>File<wbr>Share<wbr>Nfs<wbr>File<wbr>Share<wbr>Defaults?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1041,7 +1041,7 @@ The following output properties are available:
             <td class="align-top">Client<wbr>Lists</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} The list of clients that are allowed to access the file gateway. The list must contain either valid IP addresses or valid CIDR blocks. Set to `[&#34;0.0.0.0/0&#34;]` to not limit access. Minimum 1 item. Maximum 100 items.
  {{% /md %}}
@@ -1145,7 +1145,7 @@ The following output properties are available:
             <td class="align-top">Nfs<wbr>File<wbr>Share<wbr>Defaults</td>
             <td class="align-top">
                 
-                <code><a href="#nfsfilesharenfsfilesharedefaults">Pulumi.<wbr>Aws.<wbr>Storagegateway.<wbr>Nfs<wbr>File<wbr>Share<wbr>Nfs<wbr>File<wbr>Share<wbr>Defaults?</a></code>
+                <code><a href="#nfsfilesharenfsfilesharedefaults">Nfs<wbr>File<wbr>Share<wbr>Nfs<wbr>File<wbr>Share<wbr>Defaults?</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested argument with file share default values. More information below.
  {{% /md %}}
@@ -1223,7 +1223,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} Key-value mapping of resource tags
  {{% /md %}}
@@ -1601,7 +1601,7 @@ The following output properties are available:
             <td class="align-top">nfs<wbr>File<wbr>Share<wbr>Defaults</td>
             <td class="align-top">
                 
-                <code><a href="#nfsfilesharenfsfilesharedefaults">storagegateway.<wbr>Nfs<wbr>File<wbr>Share<wbr>Nfs<wbr>File<wbr>Share<wbr>Defaults?</a></code>
+                <code><a href="#nfsfilesharenfsfilesharedefaults">Nfs<wbr>File<wbr>Share<wbr>Nfs<wbr>File<wbr>Share<wbr>Defaults?</a></code>
             </td>
             <td class="align-top">{{% md %}} Nested argument with file share default values. More information below.
  {{% /md %}}
@@ -2014,7 +2014,7 @@ Amazon Resource Name (ARN) of the NFS File Share.
             <td class="align-top">Client<wbr>Lists</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2134,7 +2134,7 @@ The ARN of the backed storage used for storing file data.
             <td class="align-top">Nfs<wbr>File<wbr>Share<wbr>Defaults</td>
             <td class="align-top">
                 
-                <code><a href="#nfsfilesharenfsfilesharedefaults">Pulumi.<wbr>Aws.<wbr>Storagegateway.<wbr>Nfs<wbr>File<wbr>Share<wbr>Nfs<wbr>File<wbr>Share<wbr>Defaults<wbr>Args?</a></code>
+                <code><a href="#nfsfilesharenfsfilesharedefaults">Nfs<wbr>File<wbr>Share<wbr>Nfs<wbr>File<wbr>Share<wbr>Defaults<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2224,7 +2224,7 @@ Maps a user to anonymous user. Defaults to `RootSquash`. Valid values: `RootSqua
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2654,7 +2654,7 @@ The ARN of the backed storage used for storing file data.
             <td class="align-top">nfs<wbr>File<wbr>Share<wbr>Defaults</td>
             <td class="align-top">
                 
-                <code><a href="#nfsfilesharenfsfilesharedefaults">storagegateway.<wbr>Nfs<wbr>File<wbr>Share<wbr>Nfs<wbr>File<wbr>Share<wbr>Defaults?</a></code>
+                <code><a href="#nfsfilesharenfsfilesharedefaults">Nfs<wbr>File<wbr>Share<wbr>Nfs<wbr>File<wbr>Share<wbr>Defaults?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

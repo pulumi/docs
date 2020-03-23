@@ -106,7 +106,7 @@ The following arguments are supported:
             <td class="align-top">Context</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, string&gt;?</code>
+                <code>Dictionary<string, string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -393,7 +393,7 @@ The following output properties are available:
             <td class="align-top">Context</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, string&gt;?</code>
+                <code>Dictionary<string, string>?</code>
             </td>
             <td class="align-top">{{% md %}} An optional mapping that makes up the encryption context.
  {{% /md %}}
@@ -742,7 +742,7 @@ Base64 encoded ciphertext
             <td class="align-top">Context</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, string&gt;?</code>
+                <code>Dictionary<string, string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

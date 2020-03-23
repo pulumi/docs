@@ -164,7 +164,7 @@ The load balancer to attach the policy to.
             <td class="align-top">Policy<wbr>Names</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -434,7 +434,7 @@ The following output properties are available:
             <td class="align-top">Policy<wbr>Names</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} List of Policy Names to apply to the backend server.
  {{% /md %}}
@@ -733,7 +733,7 @@ The load balancer to attach the policy to.
             <td class="align-top">Policy<wbr>Names</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

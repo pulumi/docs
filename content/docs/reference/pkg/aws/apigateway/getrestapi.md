@@ -46,7 +46,7 @@ const myRestApi = aws.apigateway.getRestApi({
 <div class="highlight">
 <pre class="chroma">
 <code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetRestApi </span><span class="p">{</span>
-    <span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Apigateway.GetRestApiResult.html">Pulumi.Aws.Apigateway.GetRestApiResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Apigateway.GetRestApiArgs.html">GetRestApiArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span>
+    <span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Apigateway.GetRestApiResult.html">GetRestApiResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Apigateway.GetRestApiArgs.html">GetRestApiArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span>
 <span class="p">}</span></code></pre>
 </div>
 
@@ -90,7 +90,7 @@ The name of the REST API to look up. If no REST API is found with this name, an 
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -312,7 +312,7 @@ The following output properties are available:
             <td class="align-top">Binary<wbr>Media<wbr>Types</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} The list of binary media types supported by the REST API.
  {{% /md %}}
@@ -338,7 +338,7 @@ The following output properties are available:
             <td class="align-top">Endpoint<wbr>Configurations</td>
             <td class="align-top">
                 
-                <code><a href="#getrestapiendpointconfiguration">List&lt;Pulumi.<wbr>Aws.<wbr>Apigateway.<wbr>Get<wbr>Rest<wbr>Api<wbr>Endpoint<wbr>Configuration&gt;</a></code>
+                <code><a href="#getrestapiendpointconfiguration">List&lt;Get<wbr>Rest<wbr>Api<wbr>Endpoint<wbr>Configuration&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} The endpoint configuration of this RestApi showing the endpoint types of the API.
  {{% /md %}}
@@ -428,7 +428,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;</code>
+                <code>Dictionary<string, object></code>
             </td>
             <td class="align-top">{{% md %}} Key-value mapping of resource tags.
  {{% /md %}}
@@ -688,7 +688,7 @@ The following output properties are available:
             <td class="align-top">endpoint<wbr>Configurations</td>
             <td class="align-top">
                 
-                <code><a href="#getrestapiendpointconfiguration">apigateway.<wbr>Get<wbr>Rest<wbr>Api<wbr>Endpoint<wbr>Configuration[]</a></code>
+                <code><a href="#getrestapiendpointconfiguration">Get<wbr>Rest<wbr>Api<wbr>Endpoint<wbr>Configuration[]</a></code>
             </td>
             <td class="align-top">{{% md %}} The endpoint configuration of this RestApi showing the endpoint types of the API.
  {{% /md %}}
@@ -1012,7 +1012,7 @@ The following output properties are available:
             <td class="align-top">Types</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -1026,7 +1026,7 @@ The following output properties are available:
             <td class="align-top">Vpc<wbr>Endpoint<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

@@ -105,7 +105,7 @@ The following arguments are supported:
             <td class="align-top">Additional<wbr>Artifacts</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -120,7 +120,7 @@ A list of additional artifacts. Valid values are: REDSHIFT, QUICKSIGHT.
             <td class="align-top">Additional<wbr>Schema<wbr>Elements</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -739,7 +739,7 @@ The following output properties are available:
             <td class="align-top">Additional<wbr>Artifacts</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} A list of additional artifacts. Valid values are: REDSHIFT, QUICKSIGHT.
  {{% /md %}}
@@ -752,7 +752,7 @@ The following output properties are available:
             <td class="align-top">Additional<wbr>Schema<wbr>Elements</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} A list of schema elements. Valid values are: RESOURCES.
  {{% /md %}}
@@ -1346,7 +1346,7 @@ The following state arguments are supported:
             <td class="align-top">Additional<wbr>Artifacts</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1361,7 +1361,7 @@ A list of additional artifacts. Valid values are: REDSHIFT, QUICKSIGHT.
             <td class="align-top">Additional<wbr>Schema<wbr>Elements</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

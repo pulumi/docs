@@ -127,7 +127,7 @@ Name for the cache security group. This value is stored as a lowercase string.
             <td class="align-top">Security<wbr>Group<wbr>Names</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -401,7 +401,7 @@ The following output properties are available:
             <td class="align-top">Security<wbr>Group<wbr>Names</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} List of EC2 security group names to be
 authorized for ingress to the cache security group
@@ -704,7 +704,7 @@ Name for the cache security group. This value is stored as a lowercase string.
             <td class="align-top">Security<wbr>Group<wbr>Names</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

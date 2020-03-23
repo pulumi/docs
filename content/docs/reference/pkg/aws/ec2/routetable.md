@@ -123,7 +123,7 @@ The following arguments are supported:
             <td class="align-top">Propagating<wbr>Vgws</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -138,7 +138,7 @@ A list of virtual gateways for propagation.
             <td class="align-top">Routes</td>
             <td class="align-top">
                 
-                <code><a href="#routetableroute">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Route<wbr>Table<wbr>Route<wbr>Args&gt;?</a></code>
+                <code><a href="#routetableroute">List&lt;Route<wbr>Table<wbr>Route<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -153,7 +153,7 @@ A list of route objects. Their keys are documented below. This argument is proce
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -298,7 +298,7 @@ A list of virtual gateways for propagation.
             <td class="align-top">routes</td>
             <td class="align-top">
                 
-                <code><a href="#routetableroute">ec2.<wbr>Route<wbr>Table<wbr>Route[]?</a></code>
+                <code><a href="#routetableroute">Route<wbr>Table<wbr>Route[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -470,7 +470,7 @@ The following output properties are available:
             <td class="align-top">Propagating<wbr>Vgws</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} A list of virtual gateways for propagation.
  {{% /md %}}
@@ -483,7 +483,7 @@ The following output properties are available:
             <td class="align-top">Routes</td>
             <td class="align-top">
                 
-                <code><a href="#routetableroute">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Route<wbr>Table<wbr>Route&gt;</a></code>
+                <code><a href="#routetableroute">List&lt;Route<wbr>Table<wbr>Route&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of route objects. Their keys are documented below. This argument is processed in [attribute-as-blocks mode](https://www.terraform.io/docs/configuration/attr-as-blocks.html).
  {{% /md %}}
@@ -496,7 +496,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -653,7 +653,7 @@ The following output properties are available:
             <td class="align-top">routes</td>
             <td class="align-top">
                 
-                <code><a href="#routetableroute">ec2.<wbr>Route<wbr>Table<wbr>Route[]</a></code>
+                <code><a href="#routetableroute">Route<wbr>Table<wbr>Route[]</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of route objects. Their keys are documented below. This argument is processed in [attribute-as-blocks mode](https://www.terraform.io/docs/configuration/attr-as-blocks.html).
  {{% /md %}}
@@ -871,7 +871,7 @@ The ID of the AWS account that owns the route table.
             <td class="align-top">Propagating<wbr>Vgws</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -886,7 +886,7 @@ A list of virtual gateways for propagation.
             <td class="align-top">Routes</td>
             <td class="align-top">
                 
-                <code><a href="#routetableroute">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Route<wbr>Table<wbr>Route<wbr>Args&gt;?</a></code>
+                <code><a href="#routetableroute">List&lt;Route<wbr>Table<wbr>Route<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -901,7 +901,7 @@ A list of route objects. Their keys are documented below. This argument is proce
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1076,7 +1076,7 @@ A list of virtual gateways for propagation.
             <td class="align-top">routes</td>
             <td class="align-top">
                 
-                <code><a href="#routetableroute">ec2.<wbr>Route<wbr>Table<wbr>Route[]?</a></code>
+                <code><a href="#routetableroute">Route<wbr>Table<wbr>Route[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

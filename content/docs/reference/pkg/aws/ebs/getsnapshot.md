@@ -54,7 +54,7 @@ const ebsVolume = aws.ebs.getSnapshot({
 <div class="highlight">
 <pre class="chroma">
 <code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetSnapshot </span><span class="p">{</span>
-    <span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ebs.GetSnapshotResult.html">Pulumi.Aws.Ebs.GetSnapshotResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ebs.GetSnapshotArgs.html">GetSnapshotArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span>
+    <span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ebs.GetSnapshotResult.html">GetSnapshotResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ebs.GetSnapshotArgs.html">GetSnapshotArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span>
 <span class="p">}</span></code></pre>
 </div>
 
@@ -83,7 +83,7 @@ The following arguments are supported:
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getsnapshotfilter">List&lt;Pulumi.<wbr>Aws.<wbr>Ebs.<wbr>Get<wbr>Snapshot<wbr>Filter<wbr>Args&gt;?</a></code>
+                <code><a href="#getsnapshotfilter">List&lt;Get<wbr>Snapshot<wbr>Filter<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -115,7 +115,7 @@ If more than one result is returned, use the most recent snapshot.
             <td class="align-top">Owners</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -130,7 +130,7 @@ Returns the snapshots owned by the specified owner id. Multiple owners can be sp
             <td class="align-top">Restorable<wbr>By<wbr>User<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -145,7 +145,7 @@ One or more AWS accounts IDs that can create volumes from the snapshot.
             <td class="align-top">Snapshot<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -160,7 +160,7 @@ Returns information on a specific snapshot_id.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -305,7 +305,7 @@ Returns information on a specific snapshot_id.
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getsnapshotfilter">ebs.<wbr>Get<wbr>Snapshot<wbr>Filter[]?</a></code>
+                <code><a href="#getsnapshotfilter">Get<wbr>Snapshot<wbr>Filter[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -581,7 +581,7 @@ The following output properties are available:
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getsnapshotfilter">List&lt;Pulumi.<wbr>Aws.<wbr>Ebs.<wbr>Get<wbr>Snapshot<wbr>Filter&gt;?</a></code>
+                <code><a href="#getsnapshotfilter">List&lt;Get<wbr>Snapshot<wbr>Filter&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -657,7 +657,7 @@ The following output properties are available:
             <td class="align-top">Owners</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -669,7 +669,7 @@ The following output properties are available:
             <td class="align-top">Restorable<wbr>By<wbr>User<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -694,7 +694,7 @@ The following output properties are available:
             <td class="align-top">Snapshot<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -719,7 +719,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;</code>
+                <code>Dictionary<string, object></code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags for the resource.
  {{% /md %}}
@@ -1053,7 +1053,7 @@ The following output properties are available:
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getsnapshotfilter">ebs.<wbr>Get<wbr>Snapshot<wbr>Filter[]?</a></code>
+                <code><a href="#getsnapshotfilter">Get<wbr>Snapshot<wbr>Filter[]?</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1526,7 +1526,7 @@ The following output properties are available:
             <td class="align-top">Values</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

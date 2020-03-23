@@ -134,7 +134,7 @@ The resource group&#39;s name. A resource group name can have a maximum of 127 c
             <td class="align-top">Resource<wbr>Query</td>
             <td class="align-top">
                 
-                <code><a href="#groupresourcequery">Pulumi.<wbr>Aws.<wbr>Resourcegroups.<wbr>Group<wbr>Resource<wbr>Query<wbr>Args</a></code>
+                <code><a href="#groupresourcequery">Group<wbr>Resource<wbr>Query<wbr>Args</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -149,7 +149,7 @@ A `resource_query` block. Resource queries are documented below.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -294,7 +294,7 @@ The resource group&#39;s name. A resource group name can have a maximum of 127 c
             <td class="align-top">resource<wbr>Query</td>
             <td class="align-top">
                 
-                <code><a href="#groupresourcequery">resourcegroups.<wbr>Group<wbr>Resource<wbr>Query</a></code>
+                <code><a href="#groupresourcequery">Group<wbr>Resource<wbr>Query</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -477,7 +477,7 @@ The following output properties are available:
             <td class="align-top">Resource<wbr>Query</td>
             <td class="align-top">
                 
-                <code><a href="#groupresourcequery">Pulumi.<wbr>Aws.<wbr>Resourcegroups.<wbr>Group<wbr>Resource<wbr>Query</a></code>
+                <code><a href="#groupresourcequery">Group<wbr>Resource<wbr>Query</a></code>
             </td>
             <td class="align-top">{{% md %}} A `resource_query` block. Resource queries are documented below.
  {{% /md %}}
@@ -490,7 +490,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} Key-value mapping of resource tags
  {{% /md %}}
@@ -647,7 +647,7 @@ The following output properties are available:
             <td class="align-top">resource<wbr>Query</td>
             <td class="align-top">
                 
-                <code><a href="#groupresourcequery">resourcegroups.<wbr>Group<wbr>Resource<wbr>Query</a></code>
+                <code><a href="#groupresourcequery">Group<wbr>Resource<wbr>Query</a></code>
             </td>
             <td class="align-top">{{% md %}} A `resource_query` block. Resource queries are documented below.
  {{% /md %}}
@@ -882,7 +882,7 @@ The resource group&#39;s name. A resource group name can have a maximum of 127 c
             <td class="align-top">Resource<wbr>Query</td>
             <td class="align-top">
                 
-                <code><a href="#groupresourcequery">Pulumi.<wbr>Aws.<wbr>Resourcegroups.<wbr>Group<wbr>Resource<wbr>Query<wbr>Args?</a></code>
+                <code><a href="#groupresourcequery">Group<wbr>Resource<wbr>Query<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -897,7 +897,7 @@ A `resource_query` block. Resource queries are documented below.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1072,7 +1072,7 @@ The resource group&#39;s name. A resource group name can have a maximum of 127 c
             <td class="align-top">resource<wbr>Query</td>
             <td class="align-top">
                 
-                <code><a href="#groupresourcequery">resourcegroups.<wbr>Group<wbr>Resource<wbr>Query?</a></code>
+                <code><a href="#groupresourcequery">Group<wbr>Resource<wbr>Query?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

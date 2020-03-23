@@ -98,7 +98,7 @@ The access key for API operations. You can retrieve this from the &#39;Security 
             <td class="align-top">Allowed<wbr>Account<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -140,7 +140,7 @@ The access key for API operations. You can retrieve this from the &#39;Security 
             <td class="align-top">Forbidden<wbr>Account<wbr>Ids</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -154,7 +154,7 @@ The access key for API operations. You can retrieve this from the &#39;Security 
             <td class="align-top">Ignore<wbr>Tag<wbr>Prefixes</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -169,7 +169,7 @@ Resource tag key prefixes to ignore across all resources.
             <td class="align-top">Ignore<wbr>Tags</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

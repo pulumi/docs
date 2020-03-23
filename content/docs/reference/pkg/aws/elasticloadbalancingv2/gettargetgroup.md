@@ -54,7 +54,7 @@ const test = aws.lb.getTargetGroup({
 <div class="highlight">
 <pre class="chroma">
 <code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetTargetGroup </span><span class="p">{</span>
-    <span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elasticloadbalancingv2.GetTargetGroupResult.html">Pulumi.Aws.Elasticloadbalancingv2.GetTargetGroupResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elasticloadbalancingv2.GetTargetGroupArgs.html">GetTargetGroupArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span>
+    <span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elasticloadbalancingv2.GetTargetGroupResult.html">GetTargetGroupResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elasticloadbalancingv2.GetTargetGroupArgs.html">GetTargetGroupArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span>
 <span class="p">}</span></code></pre>
 </div>
 
@@ -113,7 +113,7 @@ The unique name of the target group.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -390,7 +390,7 @@ The following output properties are available:
             <td class="align-top">Health<wbr>Check</td>
             <td class="align-top">
                 
-                <code><a href="#gettargetgrouphealthcheck">Pulumi.<wbr>Aws.<wbr>Elasticloadbalancingv2.<wbr>Get<wbr>Target<wbr>Group<wbr>Health<wbr>Check</a></code>
+                <code><a href="#gettargetgrouphealthcheck">Get<wbr>Target<wbr>Group<wbr>Health<wbr>Check</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -487,7 +487,7 @@ The following output properties are available:
             <td class="align-top">Stickiness</td>
             <td class="align-top">
                 
-                <code><a href="#gettargetgroupstickiness">Pulumi.<wbr>Aws.<wbr>Elasticloadbalancingv2.<wbr>Get<wbr>Target<wbr>Group<wbr>Stickiness</a></code>
+                <code><a href="#gettargetgroupstickiness">Get<wbr>Target<wbr>Group<wbr>Stickiness</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -499,7 +499,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;</code>
+                <code>Dictionary<string, object></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -792,7 +792,7 @@ The following output properties are available:
             <td class="align-top">health<wbr>Check</td>
             <td class="align-top">
                 
-                <code><a href="#gettargetgrouphealthcheck">elasticloadbalancingv2.<wbr>Get<wbr>Target<wbr>Group<wbr>Health<wbr>Check</a></code>
+                <code><a href="#gettargetgrouphealthcheck">Get<wbr>Target<wbr>Group<wbr>Health<wbr>Check</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -889,7 +889,7 @@ The following output properties are available:
             <td class="align-top">stickiness</td>
             <td class="align-top">
                 
-                <code><a href="#gettargetgroupstickiness">elasticloadbalancingv2.<wbr>Get<wbr>Target<wbr>Group<wbr>Stickiness</a></code>
+                <code><a href="#gettargetgroupstickiness">Get<wbr>Target<wbr>Group<wbr>Stickiness</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 

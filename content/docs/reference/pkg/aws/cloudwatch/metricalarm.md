@@ -226,7 +226,7 @@ Indicates whether or not actions should be executed during any changes to the al
             <td class="align-top">Alarm<wbr>Actions</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -286,7 +286,7 @@ The number of datapoints that must be breaching to trigger the alarm.
             <td class="align-top">Dimensions</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -351,7 +351,7 @@ The percentile statistic for the metric associated with the alarm. Specify a val
             <td class="align-top">Insufficient<wbr>Data<wbr>Actions</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -382,7 +382,7 @@ See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/la
             <td class="align-top">Metric<wbr>Queries</td>
             <td class="align-top">
                 
-                <code><a href="#metricalarmmetricquery">List&lt;Pulumi.<wbr>Aws.<wbr>Cloudwatch.<wbr>Metric<wbr>Alarm<wbr>Metric<wbr>Query<wbr>Args&gt;?</a></code>
+                <code><a href="#metricalarmmetricquery">List&lt;Metric<wbr>Alarm<wbr>Metric<wbr>Query<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -428,7 +428,7 @@ See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/la
             <td class="align-top">Ok<wbr>Actions</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -474,7 +474,7 @@ Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1098,7 +1098,7 @@ See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/la
             <td class="align-top">metric<wbr>Queries</td>
             <td class="align-top">
                 
-                <code><a href="#metricalarmmetricquery">cloudwatch.<wbr>Metric<wbr>Alarm<wbr>Metric<wbr>Query[]?</a></code>
+                <code><a href="#metricalarmmetricquery">Metric<wbr>Alarm<wbr>Metric<wbr>Query[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1670,7 +1670,7 @@ The following output properties are available:
             <td class="align-top">Alarm<wbr>Actions</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} The list of actions to execute when this alarm transitions into an ALARM state from any other state. Each action is specified as an Amazon Resource Name (ARN).
  {{% /md %}}
@@ -1735,7 +1735,7 @@ The following output properties are available:
             <td class="align-top">Dimensions</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} The dimensions for this metric.  For the list of available dimensions see the AWS documentation [here](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html).
  {{% /md %}}
@@ -1792,7 +1792,7 @@ The following values are supported: `ignore`, and `evaluate`.
             <td class="align-top">Insufficient<wbr>Data<wbr>Actions</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} The list of actions to execute when this alarm transitions into an INSUFFICIENT_DATA state from any other state. Each action is specified as an Amazon Resource Name (ARN).
  {{% /md %}}
@@ -1819,7 +1819,7 @@ See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/la
             <td class="align-top">Metric<wbr>Queries</td>
             <td class="align-top">
                 
-                <code><a href="#metricalarmmetricquery">List&lt;Pulumi.<wbr>Aws.<wbr>Cloudwatch.<wbr>Metric<wbr>Alarm<wbr>Metric<wbr>Query&gt;?</a></code>
+                <code><a href="#metricalarmmetricquery">List&lt;Metric<wbr>Alarm<wbr>Metric<wbr>Query&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} Enables you to create an alarm based on a metric math expression. You may specify at most 20.
  {{% /md %}}
@@ -1859,7 +1859,7 @@ See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/la
             <td class="align-top">Ok<wbr>Actions</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} The list of actions to execute when this alarm transitions into an OK state from any other state. Each action is specified as an Amazon Resource Name (ARN).
  {{% /md %}}
@@ -1899,7 +1899,7 @@ Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -2473,7 +2473,7 @@ See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/la
             <td class="align-top">metric<wbr>Queries</td>
             <td class="align-top">
                 
-                <code><a href="#metricalarmmetricquery">cloudwatch.<wbr>Metric<wbr>Alarm<wbr>Metric<wbr>Query[]?</a></code>
+                <code><a href="#metricalarmmetricquery">Metric<wbr>Alarm<wbr>Metric<wbr>Query[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} Enables you to create an alarm based on a metric math expression. You may specify at most 20.
  {{% /md %}}
@@ -3039,7 +3039,7 @@ Indicates whether or not actions should be executed during any changes to the al
             <td class="align-top">Alarm<wbr>Actions</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3114,7 +3114,7 @@ The number of datapoints that must be breaching to trigger the alarm.
             <td class="align-top">Dimensions</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3179,7 +3179,7 @@ The percentile statistic for the metric associated with the alarm. Specify a val
             <td class="align-top">Insufficient<wbr>Data<wbr>Actions</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3210,7 +3210,7 @@ See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/la
             <td class="align-top">Metric<wbr>Queries</td>
             <td class="align-top">
                 
-                <code><a href="#metricalarmmetricquery">List&lt;Pulumi.<wbr>Aws.<wbr>Cloudwatch.<wbr>Metric<wbr>Alarm<wbr>Metric<wbr>Query<wbr>Args&gt;?</a></code>
+                <code><a href="#metricalarmmetricquery">List&lt;Metric<wbr>Alarm<wbr>Metric<wbr>Query<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3256,7 +3256,7 @@ See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/la
             <td class="align-top">Ok<wbr>Actions</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3302,7 +3302,7 @@ Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -3956,7 +3956,7 @@ See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/la
             <td class="align-top">metric<wbr>Queries</td>
             <td class="align-top">
                 
-                <code><a href="#metricalarmmetricquery">cloudwatch.<wbr>Metric<wbr>Alarm<wbr>Metric<wbr>Query[]?</a></code>
+                <code><a href="#metricalarmmetricquery">Metric<wbr>Alarm<wbr>Metric<wbr>Query[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4589,7 +4589,7 @@ A human-readable label for this metric or expression. This is especially useful 
             <td class="align-top">Metric</td>
             <td class="align-top">
                 
-                <code><a href="#metricalarmmetricquerymetric">Pulumi.<wbr>Aws.<wbr>Cloudwatch.<wbr>Metric<wbr>Alarm<wbr>Metric<wbr>Query<wbr>Metric<wbr>Args?</a></code>
+                <code><a href="#metricalarmmetricquerymetric">Metric<wbr>Alarm<wbr>Metric<wbr>Query<wbr>Metric<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4779,7 +4779,7 @@ A human-readable label for this metric or expression. This is especially useful 
             <td class="align-top">metric</td>
             <td class="align-top">
                 
-                <code><a href="#metricalarmmetricquerymetric">cloudwatch.<wbr>Metric<wbr>Alarm<wbr>Metric<wbr>Query<wbr>Metric?</a></code>
+                <code><a href="#metricalarmmetricquerymetric">Metric<wbr>Alarm<wbr>Metric<wbr>Query<wbr>Metric?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -4945,7 +4945,7 @@ Specify exactly one `metric_query` to be `true` to use that `metric_query` resul
             <td class="align-top">Dimensions</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

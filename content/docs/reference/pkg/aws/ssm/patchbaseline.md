@@ -212,7 +212,7 @@ The following arguments are supported:
             <td class="align-top">Approval<wbr>Rules</td>
             <td class="align-top">
                 
-                <code><a href="#patchbaselineapprovalrule">List&lt;Pulumi.<wbr>Aws.<wbr>Ssm.<wbr>Patch<wbr>Baseline<wbr>Approval<wbr>Rule<wbr>Args&gt;?</a></code>
+                <code><a href="#patchbaselineapprovalrule">List&lt;Patch<wbr>Baseline<wbr>Approval<wbr>Rule<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -227,7 +227,7 @@ A set of rules used to include patches in the baseline. up to 10 approval rules 
             <td class="align-top">Approved<wbr>Patches</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -272,7 +272,7 @@ The description of the patch baseline.
             <td class="align-top">Global<wbr>Filters</td>
             <td class="align-top">
                 
-                <code><a href="#patchbaselineglobalfilter">List&lt;Pulumi.<wbr>Aws.<wbr>Ssm.<wbr>Patch<wbr>Baseline<wbr>Global<wbr>Filter<wbr>Args&gt;?</a></code>
+                <code><a href="#patchbaselineglobalfilter">List&lt;Patch<wbr>Baseline<wbr>Global<wbr>Filter<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -317,7 +317,7 @@ Defines the operating system the patch baseline applies to. Supported operating 
             <td class="align-top">Rejected<wbr>Patches</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -332,7 +332,7 @@ A list of rejected patches.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -520,7 +520,7 @@ A list of rejected patches.
             <td class="align-top">approval<wbr>Rules</td>
             <td class="align-top">
                 
-                <code><a href="#patchbaselineapprovalrule">ssm.<wbr>Patch<wbr>Baseline<wbr>Approval<wbr>Rule[]?</a></code>
+                <code><a href="#patchbaselineapprovalrule">Patch<wbr>Baseline<wbr>Approval<wbr>Rule[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -580,7 +580,7 @@ The description of the patch baseline.
             <td class="align-top">global<wbr>Filters</td>
             <td class="align-top">
                 
-                <code><a href="#patchbaselineglobalfilter">ssm.<wbr>Patch<wbr>Baseline<wbr>Global<wbr>Filter[]?</a></code>
+                <code><a href="#patchbaselineglobalfilter">Patch<wbr>Baseline<wbr>Global<wbr>Filter[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -842,7 +842,7 @@ The following output properties are available:
             <td class="align-top">Approval<wbr>Rules</td>
             <td class="align-top">
                 
-                <code><a href="#patchbaselineapprovalrule">List&lt;Pulumi.<wbr>Aws.<wbr>Ssm.<wbr>Patch<wbr>Baseline<wbr>Approval<wbr>Rule&gt;?</a></code>
+                <code><a href="#patchbaselineapprovalrule">List&lt;Patch<wbr>Baseline<wbr>Approval<wbr>Rule&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} A set of rules used to include patches in the baseline. up to 10 approval rules can be specified. Each approval_rule block requires the fields documented below.
  {{% /md %}}
@@ -855,7 +855,7 @@ The following output properties are available:
             <td class="align-top">Approved<wbr>Patches</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} A list of explicitly approved patches for the baseline.
  {{% /md %}}
@@ -894,7 +894,7 @@ The following output properties are available:
             <td class="align-top">Global<wbr>Filters</td>
             <td class="align-top">
                 
-                <code><a href="#patchbaselineglobalfilter">List&lt;Pulumi.<wbr>Aws.<wbr>Ssm.<wbr>Patch<wbr>Baseline<wbr>Global<wbr>Filter&gt;?</a></code>
+                <code><a href="#patchbaselineglobalfilter">List&lt;Patch<wbr>Baseline<wbr>Global<wbr>Filter&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} A set of global filters used to exclude patches from the baseline. Up to 4 global filters can be specified using Key/Value pairs. Valid Keys are `PRODUCT | CLASSIFICATION | MSRC_SEVERITY | PATCH_ID`.
  {{% /md %}}
@@ -933,7 +933,7 @@ The following output properties are available:
             <td class="align-top">Rejected<wbr>Patches</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} A list of rejected patches.
  {{% /md %}}
@@ -946,7 +946,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -1114,7 +1114,7 @@ The following output properties are available:
             <td class="align-top">approval<wbr>Rules</td>
             <td class="align-top">
                 
-                <code><a href="#patchbaselineapprovalrule">ssm.<wbr>Patch<wbr>Baseline<wbr>Approval<wbr>Rule[]?</a></code>
+                <code><a href="#patchbaselineapprovalrule">Patch<wbr>Baseline<wbr>Approval<wbr>Rule[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} A set of rules used to include patches in the baseline. up to 10 approval rules can be specified. Each approval_rule block requires the fields documented below.
  {{% /md %}}
@@ -1166,7 +1166,7 @@ The following output properties are available:
             <td class="align-top">global<wbr>Filters</td>
             <td class="align-top">
                 
-                <code><a href="#patchbaselineglobalfilter">ssm.<wbr>Patch<wbr>Baseline<wbr>Global<wbr>Filter[]?</a></code>
+                <code><a href="#patchbaselineglobalfilter">Patch<wbr>Baseline<wbr>Global<wbr>Filter[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} A set of global filters used to exclude patches from the baseline. Up to 4 global filters can be specified using Key/Value pairs. Valid Keys are `PRODUCT | CLASSIFICATION | MSRC_SEVERITY | PATCH_ID`.
  {{% /md %}}
@@ -1445,7 +1445,7 @@ The following state arguments are supported:
             <td class="align-top">Approval<wbr>Rules</td>
             <td class="align-top">
                 
-                <code><a href="#patchbaselineapprovalrule">List&lt;Pulumi.<wbr>Aws.<wbr>Ssm.<wbr>Patch<wbr>Baseline<wbr>Approval<wbr>Rule<wbr>Args&gt;?</a></code>
+                <code><a href="#patchbaselineapprovalrule">List&lt;Patch<wbr>Baseline<wbr>Approval<wbr>Rule<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1460,7 +1460,7 @@ A set of rules used to include patches in the baseline. up to 10 approval rules 
             <td class="align-top">Approved<wbr>Patches</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1505,7 +1505,7 @@ The description of the patch baseline.
             <td class="align-top">Global<wbr>Filters</td>
             <td class="align-top">
                 
-                <code><a href="#patchbaselineglobalfilter">List&lt;Pulumi.<wbr>Aws.<wbr>Ssm.<wbr>Patch<wbr>Baseline<wbr>Global<wbr>Filter<wbr>Args&gt;?</a></code>
+                <code><a href="#patchbaselineglobalfilter">List&lt;Patch<wbr>Baseline<wbr>Global<wbr>Filter<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1550,7 +1550,7 @@ Defines the operating system the patch baseline applies to. Supported operating 
             <td class="align-top">Rejected<wbr>Patches</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1565,7 +1565,7 @@ A list of rejected patches.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1753,7 +1753,7 @@ A list of rejected patches.
             <td class="align-top">approval<wbr>Rules</td>
             <td class="align-top">
                 
-                <code><a href="#patchbaselineapprovalrule">ssm.<wbr>Patch<wbr>Baseline<wbr>Approval<wbr>Rule[]?</a></code>
+                <code><a href="#patchbaselineapprovalrule">Patch<wbr>Baseline<wbr>Approval<wbr>Rule[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1813,7 +1813,7 @@ The description of the patch baseline.
             <td class="align-top">global<wbr>Filters</td>
             <td class="align-top">
                 
-                <code><a href="#patchbaselineglobalfilter">ssm.<wbr>Patch<wbr>Baseline<wbr>Global<wbr>Filter[]?</a></code>
+                <code><a href="#patchbaselineglobalfilter">Patch<wbr>Baseline<wbr>Global<wbr>Filter[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2131,7 +2131,7 @@ A list of rejected patches.
             <td class="align-top">Patch<wbr>Filters</td>
             <td class="align-top">
                 
-                <code><a href="#patchbaselineapprovalrulepatchfilter">List&lt;Pulumi.<wbr>Aws.<wbr>Ssm.<wbr>Patch<wbr>Baseline<wbr>Approval<wbr>Rule<wbr>Patch<wbr>Filter<wbr>Args&gt;</a></code>
+                <code><a href="#patchbaselineapprovalrulepatchfilter">List&lt;Patch<wbr>Baseline<wbr>Approval<wbr>Rule<wbr>Patch<wbr>Filter<wbr>Args&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2283,7 +2283,7 @@ A list of rejected patches.
             <td class="align-top">patch<wbr>Filters</td>
             <td class="align-top">
                 
-                <code><a href="#patchbaselineapprovalrulepatchfilter">ssm.<wbr>Patch<wbr>Baseline<wbr>Approval<wbr>Rule<wbr>Patch<wbr>Filter[]</a></code>
+                <code><a href="#patchbaselineapprovalrulepatchfilter">Patch<wbr>Baseline<wbr>Approval<wbr>Rule<wbr>Patch<wbr>Filter[]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2428,7 +2428,7 @@ A list of rejected patches.
             <td class="align-top">Values</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -2641,7 +2641,7 @@ A list of rejected patches.
             <td class="align-top">Values</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

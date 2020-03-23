@@ -194,7 +194,7 @@ The description of the option group. Defaults to &#34;Managed by Pulumi&#34;.
             <td class="align-top">Options</td>
             <td class="align-top">
                 
-                <code><a href="#optiongroupoption">List&lt;Pulumi.<wbr>Aws.<wbr>Rds.<wbr>Option<wbr>Group<wbr>Option<wbr>Args&gt;?</a></code>
+                <code><a href="#optiongroupoption">List&lt;Option<wbr>Group<wbr>Option<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -209,7 +209,7 @@ A list of Options to apply.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -444,7 +444,7 @@ The description of the option group. Defaults to &#34;Managed by Pulumi&#34;.
             <td class="align-top">options</td>
             <td class="align-top">
                 
-                <code><a href="#optiongroupoption">rds.<wbr>Option<wbr>Group<wbr>Option[]?</a></code>
+                <code><a href="#optiongroupoption">Option<wbr>Group<wbr>Option[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -711,7 +711,7 @@ The following output properties are available:
             <td class="align-top">Options</td>
             <td class="align-top">
                 
-                <code><a href="#optiongroupoption">List&lt;Pulumi.<wbr>Aws.<wbr>Rds.<wbr>Option<wbr>Group<wbr>Option&gt;?</a></code>
+                <code><a href="#optiongroupoption">List&lt;Option<wbr>Group<wbr>Option&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of Options to apply.
  {{% /md %}}
@@ -724,7 +724,7 @@ The following output properties are available:
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -959,7 +959,7 @@ The following output properties are available:
             <td class="align-top">options</td>
             <td class="align-top">
                 
-                <code><a href="#optiongroupoption">rds.<wbr>Option<wbr>Group<wbr>Option[]?</a></code>
+                <code><a href="#optiongroupoption">Option<wbr>Group<wbr>Option[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of Options to apply.
  {{% /md %}}
@@ -1278,7 +1278,7 @@ The description of the option group. Defaults to &#34;Managed by Pulumi&#34;.
             <td class="align-top">Options</td>
             <td class="align-top">
                 
-                <code><a href="#optiongroupoption">List&lt;Pulumi.<wbr>Aws.<wbr>Rds.<wbr>Option<wbr>Group<wbr>Option<wbr>Args&gt;?</a></code>
+                <code><a href="#optiongroupoption">List&lt;Option<wbr>Group<wbr>Option<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1293,7 +1293,7 @@ A list of Options to apply.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1558,7 +1558,7 @@ The description of the option group. Defaults to &#34;Managed by Pulumi&#34;.
             <td class="align-top">options</td>
             <td class="align-top">
                 
-                <code><a href="#optiongroupoption">rds.<wbr>Option<wbr>Group<wbr>Option[]?</a></code>
+                <code><a href="#optiongroupoption">Option<wbr>Group<wbr>Option[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1776,7 +1776,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">Db<wbr>Security<wbr>Group<wbr>Memberships</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1806,7 +1806,7 @@ The Name of the Option (e.g. MEMCACHED).
             <td class="align-top">Option<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#optiongroupoptionoptionsetting">List&lt;Pulumi.<wbr>Aws.<wbr>Rds.<wbr>Option<wbr>Group<wbr>Option<wbr>Option<wbr>Setting<wbr>Args&gt;?</a></code>
+                <code><a href="#optiongroupoptionoptionsetting">List&lt;Option<wbr>Group<wbr>Option<wbr>Option<wbr>Setting<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1851,7 +1851,7 @@ The version of the option (e.g. 13.1.0.0).
             <td class="align-top">Vpc<wbr>Security<wbr>Group<wbr>Memberships</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -2026,7 +2026,7 @@ The Name of the Option (e.g. MEMCACHED).
             <td class="align-top">option<wbr>Settings</td>
             <td class="align-top">
                 
-                <code><a href="#optiongroupoptionoptionsetting">rds.<wbr>Option<wbr>Group<wbr>Option<wbr>Option<wbr>Setting[]?</a></code>
+                <code><a href="#optiongroupoptionoptionsetting">Option<wbr>Group<wbr>Option<wbr>Option<wbr>Setting[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

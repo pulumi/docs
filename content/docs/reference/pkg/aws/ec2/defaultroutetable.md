@@ -140,7 +140,7 @@ The ID of the Default Routing Table.
             <td class="align-top">Propagating<wbr>Vgws</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -155,7 +155,7 @@ A list of virtual gateways for propagation.
             <td class="align-top">Routes</td>
             <td class="align-top">
                 
-                <code><a href="#defaultroutetableroute">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Default<wbr>Route<wbr>Table<wbr>Route<wbr>Args&gt;?</a></code>
+                <code><a href="#defaultroutetableroute">List&lt;Default<wbr>Route<wbr>Table<wbr>Route<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -171,7 +171,7 @@ This argument is processed in [attribute-as-blocks mode](https://www.terraform.i
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -317,7 +317,7 @@ A list of virtual gateways for propagation.
             <td class="align-top">routes</td>
             <td class="align-top">
                 
-                <code><a href="#defaultroutetableroute">ec2.<wbr>Default<wbr>Route<wbr>Table<wbr>Route[]?</a></code>
+                <code><a href="#defaultroutetableroute">Default<wbr>Route<wbr>Table<wbr>Route[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -489,7 +489,7 @@ The following output properties are available:
             <td class="align-top">Propagating<wbr>Vgws</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} A list of virtual gateways for propagation.
  {{% /md %}}
@@ -502,7 +502,7 @@ The following output properties are available:
             <td class="align-top">Routes</td>
             <td class="align-top">
                 
-                <code><a href="#defaultroutetableroute">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Default<wbr>Route<wbr>Table<wbr>Route&gt;</a></code>
+                <code><a href="#defaultroutetableroute">List&lt;Default<wbr>Route<wbr>Table<wbr>Route&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of route objects. Their keys are documented below.
 This argument is processed in [attribute-as-blocks mode](https://www.terraform.io/docs/configuration/attr-as-blocks.html).
@@ -516,7 +516,7 @@ This argument is processed in [attribute-as-blocks mode](https://www.terraform.i
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -698,7 +698,7 @@ This argument is processed in [attribute-as-blocks mode](https://www.terraform.i
             <td class="align-top">routes</td>
             <td class="align-top">
                 
-                <code><a href="#defaultroutetableroute">ec2.<wbr>Default<wbr>Route<wbr>Table<wbr>Route[]</a></code>
+                <code><a href="#defaultroutetableroute">Default<wbr>Route<wbr>Table<wbr>Route[]</a></code>
             </td>
             <td class="align-top">{{% md %}} A list of route objects. Their keys are documented below.
 This argument is processed in [attribute-as-blocks mode](https://www.terraform.io/docs/configuration/attr-as-blocks.html).
@@ -944,7 +944,7 @@ The ID of the AWS account that owns the route table
             <td class="align-top">Propagating<wbr>Vgws</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;?</code>
+                <code>List<string>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -959,7 +959,7 @@ A list of virtual gateways for propagation.
             <td class="align-top">Routes</td>
             <td class="align-top">
                 
-                <code><a href="#defaultroutetableroute">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Default<wbr>Route<wbr>Table<wbr>Route<wbr>Args&gt;?</a></code>
+                <code><a href="#defaultroutetableroute">List&lt;Default<wbr>Route<wbr>Table<wbr>Route<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -975,7 +975,7 @@ This argument is processed in [attribute-as-blocks mode](https://www.terraform.i
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1179,7 +1179,7 @@ A list of virtual gateways for propagation.
             <td class="align-top">routes</td>
             <td class="align-top">
                 
-                <code><a href="#defaultroutetableroute">ec2.<wbr>Default<wbr>Route<wbr>Table<wbr>Route[]?</a></code>
+                <code><a href="#defaultroutetableroute">Default<wbr>Route<wbr>Table<wbr>Route[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)

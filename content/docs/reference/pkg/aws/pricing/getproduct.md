@@ -93,7 +93,7 @@ const example = aws.pricing.getProduct({
 <div class="highlight">
 <pre class="chroma">
 <code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetProduct </span><span class="p">{</span>
-    <span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Pricing.GetProductResult.html">Pulumi.Aws.Pricing.GetProductResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Pricing.GetProductArgs.html">GetProductArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span>
+    <span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Pricing.GetProductResult.html">GetProductResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Pricing.GetProductArgs.html">GetProductArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span>
 <span class="p">}</span></code></pre>
 </div>
 
@@ -122,7 +122,7 @@ The following arguments are supported:
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getproductfilter">List&lt;Pulumi.<wbr>Aws.<wbr>Pricing.<wbr>Get<wbr>Product<wbr>Filter<wbr>Args&gt;</a></code>
+                <code><a href="#getproductfilter">List&lt;Get<wbr>Product<wbr>Filter<wbr>Args&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -222,7 +222,7 @@ The code of the service. Available service codes can be fetched using the Descri
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getproductfilter">pricing.<wbr>Get<wbr>Product<wbr>Filter[]</a></code>
+                <code><a href="#getproductfilter">Get<wbr>Product<wbr>Filter[]</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -337,7 +337,7 @@ The following output properties are available:
             <td class="align-top">Filters</td>
             <td class="align-top">
                 
-                <code><a href="#getproductfilter">List&lt;Pulumi.<wbr>Aws.<wbr>Pricing.<wbr>Get<wbr>Product<wbr>Filter&gt;</a></code>
+                <code><a href="#getproductfilter">List&lt;Get<wbr>Product<wbr>Filter&gt;</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 
@@ -477,7 +477,7 @@ The following output properties are available:
             <td class="align-top">filters</td>
             <td class="align-top">
                 
-                <code><a href="#getproductfilter">pricing.<wbr>Get<wbr>Product<wbr>Filter[]</a></code>
+                <code><a href="#getproductfilter">Get<wbr>Product<wbr>Filter[]</a></code>
             </td>
             <td class="align-top">{{% md %}}  {{% /md %}}
 

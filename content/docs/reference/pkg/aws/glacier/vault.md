@@ -150,7 +150,7 @@ The name of the Vault. Names can be between 1 and 255 characters long and the va
             <td class="align-top">Notifications</td>
             <td class="align-top">
                 
-                <code><a href="#vaultnotification">List&lt;Pulumi.<wbr>Aws.<wbr>Glacier.<wbr>Vault<wbr>Notification<wbr>Args&gt;?</a></code>
+                <code><a href="#vaultnotification">List&lt;Vault<wbr>Notification<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -165,7 +165,7 @@ The notifications for the Vault. Fields documented below.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -312,7 +312,7 @@ The name of the Vault. Names can be between 1 and 255 characters long and the va
             <td class="align-top">notifications</td>
             <td class="align-top">
                 
-                <code><a href="#vaultnotification">glacier.<wbr>Vault<wbr>Notification[]?</a></code>
+                <code><a href="#vaultnotification">Vault<wbr>Notification[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -510,7 +510,7 @@ The heredoc syntax or `file` function is helpful here. Use the [Glacier Develope
             <td class="align-top">Notifications</td>
             <td class="align-top">
                 
-                <code><a href="#vaultnotification">List&lt;Pulumi.<wbr>Aws.<wbr>Glacier.<wbr>Vault<wbr>Notification&gt;?</a></code>
+                <code><a href="#vaultnotification">List&lt;Vault<wbr>Notification&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} The notifications for the Vault. Fields documented below.
  {{% /md %}}
@@ -523,7 +523,7 @@ The heredoc syntax or `file` function is helpful here. Use the [Glacier Develope
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
  {{% /md %}}
@@ -708,7 +708,7 @@ The heredoc syntax or `file` function is helpful here. Use the [Glacier Develope
             <td class="align-top">notifications</td>
             <td class="align-top">
                 
-                <code><a href="#vaultnotification">glacier.<wbr>Vault<wbr>Notification[]?</a></code>
+                <code><a href="#vaultnotification">Vault<wbr>Notification[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} The notifications for the Vault. Fields documented below.
  {{% /md %}}
@@ -973,7 +973,7 @@ The name of the Vault. Names can be between 1 and 255 characters long and the va
             <td class="align-top">Notifications</td>
             <td class="align-top">
                 
-                <code><a href="#vaultnotification">List&lt;Pulumi.<wbr>Aws.<wbr>Glacier.<wbr>Vault<wbr>Notification<wbr>Args&gt;?</a></code>
+                <code><a href="#vaultnotification">List&lt;Vault<wbr>Notification<wbr>Args&gt;?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -988,7 +988,7 @@ The notifications for the Vault. Fields documented below.
             <td class="align-top">Tags</td>
             <td class="align-top">
                 
-                <code>Dictionary&lt;string, object&gt;?</code>
+                <code>Dictionary<string, object>?</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1195,7 +1195,7 @@ The name of the Vault. Names can be between 1 and 255 characters long and the va
             <td class="align-top">notifications</td>
             <td class="align-top">
                 
-                <code><a href="#vaultnotification">glacier.<wbr>Vault<wbr>Notification[]?</a></code>
+                <code><a href="#vaultnotification">Vault<wbr>Notification[]?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1384,7 +1384,7 @@ A mapping of tags to assign to the resource.
             <td class="align-top">Events</td>
             <td class="align-top">
                 
-                <code>List&lt;string&gt;</code>
+                <code>List<string></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)

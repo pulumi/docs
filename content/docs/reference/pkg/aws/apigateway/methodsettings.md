@@ -162,7 +162,7 @@ The ID of the REST API
             <td class="align-top">Settings</td>
             <td class="align-top">
                 
-                <code><a href="#methodsettingssettings">Pulumi.<wbr>Aws.<wbr>Apigateway.<wbr>Method<wbr>Settings<wbr>Settings<wbr>Args</a></code>
+                <code><a href="#methodsettingssettings">Method<wbr>Settings<wbr>Settings<wbr>Args</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -307,7 +307,7 @@ Method path defined as `{resource_path}/{http_method}` for an individual method 
             <td class="align-top">rest<wbr>Api</td>
             <td class="align-top">
                 
-                <code>string | Rest<wbr>Api</code>
+                <code>string | RestApi</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -322,7 +322,7 @@ The ID of the REST API
             <td class="align-top">settings</td>
             <td class="align-top">
                 
-                <code><a href="#methodsettingssettings">apigateway.<wbr>Method<wbr>Settings<wbr>Settings</a></code>
+                <code><a href="#methodsettingssettings">Method<wbr>Settings<wbr>Settings</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Required)
@@ -492,7 +492,7 @@ The following output properties are available:
             <td class="align-top">Settings</td>
             <td class="align-top">
                 
-                <code><a href="#methodsettingssettings">Pulumi.<wbr>Aws.<wbr>Apigateway.<wbr>Method<wbr>Settings<wbr>Settings</a></code>
+                <code><a href="#methodsettingssettings">Method<wbr>Settings<wbr>Settings</a></code>
             </td>
             <td class="align-top">{{% md %}} The settings block, see below.
  {{% /md %}}
@@ -636,7 +636,7 @@ The following output properties are available:
             <td class="align-top">settings</td>
             <td class="align-top">
                 
-                <code><a href="#methodsettingssettings">apigateway.<wbr>Method<wbr>Settings<wbr>Settings</a></code>
+                <code><a href="#methodsettingssettings">Method<wbr>Settings<wbr>Settings</a></code>
             </td>
             <td class="align-top">{{% md %}} The settings block, see below.
  {{% /md %}}
@@ -843,7 +843,7 @@ The ID of the REST API
             <td class="align-top">Settings</td>
             <td class="align-top">
                 
-                <code><a href="#methodsettingssettings">Pulumi.<wbr>Aws.<wbr>Apigateway.<wbr>Method<wbr>Settings<wbr>Settings<wbr>Args?</a></code>
+                <code><a href="#methodsettingssettings">Method<wbr>Settings<wbr>Settings<wbr>Args?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -988,7 +988,7 @@ Method path defined as `{resource_path}/{http_method}` for an individual method 
             <td class="align-top">rest<wbr>Api</td>
             <td class="align-top">
                 
-                <code>string | Rest<wbr>Api</code>
+                <code>string | RestApi</code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
@@ -1003,7 +1003,7 @@ The ID of the REST API
             <td class="align-top">settings</td>
             <td class="align-top">
                 
-                <code><a href="#methodsettingssettings">apigateway.<wbr>Method<wbr>Settings<wbr>Settings?</a></code>
+                <code><a href="#methodsettingssettings">Method<wbr>Settings<wbr>Settings?</a></code>
             </td>
             <td class="align-top">{{% md %}} 
  (Optional)
