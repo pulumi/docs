@@ -16,16 +16,36 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="target" id="module-pulumi_gcp.filestore"></span><dl class="class">
 <dt id="pulumi_gcp.filestore.Instance">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.filestore.</code><code class="sig-name descname">Instance</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">file_shares=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">networks=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">tier=None</em>, <em class="sig-param">zone=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.filestore.Instance" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Instance resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] description: A description of the instance.
-:param pulumi.Input[dict] file_shares: File system shares on the instance. For this version, only a single file share is supported.
-:param pulumi.Input[dict] labels: Resource labels to represent user-provided metadata.
-:param pulumi.Input[str] name: The resource name of the instance.
-:param pulumi.Input[list] networks: VPC networks to which the instance is connected. For this version, only a single network is supported.
-:param pulumi.Input[str] tier: The service tier of the instance.
-:param pulumi.Input[str] zone: The name of the Filestore zone of the instance.</p>
+<dd><p>A Google Cloud Filestore instance.</p>
+<p>To get more information about Instance, see:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://cloud.google.com/filestore/docs/reference/rest/v1beta1/projects.locations.instances/create">API documentation</a></p></li>
+<li><p>How-to Guides</p>
+<ul>
+<li><p><a class="reference external" href="https://cloud.google.com/filestore/docs/creating-instances">Official Documentation</a></p></li>
+<li><p><a class="reference external" href="https://cloud.google.com/filestore/docs/accessing-fileshares">Use with Kubernetes</a></p></li>
+<li><p><a class="reference external" href="https://cloud.google.com/filestore/docs/copying-data">Copying Data In/Out</a></p></li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/filestore_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/filestore_instance.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of the instance.</p></li>
+<li><p><strong>file_shares</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – File system shares on the instance. For this version, only a single file share is supported.</p></li>
+<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Resource labels to represent user-provided metadata.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource name of the instance.</p></li>
+<li><p><strong>networks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – VPC networks to which the instance is connected. For this version, only a single network is supported.</p></li>
+<li><p><strong>tier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The service tier of the instance.</p></li>
+<li><p><strong>zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Filestore zone of the instance.</p></li>
+</ul>
+</dd>
+</dl>
 <p>The <strong>file_shares</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">capacityGb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>

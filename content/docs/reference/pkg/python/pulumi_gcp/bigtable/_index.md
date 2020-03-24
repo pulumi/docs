@@ -317,7 +317,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>instance</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or relative resource id of the instance to manage IAM policies for.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project in which the instance belongs. If it
-is not provided, this provider will use the provider default.</p></li>
+is not provided, a default will be supplied.</p></li>
 <li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
 <code class="docutils literal notranslate"><span class="pre">bigtable.InstanceIamBinding</span></code> can be used per role. Note that custom roles must be of the format
 <code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</p></li>
@@ -346,7 +346,7 @@ is not provided, this provider will use the provider default.</p></li>
 <dt id="pulumi_gcp.bigtable.InstanceIamBinding.project">
 <code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigtable.InstanceIamBinding.project" title="Permalink to this definition">¶</a></dt>
 <dd><p>The project in which the instance belongs. If it
-is not provided, this provider will use the provider default.</p>
+is not provided, a default will be supplied.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -371,7 +371,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>etag</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Computed) The etag of the instances’s IAM policy.</p></li>
 <li><p><strong>instance</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or relative resource id of the instance to manage IAM policies for.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project in which the instance belongs. If it
-is not provided, this provider will use the provider default.</p></li>
+is not provided, a default will be supplied.</p></li>
 <li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
 <code class="docutils literal notranslate"><span class="pre">bigtable.InstanceIamBinding</span></code> can be used per role. Note that custom roles must be of the format
 <code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</p></li>
@@ -445,7 +445,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>instance</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or relative resource id of the instance to manage IAM policies for.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project in which the instance belongs. If it
-is not provided, this provider will use the provider default.</p></li>
+is not provided, a default will be supplied.</p></li>
 <li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
 <code class="docutils literal notranslate"><span class="pre">bigtable.InstanceIamBinding</span></code> can be used per role. Note that custom roles must be of the format
 <code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</p></li>
@@ -474,7 +474,7 @@ is not provided, this provider will use the provider default.</p></li>
 <dt id="pulumi_gcp.bigtable.InstanceIamMember.project">
 <code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigtable.InstanceIamMember.project" title="Permalink to this definition">¶</a></dt>
 <dd><p>The project in which the instance belongs. If it
-is not provided, this provider will use the provider default.</p>
+is not provided, a default will be supplied.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -499,7 +499,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>etag</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Computed) The etag of the instances’s IAM policy.</p></li>
 <li><p><strong>instance</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or relative resource id of the instance to manage IAM policies for.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project in which the instance belongs. If it
-is not provided, this provider will use the provider default.</p></li>
+is not provided, a default will be supplied.</p></li>
 <li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
 <code class="docutils literal notranslate"><span class="pre">bigtable.InstanceIamBinding</span></code> can be used per role. Note that custom roles must be of the format
 <code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</p></li>
@@ -574,7 +574,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>instance</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or relative resource id of the instance to manage IAM policies for.</p></li>
 <li><p><strong>policy_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy data generated by a <code class="docutils literal notranslate"><span class="pre">organizations.getIAMPolicy</span></code> data source.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project in which the instance belongs. If it
-is not provided, this provider will use the provider default.</p></li>
+is not provided, a default will be supplied.</p></li>
 </ul>
 </dd>
 </dl>
@@ -600,7 +600,7 @@ is not provided, this provider will use the provider default.</p></li>
 <dt id="pulumi_gcp.bigtable.InstanceIamPolicy.project">
 <code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigtable.InstanceIamPolicy.project" title="Permalink to this definition">¶</a></dt>
 <dd><p>The project in which the instance belongs. If it
-is not provided, this provider will use the provider default.</p>
+is not provided, a default will be supplied.</p>
 </dd></dl>
 
 <dl class="method">
@@ -618,7 +618,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>instance</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or relative resource id of the instance to manage IAM policies for.</p></li>
 <li><p><strong>policy_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy data generated by a <code class="docutils literal notranslate"><span class="pre">organizations.getIAMPolicy</span></code> data source.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project in which the instance belongs. If it
-is not provided, this provider will use the provider default.</p></li>
+is not provided, a default will be supplied.</p></li>
 </ul>
 </dd>
 </dl>

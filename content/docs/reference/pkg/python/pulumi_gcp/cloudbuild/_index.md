@@ -16,28 +16,38 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="target" id="module-pulumi_gcp.cloudbuild"></span><dl class="class">
 <dt id="pulumi_gcp.cloudbuild.Trigger">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.cloudbuild.</code><code class="sig-name descname">Trigger</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">build=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">disabled=None</em>, <em class="sig-param">filename=None</em>, <em class="sig-param">github=None</em>, <em class="sig-param">ignored_files=None</em>, <em class="sig-param">included_files=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">substitutions=None</em>, <em class="sig-param">trigger_template=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudbuild.Trigger" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Trigger resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[dict] build: Contents of the build template. Either a filename or build template must be provided.
-:param pulumi.Input[str] description: Human-readable description of the trigger.
-:param pulumi.Input[bool] disabled: Whether the trigger is disabled or not. If true, the trigger will never result in a build.
-:param pulumi.Input[str] filename: Path, from the source root, to a file whose contents is used for the template. Either a filename or build template must</p>
+<dd><p>Configuration for an automated build in response to source repository changes.</p>
+<p>To get more information about Trigger, see:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://cloud.google.com/cloud-build/docs/api/reference/rest/">API documentation</a></p></li>
+<li><p>How-to Guides</p>
+<ul>
+<li><p><a class="reference external" href="https://cloud.google.com/cloud-build/docs/running-builds/automate-builds">Automating builds using build triggers</a></p></li>
+</ul>
+</li>
+</ul>
 <blockquote>
-<div><p>be provided.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloudbuild_trigger.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloudbuild_trigger.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>build</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Contents of the build template. Either a filename or build template must be provided.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human-readable description of the trigger.</p></li>
+<li><p><strong>disabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the trigger is disabled or not. If true, the trigger will never result in a build.</p></li>
+<li><p><strong>filename</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Path, from the source root, to a file whose contents is used for the template. Either a filename or build template must
+be provided.</p></li>
 <li><p><strong>github</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Describes the configuration of a trigger that creates a build whenever a GitHub event is received. One of
 ‘trigger_template’ or ‘github’ must be provided.</p></li>
 <li><p><strong>ignored_files</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – ignoredFiles and includedFiles are file glob matches using <a class="reference external" href="https://golang.org/pkg/path/filepath/#Match">https://golang.org/pkg/path/filepath/#Match</a> extended with
 support for ‘<a href="#id1"><span class="problematic" id="id2">**</span></a>’. If ignoredFiles and changed files are both empty, then they are not used to determine whether or not
 to trigger a build. If ignoredFiles is not empty, then we ignore any files that match any of the ignored_file globs. If
 the change has no files that are outside of the ignoredFiles globs, then we do not trigger a build.</p></li>
-<li><p><strong>included_files</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – ignoredFiles and includedFiles are file glob matches using <a class="reference external" href="http://godoc/pkg/path/filepath#Match">http://godoc/pkg/path/filepath#Match</a> extended with support
-for ‘<a href="#id3"><span class="problematic" id="id4">**</span></a>’. If any of the files altered in the commit pass the ignoredFiles filter and includedFiles is empty, then as far
-as this filter is concerned, we should trigger the build. If any of the files altered in the commit pass the
+<li><p><strong>included_files</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – ignoredFiles and includedFiles are file glob matches using <a class="reference external" href="https://golang.org/pkg/path/filepath/#Match">https://golang.org/pkg/path/filepath/#Match</a> extended with
+support for ‘<a href="#id3"><span class="problematic" id="id4">**</span></a>’. If any of the files altered in the commit pass the ignoredFiles filter and includedFiles is empty,
+then as far as this filter is concerned, we should trigger the build. If any of the files altered in the commit pass the
 ignoredFiles filter and includedFiles is not empty, then we make sure that at least one of those files matches a
 includedFiles glob. If not, then we do not trigger a build.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the trigger. Must be unique within the project.</p></li>
@@ -193,9 +203,9 @@ the change has no files that are outside of the ignoredFiles globs, then we do n
 <dl class="attribute">
 <dt id="pulumi_gcp.cloudbuild.Trigger.included_files">
 <code class="sig-name descname">included_files</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudbuild.Trigger.included_files" title="Permalink to this definition">¶</a></dt>
-<dd><p>ignoredFiles and includedFiles are file glob matches using <a class="reference external" href="http://godoc/pkg/path/filepath#Match">http://godoc/pkg/path/filepath#Match</a> extended with support
-for ‘**’. If any of the files altered in the commit pass the ignoredFiles filter and includedFiles is empty, then as far
-as this filter is concerned, we should trigger the build. If any of the files altered in the commit pass the
+<dd><p>ignoredFiles and includedFiles are file glob matches using <a class="reference external" href="https://golang.org/pkg/path/filepath/#Match">https://golang.org/pkg/path/filepath/#Match</a> extended with
+support for ‘**’. If any of the files altered in the commit pass the ignoredFiles filter and includedFiles is empty,
+then as far as this filter is concerned, we should trigger the build. If any of the files altered in the commit pass the
 ignoredFiles filter and includedFiles is not empty, then we make sure that at least one of those files matches a
 includedFiles glob. If not, then we do not trigger a build.</p>
 </dd></dl>
@@ -264,9 +274,9 @@ be provided.</p></li>
 support for ‘<a href="#id5"><span class="problematic" id="id6">**</span></a>’. If ignoredFiles and changed files are both empty, then they are not used to determine whether or not
 to trigger a build. If ignoredFiles is not empty, then we ignore any files that match any of the ignored_file globs. If
 the change has no files that are outside of the ignoredFiles globs, then we do not trigger a build.</p></li>
-<li><p><strong>included_files</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – ignoredFiles and includedFiles are file glob matches using <a class="reference external" href="http://godoc/pkg/path/filepath#Match">http://godoc/pkg/path/filepath#Match</a> extended with support
-for ‘<a href="#id7"><span class="problematic" id="id8">**</span></a>’. If any of the files altered in the commit pass the ignoredFiles filter and includedFiles is empty, then as far
-as this filter is concerned, we should trigger the build. If any of the files altered in the commit pass the
+<li><p><strong>included_files</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – ignoredFiles and includedFiles are file glob matches using <a class="reference external" href="https://golang.org/pkg/path/filepath/#Match">https://golang.org/pkg/path/filepath/#Match</a> extended with
+support for ‘<a href="#id7"><span class="problematic" id="id8">**</span></a>’. If any of the files altered in the commit pass the ignoredFiles filter and includedFiles is empty,
+then as far as this filter is concerned, we should trigger the build. If any of the files altered in the commit pass the
 ignoredFiles filter and includedFiles is not empty, then we make sure that at least one of those files matches a
 includedFiles glob. If not, then we do not trigger a build.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the trigger. Must be unique within the project.</p></li>

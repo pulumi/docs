@@ -16,17 +16,30 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="target" id="module-pulumi_gcp.deploymentmanager"></span><dl class="class">
 <dt id="pulumi_gcp.deploymentmanager.Deployment">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.deploymentmanager.</code><code class="sig-name descname">Deployment</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">create_policy=None</em>, <em class="sig-param">delete_policy=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">preview=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">target=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.deploymentmanager.Deployment" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Deployment resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] create_policy: Set the policy to use for creating new resources. Only used on create and update. Valid values are ‘CREATE_OR_ACQUIRE’</p>
+<dd><p>A collection of resources that are deployed and managed together using
+a configuration file</p>
 <blockquote>
-<div><p>(default) or ‘ACQUIRE’. If set to ‘ACQUIRE’ and resources do not already exist, the deployment will fail. Note that
-updating this field does not actually affect the deployment, just how it is updated.</p>
+<div><p><strong>Warning:</strong> This resource is intended only to manage a Deployment resource,
+and attempts to manage the Deployment’s resources in the provider as well
+will likely result in errors or unexpected behavior as the two tools
+fight over ownership. We strongly discourage doing so unless you are an
+experienced user of both tools.</p>
+</div></blockquote>
+<p>In addition, due to limitations of the API, the provider will treat
+deployments in preview as recreate-only for any update operation other
+than actually deploying an in-preview deployment (i.e. <code class="docutils literal notranslate"><span class="pre">preview=true</span></code> to
+<code class="docutils literal notranslate"><span class="pre">preview=false</span></code>).</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/deployment_manager_deployment.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/deployment_manager_deployment.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>create_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Set the policy to use for creating new resources. Only used on create and update. Valid values are ‘CREATE_OR_ACQUIRE’
+(default) or ‘ACQUIRE’. If set to ‘ACQUIRE’ and resources do not already exist, the deployment will fail. Note that
+updating this field does not actually affect the deployment, just how it is updated.</p></li>
 <li><p><strong>delete_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Set the policy to use for deleting new resources on update/delete. Valid values are ‘DELETE’ (default) or ‘ABANDON’. If
 ‘DELETE’, resource is deleted after removal from Deployment Manager. If ‘ABANDON’, the resource is only removed from
 Deployment Manager and is not actually deleted. Note that updating this field does not actually change the deployment,

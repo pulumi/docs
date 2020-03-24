@@ -55,19 +55,18 @@ Structure is documented below.</p></li>
 <li><p><strong>authenticator_groups_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration for the
 <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/role-based-access-control#groups-setup-gsuite">Google Groups for GKE</a> feature.
 Structure is documented below.</p></li>
-<li><p><strong>cluster_autoscaling</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>)
-Per-cluster configuration of Node Auto-Provisioning with Cluster Autoscaler to
+<li><p><strong>cluster_autoscaling</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Per-cluster configuration of Node Auto-Provisioning with Cluster Autoscaler to
 automatically adjust the size of the cluster and create/delete node pools based
 on the current needs of the cluster’s workload. See the
 <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/node-auto-provisioning">guide to using Node Auto-Provisioning</a>
-for more details. Structure is documented below.</p>
-</p></li>
+for more details. Structure is documented below.</p></li>
 <li><p><strong>cluster_ipv4_cidr</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IP address range of the Kubernetes pods
 in this cluster in CIDR notation (e.g. <code class="docutils literal notranslate"><span class="pre">10.96.0.0/14</span></code>). Leave blank to have one
 automatically chosen or specify a <code class="docutils literal notranslate"><span class="pre">/14</span></code> block in <code class="docutils literal notranslate"><span class="pre">10.0.0.0/8</span></code>. This field will
 only work for routes-based clusters, where <code class="docutils literal notranslate"><span class="pre">ip_allocation_policy</span></code> is not defined.</p></li>
-<li><p><strong>database_encryption</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – ).
-Structure is documented below.</p></li>
+<li><p><strong>database_encryption</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>.
+Structure is documented below.</p>
+</p></li>
 <li><p><strong>default_max_pods_per_node</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The default maximum number of pods
 per node in this cluster. This doesn’t work on “routes-based” clusters, clusters
 that don’t have IP Aliasing enabled. See the <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/flexible-pod-cidr">official documentation</a>
@@ -75,9 +74,7 @@ for more information.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the cluster.</p></li>
 <li><p><strong>enable_binary_authorization</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable Binary Authorization for this cluster.
 If enabled, all container images will be validated by Google Binary Authorization.</p></li>
-<li><p><strong>enable_intranode_visibility</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <p>)
-Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod traffic visible for VPC network.</p>
-</p></li>
+<li><p><strong>enable_intranode_visibility</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod traffic visible for VPC network.</p></li>
 <li><p><strong>enable_kubernetes_alpha</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable Kubernetes Alpha features for
 this cluster. Note that when this option is enabled, the cluster cannot be upgraded
 and will be automatically deleted after 30 days.</p></li>
@@ -85,8 +82,8 @@ and will be automatically deleted after 30 days.</p></li>
 When enabled, identities in the system, including service accounts, nodes, and controllers,
 will have statically granted permissions beyond those provided by the RBAC configuration or IAM.
 Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code></p></li>
-<li><p><strong>enable_shielded_nodes</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – ) Enable Shielded Nodes features on all nodes in this cluster.  Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
-<li><p><strong>enable_tpu</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <p>) Whether to enable Cloud TPU resources in this cluster.
+<li><p><strong>enable_shielded_nodes</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable Shielded Nodes features on all nodes in this cluster.  Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>enable_tpu</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <p>Whether to enable Cloud TPU resources in this cluster.
 See the <a class="reference external" href="https://cloud.google.com/tpu/docs/kubernetes-engine-setup">official documentation</a>.</p>
 </p></li>
 <li><p><strong>initial_node_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of nodes to create in this
@@ -125,7 +122,8 @@ current master version–use the read-only <code class="docutils literal notrans
 If unset, the cluster’s version will be set by GKE to the version of the most recent
 official release (which is not necessarily the latest version).  Most users will find
 the <code class="docutils literal notranslate"><span class="pre">container.getEngineVersions</span></code> data source useful - it indicates which versions
-are available, and can be use to approximate fuzzy versions. If you intend to specify versions manually,
+are available, and can be use to approximate fuzzy versions in a
+provider-compatible way. If you intend to specify versions manually,
 <a class="reference external" href="https://cloud.google.com/kubernetes-engine/versioning-and-upgrades#specifying_cluster_version">the docs</a>
 describe the various acceptable formats for this field.</p></li>
 <li><p><strong>monitoring_service</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The monitoring service that the cluster
@@ -162,18 +160,18 @@ container.NodePool resource instead of this property.</p></li>
 or set to the same value as <code class="docutils literal notranslate"><span class="pre">min_master_version</span></code> on create. Defaults to the default
 version set by GKE which is not necessarily the latest version. This only affects
 nodes in the default node pool. While a fuzzy version can be specified, it’s
-recommended that you specify explicit versions as this provider will see spurious diffs
+recommended that you specify explicit versions as the provider will see spurious diffs
 when fuzzy versions are used. See the <code class="docutils literal notranslate"><span class="pre">container.getEngineVersions</span></code> data source’s
-<code class="docutils literal notranslate"><span class="pre">version_prefix</span></code> field to approximate fuzzy versions.
+<code class="docutils literal notranslate"><span class="pre">version_prefix</span></code> field to approximate fuzzy versions in a provider-compatible way.
 To update nodes in other node pools, use the <code class="docutils literal notranslate"><span class="pre">version</span></code> attribute on the node pool.</p></li>
-<li><p><strong>pod_security_policy_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – ) Configuration for the
+<li><p><strong>pod_security_policy_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration for the
 <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/pod-security-policies">PodSecurityPolicy</a> feature.
 Structure is documented below.</p></li>
 <li><p><strong>private_cluster_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration for <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/private-clusters">private clusters</a>,
 clusters with private nodes. Structure is documented below.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.</p></li>
-<li><p><strong>release_channel</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – ) Configuration options for the
+<li><p><strong>release_channel</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration options for the
 <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels">Release channel</a>
 feature, which provide more control over automatic upgrades of your GKE clusters. Structure is documented below.</p></li>
 <li><p><strong>remove_default_node_pool</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If <code class="docutils literal notranslate"><span class="pre">true</span></code>, deletes the default node
@@ -181,20 +179,16 @@ pool upon cluster creation. If you’re using <code class="docutils literal notr
 resources with no default node pool, this should be set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, alongside
 setting <code class="docutils literal notranslate"><span class="pre">initial_node_count</span></code> to at least <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p></li>
 <li><p><strong>resource_labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The GCE resource labels (a map of key/value pairs) to be applied to the cluster.</p></li>
-<li><p><strong>resource_usage_export_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – ) Configuration for the
+<li><p><strong>resource_usage_export_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration for the
 <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-usage-metering">ResourceUsageExportConfig</a> feature.
 Structure is documented below.</p></li>
 <li><p><strong>subnetwork</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or self_link of the Google Compute Engine
 subnetwork in which the cluster’s instances are launched.</p></li>
-<li><p><strong>vertical_pod_autoscaling</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>)
-Vertical Pod Autoscaling automatically adjusts the resources of pods controlled by it.
-Structure is documented below.</p>
-</p></li>
-<li><p><strong>workload_identity_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>)
-Workload Identity allows Kubernetes service accounts to act as a user-managed
+<li><p><strong>vertical_pod_autoscaling</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Vertical Pod Autoscaling automatically adjusts the resources of pods controlled by it.
+Structure is documented below.</p></li>
+<li><p><strong>workload_identity_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Workload Identity allows Kubernetes service accounts to act as a user-managed
 <a class="reference external" href="https://cloud.google.com/iam/docs/service-accounts#user-managed_service_accounts">Google IAM Service Account</a>.
-Structure is documented below.</p>
-</p></li>
+Structure is documented below.</p></li>
 </ul>
 </dd>
 </dl>
@@ -203,6 +197,11 @@ Structure is documented below.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">cloudrunConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dnsCacheConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">horizontalPodAutoscaling</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
@@ -483,6 +482,11 @@ Structure is documented below.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
 </ul>
 </li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dnsCacheConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">horizontalPodAutoscaling</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
@@ -521,8 +525,7 @@ Structure is documented below.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.container.Cluster.cluster_autoscaling">
 <code class="sig-name descname">cluster_autoscaling</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.cluster_autoscaling" title="Permalink to this definition">¶</a></dt>
-<dd><p>)
-Per-cluster configuration of Node Auto-Provisioning with Cluster Autoscaler to
+<dd><p>Per-cluster configuration of Node Auto-Provisioning with Cluster Autoscaler to
 automatically adjust the size of the cluster and create/delete node pools based
 on the current needs of the cluster’s workload. See the
 <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/node-auto-provisioning">guide to using Node Auto-Provisioning</a>
@@ -558,7 +561,7 @@ only work for routes-based clusters, where <code class="docutils literal notrans
 <dl class="attribute">
 <dt id="pulumi_gcp.container.Cluster.database_encryption">
 <code class="sig-name descname">database_encryption</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.database_encryption" title="Permalink to this definition">¶</a></dt>
-<dd><p>).
+<dd><p>.
 Structure is documented below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">keyName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
@@ -591,8 +594,7 @@ If enabled, all container images will be validated by Google Binary Authorizatio
 <dl class="attribute">
 <dt id="pulumi_gcp.container.Cluster.enable_intranode_visibility">
 <code class="sig-name descname">enable_intranode_visibility</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.enable_intranode_visibility" title="Permalink to this definition">¶</a></dt>
-<dd><p>)
-Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod traffic visible for VPC network.</p>
+<dd><p>Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod traffic visible for VPC network.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -615,13 +617,13 @@ Defaults to <code class="docutils literal notranslate"><span class="pre">false</
 <dl class="attribute">
 <dt id="pulumi_gcp.container.Cluster.enable_shielded_nodes">
 <code class="sig-name descname">enable_shielded_nodes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.enable_shielded_nodes" title="Permalink to this definition">¶</a></dt>
-<dd><p>) Enable Shielded Nodes features on all nodes in this cluster.  Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+<dd><p>Enable Shielded Nodes features on all nodes in this cluster.  Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.container.Cluster.enable_tpu">
 <code class="sig-name descname">enable_tpu</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.enable_tpu" title="Permalink to this definition">¶</a></dt>
-<dd><p>) Whether to enable Cloud TPU resources in this cluster.
+<dd><p>Whether to enable Cloud TPU resources in this cluster.
 See the <a class="reference external" href="https://cloud.google.com/tpu/docs/kubernetes-engine-setup">official documentation</a>.</p>
 </dd></dl>
 
@@ -767,7 +769,8 @@ current master version–use the read-only <code class="docutils literal notrans
 If unset, the cluster’s version will be set by GKE to the version of the most recent
 official release (which is not necessarily the latest version).  Most users will find
 the <code class="docutils literal notranslate"><span class="pre">container.getEngineVersions</span></code> data source useful - it indicates which versions
-are available, and can be use to approximate fuzzy versions. If you intend to specify versions manually,
+are available, and can be use to approximate fuzzy versions in a
+provider-compatible way. If you intend to specify versions manually,
 <a class="reference external" href="https://cloud.google.com/kubernetes-engine/versioning-and-upgrades#specifying_cluster_version">the docs</a>
 describe the various acceptable formats for this field.</p>
 </dd></dl>
@@ -980,16 +983,16 @@ a zonal cluster, omit the cluster’s zone.</p></li>
 or set to the same value as <code class="docutils literal notranslate"><span class="pre">min_master_version</span></code> on create. Defaults to the default
 version set by GKE which is not necessarily the latest version. This only affects
 nodes in the default node pool. While a fuzzy version can be specified, it’s
-recommended that you specify explicit versions as this provider will see spurious diffs
+recommended that you specify explicit versions as the provider will see spurious diffs
 when fuzzy versions are used. See the <code class="docutils literal notranslate"><span class="pre">container.getEngineVersions</span></code> data source’s
-<code class="docutils literal notranslate"><span class="pre">version_prefix</span></code> field to approximate fuzzy versions.
+<code class="docutils literal notranslate"><span class="pre">version_prefix</span></code> field to approximate fuzzy versions in a provider-compatible way.
 To update nodes in other node pools, use the <code class="docutils literal notranslate"><span class="pre">version</span></code> attribute on the node pool.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.container.Cluster.pod_security_policy_config">
 <code class="sig-name descname">pod_security_policy_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.pod_security_policy_config" title="Permalink to this definition">¶</a></dt>
-<dd><p>) Configuration for the
+<dd><p>Configuration for the
 <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/pod-security-policies">PodSecurityPolicy</a> feature.
 Structure is documented below.</p>
 <ul class="simple">
@@ -1022,7 +1025,7 @@ is not provided, the provider project is used.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.container.Cluster.release_channel">
 <code class="sig-name descname">release_channel</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.release_channel" title="Permalink to this definition">¶</a></dt>
-<dd><p>) Configuration options for the
+<dd><p>Configuration options for the
 <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels">Release channel</a>
 feature, which provide more control over automatic upgrades of your GKE clusters. Structure is documented below.</p>
 <ul class="simple">
@@ -1048,7 +1051,7 @@ setting <code class="docutils literal notranslate"><span class="pre">initial_nod
 <dl class="attribute">
 <dt id="pulumi_gcp.container.Cluster.resource_usage_export_config">
 <code class="sig-name descname">resource_usage_export_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.resource_usage_export_config" title="Permalink to this definition">¶</a></dt>
-<dd><p>) Configuration for the
+<dd><p>Configuration for the
 <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-usage-metering">ResourceUsageExportConfig</a> feature.
 Structure is documented below.</p>
 <ul class="simple">
@@ -1078,10 +1081,17 @@ subnetwork in which the cluster’s instances are launched.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_gcp.container.Cluster.tpu_ipv4_cidr_block">
+<code class="sig-name descname">tpu_ipv4_cidr_block</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.tpu_ipv4_cidr_block" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Optional) The IP address range of the Cloud TPUs in this cluster, in
+<a class="reference external" href="http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing">CIDR</a>
+notation (e.g. <code class="docutils literal notranslate"><span class="pre">1.2.3.4/29</span></code>).</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_gcp.container.Cluster.vertical_pod_autoscaling">
 <code class="sig-name descname">vertical_pod_autoscaling</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.vertical_pod_autoscaling" title="Permalink to this definition">¶</a></dt>
-<dd><p>)
-Vertical Pod Autoscaling automatically adjusts the resources of pods controlled by it.
+<dd><p>Vertical Pod Autoscaling automatically adjusts the resources of pods controlled by it.
 Structure is documented below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
@@ -1091,8 +1101,7 @@ Structure is documented below.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.container.Cluster.workload_identity_config">
 <code class="sig-name descname">workload_identity_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.workload_identity_config" title="Permalink to this definition">¶</a></dt>
-<dd><p>)
-Workload Identity allows Kubernetes service accounts to act as a user-managed
+<dd><p>Workload Identity allows Kubernetes service accounts to act as a user-managed
 <a class="reference external" href="https://cloud.google.com/iam/docs/service-accounts#user-managed_service_accounts">Google IAM Service Account</a>.
 Structure is documented below.</p>
 <ul class="simple">
@@ -1117,8 +1126,7 @@ Structure is documented below.</p></li>
 <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/role-based-access-control#groups-setup-gsuite">Google Groups for GKE</a> feature.
 Structure is documented below.</p>
 </p></li>
-<li><p><strong>cluster_autoscaling</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>)
-Per-cluster configuration of Node Auto-Provisioning with Cluster Autoscaler to
+<li><p><strong>cluster_autoscaling</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>Per-cluster configuration of Node Auto-Provisioning with Cluster Autoscaler to
 automatically adjust the size of the cluster and create/delete node pools based
 on the current needs of the cluster’s workload. See the
 <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/node-auto-provisioning">guide to using Node Auto-Provisioning</a>
@@ -1128,8 +1136,9 @@ for more details. Structure is documented below.</p>
 in this cluster in CIDR notation (e.g. <code class="docutils literal notranslate"><span class="pre">10.96.0.0/14</span></code>). Leave blank to have one
 automatically chosen or specify a <code class="docutils literal notranslate"><span class="pre">/14</span></code> block in <code class="docutils literal notranslate"><span class="pre">10.0.0.0/8</span></code>. This field will
 only work for routes-based clusters, where <code class="docutils literal notranslate"><span class="pre">ip_allocation_policy</span></code> is not defined.</p></li>
-<li><p><strong>database_encryption</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – ).
-Structure is documented below.</p></li>
+<li><p><strong>database_encryption</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>.
+Structure is documented below.</p>
+</p></li>
 <li><p><strong>default_max_pods_per_node</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – <p>The default maximum number of pods
 per node in this cluster. This doesn’t work on “routes-based” clusters, clusters
 that don’t have IP Aliasing enabled. See the <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/flexible-pod-cidr">official documentation</a>
@@ -1138,9 +1147,7 @@ for more information.</p>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the cluster.</p></li>
 <li><p><strong>enable_binary_authorization</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable Binary Authorization for this cluster.
 If enabled, all container images will be validated by Google Binary Authorization.</p></li>
-<li><p><strong>enable_intranode_visibility</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <p>)
-Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod traffic visible for VPC network.</p>
-</p></li>
+<li><p><strong>enable_intranode_visibility</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod traffic visible for VPC network.</p></li>
 <li><p><strong>enable_kubernetes_alpha</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable Kubernetes Alpha features for
 this cluster. Note that when this option is enabled, the cluster cannot be upgraded
 and will be automatically deleted after 30 days.</p></li>
@@ -1148,8 +1155,8 @@ and will be automatically deleted after 30 days.</p></li>
 When enabled, identities in the system, including service accounts, nodes, and controllers,
 will have statically granted permissions beyond those provided by the RBAC configuration or IAM.
 Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code></p></li>
-<li><p><strong>enable_shielded_nodes</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – ) Enable Shielded Nodes features on all nodes in this cluster.  Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
-<li><p><strong>enable_tpu</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <p>) Whether to enable Cloud TPU resources in this cluster.
+<li><p><strong>enable_shielded_nodes</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable Shielded Nodes features on all nodes in this cluster.  Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>enable_tpu</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <p>Whether to enable Cloud TPU resources in this cluster.
 See the <a class="reference external" href="https://cloud.google.com/tpu/docs/kubernetes-engine-setup">official documentation</a>.</p>
 </p></li>
 <li><p><strong>endpoint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IP address of this cluster’s Kubernetes master.</p></li>
@@ -1196,7 +1203,8 @@ current master version–use the read-only <code class="docutils literal notrans
 If unset, the cluster’s version will be set by GKE to the version of the most recent
 official release (which is not necessarily the latest version).  Most users will find
 the <code class="docutils literal notranslate"><span class="pre">container.getEngineVersions</span></code> data source useful - it indicates which versions
-are available, and can be use to approximate fuzzy versions. If you intend to specify versions manually,
+are available, and can be use to approximate fuzzy versions in a
+provider-compatible way. If you intend to specify versions manually,
 <a class="reference external" href="https://cloud.google.com/kubernetes-engine/versioning-and-upgrades#specifying_cluster_version">the docs</a>
 describe the various acceptable formats for this field.</p>
 </p></li>
@@ -1235,11 +1243,11 @@ container.NodePool resource instead of this property.</p></li>
 or set to the same value as <code class="docutils literal notranslate"><span class="pre">min_master_version</span></code> on create. Defaults to the default
 version set by GKE which is not necessarily the latest version. This only affects
 nodes in the default node pool. While a fuzzy version can be specified, it’s
-recommended that you specify explicit versions as this provider will see spurious diffs
+recommended that you specify explicit versions as the provider will see spurious diffs
 when fuzzy versions are used. See the <code class="docutils literal notranslate"><span class="pre">container.getEngineVersions</span></code> data source’s
-<code class="docutils literal notranslate"><span class="pre">version_prefix</span></code> field to approximate fuzzy versions.
+<code class="docutils literal notranslate"><span class="pre">version_prefix</span></code> field to approximate fuzzy versions in a provider-compatible way.
 To update nodes in other node pools, use the <code class="docutils literal notranslate"><span class="pre">version</span></code> attribute on the node pool.</p></li>
-<li><p><strong>pod_security_policy_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>) Configuration for the
+<li><p><strong>pod_security_policy_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>Configuration for the
 <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/pod-security-policies">PodSecurityPolicy</a> feature.
 Structure is documented below.</p>
 </p></li>
@@ -1248,7 +1256,7 @@ clusters with private nodes. Structure is documented below.</p>
 </p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.</p></li>
-<li><p><strong>release_channel</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>) Configuration options for the
+<li><p><strong>release_channel</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>Configuration options for the
 <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels">Release channel</a>
 feature, which provide more control over automatic upgrades of your GKE clusters. Structure is documented below.</p>
 </p></li>
@@ -1257,7 +1265,7 @@ pool upon cluster creation. If you’re using <code class="docutils literal notr
 resources with no default node pool, this should be set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, alongside
 setting <code class="docutils literal notranslate"><span class="pre">initial_node_count</span></code> to at least <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p></li>
 <li><p><strong>resource_labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The GCE resource labels (a map of key/value pairs) to be applied to the cluster.</p></li>
-<li><p><strong>resource_usage_export_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>) Configuration for the
+<li><p><strong>resource_usage_export_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>Configuration for the
 <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-usage-metering">ResourceUsageExportConfig</a> feature.
 Structure is documented below.</p>
 </p></li>
@@ -1268,12 +1276,13 @@ notation (e.g. <code class="docutils literal notranslate"><span class="pre">1.2.
 </p></li>
 <li><p><strong>subnetwork</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or self_link of the Google Compute Engine
 subnetwork in which the cluster’s instances are launched.</p></li>
-<li><p><strong>vertical_pod_autoscaling</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>)
-Vertical Pod Autoscaling automatically adjusts the resources of pods controlled by it.
-Structure is documented below.</p>
+<li><p><strong>tpu_ipv4_cidr_block</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>(Optional) The IP address range of the Cloud TPUs in this cluster, in
+<a class="reference external" href="http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing">CIDR</a>
+notation (e.g. <code class="docutils literal notranslate"><span class="pre">1.2.3.4/29</span></code>).</p>
 </p></li>
-<li><p><strong>workload_identity_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>)
-Workload Identity allows Kubernetes service accounts to act as a user-managed
+<li><p><strong>vertical_pod_autoscaling</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Vertical Pod Autoscaling automatically adjusts the resources of pods controlled by it.
+Structure is documented below.</p></li>
+<li><p><strong>workload_identity_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>Workload Identity allows Kubernetes service accounts to act as a user-managed
 <a class="reference external" href="https://cloud.google.com/iam/docs/service-accounts#user-managed_service_accounts">Google IAM Service Account</a>.
 Structure is documented below.</p>
 </p></li>
@@ -1285,6 +1294,11 @@ Structure is documented below.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">cloudrunConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dnsCacheConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">horizontalPodAutoscaling</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
@@ -1701,7 +1715,7 @@ pools belonging to clusters that do not have IP Aliasing enabled.
 See the <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/flexible-pod-cidr">official documentation</a>
 for more information.</p>
 </p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the node pool. If left blank, this provider will
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the node pool. If left blank, the provider will
 auto-generate a unique name.</p></li>
 <li><p><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name for the node pool beginning
 with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p></li>
@@ -1709,20 +1723,21 @@ with the specified prefix. Conflicts with <code class="docutils literal notransl
 container.Cluster for schema.</p></li>
 <li><p><strong>node_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of nodes per instance group. This field can be used to
 update the number of nodes per instance group but should not be used alongside <code class="docutils literal notranslate"><span class="pre">autoscaling</span></code>.</p></li>
-<li><p><strong>node_locations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>)
-The list of zones in which the node pool’s nodes should be located. Nodes must
+<li><p><strong>node_locations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of zones in which the node pool’s nodes should be located. Nodes must
 be in the region of their regional cluster or in the same region as their
 cluster’s zone for zonal clusters. If unspecified, the cluster-level
-<code class="docutils literal notranslate"><span class="pre">node_locations</span></code> will be used.</p>
-</p></li>
+<code class="docutils literal notranslate"><span class="pre">node_locations</span></code> will be used.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which to create the node pool. If blank,
 the provider-configured project will be used.</p></li>
+<li><p><strong>upgrade_settings</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Specify node upgrade settings to change how many nodes GKE attempts to
+upgrade at once. The number of nodes upgraded simultaneously is the sum of <code class="docutils literal notranslate"><span class="pre">max_surge</span></code> and <code class="docutils literal notranslate"><span class="pre">max_unavailable</span></code>.
+The maximum number of nodes upgraded simultaneously is limited to 20.</p></li>
 <li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Kubernetes version for the nodes in this pool. Note that if this field
 and <code class="docutils literal notranslate"><span class="pre">auto_upgrade</span></code> are both specified, they will fight each other for what the node version should
 be, so setting both is highly discouraged. While a fuzzy version can be specified, it’s
-recommended that you specify explicit versions as this provider will see spurious diffs
+recommended that you specify explicit versions as the provider will see spurious diffs
 when fuzzy versions are used. See the <code class="docutils literal notranslate"><span class="pre">container.getEngineVersions</span></code> data source’s
-<code class="docutils literal notranslate"><span class="pre">version_prefix</span></code> field to approximate fuzzy versions.</p></li>
+<code class="docutils literal notranslate"><span class="pre">version_prefix</span></code> field to approximate fuzzy versions in a provider-compatible way.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1847,7 +1862,7 @@ for more information.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.container.NodePool.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.NodePool.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the node pool. If left blank, this provider will
+<dd><p>The name of the node pool. If left blank, the provider will
 auto-generate a unique name.</p>
 </dd></dl>
 
@@ -1919,8 +1934,7 @@ update the number of nodes per instance group but should not be used alongside <
 <dl class="attribute">
 <dt id="pulumi_gcp.container.NodePool.node_locations">
 <code class="sig-name descname">node_locations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.NodePool.node_locations" title="Permalink to this definition">¶</a></dt>
-<dd><p>)
-The list of zones in which the node pool’s nodes should be located. Nodes must
+<dd><p>The list of zones in which the node pool’s nodes should be located. Nodes must
 be in the region of their regional cluster or in the same region as their
 cluster’s zone for zonal clusters. If unspecified, the cluster-level
 <code class="docutils literal notranslate"><span class="pre">node_locations</span></code> will be used.</p>
@@ -1934,14 +1948,26 @@ the provider-configured project will be used.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_gcp.container.NodePool.upgrade_settings">
+<code class="sig-name descname">upgrade_settings</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.NodePool.upgrade_settings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specify node upgrade settings to change how many nodes GKE attempts to
+upgrade at once. The number of nodes upgraded simultaneously is the sum of <code class="docutils literal notranslate"><span class="pre">max_surge</span></code> and <code class="docutils literal notranslate"><span class="pre">max_unavailable</span></code>.
+The maximum number of nodes upgraded simultaneously is limited to 20.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">maxSurge</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxUnavailable</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_gcp.container.NodePool.version">
 <code class="sig-name descname">version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.NodePool.version" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Kubernetes version for the nodes in this pool. Note that if this field
 and <code class="docutils literal notranslate"><span class="pre">auto_upgrade</span></code> are both specified, they will fight each other for what the node version should
 be, so setting both is highly discouraged. While a fuzzy version can be specified, it’s
-recommended that you specify explicit versions as this provider will see spurious diffs
+recommended that you specify explicit versions as the provider will see spurious diffs
 when fuzzy versions are used. See the <code class="docutils literal notranslate"><span class="pre">container.getEngineVersions</span></code> data source’s
-<code class="docutils literal notranslate"><span class="pre">version_prefix</span></code> field to approximate fuzzy versions.</p>
+<code class="docutils literal notranslate"><span class="pre">version_prefix</span></code> field to approximate fuzzy versions in a provider-compatible way.</p>
 </dd></dl>
 
 <dl class="method">
@@ -1971,7 +1997,7 @@ pools belonging to clusters that do not have IP Aliasing enabled.
 See the <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/flexible-pod-cidr">official documentation</a>
 for more information.</p>
 </p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the node pool. If left blank, this provider will
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the node pool. If left blank, the provider will
 auto-generate a unique name.</p></li>
 <li><p><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name for the node pool beginning
 with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p></li>
@@ -1979,20 +2005,21 @@ with the specified prefix. Conflicts with <code class="docutils literal notransl
 container.Cluster for schema.</p></li>
 <li><p><strong>node_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of nodes per instance group. This field can be used to
 update the number of nodes per instance group but should not be used alongside <code class="docutils literal notranslate"><span class="pre">autoscaling</span></code>.</p></li>
-<li><p><strong>node_locations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>)
-The list of zones in which the node pool’s nodes should be located. Nodes must
+<li><p><strong>node_locations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of zones in which the node pool’s nodes should be located. Nodes must
 be in the region of their regional cluster or in the same region as their
 cluster’s zone for zonal clusters. If unspecified, the cluster-level
-<code class="docutils literal notranslate"><span class="pre">node_locations</span></code> will be used.</p>
-</p></li>
+<code class="docutils literal notranslate"><span class="pre">node_locations</span></code> will be used.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which to create the node pool. If blank,
 the provider-configured project will be used.</p></li>
+<li><p><strong>upgrade_settings</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Specify node upgrade settings to change how many nodes GKE attempts to
+upgrade at once. The number of nodes upgraded simultaneously is the sum of <code class="docutils literal notranslate"><span class="pre">max_surge</span></code> and <code class="docutils literal notranslate"><span class="pre">max_unavailable</span></code>.
+The maximum number of nodes upgraded simultaneously is limited to 20.</p></li>
 <li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Kubernetes version for the nodes in this pool. Note that if this field
 and <code class="docutils literal notranslate"><span class="pre">auto_upgrade</span></code> are both specified, they will fight each other for what the node version should
 be, so setting both is highly discouraged. While a fuzzy version can be specified, it’s
-recommended that you specify explicit versions as this provider will see spurious diffs
+recommended that you specify explicit versions as the provider will see spurious diffs
 when fuzzy versions are used. See the <code class="docutils literal notranslate"><span class="pre">container.getEngineVersions</span></code> data source’s
-<code class="docutils literal notranslate"><span class="pre">version_prefix</span></code> field to approximate fuzzy versions.</p></li>
+<code class="docutils literal notranslate"><span class="pre">version_prefix</span></code> field to approximate fuzzy versions in a provider-compatible way.</p></li>
 </ul>
 </dd>
 </dl>
@@ -2219,15 +2246,7 @@ favour of <code class="docutils literal notranslate"><span class="pre">location<
 <dl class="function">
 <dt id="pulumi_gcp.container.get_engine_versions">
 <code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">get_engine_versions</code><span class="sig-paren">(</span><em class="sig-param">location=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">version_prefix=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.get_engine_versions" title="Permalink to this definition">¶</a></dt>
-<dd><p>subcategory: “Kubernetes (Container) Engine”
-layout: “google”
-page_title: “Google: container.getEngineVersions”
-sidebar_current: “docs-google-datasource-container-versions”
-description: <a href="#id36"><span class="problematic" id="id37">|</span></a>-</p>
-<blockquote>
-<div><p>Provides lists of available Google Kubernetes Engine versions for masters and nodes.</p>
-</div></blockquote>
-<p>Provides access to available Google Kubernetes Engine versions in a zone or region for a given project.</p>
+<dd><p>Provides access to available Google Kubernetes Engine versions in a zone or region for a given project.</p>
 <blockquote>
 <div><p>If you are using the <code class="docutils literal notranslate"><span class="pre">container.getEngineVersions</span></code> datasource with a
 regional cluster, ensure that you have provided a region as the <code class="docutils literal notranslate"><span class="pre">location</span></code> to
@@ -2245,7 +2264,7 @@ versions may not be available. If <code class="docutils literal notranslate"><sp
 specified, the provider-level zone must be set and is used instead.</p></li>
 <li><p><strong>project</strong> (<em>str</em>) – ID of the project to list available cluster versions for. Should match the project the cluster will be deployed to.
 Defaults to the project that the provider is authenticated with.</p></li>
-<li><p><strong>version_prefix</strong> (<em>str</em>) – If provided, this provider will only return versions
+<li><p><strong>version_prefix</strong> (<em>str</em>) – If provided, the provider will only return versions
 that match the string prefix. For example, <code class="docutils literal notranslate"><span class="pre">1.11.</span></code> will match all <code class="docutils literal notranslate"><span class="pre">1.11</span></code> series
 releases. Since this is just a string match, it’s recommended that you append a
 <code class="docutils literal notranslate"><span class="pre">.</span></code> after minor versions to ensure that prefixes such as <code class="docutils literal notranslate"><span class="pre">1.1</span></code> don’t match

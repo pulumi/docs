@@ -16,19 +16,20 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="target" id="module-pulumi_gcp.cloudtasks"></span><dl class="class">
 <dt id="pulumi_gcp.cloudtasks.Queue">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.cloudtasks.</code><code class="sig-name descname">Queue</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">app_engine_routing_override=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">rate_limits=None</em>, <em class="sig-param">retry_config=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudtasks.Queue" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Queue resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[dict] app_engine_routing_override: Overrides for task-level appEngineRouting. These settings apply only to App Engine tasks in this queue
-:param pulumi.Input[str] location: The location of the queue
-:param pulumi.Input[str] name: The queue name.
-:param pulumi.Input[str] project: The ID of the project in which the resource belongs.</p>
+<dd><p>A named resource to which messages are sent by publishers.</p>
 <blockquote>
-<div><p>If it is not provided, the provider project is used.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloud_tasks_queue.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloud_tasks_queue.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>app_engine_routing_override</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Overrides for task-level appEngineRouting. These settings apply only to App Engine tasks in this queue</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The location of the queue</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The queue name.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
 <li><p><strong>rate_limits</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Rate limits for task dispatches. The queue’s actual dispatch rate is the result of: * Number of tasks in the queue *
 User-specified throttling: rateLimits, retryConfig, and the queue’s state. * System throttling due to 429 (Too Many
 Requests) or 503 (Service Unavailable) responses from the worker, high error rates, or to smooth sudden large traffic
