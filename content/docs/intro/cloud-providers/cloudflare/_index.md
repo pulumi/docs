@@ -20,9 +20,7 @@ The Cloudflare provider supports several options for interacting with Cloudflare
 
 ## Example
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
-
-{{% choosable language javascript %}}
+{{< langchoose csharp >}}
 
 ```javascript
 const cloudflare = require("@pulumi/cloudflare")
@@ -36,9 +34,6 @@ const record = new cloudflare.Record("sample-record", {
 });
 ```
 
-{{% /choosable %}}
-{{% choosable language typescript %}}
-
 ```typescript
 import * as cloudflare from "@pulumi/cloudflare";
 
@@ -51,9 +46,6 @@ const record = new cloudflare.Record("sample-record", {
 });
 ```
 
-{{% /choosable %}}
-{{% choosable language python %}}
-
 ```python
 import pulumi_cloudflare as cloudflare
 
@@ -65,9 +57,6 @@ record = cloudflare.Record("sample-record",
   ttl=3600
 )
 ```
-
-{{% /choosable %}}
-{{% choosable language go %}}
 
 ```go
 import (
@@ -82,9 +71,6 @@ record, _ := cloudflare.NewRecord(ctx, "sample-record", &cloudflare.RecordArgs{
   Ttl: 3600,
 })
 ```
-
-{{% /choosable %}}
-{{% choosable language csharp %}}
 
 ```csharp
 using System.Collections.Generic;
@@ -107,10 +93,6 @@ class Program
         });
 }
 ```
-
-{{% /choosable %}}
-
-{{< /chooser >}}
 
 ## Libraries
 

@@ -1,7 +1,7 @@
-import { Component, Element, h, Listen, Prop, Watch } from '@stencil/core';
+import { Component, h, Listen, Prop } from '@stencil/core';
 import { Store, Unsubscribe } from "@stencil/redux";
 import { AppState } from "../../store/state";
-import { ChooserType, ChooserKey, ChooserMode } from "../chooser/chooser";
+import { ChooserType, ChooserKey } from "../chooser/chooser";
 
 /**
  * The Choosable component is useful for showing or hiding information based on the
@@ -26,9 +26,6 @@ export class Choosable {
     @Prop({ context: "store" })
     store: Store;
 
-    @Element()
-    el: HTMLElement;
-
     // The type of chooser to associate with this component instance (e.g., a language chooser).
     @Prop({ mutable: true })
     type: ChooserType;
@@ -38,65 +35,45 @@ export class Choosable {
     @Prop({ mutable: true })
     value: ChooserKey;
 
-    // Similarly to value, this prop allows for providing multiple comma-delimited values.
-    @Prop({ mutable: true })
-    values: ChooserKey;
-
-    // Choosables are local by default, allowing users to opt into having free-form bits
-    // of content simply honor whatever happens to be set on the global store (accepting
-    // those bits of content may not show up in all situations).
-    @Prop({ mutable: true })
-    mode: ChooserMode;
-
-    @Watch("mode")
-    onModeChange(newMode: ChooserMode) {
-        if (newMode === "local") {
-            if (this.storeUnsubscribe) {
-                this.storeUnsubscribe();
-            }
-        }
-    }
-
-    // The currently selected value of the supplied chooser type, as .
+    // The currently selected value of the supplied chooser type.
     @Prop({ mutable: true })
     selection: ChooserKey;
 
-    componentDidUnload() {
-        if (this.storeUnsubscribe) {
-            this.storeUnsubscribe();
-        }
+    componentWillLoad() {
+
     }
 
-    @Listen("rendered", { target: "document" })
+    componentDidUnload() {
+        this.storeUnsubscribe();
+    }
+
+    @Listen('document:rendered')
     onRendered(_event: CustomEvent) {
 
-        // By default, mode is global, until told otherwise by some parental chooser.
-        this.mode = "global";
+        // Map currently selected values from the store, so we can use them in this component.
+        this.storeUnsubscribe = this.store.mapStateToProps(this, (state: AppState) => {
+            const { preferences: { language, k8sLanguage, os, cloud } } = state;
 
-        if (this.mode === "global") {
-            this.storeUnsubscribe = this.store.mapStateToProps(this, (state: AppState) => {
-                const { preferences: { language, k8sLanguage, os, cloud } } = state;
-
-                switch (this.type) {
-                    case "language":
-                        return { selection: language };
-                    case "k8s-language":
-                        return { selection: k8sLanguage };
-                    case "os":
-                        return { selection: os };
-                    case "cloud":
-                        return { selection: cloud };
-                }
-            });
-        }
+            switch (this.type) {
+                case "language":
+                    return { selection: language };
+                case "k8s-language":
+                    return { selection: k8sLanguage };
+                case "os":
+                    return { selection: os };
+                case "cloud":
+                    return { selection: cloud };
+            }
+        });
     }
 
     render() {
-        const values = this.values ? this.values.split(",").map(v => v.trim()) : [];
-        const isActive = this.selection && (this.selection === this.value || values.includes(this.selection));
-
-        return <div class={isActive ? "active" : ""}>
-            <slot></slot>
-        </div>;
+        return (
+            // If the currently selected value of the selected chooser type matches the
+            // one assigned to this instance, mark it active.
+            <div class={this.selection === this.value ? "active" : ""}>
+                <slot></slot>
+            </div>
+        );
     }
 }

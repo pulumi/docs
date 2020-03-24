@@ -23,9 +23,7 @@ For instance, let's say your infrastructure team has provisioned your network in
 
 Instead, you can look up that stack by name and use one of its output values. The following example reads an AWS CloudFormation stack named `my-network-stack` and then uses the exported `SubnetId` value to provision a brand new EC2 instance that runs in that subnet:
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
-
-{{% choosable language javascript %}}
+{{< langchoose csharp >}}
 
 ```javascript
 let aws = require("@pulumi/aws");
@@ -43,9 +41,6 @@ let web = new aws.ec2.Instance("web", {
 });
 ```
 
-{{% /choosable %}}
-{{% choosable language typescript %}}
-
 ```typescript
 import * as aws from "@pulumi/aws";
 
@@ -62,9 +57,6 @@ const web = new aws.ec2.Instance("web", {
 });
 ```
 
-{{% /choosable %}}
-{{% choosable language python %}}
-
 ```python
 import pulumi_aws as aws
 
@@ -80,9 +72,6 @@ web = aws.ec2.Instance('web',
     subnet_id=subnet_id
 )
 ```
-
-{{% /choosable %}}
-{{% choosable language go %}}
 
 ```go
 package main
@@ -119,9 +108,6 @@ func main() {
 }
 ```
 
-{{% /choosable %}}
-{{% choosable language csharp %}}
-
 ```csharp
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -156,10 +142,6 @@ class Program
 }
 ```
 
-{{% /choosable %}}
-
-{{< /chooser >}}
-
 All we need to do is run `pulumi up` and the Pulumi runtime will know how to query the CloudFormation stack and retrieve its output values. In this case, the CloudFormation stack is treated entirely as read-only, and Pulumi will never attempt to modify it or any resources managed by it.
 
 > Although we've hard-coded the AWS CloudFormation stack name here &mdash; `"my-network-stack"` &mdash; it's common to dynamically compute a name using unique per-stack information, like the stack name, AWS region, or other configuration variables.
@@ -179,9 +161,7 @@ The Pulumi AWS package [provides a CloudFormation Stack]({{< relref "/docs/refer
 
 For instance, this code deploys a simple CloudFormation template using the given parameters, and exports the resulting VPC ID:
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
-
-{{% choosable language javascript %}}
+{{< langchoose csharp >}}
 
 ```javascript
 let aws = require("@pulumi/aws");
@@ -225,9 +205,6 @@ module.exports = {
 };
 ```
 
-{{% /choosable %}}
-{{% choosable language typescript %}}
-
 ```typescript
 import * as aws from "@pulumi/aws";
 
@@ -267,9 +244,6 @@ const network = new aws.cloudformation.Stack("network", {
 
 export const vpcId = network.outputs["VpcId"];
 ```
-
-{{% /choosable %}}
-{{% choosable language python %}}
 
 ```python
 import pulumi
@@ -312,9 +286,6 @@ network = aws.cloudformation.Stack('network',
 pulumi.export('vpc_id', network.outputs["VpcId"])
 ```
 
-{{% /choosable %}}
-{{% choosable language go %}}
-
 ```go
 package main
 
@@ -349,6 +320,7 @@ const (
         }
     }
 }
+`
 )
 
 func main() {
@@ -368,9 +340,6 @@ func main() {
     })
 }
 ```
-
-{{% /choosable %}}
-{{% choosable language csharp %}}
 
 ```csharp
 using System.Collections.Generic;
@@ -427,10 +396,6 @@ class Program
     }
 }
 ```
-
-{{% /choosable %}}
-
-{{< /chooser >}}
 
 > We could have just as well read the template off disk, instead of putting it right in the source code.
 
@@ -497,9 +462,7 @@ Remember to run `pulumi up` so that your changes are applied before moving on.
 
 Next, we can adopt the resources under Pulumi's control, by using `import` IDs. For this example, recall that our VPC ID from above was `"vpc-0e1a74859af1da17f"`, which is what we will use for illustration purposes. Also, in this example, there is just one resource, so we can simply delete the CloudFormation stack in its entirety and replace it with a Pulumi definition of the VPC. In cases where multiple resources exist, you can delete them one by one, until the stack is eventually empty.
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
-
-{{% choosable language javascript %}}
+{{< langchoose csharp >}}
 
 ```javascript
 let aws = require("@pulumi/aws");
@@ -514,9 +477,6 @@ module.exports = {
 };
 ```
 
-{{% /choosable %}}
-{{% choosable language typescript %}}
-
 ```typescript
 import * as aws from "@pulumi/aws";
 
@@ -527,9 +487,6 @@ const vpc = new aws.ec2.Vpc("myVpc", {
 
 export const vpcId = vpc.id;
 ```
-
-{{% /choosable %}}
-{{% choosable language python %}}
 
 ```python
 import pulumi_aws as aws
@@ -542,9 +499,6 @@ vpc = aws.ec2.Vpc('myVpc',
 
 pulumi.export('vpc_id', vpc.id)
 ```
-
-{{% /choosable %}}
-{{% choosable language go %}}
 
 ```go
 package main
@@ -574,9 +528,6 @@ func main() {
     })
 }
 ```
-
-{{% /choosable %}}
-{{% choosable language csharp %}}
 
 ```csharp
 using System.Collections.Generic;
@@ -612,9 +563,5 @@ class Program
     }
 }
 ```
-
-{{% /choosable %}}
-
-{{< /chooser >}}
 
 After running `pulumi up`, your VPC will become under the control of Pulumi without any disruption, and you can then delete the import directives from your code. All subsequent infrastructure changes you'd like to be made can happen within Pulumi instead of AWS CloudFormation.

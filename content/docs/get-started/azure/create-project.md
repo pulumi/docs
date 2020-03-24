@@ -14,41 +14,37 @@ aliases: ["/docs/quickstart/azure/create-project/"]
 
 Let's get started with a new project in a new directory.
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< langchoose csharp >}}
 
-{{% choosable language javascript %}}
+<div class="language-prologue-javascript"></div>
 
 ```bash
 $ mkdir quickstart && cd quickstart
 $ pulumi new azure-javascript
 ```
 
-{{% /choosable %}}
-{{% choosable language typescript %}}
+<div class="language-prologue-typescript"></div>
 
 ```bash
 $ mkdir quickstart && cd quickstart
 $ pulumi new azure-typescript
 ```
 
-{{% /choosable %}}
-{{% choosable language python %}}
+<div class="language-prologue-python"></div>
 
 ```bash
 $ mkdir quickstart && cd quickstart
 $ pulumi new azure-python
 ```
 
-{{% /choosable %}}
-{{% choosable language csharp %}}
+<div class="language-prologue-csharp"></div>
 
 ```bash
 $ mkdir quickstart && cd quickstart
 $ pulumi new azure-csharp
 ```
 
-{{% /choosable %}}
-{{% choosable language go %}}
+<div class="language-prologue-go"></div>
 
 ```bash
 # install the pulumi azure plugin
@@ -58,8 +54,6 @@ $ pulumi plugin install resource azure 1.14.0
 $ mkdir quickstart && cd quickstart
 $ pulumi new azure-go
 ```
-
-{{% /choosable %}}
 
 {{< cli-note >}}
 
@@ -92,21 +86,21 @@ Next, you will be prompted for some configuration values for the stack.
 
 For Azure projects, you will be prompted for the Azure environment. You can accept the default value of `public` or choose another environment.
 
-{{% choosable language "javascript,typescript" %}}
+{{% lang nodejs %}}
 After some dependency installations from `npm`, the project and stack will be ready.
-{{% /choosable %}}
+{{% /lang %}}
 
-{{% choosable language python %}}
+{{% lang python %}}
 After the command completes, the project and stack will be ready.
-{{% /choosable %}}
+{{% /lang %}}
 
-{{% choosable language go %}}
+{{% lang go %}}
 After the command completes, the project and stack will be ready.
-{{% /choosable %}}
+{{% /lang %}}
 
-{{% choosable language "csharp,fsharp,visualbasic" %}}
+{{% lang dotnet %}}
 After the command completes, the project and stack will be ready.
-{{% /choosable %}}
+{{% /lang %}}
 
 Next, we'll review the generated project files.
 

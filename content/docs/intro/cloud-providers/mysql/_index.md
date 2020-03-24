@@ -21,9 +21,7 @@ The MySQL provider supports several options for providing access to MySQL creden
 
 ## Example
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
-
-{{% choosable language javascript %}}
+{{< langchoose csharp >}}
 
 ```javascript
 const mysql = require("@pulumi/mysql")
@@ -31,26 +29,17 @@ const mysql = require("@pulumi/mysql")
 const myDb = new mysql.Database("my-database");
 ```
 
-{{% /choosable %}}
-{{% choosable language typescript %}}
-
 ```typescript
 import * as mysql from "@pulumi/mysql";
 
 const myDb = new mysql.Database("my-database");
 ```
 
-{{% /choosable %}}
-{{% choosable language python %}}
-
 ```python
 import pulumi_mysql as mysql
 
 my_db = mysql.Database("my-database")
 ```
-
-{{% /choosable %}}
-{{% choosable language go %}}
 
 ```go
 import (
@@ -59,9 +48,6 @@ import (
 
 myDb, _ := mysql.NewDatabase(ctx, "my-database", &mysql.DatabaseArgs{})
 ```
-
-{{% /choosable %}}
-{{% choosable language csharp %}}
 
 ```csharp
 using System.Collections.Generic;
@@ -77,10 +63,6 @@ class Program
         });
 }
 ```
-
-{{% /choosable %}}
-
-{{< /chooser >}}
 
 ## Libraries
 

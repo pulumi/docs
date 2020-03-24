@@ -18,9 +18,7 @@ Let's review some of the generated project files:
 - `Pulumi.dev.yaml` contains [configuration]({{< relref "/docs/intro/concepts/config" >}}) values for the [stack]({{< relref "/docs/intro/concepts/stack" >}}) we initialized.
 - {{< langfile >}} is the Pulumi program that defines our stack resources. Let's examine it.
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
-
-{{% choosable language javascript %}}
+{{< langchoose csharp >}}
 
 ```javascript
 "use strict";
@@ -35,10 +33,6 @@ const bucket = new aws.s3.Bucket("my-bucket");
 exports.bucketName = bucket.id;
 ```
 
-{{% /choosable %}}
-
-{{% choosable language typescript %}}
-
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -51,10 +45,6 @@ const bucket = new aws.s3.Bucket("my-bucket");
 export const bucketName = bucket.id;
 ```
 
-{{% /choosable %}}
-
-{{% choosable language python %}}
-
 ```python
 import pulumi
 from pulumi_aws import s3
@@ -65,10 +55,6 @@ bucket = s3.Bucket('my-bucket')
 # Export the name of the bucket
 pulumi.export('bucket_name',  bucket.id)
 ```
-
-{{% /choosable %}}
-
-{{% choosable language go %}}
 
 ```go
 package main
@@ -93,10 +79,6 @@ func main() {
 }
 ```
 
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-
 ```csharp
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -120,25 +102,22 @@ class Program
 }
 ```
 
-{{% /choosable %}}
-
 This Pulumi program creates an S3 bucket and exports the name of the bucket.
 
-{{% choosable language python %}}
+{{% lang python %}}
 
-{{% python-venv %}}
+{{< python-venv >}}
 
-{{% /choosable %}}
+{{% /lang %}}
 
-{{% choosable language go %}}
-
+{{% lang go %}}
 For Go, before we can deploy the stack, you will need to initialize your project's dependencies. Pulumi templates currently use `dep`:
 
 ```bash
 $ dep ensure
 ```
 
-{{% /choosable %}}
+{{% /lang %}}
 
 Next, we'll deploy the stack.
 

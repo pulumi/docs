@@ -16,22 +16,15 @@ git_sha: "cf406a25aa655d2465a48cd2f1973bb44c048e77"
 > please consult the source [`aiven/terraform-provider-aiven` repo](https://github.com/aiven/terraform-provider-aiven/issues).
 
 
-{{< chooser language "javascript,typescript" >}}
-{{% choosable language javascript %}}
+{{< langchoose nodeonly >}}
 
 ```javascript
 var aiven = require("@pulumi/aiven");
 ```
 
-{{% /choosable %}}
-{{% choosable language typescript %}}
-
 ```typescript
 import * as aiven from "@pulumi/aiven";
 ```
-
-{{% /choosable %}}
-{{% /chooser %}}
 
 
 <h3>Modules</h3>

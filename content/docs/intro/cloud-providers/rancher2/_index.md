@@ -21,9 +21,7 @@ The Rancher2 provider supports several options for providing access to Rancher c
 
 ## Example
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
-
-{{% choosable language javascript %}}
+{{< langchoose csharp >}}
 
 ```javascript
 const rancher2 = require("@pulumi/rancher2")
@@ -36,9 +34,6 @@ const myUser = new rancher2.User("my-user", {
 });
 ```
 
-{{% /choosable %}}
-{{% choosable language typescript %}}
-
 ```typescript
 import * as rancher2 from "@pulumi/rancher2";
 
@@ -50,9 +45,6 @@ const myUser = new rancher2.User("my-user", {
 });
 ```
 
-{{% /choosable %}}
-{{% choosable language python %}}
-
 ```python
 import pulumi_rancher2 as rancher2
 
@@ -63,9 +55,6 @@ user = rancher2.User("my-user",
   enabled=true
 )
 ```
-
-{{% /choosable %}}
-{{% choosable language go %}}
 
 ```go
 import (
@@ -79,9 +68,6 @@ user, _ := rancher2.NewUser(ctx, "my-user", &rancher2.UserArgs{
   Enabled:  true,
 })
 ```
-
-{{% /choosable %}}
-{{% choosable language csharp %}}
 
 ```csharp
 using System.Collections.Generic;
@@ -103,10 +89,6 @@ class Program
         });
 }
 ```
-
-{{% /choosable %}}
-
-{{< /chooser >}}
 
 ## Libraries
 

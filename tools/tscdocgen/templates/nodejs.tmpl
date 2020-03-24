@@ -16,27 +16,16 @@ git_sha: "{{GitSha}}"
 {{/PackageComment}}
 {{#Package}}
 {{=<% %>=}}
-{{< chooser language "javascript,typescript" >}}
-{{% choosable language javascript %}}
+{{< langchoose nodeonly >}}
 <%={{ }}=%>
 
 ```javascript
 var {{PackageVar}} = require("{{Package}}");
 ```
 
-{{=<% %>=}}
-{{% /choosable %}}
-{{% choosable language typescript %}}
-<%={{ }}=%>
-
 ```typescript
 import * as {{PackageVar}} from "{{Package}}";
 ```
-
-{{=<% %>=}}
-{{% /choosable %}}
-{{% /chooser %}}
-<%={{ }}=%>
 
 {{/Package}}
 

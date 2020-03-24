@@ -22,9 +22,7 @@ The OpenStack provider supports several options for providing access to OpenStac
 
 ## Example
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
-
-{{% choosable language javascript %}}
+{{< langchoose csharp >}}
 
 ```javascript
 const os = require("@pulumi/openstack")
@@ -35,9 +33,6 @@ const instance = new os.compute.Instance("test", {
 });
 ```
 
-{{% /choosable %}}
-{{% choosable language typescript %}}
-
 ```typescript
 import * as os from "@pulumi/openstack";
 
@@ -46,9 +41,6 @@ const instance = new os.compute.Instance("test", {
 	imageName: "Ubuntu 16.04",
 });
 ```
-
-{{% /choosable %}}
-{{% choosable language python %}}
 
 ```python
 from pulumi_openstack import compute
@@ -59,9 +51,6 @@ instance = compute.Instance("test",
 )
 ```
 
-{{% /choosable %}}
-{{% choosable language go %}}
-
 ```go
 import "github.com/pulumi/pulumi-openstack/sdk/go/openstack/compute"
 
@@ -70,9 +59,6 @@ instance, _ := compute.NewInstance(ctx, "test", &compute.InstanceArgs{
   ImageName: "Ubuntu 16.04",
 })
 ```
-
-{{% /choosable %}}
-{{% choosable language csharp %}}
 
 ```csharp
 using System.Threading.Tasks;
@@ -91,10 +77,6 @@ class Program
         });
 }
 ```
-
-{{% /choosable %}}
-
-{{< /chooser >}}
 
 ## Libraries
 

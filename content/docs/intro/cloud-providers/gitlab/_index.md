@@ -21,9 +21,7 @@ The GitLab provider supports several options for providing access to GitLab cred
 
 ## Example
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
-
-{{% choosable language javascript %}}
+{{< langchoose csharp >}}
 
 ```javascript
 const gitlab = require("@pulumi/gitlab")
@@ -34,9 +32,6 @@ const project = new gitlab.Project("my-project", {
 });
 ```
 
-{{% /choosable %}}
-{{% choosable language typescript %}}
-
 ```typescript
 import * as gitlab from "@pulumi/gitlab";
 
@@ -46,9 +41,6 @@ const project = new gitlab.Project("my-project", {
 });
 ```
 
-{{% /choosable %}}
-{{% choosable language python %}}
-
 ```python
 import pulumi_gitlab as gitlab
 
@@ -57,9 +49,6 @@ project = gitlab.Project("my-project",
   visibility_level="public",
 )
 ```
-
-{{% /choosable %}}
-{{% choosable language go %}}
 
 ```go
 import (
@@ -71,9 +60,6 @@ project, _ := gitlab.NewProject(ctx, "test", &gitlab.ProjectArgs{
   VisibilityLevel: "public",
 })
 ```
-
-{{% /choosable %}}
-{{% choosable language csharp %}}
 
 ```csharp
 using System.Collections.Generic;
@@ -93,10 +79,6 @@ class Program
         });
 }
 ```
-
-{{% /choosable %}}
-
-{{< /chooser >}}
 
 ## Libraries
 

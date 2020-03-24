@@ -21,9 +21,11 @@ This page contains detailed instructions for [installing Pulumi](#install-pulumi
 
 ## Install Pulumi
 
-{{< chooser os "macos,windows,linux" >}}
+{{< oschoose >}}
 
-{{% choosable os macos %}}
+<div class="os-prologue-macos"></div>
+<div class="mt-8">
+{{% md %}}
 
 macOS Sierra (10.12) or later is required.
 
@@ -66,9 +68,12 @@ If you do not wish to use the previous options, you can install Pulumi manually.
 
 1. Extract the tarball and move the binaries in the `pulumi` directory to a directory included in your system's `$PATH`.
 
-{{% /choosable %}}
+{{% /md %}}
+</div>
 
-{{% choosable os linux %}}
+<div class="os-prologue-linux"></div>
+<div class="mt-8">
+{{% md %}}
 
 ### Installation Script
 
@@ -91,9 +96,12 @@ Alternatively, you can install Pulumi manually. We provide a prebuilt binary for
 
 1. Extract the tarball and move the binaries in the `pulumi` directory to a directory included in your system's `$PATH`.
 
-{{% /choosable %}}
+{{% /md %}}
+</div>
 
-{{% choosable os windows %}}
+<div class="os-prologue-windows"></div>
+<div class="mt-8">
+{{% md %}}
 
 Windows 8 and 10 are supported.
 
@@ -137,9 +145,8 @@ Alternatively, you can install Pulumi manually.
 
 1. Add `C:\pulumi\bin` to your path via **System Properties** -> **Advanced** -> **Environment Variables** -> **User Variables** -> **Path** -> **Edit**.
 
-{{% /choosable %}}
-
-{{< /chooser >}}
+{{% /md %}}
+</div>
 
 ## Verify your Installation
 

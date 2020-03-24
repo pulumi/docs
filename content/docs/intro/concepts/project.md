@@ -49,9 +49,7 @@ When using JavaScript, the working directory for the project should contain a `p
 
 When your Pulumi program references resources in the local filesystem, they are always relative to the working directory. The following example code references a subfolder `app` of the working directory, which would contain a `Dockerfile` and application code:
 
-{{< chooser language "javascript,typescript,python" >}}
-
-{{% choosable language javascript %}}
+{{< langchoose nogo >}}
 
 ```javascript
 const myTask = new cloud.Task("myTask", {
@@ -60,18 +58,12 @@ const myTask = new cloud.Task("myTask", {
 });
 ```
 
-{{% /choosable %}}
-{{% choosable language typescript %}}
-
 ```typescript
 const myTask = new cloud.Task("myTask", {
     build: "./app", // subfolder of working directory
     ...
 });
 ```
-
-{{% /choosable %}}
-{{% choosable language python %}}
 
 ```python
 myTask = Task('myTask',
@@ -81,10 +73,6 @@ myTask = Task('myTask',
     }
 )
 ```
-
-{{% /choosable %}}
-
-{{< /chooser >}}
 
 ## Stack Settings Files {#stack-settings-file}
 

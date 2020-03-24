@@ -23,9 +23,7 @@ The Packet.net provider supports several options for providing access to Packet.
 
 ## Example
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
-
-{{% choosable language javascript %}}
+{{< langchoose csharp >}}
 
 ```javascript
 const packet = require("@pulumi/packet")
@@ -35,9 +33,6 @@ const packet = new packet.Project("my-project", {
 });
 ```
 
-{{% /choosable %}}
-{{% choosable language typescript %}}
-
 ```typescript
 import * as packet from "@pulumi/packet";
 
@@ -46,18 +41,12 @@ const project = new packet.Project("my-project", {
 });
 ```
 
-{{% /choosable %}}
-{{% choosable language python %}}
-
 ```python
 import pulumi_packet as packet
 project = packet.Project("my-project",
   name='DevelopmentEnvironment'
 )
 ```
-
-{{% /choosable %}}
-{{% choosable language go %}}
 
 ```go
 import (
@@ -68,9 +57,6 @@ project, _ := packet.NewProject(ctx, "test", &packet.ProjectArgs{
   Name: "DevelopmentEnvironment"
 })
 ```
-
-{{% /choosable %}}
-{{% choosable language csharp %}}
 
 ```csharp
 using System.Threading.Tasks;
@@ -88,10 +74,6 @@ class Program
         });
 }
 ```
-
-{{% /choosable %}}
-
-{{< /chooser >}}
 
 ## Libraries
 

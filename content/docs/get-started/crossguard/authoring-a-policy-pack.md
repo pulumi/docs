@@ -32,46 +32,53 @@ aliases: ["/docs/get-started/policy-as-code/authoring-a-policy-pack/"]
 
 1. Run the `pulumi policy new` command. Since Policy as Code is a beta feature, you will need to set `PULUMI_EXPERIMENTAL=true` as an environment variable or simply pre-append it to your commands as shown.
 
-    {{< chooser os "macos,windows,linux" >}}
+    {{< oschoose >}}
 
-{{% choosable os macos %}}
+    <div class="os-prologue-macos"></div>
+    <div class="mt-4">
+{{% md %}}
 On macOS, you can run `export PULUMI_EXPERIMENTAL=true` or simply prepend it to your commands as shown.
 
 ```sh
 $ PULUMI_EXPERIMENTAL=true pulumi policy new aws-typescript
 ```
 
-{{% /choosable %}}
+{{% /md %}}
+    </div>
 
-{{% choosable os linux %}}
+    <div class="os-prologue-linux"></div>
+    <div class="mt-4">
+{{% md %}}
 On Linux, you can run `export PULUMI_EXPERIMENTAL=true` or simply prepend it to your commands as shown.
 
 ```sh
 $ PULUMI_EXPERIMENTAL=true pulumi policy new aws-typescript
 ```
 
-{{% /choosable %}}
+{{% /md %}}
+    </div>
 
-{{% choosable os windows %}}
+    <div class="os-prologue-windows"></div>
+    <div class="mt-4">
+{{% md %}}
 On Windows, you must first set the environment variable before running the command.
 
-Windows cmd.exe:
+**Windows cmd.exe**
 
 ```bat
 > set PULUMI_EXPERIMENTAL=true
 > pulumi policy new aws-typescript
 ```
 
-Windows PowerShell:
+**Windows PowerShell**
 
 ```powershell
 > $env:PULUMI_EXPERIMENTAL = 'true'
 > pulumi policy new aws-typescript
 ```
 
-{{% /choosable %}}
-
-{{< /chooser >}}
+{{% /md %}}
+    </div>
 
 1. Tweak the Policy Pack in the `index.ts` file as desired. The existing policy in the template (which is annotated below) mandates that an AWS S3 bucket not have public read or write permissions enabled. Each Policy must have a unique name, an enforcement level, and a validation function. Here we use `validateResourceOfType` that allows us to validate S3 Bucket resources.
 
@@ -117,47 +124,53 @@ Policy Packs can be tested on a user’s local workstation to facilitate rapid d
 
     In the Pulumi project's directory run:
 
-    {{< chooser os "macos,windows,linux" >}}
+    {{< oschoose >}}
 
-{{% choosable os macos %}}
-
-```sh
-$ PULUMI_EXPERIMENTAL=true pulumi preview --policy-pack <path-to-policy-pack-directory>
-```
-
-{{% /choosable %}}
-
-{{% choosable os linux %}}
+    <div class="os-prologue-macos"></div>
+    <div class="mt-4">
+{{% md %}}
 
 ```sh
 $ PULUMI_EXPERIMENTAL=true pulumi preview --policy-pack <path-to-policy-pack-directory>
 ```
 
-{{% /choosable %}}
+{{% /md %}}
+    </div>
 
-{{% choosable os windows %}}
+    <div class="os-prologue-linux"></div>
+    <div class="mt-4">
+{{% md %}}
 
-Windows cmd.exe:
+```sh
+$ PULUMI_EXPERIMENTAL=true pulumi preview --policy-pack <path-to-policy-pack-directory>
+```
+
+{{% /md %}}
+    </div>
+
+    <div class="os-prologue-windows"></div>
+    <div class="mt-4">
+{{% md %}}
+**Windows cmd.exe**
 
 ```bat
 > set PULUMI_EXPERIMENTAL=true
 > pulumi preview --policy-pack <path-to-policy-pack-directory>
 ```
 
-Windows PowerShell:
+**Windows PowerShell**
 
 ```powershell
 > $env:PULUMI_EXPERIMENTAL = 'true'
 > pulumi preview --policy-pack <path-to-policy-pack-directory>
 ```
 
-{{% /choosable %}}
-
-{{< /chooser >}}
+{{% /md %}}
+    </div>
 
     If the stack is in compliance, we expect the output to simply tell us which Policy Packs were run.
 
-{{< highlight sh >}}
+    {{< highlight sh >}}
 Previewing update (dev):
 
      Type                 Name          Plan
@@ -178,7 +191,7 @@ Resources:
 
 1. We then run the `pulumi preview` command again and this time get an error message indicating we failed the preview because of a policy violation.
 
-{{< highlight sh >}}
+    {{< highlight sh >}}
 Previewing update (dev):
 
      Type                 Name          Plan       Info

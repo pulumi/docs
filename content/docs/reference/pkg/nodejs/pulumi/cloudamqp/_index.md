@@ -16,22 +16,15 @@ git_sha: "64cb4acb6395360518bc4e5a1d9bc7a41c045327"
 > please consult the source [`cloudamqp/terraform-provider-cloudamqp` repo](https://github.com/cloudamqp/terraform-provider-cloudamqp/issues).
 
 
-{{< chooser language "javascript,typescript" >}}
-{{% choosable language javascript %}}
+{{< langchoose nodeonly >}}
 
 ```javascript
 var cloudamqp = require("@pulumi/cloudamqp");
 ```
 
-{{% /choosable %}}
-{{% choosable language typescript %}}
-
 ```typescript
 import * as cloudamqp from "@pulumi/cloudamqp";
 ```
-
-{{% /choosable %}}
-{{% /chooser %}}
 
 
 <h3>Modules</h3>

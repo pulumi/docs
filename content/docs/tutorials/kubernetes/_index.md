@@ -160,7 +160,7 @@ These tutorials tackle difficult "day two" tasks:
 
 ## Other Examples and Tutorials
 
-{{< chooser language "javascript,typescript,python" / >}}
+{{< langchoose nogo >}}
 {{< tutorials-index-kubernetes >}}
 
 If you'd like to see a new tutorial, please [request one](

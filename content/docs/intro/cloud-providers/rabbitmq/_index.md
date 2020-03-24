@@ -21,9 +21,7 @@ The RabbitMQ provider supports several options for providing access to RabbitMQ 
 
 ## Example
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
-
-{{% choosable language javascript %}}
+{{< langchoose csharp >}}
 
 ```javascript
 const rabbitmq = require("@pulumi/rabbitmq")
@@ -33,9 +31,6 @@ const user = new rabbitmq.User("user", {
 });
 ```
 
-{{% /choosable %}}
-{{% choosable language typescript %}}
-
 ```typescript
 import * as rabbitmq from "@pulumi/rabbitmq";
 
@@ -44,9 +39,6 @@ const user = new rabbitmq.User("user", {
 });
 ```
 
-{{% /choosable %}}
-{{% choosable language python %}}
-
 ```python
 import pulumi_rabbitmq as rabbitmq
 
@@ -54,9 +46,6 @@ user = rabbitmq.User("user",
   password="MyPassword1234!"
 )
 ```
-
-{{% /choosable %}}
-{{% choosable language go %}}
 
 ```go
 import (
@@ -67,9 +56,6 @@ user, _ := rabbitmq.NewUser(ctx, "user", &rabbitmq.UserArgs{
   Password: "MyPassword1234!"
 })
 ```
-
-{{% /choosable %}}
-{{% choosable language csharp %}}
 
 ```csharp
 using System.Collections.Generic;
@@ -88,10 +74,6 @@ class Program
         });
 }
 ```
-
-{{% /choosable %}}
-
-{{< /chooser >}}
 
 ## Libraries
 

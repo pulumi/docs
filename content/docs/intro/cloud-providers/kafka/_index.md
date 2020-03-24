@@ -21,9 +21,7 @@ The Kafka provider supports several options for providing access to Kafka creden
 
 ## Example
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
-
-{{% choosable language javascript %}}
+{{< langchoose csharp >}}
 
 ```javascript
 const kafka = require("@pulumi/kafka")
@@ -35,9 +33,6 @@ const topic = new kafka.Topic("topic", {
 });
 ```
 
-{{% /choosable %}}
-{{% choosable language typescript %}}
-
 ```typescript
 import * as kafka from "@pulumi/kafka";
 
@@ -48,9 +43,6 @@ const topic = new kafka.Topic("topic", {
 });
 ```
 
-{{% /choosable %}}
-{{% choosable language python %}}
-
 ```python
 import pulumi_kafka as kafka
 
@@ -60,9 +52,6 @@ topic = kafka.Topic("topic",
   partitions=4,
 )
 ```
-
-{{% /choosable %}}
-{{% choosable language go %}}
 
 ```go
 import (
@@ -75,9 +64,6 @@ topic, _ := kafka.NewTopic(ctx, "topic", &kafka.TopicArgs{
   Partitions: 4,
 })
 ```
-
-{{% /choosable %}}
-{{% choosable language csharp %}}
 
 ```csharp
 using System.Collections.Generic;
@@ -98,10 +84,6 @@ class Program
         });
 }
 ```
-
-{{% /choosable %}}
-
-{{< /chooser >}}
 
 ## Libraries
 

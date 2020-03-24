@@ -1,23 +1,45 @@
-<pulumi-chooser type="os" options="macos,linux,windows">
-    <pulumi-choosable type="os" value="macos">
-        <p>Install Pulumi on macOS through <a href="https://brew.sh/" target="_blank" rel="noopener">Homebrew</a>:</p>
-        <div class="highlight">
-            <pre class="chroma"><code class="language-bash" data-lang="bash">$ brew install pulumi</code></pre>
-        </div>
-    </pulumi-choosable>
-    <pulumi-choosable type="os" value="linux">
-        <p>Install Pulumi on Linux by running the installation script:</p>
-        <div class="highlight">
-            <pre class="chroma"><code class="language-bash" data-lang="bash">$ curl -fsSL https://get.pulumi.com | sh</code></pre>
-        </div>
-    </pulumi-choosable>
-    <pulumi-choosable type="os" value="windows">
-        <p>Install Pulumi on Windows through the <a href="https://chocolatey.org" target="_blank" rel="noopener">Chocolatey package manager</a>:</p>
-        <div class="highlight">
-            <pre class="chroma"><code class="language-bat" data-lang="bat"><span class="p">&gt;</span> choco install pulumi</code></pre>
-        </div>
-    </pulumi-choosable>
-</pulumi-chooser>
+{{/*
+This table is effectively the same as oschoose.md, however it
+needs to be embedded inline because shortcodes cannot reference
+other shortcodes.
+*/}}
+<div class="mdl-tabs os-tab-tabs">
+    <div class="mdl-tabs__tab-dir os-tab-tabstrip">
+        <a data-choice="macos" data-track="oschoose-macOs" class="mdl-tabs__tab os-tab">macOS</a>
+        <a data-choice="linux" data-track="oschoose-linux" class="mdl-tabs__tab os-tab">Linux</a>
+        <a data-choice="windows" data-track="oschoose-windows" class="mdl-tabs__tab os-tab">Windows</a>
+    </div>
+</div>
+
+{{/*
+.mdl-tabs__tab uses floats, so we need to use clearfix to avoid
+wrapping/indenting the subsequent element containing the code snippet.
+*/}}
+<div class="clearfix"></div>
+
+<div class="os-prologue-macos"></div>
+<div class="install_macos">
+    <p>Install Pulumi on macOS through <a href="https://brew.sh/" target="_blank" rel="noopener">Homebrew</a>:</p>
+    <div class="highlight">
+        <pre class="chroma"><code class="language-bash" data-lang="bash">$ brew install pulumi</code></pre>
+    </div>
+</div>
+
+<div class="os-prologue-linux"></div>
+<div class="install_linux">
+    <p>Install Pulumi on Linux by running the installation script:</p>
+    <div class="highlight">
+        <pre class="chroma"><code class="language-bash" data-lang="bash">$ curl -fsSL https://get.pulumi.com | sh</code></pre>
+    </div>
+</div>
+
+<div class="os-prologue-windows"></div>
+<div class="install_windows">
+    <p>Install Pulumi on Windows through the <a href="https://chocolatey.org" target="_blank" rel="noopener">Chocolatey package manager</a>:</p>
+    <div class="highlight">
+        <pre class="chroma"><code class="language-bat" data-lang="bat"><span class="p">&gt;</span> choco install pulumi</code></pre>
+    </div>
+</div>
 
 <p>
     <i>For alternative installation instructions (e.g. script-based installation, binaries, etc.) or troubleshooting, see

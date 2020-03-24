@@ -26,9 +26,7 @@ To adopt existing resources so that Pulumi is able to manage subsequent updates 
 
 This example imports an existing AWS EC2 security group with ID `sg-04aeda9a214730248`:
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
-
-{{% choosable language javascript %}}
+{{< langchoose csharp >}}
 
 ```javascript
 let aws = require("@pulumi/aws");
@@ -39,9 +37,6 @@ let group = new aws.ec2.SecurityGroup("my-sg", {
 }, { import: "sg-04aeda9a214730248" });
 ```
 
-{{% /choosable %}}
-{{% choosable language typescript %}}
-
 ```typescript
 import * as aws from "@pulumi/aws";
 
@@ -50,9 +45,6 @@ let group = new aws.ec2.SecurityGroup("my-sg", {
     ingress: [{ protocol: "tcp", fromPort: 80, toPort: 80, cidrBlocks: ["0.0.0.0/0"] }],
 }, { import: "sg-04aeda9a214730248" });
 ```
-
-{{% /choosable %}}
-{{% choosable language python %}}
 
 ```python
 # IMPORTANT: Python appends an underscore (`import_`) to avoid conflicting with the keyword.
@@ -68,9 +60,6 @@ group = aws.ec2.SecurityGroup('my-sg',
     ],
     opts=ResourceOptions(import_='sg-04aeda9a214730248'))
 ```
-
-{{% /choosable %}}
-{{% choosable language go %}}
 
 ```go
 group, err := ec2.NewSecurityGroup(ctx, "my-sg",
@@ -93,9 +82,6 @@ if err != nil {
 }
 ```
 
-{{% /choosable %}}
-{{% choosable language csharp %}}
-
 ```csharp
 var group = new SecurityGroup("my-sg",
     new SecurityGroupArgs {
@@ -115,10 +101,6 @@ var group = new SecurityGroup("my-sg",
     }
 );
 ```
-
-{{% /choosable %}}
-
-{{< /chooser >}}
 
 > **Note:** Import IDs are resource specific. The ID to use is the same as the ID that gets assigned when Pulumi has provisioned a resource of that type from scratch.
 

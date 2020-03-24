@@ -16,9 +16,7 @@ Now that we have an instance of our Pulumi program deployed, let's update it to 
 
 Replace the entire contents of {{< langfile >}} with the following:
 
-{{< chooser language "javascript,typescript,python,csharp" / >}}
-
-{{% choosable language javascript %}}
+{{< langchoose nogo csharp >}}
 
 ```javascript
 "use strict";
@@ -59,9 +57,6 @@ exports.ip = isMinikube
     : frontend.status.loadBalancer.ingress[0].ip;
 ```
 
-{{% /choosable %}}
-{{% choosable language typescript %}}
-
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as k8s from "@pulumi/kubernetes";
@@ -99,9 +94,6 @@ export const ip = isMinikube
     ? frontend.spec.clusterIP
     : frontend.status.loadBalancer.ingress[0].ip;
 ```
-
-{{% /choosable %}}
-{{% choosable language python %}}
 
 ```python
 import pulumi
@@ -145,9 +137,6 @@ if is_minikube:
 else:
     pulumi.export("ip", frontend.status.apply(lambda v: v["load_balancer"]["ingress"][0]["ip"] if "load_balancer" in v else None))
 ```
-
-{{% /choosable %}}
-{{% choosable language csharp %}}
 
 ```csharp
 using System.Collections.Generic;
@@ -251,8 +240,6 @@ class Program
     }
 }
 ```
-
-{{% /choosable %}}
 
 Our program now creates a service to access the NGINX deployment, and requires a new [config]({{< relref "/docs/intro/concepts/config" >}}) value to indicate whether the program is being deployed to Minikube or not.
 

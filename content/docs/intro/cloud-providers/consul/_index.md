@@ -20,9 +20,7 @@ The Consul provider supports several options for interacting with HashiCorp Cons
 
 ## Example
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
-
-{{% choosable language javascript %}}
+{{< langchoose csharp >}}
 
 ```javascript
 const consul = require("@pulumi/consul")
@@ -32,9 +30,6 @@ const node = new consul.Node("compute", {
 });
 ```
 
-{{% /choosable %}}
-{{% choosable language typescript %}}
-
 ```typescript
 import * as consul from "@pulumi/consul";
 
@@ -43,9 +38,6 @@ const node = new consul.Node("compute", {
 });
 ```
 
-{{% /choosable %}}
-{{% choosable language python %}}
-
 ```python
 import pulumi_consul as consul
 
@@ -53,9 +45,6 @@ node = consul.Node("compute",
   address='www.google.com'
 )
 ```
-
-{{% /choosable %}}
-{{% choosable language go %}}
 
 ```go
 import (
@@ -66,9 +55,6 @@ node, _ := consul.NewNode(ctx, "compute", &consul.NodeArgs{
   Address: "www.google.com",
 })
 ```
-
-{{% /choosable %}}
-{{% choosable language csharp %}}
 
 ```csharp
 using System.Collections.Generic;
@@ -87,10 +73,6 @@ class Program
         });
 }
 ```
-
-{{% /choosable %}}
-
-{{< /chooser >}}
 
 ## Libraries
 

@@ -16,22 +16,15 @@ git_sha: "e72f6c764b9880d9f9019823c6a13348a409cff8"
 > please consult the source [`terraform-providers/terraform-provider-consul` repo](https://github.com/terraform-providers/terraform-provider-consul/issues).
 
 
-{{< chooser language "javascript,typescript" >}}
-{{% choosable language javascript %}}
+{{< langchoose nodeonly >}}
 
 ```javascript
 var consul = require("@pulumi/consul");
 ```
 
-{{% /choosable %}}
-{{% choosable language typescript %}}
-
 ```typescript
 import * as consul from "@pulumi/consul";
 ```
-
-{{% /choosable %}}
-{{% /chooser %}}
 
 
 <h3>Modules</h3>

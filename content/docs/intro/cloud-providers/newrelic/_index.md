@@ -21,9 +21,7 @@ The New Relic provider supports several options for providing access to New Reli
 
 ## Example
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
-
-{{% choosable language javascript %}}
+{{< langchoose csharp >}}
 
 ```javascript
 const newrelic = require("@pulumi/newrelic")
@@ -31,26 +29,17 @@ const newrelic = require("@pulumi/newrelic")
 const policy = new newrelic.AlertPolicy("my-policy");
 ```
 
-{{% /choosable %}}
-{{% choosable language typescript %}}
-
 ```typescript
 import * as newrelic from "@pulumi/newrelic";
 
 const policu = new newrelic.AlertPolicy("my-policy");
 ```
 
-{{% /choosable %}}
-{{% choosable language python %}}
-
 ```python
 import pulumi_newrelic as newrelic
 
 policy = newrelic.AlertPolicy("my-policy")
 ```
-
-{{% /choosable %}}
-{{% choosable language go %}}
 
 ```go
 import (
@@ -59,9 +48,6 @@ import (
 
 policy, _ := newrelic.NewAlertPolicy(ctx, "my-policy"
 ```
-
-{{% /choosable %}}
-{{% choosable language csharp %}}
 
 ```csharp
 using System.Collections.Generic;
@@ -77,10 +63,6 @@ class Program
         });
 }
 ```
-
-{{% /choosable %}}
-
-{{< /chooser >}}
 
 ## Libraries
 

@@ -9,10 +9,11 @@ menu:
     weight: 2
 ---
 
-{{< chooser cloud "aws,azure,gcp" >}}
+{{< cloudchoose >}}
 
-{{% choosable cloud aws %}}
-
+<div class="cloud-prologue-aws"></div>
+<div class="mt">
+{{% md %}}
 In order to run container workloads, you will need a Kubernetes cluster.
 While it is possible to provision and manage a cluster manually on AWS,
 their managed offering [Elastic Kubernetes Service (EKS)][eks] offers an
@@ -28,9 +29,12 @@ The full code for this stack is on [GitHub][gh-repo-stack].
 [k8s-docs]: https://kubernetes.io/docs/reference/
 <!-- markdownlint-enable url -->
 
-{{% /choosable %}}
+{{% /md %}}
+</div>
 
-{{% choosable cloud azure %}}
+<div class="cloud-prologue-azure"></div>
+<div class="mt">
+{{% md %}}
 In order to run container workloads, you will need a Kubernetes cluster.
 While it is possible to provision and manage a cluster manually on Azure,
 their managed offering, [Azure Kubernetes Service (AKS)][aks], offers an
@@ -46,10 +50,12 @@ The full code for this stack is on [GitHub][gh-repo-stack].
 [k8s-docs]: https://kubernetes.io/docs/reference/
 <!-- markdownlint-enable url -->
 
-{{% /choosable %}}
+{{% /md %}}
+</div>
 
-{{% choosable cloud gcp %}}
-
+<div class="cloud-prologue-gcp"></div>
+<div class="mt">
+{{% md %}}
 In order to run container workloads, you will need a Kubernetes cluster.
 While it is possible to provision and manage a cluster manually on GCP,
 their managed offering, [Google Kubernetes Engine (GKE)][gke], offers an
@@ -65,7 +71,8 @@ The full code for this stack is on [GitHub][gh-repo-stack].
 [k8s-docs]: https://kubernetes.io/docs/reference/
 <!-- markdownlint-enable url -->
 
-{{% /choosable %}}
+{{% /md %}}
+</div>
 
 ## Overview
 
@@ -93,8 +100,9 @@ Separation of identities is important for several reasons: it can be used to
 limit the scope of damage if a given group is compromised, can regulate the number
 of API requests originating from a certain group, and can also help scope
 privileges to specific workloads.
-
-{{% choosable cloud azure %}}
+<div class="cloud-prologue-azure"></div>
+<div class="mt">
+{{% md %}}
 
 Azure Kubernetes Service can be configured to use Azure Active Directory (Azure AD) for user authentication. Cluster administrators can then configure Kubernetes role-based access control (RBAC) based on a user's identity or directory group membership.
 
@@ -103,12 +111,14 @@ To provide Azure AD authentication for an AKS cluster, two Azure AD applications
 We configure applications and service principals using the `@pulumi/azuread` package. After the applications are created, there is manual step required to [grant admin consent](https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/configure-user-consent#grant-admin-consent-when-registering-an-app-in-the-azure-portal) for API permissions.
 
 [crosswalk-identity]: {{< relref "/docs/guides/crosswalk/kubernetes/identity" >}}
-
-{{% /choosable %}}
+{{% /md %}}
+</div>
 
 ### Users
 
-{{% choosable cloud aws %}}
+<div class="cloud-prologue-aws"></div>
+<div class="mt">
+{{% md %}}
 
 For **users**, we create an `admins` role for cluster administrators with
 root privileges, and a limited scope `devs` role for general purpose
@@ -154,10 +164,12 @@ const cluster = new eks.Cluster(`${projectName}`, {
 [user-mapping]: {{< relref "/docs/reference/pkg/nodejs/pulumi/eks#UserMapping" >}}
 <!-- markdownlint-enable url -->
 
-{{% /choosable %}}
+{{% /md %}}
+</div>
 
-{{% choosable cloud azure %}}
-
+<div class="cloud-prologue-azure"></div>
+<div class="mt">
+{{% md %}}
 For users, we create and use a ServicePrincipal for cluster administrators with
 root privileges, and a limited scope `devs` user group for general purpose
 execution of workloads. Both identities will be tied into Kubernetes RBAC in
@@ -189,11 +201,12 @@ const cluster = new azure.containerservice.KubernetesCluster(`${name}`, {
 ```
 
 [crosswalk-configure-access]: {{< relref "/docs/guides/crosswalk/kubernetes/configure-access-control" >}}
+{{% /md %}}
+</div>
 
-{{% /choosable %}}
-
-{{% choosable cloud gcp %}}
-
+<div class="cloud-prologue-gcp"></div>
+<div class="mt">
+{{% md %}}
 For users, we create and use a ServiceAccount for cluster administrators with
 root privileges, and a limited scope `devs` ServiceAccount for general purpose
 execution of workloads. Both identities will be tied into Kubernetes RBAC in
@@ -203,10 +216,12 @@ By authenticating with the ServiceAccount using `gcloud`, as outlined in [Identi
 
 [crosswalk-sa-admins]: {{< relref "/docs/guides/crosswalk/kubernetes/identity#create-an-iam-role-and-serviceaccount-for-admins" >}}
 [crosswalk-configure-access]: {{< relref "/docs/guides/crosswalk/kubernetes/configure-access-control" >}}
+{{% /md %}}
+</div>
 
-{{% /choosable %}}
-
-{{% choosable cloud aws %}}
+<div class="cloud-prologue-aws"></div>
+<div class="mt">
+{{% md %}}
 
 #### Worker Node Groups
 
@@ -233,7 +248,8 @@ const cluster = new eks.Cluster(`${projectName}`, {
 [aws-instance-profile]: https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2_instance-profiles.html
 <!-- markdownlint-enable url -->
 
-{{% /choosable %}}
+{{% /md %}}
+</div>
 
 ## Managed Infrastructure
 
@@ -245,7 +261,9 @@ Configuration stack.
 
 ### Networking
 
-{{% choosable cloud aws %}}
+<div class="cloud-prologue-aws"></div>
+<div class="mt">
+{{% md %}}
 
 How you create the network will vary on your permissions and preferences.
 
@@ -298,9 +316,12 @@ const cluster = new eks.Cluster(`${projectName}`, {
 [configure-cni]: {{< relref "/docs/reference/pkg/nodejs/pulumi/eks#VpcCniOptions" >}}
 <!-- markdownlint-enable url -->
 
-{{% /choosable %}}
+{{% /md %}}
+</div>
 
-{{% choosable cloud azure %}}
+<div class="cloud-prologue-azure"></div>
+<div class="mt">
+{{% md %}}
 
 How you create the network will vary on your permissions and preferences.
 
@@ -346,9 +367,12 @@ const subnet = new azure.network.Subnet(name, {
 [k8s-pod-networking]: https://kubernetes.io/docs/concepts/cluster-administration/networking/
 <!-- markdownlint-enable url -->
 
-{{% /choosable %}}
+{{% /md %}}
+</div>
 
-{{% choosable cloud gcp %}}
+<div class="cloud-prologue-gcp"></div>
+<div class="mt">
+{{% md %}}
 
 How you create the network will vary on your permissions and preferences.
 
@@ -384,8 +408,8 @@ export const subnetworkName = subnet.name;
 
 [pulumi-gcp]: https://github.com/pulumi/pulumi-gcp
 [k8s-pod-networking]: https://kubernetes.io/docs/concepts/cluster-administration/networking/
-
-{{% /choosable %}}
+{{% /md %}}
+</div>
 
 ### Storage
 
@@ -405,7 +429,9 @@ specify the `storageClassName`
 
 See the [Kubernetes docs][k8s-storage-classes] for more details.
 
-{{% choosable cloud aws %}}
+<div class="cloud-prologue-aws"></div>
+<div class="mt">
+{{% md %}}
 
 As of Kubernetes v1.11+ on EKS, a default `gp2`
 storage class will be created automatically by EKS.
@@ -414,9 +440,11 @@ See the [official EKS docs][eks-storage-classes] for more details.
 
 [eks-storage-classes]: https://docs.aws.amazon.com/eks/latest/userguide/storage-classes.html
 
-{{< chooser k8s-language "typescript,yaml" >}}
+{{< k8s-language nokx >}}
 
-{{% choosable k8s-language yaml %}}
+<div class="k8s-language-prologue-yaml"></div>
+<div class="mt">
+{{% md %}}
 
 Create the storage classes using `kubectl`.
 
@@ -471,9 +499,12 @@ EOF
 $ kubectl apply -f pvc.yaml
 ```
 
-{{% /choosable %}}
+{{% /md %}}
+</div>
 
-{{% choosable k8s-language typescript %}}
+<div class="k8s-language-prologue-typescript"></div>
+<div class="mt">
+{{% md %}}
 
 Create the storage classes using Pulumi.
 
@@ -517,11 +548,15 @@ cluster.core.storageClasses["gp2-encrypted"].apply(sc => {
 });
 ```
 
-{{% /choosable %}}
+{{% /md %}}
+</div>
 
-{{% /choosable %}}
+{{% /md %}}
+</div>
 
-{{% choosable cloud azure %}}
+<div class="cloud-prologue-azure"></div>
+<div class="mt">
+{{% md %}}
 
 See the [official AKS docs][aks-storage-classes] for more details.
 
@@ -529,9 +564,11 @@ See the [official AKS docs][aks-storage-classes] for more details.
 [aks-storage-classes]: https://docs.microsoft.com/en-us/azure/aks/concepts-storage
 <!-- markdownlint-enable url -->
 
-{{< chooser k8s-language "typescript,yaml" >}}
+{{< k8s-language nokx >}}
 
-{{% choosable k8s-language yaml %}}
+<div class="k8s-language-prologue-yaml"></div>
+<div class="mt">
+{{% md %}}
 
 After the cluster is provisioned and running, create a StorageClass to
 provision Azure disks.
@@ -579,9 +616,12 @@ EOF
 $ kubectl apply -f pvc.yaml
 ```
 
-{{% /choosable %}}
+{{% /md %}}
+</div>
 
-{{% choosable k8s-language typescript %}}
+<div class="k8s-language-prologue-typescript"></div>
+<div class="mt">
+{{% md %}}
 
 ```ts
 import * as k8s from "@pulumi/k8s";
@@ -619,10 +659,14 @@ const myPvc = new k8s.core.v1.PersistentVolumeClaim("mypvc", {
 );
 ```
 
-{{% /choosable %}}
-{{% /choosable %}}
+{{% /md %}}
+</div>
+{{% /md %}}
+</div>
 
-{{% choosable cloud gcp %}}
+<div class="cloud-prologue-gcp"></div>
+<div class="mt">
+{{% md %}}
 
 See the [official GKE docs][gke-storage-classes] for more details.
 
@@ -630,9 +674,11 @@ See the [official GKE docs][gke-storage-classes] for more details.
 [gke-storage-classes]: https://cloud.google.com/kubernetes-engine/docs/concepts/persistent-volumes
 <!-- markdownlint-enable url -->
 
-{{< chooser k8s-language "typescript,yaml" >}}
+{{< k8s-language nokx >}}
 
-{{% choosable k8s-language yaml %}}
+<div class="k8s-language-prologue-yaml"></div>
+<div class="mt">
+{{% md %}}
 
 After the cluster is provisioned and running, create a StorageClass to
 provision GCP disks.
@@ -680,9 +726,12 @@ EOF
 $ kubectl apply -f pvc.yaml
 ```
 
-{{% /choosable %}}
+{{% /md %}}
+</div>
 
-{{% choosable k8s-language typescript %}}
+<div class="k8s-language-prologue-typescript"></div>
+<div class="mt">
+{{% md %}}
 
 ```ts
 import * as k8s from "@pulumi/k8s";
@@ -720,9 +769,10 @@ const myPvc = new k8s.core.v1.PersistentVolumeClaim("mypvc", {
 );
 ```
 
-{{% /choosable %}}
-
-{{% /choosable %}}
+{{% /md %}}
+</div>
+{{% /md %}}
+</div>
 
 ## Recommended Settings
 
@@ -737,7 +787,9 @@ general best-practices and recommendations to configure in the cluster.
   that could be updated at any time.
 * Instead of [using][kube-dash-security] `kube-dashboard`, try [VMware's Octant][octant].
 
-{{% choosable cloud aws %}}
+<div class="cloud-prologue-aws"></div>
+<div class="mt">
+{{% md %}}
 
 **EKS:**
 
@@ -753,26 +805,26 @@ general best-practices and recommendations to configure in the cluster.
   and a [bastion host][aws-bastion] would be needed to access the control
   plane.
 
-    ```typescript
-    import * as eks from "@pulumi/eks";
+```typescript
+import * as eks from "@pulumi/eks";
 
-    // Create an EKS cluster with recommended settings.
-    const cluster = new eks.Cluster(`${projectName}`, {
-            version: "1.14",
-            tags: {
-                "Project": "k8s-aws-cluster",
-                "Org": "pulumi",
-            },
-            clusterSecurityGroupTags: { "ClusterSecurityGroupTag": "true" },
-            nodeSecurityGroupTags: { "NodeSecurityGroupTag": "true" },
-            skipDefaultNodeGroup: true,
-            deployDashboard: false,
-            enabledClusterLogTypes: ["api", "audit", "authenticator", "controllerManager", "scheduler"],
-            // endpointPublicAccess: false,     // Requires bastion to access cluster API endpoint
-            // endpointPrivateAccess: true,     // Requires bastion to access cluster API endpoint
-            ...
-    }
-    ```
+// Create an EKS cluster with recommended settings.
+const cluster = new eks.Cluster(`${projectName}`, {
+        version: "1.14",
+        tags: {
+            "Project": "k8s-aws-cluster",
+            "Org": "pulumi",
+        },
+        clusterSecurityGroupTags: { "ClusterSecurityGroupTag": "true" },
+        nodeSecurityGroupTags: { "NodeSecurityGroupTag": "true" },
+        skipDefaultNodeGroup: true,
+        deployDashboard: false,
+        enabledClusterLogTypes: ["api", "audit", "authenticator", "controllerManager", "scheduler"],
+        // endpointPublicAccess: false,     // Requires bastion to access cluster API endpoint
+        // endpointPrivateAccess: true,     // Requires bastion to access cluster API endpoint
+        ...
+}
+```
 
 [nodegroups]: {{< relref "/docs/guides/crosswalk/kubernetes/worker-nodes" >}}
 
@@ -780,9 +832,12 @@ general best-practices and recommendations to configure in the cluster.
 [aws-bastion]: https://docs.aws.amazon.com/quickstart/latest/linux-bastion/architecture.html
 <!-- markdownlint-enable url -->
 
-{{% /choosable %}}
+{{% /md %}}
+</div>
 
-{{% choosable cloud azure %}}
+<div class="cloud-prologue-azure"></div>
+<div class="mt">
+{{% md %}}
 
 **AKS:**
 
@@ -790,30 +845,33 @@ general best-practices and recommendations to configure in the cluster.
 * Set [Node Labels][k8s-labels] to identify nodes by attributes
 * Enable Log Analytics using the `omsAgent` setting
 
-    ```ts
-    import * as azure from "@pulumi/azure";
+```ts
+import * as azure from "@pulumi/azure";
 
-    const cluster = new azure.containerservice.KubernetesCluster(`${name}`, {
-            ...
-            enablePodSecurityPolicy: true,
-            kubernetesVersion: "1.14.8",
-            addonProfile: {
-                omsAgent: {
-                    enabled: true,
-                    logAnalyticsWorkspaceId: config.logAnalyticsWorkspaceId,
-                },
+const cluster = new azure.containerservice.KubernetesCluster(`${name}`, {
+        ...
+        enablePodSecurityPolicy: true,
+        kubernetesVersion: "1.14.8",
+        addonProfile: {
+            omsAgent: {
+                enabled: true,
+                logAnalyticsWorkspaceId: config.logAnalyticsWorkspaceId,
             },
-    });
-    ```
+        },
+});
+```
 
 <!-- markdownlint-disable url -->
 [k8s-labels]: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/
 [k8s-psp]: https://kubernetes.io/docs/concepts/policy/pod-security-policy/
 <!-- markdownlint-enable url -->
 
-{{% /choosable %}}
+{{% /md %}}
+</div>
 
-{{% choosable cloud gcp %}}
+<div class="cloud-prologue-gcp"></div>
+<div class="mt">
+{{% md %}}
 
 **GKE:**
 
@@ -830,29 +888,29 @@ general best-practices and recommendations to configure in the cluster.
   and a [bastion host][gke-bastion] would be needed to access the control
   plane.
 
-    ```typescript
-    import * as gcp from "@pulumi/gcp";
+```typescript
+import * as gcp from "@pulumi/gcp";
 
-    const cluster = new gcp.container.Cluster("cluster", {
-            ...
-            minMasterVersion: "1.14.7-gke.10",
-            podSecurityPolicyConfig: { enabled: true },
-            nodeConfig: {
-                // We can't create a cluster without a node pool defined, but we want to
-                // only use separately managed node pools. So we create the smallest
-                // possible default node pool and immediately delete it.
-                removeDefaultNodePool: true,
-                initialNodeCount: 1,
-                metadata: {
-                    "disable-legacy-endpoints": "true",
-                },
-                oauthScopes: [
-                    "https://www.googleapis.com/auth/logging.write",
-                    "https://www.googleapis.com/auth/monitoring",
-                ],
+const cluster = new gcp.container.Cluster("cluster", {
+        ...
+        minMasterVersion: "1.14.7-gke.10",
+        podSecurityPolicyConfig: { enabled: true },
+        nodeConfig: {
+            // We can't create a cluster without a node pool defined, but we want to
+            // only use separately managed node pools. So we create the smallest
+            // possible default node pool and immediately delete it.
+            removeDefaultNodePool: true,
+            initialNodeCount: 1,
+            metadata: {
+                "disable-legacy-endpoints": "true",
             },
-    });
-    ```
+            oauthScopes: [
+                "https://www.googleapis.com/auth/logging.write",
+                "https://www.googleapis.com/auth/monitoring",
+            ],
+        },
+});
+```
 
 <!-- markdownlint-disable url -->
 [k8s-labels]: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/
@@ -861,8 +919,8 @@ general best-practices and recommendations to configure in the cluster.
 [gke-private-cluster]: https://cloud.google.com/kubernetes-engine/docs/how-to/private-clusters
 [nodegroups]: {{< relref "/docs/guides/crosswalk/kubernetes/worker-nodes" >}}
 [k8s-psp]: https://kubernetes.io/docs/concepts/policy/pod-security-policy/
-
-{{% /choosable %}}
+{{% /md %}}
+</div>
 
 [kube-dash-security]: https://blog.heptio.com/on-securing-the-kubernetes-dashboard-16b09b1b7aca
 [octant]: https://github.com/vmware-tanzu/octant

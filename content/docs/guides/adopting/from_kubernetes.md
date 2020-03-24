@@ -37,9 +37,7 @@ $ curl -L --remote-name \
 
 This Pulumi program uses `ConfigFile` to read that YAML file, provision the resources inside of it, and export the resulting IP addresses:
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
-
-{{% choosable language javascript %}}
+{{< langchoose csharp >}}
 
 ```javascript
 let k8s = require("@pulumi/kubernetes");
@@ -56,9 +54,6 @@ module.exports = {
 };
 ```
 
-{{% /choosable %}}
-{{% choosable language typescript %}}
-
 ```typescript
 import * as k8s from "@pulumi/kubernetes";
 
@@ -72,9 +67,6 @@ const frontend = guestbook.getResource("v1/Service", "frontend");
 export const privateIp = frontend.spec.clusterIP;
 ```
 
-{{% /choosable %}}
-{{% choosable language python %}}
-
 ```python
 import pulumi
 import pulumi_kubernetes as k8s
@@ -86,40 +78,6 @@ guestbook = k8s.yaml.ConfigFile('guestbook', 'guestbook-all-in-one.yaml')
 frontend = guestbook.get_resource('v1/Service', 'frontend')
 pulumi.export('private_ip', frontend.spec['cluster_ip'])
 ```
-
-{{% /choosable %}}
-{{% choosable language go %}}
-
-```go
-// Pulumi Kubernetes support for Go is coming soon:
-// https://github.com/pulumi/pulumi-kubernetes/issues/70
-```
-
-As we can see here, the `getResource` function lets us retrieve an internal resource by type and name, so that we can interact with its properties. These will be strongly typed based on the resource type. Be careful using this, of course, as it makes your code subject to the internal implementation details of the YAML configuration &mdash; however, it's often necessary to find the information you need, like the auto-assigned IP addresses.
-
-Running `pulumi up` will deploy the resources and then export the resulting frontend service's auto-assigned cluster IP address:
-
-```bash
-Updating (dev):
-     Type                              Name          Status
- +   pulumi:pulumi:Stack               k8s-yaml-dev  created
- +   └─ kubernetes:yaml:ConfigFile     guestbook     created
- +      ├─ kubernetes:core:Service     redis-master  created
- +      ├─ kubernetes:core:Service     frontend      created
- +      ├─ kubernetes:apps:Deployment  frontend      created
- +      ├─ kubernetes:core:Service     redis-slave   created
- +      ├─ kubernetes:apps:Deployment  redis-master  created
- +      └─ kubernetes:apps:Deployment  redis-slave   created
-
-Outputs:
-    privateIp: "10.52.254.168"
-
-Resources:
-    + 8 created
-```
-
-{{% /choosable %}}
-{{% choosable language csharp %}}
 
 ```csharp
 using System;
@@ -154,9 +112,33 @@ class Program
 }
 ```
 
-{{% /choosable %}}
+```go
+// Pulumi Kubernetes support for Go is coming soon:
+// https://github.com/pulumi/pulumi-kubernetes/issues/70
+```
 
-{{< /chooser >}}
+As we can see here, the `getResource` function lets us retrieve an internal resource by type and name, so that we can interact with its properties. These will be strongly typed based on the resource type. Be careful using this, of course, as it makes your code subject to the internal implementation details of the YAML configuration &mdash; however, it's often necessary to find the information you need, like the auto-assigned IP addresses.
+
+Running `pulumi up` will deploy the resources and then export the resulting frontend service's auto-assigned cluster IP address:
+
+```bash
+Updating (dev):
+     Type                              Name          Status
+ +   pulumi:pulumi:Stack               k8s-yaml-dev  created
+ +   └─ kubernetes:yaml:ConfigFile     guestbook     created
+ +      ├─ kubernetes:core:Service     redis-master  created
+ +      ├─ kubernetes:core:Service     frontend      created
+ +      ├─ kubernetes:apps:Deployment  frontend      created
+ +      ├─ kubernetes:core:Service     redis-slave   created
+ +      ├─ kubernetes:apps:Deployment  redis-master  created
+ +      └─ kubernetes:apps:Deployment  redis-slave   created
+
+Outputs:
+    privateIp: "10.52.254.168"
+
+Resources:
+    + 8 created
+```
 
 ### Deploying Multiple Kubernetes YAML Files
 
@@ -174,9 +156,7 @@ $ popd
 
 This Pulumi program uses `ConfigGroup` to read these YAML files, provision the resources inside of them, and export the resulting IP addresses:
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
-
-{{% choosable language javascript %}}
+{{< langchoose csharp >}}
 
 ```javascript
 let k8s = require("@pulumi/kubernetes");
@@ -194,9 +174,6 @@ module.exports = {
 };
 ```
 
-{{% /choosable %}}
-{{% choosable language typescript %}}
-
 ```typescript
 import * as k8s from "@pulumi/kubernetes";
 import * as path from "path";
@@ -211,24 +188,10 @@ const frontend = guestbook.getResource("v1/Service", "frontend");
 export const privateIp = frontend.spec.clusterIP;
 ```
 
-{{% /choosable %}}
-{{% choosable language python %}}
-
 ```python
 # ConfigGroup is not yet available in Python:
 # https://github.com/pulumi/pulumi-kubernetes/issues/770
 ```
-
-{{% /choosable %}}
-{{% choosable language go %}}
-
-```go
-// Pulumi Kubernetes support for Go is coming soon:
-// https://github.com/pulumi/pulumi-kubernetes/issues/70
-```
-
-{{% /choosable %}}
-{{% choosable language csharp %}}
 
 ```csharp
 using System;
@@ -264,9 +227,10 @@ class Program
 }
 ```
 
-{{% /choosable %}}
-
-{{< /chooser >}}
+```go
+// Pulumi Kubernetes support for Go is coming soon:
+// https://github.com/pulumi/pulumi-kubernetes/issues/70
+```
 
 Running `pulumi up` will deploy all of the resources in all of the YAML files and then export the resulting frontend service's auto-assigned cluster IP address:
 
@@ -326,9 +290,7 @@ $ helm repo add stable https://kubernetes-charts.storage.googleapis.com/
 
 To illustrate provisioning a Helm Chart using Pulumi, we will deploy the `stable/wordpress` chart. This will stand up a fully functional WordPress instance that uses MariaDB:
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
-
-{{% choosable language javascript %}}
+{{< langchoose csharp >}}
 
 ```javascript
 let k8s = require("@pulumi/kubernetes");
@@ -347,9 +309,6 @@ module.exports = {
 };
 ```
 
-{{% /choosable %}}
-{{% choosable language typescript %}}
-
 ```typescript
 import * as k8s from "@pulumi/kubernetes";
 
@@ -364,9 +323,6 @@ const wordpress = new k8s.helm.v2.Chart("wpdev", {
 const frontend = wordpress.getResource("v1/Service", "wpdev-wordpress");
 export const frontendIp = frontend.status.loadBalancer.ingress[0].ip;
 ```
-
-{{% /choosable %}}
-{{% choosable language python %}}
 
 ```python
 import pulumi
@@ -383,17 +339,6 @@ wordpress = Chart('wpdev', config=ChartOpts(
 frontend = wordpress.get_resource('v1/Service', 'wpdev-wordpress')
 pulumi.export('frontend_ip', frontend.status.load_balancer.ingress[0].ip)
 ```
-
-{{% /choosable %}}
-{{% choosable language go %}}
-
-```go
-// Pulumi Kubernetes support for Go is coming soon:
-// https://github.com/pulumi/pulumi-kubernetes/issues/70
-```
-
-{{% /choosable %}}
-{{% choosable language csharp %}}
 
 ```csharp
 using System.Collections.Generic;
@@ -429,9 +374,10 @@ class Program
 }
 ```
 
-{{% /choosable %}}
-
-{{< /chooser >}}
+```go
+// Pulumi Kubernetes support for Go is coming soon:
+// https://github.com/pulumi/pulumi-kubernetes/issues/70
+```
 
 Similar to `ConfigFile` and `ConfigGroup` resource types shown above, all provisioned resources are available via the `getResource` function. Be careful when depending on this, as the internal structure of Helm Charts regularly change and this could make your code more brittle and dependent upon implementation details.
 
@@ -480,9 +426,7 @@ To render YAML during a `pulumi up` rather than have Pulumi perform the deployme
 
 This example provisions a simple load-balanced NGINX service using a general purpose language but renders the output to YAML:
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
-
-{{% choosable language javascript %}}
+{{< langchoose csharp >}}
 
 ```javascript
 let k8s = require("@pulumi/kubernetes");
@@ -513,9 +457,6 @@ let svc = new k8s.core.v1.Service("nginx-svc", {
 }, { provider: renderProvider });
 ```
 
-{{% /choosable %}}
-{{% choosable language typescript %}}
-
 ```typescript
 import * as k8s from "@pulumi/kubernetes";
 
@@ -544,9 +485,6 @@ const svc = new k8s.core.v1.Service("nginx-svc", {
     },
 }, { provider: renderProvider });
 ```
-
-{{% /choosable %}}
-{{% choosable language python %}}
 
 ```python
 from pulumi import ResourceOptions
@@ -578,17 +516,6 @@ svc = Service('nginx-svc',
     }, __opts__=ResourceOptions(provider=render_provider)
 )
 ```
-
-{{% /choosable %}}
-{{% choosable language go %}}
-
-```go
-// Pulumi Kubernetes support for Go is coming soon:
-// https://github.com/pulumi/pulumi-kubernetes/issues/70
-```
-
-{{% /choosable %}}
-{{% choosable language csharp %}}
 
 ```csharp
 using System.Collections.Generic;
@@ -662,9 +589,10 @@ class Program
 }
 ```
 
-{{% /choosable %}}
-
-{{< /chooser >}}
+```go
+// Pulumi Kubernetes support for Go is coming soon:
+// https://github.com/pulumi/pulumi-kubernetes/issues/70
+```
 
 Next, just run `pulumi up`:
 
@@ -714,9 +642,7 @@ Let's see how to assign our service a public IP address, starting with [the sing
 
 The Kubernetes Guestbook by default does not assign a load balancer for the frontend service. To fix this, we could edit the YAML file, of course, but let's see `transformations` in action. By supplying the `transformations` callback that rewrites the object configuration on the fly, we can cause a load balancer to get created:
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
-
-{{% choosable language javascript %}}
+{{< langchoose csharp >}}
 
 ```javascript
 ...
@@ -735,9 +661,6 @@ module.exports = {
 };
 ```
 
-{{% /choosable %}}
-{{% choosable language typescript %}}
-
 ```typescript
 ...
 const guestbook = new k8s.yaml.ConfigFile("guestbook", {
@@ -752,9 +675,6 @@ const guestbook = new k8s.yaml.ConfigFile("guestbook", {
 export const publicIp = frontend.status.loadBalancer.ingress[0].ip;
 ```
 
-{{% /choosable %}}
-{{% choosable language python %}}
-
 ```python
 ...
 def make_frontend_public(obj):
@@ -765,17 +685,6 @@ guestbook = k8s.yaml.ConfigFile('guestbook', 'guestbook-all-in-one.yaml',
 ...
 pulumi.export('public_ip', frontend.status['load_balancer']['ingress'][0]['ip'])
 ```
-
-{{% /choosable %}}
-{{% choosable language go %}}
-
-```go
-// Pulumi Kubernetes support for Go is coming soon:
-// https://github.com/pulumi/pulumi-kubernetes/issues/70
-```
-
-{{% /choosable %}}
-{{% choosable language csharp %}}
 
 ```csharp
 ...
@@ -806,9 +715,10 @@ pulumi.export('public_ip', frontend.status['load_balancer']['ingress'][0]['ip'])
 ...
 ```
 
-{{% /choosable %}}
-
-{{< /chooser >}}
+```go
+// Pulumi Kubernetes support for Go is coming soon:
+// https://github.com/pulumi/pulumi-kubernetes/issues/70
+```
 
 After running `pulumi up`, we will see the `frontend` service replaced and that a `publicIp` is now assigned:
 

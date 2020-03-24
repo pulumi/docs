@@ -44,48 +44,51 @@ To use AWSGuard policies, you must create a Policy Pack that references the `@pu
     ```
 1. Run the `pulumi policy new` command. Since Policy as Code is in preview, you will need to set `PULUMI_EXPERIMENTAL=true` as an environment variable.
 
-    {{< chooser os "macos,windows,linux" >}}
+    {{< oschoose >}}
 
-{{% choosable os macos %}}
-
+    <div class="os-prologue-macos"></div>
+    <div class="mt-4">
+{{% md %}}
 On macOS, you can run `export PULUMI_EXPERIMENTAL=true` or simply prepend it to your commands as shown.
 
 ```sh
 $ PULUMI_EXPERIMENTAL=true pulumi policy new awsguard-typescript
 ```
-{{% /choosable %}}
+{{% /md %}}
+    </div>
 
-{{% choosable os linux %}}
-
+    <div class="os-prologue-linux"></div>
+    <div class="mt-4">
+{{% md %}}
 On Linux, you can run `export PULUMI_EXPERIMENTAL=true` or simply prepend it to your commands as shown.
 
 ```sh
 $ PULUMI_EXPERIMENTAL=true pulumi policy new awsguard-typescript
 ```
+{{% /md %}}
+    </div>
 
-{{% /choosable %}}
-
-{{% choosable os windows %}}
-
+    <div class="os-prologue-windows"></div>
+    <div class="mt-4">
+{{% md %}}
 On Windows, you must first set the environment variable before running the command.
 
-Windows cmd.exe:
+#### **Windows cmd.exe**
 
 ```bat
 > set PULUMI_EXPERIMENTAL=true
 > pulumi policy new awsguard-typescript
 ```
 
-Windows PowerShell:
+#### **Windows PowerShell**
 
 ```powershell
 > $env:PULUMI_EXPERIMENTAL = 'true'
 > pulumi policy new awsguard-typescript
 ```
 
-{{% /choosable %}}
-
-{{< /chooser >}}
+{{% /md %}}
+    </div>
 
 1. Tweak the code in the `index.ts` file as desired. The default implementation provided by the `awsguard-typescript` template simply creates a new instance of `AwsGuard` with all policies set to have an enforcement level of advisory.
 
@@ -154,47 +157,54 @@ Policy Packs can be tested on a user's local workstation to facilitate rapid dev
 
     In the Pulumi project's directory run:
 
-    {{< chooser os "macos,windows,linux" >}}
+    {{< oschoose >}}
 
-{{% choosable os macos %}}
-
-```sh
-$ PULUMI_EXPERIMENTAL=true pulumi preview --policy-pack <path-to-policy-pack-directory>
-```
-
-{{% /choosable %}}
-
-{{% choosable os linux %}}
+    <div class="os-prologue-macos"></div>
+    <div class="mt-4">
+{{% md %}}
 
 ```sh
 $ PULUMI_EXPERIMENTAL=true pulumi preview --policy-pack <path-to-policy-pack-directory>
 ```
 
-{{% /choosable %}}
+{{% /md %}}
+    </div>
 
-{{% choosable os windows %}}
+    <div class="os-prologue-linux"></div>
+    <div class="mt-4">
+{{% md %}}
 
-Windows cmd.exe:
+```sh
+$ PULUMI_EXPERIMENTAL=true pulumi preview --policy-pack <path-to-policy-pack-directory>
+```
+
+{{% /md %}}
+    </div>
+
+    <div class="os-prologue-windows"></div>
+    <div class="mt-4">
+{{% md %}}
+
+#### **Windows cmd.exe**
 
 ```bat
 > set PULUMI_EXPERIMENTAL=true
 > pulumi preview --policy-pack <path-to-policy-pack-directory>
 ```
 
-Windows PowerShell:
+#### **Windows PowerShell**
 
 ```powershell
 > $env:PULUMI_EXPERIMENTAL = 'true'
 > pulumi preview --policy-pack <path-to-policy-pack-directory>
 ```
 
-{{% /choosable %}}
-
-{{< /chooser >}}
+{{% /md %}}
+    </div>
 
     If the stack is not in compliance, the policy violation will be displayed. Since the enforcement level for all policies are set to advisory, a warning is shown for any resources that are not in compliance with the AWSGuard policies. In this case, logging must be defined for S3 buckets.
 
-    {{< highlight sh >}}
+{{< highlight sh >}}
 Previewing update (dev):
 
     Type                 Name           Plan       Info
@@ -218,7 +228,7 @@ Resources:
 
 1. Running the `pulumi preview` command again will now fail the preview operation.
 
-    {{< highlight sh >}}
+{{< highlight sh >}}
 Previewing update (dev):
 
     Type                 Name           Plan       Info
@@ -248,3 +258,5 @@ aws:s3:Bucket (my-bucket):
 Once you've validated the behavior of the AWSGuard policies you've configured in your Policy Pack, an organization administrator can publish the Policy Pack to the Pulumi Console to be enforced across your organization. To learn more see [Enforcing a Policy Pack Across an Organization]({{< relref "/docs/get-started/crossguard/enforcing-a-policy-pack" >}}).
 
 Now that you've seen how to configure and use AWSGuard policies, you may want to write your own policies. See the [Getting Started tutorial]({{< relref "/docs/get-started/crossguard" >}}) to get started.
+
+<!-- markdownlint-enable ul code -->

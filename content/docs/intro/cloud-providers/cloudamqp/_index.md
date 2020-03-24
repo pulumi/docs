@@ -19,9 +19,7 @@ The CloudAMQP provider supports several options for providing access to CloudAMQ
 
 ## Example
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
-
-{{% choosable language javascript %}}
+{{< langchoose csharp >}}
 
 ```javascript
 const cloudamqp = require("@pulumi/cloudamqp")
@@ -32,9 +30,6 @@ const instance = new cloudamqp.Instance("demo-instance", {
 });
 ```
 
-{{% /choosable %}}
-{{% choosable language typescript %}}
-
 ```typescript
 import * as cloudamqp from "@pulumi/cloudamqp";
 
@@ -44,9 +39,6 @@ const instance = new cloudamqp.Instance("demo-instance", {
 });
 ```
 
-{{% /choosable %}}
-{{% choosable language python %}}
-
 ```python
 import pulumi_cloudamqp as cloudamqp
 
@@ -55,9 +47,6 @@ instance = cloudamqp.Instance("demo-instance",
     region="amazon-web-services::us-west-2"
 )
 ```
-
-{{% /choosable %}}
-{{% choosable language go %}}
 
 ```go
 import (
@@ -69,9 +58,6 @@ instance, _ := cloudamqp.NewInstance(ctx, "demo-instance", &cloudamqp.InstanceAr
 	Region: "amazon-web-services::us-west-2"
 })
 ```
-
-{{% /choosable %}}
-{{% choosable language csharp %}}
 
 ```csharp
 using System.Collections.Generic;
@@ -91,10 +77,6 @@ class Program
         });
 }
 ```
-
-{{% /choosable %}}
-
-{{< /chooser >}}
 
 ## Libraries
 

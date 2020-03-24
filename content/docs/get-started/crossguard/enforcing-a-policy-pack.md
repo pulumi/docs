@@ -12,45 +12,58 @@ aliases: ["/docs/get-started/policy-as-code/enforcing-a-policy-pack/"]
 
 Once you’ve validated the behavior of your policies, an organization administrator can publish them to the Pulumi Console to be enforced across your organization. Any Pulumi client (a developer’s workstation, CI/CD tool, etc) that interacts with a stack via the Pulumi Console will have policy enforcement during the execution of `preview` and `update`. Policy Packs are versioned by the Pulumi Console so that updated policies can be published and applied as ready and also reverted to previous versions as needed.
 
+<!-- markdownlint-disable ul -->
 1. From within the Policy Pack directory, run the following command to publish your pack:
 
-    {{< chooser os "macos,windows,linux" >}}
+    {{< oschoose >}}
 
-{{% choosable os macos %}}
-
-```sh
-$ PULUMI_EXPERIMENTAL=true pulumi policy publish [org-name]
-```
-
-{{% /choosable %}}
-
-{{% choosable os linux %}}
+    <div class="os-prologue-macos"></div>
+    <div class="mt-4">
+{{% md %}}
+<!-- markdownlint-enable ul -->
 
 ```sh
 $ PULUMI_EXPERIMENTAL=true pulumi policy publish [org-name]
 ```
 
-{{% /choosable %}}
+{{% /md %}}
+    </div>
 
-{{% choosable os windows %}}
+    <div class="os-prologue-linux"></div>
+    <div class="mt-4">
+{{% md %}}
 
-Windows cmd.exe:
+```sh
+$ PULUMI_EXPERIMENTAL=true pulumi policy publish [org-name]
+```
+
+{{% /md %}}
+    </div>
+
+    <div class="os-prologue-windows"></div>
+    <div class="mt-4">
+{{% md %}}
+
+<!-- markdownlint-disable emphasis -->
+**Windows cmd.exe**
+<!-- markdownlint-enable emphasis -->
 
 ```bat
 > set PULUMI_EXPERIMENTAL=true
 > pulumi policy publish [org-name]
 ```
 
-Windows PowerShell:
+<!-- markdownlint-disable emphasis -->
+**Windows PowerShell**
+<!-- markdownlint-enable emphasis -->
 
 ```powershell
 > $env:PULUMI_EXPERIMENTAL = 'true'
 > pulumi policy publish [org-name]
 ```
 
-{{% /choosable %}}
-
-{{< /chooser >}}
+{{% /md %}}
+    </div>
 
     The `[org-name]` is optional. If not specified, the pack will be published to your user account.
 
@@ -67,83 +80,106 @@ Windows PowerShell:
 <!-- markdownlint-disable ul -->
 1. You can enable this Policy Pack to your organization’s default Policy Group by running:
 
-    {{< chooser os "macos,windows,linux" >}}
+    {{< oschoose >}}
 
-{{% choosable os macos %}}
-
-```sh
-$ PULUMI_EXPERIMENTAL=true pulumi policy enable <org-name>/<policy-pack-name> <version>
-```
-
-{{% /choosable %}}
-
-{{% choosable os linux %}}
+    <div class="os-prologue-macos"></div>
+    <div class="mt-4">
+{{% md %}}
+<!-- markdownlint-enable ul -->
 
 ```sh
 $ PULUMI_EXPERIMENTAL=true pulumi policy enable <org-name>/<policy-pack-name> <version>
 ```
 
-{{% /choosable %}}
+{{% /md %}}
+    </div>
 
-{{% choosable os windows %}}
+    <div class="os-prologue-linux"></div>
+    <div class="mt-4">
+{{% md %}}
 
-Windows cmd.exe:
+```sh
+$ PULUMI_EXPERIMENTAL=true pulumi policy enable <org-name>/<policy-pack-name> <version>
+```
+
+{{% /md %}}
+    </div>
+
+    <div class="os-prologue-windows"></div>
+    <div class="mt-4">
+{{% md %}}
+
+<!-- markdownlint-disable emphasis -->
+**Windows cmd.exe**
+<!-- markdownlint-enable emphasis -->
 
 ```bat
 > set PULUMI_EXPERIMENTAL=true
 > pulumi policy enable <org-name>/<policy-pack-name> <version>
 ```
 
-Windows PowerShell:
+<!-- markdownlint-disable emphasis -->
+**Windows PowerShell**
+<!-- markdownlint-enable emphasis -->
 
 ```powershell
 > $env:PULUMI_EXPERIMENTAL = 'true'
 > pulumi policy enable <org-name>/<policy-pack-name> <version>
 ```
 
-{{% /choosable %}}
-
-{{< /chooser >}}
+{{% /md %}}
+    </div>
 
     For example, to enable the Policy Pack created in the previous step:
 
-    {{< chooser os "macos,windows,linux" >}}
+    {{< oschoose >}}
 
-{{% choosable os macos %}}
-
-```sh
-$ PULUMI_EXPERIMENTAL=true pulumi policy enable pulumi/policy-pack-typescript latest
-```
-
-{{% /choosable %}}
-
-{{% choosable os linux %}}
+    <div class="os-prologue-macos"></div>
+    <div class="mt-4">
+{{% md %}}
 
 ```sh
 $ PULUMI_EXPERIMENTAL=true pulumi policy enable pulumi/policy-pack-typescript latest
 ```
 
-{{% /choosable %}}
+{{% /md %}}
+    </div>
 
-{{% choosable os windows %}}
+    <div class="os-prologue-linux"></div>
+    <div class="mt-4">
+{{% md %}}
 
-Windows cmd.exe:
+```sh
+$ PULUMI_EXPERIMENTAL=true pulumi policy enable pulumi/policy-pack-typescript latest
+```
+
+{{% /md %}}
+    </div>
+
+    <div class="os-prologue-windows"></div>
+    <div class="mt-4">
+{{% md %}}
+
+<!-- markdownlint-disable emphasis -->
+**Windows cmd.exe**
+<!-- markdownlint-enable emphasis -->
 
 ```bat
 > set PULUMI_EXPERIMENTAL=true
 > pulumi policy enable pulumi/policy-pack-typescript latest
 ```
 
-Windows PowerShell:
+<!-- markdownlint-disable emphasis -->
+**Windows PowerShell**
+<!-- markdownlint-enable emphasis -->
 
 ```powershell
 > $env:PULUMI_EXPERIMENTAL = 'true'
 > pulumi policy enable pulumi/policy-pack-typescript latest
 ```
 
-{{% /choosable %}}
-
-{{< /chooser >}}
+{{% /md %}}
+    </div>
 
     The CLI by default enables the Policy Pack to your default Policy Group. If you would like to add the Policy Pack to a different Policy Group, you can use the `--policy-group` flag.
 

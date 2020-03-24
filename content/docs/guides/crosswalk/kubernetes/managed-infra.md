@@ -5,9 +5,11 @@ meta_desc: This page provides an overview of Managed Infrastructure services tha
 linktitle: Managed Infrastructure
 ---
 
-{{< chooser cloud "aws,azure,gcp" / >}}
+{{< cloudchoose >}}
 
-{{% choosable cloud aws %}}
+<div class="cloud-prologue-aws"></div>
+<div class="mt">
+{{% md %}}
 
 AWS has a catalog of [managed infrastructure][aws-managed-svcs] services that
 support and complement Kubernetes clusters and their workloads.
@@ -33,10 +35,12 @@ The full code for this stack is on [GitHub][gh-repo-stack].
 [aws-ngw]: https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html
 [aws-sgs]: https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html
 <!-- markdownlint-enable url -->
+{{% /md %}}
+</div>
 
-{{% /choosable %}}
-
-{{% choosable cloud azure %}}
+<div class="cloud-prologue-azure"></div>
+<div class="mt">
+{{% md %}}
 
 Azure has a catalog of [managed infrastructure][azure-managed-svcs] services that
 support and complement Kubernetes clusters and their workloads.
@@ -57,10 +61,12 @@ The full code for this stack is on [GitHub][gh-repo-stack].
 [azure-sgs]: https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-vnet-plan-design-arm#security
 [azure-vpn-gw]: https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-vnet-vnet-rm-ps
 [gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/azure/02-managed-infra
+{{% /md %}}
+</div>
 
-{{% /choosable %}}
-
-{{% choosable cloud gcp %}}
+<div class="cloud-prologue-gcp"></div>
+<div class="mt">
+{{% md %}}
 
 GCP has a catalog of [managed infrastructure][gcp-managed-svcs] services that
 support and complement Kubernetes clusters and their workloads.
@@ -83,8 +89,8 @@ The full code for this stack is on [GitHub][gh-repo-stack].
 [gcp-fw-rules]: https://cloud.google.com/vpc/docs/firewalls
 [gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/gcp/02-managed-infra
 <!-- markdownlint-enable url -->
-
-{{% /choosable %}}
+{{% /md %}}
+</div>
 
 ## Overview
 
@@ -95,7 +101,9 @@ We'll configure and deploy:
 
 ## Networking
 
-{{% choosable cloud aws %}}
+<div class="cloud-prologue-aws"></div>
+<div class="mt">
+{{% md %}}
 
 In [Crosswalk for AWS][crosswalk-aws] we showcase how to define networking:
 
@@ -133,10 +141,12 @@ export const privateSubnetIds = vpc.privateSubnetIds;
 [vpc-subnets]: {{< relref "/docs/guides/crosswalk/aws/vpc#configuring-subnets-for-a-vpc" >}}
 [vpc-gw]: {{< relref "/docs/guides/crosswalk/aws/vpc#configuring-internet-and-nat-gateways-for-subnets-in-a-vpc" >}}
 [vpc-sg]: {{< relref "/docs/guides/crosswalk/aws/vpc#configuring-security-groups-for-a-vpc" >}}
+{{% /md %}}
+</div>
 
-{{% /choosable %}}
-
-{{% choosable cloud azure %}}
+<div class="cloud-prologue-azure"></div>
+<div class="mt">
+{{% md %}}
 
 ### Create a New Virtual Network for Kubernetes
 
@@ -158,9 +168,12 @@ const subnet = new azure.network.Subnet(name, {
 });
 ```
 
-{{% /choosable %}}
+{{% /md %}}
+</div>
 
-{{% choosable cloud gcp %}}
+<div class="cloud-prologue-gcp"></div>
+<div class="mt">
+{{% md %}}
 
 <!-- markdownlint-disable no-duplicate-heading -->
 ### Create a New VPC for Kubernetes
@@ -193,9 +206,12 @@ const subnet = new gcp.compute.Subnetwork(name, {
 export const subnetworkName = subnet.name;
 ```
 
-{{% /choosable %}}
+{{% /md %}}
+</div>
 
-{{% choosable cloud aws %}}
+<div class="cloud-prologue-aws"></div>
+<div class="mt">
+{{% md %}}
 
 #### Use the Default VPC with Kubernetes
 
@@ -213,9 +229,12 @@ export const defaultPublicSubnetIds = defaultVpc.publicSubnetIds;
 export const defaultPrivateSubnetIds = defaultVpc.privateSubnetIds;
 ```
 
-{{% /choosable %}}
+{{% /md %}}
+</div>
 
-{{% choosable cloud aws %}}
+<div class="cloud-prologue-aws"></div>
+<div class="mt">
+{{% md %}}
 
 #### Use an Existing VPC with Kubernetes
 
@@ -239,33 +258,41 @@ export const existingPublicSubnetIds = existingVpc.publicSubnetIds;
 export const existingPrivateSubnetIds = existingVpc.privateSubnetIds;
 ```
 
-{{% /choosable %}}
+{{% /md %}}
+</div>
 
 ### Requirements & Recommendations
 
-{{% choosable cloud aws %}}
+<div class="cloud-prologue-aws"></div>
+<div class="mt">
+{{% md %}}
 
 See the official docs [EKS Network Requirements](https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html)
 and [AWS VPC Recommendations](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Scenario2.html) for more details.
 
 [eks-tagging]: https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html#vpc-subnet-tagging
+{{% /md %}}
+</div>
 
-{{% /choosable %}}
-
-{{% choosable cloud azure %}}
+<div class="cloud-prologue-azure"></div>
+<div class="mt">
+{{% md %}}
 
 See the official Networking [docs][azure-net-docs] for more details.
 
 [azure-net-docs]: https://docs.microsoft.com/en-us/azure/aks/concepts-network
-{{% /choosable %}}
+{{% /md %}}
+</div>
 
-{{% choosable cloud gcp %}}
+<div class="cloud-prologue-gcp"></div>
+<div class="mt">
+{{% md %}}
 
 See the official Networking [docs][gke-net-docs] for more details.
 
 [gke-net-docs]: https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-admin-overview
-
-{{% /choosable %}}
+{{% /md %}}
+</div>
 
 ## Storage
 
@@ -284,7 +311,9 @@ or [App Services][crosswalk-app-svcs]. Those higher layers tend to primarily foc
 the direct needs of a **given** Kubernetes cluster and its apps, rather than the
 needs of your complete architecture.
 
-{{% choosable cloud aws %}}
+<div class="cloud-prologue-aws"></div>
+<div class="mt">
+{{% md %}}
 
 ### Amazon Simple Storage Service (S3)
 
@@ -307,10 +336,12 @@ See [Persisting Kubernetes Workloads with Amazon EFS][pulumi-efs] and the
 [aws-ecr]: https://aws.amazon.com/ecr/
 [aws-s3]: https://aws.amazon.com/s3
 <!-- markdownlint-enable url -->
+{{% /md %}}
+</div>
 
-{{% /choosable %}}
-
-{{% choosable cloud azure %}}
+<div class="cloud-prologue-azure"></div>
+<div class="mt">
+{{% md %}}
 
 ### Azure Blob Storage
 
@@ -388,9 +419,12 @@ const appImage = new docker.Image(customImage, {
 });
 ```
 
-{{% /choosable %}}
+{{% /md %}}
+</div>
 
-{{% choosable cloud gcp %}}
+<div class="cloud-prologue-gcp"></div>
+<div class="mt">
+{{% md %}}
 
 ### Google Container Registry (GCR)
 
@@ -442,7 +476,8 @@ const picture = new gcp.storage.BucketObject("picture", {
 });
 ```
 
-{{% /choosable %}}
+{{% /md %}}
+</div>
 
 <!-- markdownlint-disable url -->
 [crosswalk-cluster-svcs]: {{< relref "/docs/guides/crosswalk/kubernetes/cluster-services" >}}

@@ -16,9 +16,7 @@ Now that we have an instance of our Pulumi program deployed, let's enable encryp
 
 Replace the entire contents of {{< langfile >}} with the following:
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
-
-{{% choosable language javascript %}}
+{{< langchoose csharp >}}
 
 ```javascript
 "use strict";
@@ -45,9 +43,6 @@ const bucket = new aws.s3.Bucket("my-bucket", {
 exports.bucketName = bucket.id;
 ```
 
-{{% /choosable %}}
-{{% choosable language typescript %}}
-
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -72,9 +67,6 @@ const bucket = new aws.s3.Bucket("my-bucket", {
 export const bucketName = bucket.id;
 ```
 
-{{% /choosable %}}
-{{% choosable language python %}}
-
 ```python
 import pulumi
 from pulumi_aws import kms, s3
@@ -96,9 +88,6 @@ bucket = s3.Bucket('my-bucket',
 # Export the name of the bucket
 pulumi.export('bucket_name',  bucket.id)
 ```
-
-{{% /choosable %}}
-{{% choosable language go %}}
 
 ```go
 package main
@@ -138,9 +127,6 @@ func main() {
 	})
 }
 ```
-
-{{% /choosable %}}
-{{% choosable language csharp %}}
 
 ```csharp
 using System.Collections.Generic;
@@ -182,18 +168,16 @@ class Program
 }
 ```
 
-{{% /choosable %}}
-
 Our program now creates a KMS key and enables server-side encryption on the S3 bucket using the KMS key.
 
-{{% choosable language go %}}
+{{% lang go %}}
 We'll need to run `dep ensure` to pick up the new dependencies:
 
 ```bash
 $ dep ensure
 ```
 
-{{% /choosable %}}
+{{% /lang %}}
 
 Next, we'll deploy the changes.
 

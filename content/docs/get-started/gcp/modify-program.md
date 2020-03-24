@@ -18,9 +18,7 @@ Now that we have an instance of our Pulumi program deployed, let's update it to 
 
 Replace the entire contents of {{< langfile >}} with the following:
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
-
-{{% choosable language javascript %}}
+{{< langchoose csharp >}}
 
 ```javascript
 "use strict";
@@ -48,9 +46,6 @@ const bucket = new gcp.storage.Bucket("my-bucket", {
 exports.bucketName = bucket.url;
 ```
 
-{{% /choosable %}}
-{{% choosable language typescript %}}
-
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -76,9 +71,6 @@ const bucket = new gcp.storage.Bucket("my-bucket", {
 export const bucketName = bucket.url;
 ```
 
-{{% /choosable %}}
-{{% choosable language python %}}
-
 ```python
 import pulumi
 from pulumi_gcp import storage, kms
@@ -96,9 +88,6 @@ bucket = storage.Bucket('my-bucket',
 # Export the DNS name of the bucket
 pulumi.export('bucket_name',  bucket.url)
 ```
-
-{{% /choosable %}}
-{{% choosable language go %}}
 
 ```go
 package main
@@ -143,9 +132,6 @@ func main() {
 }
 ```
 
-{{% /choosable %}}
-{{% choosable language csharp %}}
-
 ```csharp
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -189,16 +175,14 @@ class Program
 }
 ```
 
-{{% /choosable %}}
-
-{{% choosable language go %}}
+{{% lang go %}}
 We'll need to run `dep ensure` to pick up the new dependencies:
 
 ```bash
 $ dep ensure
 ```
 
-{{% /choosable %}}
+{{% /lang %}}
 
 Next, we'll deploy the changes.
 

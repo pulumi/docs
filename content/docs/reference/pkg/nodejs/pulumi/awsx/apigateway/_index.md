@@ -1551,14 +1551,14 @@ string here.
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>type</span> Request = awslambda.APIGatewayProxyEvent;</code></pre>
+<pre class="highlight"><code><span class='kd'>type</span> Request = APIGatewayProxyEvent;</code></pre>
 <h3 class="pdoc-module-header" id="RequestContext" data-link-title="RequestContext">
     <a href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/apigateway/api.ts#L48">
         type <strong>RequestContext</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>type</span> RequestContext = awslambda.APIGatewayEventRequestContext;</code></pre>
+<pre class="highlight"><code><span class='kd'>type</span> RequestContext = APIGatewayEventRequestContext;</code></pre>
 <h3 class="pdoc-module-header" id="Response" data-link-title="Response">
     <a href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/apigateway/api.ts#L50">
         type <strong>Response</strong>

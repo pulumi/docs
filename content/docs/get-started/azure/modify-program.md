@@ -16,9 +16,7 @@ Now that we have an instance of our Pulumi program deployed, let's enforce HTTPS
 
 Replace the entire contents of {{< langfile >}} with the following:
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
-
-{{% choosable language javascript %}}
+{{< langchoose csharp >}}
 
 ```javascript
 "use strict";
@@ -40,9 +38,6 @@ const account = new azure.storage.Account("storage", {
 exports.connectionString = account.primaryConnectionString;
 ```
 
-{{% /choosable %}}
-{{% choosable language typescript %}}
-
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -62,9 +57,6 @@ const account = new azure.storage.Account("storage", {
 export const connectionString = account.primaryConnectionString;
 ```
 
-{{% /choosable %}}
-{{% choosable language python %}}
-
 ```python
 import pulumi
 from pulumi_azure import core, storage
@@ -82,9 +74,6 @@ account = storage.Account("storage",
 # Export the connection string for the storage account
 pulumi.export('connection_string', account.primary_connection_string)
 ```
-
-{{% /choosable %}}
-{{% choosable language go %}}
 
 ```go
 package main
@@ -123,9 +112,6 @@ func main() {
 }
 ```
 
-{{% /choosable %}}
-{{% choosable language csharp %}}
-
 ```csharp
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -157,8 +143,6 @@ class Program
     }
 }
 ```
-
-{{% /choosable %}}
 
 Next, we'll deploy the changes.
 

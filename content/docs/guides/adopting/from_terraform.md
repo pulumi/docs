@@ -23,47 +23,37 @@ In each of these cases, you can use the `RemoteStateReference` resource to refer
 
 To use this class, first install the relevant package on your system:
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
+{{< langchoose csharp >}}
 
-{{% choosable language javascript %}}
-
-```bash
-$ npm install @pulumi/terraform
-```
-
-{{% /choosable %}}
-{{% choosable language typescript %}}
+<div class="language-prologue-javascript"></div>
 
 ```bash
 $ npm install @pulumi/terraform
 ```
 
-{{% /choosable %}}
-{{% choosable language python %}}
+<div class="language-prologue-typescript"></div>
+
+```bash
+$ npm install @pulumi/terraform
+```
+
+<div class="language-prologue-python"></div>
 
 ```bash
 $ pip3 install pulumi_terraform
 ```
 
-{{% /choosable %}}
-{{% choosable language go %}}
+<div class="language-prologue-go"></div>
 
 > Terraform RemoteStateReference is not yet supported in Go. See <https://github.com/pulumi/pulumi-terraform/issues/518>.
 
-{{% /choosable %}}
-{{% choosable language csharp %}}
+<div class="language-prologue-csharp"></div>
 
 > Terraform RemoteStateReference is not yet supported in .NET. See <https://github.com/pulumi/pulumi-terraform/issues/516>.
 
-{{% /choosable %}}
-
-{{< /chooser >}}
-
 For example, this code reads AWS EC2 VPC and subnet IDs from `terraform.tfstate` file and provisions new EC2 instances that use them:
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
-
-{{% choosable language javascript %}}
+{{< langchoose csharp >}}
 
 ```javascript
 let aws = require("@pulumi/aws");
@@ -89,9 +79,6 @@ for (let i = 0; i < 2; i++) {
 }
 ```
 
-{{% /choosable %}}
-{{% choosable language typescript %}}
-
 ```typescript
 import * as aws from "@pulumi/aws";
 import * as terraform from "@pulumi/terraform";
@@ -116,9 +103,6 @@ for (let i = 0; i < 2; i++) {
 }
 ```
 
-{{% /choosable %}}
-{{% choosable language python %}}
-
 ```python
 import pulumi_aws as aws
 import pulumi_terraform as terraform
@@ -140,27 +124,17 @@ for i in range(2):
         subnet_id=public_subnet_ids[i])
 ```
 
-{{% /choosable %}}
-{{% choosable language go %}}
-
 ```go
 // Terraform RemoteStateReference is not yet supported in Go.
 //
 // See https://github.com/pulumi/pulumi-terraform/issues/518.
 ```
 
-{{% /choosable %}}
-{{% choosable language csharp %}}
-
 ```csharp
 // Terraform RemoteStateReference is not yet supported in .NET.
 //
 // See https://github.com/pulumi/pulumi-terraform/issues/516.
 ```
-
-{{% /choosable %}}
-
-{{< /chooser >}}
 
 If we run `pulumi up`, well see the two new servers get spun up:
 
@@ -180,9 +154,7 @@ Resources:
 
 This example uses the `"local"` backend type which simply reads a `tfstate` file on disk. There are multiple backends available. For example, this slight change to how the `RemoteStateReference` object is constructed will use a Terraform Cloud or Enterprise workspace:
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
-
-{{% choosable language javascript %}}
+{{< langchoose csharp >}}
 
 ```javascript
 let aws = require("@pulumi/aws");
@@ -204,9 +176,6 @@ let networkState = new terraform.state.RemoteStateReference("network", {
 // Same as above ...
 ```
 
-{{% /choosable %}}
-{{% choosable language typescript %}}
-
 ```typescript
 import * as aws from "@pulumi/aws";
 import * as pulumi from "@pulumi/pulumi";
@@ -227,9 +196,6 @@ const networkState = new terraform.state.RemoteStateReference("network", {
 // Same as above ...
 ```
 
-{{% /choosable %}}
-{{% choosable language python %}}
-
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -248,27 +214,17 @@ network_state = terraform.state.RemoteStateReference('network',
 # Same as above ...
 ```
 
-{{% /choosable %}}
-{{% choosable language go %}}
-
 ```go
 // Terraform RemoteStateReference is not yet supported in Go.
 //
 // See https://github.com/pulumi/pulumi-terraform/issues/518.
 ```
 
-{{% /choosable %}}
-{{% choosable language csharp %}}
-
 ```csharp
 // Terraform RemoteStateReference is not yet supported in .NET.
 //
 // See https://github.com/pulumi/pulumi-terraform/issues/516.
 ```
-
-{{% /choosable %}}
-
-{{< /chooser >}}
 
 Notice also that we've used [Pulumi secrets]({{< relref "/docs/intro/concepts/config#secrets" >}}) to ensure the Terraform Cloud or Enterprise token is secure and encrypted.
 

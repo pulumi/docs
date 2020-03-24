@@ -21,9 +21,7 @@ The Aiven provider supports several options for providing access to Aiven creden
 
 ## Example
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
-
-{{% choosable language javascript %}}
+{{< langchoose csharp >}}
 
 ```javascript
 const aiven = require("@pulumi/aiven")
@@ -37,9 +35,6 @@ const service = new aiven.Service("my-new-service", {
 });
 ```
 
-{{% /choosable %}}
-{{% choosable language typescript %}}
-
 ```typescript
 import * as aiven from "@pulumi/aiven";
 
@@ -52,9 +47,6 @@ const service = new aiven.Service("my-new-service", {
 });
 ```
 
-{{% /choosable %}}
-{{% choosable language python %}}
-
 ```python
 import pulumi_aiven as aiven
 
@@ -66,9 +58,6 @@ service = aiven.Service("my-service",
   service_type="grafana",
 )
 ```
-
-{{% /choosable %}}
-{{% choosable language go %}}
 
 ```go
 import (
@@ -83,9 +72,6 @@ service, _ := aiven.NewService(ctx, "test", &aiven.ServiceArgs{
   ServiceType: "grafana",
 })
 ```
-
-{{% /choosable %}}
-{{% choosable language csharp %}}
 
 ```csharp
 using System.Collections.Generic;
@@ -108,10 +94,6 @@ class Program
         });
 }
 ```
-
-{{% /choosable %}}
-
-{{< /chooser >}}
 
 ## Libraries
 

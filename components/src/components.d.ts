@@ -9,27 +9,20 @@
 import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 import {
   ChooserKey,
-  ChooserMode,
   ChooserType,
 } from './components/chooser/chooser';
 import {
   ChooserKey as ChooserKey1,
-  ChooserMode as ChooserMode1,
-  ChooserOptionStyle,
   ChooserType as ChooserType1,
 } from './components/chooser/chooser';
 
 export namespace Components {
   interface PulumiChoosable {
-    'mode': ChooserMode;
     'selection': ChooserKey;
     'type': ChooserType;
     'value': ChooserKey;
-    'values': ChooserKey;
   }
   interface PulumiChooser {
-    'mode': ChooserMode;
-    'optionStyle': ChooserOptionStyle;
     'options': string;
     'selection': ChooserKey;
     'type': ChooserType;
@@ -66,15 +59,11 @@ declare global {
 
 declare namespace LocalJSX {
   interface PulumiChoosable {
-    'mode'?: ChooserMode;
     'selection'?: ChooserKey;
     'type'?: ChooserType;
     'value'?: ChooserKey;
-    'values'?: ChooserKey;
   }
   interface PulumiChooser {
-    'mode'?: ChooserMode;
-    'optionStyle'?: ChooserOptionStyle;
     'options'?: string;
     'selection'?: ChooserKey;
     'type'?: ChooserType;
