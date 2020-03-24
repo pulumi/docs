@@ -3,6 +3,8 @@
 title: "Infrastructure as Code Workshop | Kubernetes"
 meta_desc: "In this workshop, Luke Hoban and the Pulumi team will show you how to tackle these challenges using Infrastructure as Code (IaC) through hands-on labs."
 
+aliases: [ "/events/workshop-san-francisco-2020-04-09" ]
+
 # If the video is pre-recorded or live.
 pre_recorded: false
 

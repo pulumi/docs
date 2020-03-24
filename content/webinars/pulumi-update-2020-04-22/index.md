@@ -4,7 +4,8 @@ title: "Pulumi Up(date)"
 meta_desc: "Join Pulumi CEO, Joe Duffy, and the Pulumi team for a walk-through of all the improvements and modern infrastructure capabilities of Pulumi."
 
 aliases: [
-    "/webinars/pulumi-v2-virtual-launch"
+    "/webinars/pulumi-v2-virtual-launch",
+    "/events/launch-v2-seattle-2020-04-15"
 ]
 
 # If the video is pre-recorded or live.
@@ -59,6 +60,9 @@ main:
           role: Founder & CEO, Pulumi
 
     # A bullet point list containing what the user will learn during the webinar.
+    learn:
+      - Cloud programming best practices and production-ready techniques.
+      - How to provision cloud resources in your favorite programming language.
 
 
 # The right hand side webinar section.
