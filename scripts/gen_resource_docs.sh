@@ -5,6 +5,8 @@ PACKDIR="./content/docs/reference/pkg"
 ABSOLUTEPACKDIR="$(pwd)/content/docs/reference/pkg"
 TOOL_APIDOCGEN="go run ./tools/resourcedocsgen/*.go"
 
+./scripts/update_repos.sh
+
 echo "Generating docs templates bundle in pulumi/pulumi"
 pushd ../pulumi
 make generate
