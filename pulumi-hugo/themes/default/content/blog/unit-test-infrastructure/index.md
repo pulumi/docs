@@ -2,22 +2,24 @@
 title: "Unit Testing Infrastructure"
 date: 2020-03-24
 meta_desc: "Unit testing for infrastructure is now available using Node.js, Python, .NET, and Go"
-meta_image: meta.png
+meta_image: tdd.png
 authors:
     - sophia-parafina
 tags:
     - unit testing
+    - test driven development
 ---
 
-What you put here will appear on the index page. In most cases, you'll also want to add a Read More link after this paragraph (though technically, that's optional). To do that, just add an HTML comment like the one below.
+We’re pleased to announce that unit testing with Node.js, Python, .NET, and Go is supported in recent releases. You can test your resources before deploying your infrastructure using familiar tools and test frameworks. Check your resource configuration and responses without the wait of deploying them and speed up infrastructure development and production deployments.
 
 <!--more-->
 
 Pulumi brings testing to Infrastructure as Code. Testing your infrastructure code will provide early bug notification, cleaner and more extensible code, and simplify refactoring. We implemented testing with these goals in mind.
 
-Run code without the engine
-Write tests using existing test tools and frameworks
-Mock any dependencies
+- Run code without the engine
+- Write tests using existing test tools and frameworks
+- Mock any dependencies
+
 Here are examples in Python and Go to get you started.
 
 ## Python
@@ -311,4 +313,4 @@ func TestInfrastructure(t *testing.T) {
 
 ## Try it out today
 
-We’ve released these features early so that you can try them out before the 2.0 release. With the 2.0 release we’ll have more documentation, examples, and blog posts to get you started with writing and running tests for your infrastructure. In the meantime, we would appreciate feedback on our [Community Slack channel](https://pulumi-community.slack.com/).
+We’ve released these features early so that you can try them out before the 2.0 release. To get you started, we've added [full working examples](https://github.com/pulumi/examples#testing) on Github. With the 2.0 release we’ll have more documentation, examples, and blog posts. In the meantime, we would appreciate feedback on our [Community Slack channel](https://pulumi-community.slack.com/).
