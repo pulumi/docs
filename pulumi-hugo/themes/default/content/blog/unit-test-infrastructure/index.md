@@ -10,7 +10,7 @@ tags:
     - test driven development
 ---
 
-We’re pleased to announce that unit testing with Node.js, Python, .NET, and Go is supported in recent releases. You can test your resources before deploying your infrastructure using familiar tools and test frameworks. Check your resource configuration and responses without the wait of deploying them and speed up infrastructure development and production deployments.
+We’re pleased to announce that unit testing with Node.js, Python, .NET, and Go is supported in recent releases. You can test resources before deploying your infrastructure using familiar tools and test frameworks. Check your resource configuration and responses without the wait of deploying them and speed up infrastructure development and production deployments.
 
 <!--more-->
 
