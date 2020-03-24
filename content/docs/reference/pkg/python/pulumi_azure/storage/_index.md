@@ -2501,6 +2501,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>cache_control</strong> (<em>str</em>) – The <code class="docutils literal notranslate"><span class="pre">Cache-Control</span></code> response header that is sent when this SAS token is used.</p></li>
+<li><p><strong>connection_string</strong> (<em>str</em>) – The connection string for the storage account to which this SAS applies. Typically directly from the <code class="docutils literal notranslate"><span class="pre">primary_connection_string</span></code> attribute of an <code class="docutils literal notranslate"><span class="pre">storage.Account</span></code> resource.</p></li>
 <li><p><strong>container_name</strong> (<em>str</em>) – Name of the container.</p></li>
 <li><p><strong>content_disposition</strong> (<em>str</em>) – The <code class="docutils literal notranslate"><span class="pre">Content-Disposition</span></code> response header that is sent when this SAS token is used.</p></li>
 <li><p><strong>content_encoding</strong> (<em>str</em>) – The <code class="docutils literal notranslate"><span class="pre">Content-Encoding</span></code> response header that is sent when this SAS token is used.</p></li>

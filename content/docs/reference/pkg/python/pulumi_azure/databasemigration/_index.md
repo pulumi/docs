@@ -98,16 +98,26 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="class">
 <dt id="pulumi_azure.databasemigration.Project">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.databasemigration.</code><code class="sig-name descname">Project</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">service_name=None</em>, <em class="sig-param">source_platform=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">target_platform=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.databasemigration.Project" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Project resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] location: Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-:param pulumi.Input[str] name: Specify the name of the database migration project. Changing this forces a new resource to be created.
-:param pulumi.Input[str] resource_group_name: Name of the resource group in which to create the database migration project. Changing this forces a new resource to be created.
-:param pulumi.Input[str] service_name: Name of the database migration service where resource belongs to. Changing this forces a new resource to be created.
-:param pulumi.Input[str] source_platform: The platform type of the migration source. Currently only support: <code class="docutils literal notranslate"><span class="pre">SQL</span></code>(on-premises SQL Server). Changing this forces a new resource to be created.
-:param pulumi.Input[dict] tags: A mapping of tags to assigned to the resource.
-:param pulumi.Input[str] target_platform: The platform type of the migration target. Currently only support: <code class="docutils literal notranslate"><span class="pre">SQLDB</span></code>(Azure SQL Database). Changing this forces a new resource to be created.</p>
+<dd><p>Manage a Azure Database Migration Project.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong> Destroying a Database Migration Project will leave any outstanding tasks untouched. This is to avoid unexpectedly deleting any tasks managed outside of this provider.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/database_migration_project.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/database_migration_project.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specify the name of the database migration project. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the resource group in which to create the database migration project. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>service_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the database migration service where resource belongs to. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>source_platform</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The platform type of the migration source. Currently only support: <code class="docutils literal notranslate"><span class="pre">SQL</span></code>(on-premises SQL Server). Changing this forces a new resource to be created.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assigned to the resource.</p></li>
+<li><p><strong>target_platform</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The platform type of the migration target. Currently only support: <code class="docutils literal notranslate"><span class="pre">SQLDB</span></code>(Azure SQL Database). Changing this forces a new resource to be created.</p></li>
+</ul>
+</dd>
+</dl>
 <dl class="attribute">
 <dt id="pulumi_azure.databasemigration.Project.location">
 <code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.databasemigration.Project.location" title="Permalink to this definition">¶</a></dt>
@@ -214,15 +224,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_azure.databasemigration.Service">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.databasemigration.</code><code class="sig-name descname">Service</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku_name=None</em>, <em class="sig-param">subnet_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.databasemigration.Service" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Service resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] location: Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-:param pulumi.Input[str] name: Specify the name of the database migration service. Changing this forces a new resource to be created.
-:param pulumi.Input[str] resource_group_name: Name of the resource group in which to create the database migration service. Changing this forces a new resource to be created.
-:param pulumi.Input[str] sku_name: The sku name of the database migration service. Possible values are <code class="docutils literal notranslate"><span class="pre">Premium_4vCores</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard_1vCores</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard_2vCores</span></code> and <code class="docutils literal notranslate"><span class="pre">Standard_4vCores</span></code>. Changing this forces a new resource to be created.
-:param pulumi.Input[str] subnet_id: The ID of the virtual subnet resource to which the database migration service should be joined. Changing this forces a new resource to be created.
-:param pulumi.Input[dict] tags: A mapping of tags to assigned to the resource.</p>
+<dd><p>Manages a Azure Database Migration Service.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong> Destroying a Database Migration Service will leave any outstanding tasks untouched. This is to avoid unexpectedly deleting any tasks managed outside of this provide.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/database_migration_service.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/database_migration_service.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specify the name of the database migration service. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the resource group in which to create the database migration service. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>sku_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The sku name of the database migration service. Possible values are <code class="docutils literal notranslate"><span class="pre">Premium_4vCores</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard_1vCores</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard_2vCores</span></code> and <code class="docutils literal notranslate"><span class="pre">Standard_4vCores</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the virtual subnet resource to which the database migration service should be joined. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assigned to the resource.</p></li>
+</ul>
+</dd>
+</dl>
 <dl class="attribute">
 <dt id="pulumi_azure.databasemigration.Service.location">
 <code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.databasemigration.Service.location" title="Permalink to this definition">¶</a></dt>

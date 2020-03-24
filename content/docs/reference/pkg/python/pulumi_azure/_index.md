@@ -31,6 +31,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li class="toctree-l1"><a class="reference internal" href="containerservice/">containerservice</a></li>
 <li class="toctree-l1"><a class="reference internal" href="core/">core</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cosmosdb/">cosmosdb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="costmanagement/">costmanagement</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dashboard/">dashboard</a></li>
 <li class="toctree-l1"><a class="reference internal" href="databasemigration/">databasemigration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="databricks/">databricks</a></li>
@@ -70,6 +71,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li class="toctree-l1"><a class="reference internal" href="operationalinsights/">operationalinsights</a></li>
 <li class="toctree-l1"><a class="reference internal" href="policy/">policy</a></li>
 <li class="toctree-l1"><a class="reference internal" href="postgresql/">postgresql</a></li>
+<li class="toctree-l1"><a class="reference internal" href="powerbi/">powerbi</a></li>
 <li class="toctree-l1"><a class="reference internal" href="privatedns/">privatedns</a></li>
 <li class="toctree-l1"><a class="reference internal" href="privatelink/">privatelink</a></li>
 <li class="toctree-l1"><a class="reference internal" href="proximity/">proximity</a></li>
