@@ -926,6 +926,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd></dd></dl>
 
 <dl class="class">
+<dt id="pulumi_azure.monitoring.AwaitableGetScheduledQueryRulesAlertResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.monitoring.</code><code class="sig-name descname">AwaitableGetScheduledQueryRulesAlertResult</code><span class="sig-paren">(</span><em class="sig-param">actions=None</em>, <em class="sig-param">authorized_resource_ids=None</em>, <em class="sig-param">data_source_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">frequency=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">query=None</em>, <em class="sig-param">query_type=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">severity=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">throttling=None</em>, <em class="sig-param">time_window=None</em>, <em class="sig-param">triggers=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.AwaitableGetScheduledQueryRulesAlertResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.monitoring.AwaitableGetScheduledQueryRulesLogResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.monitoring.</code><code class="sig-name descname">AwaitableGetScheduledQueryRulesLogResult</code><span class="sig-paren">(</span><em class="sig-param">authorized_resource_ids=None</em>, <em class="sig-param">criterias=None</em>, <em class="sig-param">data_source_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.AwaitableGetScheduledQueryRulesLogResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_azure.monitoring.DiagnosticSetting">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.monitoring.</code><code class="sig-name descname">DiagnosticSetting</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">eventhub_authorization_rule_id=None</em>, <em class="sig-param">eventhub_name=None</em>, <em class="sig-param">log_analytics_destination_type=None</em>, <em class="sig-param">log_analytics_workspace_id=None</em>, <em class="sig-param">logs=None</em>, <em class="sig-param">metrics=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">storage_account_id=None</em>, <em class="sig-param">target_resource_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.DiagnosticSetting" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Diagnostic Setting for an existing Resource.</p>
@@ -1276,6 +1286,126 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.monitoring.GetLogProfileResult.storage_account_id">
 <code class="sig-name descname">storage_account_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.GetLogProfileResult.storage_account_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The resource id of the storage account in which the Activity Log is stored.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.monitoring.GetScheduledQueryRulesAlertResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.monitoring.</code><code class="sig-name descname">GetScheduledQueryRulesAlertResult</code><span class="sig-paren">(</span><em class="sig-param">actions=None</em>, <em class="sig-param">authorized_resource_ids=None</em>, <em class="sig-param">data_source_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">frequency=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">query=None</em>, <em class="sig-param">query_type=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">severity=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">throttling=None</em>, <em class="sig-param">time_window=None</em>, <em class="sig-param">triggers=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.GetScheduledQueryRulesAlertResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getScheduledQueryRulesAlert.</p>
+<dl class="attribute">
+<dt id="pulumi_azure.monitoring.GetScheduledQueryRulesAlertResult.actions">
+<code class="sig-name descname">actions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.GetScheduledQueryRulesAlertResult.actions" title="Permalink to this definition">¶</a></dt>
+<dd><p>An <code class="docutils literal notranslate"><span class="pre">action</span></code> block as defined below.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.monitoring.GetScheduledQueryRulesAlertResult.authorized_resource_ids">
+<code class="sig-name descname">authorized_resource_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.GetScheduledQueryRulesAlertResult.authorized_resource_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of Resource IDs referred into query.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.monitoring.GetScheduledQueryRulesAlertResult.data_source_id">
+<code class="sig-name descname">data_source_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.GetScheduledQueryRulesAlertResult.data_source_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The resource URI over which log search query is to be run.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.monitoring.GetScheduledQueryRulesAlertResult.description">
+<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.GetScheduledQueryRulesAlertResult.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>The description of the scheduled query rule.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.monitoring.GetScheduledQueryRulesAlertResult.enabled">
+<code class="sig-name descname">enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.GetScheduledQueryRulesAlertResult.enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether this scheduled query rule is enabled.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.monitoring.GetScheduledQueryRulesAlertResult.frequency">
+<code class="sig-name descname">frequency</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.GetScheduledQueryRulesAlertResult.frequency" title="Permalink to this definition">¶</a></dt>
+<dd><p>Frequency at which rule condition should be evaluated.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.monitoring.GetScheduledQueryRulesAlertResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.GetScheduledQueryRulesAlertResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.monitoring.GetScheduledQueryRulesAlertResult.query">
+<code class="sig-name descname">query</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.GetScheduledQueryRulesAlertResult.query" title="Permalink to this definition">¶</a></dt>
+<dd><p>Log search query.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.monitoring.GetScheduledQueryRulesAlertResult.severity">
+<code class="sig-name descname">severity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.GetScheduledQueryRulesAlertResult.severity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Severity of the alert.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.monitoring.GetScheduledQueryRulesAlertResult.throttling">
+<code class="sig-name descname">throttling</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.GetScheduledQueryRulesAlertResult.throttling" title="Permalink to this definition">¶</a></dt>
+<dd><p>Time for which alerts should be throttled or suppressed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.monitoring.GetScheduledQueryRulesAlertResult.time_window">
+<code class="sig-name descname">time_window</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.GetScheduledQueryRulesAlertResult.time_window" title="Permalink to this definition">¶</a></dt>
+<dd><p>Time window for which data needs to be fetched for query.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.monitoring.GetScheduledQueryRulesAlertResult.triggers">
+<code class="sig-name descname">triggers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.GetScheduledQueryRulesAlertResult.triggers" title="Permalink to this definition">¶</a></dt>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">trigger</span></code> block as defined below.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.monitoring.GetScheduledQueryRulesLogResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.monitoring.</code><code class="sig-name descname">GetScheduledQueryRulesLogResult</code><span class="sig-paren">(</span><em class="sig-param">authorized_resource_ids=None</em>, <em class="sig-param">criterias=None</em>, <em class="sig-param">data_source_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.GetScheduledQueryRulesLogResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getScheduledQueryRulesLog.</p>
+<dl class="attribute">
+<dt id="pulumi_azure.monitoring.GetScheduledQueryRulesLogResult.criterias">
+<code class="sig-name descname">criterias</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.GetScheduledQueryRulesLogResult.criterias" title="Permalink to this definition">¶</a></dt>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">criteria</span></code> block as defined below.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.monitoring.GetScheduledQueryRulesLogResult.data_source_id">
+<code class="sig-name descname">data_source_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.GetScheduledQueryRulesLogResult.data_source_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The resource URI over which log search query is to be run.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.monitoring.GetScheduledQueryRulesLogResult.description">
+<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.GetScheduledQueryRulesLogResult.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>The description of the scheduled query rule.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.monitoring.GetScheduledQueryRulesLogResult.enabled">
+<code class="sig-name descname">enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.GetScheduledQueryRulesLogResult.enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether this scheduled query rule is enabled.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.monitoring.GetScheduledQueryRulesLogResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.GetScheduledQueryRulesLogResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.monitoring.GetScheduledQueryRulesLogResult.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.GetScheduledQueryRulesLogResult.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the dimension.</p>
 </dd></dl>
 
 </dd></dl>
@@ -2056,6 +2186,40 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – Specifies the Name of the Log Profile.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_azure.monitoring.get_scheduled_query_rules_alert">
+<code class="sig-prename descclassname">pulumi_azure.monitoring.</code><code class="sig-name descname">get_scheduled_query_rules_alert</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.get_scheduled_query_rules_alert" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access the properties of an AlertingAction scheduled query rule.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/monitor_scheduled_query_rules_alert.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/monitor_scheduled_query_rules_alert.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – Specifies the name of the scheduled query rule.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>str</em>) – Specifies the name of the resource group where the scheduled query rule is located.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_azure.monitoring.get_scheduled_query_rules_log">
+<code class="sig-prename descclassname">pulumi_azure.monitoring.</code><code class="sig-name descname">get_scheduled_query_rules_log</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.get_scheduled_query_rules_log" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access the properties of a LogToMetricAction scheduled query rule.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/monitor_scheduled_query_rules_log.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/monitor_scheduled_query_rules_log.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – Specifies the name of the scheduled query rule.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>str</em>) – Specifies the name of the resource group where the scheduled query rule is located.</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>

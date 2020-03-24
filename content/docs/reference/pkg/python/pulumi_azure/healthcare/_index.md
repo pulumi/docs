@@ -86,7 +86,8 @@ anything, please consult the source <a class="reference external" href="https://
 <p>The <strong>authentication_configuration</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">audience</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The intended audience to receive authentication tokens for the service. The default value is <a class="reference external" href="https://azurehealthcareapis.com">https://azurehealthcareapis.com</a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">authority</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">authority</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Azure Active Directory (tenant) that serves as the authentication authority to access the service. The default authority is the Directory defined in the authentication scheme in use when running this provider.
+Authority must be registered to Azure AD and in the following format: <a class="reference external" href="https:/">https:/</a>/{Azure-AD-endpoint}/{tenant-id}.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">smartProxyEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enables the ‘SMART on FHIR’ option for mobile and web implementations.</p></li>
 </ul>
 <p>The <strong>cors_configuration</strong> object supports the following:</p>
@@ -103,7 +104,8 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>An <code class="docutils literal notranslate"><span class="pre">authentication_configuration</span></code> block as defined below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">audience</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The intended audience to receive authentication tokens for the service. The default value is <a class="reference external" href="https://azurehealthcareapis.com">https://azurehealthcareapis.com</a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">authority</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">authority</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Azure Active Directory (tenant) that serves as the authentication authority to access the service. The default authority is the Directory defined in the authentication scheme in use when running this provider.
+Authority must be registered to Azure AD and in the following format: <a class="reference external" href="https:/">https:/</a>/{Azure-AD-endpoint}/{tenant-id}.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">smartProxyEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enables the ‘SMART on FHIR’ option for mobile and web implementations.</p></li>
 </ul>
 </dd></dl>
@@ -182,7 +184,8 @@ properties used to qualify the lookup.</p>
 <p>The <strong>authentication_configuration</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">audience</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The intended audience to receive authentication tokens for the service. The default value is <a class="reference external" href="https://azurehealthcareapis.com">https://azurehealthcareapis.com</a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">authority</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">authority</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Azure Active Directory (tenant) that serves as the authentication authority to access the service. The default authority is the Directory defined in the authentication scheme in use when running this provider.
+Authority must be registered to Azure AD and in the following format: <a class="reference external" href="https:/">https:/</a>/{Azure-AD-endpoint}/{tenant-id}.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">smartProxyEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enables the ‘SMART on FHIR’ option for mobile and web implementations.</p></li>
 </ul>
 <p>The <strong>cors_configuration</strong> object supports the following:</p>

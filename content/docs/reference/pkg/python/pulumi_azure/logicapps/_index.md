@@ -225,17 +225,29 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.logicapps.AwaitableGetWorkflowResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.logicapps.</code><code class="sig-name descname">AwaitableGetWorkflowResult</code><span class="sig-paren">(</span><em class="sig-param">access_endpoint=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">workflow_schema=None</em>, <em class="sig-param">workflow_version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.AwaitableGetWorkflowResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.logicapps.</code><code class="sig-name descname">AwaitableGetWorkflowResult</code><span class="sig-paren">(</span><em class="sig-param">access_endpoint=None</em>, <em class="sig-param">connector_endpoint_ip_addresses=None</em>, <em class="sig-param">connector_outbound_ip_addresses=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">workflow_endpoint_ip_addresses=None</em>, <em class="sig-param">workflow_outbound_ip_addresses=None</em>, <em class="sig-param">workflow_schema=None</em>, <em class="sig-param">workflow_version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.AwaitableGetWorkflowResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_azure.logicapps.GetWorkflowResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.logicapps.</code><code class="sig-name descname">GetWorkflowResult</code><span class="sig-paren">(</span><em class="sig-param">access_endpoint=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">workflow_schema=None</em>, <em class="sig-param">workflow_version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.GetWorkflowResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.logicapps.</code><code class="sig-name descname">GetWorkflowResult</code><span class="sig-paren">(</span><em class="sig-param">access_endpoint=None</em>, <em class="sig-param">connector_endpoint_ip_addresses=None</em>, <em class="sig-param">connector_outbound_ip_addresses=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">workflow_endpoint_ip_addresses=None</em>, <em class="sig-param">workflow_outbound_ip_addresses=None</em>, <em class="sig-param">workflow_schema=None</em>, <em class="sig-param">workflow_version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.GetWorkflowResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getWorkflow.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.logicapps.GetWorkflowResult.access_endpoint">
 <code class="sig-name descname">access_endpoint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.GetWorkflowResult.access_endpoint" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Access Endpoint for the Logic App Workflow</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.logicapps.GetWorkflowResult.connector_endpoint_ip_addresses">
+<code class="sig-name descname">connector_endpoint_ip_addresses</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.GetWorkflowResult.connector_endpoint_ip_addresses" title="Permalink to this definition">¶</a></dt>
+<dd><p>The list of access endpoint ip addresses of connector.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.logicapps.GetWorkflowResult.connector_outbound_ip_addresses">
+<code class="sig-name descname">connector_outbound_ip_addresses</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.GetWorkflowResult.connector_outbound_ip_addresses" title="Permalink to this definition">¶</a></dt>
+<dd><p>The list of outgoing ip addresses of connector.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -260,6 +272,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.logicapps.GetWorkflowResult.tags">
 <code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.GetWorkflowResult.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>A mapping of tags assigned to the resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.logicapps.GetWorkflowResult.workflow_endpoint_ip_addresses">
+<code class="sig-name descname">workflow_endpoint_ip_addresses</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.GetWorkflowResult.workflow_endpoint_ip_addresses" title="Permalink to this definition">¶</a></dt>
+<dd><p>The list of access endpoint ip addresses of workflow.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.logicapps.GetWorkflowResult.workflow_outbound_ip_addresses">
+<code class="sig-name descname">workflow_outbound_ip_addresses</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.GetWorkflowResult.workflow_outbound_ip_addresses" title="Permalink to this definition">¶</a></dt>
+<dd><p>The list of outgoing ip addresses of workflow.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -612,7 +636,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.logicapps.Workflow.access_endpoint">
 <code class="sig-name descname">access_endpoint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.Workflow.access_endpoint" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Access Endpoint for the Logic App Workflow</p>
+<dd><p>The Access Endpoint for the Logic App Workflow.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.logicapps.Workflow.connector_endpoint_ip_addresses">
+<code class="sig-name descname">connector_endpoint_ip_addresses</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.Workflow.connector_endpoint_ip_addresses" title="Permalink to this definition">¶</a></dt>
+<dd><p>The list of access endpoint ip addresses of connector.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.logicapps.Workflow.connector_outbound_ip_addresses">
+<code class="sig-name descname">connector_outbound_ip_addresses</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.Workflow.connector_outbound_ip_addresses" title="Permalink to this definition">¶</a></dt>
+<dd><p>The list of outgoing ip addresses of connector.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -646,6 +682,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_azure.logicapps.Workflow.workflow_endpoint_ip_addresses">
+<code class="sig-name descname">workflow_endpoint_ip_addresses</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.Workflow.workflow_endpoint_ip_addresses" title="Permalink to this definition">¶</a></dt>
+<dd><p>The list of access endpoint ip addresses of workflow.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.logicapps.Workflow.workflow_outbound_ip_addresses">
+<code class="sig-name descname">workflow_outbound_ip_addresses</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.Workflow.workflow_outbound_ip_addresses" title="Permalink to this definition">¶</a></dt>
+<dd><p>The list of outgoing ip addresses of workflow.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_azure.logicapps.Workflow.workflow_schema">
 <code class="sig-name descname">workflow_schema</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.Workflow.workflow_schema" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the Schema to use for this Logic App Workflow. Defaults to <code class="docutils literal notranslate"><span class="pre">https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#</span></code>. Changing this forces a new resource to be created.</p>
@@ -659,7 +707,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_azure.logicapps.Workflow.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_endpoint=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">workflow_schema=None</em>, <em class="sig-param">workflow_version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.Workflow.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_endpoint=None</em>, <em class="sig-param">connector_endpoint_ip_addresses=None</em>, <em class="sig-param">connector_outbound_ip_addresses=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">workflow_endpoint_ip_addresses=None</em>, <em class="sig-param">workflow_outbound_ip_addresses=None</em>, <em class="sig-param">workflow_schema=None</em>, <em class="sig-param">workflow_version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.Workflow.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Workflow resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -668,12 +716,16 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>access_endpoint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Access Endpoint for the Logic App Workflow</p></li>
+<li><p><strong>access_endpoint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Access Endpoint for the Logic App Workflow.</p></li>
+<li><p><strong>connector_endpoint_ip_addresses</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of access endpoint ip addresses of connector.</p></li>
+<li><p><strong>connector_outbound_ip_addresses</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of outgoing ip addresses of connector.</p></li>
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the Logic App Workflow exists. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Logic App Workflow. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>parameters</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of Key-Value pairs.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Resource Group in which the Logic App Workflow should be created. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>workflow_endpoint_ip_addresses</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of access endpoint ip addresses of workflow.</p></li>
+<li><p><strong>workflow_outbound_ip_addresses</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of outgoing ip addresses of workflow.</p></li>
 <li><p><strong>workflow_schema</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the Schema to use for this Logic App Workflow. Defaults to <code class="docutils literal notranslate"><span class="pre">https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#</span></code>. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>workflow_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the version of the Schema used for this Logic App Workflow. Defaults to <code class="docutils literal notranslate"><span class="pre">1.0.0.0</span></code>. Changing this forces a new resource to be created.</p></li>
 </ul>

@@ -2831,65 +2831,46 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>auto_delete_on_idle</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The idle interval after which the
-Subscription is automatically deleted, minimum of 5 minutes. Provided in the
-TimeSpan format.</p></li>
-<li><p><strong>dead_lettering_on_message_expiration</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean flag which controls
-whether the Subscription has dead letter support when a message expires. Defaults
-to false.</p></li>
-<li><p><strong>default_message_ttl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The TTL of messages sent to this Subscription
-if no TTL value is set on the message itself. Provided in the TimeSpan
-format.</p></li>
-<li><p><strong>enable_batched_operations</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean flag which controls whether the
-Subscription supports batched operations. Defaults to false.</p></li>
+<li><p><strong>auto_delete_on_idle</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The idle interval after which the topic is automatically deleted as an <a class="reference external" href="https://en.wikipedia.org/wiki/ISO_8601#Durations">ISO 8601 duration</a>. The minimum duration is <code class="docutils literal notranslate"><span class="pre">5</span></code> minutes or <code class="docutils literal notranslate"><span class="pre">P5M</span></code>.</p></li>
+<li><p><strong>dead_lettering_on_message_expiration</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean flag which controls whether the Subscription has dead letter support when a message expires. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>default_message_ttl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The Default message timespan to live as an <a class="reference external" href="https://en.wikipedia.org/wiki/ISO_8601#Durations">ISO 8601 duration</a>. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.</p>
+</p></li>
+<li><p><strong>enable_batched_operations</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean flag which controls whether the Subscription supports batched operations. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>forward_dead_lettered_messages_to</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of a Queue or Topic to automatically forward Dead Letter messages to.</p></li>
 <li><p><strong>forward_to</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of a Queue or Topic to automatically forward messages to.</p></li>
-<li><p><strong>lock_duration</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The lock duration for the subscription, maximum
-supported value is 5 minutes. Defaults to 1 minute.</p></li>
+<li><p><strong>lock_duration</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The lock duration for the subscription as an <a class="reference external" href="https://en.wikipedia.org/wiki/ISO_8601#Durations">ISO 8601 duration</a>. The default value is <code class="docutils literal notranslate"><span class="pre">1</span></code> minute or <code class="docutils literal notranslate"><span class="pre">P1M</span></code>.</p>
+</p></li>
 <li><p><strong>max_delivery_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum number of deliveries.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the ServiceBus Subscription resource.
-Changing this forces a new resource to be created.</p></li>
-<li><p><strong>namespace_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the ServiceBus Namespace to create
-this Subscription in. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>requires_session</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean flag which controls whether this Subscription
-supports the concept of a session. Defaults to false. Changing this forces a
-new resource to be created.</p></li>
-<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to
-create the namespace. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>topic_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the ServiceBus Topic to create
-this Subscription in. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the ServiceBus Subscription resource. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>namespace_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the ServiceBus Namespace to create this Subscription in. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>requires_session</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean flag which controls whether this Subscription supports the concept of a session. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the namespace. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>topic_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the ServiceBus Topic to create this Subscription in. Changing this forces a new resource to be created.</p></li>
 </ul>
 </dd>
 </dl>
 <dl class="attribute">
 <dt id="pulumi_azure.eventhub.Subscription.auto_delete_on_idle">
 <code class="sig-name descname">auto_delete_on_idle</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.Subscription.auto_delete_on_idle" title="Permalink to this definition">¶</a></dt>
-<dd><p>The idle interval after which the
-Subscription is automatically deleted, minimum of 5 minutes. Provided in the
-TimeSpan format.</p>
+<dd><p>The idle interval after which the topic is automatically deleted as an <a class="reference external" href="https://en.wikipedia.org/wiki/ISO_8601#Durations">ISO 8601 duration</a>. The minimum duration is <code class="docutils literal notranslate"><span class="pre">5</span></code> minutes or <code class="docutils literal notranslate"><span class="pre">P5M</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.eventhub.Subscription.dead_lettering_on_message_expiration">
 <code class="sig-name descname">dead_lettering_on_message_expiration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.Subscription.dead_lettering_on_message_expiration" title="Permalink to this definition">¶</a></dt>
-<dd><p>Boolean flag which controls
-whether the Subscription has dead letter support when a message expires. Defaults
-to false.</p>
+<dd><p>Boolean flag which controls whether the Subscription has dead letter support when a message expires. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.eventhub.Subscription.default_message_ttl">
 <code class="sig-name descname">default_message_ttl</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.Subscription.default_message_ttl" title="Permalink to this definition">¶</a></dt>
-<dd><p>The TTL of messages sent to this Subscription
-if no TTL value is set on the message itself. Provided in the TimeSpan
-format.</p>
+<dd><p>The Default message timespan to live as an <a class="reference external" href="https://en.wikipedia.org/wiki/ISO_8601#Durations">ISO 8601 duration</a>. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.eventhub.Subscription.enable_batched_operations">
 <code class="sig-name descname">enable_batched_operations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.Subscription.enable_batched_operations" title="Permalink to this definition">¶</a></dt>
-<dd><p>Boolean flag which controls whether the
-Subscription supports batched operations. Defaults to false.</p>
+<dd><p>Boolean flag which controls whether the Subscription supports batched operations. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2907,8 +2888,7 @@ Subscription supports batched operations. Defaults to false.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.eventhub.Subscription.lock_duration">
 <code class="sig-name descname">lock_duration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.Subscription.lock_duration" title="Permalink to this definition">¶</a></dt>
-<dd><p>The lock duration for the subscription, maximum
-supported value is 5 minutes. Defaults to 1 minute.</p>
+<dd><p>The lock duration for the subscription as an <a class="reference external" href="https://en.wikipedia.org/wiki/ISO_8601#Durations">ISO 8601 duration</a>. The default value is <code class="docutils literal notranslate"><span class="pre">1</span></code> minute or <code class="docutils literal notranslate"><span class="pre">P1M</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2920,37 +2900,31 @@ supported value is 5 minutes. Defaults to 1 minute.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.eventhub.Subscription.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.Subscription.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies the name of the ServiceBus Subscription resource.
-Changing this forces a new resource to be created.</p>
+<dd><p>Specifies the name of the ServiceBus Subscription resource. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.eventhub.Subscription.namespace_name">
 <code class="sig-name descname">namespace_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.Subscription.namespace_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the ServiceBus Namespace to create
-this Subscription in. Changing this forces a new resource to be created.</p>
+<dd><p>The name of the ServiceBus Namespace to create this Subscription in. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.eventhub.Subscription.requires_session">
 <code class="sig-name descname">requires_session</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.Subscription.requires_session" title="Permalink to this definition">¶</a></dt>
-<dd><p>Boolean flag which controls whether this Subscription
-supports the concept of a session. Defaults to false. Changing this forces a
-new resource to be created.</p>
+<dd><p>Boolean flag which controls whether this Subscription supports the concept of a session. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.eventhub.Subscription.resource_group_name">
 <code class="sig-name descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.Subscription.resource_group_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the resource group in which to
-create the namespace. Changing this forces a new resource to be created.</p>
+<dd><p>The name of the resource group in which to create the namespace. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.eventhub.Subscription.topic_name">
 <code class="sig-name descname">topic_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.Subscription.topic_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the ServiceBus Topic to create
-this Subscription in. Changing this forces a new resource to be created.</p>
+<dd><p>The name of the ServiceBus Topic to create this Subscription in. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="method">
@@ -2964,33 +2938,22 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>auto_delete_on_idle</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The idle interval after which the
-Subscription is automatically deleted, minimum of 5 minutes. Provided in the
-TimeSpan format.</p></li>
-<li><p><strong>dead_lettering_on_message_expiration</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean flag which controls
-whether the Subscription has dead letter support when a message expires. Defaults
-to false.</p></li>
-<li><p><strong>default_message_ttl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The TTL of messages sent to this Subscription
-if no TTL value is set on the message itself. Provided in the TimeSpan
-format.</p></li>
-<li><p><strong>enable_batched_operations</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean flag which controls whether the
-Subscription supports batched operations. Defaults to false.</p></li>
+<li><p><strong>auto_delete_on_idle</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The idle interval after which the topic is automatically deleted as an <a class="reference external" href="https://en.wikipedia.org/wiki/ISO_8601#Durations">ISO 8601 duration</a>. The minimum duration is <code class="docutils literal notranslate"><span class="pre">5</span></code> minutes or <code class="docutils literal notranslate"><span class="pre">P5M</span></code>.</p>
+</p></li>
+<li><p><strong>dead_lettering_on_message_expiration</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean flag which controls whether the Subscription has dead letter support when a message expires. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>default_message_ttl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The Default message timespan to live as an <a class="reference external" href="https://en.wikipedia.org/wiki/ISO_8601#Durations">ISO 8601 duration</a>. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.</p>
+</p></li>
+<li><p><strong>enable_batched_operations</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean flag which controls whether the Subscription supports batched operations. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>forward_dead_lettered_messages_to</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of a Queue or Topic to automatically forward Dead Letter messages to.</p></li>
 <li><p><strong>forward_to</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of a Queue or Topic to automatically forward messages to.</p></li>
-<li><p><strong>lock_duration</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The lock duration for the subscription, maximum
-supported value is 5 minutes. Defaults to 1 minute.</p></li>
+<li><p><strong>lock_duration</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The lock duration for the subscription as an <a class="reference external" href="https://en.wikipedia.org/wiki/ISO_8601#Durations">ISO 8601 duration</a>. The default value is <code class="docutils literal notranslate"><span class="pre">1</span></code> minute or <code class="docutils literal notranslate"><span class="pre">P1M</span></code>.</p>
+</p></li>
 <li><p><strong>max_delivery_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum number of deliveries.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the ServiceBus Subscription resource.
-Changing this forces a new resource to be created.</p></li>
-<li><p><strong>namespace_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the ServiceBus Namespace to create
-this Subscription in. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>requires_session</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean flag which controls whether this Subscription
-supports the concept of a session. Defaults to false. Changing this forces a
-new resource to be created.</p></li>
-<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to
-create the namespace. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>topic_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the ServiceBus Topic to create
-this Subscription in. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the ServiceBus Subscription resource. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>namespace_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the ServiceBus Namespace to create this Subscription in. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>requires_session</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean flag which controls whether this Subscription supports the concept of a session. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the namespace. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>topic_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the ServiceBus Topic to create this Subscription in. Changing this forces a new resource to be created.</p></li>
 </ul>
 </dd>
 </dl>
