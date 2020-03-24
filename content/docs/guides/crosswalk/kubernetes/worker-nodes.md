@@ -10,7 +10,7 @@ menu:
     weight: 3
 ---
 
-{{< chooser cloud "aws,azure,gcp" >}}
+{{< chooser cloud "aws,azure,gcp" / >}}
 
 The [worker nodes][k8s-concepts] are hosts that
 run the apps and workloads of the cluster after the control plane has

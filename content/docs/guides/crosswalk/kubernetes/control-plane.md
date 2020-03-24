@@ -9,7 +9,7 @@ menu:
     weight: 2
 ---
 
-{{< chooser cloud "aws,azure,gcp" >}}
+{{< chooser cloud "aws,azure,gcp" / >}}
 
 {{% choosable cloud aws %}}
 
