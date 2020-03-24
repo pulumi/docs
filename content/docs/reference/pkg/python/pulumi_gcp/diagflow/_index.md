@@ -16,17 +16,30 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="target" id="module-pulumi_gcp.diagflow"></span><dl class="class">
 <dt id="pulumi_gcp.diagflow.Agent">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.diagflow.</code><code class="sig-name descname">Agent</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">api_version=None</em>, <em class="sig-param">avatar_uri=None</em>, <em class="sig-param">classification_threshold=None</em>, <em class="sig-param">default_language_code=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">enable_logging=None</em>, <em class="sig-param">match_mode=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">supported_language_codes=None</em>, <em class="sig-param">tier=None</em>, <em class="sig-param">time_zone=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.diagflow.Agent" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Agent resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] api_version: API version displayed in Dialogflow console. If not specified, V2 API is assumed. Clients are free to query different</p>
+<dd><p>A Dialogflow agent is a virtual agent that handles conversations with your end-users. It is a natural language
+understanding module that understands the nuances of human language. Dialogflow translates end-user text or audio
+during a conversation to structured data that your apps and services can understand. You design and build a Dialogflow
+agent to handle the types of conversations required for your system.</p>
+<p>To get more information about Agent, see:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://cloud.google.com/dialogflow/docs/reference/rest/v2/projects/agent">API documentation</a></p></li>
+<li><p>How-to Guides</p>
+<ul>
+<li><p><a class="reference external" href="https://cloud.google.com/dialogflow/docs/">Official Documentation</a></p></li>
+</ul>
+</li>
+</ul>
 <blockquote>
-<div><p>service endpoints for different API versions. However, bots connectors and webhook calls will follow the specified API
-version. * API_VERSION_V1: Legacy V1 API. * API_VERSION_V2: V2 API. * API_VERSION_V2_BETA_1: V2beta1 API.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/dialogflow_agent.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/dialogflow_agent.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>api_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – API version displayed in Dialogflow console. If not specified, V2 API is assumed. Clients are free to query different
+service endpoints for different API versions. However, bots connectors and webhook calls will follow the specified API
+version. * API_VERSION_V1: Legacy V1 API. * API_VERSION_V2: V2 API. * API_VERSION_V2_BETA_1: V2beta1 API.</p></li>
 <li><p><strong>avatar_uri</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URI of the agent’s avatar, which are used throughout the Dialogflow console. When an image URL is entered into this
 field, the Dialogflow will save the image in the backend. The address of the backend image returned from the API will be
 shown in the [avatarUriBackend] field.</p></li>
@@ -47,10 +60,9 @@ agents with a large number of examples in intents, especially the ones using &#6
 If it is not provided, the provider project is used.</p></li>
 <li><p><strong>supported_language_codes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of all languages supported by this agent (except for the defaultLanguageCode).</p></li>
 <li><p><strong>tier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The agent tier. If not specified, TIER_STANDARD is assumed. * TIER_STANDARD: Standard tier. * TIER_ENTERPRISE:
-Enterprise tier (Essentials). * TIER_ENTERPRISE_PLUS: Enterprise tier (Plus). NOTE: This field seems to have eventual
-consistency in the API. Updating this field to a new value, or even creating a new agent with a tier that is different
-from a previous agent in the same project will take some time to propagate. The provider will wait for the API to show
-consistency, which can lead to longer apply times.</p></li>
+Enterprise tier (Essentials). * TIER_ENTERPRISE_PLUS: Enterprise tier (Plus). NOTE: Due to consistency issues, the
+provider will not read this field from the API. Drift is possible between the Terraform state and Dialogflow if the
+agent tier is changed outside of Terraform.</p></li>
 <li><p><strong>time_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The time zone of this agent from the <a class="reference external" href="https://www.iana.org/time-zones">time zone database</a>, e.g., America/New_York,
 Europe/Paris.</p></li>
 </ul>
@@ -139,10 +151,9 @@ If it is not provided, the provider project is used.</p>
 <dt id="pulumi_gcp.diagflow.Agent.tier">
 <code class="sig-name descname">tier</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.diagflow.Agent.tier" title="Permalink to this definition">¶</a></dt>
 <dd><p>The agent tier. If not specified, TIER_STANDARD is assumed. * TIER_STANDARD: Standard tier. * TIER_ENTERPRISE:
-Enterprise tier (Essentials). * TIER_ENTERPRISE_PLUS: Enterprise tier (Plus). NOTE: This field seems to have eventual
-consistency in the API. Updating this field to a new value, or even creating a new agent with a tier that is different
-from a previous agent in the same project will take some time to propagate. The provider will wait for the API to show
-consistency, which can lead to longer apply times.</p>
+Enterprise tier (Essentials). * TIER_ENTERPRISE_PLUS: Enterprise tier (Plus). NOTE: Due to consistency issues, the
+provider will not read this field from the API. Drift is possible between the Terraform state and Dialogflow if the
+agent tier is changed outside of Terraform.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -189,10 +200,9 @@ agents with a large number of examples in intents, especially the ones using &#6
 If it is not provided, the provider project is used.</p></li>
 <li><p><strong>supported_language_codes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of all languages supported by this agent (except for the defaultLanguageCode).</p></li>
 <li><p><strong>tier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The agent tier. If not specified, TIER_STANDARD is assumed. * TIER_STANDARD: Standard tier. * TIER_ENTERPRISE:
-Enterprise tier (Essentials). * TIER_ENTERPRISE_PLUS: Enterprise tier (Plus). NOTE: This field seems to have eventual
-consistency in the API. Updating this field to a new value, or even creating a new agent with a tier that is different
-from a previous agent in the same project will take some time to propagate. The provider will wait for the API to show
-consistency, which can lead to longer apply times.</p></li>
+Enterprise tier (Essentials). * TIER_ENTERPRISE_PLUS: Enterprise tier (Plus). NOTE: Due to consistency issues, the
+provider will not read this field from the API. Drift is possible between the Terraform state and Dialogflow if the
+agent tier is changed outside of Terraform.</p></li>
 <li><p><strong>time_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The time zone of this agent from the <a class="reference external" href="https://www.iana.org/time-zones">time zone database</a>, e.g., America/New_York,
 Europe/Paris.</p>
 </p></li>

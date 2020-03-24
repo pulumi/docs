@@ -16,21 +16,33 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="target" id="module-pulumi_gcp.vpcaccess"></span><dl class="class">
 <dt id="pulumi_gcp.vpcaccess.Connector">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.vpcaccess.</code><code class="sig-name descname">Connector</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">ip_cidr_range=None</em>, <em class="sig-param">max_throughput=None</em>, <em class="sig-param">min_throughput=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.vpcaccess.Connector" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Connector resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] ip_cidr_range: The range of internal addresses that follows RFC 4632 notation. Example: ‘10.132.0.0/28’.
-:param pulumi.Input[float] max_throughput: Maximum throughput of the connector in Mbps, must be greater than ‘min_throughput’. Default is 1000.
-:param pulumi.Input[float] min_throughput: Minimum throughput of the connector in Mbps. Default and min is 200.
-:param pulumi.Input[str] name: The name of the resource (Max 25 characters).
-:param pulumi.Input[str] network: Name of a VPC network.
-:param pulumi.Input[str] project: The ID of the project in which the resource belongs.</p>
+<dd><p>Serverless VPC Access connector resource.</p>
+<p>To get more information about Connector, see:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://cloud.google.com/vpc/docs/reference/vpcaccess/rest/v1/projects.locations.connectors">API documentation</a></p></li>
+<li><p>How-to Guides</p>
+<ul>
+<li><p><a class="reference external" href="https://cloud.google.com/vpc/docs/configure-serverless-vpc-access">Configuring Serverless VPC Access</a></p></li>
+</ul>
+</li>
+</ul>
 <blockquote>
-<div><p>If it is not provided, the provider project is used.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/vpc_access_connector.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/vpc_access_connector.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Region where the VPC Access connector resides</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>ip_cidr_range</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The range of internal addresses that follows RFC 4632 notation. Example: ‘10.132.0.0/28’.</p></li>
+<li><p><strong>max_throughput</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Maximum throughput of the connector in Mbps, must be greater than ‘min_throughput’. Default is 1000.</p></li>
+<li><p><strong>min_throughput</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Minimum throughput of the connector in Mbps. Default and min is 200.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource (Max 25 characters).</p></li>
+<li><p><strong>network</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of a VPC network.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
+<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Region where the VPC Access connector resides</p></li>
+</ul>
 </dd>
 </dl>
 <dl class="attribute">
