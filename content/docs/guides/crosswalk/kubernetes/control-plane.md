@@ -461,6 +461,8 @@ cluster.core.storageClasses["gp2-encrypted"].apply(sc => {
 
 {{% /choosable %}}
 
+{{< /chooser >}}
+
 {{% /choosable %}}
 
 {{% choosable cloud azure %}}
@@ -558,6 +560,9 @@ const myPvc = new k8s.core.v1.PersistentVolumeClaim("mypvc", {
 ```
 
 {{% /choosable %}}
+
+{{< /chooser >}}
+
 {{% /choosable %}}
 
 {{% choosable cloud gcp %}}
@@ -655,6 +660,8 @@ const myPvc = new k8s.core.v1.PersistentVolumeClaim("mypvc", {
 ```
 
 {{% /choosable %}}
+
+{{< /chooser >}}
 
 {{% /choosable %}}
 
