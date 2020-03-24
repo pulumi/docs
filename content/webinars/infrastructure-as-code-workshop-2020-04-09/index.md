@@ -55,6 +55,8 @@ main:
 
         After completing this workshop, you’ll be up and running with IaC fundamentals, modern application architectures across many clouds, and Kubernetes best-practices that are ready for production environments. You’ll also be ready to empower your development teams to be more productive - continuously deploying both their applications and infrastructure.
 
+        View the prerequisites for this workshop [here](https://github.com/pulumi/infrastructure-as-code-workshop/blob/master/00-installing-prerequisites.md).
+
     # The webinar presenters
     presenters:
         - name: Luke Hoban

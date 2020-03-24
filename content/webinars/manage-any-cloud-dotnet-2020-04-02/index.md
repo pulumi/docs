@@ -1,12 +1,7 @@
 ---
 # Name of the webinar.
-title: "Pulumi Up(date)"
-meta_desc: "Join Pulumi CEO, Joe Duffy, and the Pulumi team for a walk-through of all the improvements and modern infrastructure capabilities of Pulumi."
-
-aliases: [
-    "/webinars/pulumi-v2-virtual-launch",
-    "/events/launch-v2-seattle-2020-04-15"
-]
+title: "Managing Any Cloud with .NET"
+meta_desc: "Paul Stack and Mikhail Shilkov from Pulumi will show you how to get started mastering your preferred cloud using your favorite languages."
 
 # If the video is pre-recorded or live.
 pre_recorded: false
@@ -15,7 +10,7 @@ pre_recorded: false
 pulumi_tv: false
 
 # The preview image will be shown on the list page.
-preview_image: "/images/webinar/pulumi-up(date)-2020-04-22.png"
+preview_image: "/images/webinar/manage-any-cloud-dotnet-2020-04-02.png"
 
 # Webinars with unlisted as true will not be shown on the webinar list
 unlisted: false
@@ -33,43 +28,45 @@ external: false
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: "pulumi-update-2020-04-22"
+url_slug: "manage-any-cloud-dotnet-2020-04-02"
 
 # The content of the hero section.
 hero:
     # The title text in the hero. This also serves as the pages H1.
-    title: "Pulumi Up(date)"
+    title: "Managing Any Cloud with .NET"
     # The image the appears on the right hand side of the hero.
     image: "/icons/containers.svg"
 
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: "Pulumi Up(date)"
+    title: "Managing Any Cloud with .NET"
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2020-04-22 11:00:00 -07:00
+    sortable_date: 2020-04-02 11:30:00 +01:00
     # Datetime of the webinar.
-    datetime: "WED APR 22, 2020 AT 11:00AM PDT"
+    datetime: "THUR APR 02, 2020 AT 11:30AM CET"
     # Description of the webinar.
     description: |
-        Pulumi 2.0 makes it easier than ever to master any cloud using your favorite languages.  Learn about new capabilities to help your team plan, build, validate, deploy and secure your cloud resources. With Pulumi’s new capabilities, you’ll spend less time fretting about complex configurations and more time delivering new infrastructure, apps, and services for your customers and stakeholders. Our improved documentation and first-class support for Python, .NET and Go means that more teams can start building, collaborating on and re-using infrastructure code.
+        All Pulumi capabilities for defining cloud resources are now available for .NET developers. Pulumi engineer Mikhail Shilkov will show you how you can use C#, F#, and VB.NET to define the infrastructure for Azure, AWS, or even on-prem Kubernetes clusters.
+
     # The webinar presenters
     presenters:
-        - name: Joe Duffy
-          role: Founder & CEO, Pulumi
+        - name: Paul Stack
+          role: Software Engineer, Pulumi
+        - name: Mikhail Shilkov
+          role: Software Engineer, Pulumi
 
     # A bullet point list containing what the user will learn during the webinar.
     learn:
-      - Cloud programming best practices and production-ready techniques.
-      - How to provision cloud resources in your favorite programming language.
+        - How to provision cloud resources in .NET.
+        - Cloud programming best practices.
 
-
-# The right hand side webinar section.
+# The right hand side form section.
 form:
     # GoToWebinar webinar key. This key allows us to register people for webinars via the
     # HubSpot form.
-    gotowebinar_key: "1156022533022330893"
+    gotowebinar_key: "4812964122274005517"
 
     # HubSpot form id.
-    hubspot_form_id: "1388349f-96d5-4067-b08f-b4b95396054a"
+    hubspot_form_id: "d4031d4b-c986-487f-af29-d59c3dfe480f"
 ---

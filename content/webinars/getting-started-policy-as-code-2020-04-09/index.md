@@ -1,12 +1,7 @@
 ---
 # Name of the webinar.
-title: "Pulumi Up(date)"
-meta_desc: "Join Pulumi CEO, Joe Duffy, and the Pulumi team for a walk-through of all the improvements and modern infrastructure capabilities of Pulumi."
-
-aliases: [
-    "/webinars/pulumi-v2-virtual-launch",
-    "/events/launch-v2-seattle-2020-04-15"
-]
+title: "Getting Started with Policy as Code for Any Cloud"
+meta_desc: "Erin Krengel and Cameron Stokes will demonstrate practical examples for defining and enforcing policies on AWS, Azure and GCP."
 
 # If the video is pre-recorded or live.
 pre_recorded: false
@@ -15,7 +10,7 @@ pre_recorded: false
 pulumi_tv: false
 
 # The preview image will be shown on the list page.
-preview_image: "/images/webinar/pulumi-up(date)-2020-04-22.png"
+preview_image: "/images/webinar/getting-started-policy-as-code-2020-04-09.png"
 
 # Webinars with unlisted as true will not be shown on the webinar list
 unlisted: false
@@ -33,43 +28,45 @@ external: false
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: "pulumi-update-2020-04-22"
+url_slug: "getting-started-policy-as-code-2020-04-09"
 
 # The content of the hero section.
 hero:
     # The title text in the hero. This also serves as the pages H1.
-    title: "Pulumi Up(date)"
+    title: "Getting Started with Policy as Code for Any Cloud"
     # The image the appears on the right hand side of the hero.
     image: "/icons/containers.svg"
 
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: "Pulumi Up(date)"
+    title: "Getting Started with Policy as Code for Any Cloud"
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2020-04-22 11:00:00 -07:00
+    sortable_date: 2020-04-09 11:00:00 -07:00
     # Datetime of the webinar.
-    datetime: "WED APR 22, 2020 AT 11:00AM PDT"
+    datetime: "THU APR 09, 2020 AT 11:00AM - 12:00PM PDT"
     # Description of the webinar.
     description: |
-        Pulumi 2.0 makes it easier than ever to master any cloud using your favorite languages.  Learn about new capabilities to help your team plan, build, validate, deploy and secure your cloud resources. With Pulumi’s new capabilities, you’ll spend less time fretting about complex configurations and more time delivering new infrastructure, apps, and services for your customers and stakeholders. Our improved documentation and first-class support for Python, .NET and Go means that more teams can start building, collaborating on and re-using infrastructure code.
+        Poorly configured cloud infrastructure is a common source of security, reliability and cost issues that result in the types of headlines that make executive leaders cringe. The Pulumi team will show you how to enforce best practices by creating durable policies that scale from a single infrastructure stack to company-wide policies. From properly secured S3 buckets to mandated resource labels, Pulumi’s Policy as Code capabilities help you to prevent defective configurations from impacting your cloud of choice.
+
     # The webinar presenters
     presenters:
-        - name: Joe Duffy
-          role: Founder & CEO, Pulumi
+        - name: Erin Krengel
+          role: Software Engineer, Pulumi
+        - name: Cameron Stokes
+          role: Customer Engineer, Pulumi
 
     # A bullet point list containing what the user will learn during the webinar.
     learn:
-      - Cloud programming best practices and production-ready techniques.
-      - How to provision cloud resources in your favorite programming language.
+        - How to create policies for resource level validation.
+        - How to create Policy Packs for orgainizing organization wide policies.
 
-
-# The right hand side webinar section.
+# The right hand side form section.
 form:
     # GoToWebinar webinar key. This key allows us to register people for webinars via the
     # HubSpot form.
-    gotowebinar_key: "1156022533022330893"
+    gotowebinar_key: "9002810409971052299"
 
     # HubSpot form id.
-    hubspot_form_id: "1388349f-96d5-4067-b08f-b4b95396054a"
+    hubspot_form_id: "5b1083f6-e034-459c-a1b6-f2bc6d900963"
 ---
