@@ -4,7 +4,7 @@ meta_desc: This page provides an overview of how to configure any SAML 2.0 ident
            with the Pulumi Console.
 menu:
     userguides:
-        weight: 7
+        weight: 8
         identifier: saml
 
 aliases:
