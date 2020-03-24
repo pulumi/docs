@@ -7,7 +7,9 @@ meta_desc: "Use Pulumi's infrastucture-as-code approach to simplify working with
 meta_image: "pulumi-crosswalk-for-aws.png"
 ---
 
+<img align="right" src="/images/partners/aws-apn.png">
 
+<br />
 Amazon offers multiple solutions for running containers in AWS, through
 its managed Elastic Container Service (ECS). This includes three major
 approaches: ECS managed automatically with Fargate, ECS backed by EC2
