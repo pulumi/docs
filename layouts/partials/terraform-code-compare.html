@@ -117,7 +117,11 @@ class Program
             string[] files = Directory.GetFiles("./files");
             foreach (string fileName in fileEntries)
             {
-                // ...upload the files to the bucket
+                var obj = new BucketObject("file", new BucketObjectArgs
+                {
+                    Bucket = bucket.Id,
+                    Content = File.ReadAllText("file")
+                });
             }
 
             return new Dictionary<string, object> {
