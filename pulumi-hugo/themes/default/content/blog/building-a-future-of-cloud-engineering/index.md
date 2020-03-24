@@ -137,7 +137,7 @@ successfully for organizations big and small. Expect to see a steady
 stream of improvements, in addition to Enterprise Edition capabilities
 for the largest of organizations needing on-premises, advanced security,
 and custom identity. Please always [let us
-know]({{< relref "/contact" >}}) how we can better meet your
+know]({{< relref "/contact.md" >}}) how we can better meet your
 needs.
 
 This new round of funding will allow us to strengthen our commitment to

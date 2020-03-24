@@ -125,8 +125,3 @@ runtime:
   options:
     typescript: false
 ```
-
-<!-- LINKS -->
-[`pulumi.Config`]: {{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#Config" >}}
-[Using configuration values in JavaScript]: {{< relref "config#javascript" >}}
-<!-- END LINKS -->

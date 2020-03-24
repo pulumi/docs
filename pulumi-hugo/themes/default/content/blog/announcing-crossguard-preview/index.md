@@ -93,4 +93,4 @@ Pulumi CrossGuard empowers everyone to build better, safer applications and infr
 * If haven't played around with Pulumi yet, here is [Pulumi's Getting Started tutorial]({{< relref "/docs/get-started" >}}).
 * [Policy as Code Getting Started tutorial]({{< relref "/docs/get-started/crossguard" >}})
 
-We've initially released the capability to create policies with TypeScript or JavaScript (that work with Pulumi programs written in any supported language) and plan to add policy SDKs for other supported languages. We would love to hear any feedback you have! You can submit feedback via our [Contact Us form]({{< relref "/contact" >}}) or in our [community slack](https://slack.pulumi.com/).
+We've initially released the capability to create policies with TypeScript or JavaScript (that work with Pulumi programs written in any supported language) and plan to add policy SDKs for other supported languages. We would love to hear any feedback you have! You can submit feedback via our [Contact Us form]({{< relref "/contact.md" >}}) or in our [community slack](https://slack.pulumi.com/).
