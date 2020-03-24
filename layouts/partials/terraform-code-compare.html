@@ -50,6 +50,7 @@ for (let file of files) {
 export const bucketname = bucket.id;` }}
 
 {{ $pythonCodeBlock := `import os
+import mimetypes
 
 from pulumi import export, FileAsset
 from pulumi_aws import s3
@@ -70,6 +71,10 @@ pulumi.export('bucket_name',  bucket.id)`}}
 
 import (
     "io/ioutil"
+    "mime"
+	"path"
+    "path/filepath"
+
     "github.com/pulumi/pulumi-aws/sdk/go/aws/s3"
     "github.com/pulumi/pulumi/sdk/go/pulumi"
 )
@@ -102,7 +107,8 @@ func main() {
     })
 }`}}
 
-{{ $cSharpCodeBlock := `using System.Collections.Generic;
+{{ $cSharpCodeBlock := `using System.IO
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Pulumi;
 using Pulumi.Aws.S3;
@@ -120,7 +126,7 @@ class Program
                 var obj = new BucketObject("file", new BucketObjectArgs
                 {
                     Bucket = bucket.Id,
-                    Content = File.ReadAllText("file")
+                    Content = File.ReadAllText(fileName)
                 });
             }
 
