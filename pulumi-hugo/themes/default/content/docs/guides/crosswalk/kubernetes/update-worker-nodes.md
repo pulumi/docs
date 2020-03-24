@@ -44,8 +44,8 @@ The full code for this stack is on [GitHub](https://github.com/pulumi/kubernetes
 
 We'll examine how to:
 
-    * [Update an Existing Node Group](#update-an-existing-node-group)
-    * [Migrate to a New Node Group](#migrate-to-a-new-node-group)
+* [Update an Existing Node Group](#update-an-existing-node-group)
+* [Migrate to a New Node Group](#migrate-to-a-new-node-group)
 
 ### Update an Existing Node Group
 
