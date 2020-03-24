@@ -16,17 +16,29 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="target" id="module-pulumi_gcp.monitoring"></span><dl class="class">
 <dt id="pulumi_gcp.monitoring.AlertPolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.monitoring.</code><code class="sig-name descname">AlertPolicy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">combiner=None</em>, <em class="sig-param">conditions=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">documentation=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">notification_channels=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">user_labels=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.AlertPolicy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a AlertPolicy resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] combiner: How to combine the results of multiple conditions to determine if an incident should be opened.
-:param pulumi.Input[list] conditions: A list of conditions for the policy. The conditions are combined by AND or OR according to the combiner field. If the</p>
+<dd><p>A description of the conditions under which some aspect of your system is
+considered to be “unhealthy” and the ways to notify people or services
+about this state.</p>
+<p>To get more information about AlertPolicy, see:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.alertPolicies">API documentation</a></p></li>
+<li><p>How-to Guides</p>
+<ul>
+<li><p><a class="reference external" href="https://cloud.google.com/monitoring/alerts/">Official Documentation</a></p></li>
+</ul>
+</li>
+</ul>
 <blockquote>
-<div><p>combined conditions evaluate to true, then an incident is created. A policy can have from one to six conditions.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/monitoring_alert_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/monitoring_alert_policy.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>combiner</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – How to combine the results of multiple conditions to determine if an incident should be opened.</p></li>
+<li><p><strong>conditions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of conditions for the policy. The conditions are combined by AND or OR according to the combiner field. If the
+combined conditions evaluate to true, then an incident is created. A policy can have from one to six conditions.</p></li>
 <li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A short name or phrase used to identify the policy in dashboards, notifications, and incidents. To avoid confusion,
 don’t use the same display name for multiple policies in the same project. The name is limited to 512 Unicode
 characters.</p></li>
@@ -375,7 +387,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.monitoring.AwaitableGetNotificationChannelResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.monitoring.</code><code class="sig-name descname">AwaitableGetNotificationChannelResult</code><span class="sig-paren">(</span><em class="sig-param">description=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">user_labels=None</em>, <em class="sig-param">verification_status=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.AwaitableGetNotificationChannelResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.monitoring.</code><code class="sig-name descname">AwaitableGetNotificationChannelResult</code><span class="sig-paren">(</span><em class="sig-param">description=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">sensitive_labels=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">user_labels=None</em>, <em class="sig-param">verification_status=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.AwaitableGetNotificationChannelResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -385,7 +397,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.monitoring.GetNotificationChannelResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.monitoring.</code><code class="sig-name descname">GetNotificationChannelResult</code><span class="sig-paren">(</span><em class="sig-param">description=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">user_labels=None</em>, <em class="sig-param">verification_status=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.GetNotificationChannelResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.monitoring.</code><code class="sig-name descname">GetNotificationChannelResult</code><span class="sig-paren">(</span><em class="sig-param">description=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">sensitive_labels=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">user_labels=None</em>, <em class="sig-param">verification_status=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.GetNotificationChannelResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getNotificationChannel.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.monitoring.GetNotificationChannelResult.id">
@@ -400,9 +412,40 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.monitoring.</code><code class="sig-name descname">GetSecretVersionResult</code><span class="sig-paren">(</span><em class="sig-param">create_time=None</em>, <em class="sig-param">destroy_time=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">secret=None</em>, <em class="sig-param">secret_data=None</em>, <em class="sig-param">version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.GetSecretVersionResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getSecretVersion.</p>
 <dl class="attribute">
+<dt id="pulumi_gcp.monitoring.GetSecretVersionResult.create_time">
+<code class="sig-name descname">create_time</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.monitoring.GetSecretVersionResult.create_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>The time at which the Secret was created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.monitoring.GetSecretVersionResult.destroy_time">
+<code class="sig-name descname">destroy_time</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.monitoring.GetSecretVersionResult.destroy_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>The time at which the Secret was destroyed. Only present if state is DESTROYED.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.monitoring.GetSecretVersionResult.enabled">
+<code class="sig-name descname">enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.monitoring.GetSecretVersionResult.enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>True if the current state of the SecretVersion is enabled.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_gcp.monitoring.GetSecretVersionResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.monitoring.GetSecretVersionResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.monitoring.GetSecretVersionResult.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.monitoring.GetSecretVersionResult.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The resource name of the SecretVersion. Format:
+<code class="docutils literal notranslate"><span class="pre">projects/{{project}}/secrets/{{secret_id}}/versions/{{version}}</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.monitoring.GetSecretVersionResult.secret_data">
+<code class="sig-name descname">secret_data</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.monitoring.GetSecretVersionResult.secret_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>The secret data. No larger than 64KiB.</p>
 </dd></dl>
 
 </dd></dl>
@@ -410,18 +453,31 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.monitoring.Group">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.monitoring.</code><code class="sig-name descname">Group</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">filter=None</em>, <em class="sig-param">is_cluster=None</em>, <em class="sig-param">parent_name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.Group" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Group resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] display_name: A user-assigned name for this group, used only for display purposes.
-:param pulumi.Input[str] filter: The filter used to determine which monitored resources belong to this group.
-:param pulumi.Input[bool] is_cluster: If true, the members of this group are considered to be a cluster. The system can perform additional analysis on groups</p>
+<dd><p>The description of a dynamic collection of monitored resources. Each group
+has a filter that is matched against monitored resources and their
+associated metadata. If a group’s filter matches an available monitored
+resource, then that resource is a member of that group.</p>
+<p>To get more information about Group, see:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.groups">API documentation</a></p></li>
+<li><p>How-to Guides</p>
+<ul>
+<li><p><a class="reference external" href="https://cloud.google.com/monitoring/groups/">Official Documentation</a></p></li>
+</ul>
+</li>
+</ul>
 <blockquote>
-<div><p>that are clusters.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/monitoring_group.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/monitoring_group.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A user-assigned name for this group, used only for display purposes.</p></li>
+<li><p><strong>filter</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The filter used to determine which monitored resources belong to this group.</p></li>
+<li><p><strong>is_cluster</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, the members of this group are considered to be a cluster. The system can perform additional analysis on groups
+that are clusters.</p></li>
 <li><p><strong>parent_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the group’s parent, if it has one. The format is “projects/{project_id_or_number}/groups/{group_id}”. For
 groups with no parent, parentName is the empty string, “”.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
@@ -533,17 +589,41 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.monitoring.NotificationChannel">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.monitoring.</code><code class="sig-name descname">NotificationChannel</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">user_labels=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.NotificationChannel" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a NotificationChannel resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] description: An optional human-readable description of this notification channel. This description may provide additional details,</p>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.monitoring.</code><code class="sig-name descname">NotificationChannel</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">sensitive_labels=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">user_labels=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.NotificationChannel" title="Permalink to this definition">¶</a></dt>
+<dd><p>A NotificationChannel is a medium through which an alert is delivered
+when a policy violation is detected. Examples of channels include email, SMS,
+and third-party messaging applications. Fields containing sensitive information
+like authentication tokens or contact info are only partially populated on retrieval.</p>
+<p>Notification Channels are designed to be flexible and are made up of a supported <code class="docutils literal notranslate"><span class="pre">type</span></code>
+and labels to configure that channel. Each <code class="docutils literal notranslate"><span class="pre">type</span></code> has specific labels that need to be
+present for that channel to be correctly configured. The labels that are required to be
+present for one channel <code class="docutils literal notranslate"><span class="pre">type</span></code> are often different than those required for another.
+Due to these loose constraints it’s often best to set up a channel through the UI
+and import it to the provider when setting up a brand new channel type to determine which
+labels are required.</p>
+<p>A list of supported channels per project the <code class="docutils literal notranslate"><span class="pre">list</span></code> endpoint can be
+accessed programmatically or through the api explorer at  <a class="reference external" href="https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.notificationChannelDescriptors/list">https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.notificationChannelDescriptors/list</a> .
+This provides the channel type and all of the required labels that must be passed.</p>
+<p>To get more information about NotificationChannel, see:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.notificationChannels">API documentation</a></p></li>
+<li><p>How-to Guides</p>
+<ul>
+<li><p><a class="reference external" href="https://cloud.google.com/monitoring/support/notification-options">Notification Options</a></p></li>
+<li><p><a class="reference external" href="https://cloud.google.com/monitoring/api/v3/">Monitoring API Documentation</a></p></li>
+</ul>
+</li>
+</ul>
 <blockquote>
-<div><p>beyond the display name, for the channel. This may not exceed 1024 Unicode characters.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/monitoring_notification_channel.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/monitoring_notification_channel.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional human-readable description of this notification channel. This description may provide additional details,
+beyond the display name, for the channel. This may not exceed 1024 Unicode characters.</p></li>
 <li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional human-readable name for this notification channel. It is recommended that you specify a non-empty and unique
 name in order to make it easier to identify the channels in your project, though this is not enforced. The display name
 is limited to 512 Unicode characters.</p></li>
@@ -552,13 +632,16 @@ notifications to a particular channel without removing the channel from all aler
 channel. This is a more convenient approach when the change is temporary and you want to receive notifications from the
 same set of alerting policies on the channel at some point in the future.</p></li>
 <li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration fields that define the channel and its behavior. The permissible and required labels are specified in the
-NotificationChannelDescriptor corresponding to the type field. <strong>Note</strong>: Some NotificationChannelDescriptor labels are
-sensitive and the API will return an partially-obfuscated value. For example, for ‘“type”: “slack”’ channels, an
-‘auth_token’ label with value “SECRET” will be obfuscated as “<a href="#id1"><span class="problematic" id="id2">**</span></a>CRET”. In order to avoid a diff, Terraform will use the
-state value if it appears that the obfuscated value matches the state value in length/unobfuscated characters. However,
-Terraform will not detect a diff if the obfuscated portion of the value was changed outside of Terraform.</p></li>
+NotificationChannelDescriptor corresponding to the type field. Labels with sensitive data are obfuscated by the API and
+therefore Terraform cannot determine if there are upstream changes to these fields. They can also be configured via the
+sensitive_labels block, but cannot be configured in both places.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
+<li><p><strong>sensitive_labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Different notification type behaviors are configured primarily using the the ‘labels’ field on this resource. This block
+contains the labels which contain secrets or passwords so that they can be marked sensitive and hidden from plan output.
+The name of the field, eg: password, will be the key in the ‘labels’ map in the api request. Credentials may not be
+specified in both locations and will cause an error. Changing from one location to a different credential configuration
+in the config will require an apply to update state.</p></li>
 <li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the notification channel. This field matches the value of the NotificationChannelDescriptor.type field. See
 <a class="reference external" href="https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.notificationChannelDescriptors/list">https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.notificationChannelDescriptors/list</a> to get the list of
 valid values such as “email”, “slack”, etc…</p></li>
@@ -570,6 +653,12 @@ begin with a letter.</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>sensitive_labels</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">authToken</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <dl class="attribute">
 <dt id="pulumi_gcp.monitoring.NotificationChannel.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.monitoring.NotificationChannel.description" title="Permalink to this definition">¶</a></dt>
@@ -598,11 +687,9 @@ same set of alerting policies on the channel at some point in the future.</p>
 <dt id="pulumi_gcp.monitoring.NotificationChannel.labels">
 <code class="sig-name descname">labels</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.monitoring.NotificationChannel.labels" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configuration fields that define the channel and its behavior. The permissible and required labels are specified in the
-NotificationChannelDescriptor corresponding to the type field. <strong>Note</strong>: Some NotificationChannelDescriptor labels are
-sensitive and the API will return an partially-obfuscated value. For example, for ‘“type”: “slack”’ channels, an
-‘auth_token’ label with value “SECRET” will be obfuscated as “<a href="#id3"><span class="problematic" id="id4">**</span></a>CRET”. In order to avoid a diff, Terraform will use the
-state value if it appears that the obfuscated value matches the state value in length/unobfuscated characters. However,
-Terraform will not detect a diff if the obfuscated portion of the value was changed outside of Terraform.</p>
+NotificationChannelDescriptor corresponding to the type field. Labels with sensitive data are obfuscated by the API and
+therefore Terraform cannot determine if there are upstream changes to these fields. They can also be configured via the
+sensitive_labels block, but cannot be configured in both places.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -617,6 +704,21 @@ Terraform will not detect a diff if the obfuscated portion of the value was chan
 <code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.monitoring.NotificationChannel.project" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.monitoring.NotificationChannel.sensitive_labels">
+<code class="sig-name descname">sensitive_labels</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.monitoring.NotificationChannel.sensitive_labels" title="Permalink to this definition">¶</a></dt>
+<dd><p>Different notification type behaviors are configured primarily using the the ‘labels’ field on this resource. This block
+contains the labels which contain secrets or passwords so that they can be marked sensitive and hidden from plan output.
+The name of the field, eg: password, will be the key in the ‘labels’ map in the api request. Credentials may not be
+specified in both locations and will cause an error. Changing from one location to a different credential configuration
+in the config will require an apply to update state.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">authToken</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceKey</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -651,7 +753,7 @@ UpdateNotificationChannel operation. To change the value of this field, you must
 
 <dl class="method">
 <dt id="pulumi_gcp.monitoring.NotificationChannel.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">user_labels=None</em>, <em class="sig-param">verification_status=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.NotificationChannel.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">sensitive_labels=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">user_labels=None</em>, <em class="sig-param">verification_status=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.NotificationChannel.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing NotificationChannel resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -670,15 +772,18 @@ notifications to a particular channel without removing the channel from all aler
 channel. This is a more convenient approach when the change is temporary and you want to receive notifications from the
 same set of alerting policies on the channel at some point in the future.</p></li>
 <li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration fields that define the channel and its behavior. The permissible and required labels are specified in the
-NotificationChannelDescriptor corresponding to the type field. <strong>Note</strong>: Some NotificationChannelDescriptor labels are
-sensitive and the API will return an partially-obfuscated value. For example, for ‘“type”: “slack”’ channels, an
-‘auth_token’ label with value “SECRET” will be obfuscated as “<a href="#id5"><span class="problematic" id="id6">**</span></a>CRET”. In order to avoid a diff, Terraform will use the
-state value if it appears that the obfuscated value matches the state value in length/unobfuscated characters. However,
-Terraform will not detect a diff if the obfuscated portion of the value was changed outside of Terraform.</p></li>
+NotificationChannelDescriptor corresponding to the type field. Labels with sensitive data are obfuscated by the API and
+therefore Terraform cannot determine if there are upstream changes to these fields. They can also be configured via the
+sensitive_labels block, but cannot be configured in both places.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The full REST resource name for this channel. The syntax is: projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID] The
 [CHANNEL_ID] is automatically assigned by the server on creation.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
+<li><p><strong>sensitive_labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Different notification type behaviors are configured primarily using the the ‘labels’ field on this resource. This block
+contains the labels which contain secrets or passwords so that they can be marked sensitive and hidden from plan output.
+The name of the field, eg: password, will be the key in the ‘labels’ map in the api request. Credentials may not be
+specified in both locations and will cause an error. Changing from one location to a different credential configuration
+in the config will require an apply to update state.</p></li>
 <li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the notification channel. This field matches the value of the NotificationChannelDescriptor.type field. See
 <a class="reference external" href="https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.notificationChannelDescriptors/list">https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.notificationChannelDescriptors/list</a> to get the list of
 valid values such as “email”, “slack”, etc…</p></li>
@@ -697,6 +802,12 @@ UpdateNotificationChannel operation. To change the value of this field, you must
 </ul>
 </dd>
 </dl>
+<p>The <strong>sensitive_labels</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">authToken</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="method">
@@ -740,17 +851,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.monitoring.UptimeCheckConfig">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.monitoring.</code><code class="sig-name descname">UptimeCheckConfig</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">content_matchers=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">http_check=None</em>, <em class="sig-param">monitored_resource=None</em>, <em class="sig-param">period=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">resource_group=None</em>, <em class="sig-param">selected_regions=None</em>, <em class="sig-param">tcp_check=None</em>, <em class="sig-param">timeout=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.UptimeCheckConfig" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a UptimeCheckConfig resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[list] content_matchers: The expected content on the page the check is run against. Currently, only the first entry in the list is supported, and</p>
+<dd><p>This message configures which resources and services to monitor for availability.</p>
+<p>To get more information about UptimeCheckConfig, see:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.uptimeCheckConfigs">API documentation</a></p></li>
+<li><p>How-to Guides</p>
+<ul>
+<li><p><a class="reference external" href="https://cloud.google.com/monitoring/uptime-checks/">Official Documentation</a></p></li>
+</ul>
+</li>
+</ul>
 <blockquote>
-<div><p>other entries will be ignored. The server will look for an exact match of the string in the page response’s content.
-This field is optional and should only be specified if a content match is required.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/monitoring_uptime_check_config.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/monitoring_uptime_check_config.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>content_matchers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The expected content on the page the check is run against. Currently, only the first entry in the list is supported, and
+other entries will be ignored. The server will look for an exact match of the string in the page response’s content.
+This field is optional and should only be specified if a content match is required.</p></li>
 <li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A human-friendly name for the uptime check configuration. The display name should be unique within a Stackdriver
 Workspace in order to make it easier to identify; however, uniqueness is not enforced.</p></li>
 <li><p><strong>http_check</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Contains information needed to make an HTTP or HTTPS check.</p></li>
@@ -1028,13 +1149,55 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="function">
 <dt id="pulumi_gcp.monitoring.get_notification_channel">
 <code class="sig-prename descclassname">pulumi_gcp.monitoring.</code><code class="sig-name descname">get_notification_channel</code><span class="sig-paren">(</span><em class="sig-param">display_name=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">user_labels=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.get_notification_channel" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use this data source to access information about an existing resource.</p>
+<dd><p>A NotificationChannel is a medium through which an alert is delivered
+when a policy violation is detected. Examples of channels include email, SMS,
+and third-party messaging applications. Fields containing sensitive information
+like authentication tokens or contact info are only partially populated on retrieval.</p>
+<p>To get more information about NotificationChannel, see:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.notificationChannels">API documentation</a></p></li>
+<li><p>How-to Guides</p>
+<ul>
+<li><p><a class="reference external" href="https://cloud.google.com/monitoring/support/notification-options">Notification Options</a></p></li>
+<li><p><a class="reference external" href="https://cloud.google.com/monitoring/api/v3/">Monitoring API Documentation</a></p></li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/datasource_monitoring_notification_channel.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/datasource_monitoring_notification_channel.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>labels</strong> (<em>dict</em>) – Labels (corresponding to the
+NotificationChannelDescriptor schema) to filter the notification channels by.</p></li>
+<li><p><strong>project</strong> (<em>str</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
+<li><p><strong>type</strong> (<em>str</em>) – The type of the notification channel.</p></li>
+<li><p><strong>user_labels</strong> (<em>dict</em>) – User-provided key-value labels to filter by.</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_gcp.monitoring.get_secret_version">
 <code class="sig-prename descclassname">pulumi_gcp.monitoring.</code><code class="sig-name descname">get_secret_version</code><span class="sig-paren">(</span><em class="sig-param">project=None</em>, <em class="sig-param">secret=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.get_secret_version" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use this data source to access information about an existing resource.</p>
+<dd><p>Get a Secret Manager secret’s version. For more information see the <a class="reference external" href="https://cloud.google.com/secret-manager/docs/">official documentation</a> and <a class="reference external" href="https://cloud.google.com/secret-manager/docs/reference/rest/v1beta1/projects.secrets.versions">API</a>.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/datasource_google_secret_manager_secret_version.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/datasource_google_secret_manager_secret_version.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>project</strong> (<em>str</em>) – The project to get the secret version for. If it
+is not provided, the provider project is used.</p></li>
+<li><p><strong>secret</strong> (<em>str</em>) – The secret to get the secret version for.</p></li>
+<li><p><strong>version</strong> (<em>str</em>) – The version of the secret to get. If it
+is not provided, the latest version is retrieved.</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 </div>

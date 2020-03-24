@@ -16,16 +16,30 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="target" id="module-pulumi_gcp.cloudscheduler"></span><dl class="class">
 <dt id="pulumi_gcp.cloudscheduler.Job">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.cloudscheduler.</code><code class="sig-name descname">Job</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">app_engine_http_target=None</em>, <em class="sig-param">attempt_deadline=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">http_target=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">pubsub_target=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">retry_config=None</em>, <em class="sig-param">schedule=None</em>, <em class="sig-param">time_zone=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudscheduler.Job" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Job resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[dict] app_engine_http_target: App Engine HTTP target. If the job providers a App Engine HTTP target the cron will send a request to the service</p>
+<dd><p>A scheduled job that can publish a pubsub message or a http request
+every X interval of time, using crontab format string.</p>
+<p>To use Cloud Scheduler your project must contain an App Engine app
+that is located in one of the supported regions. If your project
+does not have an App Engine app, you must create one.</p>
+<p>To get more information about Job, see:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://cloud.google.com/scheduler/docs/reference/rest/">API documentation</a></p></li>
+<li><p>How-to Guides</p>
+<ul>
+<li><p><a class="reference external" href="https://cloud.google.com/scheduler/">Official Documentation</a></p></li>
+</ul>
+</li>
+</ul>
 <blockquote>
-<div><p>instance</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloud_scheduler_job.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloud_scheduler_job.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>app_engine_http_target</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – App Engine HTTP target. If the job providers a App Engine HTTP target the cron will send a request to the service
+instance</p></li>
 <li><p><strong>attempt_deadline</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The deadline for job attempts. If the request handler does not respond by this deadline then the request is cancelled
 and the attempt is marked as a DEADLINE_EXCEEDED failure. The failed attempt can be viewed in execution logs. Cloud
 Scheduler will retry the job according to the RetryConfig. The allowed duration for this deadline is: * For HTTP

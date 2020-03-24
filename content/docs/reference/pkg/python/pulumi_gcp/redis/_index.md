@@ -15,19 +15,31 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_gcp.redis"></span><dl class="class">
 <dt id="pulumi_gcp.redis.Instance">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.redis.</code><code class="sig-name descname">Instance</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">alternative_location_id=None</em>, <em class="sig-param">authorized_network=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">location_id=None</em>, <em class="sig-param">memory_size_gb=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">redis_configs=None</em>, <em class="sig-param">redis_version=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">reserved_ip_range=None</em>, <em class="sig-param">tier=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.redis.Instance" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Instance resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] alternative_location_id: Only applicable to STANDARD_HA tier which protects the instance against zonal failures by provisioning it across two</p>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.redis.</code><code class="sig-name descname">Instance</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">alternative_location_id=None</em>, <em class="sig-param">authorized_network=None</em>, <em class="sig-param">connect_mode=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">location_id=None</em>, <em class="sig-param">memory_size_gb=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">redis_configs=None</em>, <em class="sig-param">redis_version=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">reserved_ip_range=None</em>, <em class="sig-param">tier=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.redis.Instance" title="Permalink to this definition">¶</a></dt>
+<dd><p>A Google Cloud Redis instance.</p>
+<p>To get more information about Instance, see:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://cloud.google.com/memorystore/docs/redis/reference/rest/">API documentation</a></p></li>
+<li><p>How-to Guides</p>
+<ul>
+<li><p><a class="reference external" href="https://cloud.google.com/memorystore/docs/redis/">Official Documentation</a></p></li>
+</ul>
+</li>
+</ul>
 <blockquote>
-<div><p>zones. If provided, it must be a different zone from the one provided in [locationId].</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/redis_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/redis_instance.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>alternative_location_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Only applicable to STANDARD_HA tier which protects the instance against zonal failures by provisioning it across two
+zones. If provided, it must be a different zone from the one provided in [locationId].</p></li>
 <li><p><strong>authorized_network</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The full name of the Google Compute Engine network to which the instance is connected. If left unspecified, the default
 network will be used.</p></li>
+<li><p><strong>connect_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The connection mode of the Redis instance. Can be either ‘DIRECT_PEERING’ or ‘PRIVATE_SERVICE_ACCESS’. The default
+connect mode if not provided is ‘DIRECT_PEERING’.</p></li>
 <li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An arbitrary and optional user-provided name for the instance.</p></li>
 <li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Resource labels to represent user provided metadata.</p></li>
 <li><p><strong>location_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The zone where the instance will be provisioned. If not provided, the service will choose a zone for the instance. For
@@ -63,6 +75,13 @@ zones. If provided, it must be a different zone from the one provided in [locati
 <code class="sig-name descname">authorized_network</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.redis.Instance.authorized_network" title="Permalink to this definition">¶</a></dt>
 <dd><p>The full name of the Google Compute Engine network to which the instance is connected. If left unspecified, the default
 network will be used.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.redis.Instance.connect_mode">
+<code class="sig-name descname">connect_mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.redis.Instance.connect_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>The connection mode of the Redis instance. Can be either ‘DIRECT_PEERING’ or ‘PRIVATE_SERVICE_ACCESS’. The default
+connect mode if not provided is ‘DIRECT_PEERING’.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -168,7 +187,7 @@ available primary/replica instances</p>
 
 <dl class="method">
 <dt id="pulumi_gcp.redis.Instance.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">alternative_location_id=None</em>, <em class="sig-param">authorized_network=None</em>, <em class="sig-param">create_time=None</em>, <em class="sig-param">current_location_id=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">host=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">location_id=None</em>, <em class="sig-param">memory_size_gb=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">redis_configs=None</em>, <em class="sig-param">redis_version=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">reserved_ip_range=None</em>, <em class="sig-param">tier=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.redis.Instance.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">alternative_location_id=None</em>, <em class="sig-param">authorized_network=None</em>, <em class="sig-param">connect_mode=None</em>, <em class="sig-param">create_time=None</em>, <em class="sig-param">current_location_id=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">host=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">location_id=None</em>, <em class="sig-param">memory_size_gb=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">redis_configs=None</em>, <em class="sig-param">redis_version=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">reserved_ip_range=None</em>, <em class="sig-param">tier=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.redis.Instance.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Instance resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -181,6 +200,8 @@ properties used to qualify the lookup.</p>
 zones. If provided, it must be a different zone from the one provided in [locationId].</p></li>
 <li><p><strong>authorized_network</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The full name of the Google Compute Engine network to which the instance is connected. If left unspecified, the default
 network will be used.</p></li>
+<li><p><strong>connect_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The connection mode of the Redis instance. Can be either ‘DIRECT_PEERING’ or ‘PRIVATE_SERVICE_ACCESS’. The default
+connect mode if not provided is ‘DIRECT_PEERING’.</p></li>
 <li><p><strong>create_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The time the instance was created in RFC3339 UTC “Zulu” format, accurate to nanoseconds.</p></li>
 <li><p><strong>current_location_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The current zone where the Redis endpoint is placed. For Basic Tier instances, this will always be the same as the
 [locationId] provided by the user at creation time. For Standard Tier instances, this can be either [locationId] or

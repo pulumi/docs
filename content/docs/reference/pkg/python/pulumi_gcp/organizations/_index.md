@@ -62,7 +62,7 @@ and
 <a class="reference external" href="https://cloud.google.com/resource-manager/reference/rest/v2/folders">API</a>.</p>
 <p>A folder can contain projects, other folders, or a combination of both. You can use folders to group projects under an organization in a hierarchy. For example, your organization might contain multiple departments, each with its own set of Cloud Platform resources. Folders allows you to group these resources on a per-department basis. Folders are used to group resources that share common IAM policies.</p>
 <p>Folders created live inside an Organization. See the <a class="reference external" href="https://cloud.google.com/resource-manager/docs/quickstarts">Organization documentation</a> for more details.</p>
-<p>The service account used to run this provider when creating a <code class="docutils literal notranslate"><span class="pre">organizations.Folder</span></code>
+<p>The service account used to run the provider when creating a <code class="docutils literal notranslate"><span class="pre">organizations.Folder</span></code>
 resource must have <code class="docutils literal notranslate"><span class="pre">roles/resourcemanager.folderCreator</span></code>. See the
 <a class="reference external" href="https://cloud.google.com/resource-manager/docs/access-control-folders">Access Control for Folders Using IAM</a>
 doc for more information.</p>
@@ -403,7 +403,7 @@ an existing Google Cloud Platform Organization.</p>
 <dt><strong>Note:</strong> This resource <strong>must not</strong> be used in conjunction with</dt><dd><p><code class="docutils literal notranslate"><span class="pre">organizations.IAMMember</span></code> for the <strong>same role</strong> or they will fight over
 what your policy should be.</p>
 </dd>
-<dt><strong>Note:</strong> On create, this resource will overwrite members of any existing roles.</dt><dd><p>Use <code class="docutils literal notranslate"><span class="pre">import</span></code> and inspect the preview output to ensure
+<dt><strong>Note:</strong> On create, this resource will overwrite members of any existing roles.</dt><dd><p>Use <code class="docutils literal notranslate"><span class="pre">pulumi</span> <span class="pre">import</span></code> and inspect the <a href="#id1"><span class="problematic" id="id2">`</span></a>output to ensure
 your existing members are preserved.</p>
 </dd>
 </dl>
@@ -533,7 +533,7 @@ and
 same name, possibly causing confusing behavior between undelete and update. 2) A deleted role is permanently deleted
 after 7 days, but it can take up to 30 more days (i.e. between 7 and 37 days after deletion) before the role name is
 made available again. This means a deleted role that has been deleted for more than 7 days cannot be changed at all
-by this provider, and new roles cannot share that name.</p>
+by the provider, and new roles cannot share that name.</p>
 </dd>
 </dl>
 <p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_organization_iam_custom_role.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_organization_iam_custom_role.html.markdown</a>.</p>
@@ -892,12 +892,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.organizations.IamAuditConfig">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">IamAuditConfig</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">audit_log_configs=None</em>, <em class="sig-param">org_id=None</em>, <em class="sig-param">service=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.IamAuditConfig" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a IamAuditConfig resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[list] audit_log_configs: The configuration for logging of each type of permission.  This can be specified multiple times.  Structure is documented below.
-:param pulumi.Input[str] org_id: The numeric ID of the organization in which you want to manage the audit logging config.
-:param pulumi.Input[str] service: Service which will be enabled for audit logging.  The special value <code class="docutils literal notranslate"><span class="pre">allServices</span></code> covers all services.  Note that if there are google_organization_iam_audit_config resources covering both <code class="docutils literal notranslate"><span class="pre">allServices</span></code> and a specific service then the union of the two AuditConfigs is used for that service: the <code class="docutils literal notranslate"><span class="pre">log_types</span></code> specified in each <code class="docutils literal notranslate"><span class="pre">audit_log_config</span></code> are enabled, and the <code class="docutils literal notranslate"><span class="pre">exempted_members</span></code> in each <code class="docutils literal notranslate"><span class="pre">audit_log_config</span></code> are exempted.</p>
+<dd><p>Allows management of audit logging config for a given service for a Google Cloud Platform Organization.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_organization_iam_audit_config.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_organization_iam_audit_config.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>audit_log_configs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The configuration for logging of each type of permission.  This can be specified multiple times.  Structure is documented below.</p></li>
+<li><p><strong>org_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The numeric ID of the organization in which you want to manage the audit logging config.</p></li>
+<li><p><strong>service</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Service which will be enabled for audit logging.  The special value <code class="docutils literal notranslate"><span class="pre">allServices</span></code> covers all services.  Note that if there are google_organization_iam_audit_config resources covering both <code class="docutils literal notranslate"><span class="pre">allServices</span></code> and a specific service then the union of the two AuditConfigs is used for that service: the <code class="docutils literal notranslate"><span class="pre">log_types</span></code> specified in each <code class="docutils literal notranslate"><span class="pre">audit_log_config</span></code> are enabled, and the <code class="docutils literal notranslate"><span class="pre">exempted_members</span></code> in each <code class="docutils literal notranslate"><span class="pre">audit_log_config</span></code> are exempted.</p></li>
+</ul>
+</dd>
+</dl>
 <p>The <strong>audit_log_configs</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">exemptedMembers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
@@ -1204,25 +1213,8 @@ See the <a class="reference external" href="https://cloud.google.com/resource-ma
 resource must have <code class="docutils literal notranslate"><span class="pre">roles/resourcemanager.projectCreator</span></code>. See the
 <a class="reference external" href="https://cloud.google.com/resource-manager/docs/access-control-org">Access Control for Organizations Using IAM</a>
 doc for more information.</p>
-<p>Note that prior to 0.8.5, <code class="docutils literal notranslate"><span class="pre">organizations.Project</span></code> functioned like a data source,
-meaning any project referenced by it had to be created and managed outside
-this provider. As of 0.8.5, <code class="docutils literal notranslate"><span class="pre">organizations.Project</span></code> functions like any other
-resource, with this provider creating and managing the project. To replicate the old
-behavior, either:</p>
-<ul class="simple">
-<li><p>Use the project ID directly in whatever is referencing the project, using the
-<a class="reference external" href="https://www.terraform.io/docs/providers/google/r/google_project_iam.html">projects.IAMPolicy</a>
-to replace the old <code class="docutils literal notranslate"><span class="pre">policy_data</span></code> property.</p></li>
-<li><p>Use the <a class="reference external" href="https://www.terraform.io/docs/import/usage.html">import</a> functionality
-to import your pre-existing project into this provider, where it can be referenced and
-used just like always, keeping in mind that this provider will attempt to undo any changes
-made outside this provider.</p></li>
-</ul>
 <blockquote>
-<div><p>It’s important to note that any project resources that were added to your config
-prior to 0.8.5 will continue to function as they always have, and will not be managed by
-this provider. Only newly added projects are affected.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_project.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_project.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_project.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_project.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1234,7 +1226,7 @@ If set to <code class="docutils literal notranslate"><span class="pre">false</sp
 will still need to have 1 network slot available to create the project successfully, even if
 you set <code class="docutils literal notranslate"><span class="pre">auto_create_network</span></code> to <code class="docutils literal notranslate"><span class="pre">false</span></code>, since the network will exist momentarily.</p></li>
 <li><p><strong>billing_account</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The alphanumeric ID of the billing account this project
-belongs to. The user or service account performing this operation with this provider
+belongs to. The user or service account performing this operation with the provider
 must have Billing Account Administrator privileges (<code class="docutils literal notranslate"><span class="pre">roles/billing.admin</span></code>) in
 the organization. See <a class="reference external" href="https://cloud.google.com/billing/v1/how-tos/access-control">Google Cloud Billing API Access Control</a>
 for more details.</p></li>
@@ -1270,7 +1262,7 @@ you set <code class="docutils literal notranslate"><span class="pre">auto_create
 <dt id="pulumi_gcp.organizations.Project.billing_account">
 <code class="sig-name descname">billing_account</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.Project.billing_account" title="Permalink to this definition">¶</a></dt>
 <dd><p>The alphanumeric ID of the billing account this project
-belongs to. The user or service account performing this operation with this provider
+belongs to. The user or service account performing this operation with the provider
 must have Billing Account Administrator privileges (<code class="docutils literal notranslate"><span class="pre">roles/billing.admin</span></code>) in
 the organization. See <a class="reference external" href="https://cloud.google.com/billing/v1/how-tos/access-control">Google Cloud Billing API Access Control</a>
 for more details.</p>
@@ -1344,7 +1336,7 @@ If set to <code class="docutils literal notranslate"><span class="pre">false</sp
 will still need to have 1 network slot available to create the project successfully, even if
 you set <code class="docutils literal notranslate"><span class="pre">auto_create_network</span></code> to <code class="docutils literal notranslate"><span class="pre">false</span></code>, since the network will exist momentarily.</p></li>
 <li><p><strong>billing_account</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The alphanumeric ID of the billing account this project
-belongs to. The user or service account performing this operation with this provider
+belongs to. The user or service account performing this operation with the provider
 must have Billing Account Administrator privileges (<code class="docutils literal notranslate"><span class="pre">roles/billing.admin</span></code>) in
 the organization. See <a class="reference external" href="https://cloud.google.com/billing/v1/how-tos/access-control">Google Cloud Billing API Access Control</a>
 for more details.</p>

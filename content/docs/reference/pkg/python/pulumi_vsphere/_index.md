@@ -19,6 +19,16 @@ anything, please consult the source <a class="reference external" href="https://
 <dd></dd></dl>
 
 <dl class="class">
+<dt id="pulumi_vsphere.AwaitableGetContentLibraryItemResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetContentLibraryItemResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">library_id=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetContentLibraryItemResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_vsphere.AwaitableGetContentLibraryResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetContentLibraryResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetContentLibraryResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_vsphere.AwaitableGetCustomAttributeResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetCustomAttributeResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">managed_object_type=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetCustomAttributeResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -1768,6 +1778,217 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="method">
 <dt id="pulumi_vsphere.ComputeClusterVmHostRule.translate_input_property">
 <code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmHostRule.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_vsphere.ContentLibrary">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">ContentLibrary</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">storage_backings=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ContentLibrary" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">.ContentLibrary</span></code> resource can be used to manage Content Libraries.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong> This resource requires vCenter and is not available on direct ESXi
+connections.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/content_library.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/content_library.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of the Content Library.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Content Library.</p></li>
+<li><p><strong>storage_backings</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The [managed object reference ID][docs-about-morefs] on which to store Content Library
+items.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="pulumi_vsphere.ContentLibrary.description">
+<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ContentLibrary.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>A description of the Content Library.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.ContentLibrary.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ContentLibrary.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the Content Library.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.ContentLibrary.storage_backings">
+<code class="sig-name descname">storage_backings</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ContentLibrary.storage_backings" title="Permalink to this definition">¶</a></dt>
+<dd><p>The [managed object reference ID][docs-about-morefs] on which to store Content Library
+items.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_vsphere.ContentLibrary.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">storage_backings=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ContentLibrary.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ContentLibrary resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of the Content Library.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Content Library.</p></li>
+<li><p><strong>storage_backings</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The [managed object reference ID][docs-about-morefs] on which to store Content Library
+items.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_vsphere.ContentLibrary.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ContentLibrary.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_vsphere.ContentLibrary.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ContentLibrary.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_vsphere.ContentLibraryItem">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">ContentLibraryItem</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">file_urls=None</em>, <em class="sig-param">library_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ContentLibraryItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">.ContentLibraryItem</span></code> resource can be used to create items in a Content Library. Each item can contain 
+multiple files. Each <code class="docutils literal notranslate"><span class="pre">file_url</span></code> must be accessible from the vSphere environment as it will be downloaded from the
+specified location and stored on the Content Library’s storage backing.</p>
+<p>To make a <code class="docutils literal notranslate"><span class="pre">content_library_item</span></code> a functioning template, the template must be in OVF format. The .ovf and .vmdk
+file(s) can then be set as the <code class="docutils literal notranslate"><span class="pre">file_url</span></code> list.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/content_library_item.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/content_library_item.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description for the item.</p></li>
+<li><p><strong>file_urls</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of files to download for the Content Library item.</p></li>
+<li><p><strong>library_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Content Library the item should be created in.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the item to be created in the Content Library.</p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Type of content library item.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="pulumi_vsphere.ContentLibraryItem.description">
+<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ContentLibraryItem.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>A description for the item.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.ContentLibraryItem.file_urls">
+<code class="sig-name descname">file_urls</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ContentLibraryItem.file_urls" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of files to download for the Content Library item.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.ContentLibraryItem.library_id">
+<code class="sig-name descname">library_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ContentLibraryItem.library_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the Content Library the item should be created in.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.ContentLibraryItem.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ContentLibraryItem.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the item to be created in the Content Library.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.ContentLibraryItem.type">
+<code class="sig-name descname">type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ContentLibraryItem.type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Type of content library item.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_vsphere.ContentLibraryItem.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">file_urls=None</em>, <em class="sig-param">library_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ContentLibraryItem.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ContentLibraryItem resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description for the item.</p></li>
+<li><p><strong>file_urls</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of files to download for the Content Library item.</p></li>
+<li><p><strong>library_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Content Library the item should be created in.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the item to be created in the Content Library.</p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Type of content library item.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_vsphere.ContentLibraryItem.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ContentLibraryItem.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_vsphere.ContentLibraryItem.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ContentLibraryItem.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -4695,6 +4916,30 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_vsphere.GetComputeClusterResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.GetComputeClusterResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_vsphere.GetContentLibraryItemResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetContentLibraryItemResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">library_id=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetContentLibraryItemResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getContentLibraryItem.</p>
+<dl class="attribute">
+<dt id="pulumi_vsphere.GetContentLibraryItemResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.GetContentLibraryItemResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_vsphere.GetContentLibraryResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetContentLibraryResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetContentLibraryResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getContentLibrary.</p>
+<dl class="attribute">
+<dt id="pulumi_vsphere.GetContentLibraryResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.GetContentLibraryResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
@@ -7805,7 +8050,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_vsphere.VirtualMachine">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">VirtualMachine</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">alternate_guest_name=None</em>, <em class="sig-param">annotation=None</em>, <em class="sig-param">boot_delay=None</em>, <em class="sig-param">boot_retry_delay=None</em>, <em class="sig-param">boot_retry_enabled=None</em>, <em class="sig-param">cdrom=None</em>, <em class="sig-param">clone=None</em>, <em class="sig-param">cpu_hot_add_enabled=None</em>, <em class="sig-param">cpu_hot_remove_enabled=None</em>, <em class="sig-param">cpu_limit=None</em>, <em class="sig-param">cpu_performance_counters_enabled=None</em>, <em class="sig-param">cpu_reservation=None</em>, <em class="sig-param">cpu_share_count=None</em>, <em class="sig-param">cpu_share_level=None</em>, <em class="sig-param">custom_attributes=None</em>, <em class="sig-param">datastore_cluster_id=None</em>, <em class="sig-param">datastore_id=None</em>, <em class="sig-param">disks=None</em>, <em class="sig-param">efi_secure_boot_enabled=None</em>, <em class="sig-param">enable_disk_uuid=None</em>, <em class="sig-param">enable_logging=None</em>, <em class="sig-param">ept_rvi_mode=None</em>, <em class="sig-param">extra_config=None</em>, <em class="sig-param">firmware=None</em>, <em class="sig-param">folder=None</em>, <em class="sig-param">force_power_off=None</em>, <em class="sig-param">guest_id=None</em>, <em class="sig-param">host_system_id=None</em>, <em class="sig-param">hv_mode=None</em>, <em class="sig-param">ignored_guest_ips=None</em>, <em class="sig-param">latency_sensitivity=None</em>, <em class="sig-param">memory=None</em>, <em class="sig-param">memory_hot_add_enabled=None</em>, <em class="sig-param">memory_limit=None</em>, <em class="sig-param">memory_reservation=None</em>, <em class="sig-param">memory_share_count=None</em>, <em class="sig-param">memory_share_level=None</em>, <em class="sig-param">migrate_wait_timeout=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">nested_hv_enabled=None</em>, <em class="sig-param">network_interfaces=None</em>, <em class="sig-param">num_cores_per_socket=None</em>, <em class="sig-param">num_cpus=None</em>, <em class="sig-param">resource_pool_id=None</em>, <em class="sig-param">run_tools_scripts_after_power_on=None</em>, <em class="sig-param">run_tools_scripts_after_resume=None</em>, <em class="sig-param">run_tools_scripts_before_guest_reboot=None</em>, <em class="sig-param">run_tools_scripts_before_guest_shutdown=None</em>, <em class="sig-param">run_tools_scripts_before_guest_standby=None</em>, <em class="sig-param">scsi_bus_sharing=None</em>, <em class="sig-param">scsi_controller_count=None</em>, <em class="sig-param">scsi_type=None</em>, <em class="sig-param">shutdown_wait_timeout=None</em>, <em class="sig-param">storage_policy_id=None</em>, <em class="sig-param">swap_placement_policy=None</em>, <em class="sig-param">sync_time_with_host=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vapp=None</em>, <em class="sig-param">wait_for_guest_ip_timeout=None</em>, <em class="sig-param">wait_for_guest_net_routable=None</em>, <em class="sig-param">wait_for_guest_net_timeout=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VirtualMachine" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">VirtualMachine</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">alternate_guest_name=None</em>, <em class="sig-param">annotation=None</em>, <em class="sig-param">boot_delay=None</em>, <em class="sig-param">boot_retry_delay=None</em>, <em class="sig-param">boot_retry_enabled=None</em>, <em class="sig-param">cdrom=None</em>, <em class="sig-param">clone=None</em>, <em class="sig-param">cpu_hot_add_enabled=None</em>, <em class="sig-param">cpu_hot_remove_enabled=None</em>, <em class="sig-param">cpu_limit=None</em>, <em class="sig-param">cpu_performance_counters_enabled=None</em>, <em class="sig-param">cpu_reservation=None</em>, <em class="sig-param">cpu_share_count=None</em>, <em class="sig-param">cpu_share_level=None</em>, <em class="sig-param">custom_attributes=None</em>, <em class="sig-param">datastore_cluster_id=None</em>, <em class="sig-param">datastore_id=None</em>, <em class="sig-param">disks=None</em>, <em class="sig-param">efi_secure_boot_enabled=None</em>, <em class="sig-param">enable_disk_uuid=None</em>, <em class="sig-param">enable_logging=None</em>, <em class="sig-param">ept_rvi_mode=None</em>, <em class="sig-param">extra_config=None</em>, <em class="sig-param">firmware=None</em>, <em class="sig-param">folder=None</em>, <em class="sig-param">force_power_off=None</em>, <em class="sig-param">guest_id=None</em>, <em class="sig-param">host_system_id=None</em>, <em class="sig-param">hv_mode=None</em>, <em class="sig-param">ignored_guest_ips=None</em>, <em class="sig-param">latency_sensitivity=None</em>, <em class="sig-param">memory=None</em>, <em class="sig-param">memory_hot_add_enabled=None</em>, <em class="sig-param">memory_limit=None</em>, <em class="sig-param">memory_reservation=None</em>, <em class="sig-param">memory_share_count=None</em>, <em class="sig-param">memory_share_level=None</em>, <em class="sig-param">migrate_wait_timeout=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">nested_hv_enabled=None</em>, <em class="sig-param">network_interfaces=None</em>, <em class="sig-param">num_cores_per_socket=None</em>, <em class="sig-param">num_cpus=None</em>, <em class="sig-param">poweron_timeout=None</em>, <em class="sig-param">resource_pool_id=None</em>, <em class="sig-param">run_tools_scripts_after_power_on=None</em>, <em class="sig-param">run_tools_scripts_after_resume=None</em>, <em class="sig-param">run_tools_scripts_before_guest_reboot=None</em>, <em class="sig-param">run_tools_scripts_before_guest_shutdown=None</em>, <em class="sig-param">run_tools_scripts_before_guest_standby=None</em>, <em class="sig-param">scsi_bus_sharing=None</em>, <em class="sig-param">scsi_controller_count=None</em>, <em class="sig-param">scsi_type=None</em>, <em class="sig-param">shutdown_wait_timeout=None</em>, <em class="sig-param">storage_policy_id=None</em>, <em class="sig-param">swap_placement_policy=None</em>, <em class="sig-param">sync_time_with_host=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vapp=None</em>, <em class="sig-param">wait_for_guest_ip_timeout=None</em>, <em class="sig-param">wait_for_guest_net_routable=None</em>, <em class="sig-param">wait_for_guest_net_timeout=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VirtualMachine" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a VirtualMachine resource with the given unique name, props, and options.
 :param str resource_name: The name of the resource.
 :param pulumi.ResourceOptions opts: Options for the resource.
@@ -7931,6 +8176,7 @@ virtual machine. The number of vCPUs on the virtual machine will be
 supplied to <code class="docutils literal notranslate"><span class="pre">num_cpus</span></code> must be evenly divisible by this value. Default: <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p></li>
 <li><p><strong>num_cpus</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The total number of virtual processor cores to assign
 to this virtual machine. Default: <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p></li>
+<li><p><strong>poweron_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of time, in seconds, that we will be trying to power on a VM</p></li>
 <li><p><strong>resource_pool_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The [managed object reference
 ID][docs-about-morefs] of the resource pool to put this virtual machine in.
 See the section on virtual machine migration
@@ -8051,6 +8297,8 @@ below.</p>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">linkedClone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ovfNetworkMap</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ovfStorageMap</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">templateUuid</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 </ul>
@@ -8126,6 +8374,9 @@ only be manually set if <code class="docutils literal notranslate"><span class="
 computed value that gives the current MAC address of this interface.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">networkId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The [managed object reference
 ID][docs-about-morefs] of the network to connect this interface to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ovfMapping</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies which OVF NIC the <code class="docutils literal notranslate"><span class="pre">network_interface</span></code>
+should be associated with. Only applies at creation and only when deploying
+from an OVF source.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">useStaticMac</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If true, the <code class="docutils literal notranslate"><span class="pre">mac_address</span></code> field is treated as
 a static MAC address and set accordingly. Setting this to <code class="docutils literal notranslate"><span class="pre">true</span></code> requires
 <code class="docutils literal notranslate"><span class="pre">mac_address</span></code> to be set. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
@@ -8252,6 +8503,8 @@ below.</p>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">linkedClone</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ovfNetworkMap</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ovfStorageMap</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">templateUuid</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
 </ul>
@@ -8621,6 +8874,9 @@ only be manually set if <code class="docutils literal notranslate"><span class="
 computed value that gives the current MAC address of this interface.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">networkId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The [managed object reference
 ID][docs-about-morefs] of the network to connect this interface to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ovfMapping</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies which OVF NIC the <code class="docutils literal notranslate"><span class="pre">network_interface</span></code>
+should be associated with. Only applies at creation and only when deploying
+from an OVF source.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">useStaticMac</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If true, the <code class="docutils literal notranslate"><span class="pre">mac_address</span></code> field is treated as
 a static MAC address and set accordingly. Setting this to <code class="docutils literal notranslate"><span class="pre">true</span></code> requires
 <code class="docutils literal notranslate"><span class="pre">mac_address</span></code> to be set. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
@@ -8641,6 +8897,12 @@ supplied to <code class="docutils literal notranslate"><span class="pre">num_cpu
 <code class="sig-name descname">num_cpus</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.num_cpus" title="Permalink to this definition">¶</a></dt>
 <dd><p>The total number of virtual processor cores to assign
 to this virtual machine. Default: <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.VirtualMachine.poweron_timeout">
+<code class="sig-name descname">poweron_timeout</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.poweron_timeout" title="Permalink to this definition">¶</a></dt>
+<dd><p>The amount of time, in seconds, that we will be trying to power on a VM</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -8829,7 +9091,7 @@ instead. A value less than 1 disables the waiter. Default: 5 minutes.</p>
 
 <dl class="method">
 <dt id="pulumi_vsphere.VirtualMachine.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">alternate_guest_name=None</em>, <em class="sig-param">annotation=None</em>, <em class="sig-param">boot_delay=None</em>, <em class="sig-param">boot_retry_delay=None</em>, <em class="sig-param">boot_retry_enabled=None</em>, <em class="sig-param">cdrom=None</em>, <em class="sig-param">change_version=None</em>, <em class="sig-param">clone=None</em>, <em class="sig-param">cpu_hot_add_enabled=None</em>, <em class="sig-param">cpu_hot_remove_enabled=None</em>, <em class="sig-param">cpu_limit=None</em>, <em class="sig-param">cpu_performance_counters_enabled=None</em>, <em class="sig-param">cpu_reservation=None</em>, <em class="sig-param">cpu_share_count=None</em>, <em class="sig-param">cpu_share_level=None</em>, <em class="sig-param">custom_attributes=None</em>, <em class="sig-param">datastore_cluster_id=None</em>, <em class="sig-param">datastore_id=None</em>, <em class="sig-param">default_ip_address=None</em>, <em class="sig-param">disks=None</em>, <em class="sig-param">efi_secure_boot_enabled=None</em>, <em class="sig-param">enable_disk_uuid=None</em>, <em class="sig-param">enable_logging=None</em>, <em class="sig-param">ept_rvi_mode=None</em>, <em class="sig-param">extra_config=None</em>, <em class="sig-param">firmware=None</em>, <em class="sig-param">folder=None</em>, <em class="sig-param">force_power_off=None</em>, <em class="sig-param">guest_id=None</em>, <em class="sig-param">guest_ip_addresses=None</em>, <em class="sig-param">host_system_id=None</em>, <em class="sig-param">hv_mode=None</em>, <em class="sig-param">ignored_guest_ips=None</em>, <em class="sig-param">imported=None</em>, <em class="sig-param">latency_sensitivity=None</em>, <em class="sig-param">memory=None</em>, <em class="sig-param">memory_hot_add_enabled=None</em>, <em class="sig-param">memory_limit=None</em>, <em class="sig-param">memory_reservation=None</em>, <em class="sig-param">memory_share_count=None</em>, <em class="sig-param">memory_share_level=None</em>, <em class="sig-param">migrate_wait_timeout=None</em>, <em class="sig-param">moid=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">nested_hv_enabled=None</em>, <em class="sig-param">network_interfaces=None</em>, <em class="sig-param">num_cores_per_socket=None</em>, <em class="sig-param">num_cpus=None</em>, <em class="sig-param">reboot_required=None</em>, <em class="sig-param">resource_pool_id=None</em>, <em class="sig-param">run_tools_scripts_after_power_on=None</em>, <em class="sig-param">run_tools_scripts_after_resume=None</em>, <em class="sig-param">run_tools_scripts_before_guest_reboot=None</em>, <em class="sig-param">run_tools_scripts_before_guest_shutdown=None</em>, <em class="sig-param">run_tools_scripts_before_guest_standby=None</em>, <em class="sig-param">scsi_bus_sharing=None</em>, <em class="sig-param">scsi_controller_count=None</em>, <em class="sig-param">scsi_type=None</em>, <em class="sig-param">shutdown_wait_timeout=None</em>, <em class="sig-param">storage_policy_id=None</em>, <em class="sig-param">swap_placement_policy=None</em>, <em class="sig-param">sync_time_with_host=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">uuid=None</em>, <em class="sig-param">vapp=None</em>, <em class="sig-param">vapp_transports=None</em>, <em class="sig-param">vmware_tools_status=None</em>, <em class="sig-param">vmx_path=None</em>, <em class="sig-param">wait_for_guest_ip_timeout=None</em>, <em class="sig-param">wait_for_guest_net_routable=None</em>, <em class="sig-param">wait_for_guest_net_timeout=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">alternate_guest_name=None</em>, <em class="sig-param">annotation=None</em>, <em class="sig-param">boot_delay=None</em>, <em class="sig-param">boot_retry_delay=None</em>, <em class="sig-param">boot_retry_enabled=None</em>, <em class="sig-param">cdrom=None</em>, <em class="sig-param">change_version=None</em>, <em class="sig-param">clone=None</em>, <em class="sig-param">cpu_hot_add_enabled=None</em>, <em class="sig-param">cpu_hot_remove_enabled=None</em>, <em class="sig-param">cpu_limit=None</em>, <em class="sig-param">cpu_performance_counters_enabled=None</em>, <em class="sig-param">cpu_reservation=None</em>, <em class="sig-param">cpu_share_count=None</em>, <em class="sig-param">cpu_share_level=None</em>, <em class="sig-param">custom_attributes=None</em>, <em class="sig-param">datastore_cluster_id=None</em>, <em class="sig-param">datastore_id=None</em>, <em class="sig-param">default_ip_address=None</em>, <em class="sig-param">disks=None</em>, <em class="sig-param">efi_secure_boot_enabled=None</em>, <em class="sig-param">enable_disk_uuid=None</em>, <em class="sig-param">enable_logging=None</em>, <em class="sig-param">ept_rvi_mode=None</em>, <em class="sig-param">extra_config=None</em>, <em class="sig-param">firmware=None</em>, <em class="sig-param">folder=None</em>, <em class="sig-param">force_power_off=None</em>, <em class="sig-param">guest_id=None</em>, <em class="sig-param">guest_ip_addresses=None</em>, <em class="sig-param">host_system_id=None</em>, <em class="sig-param">hv_mode=None</em>, <em class="sig-param">ignored_guest_ips=None</em>, <em class="sig-param">imported=None</em>, <em class="sig-param">latency_sensitivity=None</em>, <em class="sig-param">memory=None</em>, <em class="sig-param">memory_hot_add_enabled=None</em>, <em class="sig-param">memory_limit=None</em>, <em class="sig-param">memory_reservation=None</em>, <em class="sig-param">memory_share_count=None</em>, <em class="sig-param">memory_share_level=None</em>, <em class="sig-param">migrate_wait_timeout=None</em>, <em class="sig-param">moid=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">nested_hv_enabled=None</em>, <em class="sig-param">network_interfaces=None</em>, <em class="sig-param">num_cores_per_socket=None</em>, <em class="sig-param">num_cpus=None</em>, <em class="sig-param">poweron_timeout=None</em>, <em class="sig-param">reboot_required=None</em>, <em class="sig-param">resource_pool_id=None</em>, <em class="sig-param">run_tools_scripts_after_power_on=None</em>, <em class="sig-param">run_tools_scripts_after_resume=None</em>, <em class="sig-param">run_tools_scripts_before_guest_reboot=None</em>, <em class="sig-param">run_tools_scripts_before_guest_shutdown=None</em>, <em class="sig-param">run_tools_scripts_before_guest_standby=None</em>, <em class="sig-param">scsi_bus_sharing=None</em>, <em class="sig-param">scsi_controller_count=None</em>, <em class="sig-param">scsi_type=None</em>, <em class="sig-param">shutdown_wait_timeout=None</em>, <em class="sig-param">storage_policy_id=None</em>, <em class="sig-param">swap_placement_policy=None</em>, <em class="sig-param">sync_time_with_host=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">uuid=None</em>, <em class="sig-param">vapp=None</em>, <em class="sig-param">vapp_transports=None</em>, <em class="sig-param">vmware_tools_status=None</em>, <em class="sig-param">vmx_path=None</em>, <em class="sig-param">wait_for_guest_ip_timeout=None</em>, <em class="sig-param">wait_for_guest_net_routable=None</em>, <em class="sig-param">wait_for_guest_net_timeout=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing VirtualMachine resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -8977,6 +9239,7 @@ virtual machine. The number of vCPUs on the virtual machine will be
 supplied to <code class="docutils literal notranslate"><span class="pre">num_cpus</span></code> must be evenly divisible by this value. Default: <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p></li>
 <li><p><strong>num_cpus</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The total number of virtual processor cores to assign
 to this virtual machine. Default: <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p></li>
+<li><p><strong>poweron_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of time, in seconds, that we will be trying to power on a VM</p></li>
 <li><p><strong>reboot_required</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Value internal to Terraform used to determine if a configuration set change requires a reboot.</p></li>
 <li><p><strong>resource_pool_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The [managed object reference
 ID][docs-about-morefs] of the resource pool to put this virtual machine in.
@@ -9107,6 +9370,8 @@ below.</p>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">linkedClone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ovfNetworkMap</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ovfStorageMap</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">templateUuid</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 </ul>
@@ -9182,6 +9447,9 @@ only be manually set if <code class="docutils literal notranslate"><span class="
 computed value that gives the current MAC address of this interface.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">networkId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The [managed object reference
 ID][docs-about-morefs] of the network to connect this interface to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ovfMapping</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies which OVF NIC the <code class="docutils literal notranslate"><span class="pre">network_interface</span></code>
+should be associated with. Only applies at creation and only when deploying
+from an OVF source.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">useStaticMac</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If true, the <code class="docutils literal notranslate"><span class="pre">mac_address</span></code> field is treated as
 a static MAC address and set accordingly. Setting this to <code class="docutils literal notranslate"><span class="pre">true</span></code> requires
 <code class="docutils literal notranslate"><span class="pre">mac_address</span></code> to be set. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
@@ -9795,6 +10063,41 @@ be omitted if the search path used in <code class="docutils literal notranslate"
 default datacenters, use the id attribute from an empty <code class="docutils literal notranslate"><span class="pre">.Datacenter</span></code>
 data source.</p></li>
 <li><p><strong>name</strong> (<em>str</em>) – The name or absolute path to the cluster.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_vsphere.get_content_library">
+<code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">get_content_library</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_content_library" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">.ContentLibrary</span></code> data source can be used to discover the ID of a Content Library.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong> This resource requires vCenter and is not available on direct ESXi
+connections.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/content_library.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/content_library.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the Content Library.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_vsphere.get_content_library_item">
+<code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">get_content_library_item</code><span class="sig-paren">(</span><em class="sig-param">library_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_content_library_item" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">.ContentLibraryItem</span></code> data source can be used to discover the ID of a Content Library item.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong> This resource requires vCenter and is not available on direct ESXi
+connections.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/content_library_item.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/content_library_item.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>library_id</strong> (<em>str</em>) – The ID of the Content Library the item exists in.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The name of the Content Library.</p></li>
 </ul>
 </dd>
 </dl>

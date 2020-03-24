@@ -38,7 +38,7 @@ anything, please consult the source <a class="reference external" href="https://
 <div><dl class="simple">
 <dt><strong>Warning:</strong> We <strong>STRONGLY</strong> recommend  you read the <a class="reference external" href="https://cloud.google.com/composer/docs/how-to">GCP guides</a></dt><dd><p>as the Environment resource requires a long deployment process and involves several layers of GCP infrastructure, 
 including a Kubernetes Engine cluster, Cloud Storage, and Compute networking resources. Due to limitations of the API,
-this provider will not be able to automatically find or manage many of these underlying resources. In particular:</p>
+This provider will not be able to automatically find or manage many of these underlying resources. In particular:</p>
 </dd>
 </dl>
 <ul class="simple">

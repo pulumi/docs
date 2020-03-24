@@ -23,7 +23,7 @@ an existing Google Cloud Platform Billing Account.</p>
 <dt><strong>Note:</strong> This resource <strong>must not</strong> be used in conjunction with</dt><dd><p><code class="docutils literal notranslate"><span class="pre">billing.AccountIamMember</span></code> for the <strong>same role</strong> or they will fight over
 what your policy should be.</p>
 </dd>
-<dt><strong>Note:</strong> On create, this resource will overwrite members of any existing roles.</dt><dd><p>Use <code class="docutils literal notranslate"><span class="pre">import</span></code> and inspect the preview output to ensure
+<dt><strong>Note:</strong> On create, this resource will overwrite members of any existing roles.</dt><dd><p>Use <code class="docutils literal notranslate"><span class="pre">pulumi</span> <span class="pre">import</span></code> and inspect the output to ensure
 your existing members are preserved.</p>
 </dd>
 </dl>
@@ -358,16 +358,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.billing.Budget">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.billing.</code><code class="sig-name descname">Budget</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">all_updates_rule=None</em>, <em class="sig-param">amount=None</em>, <em class="sig-param">billing_account=None</em>, <em class="sig-param">budget_filter=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">threshold_rules=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.billing.Budget" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Budget resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[dict] all_updates_rule: Defines notifications that are sent on every update to the billing account’s spend, regardless of the thresholds defined</p>
+<dd><p>Budget configuration for a billing account.</p>
+<p>To get more information about Budget, see:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://cloud.google.com/billing/docs/reference/budget/rest/v1beta1/billingAccounts.budgets">API documentation</a></p></li>
+<li><p>How-to Guides</p>
+<ul>
+<li><p><a class="reference external" href="https://cloud.google.com/billing/docs/how-to/budgets">Creating a budget</a></p></li>
+</ul>
+</li>
+</ul>
 <blockquote>
-<div><p>using threshold rules.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/billing_budget.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/billing_budget.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>all_updates_rule</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Defines notifications that are sent on every update to the billing account’s spend, regardless of the thresholds defined
+using threshold rules.</p></li>
 <li><p><strong>amount</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The budgeted amount for each usage period.</p></li>
 <li><p><strong>billing_account</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the billing account to set a budget on.</p></li>
 <li><p><strong>budget_filter</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Filters that define which resources are used to compute the actual spend against the budget.</p></li>

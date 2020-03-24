@@ -33,6 +33,18 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_gcp.dns.GetKeysResult.key_signing_keys">
+<code class="sig-name descname">key_signing_keys</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.dns.GetKeysResult.key_signing_keys" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of Key-signing key (KSK) records. Structure is documented below. Additionally, the DS record is provided:</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.dns.GetKeysResult.zone_signing_keys">
+<code class="sig-name descname">zone_signing_keys</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.dns.GetKeysResult.zone_signing_keys" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of Zone-signing key (ZSK) records. Structure is documented below.</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="class">
@@ -48,7 +60,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="attribute">
 <dt id="pulumi_gcp.dns.GetManagedZoneResult.dns_name">
 <code class="sig-name descname">dns_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.dns.GetManagedZoneResult.dns_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The fully qualified DNS name of this zone, e.g. <code class="docutils literal notranslate"><span class="pre">example.com.</span></code>.</p>
+<dd><p>The fully qualified DNS name of this zone, e.g. <code class="docutils literal notranslate"><span class="pre">example.io.</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -77,19 +89,31 @@ while private zones are visible only to Virtual Private Cloud resources.</p>
 <dl class="class">
 <dt id="pulumi_gcp.dns.ManagedZone">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.dns.</code><code class="sig-name descname">ManagedZone</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">dns_name=None</em>, <em class="sig-param">dnssec_config=None</em>, <em class="sig-param">forwarding_config=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">peering_config=None</em>, <em class="sig-param">private_visibility_config=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">reverse_lookup=None</em>, <em class="sig-param">visibility=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.dns.ManagedZone" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a ManagedZone resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] description: A textual description field. Defaults to ‘Managed by Terraform’.
-:param pulumi.Input[str] dns_name: The DNS name of this managed zone, for instance “example.com.”.
-:param pulumi.Input[dict] dnssec_config: DNSSEC configuration
-:param pulumi.Input[dict] forwarding_config: The presence for this field indicates that outbound forwarding is enabled for this zone. The value of this field</p>
+<dd><p>A zone is a subtree of the DNS namespace under one administrative
+responsibility. A ManagedZone is a resource that represents a DNS zone
+hosted by the Cloud DNS service.</p>
+<p>To get more information about ManagedZone, see:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://cloud.google.com/dns/api/v1/managedZones">API documentation</a></p></li>
+<li><p>How-to Guides</p>
+<ul>
+<li><p><a class="reference external" href="https://cloud.google.com/dns/zones/">Managing Zones</a></p></li>
+</ul>
+</li>
+</ul>
 <blockquote>
-<div><p>contains the set of destinations to forward to.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/dns_managed_zone.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/dns_managed_zone.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A textual description field. Defaults to ‘Managed by Terraform’.</p></li>
+<li><p><strong>dns_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DNS name of this managed zone, for instance “example.com.”.</p></li>
+<li><p><strong>dnssec_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – DNSSEC configuration</p></li>
+<li><p><strong>forwarding_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The presence for this field indicates that outbound forwarding is enabled for this zone. The value of this field
+contains the set of destinations to forward to.</p></li>
 <li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A set of key/value label pairs to assign to this ManagedZone.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – User assigned name for this resource. Must be unique within the project.</p></li>
 <li><p><strong>peering_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The presence of this field indicates that DNS Peering is enabled for this zone. The value of this field contains the
@@ -371,16 +395,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.dns.Policy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.dns.</code><code class="sig-name descname">Policy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">alternative_name_server_config=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enable_inbound_forwarding=None</em>, <em class="sig-param">enable_logging=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">networks=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.dns.Policy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Policy resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[dict] alternative_name_server_config: Sets an alternative name server for the associated networks. When specified, all DNS queries are forwarded to a name</p>
+<dd><p>A policy is a collection of DNS rules applied to one or more Virtual
+Private Cloud resources.</p>
+<p>To get more information about Policy, see:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://cloud.google.com/dns/docs/reference/v1beta2/policies">API documentation</a></p></li>
+<li><p>How-to Guides</p>
+<ul>
+<li><p><a class="reference external" href="https://cloud.google.com/dns/zones/#using-dns-server-policies">Using DNS server policies</a></p></li>
+</ul>
+</li>
+</ul>
 <blockquote>
-<div><p>server that you choose. Names such as .internal are not available when an alternative name server is specified.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/dns_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/dns_policy.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>alternative_name_server_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Sets an alternative name server for the associated networks. When specified, all DNS queries are forwarded to a name
+server that you choose. Names such as .internal are not available when an alternative name server is specified.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A textual description field. Defaults to ‘Managed by Terraform’.</p></li>
 <li><p><strong>enable_inbound_forwarding</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allows networks bound to this policy to receive DNS queries sent by VMs or applications over VPN connections. When
 enabled, a virtual IP address will be allocated from each of the sub-networks that are bound to this policy.</p></li>
@@ -541,7 +576,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages a set of DNS records within Google Cloud DNS. For more information see <a class="reference external" href="https://cloud.google.com/dns/records/">the official documentation</a> and
 <a class="reference external" href="https://cloud.google.com/dns/api/v1/resourceRecordSets">API</a>.</p>
 <blockquote>
-<div><p><strong>Note:</strong> The provider treats this resource as an authoritative record set. This means existing records (including the default records) for the given type will be overwritten when you create this resource with this provider. In addition, the Google Cloud DNS API requires NS records to be present at all times, so this provider will not actually remove NS records during destroy but will report that it did.</p>
+<div><p><strong>Note:</strong> The provider treats this resource as an authoritative record set. This means existing records (including 
+the default records) for the given type will be overwritten when you create this resource in the provider. 
+In addition, the Google Cloud DNS API requires NS records to be present at all times, so the provider 
+will not actually remove NS records during destroy but will report that it did.</p>
 <p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/dns_record_set.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/dns_record_set.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
@@ -555,7 +593,7 @@ reside.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.</p></li>
 <li><p><strong>rrdatas</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The string data for the records in this record set
-whose meaning depends on the DNS type. For TXT record, if the string data contains spaces, add surrounding <code class="docutils literal notranslate"><span class="pre">&quot;</span></code> if you don’t want your string to get split on spaces. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code> inside this provider’s configuration string (e.g. <code class="docutils literal notranslate"><span class="pre">&quot;first255characters&quot;&quot;morecharacters&quot;</span></code>).</p></li>
+whose meaning depends on the DNS type. For TXT record, if the string data contains spaces, add surrounding <code class="docutils literal notranslate"><span class="pre">&quot;</span></code> if you don’t want your string to get split on spaces. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code> inside the provider configuration string (e.g. <code class="docutils literal notranslate"><span class="pre">&quot;first255characters&quot;&quot;morecharacters&quot;</span></code>).</p></li>
 <li><p><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The time-to-live of this record set (seconds).</p></li>
 <li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DNS record set type.</p></li>
 </ul>
@@ -585,7 +623,7 @@ is not provided, the provider project is used.</p>
 <dt id="pulumi_gcp.dns.RecordSet.rrdatas">
 <code class="sig-name descname">rrdatas</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.dns.RecordSet.rrdatas" title="Permalink to this definition">¶</a></dt>
 <dd><p>The string data for the records in this record set
-whose meaning depends on the DNS type. For TXT record, if the string data contains spaces, add surrounding <code class="docutils literal notranslate"><span class="pre">&quot;</span></code> if you don’t want your string to get split on spaces. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code> inside this provider’s configuration string (e.g. <code class="docutils literal notranslate"><span class="pre">&quot;first255characters&quot;&quot;morecharacters&quot;</span></code>).</p>
+whose meaning depends on the DNS type. For TXT record, if the string data contains spaces, add surrounding <code class="docutils literal notranslate"><span class="pre">&quot;</span></code> if you don’t want your string to get split on spaces. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code> inside the provider configuration string (e.g. <code class="docutils literal notranslate"><span class="pre">&quot;first255characters&quot;&quot;morecharacters&quot;</span></code>).</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -617,7 +655,7 @@ reside.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.</p></li>
 <li><p><strong>rrdatas</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The string data for the records in this record set
-whose meaning depends on the DNS type. For TXT record, if the string data contains spaces, add surrounding <code class="docutils literal notranslate"><span class="pre">&quot;</span></code> if you don’t want your string to get split on spaces. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code> inside this provider’s configuration string (e.g. <code class="docutils literal notranslate"><span class="pre">&quot;first255characters&quot;&quot;morecharacters&quot;</span></code>).</p></li>
+whose meaning depends on the DNS type. For TXT record, if the string data contains spaces, add surrounding <code class="docutils literal notranslate"><span class="pre">&quot;</span></code> if you don’t want your string to get split on spaces. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code> inside the provider configuration string (e.g. <code class="docutils literal notranslate"><span class="pre">&quot;first255characters&quot;&quot;morecharacters&quot;</span></code>).</p></li>
 <li><p><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The time-to-live of this record set (seconds).</p></li>
 <li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DNS record set type.</p></li>
 </ul>
@@ -666,7 +704,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="function">
 <dt id="pulumi_gcp.dns.get_keys">
 <code class="sig-prename descclassname">pulumi_gcp.dns.</code><code class="sig-name descname">get_keys</code><span class="sig-paren">(</span><em class="sig-param">managed_zone=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.dns.get_keys" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use this data source to access information about an existing resource.</p>
+<dd><p>Get the DNSKEY and DS records of DNSSEC-signed managed zones. For more information see the
+<a class="reference external" href="https://cloud.google.com/dns/docs/dnskeys/">official documentation</a>
+and <a class="reference external" href="https://cloud.google.com/dns/docs/reference/v1/dnsKeys">API</a>.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/datasource_dns_keys.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/datasource_dns_keys.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>managed_zone</strong> (<em>str</em>) – The name or id of the Cloud DNS managed zone.</p></li>
+<li><p><strong>project</strong> (<em>str</em>) – The ID of the project in which the resource belongs. If <code class="docutils literal notranslate"><span class="pre">project</span></code> is not provided, the provider project is used.</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="function">

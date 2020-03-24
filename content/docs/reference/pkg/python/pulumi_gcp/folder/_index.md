@@ -40,7 +40,7 @@ an existing Google Cloud Platform folder.</p>
 <dt><strong>Note:</strong> This resource <em>must not</em> be used in conjunction with</dt><dd><p><code class="docutils literal notranslate"><span class="pre">folder.IAMPolicy</span></code> or they will fight over what your policy
 should be.</p>
 </dd>
-<dt><strong>Note:</strong> On create, this resource will overwrite members of any existing roles.</dt><dd><p>Use <code class="docutils literal notranslate"><span class="pre">import</span></code> and inspect the preview output to ensure
+<dt><strong>Note:</strong> On create, this resource will overwrite members of any existing roles.</dt><dd><p>Use <code class="docutils literal notranslate"><span class="pre">pulumi</span> <span class="pre">import</span></code> and inspect the output to ensure
 your existing members are preserved.</p>
 </dd>
 </dl>
