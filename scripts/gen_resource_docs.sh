@@ -10,7 +10,7 @@ pushd ../pulumi
 make generate
 popd
 
-for PROVIDER in "aws" "azuread" "gcp" ; do \
+for PROVIDER in "aws" "azure" "azuread" "gcp" ; do \
     echo "Removing the ${PACKDIR}/${PROVIDER} dir..."
     rm -rf "${PACKDIR}/${PROVIDER}"
 
