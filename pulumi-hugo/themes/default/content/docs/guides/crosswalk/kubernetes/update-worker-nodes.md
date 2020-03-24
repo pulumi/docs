@@ -9,7 +9,7 @@ menu:
     weight: 10
 ---
 
-{{< chooser cloud "aws,azure,gcp" >}}
+{{< chooser cloud "aws,azure,gcp" / >}}
 
 Updating the worker nodes is a multi-step process that includes proper management
 of the nodes themselves, and the apps running on the them. Kubernetes is best

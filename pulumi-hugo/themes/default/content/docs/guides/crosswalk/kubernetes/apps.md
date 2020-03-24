@@ -11,7 +11,7 @@ menu:
 The following are examples of how to create and use various types of Kubernetes
 resources, and typical apps and workloads.
 
-{{< chooser cloud "aws,azure,gcp" >}}
+{{< chooser cloud "aws,azure,gcp" / >}}
 
 {{% choosable cloud aws %}}
 
@@ -42,8 +42,6 @@ The full code for the GCP apps stack is on [GitHub][gh-repo-stack].
 <!-- markdownlint-enable url -->
 
 {{% /choosable %}}
-
-{{< /chooser >}}
 
 The full code for the apps is on [GitHub][gh-repo-stack].
 

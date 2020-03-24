@@ -9,7 +9,7 @@ menu:
     weight: 8
 ---
 
-{{< chooser cloud "aws,azure,gcp" >}}
+{{< chooser cloud "aws,azure,gcp" / >}}
 
 App services are general services scoped at the Kubernetes application level.
 These services tend to include datastores, and managers for ingress, DNS, and TLS.
@@ -46,8 +46,6 @@ The full code for the GCP app services stack is on [GitHub][gh-repo-stack].
 
 {{% /choosable %}}
 
-{{< /chooser >}}
-
 The full code for the general app services is on [GitHub][gh-repo-stack].
 
 <!-- markdownlint-disable url -->
@@ -63,7 +61,7 @@ We'll explore how to setup:
 
 ## Prerequisites
 
-{{< chooser cloud "aws,azure,gcp" >}}
+{{< chooser cloud "aws,azure,gcp" / >}}
 
 {{% choosable cloud aws %}}
 
@@ -102,8 +100,6 @@ $ export KUBECONFIG=`pwd`/kubeconfig.json
 [gcp-admin-identity-stack]: {{< relref "/docs/guides/crosswalk/kubernetes/identity#create-an-iam-role-and-serviceaccount-for-admins" >}}
 
 {{% /choosable %}}
-
-{{< /chooser >}}
 
 ## Datastores
 

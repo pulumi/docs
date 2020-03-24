@@ -8,7 +8,7 @@ menu:
     weight: 4
 ---
 
-{{< chooser cloud "aws,azure,gcp" >}}
+{{< chooser cloud "aws,azure,gcp" / >}}
 
 After the cluster is created with a Pulumi update, there will be
 [outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) with fields like the cluster's `kubeconfig` file
