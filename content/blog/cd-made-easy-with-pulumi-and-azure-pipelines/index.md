@@ -82,7 +82,7 @@ easily integrate Pulumi into your CI/CD pipeline, and take advantage of previews
 changes in pull requests, push-to-deploy, and ultimately removing the friction for your DevOps.
 
 As always, we'd love to hear what you think. Say 👋 in the [Pulumi Community Slack](https://slack.pulumi.com)
-or [drop us a line]({{< relref "/contact" >}}).
+or [drop us a line]({{< relref "/contact.md" >}}).
 
 Want to learn more? Check out [this post from Mikhail Shilkov]({{< relref "level-up-your-azure-platform-as-a-service-applications-with-pulumi" >}})
 for a detailed look at deploying applications on Azure with Pulumi.

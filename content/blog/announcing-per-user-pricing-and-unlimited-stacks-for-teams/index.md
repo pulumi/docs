@@ -52,7 +52,7 @@ All editions offer a 14-day free trial, no credit card
 required. If you need a longer trial period, want to discuss potential proof of
 concept projects, or are interested in advanced capabilities, such as
 large numbers of seats, Training, or Support, please [contact
-us]({{< relref "/contact" >}}).
+us]({{< relref "/contact.md" >}}).
 
 We remain committed to fostering a vibrant open source community while
 also delivering a robust production service that teams of all sizes are
@@ -100,14 +100,14 @@ facilities, including RBAC for advanced policy controls.
 Yes! We designed the editions to make it easy to get started with Team
 Starter, and once you've outgrown it, upgrading to Team Pro is a single
 click away. To upgrade to Enterprise, please [contact
-us]({{< relref "/contact" >}}).
+us]({{< relref "/contact.md" >}}).
 
 ### I'm an existing customer on a per stack plan -- what do I do?
 
 We are in the process of reaching out to all existing customers to offer
 a switch to one of the new plans. If you haven't heard from us yet,
 please don't hesitate to [drop us a
-line]({{< relref "/contact" >}}). If now isn't the right time to change
+line]({{< relref "/contact.md" >}}). If now isn't the right time to change
 for your team, however, don't worry — we are happy to honor your
 existing subscription terms.
 
@@ -115,7 +115,7 @@ existing subscription terms.
 
 We are always happy to discuss the best way to ensure Pulumi can work
 for your team. To talk with a leader at the company, please simply [fill
-out the contact us form]({{< relref "/contact" >}}) and we'll be
+out the contact us form]({{< relref "/contact.md" >}}) and we'll be
 in touch.
 
 ### What payment options do you accept?
@@ -127,4 +127,4 @@ your organization's Settings page.
 
 For annual subscriptions, we also offer invoicing that is payable with
 bank transfer or check. To discuss those options in more detail, please
-[contact us]({{< relref "/contact" >}}).
+[contact us]({{< relref "/contact.md" >}}).

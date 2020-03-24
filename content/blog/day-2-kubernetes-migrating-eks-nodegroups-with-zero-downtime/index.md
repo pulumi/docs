@@ -164,7 +164,7 @@ join our [Community Slack](https://slack.pulumi.com/) channel if you have
 any questions, need support, or just want to say hello.
 
 If you'd like to chat with our team, or get hands-on assistance with
-migrating your existing configuration code to Pulumi, please don't hesitate to [drop us a line]({{< relref "/contact" >}}).
+migrating your existing configuration code to Pulumi, please don't hesitate to [drop us a line]({{< relref "/contact.md" >}}).
 
 [eks-amis]: https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html
 [ingress-nginx]: https://github.com/kubernetes/ingress-nginx

@@ -36,4 +36,4 @@ Haven't setup your CLI for a specific cloud yet? Check out this docs page on how
 Once you've deployed your first stack, the next step is up to you. You can refer to our documentation on integrating Pulumi into your CI/CD pipeline, setting up chat-ops workflows via Webhooks, or taking your Kubernetes solutions to the next level!
 
 We'd love to hear what you're up to. Say 👋 in the [Pulumi Community Slack](https://slack.pulumi.com/)
-or [drop us a line]({{< relref "/contact" >}}).
+or [drop us a line]({{< relref "/contact.md" >}}).
