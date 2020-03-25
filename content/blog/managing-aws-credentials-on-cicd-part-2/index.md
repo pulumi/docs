@@ -8,6 +8,7 @@ authors:
     - sophia-parafina
 tags:
     - CI/CD
+    - secrets rotation
 ---
 
 This article is the second part in a series on the best practices for securely managing AWS credentials on CI/CD. In this article, we go in-depth on how to provide AWS credentials securely to a 3rd party and introduce a Pulumi program to automate rotating access keys.
