@@ -128,7 +128,7 @@ In the current state of the code, we created a Google Cloud service account and 
 
 Although we have this relationship between our resources, the Pulumi state graph doesn't display it. How can we change this without affecting the real resources on Gitlab and Google Cloud?
 
-We can pass [`CustomResourceOptions`](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions) as the last argument to every Pulumi resource that we want to create. We use `parent` and `aliases` for refactoring.
+We can pass [`CustomResourceOptions`](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions) as the last argument to every Pulumi resource that we want to create and use `parent` and `aliases` for refactoring.
 
 To link the key to the service account, we set the `parent` property to the service account resource. If you run `pulumi preview`,  Pulumi wants to recreate the key. It wants to do this because it searches for the key as a child resource of the service account. In your last applied Pulumi state, that is not the case.
 
