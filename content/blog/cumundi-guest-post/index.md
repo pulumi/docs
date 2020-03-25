@@ -9,21 +9,21 @@ tags:
     - Test Driven Developmnet
 ---
 
-**Guest Article:** [Ringo De Smet](https://www.linkedin.com/in/ringodesmet/), Founder of [Cumundi](https://www.cumundi.cloud), standardizes on Pulumi for writing infrastructure as code libraries to deliver reusable building blocks. Pulumi enables him to iterate through the build-test-release cycle of these building blocks rapidly.
+**Guest Article:** [Ringo De Smet](https://www.linkedin.com/in/ringodesmet/), Founder of [Cumundi](https://www.cumundi.cloud), standardizes on Pulumi for writing infrastructure as reusable code libraries for his customers. Pulumi enables him to rapidly iterate through the build-test-release cycle of these building blocks.
 
-Cumundi helps companies adopt the cloud more integrally. Companies are rebuilding the same 75% of the underlying infrastructure. But the shortage of people and time has led to limited investment in integrating all the non-functional requirements needed to run applications in the cloud.
+Cumundi helps companies adopt cloud infrastructure in a more integral way. It has found that 75% of companies’ needs are covered by ‘vanilla’ infrastructure patterns. However, due to a shortage of people and time, there has been limited investment to take full advantage of cloud-native configurations - which can lead to inefficiency, poor performance, and higher costs.
 
 <!--more-->
 
 ## How Pulumi Code Keeps Up with Changing Requirements
 
-At Cumundi, we build reusable libraries for our customers to set up their infrastructure integrated with best practices. These best practices span the range of non-functional requirements, which are most of the time not taken up with the same focus as application feature development. Where these non-functional requirements can be integrated into infrastructure setups, we include these in our code libraries. Cumundi focuses on all three major cloud providers to provide application-focused infrastructure libraries.
+At Cumundi, we build reusable libraries for our customers to set up their infrastructure while following best practices. These best practices include a range of "non-functional requirements" - infrastructure patterns - which often receive less focus than application features. Where feasible, Cumundi encapsulates these non-functional requirements into infrastructure code libraries. This enables Cumundi to serve clients using all major clouds while keeping application-focused infrastructure libraries clean and modular.
 
 It may come as no surprise that we also use Pulumi to manage Cumundi's own infrastructure. As a young company (founded January 1st!), it is hard to foresee how our infrastructure needs will evolve. With Pulumi, we write code in a modern programming language, and, good coding practice is not to [optimize prematurely](http://wiki.c2.com/?PrematureOptimization) because the future is unpredictable. Another coding best practice is [red-green-refactor](https://en.wikipedia.org/wiki/Test-driven_development) or formally known as Test-Driven Development. You take the current code, write a test for the new requirement, which initially fails (red). Next, you implement the code in the most straightforward way to make the test succeed (green) and you complete the cycle by refactoring the code to keep the design in proper shape.
 
 This blog post demonstrates a TDD cycle for Pulumi code with a reduced version of the code used to configure the internal infrastructure we provide for each customer. This example focuses on one specific Pulumi resource property: [`aliases`](https://www.pulumi.com/docs/intro/concepts/programming-model/#aliases)
 
-All the code is [published here](https://github.com/cumundi/pulumi-refactoring-aliases) if you want to follow along with a full project setup. Every step described here is committed as a separate branch with the starting point on `master`, the default branch.
+All the code is [available on Github](https://github.com/cumundi/pulumi-refactoring-aliases) if you want to follow along with a full project setup. Every step described here is committed as a separate branch with the starting point on `master`, the default branch.
 
 ### The Starting Point
 
