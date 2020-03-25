@@ -41,7 +41,7 @@ Applying the above code does nothing, which you can see in the *Resources* tab o
 
 ### Adding the Git Repository
 
-We created a separate repository for each of our customers:
+We create a separate repository for each of our customers:
 
 ```ts
 const config = new pulumi.Config('gitlab')
