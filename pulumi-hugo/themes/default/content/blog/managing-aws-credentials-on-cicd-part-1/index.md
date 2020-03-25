@@ -44,9 +44,9 @@ Here's the full set of steps in our series, walking through the creation of a se
 to deploy AWS resources using Pulumi:
 
 - [Create a dedicated IAM User for your CI/CD](#create-new-iam-user)
-- [Provide the IAM User’s credentials to your CI/CD system]({{< relref "/blog/managing-aws-credentials-on-cicd-part-2" >}})
-- [Comparison with using hosted sercret managers]({{< relref "/blog/managing-aws-credentials-on-cicd-part-2" >}})
-- [Automate Rotating and Revoking AWS Credentials]({{< relref "/blog/managing-aws-credentials-on-cicd-part-2" >}})
+- Provide the IAM User’s credentials to your CI/CD system
+- Comparison with using hosted secret managers
+- Automate Rotating and Revoking AWS Credentials
 - _Assuming IAM Roles for performing updates_ (coming soon!)
 - _Securing sensitive data using Pulumi_
 
