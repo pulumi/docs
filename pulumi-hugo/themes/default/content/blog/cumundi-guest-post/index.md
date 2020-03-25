@@ -1,12 +1,12 @@
 ---
-title: "Refactoring Pulumi code with `aliases`"
+title: "Refactoring Pulumi Code with `aliases`"
 date: 2020-03-26
 meta_desc: "Cumundi uses Pulumi to build infrastructure components for their customers"
 meta_image: cumundi-pulumi.png
 authors:
     - ringo-de-smet
 tags:
-    - change-me
+    - Test Driven Developmnet
 ---
 
 **Guest Article:** [Ringo De Smet](https://www.linkedin.com/in/ringodesmet/), Founder of [Cumundi](https://www.cumundi.cloud), standardizes on Pulumi for writing infrastructure as code libraries to deliver reusable building blocks. Pulumi enables him to iterate through the build-test-release cycle of these building blocks rapidly.
@@ -15,7 +15,7 @@ Cumundi helps companies adopt the cloud more integrally. Companies are rebuildin
 
 <!--more-->
 
-## How Pulumi code keeps up with changing requirements
+## How Pulumi Code Keeps Up with Changing Requirements
 
 At Cumundi, we build reusable libraries for our customers to set up their infrastructure integrated with best practices. These best practices span the range of non-functional requirements, which are most of the time not taken up with the same focus as application feature development. Where these non-functional requirements can be integrated into infrastructure setups, we include these in our code libraries. Cumundi focuses on all three major cloud providers to provide application-focused infrastructure libraries.
 
@@ -25,7 +25,7 @@ This blog post demonstrates a TDD cycle for Pulumi code with a reduced version o
 
 All the code is [published here](https://github.com/cumundi/pulumi-refactoring-aliases) if you want to follow along with a full project setup. Every step described here is committed as a separate branch with the starting point on `master`, the default branch.
 
-### The starting point
+### The Starting Point
 
 Every Pulumi project starts empty, so ours is no exception. This is how our main Pulumi code file looks for now.
 
@@ -39,7 +39,7 @@ Applying the above code does nothing, which you can see in the *Resources* tab o
 
 ![Starting point](./start.png)
 
-### Adding the Git repository
+### Adding the Git Repository
 
 We created a separate repository for each of our customers:
 
@@ -72,7 +72,7 @@ We wrote the code in the simplest way to get the job done. After `pulumi up`, th
 
 ![Step 1](./step1.png)
 
-### A customer needs cloud infrastructure
+### A Customer Needs Cloud Infrastructure
 
 For our second customer, I just duplicated the creation of the Gitlab repository and created a Google Cloud project and service account.
 
@@ -122,7 +122,7 @@ These resources are all added with the `Stack` as their parent in the resource v
 
 Visualization goes a long way, but a flat list of resources does not clearly show what belongs together.
 
-### Find relationships between resources
+### Find Relationships between Resources
 
 In the current state of the code, we created a Google Cloud service account and a key. Since a key can't be created without a service account, we also created a Gitlab CI project variable for the Gitlab project of the second customer. Two cases of a parent-child relationship.
 
@@ -165,7 +165,7 @@ Before going forward, we also changed the relationship between the Gitlab reposi
 
 ![Step 3](./step3.png)
 
-### Clean up duplication
+### Clean Up Duplication
 
 In the previous step, I copied the code for the Gitlab repository from our first customer to our second customer. In this step, we resolve the duplication issue, and ensure that customer projects can conditionally create the Google infrastructure needed.
 
@@ -246,7 +246,7 @@ When we apply this to our infrastructure, two custom resources are created and s
 
 However, we have not updated the parent-child relationships.
 
-### Fix the remaining relationships
+### Fix the Remaining Relationships
 
 We have a representation of a customer project in our Pulumi state graph, but we want to see the resources of each customer as child resources of this abstraction, right?
 
@@ -297,7 +297,7 @@ If another developer reads this code, they might not immediately have a clear pi
 * if we create a Google Cloud project, we create a service account and a key together with it
 * if we create a Google Cloud project, we also set a Gitlab CI variable. It's a pity though I can't link the Gitlab CI variable to the key.
 
-### Next steps
+### Next Steps
 
 You probably noticed by now that the `aliases` property accepts a list. You can provide entries like:
 
