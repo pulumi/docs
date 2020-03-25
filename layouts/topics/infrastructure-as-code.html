@@ -4,8 +4,9 @@
         <div class="header-hero-items container mx-auto">
             <div class="text-lg pr-5">
                 {{ .Params.hero.body | markdownify }}
-                <div>
-                    GET STARTED BUTTONS
+                <div class="mt-10">
+                    <a href="#" class="btn">GET STARTED</a>
+                    <a href="#" class="btn">LEARN MORE</a>
                 </div>
             </div>
             <div>
@@ -56,14 +57,19 @@
     <section id="favorite-language" class="py-16 bg-gray-200 px-4">
         <div class="container md:mx-auto md:flex">
             <div class="w-6/12 pr-10">
-                <h2>Favorite Languages</h2>
-                <p>
-                    By using real languages for infrastructure as code, you get many benefits: IDEs,
-                    abstractions including functions, classes, and packages, existing debugging and
-                    testing tools, and more. The result is greater productivity with far less copy and
-                    paste, and it works the same way no matter which cloud you're targeting.
+                <h2>
+                    <i class="fas fa-rocket"></i>
+                    Provisioning as Code
+                </h2>
+                <p class="mb-5">
+                    Provision and update infrastructure on any cloud using your favorite languages. Be
+                    productive with documentation integrated into your favorite editor, and leverage all
+                    capabilities of modern languages. Plan updates, preview changes before deployment,
+                    and track change history. New self-hosting capabilities bring Pulumi SaaS capabilities
+                    to your cloud account or on-premises.
                 </p>
                 <a href="#" class="btn">GET STARTED</a>
+                <a href="#" class="btn">LEARN MORE</a>
             </div>
             <div class="w-6/12">
                 <img src="/images/pulumi_code_scrn.jpg" />
@@ -77,14 +83,19 @@
                 <img src="/images/pulumi_code_scrn.jpg" />
             </div>
             <div class="w-6/12">
-                <h2>Share and Reuse Code</h2>
-                <p>
-                    Because Pulumi Programs are written in genral purpose programming languages, users
-                    can create custom libraries to share amongst their friends and co-workers. Users are able
-                    to create libraries that other developers at their organization can consume, helping ensure
-                    best practices are followed
+                <h2>
+                    <i class="fas fa-truck"></i>
+                    Delivery as Code
+                </h2>
+                <p class="mb-5">
+                    Achieve GitOps-style productivity to help you continuously deliver application and
+                    infrastructure changes across all your environments from DEV to PROD. New integrations
+                    let you work with your preferred CI/CD toolchain and source control management system.
+                    Improve velocity with familiar tools, and better visibility into infrastructure
+                    dependencies and provisioning status.
                 </p>
                 <a href="#" class="btn">GET STARTED</a>
+                <a href="#" class="btn">LEARN MORE</a>
             </div>
         </div>
     </section>
@@ -92,16 +103,19 @@
     <section id="favorite-language" class="py-16 bg-gray-200 px-4">
         <div class="container md:mx-auto md:flex">
             <div class="w-6/12 pr-10">
-                <h2>Pulumi: Under the Hood</h2>
-                <p>
-                    Although you use general-purpose languages, Pulumi is still a declarative
-                    infrastructure as code tool. After writing a program, you run the Pulumi
-                    CLI command pulumi up, which executes the program and determines the desired
-                    infrastructure state for all resources declared. The CLI will show you a preview
-                    of changes to be made, including all new resources to be created and existing resources
-                    to update or destroy. After confirming, Pulumi will carry out the changes.
+                <h2>
+                    <i class="fas fa-drafting-compass"></i>
+                    Architecture as Code
+                </h2>
+                <p class="mb-5">
+                    Stop reinventing the wheel with each new microservice component. Codify
+                    internal architectures and create self-service infrastructure for your
+                    teams. Benefit from an ecosystem of reusable libraries that implement best
+                    practices, or create your own building blocks. New multi-language library
+                    capabilities make it even easier to share infrastructure and accelerate development.
                 </p>
                 <a href="#" class="btn">GET STARTED</a>
+                <a href="#" class="btn">LEARN MORE</a>
             </div>
             <div class="w-6/12">
                 <img src="/images/pulumi_code_scrn.jpg" />
@@ -115,22 +129,19 @@
                 <img src="/images/pulumi_code_scrn.jpg" />
             </div>
             <div class="w-6/12">
-                <h2>Crossguard: Cloud Policy as Code</h2>
-                <p>
-                    Pulumi CrossGuard is a product that provides gated deployments via Policy as Code.
-                </p>
-                <p>
-                    Often organizations want to empower developers to manage their infrastructure yet are
-                    concerned about giving them full access. CrossGuard allows administrators to provide
-                    autonomy to their developers while ensuring compliance to defined organization policies.
-                </p>
-                <p>
-                    Using Policy as Code, users can express business or security rules as functions that are
-                    executed against resources in their stacks. Then using CrossGuard, organization administrators
-                    can apply these rules to particular stacks within their organization. When policies are executed
-                    as part of your Pulumi deployments, any violation will gate or block that update from proceeding.
+                <h2>
+                    <i class="fas fa-shield-alt"></i>
+                    Policy as Code
+                </h2>
+                <p class="mb-5">
+                    Enforce policies for your deployments with complete auditing capabilities using Pulumi
+                    CrossGuard. Define security, compliance, cost controls, and best practices in your
+                    favorite languages to prevent mistakes from reaching production. Policy packs for
+                    all major clouds make getting started easy and policies can be organization-wide,
+                    or project, environment, and role-specific.
                 </p>
                 <a href="#" class="btn">GET STARTED</a>
+                <a href="#" class="btn">LEARN MORE</a>
             </div>
         </div>
     </section>
@@ -138,17 +149,18 @@
     <section id="favorite-language" class="py-16 bg-gray-200 px-4">
         <div class="container md:mx-auto md:flex">
             <div class="w-6/12 pr-10">
-                <h2>Build Best In Class Engineering Teams</h2>
-                <p>
-                    Pulumi has thousands of happy users across companies of all sizes, from startups
-                    who want to get a modern cloud infrastructure up in an afternoon, to Global 2000
-                    companies managing complex, multi-cloud environments with thousands of applications.
-                    Pulumi's unique approach allows organizations to achieve unified Cloud Engineering
-                    organizations, with developers, DevOps, and SecOps engineers who can collaborate for
-                    greater efficiency. Pulumi's unique cloud object model unlocks advanced approaches to
-                    security and compliance insights and enforcement.
+                <h2>
+                    <i class="fas fa-tasks"></i>
+                    Testing as Code
+                </h2>
+                <p class="mb-5">
+                    Apply your favorite testing techniques to ensure that infrastructure is correct before and
+                    after deployment. Pulumi now supports resource mocking and works with familiar test frameworks.
+                    Ephemeral environment support helps you spin-up copies of infrastructure, apply smoke tests,
+                    then tear-down resources - all in your CI/CD workflow.
                 </p>
                 <a href="#" class="btn">GET STARTED</a>
+                <a href="#" class="btn">LEARN MORE</a>
             </div>
             <div class="w-6/12">
                 <img src="/images/pulumi_code_scrn.jpg" />
@@ -157,62 +169,6 @@
     </section>
 
     {{ partial "get-started.html" . }}
-
-    <!-- Testimonials -->
-    <section class="py-16 px-4" style="background: url(/images/home/waves-blue.svg) repeat-x; background-position: top left;">
-        <div>
-            <div class="container mx-auto md:flex items-start">
-                <div class="md:w-1/3 mx-auto bg-white py-8 px-10 text-sm rounded rounded-lg shadow-lg border border-gray-300 relative">
-                    <i class="fa fa-quote-left text-gray-200 absolute top-0 left-0 ml-4 mt-4 text-5xl z-0"></i>
-                    <p class="leading-loose mt-0 z-10 relative text-gray-800">
-                        {{ (index .Params.quotes 0).body }}
-                    </p>
-                    <div class="leading-relaxed flex items-start">
-                        <div>
-                            <div class="text-blue-700 font-semibold">
-                                {{ (index .Params.quotes 0).name }}
-                            </div>
-                            <div class="text-blue-500">
-                                {{ (index .Params.quotes 0).title }}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="md:w-1/3 md:mx-8 my-8 md:my-0 bg-white py-8 px-10 text-sm rounded rounded-lg shadow-lg border border-gray-300 relative">
-                    <i class="fa fa-quote-left text-gray-200 absolute top-0 left-0 ml-4 mt-4 text-5xl z-0"></i>
-                    <p class="leading-loose mt-0 z-10 relative text-gray-800">
-                        {{ (index .Params.quotes 1).body }}
-                    </p>
-                    <div class="leading-relaxed flex items-start">
-                        <div>
-                            <div class="text-blue-700 font-semibold">
-                                {{ (index .Params.quotes 1).name }}
-                            </div>
-                            <div class="text-blue-500">
-                                {{ (index .Params.quotes 1).title }}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="md:w-1/3 bg-white py-8 px-10 text-sm rounded rounded-lg shadow-lg border border-gray-300 relative shadow-lg">
-                    <i class="fa fa-quote-left text-gray-200 absolute top-0 left-0 ml-4 mt-4 text-5xl z-0"></i>
-                    <p class="leading-loose mt-0 z-10 relative text-gray-800">
-                        {{ (index .Params.quotes 2).body }}
-                    </p>
-                    <div class="leading-relaxed flex items-start">
-                        <div>
-                            <div class="text-blue-700 font-semibold">
-                                {{ (index .Params.quotes 2).name }}
-                            </div>
-                            <div class="text-blue-500">
-                                {{ (index .Params.quotes 2).title }}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     {{ partial "form-section" (dict "form" .Params.contact_us_form) }}
 {{ end }}
