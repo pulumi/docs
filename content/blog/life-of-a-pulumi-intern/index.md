@@ -4,7 +4,7 @@ meta_image: meta.png
 authors: ["tasia-halim"]
 meta_desc: "Peek into the kind of things I've experienced and accomplished as Pulumi's first."
 tags: ["pulumi", "intern"]
-date: "2020-03-27"
+date: "2020-04-02"
 ---
 
 👋I'm Tasia, a Computer Science student at the University of Washington and Pulumi's very first intern. Read on to learn about some of my thoughts and experiences from these past few months!
