@@ -10,7 +10,7 @@ tags:
     - CI/CD
 ---
 
-This article is the second part in a series on the best practices for securely managing AWS credentials on CI/CD. In this second part, we go in-depth on how to provide AWS credentials securely to a 3rd party and introduce a Pulumi program to automate rotating access keys.
+This article is the second part in a series on the best practices for securely managing AWS credentials on CI/CD. In this article, we go in-depth on how to provide AWS credentials securely to a 3rd party and introduce a Pulumi program to automate rotating access keys.
 
 <!--more-->
 
@@ -22,9 +22,9 @@ This article is the second part in a series on the best practices for securely m
 
 Other posts in this series:
 
-- [Create a dedicated IAM User for your CI/CD]({{< relref "/blog/managing-aws-credentials-on-cicd-part-1" >}})
+- [Create a dedicated IAM User for your CI/CD]({{< relref "/blog/managing-aws-credentials-on-cicd-part-1" >}}) (Series Start)
 - [Provide the IAM User’s credentials to your CI/CD system]({{< relref "/blog/managing-aws-credentials-on-cicd-part-1" >}})
-- [Comparison with using hosted sercret managers](#using-a-secrets-service)
+- [Comparison with using hosted secret managers](#using-a-secrets-service)
 - [Automate Rotating and Revoking AWS Credentials](#automating-key-rotation)
 - _Assuming IAM Roles for performing updates_ (coming soon!)
 - _Securing sensitive data using Pulumi_
@@ -35,9 +35,9 @@ In the [first post]({{< relref "/blog/managing-aws-credentials-on-cicd-part-1">}
 
 We need to take great caution. [AWS's documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html) states, **"Do not provide your access keys to a third party"**.
 
-Providing AWS access keys to any system is dangerous because of the risk that a bad actor could obtain those keys and do something nefarious. Even if your CI/CD service takes great care to protect your secrets, those AWS credentials could be inadvertently exposed in debugging output, system logs, or some other way.
+Providing AWS access keys to any system is dangerous because of the risk that a bad actor could obtain those keys and do something nefarious. Even if your CI/CD service takes great care to protect your secrets, those AWS credentials could be inadvertently exposed in debugging output, system logs, or in some other way.
 
-This is one of the main advantages of performing continuous deployment from within your AWS account. (For example, running Jenkins on an EC2 instance you manage, or using the AWS CodeDeploy service.) Because when you are performing a deployment from within an AWS compute environment, you can use built-in mechanisms to obtain credentials securely.
+This is one of the main advantages of performing continuous deployment from within your AWS account. For example, running Jenkins on an EC2 instance you manage, or using the AWS CodeDeploy service. Because when performing a deployment from within an AWS compute environment, you can use built-in mechanisms to obtain credentials securely.
 
 However, there are many reasons to use a hosted service for performing your CI/CD, such as developer productivity, ease of use, performance, or simply because you don't want to recreate your existing deployment workflows.
 
@@ -45,9 +45,9 @@ Ultimately, it is essential to understand the risks involved and how to mitigate
 
 ## Properly Storing Credentials
 
-If you do choose to provide your CI/CD with credentials, the most important thing is to mark them as secret. Your CI/CD provider typically has built-in support for handling "secure variables" or other sensitive information. (As opposed to general, configuration data or environment variables.)
+If you choose to provide your CI/CD with credentials, the most important thing is to mark them as secret. Your CI/CD provider typically has built-in support for handling "secure variables" or other sensitive information. As opposed to general, configuration data or environment variables.
 
-User-supplied configuration values are typically write-only and only accessible by the CI/CD worker jobs at runtime. For example, Travis CI has [encrypted environment variables](https://circleci.com/docs/2.0/env-vars/#overview) or [secure environment variables (https://circleci.com/docs/2.0/env-vars/#overview) in CircleCI.
+User-supplied configuration values are typically write-only and only accessible by the CI/CD worker jobs at runtime. For example, Travis CI has [encrypted environment variables](https://circleci.com/docs/2.0/env-vars/#overview) or [secure environment variables](https://circleci.com/docs/2.0/env-vars/#overview) in CircleCI.
 
 Please consult your CI/CD provider's documentation for how to pass and store sensitive information appropriately.
 
@@ -55,17 +55,17 @@ Please consult your CI/CD provider's documentation for how to pass and store sen
 
 A common question when discussing is how to pass access keys to a CI/CD system securely:
 
-> Rather than giving your CI/CD provider AWS credentials, why not have your CI/CD system obtain credentials from a specialized "secrets manager" type service?
+> Rather than giving your CI/CD provider AWS credentials, why not have your CI/CD system obtain credentials from a specialized "secrets manager" service?
 
 In other words, if you choose _not_ to trust your CI/CD system with this data, can you _instead_ trust some other system dedicated for securely storing and retrieving sensitive information?
 
 It sounds like a good idea on the surface but doesn't seem to make your data any more secure.
 
-Abstractly, the difference here is that the credentials are provided on-demand, rather than being available to the CI/CD job when it starts (and stored via the CI/CD provider). Instead, your CI/CD job would obtain credentials from the "secrets manager" only when they are needed.
+Abstractly, the difference here is that the credentials are provided on-demand, rather than being available to the CI/CD job when it starts (and stored via the CI/CD provider). Instead, your CI/CD job would obtain credentials from the "secrets manager" only when needed.
 
 There are some advantages to this approach, such as providing a clear audit trail for access and more control over the distribution of sensitive information.
 
-However, whatever secrets provider system you use needs to be presented with some form of credentials, too. And _those_ credentials need to be available to your CI/CD environment. So using a secrets manager leaves you in the same place you started, i.e., needing to provide sensitive data to your CI/CD provider.
+However, the secrets provider system needs to be presented with some form of credentials. And _those_ credentials need to be available to your CI/CD environment. So using a secrets manager leaves you in the same place you started, i.e., needing to provide sensitive data to your CI/CD provider.
 
 Also, by adding a dependency on a secrets manager, you introduce additional risks. Not only do you need to be even more security-conscious about that secrets manager, but it also needs to be highly available.  Any outage for that service would mean that you would be unable to perform deployments!
 
@@ -88,7 +88,7 @@ The AWS security blog describes how to [rotate access keys for IAM Users](https:
 That all sounds simple enough, but it's certainly tedious. And if you need to repeat the process across dozens, if not hundreds of different CI/CD pipelines, you need a better solution. Fortunately, Pulumi provides an excellent and extensible way for writing a serverless program to
 automate rotating credentials.
 
-The next few sections describe a simple infrastructure app for automating AWS IAM credential rotation. You can see the full application on GitHub at
+The next few sections describe a simple infrastructure application for automating AWS IAM credential rotation. You can see the full application on GitHub at
 [chrsmith/pulumi-aws-travis-cicd-demo](https://github.com/chrsmith/pulumi-aws-travis-cicd-demo).
 
 ### AWS Credential Rotator 9000
@@ -101,7 +101,7 @@ First, it creates a new access key and pushes the new value out. On the next ite
 
 ### Periodically Invoking an AWS Lambda
 
-The heart of the application is triggering it to execute on a fixed interval. Thankfully this is super-easy to do using Pulumi since it allows you to seamlessly blend your "cloud infrastructure" with "code" in a natural way. The user guide for Pulumi Crosswalk for AWS has more information on [serverless eventing]({{< ref "/docs/guides/crosswalk/aws/lambda" >}})
+The heart of the application is triggering it to execute on a fixed interval. Thankfully this is super-easy to do using Pulumi since it allows you to seamlessly blend your "cloud infrastructure" with "code" in a natural way. The user guide for Pulumi Crosswalk for AWS has more information on [serverless eventing]({{< relref "/docs/guides/crosswalk/aws/lambda" >}})
 if you would like to learn more.
 
 The following snippet is the core part of the credential rotator app. We define a function to handle the logic of key rotation in `rotateIAMUserKeys`. Then we create an AWS Lambda resource
@@ -182,7 +182,7 @@ To demonstrate the access keys rotation, we can examine the log files generated 
 
 Here's a summary of the output for clarity:
 
-```
+```bash
  START RequestId: 9406913e-a9d0-46a4-b861-2efdee508b2b Version: $LATEST
     9406913e-a9d0-46a4-b861-2efdee508b2b    INFO    IAM User has 2 keys:
     9406913e-a9d0-46a4-b861-2efdee508b2b    INFO     - AKIASHIVKXX3QEQNZNX5 [Active] Tue Mar 24 2020 12:37:03 GMT+0000 (Coordinated Universal Time)
@@ -190,7 +190,7 @@ Here's a summary of the output for clarity:
     9406913e-a9d0-46a4-b861-2efdee508b2b    INFO    Deleting older, inactive access key AKIASHIVKXX3SA2K3ME7 [Inactive]
     9406913e-a9d0-46a4-b861-2efdee508b2b    INFO    Key rotation step complete.
  END RequestId: 9406913e-a9d0-46a4-b861-2efdee508b2b
- 
+
  START RequestId: 05644e4a-81a4-4197-8ad7-fc3517998270 Version: $LATEST
     05644e4a-81a4-4197-8ad7-fc3517998270    INFO    IAM User has 1 keys:
     05644e4a-81a4-4197-8ad7-fc3517998270    INFO     - AKIASHIVKXX3QEQNZNX5 [Active] Tue Mar 24 2020 12:37:03 GMT+0000 (Coordinated Universal Time)
@@ -203,7 +203,7 @@ Here's a summary of the output for clarity:
     05644e4a-81a4-4197-8ad7-fc3517998270    INFO    Updated AWS secret access key. Got response code (200)
     05644e4a-81a4-4197-8ad7-fc3517998270    INFO    Key rotation step complete.
  END RequestId: 05644e4a-81a4-4197-8ad7-fc3517998270
- 
+
  START RequestId: ca204959-32a7-44a8-ba20-738d139542ba Version: $LATEST
     ca204959-32a7-44a8-ba20-738d139542ba    INFO    IAM User has 2 keys:
     ca204959-32a7-44a8-ba20-738d139542ba    INFO     - AKIASHIVKXX3YX4IXRVH [Active] Tue Mar 24 2020 15:37:03 GMT+0000 (Coordinated Universal Time)
@@ -211,7 +211,7 @@ Here's a summary of the output for clarity:
     ca204959-32a7-44a8-ba20-738d139542ba    INFO    Invalidating older access key AKIASHIVKXX3QEQNZNX5
     ca204959-32a7-44a8-ba20-738d139542ba    INFO    Key rotation step complete.
  END RequestId: ca204959-32a7-44a8-ba20-738d139542ba
- 
+
  START RequestId: de753fb4-0720-4f4f-a7aa-ad6b9d4c8832 Version: $LATEST
     de753fb4-0720-4f4f-a7aa-ad6b9d4c8832    INFO    IAM User has 2 keys:
     de753fb4-0720-4f4f-a7aa-ad6b9d4c8832    INFO     - AKIASHIVKXX3YX4IXRVH [Active] Tue Mar 24 2020 15:37:03 GMT+0000 (Coordinated Universal Time)
@@ -219,8 +219,7 @@ Here's a summary of the output for clarity:
     de753fb4-0720-4f4f-a7aa-ad6b9d4c8832    INFO    Deleting older, inactive access key AKIASHIVKXX3QEQNZNX5 [Inactive]
     de753fb4-0720-4f4f-a7aa-ad6b9d4c8832    INFO    Key rotation step complete.
  END RequestId: de753fb4-0720-4f4f-a7aa-ad6b9d4c8832
-
-`"
+```
 
 As you can see, the AWS credentials for the IAM User are automatically updated every few hours. And whenever a new access key is created, the value is pushed out to the impacted Travis CI projects automatically.
 
