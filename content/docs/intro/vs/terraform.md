@@ -60,7 +60,7 @@ Most Pulumi users don't need to know about this detail, however we are proud to 
 and contributing our own open source back to this vibrant ecosystem, and thought you should know.
 
 In the event you'd like to add new providers, or understand how this integration works, please check out the
-[Pulumi Terraform bridge repo](https://github.com/pulumi/pulumi-terraform).  This bridge is fully open source and
+[Pulumi Terraform bridge repo](https://github.com/pulumi/pulumi-terraform-bridge).  This bridge is fully open source and
 makes it easy to create new Pulumi providers out of existing Terraform Providers.
 
 ## Converting From Terraform
