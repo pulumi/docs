@@ -1,0 +1,19 @@
+name: Pulumify
+on: [pull_request]
+jobs:
+  hugoBuild:
+    name: Run Hugo build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+      - run: |
+        yarn lint-markdown
+        NODE_ENV=production yarn --cwd components run build
+      - uses: jakejarvis/hugo-build-action@master
+        env:
+          NODE_ENV: production
+        with:
+          args: --minify -v
