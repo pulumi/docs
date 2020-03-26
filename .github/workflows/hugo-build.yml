@@ -9,12 +9,12 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '12.x'
-      - name: Build components
+      - run: yarn run lint-markdown
+      - name: Build Stencil components
+        working-directory: components
         env:
           NODE_ENV: production
-        run: |
-        yarn lint-markdown
-        yarn --cwd components run build
+        run: yarn run build
       - uses: jakejarvis/hugo-build-action@master
         env:
           NODE_ENV: production
