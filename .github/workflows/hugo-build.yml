@@ -19,7 +19,7 @@ jobs:
         run: |
           yarn install
           yarn run build
-      - uses: jakejarvis/hugo-build-action@master
+      - uses: jakejarvis/hugo-build-action@v0.63.0
         env:
           NODE_ENV: production
         with:
