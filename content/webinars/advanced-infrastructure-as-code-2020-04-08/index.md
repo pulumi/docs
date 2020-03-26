@@ -44,7 +44,7 @@ main:
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2020-04-08 11:30:00 +01:00
     # Datetime of the webinar.
-    datetime: "WED APR 08, 2020 AT 11:30AM CET"
+    datetime: "WED APR 08, 2020 AT 11:30AM to 1:30PM CET"
     # Description of the webinar.
     description: |
         Paul Stack and Mikhail Shilkov from Pulumi will show you how to get started mastering your preferred cloud using your favorite languages.
