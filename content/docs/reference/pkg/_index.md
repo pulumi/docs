@@ -20,7 +20,7 @@ to private registries.
 
 ### Choose Your Language
 
-{{% chooser language "javascript,typescript,python,go" / %}}
+{{% chooser language "javascript,typescript,python,go,csharp" / %}}
 
 ### General Purpose Packages
 
@@ -45,11 +45,11 @@ directly. Additional general purpose packages can be used across all cloud platf
 * [**Random** (`random`)](https://pkg.go.dev/github.com/pulumi/pulumi-random/sdk/go/random)
 {{% /choosable %}}
 
-{{% lang csharp %}}
+{{% choosable language csharp %}}
 * [**Pulumi SDK** (`Pulumi`)](/docs/reference/pkg/dotnet/Pulumi/Pulumi.html)
 * [**Docker** (`Pulumi.Docker`)](/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.html)
 * [**Random** (`Pulumi.Random`)](/docs/reference/pkg/dotnet/Pulumi.Random/Pulumi.Random.html)
-{{% /lang %}}
+{{% /choosable %}}
 
 ### Cloud Providers
 
@@ -171,7 +171,7 @@ Each cloud vendor has a dedicated package for deploying resources to it:
 * [**vSphere** (`vsphere`)](https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere)
 {{% /choosable %}}
 
-{{% lang csharp %}}
+{{% choosable language csharp %}}
 * [**AWS** (`Pulumi.Aws`)](/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.html)
 * [**Microsoft Azure** (`Pulumi.Azure`)](/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.html)
 * [**Google Cloud** (`Pulumi.Gcp`)](/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.html)
@@ -206,7 +206,7 @@ Each cloud vendor has a dedicated package for deploying resources to it:
 * [**TLS** (`Pulumi.Tls`)](/docs/reference/pkg/dotnet/Pulumi.Tls/Pulumi.Tls.html)
 * [**Hashicorp Vault** (`Pulumi.Vault`)](/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.html)
 * [**vSphere** (`Pulumi.VSphere`)](/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.html)
-{{% /lang %}}
+{{% /choosable %}}
 
 ### Cloud-Agnostic Packages
 
@@ -217,10 +217,6 @@ Pulumi offers a highly productive, cloud-agnostic package for container and serv
 * [**Pulumi Cloud Framework** (`@pulumi/cloud`) <span class="badge badge-preview">PREVIEW</span>]({{< relref "nodejs/pulumi/cloud" >}})
 {{% /choosable %}}
 
-{{% choosable language python %}}
-Coming soon!
-{{% /choosable %}}
-
-{{% choosable language go %}}
+{{% choosable language "python,go,csharp" %}}
 Coming soon!
 {{% /choosable %}}
