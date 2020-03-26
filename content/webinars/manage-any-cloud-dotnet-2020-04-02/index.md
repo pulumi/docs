@@ -44,7 +44,7 @@ main:
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2020-04-02 11:30:00 +01:00
     # Datetime of the webinar.
-    datetime: "THUR APR 02, 2020 AT 11:30AM CET"
+    datetime: "THUR APR 02, 2020 AT 11:30AM TO 1:30PM CET"
     # Description of the webinar.
     description: |
         All Pulumi capabilities for defining cloud resources are now available for .NET developers. Pulumi engineer Mikhail Shilkov will show you how you can use C#, F#, and VB.NET to define the infrastructure for Azure, AWS, or even on-prem Kubernetes clusters.

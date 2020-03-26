@@ -49,7 +49,7 @@ main:
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2020-04-22 11:00:00 -07:00
     # Datetime of the webinar.
-    datetime: "WED APR 22, 2020 AT 11:00AM PDT"
+    datetime: "WED APR 22, 2020 AT 11:00AM TO 12:00PM PDT"
     # Description of the webinar.
     description: |
         Pulumi 2.0 makes it easier than ever to master any cloud using your favorite languages.  Learn about new capabilities to help your team plan, build, validate, deploy and secure your cloud resources. With Pulumi’s new capabilities, you’ll spend less time fretting about complex configurations and more time delivering new infrastructure, apps, and services for your customers and stakeholders. Our improved documentation and first-class support for Python, .NET and Go means that more teams can start building, collaborating on and re-using infrastructure code.
