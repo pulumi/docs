@@ -1,0 +1,875 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class AppService
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class AppService
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Azure.AppService.AppService">
+  
+  <h1 id="Pulumi_Azure_AppService_AppService" data-uid="Pulumi.Azure.AppService.AppService" class="text-break">Class AppService
+  </h1>
+  <div class="markdown level0 summary"><p>Manages an App Service (within an App Service Plan).</p>
+<blockquote>
+<p><strong>Note:</strong> When using Slots - the <code>app_settings</code>, <code>connection_string</code> and <code>site_config</code> blocks on the <code>azure.appservice.AppService</code> resource will be overwritten when promoting a Slot using the <code>azure.appservice.ActiveSlot</code> resource.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/app_service.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/app_service.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">AppService</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.AppService.html">Pulumi.Azure.AppService</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
+  <h5 id="Pulumi_Azure_AppService_AppService_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class AppService : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/AppService.cs/#L161">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_AppService_AppService__ctor_" data-uid="Pulumi.Azure.AppService.AppService.#ctor*"></a>
+  <h4 id="Pulumi_Azure_AppService_AppService__ctor_System_String_Pulumi_Azure_AppService_AppServiceArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.AppService.AppService.#ctor(System.String,Pulumi.Azure.AppService.AppServiceArgs,Pulumi.CustomResourceOptions)">AppService(String, AppServiceArgs, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Create a AppService resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AppService(string name, AppServiceArgs args, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Azure.AppService.AppServiceArgs.html">AppServiceArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/AppService.cs/#L24">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_AppService_AppService_AppServicePlanId_" data-uid="Pulumi.Azure.AppService.AppService.AppServicePlanId*"></a>
+  <h4 id="Pulumi_Azure_AppService_AppService_AppServicePlanId" data-uid="Pulumi.Azure.AppService.AppService.AppServicePlanId">AppServicePlanId</h4>
+  <div class="markdown level1 summary"><p>The ID of the App Service Plan within which to create this App Service.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AppServicePlanId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/AppService.cs/#L30">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_AppService_AppService_AppSettings_" data-uid="Pulumi.Azure.AppService.AppService.AppSettings*"></a>
+  <h4 id="Pulumi_Azure_AppService_AppService_AppSettings" data-uid="Pulumi.Azure.AppService.AppService.AppSettings">AppSettings</h4>
+  <div class="markdown level1 summary"><p>A key-value pair of App Settings.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; AppSettings { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/AppService.cs/#L36">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_AppService_AppService_AuthSettings_" data-uid="Pulumi.Azure.AppService.AppService.AuthSettings*"></a>
+  <h4 id="Pulumi_Azure_AppService_AppService_AuthSettings" data-uid="Pulumi.Azure.AppService.AppService.AuthSettings">AuthSettings</h4>
+  <div class="markdown level1 summary"><p>A <code>auth_settings</code> block as defined below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;AppServiceAuthSettings&gt; AuthSettings { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Azure.AppService.Outputs.AppServiceAuthSettings.html">AppServiceAuthSettings</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/AppService.cs/#L42">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_AppService_AppService_Backup_" data-uid="Pulumi.Azure.AppService.AppService.Backup*"></a>
+  <h4 id="Pulumi_Azure_AppService_AppService_Backup" data-uid="Pulumi.Azure.AppService.AppService.Backup">Backup</h4>
+  <div class="markdown level1 summary"><p>A <code>backup</code> block as defined below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;AppServiceBackup&gt; Backup { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Azure.AppService.Outputs.AppServiceBackup.html">AppServiceBackup</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/AppService.cs/#L48">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_AppService_AppService_ClientAffinityEnabled_" data-uid="Pulumi.Azure.AppService.AppService.ClientAffinityEnabled*"></a>
+  <h4 id="Pulumi_Azure_AppService_AppService_ClientAffinityEnabled" data-uid="Pulumi.Azure.AppService.AppService.ClientAffinityEnabled">ClientAffinityEnabled</h4>
+  <div class="markdown level1 summary"><p>Should the App Service send session affinity cookies, which route client requests in the same session to the same instance?</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; ClientAffinityEnabled { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/AppService.cs/#L54">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_AppService_AppService_ClientCertEnabled_" data-uid="Pulumi.Azure.AppService.AppService.ClientCertEnabled*"></a>
+  <h4 id="Pulumi_Azure_AppService_AppService_ClientCertEnabled" data-uid="Pulumi.Azure.AppService.AppService.ClientCertEnabled">ClientCertEnabled</h4>
+  <div class="markdown level1 summary"><p>Does the App Service require client certificates for incoming requests? Defaults to <code>false</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; ClientCertEnabled { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/AppService.cs/#L60">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_AppService_AppService_ConnectionStrings_" data-uid="Pulumi.Azure.AppService.AppService.ConnectionStrings*"></a>
+  <h4 id="Pulumi_Azure_AppService_AppService_ConnectionStrings" data-uid="Pulumi.Azure.AppService.AppService.ConnectionStrings">ConnectionStrings</h4>
+  <div class="markdown level1 summary"><p>One or more <code>connection_string</code> blocks as defined below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;AppServiceConnectionStrings&gt;&gt; ConnectionStrings { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.AppService.Outputs.AppServiceConnectionStrings.html">AppServiceConnectionStrings</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/AppService.cs/#L66">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_AppService_AppService_DefaultSiteHostname_" data-uid="Pulumi.Azure.AppService.AppService.DefaultSiteHostname*"></a>
+  <h4 id="Pulumi_Azure_AppService_AppService_DefaultSiteHostname" data-uid="Pulumi.Azure.AppService.AppService.DefaultSiteHostname">DefaultSiteHostname</h4>
+  <div class="markdown level1 summary"><p>The Default Hostname associated with the App Service - such as <code>mysite.azurewebsites.net</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DefaultSiteHostname { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/AppService.cs/#L72">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_AppService_AppService_Enabled_" data-uid="Pulumi.Azure.AppService.AppService.Enabled*"></a>
+  <h4 id="Pulumi_Azure_AppService_AppService_Enabled" data-uid="Pulumi.Azure.AppService.AppService.Enabled">Enabled</h4>
+  <div class="markdown level1 summary"><p>Is the App Service Enabled?</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; Enabled { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/AppService.cs/#L78">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_AppService_AppService_HttpsOnly_" data-uid="Pulumi.Azure.AppService.AppService.HttpsOnly*"></a>
+  <h4 id="Pulumi_Azure_AppService_AppService_HttpsOnly" data-uid="Pulumi.Azure.AppService.AppService.HttpsOnly">HttpsOnly</h4>
+  <div class="markdown level1 summary"><p>Can the App Service only be accessed via HTTPS? Defaults to <code>false</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; HttpsOnly { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/AppService.cs/#L84">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_AppService_AppService_Identity_" data-uid="Pulumi.Azure.AppService.AppService.Identity*"></a>
+  <h4 id="Pulumi_Azure_AppService_AppService_Identity" data-uid="Pulumi.Azure.AppService.AppService.Identity">Identity</h4>
+  <div class="markdown level1 summary"><p>A Managed Service Identity block as defined below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;AppServiceIdentity&gt; Identity { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Azure.AppService.Outputs.AppServiceIdentity.html">AppServiceIdentity</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/AppService.cs/#L90">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_AppService_AppService_Location_" data-uid="Pulumi.Azure.AppService.AppService.Location*"></a>
+  <h4 id="Pulumi_Azure_AppService_AppService_Location" data-uid="Pulumi.Azure.AppService.AppService.Location">Location</h4>
+  <div class="markdown level1 summary"><p>Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Location { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/AppService.cs/#L96">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_AppService_AppService_Logs_" data-uid="Pulumi.Azure.AppService.AppService.Logs*"></a>
+  <h4 id="Pulumi_Azure_AppService_AppService_Logs" data-uid="Pulumi.Azure.AppService.AppService.Logs">Logs</h4>
+  <div class="markdown level1 summary"><p>A <code>logs</code> block as defined below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;AppServiceLogs&gt; Logs { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Azure.AppService.Outputs.AppServiceLogs.html">AppServiceLogs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/AppService.cs/#L102">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_AppService_AppService_Name_" data-uid="Pulumi.Azure.AppService.AppService.Name*"></a>
+  <h4 id="Pulumi_Azure_AppService_AppService_Name" data-uid="Pulumi.Azure.AppService.AppService.Name">Name</h4>
+  <div class="markdown level1 summary"><p>Specifies the name of the App Service. Changing this forces a new resource to be created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/AppService.cs/#L108">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_AppService_AppService_OutboundIpAddresses_" data-uid="Pulumi.Azure.AppService.AppService.OutboundIpAddresses*"></a>
+  <h4 id="Pulumi_Azure_AppService_AppService_OutboundIpAddresses" data-uid="Pulumi.Azure.AppService.AppService.OutboundIpAddresses">OutboundIpAddresses</h4>
+  <div class="markdown level1 summary"><p>A comma separated list of outbound IP addresses - such as <code>52.23.25.3,52.143.43.12</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; OutboundIpAddresses { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/AppService.cs/#L114">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_AppService_AppService_PossibleOutboundIpAddresses_" data-uid="Pulumi.Azure.AppService.AppService.PossibleOutboundIpAddresses*"></a>
+  <h4 id="Pulumi_Azure_AppService_AppService_PossibleOutboundIpAddresses" data-uid="Pulumi.Azure.AppService.AppService.PossibleOutboundIpAddresses">PossibleOutboundIpAddresses</h4>
+  <div class="markdown level1 summary"><p>A comma separated list of outbound IP addresses - such as <code>52.23.25.3,52.143.43.12,52.143.43.17</code> - not all of which are necessarily in use. Superset of <code>outbound_ip_addresses</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; PossibleOutboundIpAddresses { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/AppService.cs/#L120">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_AppService_AppService_ResourceGroupName_" data-uid="Pulumi.Azure.AppService.AppService.ResourceGroupName*"></a>
+  <h4 id="Pulumi_Azure_AppService_AppService_ResourceGroupName" data-uid="Pulumi.Azure.AppService.AppService.ResourceGroupName">ResourceGroupName</h4>
+  <div class="markdown level1 summary"><p>The name of the resource group in which to create the App Service.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ResourceGroupName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/AppService.cs/#L126">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_AppService_AppService_SiteConfig_" data-uid="Pulumi.Azure.AppService.AppService.SiteConfig*"></a>
+  <h4 id="Pulumi_Azure_AppService_AppService_SiteConfig" data-uid="Pulumi.Azure.AppService.AppService.SiteConfig">SiteConfig</h4>
+  <div class="markdown level1 summary"><p>A <code>site_config</code> block as defined below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;AppServiceSiteConfig&gt; SiteConfig { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Azure.AppService.Outputs.AppServiceSiteConfig.html">AppServiceSiteConfig</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/AppService.cs/#L132">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_AppService_AppService_SiteCredentials_" data-uid="Pulumi.Azure.AppService.AppService.SiteCredentials*"></a>
+  <h4 id="Pulumi_Azure_AppService_AppService_SiteCredentials" data-uid="Pulumi.Azure.AppService.AppService.SiteCredentials">SiteCredentials</h4>
+  <div class="markdown level1 summary"><p>A <code>site_credential</code> block as defined below, which contains the site-level credentials used to publish to this App Service.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;AppServiceSiteCredentials&gt;&gt; SiteCredentials { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.AppService.Outputs.AppServiceSiteCredentials.html">AppServiceSiteCredentials</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/AppService.cs/#L138">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_AppService_AppService_SourceControls_" data-uid="Pulumi.Azure.AppService.AppService.SourceControls*"></a>
+  <h4 id="Pulumi_Azure_AppService_AppService_SourceControls" data-uid="Pulumi.Azure.AppService.AppService.SourceControls">SourceControls</h4>
+  <div class="markdown level1 summary"><p>A <code>source_control</code> block as defined below, which contains the Source Control information when <code>scm_type</code> is set to <code>LocalGit</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;AppServiceSourceControls&gt;&gt; SourceControls { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.AppService.Outputs.AppServiceSourceControls.html">AppServiceSourceControls</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/AppService.cs/#L144">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_AppService_AppService_StorageAccounts_" data-uid="Pulumi.Azure.AppService.AppService.StorageAccounts*"></a>
+  <h4 id="Pulumi_Azure_AppService_AppService_StorageAccounts" data-uid="Pulumi.Azure.AppService.AppService.StorageAccounts">StorageAccounts</h4>
+  <div class="markdown level1 summary"><p>One or more <code>storage_account</code> blocks as defined below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;AppServiceStorageAccounts&gt;&gt; StorageAccounts { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.AppService.Outputs.AppServiceStorageAccounts.html">AppServiceStorageAccounts</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/AppService.cs/#L150">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_AppService_AppService_Tags_" data-uid="Pulumi.Azure.AppService.AppService.Tags*"></a>
+  <h4 id="Pulumi_Azure_AppService_AppService_Tags" data-uid="Pulumi.Azure.AppService.AppService.Tags">Tags</h4>
+  <div class="markdown level1 summary"><p>A mapping of tags to assign to the resource.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; Tags { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/AppService.cs/#L191">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_AppService_AppService_Get_" data-uid="Pulumi.Azure.AppService.AppService.Get*"></a>
+  <h4 id="Pulumi_Azure_AppService_AppService_Get_System_String_Pulumi_Input_System_String__Pulumi_Azure_AppService_AppServiceState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.AppService.AppService.Get(System.String,Pulumi.Input{System.String},Pulumi.Azure.AppService.AppServiceState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, AppServiceState, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Get an existing AppService resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AppService Get(string name, Input&lt;string&gt; id, AppServiceState state = null, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Azure.AppService.AppServiceState.html">AppServiceState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Azure.AppService.AppService.html">AppService</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/AppService.cs/#L19" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

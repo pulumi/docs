@@ -1,0 +1,618 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class SnmpTraps
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class SnmpTraps
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.F5BigIP.Sys.SnmpTraps">
+  
+  <h1 id="Pulumi_F5BigIP_Sys_SnmpTraps" data-uid="Pulumi.F5BigIP.Sys.SnmpTraps" class="text-break">Class SnmpTraps
+  </h1>
+  <div class="markdown level0 summary"><p><code>f5bigip.sys.SnmpTraps</code> provides details bout how to enable snmp_traps resource on BIG-IP</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/sys_snmp_traps.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/sys_snmp_traps.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">SnmpTraps</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.F5BigIP.Sys.html">Pulumi.F5BigIP.Sys</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.F5BigIP.dll</h6>
+  <h5 id="Pulumi_F5BigIP_Sys_SnmpTraps_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class SnmpTraps : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Sys/SnmpTraps.cs/#L110">View Source</a>
+  </span>
+  <a id="Pulumi_F5BigIP_Sys_SnmpTraps__ctor_" data-uid="Pulumi.F5BigIP.Sys.SnmpTraps.#ctor*"></a>
+  <h4 id="Pulumi_F5BigIP_Sys_SnmpTraps__ctor_System_String_Pulumi_F5BigIP_Sys_SnmpTrapsArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.F5BigIP.Sys.SnmpTraps.#ctor(System.String,Pulumi.F5BigIP.Sys.SnmpTrapsArgs,System.Nullable{CustomResourceOptions})">SnmpTraps(String, SnmpTrapsArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Create a SnmpTraps resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SnmpTraps(string name, SnmpTrapsArgs args = null, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.F5BigIP.Sys.SnmpTrapsArgs.html">SnmpTrapsArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Sys/SnmpTraps.cs/#L21">View Source</a>
+  </span>
+  <a id="Pulumi_F5BigIP_Sys_SnmpTraps_AuthPasswordencrypted_" data-uid="Pulumi.F5BigIP.Sys.SnmpTraps.AuthPasswordencrypted*"></a>
+  <h4 id="Pulumi_F5BigIP_Sys_SnmpTraps_AuthPasswordencrypted" data-uid="Pulumi.F5BigIP.Sys.SnmpTraps.AuthPasswordencrypted">AuthPasswordencrypted</h4>
+  <div class="markdown level1 summary"><p>Encrypted password</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; AuthPasswordencrypted { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Sys/SnmpTraps.cs/#L27">View Source</a>
+  </span>
+  <a id="Pulumi_F5BigIP_Sys_SnmpTraps_AuthProtocol_" data-uid="Pulumi.F5BigIP.Sys.SnmpTraps.AuthProtocol*"></a>
+  <h4 id="Pulumi_F5BigIP_Sys_SnmpTraps_AuthProtocol" data-uid="Pulumi.F5BigIP.Sys.SnmpTraps.AuthProtocol">AuthProtocol</h4>
+  <div class="markdown level1 summary"><p>Specifies the protocol used to authenticate the user.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; AuthProtocol { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Sys/SnmpTraps.cs/#L33">View Source</a>
+  </span>
+  <a id="Pulumi_F5BigIP_Sys_SnmpTraps_Community_" data-uid="Pulumi.F5BigIP.Sys.SnmpTraps.Community*"></a>
+  <h4 id="Pulumi_F5BigIP_Sys_SnmpTraps_Community" data-uid="Pulumi.F5BigIP.Sys.SnmpTraps.Community">Community</h4>
+  <div class="markdown level1 summary"><p>Specifies the community string used for this trap.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Community { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Sys/SnmpTraps.cs/#L39">View Source</a>
+  </span>
+  <a id="Pulumi_F5BigIP_Sys_SnmpTraps_Description_" data-uid="Pulumi.F5BigIP.Sys.SnmpTraps.Description*"></a>
+  <h4 id="Pulumi_F5BigIP_Sys_SnmpTraps_Description" data-uid="Pulumi.F5BigIP.Sys.SnmpTraps.Description">Description</h4>
+  <div class="markdown level1 summary"><p>The port that the trap will be sent to.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Sys/SnmpTraps.cs/#L45">View Source</a>
+  </span>
+  <a id="Pulumi_F5BigIP_Sys_SnmpTraps_EngineId_" data-uid="Pulumi.F5BigIP.Sys.SnmpTraps.EngineId*"></a>
+  <h4 id="Pulumi_F5BigIP_Sys_SnmpTraps_EngineId" data-uid="Pulumi.F5BigIP.Sys.SnmpTraps.EngineId">EngineId</h4>
+  <div class="markdown level1 summary"><p>Specifies the authoritative security engine for SNMPv3.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; EngineId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Sys/SnmpTraps.cs/#L51">View Source</a>
+  </span>
+  <a id="Pulumi_F5BigIP_Sys_SnmpTraps_Host_" data-uid="Pulumi.F5BigIP.Sys.SnmpTraps.Host*"></a>
+  <h4 id="Pulumi_F5BigIP_Sys_SnmpTraps_Host" data-uid="Pulumi.F5BigIP.Sys.SnmpTraps.Host">Host</h4>
+  <div class="markdown level1 summary"><p>The host the trap will be sent to.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Host { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Sys/SnmpTraps.cs/#L57">View Source</a>
+  </span>
+  <a id="Pulumi_F5BigIP_Sys_SnmpTraps_Name_" data-uid="Pulumi.F5BigIP.Sys.SnmpTraps.Name*"></a>
+  <h4 id="Pulumi_F5BigIP_Sys_SnmpTraps_Name" data-uid="Pulumi.F5BigIP.Sys.SnmpTraps.Name">Name</h4>
+  <div class="markdown level1 summary"><p>Name of the snmp trap.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Sys/SnmpTraps.cs/#L63">View Source</a>
+  </span>
+  <a id="Pulumi_F5BigIP_Sys_SnmpTraps_Port_" data-uid="Pulumi.F5BigIP.Sys.SnmpTraps.Port*"></a>
+  <h4 id="Pulumi_F5BigIP_Sys_SnmpTraps_Port" data-uid="Pulumi.F5BigIP.Sys.SnmpTraps.Port">Port</h4>
+  <div class="markdown level1 summary"><p>User defined description.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; Port { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Sys/SnmpTraps.cs/#L69">View Source</a>
+  </span>
+  <a id="Pulumi_F5BigIP_Sys_SnmpTraps_PrivacyPassword_" data-uid="Pulumi.F5BigIP.Sys.SnmpTraps.PrivacyPassword*"></a>
+  <h4 id="Pulumi_F5BigIP_Sys_SnmpTraps_PrivacyPassword" data-uid="Pulumi.F5BigIP.Sys.SnmpTraps.PrivacyPassword">PrivacyPassword</h4>
+  <div class="markdown level1 summary"><p>Specifies the clear text password used to encrypt traffic. This field will not be displayed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; PrivacyPassword { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Sys/SnmpTraps.cs/#L75">View Source</a>
+  </span>
+  <a id="Pulumi_F5BigIP_Sys_SnmpTraps_PrivacyPasswordEncrypted_" data-uid="Pulumi.F5BigIP.Sys.SnmpTraps.PrivacyPasswordEncrypted*"></a>
+  <h4 id="Pulumi_F5BigIP_Sys_SnmpTraps_PrivacyPasswordEncrypted" data-uid="Pulumi.F5BigIP.Sys.SnmpTraps.PrivacyPasswordEncrypted">PrivacyPasswordEncrypted</h4>
+  <div class="markdown level1 summary"><p>Specifies the encrypted password used to encrypt traffic.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; PrivacyPasswordEncrypted { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Sys/SnmpTraps.cs/#L81">View Source</a>
+  </span>
+  <a id="Pulumi_F5BigIP_Sys_SnmpTraps_PrivacyProtocol_" data-uid="Pulumi.F5BigIP.Sys.SnmpTraps.PrivacyProtocol*"></a>
+  <h4 id="Pulumi_F5BigIP_Sys_SnmpTraps_PrivacyProtocol" data-uid="Pulumi.F5BigIP.Sys.SnmpTraps.PrivacyProtocol">PrivacyProtocol</h4>
+  <div class="markdown level1 summary"><p>Specifies the protocol used to encrypt traffic.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; PrivacyProtocol { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Sys/SnmpTraps.cs/#L87">View Source</a>
+  </span>
+  <a id="Pulumi_F5BigIP_Sys_SnmpTraps_SecurityLevel_" data-uid="Pulumi.F5BigIP.Sys.SnmpTraps.SecurityLevel*"></a>
+  <h4 id="Pulumi_F5BigIP_Sys_SnmpTraps_SecurityLevel" data-uid="Pulumi.F5BigIP.Sys.SnmpTraps.SecurityLevel">SecurityLevel</h4>
+  <div class="markdown level1 summary"><p>Specifies whether or not traffic is encrypted and whether or not authentication is required.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SecurityLevel { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Sys/SnmpTraps.cs/#L93">View Source</a>
+  </span>
+  <a id="Pulumi_F5BigIP_Sys_SnmpTraps_SecurityName_" data-uid="Pulumi.F5BigIP.Sys.SnmpTraps.SecurityName*"></a>
+  <h4 id="Pulumi_F5BigIP_Sys_SnmpTraps_SecurityName" data-uid="Pulumi.F5BigIP.Sys.SnmpTraps.SecurityName">SecurityName</h4>
+  <div class="markdown level1 summary"><p>Security name used in conjunction with SNMPv3.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SecurityName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Sys/SnmpTraps.cs/#L99">View Source</a>
+  </span>
+  <a id="Pulumi_F5BigIP_Sys_SnmpTraps_Version_" data-uid="Pulumi.F5BigIP.Sys.SnmpTraps.Version*"></a>
+  <h4 id="Pulumi_F5BigIP_Sys_SnmpTraps_Version" data-uid="Pulumi.F5BigIP.Sys.SnmpTraps.Version">Version</h4>
+  <div class="markdown level1 summary"><p>SNMP version used for sending the trap.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Version { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Sys/SnmpTraps.cs/#L140">View Source</a>
+  </span>
+  <a id="Pulumi_F5BigIP_Sys_SnmpTraps_Get_" data-uid="Pulumi.F5BigIP.Sys.SnmpTraps.Get*"></a>
+  <h4 id="Pulumi_F5BigIP_Sys_SnmpTraps_Get_System_String_Input_System_String__Pulumi_F5BigIP_Sys_SnmpTrapsState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.F5BigIP.Sys.SnmpTraps.Get(System.String,Input{System.String},Pulumi.F5BigIP.Sys.SnmpTrapsState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, SnmpTrapsState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Get an existing SnmpTraps resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SnmpTraps Get(string name, Input&lt;string&gt; id, SnmpTrapsState state = null, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.F5BigIP.Sys.SnmpTrapsState.html">SnmpTrapsState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.F5BigIP.Sys.SnmpTraps.html">SnmpTraps</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Sys/SnmpTraps.cs/#L16" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

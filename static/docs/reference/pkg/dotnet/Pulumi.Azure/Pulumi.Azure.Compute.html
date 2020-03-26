@@ -1,0 +1,376 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace Pulumi.Azure.Compute
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace Pulumi.Azure.Compute
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Azure.Compute">
+  
+  <h1 id="Pulumi_Azure_Compute" data-uid="Pulumi.Azure.Compute" class="text-break">Namespace Pulumi.Azure.Compute
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">Classes
+  </h3>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.AvailabilitySet.html">AvailabilitySet</a></h4>
+      <section><p>Manages an Availability Set for Virtual Machines.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/availability_set.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/availability_set.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.AvailabilitySetArgs.html">AvailabilitySetArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.AvailabilitySetState.html">AvailabilitySetState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.BastionHost.html">BastionHost</a></h4>
+      <section><p>Manages a Bastion Host.</p>
+<blockquote>
+<p><strong>Note:</strong> Bastion Hosts are a preview feature in Azure, and therefore are only supported in a select number of regions. <a href="https://docs.microsoft.com/en-us/azure/bastion/bastion-faq">Read more</a>.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/bastion_host.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/bastion_host.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.BastionHostArgs.html">BastionHostArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.BastionHostState.html">BastionHostState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.DataDiskAttachment.html">DataDiskAttachment</a></h4>
+      <section><p>Manages attaching a Disk to a Virtual Machine.</p>
+<blockquote>
+<p><strong>NOTE:</strong> Data Disks can be attached either directly on the <code>azure.compute.VirtualMachine</code> resource, or using the <code>azure.compute.DataDiskAttachment</code> resource - but the two cannot be used together. If both are used against the same Virtual Machine, spurious changes will occur.</p>
+</blockquote>
+<blockquote>
+<p><strong>Please Note:</strong> only Managed Disks are supported via this separate resource, Unmanaged Disks can be attached using the <code>storage_data_disk</code> block in the <code>azure.compute.VirtualMachine</code> resource.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/virtual_machine_data_disk_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/virtual_machine_data_disk_attachment.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.DataDiskAttachmentArgs.html">DataDiskAttachmentArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.DataDiskAttachmentState.html">DataDiskAttachmentState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.DedicatedHost.html">DedicatedHost</a></h4>
+      <section><p>Manage a Dedicated Host within a Dedicated Host Group.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dedicated_host.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dedicated_host.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.DedicatedHostArgs.html">DedicatedHostArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.DedicatedHostGroup.html">DedicatedHostGroup</a></h4>
+      <section><p>Manage a Dedicated Host Group.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dedicated_host_group.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dedicated_host_group.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.DedicatedHostGroupArgs.html">DedicatedHostGroupArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.DedicatedHostGroupState.html">DedicatedHostGroupState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.DedicatedHostState.html">DedicatedHostState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.DiskEncryptionSet.html">DiskEncryptionSet</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.DiskEncryptionSetArgs.html">DiskEncryptionSetArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.DiskEncryptionSetState.html">DiskEncryptionSetState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.Extension.html">Extension</a></h4>
+      <section><p>Manages a Virtual Machine Extension to provide post deployment configuration
+and run automated tasks.</p>
+<blockquote>
+<p><strong>NOTE:</strong> Custom Script Extensions for Linux &amp; Windows require that the <code>commandToExecute</code> returns a <code>0</code> exit code to be classified as successfully deployed. You can achieve this by appending <code>exit 0</code> to the end of your <code>commandToExecute</code>.</p>
+</blockquote>
+<blockquote>
+<p><strong>NOTE:</strong> Custom Script Extensions require that the Azure Virtual Machine Guest Agent is running on the Virtual Machine.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/virtual_machine_extension.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/virtual_machine_extension.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.ExtensionArgs.html">ExtensionArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.ExtensionState.html">ExtensionState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.GetAvailabilitySetArgs.html">GetAvailabilitySetArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.GetAvailabilitySetResult.html">GetAvailabilitySetResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.GetDedicatedHostArgs.html">GetDedicatedHostArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.GetDedicatedHostGroupArgs.html">GetDedicatedHostGroupArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.GetDedicatedHostGroupResult.html">GetDedicatedHostGroupResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.GetDedicatedHostResult.html">GetDedicatedHostResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.GetDiskEncryptionSetArgs.html">GetDiskEncryptionSetArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.GetDiskEncryptionSetResult.html">GetDiskEncryptionSetResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.GetImageArgs.html">GetImageArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.GetImageResult.html">GetImageResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.GetManagedDiskArgs.html">GetManagedDiskArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.GetManagedDiskResult.html">GetManagedDiskResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.GetPlatformImageArgs.html">GetPlatformImageArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.GetPlatformImageResult.html">GetPlatformImageResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.GetSharedImageArgs.html">GetSharedImageArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.GetSharedImageGalleryArgs.html">GetSharedImageGalleryArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.GetSharedImageGalleryResult.html">GetSharedImageGalleryResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.GetSharedImageResult.html">GetSharedImageResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.GetSharedImageVersionArgs.html">GetSharedImageVersionArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.GetSharedImageVersionResult.html">GetSharedImageVersionResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.GetSnapshotArgs.html">GetSnapshotArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.GetSnapshotResult.html">GetSnapshotResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.GetVirtualMachineArgs.html">GetVirtualMachineArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.GetVirtualMachineResult.html">GetVirtualMachineResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.Image.html">Image</a></h4>
+      <section><p>Manages a custom virtual machine image that can be used to create virtual machines.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/image.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/image.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.ImageArgs.html">ImageArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.ImageState.html">ImageState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.Invokes.html">Invokes</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.LinuxVirtualMachine.html">LinuxVirtualMachine</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.LinuxVirtualMachineArgs.html">LinuxVirtualMachineArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.LinuxVirtualMachineScaleSet.html">LinuxVirtualMachineScaleSet</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.LinuxVirtualMachineScaleSetArgs.html">LinuxVirtualMachineScaleSetArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.LinuxVirtualMachineScaleSetState.html">LinuxVirtualMachineScaleSetState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.LinuxVirtualMachineState.html">LinuxVirtualMachineState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.ManagedDisk.html">ManagedDisk</a></h4>
+      <section><p>Manages a managed disk.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/managed_disk.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/managed_disk.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.ManagedDiskArgs.html">ManagedDiskArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.ManagedDiskState.html">ManagedDiskState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.ScaleSet.html">ScaleSet</a></h4>
+      <section><p>Manages a virtual machine scale set.</p>
+<p>## Disclaimers</p>
+<blockquote>
+<p><strong>Note:</strong> The <code>azure.compute.ScaleSet</code> resource has been superseded by the <code>azure.compute.LinuxVirtualMachineScaleSet</code> and <code>azure.compute.WindowsVirtualMachineScaleSet</code> resources. The existing <code>azure.compute.ScaleSet</code> resource will continue to be available throughout the 2.x releases however is in a feature-frozen state to maintain compatibility - new functionality will instead be added to the <code>azure.compute.LinuxVirtualMachineScaleSet</code> and <code>azure.compute.WindowsVirtualMachineScaleSet</code> resources.</p>
+</blockquote>
+<blockquote>
+<p><strong>NOTE:</strong> All arguments including the administrator login and password will be stored in the raw state as plain-text. <a href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/virtual_machine_scale_set.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/virtual_machine_scale_set.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.ScaleSetArgs.html">ScaleSetArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.ScaleSetState.html">ScaleSetState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.SharedImage.html">SharedImage</a></h4>
+      <section><p>Manages a Shared Image within a Shared Image Gallery.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/shared_image.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/shared_image.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.SharedImageArgs.html">SharedImageArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.SharedImageGallery.html">SharedImageGallery</a></h4>
+      <section><p>Manages a Shared Image Gallery.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/shared_image_gallery.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/shared_image_gallery.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.SharedImageGalleryArgs.html">SharedImageGalleryArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.SharedImageGalleryState.html">SharedImageGalleryState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.SharedImageState.html">SharedImageState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.SharedImageVersion.html">SharedImageVersion</a></h4>
+      <section><p>Manages a Version of a Shared Image within a Shared Image Gallery.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/shared_image_version.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/shared_image_version.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.SharedImageVersionArgs.html">SharedImageVersionArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.SharedImageVersionState.html">SharedImageVersionState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.Snapshot.html">Snapshot</a></h4>
+      <section><p>Manages a Disk Snapshot.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/snapshot.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/snapshot.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.SnapshotArgs.html">SnapshotArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.SnapshotState.html">SnapshotState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.VirtualMachine.html">VirtualMachine</a></h4>
+      <section><p>Manages a Virtual Machine.</p>
+<h2 id="disclaimers">Disclaimers</h2>
+<blockquote>
+<p><strong>Note:</strong> The <code>azure.compute.VirtualMachine</code> resource has been superseded by the <code>azure.compute.LinuxVirtualMachine</code> and <code>azure.compute.WindowsVirtualMachine</code> resources. The existing <code>azure.compute.VirtualMachine</code> resource will continue to be available throughout the 2.x releases however is in a feature-frozen state to maintain compatibility - new functionality will instead be added to the <code>azure.compute.LinuxVirtualMachine</code> and <code>azure.compute.WindowsVirtualMachine</code> resources.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> Data Disks can be attached either directly on the <code>azure.compute.VirtualMachine</code> resource, or using the <code>azure.compute.DataDiskAttachment</code> resource - but the two cannot be used together. If both are used against the same Virtual Machine, spurious changes will occur.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/virtual_machine.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/virtual_machine.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.VirtualMachineArgs.html">VirtualMachineArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.VirtualMachineScaleSetExtension.html">VirtualMachineScaleSetExtension</a></h4>
+      <section><p>Manages an Extension for a Virtual Machine Scale Set.</p>
+<blockquote>
+<p><strong>NOTE:</strong> This resource is not intended to be used with the <code>azure.compute.ScaleSet</code> resource - instead it's intended for this to be used with the <code>azure.compute.LinuxVirtualMachineScaleSet</code> and <code>azure.compute.WindowsVirtualMachineScaleSet</code> resources.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/virtual_machine_scale_set_extension.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/virtual_machine_scale_set_extension.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.VirtualMachineScaleSetExtensionArgs.html">VirtualMachineScaleSetExtensionArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.VirtualMachineScaleSetExtensionState.html">VirtualMachineScaleSetExtensionState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.VirtualMachineState.html">VirtualMachineState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.WindowsVirtualMachine.html">WindowsVirtualMachine</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.WindowsVirtualMachineArgs.html">WindowsVirtualMachineArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.WindowsVirtualMachineScaleSet.html">WindowsVirtualMachineScaleSet</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.WindowsVirtualMachineScaleSetArgs.html">WindowsVirtualMachineScaleSetArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.WindowsVirtualMachineScaleSetState.html">WindowsVirtualMachineScaleSetState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Compute.WindowsVirtualMachineState.html">WindowsVirtualMachineState</a></h4>
+      <section></section>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

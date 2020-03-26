@@ -1,0 +1,517 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Policy
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Policy
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Aws.AppAutoScaling.Policy">
+  
+  <h1 id="Pulumi_Aws_AppAutoScaling_Policy" data-uid="Pulumi.Aws.AppAutoScaling.Policy" class="text-break">Class Policy
+  </h1>
+  <div class="markdown level0 summary"><p>Provides an Application AutoScaling Policy resource.</p>
+<h2 id="nested-fields">Nested fields</h2>
+<h3 id="target_tracking_scaling_policy_configuration"><code>target_tracking_scaling_policy_configuration</code></h3>
+<ul>
+<li><code>target_value</code> - (Required) The target value for the metric.</li>
+<li><code>disable_scale_in</code> - (Optional) Indicates whether scale in by the target tracking policy is disabled. If the value is true, scale in is disabled and the target tracking policy won't remove capacity from the scalable resource. Otherwise, scale in is enabled and the target tracking policy can remove capacity from the scalable resource. The default value is <code>false</code>.</li>
+<li><code>scale_in_cooldown</code> - (Optional) The amount of time, in seconds, after a scale in activity completes before another scale in activity can start.</li>
+<li><code>scale_out_cooldown</code> - (Optional) The amount of time, in seconds, after a scale out activity completes before another scale out activity can start.</li>
+<li><code>customized_metric_specification</code> - (Optional) A custom CloudWatch metric. Documentation can be found  at: <a href="https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_CustomizedMetricSpecification.html">AWS Customized Metric Specification</a>. See supported fields below.</li>
+<li><code>predefined_metric_specification</code> - (Optional) A predefined metric. See supported fields below.</li>
+</ul>
+<h3 id="customized_metric_specification"><code>customized_metric_specification</code></h3>
+<ul>
+<li><code>dimensions</code> - (Optional) The dimensions of the metric.</li>
+<li><code>metric_name</code> - (Required) The name of the metric.</li>
+<li><code>namespace</code> - (Required) The namespace of the metric.</li>
+<li><code>statistic</code> - (Required) The statistic of the metric.</li>
+<li><code>unit</code> - (Optional) The unit of the metric.</li>
+</ul>
+<h3 id="predefined_metric_specification"><code>predefined_metric_specification</code></h3>
+<ul>
+<li><code>predefined_metric_type</code> - (Required) The metric type.</li>
+<li><code>resource_label</code> - (Optional) Reserved for future use.</li>
+</ul>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appautoscaling_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appautoscaling_policy.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Policy</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.AppAutoScaling.html">Pulumi.Aws.AppAutoScaling</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
+  <h5 id="Pulumi_Aws_AppAutoScaling_Policy_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Policy : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Appautoscaling/Policy.cs/#L99">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_AppAutoScaling_Policy__ctor_" data-uid="Pulumi.Aws.AppAutoScaling.Policy.#ctor*"></a>
+  <h4 id="Pulumi_Aws_AppAutoScaling_Policy__ctor_System_String_Pulumi_Aws_AppAutoScaling_PolicyArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.AppAutoScaling.Policy.#ctor(System.String,Pulumi.Aws.AppAutoScaling.PolicyArgs,Pulumi.CustomResourceOptions)">Policy(String, PolicyArgs, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Create a Policy resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Policy(string name, PolicyArgs args, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Aws.AppAutoScaling.PolicyArgs.html">PolicyArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Appautoscaling/Policy.cs/#L46">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_AppAutoScaling_Policy_Arn_" data-uid="Pulumi.Aws.AppAutoScaling.Policy.Arn*"></a>
+  <h4 id="Pulumi_Aws_AppAutoScaling_Policy_Arn" data-uid="Pulumi.Aws.AppAutoScaling.Policy.Arn">Arn</h4>
+  <div class="markdown level1 summary"><p>The ARN assigned by AWS to the scaling policy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Arn { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Appautoscaling/Policy.cs/#L52">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_AppAutoScaling_Policy_Name_" data-uid="Pulumi.Aws.AppAutoScaling.Policy.Name*"></a>
+  <h4 id="Pulumi_Aws_AppAutoScaling_Policy_Name" data-uid="Pulumi.Aws.AppAutoScaling.Policy.Name">Name</h4>
+  <div class="markdown level1 summary"><p>The name of the policy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Appautoscaling/Policy.cs/#L58">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_AppAutoScaling_Policy_PolicyType_" data-uid="Pulumi.Aws.AppAutoScaling.Policy.PolicyType*"></a>
+  <h4 id="Pulumi_Aws_AppAutoScaling_Policy_PolicyType" data-uid="Pulumi.Aws.AppAutoScaling.Policy.PolicyType">PolicyType</h4>
+  <div class="markdown level1 summary"><p>For DynamoDB, only <code>TargetTrackingScaling</code> is supported. For Amazon ECS, Spot Fleet, and Amazon RDS, both <code>StepScaling</code> and <code>TargetTrackingScaling</code> are supported. For any other service, only <code>StepScaling</code> is supported. Defaults to <code>StepScaling</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; PolicyType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Appautoscaling/Policy.cs/#L64">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_AppAutoScaling_Policy_ResourceId_" data-uid="Pulumi.Aws.AppAutoScaling.Policy.ResourceId*"></a>
+  <h4 id="Pulumi_Aws_AppAutoScaling_Policy_ResourceId" data-uid="Pulumi.Aws.AppAutoScaling.Policy.ResourceId">ResourceId</h4>
+  <div class="markdown level1 summary"><p>The resource type and unique identifier string for the resource associated with the scaling policy. Documentation can be found in the <code>ResourceId</code> parameter at: <a href="http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters">AWS Application Auto Scaling API Reference</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ResourceId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Appautoscaling/Policy.cs/#L70">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_AppAutoScaling_Policy_ScalableDimension_" data-uid="Pulumi.Aws.AppAutoScaling.Policy.ScalableDimension*"></a>
+  <h4 id="Pulumi_Aws_AppAutoScaling_Policy_ScalableDimension" data-uid="Pulumi.Aws.AppAutoScaling.Policy.ScalableDimension">ScalableDimension</h4>
+  <div class="markdown level1 summary"><p>The scalable dimension of the scalable target. Documentation can be found in the <code>ScalableDimension</code> parameter at: <a href="http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters">AWS Application Auto Scaling API Reference</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ScalableDimension { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Appautoscaling/Policy.cs/#L76">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_AppAutoScaling_Policy_ServiceNamespace_" data-uid="Pulumi.Aws.AppAutoScaling.Policy.ServiceNamespace*"></a>
+  <h4 id="Pulumi_Aws_AppAutoScaling_Policy_ServiceNamespace" data-uid="Pulumi.Aws.AppAutoScaling.Policy.ServiceNamespace">ServiceNamespace</h4>
+  <div class="markdown level1 summary"><p>The AWS service namespace of the scalable target. Documentation can be found in the <code>ServiceNamespace</code> parameter at: <a href="http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters">AWS Application Auto Scaling API Reference</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ServiceNamespace { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Appautoscaling/Policy.cs/#L82">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_AppAutoScaling_Policy_StepScalingPolicyConfiguration_" data-uid="Pulumi.Aws.AppAutoScaling.Policy.StepScalingPolicyConfiguration*"></a>
+  <h4 id="Pulumi_Aws_AppAutoScaling_Policy_StepScalingPolicyConfiguration" data-uid="Pulumi.Aws.AppAutoScaling.Policy.StepScalingPolicyConfiguration">StepScalingPolicyConfiguration</h4>
+  <div class="markdown level1 summary"><p>Step scaling policy configuration, requires <code>policy_type = &amp;quot;StepScaling&amp;quot;</code> (default). See supported fields below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;PolicyStepScalingPolicyConfiguration&gt; StepScalingPolicyConfiguration { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.AppAutoScaling.Outputs.PolicyStepScalingPolicyConfiguration.html">PolicyStepScalingPolicyConfiguration</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Appautoscaling/Policy.cs/#L88">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_AppAutoScaling_Policy_TargetTrackingScalingPolicyConfiguration_" data-uid="Pulumi.Aws.AppAutoScaling.Policy.TargetTrackingScalingPolicyConfiguration*"></a>
+  <h4 id="Pulumi_Aws_AppAutoScaling_Policy_TargetTrackingScalingPolicyConfiguration" data-uid="Pulumi.Aws.AppAutoScaling.Policy.TargetTrackingScalingPolicyConfiguration">TargetTrackingScalingPolicyConfiguration</h4>
+  <div class="markdown level1 summary"><p>A target tracking policy, requires <code>policy_type = &amp;quot;TargetTrackingScaling&amp;quot;</code>. See supported fields below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;PolicyTargetTrackingScalingPolicyConfiguration&gt; TargetTrackingScalingPolicyConfiguration { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.AppAutoScaling.Outputs.PolicyTargetTrackingScalingPolicyConfiguration.html">PolicyTargetTrackingScalingPolicyConfiguration</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Appautoscaling/Policy.cs/#L129">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_AppAutoScaling_Policy_Get_" data-uid="Pulumi.Aws.AppAutoScaling.Policy.Get*"></a>
+  <h4 id="Pulumi_Aws_AppAutoScaling_Policy_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_AppAutoScaling_PolicyState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.AppAutoScaling.Policy.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.AppAutoScaling.PolicyState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, PolicyState, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Get an existing Policy resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Policy Get(string name, Input&lt;string&gt; id, PolicyState state = null, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Aws.AppAutoScaling.PolicyState.html">PolicyState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Aws.AppAutoScaling.Policy.html">Policy</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Appautoscaling/Policy.cs/#L41" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

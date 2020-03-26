@@ -1,0 +1,1011 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class UserFederation
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class UserFederation
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Keycloak.Ldap.UserFederation">
+  
+  <h1 id="Pulumi_Keycloak_Ldap_UserFederation" data-uid="Pulumi.Keycloak.Ldap.UserFederation" class="text-break">Class UserFederation
+  </h1>
+  <div class="markdown level0 summary"><h2 id="-keycloakldapuserfederation"># keycloak.ldap.UserFederation</h2>
+<p>Allows for creating and managing LDAP user federation providers within Keycloak.</p>
+<p>Keycloak can use an LDAP user federation provider to federate users to Keycloak
+from a directory system such as LDAP or Active Directory. Federated users
+will exist within the realm and will be able to log in to clients. Federated
+users can have their attributes defined using mappers.</p>
+<h3 id="argument-reference">Argument Reference</h3>
+<p>The following arguments are supported:</p>
+<ul>
+<li><code>realm_id</code> - (Required) The realm that this provider will provide user federation for.</li>
+<li><code>name</code> - (Required) Display name of the provider when displayed in the console.</li>
+<li><code>enabled</code> - (Optional) When <code>false</code>, this provider will not be used when performing queries for users. Defaults to <code>true</code>.</li>
+<li><code>priority</code> - (Optional) Priority of this provider when looking up users. Lower values are first. Defaults to <code>0</code>.</li>
+<li><code>import_enabled</code> - (Optional) When <code>true</code>, LDAP users will be imported into the Keycloak database. Defaults to <code>true</code>.</li>
+<li><code>edit_mode</code> - (Optional) Can be one of <code>READ_ONLY</code>, <code>WRITABLE</code>, or <code>UNSYNCED</code>. <code>UNSYNCED</code> allows user data to be imported but not synced back to LDAP. Defaults to <code>READ_ONLY</code>.</li>
+<li><code>sync_registrations</code> - (Optional) When <code>true</code>, newly created users will be synced back to LDAP. Defaults to <code>false</code>.</li>
+<li><code>vendor</code> - (Optional) Can be one of <code>OTHER</code>, <code>EDIRECTORY</code>, <code>AD</code>, <code>RHDS</code>, or <code>TIVOLI</code>. When this is selected in the GUI, it provides reasonable defaults for other fields. When used with the Keycloak API, this attribute does nothing, but is still required. Defaults to <code>OPTIONAL</code>.</li>
+<li><code>username_ldap_attribute</code> - (Required) Name of the LDAP attribute to use as the Keycloak username.</li>
+<li><code>rdn_ldap_attribute</code> - (Required) Name of the LDAP attribute to use as the relative distinguished name.</li>
+<li><code>uuid_ldap_attribute</code> - (Required) Name of the LDAP attribute to use as a unique object identifier for objects in LDAP.</li>
+<li><code>user_object_classes</code> - (Required) Array of all values of LDAP objectClass attribute for users in LDAP. Must contain at least one.</li>
+<li><code>connection_url</code> - (Required) Connection URL to the LDAP server.</li>
+<li><code>users_dn</code> - (Required) Full DN of LDAP tree where your users are.</li>
+<li><code>bind_dn</code> - (Optional) DN of LDAP admin, which will be used by Keycloak to access LDAP server. This attribute must be set if <code>bind_credential</code> is set.</li>
+<li><code>bind_credential</code> - (Optional) Password of LDAP admin. This attribute must be set if <code>bind_dn</code> is set.</li>
+<li><code>custom_user_search_filter</code> - (Optional) Additional LDAP filter for filtering searched users. Must begin with <code>(</code> and end with <code>)</code>.</li>
+<li><code>search_scope</code> - (Optional) Can be one of <code>ONE_LEVEL</code> or <code>SUBTREE</code>:</li>
+<li><code>ONE_LEVEL</code>: Only search for users in the DN specified by <code>user_dn</code>.</li>
+<li><code>SUBTREE</code>: Search entire LDAP subtree.</li>
+<li><code>validate_password_policy</code> - (Optional) When <code>true</code>, Keycloak will validate passwords using the realm policy before updating it.</li>
+<li><code>use_truststore_spi</code> - (Optional) Can be one of <code>ALWAYS</code>, <code>ONLY_FOR_LDAPS</code>, or <code>NEVER</code>:</li>
+<li><code>ALWAYS</code> - Always use the truststore SPI for LDAP connections.</li>
+<li><code>NEVER</code> - Never use the truststore SPI for LDAP connections.</li>
+<li><code>ONLY_FOR_LDAPS</code> - Only use the truststore SPI if your LDAP connection uses the ldaps protocol.</li>
+<li><code>connection_timeout</code> - (Optional) LDAP connection timeout in the format of a <a href="https://golang.org/pkg/time/#Duration.String">Go duration string</a>.</li>
+<li><code>read_timeout</code> - (Optional) LDAP read timeout in the format of a <a href="https://golang.org/pkg/time/#Duration.String">Go duration string</a>.</li>
+<li><code>pagination</code> - (Optional) When true, Keycloak assumes the LDAP server supports pagination. Defaults to <code>true</code>.</li>
+<li><code>batch_size_for_sync</code> - (Optional) The number of users to sync within a single transaction. Defaults to <code>1000</code>.</li>
+<li><code>full_sync_period</code> - (Optional) How frequently Keycloak should sync all LDAP users, in seconds. Omit this property to disable periodic full sync.</li>
+<li><code>changed_sync_period</code> - (Optional) How frequently Keycloak should sync changed LDAP users, in seconds. Omit this property to disable periodic changed users sync.</li>
+<li><code>cache_policy</code> - (Optional) Can be one of <code>DEFAULT</code>, <code>EVICT_DAILY</code>, <code>EVICT_WEEKLY</code>, <code>MAX_LIFESPAN</code>, or <code>NO_CACHE</code>. Defaults to <code>DEFAULT</code>.</li>
+</ul>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/ldap_user_federation.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/ldap_user_federation.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">UserFederation</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Keycloak.Ldap.html">Pulumi.Keycloak.Ldap</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Keycloak.dll</h6>
+  <h5 id="Pulumi_Keycloak_Ldap_UserFederation_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class UserFederation : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Ldap/UserFederation.cs/#L229">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Ldap_UserFederation__ctor_" data-uid="Pulumi.Keycloak.Ldap.UserFederation.#ctor*"></a>
+  <h4 id="Pulumi_Keycloak_Ldap_UserFederation__ctor_System_String_Pulumi_Keycloak_Ldap_UserFederationArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Keycloak.Ldap.UserFederation.#ctor(System.String,Pulumi.Keycloak.Ldap.UserFederationArgs,System.Nullable{CustomResourceOptions})">UserFederation(String, UserFederationArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Create a UserFederation resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UserFederation(string name, UserFederationArgs args, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Keycloak.Ldap.UserFederationArgs.html">UserFederationArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Ldap/UserFederation.cs/#L65">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Ldap_UserFederation_BatchSizeForSync_" data-uid="Pulumi.Keycloak.Ldap.UserFederation.BatchSizeForSync*"></a>
+  <h4 id="Pulumi_Keycloak_Ldap_UserFederation_BatchSizeForSync" data-uid="Pulumi.Keycloak.Ldap.UserFederation.BatchSizeForSync">BatchSizeForSync</h4>
+  <div class="markdown level1 summary"><p>The number of users to sync within a single transaction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; BatchSizeForSync { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Ldap/UserFederation.cs/#L71">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Ldap_UserFederation_BindCredential_" data-uid="Pulumi.Keycloak.Ldap.UserFederation.BindCredential*"></a>
+  <h4 id="Pulumi_Keycloak_Ldap_UserFederation_BindCredential" data-uid="Pulumi.Keycloak.Ldap.UserFederation.BindCredential">BindCredential</h4>
+  <div class="markdown level1 summary"><p>Password of LDAP admin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; BindCredential { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Ldap/UserFederation.cs/#L77">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Ldap_UserFederation_BindDn_" data-uid="Pulumi.Keycloak.Ldap.UserFederation.BindDn*"></a>
+  <h4 id="Pulumi_Keycloak_Ldap_UserFederation_BindDn" data-uid="Pulumi.Keycloak.Ldap.UserFederation.BindDn">BindDn</h4>
+  <div class="markdown level1 summary"><p>DN of LDAP admin, which will be used by Keycloak to access LDAP server.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; BindDn { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Ldap/UserFederation.cs/#L80">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Ldap_UserFederation_CachePolicy_" data-uid="Pulumi.Keycloak.Ldap.UserFederation.CachePolicy*"></a>
+  <h4 id="Pulumi_Keycloak_Ldap_UserFederation_CachePolicy" data-uid="Pulumi.Keycloak.Ldap.UserFederation.CachePolicy">CachePolicy</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; CachePolicy { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Ldap/UserFederation.cs/#L87">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Ldap_UserFederation_ChangedSyncPeriod_" data-uid="Pulumi.Keycloak.Ldap.UserFederation.ChangedSyncPeriod*"></a>
+  <h4 id="Pulumi_Keycloak_Ldap_UserFederation_ChangedSyncPeriod" data-uid="Pulumi.Keycloak.Ldap.UserFederation.ChangedSyncPeriod">ChangedSyncPeriod</h4>
+  <div class="markdown level1 summary"><p>How frequently Keycloak should sync changed LDAP users, in seconds. Omit this property to disable periodic
+changed users sync.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; ChangedSyncPeriod { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Ldap/UserFederation.cs/#L93">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Ldap_UserFederation_ConnectionTimeout_" data-uid="Pulumi.Keycloak.Ldap.UserFederation.ConnectionTimeout*"></a>
+  <h4 id="Pulumi_Keycloak_Ldap_UserFederation_ConnectionTimeout" data-uid="Pulumi.Keycloak.Ldap.UserFederation.ConnectionTimeout">ConnectionTimeout</h4>
+  <div class="markdown level1 summary"><p>LDAP connection timeout (duration string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ConnectionTimeout { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Ldap/UserFederation.cs/#L99">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Ldap_UserFederation_ConnectionUrl_" data-uid="Pulumi.Keycloak.Ldap.UserFederation.ConnectionUrl*"></a>
+  <h4 id="Pulumi_Keycloak_Ldap_UserFederation_ConnectionUrl" data-uid="Pulumi.Keycloak.Ldap.UserFederation.ConnectionUrl">ConnectionUrl</h4>
+  <div class="markdown level1 summary"><p>Connection URL to the LDAP server.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ConnectionUrl { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Ldap/UserFederation.cs/#L105">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Ldap_UserFederation_CustomUserSearchFilter_" data-uid="Pulumi.Keycloak.Ldap.UserFederation.CustomUserSearchFilter*"></a>
+  <h4 id="Pulumi_Keycloak_Ldap_UserFederation_CustomUserSearchFilter" data-uid="Pulumi.Keycloak.Ldap.UserFederation.CustomUserSearchFilter">CustomUserSearchFilter</h4>
+  <div class="markdown level1 summary"><p>Additional LDAP filter for filtering searched users. Must begin with '(' and end with ')'.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; CustomUserSearchFilter { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Ldap/UserFederation.cs/#L112">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Ldap_UserFederation_EditMode_" data-uid="Pulumi.Keycloak.Ldap.UserFederation.EditMode*"></a>
+  <h4 id="Pulumi_Keycloak_Ldap_UserFederation_EditMode" data-uid="Pulumi.Keycloak.Ldap.UserFederation.EditMode">EditMode</h4>
+  <div class="markdown level1 summary"><p>READ_ONLY and WRITABLE are self-explanatory. UNSYNCED allows user data to be imported but not synced back to
+LDAP.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; EditMode { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Ldap/UserFederation.cs/#L118">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Ldap_UserFederation_Enabled_" data-uid="Pulumi.Keycloak.Ldap.UserFederation.Enabled*"></a>
+  <h4 id="Pulumi_Keycloak_Ldap_UserFederation_Enabled" data-uid="Pulumi.Keycloak.Ldap.UserFederation.Enabled">Enabled</h4>
+  <div class="markdown level1 summary"><p>When false, this provider will not be used when performing queries for users.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; Enabled { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Ldap/UserFederation.cs/#L125">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Ldap_UserFederation_FullSyncPeriod_" data-uid="Pulumi.Keycloak.Ldap.UserFederation.FullSyncPeriod*"></a>
+  <h4 id="Pulumi_Keycloak_Ldap_UserFederation_FullSyncPeriod" data-uid="Pulumi.Keycloak.Ldap.UserFederation.FullSyncPeriod">FullSyncPeriod</h4>
+  <div class="markdown level1 summary"><p>How frequently Keycloak should sync all LDAP users, in seconds. Omit this property to disable periodic full
+sync.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; FullSyncPeriod { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Ldap/UserFederation.cs/#L131">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Ldap_UserFederation_ImportEnabled_" data-uid="Pulumi.Keycloak.Ldap.UserFederation.ImportEnabled*"></a>
+  <h4 id="Pulumi_Keycloak_Ldap_UserFederation_ImportEnabled" data-uid="Pulumi.Keycloak.Ldap.UserFederation.ImportEnabled">ImportEnabled</h4>
+  <div class="markdown level1 summary"><p>When true, LDAP users will be imported into the Keycloak database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; ImportEnabled { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Ldap/UserFederation.cs/#L137">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Ldap_UserFederation_Name_" data-uid="Pulumi.Keycloak.Ldap.UserFederation.Name*"></a>
+  <h4 id="Pulumi_Keycloak_Ldap_UserFederation_Name" data-uid="Pulumi.Keycloak.Ldap.UserFederation.Name">Name</h4>
+  <div class="markdown level1 summary"><p>Display name of the provider when displayed in the console.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Ldap/UserFederation.cs/#L143">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Ldap_UserFederation_Pagination_" data-uid="Pulumi.Keycloak.Ldap.UserFederation.Pagination*"></a>
+  <h4 id="Pulumi_Keycloak_Ldap_UserFederation_Pagination" data-uid="Pulumi.Keycloak.Ldap.UserFederation.Pagination">Pagination</h4>
+  <div class="markdown level1 summary"><p>When true, Keycloak assumes the LDAP server supports pagination.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; Pagination { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Ldap/UserFederation.cs/#L149">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Ldap_UserFederation_Priority_" data-uid="Pulumi.Keycloak.Ldap.UserFederation.Priority*"></a>
+  <h4 id="Pulumi_Keycloak_Ldap_UserFederation_Priority" data-uid="Pulumi.Keycloak.Ldap.UserFederation.Priority">Priority</h4>
+  <div class="markdown level1 summary"><p>Priority of this provider when looking up users. Lower values are first.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; Priority { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Ldap/UserFederation.cs/#L155">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Ldap_UserFederation_RdnLdapAttribute_" data-uid="Pulumi.Keycloak.Ldap.UserFederation.RdnLdapAttribute*"></a>
+  <h4 id="Pulumi_Keycloak_Ldap_UserFederation_RdnLdapAttribute" data-uid="Pulumi.Keycloak.Ldap.UserFederation.RdnLdapAttribute">RdnLdapAttribute</h4>
+  <div class="markdown level1 summary"><p>Name of the LDAP attribute to use as the relative distinguished name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; RdnLdapAttribute { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Ldap/UserFederation.cs/#L161">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Ldap_UserFederation_ReadTimeout_" data-uid="Pulumi.Keycloak.Ldap.UserFederation.ReadTimeout*"></a>
+  <h4 id="Pulumi_Keycloak_Ldap_UserFederation_ReadTimeout" data-uid="Pulumi.Keycloak.Ldap.UserFederation.ReadTimeout">ReadTimeout</h4>
+  <div class="markdown level1 summary"><p>LDAP read timeout (duration string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ReadTimeout { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Ldap/UserFederation.cs/#L167">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Ldap_UserFederation_RealmId_" data-uid="Pulumi.Keycloak.Ldap.UserFederation.RealmId*"></a>
+  <h4 id="Pulumi_Keycloak_Ldap_UserFederation_RealmId" data-uid="Pulumi.Keycloak.Ldap.UserFederation.RealmId">RealmId</h4>
+  <div class="markdown level1 summary"><p>The realm this provider will provide user federation for.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; RealmId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Ldap/UserFederation.cs/#L173">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Ldap_UserFederation_SearchScope_" data-uid="Pulumi.Keycloak.Ldap.UserFederation.SearchScope*"></a>
+  <h4 id="Pulumi_Keycloak_Ldap_UserFederation_SearchScope" data-uid="Pulumi.Keycloak.Ldap.UserFederation.SearchScope">SearchScope</h4>
+  <div class="markdown level1 summary"><p>ONE_LEVEL: only search for users in the DN specified by user_dn. SUBTREE: search entire LDAP subtree.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SearchScope { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Ldap/UserFederation.cs/#L179">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Ldap_UserFederation_SyncRegistrations_" data-uid="Pulumi.Keycloak.Ldap.UserFederation.SyncRegistrations*"></a>
+  <h4 id="Pulumi_Keycloak_Ldap_UserFederation_SyncRegistrations" data-uid="Pulumi.Keycloak.Ldap.UserFederation.SyncRegistrations">SyncRegistrations</h4>
+  <div class="markdown level1 summary"><p>When true, newly created users will be synced back to LDAP.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; SyncRegistrations { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Ldap/UserFederation.cs/#L194">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Ldap_UserFederation_UsernameLdapAttribute_" data-uid="Pulumi.Keycloak.Ldap.UserFederation.UsernameLdapAttribute*"></a>
+  <h4 id="Pulumi_Keycloak_Ldap_UserFederation_UsernameLdapAttribute" data-uid="Pulumi.Keycloak.Ldap.UserFederation.UsernameLdapAttribute">UsernameLdapAttribute</h4>
+  <div class="markdown level1 summary"><p>Name of the LDAP attribute to use as the Keycloak username.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; UsernameLdapAttribute { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Ldap/UserFederation.cs/#L188">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Ldap_UserFederation_UserObjectClasses_" data-uid="Pulumi.Keycloak.Ldap.UserFederation.UserObjectClasses*"></a>
+  <h4 id="Pulumi_Keycloak_Ldap_UserFederation_UserObjectClasses" data-uid="Pulumi.Keycloak.Ldap.UserFederation.UserObjectClasses">UserObjectClasses</h4>
+  <div class="markdown level1 summary"><p>All values of LDAP objectClass attribute for users in LDAP.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; UserObjectClasses { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Ldap/UserFederation.cs/#L200">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Ldap_UserFederation_UsersDn_" data-uid="Pulumi.Keycloak.Ldap.UserFederation.UsersDn*"></a>
+  <h4 id="Pulumi_Keycloak_Ldap_UserFederation_UsersDn" data-uid="Pulumi.Keycloak.Ldap.UserFederation.UsersDn">UsersDn</h4>
+  <div class="markdown level1 summary"><p>Full DN of LDAP tree where your users are.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; UsersDn { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Ldap/UserFederation.cs/#L182">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Ldap_UserFederation_UseTruststoreSpi_" data-uid="Pulumi.Keycloak.Ldap.UserFederation.UseTruststoreSpi*"></a>
+  <h4 id="Pulumi_Keycloak_Ldap_UserFederation_UseTruststoreSpi" data-uid="Pulumi.Keycloak.Ldap.UserFederation.UseTruststoreSpi">UseTruststoreSpi</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; UseTruststoreSpi { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Ldap/UserFederation.cs/#L206">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Ldap_UserFederation_UuidLdapAttribute_" data-uid="Pulumi.Keycloak.Ldap.UserFederation.UuidLdapAttribute*"></a>
+  <h4 id="Pulumi_Keycloak_Ldap_UserFederation_UuidLdapAttribute" data-uid="Pulumi.Keycloak.Ldap.UserFederation.UuidLdapAttribute">UuidLdapAttribute</h4>
+  <div class="markdown level1 summary"><p>Name of the LDAP attribute to use as a unique object identifier for objects in LDAP.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; UuidLdapAttribute { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Ldap/UserFederation.cs/#L212">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Ldap_UserFederation_ValidatePasswordPolicy_" data-uid="Pulumi.Keycloak.Ldap.UserFederation.ValidatePasswordPolicy*"></a>
+  <h4 id="Pulumi_Keycloak_Ldap_UserFederation_ValidatePasswordPolicy" data-uid="Pulumi.Keycloak.Ldap.UserFederation.ValidatePasswordPolicy">ValidatePasswordPolicy</h4>
+  <div class="markdown level1 summary"><p>When true, Keycloak will validate passwords using the realm policy before updating it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; ValidatePasswordPolicy { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Ldap/UserFederation.cs/#L218">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Ldap_UserFederation_Vendor_" data-uid="Pulumi.Keycloak.Ldap.UserFederation.Vendor*"></a>
+  <h4 id="Pulumi_Keycloak_Ldap_UserFederation_Vendor" data-uid="Pulumi.Keycloak.Ldap.UserFederation.Vendor">Vendor</h4>
+  <div class="markdown level1 summary"><p>LDAP vendor. I am almost certain this field does nothing, but the UI indicates that it is required.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Vendor { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Ldap/UserFederation.cs/#L259">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Ldap_UserFederation_Get_" data-uid="Pulumi.Keycloak.Ldap.UserFederation.Get*"></a>
+  <h4 id="Pulumi_Keycloak_Ldap_UserFederation_Get_System_String_Input_System_String__Pulumi_Keycloak_Ldap_UserFederationState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Keycloak.Ldap.UserFederation.Get(System.String,Input{System.String},Pulumi.Keycloak.Ldap.UserFederationState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, UserFederationState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Get an existing UserFederation resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static UserFederation Get(string name, Input&lt;string&gt; id, UserFederationState state = null, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Keycloak.Ldap.UserFederationState.html">UserFederationState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Keycloak.Ldap.UserFederation.html">UserFederation</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Ldap/UserFederation.cs/#L60" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

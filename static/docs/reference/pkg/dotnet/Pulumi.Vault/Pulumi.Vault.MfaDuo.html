@@ -1,0 +1,432 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class MfaDuo
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class MfaDuo
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Vault.MfaDuo">
+  
+  <h1 id="Pulumi_Vault_MfaDuo" data-uid="Pulumi.Vault.MfaDuo" class="text-break">Class MfaDuo
+  </h1>
+  <div class="markdown level0 summary"><p>Provides a resource to manage <a href="https://www.vaultproject.io/docs/enterprise/mfa/mfa-duo.html">Duo MFA</a>.</p>
+<p><strong>Note</strong> this feature is available only with Vault Enterprise.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/mfa_duo.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/mfa_duo.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">MfaDuo</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Vault.html">Pulumi.Vault</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Vault.dll</h6>
+  <h5 id="Pulumi_Vault_MfaDuo_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class MfaDuo : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/MfaDuo.cs/#L72">View Source</a>
+  </span>
+  <a id="Pulumi_Vault_MfaDuo__ctor_" data-uid="Pulumi.Vault.MfaDuo.#ctor*"></a>
+  <h4 id="Pulumi_Vault_MfaDuo__ctor_System_String_Pulumi_Vault_MfaDuoArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Vault.MfaDuo.#ctor(System.String,Pulumi.Vault.MfaDuoArgs,System.Nullable{CustomResourceOptions})">MfaDuo(String, MfaDuoArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Create a MfaDuo resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MfaDuo(string name, MfaDuoArgs args, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Vault.MfaDuoArgs.html">MfaDuoArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/MfaDuo.cs/#L23">View Source</a>
+  </span>
+  <a id="Pulumi_Vault_MfaDuo_ApiHostname_" data-uid="Pulumi.Vault.MfaDuo.ApiHostname*"></a>
+  <h4 id="Pulumi_Vault_MfaDuo_ApiHostname" data-uid="Pulumi.Vault.MfaDuo.ApiHostname">ApiHostname</h4>
+  <div class="markdown level1 summary"><p>API hostname for Duo.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ApiHostname { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/MfaDuo.cs/#L29">View Source</a>
+  </span>
+  <a id="Pulumi_Vault_MfaDuo_IntegrationKey_" data-uid="Pulumi.Vault.MfaDuo.IntegrationKey*"></a>
+  <h4 id="Pulumi_Vault_MfaDuo_IntegrationKey" data-uid="Pulumi.Vault.MfaDuo.IntegrationKey">IntegrationKey</h4>
+  <div class="markdown level1 summary"><p>Integration key for Duo.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; IntegrationKey { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/MfaDuo.cs/#L36">View Source</a>
+  </span>
+  <a id="Pulumi_Vault_MfaDuo_MountAccessor_" data-uid="Pulumi.Vault.MfaDuo.MountAccessor*"></a>
+  <h4 id="Pulumi_Vault_MfaDuo_MountAccessor" data-uid="Pulumi.Vault.MfaDuo.MountAccessor">MountAccessor</h4>
+  <div class="markdown level1 summary"><p>The mount to tie this method to for use in automatic mappings. The mapping will use the Name field of
+Aliases associated with this mount as the username in the mapping.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; MountAccessor { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/MfaDuo.cs/#L42">View Source</a>
+  </span>
+  <a id="Pulumi_Vault_MfaDuo_Name_" data-uid="Pulumi.Vault.MfaDuo.Name*"></a>
+  <h4 id="Pulumi_Vault_MfaDuo_Name" data-uid="Pulumi.Vault.MfaDuo.Name">Name</h4>
+  <div class="markdown level1 summary"><p>Name of the MFA method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/MfaDuo.cs/#L48">View Source</a>
+  </span>
+  <a id="Pulumi_Vault_MfaDuo_PushInfo_" data-uid="Pulumi.Vault.MfaDuo.PushInfo*"></a>
+  <h4 id="Pulumi_Vault_MfaDuo_PushInfo" data-uid="Pulumi.Vault.MfaDuo.PushInfo">PushInfo</h4>
+  <div class="markdown level1 summary"><p>Push information for Duo.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; PushInfo { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/MfaDuo.cs/#L54">View Source</a>
+  </span>
+  <a id="Pulumi_Vault_MfaDuo_SecretKey_" data-uid="Pulumi.Vault.MfaDuo.SecretKey*"></a>
+  <h4 id="Pulumi_Vault_MfaDuo_SecretKey" data-uid="Pulumi.Vault.MfaDuo.SecretKey">SecretKey</h4>
+  <div class="markdown level1 summary"><p>Secret key for Duo.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SecretKey { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/MfaDuo.cs/#L61">View Source</a>
+  </span>
+  <a id="Pulumi_Vault_MfaDuo_UsernameFormat_" data-uid="Pulumi.Vault.MfaDuo.UsernameFormat*"></a>
+  <h4 id="Pulumi_Vault_MfaDuo_UsernameFormat" data-uid="Pulumi.Vault.MfaDuo.UsernameFormat">UsernameFormat</h4>
+  <div class="markdown level1 summary"><p>A format string for mapping Identity names to MFA method names. Values to substitute should be placed in
+<code>{{}}</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; UsernameFormat { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/MfaDuo.cs/#L102">View Source</a>
+  </span>
+  <a id="Pulumi_Vault_MfaDuo_Get_" data-uid="Pulumi.Vault.MfaDuo.Get*"></a>
+  <h4 id="Pulumi_Vault_MfaDuo_Get_System_String_Input_System_String__Pulumi_Vault_MfaDuoState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Vault.MfaDuo.Get(System.String,Input{System.String},Pulumi.Vault.MfaDuoState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, MfaDuoState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Get an existing MfaDuo resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static MfaDuo Get(string name, Input&lt;string&gt; id, MfaDuoState state = null, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Vault.MfaDuoState.html">MfaDuoState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Vault.MfaDuo.html">MfaDuo</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/MfaDuo.cs/#L18" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

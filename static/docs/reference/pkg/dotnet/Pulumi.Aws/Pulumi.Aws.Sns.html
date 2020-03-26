@@ -1,0 +1,189 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace Pulumi.Aws.Sns
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace Pulumi.Aws.Sns
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Aws.Sns">
+  
+  <h1 id="Pulumi_Aws_Sns" data-uid="Pulumi.Aws.Sns" class="text-break">Namespace Pulumi.Aws.Sns
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">Classes
+  </h3>
+      <h4><a class="xref" href="Pulumi.Aws.Sns.GetTopicArgs.html">GetTopicArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Sns.GetTopicResult.html">GetTopicResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Sns.Invokes.html">Invokes</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Sns.PlatformApplication.html">PlatformApplication</a></h4>
+      <section><p>Provides an SNS platform application resource</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sns_platform_application.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sns_platform_application.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Sns.PlatformApplicationArgs.html">PlatformApplicationArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Sns.PlatformApplicationState.html">PlatformApplicationState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Sns.SmsPreferences.html">SmsPreferences</a></h4>
+      <section><p>Provides a way to set SNS SMS preferences.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sns_sms_preferences.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sns_sms_preferences.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Sns.SmsPreferencesArgs.html">SmsPreferencesArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Sns.SmsPreferencesState.html">SmsPreferencesState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Sns.Topic.html">Topic</a></h4>
+      <section><p>Provides an SNS topic resource</p>
+<h2 id="message-delivery-status-arguments">Message Delivery Status Arguments</h2>
+<p>The <code>&amp;lt;endpoint&gt;_success_feedback_role_arn</code> and <code>&amp;lt;endpoint&gt;_failure_feedback_role_arn</code> arguments are used to give Amazon SNS write access to use CloudWatch Logs on your behalf. The <code>&amp;lt;endpoint&gt;_success_feedback_sample_rate</code> argument is for specifying the sample rate percentage (0-100) of successfully delivered messages. After you configure the  <code>&amp;lt;endpoint&gt;_failure_feedback_role_arn</code> argument, then all failed message deliveries generate CloudWatch Logs.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sns_topic.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sns_topic.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Sns.TopicArgs.html">TopicArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Sns.TopicPolicy.html">TopicPolicy</a></h4>
+      <section><p>Provides an SNS topic policy resource</p>
+<blockquote>
+<p><strong>NOTE:</strong> If a Principal is specified as just an AWS account ID rather than an ARN, AWS silently converts it to the ARN for the root user, causing future deployments to differ. To avoid this problem, just specify the full ARN, e.g. <code>arn:aws:iam::123456789012:root</code></p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sns_topic_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sns_topic_policy.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Sns.TopicPolicyArgs.html">TopicPolicyArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Sns.TopicPolicyState.html">TopicPolicyState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Sns.TopicState.html">TopicState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Sns.TopicSubscription.html">TopicSubscription</a></h4>
+      <section><p>Provides a resource for subscribing to SNS topics. Requires that an SNS topic exist for the subscription to attach to.
+This resource allows you to automatically place messages sent to SNS topics in SQS queues, send them as HTTP(S) POST requests
+to a given endpoint, send SMS messages, or notify devices / applications. The most likely use case will
+probably be SQS queues.</p>
+<blockquote>
+<p><strong>NOTE:</strong> If the SNS topic and SQS queue are in different AWS regions, it is important for the &quot;aws.sns.TopicSubscription&quot; to use an AWS provider that is in the same region of the SNS topic. If the &quot;aws.sns.TopicSubscription&quot; is using a provider with a different region than the SNS topic, the subscription will fail to create.</p>
+</blockquote>
+<blockquote>
+<p><strong>NOTE:</strong> Setup of cross-account subscriptions from SNS topics to SQS queues requires the provider to have access to BOTH accounts.</p>
+</blockquote>
+<blockquote>
+<p><strong>NOTE:</strong> If SNS topic and SQS queue are in different AWS accounts but the same region it is important for the &quot;aws.sns.TopicSubscription&quot; to use the AWS provider of the account with the SQS queue. If &quot;aws.sns.TopicSubscription&quot; is using a Provider with a different account than the SQS queue, the provider creates the subscriptions but does not keep state and tries to re-create the subscription at every apply.</p>
+</blockquote>
+<blockquote>
+<p><strong>NOTE:</strong> If SNS topic and SQS queue are in different AWS accounts and different AWS regions it is important to recognize that the subscription needs to be initiated from the account with the SQS queue but in the region of the SNS topic.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sns_topic_subscription.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sns_topic_subscription.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Sns.TopicSubscriptionArgs.html">TopicSubscriptionArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Sns.TopicSubscriptionState.html">TopicSubscriptionState</a></h4>
+      <section></section>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

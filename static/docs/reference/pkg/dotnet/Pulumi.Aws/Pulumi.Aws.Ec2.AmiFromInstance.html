@@ -1,0 +1,759 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class AmiFromInstance
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class AmiFromInstance
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Aws.Ec2.AmiFromInstance">
+  
+  <h1 id="Pulumi_Aws_Ec2_AmiFromInstance" data-uid="Pulumi.Aws.Ec2.AmiFromInstance" class="text-break">Class AmiFromInstance
+  </h1>
+  <div class="markdown level0 summary"><p>The &quot;AMI from instance&quot; resource allows the creation of an Amazon Machine
+Image (AMI) modelled after an existing EBS-backed EC2 instance.</p>
+<p>The created AMI will refer to implicitly-created snapshots of the instance's
+EBS volumes and mimick its assigned block device configuration at the time
+the resource is created.</p>
+<p>This resource is best applied to an instance that is stopped when this instance
+is created, so that the contents of the created image are predictable. When
+applied to an instance that is running, <em>the instance will be stopped before taking
+the snapshots and then started back up again</em>, resulting in a period of
+downtime.</p>
+<p>Note that the source instance is inspected only at the initial creation of this
+resource. Ongoing updates to the referenced instance will not be propagated into
+the generated AMI. Users may taint or otherwise recreate the resource in order
+to produce a fresh snapshot.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ami_from_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ami_from_instance.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">AmiFromInstance</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Ec2.html">Pulumi.Aws.Ec2</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
+  <h5 id="Pulumi_Aws_Ec2_AmiFromInstance_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class AmiFromInstance : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/AmiFromInstance.cs/#L150">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Ec2_AmiFromInstance__ctor_" data-uid="Pulumi.Aws.Ec2.AmiFromInstance.#ctor*"></a>
+  <h4 id="Pulumi_Aws_Ec2_AmiFromInstance__ctor_System_String_Pulumi_Aws_Ec2_AmiFromInstanceArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Ec2.AmiFromInstance.#ctor(System.String,Pulumi.Aws.Ec2.AmiFromInstanceArgs,Pulumi.CustomResourceOptions)">AmiFromInstance(String, AmiFromInstanceArgs, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Create a AmiFromInstance resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AmiFromInstance(string name, AmiFromInstanceArgs args, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Aws.Ec2.AmiFromInstanceArgs.html">AmiFromInstanceArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/AmiFromInstance.cs/#L38">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Ec2_AmiFromInstance_Architecture_" data-uid="Pulumi.Aws.Ec2.AmiFromInstance.Architecture*"></a>
+  <h4 id="Pulumi_Aws_Ec2_AmiFromInstance_Architecture" data-uid="Pulumi.Aws.Ec2.AmiFromInstance.Architecture">Architecture</h4>
+  <div class="markdown level1 summary"><p>Machine architecture for created instances. Defaults to &quot;x86_64&quot;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Architecture { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/AmiFromInstance.cs/#L44">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Ec2_AmiFromInstance_Description_" data-uid="Pulumi.Aws.Ec2.AmiFromInstance.Description*"></a>
+  <h4 id="Pulumi_Aws_Ec2_AmiFromInstance_Description" data-uid="Pulumi.Aws.Ec2.AmiFromInstance.Description">Description</h4>
+  <div class="markdown level1 summary"><p>A longer, human-readable description for the AMI.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/AmiFromInstance.cs/#L51">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Ec2_AmiFromInstance_EbsBlockDevices_" data-uid="Pulumi.Aws.Ec2.AmiFromInstance.EbsBlockDevices*"></a>
+  <h4 id="Pulumi_Aws_Ec2_AmiFromInstance_EbsBlockDevices" data-uid="Pulumi.Aws.Ec2.AmiFromInstance.EbsBlockDevices">EbsBlockDevices</h4>
+  <div class="markdown level1 summary"><p>Nested block describing an EBS block device that should be
+attached to created instances. The structure of this block is described below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;AmiFromInstanceEbsBlockDevices&gt;&gt; EbsBlockDevices { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Outputs.AmiFromInstanceEbsBlockDevices.html">AmiFromInstanceEbsBlockDevices</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/AmiFromInstance.cs/#L57">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Ec2_AmiFromInstance_EnaSupport_" data-uid="Pulumi.Aws.Ec2.AmiFromInstance.EnaSupport*"></a>
+  <h4 id="Pulumi_Aws_Ec2_AmiFromInstance_EnaSupport" data-uid="Pulumi.Aws.Ec2.AmiFromInstance.EnaSupport">EnaSupport</h4>
+  <div class="markdown level1 summary"><p>Specifies whether enhanced networking with ENA is enabled. Defaults to <code>false</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; EnaSupport { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/AmiFromInstance.cs/#L64">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Ec2_AmiFromInstance_EphemeralBlockDevices_" data-uid="Pulumi.Aws.Ec2.AmiFromInstance.EphemeralBlockDevices*"></a>
+  <h4 id="Pulumi_Aws_Ec2_AmiFromInstance_EphemeralBlockDevices" data-uid="Pulumi.Aws.Ec2.AmiFromInstance.EphemeralBlockDevices">EphemeralBlockDevices</h4>
+  <div class="markdown level1 summary"><p>Nested block describing an ephemeral block device that
+should be attached to created instances. The structure of this block is described below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;AmiFromInstanceEphemeralBlockDevices&gt;&gt; EphemeralBlockDevices { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Outputs.AmiFromInstanceEphemeralBlockDevices.html">AmiFromInstanceEphemeralBlockDevices</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/AmiFromInstance.cs/#L71">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Ec2_AmiFromInstance_ImageLocation_" data-uid="Pulumi.Aws.Ec2.AmiFromInstance.ImageLocation*"></a>
+  <h4 id="Pulumi_Aws_Ec2_AmiFromInstance_ImageLocation" data-uid="Pulumi.Aws.Ec2.AmiFromInstance.ImageLocation">ImageLocation</h4>
+  <div class="markdown level1 summary"><p>Path to an S3 object containing an image manifest, e.g. created
+by the <code>ec2-upload-bundle</code> command in the EC2 command line tools.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ImageLocation { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/AmiFromInstance.cs/#L78">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Ec2_AmiFromInstance_KernelId_" data-uid="Pulumi.Aws.Ec2.AmiFromInstance.KernelId*"></a>
+  <h4 id="Pulumi_Aws_Ec2_AmiFromInstance_KernelId" data-uid="Pulumi.Aws.Ec2.AmiFromInstance.KernelId">KernelId</h4>
+  <div class="markdown level1 summary"><p>The id of the kernel image (AKI) that will be used as the paravirtual
+kernel in created instances.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; KernelId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/AmiFromInstance.cs/#L81">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Ec2_AmiFromInstance_ManageEbsSnapshots_" data-uid="Pulumi.Aws.Ec2.AmiFromInstance.ManageEbsSnapshots*"></a>
+  <h4 id="Pulumi_Aws_Ec2_AmiFromInstance_ManageEbsSnapshots" data-uid="Pulumi.Aws.Ec2.AmiFromInstance.ManageEbsSnapshots">ManageEbsSnapshots</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; ManageEbsSnapshots { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/AmiFromInstance.cs/#L87">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Ec2_AmiFromInstance_Name_" data-uid="Pulumi.Aws.Ec2.AmiFromInstance.Name*"></a>
+  <h4 id="Pulumi_Aws_Ec2_AmiFromInstance_Name" data-uid="Pulumi.Aws.Ec2.AmiFromInstance.Name">Name</h4>
+  <div class="markdown level1 summary"><p>A region-unique name for the AMI.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/AmiFromInstance.cs/#L94">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Ec2_AmiFromInstance_RamdiskId_" data-uid="Pulumi.Aws.Ec2.AmiFromInstance.RamdiskId*"></a>
+  <h4 id="Pulumi_Aws_Ec2_AmiFromInstance_RamdiskId" data-uid="Pulumi.Aws.Ec2.AmiFromInstance.RamdiskId">RamdiskId</h4>
+  <div class="markdown level1 summary"><p>The id of an initrd image (ARI) that will be used when booting the
+created instances.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; RamdiskId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/AmiFromInstance.cs/#L100">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Ec2_AmiFromInstance_RootDeviceName_" data-uid="Pulumi.Aws.Ec2.AmiFromInstance.RootDeviceName*"></a>
+  <h4 id="Pulumi_Aws_Ec2_AmiFromInstance_RootDeviceName" data-uid="Pulumi.Aws.Ec2.AmiFromInstance.RootDeviceName">RootDeviceName</h4>
+  <div class="markdown level1 summary"><p>The name of the root device (for example, <code>/dev/sda1</code>, or <code>/dev/xvda</code>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; RootDeviceName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/AmiFromInstance.cs/#L103">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Ec2_AmiFromInstance_RootSnapshotId_" data-uid="Pulumi.Aws.Ec2.AmiFromInstance.RootSnapshotId*"></a>
+  <h4 id="Pulumi_Aws_Ec2_AmiFromInstance_RootSnapshotId" data-uid="Pulumi.Aws.Ec2.AmiFromInstance.RootSnapshotId">RootSnapshotId</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; RootSnapshotId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/AmiFromInstance.cs/#L112">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Ec2_AmiFromInstance_SnapshotWithoutReboot_" data-uid="Pulumi.Aws.Ec2.AmiFromInstance.SnapshotWithoutReboot*"></a>
+  <h4 id="Pulumi_Aws_Ec2_AmiFromInstance_SnapshotWithoutReboot" data-uid="Pulumi.Aws.Ec2.AmiFromInstance.SnapshotWithoutReboot">SnapshotWithoutReboot</h4>
+  <div class="markdown level1 summary"><p>Boolean that overrides the behavior of stopping
+the instance before snapshotting. This is risky since it may cause a snapshot of an
+inconsistent filesystem state, but can be used to avoid downtime if the user otherwise
+guarantees that no filesystem writes will be underway at the time of snapshot.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; SnapshotWithoutReboot { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/AmiFromInstance.cs/#L118">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Ec2_AmiFromInstance_SourceInstanceId_" data-uid="Pulumi.Aws.Ec2.AmiFromInstance.SourceInstanceId*"></a>
+  <h4 id="Pulumi_Aws_Ec2_AmiFromInstance_SourceInstanceId" data-uid="Pulumi.Aws.Ec2.AmiFromInstance.SourceInstanceId">SourceInstanceId</h4>
+  <div class="markdown level1 summary"><p>The id of the instance to use as the basis of the AMI.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SourceInstanceId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/AmiFromInstance.cs/#L125">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Ec2_AmiFromInstance_SriovNetSupport_" data-uid="Pulumi.Aws.Ec2.AmiFromInstance.SriovNetSupport*"></a>
+  <h4 id="Pulumi_Aws_Ec2_AmiFromInstance_SriovNetSupport" data-uid="Pulumi.Aws.Ec2.AmiFromInstance.SriovNetSupport">SriovNetSupport</h4>
+  <div class="markdown level1 summary"><p>When set to &quot;simple&quot; (the default), enables enhanced networking
+for created instances. No other value is supported at this time.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SriovNetSupport { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/AmiFromInstance.cs/#L131">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Ec2_AmiFromInstance_Tags_" data-uid="Pulumi.Aws.Ec2.AmiFromInstance.Tags*"></a>
+  <h4 id="Pulumi_Aws_Ec2_AmiFromInstance_Tags" data-uid="Pulumi.Aws.Ec2.AmiFromInstance.Tags">Tags</h4>
+  <div class="markdown level1 summary"><p>A mapping of tags to assign to the resource.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Tags { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/AmiFromInstance.cs/#L139">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Ec2_AmiFromInstance_VirtualizationType_" data-uid="Pulumi.Aws.Ec2.AmiFromInstance.VirtualizationType*"></a>
+  <h4 id="Pulumi_Aws_Ec2_AmiFromInstance_VirtualizationType" data-uid="Pulumi.Aws.Ec2.AmiFromInstance.VirtualizationType">VirtualizationType</h4>
+  <div class="markdown level1 summary"><p>Keyword to choose what virtualization mode created instances
+will use. Can be either &quot;paravirtual&quot; (the default) or &quot;hvm&quot;. The choice of virtualization type
+changes the set of further arguments that are required, as described below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; VirtualizationType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/AmiFromInstance.cs/#L180">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Ec2_AmiFromInstance_Get_" data-uid="Pulumi.Aws.Ec2.AmiFromInstance.Get*"></a>
+  <h4 id="Pulumi_Aws_Ec2_AmiFromInstance_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_Ec2_AmiFromInstanceState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Ec2.AmiFromInstance.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.Ec2.AmiFromInstanceState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, AmiFromInstanceState, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Get an existing AmiFromInstance resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AmiFromInstance Get(string name, Input&lt;string&gt; id, AmiFromInstanceState state = null, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Aws.Ec2.AmiFromInstanceState.html">AmiFromInstanceState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Aws.Ec2.AmiFromInstance.html">AmiFromInstance</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/AmiFromInstance.cs/#L33" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

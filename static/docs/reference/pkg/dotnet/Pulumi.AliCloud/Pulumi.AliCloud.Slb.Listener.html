@@ -1,0 +1,1622 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Listener
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Listener
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.AliCloud.Slb.Listener">
+  
+  <h1 id="Pulumi_AliCloud_Slb_Listener" data-uid="Pulumi.AliCloud.Slb.Listener" class="text-break">Class Listener
+  </h1>
+  <div class="markdown level0 summary"><p>Provides an Application Load Balancer Listener resource.</p>
+<p>For information about slb and how to use it, see <a href="https://www.alibabacloud.com/help/doc-detail/27539.htm">What is Server Load Balancer</a>.</p>
+<p>For information about listener and how to use it, to see the following:</p>
+<ul>
+<li><a href="https://www.alibabacloud.com/help/doc-detail/27592.htm">Configure a HTTP Listener</a>.</li>
+<li><a href="https://www.alibabacloud.com/help/doc-detail/27593.htm">Configure a HTTPS Listener</a>.</li>
+<li><a href="https://www.alibabacloud.com/help/doc-detail/27594.htm">Configure a TCP Listener</a>.</li>
+<li><a href="https://www.alibabacloud.com/help/doc-detail/27595.htm">Configure a UDP Listener</a>.</li>
+</ul>
+<h2 id="listener-fields-and-protocol-mapping">Listener fields and protocol mapping</h2>
+<p>load balance support 4 protocal to listen on, they are <code>http</code>,<code>https</code>,<code>tcp</code>,<code>udp</code>, the every listener support which portocal following:</p>
+<table>
+<thead>
+<tr>
+<th>listener parameter</th>
+<th>support protocol</th>
+<th>value range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>backend_port</td>
+<td>http &amp; https &amp; tcp &amp; udp</td>
+<td>1-65535</td>
+</tr>
+<tr>
+<td>frontend_port</td>
+<td>http &amp; https &amp; tcp &amp; udp</td>
+<td>1-65535</td>
+</tr>
+<tr>
+<td>protocol</td>
+<td>http &amp; https &amp; tcp &amp; udp</td>
+<td></td>
+</tr>
+<tr>
+<td>bandwidth</td>
+<td>http &amp; https &amp; tcp &amp; udp</td>
+<td>-1 / 1-1000</td>
+</tr>
+<tr>
+<td>scheduler</td>
+<td>http &amp; https &amp; tcp &amp; udp</td>
+<td>wrr rr or wlc</td>
+</tr>
+<tr>
+<td>sticky_session</td>
+<td>http &amp; https</td>
+<td>on or off</td>
+</tr>
+<tr>
+<td>sticky_session_type</td>
+<td>http &amp; https</td>
+<td>insert or server</td>
+</tr>
+<tr>
+<td>cookie_timeout</td>
+<td>http &amp; https</td>
+<td>1-86400</td>
+</tr>
+<tr>
+<td>cookie</td>
+<td>http &amp; https</td>
+<td></td>
+</tr>
+<tr>
+<td>persistence_timeout</td>
+<td>tcp &amp; udp</td>
+<td>0-3600</td>
+</tr>
+<tr>
+<td>health_check</td>
+<td>http &amp; https</td>
+<td>on or off</td>
+</tr>
+<tr>
+<td>health_check_type</td>
+<td>tcp</td>
+<td>tcp or http</td>
+</tr>
+<tr>
+<td>health_check_domain</td>
+<td>http &amp; https &amp; tcp</td>
+<td></td>
+</tr>
+<tr>
+<td>health_check_method</td>
+<td>http &amp; https &amp; tcp</td>
+<td></td>
+</tr>
+<tr>
+<td>health_check_uri</td>
+<td>http &amp; https &amp; tcp</td>
+<td></td>
+</tr>
+<tr>
+<td>health_check_connect_port</td>
+<td>http &amp; https &amp; tcp &amp; udp</td>
+<td>1-65535 or -520</td>
+</tr>
+<tr>
+<td>healthy_threshold</td>
+<td>http &amp; https &amp; tcp &amp; udp</td>
+<td>1-10</td>
+</tr>
+<tr>
+<td>unhealthy_threshold</td>
+<td>http &amp; https &amp; tcp &amp; udp</td>
+<td>1-10</td>
+</tr>
+<tr>
+<td>health_check_timeout</td>
+<td>http &amp; https &amp; tcp &amp; udp</td>
+<td>1-300</td>
+</tr>
+<tr>
+<td>health_check_interval</td>
+<td>http &amp; https &amp; tcp &amp; udp</td>
+<td>1-50</td>
+</tr>
+<tr>
+<td>health_check_http_code</td>
+<td>http &amp; https &amp; tcp</td>
+<td>http_2xx,http_3xx,http_4xx,http_5xx</td>
+</tr>
+<tr>
+<td>server_certificate_id</td>
+<td>https</td>
+<td></td>
+</tr>
+<tr>
+<td>gzip</td>
+<td>http &amp; https</td>
+<td>true or false</td>
+</tr>
+<tr>
+<td>x_forwarded_for</td>
+<td>http &amp; https</td>
+<td></td>
+</tr>
+<tr>
+<td>acl_status</td>
+<td>http &amp; https &amp; tcp &amp; udp</td>
+<td>on or off</td>
+</tr>
+<tr>
+<td>acl_type</td>
+<td>http &amp; https &amp; tcp &amp; udp</td>
+<td>white or black</td>
+</tr>
+<tr>
+<td>acl_id</td>
+<td>http &amp; https &amp; tcp &amp; udp</td>
+<td>the id of resource alicloud_slb_acl</td>
+</tr>
+<tr>
+<td>established_timeout</td>
+<td>tcp</td>
+<td>10-900</td>
+</tr>
+<tr>
+<td>idle_timeout</td>
+<td>http &amp; https</td>
+<td>1-60</td>
+</tr>
+<tr>
+<td>request_timeout</td>
+<td>http &amp; https</td>
+<td>1-180</td>
+</tr>
+<tr>
+<td>enable_http2</td>
+<td>https</td>
+<td>on or off</td>
+</tr>
+<tr>
+<td>tls_cipher_policy</td>
+<td>https</td>
+<td>tls_cipher_policy_1_0, tls_cipher_policy_1_1, tls_cipher_policy_1_2, tls_cipher_policy_1_2_strict</td>
+</tr>
+<tr>
+<td>server_group_id</td>
+<td>http &amp; https &amp; tcp &amp; udp</td>
+<td>the id of resource alicloud.slb.ServerGroup</td>
+</tr>
+</tbody>
+</table>
+<p>The listener mapping supports the following:</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_listener.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_listener.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Listener</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.AliCloud.Slb.html">Pulumi.AliCloud.Slb</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.AliCloud.dll</h6>
+  <h5 id="Pulumi_AliCloud_Slb_Listener_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Listener : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Listener.cs/#L324">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Listener__ctor_" data-uid="Pulumi.AliCloud.Slb.Listener.#ctor*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Listener__ctor_System_String_Pulumi_AliCloud_Slb_ListenerArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.AliCloud.Slb.Listener.#ctor(System.String,Pulumi.AliCloud.Slb.ListenerArgs,Pulumi.CustomResourceOptions)">Listener(String, ListenerArgs, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Create a Listener resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Listener(string name, ListenerArgs args, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.AliCloud.Slb.ListenerArgs.html">ListenerArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Listener.cs/#L73">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Listener_AclId_" data-uid="Pulumi.AliCloud.Slb.Listener.AclId*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Listener_AclId" data-uid="Pulumi.AliCloud.Slb.Listener.AclId">AclId</h4>
+  <div class="markdown level1 summary"><p>the id of access control list to be apply on the listener, is the id of resource alicloud_slb_acl. If <code>acl_status</code> is &quot;on&quot;, it is mandatory. Otherwise, it will be ignored.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AclId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Listener.cs/#L79">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Listener_AclStatus_" data-uid="Pulumi.AliCloud.Slb.Listener.AclStatus*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Listener_AclStatus" data-uid="Pulumi.AliCloud.Slb.Listener.AclStatus">AclStatus</h4>
+  <div class="markdown level1 summary"><p>Whether to enable &quot;acl(access control list)&quot;, the acl is specified by <code>acl_id</code>. Valid values are <code>on</code> and <code>off</code>. Default to <code>off</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AclStatus { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Listener.cs/#L85">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Listener_AclType_" data-uid="Pulumi.AliCloud.Slb.Listener.AclType*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Listener_AclType" data-uid="Pulumi.AliCloud.Slb.Listener.AclType">AclType</h4>
+  <div class="markdown level1 summary"><p>Mode for handling the acl specified by acl_id. If <code>acl_status</code> is &quot;on&quot;, it is mandatory. Otherwise, it will be ignored. Valid values are <code>white</code> and <code>black</code>. <code>white</code> means the Listener can only be accessed by client ip belongs to the acl; <code>black</code> means the Listener can not be accessed by client ip belongs to the acl.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AclType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Listener.cs/#L91">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Listener_BackendPort_" data-uid="Pulumi.AliCloud.Slb.Listener.BackendPort*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Listener_BackendPort" data-uid="Pulumi.AliCloud.Slb.Listener.BackendPort">BackendPort</h4>
+  <div class="markdown level1 summary"><p>Port used by the Server Load Balancer instance backend. Valid value range: [1-65535].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; BackendPort { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Listener.cs/#L97">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Listener_Bandwidth_" data-uid="Pulumi.AliCloud.Slb.Listener.Bandwidth*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Listener_Bandwidth" data-uid="Pulumi.AliCloud.Slb.Listener.Bandwidth">Bandwidth</h4>
+  <div class="markdown level1 summary"><p>Bandwidth peak of Listener. For the public network instance charged per traffic consumed, the Bandwidth on Listener can be set to -1, indicating the bandwidth peak is unlimited. Valid values are [-1, 1-1000] in Mbps.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; Bandwidth { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Listener.cs/#L103">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Listener_Cookie_" data-uid="Pulumi.AliCloud.Slb.Listener.Cookie*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Listener_Cookie" data-uid="Pulumi.AliCloud.Slb.Listener.Cookie">Cookie</h4>
+  <div class="markdown level1 summary"><p>The cookie configured on the server. It is mandatory when <code>sticky_session</code> is &quot;on&quot; and <code>sticky_session_type</code> is &quot;server&quot;. Otherwise, it will be ignored. Valid value：String in line with RFC 2965, with length being 1- 200. It only contains characters such as ASCII codes, English letters and digits instead of the comma, semicolon or spacing, and it cannot start with $.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Cookie { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Listener.cs/#L109">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Listener_CookieTimeout_" data-uid="Pulumi.AliCloud.Slb.Listener.CookieTimeout*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Listener_CookieTimeout" data-uid="Pulumi.AliCloud.Slb.Listener.CookieTimeout">CookieTimeout</h4>
+  <div class="markdown level1 summary"><p>Cookie timeout. It is mandatory when <code>sticky_session</code> is &quot;on&quot; and <code>sticky_session_type</code> is &quot;insert&quot;. Otherwise, it will be ignored. Valid value range: [1-86400] in seconds.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; CookieTimeout { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Listener.cs/#L115">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Listener_DeleteProtectionValidation_" data-uid="Pulumi.AliCloud.Slb.Listener.DeleteProtectionValidation*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Listener_DeleteProtectionValidation" data-uid="Pulumi.AliCloud.Slb.Listener.DeleteProtectionValidation">DeleteProtectionValidation</h4>
+  <div class="markdown level1 summary"><p>Checking DeleteProtection of SLB instance before deleting. If true, this resource will not be deleted when its SLB instance enabled DeleteProtection. Default to false.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; DeleteProtectionValidation { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Listener.cs/#L121">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Listener_Description_" data-uid="Pulumi.AliCloud.Slb.Listener.Description*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Listener_Description" data-uid="Pulumi.AliCloud.Slb.Listener.Description">Description</h4>
+  <div class="markdown level1 summary"><p>The description of slb listener. This description can have a string of 1 to 80 characters. Default value: null.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Listener.cs/#L127">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Listener_EnableHttp2_" data-uid="Pulumi.AliCloud.Slb.Listener.EnableHttp2*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Listener_EnableHttp2" data-uid="Pulumi.AliCloud.Slb.Listener.EnableHttp2">EnableHttp2</h4>
+  <div class="markdown level1 summary"><p>Whether to enable https listener support http2 or not. Valid values are <code>on</code> and <code>off</code>. Default to <code>on</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; EnableHttp2 { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Listener.cs/#L133">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Listener_EstablishedTimeout_" data-uid="Pulumi.AliCloud.Slb.Listener.EstablishedTimeout*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Listener_EstablishedTimeout" data-uid="Pulumi.AliCloud.Slb.Listener.EstablishedTimeout">EstablishedTimeout</h4>
+  <div class="markdown level1 summary"><p>Timeout of tcp listener established connection idle timeout. Valid value range: [10-900] in seconds. Default to 900.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; EstablishedTimeout { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Listener.cs/#L139">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Listener_ForwardPort_" data-uid="Pulumi.AliCloud.Slb.Listener.ForwardPort*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Listener_ForwardPort" data-uid="Pulumi.AliCloud.Slb.Listener.ForwardPort">ForwardPort</h4>
+  <div class="markdown level1 summary"><p>The port that http redirect to https.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; ForwardPort { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Listener.cs/#L145">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Listener_FrontendPort_" data-uid="Pulumi.AliCloud.Slb.Listener.FrontendPort*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Listener_FrontendPort" data-uid="Pulumi.AliCloud.Slb.Listener.FrontendPort">FrontendPort</h4>
+  <div class="markdown level1 summary"><p>Port used by the Server Load Balancer instance frontend. Valid value range: [1-65535].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; FrontendPort { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Listener.cs/#L151">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Listener_Gzip_" data-uid="Pulumi.AliCloud.Slb.Listener.Gzip*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Listener_Gzip" data-uid="Pulumi.AliCloud.Slb.Listener.Gzip">Gzip</h4>
+  <div class="markdown level1 summary"><p>Whether to enable &quot;Gzip Compression&quot;. If enabled, files of specific file types will be compressed, otherwise, no files will be compressed. Default to true. Available in v1.13.0+.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; Gzip { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Listener.cs/#L157">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Listener_HealthCheck_" data-uid="Pulumi.AliCloud.Slb.Listener.HealthCheck*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Listener_HealthCheck" data-uid="Pulumi.AliCloud.Slb.Listener.HealthCheck">HealthCheck</h4>
+  <div class="markdown level1 summary"><p>Whether to enable health check. Valid values are<code>on</code> and <code>off</code>. TCP and UDP listener's HealthCheck is always on, so it will be ignore when launching TCP or UDP listener.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; HealthCheck { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Listener.cs/#L163">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Listener_HealthCheckConnectPort_" data-uid="Pulumi.AliCloud.Slb.Listener.HealthCheckConnectPort*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Listener_HealthCheckConnectPort" data-uid="Pulumi.AliCloud.Slb.Listener.HealthCheckConnectPort">HealthCheckConnectPort</h4>
+  <div class="markdown level1 summary"><p>Port used for health check. Valid value range: [1-65535]. Default to &quot;None&quot; means the backend server port is used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; HealthCheckConnectPort { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Listener.cs/#L169">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Listener_HealthCheckDomain_" data-uid="Pulumi.AliCloud.Slb.Listener.HealthCheckDomain*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Listener_HealthCheckDomain" data-uid="Pulumi.AliCloud.Slb.Listener.HealthCheckDomain">HealthCheckDomain</h4>
+  <div class="markdown level1 summary"><p>Domain name used for health check. When it used to launch TCP listener, <code>health_check_type</code> must be &quot;http&quot;. Its length is limited to 1-80 and only characters such as letters, digits, ‘-‘ and ‘.’ are allowed. When it is not set or empty,  Server Load Balancer uses the private network IP address of each backend server as Domain used for health check.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; HealthCheckDomain { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Listener.cs/#L175">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Listener_HealthCheckHttpCode_" data-uid="Pulumi.AliCloud.Slb.Listener.HealthCheckHttpCode*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Listener_HealthCheckHttpCode" data-uid="Pulumi.AliCloud.Slb.Listener.HealthCheckHttpCode">HealthCheckHttpCode</h4>
+  <div class="markdown level1 summary"><p>Regular health check HTTP status code. Multiple codes are segmented by “,”. It is required when <code>health_check</code> is on. Default to <code>http_2xx</code>.  Valid values are: <code>http_2xx</code>,  <code>http_3xx</code>, <code>http_4xx</code> and <code>http_5xx</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; HealthCheckHttpCode { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Listener.cs/#L181">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Listener_HealthCheckInterval_" data-uid="Pulumi.AliCloud.Slb.Listener.HealthCheckInterval*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Listener_HealthCheckInterval" data-uid="Pulumi.AliCloud.Slb.Listener.HealthCheckInterval">HealthCheckInterval</h4>
+  <div class="markdown level1 summary"><p>Time interval of health checks. It is required when <code>health_check</code> is on. Valid value range: [1-50] in seconds. Default to 2.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; HealthCheckInterval { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Listener.cs/#L187">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Listener_HealthCheckMethod_" data-uid="Pulumi.AliCloud.Slb.Listener.HealthCheckMethod*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Listener_HealthCheckMethod" data-uid="Pulumi.AliCloud.Slb.Listener.HealthCheckMethod">HealthCheckMethod</h4>
+  <div class="markdown level1 summary"><p>The method of health check. Valid values: [&quot;head&quot;, &quot;get&quot;].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; HealthCheckMethod { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Listener.cs/#L193">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Listener_HealthCheckTimeout_" data-uid="Pulumi.AliCloud.Slb.Listener.HealthCheckTimeout*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Listener_HealthCheckTimeout" data-uid="Pulumi.AliCloud.Slb.Listener.HealthCheckTimeout">HealthCheckTimeout</h4>
+  <div class="markdown level1 summary"><p>Maximum timeout of each health check response. It is required when <code>health_check</code> is on. Valid value range: [1-300] in seconds. Default to 5. Note: If <code>health_check_timeout</code> &lt; <code>health_check_interval</code>, its will be replaced by <code>health_check_interval</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; HealthCheckTimeout { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Listener.cs/#L199">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Listener_HealthCheckType_" data-uid="Pulumi.AliCloud.Slb.Listener.HealthCheckType*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Listener_HealthCheckType" data-uid="Pulumi.AliCloud.Slb.Listener.HealthCheckType">HealthCheckType</h4>
+  <div class="markdown level1 summary"><p>Type of health check. Valid values are: <code>tcp</code> and <code>http</code>. Default to <code>tcp</code> . TCP supports TCP and HTTP health check mode, you can select the particular mode depending on your application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; HealthCheckType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Listener.cs/#L205">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Listener_HealthCheckUri_" data-uid="Pulumi.AliCloud.Slb.Listener.HealthCheckUri*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Listener_HealthCheckUri" data-uid="Pulumi.AliCloud.Slb.Listener.HealthCheckUri">HealthCheckUri</h4>
+  <div class="markdown level1 summary"><p>URI used for health check. When it used to launch TCP listener, <code>health_check_type</code> must be &quot;http&quot;. Its length is limited to 1-80 and it must start with /. Only characters such as letters, digits, ‘-’, ‘/’, ‘.’, ‘%’, ‘?’, #’ and ‘&amp;’ are allowed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; HealthCheckUri { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Listener.cs/#L211">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Listener_HealthyThreshold_" data-uid="Pulumi.AliCloud.Slb.Listener.HealthyThreshold*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Listener_HealthyThreshold" data-uid="Pulumi.AliCloud.Slb.Listener.HealthyThreshold">HealthyThreshold</h4>
+  <div class="markdown level1 summary"><p>Threshold determining the result of the health check is success. It is required when <code>health_check</code> is on. Valid value range: [1-10] in seconds. Default to 3.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; HealthyThreshold { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Listener.cs/#L217">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Listener_IdleTimeout_" data-uid="Pulumi.AliCloud.Slb.Listener.IdleTimeout*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Listener_IdleTimeout" data-uid="Pulumi.AliCloud.Slb.Listener.IdleTimeout">IdleTimeout</h4>
+  <div class="markdown level1 summary"><p>Timeout of http or https listener established connection idle timeout. Valid value range: [1-60] in seconds. Default to 15.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; IdleTimeout { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Listener.cs/#L220">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Listener_InstancePort_" data-uid="Pulumi.AliCloud.Slb.Listener.InstancePort*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Listener_InstancePort" data-uid="Pulumi.AliCloud.Slb.Listener.InstancePort">InstancePort</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; InstancePort { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Listener.cs/#L223">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Listener_LbPort_" data-uid="Pulumi.AliCloud.Slb.Listener.LbPort*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Listener_LbPort" data-uid="Pulumi.AliCloud.Slb.Listener.LbPort">LbPort</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; LbPort { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Listener.cs/#L226">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Listener_LbProtocol_" data-uid="Pulumi.AliCloud.Slb.Listener.LbProtocol*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Listener_LbProtocol" data-uid="Pulumi.AliCloud.Slb.Listener.LbProtocol">LbProtocol</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; LbProtocol { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Listener.cs/#L232">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Listener_ListenerForward_" data-uid="Pulumi.AliCloud.Slb.Listener.ListenerForward*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Listener_ListenerForward" data-uid="Pulumi.AliCloud.Slb.Listener.ListenerForward">ListenerForward</h4>
+  <div class="markdown level1 summary"><p>Whether to enable http redirect to https, Valid values are <code>on</code> and <code>off</code>. Default to <code>off</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ListenerForward { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Listener.cs/#L238">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Listener_LoadBalancerId_" data-uid="Pulumi.AliCloud.Slb.Listener.LoadBalancerId*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Listener_LoadBalancerId" data-uid="Pulumi.AliCloud.Slb.Listener.LoadBalancerId">LoadBalancerId</h4>
+  <div class="markdown level1 summary"><p>The Load Balancer ID which is used to launch a new listener.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; LoadBalancerId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Listener.cs/#L241">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Listener_MasterSlaveServerGroupId_" data-uid="Pulumi.AliCloud.Slb.Listener.MasterSlaveServerGroupId*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Listener_MasterSlaveServerGroupId" data-uid="Pulumi.AliCloud.Slb.Listener.MasterSlaveServerGroupId">MasterSlaveServerGroupId</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; MasterSlaveServerGroupId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Listener.cs/#L247">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Listener_PersistenceTimeout_" data-uid="Pulumi.AliCloud.Slb.Listener.PersistenceTimeout*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Listener_PersistenceTimeout" data-uid="Pulumi.AliCloud.Slb.Listener.PersistenceTimeout">PersistenceTimeout</h4>
+  <div class="markdown level1 summary"><p>Timeout of connection persistence. Valid value range: [0-3600] in seconds. Default to 0 and means closing it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; PersistenceTimeout { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Listener.cs/#L253">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Listener_Protocol_" data-uid="Pulumi.AliCloud.Slb.Listener.Protocol*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Listener_Protocol" data-uid="Pulumi.AliCloud.Slb.Listener.Protocol">Protocol</h4>
+  <div class="markdown level1 summary"><p>The protocol to listen on. Valid values are [<code>http</code>, <code>https</code>, <code>tcp</code>, <code>udp</code>].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Protocol { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Listener.cs/#L259">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Listener_RequestTimeout_" data-uid="Pulumi.AliCloud.Slb.Listener.RequestTimeout*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Listener_RequestTimeout" data-uid="Pulumi.AliCloud.Slb.Listener.RequestTimeout">RequestTimeout</h4>
+  <div class="markdown level1 summary"><p>Timeout of http or https listener request (which does not get response from backend) timeout. Valid value range: [1-180] in seconds. Default to 60.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; RequestTimeout { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Listener.cs/#L265">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Listener_Scheduler_" data-uid="Pulumi.AliCloud.Slb.Listener.Scheduler*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Listener_Scheduler" data-uid="Pulumi.AliCloud.Slb.Listener.Scheduler">Scheduler</h4>
+  <div class="markdown level1 summary"><p>Scheduling algorithm, Valid values are <code>wrr</code>, <code>rr</code> and <code>wlc</code>.  Default to &quot;wrr&quot;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Scheduler { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Listener.cs/#L271">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Listener_ServerCertificateId_" data-uid="Pulumi.AliCloud.Slb.Listener.ServerCertificateId*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Listener_ServerCertificateId" data-uid="Pulumi.AliCloud.Slb.Listener.ServerCertificateId">ServerCertificateId</h4>
+  <div class="markdown level1 summary"><p>SLB Server certificate ID. It is required when <code>protocol</code> is <code>https</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ServerCertificateId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Listener.cs/#L277">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Listener_ServerGroupId_" data-uid="Pulumi.AliCloud.Slb.Listener.ServerGroupId*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Listener_ServerGroupId" data-uid="Pulumi.AliCloud.Slb.Listener.ServerGroupId">ServerGroupId</h4>
+  <div class="markdown level1 summary"><p>the id of server group to be apply on the listener, is the id of resource <code>alicloud.slb.ServerGroup</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ServerGroupId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Listener.cs/#L283">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Listener_SslCertificateId_" data-uid="Pulumi.AliCloud.Slb.Listener.SslCertificateId*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Listener_SslCertificateId" data-uid="Pulumi.AliCloud.Slb.Listener.SslCertificateId">SslCertificateId</h4>
+  <div class="markdown level1 summary"><p>It has been deprecated from 1.59.0 and using <code>server_certificate_id</code> instead.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SslCertificateId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Listener.cs/#L289">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Listener_StickySession_" data-uid="Pulumi.AliCloud.Slb.Listener.StickySession*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Listener_StickySession" data-uid="Pulumi.AliCloud.Slb.Listener.StickySession">StickySession</h4>
+  <div class="markdown level1 summary"><p>Whether to enable session persistence, Valid values are <code>on</code> and <code>off</code>. Default to <code>off</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; StickySession { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Listener.cs/#L295">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Listener_StickySessionType_" data-uid="Pulumi.AliCloud.Slb.Listener.StickySessionType*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Listener_StickySessionType" data-uid="Pulumi.AliCloud.Slb.Listener.StickySessionType">StickySessionType</h4>
+  <div class="markdown level1 summary"><p>Mode for handling the cookie. If <code>sticky_session</code> is &quot;on&quot;, it is mandatory. Otherwise, it will be ignored. Valid values are <code>insert</code> and <code>server</code>. <code>insert</code> means it is inserted from Server Load Balancer; <code>server</code> means the Server Load Balancer learns from the backend server.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; StickySessionType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Listener.cs/#L301">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Listener_TlsCipherPolicy_" data-uid="Pulumi.AliCloud.Slb.Listener.TlsCipherPolicy*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Listener_TlsCipherPolicy" data-uid="Pulumi.AliCloud.Slb.Listener.TlsCipherPolicy">TlsCipherPolicy</h4>
+  <div class="markdown level1 summary"><p>Https listener TLS cipher policy. Valid values are <code>tls_cipher_policy_1_0</code>, <code>tls_cipher_policy_1_1</code>, <code>tls_cipher_policy_1_2</code>, <code>tls_cipher_policy_1_2_strict</code>. Default to <code>tls_cipher_policy_1_0</code>. Currently the <code>tls_cipher_policy</code> can not be updated when load balancer instance is &quot;Shared-Performance&quot;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; TlsCipherPolicy { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Listener.cs/#L307">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Listener_UnhealthyThreshold_" data-uid="Pulumi.AliCloud.Slb.Listener.UnhealthyThreshold*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Listener_UnhealthyThreshold" data-uid="Pulumi.AliCloud.Slb.Listener.UnhealthyThreshold">UnhealthyThreshold</h4>
+  <div class="markdown level1 summary"><p>Threshold determining the result of the health check is fail. It is required when <code>health_check</code> is on. Valid value range: [1-10] in seconds. Default to 3.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; UnhealthyThreshold { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Listener.cs/#L313">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Listener_XForwardedFor_" data-uid="Pulumi.AliCloud.Slb.Listener.XForwardedFor*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Listener_XForwardedFor" data-uid="Pulumi.AliCloud.Slb.Listener.XForwardedFor">XForwardedFor</h4>
+  <div class="markdown level1 summary"><p>Whether to set additional HTTP Header field &quot;X-Forwarded-For&quot; (documented below). Available in v1.13.0+.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ListenerXForwardedFor&gt; XForwardedFor { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.AliCloud.Slb.Outputs.ListenerXForwardedFor.html">ListenerXForwardedFor</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Listener.cs/#L354">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Listener_Get_" data-uid="Pulumi.AliCloud.Slb.Listener.Get*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Listener_Get_System_String_Pulumi_Input_System_String__Pulumi_AliCloud_Slb_ListenerState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.AliCloud.Slb.Listener.Get(System.String,Pulumi.Input{System.String},Pulumi.AliCloud.Slb.ListenerState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, ListenerState, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Get an existing Listener resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Listener Get(string name, Input&lt;string&gt; id, ListenerState state = null, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.AliCloud.Slb.ListenerState.html">ListenerState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.AliCloud.Slb.Listener.html">Listener</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Listener.cs/#L68" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1218 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Cluster
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Cluster
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Aws.Emr.Cluster">
+  
+  <h1 id="Pulumi_Aws_Emr_Cluster" data-uid="Pulumi.Aws.Emr.Cluster" class="text-break">Class Cluster
+  </h1>
+  <div class="markdown level0 summary"><p>Provides an Elastic MapReduce Cluster, a web service that makes it easy to
+process large amounts of data efficiently. See <a href="https://aws.amazon.com/documentation/elastic-mapreduce/">Amazon Elastic MapReduce Documentation</a>
+for more information.</p>
+<p>To configure <a href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups">Instance Groups</a> for <a href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-task">task nodes</a>, see the <a href="https://www.terraform.io/docs/providers/aws/r/emr_instance_group.html"><code>aws.emr.InstanceGroup</code> resource</a>.</p>
+<blockquote>
+<p>Support for <a href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-fleets">Instance Fleets</a> will be made available in an upcoming release.</p>
+</blockquote>
+<h2 id="core_instance_group-configuration-block">core_instance_group Configuration Block</h2>
+<p>Supported arguments for the <code>core_instance_group</code> configuration block:</p>
+<ul>
+<li><code>instance_type</code> - (Required) EC2 instance type for all instances in the instance group.</li>
+<li><code>autoscaling_policy</code> - (Optional) String containing the <a href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-automatic-scaling.html">EMR Auto Scaling Policy</a> JSON.</li>
+<li><code>bid_price</code> - (Optional) Bid price for each EC2 instance in the instance group, expressed in USD. By setting this attribute, the instance group is being declared as a Spot Instance, and will implicitly create a Spot request. Leave this blank to use On-Demand Instances.</li>
+<li><code>ebs_config</code> - (Optional) Configuration block(s) for EBS volumes attached to each instance in the instance group. Detailed below.</li>
+<li><code>instance_count</code> - (Optional) Target number of instances for the instance group. Must be at least 1. Defaults to 1.</li>
+<li><code>name</code> - (Optional) Friendly name given to the instance group.</li>
+</ul>
+<h2 id="ec2_attributes">ec2_attributes</h2>
+<p>Attributes for the Amazon EC2 instances running the job flow</p>
+<ul>
+<li><code>key_name</code> - (Optional) Amazon EC2 key pair that can be used to ssh to the master node as the user called <code>hadoop</code></li>
+<li><code>subnet_id</code> - (Optional) VPC subnet id where you want the job flow to launch. Cannot specify the <code>cc1.4xlarge</code> instance type for nodes of a job flow launched in a Amazon VPC</li>
+<li><code>additional_master_security_groups</code> - (Optional) String containing a comma separated list of additional Amazon EC2 security group IDs for the master node</li>
+<li><code>additional_slave_security_groups</code> - (Optional) String containing a comma separated list of additional Amazon EC2 security group IDs for the slave nodes as a comma separated string</li>
+<li><code>emr_managed_master_security_group</code> - (Optional) Identifier of the Amazon EC2 EMR-Managed security group for the master node</li>
+<li><code>emr_managed_slave_security_group</code> - (Optional) Identifier of the Amazon EC2 EMR-Managed security group for the slave nodes</li>
+<li><code>service_access_security_group</code> - (Optional) Identifier of the Amazon EC2 service-access security group - required when the cluster runs on a private subnet</li>
+<li><code>instance_profile</code> - (Required) Instance Profile for EC2 instances of the cluster assume this role</li>
+</ul>
+<blockquote>
+<p><strong>NOTE on EMR-Managed security groups:</strong> These security groups will have any
+missing inbound or outbound access rules added and maintained by AWS, to ensure
+proper communication between instances in a cluster. The EMR service will
+maintain these rules for groups provided in <code>emr_managed_master_security_group</code>
+and <code>emr_managed_slave_security_group</code>; attempts to remove the required rules
+may succeed, only for the EMR service to re-add them in a matter of minutes.
+This may cause this provider to fail to destroy an environment that contains an EMR
+cluster, because the EMR service does not revoke rules added on deletion,
+leaving a cyclic dependency between the security groups that prevents their
+deletion. To avoid this, use the <code>revoke_rules_on_delete</code> optional attribute for
+any Security Group used in <code>emr_managed_master_security_group</code> and
+<code>emr_managed_slave_security_group</code>. See <a href="http://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-man-sec-groups.html">Amazon EMR-Managed Security
+Groups</a>
+for more information about the EMR-managed security group rules.</p>
+</blockquote>
+<h2 id="kerberos_attributes">kerberos_attributes</h2>
+<p>Attributes for Kerberos configuration</p>
+<ul>
+<li><code>ad_domain_join_password</code> - (Optional) The Active Directory password for <code>ad_domain_join_user</code>. This provider cannot perform drift detection of this configuration.</li>
+<li><code>ad_domain_join_user</code> - (Optional) Required only when establishing a cross-realm trust with an Active Directory domain. A user with sufficient privileges to join resources to the domain. This provider cannot perform drift detection of this configuration.</li>
+<li><code>cross_realm_trust_principal_password</code> - (Optional) Required only when establishing a cross-realm trust with a KDC in a different realm. The cross-realm principal password, which must be identical across realms. This provider cannot perform drift detection of this configuration.</li>
+<li><code>kdc_admin_password</code> - (Required) The password used within the cluster for the kadmin service on the cluster-dedicated KDC, which maintains Kerberos principals, password policies, and keytabs for the cluster. This provider cannot perform drift detection of this configuration.</li>
+<li><code>realm</code> - (Required) The name of the Kerberos realm to which all nodes in a cluster belong. For example, <code>EC2.INTERNAL</code></li>
+</ul>
+<h2 id="instance_group">instance_group</h2>
+<p>Attributes for each task instance group in the cluster</p>
+<ul>
+<li><code>instance_role</code> - (Required) The role of the instance group in the cluster. Valid values are: <code>MASTER</code>, <code>CORE</code>, and <code>TASK</code>.</li>
+<li><code>instance_type</code> - (Required) The EC2 instance type for all instances in the instance group</li>
+<li><code>instance_count</code> - (Optional) Target number of instances for the instance group</li>
+<li><code>name</code> - (Optional) Friendly name given to the instance group</li>
+<li><code>bid_price</code> - (Optional) If set, the bid price for each EC2 instance in the instance group, expressed in USD. By setting this attribute, the instance group is being declared as a Spot Instance, and will implicitly create a Spot request. Leave this blank to use On-Demand Instances.</li>
+<li><code>ebs_config</code> - (Optional) A list of attributes for the EBS volumes attached to each instance in the instance group. Each <code>ebs_config</code> defined will result in additional EBS volumes being attached to <em>each</em> instance in the instance group. Defined below</li>
+<li><code>autoscaling_policy</code> - (Optional) The autoscaling policy document. This is a JSON formatted string. See <a href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-automatic-scaling.html">EMR Auto Scaling</a></li>
+</ul>
+<h2 id="master_instance_group-configuration-block">master_instance_group Configuration Block</h2>
+<p>Supported nested arguments for the <code>master_instance_group</code> configuration block:</p>
+<ul>
+<li><code>instance_type</code> - (Required) EC2 instance type for all instances in the instance group.</li>
+<li><code>bid_price</code> - (Optional) Bid price for each EC2 instance in the instance group, expressed in USD. By setting this attribute, the instance group is being declared as a Spot Instance, and will implicitly create a Spot request. Leave this blank to use On-Demand Instances.</li>
+<li><code>ebs_config</code> - (Optional) Configuration block(s) for EBS volumes attached to each instance in the instance group. Detailed below.</li>
+<li><code>instance_count</code> - (Optional) Target number of instances for the instance group. Must be 1 or 3. Defaults to 1. Launching with multiple master nodes is only supported in EMR version 5.23.0+, and requires this resource's <code>core_instance_group</code> to be configured. Public (Internet accessible) instances must be created in VPC subnets that have <a href="https://www.terraform.io/docs/providers/aws/r/subnet.html#map_public_ip_on_launch">map public IP on launch</a> enabled. Termination protection is automatically enabled when launched with multiple master nodes and this provider must have the <code>termination_protection = false</code> configuration applied before destroying this resource.</li>
+<li><code>name</code> - (Optional) Friendly name given to the instance group.</li>
+</ul>
+<h2 id="ebs_config">ebs_config</h2>
+<p>Attributes for the EBS volumes attached to each EC2 instance in the <code>instance_group</code></p>
+<ul>
+<li><code>size</code> - (Required) The volume size, in gibibytes (GiB).</li>
+<li><code>type</code> - (Required) The volume type. Valid options are <code>gp2</code>, <code>io1</code>, <code>standard</code> and <code>st1</code>. See <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html">EBS Volume Types</a>.</li>
+<li><code>iops</code> - (Optional) The number of I/O operations per second (IOPS) that the volume supports</li>
+<li><code>volumes_per_instance</code> - (Optional) The number of EBS volumes with this configuration to attach to each EC2 instance in the instance group (default is 1)</li>
+</ul>
+<h2 id="bootstrap_action">bootstrap_action</h2>
+<ul>
+<li><code>name</code> - (Required) Name of the bootstrap action</li>
+<li><code>path</code> - (Required) Location of the script to run during a bootstrap action. Can be either a location in Amazon S3 or on a local file system</li>
+<li><code>args</code> - (Optional) List of command line arguments to pass to the bootstrap action script</li>
+</ul>
+<h2 id="step">step</h2>
+<p>Attributes for step configuration</p>
+<ul>
+<li><code>action_on_failure</code> - (Required) The action to take if the step fails. Valid values: <code>TERMINATE_JOB_FLOW</code>, <code>TERMINATE_CLUSTER</code>, <code>CANCEL_AND_WAIT</code>, and <code>CONTINUE</code></li>
+<li><code>hadoop_jar_step</code> - (Required) The JAR file used for the step. Defined below.</li>
+<li><code>name</code> - (Required) The name of the step.</li>
+</ul>
+<h3 id="hadoop_jar_step">hadoop_jar_step</h3>
+<p>Attributes for Hadoop job step configuration</p>
+<ul>
+<li><code>args</code> - (Optional) List of command line arguments passed to the JAR file's main function when executed.</li>
+<li><code>jar</code> - (Required) Path to a JAR file run during the step.</li>
+<li><code>main_class</code> - (Optional) Name of the main class in the specified Java file. If not specified, the JAR file should specify a Main-Class in its manifest file.</li>
+<li><code>properties</code> - (Optional) Key-Value map of Java properties that are set when the step runs. You can use these properties to pass key value pairs to your main function.</li>
+</ul>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/emr_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/emr_cluster.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Cluster</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Emr.html">Pulumi.Aws.Emr</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
+  <h5 id="Pulumi_Aws_Emr_Cluster_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Cluster : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Emr/Cluster.cs/#L317">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Emr_Cluster__ctor_" data-uid="Pulumi.Aws.Emr.Cluster.#ctor*"></a>
+  <h4 id="Pulumi_Aws_Emr_Cluster__ctor_System_String_Pulumi_Aws_Emr_ClusterArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Emr.Cluster.#ctor(System.String,Pulumi.Aws.Emr.ClusterArgs,Pulumi.CustomResourceOptions)">Cluster(String, ClusterArgs, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Create a Cluster resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Cluster(string name, ClusterArgs args, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Aws.Emr.ClusterArgs.html">ClusterArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Emr/Cluster.cs/#L131">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Emr_Cluster_AdditionalInfo_" data-uid="Pulumi.Aws.Emr.Cluster.AdditionalInfo*"></a>
+  <h4 id="Pulumi_Aws_Emr_Cluster_AdditionalInfo" data-uid="Pulumi.Aws.Emr.Cluster.AdditionalInfo">AdditionalInfo</h4>
+  <div class="markdown level1 summary"><p>A JSON string for selecting additional features such as adding proxy information. Note: Currently there is no API to retrieve the value of this argument after EMR cluster creation from provider, therefore this provider cannot detect drift from the actual EMR cluster if its value is changed outside this provider.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AdditionalInfo { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Emr/Cluster.cs/#L137">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Emr_Cluster_Applications_" data-uid="Pulumi.Aws.Emr.Cluster.Applications*"></a>
+  <h4 id="Pulumi_Aws_Emr_Cluster_Applications" data-uid="Pulumi.Aws.Emr.Cluster.Applications">Applications</h4>
+  <div class="markdown level1 summary"><p>A list of applications for the cluster. Valid values are: <code>Flink</code>, <code>Hadoop</code>, <code>Hive</code>, <code>Mahout</code>, <code>Pig</code>, <code>Spark</code>, and <code>JupyterHub</code> (as of EMR 5.14.0). Case insensitive</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; Applications { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Emr/Cluster.cs/#L140">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Emr_Cluster_Arn_" data-uid="Pulumi.Aws.Emr.Cluster.Arn*"></a>
+  <h4 id="Pulumi_Aws_Emr_Cluster_Arn" data-uid="Pulumi.Aws.Emr.Cluster.Arn">Arn</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Arn { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Emr/Cluster.cs/#L146">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Emr_Cluster_AutoscalingRole_" data-uid="Pulumi.Aws.Emr.Cluster.AutoscalingRole*"></a>
+  <h4 id="Pulumi_Aws_Emr_Cluster_AutoscalingRole" data-uid="Pulumi.Aws.Emr.Cluster.AutoscalingRole">AutoscalingRole</h4>
+  <div class="markdown level1 summary"><p>An IAM role for automatic scaling policies. The IAM role provides permissions that the automatic scaling feature requires to launch and terminate EC2 instances in an instance group.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AutoscalingRole { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Emr/Cluster.cs/#L152">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Emr_Cluster_BootstrapActions_" data-uid="Pulumi.Aws.Emr.Cluster.BootstrapActions*"></a>
+  <h4 id="Pulumi_Aws_Emr_Cluster_BootstrapActions" data-uid="Pulumi.Aws.Emr.Cluster.BootstrapActions">BootstrapActions</h4>
+  <div class="markdown level1 summary"><p>List of bootstrap actions that will be run before Hadoop is started on the cluster nodes. Defined below</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;ClusterBootstrapActions&gt;&gt; BootstrapActions { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Emr.Outputs.ClusterBootstrapActions.html">ClusterBootstrapActions</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Emr/Cluster.cs/#L161">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Emr_Cluster_Configurations_" data-uid="Pulumi.Aws.Emr.Cluster.Configurations*"></a>
+  <h4 id="Pulumi_Aws_Emr_Cluster_Configurations" data-uid="Pulumi.Aws.Emr.Cluster.Configurations">Configurations</h4>
+  <div class="markdown level1 summary"><p>List of configurations supplied for the EMR cluster you are creating</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Configurations { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Emr/Cluster.cs/#L167">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Emr_Cluster_ConfigurationsJson_" data-uid="Pulumi.Aws.Emr.Cluster.ConfigurationsJson*"></a>
+  <h4 id="Pulumi_Aws_Emr_Cluster_ConfigurationsJson" data-uid="Pulumi.Aws.Emr.Cluster.ConfigurationsJson">ConfigurationsJson</h4>
+  <div class="markdown level1 summary"><p>A JSON string for supplying list of configurations for the EMR cluster.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ConfigurationsJson { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Emr/Cluster.cs/#L173">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Emr_Cluster_CoreInstanceCount_" data-uid="Pulumi.Aws.Emr.Cluster.CoreInstanceCount*"></a>
+  <h4 id="Pulumi_Aws_Emr_Cluster_CoreInstanceCount" data-uid="Pulumi.Aws.Emr.Cluster.CoreInstanceCount">CoreInstanceCount</h4>
+  <div class="markdown level1 summary"><p>Use the <code>core_instance_group</code> configuration block <code>instance_count</code> argument instead. Number of Amazon EC2 instances used to execute the job flow. EMR will use one node as the cluster's master node and use the remainder of the nodes (<code>core_instance_count</code>-1) as core nodes. Cannot be specified if <code>core_instance_group</code> or <code>instance_group</code> configuration blocks are set. Default <code>1</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; CoreInstanceCount { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Emr/Cluster.cs/#L179">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Emr_Cluster_CoreInstanceGroup_" data-uid="Pulumi.Aws.Emr.Cluster.CoreInstanceGroup*"></a>
+  <h4 id="Pulumi_Aws_Emr_Cluster_CoreInstanceGroup" data-uid="Pulumi.Aws.Emr.Cluster.CoreInstanceGroup">CoreInstanceGroup</h4>
+  <div class="markdown level1 summary"><p>Configuration block to use an <a href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups">Instance Group</a> for the <a href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-core">core node type</a>. Cannot be specified if <code>core_instance_count</code> argument, <code>core_instance_type</code> argument, or <code>instance_group</code> configuration blocks are set. Detailed below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ClusterCoreInstanceGroup&gt; CoreInstanceGroup { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.Emr.Outputs.ClusterCoreInstanceGroup.html">ClusterCoreInstanceGroup</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Emr/Cluster.cs/#L185">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Emr_Cluster_CoreInstanceType_" data-uid="Pulumi.Aws.Emr.Cluster.CoreInstanceType*"></a>
+  <h4 id="Pulumi_Aws_Emr_Cluster_CoreInstanceType" data-uid="Pulumi.Aws.Emr.Cluster.CoreInstanceType">CoreInstanceType</h4>
+  <div class="markdown level1 summary"><p>Use the <code>core_instance_group</code> configuration block <code>instance_type</code> argument instead. The EC2 instance type of the slave nodes. Cannot be specified if <code>core_instance_group</code> or <code>instance_group</code> configuration blocks are set.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; CoreInstanceType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Emr/Cluster.cs/#L191">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Emr_Cluster_CustomAmiId_" data-uid="Pulumi.Aws.Emr.Cluster.CustomAmiId*"></a>
+  <h4 id="Pulumi_Aws_Emr_Cluster_CustomAmiId" data-uid="Pulumi.Aws.Emr.Cluster.CustomAmiId">CustomAmiId</h4>
+  <div class="markdown level1 summary"><p>A custom Amazon Linux AMI for the cluster (instead of an EMR-owned AMI). Available in Amazon EMR version 5.7.0 and later.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; CustomAmiId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Emr/Cluster.cs/#L197">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Emr_Cluster_EbsRootVolumeSize_" data-uid="Pulumi.Aws.Emr.Cluster.EbsRootVolumeSize*"></a>
+  <h4 id="Pulumi_Aws_Emr_Cluster_EbsRootVolumeSize" data-uid="Pulumi.Aws.Emr.Cluster.EbsRootVolumeSize">EbsRootVolumeSize</h4>
+  <div class="markdown level1 summary"><p>Size in GiB of the EBS root device volume of the Linux AMI that is used for each EC2 instance. Available in Amazon EMR version 4.x and later.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; EbsRootVolumeSize { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Emr/Cluster.cs/#L203">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Emr_Cluster_Ec2Attributes_" data-uid="Pulumi.Aws.Emr.Cluster.Ec2Attributes*"></a>
+  <h4 id="Pulumi_Aws_Emr_Cluster_Ec2Attributes" data-uid="Pulumi.Aws.Emr.Cluster.Ec2Attributes">Ec2Attributes</h4>
+  <div class="markdown level1 summary"><p>Attributes for the EC2 instances running the job flow. Defined below</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ClusterEc2Attributes&gt; Ec2Attributes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.Emr.Outputs.ClusterEc2Attributes.html">ClusterEc2Attributes</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Emr/Cluster.cs/#L209">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Emr_Cluster_InstanceGroups_" data-uid="Pulumi.Aws.Emr.Cluster.InstanceGroups*"></a>
+  <h4 id="Pulumi_Aws_Emr_Cluster_InstanceGroups" data-uid="Pulumi.Aws.Emr.Cluster.InstanceGroups">InstanceGroups</h4>
+  <div class="markdown level1 summary"><p>Use the <code>master_instance_group</code> configuration block, <code>core_instance_group</code> configuration block and <a href="https://www.terraform.io/docs/providers/aws/r/emr_instance_group.html"><code>aws.emr.InstanceGroup</code> resource(s)</a> instead. A list of <code>instance_group</code> objects for each instance group in the cluster. Exactly one of <code>master_instance_type</code> and <code>instance_group</code> must be specified. If <code>instance_group</code> is set, then it must contain a configuration block for at least the <code>MASTER</code> instance group type (as well as any additional instance groups). Cannot be specified if <code>master_instance_group</code> or <code>core_instance_group</code> configuration blocks are set. Defined below</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;ClusterInstanceGroups&gt;&gt; InstanceGroups { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Emr.Outputs.ClusterInstanceGroups.html">ClusterInstanceGroups</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Emr/Cluster.cs/#L215">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Emr_Cluster_KeepJobFlowAliveWhenNoSteps_" data-uid="Pulumi.Aws.Emr.Cluster.KeepJobFlowAliveWhenNoSteps*"></a>
+  <h4 id="Pulumi_Aws_Emr_Cluster_KeepJobFlowAliveWhenNoSteps" data-uid="Pulumi.Aws.Emr.Cluster.KeepJobFlowAliveWhenNoSteps">KeepJobFlowAliveWhenNoSteps</h4>
+  <div class="markdown level1 summary"><p>Switch on/off run cluster with no steps or when all steps are complete (default is on)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; KeepJobFlowAliveWhenNoSteps { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Emr/Cluster.cs/#L221">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Emr_Cluster_KerberosAttributes_" data-uid="Pulumi.Aws.Emr.Cluster.KerberosAttributes*"></a>
+  <h4 id="Pulumi_Aws_Emr_Cluster_KerberosAttributes" data-uid="Pulumi.Aws.Emr.Cluster.KerberosAttributes">KerberosAttributes</h4>
+  <div class="markdown level1 summary"><p>Kerberos configuration for the cluster. Defined below</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ClusterKerberosAttributes&gt; KerberosAttributes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.Emr.Outputs.ClusterKerberosAttributes.html">ClusterKerberosAttributes</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Emr/Cluster.cs/#L227">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Emr_Cluster_LogUri_" data-uid="Pulumi.Aws.Emr.Cluster.LogUri*"></a>
+  <h4 id="Pulumi_Aws_Emr_Cluster_LogUri" data-uid="Pulumi.Aws.Emr.Cluster.LogUri">LogUri</h4>
+  <div class="markdown level1 summary"><p>S3 bucket to write the log files of the job flow. If a value is not provided, logs are not created</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; LogUri { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Emr/Cluster.cs/#L233">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Emr_Cluster_MasterInstanceGroup_" data-uid="Pulumi.Aws.Emr.Cluster.MasterInstanceGroup*"></a>
+  <h4 id="Pulumi_Aws_Emr_Cluster_MasterInstanceGroup" data-uid="Pulumi.Aws.Emr.Cluster.MasterInstanceGroup">MasterInstanceGroup</h4>
+  <div class="markdown level1 summary"><p>Configuration block to use an <a href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups">Instance Group</a> for the <a href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-master">master node type</a>. Cannot be specified if <code>master_instance_type</code> argument or <code>instance_group</code> configuration blocks are set. Detailed below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ClusterMasterInstanceGroup&gt; MasterInstanceGroup { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.Emr.Outputs.ClusterMasterInstanceGroup.html">ClusterMasterInstanceGroup</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Emr/Cluster.cs/#L239">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Emr_Cluster_MasterInstanceType_" data-uid="Pulumi.Aws.Emr.Cluster.MasterInstanceType*"></a>
+  <h4 id="Pulumi_Aws_Emr_Cluster_MasterInstanceType" data-uid="Pulumi.Aws.Emr.Cluster.MasterInstanceType">MasterInstanceType</h4>
+  <div class="markdown level1 summary"><p>Use the <code>master_instance_group</code> configuration block <code>instance_type</code> argument instead. The EC2 instance type of the master node. Cannot be specified if <code>master_instance_group</code> or <code>instance_group</code> configuration blocks are set.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; MasterInstanceType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Emr/Cluster.cs/#L246">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Emr_Cluster_MasterPublicDns_" data-uid="Pulumi.Aws.Emr.Cluster.MasterPublicDns*"></a>
+  <h4 id="Pulumi_Aws_Emr_Cluster_MasterPublicDns" data-uid="Pulumi.Aws.Emr.Cluster.MasterPublicDns">MasterPublicDns</h4>
+  <div class="markdown level1 summary"><p>The public DNS name of the master EC2 instance.</p>
+<ul>
+<li><code>core_instance_group.0.id</code> - Core node type Instance Group ID, if using Instance Group for this node type.</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; MasterPublicDns { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Emr/Cluster.cs/#L252">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Emr_Cluster_Name_" data-uid="Pulumi.Aws.Emr.Cluster.Name*"></a>
+  <h4 id="Pulumi_Aws_Emr_Cluster_Name" data-uid="Pulumi.Aws.Emr.Cluster.Name">Name</h4>
+  <div class="markdown level1 summary"><p>The name of the job flow</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Emr/Cluster.cs/#L258">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Emr_Cluster_ReleaseLabel_" data-uid="Pulumi.Aws.Emr.Cluster.ReleaseLabel*"></a>
+  <h4 id="Pulumi_Aws_Emr_Cluster_ReleaseLabel" data-uid="Pulumi.Aws.Emr.Cluster.ReleaseLabel">ReleaseLabel</h4>
+  <div class="markdown level1 summary"><p>The release label for the Amazon EMR release</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ReleaseLabel { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Emr/Cluster.cs/#L264">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Emr_Cluster_ScaleDownBehavior_" data-uid="Pulumi.Aws.Emr.Cluster.ScaleDownBehavior*"></a>
+  <h4 id="Pulumi_Aws_Emr_Cluster_ScaleDownBehavior" data-uid="Pulumi.Aws.Emr.Cluster.ScaleDownBehavior">ScaleDownBehavior</h4>
+  <div class="markdown level1 summary"><p>The way that individual Amazon EC2 instances terminate when an automatic scale-in activity occurs or an <code>instance group</code> is resized.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ScaleDownBehavior { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Emr/Cluster.cs/#L270">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Emr_Cluster_SecurityConfiguration_" data-uid="Pulumi.Aws.Emr.Cluster.SecurityConfiguration*"></a>
+  <h4 id="Pulumi_Aws_Emr_Cluster_SecurityConfiguration" data-uid="Pulumi.Aws.Emr.Cluster.SecurityConfiguration">SecurityConfiguration</h4>
+  <div class="markdown level1 summary"><p>The security configuration name to attach to the EMR cluster. Only valid for EMR clusters with <code>release_label</code> 4.8.0 or greater</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SecurityConfiguration { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Emr/Cluster.cs/#L276">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Emr_Cluster_ServiceRole_" data-uid="Pulumi.Aws.Emr.Cluster.ServiceRole*"></a>
+  <h4 id="Pulumi_Aws_Emr_Cluster_ServiceRole" data-uid="Pulumi.Aws.Emr.Cluster.ServiceRole">ServiceRole</h4>
+  <div class="markdown level1 summary"><p>IAM role that will be assumed by the Amazon EMR service to access AWS resources</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ServiceRole { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Emr/Cluster.cs/#L155">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Emr_Cluster_State_" data-uid="Pulumi.Aws.Emr.Cluster.State*"></a>
+  <h4 id="Pulumi_Aws_Emr_Cluster_State" data-uid="Pulumi.Aws.Emr.Cluster.State">State</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; State { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Emr/Cluster.cs/#L288">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Emr_Cluster_StepConcurrencyLevel_" data-uid="Pulumi.Aws.Emr.Cluster.StepConcurrencyLevel*"></a>
+  <h4 id="Pulumi_Aws_Emr_Cluster_StepConcurrencyLevel" data-uid="Pulumi.Aws.Emr.Cluster.StepConcurrencyLevel">StepConcurrencyLevel</h4>
+  <div class="markdown level1 summary"><p>The number of steps that can be executed concurrently. You can specify a maximum of 256 steps. Only valid for EMR clusters with <code>release_label</code> 5.28.0 or greater. (default is 1)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; StepConcurrencyLevel { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Emr/Cluster.cs/#L282">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Emr_Cluster_Steps_" data-uid="Pulumi.Aws.Emr.Cluster.Steps*"></a>
+  <h4 id="Pulumi_Aws_Emr_Cluster_Steps" data-uid="Pulumi.Aws.Emr.Cluster.Steps">Steps</h4>
+  <div class="markdown level1 summary"><p>List of steps to run when creating the cluster. Defined below. It is highly recommended to utilize the <a href="https://www.terraform.io/docs/configuration/resources.html">lifecycle configuration block</a> with <code>ignore_changes</code> if other steps are being managed outside of this provider. This argument is processed in <a href="https://www.terraform.io/docs/configuration/attr-as-blocks.html">attribute-as-blocks mode</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;ClusterSteps&gt;&gt; Steps { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Emr.Outputs.ClusterSteps.html">ClusterSteps</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Emr/Cluster.cs/#L294">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Emr_Cluster_Tags_" data-uid="Pulumi.Aws.Emr.Cluster.Tags*"></a>
+  <h4 id="Pulumi_Aws_Emr_Cluster_Tags" data-uid="Pulumi.Aws.Emr.Cluster.Tags">Tags</h4>
+  <div class="markdown level1 summary"><p>list of tags to apply to the EMR Cluster</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Tags { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Emr/Cluster.cs/#L300">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Emr_Cluster_TerminationProtection_" data-uid="Pulumi.Aws.Emr.Cluster.TerminationProtection*"></a>
+  <h4 id="Pulumi_Aws_Emr_Cluster_TerminationProtection" data-uid="Pulumi.Aws.Emr.Cluster.TerminationProtection">TerminationProtection</h4>
+  <div class="markdown level1 summary"><p>Switch on/off termination protection (default is <code>false</code>, except when using multiple master nodes). Before attempting to destroy the resource when termination protection is enabled, this configuration must be applied with its value set to <code>false</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; TerminationProtection { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Emr/Cluster.cs/#L306">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Emr_Cluster_VisibleToAllUsers_" data-uid="Pulumi.Aws.Emr.Cluster.VisibleToAllUsers*"></a>
+  <h4 id="Pulumi_Aws_Emr_Cluster_VisibleToAllUsers" data-uid="Pulumi.Aws.Emr.Cluster.VisibleToAllUsers">VisibleToAllUsers</h4>
+  <div class="markdown level1 summary"><p>Whether the job flow is visible to all IAM users of the AWS account associated with the job flow. Default <code>true</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; VisibleToAllUsers { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Emr/Cluster.cs/#L347">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Emr_Cluster_Get_" data-uid="Pulumi.Aws.Emr.Cluster.Get*"></a>
+  <h4 id="Pulumi_Aws_Emr_Cluster_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_Emr_ClusterState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Emr.Cluster.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.Emr.ClusterState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, ClusterState, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Get an existing Cluster resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Cluster Get(string name, Input&lt;string&gt; id, ClusterState state = null, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Aws.Emr.ClusterState.html">ClusterState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Aws.Emr.Cluster.html">Cluster</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Emr/Cluster.cs/#L126" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,181 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace Pulumi.Gcp.Folder
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace Pulumi.Gcp.Folder
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Gcp.Folder">
+  
+  <h1 id="Pulumi_Gcp_Folder" data-uid="Pulumi.Gcp.Folder" class="text-break">Namespace Pulumi.Gcp.Folder
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">Classes
+  </h3>
+      <h4><a class="xref" href="Pulumi.Gcp.Folder.GetOrganizationPolicyArgs.html">GetOrganizationPolicyArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Folder.GetOrganizationPolicyResult.html">GetOrganizationPolicyResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Folder.IAMBinding.html">IAMBinding</a></h4>
+      <section><p>Allows creation and management of a single binding within IAM policy for
+an existing Google Cloud Platform folder.</p>
+<blockquote>
+<p><strong>Note:</strong> This resource <em>must not</em> be used in conjunction with
+<code>gcp.folder.IAMPolicy</code> or they will fight over what your policy
+should be.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> On create, this resource will overwrite members of any existing roles.
+Use <code>import</code> and inspect the preview output to ensure
+your existing members are preserved.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_folder_iam_binding.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_folder_iam_binding.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Gcp.Folder.IAMBindingArgs.html">IAMBindingArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Folder.IAMBindingState.html">IAMBindingState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Folder.IAMMember.html">IAMMember</a></h4>
+      <section><p>Allows creation and management of a single member for a single binding within
+the IAM policy for an existing Google Cloud Platform folder.</p>
+<blockquote>
+<p><strong>Note:</strong> This resource <em>must not</em> be used in conjunction with
+<code>gcp.folder.IAMPolicy</code> or they will fight over what your policy
+should be. Similarly, roles controlled by <code>gcp.folder.IAMBinding</code>
+should not be assigned to using <code>gcp.folder.IAMMember</code>.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_folder_iam_member.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_folder_iam_member.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Gcp.Folder.IAMMemberArgs.html">IAMMemberArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Folder.IAMMemberState.html">IAMMemberState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Folder.IAMPolicy.html">IAMPolicy</a></h4>
+      <section><p>Allows creation and management of the IAM policy for an existing Google Cloud
+Platform folder.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_folder_iam_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_folder_iam_policy.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Gcp.Folder.IAMPolicyArgs.html">IAMPolicyArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Folder.IAMPolicyState.html">IAMPolicyState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Folder.Invokes.html">Invokes</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Folder.OrganizationPolicy.html">OrganizationPolicy</a></h4>
+      <section><p>Allows management of Organization policies for a Google Folder. For more information see
+<a href="https://cloud.google.com/resource-manager/docs/organization-policy/overview">the official
+documentation</a> and
+<a href="https://cloud.google.com/resource-manager/reference/rest/v1/folders/setOrgPolicy">API</a>.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_folder_organization_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_folder_organization_policy.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Gcp.Folder.OrganizationPolicyArgs.html">OrganizationPolicyArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Folder.OrganizationPolicyState.html">OrganizationPolicyState</a></h4>
+      <section></section>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

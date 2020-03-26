@@ -18,19 +18,329 @@
         }
       ],
       "dest": "metadata/Pulumi.FSharp"
+    },
+    {
+      "src": [
+        {
+          "src": "../../pulumi-aws/sdk/dotnet",
+          "files": ["Pulumi.*.csproj"]
+        }
+      ],
+      "dest": "metadata/Pulumi.Aws"
+    },
+    {
+      "src": [
+        {
+          "src": "../../pulumi-azure/sdk/dotnet",
+          "files": ["Pulumi.*.csproj"]
+        }
+      ],
+      "dest": "metadata/Pulumi.Azure"
+    },
+    {
+      "src": [
+        {
+          "src": "../../pulumi-gcp/sdk/dotnet",
+          "files": ["Pulumi.*.csproj"]
+        }
+      ],
+      "dest": "metadata/Pulumi.Gcp"
+    },
+    {
+      "src": [
+        {
+          "src": "../../pulumi-kubernetes/sdk/dotnet",
+          "files": ["Pulumi.*.csproj"]
+        }
+      ],
+      "dest": "metadata/Pulumi.Kubernetes"
+    },
+    {
+      "src": [
+        {
+          "src": "../../pulumi-docker/sdk/dotnet",
+          "files": ["Pulumi.*.csproj"]
+        }
+      ],
+      "dest": "metadata/Pulumi.Docker"
+    },
+    {
+      "src": [
+        {
+          "src": "../../pulumi-random/sdk/dotnet",
+          "files": ["Pulumi.*.csproj"]
+        }
+      ],
+      "dest": "metadata/Pulumi.Random"
+    },
+    {
+      "src": [
+        {
+          "src": "../../pulumi-aiven/sdk/dotnet",
+          "files": ["Pulumi.*.csproj"]
+        }
+      ],
+      "dest": "metadata/Pulumi.Aiven"
+    },
+    {
+      "src": [
+        {
+          "src": "../../pulumi-alicloud/sdk/dotnet",
+          "files": ["Pulumi.*.csproj"]
+        }
+      ],
+      "dest": "metadata/Pulumi.AliCloud"
+    },
+    {
+      "src": [
+        {
+          "src": "../../pulumi-cloudamqp/sdk/dotnet",
+          "files": ["Pulumi.*.csproj"]
+        }
+      ],
+      "dest": "metadata/Pulumi.CloudAmqp"
+    },
+    {
+      "src": [
+        {
+          "src": "../../pulumi-cloudflare/sdk/dotnet",
+          "files": ["Pulumi.*.csproj"]
+        }
+      ],
+      "dest": "metadata/Pulumi.Cloudflare"
+    },
+    {
+      "src": [
+        {
+          "src": "../../pulumi-consul/sdk/dotnet",
+          "files": ["Pulumi.*.csproj"]
+        }
+      ],
+      "dest": "metadata/Pulumi.Consul"
+    },
+    {
+      "src": [
+        {
+          "src": "../../pulumi-datadog/sdk/dotnet",
+          "files": ["Pulumi.*.csproj"]
+        }
+      ],
+      "dest": "metadata/Pulumi.Datadog"
+    },
+    {
+      "src": [
+        {
+          "src": "../../pulumi-digitalocean/sdk/dotnet",
+          "files": ["Pulumi.*.csproj"]
+        }
+      ],
+      "dest": "metadata/Pulumi.DigitalOcean"
+    },
+    {
+      "src": [
+        {
+          "src": "../../pulumi-dnsimple/sdk/dotnet",
+          "files": ["Pulumi.*.csproj"]
+        }
+      ],
+      "dest": "metadata/Pulumi.DNSimple"
+    },
+    {
+      "src": [
+        {
+          "src": "../../pulumi-fastly/sdk/dotnet",
+          "files": ["Pulumi.*.csproj"]
+        }
+      ],
+      "dest": "metadata/Pulumi.Fastly"
+    },
+    {
+      "src": [
+        {
+          "src": "../../pulumi-f5bigip/sdk/dotnet",
+          "files": ["Pulumi.*.csproj"]
+        }
+      ],
+      "dest": "metadata/Pulumi.F5BigIP"
+    },
+    {
+      "src": [
+        {
+          "src": "../../pulumi-gitlab/sdk/dotnet",
+          "files": ["Pulumi.*.csproj"]
+        }
+      ],
+      "dest": "metadata/Pulumi.GitLab"
+    },
+    {
+      "src": [
+        {
+          "src": "../../pulumi-kafka/sdk/dotnet",
+          "files": ["Pulumi.*.csproj"]
+        }
+      ],
+      "dest": "metadata/Pulumi.Kafka"
+    },
+    {
+      "src": [
+        {
+          "src": "../../pulumi-keycloak/sdk/dotnet",
+          "files": ["Pulumi.*.csproj"]
+        }
+      ],
+      "dest": "metadata/Pulumi.Keycloak"
+    },
+    {
+      "src": [
+        {
+          "src": "../../pulumi-linode/sdk/dotnet",
+          "files": ["Pulumi.*.csproj"]
+        }
+      ],
+      "dest": "metadata/Pulumi.Linode"
+    },
+    {
+      "src": [
+        {
+          "src": "../../pulumi-mailgun/sdk/dotnet",
+          "files": ["Pulumi.*.csproj"]
+        }
+      ],
+      "dest": "metadata/Pulumi.Mailgun"
+    },
+    {
+      "src": [
+        {
+          "src": "../../pulumi-mysql/sdk/dotnet",
+          "files": ["Pulumi.*.csproj"]
+        }
+      ],
+      "dest": "metadata/Pulumi.MySql"
+    },
+    {
+      "src": [
+        {
+          "src": "../../pulumi-newrelic/sdk/dotnet",
+          "files": ["Pulumi.*.csproj"]
+        }
+      ],
+      "dest": "metadata/Pulumi.NewRelic"
+    },
+    {
+      "src": [
+        {
+          "src": "../../pulumi-okta/sdk/dotnet",
+          "files": ["Pulumi.*.csproj"]
+        }
+      ],
+      "dest": "metadata/Pulumi.Okta"
+    },
+    {
+      "src": [
+        {
+          "src": "../../pulumi-openstack/sdk/dotnet",
+          "files": ["Pulumi.*.csproj"]
+        }
+      ],
+      "dest": "metadata/Pulumi.OpenStack"
+    },
+    {
+      "src": [
+        {
+          "src": "../../pulumi-packet/sdk/dotnet",
+          "files": ["Pulumi.*.csproj"]
+        }
+      ],
+      "dest": "metadata/Pulumi.Packet"
+    },
+    {
+      "src": [
+        {
+          "src": "../../pulumi-postgresql/sdk/dotnet",
+          "files": ["Pulumi.*.csproj"]
+        }
+      ],
+      "dest": "metadata/Pulumi.PostgreSql"
+    },
+    {
+      "src": [
+        {
+          "src": "../../pulumi-rabbitmq/sdk/dotnet",
+          "files": ["Pulumi.*.csproj"]
+        }
+      ],
+      "dest": "metadata/Pulumi.RabbitMQ"
+    },
+    {
+      "src": [
+        {
+          "src": "../../pulumi-rancher2/sdk/dotnet",
+          "files": ["Pulumi.*.csproj"]
+        }
+      ],
+      "dest": "metadata/Pulumi.Rancher2"
+    },
+    {
+      "src": [
+        {
+          "src": "../../pulumi-signalfx/sdk/dotnet",
+          "files": ["Pulumi.*.csproj"]
+        }
+      ],
+      "dest": "metadata/Pulumi.SignalFX"
+    },
+    {
+      "src": [
+        {
+          "src": "../../pulumi-spotinst/sdk/dotnet",
+          "files": ["Pulumi.*.csproj"]
+        }
+      ],
+      "dest": "metadata/Pulumi.SpotInst"
+    },
+    {
+      "src": [
+        {
+          "src": "../../pulumi-terraform/sdk/dotnet",
+          "files": ["Pulumi.*.csproj"]
+        }
+      ],
+      "dest": "metadata/Pulumi.Terraform"
+    },
+    {
+      "src": [
+        {
+          "src": "../../pulumi-tls/sdk/dotnet",
+          "files": ["Pulumi.*.csproj"]
+        }
+      ],
+      "dest": "metadata/Pulumi.Tls"
+    },
+    {
+      "src": [
+        {
+          "src": "../../pulumi-vault/sdk/dotnet",
+          "files": ["Pulumi.*.csproj"]
+        }
+      ],
+      "dest": "metadata/Pulumi.Vault"
+    },
+    {
+      "src": [
+        {
+          "src": "../../pulumi-vsphere/sdk/dotnet",
+          "files": ["Pulumi.*.csproj"]
+        }
+      ],
+      "dest": "metadata/Pulumi.VSphere"
     }
   ],
   "build": {
     "content": [
       {
-        "src": "metadata/Pulumi",
+        "src": "metadata",
         "files": ["**/*.yml"],
-        "dest": "Pulumi"
-      },
-      {
-        "src": "metadata/Pulumi.FSharp",
-        "files": ["**/*.yml"],
-        "dest": "Pulumi.FSharp"
+        "dest": "."
       }
     ],
     "overwrite": [],

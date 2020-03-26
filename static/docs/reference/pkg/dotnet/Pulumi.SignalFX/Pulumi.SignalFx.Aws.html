@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace Pulumi.SignalFx.Aws
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace Pulumi.SignalFx.Aws
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.SignalFx.Aws">
+  
+  <h1 id="Pulumi_SignalFx_Aws" data-uid="Pulumi.SignalFx.Aws" class="text-break">Namespace Pulumi.SignalFx.Aws
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">Classes
+  </h3>
+      <h4><a class="xref" href="Pulumi.SignalFx.Aws.ExternalIntegration.html">ExternalIntegration</a></h4>
+      <section><p>SignalFx AWS CloudWatch integrations using Role ARNs. For help with this integration see <a href="https://docs.signalfx.com/en/latest/integrations/amazon-web-services.html#connect-to-aws">Connect to AWS CloudWatch</a>.</p>
+<p><strong>Note:</strong> When managing integrations you'll need to use an admin token to authenticate the SignalFx provider.</p>
+<blockquote>
+<p><strong>WARNING</strong> This resource implements a part of a workflow. You must use it with <code>signalfx.aws.Integration</code>. Check with SignalFx support for your realm's AWS account id.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/aws_external_integration.html.markdown">https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/aws_external_integration.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.SignalFx.Aws.ExternalIntegrationArgs.html">ExternalIntegrationArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.SignalFx.Aws.ExternalIntegrationState.html">ExternalIntegrationState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.SignalFx.Aws.Integration.html">Integration</a></h4>
+      <section><p>SignalFx AWS CloudWatch integrations. For help with this integration see <a href="https://docs.signalfx.com/en/latest/integrations/amazon-web-services.html#monitor-amazon-web-services">Monitoring Amazon Web Services</a>.</p>
+<p><strong>Note:</strong> When managing integrations you'll need to use an admin token to authenticate the SignalFx provider.</p>
+<blockquote>
+<p><strong>WARNING</strong> This resource implements a part of a workflow. You must use it with one of either <code>signalfx.aws.ExternalIntegration</code> or <code>signalfx.aws.TokenIntegration</code>.</p>
+</blockquote>
+<h2 id="service-names">Service Names</h2>
+<p>Fields that expect an AWS service/namespace will work with one of: &quot;AWS/ApiGateway&quot; &quot;AWS/AppStream&quot; &quot;AWS/AutoScaling&quot; &quot;AWS/Billing&quot; &quot;AWS/CloudFront&quot; &quot;AWS/CloudSearch&quot; &quot;AWS/Events&quot; &quot;AWS/Logs&quot; &quot;AWS/Connect&quot; &quot;AWS/DMS&quot; &quot;AWS/DX&quot; &quot;AWS/DynamoDB&quot; &quot;AWS/EC2&quot; &quot;AWS/EC2Spot&quot; &quot;AWS/ECS&quot; &quot;AWS/ElasticBeanstalk&quot; &quot;AWS/EBS&quot; &quot;AWS/EFS&quot; &quot;AWS/ELB&quot; &quot;AWS/ApplicationELB&quot; &quot;AWS/NetworkELB&quot; &quot;AWS/ElasticTranscoder&quot; &quot;AWS/ElastiCache&quot; &quot;AWS/ES&quot; &quot;AWS/ElasticMapReduce&quot; &quot;AWS/GameLift&quot; &quot;AWS/Inspector&quot; &quot;AWS/IoT&quot; &quot;AWS/KMS&quot; &quot;AWS/KinesisAnalytics&quot; &quot;AWS/Firehose&quot; &quot;AWS/Kinesis&quot; &quot;AWS/KinesisVideo&quot; &quot;AWS/Lambda&quot; &quot;AWS/Lex&quot; &quot;AWS/ML&quot; &quot;AWS/OpsWorks&quot; &quot;AWS/Polly&quot; &quot;AWS/Redshift&quot; &quot;AWS/RDS&quot; &quot;AWS/Route53&quot; &quot;AWS/SageMaker&quot; &quot;AWS/DDoSProtection&quot; &quot;AWS/SES&quot; &quot;AWS/SNS&quot; &quot;AWS/SQS&quot; &quot;AWS/S3&quot; &quot;AWS/SWF&quot; &quot;AWS/States&quot; &quot;AWS/StorageGateway&quot; &quot;AWS/Translate&quot; &quot;AWS/NATGateway&quot; &quot;AWS/VPN (VPN)&quot; &quot;WAF&quot; &quot;AWS/WorkSpaces&quot;.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/aws_integration.html.markdown">https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/aws_integration.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.SignalFx.Aws.IntegrationArgs.html">IntegrationArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.SignalFx.Aws.IntegrationState.html">IntegrationState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.SignalFx.Aws.TokenIntegration.html">TokenIntegration</a></h4>
+      <section><p>SignalFx AWS CloudWatch integrations using security tokens. For help with this integration see <a href="https://docs.signalfx.com/en/latest/integrations/amazon-web-services.html#connect-to-aws">Connect to AWS CloudWatch</a>.</p>
+<p><strong>Note:</strong> When managing integrations you'll need to use an admin token to authenticate the SignalFx provider.</p>
+<blockquote>
+<p><strong>WARNING</strong> This resource implements a part of a workflow. You must use it with <code>signalfx.aws.Integration</code>.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/aws_token_integration.html.markdown">https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/aws_token_integration.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.SignalFx.Aws.TokenIntegrationArgs.html">TokenIntegrationArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.SignalFx.Aws.TokenIntegrationState.html">TokenIntegrationState</a></h4>
+      <section></section>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

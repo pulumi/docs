@@ -1,0 +1,287 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace Pulumi.OpenStack.Compute
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace Pulumi.OpenStack.Compute
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.OpenStack.Compute">
+  
+  <h1 id="Pulumi_OpenStack_Compute" data-uid="Pulumi.OpenStack.Compute" class="text-break">Namespace Pulumi.OpenStack.Compute
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">Classes
+  </h3>
+      <h4><a class="xref" href="Pulumi.OpenStack.Compute.Flavor.html">Flavor</a></h4>
+      <section><p>Manages a V2 flavor resource within OpenStack.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_flavor_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_flavor_v2.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.OpenStack.Compute.FlavorAccess.html">FlavorAccess</a></h4>
+      <section><p>Manages a project access for flavor V2 resource within OpenStack.</p>
+<p>Note: You <em>must</em> have admin privileges in your OpenStack cloud to use
+this resource.</p>
+<hr>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_flavor_access_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_flavor_access_v2.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.OpenStack.Compute.FlavorAccessArgs.html">FlavorAccessArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.OpenStack.Compute.FlavorAccessState.html">FlavorAccessState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.OpenStack.Compute.FlavorArgs.html">FlavorArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.OpenStack.Compute.FlavorState.html">FlavorState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.OpenStack.Compute.FloatingIp.html">FloatingIp</a></h4>
+      <section><p>Manages a V2 floating IP resource within OpenStack Nova (compute)
+that can be used for compute instances.</p>
+<p>Please note that managing floating IPs through the OpenStack Compute API has
+been deprecated. Unless you are using an older OpenStack environment, it is
+recommended to use the <code>openstack.networking.FloatingIp</code>
+resource instead, which uses the OpenStack Networking API.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_floatingip_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_floatingip_v2.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.OpenStack.Compute.FloatingIpArgs.html">FloatingIpArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.OpenStack.Compute.FloatingIpAssociate.html">FloatingIpAssociate</a></h4>
+      <section><p>Associate a floating IP to an instance. This can be used instead of the
+<code>floating_ip</code> options in <code>openstack.compute.Instance</code>.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_floatingip_associate_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_floatingip_associate_v2.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.OpenStack.Compute.FloatingIpAssociateArgs.html">FloatingIpAssociateArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.OpenStack.Compute.FloatingIpAssociateState.html">FloatingIpAssociateState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.OpenStack.Compute.FloatingIpState.html">FloatingIpState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.OpenStack.Compute.GetAvailabilityZonesArgs.html">GetAvailabilityZonesArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.OpenStack.Compute.GetAvailabilityZonesResult.html">GetAvailabilityZonesResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.OpenStack.Compute.GetFlavorArgs.html">GetFlavorArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.OpenStack.Compute.GetFlavorResult.html">GetFlavorResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.OpenStack.Compute.GetKeypairArgs.html">GetKeypairArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.OpenStack.Compute.GetKeypairResult.html">GetKeypairResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.OpenStack.Compute.Instance.html">Instance</a></h4>
+      <section><p>Manages a V2 VM instance resource within OpenStack.</p>
+<h2 id="importing-instances">Importing instances</h2>
+<p>Importing instances can be tricky, since the nova api does not offer all
+information provided at creation time for later retrieval.
+Network interface attachment order, and number and sizes of ephemeral
+disks are examples of this.</p>
+<h3 id="importing-an-instance-with-multiple-emphemeral-disks">Importing an instance with multiple emphemeral disks</h3>
+<p>The importer cannot read the emphemeral disk configuration
+of an instance, so just specify image_id as in the configuration
+of the basic instance example.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_instance_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_instance_v2.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.OpenStack.Compute.InstanceArgs.html">InstanceArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.OpenStack.Compute.InstanceState.html">InstanceState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.OpenStack.Compute.InterfaceAttach.html">InterfaceAttach</a></h4>
+      <section><p>Attaches a Network Interface (a Port) to an Instance using the OpenStack
+Compute (Nova) v2 API.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_interface_attach_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_interface_attach_v2.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.OpenStack.Compute.InterfaceAttachArgs.html">InterfaceAttachArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.OpenStack.Compute.InterfaceAttachState.html">InterfaceAttachState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.OpenStack.Compute.Invokes.html">Invokes</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.OpenStack.Compute.Keypair.html">Keypair</a></h4>
+      <section><blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_keypair_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_keypair_v2.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.OpenStack.Compute.KeypairArgs.html">KeypairArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.OpenStack.Compute.KeypairState.html">KeypairState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.OpenStack.Compute.QuotaSetV2.html">QuotaSetV2</a></h4>
+      <section><p>Manages a V2 compute quotaset resource within OpenStack.</p>
+<blockquote>
+<p><strong>Note:</strong> This usually requires admin privileges.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> This resource has a no-op deletion so no actual actions will be done against the OpenStack API
+in case of delete call.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_quotaset_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_quotaset_v2.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.OpenStack.Compute.QuotaSetV2Args.html">QuotaSetV2Args</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.OpenStack.Compute.QuotaSetV2State.html">QuotaSetV2State</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.OpenStack.Compute.SecGroup.html">SecGroup</a></h4>
+      <section><p>Manages a V2 security group resource within OpenStack.</p>
+<p>Please note that managing security groups through the OpenStack Compute API
+has been deprecated. Unless you are using an older OpenStack environment, it is
+recommended to use the <code>openstack.networking.SecGroup</code>
+and <code>openstack.networking.SecGroupRule</code>
+resources instead, which uses the OpenStack Networking API.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_secgroup_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_secgroup_v2.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.OpenStack.Compute.SecGroupArgs.html">SecGroupArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.OpenStack.Compute.SecGroupState.html">SecGroupState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.OpenStack.Compute.ServerGroup.html">ServerGroup</a></h4>
+      <section><p>Manages a V2 Server Group resource within OpenStack.</p>
+<h2 id="policies">Policies</h2>
+<ul>
+<li><p><code>affinity</code> - All instances/servers launched in this group will be hosted on
+the same compute node.</p>
+</li>
+<li><p><code>anti-affinity</code> - All instances/servers launched in this group will be
+hosted on different compute nodes.</p>
+</li>
+<li><p><code>soft-affinity</code> - All instances/servers launched in this group will be hosted
+on the same compute node if possible, but if not possible they
+still will be scheduled instead of failure. To use this policy your
+OpenStack environment should support Compute service API 2.15 or above.</p>
+</li>
+<li><p><code>soft-anti-affinity</code> - All instances/servers launched in this group will be
+hosted on different compute nodes if possible, but if not possible they
+still will be scheduled instead of failure. To use this policy your
+OpenStack environment should support Compute service API 2.15 or above.</p>
+</li>
+</ul>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_servergroup_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_servergroup_v2.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.OpenStack.Compute.ServerGroupArgs.html">ServerGroupArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.OpenStack.Compute.ServerGroupState.html">ServerGroupState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.OpenStack.Compute.VolumeAttach.html">VolumeAttach</a></h4>
+      <section><p>Attaches a Block Storage Volume to an Instance using the OpenStack
+Compute (Nova) v2 API.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_volume_attach_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_volume_attach_v2.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.OpenStack.Compute.VolumeAttachArgs.html">VolumeAttachArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.OpenStack.Compute.VolumeAttachState.html">VolumeAttachState</a></h4>
+      <section></section>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

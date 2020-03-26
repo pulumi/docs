@@ -1,0 +1,356 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace Pulumi.SpotInst.Aws
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace Pulumi.SpotInst.Aws
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.SpotInst.Aws">
+  
+  <h1 id="Pulumi_SpotInst_Aws" data-uid="Pulumi.SpotInst.Aws" class="text-break">Namespace Pulumi.SpotInst.Aws
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">Classes
+  </h3>
+      <h4><a class="xref" href="Pulumi.SpotInst.Aws.Beanstalk.html">Beanstalk</a></h4>
+      <section><p>Provides a Spotinst AWS group resource using Elastic Beanstalk.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/elastigroup_aws_beanstalk.html.markdown">https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/elastigroup_aws_beanstalk.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.SpotInst.Aws.BeanstalkArgs.html">BeanstalkArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.SpotInst.Aws.BeanstalkState.html">BeanstalkState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.SpotInst.Aws.Elastigroup.html">Elastigroup</a></h4>
+      <section><p>Provides a Spotinst AWS group resource.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/elastigroup_aws.html.markdown">https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/elastigroup_aws.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.SpotInst.Aws.ElastigroupArgs.html">ElastigroupArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.SpotInst.Aws.ElastigroupState.html">ElastigroupState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.SpotInst.Aws.ManagedInstance.html">ManagedInstance</a></h4>
+      <section><p>Provides a Spotinst AWS ManagedInstance resource.</p>
+<h2 id="load-balancers">Load Balancers</h2>
+<ul>
+<li><code>loadBalancersConfig</code> - (Optional) LB integration object.
+<ul>
+<li><code>load_balancers</code> - (Optional) List of load balancers configs.
+* <code>name</code> - The AWS resource name. Required for Classic Load Balancer. Optional for Application Load Balancer.
+* <code>arn</code> - The AWS resource ARN (Required only for ALB target groups).
+* <code>balancer_id</code> - The Multai load balancer ID.
+Default: lb-123456
+* <code>target_set_id</code> - The Multai load target set ID.
+Default: ts-123456
+* <code>auto_weight</code> - “Auto Weight” will automatically provide a higher weight for instances that are larger as appropriate. For example, if you have configured your Elastigroup with m4.large and m4.xlarge instances the m4.large will have half the weight of an m4.xlarge. This ensures that larger instances receive a higher number of MLB requests.
+* <code>zone_awareness</code> - “AZ Awareness” will ensure that instances within the same AZ are using the corresponding MLB runtime instance in the same AZ. This feature reduces multi-zone data transfer fees.
+* <code>type</code> - The resource type. Valid Values: CLASSIC, TARGET_GROUP, MULTAI_TARGET_SET.</li>
+</ul>
+</li>
+</ul>
+<p>Usage:</p>
+<pre><code class="lang-hcl">load_balancers {
+   arn  = &amp;quot;arn&amp;quot;
+   type = &amp;quot;CLASSIC&amp;quot;
+   balancer_id   = &amp;quot;lb-123&amp;quot;
+   target_set_id = &amp;quot;ts-123&amp;quot;
+   auto_weight   = &amp;quot;true&amp;quot;
+   az_awareness = &amp;quot;true&amp;quot;
+ }
+</code></pre>
+<p>&lt;a id=&quot;route53&quot;&gt;&lt;/a&gt;</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/managed_instance_aws.html.markdown">https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/managed_instance_aws.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.SpotInst.Aws.ManagedInstanceArgs.html">ManagedInstanceArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.SpotInst.Aws.ManagedInstanceState.html">ManagedInstanceState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.SpotInst.Aws.MrScalar.html">MrScalar</a></h4>
+      <section><p>Provides a Spotinst AWS MrScaler resource.</p>
+<h2 id="provisioning-timeout-clone-new-strategies">Provisioning Timeout (Clone, New strategies)</h2>
+<ul>
+<li><code>timeout</code> - (Optional) The amount of time (minutes) after which the cluster is automatically terminated if it's still in provisioning status. Minimum: '15'.</li>
+<li><code>timeout_action</code> - (Optional) The action to take if the timeout is exceeded. Valid values: <code>terminate</code>, <code>terminateAndRetry</code>.</li>
+</ul>
+<p>&lt;a id=&quot;cluster-config&quot;&gt;&lt;/a&gt;</p>
+<h2 id="cluster-configuration-new-strategy-only">Cluster Configuration (New strategy only)</h2>
+<ul>
+<li><code>log_uri</code> - (Optional) The path to the Amazon S3 location where logs for this cluster are stored.</li>
+<li><code>additional_info</code> - (Optional) This is meta information about third-party applications that third-party vendors use for testing purposes.</li>
+<li><code>security_config</code> - (Optional) The name of the security configuration applied to the cluster.</li>
+<li><code>service_role</code> - (Optional) The IAM role that will be assumed by the Amazon EMR service to access AWS resources on your behalf.</li>
+<li><code>job_flow_role</code> - (Optional) The IAM role that was specified when the job flow was launched. The EC2 instances of the job flow assume this role.</li>
+<li><code>termination_protected</code> - (Optional) Specifies whether the Amazon EC2 instances in the cluster are protected from termination by API calls, user intervention, or in the event of a job-flow error.</li>
+<li><code>keep_job_flow_alive</code> - (Optional) Specifies whether the cluster should remain available after completing all steps.</li>
+</ul>
+<p>&lt;a id=&quot;task-group&quot;&gt;&lt;/a&gt;</p>
+<h2 id="task-group-wrap-clone-and-new-strategies">Task Group (Wrap, Clone, and New strategies)</h2>
+<ul>
+<li><code>task_instance_types</code> - (Required) The MrScaler instance types for the task nodes.</li>
+<li><code>task_target</code> - (Required) amount of instances in task group.</li>
+<li><code>task_maximum</code> - (Optional) maximal amount of instances in task group.</li>
+<li><code>task_minimum</code> - (Optional) The minimal amount of instances in task group.</li>
+<li><code>task_lifecycle</code> - (Required) The MrScaler lifecycle for instances in task group. Allowed values are 'SPOT' and 'ON_DEMAND'.</li>
+<li><code>task_ebs_optimized</code> - (Optional) EBS Optimization setting for instances in group.</li>
+<li><code>task_ebs_block_device</code> - (Required) This determines the ebs configuration for your task group instances. Only a single block is allowed.</li>
+<li><code>volumes_per_instance</code> - (Optional; Default 1) Amount of volumes per instance in the task group.</li>
+<li><code>volume_type</code> - (Required) volume type. Allowed values are 'gp2', 'io1' and others.</li>
+<li><code>size_in_gb</code> - (Required) Size of the volume, in GBs.</li>
+<li><code>iops</code> - (Optional) IOPS for the volume. Required in some volume types, such as io1.</li>
+</ul>
+<p>&lt;a id=&quot;core-group&quot;&gt;&lt;/a&gt;</p>
+<h2 id="core-group-clone-new-strategies">Core Group (Clone, New strategies)</h2>
+<ul>
+<li><code>core_instance_types</code> - (Required) The MrScaler instance types for the core nodes.</li>
+<li><code>core_target</code> - (Required) amount of instances in core group.</li>
+<li><code>core_maximum</code> - (Optional) maximal amount of instances in core group.</li>
+<li><code>core_minimum</code> - (Optional) The minimal amount of instances in core group.</li>
+<li><code>core_lifecycle</code> - (Required) The MrScaler lifecycle for instances in core group. Allowed values are 'SPOT' and 'ON_DEMAND'.</li>
+<li><code>core_ebs_optimized</code> - (Optional) EBS Optimization setting for instances in group.</li>
+<li><code>core_ebs_block_device</code> - (Required) This determines the ebs configuration for your core group instances. Only a single block is allowed.</li>
+<li><code>volumes_per_instance</code> - (Optional; Default 1) Amount of volumes per instance in the core group.</li>
+<li><code>volume_type</code> - (Required) volume type. Allowed values are 'gp2', 'io1' and others.</li>
+<li><code>size_in_gb</code> - (Required) Size of the volume, in GBs.</li>
+<li><code>iops</code> - (Optional) IOPS for the volume. Required in some volume types, such as io1.</li>
+</ul>
+<p>&lt;a id=&quot;master-group&quot;&gt;&lt;/a&gt;</p>
+<h2 id="master-group-clone-new-strategies">Master Group (Clone, New strategies)</h2>
+<ul>
+<li><code>master_instance_types</code> - (Required) The MrScaler instance types for the master nodes.</li>
+<li><code>master_lifecycle</code> - (Required) The MrScaler lifecycle for instances in master group. Allowed values are 'SPOT' and 'ON_DEMAND'.</li>
+<li><code>master_ebs_optimized</code> - (Optional) EBS Optimization setting for instances in group.</li>
+<li><code>master_ebs_block_device</code> - (Required) This determines the ebs configuration for your master group instances. Only a single block is allowed.</li>
+<li><code>volumes_per_instance</code> - (Optional; Default 1) Amount of volumes per instance in the master group.</li>
+<li><code>volume_type</code> - (Required) volume type. Allowed values are 'gp2', 'io1' and others.</li>
+<li><code>size_in_gb</code> - (Required) Size of the volume, in GBs.</li>
+<li><code>iops</code> - (Optional) IOPS for the volume. Required in some volume types, such as io1.</li>
+</ul>
+<p>&lt;a id=&quot;tags&quot;&gt;&lt;/a&gt;</p>
+<h2 id="tags-clone-new-strategies">Tags (Clone, New strategies)</h2>
+<ul>
+<li><code>tags</code> - (Optional) A list of tags to assign to the resource. You may define multiple tags.</li>
+<li><code>key</code> - (Required) Tag key.</li>
+<li><code>value</code> - (Required) Tag value.</li>
+</ul>
+<p>&lt;a id=&quot;Optional Compute Parameters&quot;&gt;&lt;/a&gt;</p>
+<h2 id="optional-compute-parameters-new-strategy">Optional Compute Parameters (New strategy)</h2>
+<ul>
+<li><code>managed_primary_security_group</code> - (Optional) EMR Managed Security group that will be set to the primary instance group.</li>
+<li><code>managed_replica_security_group</code> - (Optional) EMR Managed Security group that will be set to the replica instance group.</li>
+<li><code>service_access_security_group</code> - (Optional) The identifier of the Amazon EC2 security group for the Amazon EMR service to access clusters in VPC private subnets.</li>
+<li><code>additional_primary_security_groups</code> - (Optional) A list of additional Amazon EC2 security group IDs for the master node.</li>
+<li><code>additional_replica_security_groups</code> - (Optional) A list of additional Amazon EC2 security group IDs for the core and task nodes.</li>
+<li><code>custom_ami_id</code> - (Optional) The ID of a custom Amazon EBS-backed Linux AMI if the cluster uses a custom AMI.</li>
+<li><code>repo_upgrade_on_boot</code> - (Optional) Applies only when <code>custom_ami_id</code> is used. Specifies the type of updates that are applied from the Amazon Linux AMI package repositories when an instance boots using the AMI. Possible values include: <code>SECURITY</code>, <code>NONE</code>.</li>
+<li><code>ec2_key_name</code> - (Optional) The name of an Amazon EC2 key pair that can be used to ssh to the master node.</li>
+<li><code>applications</code> - (Optional) A case-insensitive list of applications for Amazon EMR to install and configure when launching the cluster</li>
+<li><code>args</code> - (Optional) Arguments for EMR to pass to the application.</li>
+<li><code>name</code> - (Required) The application name.</li>
+<li><code>version</code>- (Optional)T he version of the application.</li>
+<li><code>instance_weights</code> - (Optional) Describes the instance and weights. Check out <a href="https://api.spotinst.com/elastigroup-for-aws/concepts/general-concepts/elastigroup-capacity-instances-or-weighted">Elastigroup Weighted Instances</a> for more info.</li>
+<li><code>instance_type</code> - (Required) The type of the instance.</li>
+<li><code>weighted_capacity</code> - (Required) The weight given to the associated instance type.</li>
+</ul>
+<p>&lt;a id=&quot;availability-zone&quot;&gt;&lt;/a&gt;</p>
+<h2 id="availability-zones-clone-new-strategies">Availability Zones (Clone, New strategies)</h2>
+<ul>
+<li><code>availability_zones</code> - (Required in Clone) List of AZs and their subnet Ids. See example above for usage.</li>
+</ul>
+<p>&lt;a id=&quot;configurations&quot;&gt;&lt;/a&gt;</p>
+<h2 id="configurations-clone-new-strategies">Configurations (Clone, New strategies)</h2>
+<ul>
+<li><code>configurations_file</code> - (Optional) Describes path to S3 file containing description of configurations. <a href="https://api.spotinst.com/elastigroup-for-aws/services-integrations/elastic-mapreduce/import-an-emr-cluster/advanced/">More Information</a></li>
+<li><code>bucket</code> - (Required) S3 Bucket name for configurations.</li>
+<li><code>key</code>- (Required) S3 key for configurations.</li>
+</ul>
+<p>&lt;a id=&quot;steps&quot;&gt;&lt;/a&gt;</p>
+<h2 id="steps-clone-new-strategies">Steps (Clone, New strategies)</h2>
+<ul>
+<li><code>steps_file</code> - (Optional) Steps from S3.</li>
+<li><code>bucket</code> - (Required) S3 Bucket name for steps.</li>
+<li><code>key</code>- (Required) S3 key for steps.</li>
+</ul>
+<p>&lt;a id=&quot;boostrap-actions&quot;&gt;&lt;/a&gt;</p>
+<h2 id="bootstrap-actions-clone-new-strategies">Bootstrap Actions (Clone, New strategies)</h2>
+<ul>
+<li><code>bootstrap_actions_file</code> - (Optional) Describes path to S3 file containing description of bootstrap actions. <a href="https://api.spotinst.com/elastigroup-for-aws/services-integrations/elastic-mapreduce/import-an-emr-cluster/advanced/">More Information</a></li>
+<li><code>bucket</code> - (Required) S3 Bucket name for bootstrap actions.</li>
+<li><code>key</code>- (Required) S3 key for bootstrap actions.</li>
+</ul>
+<p>&lt;a id=&quot;scaling-policy&quot;&gt;&lt;/a&gt;</p>
+<h2 id="scaling-policies">Scaling Policies</h2>
+<p>Possible task group scaling policies (Wrap, Clone, and New strategies):</p>
+<ul>
+<li><code>task_scaling_up_policy</code></li>
+<li><code>task_scaling_down_policy</code></li>
+</ul>
+<p>Possible core group scaling policies (Clone, New strategies):</p>
+<ul>
+<li><code>core_scaling_up_policy</code></li>
+<li><code>core_scaling_down_policy</code></li>
+</ul>
+<p>Each <code>*_scaling_*_policy</code> supports the following:</p>
+<ul>
+<li><code>policy_name</code> - (Required) The name of the policy.</li>
+<li><code>metric_name</code> - (Required) The name of the metric, with or without spaces.</li>
+<li><code>statistic</code> - (Required) The metric statistics to return. For information about specific statistics go to <a href="http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/index.html?CHAP_TerminologyandKeyConcepts.html#Statistic">Statistics</a> in the Amazon CloudWatch Developer Guide.</li>
+<li><code>unit</code> - (Required) The unit for the metric.</li>
+<li><code>threshold</code> - (Required) The value against which the specified statistic is compared.</li>
+<li><code>adjustment</code> - (Optional) The number of instances to add/remove to/from the target capacity when scale is needed.</li>
+<li><code>min_target_capacity</code> - (Optional) Min target capacity for scale up.</li>
+<li><code>max_target_capacity</code> - (Optional) Max target capacity for scale down.</li>
+<li><code>namespace</code> - (Required) The namespace for the metric.</li>
+<li><code>operator</code> - (Required) The operator to use. Allowed values are : 'gt', 'gte', 'lt' , 'lte'.</li>
+<li><code>evaluation_periods</code> - (Required) The number of periods over which data is compared to the specified threshold.</li>
+<li><code>period</code> - (Required) The granularity, in seconds, of the returned datapoints. Period must be at least 60 seconds and must be a multiple of 60.</li>
+<li><code>cooldown</code> - (Required) The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start.</li>
+<li><code>dimensions</code> - (Optional) A mapping of dimensions describing qualities of the metric.</li>
+<li><code>minimum</code> - (Optional) The minimum to set when scale is needed.</li>
+<li><code>maximum</code> - (Optional) The maximum to set when scale is needed.</li>
+<li><code>target</code> - (Optional) The number of instances to set when scale is needed.</li>
+<li><code>action_type</code> - (Required) The type of action to perform. Allowed values are : 'adjustment', 'setMinTarget', 'setMaxTarget', 'updateCapacity', 'percentageAdjustment'</li>
+</ul>
+<p>&lt;a id=&quot;scheduled-task&quot;&gt;&lt;/a&gt;</p>
+<h2 id="scheduled-tasks">Scheduled Tasks</h2>
+<ul>
+<li><code>scheduled_task</code> - (Optional) An array of scheduled tasks.</li>
+<li><code>is_enabled</code> - (Optional) Enable/Disable the specified scheduling task.</li>
+<li><code>task_type</code> - (Required) The type of task to be scheduled. Valid values: <code>setCapacity</code>.</li>
+<li><code>instance_group_type</code> - (Required) Select the EMR instance groups to execute the scheduled task on. Valid values: <code>task</code>.</li>
+<li><code>cron</code> - (Required) A cron expression representing the schedule for the task.</li>
+<li><code>desired_capacity</code> - (Optional) New desired capacity for the elastigroup.</li>
+<li><code>min_capacity</code> - (Optional) New min capacity for the elastigroup.</li>
+<li><code>max_capacity</code> - (Optional) New max capacity for the elastigroup.</li>
+</ul>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/mrscaler_aws.html.markdown">https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/mrscaler_aws.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.SpotInst.Aws.MrScalarArgs.html">MrScalarArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.SpotInst.Aws.MrScalarState.html">MrScalarState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.SpotInst.Aws.Ocean.html">Ocean</a></h4>
+      <section><p>Provides a Spotinst Ocean AWS resource.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/ocean_aws.html.markdown">https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/ocean_aws.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.SpotInst.Aws.OceanArgs.html">OceanArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.SpotInst.Aws.OceanLaunchSpec.html">OceanLaunchSpec</a></h4>
+      <section><p>Provides a custom Spotinst Ocean AWS Launch Spec resource.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/ocean_aws_launch_spec.html.markdown">https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/ocean_aws_launch_spec.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.SpotInst.Aws.OceanLaunchSpecArgs.html">OceanLaunchSpecArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.SpotInst.Aws.OceanLaunchSpecState.html">OceanLaunchSpecState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.SpotInst.Aws.OceanState.html">OceanState</a></h4>
+      <section></section>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

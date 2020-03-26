@@ -1,0 +1,776 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class DomainName
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class DomainName
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Aws.ApiGateway.DomainName">
+  
+  <h1 id="Pulumi_Aws_ApiGateway_DomainName" data-uid="Pulumi.Aws.ApiGateway.DomainName" class="text-break">Class DomainName
+  </h1>
+  <div class="markdown level0 summary"><p>Registers a custom domain name for use with AWS API Gateway. Additional information about this functionality
+can be found in the <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-custom-domains.html">API Gateway Developer Guide</a>.</p>
+<p>This resource just establishes ownership of and the TLS settings for
+a particular domain name. An API can be attached to a particular path
+under the registered domain name using
+the <code>aws.apigateway.BasePathMapping</code> resource.</p>
+<p>API Gateway domains can be defined as either 'edge-optimized' or 'regional'.  In an edge-optimized configuration,
+API Gateway internally creates and manages a CloudFront distribution to route requests on the given hostname. In
+addition to this resource it's necessary to create a DNS record corresponding to the given domain name which is an alias
+(either Route53 alias or traditional CNAME) to the Cloudfront domain name exported in the <code>cloudfront_domain_name</code>
+attribute.</p>
+<p>In a regional configuration, API Gateway does not create a CloudFront distribution to route requests to the API, though
+a distribution can be created if needed. In either case, it is necessary to create a DNS record corresponding to the
+given domain name which is an alias (either Route53 alias or traditional CNAME) to the regional domain name exported in
+the <code>regional_domain_name</code> attribute.</p>
+<blockquote>
+<p><strong>Note:</strong> API Gateway requires the use of AWS Certificate Manager (ACM) certificates instead of Identity and Access Management (IAM) certificates in regions that support ACM. Regions that support ACM can be found in the <a href="https://docs.aws.amazon.com/general/latest/gr/rande.html#acm_region">Regions and Endpoints Documentation</a>. To import an existing private key and certificate into ACM or request an ACM certificate, see the <a href="https://www.terraform.io/docs/providers/aws/r/acm_certificate.html"><code>aws.acm.Certificate</code> resource</a>.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> The <code>aws.apigateway.DomainName</code> resource expects dependency on the <code>aws.acm.CertificateValidation</code> as
+only verified certificates can be used. This can be made either explicitly by adding the
+<code>depends_on = [aws_acm_certificate_validation.cert]</code> attribute. Or implicitly by referring certificate ARN
+from the validation resource where it will be available after the resource creation:
+<code>regional_certificate_arn = aws_acm_certificate_validation.cert.certificate_arn</code>.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> All arguments including the private key will be stored in the raw state as plain-text.
+<a href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_domain_name.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_domain_name.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">DomainName</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.ApiGateway.html">Pulumi.Aws.ApiGateway</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
+  <h5 id="Pulumi_Aws_ApiGateway_DomainName_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class DomainName : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Apigateway/DomainName.cs/#L168">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_ApiGateway_DomainName__ctor_" data-uid="Pulumi.Aws.ApiGateway.DomainName.#ctor*"></a>
+  <h4 id="Pulumi_Aws_ApiGateway_DomainName__ctor_System_String_Pulumi_Aws_ApiGateway_DomainNameArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.ApiGateway.DomainName.#ctor(System.String,Pulumi.Aws.ApiGateway.DomainNameArgs,Pulumi.CustomResourceOptions)">DomainName(String, DomainNameArgs, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Create a DomainName resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DomainName(string name, DomainNameArgs args, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Aws.ApiGateway.DomainNameArgs.html">DomainNameArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Apigateway/DomainName.cs/#L50">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_ApiGateway_DomainName_Arn_" data-uid="Pulumi.Aws.ApiGateway.DomainName.Arn*"></a>
+  <h4 id="Pulumi_Aws_ApiGateway_DomainName_Arn" data-uid="Pulumi.Aws.ApiGateway.DomainName.Arn">Arn</h4>
+  <div class="markdown level1 summary"><p>Amazon Resource Name (ARN)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Arn { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Apigateway/DomainName.cs/#L56">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_ApiGateway_DomainName_CertificateArn_" data-uid="Pulumi.Aws.ApiGateway.DomainName.CertificateArn*"></a>
+  <h4 id="Pulumi_Aws_ApiGateway_DomainName_CertificateArn" data-uid="Pulumi.Aws.ApiGateway.DomainName.CertificateArn">CertificateArn</h4>
+  <div class="markdown level1 summary"><p>The ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when an edge-optimized domain name is desired. Conflicts with <code>certificate_name</code>, <code>certificate_body</code>, <code>certificate_chain</code>, <code>certificate_private_key</code>, <code>regional_certificate_arn</code>, and <code>regional_certificate_name</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; CertificateArn { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Apigateway/DomainName.cs/#L64">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_ApiGateway_DomainName_CertificateBody_" data-uid="Pulumi.Aws.ApiGateway.DomainName.CertificateBody*"></a>
+  <h4 id="Pulumi_Aws_ApiGateway_DomainName_CertificateBody" data-uid="Pulumi.Aws.ApiGateway.DomainName.CertificateBody">CertificateBody</h4>
+  <div class="markdown level1 summary"><p>The certificate issued for the domain name
+being registered, in PEM format. Only valid for <code>EDGE</code> endpoint configuration type. Conflicts with <code>certificate_arn</code>, <code>regional_certificate_arn</code>, and
+<code>regional_certificate_name</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; CertificateBody { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Apigateway/DomainName.cs/#L73">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_ApiGateway_DomainName_CertificateChain_" data-uid="Pulumi.Aws.ApiGateway.DomainName.CertificateChain*"></a>
+  <h4 id="Pulumi_Aws_ApiGateway_DomainName_CertificateChain" data-uid="Pulumi.Aws.ApiGateway.DomainName.CertificateChain">CertificateChain</h4>
+  <div class="markdown level1 summary"><p>The certificate for the CA that issued the
+certificate, along with any intermediate CA certificates required to
+create an unbroken chain to a certificate trusted by the intended API clients. Only valid for <code>EDGE</code> endpoint configuration type. Conflicts with <code>certificate_arn</code>,
+<code>regional_certificate_arn</code>, and <code>regional_certificate_name</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; CertificateChain { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Apigateway/DomainName.cs/#L81">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_ApiGateway_DomainName_CertificateName_" data-uid="Pulumi.Aws.ApiGateway.DomainName.CertificateName*"></a>
+  <h4 id="Pulumi_Aws_ApiGateway_DomainName_CertificateName" data-uid="Pulumi.Aws.ApiGateway.DomainName.CertificateName">CertificateName</h4>
+  <div class="markdown level1 summary"><p>The unique name to use when registering this
+certificate as an IAM server certificate. Conflicts with <code>certificate_arn</code>, <code>regional_certificate_arn</code>, and
+<code>regional_certificate_name</code>. Required if <code>certificate_arn</code> is not set.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; CertificateName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Apigateway/DomainName.cs/#L88">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_ApiGateway_DomainName_CertificatePrivateKey_" data-uid="Pulumi.Aws.ApiGateway.DomainName.CertificatePrivateKey*"></a>
+  <h4 id="Pulumi_Aws_ApiGateway_DomainName_CertificatePrivateKey" data-uid="Pulumi.Aws.ApiGateway.DomainName.CertificatePrivateKey">CertificatePrivateKey</h4>
+  <div class="markdown level1 summary"><p>The private key associated with the
+domain certificate given in <code>certificate_body</code>. Only valid for <code>EDGE</code> endpoint configuration type. Conflicts with <code>certificate_arn</code>, <code>regional_certificate_arn</code>, and <code>regional_certificate_name</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; CertificatePrivateKey { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Apigateway/DomainName.cs/#L94">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_ApiGateway_DomainName_CertificateUploadDate_" data-uid="Pulumi.Aws.ApiGateway.DomainName.CertificateUploadDate*"></a>
+  <h4 id="Pulumi_Aws_ApiGateway_DomainName_CertificateUploadDate" data-uid="Pulumi.Aws.ApiGateway.DomainName.CertificateUploadDate">CertificateUploadDate</h4>
+  <div class="markdown level1 summary"><p>The upload date associated with the domain certificate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; CertificateUploadDate { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Apigateway/DomainName.cs/#L101">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_ApiGateway_DomainName_CloudfrontDomainName_" data-uid="Pulumi.Aws.ApiGateway.DomainName.CloudfrontDomainName*"></a>
+  <h4 id="Pulumi_Aws_ApiGateway_DomainName_CloudfrontDomainName" data-uid="Pulumi.Aws.ApiGateway.DomainName.CloudfrontDomainName">CloudfrontDomainName</h4>
+  <div class="markdown level1 summary"><p>The hostname created by Cloudfront to represent
+the distribution that implements this domain name mapping.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; CloudfrontDomainName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Apigateway/DomainName.cs/#L108">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_ApiGateway_DomainName_CloudfrontZoneId_" data-uid="Pulumi.Aws.ApiGateway.DomainName.CloudfrontZoneId*"></a>
+  <h4 id="Pulumi_Aws_ApiGateway_DomainName_CloudfrontZoneId" data-uid="Pulumi.Aws.ApiGateway.DomainName.CloudfrontZoneId">CloudfrontZoneId</h4>
+  <div class="markdown level1 summary"><p>For convenience, the hosted zone ID (<code>Z2FDTNDATAQYW2</code>)
+that can be used to create a Route53 alias record for the distribution.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; CloudfrontZoneId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Apigateway/DomainName.cs/#L114">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_ApiGateway_DomainName_Domain_" data-uid="Pulumi.Aws.ApiGateway.DomainName.Domain*"></a>
+  <h4 id="Pulumi_Aws_ApiGateway_DomainName_Domain" data-uid="Pulumi.Aws.ApiGateway.DomainName.Domain">Domain</h4>
+  <div class="markdown level1 summary"><p>The fully-qualified domain name to register</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Domain { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Apigateway/DomainName.cs/#L120">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_ApiGateway_DomainName_EndpointConfiguration_" data-uid="Pulumi.Aws.ApiGateway.DomainName.EndpointConfiguration*"></a>
+  <h4 id="Pulumi_Aws_ApiGateway_DomainName_EndpointConfiguration" data-uid="Pulumi.Aws.ApiGateway.DomainName.EndpointConfiguration">EndpointConfiguration</h4>
+  <div class="markdown level1 summary"><p>Configuration block defining API endpoint information including type. Defined below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;DomainNameEndpointConfiguration&gt; EndpointConfiguration { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.ApiGateway.Outputs.DomainNameEndpointConfiguration.html">DomainNameEndpointConfiguration</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Apigateway/DomainName.cs/#L126">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_ApiGateway_DomainName_RegionalCertificateArn_" data-uid="Pulumi.Aws.ApiGateway.DomainName.RegionalCertificateArn*"></a>
+  <h4 id="Pulumi_Aws_ApiGateway_DomainName_RegionalCertificateArn" data-uid="Pulumi.Aws.ApiGateway.DomainName.RegionalCertificateArn">RegionalCertificateArn</h4>
+  <div class="markdown level1 summary"><p>The ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when a regional domain name is desired. Conflicts with <code>certificate_arn</code>, <code>certificate_name</code>, <code>certificate_body</code>, <code>certificate_chain</code>, and <code>certificate_private_key</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; RegionalCertificateArn { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Apigateway/DomainName.cs/#L133">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_ApiGateway_DomainName_RegionalCertificateName_" data-uid="Pulumi.Aws.ApiGateway.DomainName.RegionalCertificateName*"></a>
+  <h4 id="Pulumi_Aws_ApiGateway_DomainName_RegionalCertificateName" data-uid="Pulumi.Aws.ApiGateway.DomainName.RegionalCertificateName">RegionalCertificateName</h4>
+  <div class="markdown level1 summary"><p>The user-friendly name of the certificate that will be used by regional endpoint for this domain name. Conflicts with <code>certificate_arn</code>, <code>certificate_name</code>, <code>certificate_body</code>, <code>certificate_chain</code>, and
+<code>certificate_private_key</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; RegionalCertificateName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Apigateway/DomainName.cs/#L139">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_ApiGateway_DomainName_RegionalDomainName_" data-uid="Pulumi.Aws.ApiGateway.DomainName.RegionalDomainName*"></a>
+  <h4 id="Pulumi_Aws_ApiGateway_DomainName_RegionalDomainName" data-uid="Pulumi.Aws.ApiGateway.DomainName.RegionalDomainName">RegionalDomainName</h4>
+  <div class="markdown level1 summary"><p>The hostname for the custom domain's regional endpoint.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; RegionalDomainName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Apigateway/DomainName.cs/#L145">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_ApiGateway_DomainName_RegionalZoneId_" data-uid="Pulumi.Aws.ApiGateway.DomainName.RegionalZoneId*"></a>
+  <h4 id="Pulumi_Aws_ApiGateway_DomainName_RegionalZoneId" data-uid="Pulumi.Aws.ApiGateway.DomainName.RegionalZoneId">RegionalZoneId</h4>
+  <div class="markdown level1 summary"><p>The hosted zone ID that can be used to create a Route53 alias record for the regional endpoint.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; RegionalZoneId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Apigateway/DomainName.cs/#L151">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_ApiGateway_DomainName_SecurityPolicy_" data-uid="Pulumi.Aws.ApiGateway.DomainName.SecurityPolicy*"></a>
+  <h4 id="Pulumi_Aws_ApiGateway_DomainName_SecurityPolicy" data-uid="Pulumi.Aws.ApiGateway.DomainName.SecurityPolicy">SecurityPolicy</h4>
+  <div class="markdown level1 summary"><p>The Transport Layer Security (TLS) version + cipher suite for this DomainName. The valid values are <code>TLS_1_0</code> and <code>TLS_1_2</code>. Must be configured to perform drift detection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SecurityPolicy { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Apigateway/DomainName.cs/#L157">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_ApiGateway_DomainName_Tags_" data-uid="Pulumi.Aws.ApiGateway.DomainName.Tags*"></a>
+  <h4 id="Pulumi_Aws_ApiGateway_DomainName_Tags" data-uid="Pulumi.Aws.ApiGateway.DomainName.Tags">Tags</h4>
+  <div class="markdown level1 summary"><p>Key-value mapping of resource tags</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Tags { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Apigateway/DomainName.cs/#L198">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_ApiGateway_DomainName_Get_" data-uid="Pulumi.Aws.ApiGateway.DomainName.Get*"></a>
+  <h4 id="Pulumi_Aws_ApiGateway_DomainName_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_ApiGateway_DomainNameState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.ApiGateway.DomainName.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.ApiGateway.DomainNameState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, DomainNameState, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Get an existing DomainName resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static DomainName Get(string name, Input&lt;string&gt; id, DomainNameState state = null, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Aws.ApiGateway.DomainNameState.html">DomainNameState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Aws.ApiGateway.DomainName.html">DomainName</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Apigateway/DomainName.cs/#L45" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

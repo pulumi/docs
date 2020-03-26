@@ -1,0 +1,575 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class QosPolicy
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class QosPolicy
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.OpenStack.Networking.QosPolicy">
+  
+  <h1 id="Pulumi_OpenStack_Networking_QosPolicy" data-uid="Pulumi.OpenStack.Networking.QosPolicy" class="text-break">Class QosPolicy
+  </h1>
+  <div class="markdown level0 summary"><p>Manages a V2 Neutron QoS policy resource within OpenStack.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_qos_policy_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_qos_policy_v2.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">QosPolicy</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.OpenStack.Networking.html">Pulumi.OpenStack.Networking</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.OpenStack.dll</h6>
+  <h5 id="Pulumi_OpenStack_Networking_QosPolicy_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class QosPolicy : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/QosPolicy.cs/#L109">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Networking_QosPolicy__ctor_" data-uid="Pulumi.OpenStack.Networking.QosPolicy.#ctor*"></a>
+  <h4 id="Pulumi_OpenStack_Networking_QosPolicy__ctor_System_String_Pulumi_OpenStack_Networking_QosPolicyArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.OpenStack.Networking.QosPolicy.#ctor(System.String,Pulumi.OpenStack.Networking.QosPolicyArgs,System.Nullable{CustomResourceOptions})">QosPolicy(String, QosPolicyArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Create a QosPolicy resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public QosPolicy(string name, QosPolicyArgs args = null, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.OpenStack.Networking.QosPolicyArgs.html">QosPolicyArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/QosPolicy.cs/#L22">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Networking_QosPolicy_AllTags_" data-uid="Pulumi.OpenStack.Networking.QosPolicy.AllTags*"></a>
+  <h4 id="Pulumi_OpenStack_Networking_QosPolicy_AllTags" data-uid="Pulumi.OpenStack.Networking.QosPolicy.AllTags">AllTags</h4>
+  <div class="markdown level1 summary"><p>The collection of tags assigned on the QoS policy, which have been
+explicitly and implicitly added.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; AllTags { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/QosPolicy.cs/#L28">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Networking_QosPolicy_CreatedAt_" data-uid="Pulumi.OpenStack.Networking.QosPolicy.CreatedAt*"></a>
+  <h4 id="Pulumi_OpenStack_Networking_QosPolicy_CreatedAt" data-uid="Pulumi.OpenStack.Networking.QosPolicy.CreatedAt">CreatedAt</h4>
+  <div class="markdown level1 summary"><p>The time at which QoS policy was created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; CreatedAt { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/QosPolicy.cs/#L35">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Networking_QosPolicy_Description_" data-uid="Pulumi.OpenStack.Networking.QosPolicy.Description*"></a>
+  <h4 id="Pulumi_OpenStack_Networking_QosPolicy_Description" data-uid="Pulumi.OpenStack.Networking.QosPolicy.Description">Description</h4>
+  <div class="markdown level1 summary"><p>The human-readable description for the QoS policy.
+Changing this updates the description of the existing QoS policy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/QosPolicy.cs/#L43">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Networking_QosPolicy_IsDefault_" data-uid="Pulumi.OpenStack.Networking.QosPolicy.IsDefault*"></a>
+  <h4 id="Pulumi_OpenStack_Networking_QosPolicy_IsDefault" data-uid="Pulumi.OpenStack.Networking.QosPolicy.IsDefault">IsDefault</h4>
+  <div class="markdown level1 summary"><p>Indicates whether the QoS policy is default
+QoS policy or not. Changing this updates the default status of the existing
+QoS policy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; IsDefault { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/QosPolicy.cs/#L50">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Networking_QosPolicy_Name_" data-uid="Pulumi.OpenStack.Networking.QosPolicy.Name*"></a>
+  <h4 id="Pulumi_OpenStack_Networking_QosPolicy_Name" data-uid="Pulumi.OpenStack.Networking.QosPolicy.Name">Name</h4>
+  <div class="markdown level1 summary"><p>The name of the QoS policy. Changing this updates the name of
+the existing QoS policy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/QosPolicy.cs/#L57">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Networking_QosPolicy_ProjectId_" data-uid="Pulumi.OpenStack.Networking.QosPolicy.ProjectId*"></a>
+  <h4 id="Pulumi_OpenStack_Networking_QosPolicy_ProjectId" data-uid="Pulumi.OpenStack.Networking.QosPolicy.ProjectId">ProjectId</h4>
+  <div class="markdown level1 summary"><p>The owner of the QoS policy. Required if admin wants to
+create a QoS policy for another project. Changing this creates a new QoS policy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ProjectId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/QosPolicy.cs/#L66">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Networking_QosPolicy_Region_" data-uid="Pulumi.OpenStack.Networking.QosPolicy.Region*"></a>
+  <h4 id="Pulumi_OpenStack_Networking_QosPolicy_Region" data-uid="Pulumi.OpenStack.Networking.QosPolicy.Region">Region</h4>
+  <div class="markdown level1 summary"><p>The region in which to obtain the V2 Networking client.
+A Networking client is needed to create a Neutron Qos policy. If omitted, the
+<code>region</code> argument of the provider is used. Changing this creates a new
+QoS policy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Region { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/QosPolicy.cs/#L72">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Networking_QosPolicy_RevisionNumber_" data-uid="Pulumi.OpenStack.Networking.QosPolicy.RevisionNumber*"></a>
+  <h4 id="Pulumi_OpenStack_Networking_QosPolicy_RevisionNumber" data-uid="Pulumi.OpenStack.Networking.QosPolicy.RevisionNumber">RevisionNumber</h4>
+  <div class="markdown level1 summary"><p>The revision number of the QoS policy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; RevisionNumber { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/QosPolicy.cs/#L80">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Networking_QosPolicy_Shared_" data-uid="Pulumi.OpenStack.Networking.QosPolicy.Shared*"></a>
+  <h4 id="Pulumi_OpenStack_Networking_QosPolicy_Shared" data-uid="Pulumi.OpenStack.Networking.QosPolicy.Shared">Shared</h4>
+  <div class="markdown level1 summary"><p>Indicates whether this QoS policy is shared across
+all projects. Changing this updates the shared status of the existing
+QoS policy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; Shared { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/QosPolicy.cs/#L86">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Networking_QosPolicy_Tags_" data-uid="Pulumi.OpenStack.Networking.QosPolicy.Tags*"></a>
+  <h4 id="Pulumi_OpenStack_Networking_QosPolicy_Tags" data-uid="Pulumi.OpenStack.Networking.QosPolicy.Tags">Tags</h4>
+  <div class="markdown level1 summary"><p>A set of string tags for the QoS policy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; Tags { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/QosPolicy.cs/#L92">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Networking_QosPolicy_UpdatedAt_" data-uid="Pulumi.OpenStack.Networking.QosPolicy.UpdatedAt*"></a>
+  <h4 id="Pulumi_OpenStack_Networking_QosPolicy_UpdatedAt" data-uid="Pulumi.OpenStack.Networking.QosPolicy.UpdatedAt">UpdatedAt</h4>
+  <div class="markdown level1 summary"><p>The time at which QoS policy was created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; UpdatedAt { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/QosPolicy.cs/#L98">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Networking_QosPolicy_ValueSpecs_" data-uid="Pulumi.OpenStack.Networking.QosPolicy.ValueSpecs*"></a>
+  <h4 id="Pulumi_OpenStack_Networking_QosPolicy_ValueSpecs" data-uid="Pulumi.OpenStack.Networking.QosPolicy.ValueSpecs">ValueSpecs</h4>
+  <div class="markdown level1 summary"><p>Map of additional options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; ValueSpecs { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/QosPolicy.cs/#L139">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Networking_QosPolicy_Get_" data-uid="Pulumi.OpenStack.Networking.QosPolicy.Get*"></a>
+  <h4 id="Pulumi_OpenStack_Networking_QosPolicy_Get_System_String_Input_System_String__Pulumi_OpenStack_Networking_QosPolicyState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.OpenStack.Networking.QosPolicy.Get(System.String,Input{System.String},Pulumi.OpenStack.Networking.QosPolicyState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, QosPolicyState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Get an existing QosPolicy resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static QosPolicy Get(string name, Input&lt;string&gt; id, QosPolicyState state = null, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.OpenStack.Networking.QosPolicyState.html">QosPolicyState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.OpenStack.Networking.QosPolicy.html">QosPolicy</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/QosPolicy.cs/#L16" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

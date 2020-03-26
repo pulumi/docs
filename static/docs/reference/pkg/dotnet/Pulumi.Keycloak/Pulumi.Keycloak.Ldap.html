@@ -1,0 +1,299 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace Pulumi.Keycloak.Ldap
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace Pulumi.Keycloak.Ldap
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Keycloak.Ldap">
+  
+  <h1 id="Pulumi_Keycloak_Ldap" data-uid="Pulumi.Keycloak.Ldap" class="text-break">Namespace Pulumi.Keycloak.Ldap
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">Classes
+  </h3>
+      <h4><a class="xref" href="Pulumi.Keycloak.Ldap.FullNameMapper.html">FullNameMapper</a></h4>
+      <section><h2 id="-keycloakldapfullnamemapper"># keycloak.ldap.FullNameMapper</h2>
+<p>Allows for creating and managing full name mappers for Keycloak users federated
+via LDAP.</p>
+<p>The LDAP full name mapper can map a user's full name from an LDAP attribute
+to the first and last name attributes of a Keycloak user.</p>
+<h3 id="argument-reference">Argument Reference</h3>
+<p>The following arguments are supported:</p>
+<ul>
+<li><code>realm_id</code> - (Required) The realm that this LDAP mapper will exist in.</li>
+<li><code>ldap_user_federation_id</code> - (Required) The ID of the LDAP user federation provider to attach this mapper to.</li>
+<li><code>name</code> - (Required) Display name of this mapper when displayed in the console.</li>
+<li><code>ldap_full_name_attribute</code> - (Required) The name of the LDAP attribute containing the user's full name.</li>
+<li><code>read_only</code> - (Optional) When <code>true</code>, updates to a user within Keycloak will not be written back to LDAP. Defaults to <code>false</code>.</li>
+<li><code>write_only</code> - (Optional) When <code>true</code>, this mapper will only be used to write updates to LDAP. Defaults to <code>false</code>.</li>
+</ul>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/ldap_full_name_mapper.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/ldap_full_name_mapper.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Keycloak.Ldap.FullNameMapperArgs.html">FullNameMapperArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.Ldap.FullNameMapperState.html">FullNameMapperState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.Ldap.GroupMapper.html">GroupMapper</a></h4>
+      <section><h2 id="-keycloakldapgroupmapper"># keycloak.ldap.GroupMapper</h2>
+<p>Allows for creating and managing group mappers for Keycloak users federated
+via LDAP.</p>
+<p>The LDAP group mapper can be used to map an LDAP user's groups from some DN
+to Keycloak groups. This group mapper will also create the groups within Keycloak
+if they do not already exist.</p>
+<h3 id="argument-reference">Argument Reference</h3>
+<p>The following arguments are supported:</p>
+<ul>
+<li><code>realm_id</code> - (Required) The realm that this LDAP mapper will exist in.</li>
+<li><code>ldap_user_federation_id</code> - (Required) The ID of the LDAP user federation provider to attach this mapper to.</li>
+<li><code>name</code> - (Required) Display name of this mapper when displayed in the console.</li>
+<li><code>ldap_groups_dn</code> - (Required) The LDAP DN where groups can be found.</li>
+<li><code>group_name_ldap_attribute</code> - (Required) The name of the LDAP attribute that is used in group objects for the name and RDN of the group. Typically <code>cn</code>.</li>
+<li><code>group_object_classes</code> - (Required) Array of strings representing the object classes for the group. Must contain at least one.</li>
+<li><code>preserve_group_inheritance</code> - (Optional) When <code>true</code>, group inheritance will be propagated from LDAP to Keycloak. When <code>false</code>, all LDAP groups will be propagated as top level groups within Keycloak.</li>
+<li><code>ignore_missing_groups</code> - (Optional) When <code>true</code>, missing groups in the hierarchy will be ignored.</li>
+<li><code>membership_ldap_attribute</code> - (Required) The name of the LDAP attribute that is used for membership mappings.</li>
+<li><code>membership_attribute_type</code> - (Optional) Can be one of <code>DN</code> or <code>UID</code>. Defaults to <code>DN</code>.</li>
+<li><code>membership_user_ldap_attribute</code> - (Required) The name of the LDAP attribute on a user that is used for membership mappings.</li>
+<li><code>groups_ldap_filter</code> - (Optional) When specified, adds an additional custom filter to be used when querying for groups. Must start with <code>(</code> and end with <code>)</code>.</li>
+<li><code>mode</code> - (Optional) Can be one of <code>READ_ONLY</code> or <code>LDAP_ONLY</code>. Defaults to <code>READ_ONLY</code>.</li>
+<li><code>user_roles_retrieve_strategy</code> - (Optional) Can be one of <code>LOAD_GROUPS_BY_MEMBER_ATTRIBUTE</code>, <code>GET_GROUPS_FROM_USER_MEMBEROF_ATTRIBUTE</code>, or <code>LOAD_GROUPS_BY_MEMBER_ATTRIBUTE_RECURSIVELY</code>. Defaults to <code>LOAD_GROUPS_BY_MEMBER_ATTRIBUTE</code>.</li>
+<li><code>memberof_ldap_attribute</code> - (Optional) Specifies the name of the LDAP attribute on the LDAP user that contains the groups the user is a member of. Defaults to <code>memberOf</code>.</li>
+<li><code>mapped_group_attributes</code> - (Optional) Array of strings representing attributes on the LDAP group which will be mapped to attributes on the Keycloak group.</li>
+<li><code>drop_non_existing_groups_during_sync</code> - (Optional) When <code>true</code>, groups that no longer exist within LDAP will be dropped in Keycloak during sync. Defaults to <code>false</code>.</li>
+</ul>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/ldap_group_mapper.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/ldap_group_mapper.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Keycloak.Ldap.GroupMapperArgs.html">GroupMapperArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.Ldap.GroupMapperState.html">GroupMapperState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.Ldap.HardcodedRoleMapper.html">HardcodedRoleMapper</a></h4>
+      <section><h2 id="-keycloakldaphardcodedrolemapper"># keycloak.ldap.HardcodedRoleMapper</h2>
+<p>This mapper will grant a specified Keycloak role to each Keycloak user linked with LDAP.</p>
+<h3 id="argument-reference">Argument Reference</h3>
+<p>The following arguments are supported:</p>
+<ul>
+<li><code>realm_id</code> - (Required) The realm that this LDAP mapper will exist in.</li>
+<li><code>ldap_user_federation_id</code> - (Required) The ID of the LDAP user federation provider to attach this mapper to.</li>
+<li><code>name</code> - (Required) Display name of this mapper when displayed in the console.</li>
+<li><code>role</code> - (Required) The role which should be assigned to the users.</li>
+</ul>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/ldap_hardcoded_role_mapper.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/ldap_hardcoded_role_mapper.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Keycloak.Ldap.HardcodedRoleMapperArgs.html">HardcodedRoleMapperArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.Ldap.HardcodedRoleMapperState.html">HardcodedRoleMapperState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.Ldap.MsadLdsUserAccountControlMapper.html">MsadLdsUserAccountControlMapper</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.Ldap.MsadLdsUserAccountControlMapperArgs.html">MsadLdsUserAccountControlMapperArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.Ldap.MsadLdsUserAccountControlMapperState.html">MsadLdsUserAccountControlMapperState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.Ldap.MsadUserAccountControlMapper.html">MsadUserAccountControlMapper</a></h4>
+      <section><h2 id="-keycloakldapmsaduseraccountcontrolmapper"># keycloak.ldap.MsadUserAccountControlMapper</h2>
+<p>Allows for creating and managing MSAD user account control mappers for Keycloak
+users federated via LDAP.</p>
+<p>The MSAD (Microsoft Active Directory) user account control mapper is specific
+to LDAP user federation providers that are pulling from AD, and it can propagate
+AD user state to Keycloak in order to enforce settings like expired passwords
+or disabled accounts.</p>
+<h3 id="argument-reference">Argument Reference</h3>
+<p>The following arguments are supported:</p>
+<ul>
+<li><code>realm_id</code> - (Required) The realm that this LDAP mapper will exist in.</li>
+<li><code>ldap_user_federation_id</code> - (Required) The ID of the LDAP user federation provider to attach this mapper to.</li>
+<li><code>name</code> - (Required) Display name of this mapper when displayed in the console.</li>
+<li><code>ldap_password_policy_hints_enabled</code> - (Optional) When <code>true</code>, advanced password policies, such as password hints and previous password history will be used when writing new passwords to AD. Defaults to <code>false</code>.</li>
+</ul>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/ldap_msad_user_account_control_mapper.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/ldap_msad_user_account_control_mapper.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Keycloak.Ldap.MsadUserAccountControlMapperArgs.html">MsadUserAccountControlMapperArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.Ldap.MsadUserAccountControlMapperState.html">MsadUserAccountControlMapperState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.Ldap.UserAttributeMapper.html">UserAttributeMapper</a></h4>
+      <section><h2 id="-keycloakldapuserattributemapper"># keycloak.ldap.UserAttributeMapper</h2>
+<p>Allows for creating and managing user attribute mappers for Keycloak users
+federated via LDAP.</p>
+<p>The LDAP user attribute mapper can be used to map a single LDAP attribute
+to an attribute on the Keycloak user model.</p>
+<h3 id="argument-reference">Argument Reference</h3>
+<p>The following arguments are supported:</p>
+<ul>
+<li><code>realm_id</code> - (Required) The realm that this LDAP mapper will exist in.</li>
+<li><code>ldap_user_federation_id</code> - (Required) The ID of the LDAP user federation provider to attach this mapper to.</li>
+<li><code>name</code> - (Required) Display name of this mapper when displayed in the console.</li>
+<li><code>user_model_attribute</code> - (Required) Name of the user property or attribute you want to map the LDAP attribute into.</li>
+<li><code>ldap_attribute</code> - (Required) Name of the mapped attribute on the LDAP object.</li>
+<li><code>read_only</code> - (Optional) When <code>true</code>, this attribute is not saved back to LDAP when the user attribute is updated in Keycloak. Defaults to <code>false</code>.</li>
+<li><code>always_read_value_from_ldap</code> - (Optional) When <code>true</code>, the value fetched from LDAP will override the value stored in Keycloak. Defaults to <code>false</code>.</li>
+<li><code>is_mandatory_in_ldap</code> - (Optional) When <code>true</code>, this attribute must exist in LDAP. Defaults to <code>false</code>.</li>
+</ul>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/ldap_user_attribute_mapper.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/ldap_user_attribute_mapper.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Keycloak.Ldap.UserAttributeMapperArgs.html">UserAttributeMapperArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.Ldap.UserAttributeMapperState.html">UserAttributeMapperState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.Ldap.UserFederation.html">UserFederation</a></h4>
+      <section><h2 id="-keycloakldapuserfederation"># keycloak.ldap.UserFederation</h2>
+<p>Allows for creating and managing LDAP user federation providers within Keycloak.</p>
+<p>Keycloak can use an LDAP user federation provider to federate users to Keycloak
+from a directory system such as LDAP or Active Directory. Federated users
+will exist within the realm and will be able to log in to clients. Federated
+users can have their attributes defined using mappers.</p>
+<h3 id="argument-reference">Argument Reference</h3>
+<p>The following arguments are supported:</p>
+<ul>
+<li><code>realm_id</code> - (Required) The realm that this provider will provide user federation for.</li>
+<li><code>name</code> - (Required) Display name of the provider when displayed in the console.</li>
+<li><code>enabled</code> - (Optional) When <code>false</code>, this provider will not be used when performing queries for users. Defaults to <code>true</code>.</li>
+<li><code>priority</code> - (Optional) Priority of this provider when looking up users. Lower values are first. Defaults to <code>0</code>.</li>
+<li><code>import_enabled</code> - (Optional) When <code>true</code>, LDAP users will be imported into the Keycloak database. Defaults to <code>true</code>.</li>
+<li><code>edit_mode</code> - (Optional) Can be one of <code>READ_ONLY</code>, <code>WRITABLE</code>, or <code>UNSYNCED</code>. <code>UNSYNCED</code> allows user data to be imported but not synced back to LDAP. Defaults to <code>READ_ONLY</code>.</li>
+<li><code>sync_registrations</code> - (Optional) When <code>true</code>, newly created users will be synced back to LDAP. Defaults to <code>false</code>.</li>
+<li><code>vendor</code> - (Optional) Can be one of <code>OTHER</code>, <code>EDIRECTORY</code>, <code>AD</code>, <code>RHDS</code>, or <code>TIVOLI</code>. When this is selected in the GUI, it provides reasonable defaults for other fields. When used with the Keycloak API, this attribute does nothing, but is still required. Defaults to <code>OPTIONAL</code>.</li>
+<li><code>username_ldap_attribute</code> - (Required) Name of the LDAP attribute to use as the Keycloak username.</li>
+<li><code>rdn_ldap_attribute</code> - (Required) Name of the LDAP attribute to use as the relative distinguished name.</li>
+<li><code>uuid_ldap_attribute</code> - (Required) Name of the LDAP attribute to use as a unique object identifier for objects in LDAP.</li>
+<li><code>user_object_classes</code> - (Required) Array of all values of LDAP objectClass attribute for users in LDAP. Must contain at least one.</li>
+<li><code>connection_url</code> - (Required) Connection URL to the LDAP server.</li>
+<li><code>users_dn</code> - (Required) Full DN of LDAP tree where your users are.</li>
+<li><code>bind_dn</code> - (Optional) DN of LDAP admin, which will be used by Keycloak to access LDAP server. This attribute must be set if <code>bind_credential</code> is set.</li>
+<li><code>bind_credential</code> - (Optional) Password of LDAP admin. This attribute must be set if <code>bind_dn</code> is set.</li>
+<li><code>custom_user_search_filter</code> - (Optional) Additional LDAP filter for filtering searched users. Must begin with <code>(</code> and end with <code>)</code>.</li>
+<li><code>search_scope</code> - (Optional) Can be one of <code>ONE_LEVEL</code> or <code>SUBTREE</code>:</li>
+<li><code>ONE_LEVEL</code>: Only search for users in the DN specified by <code>user_dn</code>.</li>
+<li><code>SUBTREE</code>: Search entire LDAP subtree.</li>
+<li><code>validate_password_policy</code> - (Optional) When <code>true</code>, Keycloak will validate passwords using the realm policy before updating it.</li>
+<li><code>use_truststore_spi</code> - (Optional) Can be one of <code>ALWAYS</code>, <code>ONLY_FOR_LDAPS</code>, or <code>NEVER</code>:</li>
+<li><code>ALWAYS</code> - Always use the truststore SPI for LDAP connections.</li>
+<li><code>NEVER</code> - Never use the truststore SPI for LDAP connections.</li>
+<li><code>ONLY_FOR_LDAPS</code> - Only use the truststore SPI if your LDAP connection uses the ldaps protocol.</li>
+<li><code>connection_timeout</code> - (Optional) LDAP connection timeout in the format of a <a href="https://golang.org/pkg/time/#Duration.String">Go duration string</a>.</li>
+<li><code>read_timeout</code> - (Optional) LDAP read timeout in the format of a <a href="https://golang.org/pkg/time/#Duration.String">Go duration string</a>.</li>
+<li><code>pagination</code> - (Optional) When true, Keycloak assumes the LDAP server supports pagination. Defaults to <code>true</code>.</li>
+<li><code>batch_size_for_sync</code> - (Optional) The number of users to sync within a single transaction. Defaults to <code>1000</code>.</li>
+<li><code>full_sync_period</code> - (Optional) How frequently Keycloak should sync all LDAP users, in seconds. Omit this property to disable periodic full sync.</li>
+<li><code>changed_sync_period</code> - (Optional) How frequently Keycloak should sync changed LDAP users, in seconds. Omit this property to disable periodic changed users sync.</li>
+<li><code>cache_policy</code> - (Optional) Can be one of <code>DEFAULT</code>, <code>EVICT_DAILY</code>, <code>EVICT_WEEKLY</code>, <code>MAX_LIFESPAN</code>, or <code>NO_CACHE</code>. Defaults to <code>DEFAULT</code>.</li>
+</ul>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/ldap_user_federation.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/ldap_user_federation.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Keycloak.Ldap.UserFederationArgs.html">UserFederationArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.Ldap.UserFederationState.html">UserFederationState</a></h4>
+      <section></section>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

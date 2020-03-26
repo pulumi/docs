@@ -1,0 +1,1155 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Servicev1
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Servicev1
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Fastly.Servicev1">
+  
+  <h1 id="Pulumi_Fastly_Servicev1" data-uid="Pulumi.Fastly.Servicev1" class="text-break">Class Servicev1
+  </h1>
+  <div class="markdown level0 summary"><p>Provides a Fastly Service, representing the configuration for a website, app,
+API, or anything else to be served through Fastly. A Service encompasses Domains
+and Backends.</p>
+<p>The Service resource requires a domain name that is correctly set up to direct
+traffic to the Fastly service. See Fastly's guide on [Adding CNAME Records][fastly-cname]
+on their documentation site for guidance.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-fastly/blob/master/website/docs/r/service_v1.html.markdown">https://github.com/terraform-providers/terraform-provider-fastly/blob/master/website/docs/r/service_v1.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Servicev1</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Fastly.html">Pulumi.Fastly</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Fastly.dll</h6>
+  <h5 id="Pulumi_Fastly_Servicev1_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Servicev1 : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/master/sdk/dotnet/Servicev1.cs/#L247">View Source</a>
+  </span>
+  <a id="Pulumi_Fastly_Servicev1__ctor_" data-uid="Pulumi.Fastly.Servicev1.#ctor*"></a>
+  <h4 id="Pulumi_Fastly_Servicev1__ctor_System_String_Pulumi_Fastly_Servicev1Args_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Fastly.Servicev1.#ctor(System.String,Pulumi.Fastly.Servicev1Args,System.Nullable{CustomResourceOptions})">Servicev1(String, Servicev1Args, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Create a Servicev1 resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Servicev1(string name, Servicev1Args args, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Fastly.Servicev1Args.html">Servicev1Args</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/master/sdk/dotnet/Servicev1.cs/#L27">View Source</a>
+  </span>
+  <a id="Pulumi_Fastly_Servicev1_Acls_" data-uid="Pulumi.Fastly.Servicev1.Acls*"></a>
+  <h4 id="Pulumi_Fastly_Servicev1_Acls" data-uid="Pulumi.Fastly.Servicev1.Acls">Acls</h4>
+  <div class="markdown level1 summary"><p>A set of ACL configuration blocks.  Defined below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;Servicev1Acls&gt;&gt; Acls { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Fastly.Outputs.Servicev1Acls.html">Servicev1Acls</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/master/sdk/dotnet/Servicev1.cs/#L33">View Source</a>
+  </span>
+  <a id="Pulumi_Fastly_Servicev1_Activate_" data-uid="Pulumi.Fastly.Servicev1.Activate*"></a>
+  <h4 id="Pulumi_Fastly_Servicev1_Activate" data-uid="Pulumi.Fastly.Servicev1.Activate">Activate</h4>
+  <div class="markdown level1 summary"><p>Conditionally prevents the Service from being activated. The apply step will continue to create a new draft version but will not activate it if this is set to false. Default true.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; Activate { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/master/sdk/dotnet/Servicev1.cs/#L39">View Source</a>
+  </span>
+  <a id="Pulumi_Fastly_Servicev1_ActiveVersion_" data-uid="Pulumi.Fastly.Servicev1.ActiveVersion*"></a>
+  <h4 id="Pulumi_Fastly_Servicev1_ActiveVersion" data-uid="Pulumi.Fastly.Servicev1.ActiveVersion">ActiveVersion</h4>
+  <div class="markdown level1 summary"><p>The currently active version of your Fastly Service.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; ActiveVersion { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/master/sdk/dotnet/Servicev1.cs/#L47">View Source</a>
+  </span>
+  <a id="Pulumi_Fastly_Servicev1_Backends_" data-uid="Pulumi.Fastly.Servicev1.Backends*"></a>
+  <h4 id="Pulumi_Fastly_Servicev1_Backends" data-uid="Pulumi.Fastly.Servicev1.Backends">Backends</h4>
+  <div class="markdown level1 summary"><p>A set of Backends to service requests from your Domains.
+Defined below. Backends must be defined in this argument, or defined in the
+<code>vcl</code> argument below</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;Servicev1Backends&gt;&gt; Backends { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Fastly.Outputs.Servicev1Backends.html">Servicev1Backends</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/master/sdk/dotnet/Servicev1.cs/#L54">View Source</a>
+  </span>
+  <a id="Pulumi_Fastly_Servicev1_Bigqueryloggings_" data-uid="Pulumi.Fastly.Servicev1.Bigqueryloggings*"></a>
+  <h4 id="Pulumi_Fastly_Servicev1_Bigqueryloggings" data-uid="Pulumi.Fastly.Servicev1.Bigqueryloggings">Bigqueryloggings</h4>
+  <div class="markdown level1 summary"><p>A BigQuery endpoint to send streaming logs too.
+Defined below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;Servicev1Bigqueryloggings&gt;&gt; Bigqueryloggings { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Fastly.Outputs.Servicev1Bigqueryloggings.html">Servicev1Bigqueryloggings</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/master/sdk/dotnet/Servicev1.cs/#L61">View Source</a>
+  </span>
+  <a id="Pulumi_Fastly_Servicev1_Blobstorageloggings_" data-uid="Pulumi.Fastly.Servicev1.Blobstorageloggings*"></a>
+  <h4 id="Pulumi_Fastly_Servicev1_Blobstorageloggings" data-uid="Pulumi.Fastly.Servicev1.Blobstorageloggings">Blobstorageloggings</h4>
+  <div class="markdown level1 summary"><p>An Azure Blob Storage endpoint to send streaming logs too.
+Defined below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;Servicev1Blobstorageloggings&gt;&gt; Blobstorageloggings { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Fastly.Outputs.Servicev1Blobstorageloggings.html">Servicev1Blobstorageloggings</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/master/sdk/dotnet/Servicev1.cs/#L67">View Source</a>
+  </span>
+  <a id="Pulumi_Fastly_Servicev1_CacheSettings_" data-uid="Pulumi.Fastly.Servicev1.CacheSettings*"></a>
+  <h4 id="Pulumi_Fastly_Servicev1_CacheSettings" data-uid="Pulumi.Fastly.Servicev1.CacheSettings">CacheSettings</h4>
+  <div class="markdown level1 summary"><p>A set of Cache Settings, allowing you to override</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;Servicev1CacheSettings&gt;&gt; CacheSettings { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Fastly.Outputs.Servicev1CacheSettings.html">Servicev1CacheSettings</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/master/sdk/dotnet/Servicev1.cs/#L70">View Source</a>
+  </span>
+  <a id="Pulumi_Fastly_Servicev1_ClonedVersion_" data-uid="Pulumi.Fastly.Servicev1.ClonedVersion*"></a>
+  <h4 id="Pulumi_Fastly_Servicev1_ClonedVersion" data-uid="Pulumi.Fastly.Servicev1.ClonedVersion">ClonedVersion</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; ClonedVersion { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/master/sdk/dotnet/Servicev1.cs/#L76">View Source</a>
+  </span>
+  <a id="Pulumi_Fastly_Servicev1_Comment_" data-uid="Pulumi.Fastly.Servicev1.Comment*"></a>
+  <h4 id="Pulumi_Fastly_Servicev1_Comment" data-uid="Pulumi.Fastly.Servicev1.Comment">Comment</h4>
+  <div class="markdown level1 summary"><p>A personal freeform descriptive note</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Comment { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/master/sdk/dotnet/Servicev1.cs/#L83">View Source</a>
+  </span>
+  <a id="Pulumi_Fastly_Servicev1_Conditions_" data-uid="Pulumi.Fastly.Servicev1.Conditions*"></a>
+  <h4 id="Pulumi_Fastly_Servicev1_Conditions" data-uid="Pulumi.Fastly.Servicev1.Conditions">Conditions</h4>
+  <div class="markdown level1 summary"><p>A set of conditions to add logic to any basic
+configuration object in this service. Defined below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;Servicev1Conditions&gt;&gt; Conditions { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Fastly.Outputs.Servicev1Conditions.html">Servicev1Conditions</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/master/sdk/dotnet/Servicev1.cs/#L89">View Source</a>
+  </span>
+  <a id="Pulumi_Fastly_Servicev1_DefaultHost_" data-uid="Pulumi.Fastly.Servicev1.DefaultHost*"></a>
+  <h4 id="Pulumi_Fastly_Servicev1_DefaultHost" data-uid="Pulumi.Fastly.Servicev1.DefaultHost">DefaultHost</h4>
+  <div class="markdown level1 summary"><p>The default hostname.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DefaultHost { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/master/sdk/dotnet/Servicev1.cs/#L96">View Source</a>
+  </span>
+  <a id="Pulumi_Fastly_Servicev1_DefaultTtl_" data-uid="Pulumi.Fastly.Servicev1.DefaultTtl*"></a>
+  <h4 id="Pulumi_Fastly_Servicev1_DefaultTtl" data-uid="Pulumi.Fastly.Servicev1.DefaultTtl">DefaultTtl</h4>
+  <div class="markdown level1 summary"><p>The default Time-to-live (TTL) for
+requests.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; DefaultTtl { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/master/sdk/dotnet/Servicev1.cs/#L102">View Source</a>
+  </span>
+  <a id="Pulumi_Fastly_Servicev1_Dictionaries_" data-uid="Pulumi.Fastly.Servicev1.Dictionaries*"></a>
+  <h4 id="Pulumi_Fastly_Servicev1_Dictionaries" data-uid="Pulumi.Fastly.Servicev1.Dictionaries">Dictionaries</h4>
+  <div class="markdown level1 summary"><p>A set of dictionaries that allow the storing of key values pair for use within VCL functions. Defined below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;Servicev1Dictionaries&gt;&gt; Dictionaries { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Fastly.Outputs.Servicev1Dictionaries.html">Servicev1Dictionaries</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/master/sdk/dotnet/Servicev1.cs/#L109">View Source</a>
+  </span>
+  <a id="Pulumi_Fastly_Servicev1_Directors_" data-uid="Pulumi.Fastly.Servicev1.Directors*"></a>
+  <h4 id="Pulumi_Fastly_Servicev1_Directors" data-uid="Pulumi.Fastly.Servicev1.Directors">Directors</h4>
+  <div class="markdown level1 summary"><p>A director to allow more control over balancing traffic over backends.
+when an item is not to be cached based on an above <code>condition</code>. Defined below</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;Servicev1Directors&gt;&gt; Directors { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Fastly.Outputs.Servicev1Directors.html">Servicev1Directors</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/master/sdk/dotnet/Servicev1.cs/#L116">View Source</a>
+  </span>
+  <a id="Pulumi_Fastly_Servicev1_Domains_" data-uid="Pulumi.Fastly.Servicev1.Domains*"></a>
+  <h4 id="Pulumi_Fastly_Servicev1_Domains" data-uid="Pulumi.Fastly.Servicev1.Domains">Domains</h4>
+  <div class="markdown level1 summary"><p>A set of Domain names to serve as entry points for your
+Service. Defined below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;Servicev1Domains&gt;&gt; Domains { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Fastly.Outputs.Servicev1Domains.html">Servicev1Domains</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/master/sdk/dotnet/Servicev1.cs/#L122">View Source</a>
+  </span>
+  <a id="Pulumi_Fastly_Servicev1_Dynamicsnippets_" data-uid="Pulumi.Fastly.Servicev1.Dynamicsnippets*"></a>
+  <h4 id="Pulumi_Fastly_Servicev1_Dynamicsnippets" data-uid="Pulumi.Fastly.Servicev1.Dynamicsnippets">Dynamicsnippets</h4>
+  <div class="markdown level1 summary"><p>A set of custom, &quot;dynamic&quot; VCL Snippet configuration blocks.  Defined below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;Servicev1Dynamicsnippets&gt;&gt; Dynamicsnippets { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Fastly.Outputs.Servicev1Dynamicsnippets.html">Servicev1Dynamicsnippets</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/master/sdk/dotnet/Servicev1.cs/#L129">View Source</a>
+  </span>
+  <a id="Pulumi_Fastly_Servicev1_ForceDestroy_" data-uid="Pulumi.Fastly.Servicev1.ForceDestroy*"></a>
+  <h4 id="Pulumi_Fastly_Servicev1_ForceDestroy" data-uid="Pulumi.Fastly.Servicev1.ForceDestroy">ForceDestroy</h4>
+  <div class="markdown level1 summary"><p>Services that are active cannot be destroyed. In
+order to destroy the Service, set <code>force_destroy</code> to <code>true</code>. Default <code>false</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; ForceDestroy { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/master/sdk/dotnet/Servicev1.cs/#L136">View Source</a>
+  </span>
+  <a id="Pulumi_Fastly_Servicev1_Gcsloggings_" data-uid="Pulumi.Fastly.Servicev1.Gcsloggings*"></a>
+  <h4 id="Pulumi_Fastly_Servicev1_Gcsloggings" data-uid="Pulumi.Fastly.Servicev1.Gcsloggings">Gcsloggings</h4>
+  <div class="markdown level1 summary"><p>A gcs endpoint to send streaming logs too.
+Defined below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;Servicev1Gcsloggings&gt;&gt; Gcsloggings { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Fastly.Outputs.Servicev1Gcsloggings.html">Servicev1Gcsloggings</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/master/sdk/dotnet/Servicev1.cs/#L143">View Source</a>
+  </span>
+  <a id="Pulumi_Fastly_Servicev1_Gzips_" data-uid="Pulumi.Fastly.Servicev1.Gzips*"></a>
+  <h4 id="Pulumi_Fastly_Servicev1_Gzips" data-uid="Pulumi.Fastly.Servicev1.Gzips">Gzips</h4>
+  <div class="markdown level1 summary"><p>A set of gzip rules to control automatic gzipping of
+content. Defined below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;Servicev1Gzips&gt;&gt; Gzips { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Fastly.Outputs.Servicev1Gzips.html">Servicev1Gzips</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/master/sdk/dotnet/Servicev1.cs/#L150">View Source</a>
+  </span>
+  <a id="Pulumi_Fastly_Servicev1_Headers_" data-uid="Pulumi.Fastly.Servicev1.Headers*"></a>
+  <h4 id="Pulumi_Fastly_Servicev1_Headers" data-uid="Pulumi.Fastly.Servicev1.Headers">Headers</h4>
+  <div class="markdown level1 summary"><p>A set of Headers to manipulate for each request. Defined
+below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;Servicev1Headers&gt;&gt; Headers { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Fastly.Outputs.Servicev1Headers.html">Servicev1Headers</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/master/sdk/dotnet/Servicev1.cs/#L156">View Source</a>
+  </span>
+  <a id="Pulumi_Fastly_Servicev1_Healthchecks_" data-uid="Pulumi.Fastly.Servicev1.Healthchecks*"></a>
+  <h4 id="Pulumi_Fastly_Servicev1_Healthchecks" data-uid="Pulumi.Fastly.Servicev1.Healthchecks">Healthchecks</h4>
+  <div class="markdown level1 summary"><p>Automated healthchecks on the cache that can change how Fastly interacts with the cache based on its health.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;Servicev1Healthchecks&gt;&gt; Healthchecks { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Fastly.Outputs.Servicev1Healthchecks.html">Servicev1Healthchecks</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/master/sdk/dotnet/Servicev1.cs/#L163">View Source</a>
+  </span>
+  <a id="Pulumi_Fastly_Servicev1_Logentries_" data-uid="Pulumi.Fastly.Servicev1.Logentries*"></a>
+  <h4 id="Pulumi_Fastly_Servicev1_Logentries" data-uid="Pulumi.Fastly.Servicev1.Logentries">Logentries</h4>
+  <div class="markdown level1 summary"><p>A logentries endpoint to send streaming logs too.
+Defined below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;Servicev1Logentries&gt;&gt; Logentries { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Fastly.Outputs.Servicev1Logentries.html">Servicev1Logentries</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/master/sdk/dotnet/Servicev1.cs/#L169">View Source</a>
+  </span>
+  <a id="Pulumi_Fastly_Servicev1_Name_" data-uid="Pulumi.Fastly.Servicev1.Name*"></a>
+  <h4 id="Pulumi_Fastly_Servicev1_Name" data-uid="Pulumi.Fastly.Servicev1.Name">Name</h4>
+  <div class="markdown level1 summary"><p>The unique name for the Service to create.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/master/sdk/dotnet/Servicev1.cs/#L176">View Source</a>
+  </span>
+  <a id="Pulumi_Fastly_Servicev1_Papertrails_" data-uid="Pulumi.Fastly.Servicev1.Papertrails*"></a>
+  <h4 id="Pulumi_Fastly_Servicev1_Papertrails" data-uid="Pulumi.Fastly.Servicev1.Papertrails">Papertrails</h4>
+  <div class="markdown level1 summary"><p>A Papertrail endpoint to send streaming logs too.
+Defined below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;Servicev1Papertrails&gt;&gt; Papertrails { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Fastly.Outputs.Servicev1Papertrails.html">Servicev1Papertrails</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/master/sdk/dotnet/Servicev1.cs/#L182">View Source</a>
+  </span>
+  <a id="Pulumi_Fastly_Servicev1_RequestSettings_" data-uid="Pulumi.Fastly.Servicev1.RequestSettings*"></a>
+  <h4 id="Pulumi_Fastly_Servicev1_RequestSettings" data-uid="Pulumi.Fastly.Servicev1.RequestSettings">RequestSettings</h4>
+  <div class="markdown level1 summary"><p>A set of Request modifiers. Defined below</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;Servicev1RequestSettings&gt;&gt; RequestSettings { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Fastly.Outputs.Servicev1RequestSettings.html">Servicev1RequestSettings</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/master/sdk/dotnet/Servicev1.cs/#L188">View Source</a>
+  </span>
+  <a id="Pulumi_Fastly_Servicev1_ResponseObjects_" data-uid="Pulumi.Fastly.Servicev1.ResponseObjects*"></a>
+  <h4 id="Pulumi_Fastly_Servicev1_ResponseObjects" data-uid="Pulumi.Fastly.Servicev1.ResponseObjects">ResponseObjects</h4>
+  <div class="markdown level1 summary"><p>Allows you to create synthetic responses that exist entirely on the varnish machine. Useful for creating error or maintenance pages that exists outside the scope of your datacenter. Best when used with Condition objects.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;Servicev1ResponseObjects&gt;&gt; ResponseObjects { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Fastly.Outputs.Servicev1ResponseObjects.html">Servicev1ResponseObjects</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/master/sdk/dotnet/Servicev1.cs/#L195">View Source</a>
+  </span>
+  <a id="Pulumi_Fastly_Servicev1_S3loggings_" data-uid="Pulumi.Fastly.Servicev1.S3loggings*"></a>
+  <h4 id="Pulumi_Fastly_Servicev1_S3loggings" data-uid="Pulumi.Fastly.Servicev1.S3loggings">S3loggings</h4>
+  <div class="markdown level1 summary"><p>A set of S3 Buckets to send streaming logs too.
+Defined below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;Servicev1S3loggings&gt;&gt; S3loggings { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Fastly.Outputs.Servicev1S3loggings.html">Servicev1S3loggings</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/master/sdk/dotnet/Servicev1.cs/#L201">View Source</a>
+  </span>
+  <a id="Pulumi_Fastly_Servicev1_Snippets_" data-uid="Pulumi.Fastly.Servicev1.Snippets*"></a>
+  <h4 id="Pulumi_Fastly_Servicev1_Snippets" data-uid="Pulumi.Fastly.Servicev1.Snippets">Snippets</h4>
+  <div class="markdown level1 summary"><p>A set of custom, &quot;regular&quot; (non-dynamic) VCL Snippet configuration blocks.  Defined below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;Servicev1Snippets&gt;&gt; Snippets { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Fastly.Outputs.Servicev1Snippets.html">Servicev1Snippets</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/master/sdk/dotnet/Servicev1.cs/#L208">View Source</a>
+  </span>
+  <a id="Pulumi_Fastly_Servicev1_Splunks_" data-uid="Pulumi.Fastly.Servicev1.Splunks*"></a>
+  <h4 id="Pulumi_Fastly_Servicev1_Splunks" data-uid="Pulumi.Fastly.Servicev1.Splunks">Splunks</h4>
+  <div class="markdown level1 summary"><p>A Splunk endpoint to send streaming logs too.
+Defined below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;Servicev1Splunks&gt;&gt; Splunks { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Fastly.Outputs.Servicev1Splunks.html">Servicev1Splunks</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/master/sdk/dotnet/Servicev1.cs/#L215">View Source</a>
+  </span>
+  <a id="Pulumi_Fastly_Servicev1_Sumologics_" data-uid="Pulumi.Fastly.Servicev1.Sumologics*"></a>
+  <h4 id="Pulumi_Fastly_Servicev1_Sumologics" data-uid="Pulumi.Fastly.Servicev1.Sumologics">Sumologics</h4>
+  <div class="markdown level1 summary"><p>A Sumologic endpoint to send streaming logs too.
+Defined below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;Servicev1Sumologics&gt;&gt; Sumologics { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Fastly.Outputs.Servicev1Sumologics.html">Servicev1Sumologics</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/master/sdk/dotnet/Servicev1.cs/#L222">View Source</a>
+  </span>
+  <a id="Pulumi_Fastly_Servicev1_Syslogs_" data-uid="Pulumi.Fastly.Servicev1.Syslogs*"></a>
+  <h4 id="Pulumi_Fastly_Servicev1_Syslogs" data-uid="Pulumi.Fastly.Servicev1.Syslogs">Syslogs</h4>
+  <div class="markdown level1 summary"><p>A syslog endpoint to send streaming logs too.
+Defined below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;Servicev1Syslogs&gt;&gt; Syslogs { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Fastly.Outputs.Servicev1Syslogs.html">Servicev1Syslogs</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/master/sdk/dotnet/Servicev1.cs/#L230">View Source</a>
+  </span>
+  <a id="Pulumi_Fastly_Servicev1_Vcls_" data-uid="Pulumi.Fastly.Servicev1.Vcls*"></a>
+  <h4 id="Pulumi_Fastly_Servicev1_Vcls" data-uid="Pulumi.Fastly.Servicev1.Vcls">Vcls</h4>
+  <div class="markdown level1 summary"><p>A set of custom VCL configuration blocks. The
+ability to upload custom VCL code is not enabled by default for new Fastly
+accounts (see the <a href="https://docs.fastly.com/guides/vcl/uploading-custom-vcl">Fastly documentation</a> for details).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;Servicev1Vcls&gt;&gt; Vcls { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Fastly.Outputs.Servicev1Vcls.html">Servicev1Vcls</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/master/sdk/dotnet/Servicev1.cs/#L236">View Source</a>
+  </span>
+  <a id="Pulumi_Fastly_Servicev1_VersionComment_" data-uid="Pulumi.Fastly.Servicev1.VersionComment*"></a>
+  <h4 id="Pulumi_Fastly_Servicev1_VersionComment" data-uid="Pulumi.Fastly.Servicev1.VersionComment">VersionComment</h4>
+  <div class="markdown level1 summary"><p>Description field for the version.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; VersionComment { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/master/sdk/dotnet/Servicev1.cs/#L277">View Source</a>
+  </span>
+  <a id="Pulumi_Fastly_Servicev1_Get_" data-uid="Pulumi.Fastly.Servicev1.Get*"></a>
+  <h4 id="Pulumi_Fastly_Servicev1_Get_System_String_Input_System_String__Pulumi_Fastly_Servicev1State_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Fastly.Servicev1.Get(System.String,Input{System.String},Pulumi.Fastly.Servicev1State,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, Servicev1State, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Get an existing Servicev1 resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Servicev1 Get(string name, Input&lt;string&gt; id, Servicev1State state = null, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Fastly.Servicev1State.html">Servicev1State</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Fastly.Servicev1.html">Servicev1</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-fastly/blob/master/sdk/dotnet/Servicev1.cs/#L22" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

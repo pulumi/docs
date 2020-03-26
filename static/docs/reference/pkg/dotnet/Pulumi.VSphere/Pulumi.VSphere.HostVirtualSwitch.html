@@ -1,0 +1,840 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class HostVirtualSwitch
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class HostVirtualSwitch
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.VSphere.HostVirtualSwitch">
+  
+  <h1 id="Pulumi_VSphere_HostVirtualSwitch" data-uid="Pulumi.VSphere.HostVirtualSwitch" class="text-break">Class HostVirtualSwitch
+  </h1>
+  <div class="markdown level0 summary"><p>The <code>vsphere..HostVirtualSwitch</code> resource can be used to manage vSphere
+standard switches on an ESXi host. These switches can be used as a backing for
+standard port groups, which can be managed by the
+<a href="/docs/providers/vsphere/r/host_port_group.html"><code>vsphere..HostPortGroup</code></a> resource.</p>
+<p>For an overview on vSphere networking concepts, see <a href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.networking.doc/GUID-2B11DBB8-CB3C-4AFF-8885-EFEA0FC562F4.html">this
+page</a>.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/host_virtual_switch.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/host_virtual_switch.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">HostVirtualSwitch</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.VSphere.html">Pulumi.VSphere</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.VSphere.dll</h6>
+  <h5 id="Pulumi_VSphere_HostVirtualSwitch_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class HostVirtualSwitch : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostVirtualSwitch.cs/#L189">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_HostVirtualSwitch__ctor_" data-uid="Pulumi.VSphere.HostVirtualSwitch.#ctor*"></a>
+  <h4 id="Pulumi_VSphere_HostVirtualSwitch__ctor_System_String_Pulumi_VSphere_HostVirtualSwitchArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.VSphere.HostVirtualSwitch.#ctor(System.String,Pulumi.VSphere.HostVirtualSwitchArgs,System.Nullable{CustomResourceOptions})">HostVirtualSwitch(String, HostVirtualSwitchArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Create a HostVirtualSwitch resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public HostVirtualSwitch(string name, HostVirtualSwitchArgs args, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.VSphere.HostVirtualSwitchArgs.html">HostVirtualSwitchArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostVirtualSwitch.cs/#L31">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_HostVirtualSwitch_ActiveNics_" data-uid="Pulumi.VSphere.HostVirtualSwitch.ActiveNics*"></a>
+  <h4 id="Pulumi_VSphere_HostVirtualSwitch_ActiveNics" data-uid="Pulumi.VSphere.HostVirtualSwitch.ActiveNics">ActiveNics</h4>
+  <div class="markdown level1 summary"><p>The list of active network adapters used for load
+balancing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; ActiveNics { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostVirtualSwitch.cs/#L39">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_HostVirtualSwitch_AllowForgedTransmits_" data-uid="Pulumi.VSphere.HostVirtualSwitch.AllowForgedTransmits*"></a>
+  <h4 id="Pulumi_VSphere_HostVirtualSwitch_AllowForgedTransmits" data-uid="Pulumi.VSphere.HostVirtualSwitch.AllowForgedTransmits">AllowForgedTransmits</h4>
+  <div class="markdown level1 summary"><p>Controls whether or not the virtual
+network adapter is allowed to send network traffic with a different MAC
+address than that of its own. Default: <code>true</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; AllowForgedTransmits { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostVirtualSwitch.cs/#L46">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_HostVirtualSwitch_AllowMacChanges_" data-uid="Pulumi.VSphere.HostVirtualSwitch.AllowMacChanges*"></a>
+  <h4 id="Pulumi_VSphere_HostVirtualSwitch_AllowMacChanges" data-uid="Pulumi.VSphere.HostVirtualSwitch.AllowMacChanges">AllowMacChanges</h4>
+  <div class="markdown level1 summary"><p>Controls whether or not the Media Access
+Control (MAC) address can be changed. Default: <code>true</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; AllowMacChanges { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostVirtualSwitch.cs/#L54">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_HostVirtualSwitch_AllowPromiscuous_" data-uid="Pulumi.VSphere.HostVirtualSwitch.AllowPromiscuous*"></a>
+  <h4 id="Pulumi_VSphere_HostVirtualSwitch_AllowPromiscuous" data-uid="Pulumi.VSphere.HostVirtualSwitch.AllowPromiscuous">AllowPromiscuous</h4>
+  <div class="markdown level1 summary"><p>Enable promiscuous mode on the network. This
+flag indicates whether or not all traffic is seen on a given port. Default:
+<code>false</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; AllowPromiscuous { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostVirtualSwitch.cs/#L62">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_HostVirtualSwitch_BeaconInterval_" data-uid="Pulumi.VSphere.HostVirtualSwitch.BeaconInterval*"></a>
+  <h4 id="Pulumi_VSphere_HostVirtualSwitch_BeaconInterval" data-uid="Pulumi.VSphere.HostVirtualSwitch.BeaconInterval">BeaconInterval</h4>
+  <div class="markdown level1 summary"><p>The interval, in seconds, that a NIC beacon
+packet is sent out. This can be used with <code>check_beacon</code> to
+offer link failure capability beyond link status only. Default: <code>1</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; BeaconInterval { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostVirtualSwitch.cs/#L71">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_HostVirtualSwitch_CheckBeacon_" data-uid="Pulumi.VSphere.HostVirtualSwitch.CheckBeacon*"></a>
+  <h4 id="Pulumi_VSphere_HostVirtualSwitch_CheckBeacon" data-uid="Pulumi.VSphere.HostVirtualSwitch.CheckBeacon">CheckBeacon</h4>
+  <div class="markdown level1 summary"><p>Enable beacon probing - this requires that the
+<code>beacon_interval</code> option has been set in the bridge
+options. If this is set to <code>false</code>, only link status is used to check for
+failed NICs.  Default: <code>false</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; CheckBeacon { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostVirtualSwitch.cs/#L79">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_HostVirtualSwitch_Failback_" data-uid="Pulumi.VSphere.HostVirtualSwitch.Failback*"></a>
+  <h4 id="Pulumi_VSphere_HostVirtualSwitch_Failback" data-uid="Pulumi.VSphere.HostVirtualSwitch.Failback">Failback</h4>
+  <div class="markdown level1 summary"><p>If set to <code>true</code>, the teaming policy will re-activate
+failed interfaces higher in precedence when they come back up.  Default:
+<code>true</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; Failback { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostVirtualSwitch.cs/#L86">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_HostVirtualSwitch_HostSystemId_" data-uid="Pulumi.VSphere.HostVirtualSwitch.HostSystemId*"></a>
+  <h4 id="Pulumi_VSphere_HostVirtualSwitch_HostSystemId" data-uid="Pulumi.VSphere.HostVirtualSwitch.HostSystemId">HostSystemId</h4>
+  <div class="markdown level1 summary"><p>The [managed object ID][docs-about-morefs] of
+the host to set the virtual switch up on. Forces a new resource if changed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; HostSystemId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostVirtualSwitch.cs/#L93">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_HostVirtualSwitch_LinkDiscoveryOperation_" data-uid="Pulumi.VSphere.HostVirtualSwitch.LinkDiscoveryOperation*"></a>
+  <h4 id="Pulumi_VSphere_HostVirtualSwitch_LinkDiscoveryOperation" data-uid="Pulumi.VSphere.HostVirtualSwitch.LinkDiscoveryOperation">LinkDiscoveryOperation</h4>
+  <div class="markdown level1 summary"><p>Whether to <code>advertise</code> or <code>listen</code>
+for link discovery traffic. Default: <code>listen</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; LinkDiscoveryOperation { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostVirtualSwitch.cs/#L100">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_HostVirtualSwitch_LinkDiscoveryProtocol_" data-uid="Pulumi.VSphere.HostVirtualSwitch.LinkDiscoveryProtocol*"></a>
+  <h4 id="Pulumi_VSphere_HostVirtualSwitch_LinkDiscoveryProtocol" data-uid="Pulumi.VSphere.HostVirtualSwitch.LinkDiscoveryProtocol">LinkDiscoveryProtocol</h4>
+  <div class="markdown level1 summary"><p>The discovery protocol type.  Valid
+types are <code>cpd</code> and <code>lldp</code>. Default: <code>cdp</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; LinkDiscoveryProtocol { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostVirtualSwitch.cs/#L107">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_HostVirtualSwitch_Mtu_" data-uid="Pulumi.VSphere.HostVirtualSwitch.Mtu*"></a>
+  <h4 id="Pulumi_VSphere_HostVirtualSwitch_Mtu" data-uid="Pulumi.VSphere.HostVirtualSwitch.Mtu">Mtu</h4>
+  <div class="markdown level1 summary"><p>The maximum transmission unit (MTU) for the virtual
+switch. Default: <code>1500</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; Mtu { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostVirtualSwitch.cs/#L114">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_HostVirtualSwitch_Name_" data-uid="Pulumi.VSphere.HostVirtualSwitch.Name*"></a>
+  <h4 id="Pulumi_VSphere_HostVirtualSwitch_Name" data-uid="Pulumi.VSphere.HostVirtualSwitch.Name">Name</h4>
+  <div class="markdown level1 summary"><p>The name of the virtual switch. Forces a new resource if
+changed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostVirtualSwitch.cs/#L120">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_HostVirtualSwitch_NetworkAdapters_" data-uid="Pulumi.VSphere.HostVirtualSwitch.NetworkAdapters*"></a>
+  <h4 id="Pulumi_VSphere_HostVirtualSwitch_NetworkAdapters" data-uid="Pulumi.VSphere.HostVirtualSwitch.NetworkAdapters">NetworkAdapters</h4>
+  <div class="markdown level1 summary"><p>The network interfaces to bind to the bridge.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; NetworkAdapters { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostVirtualSwitch.cs/#L128">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_HostVirtualSwitch_NotifySwitches_" data-uid="Pulumi.VSphere.HostVirtualSwitch.NotifySwitches*"></a>
+  <h4 id="Pulumi_VSphere_HostVirtualSwitch_NotifySwitches" data-uid="Pulumi.VSphere.HostVirtualSwitch.NotifySwitches">NotifySwitches</h4>
+  <div class="markdown level1 summary"><p>If set to <code>true</code>, the teaming policy will
+notify the broadcast network of a NIC failover, triggering cache updates.
+Default: <code>true</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; NotifySwitches { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostVirtualSwitch.cs/#L135">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_HostVirtualSwitch_NumberOfPorts_" data-uid="Pulumi.VSphere.HostVirtualSwitch.NumberOfPorts*"></a>
+  <h4 id="Pulumi_VSphere_HostVirtualSwitch_NumberOfPorts" data-uid="Pulumi.VSphere.HostVirtualSwitch.NumberOfPorts">NumberOfPorts</h4>
+  <div class="markdown level1 summary"><p>The number of ports to create with this
+virtual switch. Default: <code>128</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; NumberOfPorts { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostVirtualSwitch.cs/#L142">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_HostVirtualSwitch_ShapingAverageBandwidth_" data-uid="Pulumi.VSphere.HostVirtualSwitch.ShapingAverageBandwidth*"></a>
+  <h4 id="Pulumi_VSphere_HostVirtualSwitch_ShapingAverageBandwidth" data-uid="Pulumi.VSphere.HostVirtualSwitch.ShapingAverageBandwidth">ShapingAverageBandwidth</h4>
+  <div class="markdown level1 summary"><p>The average bandwidth in bits per
+second if traffic shaping is enabled. Default: <code>0</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; ShapingAverageBandwidth { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostVirtualSwitch.cs/#L149">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_HostVirtualSwitch_ShapingBurstSize_" data-uid="Pulumi.VSphere.HostVirtualSwitch.ShapingBurstSize*"></a>
+  <h4 id="Pulumi_VSphere_HostVirtualSwitch_ShapingBurstSize" data-uid="Pulumi.VSphere.HostVirtualSwitch.ShapingBurstSize">ShapingBurstSize</h4>
+  <div class="markdown level1 summary"><p>The maximum burst size allowed in bytes if
+shaping is enabled. Default: <code>0</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; ShapingBurstSize { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostVirtualSwitch.cs/#L156">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_HostVirtualSwitch_ShapingEnabled_" data-uid="Pulumi.VSphere.HostVirtualSwitch.ShapingEnabled*"></a>
+  <h4 id="Pulumi_VSphere_HostVirtualSwitch_ShapingEnabled" data-uid="Pulumi.VSphere.HostVirtualSwitch.ShapingEnabled">ShapingEnabled</h4>
+  <div class="markdown level1 summary"><p>Set to <code>true</code> to enable the traffic shaper for
+ports managed by this virtual switch. Default: <code>false</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; ShapingEnabled { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostVirtualSwitch.cs/#L163">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_HostVirtualSwitch_ShapingPeakBandwidth_" data-uid="Pulumi.VSphere.HostVirtualSwitch.ShapingPeakBandwidth*"></a>
+  <h4 id="Pulumi_VSphere_HostVirtualSwitch_ShapingPeakBandwidth" data-uid="Pulumi.VSphere.HostVirtualSwitch.ShapingPeakBandwidth">ShapingPeakBandwidth</h4>
+  <div class="markdown level1 summary"><p>The peak bandwidth during bursts in
+bits per second if traffic shaping is enabled. Default: <code>0</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; ShapingPeakBandwidth { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostVirtualSwitch.cs/#L170">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_HostVirtualSwitch_StandbyNics_" data-uid="Pulumi.VSphere.HostVirtualSwitch.StandbyNics*"></a>
+  <h4 id="Pulumi_VSphere_HostVirtualSwitch_StandbyNics" data-uid="Pulumi.VSphere.HostVirtualSwitch.StandbyNics">StandbyNics</h4>
+  <div class="markdown level1 summary"><p>The list of standby network adapters used for
+failover.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; StandbyNics { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostVirtualSwitch.cs/#L178">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_HostVirtualSwitch_TeamingPolicy_" data-uid="Pulumi.VSphere.HostVirtualSwitch.TeamingPolicy*"></a>
+  <h4 id="Pulumi_VSphere_HostVirtualSwitch_TeamingPolicy" data-uid="Pulumi.VSphere.HostVirtualSwitch.TeamingPolicy">TeamingPolicy</h4>
+  <div class="markdown level1 summary"><p>The network adapter teaming policy. Can be one
+of <code>loadbalance_ip</code>, <code>loadbalance_srcmac</code>, <code>loadbalance_srcid</code>, or
+<code>failover_explicit</code>. Default: <code>loadbalance_srcid</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; TeamingPolicy { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostVirtualSwitch.cs/#L219">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_HostVirtualSwitch_Get_" data-uid="Pulumi.VSphere.HostVirtualSwitch.Get*"></a>
+  <h4 id="Pulumi_VSphere_HostVirtualSwitch_Get_System_String_Input_System_String__Pulumi_VSphere_HostVirtualSwitchState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.VSphere.HostVirtualSwitch.Get(System.String,Input{System.String},Pulumi.VSphere.HostVirtualSwitchState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, HostVirtualSwitchState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Get an existing HostVirtualSwitch resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static HostVirtualSwitch Get(string name, Input&lt;string&gt; id, HostVirtualSwitchState state = null, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.VSphere.HostVirtualSwitchState.html">HostVirtualSwitchState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.VSphere.HostVirtualSwitch.html">HostVirtualSwitch</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostVirtualSwitch.cs/#L25" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

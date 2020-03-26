@@ -1,0 +1,769 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class NetworkSecurityRule
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class NetworkSecurityRule
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Azure.Network.NetworkSecurityRule">
+  
+  <h1 id="Pulumi_Azure_Network_NetworkSecurityRule" data-uid="Pulumi.Azure.Network.NetworkSecurityRule" class="text-break">Class NetworkSecurityRule
+  </h1>
+  <div class="markdown level0 summary"><p>Manages a Network Security Rule.</p>
+<blockquote>
+<p><strong>NOTE on Network Security Groups and Network Security Rules:</strong> This provider currently
+provides both a standalone Network Security Rule resource, and allows for Network Security Rules to be defined in-line within the Network Security Group resource.
+At this time you cannot use a Network Security Group with in-line Network Security Rules in conjunction with any Network Security Rule resources. Doing so will cause a conflict of rule settings and will overwrite rules.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/network_security_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/network_security_rule.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">NetworkSecurityRule</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.Network.html">Pulumi.Azure.Network</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
+  <h5 id="Pulumi_Azure_Network_NetworkSecurityRule_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class NetworkSecurityRule : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/NetworkSecurityRule.cs/#L139">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Network_NetworkSecurityRule__ctor_" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.#ctor*"></a>
+  <h4 id="Pulumi_Azure_Network_NetworkSecurityRule__ctor_System_String_Pulumi_Azure_Network_NetworkSecurityRuleArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.#ctor(System.String,Pulumi.Azure.Network.NetworkSecurityRuleArgs,Pulumi.CustomResourceOptions)">NetworkSecurityRule(String, NetworkSecurityRuleArgs, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Create a NetworkSecurityRule resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NetworkSecurityRule(string name, NetworkSecurityRuleArgs args, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Azure.Network.NetworkSecurityRuleArgs.html">NetworkSecurityRuleArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/NetworkSecurityRule.cs/#L26">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Network_NetworkSecurityRule_Access_" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.Access*"></a>
+  <h4 id="Pulumi_Azure_Network_NetworkSecurityRule_Access" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.Access">Access</h4>
+  <div class="markdown level1 summary"><p>Specifies whether network traffic is allowed or denied. Possible values are <code>Allow</code> and <code>Deny</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Access { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/NetworkSecurityRule.cs/#L32">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Network_NetworkSecurityRule_Description_" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.Description*"></a>
+  <h4 id="Pulumi_Azure_Network_NetworkSecurityRule_Description" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.Description">Description</h4>
+  <div class="markdown level1 summary"><p>A description for this rule. Restricted to 140 characters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/NetworkSecurityRule.cs/#L38">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Network_NetworkSecurityRule_DestinationAddressPrefix_" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.DestinationAddressPrefix*"></a>
+  <h4 id="Pulumi_Azure_Network_NetworkSecurityRule_DestinationAddressPrefix" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.DestinationAddressPrefix">DestinationAddressPrefix</h4>
+  <div class="markdown level1 summary"><p>CIDR or destination IP range or * to match any IP. Tags such as ‘VirtualNetwork’, ‘AzureLoadBalancer’ and ‘Internet’ can also be used. This is required if <code>destination_address_prefixes</code> is not specified.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DestinationAddressPrefix { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/NetworkSecurityRule.cs/#L44">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Network_NetworkSecurityRule_DestinationAddressPrefixes_" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.DestinationAddressPrefixes*"></a>
+  <h4 id="Pulumi_Azure_Network_NetworkSecurityRule_DestinationAddressPrefixes" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.DestinationAddressPrefixes">DestinationAddressPrefixes</h4>
+  <div class="markdown level1 summary"><p>List of destination address prefixes. Tags may not be used. This is required if <code>destination_address_prefix</code> is not specified.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; DestinationAddressPrefixes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/NetworkSecurityRule.cs/#L50">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Network_NetworkSecurityRule_DestinationApplicationSecurityGroupIds_" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.DestinationApplicationSecurityGroupIds*"></a>
+  <h4 id="Pulumi_Azure_Network_NetworkSecurityRule_DestinationApplicationSecurityGroupIds" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.DestinationApplicationSecurityGroupIds">DestinationApplicationSecurityGroupIds</h4>
+  <div class="markdown level1 summary"><p>A List of destination Application Security Group ID's</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DestinationApplicationSecurityGroupIds { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/NetworkSecurityRule.cs/#L56">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Network_NetworkSecurityRule_DestinationPortRange_" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.DestinationPortRange*"></a>
+  <h4 id="Pulumi_Azure_Network_NetworkSecurityRule_DestinationPortRange" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.DestinationPortRange">DestinationPortRange</h4>
+  <div class="markdown level1 summary"><p>Destination Port or Range. Integer or range between <code>0</code> and <code>65535</code> or <code>*</code> to match any. This is required if <code>destination_port_ranges</code> is not specified.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DestinationPortRange { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/NetworkSecurityRule.cs/#L62">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Network_NetworkSecurityRule_DestinationPortRanges_" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.DestinationPortRanges*"></a>
+  <h4 id="Pulumi_Azure_Network_NetworkSecurityRule_DestinationPortRanges" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.DestinationPortRanges">DestinationPortRanges</h4>
+  <div class="markdown level1 summary"><p>List of destination ports or port ranges. This is required if <code>destination_port_range</code> is not specified.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; DestinationPortRanges { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/NetworkSecurityRule.cs/#L68">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Network_NetworkSecurityRule_Direction_" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.Direction*"></a>
+  <h4 id="Pulumi_Azure_Network_NetworkSecurityRule_Direction" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.Direction">Direction</h4>
+  <div class="markdown level1 summary"><p>The direction specifies if rule will be evaluated on incoming or outgoing traffic. Possible values are <code>Inbound</code> and <code>Outbound</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Direction { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/NetworkSecurityRule.cs/#L74">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Network_NetworkSecurityRule_Name_" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.Name*"></a>
+  <h4 id="Pulumi_Azure_Network_NetworkSecurityRule_Name" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.Name">Name</h4>
+  <div class="markdown level1 summary"><p>The name of the security rule. This needs to be unique across all Rules in the Network Security Group. Changing this forces a new resource to be created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/NetworkSecurityRule.cs/#L80">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Network_NetworkSecurityRule_NetworkSecurityGroupName_" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.NetworkSecurityGroupName*"></a>
+  <h4 id="Pulumi_Azure_Network_NetworkSecurityRule_NetworkSecurityGroupName" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.NetworkSecurityGroupName">NetworkSecurityGroupName</h4>
+  <div class="markdown level1 summary"><p>The name of the Network Security Group that we want to attach the rule to. Changing this forces a new resource to be created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; NetworkSecurityGroupName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/NetworkSecurityRule.cs/#L86">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Network_NetworkSecurityRule_Priority_" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.Priority*"></a>
+  <h4 id="Pulumi_Azure_Network_NetworkSecurityRule_Priority" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.Priority">Priority</h4>
+  <div class="markdown level1 summary"><p>Specifies the priority of the rule. The value can be between 100 and 4096. The priority number must be unique for each rule in the collection. The lower the priority number, the higher the priority of the rule.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; Priority { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/NetworkSecurityRule.cs/#L92">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Network_NetworkSecurityRule_Protocol_" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.Protocol*"></a>
+  <h4 id="Pulumi_Azure_Network_NetworkSecurityRule_Protocol" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.Protocol">Protocol</h4>
+  <div class="markdown level1 summary"><p>Network protocol this rule applies to. Possible values include <code>Tcp</code>, <code>Udp</code>, <code>Icmp</code>, or <code>*</code> (which matches all).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Protocol { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/NetworkSecurityRule.cs/#L98">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Network_NetworkSecurityRule_ResourceGroupName_" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.ResourceGroupName*"></a>
+  <h4 id="Pulumi_Azure_Network_NetworkSecurityRule_ResourceGroupName" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.ResourceGroupName">ResourceGroupName</h4>
+  <div class="markdown level1 summary"><p>The name of the resource group in which to create the Network Security Rule. Changing this forces a new resource to be created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ResourceGroupName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/NetworkSecurityRule.cs/#L104">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Network_NetworkSecurityRule_SourceAddressPrefix_" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.SourceAddressPrefix*"></a>
+  <h4 id="Pulumi_Azure_Network_NetworkSecurityRule_SourceAddressPrefix" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.SourceAddressPrefix">SourceAddressPrefix</h4>
+  <div class="markdown level1 summary"><p>CIDR or source IP range or * to match any IP. Tags such as ‘VirtualNetwork’, ‘AzureLoadBalancer’ and ‘Internet’ can also be used. This is required if <code>source_address_prefixes</code> is not specified.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SourceAddressPrefix { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/NetworkSecurityRule.cs/#L110">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Network_NetworkSecurityRule_SourceAddressPrefixes_" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.SourceAddressPrefixes*"></a>
+  <h4 id="Pulumi_Azure_Network_NetworkSecurityRule_SourceAddressPrefixes" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.SourceAddressPrefixes">SourceAddressPrefixes</h4>
+  <div class="markdown level1 summary"><p>List of source address prefixes. Tags may not be used. This is required if <code>source_address_prefix</code> is not specified.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; SourceAddressPrefixes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/NetworkSecurityRule.cs/#L116">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Network_NetworkSecurityRule_SourceApplicationSecurityGroupIds_" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.SourceApplicationSecurityGroupIds*"></a>
+  <h4 id="Pulumi_Azure_Network_NetworkSecurityRule_SourceApplicationSecurityGroupIds" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.SourceApplicationSecurityGroupIds">SourceApplicationSecurityGroupIds</h4>
+  <div class="markdown level1 summary"><p>A List of source Application Security Group ID's</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SourceApplicationSecurityGroupIds { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/NetworkSecurityRule.cs/#L122">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Network_NetworkSecurityRule_SourcePortRange_" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.SourcePortRange*"></a>
+  <h4 id="Pulumi_Azure_Network_NetworkSecurityRule_SourcePortRange" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.SourcePortRange">SourcePortRange</h4>
+  <div class="markdown level1 summary"><p>Source Port or Range. Integer or range between <code>0</code> and <code>65535</code> or <code>*</code> to match any. This is required if <code>source_port_ranges</code> is not specified.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SourcePortRange { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/NetworkSecurityRule.cs/#L128">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Network_NetworkSecurityRule_SourcePortRanges_" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.SourcePortRanges*"></a>
+  <h4 id="Pulumi_Azure_Network_NetworkSecurityRule_SourcePortRanges" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.SourcePortRanges">SourcePortRanges</h4>
+  <div class="markdown level1 summary"><p>List of source ports or port ranges. This is required if <code>source_port_range</code> is not specified.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; SourcePortRanges { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/NetworkSecurityRule.cs/#L169">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Network_NetworkSecurityRule_Get_" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.Get*"></a>
+  <h4 id="Pulumi_Azure_Network_NetworkSecurityRule_Get_System_String_Pulumi_Input_System_String__Pulumi_Azure_Network_NetworkSecurityRuleState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.Get(System.String,Pulumi.Input{System.String},Pulumi.Azure.Network.NetworkSecurityRuleState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, NetworkSecurityRuleState, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Get an existing NetworkSecurityRule resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static NetworkSecurityRule Get(string name, Input&lt;string&gt; id, NetworkSecurityRuleState state = null, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Azure.Network.NetworkSecurityRuleState.html">NetworkSecurityRuleState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Azure.Network.NetworkSecurityRule.html">NetworkSecurityRule</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/NetworkSecurityRule.cs/#L21" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,711 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class GroupMapper
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class GroupMapper
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Keycloak.Ldap.GroupMapper">
+  
+  <h1 id="Pulumi_Keycloak_Ldap_GroupMapper" data-uid="Pulumi.Keycloak.Ldap.GroupMapper" class="text-break">Class GroupMapper
+  </h1>
+  <div class="markdown level0 summary"><h2 id="-keycloakldapgroupmapper"># keycloak.ldap.GroupMapper</h2>
+<p>Allows for creating and managing group mappers for Keycloak users federated
+via LDAP.</p>
+<p>The LDAP group mapper can be used to map an LDAP user's groups from some DN
+to Keycloak groups. This group mapper will also create the groups within Keycloak
+if they do not already exist.</p>
+<h3 id="argument-reference">Argument Reference</h3>
+<p>The following arguments are supported:</p>
+<ul>
+<li><code>realm_id</code> - (Required) The realm that this LDAP mapper will exist in.</li>
+<li><code>ldap_user_federation_id</code> - (Required) The ID of the LDAP user federation provider to attach this mapper to.</li>
+<li><code>name</code> - (Required) Display name of this mapper when displayed in the console.</li>
+<li><code>ldap_groups_dn</code> - (Required) The LDAP DN where groups can be found.</li>
+<li><code>group_name_ldap_attribute</code> - (Required) The name of the LDAP attribute that is used in group objects for the name and RDN of the group. Typically <code>cn</code>.</li>
+<li><code>group_object_classes</code> - (Required) Array of strings representing the object classes for the group. Must contain at least one.</li>
+<li><code>preserve_group_inheritance</code> - (Optional) When <code>true</code>, group inheritance will be propagated from LDAP to Keycloak. When <code>false</code>, all LDAP groups will be propagated as top level groups within Keycloak.</li>
+<li><code>ignore_missing_groups</code> - (Optional) When <code>true</code>, missing groups in the hierarchy will be ignored.</li>
+<li><code>membership_ldap_attribute</code> - (Required) The name of the LDAP attribute that is used for membership mappings.</li>
+<li><code>membership_attribute_type</code> - (Optional) Can be one of <code>DN</code> or <code>UID</code>. Defaults to <code>DN</code>.</li>
+<li><code>membership_user_ldap_attribute</code> - (Required) The name of the LDAP attribute on a user that is used for membership mappings.</li>
+<li><code>groups_ldap_filter</code> - (Optional) When specified, adds an additional custom filter to be used when querying for groups. Must start with <code>(</code> and end with <code>)</code>.</li>
+<li><code>mode</code> - (Optional) Can be one of <code>READ_ONLY</code> or <code>LDAP_ONLY</code>. Defaults to <code>READ_ONLY</code>.</li>
+<li><code>user_roles_retrieve_strategy</code> - (Optional) Can be one of <code>LOAD_GROUPS_BY_MEMBER_ATTRIBUTE</code>, <code>GET_GROUPS_FROM_USER_MEMBEROF_ATTRIBUTE</code>, or <code>LOAD_GROUPS_BY_MEMBER_ATTRIBUTE_RECURSIVELY</code>. Defaults to <code>LOAD_GROUPS_BY_MEMBER_ATTRIBUTE</code>.</li>
+<li><code>memberof_ldap_attribute</code> - (Optional) Specifies the name of the LDAP attribute on the LDAP user that contains the groups the user is a member of. Defaults to <code>memberOf</code>.</li>
+<li><code>mapped_group_attributes</code> - (Optional) Array of strings representing attributes on the LDAP group which will be mapped to attributes on the Keycloak group.</li>
+<li><code>drop_non_existing_groups_during_sync</code> - (Optional) When <code>true</code>, groups that no longer exist within LDAP will be dropped in Keycloak during sync. Defaults to <code>false</code>.</li>
+</ul>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/ldap_group_mapper.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/ldap_group_mapper.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">GroupMapper</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Keycloak.Ldap.html">Pulumi.Keycloak.Ldap</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Keycloak.dll</h6>
+  <h5 id="Pulumi_Keycloak_Ldap_GroupMapper_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class GroupMapper : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Ldap/GroupMapper.cs/#L115">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Ldap_GroupMapper__ctor_" data-uid="Pulumi.Keycloak.Ldap.GroupMapper.#ctor*"></a>
+  <h4 id="Pulumi_Keycloak_Ldap_GroupMapper__ctor_System_String_Pulumi_Keycloak_Ldap_GroupMapperArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Keycloak.Ldap.GroupMapper.#ctor(System.String,Pulumi.Keycloak.Ldap.GroupMapperArgs,System.Nullable{CustomResourceOptions})">GroupMapper(String, GroupMapperArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Create a GroupMapper resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GroupMapper(string name, GroupMapperArgs args, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Keycloak.Ldap.GroupMapperArgs.html">GroupMapperArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Ldap/GroupMapper.cs/#L47">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Ldap_GroupMapper_DropNonExistingGroupsDuringSync_" data-uid="Pulumi.Keycloak.Ldap.GroupMapper.DropNonExistingGroupsDuringSync*"></a>
+  <h4 id="Pulumi_Keycloak_Ldap_GroupMapper_DropNonExistingGroupsDuringSync" data-uid="Pulumi.Keycloak.Ldap.GroupMapper.DropNonExistingGroupsDuringSync">DropNonExistingGroupsDuringSync</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; DropNonExistingGroupsDuringSync { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Ldap/GroupMapper.cs/#L50">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Ldap_GroupMapper_GroupNameLdapAttribute_" data-uid="Pulumi.Keycloak.Ldap.GroupMapper.GroupNameLdapAttribute*"></a>
+  <h4 id="Pulumi_Keycloak_Ldap_GroupMapper_GroupNameLdapAttribute" data-uid="Pulumi.Keycloak.Ldap.GroupMapper.GroupNameLdapAttribute">GroupNameLdapAttribute</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; GroupNameLdapAttribute { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Ldap/GroupMapper.cs/#L53">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Ldap_GroupMapper_GroupObjectClasses_" data-uid="Pulumi.Keycloak.Ldap.GroupMapper.GroupObjectClasses*"></a>
+  <h4 id="Pulumi_Keycloak_Ldap_GroupMapper_GroupObjectClasses" data-uid="Pulumi.Keycloak.Ldap.GroupMapper.GroupObjectClasses">GroupObjectClasses</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; GroupObjectClasses { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Ldap/GroupMapper.cs/#L56">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Ldap_GroupMapper_GroupsLdapFilter_" data-uid="Pulumi.Keycloak.Ldap.GroupMapper.GroupsLdapFilter*"></a>
+  <h4 id="Pulumi_Keycloak_Ldap_GroupMapper_GroupsLdapFilter" data-uid="Pulumi.Keycloak.Ldap.GroupMapper.GroupsLdapFilter">GroupsLdapFilter</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; GroupsLdapFilter { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Ldap/GroupMapper.cs/#L59">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Ldap_GroupMapper_IgnoreMissingGroups_" data-uid="Pulumi.Keycloak.Ldap.GroupMapper.IgnoreMissingGroups*"></a>
+  <h4 id="Pulumi_Keycloak_Ldap_GroupMapper_IgnoreMissingGroups" data-uid="Pulumi.Keycloak.Ldap.GroupMapper.IgnoreMissingGroups">IgnoreMissingGroups</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; IgnoreMissingGroups { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Ldap/GroupMapper.cs/#L62">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Ldap_GroupMapper_LdapGroupsDn_" data-uid="Pulumi.Keycloak.Ldap.GroupMapper.LdapGroupsDn*"></a>
+  <h4 id="Pulumi_Keycloak_Ldap_GroupMapper_LdapGroupsDn" data-uid="Pulumi.Keycloak.Ldap.GroupMapper.LdapGroupsDn">LdapGroupsDn</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; LdapGroupsDn { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Ldap/GroupMapper.cs/#L68">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Ldap_GroupMapper_LdapUserFederationId_" data-uid="Pulumi.Keycloak.Ldap.GroupMapper.LdapUserFederationId*"></a>
+  <h4 id="Pulumi_Keycloak_Ldap_GroupMapper_LdapUserFederationId" data-uid="Pulumi.Keycloak.Ldap.GroupMapper.LdapUserFederationId">LdapUserFederationId</h4>
+  <div class="markdown level1 summary"><p>The ldap user federation provider to attach this mapper to.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; LdapUserFederationId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Ldap/GroupMapper.cs/#L71">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Ldap_GroupMapper_MappedGroupAttributes_" data-uid="Pulumi.Keycloak.Ldap.GroupMapper.MappedGroupAttributes*"></a>
+  <h4 id="Pulumi_Keycloak_Ldap_GroupMapper_MappedGroupAttributes" data-uid="Pulumi.Keycloak.Ldap.GroupMapper.MappedGroupAttributes">MappedGroupAttributes</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; MappedGroupAttributes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Ldap/GroupMapper.cs/#L74">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Ldap_GroupMapper_MemberofLdapAttribute_" data-uid="Pulumi.Keycloak.Ldap.GroupMapper.MemberofLdapAttribute*"></a>
+  <h4 id="Pulumi_Keycloak_Ldap_GroupMapper_MemberofLdapAttribute" data-uid="Pulumi.Keycloak.Ldap.GroupMapper.MemberofLdapAttribute">MemberofLdapAttribute</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; MemberofLdapAttribute { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Ldap/GroupMapper.cs/#L77">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Ldap_GroupMapper_MembershipAttributeType_" data-uid="Pulumi.Keycloak.Ldap.GroupMapper.MembershipAttributeType*"></a>
+  <h4 id="Pulumi_Keycloak_Ldap_GroupMapper_MembershipAttributeType" data-uid="Pulumi.Keycloak.Ldap.GroupMapper.MembershipAttributeType">MembershipAttributeType</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; MembershipAttributeType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Ldap/GroupMapper.cs/#L80">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Ldap_GroupMapper_MembershipLdapAttribute_" data-uid="Pulumi.Keycloak.Ldap.GroupMapper.MembershipLdapAttribute*"></a>
+  <h4 id="Pulumi_Keycloak_Ldap_GroupMapper_MembershipLdapAttribute" data-uid="Pulumi.Keycloak.Ldap.GroupMapper.MembershipLdapAttribute">MembershipLdapAttribute</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; MembershipLdapAttribute { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Ldap/GroupMapper.cs/#L83">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Ldap_GroupMapper_MembershipUserLdapAttribute_" data-uid="Pulumi.Keycloak.Ldap.GroupMapper.MembershipUserLdapAttribute*"></a>
+  <h4 id="Pulumi_Keycloak_Ldap_GroupMapper_MembershipUserLdapAttribute" data-uid="Pulumi.Keycloak.Ldap.GroupMapper.MembershipUserLdapAttribute">MembershipUserLdapAttribute</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; MembershipUserLdapAttribute { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Ldap/GroupMapper.cs/#L86">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Ldap_GroupMapper_Mode_" data-uid="Pulumi.Keycloak.Ldap.GroupMapper.Mode*"></a>
+  <h4 id="Pulumi_Keycloak_Ldap_GroupMapper_Mode" data-uid="Pulumi.Keycloak.Ldap.GroupMapper.Mode">Mode</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Mode { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Ldap/GroupMapper.cs/#L92">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Ldap_GroupMapper_Name_" data-uid="Pulumi.Keycloak.Ldap.GroupMapper.Name*"></a>
+  <h4 id="Pulumi_Keycloak_Ldap_GroupMapper_Name" data-uid="Pulumi.Keycloak.Ldap.GroupMapper.Name">Name</h4>
+  <div class="markdown level1 summary"><p>Display name of the mapper when displayed in the console.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Ldap/GroupMapper.cs/#L95">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Ldap_GroupMapper_PreserveGroupInheritance_" data-uid="Pulumi.Keycloak.Ldap.GroupMapper.PreserveGroupInheritance*"></a>
+  <h4 id="Pulumi_Keycloak_Ldap_GroupMapper_PreserveGroupInheritance" data-uid="Pulumi.Keycloak.Ldap.GroupMapper.PreserveGroupInheritance">PreserveGroupInheritance</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; PreserveGroupInheritance { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Ldap/GroupMapper.cs/#L101">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Ldap_GroupMapper_RealmId_" data-uid="Pulumi.Keycloak.Ldap.GroupMapper.RealmId*"></a>
+  <h4 id="Pulumi_Keycloak_Ldap_GroupMapper_RealmId" data-uid="Pulumi.Keycloak.Ldap.GroupMapper.RealmId">RealmId</h4>
+  <div class="markdown level1 summary"><p>The realm in which the ldap user federation provider exists.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; RealmId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Ldap/GroupMapper.cs/#L104">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Ldap_GroupMapper_UserRolesRetrieveStrategy_" data-uid="Pulumi.Keycloak.Ldap.GroupMapper.UserRolesRetrieveStrategy*"></a>
+  <h4 id="Pulumi_Keycloak_Ldap_GroupMapper_UserRolesRetrieveStrategy" data-uid="Pulumi.Keycloak.Ldap.GroupMapper.UserRolesRetrieveStrategy">UserRolesRetrieveStrategy</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; UserRolesRetrieveStrategy { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Ldap/GroupMapper.cs/#L145">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Ldap_GroupMapper_Get_" data-uid="Pulumi.Keycloak.Ldap.GroupMapper.Get*"></a>
+  <h4 id="Pulumi_Keycloak_Ldap_GroupMapper_Get_System_String_Input_System_String__Pulumi_Keycloak_Ldap_GroupMapperState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Keycloak.Ldap.GroupMapper.Get(System.String,Input{System.String},Pulumi.Keycloak.Ldap.GroupMapperState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, GroupMapperState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Get an existing GroupMapper resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static GroupMapper Get(string name, Input&lt;string&gt; id, GroupMapperState state = null, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Keycloak.Ldap.GroupMapperState.html">GroupMapperState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Keycloak.Ldap.GroupMapper.html">GroupMapper</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Ldap/GroupMapper.cs/#L45" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

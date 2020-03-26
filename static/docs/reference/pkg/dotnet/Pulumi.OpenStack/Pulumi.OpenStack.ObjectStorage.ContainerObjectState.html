@@ -1,0 +1,685 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ContainerObjectState
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ContainerObjectState
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.OpenStack.ObjectStorage.ContainerObjectState">
+  
+  <h1 id="Pulumi_OpenStack_ObjectStorage_ContainerObjectState" data-uid="Pulumi.OpenStack.ObjectStorage.ContainerObjectState" class="text-break">Class ContainerObjectState
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">ContainerObjectState</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.OpenStack.ObjectStorage.html">Pulumi.OpenStack.ObjectStorage</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.OpenStack.dll</h6>
+  <h5 id="Pulumi_OpenStack_ObjectStorage_ContainerObjectState_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class ContainerObjectState : ResourceArgs</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Objectstorage/ContainerObject.cs/#L483">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ObjectStorage_ContainerObjectState__ctor_" data-uid="Pulumi.OpenStack.ObjectStorage.ContainerObjectState.#ctor*"></a>
+  <h4 id="Pulumi_OpenStack_ObjectStorage_ContainerObjectState__ctor" data-uid="Pulumi.OpenStack.ObjectStorage.ContainerObjectState.#ctor">ContainerObjectState()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ContainerObjectState()</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Objectstorage/ContainerObject.cs/#L341">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ObjectStorage_ContainerObjectState_ContainerName_" data-uid="Pulumi.OpenStack.ObjectStorage.ContainerObjectState.ContainerName*"></a>
+  <h4 id="Pulumi_OpenStack_ObjectStorage_ContainerObjectState_ContainerName" data-uid="Pulumi.OpenStack.ObjectStorage.ContainerObjectState.ContainerName">ContainerName</h4>
+  <div class="markdown level1 summary"><p>A unique (within an account) name for the container.
+The container name must be from 1 to 256 characters long and can start
+with any character and contain any pattern. Character set must be UTF-8.
+The container name cannot contain a slash (/) character because this
+character delimits the container and object name. For example, the path
+/v1/account/www/pages specifies the www container, not the www/pages container.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ContainerName { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Objectstorage/ContainerObject.cs/#L348">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ObjectStorage_ContainerObjectState_Content_" data-uid="Pulumi.OpenStack.ObjectStorage.ContainerObjectState.Content*"></a>
+  <h4 id="Pulumi_OpenStack_ObjectStorage_ContainerObjectState_Content" data-uid="Pulumi.OpenStack.ObjectStorage.ContainerObjectState.Content">Content</h4>
+  <div class="markdown level1 summary"><p>A string representing the content of the object. Conflicts with
+<code>source</code> and <code>copy_from</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Content { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Objectstorage/ContainerObject.cs/#L356">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ObjectStorage_ContainerObjectState_ContentDisposition_" data-uid="Pulumi.OpenStack.ObjectStorage.ContainerObjectState.ContentDisposition*"></a>
+  <h4 id="Pulumi_OpenStack_ObjectStorage_ContainerObjectState_ContentDisposition" data-uid="Pulumi.OpenStack.ObjectStorage.ContainerObjectState.ContentDisposition">ContentDisposition</h4>
+  <div class="markdown level1 summary"><p>A string which specifies the override behavior for
+the browser. For example, this header might specify that the browser use a download
+program to save this file rather than show the file, which is the default.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ContentDisposition { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Objectstorage/ContainerObject.cs/#L363">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ObjectStorage_ContainerObjectState_ContentEncoding_" data-uid="Pulumi.OpenStack.ObjectStorage.ContainerObjectState.ContentEncoding*"></a>
+  <h4 id="Pulumi_OpenStack_ObjectStorage_ContainerObjectState_ContentEncoding" data-uid="Pulumi.OpenStack.ObjectStorage.ContainerObjectState.ContentEncoding">ContentEncoding</h4>
+  <div class="markdown level1 summary"><p>A string representing the value of the Content-Encoding
+metadata.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ContentEncoding { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Objectstorage/ContainerObject.cs/#L370">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ObjectStorage_ContainerObjectState_ContentLength_" data-uid="Pulumi.OpenStack.ObjectStorage.ContainerObjectState.ContentLength*"></a>
+  <h4 id="Pulumi_OpenStack_ObjectStorage_ContainerObjectState_ContentLength" data-uid="Pulumi.OpenStack.ObjectStorage.ContainerObjectState.ContentLength">ContentLength</h4>
+  <div class="markdown level1 summary"><p>If the operation succeeds, this value is zero (0) or the
+length of informational or error text in the response body.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? ContentLength { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Objectstorage/ContainerObject.cs/#L376">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ObjectStorage_ContainerObjectState_ContentType_" data-uid="Pulumi.OpenStack.ObjectStorage.ContainerObjectState.ContentType*"></a>
+  <h4 id="Pulumi_OpenStack_ObjectStorage_ContainerObjectState_ContentType" data-uid="Pulumi.OpenStack.ObjectStorage.ContainerObjectState.ContentType">ContentType</h4>
+  <div class="markdown level1 summary"><p>A string which sets the MIME type for the object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ContentType { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Objectstorage/ContainerObject.cs/#L386">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ObjectStorage_ContainerObjectState_CopyFrom_" data-uid="Pulumi.OpenStack.ObjectStorage.ContainerObjectState.CopyFrom*"></a>
+  <h4 id="Pulumi_OpenStack_ObjectStorage_ContainerObjectState_CopyFrom" data-uid="Pulumi.OpenStack.ObjectStorage.ContainerObjectState.CopyFrom">CopyFrom</h4>
+  <div class="markdown level1 summary"><p>A string representing the name of an object
+used to create the new object by copying the <code>copy_from</code> object. The value is in form
+{container}/{object}. You must UTF-8-encode and then URL-encode the names of the
+container and object before you include them in the header. Conflicts with <code>source</code> and
+<code>content</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? CopyFrom { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Objectstorage/ContainerObject.cs/#L394">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ObjectStorage_ContainerObjectState_Date_" data-uid="Pulumi.OpenStack.ObjectStorage.ContainerObjectState.Date*"></a>
+  <h4 id="Pulumi_OpenStack_ObjectStorage_ContainerObjectState_Date" data-uid="Pulumi.OpenStack.ObjectStorage.ContainerObjectState.Date">Date</h4>
+  <div class="markdown level1 summary"><p>The date and time the system responded to the request, using the preferred
+format of RFC 7231 as shown in this example Thu, 16 Jun 2016 15:10:38 GMT. The
+time is always in UTC.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Date { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Objectstorage/ContainerObject.cs/#L402">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ObjectStorage_ContainerObjectState_DeleteAfter_" data-uid="Pulumi.OpenStack.ObjectStorage.ContainerObjectState.DeleteAfter*"></a>
+  <h4 id="Pulumi_OpenStack_ObjectStorage_ContainerObjectState_DeleteAfter" data-uid="Pulumi.OpenStack.ObjectStorage.ContainerObjectState.DeleteAfter">DeleteAfter</h4>
+  <div class="markdown level1 summary"><p>An integer representing the number of seconds after which the
+system removes the object. Internally, the Object Storage system stores this value in
+the X-Delete-At metadata item.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? DeleteAfter { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Objectstorage/ContainerObject.cs/#L409">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ObjectStorage_ContainerObjectState_DeleteAt_" data-uid="Pulumi.OpenStack.ObjectStorage.ContainerObjectState.DeleteAt*"></a>
+  <h4 id="Pulumi_OpenStack_ObjectStorage_ContainerObjectState_DeleteAt" data-uid="Pulumi.OpenStack.ObjectStorage.ContainerObjectState.DeleteAt">DeleteAt</h4>
+  <div class="markdown level1 summary"><p>An string representing the date when the system removes the object.
+For example, &quot;2015-08-26&quot; is equivalent to Mon, Wed, 26 Aug 2015 00:00:00 GMT.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? DeleteAt { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Objectstorage/ContainerObject.cs/#L417">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ObjectStorage_ContainerObjectState_DetectContentType_" data-uid="Pulumi.OpenStack.ObjectStorage.ContainerObjectState.DetectContentType*"></a>
+  <h4 id="Pulumi_OpenStack_ObjectStorage_ContainerObjectState_DetectContentType" data-uid="Pulumi.OpenStack.ObjectStorage.ContainerObjectState.DetectContentType">DetectContentType</h4>
+  <div class="markdown level1 summary"><p>If set to true, Object Storage guesses the content
+type based on the file extension and ignores the value sent in the Content-Type
+header, if present.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? DetectContentType { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Objectstorage/ContainerObject.cs/#L423">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ObjectStorage_ContainerObjectState_Etag_" data-uid="Pulumi.OpenStack.ObjectStorage.ContainerObjectState.Etag*"></a>
+  <h4 id="Pulumi_OpenStack_ObjectStorage_ContainerObjectState_Etag" data-uid="Pulumi.OpenStack.ObjectStorage.ContainerObjectState.Etag">Etag</h4>
+  <div class="markdown level1 summary"><p>Used to trigger updates. The only meaningful value is ${md5(file(&quot;path/to/file&quot;))}.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Etag { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Objectstorage/ContainerObject.cs/#L434">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ObjectStorage_ContainerObjectState_LastModified_" data-uid="Pulumi.OpenStack.ObjectStorage.ContainerObjectState.LastModified*"></a>
+  <h4 id="Pulumi_OpenStack_ObjectStorage_ContainerObjectState_LastModified" data-uid="Pulumi.OpenStack.ObjectStorage.ContainerObjectState.LastModified">LastModified</h4>
+  <div class="markdown level1 summary"><p>The date and time when the object was last modified. The date and time
+stamp format is ISO 8601:
+CCYY-MM-DDThh:mm:ss±hh:mm
+For example, 2015-08-27T09:49:58-05:00.
+The ±hh:mm value, if included, is the time zone as an offset from UTC. In the previous
+example, the offset value is -05:00.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? LastModified { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Objectstorage/ContainerObject.cs/#L439">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ObjectStorage_ContainerObjectState_Metadata_" data-uid="Pulumi.OpenStack.ObjectStorage.ContainerObjectState.Metadata*"></a>
+  <h4 id="Pulumi_OpenStack_ObjectStorage_ContainerObjectState_Metadata" data-uid="Pulumi.OpenStack.ObjectStorage.ContainerObjectState.Metadata">Metadata</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputMap&lt;object&gt; Metadata { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Objectstorage/ContainerObject.cs/#L448">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ObjectStorage_ContainerObjectState_Name_" data-uid="Pulumi.OpenStack.ObjectStorage.ContainerObjectState.Name*"></a>
+  <h4 id="Pulumi_OpenStack_ObjectStorage_ContainerObjectState_Name" data-uid="Pulumi.OpenStack.ObjectStorage.ContainerObjectState.Name">Name</h4>
+  <div class="markdown level1 summary"><p>A unique name for the object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Objectstorage/ContainerObject.cs/#L458">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ObjectStorage_ContainerObjectState_ObjectManifest_" data-uid="Pulumi.OpenStack.ObjectStorage.ContainerObjectState.ObjectManifest*"></a>
+  <h4 id="Pulumi_OpenStack_ObjectStorage_ContainerObjectState_ObjectManifest" data-uid="Pulumi.OpenStack.ObjectStorage.ContainerObjectState.ObjectManifest">ObjectManifest</h4>
+  <div class="markdown level1 summary"><p>A string set to specify that this is a dynamic large
+object manifest object. The value is the container and object name prefix of the
+segment objects in the form container/prefix. You must UTF-8-encode and then
+URL-encode the names of the container and prefix before you include them in this
+header.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ObjectManifest { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Objectstorage/ContainerObject.cs/#L466">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ObjectStorage_ContainerObjectState_Region_" data-uid="Pulumi.OpenStack.ObjectStorage.ContainerObjectState.Region*"></a>
+  <h4 id="Pulumi_OpenStack_ObjectStorage_ContainerObjectState_Region" data-uid="Pulumi.OpenStack.ObjectStorage.ContainerObjectState.Region">Region</h4>
+  <div class="markdown level1 summary"><p>The region in which to create the container. If
+omitted, the <code>region</code> argument of the provider is used. Changing this
+creates a new container.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Region { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Objectstorage/ContainerObject.cs/#L473">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ObjectStorage_ContainerObjectState_Source_" data-uid="Pulumi.OpenStack.ObjectStorage.ContainerObjectState.Source*"></a>
+  <h4 id="Pulumi_OpenStack_ObjectStorage_ContainerObjectState_Source" data-uid="Pulumi.OpenStack.ObjectStorage.ContainerObjectState.Source">Source</h4>
+  <div class="markdown level1 summary"><p>A string representing the local path of a file which will be used
+as the object's content. Conflicts with <code>source</code> and <code>copy_from</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Source { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Objectstorage/ContainerObject.cs/#L480">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_ObjectStorage_ContainerObjectState_TransId_" data-uid="Pulumi.OpenStack.ObjectStorage.ContainerObjectState.TransId*"></a>
+  <h4 id="Pulumi_OpenStack_ObjectStorage_ContainerObjectState_TransId" data-uid="Pulumi.OpenStack.ObjectStorage.ContainerObjectState.TransId">TransId</h4>
+  <div class="markdown level1 summary"><p>A unique transaction ID for this request. Your service provider might
+need this value if you report a problem.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? TransId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Objectstorage/ContainerObject.cs/#L331" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

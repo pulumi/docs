@@ -1,0 +1,737 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ReplicationInstance
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ReplicationInstance
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Aws.Dms.ReplicationInstance">
+  
+  <h1 id="Pulumi_Aws_Dms_ReplicationInstance" data-uid="Pulumi.Aws.Dms.ReplicationInstance" class="text-break">Class ReplicationInstance
+  </h1>
+  <div class="markdown level0 summary"><p>Provides a DMS (Data Migration Service) replication instance resource. DMS replication instances can be created, updated, deleted, and imported.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dms_replication_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dms_replication_instance.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">ReplicationInstance</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Dms.html">Pulumi.Aws.Dms</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
+  <h5 id="Pulumi_Aws_Dms_ReplicationInstance_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ReplicationInstance : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Dms/ReplicationInstance.cs/#L129">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Dms_ReplicationInstance__ctor_" data-uid="Pulumi.Aws.Dms.ReplicationInstance.#ctor*"></a>
+  <h4 id="Pulumi_Aws_Dms_ReplicationInstance__ctor_System_String_Pulumi_Aws_Dms_ReplicationInstanceArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Dms.ReplicationInstance.#ctor(System.String,Pulumi.Aws.Dms.ReplicationInstanceArgs,Pulumi.CustomResourceOptions)">ReplicationInstance(String, ReplicationInstanceArgs, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Create a ReplicationInstance resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ReplicationInstance(string name, ReplicationInstanceArgs args, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Aws.Dms.ReplicationInstanceArgs.html">ReplicationInstanceArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Dms/ReplicationInstance.cs/#L22">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Dms_ReplicationInstance_AllocatedStorage_" data-uid="Pulumi.Aws.Dms.ReplicationInstance.AllocatedStorage*"></a>
+  <h4 id="Pulumi_Aws_Dms_ReplicationInstance_AllocatedStorage" data-uid="Pulumi.Aws.Dms.ReplicationInstance.AllocatedStorage">AllocatedStorage</h4>
+  <div class="markdown level1 summary"><p>The amount of storage (in gigabytes) to be initially allocated for the replication instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; AllocatedStorage { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Dms/ReplicationInstance.cs/#L28">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Dms_ReplicationInstance_ApplyImmediately_" data-uid="Pulumi.Aws.Dms.ReplicationInstance.ApplyImmediately*"></a>
+  <h4 id="Pulumi_Aws_Dms_ReplicationInstance_ApplyImmediately" data-uid="Pulumi.Aws.Dms.ReplicationInstance.ApplyImmediately">ApplyImmediately</h4>
+  <div class="markdown level1 summary"><p>Indicates whether the changes should be applied immediately or during the next maintenance window. Only used when updating an existing resource.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; ApplyImmediately { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Dms/ReplicationInstance.cs/#L34">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Dms_ReplicationInstance_AutoMinorVersionUpgrade_" data-uid="Pulumi.Aws.Dms.ReplicationInstance.AutoMinorVersionUpgrade*"></a>
+  <h4 id="Pulumi_Aws_Dms_ReplicationInstance_AutoMinorVersionUpgrade" data-uid="Pulumi.Aws.Dms.ReplicationInstance.AutoMinorVersionUpgrade">AutoMinorVersionUpgrade</h4>
+  <div class="markdown level1 summary"><p>Indicates that minor engine upgrades will be applied automatically to the replication instance during the maintenance window.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; AutoMinorVersionUpgrade { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Dms/ReplicationInstance.cs/#L40">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Dms_ReplicationInstance_AvailabilityZone_" data-uid="Pulumi.Aws.Dms.ReplicationInstance.AvailabilityZone*"></a>
+  <h4 id="Pulumi_Aws_Dms_ReplicationInstance_AvailabilityZone" data-uid="Pulumi.Aws.Dms.ReplicationInstance.AvailabilityZone">AvailabilityZone</h4>
+  <div class="markdown level1 summary"><p>The EC2 Availability Zone that the replication instance will be created in.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AvailabilityZone { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Dms/ReplicationInstance.cs/#L46">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Dms_ReplicationInstance_EngineVersion_" data-uid="Pulumi.Aws.Dms.ReplicationInstance.EngineVersion*"></a>
+  <h4 id="Pulumi_Aws_Dms_ReplicationInstance_EngineVersion" data-uid="Pulumi.Aws.Dms.ReplicationInstance.EngineVersion">EngineVersion</h4>
+  <div class="markdown level1 summary"><p>The engine version number of the replication instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; EngineVersion { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Dms/ReplicationInstance.cs/#L52">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Dms_ReplicationInstance_KmsKeyArn_" data-uid="Pulumi.Aws.Dms.ReplicationInstance.KmsKeyArn*"></a>
+  <h4 id="Pulumi_Aws_Dms_ReplicationInstance_KmsKeyArn" data-uid="Pulumi.Aws.Dms.ReplicationInstance.KmsKeyArn">KmsKeyArn</h4>
+  <div class="markdown level1 summary"><p>The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for <code>kms_key_arn</code>, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; KmsKeyArn { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Dms/ReplicationInstance.cs/#L58">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Dms_ReplicationInstance_MultiAz_" data-uid="Pulumi.Aws.Dms.ReplicationInstance.MultiAz*"></a>
+  <h4 id="Pulumi_Aws_Dms_ReplicationInstance_MultiAz" data-uid="Pulumi.Aws.Dms.ReplicationInstance.MultiAz">MultiAz</h4>
+  <div class="markdown level1 summary"><p>Specifies if the replication instance is a multi-az deployment. You cannot set the <code>availability_zone</code> parameter if the <code>multi_az</code> parameter is set to <code>true</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; MultiAz { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Dms/ReplicationInstance.cs/#L64">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Dms_ReplicationInstance_PreferredMaintenanceWindow_" data-uid="Pulumi.Aws.Dms.ReplicationInstance.PreferredMaintenanceWindow*"></a>
+  <h4 id="Pulumi_Aws_Dms_ReplicationInstance_PreferredMaintenanceWindow" data-uid="Pulumi.Aws.Dms.ReplicationInstance.PreferredMaintenanceWindow">PreferredMaintenanceWindow</h4>
+  <div class="markdown level1 summary"><p>The weekly time range during which system maintenance can occur, in Universal Coordinated Time (UTC).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; PreferredMaintenanceWindow { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Dms/ReplicationInstance.cs/#L70">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Dms_ReplicationInstance_PubliclyAccessible_" data-uid="Pulumi.Aws.Dms.ReplicationInstance.PubliclyAccessible*"></a>
+  <h4 id="Pulumi_Aws_Dms_ReplicationInstance_PubliclyAccessible" data-uid="Pulumi.Aws.Dms.ReplicationInstance.PubliclyAccessible">PubliclyAccessible</h4>
+  <div class="markdown level1 summary"><p>Specifies the accessibility options for the replication instance. A value of true represents an instance with a public IP address. A value of false represents an instance with a private IP address.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; PubliclyAccessible { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Dms/ReplicationInstance.cs/#L76">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Dms_ReplicationInstance_ReplicationInstanceArn_" data-uid="Pulumi.Aws.Dms.ReplicationInstance.ReplicationInstanceArn*"></a>
+  <h4 id="Pulumi_Aws_Dms_ReplicationInstance_ReplicationInstanceArn" data-uid="Pulumi.Aws.Dms.ReplicationInstance.ReplicationInstanceArn">ReplicationInstanceArn</h4>
+  <div class="markdown level1 summary"><p>The Amazon Resource Name (ARN) of the replication instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ReplicationInstanceArn { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Dms/ReplicationInstance.cs/#L82">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Dms_ReplicationInstance_ReplicationInstanceClass_" data-uid="Pulumi.Aws.Dms.ReplicationInstance.ReplicationInstanceClass*"></a>
+  <h4 id="Pulumi_Aws_Dms_ReplicationInstance_ReplicationInstanceClass" data-uid="Pulumi.Aws.Dms.ReplicationInstance.ReplicationInstanceClass">ReplicationInstanceClass</h4>
+  <div class="markdown level1 summary"><p>The compute and memory capacity of the replication instance as specified by the replication instance class. Can be one of <code>dms.t2.micro | dms.t2.small | dms.t2.medium | dms.t2.large | dms.c4.large | dms.c4.xlarge | dms.c4.2xlarge | dms.c4.4xlarge</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ReplicationInstanceClass { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Dms/ReplicationInstance.cs/#L88">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Dms_ReplicationInstance_ReplicationInstanceId_" data-uid="Pulumi.Aws.Dms.ReplicationInstance.ReplicationInstanceId*"></a>
+  <h4 id="Pulumi_Aws_Dms_ReplicationInstance_ReplicationInstanceId" data-uid="Pulumi.Aws.Dms.ReplicationInstance.ReplicationInstanceId">ReplicationInstanceId</h4>
+  <div class="markdown level1 summary"><p>The replication instance identifier. This parameter is stored as a lowercase string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ReplicationInstanceId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Dms/ReplicationInstance.cs/#L94">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Dms_ReplicationInstance_ReplicationInstancePrivateIps_" data-uid="Pulumi.Aws.Dms.ReplicationInstance.ReplicationInstancePrivateIps*"></a>
+  <h4 id="Pulumi_Aws_Dms_ReplicationInstance_ReplicationInstancePrivateIps" data-uid="Pulumi.Aws.Dms.ReplicationInstance.ReplicationInstancePrivateIps">ReplicationInstancePrivateIps</h4>
+  <div class="markdown level1 summary"><p>A list of the private IP addresses of the replication instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; ReplicationInstancePrivateIps { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Dms/ReplicationInstance.cs/#L100">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Dms_ReplicationInstance_ReplicationInstancePublicIps_" data-uid="Pulumi.Aws.Dms.ReplicationInstance.ReplicationInstancePublicIps*"></a>
+  <h4 id="Pulumi_Aws_Dms_ReplicationInstance_ReplicationInstancePublicIps" data-uid="Pulumi.Aws.Dms.ReplicationInstance.ReplicationInstancePublicIps">ReplicationInstancePublicIps</h4>
+  <div class="markdown level1 summary"><p>A list of the public IP addresses of the replication instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; ReplicationInstancePublicIps { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Dms/ReplicationInstance.cs/#L106">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Dms_ReplicationInstance_ReplicationSubnetGroupId_" data-uid="Pulumi.Aws.Dms.ReplicationInstance.ReplicationSubnetGroupId*"></a>
+  <h4 id="Pulumi_Aws_Dms_ReplicationInstance_ReplicationSubnetGroupId" data-uid="Pulumi.Aws.Dms.ReplicationInstance.ReplicationSubnetGroupId">ReplicationSubnetGroupId</h4>
+  <div class="markdown level1 summary"><p>A subnet group to associate with the replication instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ReplicationSubnetGroupId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Dms/ReplicationInstance.cs/#L112">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Dms_ReplicationInstance_Tags_" data-uid="Pulumi.Aws.Dms.ReplicationInstance.Tags*"></a>
+  <h4 id="Pulumi_Aws_Dms_ReplicationInstance_Tags" data-uid="Pulumi.Aws.Dms.ReplicationInstance.Tags">Tags</h4>
+  <div class="markdown level1 summary"><p>A mapping of tags to assign to the resource.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Tags { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Dms/ReplicationInstance.cs/#L118">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Dms_ReplicationInstance_VpcSecurityGroupIds_" data-uid="Pulumi.Aws.Dms.ReplicationInstance.VpcSecurityGroupIds*"></a>
+  <h4 id="Pulumi_Aws_Dms_ReplicationInstance_VpcSecurityGroupIds" data-uid="Pulumi.Aws.Dms.ReplicationInstance.VpcSecurityGroupIds">VpcSecurityGroupIds</h4>
+  <div class="markdown level1 summary"><p>A list of VPC security group IDs to be used with the replication instance. The VPC security groups must work with the VPC containing the replication instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; VpcSecurityGroupIds { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Dms/ReplicationInstance.cs/#L159">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Dms_ReplicationInstance_Get_" data-uid="Pulumi.Aws.Dms.ReplicationInstance.Get*"></a>
+  <h4 id="Pulumi_Aws_Dms_ReplicationInstance_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_Dms_ReplicationInstanceState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Dms.ReplicationInstance.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.Dms.ReplicationInstanceState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, ReplicationInstanceState, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Get an existing ReplicationInstance resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ReplicationInstance Get(string name, Input&lt;string&gt; id, ReplicationInstanceState state = null, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Aws.Dms.ReplicationInstanceState.html">ReplicationInstanceState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Aws.Dms.ReplicationInstance.html">ReplicationInstance</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Dms/ReplicationInstance.cs/#L17" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

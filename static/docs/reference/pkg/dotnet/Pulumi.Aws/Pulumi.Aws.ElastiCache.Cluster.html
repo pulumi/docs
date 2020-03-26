@@ -1,0 +1,1017 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Cluster
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Cluster
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Aws.ElastiCache.Cluster">
+  
+  <h1 id="Pulumi_Aws_ElastiCache_Cluster" data-uid="Pulumi.Aws.ElastiCache.Cluster" class="text-break">Class Cluster
+  </h1>
+  <div class="markdown level0 summary"><p>Provides an ElastiCache Cluster resource, which manages a Memcached cluster or Redis instance.
+For working with Redis (Cluster Mode Enabled) replication groups, see the
+<a href="https://www.terraform.io/docs/providers/aws/r/elasticache_replication_group.html"><code>aws.elasticache.ReplicationGroup</code> resource</a>.</p>
+<blockquote>
+<p><strong>Note:</strong> When you change an attribute, such as <code>node_type</code>, by default
+it is applied in the next maintenance window. Because of this, this provider may report
+a difference in its planning phase because the actual modification has not yet taken
+place. You can use the <code>apply_immediately</code> flag to instruct the service to apply the
+change immediately. Using <code>apply_immediately</code> can result in a brief downtime as the server reboots.
+See the AWS Docs on [Modifying an ElastiCache Cache Cluster][2] for more information.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_cluster.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Cluster</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.ElastiCache.html">Pulumi.Aws.ElastiCache</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
+  <h5 id="Pulumi_Aws_ElastiCache_Cluster_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Cluster : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticache/Cluster.cs/#L217">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_ElastiCache_Cluster__ctor_" data-uid="Pulumi.Aws.ElastiCache.Cluster.#ctor*"></a>
+  <h4 id="Pulumi_Aws_ElastiCache_Cluster__ctor_System_String_Pulumi_Aws_ElastiCache_ClusterArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.ElastiCache.Cluster.#ctor(System.String,Pulumi.Aws.ElastiCache.ClusterArgs,Pulumi.CustomResourceOptions)">Cluster(String, ClusterArgs, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Create a Cluster resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Cluster(string name, ClusterArgs args = null, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Aws.ElastiCache.ClusterArgs.html">ClusterArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticache/Cluster.cs/#L34">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_ElastiCache_Cluster_ApplyImmediately_" data-uid="Pulumi.Aws.ElastiCache.Cluster.ApplyImmediately*"></a>
+  <h4 id="Pulumi_Aws_ElastiCache_Cluster_ApplyImmediately" data-uid="Pulumi.Aws.ElastiCache.Cluster.ApplyImmediately">ApplyImmediately</h4>
+  <div class="markdown level1 summary"><p>Specifies whether any database modifications
+are applied immediately, or during the next maintenance window. Default is
+<code>false</code>. See [Amazon ElastiCache Documentation for more information.][1]
+(Available since v0.6.0)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; ApplyImmediately { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticache/Cluster.cs/#L37">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_ElastiCache_Cluster_Arn_" data-uid="Pulumi.Aws.ElastiCache.Cluster.Arn*"></a>
+  <h4 id="Pulumi_Aws_ElastiCache_Cluster_Arn" data-uid="Pulumi.Aws.ElastiCache.Cluster.Arn">Arn</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Arn { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticache/Cluster.cs/#L43">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_ElastiCache_Cluster_AvailabilityZone_" data-uid="Pulumi.Aws.ElastiCache.Cluster.AvailabilityZone*"></a>
+  <h4 id="Pulumi_Aws_ElastiCache_Cluster_AvailabilityZone" data-uid="Pulumi.Aws.ElastiCache.Cluster.AvailabilityZone">AvailabilityZone</h4>
+  <div class="markdown level1 summary"><p>The Availability Zone for the cache cluster. If you want to create cache nodes in multi-az, use <code>preferred_availability_zones</code> instead. Default: System chosen Availability Zone.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AvailabilityZone { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticache/Cluster.cs/#L49">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_ElastiCache_Cluster_AzMode_" data-uid="Pulumi.Aws.ElastiCache.Cluster.AzMode*"></a>
+  <h4 id="Pulumi_Aws_ElastiCache_Cluster_AzMode" data-uid="Pulumi.Aws.ElastiCache.Cluster.AzMode">AzMode</h4>
+  <div class="markdown level1 summary"><p>Specifies whether the nodes in this Memcached node group are created in a single Availability Zone or created across multiple Availability Zones in the cluster's region. Valid values for this parameter are <code>single-az</code> or <code>cross-az</code>, default is <code>single-az</code>. If you want to choose <code>cross-az</code>, <code>num_cache_nodes</code> must be greater than <code>1</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AzMode { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticache/Cluster.cs/#L56">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_ElastiCache_Cluster_CacheNodes_" data-uid="Pulumi.Aws.ElastiCache.Cluster.CacheNodes*"></a>
+  <h4 id="Pulumi_Aws_ElastiCache_Cluster_CacheNodes" data-uid="Pulumi.Aws.ElastiCache.Cluster.CacheNodes">CacheNodes</h4>
+  <div class="markdown level1 summary"><p>List of node objects including <code>id</code>, <code>address</code>, <code>port</code> and <code>availability_zone</code>.
+Referenceable e.g. as <code>${aws_elasticache_cluster.bar.cache_nodes.0.address}</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;ClusterCacheNodes&gt;&gt; CacheNodes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.ElastiCache.Outputs.ClusterCacheNodes.html">ClusterCacheNodes</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticache/Cluster.cs/#L62">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_ElastiCache_Cluster_ClusterAddress_" data-uid="Pulumi.Aws.ElastiCache.Cluster.ClusterAddress*"></a>
+  <h4 id="Pulumi_Aws_ElastiCache_Cluster_ClusterAddress" data-uid="Pulumi.Aws.ElastiCache.Cluster.ClusterAddress">ClusterAddress</h4>
+  <div class="markdown level1 summary"><p>(Memcached only) The DNS name of the cache cluster without the port appended.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ClusterAddress { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticache/Cluster.cs/#L69">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_ElastiCache_Cluster_ClusterId_" data-uid="Pulumi.Aws.ElastiCache.Cluster.ClusterId*"></a>
+  <h4 id="Pulumi_Aws_ElastiCache_Cluster_ClusterId" data-uid="Pulumi.Aws.ElastiCache.Cluster.ClusterId">ClusterId</h4>
+  <div class="markdown level1 summary"><p>Group identifier. ElastiCache converts
+this name to lowercase</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ClusterId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticache/Cluster.cs/#L75">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_ElastiCache_Cluster_ConfigurationEndpoint_" data-uid="Pulumi.Aws.ElastiCache.Cluster.ConfigurationEndpoint*"></a>
+  <h4 id="Pulumi_Aws_ElastiCache_Cluster_ConfigurationEndpoint" data-uid="Pulumi.Aws.ElastiCache.Cluster.ConfigurationEndpoint">ConfigurationEndpoint</h4>
+  <div class="markdown level1 summary"><p>(Memcached only) The configuration endpoint to allow host discovery.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ConfigurationEndpoint { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticache/Cluster.cs/#L82">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_ElastiCache_Cluster_Engine_" data-uid="Pulumi.Aws.ElastiCache.Cluster.Engine*"></a>
+  <h4 id="Pulumi_Aws_ElastiCache_Cluster_Engine" data-uid="Pulumi.Aws.ElastiCache.Cluster.Engine">Engine</h4>
+  <div class="markdown level1 summary"><p>Name of the cache engine to be used for this cache cluster.
+Valid values for this parameter are <code>memcached</code> or <code>redis</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Engine { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticache/Cluster.cs/#L90">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_ElastiCache_Cluster_EngineVersion_" data-uid="Pulumi.Aws.ElastiCache.Cluster.EngineVersion*"></a>
+  <h4 id="Pulumi_Aws_ElastiCache_Cluster_EngineVersion" data-uid="Pulumi.Aws.ElastiCache.Cluster.EngineVersion">EngineVersion</h4>
+  <div class="markdown level1 summary"><p>Version number of the cache engine to be used.
+See <a href="https://docs.aws.amazon.com/cli/latest/reference/elasticache/describe-cache-engine-versions.html">Describe Cache Engine Versions</a>
+in the AWS Documentation center for supported versions</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; EngineVersion { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticache/Cluster.cs/#L98">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_ElastiCache_Cluster_MaintenanceWindow_" data-uid="Pulumi.Aws.ElastiCache.Cluster.MaintenanceWindow*"></a>
+  <h4 id="Pulumi_Aws_ElastiCache_Cluster_MaintenanceWindow" data-uid="Pulumi.Aws.ElastiCache.Cluster.MaintenanceWindow">MaintenanceWindow</h4>
+  <div class="markdown level1 summary"><p>Specifies the weekly time range for when maintenance
+on the cache cluster is performed. The format is <code>ddd:hh24:mi-ddd:hh24:mi</code> (24H Clock UTC).
+The minimum maintenance window is a 60 minute period. Example: <code>sun:05:00-sun:09:00</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; MaintenanceWindow { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticache/Cluster.cs/#L106">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_ElastiCache_Cluster_NodeType_" data-uid="Pulumi.Aws.ElastiCache.Cluster.NodeType*"></a>
+  <h4 id="Pulumi_Aws_ElastiCache_Cluster_NodeType" data-uid="Pulumi.Aws.ElastiCache.Cluster.NodeType">NodeType</h4>
+  <div class="markdown level1 summary"><p>The compute and memory capacity of the nodes. See
+<a href="https://aws.amazon.com/elasticache/details#Available_Cache_Node_Types">Available Cache Node Types</a> for
+supported node types</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; NodeType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticache/Cluster.cs/#L114">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_ElastiCache_Cluster_NotificationTopicArn_" data-uid="Pulumi.Aws.ElastiCache.Cluster.NotificationTopicArn*"></a>
+  <h4 id="Pulumi_Aws_ElastiCache_Cluster_NotificationTopicArn" data-uid="Pulumi.Aws.ElastiCache.Cluster.NotificationTopicArn">NotificationTopicArn</h4>
+  <div class="markdown level1 summary"><p>An Amazon Resource Name (ARN) of an
+SNS topic to send ElastiCache notifications to. Example:
+<code>arn:aws:sns:us-east-1:012345678999:my_sns_topic</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; NotificationTopicArn { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticache/Cluster.cs/#L123">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_ElastiCache_Cluster_NumCacheNodes_" data-uid="Pulumi.Aws.ElastiCache.Cluster.NumCacheNodes*"></a>
+  <h4 id="Pulumi_Aws_ElastiCache_Cluster_NumCacheNodes" data-uid="Pulumi.Aws.ElastiCache.Cluster.NumCacheNodes">NumCacheNodes</h4>
+  <div class="markdown level1 summary"><p>The initial number of cache nodes that the
+cache cluster will have. For Redis, this value must be 1. For Memcache, this
+value must be between 1 and 20. If this number is reduced on subsequent runs,
+the highest numbered nodes will be removed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; NumCacheNodes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticache/Cluster.cs/#L130">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_ElastiCache_Cluster_ParameterGroupName_" data-uid="Pulumi.Aws.ElastiCache.Cluster.ParameterGroupName*"></a>
+  <h4 id="Pulumi_Aws_ElastiCache_Cluster_ParameterGroupName" data-uid="Pulumi.Aws.ElastiCache.Cluster.ParameterGroupName">ParameterGroupName</h4>
+  <div class="markdown level1 summary"><p>Name of the parameter group to associate
+with this cache cluster</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ParameterGroupName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticache/Cluster.cs/#L136">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_ElastiCache_Cluster_Port_" data-uid="Pulumi.Aws.ElastiCache.Cluster.Port*"></a>
+  <h4 id="Pulumi_Aws_ElastiCache_Cluster_Port" data-uid="Pulumi.Aws.ElastiCache.Cluster.Port">Port</h4>
+  <div class="markdown level1 summary"><p>The port number on which each of the cache nodes will accept connections. For Memcache the default is 11211, and for Redis the default port is 6379. Cannot be provided with <code>replication_group_id</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; Port { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticache/Cluster.cs/#L142">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_ElastiCache_Cluster_PreferredAvailabilityZones_" data-uid="Pulumi.Aws.ElastiCache.Cluster.PreferredAvailabilityZones*"></a>
+  <h4 id="Pulumi_Aws_ElastiCache_Cluster_PreferredAvailabilityZones" data-uid="Pulumi.Aws.ElastiCache.Cluster.PreferredAvailabilityZones">PreferredAvailabilityZones</h4>
+  <div class="markdown level1 summary"><p>A list of the Availability Zones in which cache nodes are created. If you are creating your cluster in an Amazon VPC you can only locate nodes in Availability Zones that are associated with the subnets in the selected subnet group. The number of Availability Zones listed must equal the value of <code>num_cache_nodes</code>. If you want all the nodes in the same Availability Zone, use <code>availability_zone</code> instead, or repeat the Availability Zone multiple times in the list. Default: System chosen Availability Zones. Detecting drift of existing node availability zone is not currently supported. Updating this argument by itself to migrate existing node availability zones is not currently supported and will show a perpetual difference.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; PreferredAvailabilityZones { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticache/Cluster.cs/#L148">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_ElastiCache_Cluster_ReplicationGroupId_" data-uid="Pulumi.Aws.ElastiCache.Cluster.ReplicationGroupId*"></a>
+  <h4 id="Pulumi_Aws_ElastiCache_Cluster_ReplicationGroupId" data-uid="Pulumi.Aws.ElastiCache.Cluster.ReplicationGroupId">ReplicationGroupId</h4>
+  <div class="markdown level1 summary"><p>The ID of the replication group to which this cluster should belong. If this parameter is specified, the cluster is added to the specified replication group as a read replica; otherwise, the cluster is a standalone primary that is not part of any replication group.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ReplicationGroupId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticache/Cluster.cs/#L155">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_ElastiCache_Cluster_SecurityGroupIds_" data-uid="Pulumi.Aws.ElastiCache.Cluster.SecurityGroupIds*"></a>
+  <h4 id="Pulumi_Aws_ElastiCache_Cluster_SecurityGroupIds" data-uid="Pulumi.Aws.ElastiCache.Cluster.SecurityGroupIds">SecurityGroupIds</h4>
+  <div class="markdown level1 summary"><p>One or more VPC security groups associated
+with the cache cluster</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; SecurityGroupIds { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticache/Cluster.cs/#L162">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_ElastiCache_Cluster_SecurityGroupNames_" data-uid="Pulumi.Aws.ElastiCache.Cluster.SecurityGroupNames*"></a>
+  <h4 id="Pulumi_Aws_ElastiCache_Cluster_SecurityGroupNames" data-uid="Pulumi.Aws.ElastiCache.Cluster.SecurityGroupNames">SecurityGroupNames</h4>
+  <div class="markdown level1 summary"><p>List of security group
+names to associate with this cache cluster</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; SecurityGroupNames { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticache/Cluster.cs/#L170">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_ElastiCache_Cluster_SnapshotArns_" data-uid="Pulumi.Aws.ElastiCache.Cluster.SnapshotArns*"></a>
+  <h4 id="Pulumi_Aws_ElastiCache_Cluster_SnapshotArns" data-uid="Pulumi.Aws.ElastiCache.Cluster.SnapshotArns">SnapshotArns</h4>
+  <div class="markdown level1 summary"><p>A single-element string list containing an
+Amazon Resource Name (ARN) of a Redis RDB snapshot file stored in Amazon S3.
+Example: <code>arn:aws:s3:::my_bucket/snapshot1.rdb</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; SnapshotArns { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticache/Cluster.cs/#L176">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_ElastiCache_Cluster_SnapshotName_" data-uid="Pulumi.Aws.ElastiCache.Cluster.SnapshotName*"></a>
+  <h4 id="Pulumi_Aws_ElastiCache_Cluster_SnapshotName" data-uid="Pulumi.Aws.ElastiCache.Cluster.SnapshotName">SnapshotName</h4>
+  <div class="markdown level1 summary"><p>The name of a snapshot from which to restore data into the new node group.  Changing the <code>snapshot_name</code> forces a new resource.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SnapshotName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticache/Cluster.cs/#L186">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_ElastiCache_Cluster_SnapshotRetentionLimit_" data-uid="Pulumi.Aws.ElastiCache.Cluster.SnapshotRetentionLimit*"></a>
+  <h4 id="Pulumi_Aws_ElastiCache_Cluster_SnapshotRetentionLimit" data-uid="Pulumi.Aws.ElastiCache.Cluster.SnapshotRetentionLimit">SnapshotRetentionLimit</h4>
+  <div class="markdown level1 summary"><p>The number of days for which ElastiCache will
+retain automatic cache cluster snapshots before deleting them. For example, if you set
+SnapshotRetentionLimit to 5, then a snapshot that was taken today will be retained for 5 days
+before being deleted. If the value of SnapshotRetentionLimit is set to zero (0), backups are turned off.
+Please note that setting a <code>snapshot_retention_limit</code> is not supported on cache.t1.micro or cache.t2.* cache nodes</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; SnapshotRetentionLimit { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticache/Cluster.cs/#L193">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_ElastiCache_Cluster_SnapshotWindow_" data-uid="Pulumi.Aws.ElastiCache.Cluster.SnapshotWindow*"></a>
+  <h4 id="Pulumi_Aws_ElastiCache_Cluster_SnapshotWindow" data-uid="Pulumi.Aws.ElastiCache.Cluster.SnapshotWindow">SnapshotWindow</h4>
+  <div class="markdown level1 summary"><p>The daily time range (in UTC) during which ElastiCache will
+begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SnapshotWindow { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticache/Cluster.cs/#L200">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_ElastiCache_Cluster_SubnetGroupName_" data-uid="Pulumi.Aws.ElastiCache.Cluster.SubnetGroupName*"></a>
+  <h4 id="Pulumi_Aws_ElastiCache_Cluster_SubnetGroupName" data-uid="Pulumi.Aws.ElastiCache.Cluster.SubnetGroupName">SubnetGroupName</h4>
+  <div class="markdown level1 summary"><p>Name of the subnet group to be used
+for the cache cluster.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SubnetGroupName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticache/Cluster.cs/#L206">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_ElastiCache_Cluster_Tags_" data-uid="Pulumi.Aws.ElastiCache.Cluster.Tags*"></a>
+  <h4 id="Pulumi_Aws_ElastiCache_Cluster_Tags" data-uid="Pulumi.Aws.ElastiCache.Cluster.Tags">Tags</h4>
+  <div class="markdown level1 summary"><p>A mapping of tags to assign to the resource</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Tags { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticache/Cluster.cs/#L247">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_ElastiCache_Cluster_Get_" data-uid="Pulumi.Aws.ElastiCache.Cluster.Get*"></a>
+  <h4 id="Pulumi_Aws_ElastiCache_Cluster_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_ElastiCache_ClusterState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.ElastiCache.Cluster.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.ElastiCache.ClusterState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, ClusterState, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Get an existing Cluster resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Cluster Get(string name, Input&lt;string&gt; id, ClusterState state = null, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Aws.ElastiCache.ClusterState.html">ClusterState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Aws.ElastiCache.Cluster.html">Cluster</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticache/Cluster.cs/#L26" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

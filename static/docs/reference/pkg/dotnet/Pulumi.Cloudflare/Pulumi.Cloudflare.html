@@ -1,0 +1,493 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace Pulumi.Cloudflare
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace Pulumi.Cloudflare
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Cloudflare">
+  
+  <h1 id="Pulumi_Cloudflare" data-uid="Pulumi.Cloudflare" class="text-break">Namespace Pulumi.Cloudflare
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">Classes
+  </h3>
+      <h4><a class="xref" href="Pulumi.Cloudflare.AccessApplication.html">AccessApplication</a></h4>
+      <section><p>Provides a Cloudflare Access Application resource. Access Applications
+are used to restrict access to a whole application using an
+authorisation gateway managed by Cloudflare.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/access_application.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/access_application.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.AccessApplicationArgs.html">AccessApplicationArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.AccessApplicationState.html">AccessApplicationState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.AccessGroup.html">AccessGroup</a></h4>
+      <section><p>Provides a Cloudflare Access Group resource. Access Groups are used
+in conjunction with Access Policies to restrict access to a
+particular resource based on group membership.</p>
+<h2 id="conditions">Conditions</h2>
+<p><code>require</code>, <code>exclude</code> and <code>include</code> arguments share the available
+conditions which can be applied. The conditions are:</p>
+<ul>
+<li><code>ip</code> - (Optional) A list of IP addresses or ranges. Example:
+<code>ip = [&amp;quot;1.2.3.4&amp;quot;, &amp;quot;10.0.0.0/2&amp;quot;]</code></li>
+<li><code>email</code> - (Optional) A list of email addresses. Example:
+<code>email = [&amp;quot;test@example.com&amp;quot;]</code></li>
+<li><code>email_domain</code> - (Optional) A list of email domains. Example:
+<code>email_domain = [&amp;quot;example.com&amp;quot;]</code></li>
+<li><code>everyone</code> - (Optional) Boolean indicating permitting access for all
+requests. Example: <code>everyone = true</code></li>
+</ul>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/access_group.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/access_group.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.AccessGroupArgs.html">AccessGroupArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.AccessGroupState.html">AccessGroupState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.AccessIdentityProvider.html">AccessIdentityProvider</a></h4>
+      <section><p>Provides a Cloudflare Access Identity Provider resource. Identity Providers are
+used as an authentication or authorisation source within Access.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/access_identity_provider.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/access_identity_provider.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.AccessIdentityProviderArgs.html">AccessIdentityProviderArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.AccessIdentityProviderState.html">AccessIdentityProviderState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.AccessPolicy.html">AccessPolicy</a></h4>
+      <section><p>Provides a Cloudflare Access Policy resource. Access Policies are used
+in conjunction with Access Applications to restrict access to a
+particular resource.</p>
+<h2 id="conditions">Conditions</h2>
+<p><code>require</code>, <code>exclude</code> and <code>include</code> arguments share the available
+conditions which can be applied. The conditions are:</p>
+<ul>
+<li><code>ip</code> - (Optional) A list of IP addresses or ranges. Example:
+<code>ip = [&amp;quot;1.2.3.4&amp;quot;, &amp;quot;10.0.0.0/2&amp;quot;]</code></li>
+<li><code>email</code> - (Optional) A list of email addresses. Example:
+<code>email = [&amp;quot;test@example.com&amp;quot;]</code></li>
+<li><code>email_domain</code> - (Optional) A list of email domains. Example:
+<code>email_domain = [&amp;quot;example.com&amp;quot;]</code></li>
+<li><code>everyone</code> - (Optional) Boolean indicating permitting access for all
+requests. Example: <code>everyone = true</code></li>
+</ul>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/access_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/access_policy.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.AccessPolicyArgs.html">AccessPolicyArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.AccessPolicyState.html">AccessPolicyState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.AccessRule.html">AccessRule</a></h4>
+      <section><p>Provides a Cloudflare IP Firewall Access Rule resource. Access control can be applied on basis of IP addresses, IP ranges, AS numbers or countries.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/access_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/access_rule.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.AccessRuleArgs.html">AccessRuleArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.AccessRuleState.html">AccessRuleState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.AccessServiceToken.html">AccessServiceToken</a></h4>
+      <section><p>Access Service Tokens are used for service-to-service communication
+when an application is behind Cloudflare Access.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/access_service_token.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/access_service_token.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.AccessServiceTokenArgs.html">AccessServiceTokenArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.AccessServiceTokenState.html">AccessServiceTokenState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.AccountMember.html">AccountMember</a></h4>
+      <section><p>Provides a resource which manages Cloudflare account members.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/account_member.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/account_member.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.AccountMemberArgs.html">AccountMemberArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.AccountMemberState.html">AccountMemberState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.Argo.html">Argo</a></h4>
+      <section><p>Cloudflare Argo controls the routing to your origin and tiered caching options to speed up your website browsing experience.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/argo.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/argo.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.ArgoArgs.html">ArgoArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.ArgoState.html">ArgoState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.Config.html">Config</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.CustomPages.html">CustomPages</a></h4>
+      <section><p>Provides a resource which manages Cloudflare custom error pages.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/custom_pages.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/custom_pages.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.CustomPagesArgs.html">CustomPagesArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.CustomPagesState.html">CustomPagesState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.CustomSsl.html">CustomSsl</a></h4>
+      <section><p>Provides a Cloudflare custom ssl resource.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/custom_ssl.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/custom_ssl.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.CustomSslArgs.html">CustomSslArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.CustomSslState.html">CustomSslState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.Filter.html">Filter</a></h4>
+      <section><p>Filter expressions that can be referenced across multiple features, e.g. Firewall Rule. The expression format is similar to <a href="https://www.wireshark.org/docs/man-pages/wireshark-filter.html">Wireshark Display Filter</a>.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/filter.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/filter.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.FilterArgs.html">FilterArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.FilterState.html">FilterState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.FirewallRule.html">FirewallRule</a></h4>
+      <section><p>Define Firewall rules using filter expressions for more control over how traffic is matched to the rule.
+A filter expression permits selecting traffic by multiple criteria allowing greater freedom in rule creation.</p>
+<p>Filter expressions needs to be created first before using Firewall Rule. See Filter.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/firewall_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/firewall_rule.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.FirewallRuleArgs.html">FirewallRuleArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.FirewallRuleState.html">FirewallRuleState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.GetIpRangesResult.html">GetIpRangesResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.GetWafGroupsArgs.html">GetWafGroupsArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.GetWafGroupsResult.html">GetWafGroupsResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.GetWafPackagesArgs.html">GetWafPackagesArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.GetWafPackagesResult.html">GetWafPackagesResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.GetWafRulesArgs.html">GetWafRulesArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.GetWafRulesResult.html">GetWafRulesResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.GetZonesArgs.html">GetZonesArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.GetZonesResult.html">GetZonesResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.Invokes.html">Invokes</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.LoadBalancer.html">LoadBalancer</a></h4>
+      <section><p>Provides a Cloudflare Load Balancer resource. This sits in front of a number of defined pools of origins and provides various options for geographically-aware load balancing. Note that the load balancing feature must be enabled in your Clouflare account before you can use this resource.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/load_balancer.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/load_balancer.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.LoadBalancerArgs.html">LoadBalancerArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.LoadBalancerMonitor.html">LoadBalancerMonitor</a></h4>
+      <section><p>If you're using Cloudflare's Load Balancing to load-balance across multiple origin servers or data centers, you configure one of these Monitors to actively check the availability of those servers over HTTP(S) or TCP.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/load_balancer_monitor.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/load_balancer_monitor.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.LoadBalancerMonitorArgs.html">LoadBalancerMonitorArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.LoadBalancerMonitorState.html">LoadBalancerMonitorState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.LoadBalancerPool.html">LoadBalancerPool</a></h4>
+      <section><p>Provides a Cloudflare Load Balancer pool resource. This provides a pool of origins that can be used by a Cloudflare Load Balancer. Note that the load balancing feature must be enabled in your Clouflare account before you can use this resource.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/load_balancer_pool.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/load_balancer_pool.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.LoadBalancerPoolArgs.html">LoadBalancerPoolArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.LoadBalancerPoolState.html">LoadBalancerPoolState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.LoadBalancerState.html">LoadBalancerState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.LogpushJob.html">LogpushJob</a></h4>
+      <section><p>Provides a resource which manages Cloudflare logpush jobs.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/logpush_job.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/logpush_job.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.LogpushJobArgs.html">LogpushJobArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.LogpushJobState.html">LogpushJobState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.OriginCaCertificate.html">OriginCaCertificate</a></h4>
+      <section><p>Provides a Cloudflare Origin CA certificate used to protect traffic to your origin without involving a third party Certificate Authority.</p>
+<p><strong>This resource requires you use your Origin CA Key as the <code>api_user_service_key</code>.</strong></p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/origin_ca_certificate.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/origin_ca_certificate.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.OriginCaCertificateArgs.html">OriginCaCertificateArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.OriginCaCertificateState.html">OriginCaCertificateState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.PageRule.html">PageRule</a></h4>
+      <section><p>Provides a Cloudflare page rule resource.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/page_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/page_rule.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.PageRuleArgs.html">PageRuleArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.PageRuleState.html">PageRuleState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.Provider.html">Provider</a></h4>
+      <section><p>The provider type for the cloudflare package. By default, resources use package-wide configuration
+settings, however an explicit <code>Provider</code> instance may be created and passed during resource
+construction to achieve fine-grained programmatic control over provider settings. See the
+<a href="https://www.pulumi.com/docs/reference/programming-model/#providers">documentation</a> for more information.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/index.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/index.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.ProviderArgs.html">ProviderArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.RateLimit.html">RateLimit</a></h4>
+      <section><p>Provides a Cloudflare rate limit resource for a given zone. This can be used to limit the traffic you receive zone-wide, or matching more specific types of requests/responses.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/rate_limit.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/rate_limit.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.RateLimitArgs.html">RateLimitArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.RateLimitState.html">RateLimitState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.Record.html">Record</a></h4>
+      <section><p>Provides a Cloudflare record resource.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/record.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/record.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.RecordArgs.html">RecordArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.RecordState.html">RecordState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.SpectrumApplication.html">SpectrumApplication</a></h4>
+      <section><p>Provides a Cloudflare Spectrum Application. You can extend the power of Cloudflare's DDoS, TLS, and IP Firewall to your other TCP-based services.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/spectrum_application.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/spectrum_application.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.SpectrumApplicationArgs.html">SpectrumApplicationArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.SpectrumApplicationState.html">SpectrumApplicationState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.WafGroup.html">WafGroup</a></h4>
+      <section><p>Provides a Cloudflare WAF rule group resource for a particular zone. This can be used to configure firewall behaviour for pre-defined firewall groups.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/waf_group.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/waf_group.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.WafGroupArgs.html">WafGroupArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.WafGroupState.html">WafGroupState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.WafPackage.html">WafPackage</a></h4>
+      <section><p>Provides a Cloudflare WAF rule package resource for a particular zone. This can be used to configure firewall behaviour for pre-defined firewall packages.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/waf_package.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/waf_package.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.WafPackageArgs.html">WafPackageArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.WafPackageState.html">WafPackageState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.WafRule.html">WafRule</a></h4>
+      <section><p>Provides a Cloudflare WAF rule resource for a particular zone. This can be used to configure firewall behaviour for pre-defined firewall rules.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/waf_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/waf_rule.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.WafRuleArgs.html">WafRuleArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.WafRuleState.html">WafRuleState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.WorkerRoute.html">WorkerRoute</a></h4>
+      <section><p>Provides a Cloudflare worker route resource. A route will also require a <code>cloudflare..WorkerScript</code>.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/worker_route.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/worker_route.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.WorkerRouteArgs.html">WorkerRouteArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.WorkerRouteState.html">WorkerRouteState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.WorkerScript.html">WorkerScript</a></h4>
+      <section><p>Provides a Cloudflare worker script resource. In order for a script to be active, you'll also need to setup a <code>cloudflare..WorkerRoute</code>.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/worker_script.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/worker_script.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.WorkerScriptArgs.html">WorkerScriptArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.WorkerScriptState.html">WorkerScriptState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.WorkersKv.html">WorkersKv</a></h4>
+      <section><p>Provides a Workers KV Pair.  <em>NOTE:</em>  This resource uses the Cloudflare account APIs.  This requires setting the <code>CLOUDFLARE_ACCOUNT_ID</code> environment variable or <code>account_id</code> provider argument.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/workers_kv.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/workers_kv.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.WorkersKvArgs.html">WorkersKvArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.WorkersKvNamespace.html">WorkersKvNamespace</a></h4>
+      <section><p>Provides a Workers KV Namespace</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/workers_kv_namespace.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/workers_kv_namespace.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.WorkersKvNamespaceArgs.html">WorkersKvNamespaceArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.WorkersKvNamespaceState.html">WorkersKvNamespaceState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.WorkersKvState.html">WorkersKvState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.Zone.html">Zone</a></h4>
+      <section><p>Provides a Cloudflare Zone resource. Zone is the basic resource for working with Cloudflare and is roughly equivalent to a domain name that the user purchases.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/zone.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/zone.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.ZoneArgs.html">ZoneArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.ZoneLockdown.html">ZoneLockdown</a></h4>
+      <section><p>Provides a Cloudflare Zone Lockdown resource. Zone Lockdown allows you to define one or more URLs (with wildcard matching on the domain or path) that will only permit access if the request originates from an IP address that matches a safelist of one or more IP addresses and/or IP ranges.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/zone_lockdown.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/zone_lockdown.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.ZoneLockdownArgs.html">ZoneLockdownArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.ZoneLockdownState.html">ZoneLockdownState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.ZoneSettingsOverride.html">ZoneSettingsOverride</a></h4>
+      <section><p>Provides a resource which customizes Cloudflare zone settings. Note that after destroying this resource Zone Settings will be reset to their initial values.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/zone_settings_override.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/zone_settings_override.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.ZoneSettingsOverrideArgs.html">ZoneSettingsOverrideArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.ZoneSettingsOverrideState.html">ZoneSettingsOverrideState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Cloudflare.ZoneState.html">ZoneState</a></h4>
+      <section></section>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

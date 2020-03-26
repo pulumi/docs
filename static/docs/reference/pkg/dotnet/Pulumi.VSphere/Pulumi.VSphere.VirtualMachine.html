@@ -1,0 +1,2284 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class VirtualMachine
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class VirtualMachine
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.VSphere.VirtualMachine">
+  
+  <h1 id="Pulumi_VSphere_VirtualMachine" data-uid="Pulumi.VSphere.VirtualMachine" class="text-break">Class VirtualMachine
+  </h1>
+  <div class="markdown level0 summary"><blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/virtual_machine.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/virtual_machine.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">VirtualMachine</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.VSphere.html">Pulumi.VSphere</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.VSphere.dll</h6>
+  <h5 id="Pulumi_VSphere_VirtualMachine_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class VirtualMachine : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L576">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine__ctor_" data-uid="Pulumi.VSphere.VirtualMachine.#ctor*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine__ctor_System_String_Pulumi_VSphere_VirtualMachineArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.VSphere.VirtualMachine.#ctor(System.String,Pulumi.VSphere.VirtualMachineArgs,System.Nullable{CustomResourceOptions})">VirtualMachine(String, VirtualMachineArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Create a VirtualMachine resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VirtualMachine(string name, VirtualMachineArgs args, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.VSphere.VirtualMachineArgs.html">VirtualMachineArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L20">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_AlternateGuestName_" data-uid="Pulumi.VSphere.VirtualMachine.AlternateGuestName*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_AlternateGuestName" data-uid="Pulumi.VSphere.VirtualMachine.AlternateGuestName">AlternateGuestName</h4>
+  <div class="markdown level1 summary"><p>The guest name for the operating system
+when <code>guest_id</code> is <code>other</code> or <code>other-64</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; AlternateGuestName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L27">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_Annotation_" data-uid="Pulumi.VSphere.VirtualMachine.Annotation*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_Annotation" data-uid="Pulumi.VSphere.VirtualMachine.Annotation">Annotation</h4>
+  <div class="markdown level1 summary"><p>A user-provided description of the virtual machine.
+The default is no annotation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Annotation { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L34">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_BootDelay_" data-uid="Pulumi.VSphere.VirtualMachine.BootDelay*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_BootDelay" data-uid="Pulumi.VSphere.VirtualMachine.BootDelay">BootDelay</h4>
+  <div class="markdown level1 summary"><p>The number of milliseconds to wait before starting
+the boot sequence. The default is no delay.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; BootDelay { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L42">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_BootRetryDelay_" data-uid="Pulumi.VSphere.VirtualMachine.BootRetryDelay*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_BootRetryDelay" data-uid="Pulumi.VSphere.VirtualMachine.BootRetryDelay">BootRetryDelay</h4>
+  <div class="markdown level1 summary"><p>The number of milliseconds to wait before
+retrying the boot sequence. This only valid if <code>boot_retry_enabled</code> is true.
+Default: <code>10000</code> (10 seconds).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; BootRetryDelay { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L50">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_BootRetryEnabled_" data-uid="Pulumi.VSphere.VirtualMachine.BootRetryEnabled*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_BootRetryEnabled" data-uid="Pulumi.VSphere.VirtualMachine.BootRetryEnabled">BootRetryEnabled</h4>
+  <div class="markdown level1 summary"><p>If set to true, a virtual machine that
+fails to boot will try again after the delay defined in <code>boot_retry_delay</code>.
+Default: <code>false</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; BootRetryEnabled { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L57">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_Cdrom_" data-uid="Pulumi.VSphere.VirtualMachine.Cdrom*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_Cdrom" data-uid="Pulumi.VSphere.VirtualMachine.Cdrom">Cdrom</h4>
+  <div class="markdown level1 summary"><p>A specification for a CDROM device on this virtual
+machine. See CDROM options below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;VirtualMachineCdrom&gt; Cdrom { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.VSphere.Outputs.VirtualMachineCdrom.html">VirtualMachineCdrom</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L65">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_ChangeVersion_" data-uid="Pulumi.VSphere.VirtualMachine.ChangeVersion*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_ChangeVersion" data-uid="Pulumi.VSphere.VirtualMachine.ChangeVersion">ChangeVersion</h4>
+  <div class="markdown level1 summary"><p>A unique identifier for a given version of the last
+configuration applied, such the timestamp of the last update to the
+configuration.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ChangeVersion { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L74">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_Clone_" data-uid="Pulumi.VSphere.VirtualMachine.Clone*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_Clone" data-uid="Pulumi.VSphere.VirtualMachine.Clone">Clone</h4>
+  <div class="markdown level1 summary"><p>When specified, the VM will be created as a clone of a
+specified template. Optional customization options can be submitted as well.
+See creating a virtual machine from a
+template for more details.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;VirtualMachineClone&gt; Clone { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.VSphere.Outputs.VirtualMachineClone.html">VirtualMachineClone</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L81">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_CpuHotAddEnabled_" data-uid="Pulumi.VSphere.VirtualMachine.CpuHotAddEnabled*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_CpuHotAddEnabled" data-uid="Pulumi.VSphere.VirtualMachine.CpuHotAddEnabled">CpuHotAddEnabled</h4>
+  <div class="markdown level1 summary"><p>Allow CPUs to be added to this virtual
+machine while it is running.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; CpuHotAddEnabled { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L88">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_CpuHotRemoveEnabled_" data-uid="Pulumi.VSphere.VirtualMachine.CpuHotRemoveEnabled*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_CpuHotRemoveEnabled" data-uid="Pulumi.VSphere.VirtualMachine.CpuHotRemoveEnabled">CpuHotRemoveEnabled</h4>
+  <div class="markdown level1 summary"><p>Allow CPUs to be removed to this
+virtual machine while it is running.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; CpuHotRemoveEnabled { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L96">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_CpuLimit_" data-uid="Pulumi.VSphere.VirtualMachine.CpuLimit*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_CpuLimit" data-uid="Pulumi.VSphere.VirtualMachine.CpuLimit">CpuLimit</h4>
+  <div class="markdown level1 summary"><p>The maximum amount of CPU (in MHz) that this virtual
+machine can consume, regardless of available resources. The default is no
+limit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; CpuLimit { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L103">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_CpuPerformanceCountersEnabled_" data-uid="Pulumi.VSphere.VirtualMachine.CpuPerformanceCountersEnabled*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_CpuPerformanceCountersEnabled" data-uid="Pulumi.VSphere.VirtualMachine.CpuPerformanceCountersEnabled">CpuPerformanceCountersEnabled</h4>
+  <div class="markdown level1 summary"><p>Enable CPU performance
+counters on this virtual machine. Default: <code>false</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; CpuPerformanceCountersEnabled { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L110">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_CpuReservation_" data-uid="Pulumi.VSphere.VirtualMachine.CpuReservation*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_CpuReservation" data-uid="Pulumi.VSphere.VirtualMachine.CpuReservation">CpuReservation</h4>
+  <div class="markdown level1 summary"><p>The amount of CPU (in MHz) that this virtual
+machine is guaranteed. The default is no reservation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; CpuReservation { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L117">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_CpuShareCount_" data-uid="Pulumi.VSphere.VirtualMachine.CpuShareCount*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_CpuShareCount" data-uid="Pulumi.VSphere.VirtualMachine.CpuShareCount">CpuShareCount</h4>
+  <div class="markdown level1 summary"><p>The number of CPU shares allocated to the
+virtual machine when the <code>cpu_share_level</code> is <code>custom</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; CpuShareCount { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L124">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_CpuShareLevel_" data-uid="Pulumi.VSphere.VirtualMachine.CpuShareLevel*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_CpuShareLevel" data-uid="Pulumi.VSphere.VirtualMachine.CpuShareLevel">CpuShareLevel</h4>
+  <div class="markdown level1 summary"><p>The allocation level for CPU resources. Can be
+one of <code>high</code>, <code>low</code>, <code>normal</code>, or <code>custom</code>. Default: <code>custom</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; CpuShareLevel { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L133">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_CustomAttributes_" data-uid="Pulumi.VSphere.VirtualMachine.CustomAttributes*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_CustomAttributes" data-uid="Pulumi.VSphere.VirtualMachine.CustomAttributes">CustomAttributes</h4>
+  <div class="markdown level1 summary"><p>Map of custom attribute ids to attribute
+value strings to set for virtual machine. See
+[here][docs-setting-custom-attributes] for a reference on how to set values
+for custom attributes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;?&gt; CustomAttributes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L143">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_DatastoreClusterId_" data-uid="Pulumi.VSphere.VirtualMachine.DatastoreClusterId*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_DatastoreClusterId" data-uid="Pulumi.VSphere.VirtualMachine.DatastoreClusterId">DatastoreClusterId</h4>
+  <div class="markdown level1 summary"><p>The [managed object reference
+ID][docs-about-morefs] of the datastore cluster ID to use. This setting
+applies to entire virtual machine and implies that you wish to use Storage
+DRS with this virtual machine. See the section on virtual machine
+migration for details on changing this value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; DatastoreClusterId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L150">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_DatastoreId_" data-uid="Pulumi.VSphere.VirtualMachine.DatastoreId*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_DatastoreId" data-uid="Pulumi.VSphere.VirtualMachine.DatastoreId">DatastoreId</h4>
+  <div class="markdown level1 summary"><p>The datastore ID that the ISO is located in.
+Requried for using a datastore ISO. Conflicts with <code>client_device</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DatastoreId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L156">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_DefaultIpAddress_" data-uid="Pulumi.VSphere.VirtualMachine.DefaultIpAddress*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_DefaultIpAddress" data-uid="Pulumi.VSphere.VirtualMachine.DefaultIpAddress">DefaultIpAddress</h4>
+  <div class="markdown level1 summary"><p>The IP address selected by Terraform to be used for the provisioner.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DefaultIpAddress { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L163">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_Disks_" data-uid="Pulumi.VSphere.VirtualMachine.Disks*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_Disks" data-uid="Pulumi.VSphere.VirtualMachine.Disks">Disks</h4>
+  <div class="markdown level1 summary"><p>A specification for a virtual disk device on this virtual
+machine. See disk options below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;VirtualMachineDisks&gt;&gt; Disks { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.VSphere.Outputs.VirtualMachineDisks.html">VirtualMachineDisks</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L170">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_EfiSecureBootEnabled_" data-uid="Pulumi.VSphere.VirtualMachine.EfiSecureBootEnabled*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_EfiSecureBootEnabled" data-uid="Pulumi.VSphere.VirtualMachine.EfiSecureBootEnabled">EfiSecureBootEnabled</h4>
+  <div class="markdown level1 summary"><p>When the <code>firmware</code> type is set to is
+<code>efi</code>, this enables EFI secure boot. Default: <code>false</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; EfiSecureBootEnabled { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L177">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_EnableDiskUuid_" data-uid="Pulumi.VSphere.VirtualMachine.EnableDiskUuid*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_EnableDiskUuid" data-uid="Pulumi.VSphere.VirtualMachine.EnableDiskUuid">EnableDiskUuid</h4>
+  <div class="markdown level1 summary"><p>Expose the UUIDs of attached virtual disks to
+the virtual machine, allowing access to them in the guest. Default: <code>false</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; EnableDiskUuid { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L184">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_EnableLogging_" data-uid="Pulumi.VSphere.VirtualMachine.EnableLogging*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_EnableLogging" data-uid="Pulumi.VSphere.VirtualMachine.EnableLogging">EnableLogging</h4>
+  <div class="markdown level1 summary"><p>Enable logging of virtual machine events to a
+log file stored in the virtual machine directory. Default: <code>false</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; EnableLogging { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L192">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_EptRviMode_" data-uid="Pulumi.VSphere.VirtualMachine.EptRviMode*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_EptRviMode" data-uid="Pulumi.VSphere.VirtualMachine.EptRviMode">EptRviMode</h4>
+  <div class="markdown level1 summary"><p>The EPT/RVI (hardware memory virtualization)
+setting for this virtual machine. Can be one of <code>automatic</code>, <code>on</code>, or <code>off</code>.
+Default: <code>automatic</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; EptRviMode { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L200">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_ExtraConfig_" data-uid="Pulumi.VSphere.VirtualMachine.ExtraConfig*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_ExtraConfig" data-uid="Pulumi.VSphere.VirtualMachine.ExtraConfig">ExtraConfig</h4>
+  <div class="markdown level1 summary"><p>Extra configuration data for this virtual
+machine. Can be used to supply advanced parameters not normally in
+configuration, such as instance metadata.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;?&gt; ExtraConfig { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L207">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_Firmware_" data-uid="Pulumi.VSphere.VirtualMachine.Firmware*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_Firmware" data-uid="Pulumi.VSphere.VirtualMachine.Firmware">Firmware</h4>
+  <div class="markdown level1 summary"><p>The firmware interface to use on the virtual machine.
+Can be one of <code>bios</code> or <code>EFI</code>. Default: <code>bios</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Firmware { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L214">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_Folder_" data-uid="Pulumi.VSphere.VirtualMachine.Folder*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_Folder" data-uid="Pulumi.VSphere.VirtualMachine.Folder">Folder</h4>
+  <div class="markdown level1 summary"><p>The path to the folder to put this virtual machine in,
+relative to the datacenter that the resource pool is in.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Folder { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L223">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_ForcePowerOff_" data-uid="Pulumi.VSphere.VirtualMachine.ForcePowerOff*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_ForcePowerOff" data-uid="Pulumi.VSphere.VirtualMachine.ForcePowerOff">ForcePowerOff</h4>
+  <div class="markdown level1 summary"><p>If a guest shutdown failed or timed out while
+updating or destroying (see
+<code>shutdown_wait_timeout</code>), force the power-off of
+the virtual machine. Default: <code>true</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; ForcePowerOff { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L230">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_GuestId_" data-uid="Pulumi.VSphere.VirtualMachine.GuestId*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_GuestId" data-uid="Pulumi.VSphere.VirtualMachine.GuestId">GuestId</h4>
+  <div class="markdown level1 summary"><p>The guest ID for the operating system type. For a
+full list of possible values, see [here][vmware-docs-guest-ids]. Default: <code>other-64</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; GuestId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L240">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_GuestIpAddresses_" data-uid="Pulumi.VSphere.VirtualMachine.GuestIpAddresses*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_GuestIpAddresses" data-uid="Pulumi.VSphere.VirtualMachine.GuestIpAddresses">GuestIpAddresses</h4>
+  <div class="markdown level1 summary"><p>The current list of IP addresses on this machine,
+including the value of <code>default_ip_address</code>. If VMware tools is not running
+on the virtual machine, or if the VM is powered off, this list will be empty.</p>
+<ul>
+<li><code>moid</code>: The [managed object reference ID][docs-about-morefs] of the created
+virtual machine.</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; GuestIpAddresses { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L251">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_HostSystemId_" data-uid="Pulumi.VSphere.VirtualMachine.HostSystemId*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_HostSystemId" data-uid="Pulumi.VSphere.VirtualMachine.HostSystemId">HostSystemId</h4>
+  <div class="markdown level1 summary"><p>An optional [managed object reference
+ID][docs-about-morefs] of a host to put this virtual machine on. See the
+section on virtual machine migration for
+details on changing this value. If a <code>host_system_id</code> is not supplied,
+vSphere will select a host in the resource pool to place the virtual machine,
+according to any defaults or DRS policies in place.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; HostSystemId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L259">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_HvMode_" data-uid="Pulumi.VSphere.VirtualMachine.HvMode*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_HvMode" data-uid="Pulumi.VSphere.VirtualMachine.HvMode">HvMode</h4>
+  <div class="markdown level1 summary"><p>The (non-nested) hardware virtualization setting for
+this virtual machine. Can be one of <code>hvAuto</code>, <code>hvOn</code>, or <code>hvOff</code>. Default:
+<code>hvAuto</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; HvMode { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L268">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_IgnoredGuestIps_" data-uid="Pulumi.VSphere.VirtualMachine.IgnoredGuestIps*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_IgnoredGuestIps" data-uid="Pulumi.VSphere.VirtualMachine.IgnoredGuestIps">IgnoredGuestIps</h4>
+  <div class="markdown level1 summary"><p>List of IP addresses and CIDR networks to
+ignore while waiting for an available IP address using either of the waiters.
+Any IP addresses in this list will be ignored if they show up so that the
+waiter will continue to wait for a real IP address. Default: [].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; IgnoredGuestIps { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L277">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_Imported_" data-uid="Pulumi.VSphere.VirtualMachine.Imported*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_Imported" data-uid="Pulumi.VSphere.VirtualMachine.Imported">Imported</h4>
+  <div class="markdown level1 summary"><p>This is flagged if the virtual machine has been imported, or the
+state has been migrated from a previous version of the resource. It
+influences the behavior of the first post-import apply operation. See the
+section on importing below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; Imported { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L287">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_LatencySensitivity_" data-uid="Pulumi.VSphere.VirtualMachine.LatencySensitivity*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_LatencySensitivity" data-uid="Pulumi.VSphere.VirtualMachine.LatencySensitivity">LatencySensitivity</h4>
+  <div class="markdown level1 summary"><p>Controls the scheduling delay of the
+virtual machine. Use a higher sensitivity for applications that require lower
+latency, such as VOIP, media player applications, or applications that
+require frequent access to mouse or keyboard devices. Can be one of <code>low</code>,
+<code>normal</code>, <code>medium</code>, or <code>high</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; LatencySensitivity { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L294">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_Memory_" data-uid="Pulumi.VSphere.VirtualMachine.Memory*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_Memory" data-uid="Pulumi.VSphere.VirtualMachine.Memory">Memory</h4>
+  <div class="markdown level1 summary"><p>The size of the virtual machine's memory, in MB.
+Default: <code>1024</code> (1 GB).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; Memory { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L301">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_MemoryHotAddEnabled_" data-uid="Pulumi.VSphere.VirtualMachine.MemoryHotAddEnabled*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_MemoryHotAddEnabled" data-uid="Pulumi.VSphere.VirtualMachine.MemoryHotAddEnabled">MemoryHotAddEnabled</h4>
+  <div class="markdown level1 summary"><p>Allow memory to be added to this
+virtual machine while it is running.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; MemoryHotAddEnabled { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L309">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_MemoryLimit_" data-uid="Pulumi.VSphere.VirtualMachine.MemoryLimit*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_MemoryLimit" data-uid="Pulumi.VSphere.VirtualMachine.MemoryLimit">MemoryLimit</h4>
+  <div class="markdown level1 summary"><p>The maximum amount of memory (in MB) that this
+virtual machine can consume, regardless of available resources. The default
+is no limit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; MemoryLimit { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L316">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_MemoryReservation_" data-uid="Pulumi.VSphere.VirtualMachine.MemoryReservation*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_MemoryReservation" data-uid="Pulumi.VSphere.VirtualMachine.MemoryReservation">MemoryReservation</h4>
+  <div class="markdown level1 summary"><p>The amount of memory (in MB) that this
+virtual machine is guaranteed. The default is no reservation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; MemoryReservation { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L323">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_MemoryShareCount_" data-uid="Pulumi.VSphere.VirtualMachine.MemoryShareCount*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_MemoryShareCount" data-uid="Pulumi.VSphere.VirtualMachine.MemoryShareCount">MemoryShareCount</h4>
+  <div class="markdown level1 summary"><p>The number of memory shares allocated to
+the virtual machine when the <code>memory_share_level</code> is <code>custom</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; MemoryShareCount { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L330">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_MemoryShareLevel_" data-uid="Pulumi.VSphere.VirtualMachine.MemoryShareLevel*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_MemoryShareLevel" data-uid="Pulumi.VSphere.VirtualMachine.MemoryShareLevel">MemoryShareLevel</h4>
+  <div class="markdown level1 summary"><p>The allocation level for memory resources.
+Can be one of <code>high</code>, <code>low</code>, <code>normal</code>, or <code>custom</code>. Default: <code>custom</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; MemoryShareLevel { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L339">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_MigrateWaitTimeout_" data-uid="Pulumi.VSphere.VirtualMachine.MigrateWaitTimeout*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_MigrateWaitTimeout" data-uid="Pulumi.VSphere.VirtualMachine.MigrateWaitTimeout">MigrateWaitTimeout</h4>
+  <div class="markdown level1 summary"><p>The amount of time, in minutes, to wait
+for a virtual machine migration to complete before failing. Default: 10
+minutes. Also see the section on virtual machine
+migration.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; MigrateWaitTimeout { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L345">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_Moid_" data-uid="Pulumi.VSphere.VirtualMachine.Moid*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_Moid" data-uid="Pulumi.VSphere.VirtualMachine.Moid">Moid</h4>
+  <div class="markdown level1 summary"><p>The machine object ID from VMWare</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Moid { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L352">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_Name_" data-uid="Pulumi.VSphere.VirtualMachine.Name*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_Name" data-uid="Pulumi.VSphere.VirtualMachine.Name">Name</h4>
+  <div class="markdown level1 summary"><p>An alias for both <code>label</code> and <code>path</code>, the latter when
+using <code>attach</code>. Required if not using <code>label</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L360">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_NestedHvEnabled_" data-uid="Pulumi.VSphere.VirtualMachine.NestedHvEnabled*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_NestedHvEnabled" data-uid="Pulumi.VSphere.VirtualMachine.NestedHvEnabled">NestedHvEnabled</h4>
+  <div class="markdown level1 summary"><p>Enable nested hardware virtualization on
+this virtual machine, facilitating nested virtualization in the guest.
+Default: <code>false</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; NestedHvEnabled { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L368">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_NetworkInterfaces_" data-uid="Pulumi.VSphere.VirtualMachine.NetworkInterfaces*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_NetworkInterfaces" data-uid="Pulumi.VSphere.VirtualMachine.NetworkInterfaces">NetworkInterfaces</h4>
+  <div class="markdown level1 summary"><p>A specification for a virtual NIC on this
+virtual machine. See network interface options
+below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;VirtualMachineNetworkInterfaces&gt;&gt; NetworkInterfaces { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.VSphere.Outputs.VirtualMachineNetworkInterfaces.html">VirtualMachineNetworkInterfaces</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L377">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_NumCoresPerSocket_" data-uid="Pulumi.VSphere.VirtualMachine.NumCoresPerSocket*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_NumCoresPerSocket" data-uid="Pulumi.VSphere.VirtualMachine.NumCoresPerSocket">NumCoresPerSocket</h4>
+  <div class="markdown level1 summary"><p>The number of cores per socket in this
+virtual machine. The number of vCPUs on the virtual machine will be
+<code>num_cpus</code> divided by <code>num_cores_per_socket</code>. If specified, the value
+supplied to <code>num_cpus</code> must be evenly divisible by this value. Default: <code>1</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; NumCoresPerSocket { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L384">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_NumCpus_" data-uid="Pulumi.VSphere.VirtualMachine.NumCpus*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_NumCpus" data-uid="Pulumi.VSphere.VirtualMachine.NumCpus">NumCpus</h4>
+  <div class="markdown level1 summary"><p>The total number of virtual processor cores to assign
+to this virtual machine. Default: <code>1</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; NumCpus { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L390">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_RebootRequired_" data-uid="Pulumi.VSphere.VirtualMachine.RebootRequired*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_RebootRequired" data-uid="Pulumi.VSphere.VirtualMachine.RebootRequired">RebootRequired</h4>
+  <div class="markdown level1 summary"><p>Value internal to Terraform used to determine if a configuration set change requires a reboot.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; RebootRequired { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L399">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_ResourcePoolId_" data-uid="Pulumi.VSphere.VirtualMachine.ResourcePoolId*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_ResourcePoolId" data-uid="Pulumi.VSphere.VirtualMachine.ResourcePoolId">ResourcePoolId</h4>
+  <div class="markdown level1 summary"><p>The [managed object reference
+ID][docs-about-morefs] of the resource pool to put this virtual machine in.
+See the section on virtual machine migration
+for details on changing this value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ResourcePoolId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L406">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_RunToolsScriptsAfterPowerOn_" data-uid="Pulumi.VSphere.VirtualMachine.RunToolsScriptsAfterPowerOn*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_RunToolsScriptsAfterPowerOn" data-uid="Pulumi.VSphere.VirtualMachine.RunToolsScriptsAfterPowerOn">RunToolsScriptsAfterPowerOn</h4>
+  <div class="markdown level1 summary"><p>Enable the execution of
+post-power-on scripts when VMware tools is installed. Default: <code>true</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; RunToolsScriptsAfterPowerOn { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L413">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_RunToolsScriptsAfterResume_" data-uid="Pulumi.VSphere.VirtualMachine.RunToolsScriptsAfterResume*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_RunToolsScriptsAfterResume" data-uid="Pulumi.VSphere.VirtualMachine.RunToolsScriptsAfterResume">RunToolsScriptsAfterResume</h4>
+  <div class="markdown level1 summary"><p>Enable the execution of
+post-resume scripts when VMware tools is installed. Default: <code>true</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; RunToolsScriptsAfterResume { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L420">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_RunToolsScriptsBeforeGuestReboot_" data-uid="Pulumi.VSphere.VirtualMachine.RunToolsScriptsBeforeGuestReboot*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_RunToolsScriptsBeforeGuestReboot" data-uid="Pulumi.VSphere.VirtualMachine.RunToolsScriptsBeforeGuestReboot">RunToolsScriptsBeforeGuestReboot</h4>
+  <div class="markdown level1 summary"><p>Enable the execution of
+pre-reboot scripts when VMware tools is installed. Default: <code>false</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; RunToolsScriptsBeforeGuestReboot { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L427">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_RunToolsScriptsBeforeGuestShutdown_" data-uid="Pulumi.VSphere.VirtualMachine.RunToolsScriptsBeforeGuestShutdown*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_RunToolsScriptsBeforeGuestShutdown" data-uid="Pulumi.VSphere.VirtualMachine.RunToolsScriptsBeforeGuestShutdown">RunToolsScriptsBeforeGuestShutdown</h4>
+  <div class="markdown level1 summary"><p>Enable the execution
+of pre-shutdown scripts when VMware tools is installed. Default: <code>true</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; RunToolsScriptsBeforeGuestShutdown { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L434">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_RunToolsScriptsBeforeGuestStandby_" data-uid="Pulumi.VSphere.VirtualMachine.RunToolsScriptsBeforeGuestStandby*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_RunToolsScriptsBeforeGuestStandby" data-uid="Pulumi.VSphere.VirtualMachine.RunToolsScriptsBeforeGuestStandby">RunToolsScriptsBeforeGuestStandby</h4>
+  <div class="markdown level1 summary"><p>Enable the execution of
+pre-standby scripts when VMware tools is installed. Default: <code>true</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; RunToolsScriptsBeforeGuestStandby { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L441">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_ScsiBusSharing_" data-uid="Pulumi.VSphere.VirtualMachine.ScsiBusSharing*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_ScsiBusSharing" data-uid="Pulumi.VSphere.VirtualMachine.ScsiBusSharing">ScsiBusSharing</h4>
+  <div class="markdown level1 summary"><p>Mode for sharing the SCSI bus. The modes are
+physicalSharing, virtualSharing, and noSharing. Default: <code>noSharing</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ScsiBusSharing { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L449">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_ScsiControllerCount_" data-uid="Pulumi.VSphere.VirtualMachine.ScsiControllerCount*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_ScsiControllerCount" data-uid="Pulumi.VSphere.VirtualMachine.ScsiControllerCount">ScsiControllerCount</h4>
+  <div class="markdown level1 summary"><p>The number of SCSI controllers that Terraform manages on this virtual machine. This directly affects the
+amount of disks you can add to the virtual machine and the maximum disk unit number. Note that lowering this
+value does not remove controllers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; ScsiControllerCount { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L457">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_ScsiType_" data-uid="Pulumi.VSphere.VirtualMachine.ScsiType*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_ScsiType" data-uid="Pulumi.VSphere.VirtualMachine.ScsiType">ScsiType</h4>
+  <div class="markdown level1 summary"><p>The type of SCSI bus this virtual machine will have.
+Can be one of lsilogic (LSI Logic Parallel), lsilogic-sas (LSI Logic SAS) or
+pvscsi (VMware Paravirtual). Defualt: <code>pvscsi</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ScsiType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L466">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_ShutdownWaitTimeout_" data-uid="Pulumi.VSphere.VirtualMachine.ShutdownWaitTimeout*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_ShutdownWaitTimeout" data-uid="Pulumi.VSphere.VirtualMachine.ShutdownWaitTimeout">ShutdownWaitTimeout</h4>
+  <div class="markdown level1 summary"><p>The amount of time, in minutes, to wait
+for a graceful guest shutdown when making necessary updates to the virtual
+machine. If <code>force_power_off</code> is set to true, the VM will be force powered-off
+after this timeout, otherwise an error is returned. Default: 3 minutes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; ShutdownWaitTimeout { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L472">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_StoragePolicyId_" data-uid="Pulumi.VSphere.VirtualMachine.StoragePolicyId*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_StoragePolicyId" data-uid="Pulumi.VSphere.VirtualMachine.StoragePolicyId">StoragePolicyId</h4>
+  <div class="markdown level1 summary"><p>The UUID of the storage policy to assign to this disk.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; StoragePolicyId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L480">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_SwapPlacementPolicy_" data-uid="Pulumi.VSphere.VirtualMachine.SwapPlacementPolicy*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_SwapPlacementPolicy" data-uid="Pulumi.VSphere.VirtualMachine.SwapPlacementPolicy">SwapPlacementPolicy</h4>
+  <div class="markdown level1 summary"><p>The swap file placement policy for this
+virtual machine. Can be one of <code>inherit</code>, <code>hostLocal</code>, or <code>vmDirectory</code>.
+Default: <code>inherit</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SwapPlacementPolicy { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L487">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_SyncTimeWithHost_" data-uid="Pulumi.VSphere.VirtualMachine.SyncTimeWithHost*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_SyncTimeWithHost" data-uid="Pulumi.VSphere.VirtualMachine.SyncTimeWithHost">SyncTimeWithHost</h4>
+  <div class="markdown level1 summary"><p>Enable guest clock synchronization with
+the host. Requires VMware tools to be installed. Default: <code>false</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; SyncTimeWithHost { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L494">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_Tags_" data-uid="Pulumi.VSphere.VirtualMachine.Tags*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_Tags" data-uid="Pulumi.VSphere.VirtualMachine.Tags">Tags</h4>
+  <div class="markdown level1 summary"><p>The IDs of any tags to attach to this resource. See
+[here][docs-applying-tags] for a reference on how to apply tags.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; Tags { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L501">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_Uuid_" data-uid="Pulumi.VSphere.VirtualMachine.Uuid*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_Uuid" data-uid="Pulumi.VSphere.VirtualMachine.Uuid">Uuid</h4>
+  <div class="markdown level1 summary"><p>The UUID of the virtual disk's VMDK file. This is used to track the
+virtual disk on the virtual machine.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Uuid { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L511">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_Vapp_" data-uid="Pulumi.VSphere.VirtualMachine.Vapp*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_Vapp" data-uid="Pulumi.VSphere.VirtualMachine.Vapp">Vapp</h4>
+  <div class="markdown level1 summary"><p>Optional vApp configuration. The only sub-key available
+is <code>properties</code>, which is a key/value map of properties for virtual machines
+imported from OVF or OVA files. See Using vApp properties to supply OVF/OVA
+configuration for
+more details.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;VirtualMachineVapp&gt; Vapp { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.VSphere.Outputs.VirtualMachineVapp.html">VirtualMachineVapp</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L519">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_VappTransports_" data-uid="Pulumi.VSphere.VirtualMachine.VappTransports*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_VappTransports" data-uid="Pulumi.VSphere.VirtualMachine.VappTransports">VappTransports</h4>
+  <div class="markdown level1 summary"><p>Computed value which is only valid for cloned virtual
+machines. A list of vApp transport methods supported by the source virtual
+machine or template.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; VappTransports { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L526">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_VmwareToolsStatus_" data-uid="Pulumi.VSphere.VirtualMachine.VmwareToolsStatus*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_VmwareToolsStatus" data-uid="Pulumi.VSphere.VirtualMachine.VmwareToolsStatus">VmwareToolsStatus</h4>
+  <div class="markdown level1 summary"><p>The state of VMware tools in the guest. This will
+determine the proper course of action for some device operations.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; VmwareToolsStatus { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L533">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_VmxPath_" data-uid="Pulumi.VSphere.VirtualMachine.VmxPath*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_VmxPath" data-uid="Pulumi.VSphere.VirtualMachine.VmxPath">VmxPath</h4>
+  <div class="markdown level1 summary"><p>The path of the virtual machine's configuration file in the VM's
+datastore.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; VmxPath { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L543">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_WaitForGuestIpTimeout_" data-uid="Pulumi.VSphere.VirtualMachine.WaitForGuestIpTimeout*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_WaitForGuestIpTimeout" data-uid="Pulumi.VSphere.VirtualMachine.WaitForGuestIpTimeout">WaitForGuestIpTimeout</h4>
+  <div class="markdown level1 summary"><p>The amount of time, in minutes, to
+wait for an available guest IP address on this virtual machine. This should
+only be used if your version of VMware Tools does not allow the
+<code>wait_for_guest_net_timeout</code> waiter to be
+used. A value less than 1 disables the waiter. Default: 0.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; WaitForGuestIpTimeout { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L554">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_WaitForGuestNetRoutable_" data-uid="Pulumi.VSphere.VirtualMachine.WaitForGuestNetRoutable*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_WaitForGuestNetRoutable" data-uid="Pulumi.VSphere.VirtualMachine.WaitForGuestNetRoutable">WaitForGuestNetRoutable</h4>
+  <div class="markdown level1 summary"><p>Controls whether or not the guest
+network waiter waits for a routable address. When <code>false</code>, the waiter does
+not wait for a default gateway, nor are IP addresses checked against any
+discovered default gateways as part of its success criteria. This property is
+ignored if the <code>wait_for_guest_ip_timeout</code>
+waiter is used. Default: <code>true</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; WaitForGuestNetRoutable { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L565">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_WaitForGuestNetTimeout_" data-uid="Pulumi.VSphere.VirtualMachine.WaitForGuestNetTimeout*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_WaitForGuestNetTimeout" data-uid="Pulumi.VSphere.VirtualMachine.WaitForGuestNetTimeout">WaitForGuestNetTimeout</h4>
+  <div class="markdown level1 summary"><p>The amount of time, in minutes, to
+wait for an available IP address on this virtual machine's NICs. Older
+versions of VMware Tools do not populate this property. In those cases, this
+waiter can be disabled and the
+<code>wait_for_guest_ip_timeout</code> waiter can be used
+instead. A value less than 1 disables the waiter. Default: 5 minutes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; WaitForGuestNetTimeout { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L606">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachine_Get_" data-uid="Pulumi.VSphere.VirtualMachine.Get*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachine_Get_System_String_Input_System_String__Pulumi_VSphere_VirtualMachineState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.VSphere.VirtualMachine.Get(System.String,Input{System.String},Pulumi.VSphere.VirtualMachineState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, VirtualMachineState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Get an existing VirtualMachine resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static VirtualMachine Get(string name, Input&lt;string&gt; id, VirtualMachineState state = null, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.VSphere.VirtualMachineState.html">VirtualMachineState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.VSphere.VirtualMachine.html">VirtualMachine</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachine.cs/#L14" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,723 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class AuthBackend
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class AuthBackend
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Vault.GitHub.AuthBackend">
+  
+  <h1 id="Pulumi_Vault_GitHub_AuthBackend" data-uid="Pulumi.Vault.GitHub.AuthBackend" class="text-break">Class AuthBackend
+  </h1>
+  <div class="markdown level0 summary"><p>Manages a Github Auth mount in a Vault server. See the <a href="https://www.vaultproject.io/docs/auth/github.html">Vault
+documentation</a> for more
+information.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/github_auth_backend.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/github_auth_backend.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">AuthBackend</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Vault.GitHub.html">Pulumi.Vault.GitHub</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Vault.dll</h6>
+  <h5 id="Pulumi_Vault_GitHub_AuthBackend_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class AuthBackend : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Github/AuthBackend.cs/#L150">View Source</a>
+  </span>
+  <a id="Pulumi_Vault_GitHub_AuthBackend__ctor_" data-uid="Pulumi.Vault.GitHub.AuthBackend.#ctor*"></a>
+  <h4 id="Pulumi_Vault_GitHub_AuthBackend__ctor_System_String_Pulumi_Vault_GitHub_AuthBackendArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Vault.GitHub.AuthBackend.#ctor(System.String,Pulumi.Vault.GitHub.AuthBackendArgs,System.Nullable{CustomResourceOptions})">AuthBackend(String, AuthBackendArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Create a AuthBackend resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AuthBackend(string name, AuthBackendArgs args, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Vault.GitHub.AuthBackendArgs.html">AuthBackendArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Github/AuthBackend.cs/#L23">View Source</a>
+  </span>
+  <a id="Pulumi_Vault_GitHub_AuthBackend_Accessor_" data-uid="Pulumi.Vault.GitHub.AuthBackend.Accessor*"></a>
+  <h4 id="Pulumi_Vault_GitHub_AuthBackend_Accessor" data-uid="Pulumi.Vault.GitHub.AuthBackend.Accessor">Accessor</h4>
+  <div class="markdown level1 summary"><p>The mount accessor related to the auth mount. It is useful for integration with <a href="https://www.vaultproject.io/docs/secrets/identity/index.html">Identity Secrets Engine</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Accessor { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Github/AuthBackend.cs/#L30">View Source</a>
+  </span>
+  <a id="Pulumi_Vault_GitHub_AuthBackend_BaseUrl_" data-uid="Pulumi.Vault.GitHub.AuthBackend.BaseUrl*"></a>
+  <h4 id="Pulumi_Vault_GitHub_AuthBackend_BaseUrl" data-uid="Pulumi.Vault.GitHub.AuthBackend.BaseUrl">BaseUrl</h4>
+  <div class="markdown level1 summary"><p>The API endpoint to use. Useful if you
+are running GitHub Enterprise or an API-compatible authentication server.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; BaseUrl { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Github/AuthBackend.cs/#L37">View Source</a>
+  </span>
+  <a id="Pulumi_Vault_GitHub_AuthBackend_Description_" data-uid="Pulumi.Vault.GitHub.AuthBackend.Description*"></a>
+  <h4 id="Pulumi_Vault_GitHub_AuthBackend_Description" data-uid="Pulumi.Vault.GitHub.AuthBackend.Description">Description</h4>
+  <div class="markdown level1 summary"><p>Specifies the description of the mount.
+This overrides the current stored value, if any.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Github/AuthBackend.cs/#L44">View Source</a>
+  </span>
+  <a id="Pulumi_Vault_GitHub_AuthBackend_MaxTtl_" data-uid="Pulumi.Vault.GitHub.AuthBackend.MaxTtl*"></a>
+  <h4 id="Pulumi_Vault_GitHub_AuthBackend_MaxTtl" data-uid="Pulumi.Vault.GitHub.AuthBackend.MaxTtl">MaxTtl</h4>
+  <div class="markdown level1 summary"><p>(Optional; Deprecated, use <code>token_max_ttl</code> instead if you are running Vault &gt;= 1.2) The maximum allowed lifetime of tokens
+issued using this role. This must be a valid <a href="https://golang.org/pkg/time/#ParseDuration">duration string</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; MaxTtl { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Github/AuthBackend.cs/#L50">View Source</a>
+  </span>
+  <a id="Pulumi_Vault_GitHub_AuthBackend_Organization_" data-uid="Pulumi.Vault.GitHub.AuthBackend.Organization*"></a>
+  <h4 id="Pulumi_Vault_GitHub_AuthBackend_Organization" data-uid="Pulumi.Vault.GitHub.AuthBackend.Organization">Organization</h4>
+  <div class="markdown level1 summary"><p>The organization configured users must be part of.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Organization { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Github/AuthBackend.cs/#L57">View Source</a>
+  </span>
+  <a id="Pulumi_Vault_GitHub_AuthBackend_Path_" data-uid="Pulumi.Vault.GitHub.AuthBackend.Path*"></a>
+  <h4 id="Pulumi_Vault_GitHub_AuthBackend_Path" data-uid="Pulumi.Vault.GitHub.AuthBackend.Path">Path</h4>
+  <div class="markdown level1 summary"><p>Path where the auth backend is mounted. Defaults to <code>auth/github</code>
+if not specified.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Path { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Github/AuthBackend.cs/#L65">View Source</a>
+  </span>
+  <a id="Pulumi_Vault_GitHub_AuthBackend_TokenBoundCidrs_" data-uid="Pulumi.Vault.GitHub.AuthBackend.TokenBoundCidrs*"></a>
+  <h4 id="Pulumi_Vault_GitHub_AuthBackend_TokenBoundCidrs" data-uid="Pulumi.Vault.GitHub.AuthBackend.TokenBoundCidrs">TokenBoundCidrs</h4>
+  <div class="markdown level1 summary"><p>(Optional) List of CIDR blocks; if set, specifies blocks of IP
+addresses which can authenticate successfully, and ties the resulting token to these blocks
+as well.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; TokenBoundCidrs { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Github/AuthBackend.cs/#L74">View Source</a>
+  </span>
+  <a id="Pulumi_Vault_GitHub_AuthBackend_TokenExplicitMaxTtl_" data-uid="Pulumi.Vault.GitHub.AuthBackend.TokenExplicitMaxTtl*"></a>
+  <h4 id="Pulumi_Vault_GitHub_AuthBackend_TokenExplicitMaxTtl" data-uid="Pulumi.Vault.GitHub.AuthBackend.TokenExplicitMaxTtl">TokenExplicitMaxTtl</h4>
+  <div class="markdown level1 summary"><p>(Optional) If set, will encode an
+<a href="https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls">explicit max TTL</a>
+onto the token in number of seconds. This is a hard cap even if <code>token_ttl</code> and
+<code>token_max_ttl</code> would otherwise allow a renewal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; TokenExplicitMaxTtl { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Github/AuthBackend.cs/#L81">View Source</a>
+  </span>
+  <a id="Pulumi_Vault_GitHub_AuthBackend_TokenMaxTtl_" data-uid="Pulumi.Vault.GitHub.AuthBackend.TokenMaxTtl*"></a>
+  <h4 id="Pulumi_Vault_GitHub_AuthBackend_TokenMaxTtl" data-uid="Pulumi.Vault.GitHub.AuthBackend.TokenMaxTtl">TokenMaxTtl</h4>
+  <div class="markdown level1 summary"><p>(Optional) The maximum lifetime for generated tokens in number of seconds.
+Its current value will be referenced at renewal time.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; TokenMaxTtl { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Github/AuthBackend.cs/#L88">View Source</a>
+  </span>
+  <a id="Pulumi_Vault_GitHub_AuthBackend_TokenNoDefaultPolicy_" data-uid="Pulumi.Vault.GitHub.AuthBackend.TokenNoDefaultPolicy*"></a>
+  <h4 id="Pulumi_Vault_GitHub_AuthBackend_TokenNoDefaultPolicy" data-uid="Pulumi.Vault.GitHub.AuthBackend.TokenNoDefaultPolicy">TokenNoDefaultPolicy</h4>
+  <div class="markdown level1 summary"><p>(Optional) If set, the default policy will not be set on
+generated tokens; otherwise it will be added to the policies set in token_policies.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; TokenNoDefaultPolicy { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Github/AuthBackend.cs/#L96">View Source</a>
+  </span>
+  <a id="Pulumi_Vault_GitHub_AuthBackend_TokenNumUses_" data-uid="Pulumi.Vault.GitHub.AuthBackend.TokenNumUses*"></a>
+  <h4 id="Pulumi_Vault_GitHub_AuthBackend_TokenNumUses" data-uid="Pulumi.Vault.GitHub.AuthBackend.TokenNumUses">TokenNumUses</h4>
+  <div class="markdown level1 summary"><p>(Optional) The
+<a href="https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls">period</a>,
+if any, in number of seconds to set on the token.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; TokenNumUses { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Github/AuthBackend.cs/#L105">View Source</a>
+  </span>
+  <a id="Pulumi_Vault_GitHub_AuthBackend_TokenPeriod_" data-uid="Pulumi.Vault.GitHub.AuthBackend.TokenPeriod*"></a>
+  <h4 id="Pulumi_Vault_GitHub_AuthBackend_TokenPeriod" data-uid="Pulumi.Vault.GitHub.AuthBackend.TokenPeriod">TokenPeriod</h4>
+  <div class="markdown level1 summary"><p>(Optional) If set, indicates that the
+token generated using this role should never expire. The token should be renewed within the
+duration specified by this value. At each renewal, the token's TTL will be set to the
+value of this field. Specified in seconds.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; TokenPeriod { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Github/AuthBackend.cs/#L112">View Source</a>
+  </span>
+  <a id="Pulumi_Vault_GitHub_AuthBackend_TokenPolicies_" data-uid="Pulumi.Vault.GitHub.AuthBackend.TokenPolicies*"></a>
+  <h4 id="Pulumi_Vault_GitHub_AuthBackend_TokenPolicies" data-uid="Pulumi.Vault.GitHub.AuthBackend.TokenPolicies">TokenPolicies</h4>
+  <div class="markdown level1 summary"><p>(Optional) List of policies to encode onto generated tokens. Depending
+on the auth method, this list may be supplemented by user/group/other values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; TokenPolicies { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Github/AuthBackend.cs/#L119">View Source</a>
+  </span>
+  <a id="Pulumi_Vault_GitHub_AuthBackend_TokenTtl_" data-uid="Pulumi.Vault.GitHub.AuthBackend.TokenTtl*"></a>
+  <h4 id="Pulumi_Vault_GitHub_AuthBackend_TokenTtl" data-uid="Pulumi.Vault.GitHub.AuthBackend.TokenTtl">TokenTtl</h4>
+  <div class="markdown level1 summary"><p>(Optional) The incremental lifetime for generated tokens in number of seconds.
+Its current value will be referenced at renewal time.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; TokenTtl { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Github/AuthBackend.cs/#L129">View Source</a>
+  </span>
+  <a id="Pulumi_Vault_GitHub_AuthBackend_TokenType_" data-uid="Pulumi.Vault.GitHub.AuthBackend.TokenType*"></a>
+  <h4 id="Pulumi_Vault_GitHub_AuthBackend_TokenType" data-uid="Pulumi.Vault.GitHub.AuthBackend.TokenType">TokenType</h4>
+  <div class="markdown level1 summary"><p>(Optional) The type of token that should be generated. Can be <code>service</code>,
+<code>batch</code>, or <code>default</code> to use the mount's tuned default (which unless changed will be
+<code>service</code> tokens). For token store roles, there are two additional possibilities:
+<code>default-service</code> and <code>default-batch</code> which specify the type to return unless the client
+requests a different type at generation time.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; TokenType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Github/AuthBackend.cs/#L136">View Source</a>
+  </span>
+  <a id="Pulumi_Vault_GitHub_AuthBackend_Ttl_" data-uid="Pulumi.Vault.GitHub.AuthBackend.Ttl*"></a>
+  <h4 id="Pulumi_Vault_GitHub_AuthBackend_Ttl" data-uid="Pulumi.Vault.GitHub.AuthBackend.Ttl">Ttl</h4>
+  <div class="markdown level1 summary"><p>(Optional; Deprecated, use <code>token_ttl</code> instead if you are running Vault &gt;= 1.2) The TTL period of tokens issued
+using this role. This must be a valid <a href="https://golang.org/pkg/time/#ParseDuration">duration string</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Ttl { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Github/AuthBackend.cs/#L139">View Source</a>
+  </span>
+  <a id="Pulumi_Vault_GitHub_AuthBackend_Tune_" data-uid="Pulumi.Vault.GitHub.AuthBackend.Tune*"></a>
+  <h4 id="Pulumi_Vault_GitHub_AuthBackend_Tune" data-uid="Pulumi.Vault.GitHub.AuthBackend.Tune">Tune</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;AuthBackendTune&gt; Tune { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Vault.GitHub.Outputs.AuthBackendTune.html">AuthBackendTune</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Github/AuthBackend.cs/#L180">View Source</a>
+  </span>
+  <a id="Pulumi_Vault_GitHub_AuthBackend_Get_" data-uid="Pulumi.Vault.GitHub.AuthBackend.Get*"></a>
+  <h4 id="Pulumi_Vault_GitHub_AuthBackend_Get_System_String_Input_System_String__Pulumi_Vault_GitHub_AuthBackendState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Vault.GitHub.AuthBackend.Get(System.String,Input{System.String},Pulumi.Vault.GitHub.AuthBackendState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, AuthBackendState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Get an existing AuthBackend resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AuthBackend Get(string name, Input&lt;string&gt; id, AuthBackendState state = null, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Vault.GitHub.AuthBackendState.html">AuthBackendState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Vault.GitHub.AuthBackend.html">AuthBackend</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Github/AuthBackend.cs/#L18" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

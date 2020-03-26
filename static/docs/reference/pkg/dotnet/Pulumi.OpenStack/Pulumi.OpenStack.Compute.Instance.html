@@ -1,0 +1,989 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Instance
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Instance
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.OpenStack.Compute.Instance">
+  
+  <h1 id="Pulumi_OpenStack_Compute_Instance" data-uid="Pulumi.OpenStack.Compute.Instance" class="text-break">Class Instance
+  </h1>
+  <div class="markdown level0 summary"><p>Manages a V2 VM instance resource within OpenStack.</p>
+<h2 id="importing-instances">Importing instances</h2>
+<p>Importing instances can be tricky, since the nova api does not offer all
+information provided at creation time for later retrieval.
+Network interface attachment order, and number and sizes of ephemeral
+disks are examples of this.</p>
+<h3 id="importing-an-instance-with-multiple-emphemeral-disks">Importing an instance with multiple emphemeral disks</h3>
+<p>The importer cannot read the emphemeral disk configuration
+of an instance, so just specify image_id as in the configuration
+of the basic instance example.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_instance_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_instance_v2.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Instance</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.OpenStack.Compute.html">Pulumi.OpenStack.Compute</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.OpenStack.dll</h6>
+  <h5 id="Pulumi_OpenStack_Compute_Instance_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Instance : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Instance.cs/#L231">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Compute_Instance__ctor_" data-uid="Pulumi.OpenStack.Compute.Instance.#ctor*"></a>
+  <h4 id="Pulumi_OpenStack_Compute_Instance__ctor_System_String_Pulumi_OpenStack_Compute_InstanceArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.OpenStack.Compute.Instance.#ctor(System.String,Pulumi.OpenStack.Compute.InstanceArgs,System.Nullable{CustomResourceOptions})">Instance(String, InstanceArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Create a Instance resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Instance(string name, InstanceArgs args = null, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.OpenStack.Compute.InstanceArgs.html">InstanceArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Instance.cs/#L34">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Compute_Instance_AccessIpV4_" data-uid="Pulumi.OpenStack.Compute.Instance.AccessIpV4*"></a>
+  <h4 id="Pulumi_OpenStack_Compute_Instance_AccessIpV4" data-uid="Pulumi.OpenStack.Compute.Instance.AccessIpV4">AccessIpV4</h4>
+  <div class="markdown level1 summary"><p>The first detected Fixed IPv4 address.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AccessIpV4 { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Instance.cs/#L40">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Compute_Instance_AccessIpV6_" data-uid="Pulumi.OpenStack.Compute.Instance.AccessIpV6*"></a>
+  <h4 id="Pulumi_OpenStack_Compute_Instance_AccessIpV6" data-uid="Pulumi.OpenStack.Compute.Instance.AccessIpV6">AccessIpV6</h4>
+  <div class="markdown level1 summary"><p>The first detected Fixed IPv6 address.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AccessIpV6 { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Instance.cs/#L47">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Compute_Instance_AdminPass_" data-uid="Pulumi.OpenStack.Compute.Instance.AdminPass*"></a>
+  <h4 id="Pulumi_OpenStack_Compute_Instance_AdminPass" data-uid="Pulumi.OpenStack.Compute.Instance.AdminPass">AdminPass</h4>
+  <div class="markdown level1 summary"><p>The administrative password to assign to the server.
+Changing this changes the root password on the existing server.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; AdminPass { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Instance.cs/#L50">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Compute_Instance_AllMetadata_" data-uid="Pulumi.OpenStack.Compute.Instance.AllMetadata*"></a>
+  <h4 id="Pulumi_OpenStack_Compute_Instance_AllMetadata" data-uid="Pulumi.OpenStack.Compute.Instance.AllMetadata">AllMetadata</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; AllMetadata { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Instance.cs/#L57">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Compute_Instance_AllTags_" data-uid="Pulumi.OpenStack.Compute.Instance.AllTags*"></a>
+  <h4 id="Pulumi_OpenStack_Compute_Instance_AllTags" data-uid="Pulumi.OpenStack.Compute.Instance.AllTags">AllTags</h4>
+  <div class="markdown level1 summary"><p>The collection of tags assigned on the instance, which have
+been explicitly and implicitly added.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; AllTags { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Instance.cs/#L64">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Compute_Instance_AvailabilityZone_" data-uid="Pulumi.OpenStack.Compute.Instance.AvailabilityZone*"></a>
+  <h4 id="Pulumi_OpenStack_Compute_Instance_AvailabilityZone" data-uid="Pulumi.OpenStack.Compute.Instance.AvailabilityZone">AvailabilityZone</h4>
+  <div class="markdown level1 summary"><p>The availability zone in which to create
+the server. Changing this creates a new server.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AvailabilityZone { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Instance.cs/#L75">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Compute_Instance_BlockDevices_" data-uid="Pulumi.OpenStack.Compute.Instance.BlockDevices*"></a>
+  <h4 id="Pulumi_OpenStack_Compute_Instance_BlockDevices" data-uid="Pulumi.OpenStack.Compute.Instance.BlockDevices">BlockDevices</h4>
+  <div class="markdown level1 summary"><p>Configuration of block devices. The block_device
+structure is documented below. Changing this creates a new server.
+You can specify multiple block devices which will create an instance with
+multiple disks. This configuration is very flexible, so please see the
+following <a href="https://docs.openstack.org/nova/latest/user/block-device-mapping.html">reference</a>
+for more information.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;InstanceBlockDevices&gt;&gt; BlockDevices { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.OpenStack.Compute.Outputs.InstanceBlockDevices.html">InstanceBlockDevices</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Instance.cs/#L82">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Compute_Instance_ConfigDrive_" data-uid="Pulumi.OpenStack.Compute.Instance.ConfigDrive*"></a>
+  <h4 id="Pulumi_OpenStack_Compute_Instance_ConfigDrive" data-uid="Pulumi.OpenStack.Compute.Instance.ConfigDrive">ConfigDrive</h4>
+  <div class="markdown level1 summary"><p>Whether to use the config_drive feature to
+configure the instance. Changing this creates a new server.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; ConfigDrive { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Instance.cs/#L89">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Compute_Instance_FlavorId_" data-uid="Pulumi.OpenStack.Compute.Instance.FlavorId*"></a>
+  <h4 id="Pulumi_OpenStack_Compute_Instance_FlavorId" data-uid="Pulumi.OpenStack.Compute.Instance.FlavorId">FlavorId</h4>
+  <div class="markdown level1 summary"><p>The flavor ID of
+the desired flavor for the server. Changing this resizes the existing server.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; FlavorId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Instance.cs/#L96">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Compute_Instance_FlavorName_" data-uid="Pulumi.OpenStack.Compute.Instance.FlavorName*"></a>
+  <h4 id="Pulumi_OpenStack_Compute_Instance_FlavorName" data-uid="Pulumi.OpenStack.Compute.Instance.FlavorName">FlavorName</h4>
+  <div class="markdown level1 summary"><p>The name of the
+desired flavor for the server. Changing this resizes the existing server.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; FlavorName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Instance.cs/#L104">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Compute_Instance_ForceDelete_" data-uid="Pulumi.OpenStack.Compute.Instance.ForceDelete*"></a>
+  <h4 id="Pulumi_OpenStack_Compute_Instance_ForceDelete" data-uid="Pulumi.OpenStack.Compute.Instance.ForceDelete">ForceDelete</h4>
+  <div class="markdown level1 summary"><p>Whether to force the OpenStack instance to be
+forcefully deleted. This is useful for environments that have reclaim / soft
+deletion enabled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; ForceDelete { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Instance.cs/#L112">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Compute_Instance_ImageId_" data-uid="Pulumi.OpenStack.Compute.Instance.ImageId*"></a>
+  <h4 id="Pulumi_OpenStack_Compute_Instance_ImageId" data-uid="Pulumi.OpenStack.Compute.Instance.ImageId">ImageId</h4>
+  <div class="markdown level1 summary"><p>(Optional; Required if <code>image_name</code> is empty and not booting
+from a volume. Do not specify if booting from a volume.) The image ID of
+the desired image for the server. Changing this creates a new server.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ImageId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Instance.cs/#L120">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Compute_Instance_ImageName_" data-uid="Pulumi.OpenStack.Compute.Instance.ImageName*"></a>
+  <h4 id="Pulumi_OpenStack_Compute_Instance_ImageName" data-uid="Pulumi.OpenStack.Compute.Instance.ImageName">ImageName</h4>
+  <div class="markdown level1 summary"><p>(Optional; Required if <code>image_id</code> is empty and not booting
+from a volume. Do not specify if booting from a volume.) The name of the
+desired image for the server. Changing this creates a new server.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ImageName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Instance.cs/#L128">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Compute_Instance_KeyPair_" data-uid="Pulumi.OpenStack.Compute.Instance.KeyPair*"></a>
+  <h4 id="Pulumi_OpenStack_Compute_Instance_KeyPair" data-uid="Pulumi.OpenStack.Compute.Instance.KeyPair">KeyPair</h4>
+  <div class="markdown level1 summary"><p>The name of a key pair to put on the server. The key
+pair must already be created and associated with the tenant's account.
+Changing this creates a new server.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; KeyPair { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Instance.cs/#L135">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Compute_Instance_Metadata_" data-uid="Pulumi.OpenStack.Compute.Instance.Metadata*"></a>
+  <h4 id="Pulumi_OpenStack_Compute_Instance_Metadata" data-uid="Pulumi.OpenStack.Compute.Instance.Metadata">Metadata</h4>
+  <div class="markdown level1 summary"><p>Metadata key/value pairs to make available from
+within the instance. Changing this updates the existing server metadata.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; Metadata { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Instance.cs/#L141">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Compute_Instance_Name_" data-uid="Pulumi.OpenStack.Compute.Instance.Name*"></a>
+  <h4 id="Pulumi_OpenStack_Compute_Instance_Name" data-uid="Pulumi.OpenStack.Compute.Instance.Name">Name</h4>
+  <div class="markdown level1 summary"><p>A unique name for the resource.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Instance.cs/#L149">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Compute_Instance_Networks_" data-uid="Pulumi.OpenStack.Compute.Instance.Networks*"></a>
+  <h4 id="Pulumi_OpenStack_Compute_Instance_Networks" data-uid="Pulumi.OpenStack.Compute.Instance.Networks">Networks</h4>
+  <div class="markdown level1 summary"><p>An array of one or more networks to attach to the
+instance. The network object structure is documented below. Changing this
+creates a new server.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;InstanceNetworks&gt;&gt; Networks { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.OpenStack.Compute.Outputs.InstanceNetworks.html">InstanceNetworks</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Instance.cs/#L157">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Compute_Instance_Personalities_" data-uid="Pulumi.OpenStack.Compute.Instance.Personalities*"></a>
+  <h4 id="Pulumi_OpenStack_Compute_Instance_Personalities" data-uid="Pulumi.OpenStack.Compute.Instance.Personalities">Personalities</h4>
+  <div class="markdown level1 summary"><p>Customize the personality of an instance by
+defining one or more files and their contents. The personality structure
+is described below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;InstancePersonalities&gt;&gt; Personalities { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.OpenStack.Compute.Outputs.InstancePersonalities.html">InstancePersonalities</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Instance.cs/#L166">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Compute_Instance_PowerState_" data-uid="Pulumi.OpenStack.Compute.Instance.PowerState*"></a>
+  <h4 id="Pulumi_OpenStack_Compute_Instance_PowerState" data-uid="Pulumi.OpenStack.Compute.Instance.PowerState">PowerState</h4>
+  <div class="markdown level1 summary"><p>Provide the VM state. Only 'active' and 'shutoff'
+are supported values. <em>Note</em>: If the initial power_state is the shutoff
+the VM will be stopped immediately after build and the provisioners like
+remote-exec or files are not supported.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; PowerState { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Instance.cs/#L174">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Compute_Instance_Region_" data-uid="Pulumi.OpenStack.Compute.Instance.Region*"></a>
+  <h4 id="Pulumi_OpenStack_Compute_Instance_Region" data-uid="Pulumi.OpenStack.Compute.Instance.Region">Region</h4>
+  <div class="markdown level1 summary"><p>The region in which to create the server instance. If
+omitted, the <code>region</code> argument of the provider is used. Changing this
+creates a new server.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Region { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Instance.cs/#L181">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Compute_Instance_SchedulerHints_" data-uid="Pulumi.OpenStack.Compute.Instance.SchedulerHints*"></a>
+  <h4 id="Pulumi_OpenStack_Compute_Instance_SchedulerHints" data-uid="Pulumi.OpenStack.Compute.Instance.SchedulerHints">SchedulerHints</h4>
+  <div class="markdown level1 summary"><p>Provide the Nova scheduler with hints on how
+the instance should be launched. The available hints are described below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;InstanceSchedulerHints&gt;&gt; SchedulerHints { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.OpenStack.Compute.Outputs.InstanceSchedulerHints.html">InstanceSchedulerHints</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Instance.cs/#L191">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Compute_Instance_SecurityGroups_" data-uid="Pulumi.OpenStack.Compute.Instance.SecurityGroups*"></a>
+  <h4 id="Pulumi_OpenStack_Compute_Instance_SecurityGroups" data-uid="Pulumi.OpenStack.Compute.Instance.SecurityGroups">SecurityGroups</h4>
+  <div class="markdown level1 summary"><p>An array of one or more security group names
+or ids to associate with the server. Changing this results in adding/removing
+security groups from the existing server. <em>Note</em>: When attaching the
+instance to networks using Ports, place the security groups on the Port
+and not the instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; SecurityGroups { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Instance.cs/#L199">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Compute_Instance_StopBeforeDestroy_" data-uid="Pulumi.OpenStack.Compute.Instance.StopBeforeDestroy*"></a>
+  <h4 id="Pulumi_OpenStack_Compute_Instance_StopBeforeDestroy" data-uid="Pulumi.OpenStack.Compute.Instance.StopBeforeDestroy">StopBeforeDestroy</h4>
+  <div class="markdown level1 summary"><p>Whether to try stop instance gracefully
+before destroying it, thus giving chance for guest OS daemons to stop correctly.
+If instance doesn't stop within timeout, it will be destroyed anyway.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; StopBeforeDestroy { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Instance.cs/#L206">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Compute_Instance_Tags_" data-uid="Pulumi.OpenStack.Compute.Instance.Tags*"></a>
+  <h4 id="Pulumi_OpenStack_Compute_Instance_Tags" data-uid="Pulumi.OpenStack.Compute.Instance.Tags">Tags</h4>
+  <div class="markdown level1 summary"><p>A set of string tags for the instance. Changing this
+updates the existing instance tags.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; Tags { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Instance.cs/#L213">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Compute_Instance_UserData_" data-uid="Pulumi.OpenStack.Compute.Instance.UserData*"></a>
+  <h4 id="Pulumi_OpenStack_Compute_Instance_UserData" data-uid="Pulumi.OpenStack.Compute.Instance.UserData">UserData</h4>
+  <div class="markdown level1 summary"><p>The user data to provide when launching the instance.
+Changing this creates a new server.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; UserData { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Instance.cs/#L220">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Compute_Instance_VendorOptions_" data-uid="Pulumi.OpenStack.Compute.Instance.VendorOptions*"></a>
+  <h4 id="Pulumi_OpenStack_Compute_Instance_VendorOptions" data-uid="Pulumi.OpenStack.Compute.Instance.VendorOptions">VendorOptions</h4>
+  <div class="markdown level1 summary"><p>Map of additional vendor-specific options.
+Supported options are described below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;InstanceVendorOptions&gt; VendorOptions { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.OpenStack.Compute.Outputs.InstanceVendorOptions.html">InstanceVendorOptions</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Instance.cs/#L261">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Compute_Instance_Get_" data-uid="Pulumi.OpenStack.Compute.Instance.Get*"></a>
+  <h4 id="Pulumi_OpenStack_Compute_Instance_Get_System_String_Input_System_String__Pulumi_OpenStack_Compute_InstanceState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.OpenStack.Compute.Instance.Get(System.String,Input{System.String},Pulumi.OpenStack.Compute.InstanceState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, InstanceState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Get an existing Instance resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Instance Get(string name, Input&lt;string&gt; id, InstanceState state = null, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.OpenStack.Compute.InstanceState.html">InstanceState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.OpenStack.Compute.Instance.html">Instance</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Compute/Instance.cs/#L29" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

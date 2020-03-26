@@ -1,0 +1,894 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Rule
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Rule
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.AliCloud.Slb.Rule">
+  
+  <h1 id="Pulumi_AliCloud_Slb_Rule" data-uid="Pulumi.AliCloud.Slb.Rule" class="text-break">Class Rule
+  </h1>
+  <div class="markdown level0 summary"><p>A forwarding rule is configured in <code>HTTP</code>/<code>HTTPS</code> listener and it used to listen a list of backend servers which in one specified virtual backend server group.
+You can add forwarding rules to a listener to forward requests based on the domain names or the URL in the request.</p>
+<blockquote>
+<p><strong>NOTE:</strong> One virtual backend server group can be attached in multiple forwarding rules.</p>
+</blockquote>
+<blockquote>
+<p><strong>NOTE:</strong> At least one &quot;Domain&quot; or &quot;Url&quot; must be specified when creating a new rule.</p>
+</blockquote>
+<blockquote>
+<p><strong>NOTE:</strong> Having the same 'Domain' and 'Url' rule can not be created repeatedly in the one listener.</p>
+</blockquote>
+<blockquote>
+<p><strong>NOTE:</strong> Rule only be created in the <code>HTTP</code> or <code>HTTPS</code> listener.</p>
+</blockquote>
+<blockquote>
+<p><strong>NOTE:</strong> Only rule's virtual server group can be modified.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_rule.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Rule</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.AliCloud.Slb.html">Pulumi.AliCloud.Slb</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.AliCloud.dll</h6>
+  <h5 id="Pulumi_AliCloud_Slb_Rule_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Rule : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Rule.cs/#L174">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Rule__ctor_" data-uid="Pulumi.AliCloud.Slb.Rule.#ctor*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Rule__ctor_System_String_Pulumi_AliCloud_Slb_RuleArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.AliCloud.Slb.Rule.#ctor(System.String,Pulumi.AliCloud.Slb.RuleArgs,Pulumi.CustomResourceOptions)">Rule(String, RuleArgs, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Create a Rule resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Rule(string name, RuleArgs args, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.AliCloud.Slb.RuleArgs.html">RuleArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Rule.cs/#L33">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Rule_Cookie_" data-uid="Pulumi.AliCloud.Slb.Rule.Cookie*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Rule_Cookie" data-uid="Pulumi.AliCloud.Slb.Rule.Cookie">Cookie</h4>
+  <div class="markdown level1 summary"><p>The cookie configured on the server. It is mandatory when <code>sticky_session</code> is &quot;on&quot; and <code>sticky_session_type</code> is &quot;server&quot;. Otherwise, it will be ignored. Valid value：String in line with RFC 2965, with length being 1- 200. It only contains characters such as ASCII codes, English letters and digits instead of the comma, semicolon or spacing, and it cannot start with $.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Cookie { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Rule.cs/#L39">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Rule_CookieTimeout_" data-uid="Pulumi.AliCloud.Slb.Rule.CookieTimeout*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Rule_CookieTimeout" data-uid="Pulumi.AliCloud.Slb.Rule.CookieTimeout">CookieTimeout</h4>
+  <div class="markdown level1 summary"><p>Cookie timeout. It is mandatory when <code>sticky_session</code> is &quot;on&quot; and <code>sticky_session_type</code> is &quot;insert&quot;. Otherwise, it will be ignored. Valid value range: [1-86400] in seconds.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; CookieTimeout { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Rule.cs/#L45">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Rule_DeleteProtectionValidation_" data-uid="Pulumi.AliCloud.Slb.Rule.DeleteProtectionValidation*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Rule_DeleteProtectionValidation" data-uid="Pulumi.AliCloud.Slb.Rule.DeleteProtectionValidation">DeleteProtectionValidation</h4>
+  <div class="markdown level1 summary"><p>Checking DeleteProtection of SLB instance before deleting. If true, this resource will not be deleted when its SLB instance enabled DeleteProtection. Default to false.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; DeleteProtectionValidation { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Rule.cs/#L54">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Rule_Domain_" data-uid="Pulumi.AliCloud.Slb.Rule.Domain*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Rule_Domain" data-uid="Pulumi.AliCloud.Slb.Rule.Domain">Domain</h4>
+  <div class="markdown level1 summary"><p>Domain name of the forwarding rule. It can contain letters a-z, numbers 0-9, hyphens (-), and periods (.),
+and wildcard characters. The following two domain name formats are supported:</p>
+<ul>
+<li>Standard domain name: <a href="http://www.test.com">www.test.com</a></li>
+<li>Wildcard domain name: <em>.test.com. wildcard (</em>) must be the first character in the format of (*.)</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Domain { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Rule.cs/#L60">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Rule_FrontendPort_" data-uid="Pulumi.AliCloud.Slb.Rule.FrontendPort*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Rule_FrontendPort" data-uid="Pulumi.AliCloud.Slb.Rule.FrontendPort">FrontendPort</h4>
+  <div class="markdown level1 summary"><p>The listener frontend port which is used to launch the new forwarding rule. Valid range: [1-65535].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; FrontendPort { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Rule.cs/#L66">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Rule_HealthCheck_" data-uid="Pulumi.AliCloud.Slb.Rule.HealthCheck*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Rule_HealthCheck" data-uid="Pulumi.AliCloud.Slb.Rule.HealthCheck">HealthCheck</h4>
+  <div class="markdown level1 summary"><p>Whether to enable health check. Valid values are<code>on</code> and <code>off</code>. TCP and UDP listener's HealthCheck is always on, so it will be ignore when launching TCP or UDP listener. This parameter is required  and takes effect only when ListenerSync is set to off.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; HealthCheck { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Rule.cs/#L72">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Rule_HealthCheckConnectPort_" data-uid="Pulumi.AliCloud.Slb.Rule.HealthCheckConnectPort*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Rule_HealthCheckConnectPort" data-uid="Pulumi.AliCloud.Slb.Rule.HealthCheckConnectPort">HealthCheckConnectPort</h4>
+  <div class="markdown level1 summary"><p>Port used for health check. Valid value range: [1-65535]. Default to &quot;None&quot; means the backend server port is used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; HealthCheckConnectPort { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Rule.cs/#L78">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Rule_HealthCheckDomain_" data-uid="Pulumi.AliCloud.Slb.Rule.HealthCheckDomain*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Rule_HealthCheckDomain" data-uid="Pulumi.AliCloud.Slb.Rule.HealthCheckDomain">HealthCheckDomain</h4>
+  <div class="markdown level1 summary"><p>Domain name used for health check. When it used to launch TCP listener, <code>health_check_type</code> must be &quot;http&quot;. Its length is limited to 1-80 and only characters such as letters, digits, ‘-‘ and ‘.’ are allowed. When it is not set or empty,  Server Load Balancer uses the private network IP address of each backend server as Domain used for health check.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; HealthCheckDomain { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Rule.cs/#L84">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Rule_HealthCheckHttpCode_" data-uid="Pulumi.AliCloud.Slb.Rule.HealthCheckHttpCode*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Rule_HealthCheckHttpCode" data-uid="Pulumi.AliCloud.Slb.Rule.HealthCheckHttpCode">HealthCheckHttpCode</h4>
+  <div class="markdown level1 summary"><p>Regular health check HTTP status code. Multiple codes are segmented by “,”. It is required when <code>health_check</code> is on. Default to <code>http_2xx</code>.  Valid values are: <code>http_2xx</code>,  <code>http_3xx</code>, <code>http_4xx</code> and <code>http_5xx</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; HealthCheckHttpCode { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Rule.cs/#L90">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Rule_HealthCheckInterval_" data-uid="Pulumi.AliCloud.Slb.Rule.HealthCheckInterval*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Rule_HealthCheckInterval" data-uid="Pulumi.AliCloud.Slb.Rule.HealthCheckInterval">HealthCheckInterval</h4>
+  <div class="markdown level1 summary"><p>Time interval of health checks. It is required when <code>health_check</code> is on. Valid value range: [1-50] in seconds. Default to 2.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; HealthCheckInterval { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Rule.cs/#L96">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Rule_HealthCheckTimeout_" data-uid="Pulumi.AliCloud.Slb.Rule.HealthCheckTimeout*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Rule_HealthCheckTimeout" data-uid="Pulumi.AliCloud.Slb.Rule.HealthCheckTimeout">HealthCheckTimeout</h4>
+  <div class="markdown level1 summary"><p>Maximum timeout of each health check response. It is required when <code>health_check</code> is on. Valid value range: [1-300] in seconds. Default to 5. Note: If <code>health_check_timeout</code> &lt; <code>health_check_interval</code>, its will be replaced by <code>health_check_interval</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; HealthCheckTimeout { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Rule.cs/#L102">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Rule_HealthCheckUri_" data-uid="Pulumi.AliCloud.Slb.Rule.HealthCheckUri*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Rule_HealthCheckUri" data-uid="Pulumi.AliCloud.Slb.Rule.HealthCheckUri">HealthCheckUri</h4>
+  <div class="markdown level1 summary"><p>URI used for health check. When it used to launch TCP listener, <code>health_check_type</code> must be &quot;http&quot;. Its length is limited to 1-80 and it must start with /. Only characters such as letters, digits, ‘-’, ‘/’, ‘.’, ‘%’, ‘?’, #’ and ‘&amp;’ are allowed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; HealthCheckUri { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Rule.cs/#L108">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Rule_HealthyThreshold_" data-uid="Pulumi.AliCloud.Slb.Rule.HealthyThreshold*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Rule_HealthyThreshold" data-uid="Pulumi.AliCloud.Slb.Rule.HealthyThreshold">HealthyThreshold</h4>
+  <div class="markdown level1 summary"><p>Threshold determining the result of the health check is success. It is required when <code>health_check</code> is on. Valid value range: [1-10] in seconds. Default to 3.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; HealthyThreshold { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Rule.cs/#L114">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Rule_ListenerSync_" data-uid="Pulumi.AliCloud.Slb.Rule.ListenerSync*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Rule_ListenerSync" data-uid="Pulumi.AliCloud.Slb.Rule.ListenerSync">ListenerSync</h4>
+  <div class="markdown level1 summary"><p>Indicates whether a forwarding rule inherits the settings of a health check , session persistence, and scheduling algorithm from a listener. Default to on.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ListenerSync { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Rule.cs/#L120">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Rule_LoadBalancerId_" data-uid="Pulumi.AliCloud.Slb.Rule.LoadBalancerId*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Rule_LoadBalancerId" data-uid="Pulumi.AliCloud.Slb.Rule.LoadBalancerId">LoadBalancerId</h4>
+  <div class="markdown level1 summary"><p>The Load Balancer ID which is used to launch the new forwarding rule.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; LoadBalancerId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Rule.cs/#L126">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Rule_Name_" data-uid="Pulumi.AliCloud.Slb.Rule.Name*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Rule_Name" data-uid="Pulumi.AliCloud.Slb.Rule.Name">Name</h4>
+  <div class="markdown level1 summary"><p>Name of the forwarding rule. Our plugin provides a default name: &quot;tf-slb-rule&quot;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Rule.cs/#L132">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Rule_Scheduler_" data-uid="Pulumi.AliCloud.Slb.Rule.Scheduler*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Rule_Scheduler" data-uid="Pulumi.AliCloud.Slb.Rule.Scheduler">Scheduler</h4>
+  <div class="markdown level1 summary"><p>Scheduling algorithm, Valid values are <code>wrr</code>, <code>rr</code> and <code>wlc</code>.  Default to &quot;wrr&quot;. This parameter is required  and takes effect only when ListenerSync is set to off.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Scheduler { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Rule.cs/#L138">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Rule_ServerGroupId_" data-uid="Pulumi.AliCloud.Slb.Rule.ServerGroupId*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Rule_ServerGroupId" data-uid="Pulumi.AliCloud.Slb.Rule.ServerGroupId">ServerGroupId</h4>
+  <div class="markdown level1 summary"><p>ID of a virtual server group that will be forwarded.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ServerGroupId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Rule.cs/#L144">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Rule_StickySession_" data-uid="Pulumi.AliCloud.Slb.Rule.StickySession*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Rule_StickySession" data-uid="Pulumi.AliCloud.Slb.Rule.StickySession">StickySession</h4>
+  <div class="markdown level1 summary"><p>Whether to enable session persistence, Valid values are <code>on</code> and <code>off</code>. Default to <code>off</code>. This parameter is required  and takes effect only when ListenerSync is set to off.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; StickySession { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Rule.cs/#L150">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Rule_StickySessionType_" data-uid="Pulumi.AliCloud.Slb.Rule.StickySessionType*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Rule_StickySessionType" data-uid="Pulumi.AliCloud.Slb.Rule.StickySessionType">StickySessionType</h4>
+  <div class="markdown level1 summary"><p>Mode for handling the cookie. If <code>sticky_session</code> is &quot;on&quot;, it is mandatory. Otherwise, it will be ignored. Valid values are <code>insert</code> and <code>server</code>. <code>insert</code> means it is inserted from Server Load Balancer; <code>server</code> means the Server Load Balancer learns from the backend server.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; StickySessionType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Rule.cs/#L156">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Rule_UnhealthyThreshold_" data-uid="Pulumi.AliCloud.Slb.Rule.UnhealthyThreshold*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Rule_UnhealthyThreshold" data-uid="Pulumi.AliCloud.Slb.Rule.UnhealthyThreshold">UnhealthyThreshold</h4>
+  <div class="markdown level1 summary"><p>Threshold determining the result of the health check is fail. It is required when <code>health_check</code> is on. Valid value range: [1-10] in seconds. Default to 3.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; UnhealthyThreshold { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Rule.cs/#L163">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Rule_Url_" data-uid="Pulumi.AliCloud.Slb.Rule.Url*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Rule_Url" data-uid="Pulumi.AliCloud.Slb.Rule.Url">Url</h4>
+  <div class="markdown level1 summary"><p>Domain of the forwarding rule. It must be 2-80 characters in length. Only letters a-z, numbers 0-9,
+and characters '-' '/' '?' '%' '#' and '&amp;' are allowed. URLs must be started with the character '/', but cannot be '/' alone.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Url { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Rule.cs/#L204">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Rule_Get_" data-uid="Pulumi.AliCloud.Slb.Rule.Get*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Rule_Get_System_String_Pulumi_Input_System_String__Pulumi_AliCloud_Slb_RuleState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.AliCloud.Slb.Rule.Get(System.String,Pulumi.Input{System.String},Pulumi.AliCloud.Slb.RuleState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, RuleState, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Get an existing Rule resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Rule Get(string name, Input&lt;string&gt; id, RuleState state = null, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.AliCloud.Slb.RuleState.html">RuleState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.AliCloud.Slb.Rule.html">Rule</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/Rule.cs/#L28" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

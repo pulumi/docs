@@ -1,0 +1,796 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class HostPortGroup
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class HostPortGroup
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.VSphere.HostPortGroup">
+  
+  <h1 id="Pulumi_VSphere_HostPortGroup" data-uid="Pulumi.VSphere.HostPortGroup" class="text-break">Class HostPortGroup
+  </h1>
+  <div class="markdown level0 summary"><p>The <code>vsphere..HostPortGroup</code> resource can be used to manage vSphere standard
+port groups on an ESXi host. These port groups are connected to standard
+virtual switches, which can be managed by the
+<a href="/docs/providers/vsphere/r/host_virtual_switch.html"><code>vsphere..HostVirtualSwitch</code></a> resource.</p>
+<p>For an overview on vSphere networking concepts, see <a href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.networking.doc/GUID-2B11DBB8-CB3C-4AFF-8885-EFEA0FC562F4.html">this page</a>.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/host_port_group.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/host_port_group.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">HostPortGroup</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.VSphere.html">Pulumi.VSphere</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.VSphere.dll</h6>
+  <h5 id="Pulumi_VSphere_HostPortGroup_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class HostPortGroup : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostPortGroup.cs/#L166">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_HostPortGroup__ctor_" data-uid="Pulumi.VSphere.HostPortGroup.#ctor*"></a>
+  <h4 id="Pulumi_VSphere_HostPortGroup__ctor_System_String_Pulumi_VSphere_HostPortGroupArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.VSphere.HostPortGroup.#ctor(System.String,Pulumi.VSphere.HostPortGroupArgs,System.Nullable{CustomResourceOptions})">HostPortGroup(String, HostPortGroupArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Create a HostPortGroup resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public HostPortGroup(string name, HostPortGroupArgs args, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.VSphere.HostPortGroupArgs.html">HostPortGroupArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostPortGroup.cs/#L29">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_HostPortGroup_ActiveNics_" data-uid="Pulumi.VSphere.HostPortGroup.ActiveNics*"></a>
+  <h4 id="Pulumi_VSphere_HostPortGroup_ActiveNics" data-uid="Pulumi.VSphere.HostPortGroup.ActiveNics">ActiveNics</h4>
+  <div class="markdown level1 summary"><p>List of active network adapters used for load balancing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; ActiveNics { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostPortGroup.cs/#L36">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_HostPortGroup_AllowForgedTransmits_" data-uid="Pulumi.VSphere.HostPortGroup.AllowForgedTransmits*"></a>
+  <h4 id="Pulumi_VSphere_HostPortGroup_AllowForgedTransmits" data-uid="Pulumi.VSphere.HostPortGroup.AllowForgedTransmits">AllowForgedTransmits</h4>
+  <div class="markdown level1 summary"><p>Controls whether or not the virtual network adapter is allowed to send network traffic with a different MAC
+address than that of its own.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; AllowForgedTransmits { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostPortGroup.cs/#L42">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_HostPortGroup_AllowMacChanges_" data-uid="Pulumi.VSphere.HostPortGroup.AllowMacChanges*"></a>
+  <h4 id="Pulumi_VSphere_HostPortGroup_AllowMacChanges" data-uid="Pulumi.VSphere.HostPortGroup.AllowMacChanges">AllowMacChanges</h4>
+  <div class="markdown level1 summary"><p>Controls whether or not the Media Access Control (MAC) address can be changed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; AllowMacChanges { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostPortGroup.cs/#L49">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_HostPortGroup_AllowPromiscuous_" data-uid="Pulumi.VSphere.HostPortGroup.AllowPromiscuous*"></a>
+  <h4 id="Pulumi_VSphere_HostPortGroup_AllowPromiscuous" data-uid="Pulumi.VSphere.HostPortGroup.AllowPromiscuous">AllowPromiscuous</h4>
+  <div class="markdown level1 summary"><p>Enable promiscuous mode on the network. This flag indicates whether or not all traffic is seen on a given
+port.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; AllowPromiscuous { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostPortGroup.cs/#L56">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_HostPortGroup_CheckBeacon_" data-uid="Pulumi.VSphere.HostPortGroup.CheckBeacon*"></a>
+  <h4 id="Pulumi_VSphere_HostPortGroup_CheckBeacon" data-uid="Pulumi.VSphere.HostPortGroup.CheckBeacon">CheckBeacon</h4>
+  <div class="markdown level1 summary"><p>Enable beacon probing. Requires that the vSwitch has been configured to use a beacon. If disabled, link
+status is used only.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; CheckBeacon { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostPortGroup.cs/#L64">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_HostPortGroup_ComputedPolicy_" data-uid="Pulumi.VSphere.HostPortGroup.ComputedPolicy*"></a>
+  <h4 id="Pulumi_VSphere_HostPortGroup_ComputedPolicy" data-uid="Pulumi.VSphere.HostPortGroup.ComputedPolicy">ComputedPolicy</h4>
+  <div class="markdown level1 summary"><p>A map with a full set of the [policy
+options][host-vswitch-policy-options] computed from defaults and overrides,
+explaining the effective policy for this port group.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; ComputedPolicy { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostPortGroup.cs/#L70">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_HostPortGroup_Failback_" data-uid="Pulumi.VSphere.HostPortGroup.Failback*"></a>
+  <h4 id="Pulumi_VSphere_HostPortGroup_Failback" data-uid="Pulumi.VSphere.HostPortGroup.Failback">Failback</h4>
+  <div class="markdown level1 summary"><p>If true, the teaming policy will re-activate failed interfaces higher in precedence when they come back up.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; Failback { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostPortGroup.cs/#L77">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_HostPortGroup_HostSystemId_" data-uid="Pulumi.VSphere.HostPortGroup.HostSystemId*"></a>
+  <h4 id="Pulumi_VSphere_HostPortGroup_HostSystemId" data-uid="Pulumi.VSphere.HostPortGroup.HostSystemId">HostSystemId</h4>
+  <div class="markdown level1 summary"><p>The [managed object ID][docs-about-morefs] of
+the host to set the port group up on. Forces a new resource if changed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; HostSystemId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostPortGroup.cs/#L83">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_HostPortGroup_Key_" data-uid="Pulumi.VSphere.HostPortGroup.Key*"></a>
+  <h4 id="Pulumi_VSphere_HostPortGroup_Key" data-uid="Pulumi.VSphere.HostPortGroup.Key">Key</h4>
+  <div class="markdown level1 summary"><p>The key for this port group as returned from the vSphere API.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Key { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostPortGroup.cs/#L90">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_HostPortGroup_Name_" data-uid="Pulumi.VSphere.HostPortGroup.Name*"></a>
+  <h4 id="Pulumi_VSphere_HostPortGroup_Name" data-uid="Pulumi.VSphere.HostPortGroup.Name">Name</h4>
+  <div class="markdown level1 summary"><p>The name of the port group.  Forces a new resource if
+changed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostPortGroup.cs/#L96">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_HostPortGroup_NotifySwitches_" data-uid="Pulumi.VSphere.HostPortGroup.NotifySwitches*"></a>
+  <h4 id="Pulumi_VSphere_HostPortGroup_NotifySwitches" data-uid="Pulumi.VSphere.HostPortGroup.NotifySwitches">NotifySwitches</h4>
+  <div class="markdown level1 summary"><p>If true, the teaming policy will notify the broadcast network of a NIC failover, triggering cache updates.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; NotifySwitches { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostPortGroup.cs/#L102">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_HostPortGroup_Ports_" data-uid="Pulumi.VSphere.HostPortGroup.Ports*"></a>
+  <h4 id="Pulumi_VSphere_HostPortGroup_Ports" data-uid="Pulumi.VSphere.HostPortGroup.Ports">Ports</h4>
+  <div class="markdown level1 summary"><p>A list of ports that currently exist and are used on this port group.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;HostPortGroupPorts&gt; Ports { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.VSphere.Outputs.HostPortGroupPorts.html">HostPortGroupPorts</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostPortGroup.cs/#L108">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_HostPortGroup_ShapingAverageBandwidth_" data-uid="Pulumi.VSphere.HostPortGroup.ShapingAverageBandwidth*"></a>
+  <h4 id="Pulumi_VSphere_HostPortGroup_ShapingAverageBandwidth" data-uid="Pulumi.VSphere.HostPortGroup.ShapingAverageBandwidth">ShapingAverageBandwidth</h4>
+  <div class="markdown level1 summary"><p>The average bandwidth in bits per second if traffic shaping is enabled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; ShapingAverageBandwidth { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostPortGroup.cs/#L114">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_HostPortGroup_ShapingBurstSize_" data-uid="Pulumi.VSphere.HostPortGroup.ShapingBurstSize*"></a>
+  <h4 id="Pulumi_VSphere_HostPortGroup_ShapingBurstSize" data-uid="Pulumi.VSphere.HostPortGroup.ShapingBurstSize">ShapingBurstSize</h4>
+  <div class="markdown level1 summary"><p>The maximum burst size allowed in bytes if traffic shaping is enabled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; ShapingBurstSize { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostPortGroup.cs/#L120">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_HostPortGroup_ShapingEnabled_" data-uid="Pulumi.VSphere.HostPortGroup.ShapingEnabled*"></a>
+  <h4 id="Pulumi_VSphere_HostPortGroup_ShapingEnabled" data-uid="Pulumi.VSphere.HostPortGroup.ShapingEnabled">ShapingEnabled</h4>
+  <div class="markdown level1 summary"><p>Enable traffic shaping on this virtual switch or port group.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; ShapingEnabled { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostPortGroup.cs/#L126">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_HostPortGroup_ShapingPeakBandwidth_" data-uid="Pulumi.VSphere.HostPortGroup.ShapingPeakBandwidth*"></a>
+  <h4 id="Pulumi_VSphere_HostPortGroup_ShapingPeakBandwidth" data-uid="Pulumi.VSphere.HostPortGroup.ShapingPeakBandwidth">ShapingPeakBandwidth</h4>
+  <div class="markdown level1 summary"><p>The peak bandwidth during bursts in bits per second if traffic shaping is enabled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; ShapingPeakBandwidth { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostPortGroup.cs/#L132">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_HostPortGroup_StandbyNics_" data-uid="Pulumi.VSphere.HostPortGroup.StandbyNics*"></a>
+  <h4 id="Pulumi_VSphere_HostPortGroup_StandbyNics" data-uid="Pulumi.VSphere.HostPortGroup.StandbyNics">StandbyNics</h4>
+  <div class="markdown level1 summary"><p>List of standby network adapters used for failover.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; StandbyNics { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostPortGroup.cs/#L139">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_HostPortGroup_TeamingPolicy_" data-uid="Pulumi.VSphere.HostPortGroup.TeamingPolicy*"></a>
+  <h4 id="Pulumi_VSphere_HostPortGroup_TeamingPolicy" data-uid="Pulumi.VSphere.HostPortGroup.TeamingPolicy">TeamingPolicy</h4>
+  <div class="markdown level1 summary"><p>The network adapter teaming policy. Can be one of loadbalance_ip, loadbalance_srcmac, loadbalance_srcid, or
+failover_explicit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; TeamingPolicy { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostPortGroup.cs/#L146">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_HostPortGroup_VirtualSwitchName_" data-uid="Pulumi.VSphere.HostPortGroup.VirtualSwitchName*"></a>
+  <h4 id="Pulumi_VSphere_HostPortGroup_VirtualSwitchName" data-uid="Pulumi.VSphere.HostPortGroup.VirtualSwitchName">VirtualSwitchName</h4>
+  <div class="markdown level1 summary"><p>The name of the virtual switch to bind
+this port group to. Forces a new resource if changed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; VirtualSwitchName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostPortGroup.cs/#L155">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_HostPortGroup_VlanId_" data-uid="Pulumi.VSphere.HostPortGroup.VlanId*"></a>
+  <h4 id="Pulumi_VSphere_HostPortGroup_VlanId" data-uid="Pulumi.VSphere.HostPortGroup.VlanId">VlanId</h4>
+  <div class="markdown level1 summary"><p>The VLAN ID/trunk mode for this port group.  An ID of
+<code>0</code> denotes no tagging, an ID of <code>1</code>-<code>4094</code> tags with the specific ID, and an
+ID of <code>4095</code> enables trunk mode, allowing the guest to manage its own
+tagging. Default: <code>0</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; VlanId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostPortGroup.cs/#L196">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_HostPortGroup_Get_" data-uid="Pulumi.VSphere.HostPortGroup.Get*"></a>
+  <h4 id="Pulumi_VSphere_HostPortGroup_Get_System_String_Input_System_String__Pulumi_VSphere_HostPortGroupState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.VSphere.HostPortGroup.Get(System.String,Input{System.String},Pulumi.VSphere.HostPortGroupState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, HostPortGroupState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Get an existing HostPortGroup resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static HostPortGroup Get(string name, Input&lt;string&gt; id, HostPortGroupState state = null, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.VSphere.HostPortGroupState.html">HostPortGroupState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.VSphere.HostPortGroup.html">HostPortGroup</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostPortGroup.cs/#L24" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

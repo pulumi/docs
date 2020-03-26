@@ -1,0 +1,528 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class HardcodedClaimProtocolMapper
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class HardcodedClaimProtocolMapper
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Keycloak.OpenId.HardcodedClaimProtocolMapper">
+  
+  <h1 id="Pulumi_Keycloak_OpenId_HardcodedClaimProtocolMapper" data-uid="Pulumi.Keycloak.OpenId.HardcodedClaimProtocolMapper" class="text-break">Class HardcodedClaimProtocolMapper
+  </h1>
+  <div class="markdown level0 summary"><h2 id="-keycloakopenidhardcodedclaimprotocolmapper"># keycloak.openid.HardcodedClaimProtocolMapper</h2>
+<p>Allows for creating and managing hardcoded claim protocol mappers within
+Keycloak.</p>
+<p>Hardcoded claim protocol mappers allow you to define a claim with a hardcoded
+value. Protocol mappers can be defined for a single client, or they can
+be defined for a client scope which can be shared between multiple different
+clients.</p>
+<h3 id="argument-reference">Argument Reference</h3>
+<p>The following arguments are supported:</p>
+<ul>
+<li><code>realm_id</code> - (Required) The realm this protocol mapper exists within.</li>
+<li><code>client_id</code> - (Required if <code>client_scope_id</code> is not specified) The client this protocol mapper is attached to.</li>
+<li><code>client_scope_id</code> - (Required if <code>client_id</code> is not specified) The client scope this protocol mapper is attached to.</li>
+<li><code>name</code> - (Required) The display name of this protocol mapper in the GUI.</li>
+<li><code>claim_name</code> - (Required) The name of the claim to insert into a token.</li>
+<li><code>claim_value</code> - (Required) The hardcoded value of the claim.</li>
+<li><code>claim_value_type</code> - (Optional) The claim type used when serializing JSON tokens. Can be one of <code>String</code>, <code>long</code>, <code>int</code>, or <code>boolean</code>. Defaults to <code>String</code>.</li>
+<li><code>add_to_id_token</code> - (Optional) Indicates if the property should be added as a claim to the id token. Defaults to <code>true</code>.</li>
+<li><code>add_to_access_token</code> - (Optional) Indicates if the property should be added as a claim to the access token. Defaults to <code>true</code>.</li>
+<li><code>add_to_userinfo</code> - (Optional) Indicates if the property should be added as a claim to the UserInfo response body. Defaults to <code>true</code>.</li>
+</ul>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/openid_hardcoded_claim_protocol_mapper.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/openid_hardcoded_claim_protocol_mapper.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">HardcodedClaimProtocolMapper</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Keycloak.OpenId.html">Pulumi.Keycloak.OpenId</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Keycloak.dll</h6>
+  <h5 id="Pulumi_Keycloak_OpenId_HardcodedClaimProtocolMapper_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class HardcodedClaimProtocolMapper : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Openid/HardcodedClaimProtocolMapper.cs/#L103">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_OpenId_HardcodedClaimProtocolMapper__ctor_" data-uid="Pulumi.Keycloak.OpenId.HardcodedClaimProtocolMapper.#ctor*"></a>
+  <h4 id="Pulumi_Keycloak_OpenId_HardcodedClaimProtocolMapper__ctor_System_String_Pulumi_Keycloak_OpenId_HardcodedClaimProtocolMapperArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Keycloak.OpenId.HardcodedClaimProtocolMapper.#ctor(System.String,Pulumi.Keycloak.OpenId.HardcodedClaimProtocolMapperArgs,System.Nullable{CustomResourceOptions})">HardcodedClaimProtocolMapper(String, HardcodedClaimProtocolMapperArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Create a HardcodedClaimProtocolMapper resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public HardcodedClaimProtocolMapper(string name, HardcodedClaimProtocolMapperArgs args, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Keycloak.OpenId.HardcodedClaimProtocolMapperArgs.html">HardcodedClaimProtocolMapperArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Openid/HardcodedClaimProtocolMapper.cs/#L44">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_OpenId_HardcodedClaimProtocolMapper_AddToAccessToken_" data-uid="Pulumi.Keycloak.OpenId.HardcodedClaimProtocolMapper.AddToAccessToken*"></a>
+  <h4 id="Pulumi_Keycloak_OpenId_HardcodedClaimProtocolMapper_AddToAccessToken" data-uid="Pulumi.Keycloak.OpenId.HardcodedClaimProtocolMapper.AddToAccessToken">AddToAccessToken</h4>
+  <div class="markdown level1 summary"><p>Indicates if the attribute should be a claim in the access token.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; AddToAccessToken { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Openid/HardcodedClaimProtocolMapper.cs/#L50">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_OpenId_HardcodedClaimProtocolMapper_AddToIdToken_" data-uid="Pulumi.Keycloak.OpenId.HardcodedClaimProtocolMapper.AddToIdToken*"></a>
+  <h4 id="Pulumi_Keycloak_OpenId_HardcodedClaimProtocolMapper_AddToIdToken" data-uid="Pulumi.Keycloak.OpenId.HardcodedClaimProtocolMapper.AddToIdToken">AddToIdToken</h4>
+  <div class="markdown level1 summary"><p>Indicates if the attribute should be a claim in the id token.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; AddToIdToken { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Openid/HardcodedClaimProtocolMapper.cs/#L56">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_OpenId_HardcodedClaimProtocolMapper_AddToUserinfo_" data-uid="Pulumi.Keycloak.OpenId.HardcodedClaimProtocolMapper.AddToUserinfo*"></a>
+  <h4 id="Pulumi_Keycloak_OpenId_HardcodedClaimProtocolMapper_AddToUserinfo" data-uid="Pulumi.Keycloak.OpenId.HardcodedClaimProtocolMapper.AddToUserinfo">AddToUserinfo</h4>
+  <div class="markdown level1 summary"><p>Indicates if the attribute should appear in the userinfo response body.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; AddToUserinfo { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Openid/HardcodedClaimProtocolMapper.cs/#L59">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_OpenId_HardcodedClaimProtocolMapper_ClaimName_" data-uid="Pulumi.Keycloak.OpenId.HardcodedClaimProtocolMapper.ClaimName*"></a>
+  <h4 id="Pulumi_Keycloak_OpenId_HardcodedClaimProtocolMapper_ClaimName" data-uid="Pulumi.Keycloak.OpenId.HardcodedClaimProtocolMapper.ClaimName">ClaimName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ClaimName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Openid/HardcodedClaimProtocolMapper.cs/#L62">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_OpenId_HardcodedClaimProtocolMapper_ClaimValue_" data-uid="Pulumi.Keycloak.OpenId.HardcodedClaimProtocolMapper.ClaimValue*"></a>
+  <h4 id="Pulumi_Keycloak_OpenId_HardcodedClaimProtocolMapper_ClaimValue" data-uid="Pulumi.Keycloak.OpenId.HardcodedClaimProtocolMapper.ClaimValue">ClaimValue</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ClaimValue { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Openid/HardcodedClaimProtocolMapper.cs/#L68">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_OpenId_HardcodedClaimProtocolMapper_ClaimValueType_" data-uid="Pulumi.Keycloak.OpenId.HardcodedClaimProtocolMapper.ClaimValueType*"></a>
+  <h4 id="Pulumi_Keycloak_OpenId_HardcodedClaimProtocolMapper_ClaimValueType" data-uid="Pulumi.Keycloak.OpenId.HardcodedClaimProtocolMapper.ClaimValueType">ClaimValueType</h4>
+  <div class="markdown level1 summary"><p>Claim type used when serializing tokens.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ClaimValueType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Openid/HardcodedClaimProtocolMapper.cs/#L74">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_OpenId_HardcodedClaimProtocolMapper_ClientId_" data-uid="Pulumi.Keycloak.OpenId.HardcodedClaimProtocolMapper.ClientId*"></a>
+  <h4 id="Pulumi_Keycloak_OpenId_HardcodedClaimProtocolMapper_ClientId" data-uid="Pulumi.Keycloak.OpenId.HardcodedClaimProtocolMapper.ClientId">ClientId</h4>
+  <div class="markdown level1 summary"><p>The mapper's associated client. Cannot be used at the same time as client_scope_id.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ClientId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Openid/HardcodedClaimProtocolMapper.cs/#L80">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_OpenId_HardcodedClaimProtocolMapper_ClientScopeId_" data-uid="Pulumi.Keycloak.OpenId.HardcodedClaimProtocolMapper.ClientScopeId*"></a>
+  <h4 id="Pulumi_Keycloak_OpenId_HardcodedClaimProtocolMapper_ClientScopeId" data-uid="Pulumi.Keycloak.OpenId.HardcodedClaimProtocolMapper.ClientScopeId">ClientScopeId</h4>
+  <div class="markdown level1 summary"><p>The mapper's associated client scope. Cannot be used at the same time as client_id.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ClientScopeId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Openid/HardcodedClaimProtocolMapper.cs/#L86">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_OpenId_HardcodedClaimProtocolMapper_Name_" data-uid="Pulumi.Keycloak.OpenId.HardcodedClaimProtocolMapper.Name*"></a>
+  <h4 id="Pulumi_Keycloak_OpenId_HardcodedClaimProtocolMapper_Name" data-uid="Pulumi.Keycloak.OpenId.HardcodedClaimProtocolMapper.Name">Name</h4>
+  <div class="markdown level1 summary"><p>A human-friendly name that will appear in the Keycloak console.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Openid/HardcodedClaimProtocolMapper.cs/#L92">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_OpenId_HardcodedClaimProtocolMapper_RealmId_" data-uid="Pulumi.Keycloak.OpenId.HardcodedClaimProtocolMapper.RealmId*"></a>
+  <h4 id="Pulumi_Keycloak_OpenId_HardcodedClaimProtocolMapper_RealmId" data-uid="Pulumi.Keycloak.OpenId.HardcodedClaimProtocolMapper.RealmId">RealmId</h4>
+  <div class="markdown level1 summary"><p>The realm id where the associated client or client scope exists.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; RealmId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Openid/HardcodedClaimProtocolMapper.cs/#L133">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_OpenId_HardcodedClaimProtocolMapper_Get_" data-uid="Pulumi.Keycloak.OpenId.HardcodedClaimProtocolMapper.Get*"></a>
+  <h4 id="Pulumi_Keycloak_OpenId_HardcodedClaimProtocolMapper_Get_System_String_Input_System_String__Pulumi_Keycloak_OpenId_HardcodedClaimProtocolMapperState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Keycloak.OpenId.HardcodedClaimProtocolMapper.Get(System.String,Input{System.String},Pulumi.Keycloak.OpenId.HardcodedClaimProtocolMapperState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, HardcodedClaimProtocolMapperState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Get an existing HardcodedClaimProtocolMapper resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static HardcodedClaimProtocolMapper Get(string name, Input&lt;string&gt; id, HardcodedClaimProtocolMapperState state = null, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Keycloak.OpenId.HardcodedClaimProtocolMapperState.html">HardcodedClaimProtocolMapperState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Keycloak.OpenId.HardcodedClaimProtocolMapper.html">HardcodedClaimProtocolMapper</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Openid/HardcodedClaimProtocolMapper.cs/#L39" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

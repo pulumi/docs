@@ -1,0 +1,1040 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ScaleSet
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ScaleSet
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Azure.Compute.ScaleSet">
+  
+  <h1 id="Pulumi_Azure_Compute_ScaleSet" data-uid="Pulumi.Azure.Compute.ScaleSet" class="text-break">Class ScaleSet
+  </h1>
+  <div class="markdown level0 summary"><p>Manages a virtual machine scale set.</p>
+<p>## Disclaimers</p>
+<blockquote>
+<p><strong>Note:</strong> The <code>azure.compute.ScaleSet</code> resource has been superseded by the <code>azure.compute.LinuxVirtualMachineScaleSet</code> and <code>azure.compute.WindowsVirtualMachineScaleSet</code> resources. The existing <code>azure.compute.ScaleSet</code> resource will continue to be available throughout the 2.x releases however is in a feature-frozen state to maintain compatibility - new functionality will instead be added to the <code>azure.compute.LinuxVirtualMachineScaleSet</code> and <code>azure.compute.WindowsVirtualMachineScaleSet</code> resources.</p>
+</blockquote>
+<blockquote>
+<p><strong>NOTE:</strong> All arguments including the administrator login and password will be stored in the raw state as plain-text. <a href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/virtual_machine_scale_set.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/virtual_machine_scale_set.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">ScaleSet</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.Compute.html">Pulumi.Azure.Compute</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
+  <h5 id="Pulumi_Azure_Compute_ScaleSet_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ScaleSet : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L198">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Compute_ScaleSet__ctor_" data-uid="Pulumi.Azure.Compute.ScaleSet.#ctor*"></a>
+  <h4 id="Pulumi_Azure_Compute_ScaleSet__ctor_System_String_Pulumi_Azure_Compute_ScaleSetArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.Compute.ScaleSet.#ctor(System.String,Pulumi.Azure.Compute.ScaleSetArgs,Pulumi.CustomResourceOptions)">ScaleSet(String, ScaleSetArgs, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Create a ScaleSet resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ScaleSet(string name, ScaleSetArgs args, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Azure.Compute.ScaleSetArgs.html">ScaleSetArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L28">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Compute_ScaleSet_AutomaticOsUpgrade_" data-uid="Pulumi.Azure.Compute.ScaleSet.AutomaticOsUpgrade*"></a>
+  <h4 id="Pulumi_Azure_Compute_ScaleSet_AutomaticOsUpgrade" data-uid="Pulumi.Azure.Compute.ScaleSet.AutomaticOsUpgrade">AutomaticOsUpgrade</h4>
+  <div class="markdown level1 summary"><p>Automatic OS patches can be applied by Azure to your scaleset. This is particularly useful when <code>upgrade_policy_mode</code> is set to <code>Rolling</code>. Defaults to <code>false</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; AutomaticOsUpgrade { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L34">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Compute_ScaleSet_BootDiagnostics_" data-uid="Pulumi.Azure.Compute.ScaleSet.BootDiagnostics*"></a>
+  <h4 id="Pulumi_Azure_Compute_ScaleSet_BootDiagnostics" data-uid="Pulumi.Azure.Compute.ScaleSet.BootDiagnostics">BootDiagnostics</h4>
+  <div class="markdown level1 summary"><p>A boot diagnostics profile block as referenced below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ScaleSetBootDiagnostics&gt; BootDiagnostics { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.ScaleSetBootDiagnostics.html">ScaleSetBootDiagnostics</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L40">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Compute_ScaleSet_EvictionPolicy_" data-uid="Pulumi.Azure.Compute.ScaleSet.EvictionPolicy*"></a>
+  <h4 id="Pulumi_Azure_Compute_ScaleSet_EvictionPolicy" data-uid="Pulumi.Azure.Compute.ScaleSet.EvictionPolicy">EvictionPolicy</h4>
+  <div class="markdown level1 summary"><p>Specifies the eviction policy for Virtual Machines in this Scale Set. Possible values are <code>Deallocate</code> and <code>Delete</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; EvictionPolicy { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L46">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Compute_ScaleSet_Extensions_" data-uid="Pulumi.Azure.Compute.ScaleSet.Extensions*"></a>
+  <h4 id="Pulumi_Azure_Compute_ScaleSet_Extensions" data-uid="Pulumi.Azure.Compute.ScaleSet.Extensions">Extensions</h4>
+  <div class="markdown level1 summary"><p>Can be specified multiple times to add extension profiles to the scale set. Each <code>extension</code> block supports the fields documented below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;ScaleSetExtensions&gt;&gt; Extensions { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.ScaleSetExtensions.html">ScaleSetExtensions</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L52">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Compute_ScaleSet_HealthProbeId_" data-uid="Pulumi.Azure.Compute.ScaleSet.HealthProbeId*"></a>
+  <h4 id="Pulumi_Azure_Compute_ScaleSet_HealthProbeId" data-uid="Pulumi.Azure.Compute.ScaleSet.HealthProbeId">HealthProbeId</h4>
+  <div class="markdown level1 summary"><p>Specifies the identifier for the load balancer health probe. Required when using <code>Rolling</code> as your <code>upgrade_policy_mode</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; HealthProbeId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L55">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Compute_ScaleSet_Identity_" data-uid="Pulumi.Azure.Compute.ScaleSet.Identity*"></a>
+  <h4 id="Pulumi_Azure_Compute_ScaleSet_Identity" data-uid="Pulumi.Azure.Compute.ScaleSet.Identity">Identity</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ScaleSetIdentity&gt; Identity { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.ScaleSetIdentity.html">ScaleSetIdentity</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L61">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Compute_ScaleSet_LicenseType_" data-uid="Pulumi.Azure.Compute.ScaleSet.LicenseType*"></a>
+  <h4 id="Pulumi_Azure_Compute_ScaleSet_LicenseType" data-uid="Pulumi.Azure.Compute.ScaleSet.LicenseType">LicenseType</h4>
+  <div class="markdown level1 summary"><p>Specifies the Windows OS license type. If supplied, the only allowed values are <code>Windows_Client</code> and <code>Windows_Server</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; LicenseType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L67">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Compute_ScaleSet_Location_" data-uid="Pulumi.Azure.Compute.ScaleSet.Location*"></a>
+  <h4 id="Pulumi_Azure_Compute_ScaleSet_Location" data-uid="Pulumi.Azure.Compute.ScaleSet.Location">Location</h4>
+  <div class="markdown level1 summary"><p>Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Location { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L73">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Compute_ScaleSet_Name_" data-uid="Pulumi.Azure.Compute.ScaleSet.Name*"></a>
+  <h4 id="Pulumi_Azure_Compute_ScaleSet_Name" data-uid="Pulumi.Azure.Compute.ScaleSet.Name">Name</h4>
+  <div class="markdown level1 summary"><p>Specifies the name of the image from the marketplace.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L79">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Compute_ScaleSet_NetworkProfiles_" data-uid="Pulumi.Azure.Compute.ScaleSet.NetworkProfiles*"></a>
+  <h4 id="Pulumi_Azure_Compute_ScaleSet_NetworkProfiles" data-uid="Pulumi.Azure.Compute.ScaleSet.NetworkProfiles">NetworkProfiles</h4>
+  <div class="markdown level1 summary"><p>A collection of network profile block as documented below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;ScaleSetNetworkProfiles&gt;&gt; NetworkProfiles { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.ScaleSetNetworkProfiles.html">ScaleSetNetworkProfiles</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L85">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Compute_ScaleSet_OsProfile_" data-uid="Pulumi.Azure.Compute.ScaleSet.OsProfile*"></a>
+  <h4 id="Pulumi_Azure_Compute_ScaleSet_OsProfile" data-uid="Pulumi.Azure.Compute.ScaleSet.OsProfile">OsProfile</h4>
+  <div class="markdown level1 summary"><p>A Virtual Machine OS Profile block as documented below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ScaleSetOsProfile&gt; OsProfile { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.ScaleSetOsProfile.html">ScaleSetOsProfile</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L91">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Compute_ScaleSet_OsProfileLinuxConfig_" data-uid="Pulumi.Azure.Compute.ScaleSet.OsProfileLinuxConfig*"></a>
+  <h4 id="Pulumi_Azure_Compute_ScaleSet_OsProfileLinuxConfig" data-uid="Pulumi.Azure.Compute.ScaleSet.OsProfileLinuxConfig">OsProfileLinuxConfig</h4>
+  <div class="markdown level1 summary"><p>A Linux config block as documented below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ScaleSetOsProfileLinuxConfig&gt; OsProfileLinuxConfig { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.ScaleSetOsProfileLinuxConfig.html">ScaleSetOsProfileLinuxConfig</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L97">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Compute_ScaleSet_OsProfileSecrets_" data-uid="Pulumi.Azure.Compute.ScaleSet.OsProfileSecrets*"></a>
+  <h4 id="Pulumi_Azure_Compute_ScaleSet_OsProfileSecrets" data-uid="Pulumi.Azure.Compute.ScaleSet.OsProfileSecrets">OsProfileSecrets</h4>
+  <div class="markdown level1 summary"><p>A collection of Secret blocks as documented below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;ScaleSetOsProfileSecrets&gt;&gt; OsProfileSecrets { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.ScaleSetOsProfileSecrets.html">ScaleSetOsProfileSecrets</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L103">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Compute_ScaleSet_OsProfileWindowsConfig_" data-uid="Pulumi.Azure.Compute.ScaleSet.OsProfileWindowsConfig*"></a>
+  <h4 id="Pulumi_Azure_Compute_ScaleSet_OsProfileWindowsConfig" data-uid="Pulumi.Azure.Compute.ScaleSet.OsProfileWindowsConfig">OsProfileWindowsConfig</h4>
+  <div class="markdown level1 summary"><p>A Windows config block as documented below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ScaleSetOsProfileWindowsConfig&gt; OsProfileWindowsConfig { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.ScaleSetOsProfileWindowsConfig.html">ScaleSetOsProfileWindowsConfig</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L109">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Compute_ScaleSet_Overprovision_" data-uid="Pulumi.Azure.Compute.ScaleSet.Overprovision*"></a>
+  <h4 id="Pulumi_Azure_Compute_ScaleSet_Overprovision" data-uid="Pulumi.Azure.Compute.ScaleSet.Overprovision">Overprovision</h4>
+  <div class="markdown level1 summary"><p>Specifies whether the virtual machine scale set should be overprovisioned.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; Overprovision { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L115">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Compute_ScaleSet_Plan_" data-uid="Pulumi.Azure.Compute.ScaleSet.Plan*"></a>
+  <h4 id="Pulumi_Azure_Compute_ScaleSet_Plan" data-uid="Pulumi.Azure.Compute.ScaleSet.Plan">Plan</h4>
+  <div class="markdown level1 summary"><p>A plan block as documented below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ScaleSetPlan&gt; Plan { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.ScaleSetPlan.html">ScaleSetPlan</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L121">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Compute_ScaleSet_Priority_" data-uid="Pulumi.Azure.Compute.ScaleSet.Priority*"></a>
+  <h4 id="Pulumi_Azure_Compute_ScaleSet_Priority" data-uid="Pulumi.Azure.Compute.ScaleSet.Priority">Priority</h4>
+  <div class="markdown level1 summary"><p>Specifies the priority for the Virtual Machines in the Scale Set. Defaults to <code>Regular</code>. Possible values are <code>Low</code> and <code>Regular</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Priority { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L127">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Compute_ScaleSet_ProximityPlacementGroupId_" data-uid="Pulumi.Azure.Compute.ScaleSet.ProximityPlacementGroupId*"></a>
+  <h4 id="Pulumi_Azure_Compute_ScaleSet_ProximityPlacementGroupId" data-uid="Pulumi.Azure.Compute.ScaleSet.ProximityPlacementGroupId">ProximityPlacementGroupId</h4>
+  <div class="markdown level1 summary"><p>The ID of the Proximity Placement Group to which this Virtual Machine should be assigned. Changing this forces a new resource to be created</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ProximityPlacementGroupId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L133">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Compute_ScaleSet_ResourceGroupName_" data-uid="Pulumi.Azure.Compute.ScaleSet.ResourceGroupName*"></a>
+  <h4 id="Pulumi_Azure_Compute_ScaleSet_ResourceGroupName" data-uid="Pulumi.Azure.Compute.ScaleSet.ResourceGroupName">ResourceGroupName</h4>
+  <div class="markdown level1 summary"><p>The name of the resource group in which to create the virtual machine scale set. Changing this forces a new resource to be created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ResourceGroupName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L139">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Compute_ScaleSet_RollingUpgradePolicy_" data-uid="Pulumi.Azure.Compute.ScaleSet.RollingUpgradePolicy*"></a>
+  <h4 id="Pulumi_Azure_Compute_ScaleSet_RollingUpgradePolicy" data-uid="Pulumi.Azure.Compute.ScaleSet.RollingUpgradePolicy">RollingUpgradePolicy</h4>
+  <div class="markdown level1 summary"><p>A <code>rolling_upgrade_policy</code> block as defined below. This is only applicable when the <code>upgrade_policy_mode</code> is <code>Rolling</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ScaleSetRollingUpgradePolicy&gt; RollingUpgradePolicy { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.ScaleSetRollingUpgradePolicy.html">ScaleSetRollingUpgradePolicy</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L145">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Compute_ScaleSet_SinglePlacementGroup_" data-uid="Pulumi.Azure.Compute.ScaleSet.SinglePlacementGroup*"></a>
+  <h4 id="Pulumi_Azure_Compute_ScaleSet_SinglePlacementGroup" data-uid="Pulumi.Azure.Compute.ScaleSet.SinglePlacementGroup">SinglePlacementGroup</h4>
+  <div class="markdown level1 summary"><p>Specifies whether the scale set is limited to a single placement group with a maximum size of 100 virtual machines. If set to false, managed disks must be used. Default is true. Changing this forces a new resource to be created. See <a href="http://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-placement-groups">documentation</a> for more information.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; SinglePlacementGroup { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L151">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Compute_ScaleSet_Sku_" data-uid="Pulumi.Azure.Compute.ScaleSet.Sku*"></a>
+  <h4 id="Pulumi_Azure_Compute_ScaleSet_Sku" data-uid="Pulumi.Azure.Compute.ScaleSet.Sku">Sku</h4>
+  <div class="markdown level1 summary"><p>Specifies the SKU of the image used to create the virtual machines.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ScaleSetSku&gt; Sku { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.ScaleSetSku.html">ScaleSetSku</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L157">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Compute_ScaleSet_StorageProfileDataDisks_" data-uid="Pulumi.Azure.Compute.ScaleSet.StorageProfileDataDisks*"></a>
+  <h4 id="Pulumi_Azure_Compute_ScaleSet_StorageProfileDataDisks" data-uid="Pulumi.Azure.Compute.ScaleSet.StorageProfileDataDisks">StorageProfileDataDisks</h4>
+  <div class="markdown level1 summary"><p>A storage profile data disk block as documented below</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;ScaleSetStorageProfileDataDisks&gt;&gt; StorageProfileDataDisks { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.ScaleSetStorageProfileDataDisks.html">ScaleSetStorageProfileDataDisks</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L163">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Compute_ScaleSet_StorageProfileImageReference_" data-uid="Pulumi.Azure.Compute.ScaleSet.StorageProfileImageReference*"></a>
+  <h4 id="Pulumi_Azure_Compute_ScaleSet_StorageProfileImageReference" data-uid="Pulumi.Azure.Compute.ScaleSet.StorageProfileImageReference">StorageProfileImageReference</h4>
+  <div class="markdown level1 summary"><p>A storage profile image reference block as documented below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ScaleSetStorageProfileImageReference&gt; StorageProfileImageReference { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.ScaleSetStorageProfileImageReference.html">ScaleSetStorageProfileImageReference</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L169">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Compute_ScaleSet_StorageProfileOsDisk_" data-uid="Pulumi.Azure.Compute.ScaleSet.StorageProfileOsDisk*"></a>
+  <h4 id="Pulumi_Azure_Compute_ScaleSet_StorageProfileOsDisk" data-uid="Pulumi.Azure.Compute.ScaleSet.StorageProfileOsDisk">StorageProfileOsDisk</h4>
+  <div class="markdown level1 summary"><p>A storage profile os disk block as documented below</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ScaleSetStorageProfileOsDisk&gt; StorageProfileOsDisk { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.ScaleSetStorageProfileOsDisk.html">ScaleSetStorageProfileOsDisk</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L175">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Compute_ScaleSet_Tags_" data-uid="Pulumi.Azure.Compute.ScaleSet.Tags*"></a>
+  <h4 id="Pulumi_Azure_Compute_ScaleSet_Tags" data-uid="Pulumi.Azure.Compute.ScaleSet.Tags">Tags</h4>
+  <div class="markdown level1 summary"><p>A mapping of tags to assign to the resource.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; Tags { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L181">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Compute_ScaleSet_UpgradePolicyMode_" data-uid="Pulumi.Azure.Compute.ScaleSet.UpgradePolicyMode*"></a>
+  <h4 id="Pulumi_Azure_Compute_ScaleSet_UpgradePolicyMode" data-uid="Pulumi.Azure.Compute.ScaleSet.UpgradePolicyMode">UpgradePolicyMode</h4>
+  <div class="markdown level1 summary"><p>Specifies the mode of an upgrade to virtual machines in the scale set. Possible values, <code>Rolling</code>, <code>Manual</code>, or <code>Automatic</code>. When choosing <code>Rolling</code>, you will need to set a health probe.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; UpgradePolicyMode { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L187">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Compute_ScaleSet_Zones_" data-uid="Pulumi.Azure.Compute.ScaleSet.Zones*"></a>
+  <h4 id="Pulumi_Azure_Compute_ScaleSet_Zones" data-uid="Pulumi.Azure.Compute.ScaleSet.Zones">Zones</h4>
+  <div class="markdown level1 summary"><p>A collection of availability zones to spread the Virtual Machines over.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; Zones { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L228">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Compute_ScaleSet_Get_" data-uid="Pulumi.Azure.Compute.ScaleSet.Get*"></a>
+  <h4 id="Pulumi_Azure_Compute_ScaleSet_Get_System_String_Pulumi_Input_System_String__Pulumi_Azure_Compute_ScaleSetState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.Compute.ScaleSet.Get(System.String,Pulumi.Input{System.String},Pulumi.Azure.Compute.ScaleSetState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, ScaleSetState, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Get an existing ScaleSet resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ScaleSet Get(string name, Input&lt;string&gt; id, ScaleSetState state = null, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Azure.Compute.ScaleSetState.html">ScaleSetState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Azure.Compute.ScaleSet.html">ScaleSet</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L23" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

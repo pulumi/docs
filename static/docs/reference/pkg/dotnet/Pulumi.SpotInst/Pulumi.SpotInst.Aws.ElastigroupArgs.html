@@ -1,0 +1,2005 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ElastigroupArgs
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ElastigroupArgs
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs">
+  
+  <h1 id="Pulumi_SpotInst_Aws_ElastigroupArgs" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs" class="text-break">Class ElastigroupArgs
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">ElastigroupArgs</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.SpotInst.Aws.html">Pulumi.SpotInst.Aws</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.SpotInst.dll</h6>
+  <h5 id="Pulumi_SpotInst_Aws_ElastigroupArgs_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class ElastigroupArgs : ResourceArgs</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L856">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs__ctor_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.#ctor*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs__ctor" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.#ctor">ElastigroupArgs()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ElastigroupArgs()</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L408">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_AvailabilityZones_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.AvailabilityZones*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_AvailabilityZones" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.AvailabilityZones">AvailabilityZones</h4>
+  <div class="markdown level1 summary"><p>List of Strings of availability zones. When this parameter is set, <code>subnet_ids</code> should be left unused.
+Note: <code>availability_zones</code> naming syntax follows the convention <code>availability-zone:subnet:placement-group-name</code>. For example, to set an AZ in <code>us-east-1</code> with subnet <code>subnet-123456</code> and placement group <code>ClusterI03</code>, you would set:
+<code>availability_zones = [&amp;quot;us-east-1a:subnet-123456:ClusterI03&amp;quot;]</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputList&lt;string&gt; AvailabilityZones { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L414">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_BlockDevicesMode_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.BlockDevicesMode*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_BlockDevicesMode" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.BlockDevicesMode">BlockDevicesMode</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? BlockDevicesMode { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L420">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_CapacityUnit_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.CapacityUnit*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_CapacityUnit" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.CapacityUnit">CapacityUnit</h4>
+  <div class="markdown level1 summary"><p>The capacity unit to launch instances by. If not specified, when choosing the weight unit, each instance will weight as the number of its vCPUs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? CapacityUnit { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L426">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_CpuCredits_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.CpuCredits*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_CpuCredits" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.CpuCredits">CpuCredits</h4>
+  <div class="markdown level1 summary"><p>Controls how T3 instances are launched. Valid values: <code>standard</code>, <code>unlimited</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? CpuCredits { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L432">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_Description_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.Description*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_Description" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.Description">Description</h4>
+  <div class="markdown level1 summary"><p>The group description.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Description { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L438">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_DesiredCapacity_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.DesiredCapacity*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_DesiredCapacity" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.DesiredCapacity">DesiredCapacity</h4>
+  <div class="markdown level1 summary"><p>The desired number of instances the group should have at any time.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? DesiredCapacity { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L444">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_DrainingTimeout_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.DrainingTimeout*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_DrainingTimeout" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.DrainingTimeout">DrainingTimeout</h4>
+  <div class="markdown level1 summary"><p>The time in seconds, the instance is allowed to run while detached from the ELB. This is to allow the instance time to be drained from incoming TCP connections before terminating it, during a scale down operation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? DrainingTimeout { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L449">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_EbsBlockDevices_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.EbsBlockDevices*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_EbsBlockDevices" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.EbsBlockDevices">EbsBlockDevices</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputList&lt;ElastigroupEbsBlockDevicesArgs&gt; EbsBlockDevices { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.SpotInst.Aws.Inputs.ElastigroupEbsBlockDevicesArgs.html">ElastigroupEbsBlockDevicesArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L458">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_EbsOptimized_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.EbsOptimized*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_EbsOptimized" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.EbsOptimized">EbsOptimized</h4>
+  <div class="markdown level1 summary"><p>Enable high bandwidth connectivity between instances and AWS’s Elastic Block Store (EBS). For instance types that are EBS-optimized by default this parameter will be ignored.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? EbsOptimized { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L467">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_ElasticIps_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.ElasticIps*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_ElasticIps" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.ElasticIps">ElasticIps</h4>
+  <div class="markdown level1 summary"><p>A list of <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html">AWS Elastic IP</a> allocation IDs to associate to the group instances.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputList&lt;string&gt; ElasticIps { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L475">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_ElasticLoadBalancers_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.ElasticLoadBalancers*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_ElasticLoadBalancers" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.ElasticLoadBalancers">ElasticLoadBalancers</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputList&lt;string&gt; ElasticLoadBalancers { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L484">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_EnableMonitoring_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.EnableMonitoring*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_EnableMonitoring" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.EnableMonitoring">EnableMonitoring</h4>
+  <div class="markdown level1 summary"><p>Indicates whether monitoring is enabled for the instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? EnableMonitoring { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L489">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_EphemeralBlockDevices_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.EphemeralBlockDevices*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_EphemeralBlockDevices" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.EphemeralBlockDevices">EphemeralBlockDevices</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputList&lt;ElastigroupEphemeralBlockDevicesArgs&gt; EphemeralBlockDevices { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.SpotInst.Aws.Inputs.ElastigroupEphemeralBlockDevicesArgs.html">ElastigroupEphemeralBlockDevicesArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L498">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_FallbackToOndemand_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.FallbackToOndemand*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_FallbackToOndemand" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.FallbackToOndemand">FallbackToOndemand</h4>
+  <div class="markdown level1 summary"><p>In a case of no Spot instances available, Elastigroup will launch on-demand instances instead.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; FallbackToOndemand { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L504">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_HealthCheckGracePeriod_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.HealthCheckGracePeriod*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_HealthCheckGracePeriod" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.HealthCheckGracePeriod">HealthCheckGracePeriod</h4>
+  <div class="markdown level1 summary"><p>The amount of time, in seconds, after the instance has launched to starts and check its health.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? HealthCheckGracePeriod { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L510">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_HealthCheckType_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.HealthCheckType*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_HealthCheckType" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.HealthCheckType">HealthCheckType</h4>
+  <div class="markdown level1 summary"><p>The service that will perform health checks for the instance. Valid values: <code>&amp;quot;ELB&amp;quot;</code>, <code>&amp;quot;HCS&amp;quot;</code>, <code>&amp;quot;TARGET_GROUP&amp;quot;</code>, <code>&amp;quot;MLB&amp;quot;</code>, <code>&amp;quot;EC2&amp;quot;</code>, <code>&amp;quot;MULTAI_TARGET_SET&amp;quot;</code>, <code>&amp;quot;MLB_RUNTIME&amp;quot;</code>, <code>&amp;quot;K8S_NODE&amp;quot;</code>, <code>&amp;quot;NOMAD_NODE&amp;quot;</code>, <code>&amp;quot;ECS_CLUSTER_INSTANCE&amp;quot;</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? HealthCheckType { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L516">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_HealthCheckUnhealthyDurationBeforeReplacement_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.HealthCheckUnhealthyDurationBeforeReplacement*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_HealthCheckUnhealthyDurationBeforeReplacement" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.HealthCheckUnhealthyDurationBeforeReplacement">HealthCheckUnhealthyDurationBeforeReplacement</h4>
+  <div class="markdown level1 summary"><p>The amount of time, in seconds, that we will wait before replacing an instance that is running and became unhealthy (this is only applicable for instances that were once healthy).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? HealthCheckUnhealthyDurationBeforeReplacement { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L522">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_IamInstanceProfile_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.IamInstanceProfile*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_IamInstanceProfile" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.IamInstanceProfile">IamInstanceProfile</h4>
+  <div class="markdown level1 summary"><p>The ARN or name of an IAM instance profile to associate with launched instances.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? IamInstanceProfile { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L528">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_ImageId_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.ImageId*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_ImageId" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.ImageId">ImageId</h4>
+  <div class="markdown level1 summary"><p>The ID of the AMI used to launch the instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ImageId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L534">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_InstanceTypesOndemand_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.InstanceTypesOndemand*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_InstanceTypesOndemand" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.InstanceTypesOndemand">InstanceTypesOndemand</h4>
+  <div class="markdown level1 summary"><p>The type of instance determines your instance's CPU capacity, memory and storage (e.g., m1.small, c1.xlarge).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; InstanceTypesOndemand { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L543">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_InstanceTypesPreferredSpots_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.InstanceTypesPreferredSpots*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_InstanceTypesPreferredSpots" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.InstanceTypesPreferredSpots">InstanceTypesPreferredSpots</h4>
+  <div class="markdown level1 summary"><p>Prioritize a subset of spot instance types. Must be a subset of the selected spot instance types.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputList&lt;string&gt; InstanceTypesPreferredSpots { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L555">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_InstanceTypesSpots_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.InstanceTypesSpots*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_InstanceTypesSpots" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.InstanceTypesSpots">InstanceTypesSpots</h4>
+  <div class="markdown level1 summary"><p>One or more instance types.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputList&lt;string&gt; InstanceTypesSpots { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L567">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_InstanceTypesWeights_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.InstanceTypesWeights*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_InstanceTypesWeights" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.InstanceTypesWeights">InstanceTypesWeights</h4>
+  <div class="markdown level1 summary"><p>List of weights per instance type for weighted groups. Each object in the list should have the following attributes:</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputList&lt;ElastigroupInstanceTypesWeightsArgs&gt; InstanceTypesWeights { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.SpotInst.Aws.Inputs.ElastigroupInstanceTypesWeightsArgs.html">ElastigroupInstanceTypesWeightsArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L573">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_IntegrationBeanstalk_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.IntegrationBeanstalk*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_IntegrationBeanstalk" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.IntegrationBeanstalk">IntegrationBeanstalk</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;ElastigroupIntegrationBeanstalkArgs&gt;? IntegrationBeanstalk { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.SpotInst.Aws.Inputs.ElastigroupIntegrationBeanstalkArgs.html">ElastigroupIntegrationBeanstalkArgs</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L576">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_IntegrationCodedeploy_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.IntegrationCodedeploy*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_IntegrationCodedeploy" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.IntegrationCodedeploy">IntegrationCodedeploy</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;ElastigroupIntegrationCodedeployArgs&gt;? IntegrationCodedeploy { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.SpotInst.Aws.Inputs.ElastigroupIntegrationCodedeployArgs.html">ElastigroupIntegrationCodedeployArgs</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L579">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_IntegrationDockerSwarm_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.IntegrationDockerSwarm*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_IntegrationDockerSwarm" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.IntegrationDockerSwarm">IntegrationDockerSwarm</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;ElastigroupIntegrationDockerSwarmArgs&gt;? IntegrationDockerSwarm { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.SpotInst.Aws.Inputs.ElastigroupIntegrationDockerSwarmArgs.html">ElastigroupIntegrationDockerSwarmArgs</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L582">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_IntegrationEcs_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.IntegrationEcs*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_IntegrationEcs" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.IntegrationEcs">IntegrationEcs</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;ElastigroupIntegrationEcsArgs&gt;? IntegrationEcs { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.SpotInst.Aws.Inputs.ElastigroupIntegrationEcsArgs.html">ElastigroupIntegrationEcsArgs</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L585">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_IntegrationGitlab_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.IntegrationGitlab*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_IntegrationGitlab" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.IntegrationGitlab">IntegrationGitlab</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;ElastigroupIntegrationGitlabArgs&gt;? IntegrationGitlab { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.SpotInst.Aws.Inputs.ElastigroupIntegrationGitlabArgs.html">ElastigroupIntegrationGitlabArgs</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L588">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_IntegrationKubernetes_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.IntegrationKubernetes*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_IntegrationKubernetes" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.IntegrationKubernetes">IntegrationKubernetes</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;ElastigroupIntegrationKubernetesArgs&gt;? IntegrationKubernetes { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.SpotInst.Aws.Inputs.ElastigroupIntegrationKubernetesArgs.html">ElastigroupIntegrationKubernetesArgs</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L591">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_IntegrationMesosphere_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.IntegrationMesosphere*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_IntegrationMesosphere" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.IntegrationMesosphere">IntegrationMesosphere</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;ElastigroupIntegrationMesosphereArgs&gt;? IntegrationMesosphere { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.SpotInst.Aws.Inputs.ElastigroupIntegrationMesosphereArgs.html">ElastigroupIntegrationMesosphereArgs</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L594">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_IntegrationMultaiRuntime_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.IntegrationMultaiRuntime*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_IntegrationMultaiRuntime" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.IntegrationMultaiRuntime">IntegrationMultaiRuntime</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;ElastigroupIntegrationMultaiRuntimeArgs&gt;? IntegrationMultaiRuntime { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.SpotInst.Aws.Inputs.ElastigroupIntegrationMultaiRuntimeArgs.html">ElastigroupIntegrationMultaiRuntimeArgs</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L597">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_IntegrationNomad_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.IntegrationNomad*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_IntegrationNomad" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.IntegrationNomad">IntegrationNomad</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;ElastigroupIntegrationNomadArgs&gt;? IntegrationNomad { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.SpotInst.Aws.Inputs.ElastigroupIntegrationNomadArgs.html">ElastigroupIntegrationNomadArgs</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L600">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_IntegrationRancher_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.IntegrationRancher*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_IntegrationRancher" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.IntegrationRancher">IntegrationRancher</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;ElastigroupIntegrationRancherArgs&gt;? IntegrationRancher { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.SpotInst.Aws.Inputs.ElastigroupIntegrationRancherArgs.html">ElastigroupIntegrationRancherArgs</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L603">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_IntegrationRoute53_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.IntegrationRoute53*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_IntegrationRoute53" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.IntegrationRoute53">IntegrationRoute53</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;ElastigroupIntegrationRoute53Args&gt;? IntegrationRoute53 { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.SpotInst.Aws.Inputs.ElastigroupIntegrationRoute53Args.html">ElastigroupIntegrationRoute53Args</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L609">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_KeyName_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.KeyName*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_KeyName" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.KeyName">KeyName</h4>
+  <div class="markdown level1 summary"><p>The key name that should be used for the instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? KeyName { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L612">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_LifetimePeriod_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.LifetimePeriod*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_LifetimePeriod" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.LifetimePeriod">LifetimePeriod</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? LifetimePeriod { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L618">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_MaxSize_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.MaxSize*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_MaxSize" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.MaxSize">MaxSize</h4>
+  <div class="markdown level1 summary"><p>The maximum number of instances the group should have at any time.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? MaxSize { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L624">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_MinSize_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.MinSize*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_MinSize" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.MinSize">MinSize</h4>
+  <div class="markdown level1 summary"><p>The minimum number of instances the group should have at any time.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? MinSize { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L629">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_MultaiTargetSets_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.MultaiTargetSets*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_MultaiTargetSets" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.MultaiTargetSets">MultaiTargetSets</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputList&lt;ElastigroupMultaiTargetSetsArgs&gt; MultaiTargetSets { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.SpotInst.Aws.Inputs.ElastigroupMultaiTargetSetsArgs.html">ElastigroupMultaiTargetSetsArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L638">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_Name_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.Name*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_Name" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.Name">Name</h4>
+  <div class="markdown level1 summary"><p>The group name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L643">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_NetworkInterfaces_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.NetworkInterfaces*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_NetworkInterfaces" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.NetworkInterfaces">NetworkInterfaces</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputList&lt;ElastigroupNetworkInterfacesArgs&gt; NetworkInterfaces { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.SpotInst.Aws.Inputs.ElastigroupNetworkInterfacesArgs.html">ElastigroupNetworkInterfacesArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L652">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_OndemandCount_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.OndemandCount*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_OndemandCount" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.OndemandCount">OndemandCount</h4>
+  <div class="markdown level1 summary"><p>Number of on demand instances to launch in the group. All other instances will be spot instances. When this parameter is set the <code>spot_percentage</code> parameter is being ignored.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? OndemandCount { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L658">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_Orientation_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.Orientation*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_Orientation" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.Orientation">Orientation</h4>
+  <div class="markdown level1 summary"><p>Select a prediction strategy. Valid values: <code>&amp;quot;balanced&amp;quot;</code>, <code>&amp;quot;costOriented&amp;quot;</code>, <code>&amp;quot;equalAzDistribution&amp;quot;</code>, <code>&amp;quot;availabilityOriented&amp;quot;</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Orientation { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L661">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_PersistBlockDevices_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.PersistBlockDevices*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_PersistBlockDevices" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.PersistBlockDevices">PersistBlockDevices</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? PersistBlockDevices { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L664">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_PersistPrivateIp_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.PersistPrivateIp*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_PersistPrivateIp" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.PersistPrivateIp">PersistPrivateIp</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? PersistPrivateIp { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L667">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_PersistRootDevice_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.PersistRootDevice*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_PersistRootDevice" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.PersistRootDevice">PersistRootDevice</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? PersistRootDevice { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L673">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_PlacementTenancy_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.PlacementTenancy*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_PlacementTenancy" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.PlacementTenancy">PlacementTenancy</h4>
+  <div class="markdown level1 summary"><p>Enable dedicated tenancy. Note: There is a flat hourly fee for each region in which dedicated tenancy is used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? PlacementTenancy { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L683">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_PreferredAvailabilityZones_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.PreferredAvailabilityZones*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_PreferredAvailabilityZones" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.PreferredAvailabilityZones">PreferredAvailabilityZones</h4>
+  <div class="markdown level1 summary"><p>The AZs to prioritize when launching Spot instances. If no markets are available in the Preferred AZs, Spot instances are launched in the non-preferred AZs.
+Note: Must be a sublist of <code>availability_zones</code> and <code>orientation</code> value must not be <code>&amp;quot;equalAzDistribution&amp;quot;</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputList&lt;string&gt; PreferredAvailabilityZones { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L691">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_PrivateIps_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.PrivateIps*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_PrivateIps" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.PrivateIps">PrivateIps</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputList&lt;string&gt; PrivateIps { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L701">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_Product_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.Product*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_Product" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.Product">Product</h4>
+  <div class="markdown level1 summary"><p>Operation system type. Valid values: <code>&amp;quot;Linux/UNIX&amp;quot;</code>, <code>&amp;quot;SUSE Linux&amp;quot;</code>, <code>&amp;quot;Windows&amp;quot;</code>.
+For EC2 Classic instances:  <code>&amp;quot;Linux/UNIX (Amazon VPC)&amp;quot;</code>, <code>&amp;quot;SUSE Linux (Amazon VPC)&amp;quot;</code>, <code>&amp;quot;Windows (Amazon VPC)&amp;quot;</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Product { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L708">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_Region_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.Region*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_Region" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.Region">Region</h4>
+  <div class="markdown level1 summary"><p>The AWS region your group will be created in.
+Note: This parameter is required if you specify subnets (through subnet_ids). This parameter is optional if you specify Availability Zones (through availability_zones).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Region { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L714">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_RevertToSpot_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.RevertToSpot*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_RevertToSpot" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.RevertToSpot">RevertToSpot</h4>
+  <div class="markdown level1 summary"><p>Hold settings for strategy correction – replacing On-Demand for Spot instances. Supported Values: <code>&amp;quot;never&amp;quot;</code>, <code>&amp;quot;always&amp;quot;</code>, <code>&amp;quot;timeWindow&amp;quot;</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;ElastigroupRevertToSpotArgs&gt;? RevertToSpot { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.SpotInst.Aws.Inputs.ElastigroupRevertToSpotArgs.html">ElastigroupRevertToSpotArgs</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L719">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_ScalingDownPolicies_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.ScalingDownPolicies*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_ScalingDownPolicies" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.ScalingDownPolicies">ScalingDownPolicies</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputList&lt;ElastigroupScalingDownPoliciesArgs&gt; ScalingDownPolicies { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.SpotInst.Aws.Inputs.ElastigroupScalingDownPoliciesArgs.html">ElastigroupScalingDownPoliciesArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L731">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_ScalingStrategies_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.ScalingStrategies*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_ScalingStrategies" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.ScalingStrategies">ScalingStrategies</h4>
+  <div class="markdown level1 summary"><p>Set termination policy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputList&lt;ElastigroupScalingStrategiesArgs&gt; ScalingStrategies { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.SpotInst.Aws.Inputs.ElastigroupScalingStrategiesArgs.html">ElastigroupScalingStrategiesArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L739">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_ScalingTargetPolicies_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.ScalingTargetPolicies*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_ScalingTargetPolicies" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.ScalingTargetPolicies">ScalingTargetPolicies</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputList&lt;ElastigroupScalingTargetPoliciesArgs&gt; ScalingTargetPolicies { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.SpotInst.Aws.Inputs.ElastigroupScalingTargetPoliciesArgs.html">ElastigroupScalingTargetPoliciesArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L747">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_ScalingUpPolicies_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.ScalingUpPolicies*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_ScalingUpPolicies" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.ScalingUpPolicies">ScalingUpPolicies</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputList&lt;ElastigroupScalingUpPoliciesArgs&gt; ScalingUpPolicies { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.SpotInst.Aws.Inputs.ElastigroupScalingUpPoliciesArgs.html">ElastigroupScalingUpPoliciesArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L755">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_ScheduledTasks_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.ScheduledTasks*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_ScheduledTasks" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.ScheduledTasks">ScheduledTasks</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputList&lt;ElastigroupScheduledTasksArgs&gt; ScheduledTasks { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.SpotInst.Aws.Inputs.ElastigroupScheduledTasksArgs.html">ElastigroupScheduledTasksArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L767">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_SecurityGroups_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.SecurityGroups*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_SecurityGroups" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.SecurityGroups">SecurityGroups</h4>
+  <div class="markdown level1 summary"><p>A list of associated security group IDS.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputList&lt;string&gt; SecurityGroups { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L776">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_ShutdownScript_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.ShutdownScript*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_ShutdownScript" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.ShutdownScript">ShutdownScript</h4>
+  <div class="markdown level1 summary"><p>The Base64-encoded shutdown script that executes prior to instance termination, for more information please see: <a href="https://api.spotinst.com/integration-docs/elastigroup/concepts/compute-concepts/shutdown-scripts/">Shutdown Script</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ShutdownScript { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L781">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_Signals_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.Signals*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_Signals" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.Signals">Signals</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputList&lt;ElastigroupSignalsArgs&gt; Signals { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.SpotInst.Aws.Inputs.ElastigroupSignalsArgs.html">ElastigroupSignalsArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L790">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_SpotPercentage_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.SpotPercentage*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_SpotPercentage" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.SpotPercentage">SpotPercentage</h4>
+  <div class="markdown level1 summary"><p>The percentage of Spot instances that would spin up from the <code>desired_capacity</code> number.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;double&gt;? SpotPercentage { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Double</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L793">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_StatefulDeallocation_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.StatefulDeallocation*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_StatefulDeallocation" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.StatefulDeallocation">StatefulDeallocation</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;ElastigroupStatefulDeallocationArgs&gt;? StatefulDeallocation { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.SpotInst.Aws.Inputs.ElastigroupStatefulDeallocationArgs.html">ElastigroupStatefulDeallocationArgs</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L803">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_SubnetIds_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.SubnetIds*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_SubnetIds" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.SubnetIds">SubnetIds</h4>
+  <div class="markdown level1 summary"><p>List of Strings of subnet identifiers.
+Note: When this parameter is set, <code>availability_zones</code> should be left unused.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputList&lt;string&gt; SubnetIds { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L815">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_Tags_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.Tags*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_Tags" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.Tags">Tags</h4>
+  <div class="markdown level1 summary"><p>A key/value mapping of tags to assign to the resource.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputList&lt;ElastigroupTagsArgs&gt; Tags { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.SpotInst.Aws.Inputs.ElastigroupTagsArgs.html">ElastigroupTagsArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L823">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_TargetGroupArns_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.TargetGroupArns*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_TargetGroupArns" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.TargetGroupArns">TargetGroupArns</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputList&lt;string&gt; TargetGroupArns { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L829">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_UpdatePolicy_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.UpdatePolicy*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_UpdatePolicy" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.UpdatePolicy">UpdatePolicy</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;ElastigroupUpdatePolicyArgs&gt;? UpdatePolicy { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.SpotInst.Aws.Inputs.ElastigroupUpdatePolicyArgs.html">ElastigroupUpdatePolicyArgs</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L835">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_UserData_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.UserData*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_UserData" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.UserData">UserData</h4>
+  <div class="markdown level1 summary"><p>The user data to provide when launching the instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? UserData { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L841">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_UtilizeReservedInstances_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.UtilizeReservedInstances*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_UtilizeReservedInstances" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.UtilizeReservedInstances">UtilizeReservedInstances</h4>
+  <div class="markdown level1 summary"><p>In a case of any available reserved instances, Elastigroup will utilize them first before purchasing Spot instances.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? UtilizeReservedInstances { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L847">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_WaitForCapacity_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.WaitForCapacity*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_WaitForCapacity" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.WaitForCapacity">WaitForCapacity</h4>
+  <div class="markdown level1 summary"><p>Minimum number of instances in a 'HEALTHY' status that is required before continuing. This is ignored when updating with blue/green deployment. Cannot exceed <code>desired_capacity</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? WaitForCapacity { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L853">View Source</a>
+  </span>
+  <a id="Pulumi_SpotInst_Aws_ElastigroupArgs_WaitForCapacityTimeout_" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.WaitForCapacityTimeout*"></a>
+  <h4 id="Pulumi_SpotInst_Aws_ElastigroupArgs_WaitForCapacityTimeout" data-uid="Pulumi.SpotInst.Aws.ElastigroupArgs.WaitForCapacityTimeout">WaitForCapacityTimeout</h4>
+  <div class="markdown level1 summary"><p>Time (seconds) to wait for instances to report a 'HEALTHY' status. Useful for plans with multiple dependencies that take some time to initialize. Leave undefined or set to <code>0</code> to indicate no wait. This is ignored when updating with blue/green deployment.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? WaitForCapacityTimeout { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-spotinst/blob/master/sdk/dotnet/Aws/Elastigroup.cs/#L398" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

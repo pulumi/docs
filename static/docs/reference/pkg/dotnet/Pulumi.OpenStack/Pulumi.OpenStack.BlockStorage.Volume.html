@@ -1,0 +1,660 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Volume
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Volume
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.OpenStack.BlockStorage.Volume">
+  
+  <h1 id="Pulumi_OpenStack_BlockStorage_Volume" data-uid="Pulumi.OpenStack.BlockStorage.Volume" class="text-break">Class Volume
+  </h1>
+  <div class="markdown level0 summary"><p>Manages a V3 volume resource within OpenStack.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/blockstorage_volume_v3.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/blockstorage_volume_v3.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Volume</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.OpenStack.BlockStorage.html">Pulumi.OpenStack.BlockStorage</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.OpenStack.dll</h6>
+  <h5 id="Pulumi_OpenStack_BlockStorage_Volume_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Volume : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Blockstorage/Volume.cs/#L131">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_BlockStorage_Volume__ctor_" data-uid="Pulumi.OpenStack.BlockStorage.Volume.#ctor*"></a>
+  <h4 id="Pulumi_OpenStack_BlockStorage_Volume__ctor_System_String_Pulumi_OpenStack_BlockStorage_VolumeArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.OpenStack.BlockStorage.Volume.#ctor(System.String,Pulumi.OpenStack.BlockStorage.VolumeArgs,System.Nullable{CustomResourceOptions})">Volume(String, VolumeArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Create a Volume resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Volume(string name, VolumeArgs args, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.OpenStack.BlockStorage.VolumeArgs.html">VolumeArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Blockstorage/Volume.cs/#L23">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_BlockStorage_Volume_Attachments_" data-uid="Pulumi.OpenStack.BlockStorage.Volume.Attachments*"></a>
+  <h4 id="Pulumi_OpenStack_BlockStorage_Volume_Attachments" data-uid="Pulumi.OpenStack.BlockStorage.Volume.Attachments">Attachments</h4>
+  <div class="markdown level1 summary"><p>If a volume is attached to an instance, this attribute will
+display the Attachment ID, Instance ID, and the Device as the Instance
+sees it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;VolumeAttachments&gt;&gt; Attachments { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.OpenStack.BlockStorage.Outputs.VolumeAttachments.html">VolumeAttachments</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Blockstorage/Volume.cs/#L30">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_BlockStorage_Volume_AvailabilityZone_" data-uid="Pulumi.OpenStack.BlockStorage.Volume.AvailabilityZone*"></a>
+  <h4 id="Pulumi_OpenStack_BlockStorage_Volume_AvailabilityZone" data-uid="Pulumi.OpenStack.BlockStorage.Volume.AvailabilityZone">AvailabilityZone</h4>
+  <div class="markdown level1 summary"><p>The availability zone for the volume.
+Changing this creates a new volume.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AvailabilityZone { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Blockstorage/Volume.cs/#L37">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_BlockStorage_Volume_ConsistencyGroupId_" data-uid="Pulumi.OpenStack.BlockStorage.Volume.ConsistencyGroupId*"></a>
+  <h4 id="Pulumi_OpenStack_BlockStorage_Volume_ConsistencyGroupId" data-uid="Pulumi.OpenStack.BlockStorage.Volume.ConsistencyGroupId">ConsistencyGroupId</h4>
+  <div class="markdown level1 summary"><p>The consistency group to place the volume
+in.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ConsistencyGroupId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Blockstorage/Volume.cs/#L44">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_BlockStorage_Volume_Description_" data-uid="Pulumi.OpenStack.BlockStorage.Volume.Description*"></a>
+  <h4 id="Pulumi_OpenStack_BlockStorage_Volume_Description" data-uid="Pulumi.OpenStack.BlockStorage.Volume.Description">Description</h4>
+  <div class="markdown level1 summary"><p>A description of the volume. Changing this updates
+the volume's description.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Blockstorage/Volume.cs/#L52">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_BlockStorage_Volume_EnableOnlineResize_" data-uid="Pulumi.OpenStack.BlockStorage.Volume.EnableOnlineResize*"></a>
+  <h4 id="Pulumi_OpenStack_BlockStorage_Volume_EnableOnlineResize" data-uid="Pulumi.OpenStack.BlockStorage.Volume.EnableOnlineResize">EnableOnlineResize</h4>
+  <div class="markdown level1 summary"><p>When this option is set it allows extending
+attached volumes. Note: updating size of an attached volume requires Cinder
+support for version 3.42 and a compatible storage driver.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; EnableOnlineResize { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Blockstorage/Volume.cs/#L59">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_BlockStorage_Volume_ImageId_" data-uid="Pulumi.OpenStack.BlockStorage.Volume.ImageId*"></a>
+  <h4 id="Pulumi_OpenStack_BlockStorage_Volume_ImageId" data-uid="Pulumi.OpenStack.BlockStorage.Volume.ImageId">ImageId</h4>
+  <div class="markdown level1 summary"><p>The image ID from which to create the volume.
+Changing this creates a new volume.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ImageId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Blockstorage/Volume.cs/#L66">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_BlockStorage_Volume_Metadata_" data-uid="Pulumi.OpenStack.BlockStorage.Volume.Metadata*"></a>
+  <h4 id="Pulumi_OpenStack_BlockStorage_Volume_Metadata" data-uid="Pulumi.OpenStack.BlockStorage.Volume.Metadata">Metadata</h4>
+  <div class="markdown level1 summary"><p>Metadata key/value pairs to associate with the volume.
+Changing this updates the existing volume metadata.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Metadata { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Blockstorage/Volume.cs/#L72">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_BlockStorage_Volume_Multiattach_" data-uid="Pulumi.OpenStack.BlockStorage.Volume.Multiattach*"></a>
+  <h4 id="Pulumi_OpenStack_BlockStorage_Volume_Multiattach" data-uid="Pulumi.OpenStack.BlockStorage.Volume.Multiattach">Multiattach</h4>
+  <div class="markdown level1 summary"><p>Allow the volume to be attached to more than one Compute instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; Multiattach { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Blockstorage/Volume.cs/#L79">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_BlockStorage_Volume_Name_" data-uid="Pulumi.OpenStack.BlockStorage.Volume.Name*"></a>
+  <h4 id="Pulumi_OpenStack_BlockStorage_Volume_Name" data-uid="Pulumi.OpenStack.BlockStorage.Volume.Name">Name</h4>
+  <div class="markdown level1 summary"><p>A unique name for the volume. Changing this updates the
+volume's name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Blockstorage/Volume.cs/#L87">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_BlockStorage_Volume_Region_" data-uid="Pulumi.OpenStack.BlockStorage.Volume.Region*"></a>
+  <h4 id="Pulumi_OpenStack_BlockStorage_Volume_Region" data-uid="Pulumi.OpenStack.BlockStorage.Volume.Region">Region</h4>
+  <div class="markdown level1 summary"><p>The region in which to create the volume. If
+omitted, the <code>region</code> argument of the provider is used. Changing this
+creates a new volume.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Region { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Blockstorage/Volume.cs/#L93">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_BlockStorage_Volume_Size_" data-uid="Pulumi.OpenStack.BlockStorage.Volume.Size*"></a>
+  <h4 id="Pulumi_OpenStack_BlockStorage_Volume_Size" data-uid="Pulumi.OpenStack.BlockStorage.Volume.Size">Size</h4>
+  <div class="markdown level1 summary"><p>The size of the volume to create (in gigabytes).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; Size { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Blockstorage/Volume.cs/#L100">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_BlockStorage_Volume_SnapshotId_" data-uid="Pulumi.OpenStack.BlockStorage.Volume.SnapshotId*"></a>
+  <h4 id="Pulumi_OpenStack_BlockStorage_Volume_SnapshotId" data-uid="Pulumi.OpenStack.BlockStorage.Volume.SnapshotId">SnapshotId</h4>
+  <div class="markdown level1 summary"><p>The snapshot ID from which to create the volume.
+Changing this creates a new volume.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SnapshotId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Blockstorage/Volume.cs/#L106">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_BlockStorage_Volume_SourceReplica_" data-uid="Pulumi.OpenStack.BlockStorage.Volume.SourceReplica*"></a>
+  <h4 id="Pulumi_OpenStack_BlockStorage_Volume_SourceReplica" data-uid="Pulumi.OpenStack.BlockStorage.Volume.SourceReplica">SourceReplica</h4>
+  <div class="markdown level1 summary"><p>The volume ID to replicate with.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SourceReplica { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Blockstorage/Volume.cs/#L113">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_BlockStorage_Volume_SourceVolId_" data-uid="Pulumi.OpenStack.BlockStorage.Volume.SourceVolId*"></a>
+  <h4 id="Pulumi_OpenStack_BlockStorage_Volume_SourceVolId" data-uid="Pulumi.OpenStack.BlockStorage.Volume.SourceVolId">SourceVolId</h4>
+  <div class="markdown level1 summary"><p>The volume ID from which to create the volume.
+Changing this creates a new volume.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SourceVolId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Blockstorage/Volume.cs/#L120">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_BlockStorage_Volume_VolumeType_" data-uid="Pulumi.OpenStack.BlockStorage.Volume.VolumeType*"></a>
+  <h4 id="Pulumi_OpenStack_BlockStorage_Volume_VolumeType" data-uid="Pulumi.OpenStack.BlockStorage.Volume.VolumeType">VolumeType</h4>
+  <div class="markdown level1 summary"><p>The type of volume to create.
+Changing this creates a new volume.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; VolumeType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Blockstorage/Volume.cs/#L161">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_BlockStorage_Volume_Get_" data-uid="Pulumi.OpenStack.BlockStorage.Volume.Get*"></a>
+  <h4 id="Pulumi_OpenStack_BlockStorage_Volume_Get_System_String_Input_System_String__Pulumi_OpenStack_BlockStorage_VolumeState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.OpenStack.BlockStorage.Volume.Get(System.String,Input{System.String},Pulumi.OpenStack.BlockStorage.VolumeState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, VolumeState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Get an existing Volume resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Volume Get(string name, Input&lt;string&gt; id, VolumeState state = null, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.OpenStack.BlockStorage.VolumeState.html">VolumeState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.OpenStack.BlockStorage.Volume.html">Volume</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Blockstorage/Volume.cs/#L16" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
