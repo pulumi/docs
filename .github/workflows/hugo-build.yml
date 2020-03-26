@@ -1,4 +1,4 @@
-name: Pulumify
+name: Hugo Build
 on: [pull_request]
 jobs:
   hugoBuild:
@@ -9,8 +9,12 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '12.x'
-      - run: |
-        yarn lint-markdown && NODE_ENV=production yarn --cwd components run build
+      - name: Build components
+        env:
+          NODE_ENV: production
+        run: |
+        yarn lint-markdown
+        yarn --cwd components run build
       - uses: jakejarvis/hugo-build-action@master
         env:
           NODE_ENV: production
