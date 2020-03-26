@@ -44,7 +44,7 @@ main:
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2020-04-01 18:30:00 -04:00
     # Datetime of the webinar.
-    datetime: "WED, APR 01, 2020 AT 6:30PM to 8:00PM EDT"
+    datetime: "WED, APR 01, 2020 AT 6:30PM TO 8:00PM EDT"
     # Description of the webinar.
     description: >
         Declaratively defining, deploying, and managing infrastructure usually means breaking out of your day to day toolchain and using YAML or some sort of DSL. Learn how to automate modern infrastructure like functions, containers, and Kubernetes using Pulumi and Go. In this talk we'll explore the productivity superpowers that Pulumi brings to infrastructure:

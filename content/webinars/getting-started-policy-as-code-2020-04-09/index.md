@@ -44,7 +44,7 @@ main:
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2020-04-09 11:00:00 -07:00
     # Datetime of the webinar.
-    datetime: "THU APR 09, 2020 AT 11:00AM - 12:00PM PDT"
+    datetime: "THU APR 09, 2020 AT 11:00AM TO 12:00PM PDT"
     # Description of the webinar.
     description: |
         Poorly configured cloud infrastructure is a common source of security, reliability and cost issues that result in the types of headlines that make executive leaders cringe. The Pulumi team will show you how to enforce best practices by creating durable policies that scale from a single infrastructure stack to company-wide policies. From properly secured S3 buckets to mandated resource labels, Pulumi’s Policy as Code capabilities help you to prevent defective configurations from impacting your cloud of choice.
