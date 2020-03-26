@@ -2,13 +2,13 @@
 title: "Managing AWS Credentials on CI/CD - Part 2"
 date: 2020-03-26
 meta_desc: "Best practices for managing AWS credentials on CI/CD - Part 2 in the series"
-meta_image: meta.png
+meta_image: key.png
 authors:
     - chris-smith
     - sophia-parafina
 tags:
     - CI/CD
-    - secrets rotation
+    - secrets
 ---
 
 This article is the second part in a series on the best practices for securely managing AWS credentials on CI/CD. In this article, we go in-depth on how to provide AWS credentials securely to a 3rd party and introduce a Pulumi program to automate rotating access keys.
