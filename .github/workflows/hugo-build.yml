@@ -10,8 +10,8 @@ jobs:
         with:
           node-version: '12.x'
       - run: |
-        yarn install
-        yarn run lint-markdown
+          yarn install
+          yarn run lint-markdown
       - name: Build Stencil components
         working-directory: components
         env:
