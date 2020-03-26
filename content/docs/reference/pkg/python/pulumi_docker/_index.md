@@ -953,6 +953,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
+<dl class="exception">
+<dt id="pulumi_docker.Error">
+<em class="property">exception </em><code class="sig-prename descclassname">pulumi_docker.</code><code class="sig-name descname">Error</code><a class="headerlink" href="#pulumi_docker.Error" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 <dl class="class">
 <dt id="pulumi_docker.GetNetworkResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_docker.</code><code class="sig-name descname">GetNetworkResult</code><span class="sig-paren">(</span><em class="sig-param">driver=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">internal=None</em>, <em class="sig-param">ipam_configs=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">options=None</em>, <em class="sig-param">scope=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_docker.GetNetworkResult" title="Permalink to this definition">¶</a></dt>
@@ -989,6 +994,28 @@ See [docker docs][networkdocs] for more details.</p>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_docker.Image">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_docker.</code><code class="sig-name descname">Image</code><span class="sig-paren">(</span><em class="sig-param">name: str, image_name: Union[str, Awaitable[str], Output[T]], build: Union[str, Awaitable[str], Output[T], pulumi_docker.docker.DockerBuild], local_image_name: Union[str, Awaitable[str], Output[T], None] = None, registry: Union[pulumi_docker.image.ImageRegistry, Awaitable[pulumi_docker.image.ImageRegistry], Output[T], None] = None, skip_push: Optional[bool] = None, opts: Optional[pulumi.resource.ResourceOptions] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_docker.Image" title="Permalink to this definition">¶</a></dt>
+<dd><p>A docker.Image resource represents a Docker image built locally which is published and made
+available via a remote Docker registry.  This can be used to ensure that a Docker source
+directory from a local deployment environment is built and pushed to a cloud-hosted Docker
+registry as part of a Pulumi deployment, so that it can be referenced as an image input from
+other cloud services that reference Docker images - including Kubernetes Pods, AWS ECS Tasks, and
+Azure Container Instances.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>t</strong> (<em>str</em>) – The type of this resource.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The name of this resource.</p></li>
+<li><p><strong>props</strong> (<em>Optional</em><em>[</em><em>dict</em><em>]</em>) – An optional list of input properties to use as inputs for the resource.</p></li>
+<li><p><strong>opts</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>ResourceOptions</em></a><em>]</em>) – Optional set of <a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><code class="xref py py-class docutils literal notranslate"><span class="pre">pulumi.ResourceOptions</span></code></a> to use for this
+resource.</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="class">
@@ -1411,6 +1438,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 </dd></dl>
+
+<dl class="exception">
+<dt id="pulumi_docker.ResourceError">
+<em class="property">exception </em><code class="sig-prename descclassname">pulumi_docker.</code><code class="sig-name descname">ResourceError</code><span class="sig-paren">(</span><em class="sig-param">message: str, resource: Optional[pulumi.resource.Resource], hide_stack: Optional[bool] = False</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_docker.ResourceError" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_docker.Secret">
@@ -2584,6 +2616,23 @@ to date on the latest available version of the tag.</p>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the Docker image, including any tags. e.g. <code class="docutils literal notranslate"><span class="pre">alpine:latest</span></code></p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_docker.new_event_loop">
+<code class="sig-prename descclassname">pulumi_docker.</code><code class="sig-name descname">new_event_loop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_docker.new_event_loop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Equivalent to calling get_event_loop_policy().new_event_loop().</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_docker.random">
+<code class="sig-prename descclassname">pulumi_docker.</code><code class="sig-name descname">random</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; x in the interval [0, 1).<a class="headerlink" href="#pulumi_docker.random" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="pulumi_docker.set_event_loop">
+<code class="sig-prename descclassname">pulumi_docker.</code><code class="sig-name descname">set_event_loop</code><span class="sig-paren">(</span><em class="sig-param">loop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_docker.set_event_loop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Equivalent to calling get_event_loop_policy().set_event_loop(loop).</p>
 </dd></dl>
 
 </div>
