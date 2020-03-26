@@ -11,7 +11,7 @@ tags:
     - secrets
 ---
 
-This article is the second part in a series on the best practices for securely managing AWS credentials on CI/CD. In this article, we go in-depth on how to provide AWS credentials securely to a 3rd party and introduce a Pulumi program to automate rotating access keys.
+This article is the second part of a series on best practices for securely managing AWS credentials on CI/CD. In this article, we go in-depth on providing AWS credentials securely to a 3rd party and introduce a Pulumi program to automate rotating access keys.
 
 <!--more-->
 
@@ -24,7 +24,7 @@ This article is the second part in a series on the best practices for securely m
 Other posts in this series:
 
 - [Create a dedicated IAM User for your CI/CD]({{< relref "/blog/managing-aws-credentials-on-cicd-part-1" >}}) (Series Start)
-- [Provide the IAM User’s credentials to your CI/CD system]({{< relref "/blog/managing-aws-credentials-on-cicd-part-1" >}})
+- [Provide the IAM User’s credentials to your CI/CD system](#providing-iam-credentials)
 - [Comparison with using hosted secret managers](#using-a-secrets-service)
 - [Automate Rotating and Revoking AWS Credentials](#automating-key-rotation)
 - _Assuming IAM Roles for performing updates_ (coming soon!)
