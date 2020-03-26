@@ -77,6 +77,7 @@ Pulumi’s approach to infrastructure as code is great for continuous delivery, 
         <ul class="p2">
             <li><a href="{{< relref "crossguard/core-concepts" >}}">Core Concepts</a></li>
             <li><a href="{{< relref "crossguard/best-practices" >}}">Best Practices</a></li>
+            <li><a href="{{< relref "crossguard/configuration" >}}">Configuration</a></li>
             <li><a href="{{< relref "crossguard/faq" >}}">Frequently Asked Questions</a></li>
         </ul>
             <p class="mt-6">

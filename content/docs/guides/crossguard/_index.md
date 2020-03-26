@@ -23,6 +23,10 @@ try the [Getting Started tutorial]({{< relref "/docs/get-started/crossguard" >}}
 
 In addition to being able to implement your own CrossGuard policies, we've also created a set of policies that codifies best practices for AWS that you can adopt and use in a Policy Pack. AWSGuard is a configurable library that you can use to enforce best practices for your own Pulumi stacks or organization. [Learn more and get started with AWSGuard]({{< relref "./awsguard" >}}).
 
+## Configuring Policy Packs
+
+Using configurable Policy Packs, you can write flexible policies that can be re-used across your organization. By default, some fields like enforcement level, are configurable. You may also specify configurable variables alongside each policy. [Learn more about configurable Policy Packs]({{< relref "./configuration" >}}).
+
 ## Examples
 
 If you're looking for some example Policy Packs, take a look at these:
