@@ -19,8 +19,12 @@ jobs:
         run: |
           yarn install
           yarn run build
-      - uses: jakejarvis/hugo-build-action@v0.63.0
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.63.0'
+          extended: true
+      - name: Build
+        run: hugo --minify -v
         env:
           NODE_ENV: production
-        with:
-          args: --minify -v
