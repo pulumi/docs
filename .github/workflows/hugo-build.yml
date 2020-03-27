@@ -12,6 +12,8 @@ on:
     - cron:  '0 0 * * *'
 jobs:
   buildSite:
+    env:
+      GOPATH: ${{ github.workspace }}
     name: Install deps and build site
     runs-on: ubuntu-latest
     # Max timeout before this job is killed.
