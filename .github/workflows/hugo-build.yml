@@ -1,30 +1,30 @@
-name: Hugo Build
-on: [pull_request]
+name: Build site with Hugo
+on: [pull_request, push]
 jobs:
-  hugoBuild:
-    name: Run Hugo build
+  setupDeps:
+    name: Setup dependencies
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
           node-version: '12.x'
-      - run: |
-          yarn install
-          yarn run lint-markdown
-      - name: Build Stencil components
-        working-directory: components
-        env:
-          NODE_ENV: production
-        run: |
-          yarn install
-          yarn run build
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: '0.55.4'
           extended: true
-      - name: Build
-        run: hugo --minify -v
-        env:
-          NODE_ENV: production
+      - name: Install Go
+        uses: actions/setup-go@v1
+        with:
+          go-version: 1.13.x
+      - name: Install assume-role
+        run: go get -u github.com/remind101/assume-role
+      - name: Install latest Pulumi CLI
+        run: |
+          curl -fsSL https://get.pulumi.com/ | bash -s
+          export PATH=$PATH:$HOME/.pulumi/bin
+      - run: make travis_${GITHUB_EVENT_NAME}
+        
+      
+      
