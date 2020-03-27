@@ -27,7 +27,6 @@ cd ./infrastructure
 yarn cache clean
 yarn install
 
-export PATH=$PATH:$HOME/.pulumi/bin:$HOME/go/bin
 pulumi login
 pulumi stack select "pulumi/${STACK_NAME}"
 
