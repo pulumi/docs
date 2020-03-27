@@ -158,3 +158,16 @@ Examples of other sites and their docs as inspiration:
 - http://developer.mailchimp.com/documentation/mailchimp/
 - http://ionicframework.com/docs/
 - https://www.twilio.com/docs/
+
+## Troubleshooting
+
+If you're on macOS and you encounter an error running `make serve` about having `too many open files`, you’ll need to increase the number of file descriptors available to shell processes to some number greater than the number of files comprising the website, which is currently hovering at around 30K.
+
+The commands below should help. The first sets the soft and hard limits for your system, and will persist until you restart your computer. The second is also required, and applies those limits for the duration of your shell.
+
+```
+sudo launchctl limit maxfiles 50000 50000
+ulimit -n 50000
+```
+
+Once you do this, `make serve` should work for you.
