@@ -5,8 +5,8 @@ branches:
   only:
   - master
 before_install:
-- nvm install 12.x
-- nvm use 12
+- nvm install 12.15.0
+- nvm use 12.15.0
 # Download and install required tools.
 # Limit to one push build per branch.
 - go get github.com/pulumi/travisqueue
