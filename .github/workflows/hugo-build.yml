@@ -50,7 +50,6 @@ jobs:
       - name: Install latest Pulumi CLI
         run: |
           curl -fsSL https://get.pulumi.com/ | bash -s
-          export PATH=$PATH:$HOME/.pulumi/bin
 
       - run: make ci_${GITHUB_EVENT_NAME}
         if: ${{ github.event_name }} != 'schedule'
