@@ -60,22 +60,26 @@ build:
 test:
 	./scripts/check-links.sh
 
-.PHONY: travis_push
-travis_push::
+.PHONY: ci_push
+ci_push::
 	$(MAKE) banner
 	$(MAKE) ensure
-ifeq ($(TRAVIS_BRANCH),master)
+# GITHUB_HEAD_REF will be set only for forked repos,
+# so it is safe to check it and only run Pulumi if it is empty.
+ifeq ($(GITHUB_HEAD_REF),)
 	$(MAKE) build
 	./scripts/run-pulumi.sh update production
 else
 	$(MAKE) build
 endif
 
-.PHONY: travis_pull_request
-travis_pull_request::
+.PHONY: ci_pull_request
+ci_pull_request::
 	$(MAKE) banner
 	$(MAKE) ensure
-ifeq ($(TRAVIS_BRANCH),master)
+# GITHUB_HEAD_REF will be set only for forked repos,
+# so it is safe to check it and only run Pulumi if it is empty.
+ifeq ($(GITHUB_HEAD_REF),)
 	$(MAKE) build
 	./scripts/run-pulumi.sh preview production
 else

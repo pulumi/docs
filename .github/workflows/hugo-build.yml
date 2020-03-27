@@ -1,30 +1,50 @@
 name: Build site with Hugo
-on: [pull_request, push]
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+  schedule:
+    # * is a special character in YAML so you have to quote this string.
+    # Run every day at 12:00AM.
+    - cron:  '0 0 * * *'
 jobs:
-  setupDeps:
-    name: Setup dependencies
+  buildSite:
+    name: Install deps and build site
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+
       - uses: actions/setup-node@v1
         with:
           node-version: '12.x'
+
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: '0.55.4'
           extended: true
+
       - name: Install Go
         uses: actions/setup-go@v1
         with:
           go-version: 1.13.x
+
       - name: Install assume-role
         run: go get -u github.com/remind101/assume-role
+
       - name: Install latest Pulumi CLI
         run: |
           curl -fsSL https://get.pulumi.com/ | bash -s
           export PATH=$PATH:$HOME/.pulumi/bin
-      - run: make travis_${GITHUB_EVENT_NAME}
+
+      - run: make ci_${GITHUB_EVENT_NAME}
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.CI_AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.CI_AWS_SECRET_ACCESS_KEY }}
+          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
         
       
       
