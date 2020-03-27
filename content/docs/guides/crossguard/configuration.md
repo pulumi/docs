@@ -15,7 +15,7 @@ menu:
 
 Configuration allows you to author flexible Policy Packs that can be reused across your entire organization. As an organization administrator, you can use a single Policy Pack yet vary configuration (e.g. enforcement level, the allowed instance types, cost allowances, etc.) from one Policy Group to the next. For example, you may have a Policy Group for your non-production stacks that allow smaller instance types, while your Production Policy Group allows for use of large instance types.
 
-Configuration schema defined using per policy, and then the actual configuration can be set via a form in the Pulumi Console or using a JSON file.
+Configuration schema is defined per policy, and then the actual configuration can be set via a form in the Pulumi Console or using a JSON file.
 
 Configuration is currently supported for the TypeScript and JavaScript Policy SDKs. Python support for configuration is [coming soon](https://github.com/pulumi/pulumi-policy/issues/210).
 
