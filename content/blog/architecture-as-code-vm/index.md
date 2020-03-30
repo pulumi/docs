@@ -25,7 +25,7 @@ $ mkdir virtual_machine
 $ pulumi new https://github.com/pulumi/examples/tree/master/aws-ts-ec2-provisioners
 ```
 
-Follow the instructions to create an OpenSSH keypair and set them as secrets, we'll need them to log into and provision the VM. Let's take a look at the code. The first part configures the VM with the OpenSSH keys that we stored as secrets in the Pulumi configuration file (Pulumi.dev.yaml). 
+Follow the instructions to create an OpenSSH keypair and set them as secrets, we'll need them to log into and provision the VM. Let's take a look at the code. The first part configures the VM with the OpenSSH keys that we stored as secrets in the Pulumi configuration file (Pulumi.dev.yaml).
 
 The following part defines a security group that allows us to ssh via port 22 and receive requests on port 80.
 
@@ -57,9 +57,9 @@ const secgrp = new aws.ec2.SecurityGroup("secgrp", {
    ],
 });
 ```
- 
+
 The code block below selects the AWS AMI and creates an EC2 instance with the OpenSSH keypair and security group with ingress and egress rules configured.
- 
+
 ```
 // Get the AMI.
 const amiId = aws.getAmi({
@@ -70,20 +70,20 @@ const amiId = aws.getAmi({
        values: ["amzn2-ami-hvm-2.0.????????-x86_64-gp2"],
    }],
 }, { async: true }).then(ami => ami.id);
- 
+
 // Create an EC2 server that we'll then provision stuff onto.
 const size = "t2.micro";
 if (!keyName) {
    const key = new aws.ec2.KeyPair("key", { publicKey });
    keyName = key.keyName;
 }
- 
+
 const server = new aws.ec2.Instance("server", {
    instanceType: size,
    ami: amiId,
    keyName: keyName,
    vpcSecurityGroupIds: [ secgrp.id ],
- 
+
 });
 ```
  
@@ -98,7 +98,7 @@ const ebsvolume = new aws.ebs.Volume("vm", {
        Name: "vm_volume",
    },
 });
- 
+
 // Attach storage to the virtual machine.
 const ebsAtt = new aws.ec2.VolumeAttachment("ebsAtt", {
    deviceName: "/dev/sdh",
@@ -144,21 +144,21 @@ export class Provisioner<T, U> extends pulumi.dynamic.Resource {
        super(provider, name, { dep: props.dep, result: null }, opts);
    }
 }
- 
+
 export interface ProvisionerProperties<T, U> {
    dep: pulumi.Input<T>;
    onCreate: (dep: pulumi.Unwrap<T>) => Promise<pulumi.Unwrap<U>>;
 }
- 
+
 interface State<T, U> {
    dep: pulumi.Unwrap<T>;
    result: pulumi.Unwrap<U>;
 }
 ```
 
-This example creates two interfaces using the provisioner. The first is a `copyFile` function that lets us copy the configuration files to the virtual machine. The second interface is the `runCommand` function, which runs commands on the virtual machine. Underlying both functions is the 'connToSsh2' function that opens the ssh connection to copy files via scp and to execute commands. When you run `pulumi up` the example writes a small configuration file on the virtual machine then runs 'cat' to print the configuration file to stdout. 
+This example creates two interfaces using the provisioner. The first is a `copyFile` function that lets us copy the configuration files to the virtual machine. The second interface is the `runCommand` function, which runs commands on the virtual machine. Underlying both functions is the 'connToSsh2' function that opens the ssh connection to copy files via scp and to execute commands. When you run `pulumi up` the example writes a small configuration file on the virtual machine then runs 'cat' to print the configuration file to stdout.
 
-# Installing PostgreSQL
+## Installing PostgreSQL
 
 Let's modify the example to install and configure PostgreSQL. First, create a directory to hold the installation script and configuration files.
 
@@ -175,13 +175,13 @@ Add the following files to the postgres directory. The postgres.conf file is a b
 # PostgreSQL configuration file
 # -----------------------------
 #
- 
+
 #------------------------------------------------------------------------------
 # CONNECTIONS AND AUTHENTICATION
 #------------------------------------------------------------------------------
- 
+
 # - Connection Settings -
- 
+
 listen_addresses = '*'      # what IP address(es) to listen on;
                    # comma-separated list of addresses;
                    # defaults to 'localhost'; use '*' for all
@@ -193,7 +193,7 @@ port = 5432             # (change requires restart)
 # pg_hba.conf
 
 # TYPE  DATABASE        USER            ADDRESS                 METHOD
- 
+
 # "local" is for Unix domain socket connections only
 local   all             all                                     trust
 # IPv4 local connections:
@@ -207,15 +207,15 @@ Finally, the postgres_install.sh is a bash script that installs Postgres with th
 
 ```bash
 #!/bin/bash
- 
+
 # This script installs and configures PostgreSQL
 sudo yum -y install postgresql postgresql-server postgresql-devel postgresql-contrib postgresql-docs
 sudo postgresql-setup initdb
- 
+
 # Copy configuration files
 sudo cp -f ./pg_hba.conf /var/lib/pgsql/data/pg_hba.conf
 sudo cp -f ./postgresql.conf /var/lib/pgsql/data/postgresql.conf
- 
+
 # Start postgres
 sudo service postgresql start
 ```
@@ -229,24 +229,24 @@ const cpConf = new provisioners.CopyFile("postgres_conf", {
    src: "./postgres/",
    dest: "./",
 }, { dependsOn: server });
- 
+
 // Execute a basic command on our server.
 const chmodInstall = new provisioners.RemoteExec("chmod-install", {
    conn,
    command: "chmod 755 postgres_install.sh ",
 }, { dependsOn: cpConf });
- 
+
 // Execute a basic command on our server.
 const installPgsql = new provisioners.RemoteExec("pg_install", {
    conn,
    command: "./postgres_install.sh ",
 }, { dependsOn: chmodInstall });
- 
+
 export const publicIp = server.publicIp;
 export const publicHostName = server.publicDns;
 ```
 
-To deploy PostgreSQL on your virtual machine, run `pulumi up`. You can check the install by logging into the virtual machine and use psql to log into the database and list the tables.	
+To deploy PostgreSQL on your virtual machine, run `pulumi up`. You can check the install by logging into the virtual machine and use psql to log into the database and list the tables.
 
 ```bash
 $ ssh -i rsa ec2-user@<>
@@ -274,7 +274,7 @@ postgres=# \q
 
 ## Conclusion
 
-We can deploy and configure virtual machines programmatically using scripts and a CLI. However, updating existing instances can be onerous because it would require logging into each instance to update them. With Pulumi, we can use a dynamic provider to create a provisioner that can provision and configure an existing virtual machine. In this post, we walked through how to create a virtual machine with storage, starting from an [example on Github](https://github.com/pulumi/examples/tree/master/aws-ts-ec2-provisioners). We then installed PostgreSQL using a provisioner that copied configuration files, and an installation script then ran the script, all without creating a new virtual machine. 
+We can deploy and configure virtual machines programmatically using scripts and a CLI. However, updating existing instances can be onerous because it would require logging into each instance to update them. With Pulumi, we can use a dynamic provider to create a provisioner that can provision and configure an existing virtual machine. In this post, we walked through how to create a virtual machine with storage, starting from an [example on Github](https://github.com/pulumi/examples/tree/master/aws-ts-ec2-provisioners). We then installed PostgreSQL using a provisioner that copied configuration files, and an installation script then ran the script, all without creating a new virtual machine.
 
 We have more virtual machine examples for other cloud providers. Checkout:
 
