@@ -60,30 +60,22 @@ build:
 test:
 	./scripts/check-links.sh
 
-.PHONY: travis_push
-travis_push::
+.PHONY: ci_push
+ci_push::
 	$(MAKE) banner
 	$(MAKE) ensure
-ifeq ($(TRAVIS_BRANCH),master)
 	$(MAKE) build
 	./scripts/run-pulumi.sh update production
-else
-	$(MAKE) build
-endif
 
-.PHONY: travis_pull_request
-travis_pull_request::
+.PHONY: ci_pull_request
+ci_pull_request::
 	$(MAKE) banner
 	$(MAKE) ensure
-ifeq ($(TRAVIS_BRANCH),master)
 	$(MAKE) build
 	./scripts/run-pulumi.sh preview production
-else
-	$(MAKE) build
-endif
 
-.PHONY: travis_cron
-travis_cron::
+.PHONY: ci_cron
+ci_cron::
 	$(MAKE) banner
 	$(MAKE) ensure
 	$(MAKE) build
