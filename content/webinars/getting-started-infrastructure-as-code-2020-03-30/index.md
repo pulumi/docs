@@ -3,6 +3,8 @@
 title: "Getting Started with Infrastructure as Code"
 meta_desc: "Join us on March 30th, 2020 for a deep dive into Infrastructure as Code concepts with Pulumi engineers Paul Stack and Mikhail Shilkov."
 
+redirect_to: "/webinars/"
+
 # If the video is pre-recorded or live.
 pre_recorded: false
 
@@ -13,7 +15,7 @@ pulumi_tv: false
 preview_image: "/images/webinar/getting-started-with-iac-2020-03-30.png"
 
 # Webinars with unlisted as true will not be shown on the webinar list
-unlisted: false
+unlisted: true
 
 # Gated webinars will have a registration form and the user will need
 # to fill out the form before viewing.

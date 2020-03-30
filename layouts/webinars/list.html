@@ -17,7 +17,8 @@
 
 {{ define "main" }}
     {{ $webinars := (where $.Pages "Type" "webinars") }}
-    {{ $non_pulumi_tv_webinars := (where $webinars ".Params.pulumi_tv" false)}}
+    {{ $listed_webinars := (where $webinars ".Params.unlisted" false) }}
+    {{ $non_pulumi_tv_webinars := (where $listed_webinars ".Params.pulumi_tv" false)}}
     <div class="container mx-auto">
         <div class="justify-between py-10 md:py-24 px-5 md:px-20">
             <div class="w-full">
@@ -32,7 +33,7 @@
             <div class="w-full">
                 <h2 id="pulumiTV" class="mb-8">PulumiTV</h2>
                 <ul class="list-none md:flex md:flex-wrap pl-0">
-                    {{ $pulumi_tv_webinars := (where $webinars ".Params.pulumi_tv" true)}}
+                    {{ $pulumi_tv_webinars := (where $listed_webinars ".Params.pulumi_tv" true)}}
                     {{ range (sort $pulumi_tv_webinars ".Params.main.sortable_date" "desc") }}
                         {{ partial "webinar-list-item" . }}
                     {{ end }}
