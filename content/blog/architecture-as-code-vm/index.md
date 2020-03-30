@@ -60,7 +60,7 @@ const secgrp = new aws.ec2.SecurityGroup("secgrp", {
 
 The code block below selects the AWS AMI and creates an EC2 instance with the OpenSSH keypair and security group with ingress and egress rules configured.
 
-```
+```ts
 // Get the AMI.
 const amiId = aws.getAmi({
    owners: ["amazon"],
@@ -246,7 +246,7 @@ export const publicIp = server.publicIp;
 export const publicHostName = server.publicDns;
 ```
 
-To deploy PostgreSQL on your virtual machine, run `pulumi up`. You can check the install by logging into the virtual machine and use psql to log into the database and list the tables.
+Note that the `dependsOn` parameter determines the sequence of deployment steps. This ensures that each part is available to the provisioner at that step. To deploy PostgreSQL on your virtual machine, run `pulumi up`. You can check the install by logging into the virtual machine and use psql to log into the database and list the tables.
 
 ```bash
 $ ssh -i rsa ec2-user@<>
