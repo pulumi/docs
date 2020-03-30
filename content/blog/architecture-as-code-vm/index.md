@@ -249,7 +249,7 @@ export const publicHostName = server.publicDns;
 Note that the `dependsOn` parameter determines the sequence of deployment steps. This ensures that each part is available to the provisioner at that step. To deploy PostgreSQL on your virtual machine, run `pulumi up`. You can check the install by logging into the virtual machine and use psql to log into the database and list the tables.
 
 ```bash
-$ ssh -i rsa ec2-user@<>
+$ ssh -i rsa ec2-user@$(pulumi stack output publicHostName)
 
 # In the virtual machine
 $ sudo su - postgres
