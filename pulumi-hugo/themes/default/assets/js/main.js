@@ -58,7 +58,7 @@ function generateOnThisPage() {
                     if (!active && heading.element.offset().top >= window.scrollY) {
                         active = heading;
                     }
-                    heading.listItem.toggleClass("font-bold", heading === active);
+                    heading.listItem.toggleClass("active", heading === active);
                 }
             }
 

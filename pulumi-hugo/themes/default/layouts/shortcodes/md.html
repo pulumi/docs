@@ -5,5 +5,5 @@
     whether it ends up being within HTML tags or not.
     See https://gohugo.io/content-management/shortcodes/#shortcodes-with-markdown.
 */}}
-{{ $_hugo_config := `{ "version": 1 }` }}
-{{ .Inner }}
+{{- $_hugo_config := `{ "version": 1 }` -}}
+{{- .Inner -}}
