@@ -2,7 +2,7 @@
 title: "Architecture as Code: Virtual Machines"
 date: 2020-03-31
 meta_desc: "Provisioning virtual machines and redeploying applications on existing instances using Pulumi"
-meta_image: meta.png
+meta_image: vm.png
 authors:
     - sophia-parafina
 tags:
@@ -113,7 +113,7 @@ Now we have a virtual machine that can receive HTTP and HTTPS requests and allow
 
 Provisioning a VM when it's created by running user-supplied scripts is straightforward. For example, AWS EC2 instances have a userData parameter that allows you to specify an inline script that runs when the instance starts. But what if you need to copy and execute scripts on the virtual machine without replacing the instance?
 
-This where you can use Pulumi’s [dynamic provider]({{< relref “/intro/concepts/programming-model/#dynamicproviders” >}})) to provision existing instances. Dynamic providers enable creating custom resource types, such as provisioners, within the source code of your Pulumi program. They let you execute arbitrary code during the deployment process. Dynamic provisioners run during resource provisioning, and enables adding custom logic to a deployment workflow during the create, read, update, or delete steps of a Pulumi program.
+This where you can use Pulumi’s [dynamic provider]({{< relref "/docs/intro/concepts/programming-model#dynamicproviders" >}})) to provision existing instances. Dynamic providers enable creating custom resource types, such as provisioners, within the source code of your Pulumi program. They let you execute arbitrary code during the deployment process. Dynamic provisioners run during resource provisioning, and enables adding custom logic to a deployment workflow during the create, read, update, or delete steps of a Pulumi program.
 
 Let's look at the code which creates a dynamic provisioner. In the code below, if Pulumi doesn't find the resource, it creates the resource. However, if you run `pulumi up` again and the resource is already running, Pulumi uses the diff method to replace the resource.
 
@@ -278,9 +278,9 @@ We can deploy and configure virtual machines programmatically using scripts and 
 
 We have more virtual machine examples for other cloud providers. Checkout:
 
-[Azure VM Scale Sets](https://github.com/pulumi/examples/tree/master/azure-py-vm-scaleset)
-[Pulumi DigitalOcean Droplets](https://github.com/pulumi/examples/tree/master/digitalocean-ts-loadbalanced-droplets)
-[GCP Nginx Server Using Compute Engine](https://github.com/pulumi/examples/tree/master/gcp-py-instance-nginx)
-[VSphere](https://github.com/pulumi/pulumi-vsphere/tree/master/examples/)
+- [Azure VM Scale Sets](https://github.com/pulumi/examples/tree/master/azure-py-vm-scaleset)
+- [Pulumi DigitalOcean Droplets](https://github.com/pulumi/examples/tree/master/digitalocean-ts-loadbalanced-droplets)
+- [GCP Nginx Server Using Compute Engine](https://github.com/pulumi/examples/tree/master/gcp-py-instance-nginx)
+- [VSphere](https://github.com/pulumi/pulumi-vsphere/tree/master/examples/)
 
 In our next installment, we'll go into detail about deploying applications on serverless infrastructure.
