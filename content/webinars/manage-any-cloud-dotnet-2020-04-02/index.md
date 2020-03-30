@@ -1,7 +1,8 @@
 ---
 # Name of the webinar.
 title: "Managing Any Cloud with .NET"
-meta_desc: "Paul Stack and Mikhail Shilkov from Pulumi will show you how to get started mastering your preferred cloud using your favorite languages."
+meta_desc: "Pulumi engineer Mikhail Shilkov will show you how you can use C#, F#, and VB.NET to define the infrastructure for Azure, AWS, or even on-prem Kubernetes clusters."
+meta_image: "/images/webinar/manage-any-cloud-dotnet-2020-04-02.png"
 
 # If the video is pre-recorded or live.
 pre_recorded: false
@@ -51,9 +52,9 @@ main:
 
     # The webinar presenters
     presenters:
-        - name: Paul Stack
-          role: Software Engineer, Pulumi
         - name: Mikhail Shilkov
+          role: Software Engineer, Pulumi
+        - name: Paul Stack
           role: Software Engineer, Pulumi
 
     # A bullet point list containing what the user will learn during the webinar.
