@@ -86,7 +86,7 @@ const server = new aws.ec2.Instance("server", {
 
 });
 ```
- 
+
 Next, let's add storage to our virtual machine using AWS Elastic Block Storage and attach it to our EC2 instance. Add the following code after the virtual machine is created. The code creates a 10 GB volume and attaches it to our virtual machine via the `instanceId` property.
 
 ```ts
@@ -107,7 +107,7 @@ const ebsAtt = new aws.ec2.VolumeAttachment("ebsAtt", {
 });
 ```
 
-Now we have a virtual machine that can receive HTTP and HTTPS requests and allows outbound network traffic so that we can update and install software via the package manager. 
+Now we have a virtual machine that can receive HTTP and HTTPS requests and allows outbound network traffic so that we can update and install software via the package manager.
 
 ## Provisioning with Dynamic Providers
 
