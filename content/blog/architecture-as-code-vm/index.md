@@ -10,7 +10,7 @@ tags:
     - provisioning
 ---
 
-In a [previous article](https://www.pulumi.com/blog/architecture-as-code-intro/), we presented an overview of four infrastructure patterns for deploying modern applications. The article reviewed virtual machines, serverless, Kubernetes, and microservices. In this post, we'll go in-depth about virtual machines.
+In a [previous article](https://www.pulumi.com/blog/architecture-as-code-intro/), we presented an overview of four infrastructure patterns for deploying modern applications. The article reviewed virtual machines, serverless, Kubernetes, and microservices. In this post, we'll examine virtual machines in-depth.
 
 <!--more-->
 
