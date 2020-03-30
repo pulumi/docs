@@ -55,6 +55,9 @@ module.exports = {
                 }),
                 "./content/docs/reference/pkg/nodejs/pulumi/aws/**/*.md",
                 "./content/docs/reference/pkg/python/pulumi/**/*.md",
+                "./content/docs/reference/pkg/aws/s3/bucket.md",
+                "./content/docs/reference/pkg/aws/cognito/userpool.md",
+                "./content/docs/reference/pkg/_index.md",
             ],
 
             // Whitelist specific classes that were being removed.
