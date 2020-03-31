@@ -24,7 +24,7 @@ Configuration is currently supported for the Node.js Policy SDK (TypeScript/Java
 
 ### Enforcement Level
 
-The Policy SDK will automatically make the enforcement levels of all policies configurable. You can configure the enforcement level for all policies in a Policy Pack or configure it for each individual policy level. The top level enforcement level under `all` will override the existing enforcement levels of all policies in the Policy Pack. A configured enforcement level for a specific policy will override the policy's existing enforcement level as well as the top level configured enforcement level.
+The Policy SDK will automatically make the enforcement levels of all policies configurable. You can configure the enforcement level for all policies in a Policy Pack or configure it for each individual policy. The top-level enforcement level under `all` will override the existing enforcement levels of all policies in the Policy Pack. A configured enforcement level for a specific policy will override the policy's existing enforcement level as well as the top-level configured enforcement level.
 
 In the example configuration below, all policies in the Policy Pack would be `disabled` with the exception of the `a-policy` policy, which would be `mandatory`.
 
@@ -79,7 +79,7 @@ const examplePolicy: ResourceValidationPolicy = {
 }
 ```
 
-The schema in the above example includes an optional property. If the property value is not set, a reasonable message is set from within the `validateResource` function. It's generally better to provide policies that has reasonable defaults and can run without setting any configuration values. Configuration should be used to change behavior or opt-in to more specific checks in the case that a specific configuration property is set. For example, a policy that checks encryption is enabled can be done without any configuration, but an optional configuration property for an "id of the encryption key" can be specified to further enforce that a specific key is being used for the encryption.
+The schema in the above example includes an optional property. If the property value is not set, a reasonable message is set from within the `validateResource` function. It's generally better to provide policies that have reasonable defaults and can run without setting any configuration values. Configuration should be used to change behavior or opt-in to more specific checks in the case that a specific configuration property is set. For example, a policy that checks encryption is enabled can be done without any configuration, but an optional configuration property for an "id of the encryption key" can be specified to further enforce that a specific key is being used for the encryption.
 
 #### Required Properties
 
@@ -100,7 +100,8 @@ const examplePolicy: ResourceValidationPolicy = {
         required: ["message"],
     },
     validateResource: validateTypedResource(aws.s3.Bucket, (_, args, reportViolation) => {
-        // We no longer need to add the ? in getConfig function, since the message field is required.
+        // The `?` after the `message` property in the type specified to the `getConfig` function is no
+        // longer necessary since `message` is required and will always have a value.
         const config = args.getConfig<{ message: string }>();
         reportViolation("Here is the configurable message: " + config.message);
     }),
@@ -115,10 +116,8 @@ With the above example Policy, we can write the following configuration to a `co
 
 ```json
 {
-    "all": {
-        "enforcementLevel": "mandatory"
-    },
-    "example-policy-with-schema":{
+    "all": "mandatory",
+    "example-policy-with-schema": {
         "message": "Here is my message."
     }
 }
