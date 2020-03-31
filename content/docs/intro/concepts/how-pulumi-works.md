@@ -107,7 +107,7 @@ In this case, since the last deployed state has no resources, the engine determi
 
 As the engine was creating the `media-bucket` bucket, the language host continued to execute the Pulumi program. This caused another resource registration to be generated (for `content-bucket`). Since there is no dependency between these two buckets, the engine is able to process that request in parallel with the creation of `media-bucket`.
 
-After both operations have completed, the language host exists as the program has finished running. Then the engine and resource providers shutdown. The state for mystack now looks like the following:
+After both operations have completed, the language host exits as the program has finished running. Then the engine and resource providers shutdown. The state for mystack now looks like the following:
 
 ```
 stack mystack
