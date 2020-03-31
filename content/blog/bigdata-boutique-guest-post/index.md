@@ -18,8 +18,6 @@ tags:
 
 BigData Boutique can rapidly iterate through infrastructure configurations based on client requirements. Real programming languages significantly shortens the inner dev loop because developers and operators can use modern programming tools such as IDEs, test frameworks, and CI/CD. By increasing the velocity of infrastructure deployment across many clouds with repeatable and versioned code, Pulumi enables companies to build efficient revenue centers for their business.
 
--
-
 ### How Pulumi Drives Our Elasticsearch Capacity Planning and Cost Optimization Service
 
 *Capacity Planning and Cost Optimization of Elasticsearch clusters requires a special level of expertise and automation. Here is how we use Pulumi to launch long-running benchmarks to correctly identify the right configuration for our customers’ Big Data clusters.*
