@@ -39,11 +39,22 @@ In the example configuration below, all policies in the Policy Pack would be `di
 }
 ```
 
+As a convenience, when only configuring an enforcement level for a policy, its value can be specified directly. The above example could therefore also be written as:
+
+```json
+{
+    "all": "disabled",
+    "a-policy": "mandatory"
+}
+```
+
 ### Custom Configuration
 
 Policy authors can denote the schema for a particular Policy's configuration using the `configSchema` field. The configuration schema uses [JSON Schema](https://json-schema.org/) to describe the acceptable configuration for a Policy.
 
-The below example shows a  `ResourceValidationPolicy` that has a required `message` field, which must be between five and fifty characters. Then, from within the `validateResource` function the configuration value can be accessed using `args.getConfig`.
+At the top level, the `configSchema` for each Policy has only the `properties` and `required` fields. Within the `properties` field, you may use the entire breadth of [validations keywords provided by the JSON Schema](https://json-schema.org/draft/2019-09/json-schema-validation.html#rfc.section.6). Validation keywords are fields like `minLength` and `maxLength` in the below example.
+
+The below example shows a  `ResourceValidationPolicy` that has an optional `message` field, which must be between five and fifty characters. Then, from within the `validateResource` function the configuration value can be accessed using `args.getConfig`. All property fields are optional by default.  
 
 ```typescript
 const examplePolicy: ResourceValidationPolicy = {
@@ -55,27 +66,48 @@ const examplePolicy: ResourceValidationPolicy = {
                 type: "string",
                 minLength: 5,
                 maxLength: 50,
-                default: "This is a configurable message."
+            }
+        },
+    },
+    validateResource: validateTypedResource(aws.s3.Bucket, (_, args, reportViolation) => {
+        const config = args.getConfig<{ message?: string }>();
+        if (!config.message) {
+            config.message = "Setting reasonable defaults is recommended!";
+        }
+        reportViolation("Here is the configurable message: " + config.message);
+    }),
+}
+```
+
+The schema in the above example includes an optional property. If the property value is not set, a reasonable message is set from within the `validateResource` function. It's generally better to provide policies that has reasonable defaults and can run without setting any configuration values. Configuration should be used to change behavior or opt-in to more specific checks in the case that a specific configuration property is set. For example, a policy that checks encryption is enabled can be done without any configuration, but an optional configuration property for an "id of the encryption key" can be specified to further enforce that a specific key is being used for the encryption.
+
+#### Required Properties
+
+In some cases, you may need to require a property be set via configuration. This can be done by adding the property to the `required` list as shown in the example below.
+
+```typescript
+const examplePolicy: ResourceValidationPolicy = {
+    name: "example-policy-with-schema",
+    ...
+    configSchema: {
+        properties: {
+            message: {
+                type: "string",
+                minLength: 5,
+                maxLength: 50,
             }
         },
         required: ["message"],
     },
     validateResource: validateTypedResource(aws.s3.Bucket, (_, args, reportViolation) => {
+        // We no longer need to add the ? in getConfig function, since the message field is required.
         const config = args.getConfig<{ message: string }>();
         reportViolation("Here is the configurable message: " + config.message);
     }),
 }
 ```
 
-At the top level, the `configSchema` for each Policy has only the `properties` and `required` fields. Within the `properties` field, you may use the entire breadth of [validations keywords provided by the JSON Schema](https://json-schema.org/draft/2019-09/json-schema-validation.html#rfc.section.6). Validation keywords are fields like `minLength` and `maxLength` in the above example.
-
-## Configuring a Policy Pack
-
-You can configure a Policy Pack via the `pulumi` CLI or the Pulumi Console.
-
-### Using the Pulumi CLI
-
-#### Running Policy Packs Locally
+## Running Policy Packs Locally
 
 If you are using the `pulumi` CLI to run local Policy Packs, you can store the configuration in a file and then use a flag to pass the file to the CLI.
 
@@ -98,6 +130,22 @@ To run this Policy Pack locally with the configuration, you can run:
 $ pulumi preview --policy-pack <path-to-policy-pack-directory> --policy-pack-config <path-to-policy-pack-config-file>
 ```
 
+## Using the Pulumi Console
+
+Configuration can also be added, edited and enabled via the Pulumi Console. Once a Policy Pack has been [published to the Pulumi Console]({{< relref "/docs/get-started/crossguard/enforcing-a-policy-pack" >}}), organization administrators can enable the pack with configuration on a Policy Group using the console.
+
+On a Policy Group page, you can click the ADD button to enable a new Policy Pack.
+
+![Enable Policy Pack](/images/docs/guides/crossguard/enable-policy-pack.jpg)
+
+If the selected Policy Pack has configuration, a form will appear for you to enter the configuration. The form provides automatic validation to ensure the supplied configuration meets the configuration schema.
+
+![Policy Pack Configuration Form](/images/docs/guides/crossguard/config-dialog.jpg)
+
+### Using the CLI with the Console
+
+The `pulumi` CLI can also be used to interact with Policy Packs enforced by the Pulumi Console. The CLI allows you to both validate configuration and enable Policy Packs with configuration files.
+
 #### Validating Configuration
 
 If the Policy Pack has already been [published to the Pulumi Console]({{< relref "/docs/get-started/crossguard/enforcing-a-policy-pack" >}}), you can validate the configuration using the `pulumi policy validate-config` command.
@@ -119,15 +167,3 @@ If you would like to enable it for a specific Policy Group, you can specify the 
 ```bash
 $ pulumi policy enable <org-name>/<policy-pack-name> <version> --config <path-to-policy-pack-config-file> --policy-group <policy-group-name>
 ```
-
-### Using the Pulumi Console
-
-Configuration can also be added, edited and enabled via the Pulumi Console. Once a Policy Pack has been [published to the Pulumi Console]({{< relref "/docs/get-started/crossguard/enforcing-a-policy-pack" >}}), organization administrators can enable the pack with configuration on a Policy Group using the console.
-
-On a Policy Group page, you can click the ADD button to enable a new Policy Pack.
-
-![Enable Policy Pack](/images/docs/guides/crossguard/enable-policy-pack.jpg)
-
-If the selected Policy Pack has configuration, a form will appear for you to enter the configuration. The form provides automatic validation to ensure the supplied configuration meets the configuration schema.
-
-![Policy Pack Configuration Form](/images/docs/guides/crossguard/config-dialog.jpg)
