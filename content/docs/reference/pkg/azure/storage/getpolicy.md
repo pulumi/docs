@@ -33,7 +33,9 @@ Use this data source to access information about an existing Storage Management 
 
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetPolicy </span><span class="p">{</span><span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Storage.GetPolicyResult.html">GetPolicyResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Storage.Inputs.GetPolicyArgs.html">GetPolicyArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">Pulumi.InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">}</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetPolicy </span><span class="p">{</span><span class="k">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Storage.GetPolicyResult.html">GetPolicyResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Storage.Inputs.GetPolicyArgs.html">GetPolicyArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">Pulumi.InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+}</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -259,7 +261,7 @@ The following output properties are available:
 
 ## Supporting Types
 
-#### Get&lt;wbr&gt;Policy&lt;wbr&gt;Rule
+<h4>Get<wbr>Policy<wbr>Rule</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetPolicyRule">output</a> API doc for this type.
 {{% /choosable %}}
@@ -446,7 +448,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Policy&lt;wbr&gt;Rule&lt;wbr&gt;Action
+<h4>Get<wbr>Policy<wbr>Rule<wbr>Action</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetPolicyRuleAction">output</a> API doc for this type.
 {{% /choosable %}}
@@ -561,7 +563,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Policy&lt;wbr&gt;Rule&lt;wbr&gt;Action&lt;wbr&gt;Base&lt;wbr&gt;Blob
+<h4>Get<wbr>Policy<wbr>Rule<wbr>Action<wbr>Base<wbr>Blob</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetPolicyRuleActionBaseBlob">output</a> API doc for this type.
 {{% /choosable %}}
@@ -712,7 +714,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Policy&lt;wbr&gt;Rule&lt;wbr&gt;Action&lt;wbr&gt;Snapshot
+<h4>Get<wbr>Policy<wbr>Rule<wbr>Action<wbr>Snapshot</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetPolicyRuleActionSnapshot">output</a> API doc for this type.
 {{% /choosable %}}
@@ -791,7 +793,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Policy&lt;wbr&gt;Rule&lt;wbr&gt;Filter
+<h4>Get<wbr>Policy<wbr>Rule<wbr>Filter</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetPolicyRuleFilter">output</a> API doc for this type.
 {{% /choosable %}}

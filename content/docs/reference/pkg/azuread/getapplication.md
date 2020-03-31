@@ -48,7 +48,9 @@ export const azureAdObjectId = example.id;
 
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetApplication </span><span class="p">{</span><span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azuread/Pulumi.Azuread.GetApplicationResult.html">GetApplicationResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azuread/Pulumi.Azuread.Inputs.GetApplicationArgs.html">GetApplicationArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">Pulumi.InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">}</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetApplication </span><span class="p">{</span><span class="k">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azuread/Pulumi.Azuread.GetApplicationResult.html">GetApplicationResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azuread/Pulumi.Azuread.Inputs.GetApplicationArgs.html">GetApplicationArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">Pulumi.InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+}</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -810,7 +812,7 @@ The following output properties are available:
 
 ## Supporting Types
 
-#### Get&lt;wbr&gt;Application&lt;wbr&gt;App&lt;wbr&gt;Role
+<h4>Get<wbr>Application<wbr>App<wbr>Role</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#GetApplicationAppRole">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1069,7 +1071,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Application&lt;wbr&gt;Oauth2Permission
+<h4>Get<wbr>Application<wbr>Oauth2Permission</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azuread/types/input/#GetApplicationOauth2Permission">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#GetApplicationOauth2Permission">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1400,7 +1402,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Application&lt;wbr&gt;Required&lt;wbr&gt;Resource&lt;wbr&gt;Access
+<h4>Get<wbr>Application<wbr>Required<wbr>Resource<wbr>Access</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#GetApplicationRequiredResourceAccess">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1515,7 +1517,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Application&lt;wbr&gt;Required&lt;wbr&gt;Resource&lt;wbr&gt;Access&lt;wbr&gt;Resource&lt;wbr&gt;Access
+<h4>Get<wbr>Application<wbr>Required<wbr>Resource<wbr>Access<wbr>Resource<wbr>Access</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#GetApplicationRequiredResourceAccessResourceAccess">output</a> API doc for this type.
 {{% /choosable %}}

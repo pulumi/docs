@@ -68,7 +68,9 @@ const example = azuread.getServicePrincipal({
 
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetServicePrincipal </span><span class="p">{</span><span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azuread/Pulumi.Azuread.GetServicePrincipalResult.html">GetServicePrincipalResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azuread/Pulumi.Azuread.Inputs.GetServicePrincipalArgs.html">GetServicePrincipalArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">Pulumi.InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">}</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetServicePrincipal </span><span class="p">{</span><span class="k">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azuread/Pulumi.Azuread.GetServicePrincipalResult.html">GetServicePrincipalResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azuread/Pulumi.Azuread.Inputs.GetServicePrincipalArgs.html">GetServicePrincipalArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">Pulumi.InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+}</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -498,7 +500,7 @@ The following output properties are available:
 
 ## Supporting Types
 
-#### Get&lt;wbr&gt;Service&lt;wbr&gt;Principal&lt;wbr&gt;App&lt;wbr&gt;Role
+<h4>Get<wbr>Service<wbr>Principal<wbr>App<wbr>Role</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#GetServicePrincipalAppRole">output</a> API doc for this type.
 {{% /choosable %}}
@@ -757,7 +759,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Service&lt;wbr&gt;Principal&lt;wbr&gt;Oauth2Permission
+<h4>Get<wbr>Service<wbr>Principal<wbr>Oauth2Permission</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azuread/types/input/#GetServicePrincipalOauth2Permission">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#GetServicePrincipalOauth2Permission">output</a> API doc for this type.
 {{% /choosable %}}

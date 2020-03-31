@@ -44,7 +44,9 @@ const tableName = aws.dynamodb.getTable({
 
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetTable </span><span class="p">{</span><span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Dynamodb.GetTableResult.html">GetTableResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DynamoDB.Inputs.GetTableArgs.html">GetTableArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">Pulumi.InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">}</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetTable </span><span class="p">{</span><span class="k">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Dynamodb.GetTableResult.html">GetTableResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DynamoDB.Inputs.GetTableArgs.html">GetTableArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">Pulumi.InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+}</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -842,7 +844,7 @@ The following output properties are available:
 
 ## Supporting Types
 
-#### Get&lt;wbr&gt;Table&lt;wbr&gt;Attribute
+<h4>Get<wbr>Table<wbr>Attribute</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetTableAttribute">output</a> API doc for this type.
 {{% /choosable %}}
@@ -953,7 +955,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Table&lt;wbr&gt;Global&lt;wbr&gt;Secondary&lt;wbr&gt;Index
+<h4>Get<wbr>Table<wbr>Global<wbr>Secondary<wbr>Index</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetTableGlobalSecondaryIndex">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1224,7 +1226,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Table&lt;wbr&gt;Local&lt;wbr&gt;Secondary&lt;wbr&gt;Index
+<h4>Get<wbr>Table<wbr>Local<wbr>Secondary<wbr>Index</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetTableLocalSecondaryIndex">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1399,7 +1401,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Table&lt;wbr&gt;Point&lt;wbr&gt;In&lt;wbr&gt;Time&lt;wbr&gt;Recovery
+<h4>Get<wbr>Table<wbr>Point<wbr>In<wbr>Time<wbr>Recovery</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetTablePointInTimeRecovery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1474,7 +1476,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Table&lt;wbr&gt;Server&lt;wbr&gt;Side&lt;wbr&gt;Encryption
+<h4>Get<wbr>Table<wbr>Server<wbr>Side<wbr>Encryption</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetTableServerSideEncryption">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetTableServerSideEncryption">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1581,7 +1583,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Table&lt;wbr&gt;Ttl
+<h4>Get<wbr>Table<wbr>Ttl</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetTableTtl">output</a> API doc for this type.
 {{% /choosable %}}

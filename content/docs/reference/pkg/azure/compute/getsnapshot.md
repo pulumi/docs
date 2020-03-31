@@ -45,7 +45,9 @@ const example = azure.compute.getSnapshot({
 
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetSnapshot </span><span class="p">{</span><span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.GetSnapshotResult.html">GetSnapshotResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Inputs.GetSnapshotArgs.html">GetSnapshotArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">Pulumi.InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">}</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetSnapshot </span><span class="p">{</span><span class="k">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.GetSnapshotResult.html">GetSnapshotResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Inputs.GetSnapshotArgs.html">GetSnapshotArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">Pulumi.InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+}</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -575,7 +577,7 @@ The following output properties are available:
 
 ## Supporting Types
 
-#### Get&lt;wbr&gt;Snapshot&lt;wbr&gt;Encryption&lt;wbr&gt;Setting
+<h4>Get<wbr>Snapshot<wbr>Encryption<wbr>Setting</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetSnapshotEncryptionSetting">output</a> API doc for this type.
 {{% /choosable %}}
@@ -714,7 +716,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Snapshot&lt;wbr&gt;Encryption&lt;wbr&gt;Setting&lt;wbr&gt;Disk&lt;wbr&gt;Encryption&lt;wbr&gt;Key
+<h4>Get<wbr>Snapshot<wbr>Encryption<wbr>Setting<wbr>Disk<wbr>Encryption<wbr>Key</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetSnapshotEncryptionSettingDiskEncryptionKey">output</a> API doc for this type.
 {{% /choosable %}}
@@ -821,7 +823,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Snapshot&lt;wbr&gt;Encryption&lt;wbr&gt;Setting&lt;wbr&gt;Key&lt;wbr&gt;Encryption&lt;wbr&gt;Key
+<h4>Get<wbr>Snapshot<wbr>Encryption<wbr>Setting<wbr>Key<wbr>Encryption<wbr>Key</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetSnapshotEncryptionSettingKeyEncryptionKey">output</a> API doc for this type.
 {{% /choosable %}}

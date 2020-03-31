@@ -49,7 +49,9 @@ const appserver = gcp.compute.getInstance({
 
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetInstance </span><span class="p">{</span><span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.GetInstanceResult.html">GetInstanceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.GetInstanceArgs.html">GetInstanceArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">Pulumi.InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">}</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetInstance </span><span class="p">{</span><span class="k">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.GetInstanceResult.html">GetInstanceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.GetInstanceArgs.html">GetInstanceArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">Pulumi.InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+}</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -1411,7 +1413,7 @@ The following output properties are available:
 
 ## Supporting Types
 
-#### Get&lt;wbr&gt;Instance&lt;wbr&gt;Attached&lt;wbr&gt;Disk
+<h4>Get<wbr>Instance<wbr>Attached<wbr>Disk</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetInstanceAttachedDisk">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1662,7 +1664,7 @@ under `/dev/disk/by-id/`
 
 
 
-#### Get&lt;wbr&gt;Instance&lt;wbr&gt;Boot&lt;wbr&gt;Disk
+<h4>Get<wbr>Instance<wbr>Boot<wbr>Disk</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetInstanceBootDisk">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1989,7 +1991,7 @@ Structure is documented below.
 
 
 
-#### Get&lt;wbr&gt;Instance&lt;wbr&gt;Boot&lt;wbr&gt;Disk&lt;wbr&gt;Initialize&lt;wbr&gt;Param
+<h4>Get<wbr>Instance<wbr>Boot<wbr>Disk<wbr>Initialize<wbr>Param</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetInstanceBootDiskInitializeParam">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2176,7 +2178,7 @@ Structure is documented below.
 
 
 
-#### Get&lt;wbr&gt;Instance&lt;wbr&gt;Guest&lt;wbr&gt;Accelerator
+<h4>Get<wbr>Instance<wbr>Guest<wbr>Accelerator</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetInstanceGuestAccelerator">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2291,7 +2293,7 @@ Structure is documented below.
 
 
 
-#### Get&lt;wbr&gt;Instance&lt;wbr&gt;Network&lt;wbr&gt;Interface
+<h4>Get<wbr>Instance<wbr>Network<wbr>Interface</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetInstanceNetworkInterface">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2590,7 +2592,7 @@ instance can be accessed via the Internet. Structure documented below.
 
 
 
-#### Get&lt;wbr&gt;Instance&lt;wbr&gt;Network&lt;wbr&gt;Interface&lt;wbr&gt;Access&lt;wbr&gt;Config
+<h4>Get<wbr>Instance<wbr>Network<wbr>Interface<wbr>Access<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetInstanceNetworkInterfaceAccessConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2745,7 +2747,7 @@ network ip.
 
 
 
-#### Get&lt;wbr&gt;Instance&lt;wbr&gt;Network&lt;wbr&gt;Interface&lt;wbr&gt;Alias&lt;wbr&gt;Ip&lt;wbr&gt;Range
+<h4>Get<wbr>Instance<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetInstanceNetworkInterfaceAliasIpRange">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2868,7 +2870,7 @@ range.
 
 
 
-#### Get&lt;wbr&gt;Instance&lt;wbr&gt;Scheduling
+<h4>Get<wbr>Instance<wbr>Scheduling</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetInstanceScheduling">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3063,7 +3065,7 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
 
 
 
-#### Get&lt;wbr&gt;Instance&lt;wbr&gt;Scheduling&lt;wbr&gt;Node&lt;wbr&gt;Affinity
+<h4>Get<wbr>Instance<wbr>Scheduling<wbr>Node<wbr>Affinity</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetInstanceSchedulingNodeAffinity">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3202,7 +3204,7 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
 
 
 
-#### Get&lt;wbr&gt;Instance&lt;wbr&gt;Scratch&lt;wbr&gt;Disk
+<h4>Get<wbr>Instance<wbr>Scratch<wbr>Disk</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetInstanceScratchDisk">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3281,7 +3283,7 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
 
 
 
-#### Get&lt;wbr&gt;Instance&lt;wbr&gt;Service&lt;wbr&gt;Account
+<h4>Get<wbr>Instance<wbr>Service<wbr>Account</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetInstanceServiceAccount">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3396,7 +3398,7 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
 
 
 
-#### Get&lt;wbr&gt;Instance&lt;wbr&gt;Shielded&lt;wbr&gt;Instance&lt;wbr&gt;Config
+<h4>Get<wbr>Instance<wbr>Shielded<wbr>Instance<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetInstanceShieldedInstanceConfig">output</a> API doc for this type.
 {{% /choosable %}}

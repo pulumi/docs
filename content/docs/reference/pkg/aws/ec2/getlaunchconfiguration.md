@@ -44,7 +44,9 @@ const ubuntu = aws.ec2.getLaunchConfiguration({
 
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetLaunchConfiguration </span><span class="p">{</span><span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.GetLaunchConfigurationResult.html">GetLaunchConfigurationResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.GetLaunchConfigurationArgs.html">GetLaunchConfigurationArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">Pulumi.InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">}</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetLaunchConfiguration </span><span class="p">{</span><span class="k">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.GetLaunchConfigurationResult.html">GetLaunchConfigurationResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.GetLaunchConfigurationArgs.html">GetLaunchConfigurationArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">Pulumi.InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+}</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -850,7 +852,7 @@ The following output properties are available:
 
 ## Supporting Types
 
-#### Get&lt;wbr&gt;Launch&lt;wbr&gt;Configuration&lt;wbr&gt;Ebs&lt;wbr&gt;Block&lt;wbr&gt;Device
+<h4>Get<wbr>Launch<wbr>Configuration<wbr>Ebs<wbr>Block<wbr>Device</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLaunchConfigurationEbsBlockDevice">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1145,7 +1147,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Launch&lt;wbr&gt;Configuration&lt;wbr&gt;Ephemeral&lt;wbr&gt;Block&lt;wbr&gt;Device
+<h4>Get<wbr>Launch<wbr>Configuration<wbr>Ephemeral<wbr>Block<wbr>Device</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLaunchConfigurationEphemeralBlockDevice">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1260,7 +1262,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Launch&lt;wbr&gt;Configuration&lt;wbr&gt;Root&lt;wbr&gt;Block&lt;wbr&gt;Device
+<h4>Get<wbr>Launch<wbr>Configuration<wbr>Root<wbr>Block<wbr>Device</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLaunchConfigurationRootBlockDevice">output</a> API doc for this type.
 {{% /choosable %}}

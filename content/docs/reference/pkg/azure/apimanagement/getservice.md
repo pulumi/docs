@@ -33,7 +33,9 @@ Use this data source to access information about an existing API Management Serv
 
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetService </span><span class="p">{</span><span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Apimanagement.GetServiceResult.html">GetServiceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ApiManagement.Inputs.GetServiceArgs.html">GetServiceArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">Pulumi.InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">}</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetService </span><span class="p">{</span><span class="k">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Apimanagement.GetServiceResult.html">GetServiceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ApiManagement.Inputs.GetServiceArgs.html">GetServiceArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">Pulumi.InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+}</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -795,7 +797,7 @@ The following output properties are available:
 
 ## Supporting Types
 
-#### Get&lt;wbr&gt;Service&lt;wbr&gt;Additional&lt;wbr&gt;Location
+<h4>Get<wbr>Service<wbr>Additional<wbr>Location</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetServiceAdditionalLocation">output</a> API doc for this type.
 {{% /choosable %}}
@@ -946,7 +948,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Service&lt;wbr&gt;Hostname&lt;wbr&gt;Configuration
+<h4>Get<wbr>Service<wbr>Hostname<wbr>Configuration</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetServiceHostnameConfiguration">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1133,7 +1135,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Service&lt;wbr&gt;Hostname&lt;wbr&gt;Configuration&lt;wbr&gt;Management
+<h4>Get<wbr>Service<wbr>Hostname<wbr>Configuration<wbr>Management</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetServiceHostnameConfigurationManagement">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1284,7 +1286,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Service&lt;wbr&gt;Hostname&lt;wbr&gt;Configuration&lt;wbr&gt;Portal
+<h4>Get<wbr>Service<wbr>Hostname<wbr>Configuration<wbr>Portal</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetServiceHostnameConfigurationPortal">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1435,7 +1437,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Service&lt;wbr&gt;Hostname&lt;wbr&gt;Configuration&lt;wbr&gt;Proxy
+<h4>Get<wbr>Service<wbr>Hostname<wbr>Configuration<wbr>Proxy</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetServiceHostnameConfigurationProxy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1622,7 +1624,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Service&lt;wbr&gt;Hostname&lt;wbr&gt;Configuration&lt;wbr&gt;Scm
+<h4>Get<wbr>Service<wbr>Hostname<wbr>Configuration<wbr>Scm</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetServiceHostnameConfigurationScm">output</a> API doc for this type.
 {{% /choosable %}}

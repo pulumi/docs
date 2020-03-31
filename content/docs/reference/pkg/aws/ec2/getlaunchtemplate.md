@@ -58,7 +58,9 @@ const test = aws.ec2.getLaunchTemplate({
 
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetLaunchTemplate </span><span class="p">{</span><span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.GetLaunchTemplateResult.html">GetLaunchTemplateResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.GetLaunchTemplateArgs.html">GetLaunchTemplateArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">Pulumi.InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">}</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetLaunchTemplate </span><span class="p">{</span><span class="k">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.GetLaunchTemplateResult.html">GetLaunchTemplateResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.GetLaunchTemplateArgs.html">GetLaunchTemplateArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">Pulumi.InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+}</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -1320,7 +1322,7 @@ Interfaces below for more details.
 
 ## Supporting Types
 
-#### Get&lt;wbr&gt;Launch&lt;wbr&gt;Template&lt;wbr&gt;Block&lt;wbr&gt;Device&lt;wbr&gt;Mapping
+<h4>Get<wbr>Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLaunchTemplateBlockDeviceMapping">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1491,7 +1493,7 @@ Interfaces below for more details.
 
 
 
-#### Get&lt;wbr&gt;Launch&lt;wbr&gt;Template&lt;wbr&gt;Block&lt;wbr&gt;Device&lt;wbr&gt;Mapping&lt;wbr&gt;Eb
+<h4>Get<wbr>Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping<wbr>Eb</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLaunchTemplateBlockDeviceMappingEb">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1758,7 +1760,7 @@ Interfaces below for more details.
 
 
 
-#### Get&lt;wbr&gt;Launch&lt;wbr&gt;Template&lt;wbr&gt;Credit&lt;wbr&gt;Specification
+<h4>Get<wbr>Launch<wbr>Template<wbr>Credit<wbr>Specification</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLaunchTemplateCreditSpecification">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1833,7 +1835,7 @@ Interfaces below for more details.
 
 
 
-#### Get&lt;wbr&gt;Launch&lt;wbr&gt;Template&lt;wbr&gt;Elastic&lt;wbr&gt;Gpu&lt;wbr&gt;Specification
+<h4>Get<wbr>Launch<wbr>Template<wbr>Elastic<wbr>Gpu<wbr>Specification</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLaunchTemplateElasticGpuSpecification">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1908,7 +1910,7 @@ Interfaces below for more details.
 
 
 
-#### Get&lt;wbr&gt;Launch&lt;wbr&gt;Template&lt;wbr&gt;Filter
+<h4>Get<wbr>Launch<wbr>Template<wbr>Filter</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetLaunchTemplateFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLaunchTemplateFilter">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2023,7 +2025,7 @@ Interfaces below for more details.
 
 
 
-#### Get&lt;wbr&gt;Launch&lt;wbr&gt;Template&lt;wbr&gt;Iam&lt;wbr&gt;Instance&lt;wbr&gt;Profile
+<h4>Get<wbr>Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLaunchTemplateIamInstanceProfile">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2138,7 +2140,7 @@ Interfaces below for more details.
 
 
 
-#### Get&lt;wbr&gt;Launch&lt;wbr&gt;Template&lt;wbr&gt;Instance&lt;wbr&gt;Market&lt;wbr&gt;Option
+<h4>Get<wbr>Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Option</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLaunchTemplateInstanceMarketOption">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2245,7 +2247,7 @@ Interfaces below for more details.
 
 
 
-#### Get&lt;wbr&gt;Launch&lt;wbr&gt;Template&lt;wbr&gt;Instance&lt;wbr&gt;Market&lt;wbr&gt;Option&lt;wbr&gt;Spot&lt;wbr&gt;Option
+<h4>Get<wbr>Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Option<wbr>Spot<wbr>Option</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLaunchTemplateInstanceMarketOptionSpotOption">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2448,7 +2450,7 @@ Interfaces below for more details.
 
 
 
-#### Get&lt;wbr&gt;Launch&lt;wbr&gt;Template&lt;wbr&gt;Metadata&lt;wbr&gt;Option
+<h4>Get<wbr>Launch<wbr>Template<wbr>Metadata<wbr>Option</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLaunchTemplateMetadataOption">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2599,7 +2601,7 @@ Interfaces below for more details.
 
 
 
-#### Get&lt;wbr&gt;Launch&lt;wbr&gt;Template&lt;wbr&gt;Monitoring
+<h4>Get<wbr>Launch<wbr>Template<wbr>Monitoring</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLaunchTemplateMonitoring">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2674,7 +2676,7 @@ Interfaces below for more details.
 
 
 
-#### Get&lt;wbr&gt;Launch&lt;wbr&gt;Template&lt;wbr&gt;Network&lt;wbr&gt;Interface
+<h4>Get<wbr>Launch<wbr>Template<wbr>Network<wbr>Interface</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLaunchTemplateNetworkInterface">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3105,7 +3107,7 @@ Interfaces below for more details.
 
 
 
-#### Get&lt;wbr&gt;Launch&lt;wbr&gt;Template&lt;wbr&gt;Placement
+<h4>Get<wbr>Launch<wbr>Template<wbr>Placement</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLaunchTemplatePlacement">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3340,7 +3342,7 @@ Interfaces below for more details.
 
 
 
-#### Get&lt;wbr&gt;Launch&lt;wbr&gt;Template&lt;wbr&gt;Tag&lt;wbr&gt;Specification
+<h4>Get<wbr>Launch<wbr>Template<wbr>Tag<wbr>Specification</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLaunchTemplateTagSpecification">output</a> API doc for this type.
 {{% /choosable %}}
