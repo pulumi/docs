@@ -35,7 +35,7 @@ npm install @pulumi/pulumi@^2.0.0
 
 ### Remove synchronous invokes
 
-Pulumi 2.0 no longer supports synchronous invokes. As a result, using the return values of any resource `get` operations will need to be made asynchronous. Similarly, the use of `getOutputSync` and `requireOutputSync` are no longer supported and you should move to using the `Output`-based versions of `getOutput` and `requireOutput`.
+Pulumi 2.0 no longer supports synchronous invokes. As a result, the return value of all `getSomething` operations are now `Promise<Something>` values, instead of `Something` values, and should be processed using `.then`, `async/await` or by passing the results to `pulumi.output()`. Similarly, the the `StackReference` operations `getOutputSync` and `requireOutputSync` are no longer supported and you should move to using the `Output`-based versions of `getOutput` and `requireOutput`.
 
 ```javascript
 const engineVersion = gcp.container.getEngineVersions().latestMasterVersion;
