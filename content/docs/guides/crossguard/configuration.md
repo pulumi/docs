@@ -8,6 +8,7 @@ menu:
   userguides:
     parent: crossguard
 ---
+
 <!-- markdownlint-disable ul code -->
 {{% crossguard-preview %}}
 
@@ -17,7 +18,7 @@ Configuration allows you to author flexible Policy Packs that can be reused acro
 
 Configuration schema is defined per policy, and then the actual configuration can be set via a form in the Pulumi Console or using a JSON file.
 
-Configuration is currently supported for the TypeScript and JavaScript Policy SDKs. Python support for configuration is [coming soon](https://github.com/pulumi/pulumi-policy/issues/210).
+Configuration is currently supported for the Node.js Policy SDK (TypeScript/JavaScript). Python support for configuration is [coming soon](https://github.com/pulumi/pulumi-policy/issues/210).
 
 ## Writing Configurable Policy Packs
 
@@ -30,10 +31,10 @@ In the example configuration below, all policies in the Policy Pack would be `di
 ```json
 {
     "all": {
-        "enforcementLevel": "disabled",
+        "enforcementLevel": "disabled"
     },
     "a-policy": {
-         "enforcementLevel": "mandatory",
+         "enforcementLevel": "mandatory"
     }
 }
 ```
@@ -60,7 +61,7 @@ const examplePolicy: ResourceValidationPolicy = {
         required: ["message"],
     },
     validateResource: validateTypedResource(aws.s3.Bucket, (_, args, reportViolation) => {
-        const config = args.getConfig<{ message?: string }>();
+        const config = args.getConfig<{ message: string }>();
         reportViolation("Here is the configurable message: " + config.message);
     }),
 }
@@ -107,7 +108,7 @@ $ pulumi policy validate-config <org-name>/<policy-pack-name> <version> --config
 
 #### Enabling the Policy Pack
 
-Once you are satisfied with the configuration, (if Policy as Code is enabled for your organization) you can enable the Policy Pack and configuration for your organization's defualt Policy Group by running:
+Once you are satisfied with the configuration, (if Policy as Code is enabled for your organization) you can enable the Policy Pack and configuration for your organization's default Policy Group by running:
 
 ```bash
 $ pulumi policy enable <org-name>/<policy-pack-name> <version> --config <path-to-policy-pack-config-file>
