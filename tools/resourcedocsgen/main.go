@@ -22,6 +22,7 @@ import (
 	"os"
 	"path"
 
+	"github.com/golang/glog"
 	"github.com/pkg/errors"
 
 	docsgen "github.com/pulumi/pulumi/pkg/codegen/docs"
@@ -38,6 +39,8 @@ func main() {
 		fmt.Fprintf(os.Stderr, "error: usage: %s <out-dir> <provider-schema-file>\n", os.Args[0])
 		os.Exit(1)
 	}
+
+	defer glog.Flush()
 
 	outDir, schemaFile := args[0], args[1]
 
