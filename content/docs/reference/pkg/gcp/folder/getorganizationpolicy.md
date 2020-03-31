@@ -35,7 +35,9 @@ documentation](https://cloud.google.com/resource-manager/docs/organization-polic
 
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetOrganizationPolicy </span><span class="p">{</span><span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Folder.GetOrganizationPolicyResult.html">GetOrganizationPolicyResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Folder.Inputs.GetOrganizationPolicyArgs.html">GetOrganizationPolicyArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">Pulumi.InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">}</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetOrganizationPolicy </span><span class="p">{</span><span class="k">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Folder.GetOrganizationPolicyResult.html">GetOrganizationPolicyResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Folder.Inputs.GetOrganizationPolicyArgs.html">GetOrganizationPolicyArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">Pulumi.InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+}</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -485,7 +487,7 @@ The following output properties are available:
 
 ## Supporting Types
 
-#### Get&lt;wbr&gt;Organization&lt;wbr&gt;Policy&lt;wbr&gt;Boolean&lt;wbr&gt;Policy
+<h4>Get<wbr>Organization<wbr>Policy<wbr>Boolean<wbr>Policy</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetOrganizationPolicyBooleanPolicy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -560,7 +562,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Organization&lt;wbr&gt;Policy&lt;wbr&gt;List&lt;wbr&gt;Policy
+<h4>Get<wbr>Organization<wbr>Policy<wbr>List<wbr>Policy</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetOrganizationPolicyListPolicy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -731,7 +733,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Organization&lt;wbr&gt;Policy&lt;wbr&gt;List&lt;wbr&gt;Policy&lt;wbr&gt;Allow
+<h4>Get<wbr>Organization<wbr>Policy<wbr>List<wbr>Policy<wbr>Allow</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetOrganizationPolicyListPolicyAllow">output</a> API doc for this type.
 {{% /choosable %}}
@@ -838,7 +840,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Organization&lt;wbr&gt;Policy&lt;wbr&gt;List&lt;wbr&gt;Policy&lt;wbr&gt;Deny
+<h4>Get<wbr>Organization<wbr>Policy<wbr>List<wbr>Policy<wbr>Deny</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetOrganizationPolicyListPolicyDeny">output</a> API doc for this type.
 {{% /choosable %}}
@@ -945,7 +947,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Organization&lt;wbr&gt;Policy&lt;wbr&gt;Restore&lt;wbr&gt;Policy
+<h4>Get<wbr>Organization<wbr>Policy<wbr>Restore<wbr>Policy</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetOrganizationPolicyRestorePolicy">output</a> API doc for this type.
 {{% /choosable %}}

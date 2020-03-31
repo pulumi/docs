@@ -33,7 +33,9 @@ Use this data source to access information about an existing CosmosDB (formally 
 
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetAccount </span><span class="p">{</span><span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Cosmosdb.GetAccountResult.html">GetAccountResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.CosmosDB.Inputs.GetAccountArgs.html">GetAccountArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">Pulumi.InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">}</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetAccount </span><span class="p">{</span><span class="k">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Cosmosdb.GetAccountResult.html">GetAccountResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.CosmosDB.Inputs.GetAccountArgs.html">GetAccountArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">Pulumi.InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+}</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -967,7 +969,7 @@ The following output properties are available:
 
 ## Supporting Types
 
-#### Get&lt;wbr&gt;Account&lt;wbr&gt;Capability
+<h4>Get<wbr>Account<wbr>Capability</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAccountCapability">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1046,7 +1048,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Account&lt;wbr&gt;Consistency&lt;wbr&gt;Policy
+<h4>Get<wbr>Account<wbr>Consistency<wbr>Policy</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAccountConsistencyPolicy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1197,7 +1199,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Account&lt;wbr&gt;Geo&lt;wbr&gt;Location
+<h4>Get<wbr>Account<wbr>Geo<wbr>Location</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAccountGeoLocation">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1344,7 +1346,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Account&lt;wbr&gt;Virtual&lt;wbr&gt;Network&lt;wbr&gt;Rule
+<h4>Get<wbr>Account<wbr>Virtual<wbr>Network<wbr>Rule</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAccountVirtualNetworkRule">output</a> API doc for this type.
 {{% /choosable %}}

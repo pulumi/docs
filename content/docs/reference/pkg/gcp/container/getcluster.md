@@ -33,7 +33,9 @@ Get info about a GKE cluster from its name and location.
 
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetCluster </span><span class="p">{</span><span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.GetClusterResult.html">GetClusterResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Inputs.GetClusterArgs.html">GetClusterArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">Pulumi.InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">}</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetCluster </span><span class="p">{</span><span class="k">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.GetClusterResult.html">GetClusterResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Inputs.GetClusterArgs.html">GetClusterArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">Pulumi.InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+}</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -1923,7 +1925,7 @@ The following output properties are available:
 
 ## Supporting Types
 
-#### Get&lt;wbr&gt;Cluster&lt;wbr&gt;Addons&lt;wbr&gt;Config
+<h4>Get<wbr>Cluster<wbr>Addons<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterAddonsConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2190,7 +2192,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Cluster&lt;wbr&gt;Addons&lt;wbr&gt;Config&lt;wbr&gt;Cloudrun&lt;wbr&gt;Config
+<h4>Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Cloudrun<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterAddonsConfigCloudrunConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2265,7 +2267,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Cluster&lt;wbr&gt;Addons&lt;wbr&gt;Config&lt;wbr&gt;Dns&lt;wbr&gt;Cache&lt;wbr&gt;Config
+<h4>Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Dns<wbr>Cache<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterAddonsConfigDnsCacheConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2340,7 +2342,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Cluster&lt;wbr&gt;Addons&lt;wbr&gt;Config&lt;wbr&gt;Horizontal&lt;wbr&gt;Pod&lt;wbr&gt;Autoscaling
+<h4>Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Horizontal<wbr>Pod<wbr>Autoscaling</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterAddonsConfigHorizontalPodAutoscaling">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2415,7 +2417,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Cluster&lt;wbr&gt;Addons&lt;wbr&gt;Config&lt;wbr&gt;Http&lt;wbr&gt;Load&lt;wbr&gt;Balancing
+<h4>Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Http<wbr>Load<wbr>Balancing</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterAddonsConfigHttpLoadBalancing">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2490,7 +2492,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Cluster&lt;wbr&gt;Addons&lt;wbr&gt;Config&lt;wbr&gt;Istio&lt;wbr&gt;Config
+<h4>Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Istio<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterAddonsConfigIstioConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2597,7 +2599,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Cluster&lt;wbr&gt;Addons&lt;wbr&gt;Config&lt;wbr&gt;Kubernetes&lt;wbr&gt;Dashboard
+<h4>Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Kubernetes<wbr>Dashboard</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterAddonsConfigKubernetesDashboard">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2672,7 +2674,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Cluster&lt;wbr&gt;Addons&lt;wbr&gt;Config&lt;wbr&gt;Network&lt;wbr&gt;Policy&lt;wbr&gt;Config
+<h4>Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Network<wbr>Policy<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterAddonsConfigNetworkPolicyConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2747,7 +2749,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Cluster&lt;wbr&gt;Authenticator&lt;wbr&gt;Groups&lt;wbr&gt;Config
+<h4>Get<wbr>Cluster<wbr>Authenticator<wbr>Groups<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterAuthenticatorGroupsConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2822,7 +2824,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Cluster&lt;wbr&gt;Cluster&lt;wbr&gt;Autoscaling
+<h4>Get<wbr>Cluster<wbr>Cluster<wbr>Autoscaling</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterClusterAutoscaling">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2993,7 +2995,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Cluster&lt;wbr&gt;Cluster&lt;wbr&gt;Autoscaling&lt;wbr&gt;Auto&lt;wbr&gt;Provisioning&lt;wbr&gt;Default
+<h4>Get<wbr>Cluster<wbr>Cluster<wbr>Autoscaling<wbr>Auto<wbr>Provisioning<wbr>Default</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterClusterAutoscalingAutoProvisioningDefault">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3100,7 +3102,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Cluster&lt;wbr&gt;Cluster&lt;wbr&gt;Autoscaling&lt;wbr&gt;Resource&lt;wbr&gt;Limit
+<h4>Get<wbr>Cluster<wbr>Cluster<wbr>Autoscaling<wbr>Resource<wbr>Limit</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterClusterAutoscalingResourceLimit">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3239,7 +3241,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Cluster&lt;wbr&gt;Database&lt;wbr&gt;Encryption
+<h4>Get<wbr>Cluster<wbr>Database<wbr>Encryption</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterDatabaseEncryption">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3346,7 +3348,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Cluster&lt;wbr&gt;Ip&lt;wbr&gt;Allocation&lt;wbr&gt;Policy
+<h4>Get<wbr>Cluster<wbr>Ip<wbr>Allocation<wbr>Policy</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterIpAllocationPolicy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3581,7 +3583,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Cluster&lt;wbr&gt;Maintenance&lt;wbr&gt;Policy
+<h4>Get<wbr>Cluster<wbr>Maintenance<wbr>Policy</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterMaintenancePolicy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3688,7 +3690,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Cluster&lt;wbr&gt;Maintenance&lt;wbr&gt;Policy&lt;wbr&gt;Daily&lt;wbr&gt;Maintenance&lt;wbr&gt;Window
+<h4>Get<wbr>Cluster<wbr>Maintenance<wbr>Policy<wbr>Daily<wbr>Maintenance<wbr>Window</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterMaintenancePolicyDailyMaintenanceWindow">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3795,7 +3797,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Cluster&lt;wbr&gt;Maintenance&lt;wbr&gt;Policy&lt;wbr&gt;Recurring&lt;wbr&gt;Window
+<h4>Get<wbr>Cluster<wbr>Maintenance<wbr>Policy<wbr>Recurring<wbr>Window</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterMaintenancePolicyRecurringWindow">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3934,7 +3936,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Cluster&lt;wbr&gt;Master&lt;wbr&gt;Auth
+<h4>Get<wbr>Cluster<wbr>Master<wbr>Auth</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterMasterAuth">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4169,7 +4171,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Cluster&lt;wbr&gt;Master&lt;wbr&gt;Auth&lt;wbr&gt;Client&lt;wbr&gt;Certificate&lt;wbr&gt;Config
+<h4>Get<wbr>Cluster<wbr>Master<wbr>Auth<wbr>Client<wbr>Certificate<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterMasterAuthClientCertificateConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4244,7 +4246,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Cluster&lt;wbr&gt;Master&lt;wbr&gt;Authorized&lt;wbr&gt;Networks&lt;wbr&gt;Config
+<h4>Get<wbr>Cluster<wbr>Master<wbr>Authorized<wbr>Networks<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterMasterAuthorizedNetworksConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4319,7 +4321,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Cluster&lt;wbr&gt;Master&lt;wbr&gt;Authorized&lt;wbr&gt;Networks&lt;wbr&gt;Config&lt;wbr&gt;Cidr&lt;wbr&gt;Block
+<h4>Get<wbr>Cluster<wbr>Master<wbr>Authorized<wbr>Networks<wbr>Config<wbr>Cidr<wbr>Block</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterMasterAuthorizedNetworksConfigCidrBlock">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4426,7 +4428,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Cluster&lt;wbr&gt;Network&lt;wbr&gt;Policy
+<h4>Get<wbr>Cluster<wbr>Network<wbr>Policy</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterNetworkPolicy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4533,7 +4535,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Cluster&lt;wbr&gt;Node&lt;wbr&gt;Config
+<h4>Get<wbr>Cluster<wbr>Node<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterNodeConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5152,7 +5154,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Cluster&lt;wbr&gt;Node&lt;wbr&gt;Config&lt;wbr&gt;Guest&lt;wbr&gt;Accelerator
+<h4>Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Guest<wbr>Accelerator</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterNodeConfigGuestAccelerator">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5259,7 +5261,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Cluster&lt;wbr&gt;Node&lt;wbr&gt;Config&lt;wbr&gt;Sandbox&lt;wbr&gt;Config
+<h4>Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Sandbox<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterNodeConfigSandboxConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5334,7 +5336,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Cluster&lt;wbr&gt;Node&lt;wbr&gt;Config&lt;wbr&gt;Shielded&lt;wbr&gt;Instance&lt;wbr&gt;Config
+<h4>Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterNodeConfigShieldedInstanceConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5441,7 +5443,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Cluster&lt;wbr&gt;Node&lt;wbr&gt;Config&lt;wbr&gt;Taint
+<h4>Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Taint</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterNodeConfigTaint">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5580,7 +5582,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Cluster&lt;wbr&gt;Node&lt;wbr&gt;Config&lt;wbr&gt;Workload&lt;wbr&gt;Metadata&lt;wbr&gt;Config
+<h4>Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Workload<wbr>Metadata<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterNodeConfigWorkloadMetadataConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5655,7 +5657,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Cluster&lt;wbr&gt;Node&lt;wbr&gt;Pool
+<h4>Get<wbr>Cluster<wbr>Node<wbr>Pool</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterNodePool">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6086,7 +6088,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Cluster&lt;wbr&gt;Node&lt;wbr&gt;Pool&lt;wbr&gt;Autoscaling
+<h4>Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Autoscaling</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterNodePoolAutoscaling">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6193,7 +6195,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Cluster&lt;wbr&gt;Node&lt;wbr&gt;Pool&lt;wbr&gt;Management
+<h4>Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Management</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterNodePoolManagement">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6300,7 +6302,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Cluster&lt;wbr&gt;Node&lt;wbr&gt;Pool&lt;wbr&gt;Node&lt;wbr&gt;Config
+<h4>Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterNodePoolNodeConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6919,7 +6921,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Cluster&lt;wbr&gt;Node&lt;wbr&gt;Pool&lt;wbr&gt;Node&lt;wbr&gt;Config&lt;wbr&gt;Guest&lt;wbr&gt;Accelerator
+<h4>Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Guest<wbr>Accelerator</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterNodePoolNodeConfigGuestAccelerator">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7026,7 +7028,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Cluster&lt;wbr&gt;Node&lt;wbr&gt;Pool&lt;wbr&gt;Node&lt;wbr&gt;Config&lt;wbr&gt;Sandbox&lt;wbr&gt;Config
+<h4>Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Sandbox<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterNodePoolNodeConfigSandboxConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7101,7 +7103,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Cluster&lt;wbr&gt;Node&lt;wbr&gt;Pool&lt;wbr&gt;Node&lt;wbr&gt;Config&lt;wbr&gt;Shielded&lt;wbr&gt;Instance&lt;wbr&gt;Config
+<h4>Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterNodePoolNodeConfigShieldedInstanceConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7208,7 +7210,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Cluster&lt;wbr&gt;Node&lt;wbr&gt;Pool&lt;wbr&gt;Node&lt;wbr&gt;Config&lt;wbr&gt;Taint
+<h4>Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Taint</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterNodePoolNodeConfigTaint">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7347,7 +7349,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Cluster&lt;wbr&gt;Node&lt;wbr&gt;Pool&lt;wbr&gt;Node&lt;wbr&gt;Config&lt;wbr&gt;Workload&lt;wbr&gt;Metadata&lt;wbr&gt;Config
+<h4>Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Workload<wbr>Metadata<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterNodePoolNodeConfigWorkloadMetadataConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7422,7 +7424,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Cluster&lt;wbr&gt;Node&lt;wbr&gt;Pool&lt;wbr&gt;Upgrade&lt;wbr&gt;Setting
+<h4>Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Upgrade<wbr>Setting</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterNodePoolUpgradeSetting">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7529,7 +7531,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Cluster&lt;wbr&gt;Pod&lt;wbr&gt;Security&lt;wbr&gt;Policy&lt;wbr&gt;Config
+<h4>Get<wbr>Cluster<wbr>Pod<wbr>Security<wbr>Policy<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterPodSecurityPolicyConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7604,7 +7606,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Cluster&lt;wbr&gt;Private&lt;wbr&gt;Cluster&lt;wbr&gt;Config
+<h4>Get<wbr>Cluster<wbr>Private<wbr>Cluster<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterPrivateClusterConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7839,7 +7841,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Cluster&lt;wbr&gt;Release&lt;wbr&gt;Channel
+<h4>Get<wbr>Cluster<wbr>Release<wbr>Channel</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterReleaseChannel">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7914,7 +7916,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Cluster&lt;wbr&gt;Resource&lt;wbr&gt;Usage&lt;wbr&gt;Export&lt;wbr&gt;Config
+<h4>Get<wbr>Cluster<wbr>Resource<wbr>Usage<wbr>Export<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterResourceUsageExportConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -8021,7 +8023,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Cluster&lt;wbr&gt;Resource&lt;wbr&gt;Usage&lt;wbr&gt;Export&lt;wbr&gt;Config&lt;wbr&gt;Bigquery&lt;wbr&gt;Destination
+<h4>Get<wbr>Cluster<wbr>Resource<wbr>Usage<wbr>Export<wbr>Config<wbr>Bigquery<wbr>Destination</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterResourceUsageExportConfigBigqueryDestination">output</a> API doc for this type.
 {{% /choosable %}}
@@ -8096,7 +8098,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Cluster&lt;wbr&gt;Vertical&lt;wbr&gt;Pod&lt;wbr&gt;Autoscaling
+<h4>Get<wbr>Cluster<wbr>Vertical<wbr>Pod<wbr>Autoscaling</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterVerticalPodAutoscaling">output</a> API doc for this type.
 {{% /choosable %}}
@@ -8171,7 +8173,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Cluster&lt;wbr&gt;Workload&lt;wbr&gt;Identity&lt;wbr&gt;Config
+<h4>Get<wbr>Cluster<wbr>Workload<wbr>Identity<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterWorkloadIdentityConfig">output</a> API doc for this type.
 {{% /choosable %}}

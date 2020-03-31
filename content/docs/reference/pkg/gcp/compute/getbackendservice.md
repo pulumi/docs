@@ -35,7 +35,9 @@ and the [API](https://cloud.google.com/compute/docs/reference/latest/backendServ
 
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetBackendService </span><span class="p">{</span><span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.GetBackendServiceResult.html">GetBackendServiceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.GetBackendServiceArgs.html">GetBackendServiceArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">Pulumi.InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">}</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetBackendService </span><span class="p">{</span><span class="k">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.GetBackendServiceResult.html">GetBackendServiceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.GetBackendServiceArgs.html">GetBackendServiceArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">Pulumi.InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+}</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -1073,7 +1075,7 @@ The following output properties are available:
 
 ## Supporting Types
 
-#### Get&lt;wbr&gt;Backend&lt;wbr&gt;Service&lt;wbr&gt;Backend
+<h4>Get<wbr>Backend<wbr>Service<wbr>Backend</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetBackendServiceBackend">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1472,7 +1474,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Backend&lt;wbr&gt;Service&lt;wbr&gt;Cdn&lt;wbr&gt;Policy
+<h4>Get<wbr>Backend<wbr>Service<wbr>Cdn<wbr>Policy</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetBackendServiceCdnPolicy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1579,7 +1581,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Backend&lt;wbr&gt;Service&lt;wbr&gt;Cdn&lt;wbr&gt;Policy&lt;wbr&gt;Cache&lt;wbr&gt;Key&lt;wbr&gt;Policy
+<h4>Get<wbr>Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Cache<wbr>Key<wbr>Policy</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetBackendServiceCdnPolicyCacheKeyPolicy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1782,7 +1784,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Backend&lt;wbr&gt;Service&lt;wbr&gt;Circuit&lt;wbr&gt;Breaker
+<h4>Get<wbr>Backend<wbr>Service<wbr>Circuit<wbr>Breaker</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetBackendServiceCircuitBreaker">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2017,7 +2019,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Backend&lt;wbr&gt;Service&lt;wbr&gt;Circuit&lt;wbr&gt;Breaker&lt;wbr&gt;Connect&lt;wbr&gt;Timeout
+<h4>Get<wbr>Backend<wbr>Service<wbr>Circuit<wbr>Breaker<wbr>Connect<wbr>Timeout</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetBackendServiceCircuitBreakerConnectTimeout">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2124,7 +2126,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Backend&lt;wbr&gt;Service&lt;wbr&gt;Consistent&lt;wbr&gt;Hash
+<h4>Get<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetBackendServiceConsistentHash">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2263,7 +2265,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Backend&lt;wbr&gt;Service&lt;wbr&gt;Consistent&lt;wbr&gt;Hash&lt;wbr&gt;Http&lt;wbr&gt;Cooky
+<h4>Get<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cooky</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetBackendServiceConsistentHashHttpCooky">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2406,7 +2408,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Backend&lt;wbr&gt;Service&lt;wbr&gt;Consistent&lt;wbr&gt;Hash&lt;wbr&gt;Http&lt;wbr&gt;Cooky&lt;wbr&gt;Ttl
+<h4>Get<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cooky<wbr>Ttl</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetBackendServiceConsistentHashHttpCookyTtl">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2513,7 +2515,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Backend&lt;wbr&gt;Service&lt;wbr&gt;Iap
+<h4>Get<wbr>Backend<wbr>Service<wbr>Iap</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetBackendServiceIap">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2652,7 +2654,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Backend&lt;wbr&gt;Service&lt;wbr&gt;Log&lt;wbr&gt;Config
+<h4>Get<wbr>Backend<wbr>Service<wbr>Log<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetBackendServiceLogConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2759,7 +2761,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Backend&lt;wbr&gt;Service&lt;wbr&gt;Outlier&lt;wbr&gt;Detection
+<h4>Get<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetBackendServiceOutlierDetection">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3154,7 +3156,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Backend&lt;wbr&gt;Service&lt;wbr&gt;Outlier&lt;wbr&gt;Detection&lt;wbr&gt;Base&lt;wbr&gt;Ejection&lt;wbr&gt;Time
+<h4>Get<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Base<wbr>Ejection<wbr>Time</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetBackendServiceOutlierDetectionBaseEjectionTime">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3261,7 +3263,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Backend&lt;wbr&gt;Service&lt;wbr&gt;Outlier&lt;wbr&gt;Detection&lt;wbr&gt;Interval
+<h4>Get<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Interval</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetBackendServiceOutlierDetectionInterval">output</a> API doc for this type.
 {{% /choosable %}}

@@ -33,7 +33,9 @@ Use this data source to access information about an existing App Service.
 
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetAppService </span><span class="p">{</span><span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Appservice.GetAppServiceResult.html">GetAppServiceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppService.Inputs.GetAppServiceArgs.html">GetAppServiceArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">Pulumi.InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">}</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetAppService </span><span class="p">{</span><span class="k">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Appservice.GetAppServiceResult.html">GetAppServiceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppService.Inputs.GetAppServiceArgs.html">GetAppServiceArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">Pulumi.InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+}</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -827,7 +829,7 @@ The following output properties are available:
 
 ## Supporting Types
 
-#### Get&lt;wbr&gt;App&lt;wbr&gt;Service&lt;wbr&gt;Connection&lt;wbr&gt;String
+<h4>Get<wbr>App<wbr>Service<wbr>Connection<wbr>String</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAppServiceConnectionString">output</a> API doc for this type.
 {{% /choosable %}}
@@ -978,7 +980,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;App&lt;wbr&gt;Service&lt;wbr&gt;Site&lt;wbr&gt;Config
+<h4>Get<wbr>App<wbr>Service<wbr>Site<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAppServiceSiteConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1849,7 +1851,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;App&lt;wbr&gt;Service&lt;wbr&gt;Site&lt;wbr&gt;Config&lt;wbr&gt;Cor
+<h4>Get<wbr>App<wbr>Service<wbr>Site<wbr>Config<wbr>Cor</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAppServiceSiteConfigCor">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1964,7 +1966,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;App&lt;wbr&gt;Service&lt;wbr&gt;Site&lt;wbr&gt;Config&lt;wbr&gt;Ip&lt;wbr&gt;Restriction
+<h4>Get<wbr>App<wbr>Service<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAppServiceSiteConfigIpRestriction">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2075,7 +2077,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;App&lt;wbr&gt;Service&lt;wbr&gt;Site&lt;wbr&gt;Credential
+<h4>Get<wbr>App<wbr>Service<wbr>Site<wbr>Credential</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAppServiceSiteCredential">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2182,7 +2184,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;App&lt;wbr&gt;Service&lt;wbr&gt;Source&lt;wbr&gt;Control
+<h4>Get<wbr>App<wbr>Service<wbr>Source<wbr>Control</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAppServiceSourceControl">output</a> API doc for this type.
 {{% /choosable %}}

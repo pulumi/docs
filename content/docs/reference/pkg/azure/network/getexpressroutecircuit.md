@@ -33,7 +33,9 @@ Use this data source to access information about an existing ExpressRoute circui
 
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetExpressRouteCircuit </span><span class="p">{</span><span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.GetExpressRouteCircuitResult.html">GetExpressRouteCircuitResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Inputs.GetExpressRouteCircuitArgs.html">GetExpressRouteCircuitArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">Pulumi.InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">}</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetExpressRouteCircuit </span><span class="p">{</span><span class="k">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.GetExpressRouteCircuitResult.html">GetExpressRouteCircuitResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Inputs.GetExpressRouteCircuitArgs.html">GetExpressRouteCircuitArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">Pulumi.InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+}</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -507,7 +509,7 @@ The following output properties are available:
 
 ## Supporting Types
 
-#### Get&lt;wbr&gt;Express&lt;wbr&gt;Route&lt;wbr&gt;Circuit&lt;wbr&gt;Peering
+<h4>Get<wbr>Express<wbr>Route<wbr>Circuit<wbr>Peering</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetExpressRouteCircuitPeering">output</a> API doc for this type.
 {{% /choosable %}}
@@ -802,7 +804,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Express&lt;wbr&gt;Route&lt;wbr&gt;Circuit&lt;wbr&gt;Service&lt;wbr&gt;Provider&lt;wbr&gt;Property
+<h4>Get<wbr>Express<wbr>Route<wbr>Circuit<wbr>Service<wbr>Provider<wbr>Property</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetExpressRouteCircuitServiceProviderProperty">output</a> API doc for this type.
 {{% /choosable %}}
@@ -953,7 +955,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Express&lt;wbr&gt;Route&lt;wbr&gt;Circuit&lt;wbr&gt;Sku
+<h4>Get<wbr>Express<wbr>Route<wbr>Circuit<wbr>Sku</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetExpressRouteCircuitSku">output</a> API doc for this type.
 {{% /choosable %}}

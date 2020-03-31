@@ -35,7 +35,9 @@ and [API](https://cloud.google.com/dns/docs/reference/v1/dnsKeys).
 
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetKeys </span><span class="p">{</span><span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dns.GetKeysResult.html">GetKeysResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dns.Inputs.GetKeysArgs.html">GetKeysArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">Pulumi.InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">}</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetKeys </span><span class="p">{</span><span class="k">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dns.GetKeysResult.html">GetKeysResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dns.Inputs.GetKeysArgs.html">GetKeysArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">Pulumi.InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+}</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -365,7 +367,7 @@ The following output properties are available:
 
 ## Supporting Types
 
-#### Get&lt;wbr&gt;Keys&lt;wbr&gt;Key&lt;wbr&gt;Signing&lt;wbr&gt;Key
+<h4>Get<wbr>Keys<wbr>Key<wbr>Signing<wbr>Key</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetKeysKeySigningKey">output</a> API doc for this type.
 {{% /choosable %}}
@@ -776,7 +778,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Keys&lt;wbr&gt;Key&lt;wbr&gt;Signing&lt;wbr&gt;Key&lt;wbr&gt;Digest
+<h4>Get<wbr>Keys<wbr>Key<wbr>Signing<wbr>Key<wbr>Digest</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetKeysKeySigningKeyDigest">output</a> API doc for this type.
 {{% /choosable %}}
@@ -883,7 +885,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Keys&lt;wbr&gt;Zone&lt;wbr&gt;Signing&lt;wbr&gt;Key
+<h4>Get<wbr>Keys<wbr>Zone<wbr>Signing<wbr>Key</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetKeysZoneSigningKey">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1258,7 +1260,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Keys&lt;wbr&gt;Zone&lt;wbr&gt;Signing&lt;wbr&gt;Key&lt;wbr&gt;Digest
+<h4>Get<wbr>Keys<wbr>Zone<wbr>Signing<wbr>Key<wbr>Digest</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetKeysZoneSigningKeyDigest">output</a> API doc for this type.
 {{% /choosable %}}

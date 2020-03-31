@@ -51,7 +51,9 @@ const byName = aws.mq.getBroker({
 
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetBroker </span><span class="p">{</span><span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Mq.GetBrokerResult.html">GetBrokerResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Mq.Inputs.GetBrokerArgs.html">GetBrokerArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">Pulumi.InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">}</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetBroker </span><span class="p">{</span><span class="k">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Mq.GetBrokerResult.html">GetBrokerResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Mq.Inputs.GetBrokerArgs.html">GetBrokerArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">Pulumi.InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+}</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -885,7 +887,7 @@ The following output properties are available:
 
 ## Supporting Types
 
-#### Get&lt;wbr&gt;Broker&lt;wbr&gt;Configuration
+<h4>Get<wbr>Broker<wbr>Configuration</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetBrokerConfiguration">output</a> API doc for this type.
 {{% /choosable %}}
@@ -992,7 +994,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Broker&lt;wbr&gt;Encryption&lt;wbr&gt;Option
+<h4>Get<wbr>Broker<wbr>Encryption<wbr>Option</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetBrokerEncryptionOption">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1099,7 +1101,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Broker&lt;wbr&gt;Instance
+<h4>Get<wbr>Broker<wbr>Instance</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetBrokerInstance">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1238,7 +1240,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Broker&lt;wbr&gt;Logs
+<h4>Get<wbr>Broker<wbr>Logs</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetBrokerLogs">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetBrokerLogs">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1345,7 +1347,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Broker&lt;wbr&gt;Maintenance&lt;wbr&gt;Window&lt;wbr&gt;Start&lt;wbr&gt;Time
+<h4>Get<wbr>Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetBrokerMaintenanceWindowStartTime">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1484,7 +1486,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Broker&lt;wbr&gt;User
+<h4>Get<wbr>Broker<wbr>User</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetBrokerUser">output</a> API doc for this type.
 {{% /choosable %}}

@@ -38,7 +38,9 @@ and *not* a [Service SAS](https://docs.microsoft.com/en-us/rest/api/storageservi
 
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetAccountSAS </span><span class="p">{</span><span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Storage.GetAccountSASResult.html">GetAccountSASResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Storage.Inputs.GetAccountSASArgs.html">GetAccountSASArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">Pulumi.InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">}</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetAccountSAS </span><span class="p">{</span><span class="k">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Storage.GetAccountSASResult.html">GetAccountSASResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Storage.Inputs.GetAccountSASArgs.html">GetAccountSASArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">Pulumi.InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+}</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -672,7 +674,7 @@ The following output properties are available:
 
 ## Supporting Types
 
-#### Get&lt;wbr&gt;Account&lt;wbr&gt;SASPermissions
+<h4>Get<wbr>Account<wbr>SASPermissions</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GetAccountSASPermissions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAccountSASPermissions">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1003,7 +1005,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Account&lt;wbr&gt;SASResource&lt;wbr&gt;Types
+<h4>Get<wbr>Account<wbr>SASResource<wbr>Types</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GetAccountSASResourceTypes">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAccountSASResourceTypes">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1154,7 +1156,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Account&lt;wbr&gt;SASServices
+<h4>Get<wbr>Account<wbr>SASServices</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GetAccountSASServices">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAccountSASServices">output</a> API doc for this type.
 {{% /choosable %}}

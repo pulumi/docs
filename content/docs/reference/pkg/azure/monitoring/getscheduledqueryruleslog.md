@@ -47,7 +47,9 @@ export const queryRuleId = example.id;
 
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetScheduledQueryRulesLog </span><span class="p">{</span><span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Monitoring.GetScheduledQueryRulesLogResult.html">GetScheduledQueryRulesLogResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Monitoring.Inputs.GetScheduledQueryRulesLogArgs.html">GetScheduledQueryRulesLogArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">Pulumi.InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">}</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetScheduledQueryRulesLog </span><span class="p">{</span><span class="k">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Monitoring.GetScheduledQueryRulesLogResult.html">GetScheduledQueryRulesLogResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Monitoring.Inputs.GetScheduledQueryRulesLogArgs.html">GetScheduledQueryRulesLogArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">Pulumi.InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+}</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -549,7 +551,7 @@ The following output properties are available:
 
 ## Supporting Types
 
-#### Get&lt;wbr&gt;Scheduled&lt;wbr&gt;Query&lt;wbr&gt;Rules&lt;wbr&gt;Log&lt;wbr&gt;Criteria
+<h4>Get<wbr>Scheduled<wbr>Query<wbr>Rules<wbr>Log<wbr>Criteria</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetScheduledQueryRulesLogCriteria">output</a> API doc for this type.
 {{% /choosable %}}
@@ -664,7 +666,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Scheduled&lt;wbr&gt;Query&lt;wbr&gt;Rules&lt;wbr&gt;Log&lt;wbr&gt;Criteria&lt;wbr&gt;Dimension
+<h4>Get<wbr>Scheduled<wbr>Query<wbr>Rules<wbr>Log<wbr>Criteria<wbr>Dimension</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetScheduledQueryRulesLogCriteriaDimension">output</a> API doc for this type.
 {{% /choosable %}}

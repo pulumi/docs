@@ -60,7 +60,9 @@ const selected443 = aws.lb.getListener({
 
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetListener </span><span class="p">{</span><span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Alb.GetListenerResult.html">GetListenerResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Alb.Inputs.GetListenerArgs.html">GetListenerArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">Pulumi.InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">}</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetListener </span><span class="p">{</span><span class="k">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Alb.GetListenerResult.html">GetListenerResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Alb.Inputs.GetListenerArgs.html">GetListenerArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">Pulumi.InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+}</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -514,7 +516,7 @@ The following output properties are available:
 
 ## Supporting Types
 
-#### Get&lt;wbr&gt;Listener&lt;wbr&gt;Default&lt;wbr&gt;Action
+<h4>Get<wbr>Listener<wbr>Default<wbr>Action</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetListenerDefaultAction">output</a> API doc for this type.
 {{% /choosable %}}
@@ -781,7 +783,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Listener&lt;wbr&gt;Default&lt;wbr&gt;Action&lt;wbr&gt;Authenticate&lt;wbr&gt;Cognito
+<h4>Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Cognito</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetListenerDefaultActionAuthenticateCognito">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1080,7 +1082,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Listener&lt;wbr&gt;Default&lt;wbr&gt;Action&lt;wbr&gt;Authenticate&lt;wbr&gt;Oidc
+<h4>Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Oidc</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetListenerDefaultActionAuthenticateOidc">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1475,7 +1477,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Listener&lt;wbr&gt;Default&lt;wbr&gt;Action&lt;wbr&gt;Fixed&lt;wbr&gt;Response
+<h4>Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Fixed<wbr>Response</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetListenerDefaultActionFixedResponse">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1614,7 +1616,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Listener&lt;wbr&gt;Default&lt;wbr&gt;Action&lt;wbr&gt;Redirect
+<h4>Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Redirect</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetListenerDefaultActionRedirect">output</a> API doc for this type.
 {{% /choosable %}}

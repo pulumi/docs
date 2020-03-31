@@ -45,7 +45,9 @@ const example = azure.containerservice.getKubernetesCluster({
 
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetKubernetesCluster </span><span class="p">{</span><span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Containerservice.GetKubernetesClusterResult.html">GetKubernetesClusterResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ContainerService.Inputs.GetKubernetesClusterArgs.html">GetKubernetesClusterArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">Pulumi.InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">}</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetKubernetesCluster </span><span class="p">{</span><span class="k">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Containerservice.GetKubernetesClusterResult.html">GetKubernetesClusterResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ContainerService.Inputs.GetKubernetesClusterArgs.html">GetKubernetesClusterArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">Pulumi.InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+}</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -1027,7 +1029,7 @@ The following output properties are available:
 
 ## Supporting Types
 
-#### Get&lt;wbr&gt;Kubernetes&lt;wbr&gt;Cluster&lt;wbr&gt;Addon&lt;wbr&gt;Profile
+<h4>Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKubernetesClusterAddonProfile">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1214,7 +1216,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Kubernetes&lt;wbr&gt;Cluster&lt;wbr&gt;Addon&lt;wbr&gt;Profile&lt;wbr&gt;Azure&lt;wbr&gt;Policy
+<h4>Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Azure<wbr>Policy</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKubernetesClusterAddonProfileAzurePolicy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1293,7 +1295,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Kubernetes&lt;wbr&gt;Cluster&lt;wbr&gt;Addon&lt;wbr&gt;Profile&lt;wbr&gt;Http&lt;wbr&gt;Application&lt;wbr&gt;Routing
+<h4>Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Http<wbr>Application<wbr>Routing</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKubernetesClusterAddonProfileHttpApplicationRouting">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1408,7 +1410,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Kubernetes&lt;wbr&gt;Cluster&lt;wbr&gt;Addon&lt;wbr&gt;Profile&lt;wbr&gt;Kube&lt;wbr&gt;Dashboard
+<h4>Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Kube<wbr>Dashboard</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKubernetesClusterAddonProfileKubeDashboard">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1487,7 +1489,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Kubernetes&lt;wbr&gt;Cluster&lt;wbr&gt;Addon&lt;wbr&gt;Profile&lt;wbr&gt;Oms&lt;wbr&gt;Agent
+<h4>Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKubernetesClusterAddonProfileOmsAgent">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1602,7 +1604,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Kubernetes&lt;wbr&gt;Cluster&lt;wbr&gt;Agent&lt;wbr&gt;Pool&lt;wbr&gt;Profile
+<h4>Get<wbr>Kubernetes<wbr>Cluster<wbr>Agent<wbr>Pool<wbr>Profile</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKubernetesClusterAgentPoolProfile">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2213,7 +2215,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Kubernetes&lt;wbr&gt;Cluster&lt;wbr&gt;Kube&lt;wbr&gt;Admin&lt;wbr&gt;Config
+<h4>Get<wbr>Kubernetes<wbr>Cluster<wbr>Kube<wbr>Admin<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKubernetesClusterKubeAdminConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2472,7 +2474,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Kubernetes&lt;wbr&gt;Cluster&lt;wbr&gt;Kube&lt;wbr&gt;Config
+<h4>Get<wbr>Kubernetes<wbr>Cluster<wbr>Kube<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKubernetesClusterKubeConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2731,7 +2733,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Kubernetes&lt;wbr&gt;Cluster&lt;wbr&gt;Linux&lt;wbr&gt;Profile
+<h4>Get<wbr>Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKubernetesClusterLinuxProfile">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2846,7 +2848,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Kubernetes&lt;wbr&gt;Cluster&lt;wbr&gt;Linux&lt;wbr&gt;Profile&lt;wbr&gt;Ssh&lt;wbr&gt;Key
+<h4>Get<wbr>Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile<wbr>Ssh<wbr>Key</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKubernetesClusterLinuxProfileSshKey">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2925,7 +2927,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Kubernetes&lt;wbr&gt;Cluster&lt;wbr&gt;Network&lt;wbr&gt;Profile
+<h4>Get<wbr>Kubernetes<wbr>Cluster<wbr>Network<wbr>Profile</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKubernetesClusterNetworkProfile">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3216,7 +3218,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Kubernetes&lt;wbr&gt;Cluster&lt;wbr&gt;Role&lt;wbr&gt;Based&lt;wbr&gt;Access&lt;wbr&gt;Control
+<h4>Get<wbr>Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKubernetesClusterRoleBasedAccessControl">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3331,7 +3333,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Kubernetes&lt;wbr&gt;Cluster&lt;wbr&gt;Role&lt;wbr&gt;Based&lt;wbr&gt;Access&lt;wbr&gt;Control&lt;wbr&gt;Azure&lt;wbr&gt;Active&lt;wbr&gt;Directory
+<h4>Get<wbr>Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control<wbr>Azure<wbr>Active<wbr>Directory</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKubernetesClusterRoleBasedAccessControlAzureActiveDirectory">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3482,7 +3484,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Kubernetes&lt;wbr&gt;Cluster&lt;wbr&gt;Service&lt;wbr&gt;Principal
+<h4>Get<wbr>Kubernetes<wbr>Cluster<wbr>Service<wbr>Principal</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKubernetesClusterServicePrincipal">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3561,7 +3563,7 @@ The following output properties are available:
 
 
 
-#### Get&lt;wbr&gt;Kubernetes&lt;wbr&gt;Cluster&lt;wbr&gt;Windows&lt;wbr&gt;Profile
+<h4>Get<wbr>Kubernetes<wbr>Cluster<wbr>Windows<wbr>Profile</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKubernetesClusterWindowsProfile">output</a> API doc for this type.
 {{% /choosable %}}
