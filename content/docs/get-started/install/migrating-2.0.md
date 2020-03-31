@@ -32,7 +32,7 @@ Previously, the Pulumi CLI would assume `--yes` when used in non-interactive mod
 ### Update Dependencies
 
 ```bash
-npm install @pulumi/pulumi@^2.0.0-beta.1
+npm install @pulumi/pulumi@^2.0.0-beta.2
 ```
 
 ### Remove synchronous invokes
@@ -59,7 +59,7 @@ const version: Output<string> = pulumi.output(gcp.container.getEngineVersions())
 Modify your `requirements.txt` file to update the Pulumi SDK and related providers as below:
 
 ```
-pulumi>=2.0.0-beta.1
+pulumi>=2.0.0-beta.2
 pulumi-aws>=2.0.0-beta.1
 ```
 
@@ -78,7 +78,7 @@ Pulumi 2.0 now supports Go modules. In `go.mod`, you can depend on the Pulumi SD
 
 ```
 require (
-    github.com/pulumi/pulumi/sdk/v2 v2.0.0-beta.1
+    github.com/pulumi/pulumi/sdk/v2 v2.0.0-beta.2
     github.com/pulumi/pulumi-aws/sdk/v2/go/aws v2.0.0-beta.1
 )
 ```
@@ -93,7 +93,7 @@ Then run `go mod download`
 Update your package reference to the latest version of the SDK:
 
 ```csharp
-<PackageReference Include="Pulumi" Version="2.0.0-beta.1" />
+<PackageReference Include="Pulumi" Version="2.0.0-beta.2" />
 ```
 
 ### Update Invokes
