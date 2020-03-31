@@ -224,4 +224,30 @@ main {
     }
 }
 
+.tooltip {
+    @apply absolute;
+}
+
+.tooltip .tooltip-text {
+    @apply absolute text-white hidden text-xs text-center font-normal bg-gray-700 rounded p-2 z-0 bottom-0 right-0 opacity-75 mb-8 w-64;
+    margin-right: -7rem;
+
+    // Arrow on the bottom of the tooltip.
+    &::after {
+        @apply absolute border-solid;
+
+        content: " ";
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-color: map-get($gray, 700) transparent transparent transparent;
+    }
+
+}
+
+.tooltip:hover .tooltip-text {
+    @apply block;
+}
+
 @tailwind utilities;
