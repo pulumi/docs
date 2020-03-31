@@ -89,8 +89,8 @@ pulumi.export('connection_string', account.primary_connection_string)
 package main
 
 import (
-	"github.com/pulumi/pulumi-azure/sdk/go/azure/core"
-	"github.com/pulumi/pulumi-azure/sdk/go/azure/storage"
+	"github.com/pulumi/pulumi-azure/sdk/v2/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v2/go/azure/storage"
 	"github.com/pulumi/pulumi/sdk/go/pulumi"
 )
 
@@ -164,15 +164,6 @@ This Pulumi program creates an Azure resource group and storage account and expo
 {{% choosable language python %}}
 
 {{< python-venv >}}
-
-{{% /choosable %}}
-
-{{% choosable language go %}}
-For Go, before we can deploy the stack, you will need to initialize your project's dependencies. Pulumi templates currently use `dep`:
-
-```bash
-$ dep ensure
-```
 
 {{% /choosable %}}
 

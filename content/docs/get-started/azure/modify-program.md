@@ -90,8 +90,8 @@ pulumi.export('connection_string', account.primary_connection_string)
 package main
 
 import (
-	"github.com/pulumi/pulumi-azure/sdk/go/azure/core"
-	"github.com/pulumi/pulumi-azure/sdk/go/azure/storage"
+	"github.com/pulumi/pulumi-azure/sdk/v2/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v2/go/azure/storage"
 	"github.com/pulumi/pulumi/sdk/go/pulumi"
 )
 

@@ -130,16 +130,6 @@ This Pulumi program creates an S3 bucket and exports the name of the bucket.
 
 {{% /choosable %}}
 
-{{% choosable language go %}}
-
-For Go, before we can deploy the stack, you will need to initialize your project's dependencies. Pulumi templates currently use `dep`:
-
-```bash
-$ dep ensure
-```
-
-{{% /choosable %}}
-
 Next, we'll deploy the stack.
 
 {{< get-started-stepper >}}
