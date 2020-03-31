@@ -10,22 +10,22 @@ tags:
     - provisioning
 ---
 
-In a [previous article](https://www.pulumi.com/blog/architecture-as-code-intro/), we presented an overview of four infrastructure patterns for deploying modern applications. The article reviewed virtual machines, serverless, Kubernetes, and microservices. In this post, we'll examine virtual machines in-depth.
+In a [previous article]({{< relref "/blog/architecture-as-code-intro" >}}), we presented an overview of four infrastructure patterns for deploying modern applications. The article reviewed virtual machines, serverless, Kubernetes, and microservices. In this post, we'll examine virtual machines in-depth.
 
 <!--more-->
 
 ## The Minimum Virtual Machine
 
-Whether you choose to build a virtual machine using VMWare or from a cloud service provider such as AWS, Azure, or Google Cloud Platform, they require three resources. First, the instance itself must be configured to meet application requirements. Second, network access for maintaining the instance and for applications. And finally, storage for application data.
+Whether you choose to build a virtual machine using VMWare or from a cloud service provider such as AWS, Azure, or Google Cloud Platform, they require three resources. First, the instance itself must be configured to meet application requirements. Second, network access for maintaining the instance and for applications. Finally, storage for application data.
 
 Let's start with the EC2 provisioner example, which is available on [Github](https://github.com/pulumi/examples/tree/master/aws-ts-ec2-provisioners). Make an empty directory and clone the example in the directory using `pulumi new`.
 
 ```bash
-$ mkdir virtual_machine
+$ mkdir virtual_machine && cd virtual_machine
 $ pulumi new https://github.com/pulumi/examples/tree/master/aws-ts-ec2-provisioners
 ```
 
-Follow the instructions to create an OpenSSH keypair and set them as secrets, we'll need them to log into and provision the VM. Let's take a look at the code. The first part configures the VM with the OpenSSH keys that we stored as secrets in the Pulumi configuration file (Pulumi.dev.yaml).
+Follow the instructions in the [README](https://github.com/pulumi/examples/tree/master/aws-ts-ec2-provisioners) to create an OpenSSH keypair and set them as secrets, we'll need them to log into and provision the VM. Let's take a look at the [code](https://github.com/pulumi/examples/blob/master/aws-ts-ec2-provisioners/index.ts). The first part configures the VM with the OpenSSH keys that we stored as secrets in the Pulumi configuration file (Pulumi.dev.yaml).
 
 The following part defines a security group that allows us to ssh via port 22 and receive requests on port 80.
 
@@ -111,9 +111,9 @@ Now we have a virtual machine that can receive HTTP and HTTPS requests and allow
 
 ## Provisioning with Dynamic Providers
 
-Provisioning a VM when it's created by running user-supplied scripts is straightforward. For example, AWS EC2 instances have a userData parameter that allows you to specify an inline script that runs when the instance starts. But what if you need to copy and execute scripts on the virtual machine without replacing the instance?
+Provisioning a VM when it's created by running user-supplied scripts is relatively straightforward. For example, AWS EC2 instances have a userData parameter that allows you to specify an inline script that runs when the instance starts. But what if you need to copy and execute scripts on the virtual machine without replacing the instance?
 
-This where you can use Pulumi’s [dynamic provider]({{< relref "/docs/intro/concepts/programming-model#dynamicproviders" >}}) to provision existing instances. Dynamic providers enable creating custom resource types, such as provisioners, within the source code of your Pulumi program. They let you execute arbitrary code during the deployment process. Dynamic provisioners run during resource provisioning, and enables adding custom logic to a deployment workflow during the create, read, update, or delete steps of a Pulumi program.
+This where you can use Pulumi’s [dynamic provider]({{< relref "/docs/intro/concepts/programming-model#dynamicproviders" >}}) to provision existing instances. Dynamic providers enable creating custom resource types, such as provisioners, within the source code of your Pulumi program. They let you execute arbitrary code during the deployment process. Dynamic provisioners run during resource provisioning, and enable adding custom logic to a deployment workflow during the create, read, update, or delete steps of a Pulumi program.
 
 Let's look at the code which creates a dynamic provisioner. In the code below, if Pulumi doesn't find the resource, it creates the resource. However, if you run `pulumi up` again and the resource is already running, Pulumi uses the diff method to replace the resource.
 
@@ -276,7 +276,7 @@ postgres=# \q
 
 We can deploy and configure virtual machines programmatically using scripts and a CLI. However, updating existing instances can be onerous because it would require logging into each instance to update them. With Pulumi, we can use a dynamic provider to create a provisioner that can provision and configure an existing virtual machine. In this post, we walked through how to create a virtual machine with storage, starting from an [example on Github](https://github.com/pulumi/examples/tree/master/aws-ts-ec2-provisioners). We then installed PostgreSQL using a provisioner that copied configuration files, and an installation script then ran the script, all without creating a new virtual machine.
 
-We have more virtual machine examples for other cloud providers. Checkout:
+We have more virtual machine examples for other cloud providers. Check out:
 
 - [Azure VM Scale Sets](https://github.com/pulumi/examples/tree/master/azure-py-vm-scaleset)
 - [Pulumi DigitalOcean Droplets](https://github.com/pulumi/examples/tree/master/digitalocean-ts-loadbalanced-droplets)
