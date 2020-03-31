@@ -104,8 +104,8 @@ pulumi.export('bucket_name',  bucket.url)
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/go/gcp/kms"
-	"github.com/pulumi/pulumi-gcp/sdk/go/gcp/storage"
+	"github.com/pulumi/pulumi-gcp/sdk/v2/go/gcp/kms"
+	"github.com/pulumi/pulumi-gcp/sdk/v2/go/gcp/storage"
 	"github.com/pulumi/pulumi/sdk/go/pulumi"
 )
 
@@ -187,15 +187,6 @@ class Program
         });
     }
 }
-```
-
-{{% /choosable %}}
-
-{{% choosable language go %}}
-We'll need to run `dep ensure` to pick up the new dependencies:
-
-```bash
-$ dep ensure
 ```
 
 {{% /choosable %}}

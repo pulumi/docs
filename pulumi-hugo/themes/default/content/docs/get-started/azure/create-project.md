@@ -53,7 +53,7 @@ $ pulumi new azure-csharp
 ```bash
 # install the pulumi azure plugin
 # check for the release version here https://github.com/pulumi/pulumi-azure/releases
-$ pulumi plugin install resource azure 1.14.0
+$ pulumi plugin install resource azure 2.3.1
 # from within your $GOPATH
 $ mkdir quickstart && cd quickstart
 $ pulumi new azure-go
