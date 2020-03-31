@@ -3,7 +3,7 @@ set -o nounset -o errexit -o pipefail
 
 PACKDIR="./content/docs/reference/pkg"
 ABSOLUTEPACKDIR="$(pwd)/content/docs/reference/pkg"
-TOOL_APIDOCGEN="go run ./tools/resourcedocsgen/*.go"
+TOOL_RESDOCGEN="go run ./tools/resourcedocsgen/*.go -v=3 -logtostderr"
 
 PROVIDERS=(
     "kubernetes"
@@ -32,9 +32,9 @@ for PROVIDER in "${PROVIDERS[@]}" ; do \
     else
         SCHEMA_FILE="../pulumi-${PROVIDER}/provider/cmd/pulumi-resource-${PROVIDER}/schema.json"
     fi
-    
+
     echo "Running docs generator from schema for ${PROVIDER}..."
-    ${TOOL_APIDOCGEN} ${ABSOLUTEPACKDIR}/${PROVIDER} ${SCHEMA_FILE} || exit 3
+    ${TOOL_RESDOCGEN} ${ABSOLUTEPACKDIR}/${PROVIDER} ${SCHEMA_FILE} || exit 3
 
     echo "Done generating resource docs for ${PROVIDER}"
     echo ""
