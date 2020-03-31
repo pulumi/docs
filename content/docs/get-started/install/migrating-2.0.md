@@ -2,8 +2,6 @@
 title: Migrating to Pulumi 2.0
 meta_desc: This page provides instructions for migrating to Pulumi 2.0
 no_on_this_page: true
-data:
-  node_invokes_text: Pulumi 2.0 no longer supports synchronous invokes. As a result, using the return values of any resource `get` operations will need to be made asynchronous. Similarly, the use of `getOutputSync` and `requireOutputSync` are no longer supported and you should move to using the `Output`-based versions of `getOutput` and `requireOutput`.
 ---
 
 ## Migrating to 2.0
@@ -37,7 +35,7 @@ npm install @pulumi/pulumi@^2.0.0
 
 ### Remove synchronous invokes
 
-{{< param "data.node_invokes_text" >}}
+Pulumi 2.0 no longer supports synchronous invokes. As a result, using the return values of any resource `get` operations will need to be made asynchronous. Similarly, the use of `getOutputSync` and `requireOutputSync` are no longer supported and you should move to using the `Output`-based versions of `getOutput` and `requireOutput`.
 
 ```javascript
 const engineVersion = gcp.container.getEngineVersions().latestMasterVersion;
