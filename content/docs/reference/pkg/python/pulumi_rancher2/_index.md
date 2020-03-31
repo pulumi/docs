@@ -2251,7 +2251,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_rancher2.AwaitableGetCatalogResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetCatalogResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">branch=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">kind=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">scope=None</em>, <em class="sig-param">url=None</em>, <em class="sig-param">username=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetCatalogResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetCatalogResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">branch=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">kind=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">scope=None</em>, <em class="sig-param">url=None</em>, <em class="sig-param">username=None</em>, <em class="sig-param">version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetCatalogResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -2281,17 +2281,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_rancher2.AwaitableGetClusterLoggingResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetClusterLoggingResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">elasticsearch_config=None</em>, <em class="sig-param">fluentd_config=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">kafka_config=None</em>, <em class="sig-param">kind=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_id=None</em>, <em class="sig-param">output_flush_interval=None</em>, <em class="sig-param">output_tags=None</em>, <em class="sig-param">splunk_config=None</em>, <em class="sig-param">syslog_config=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetClusterLoggingResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetClusterLoggingResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">custom_target_config=None</em>, <em class="sig-param">elasticsearch_config=None</em>, <em class="sig-param">enable_json_parsing=None</em>, <em class="sig-param">fluentd_config=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">kafka_config=None</em>, <em class="sig-param">kind=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_id=None</em>, <em class="sig-param">output_flush_interval=None</em>, <em class="sig-param">output_tags=None</em>, <em class="sig-param">splunk_config=None</em>, <em class="sig-param">syslog_config=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetClusterLoggingResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_rancher2.AwaitableGetClusterResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetClusterResult</code><span class="sig-paren">(</span><em class="sig-param">aks_config=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_auth_endpoint=None</em>, <em class="sig-param">cluster_monitoring_input=None</em>, <em class="sig-param">cluster_registration_token=None</em>, <em class="sig-param">cluster_template_answers=None</em>, <em class="sig-param">cluster_template_id=None</em>, <em class="sig-param">cluster_template_questions=None</em>, <em class="sig-param">cluster_template_revision_id=None</em>, <em class="sig-param">default_pod_security_policy_template_id=None</em>, <em class="sig-param">default_project_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">driver=None</em>, <em class="sig-param">eks_config=None</em>, <em class="sig-param">enable_cluster_alerting=None</em>, <em class="sig-param">enable_cluster_monitoring=None</em>, <em class="sig-param">enable_network_policy=None</em>, <em class="sig-param">gke_config=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">kube_config=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">rke_config=None</em>, <em class="sig-param">system_project_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetClusterResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetClusterResult</code><span class="sig-paren">(</span><em class="sig-param">aks_config=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_auth_endpoint=None</em>, <em class="sig-param">cluster_monitoring_input=None</em>, <em class="sig-param">cluster_registration_token=None</em>, <em class="sig-param">cluster_template_answers=None</em>, <em class="sig-param">cluster_template_id=None</em>, <em class="sig-param">cluster_template_questions=None</em>, <em class="sig-param">cluster_template_revision_id=None</em>, <em class="sig-param">default_pod_security_policy_template_id=None</em>, <em class="sig-param">default_project_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">driver=None</em>, <em class="sig-param">eks_config=None</em>, <em class="sig-param">enable_cluster_alerting=None</em>, <em class="sig-param">enable_cluster_monitoring=None</em>, <em class="sig-param">enable_network_policy=None</em>, <em class="sig-param">gke_config=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">k3s_config=None</em>, <em class="sig-param">kube_config=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">rke_config=None</em>, <em class="sig-param">scheduled_cluster_scans=None</em>, <em class="sig-param">system_project_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetClusterResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_rancher2.AwaitableGetClusterRoleTemplateBindingResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetClusterRoleTemplateBindingResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">group_id=None</em>, <em class="sig-param">group_principal_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">role_template_id=None</em>, <em class="sig-param">user_id=None</em>, <em class="sig-param">user_principal_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetClusterRoleTemplateBindingResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_rancher2.AwaitableGetClusterScanResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetClusterScanResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">run_type=None</em>, <em class="sig-param">scan_config=None</em>, <em class="sig-param">scan_type=None</em>, <em class="sig-param">status=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetClusterScanResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -2306,7 +2311,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_rancher2.AwaitableGetGlobalRoleBindingResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetGlobalRoleBindingResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">global_role_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">user_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetGlobalRoleBindingResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetGlobalRoleBindingResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">global_role_id=None</em>, <em class="sig-param">group_principal_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">user_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetGlobalRoleBindingResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -2356,7 +2361,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_rancher2.AwaitableGetProjectLoggingResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetProjectLoggingResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">elasticsearch_config=None</em>, <em class="sig-param">fluentd_config=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">kafka_config=None</em>, <em class="sig-param">kind=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_id=None</em>, <em class="sig-param">output_flush_interval=None</em>, <em class="sig-param">output_tags=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">splunk_config=None</em>, <em class="sig-param">syslog_config=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetProjectLoggingResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetProjectLoggingResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">custom_target_config=None</em>, <em class="sig-param">elasticsearch_config=None</em>, <em class="sig-param">enable_json_parsing=None</em>, <em class="sig-param">fluentd_config=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">kafka_config=None</em>, <em class="sig-param">kind=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_id=None</em>, <em class="sig-param">output_flush_interval=None</em>, <em class="sig-param">output_tags=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">splunk_config=None</em>, <em class="sig-param">syslog_config=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetProjectLoggingResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -2538,7 +2543,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_rancher2.Catalog">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">Catalog</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">branch=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">kind=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">refresh=None</em>, <em class="sig-param">scope=None</em>, <em class="sig-param">url=None</em>, <em class="sig-param">username=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.Catalog" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">Catalog</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">branch=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">kind=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">refresh=None</em>, <em class="sig-param">scope=None</em>, <em class="sig-param">url=None</em>, <em class="sig-param">username=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.Catalog" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Catalog resource. This can be used to create cluster, global and/or project catalogs for Rancher v2 environments and retrieve their information.</p>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/catalog.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/catalog.html.markdown</a>.</p>
@@ -2561,6 +2566,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>scope</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The scope of the catalog. <code class="docutils literal notranslate"><span class="pre">cluster</span></code>, <code class="docutils literal notranslate"><span class="pre">global</span></code>, and <code class="docutils literal notranslate"><span class="pre">project</span></code> are supported. Default <code class="docutils literal notranslate"><span class="pre">global</span></code> (string)</p></li>
 <li><p><strong>url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The url of the catalog repo (string)</p></li>
 <li><p><strong>username</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The username to access the catalog if needed (string)</p></li>
+<li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Helm version for the catalog. Available options: <code class="docutils literal notranslate"><span class="pre">helm_v2</span></code> (default) and <code class="docutils literal notranslate"><span class="pre">helm_v3</span></code> (string)</p></li>
 </ul>
 </dd>
 </dl>
@@ -2642,9 +2648,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The username to access the catalog if needed (string)</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_rancher2.Catalog.version">
+<code class="sig-name descname">version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.Catalog.version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Helm version for the catalog. Available options: <code class="docutils literal notranslate"><span class="pre">helm_v2</span></code> (default) and <code class="docutils literal notranslate"><span class="pre">helm_v3</span></code> (string)</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_rancher2.Catalog.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">branch=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">kind=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">refresh=None</em>, <em class="sig-param">scope=None</em>, <em class="sig-param">url=None</em>, <em class="sig-param">username=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.Catalog.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">branch=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">kind=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">refresh=None</em>, <em class="sig-param">scope=None</em>, <em class="sig-param">url=None</em>, <em class="sig-param">username=None</em>, <em class="sig-param">version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.Catalog.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Catalog resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -2666,6 +2678,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>scope</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The scope of the catalog. <code class="docutils literal notranslate"><span class="pre">cluster</span></code>, <code class="docutils literal notranslate"><span class="pre">global</span></code>, and <code class="docutils literal notranslate"><span class="pre">project</span></code> are supported. Default <code class="docutils literal notranslate"><span class="pre">global</span></code> (string)</p></li>
 <li><p><strong>url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The url of the catalog repo (string)</p></li>
 <li><p><strong>username</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The username to access the catalog if needed (string)</p></li>
+<li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Helm version for the catalog. Available options: <code class="docutils literal notranslate"><span class="pre">helm_v2</span></code> (default) and <code class="docutils literal notranslate"><span class="pre">helm_v3</span></code> (string)</p></li>
 </ul>
 </dd>
 </dl>
@@ -3071,14 +3084,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_rancher2.Cluster">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">Cluster</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">aks_config=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_auth_endpoint=None</em>, <em class="sig-param">cluster_monitoring_input=None</em>, <em class="sig-param">cluster_template_answers=None</em>, <em class="sig-param">cluster_template_id=None</em>, <em class="sig-param">cluster_template_questions=None</em>, <em class="sig-param">cluster_template_revision_id=None</em>, <em class="sig-param">default_pod_security_policy_template_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">desired_agent_image=None</em>, <em class="sig-param">desired_auth_image=None</em>, <em class="sig-param">docker_root_dir=None</em>, <em class="sig-param">driver=None</em>, <em class="sig-param">eks_config=None</em>, <em class="sig-param">enable_cluster_alerting=None</em>, <em class="sig-param">enable_cluster_istio=None</em>, <em class="sig-param">enable_cluster_monitoring=None</em>, <em class="sig-param">enable_network_policy=None</em>, <em class="sig-param">gke_config=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">rke_config=None</em>, <em class="sig-param">windows_prefered_cluster=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.Cluster" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">Cluster</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">aks_config=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_auth_endpoint=None</em>, <em class="sig-param">cluster_monitoring_input=None</em>, <em class="sig-param">cluster_template_answers=None</em>, <em class="sig-param">cluster_template_id=None</em>, <em class="sig-param">cluster_template_questions=None</em>, <em class="sig-param">cluster_template_revision_id=None</em>, <em class="sig-param">default_pod_security_policy_template_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">desired_agent_image=None</em>, <em class="sig-param">desired_auth_image=None</em>, <em class="sig-param">docker_root_dir=None</em>, <em class="sig-param">driver=None</em>, <em class="sig-param">eks_config=None</em>, <em class="sig-param">enable_cluster_alerting=None</em>, <em class="sig-param">enable_cluster_istio=None</em>, <em class="sig-param">enable_cluster_monitoring=None</em>, <em class="sig-param">enable_network_policy=None</em>, <em class="sig-param">gke_config=None</em>, <em class="sig-param">k3s_config=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">rke_config=None</em>, <em class="sig-param">scheduled_cluster_scan=None</em>, <em class="sig-param">windows_prefered_cluster=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.Cluster" title="Permalink to this definition">¶</a></dt>
 <dd><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Provides a Rancher v2 Cluster resource. This can be used to create Clusters for Rancher v2 environments and retrieve their information.
 
 &gt; This content is derived from https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/cluster.html.markdown.
 
 :param str resource_name: The name of the resource.
 :param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[dict] aks_config: The Azure AKS configuration for `aks` Clusters. Conflicts with `eks_config`, `gke_config` and `rke_config` (list maxitems:1)
+:param pulumi.Input[dict] aks_config: The Azure AKS configuration for `aks` Clusters. Conflicts with `eks_config`, `gke_config`, `k3s_config` and `rke_config` (list maxitems:1)
 :param pulumi.Input[dict] annotations: Annotations for cluster registration token object (map)
 :param pulumi.Input[dict] cluster_auth_endpoint: Enabling the [local cluster authorized endpoint](https://rancher.com/docs/rancher/v2.x/en/cluster-provisioning/rke-clusters/options/#local-cluster-auth-endpoint) allows direct communication with the cluster, bypassing the Rancher API proxy. (list maxitems:1)
 :param pulumi.Input[dict] cluster_monitoring_input: Cluster monitoring config. Any parameter defined in [rancher-monitoring charts](https://github.com/rancher/system-charts/tree/dev/charts/rancher-monitoring) could be configured  (list maxitems:1)
@@ -3092,15 +3105,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 :param pulumi.Input[str] desired_auth_image: Desired auth image. Just for Rancher v2.3.x and above (string)
 :param pulumi.Input[str] docker_root_dir: Desired auth image. Just for Rancher v2.3.x and above (string)
 :param pulumi.Input[str] driver: (Computed) The driver used for the Cluster. `imported`, `azurekubernetesservice`, `amazonelasticcontainerservice`, `googlekubernetesengine` and `rancherKubernetesEngine` are supported (string)
-:param pulumi.Input[dict] eks_config: The Amazon EKS configuration for `eks` Clusters. Conflicts with `aks_config`, `gke_config` and `rke_config` (list maxitems:1)
+:param pulumi.Input[dict] eks_config: The Amazon EKS configuration for `eks` Clusters. Conflicts with `aks_config`, `gke_config`, `k3s_config` and `rke_config` (list maxitems:1)
 :param pulumi.Input[bool] enable_cluster_alerting: Enable built-in cluster alerting. Default `false` (bool)
 :param pulumi.Input[bool] enable_cluster_istio: Enable built-in cluster istio. Default `false`. Just for Rancher v2.3.x and above (bool)
 :param pulumi.Input[bool] enable_cluster_monitoring: Enable built-in cluster monitoring. Default `false` (bool)
 :param pulumi.Input[bool] enable_network_policy: Enable project network isolation. Default `false` (bool)
-:param pulumi.Input[dict] gke_config: The Google GKE configuration for `gke` Clusters. Conflicts with `aks_config`, `eks_config` and `rke_config` (list maxitems:1)
+       * `scheduled_cluster_scan`- (Optional) Cluster scheduled cis scan. For Rancher v2.4.0 or above (List maxitems:1)
+:param pulumi.Input[dict] gke_config: The Google GKE configuration for `gke` Clusters. Conflicts with `aks_config`, `eks_config`, `k3s_config` and `rke_config` (list maxitems:1)
+:param pulumi.Input[dict] k3s_config: The K3S configuration for `k3s` imported Clusters. Conflicts with `aks_config`, `eks_config`, `gke_config` and `rke_config` (list maxitems:1)
 :param pulumi.Input[dict] labels: Labels for cluster registration token object (map)
 :param pulumi.Input[str] name: Name of cluster registration token (string)
-:param pulumi.Input[dict] rke_config: The RKE configuration for `rke` Clusters. Conflicts with `aks_config`, `eks_config` and `gke_config` (list maxitems:1)
+:param pulumi.Input[dict] rke_config: The RKE configuration for `rke` Clusters. Conflicts with `aks_config`, `eks_config`, `gke_config` and `k3s_config` (list maxitems:1)
+:param pulumi.Input[dict] scheduled_cluster_scan: Cluster scheduled scan
 :param pulumi.Input[bool] windows_prefered_cluster: Windows preferred cluster. Default: `false` (bool)
 
 The **aks_config** object supports the following:
@@ -3146,13 +3162,12 @@ The **aks_config** object supports the following:
 The **cluster_auth_endpoint** object supports the following:
 
   * `ca_certs` (`pulumi.Input[str]`) - CA certs for the authorized cluster endpoint (string)
-  * `enabled` (`pulumi.Input[bool]`) - Enable the authorized cluster endpoint. Default `true` (bool)
+  * `enabled` (`pulumi.Input[bool]`) - Enable scheduled cluster scan. Default: `false` (bool)
   * `fqdn` (`pulumi.Input[str]`) - FQDN for the authorized cluster endpoint (string)
 
 The **cluster_monitoring_input** object supports the following:
 
   * `answers` (`pulumi.Input[dict]`) - Key/value answers for monitor input (map)
-    =======
 
 The **cluster_template_answers** object supports the following:
 
@@ -3166,7 +3181,6 @@ The **cluster_template_questions** object supports the following:
   * `required` (`pulumi.Input[bool]`) - Required variable. Default `false` (bool)
   * `type` (`pulumi.Input[str]`) - Variable type. `boolean`, `int` and `string` are allowed. Default `string` (string)
   * `variable` (`pulumi.Input[str]`) - Variable name (string)
-    &gt;&gt;&gt;&gt;&gt;&gt;&gt; c6a2cbc... Feat: added .ClusterTemplate datasource and resource. For rancher V2.3.x. Doc files
 
 The **eks_config** object supports the following:
 
@@ -3243,6 +3257,16 @@ The **gke_config** object supports the following:
   * `taints` (`pulumi.Input[list]`) - List of Kubernetes taints to be applied to each node (list)
   * `useIpAliases` (`pulumi.Input[bool]`) - Whether alias IPs will be used for pod IPs in the cluster. Default `false` (bool)
   * `zone` (`pulumi.Input[str]`) - Zone GKE cluster (string)
+
+The **k3s_config** object supports the following:
+
+  * `upgrade_strategy` (`pulumi.Input[dict]`) - K3S upgrade strategy (List maxitems: 1)
+    * `drainServerNodes` (`pulumi.Input[bool]`) - Drain server nodes. Default: `false` (bool)
+    * `drainWorkerNodes` (`pulumi.Input[bool]`) - Drain worker nodes. Default: `false` (bool)
+    * `serverConcurrency` (`pulumi.Input[float]`) - Server concurrency. Default: `1` (int)
+    * `workerConcurrency` (`pulumi.Input[float]`) - Worker concurrency. Default: `1` (int)
+
+  * `version` (`pulumi.Input[str]`) - K3S kubernetes version (string)
 
 The **rke_config** object supports the following:
 
@@ -3446,7 +3470,7 @@ The **rke_config** object supports the following:
   * `services` (`pulumi.Input[dict]`) - Kubernetes cluster services (list maxitems:1)
     * `etcd` (`pulumi.Input[dict]`) - Etcd options for RKE services (list maxitems:1)
       * `backup_config` (`pulumi.Input[dict]`) - Backup options for etcd service. Just for Rancher v2.2.x (list maxitems:1)
-        * `enabled` (`pulumi.Input[bool]`) - Enable the authorized cluster endpoint. Default `true` (bool)
+        * `enabled` (`pulumi.Input[bool]`) - Enable scheduled cluster scan. Default: `false` (bool)
         * `intervalHours` (`pulumi.Input[float]`) - Interval hours for etcd backup. Default `12` (int)
         * `retention` (`pulumi.Input[float]`) - Retention for etcd backup. Default `6` (int)
         * `s3BackupConfig` (`pulumi.Input[dict]`) - S3 config options for etcd backup (list maxitems:1)
@@ -3478,7 +3502,7 @@ The **rke_config** object supports the following:
     * `kubeApi` (`pulumi.Input[dict]`) - Kube API options for RKE services (list maxitems:1)
       * `admissionConfiguration` (`pulumi.Input[dict]`) - Admission configuration (map)
       * `alwaysPullImages` (`pulumi.Input[bool]`) - Enable [AlwaysPullImages](https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/#alwayspullimages) Admission controller plugin. [Rancher docs](https://rancher.com/docs/rke/latest/en/config-options/services/#kubernetes-api-server-options) Default: `false` (bool)
-      * `auditLog` (`pulumi.Input[dict]`) - K8s audit log configuration. (list maxitem: 1)
+      * `auditLog` (`pulumi.Input[dict]`) - K8s audit log configuration. (list maxitems: 1)
         * `configuration` (`pulumi.Input[dict]`) - Event rate limit configuration. (map)
           * `format` (`pulumi.Input[str]`) - Audit log format. Default: &#39;json&#39; (string)
           * `maxAge` (`pulumi.Input[float]`) - Audit log max age. Default: `30` (int)
@@ -3499,59 +3523,87 @@ resources:</p>
 <ul>
 <li><p>pods
 “` <a class="reference external" href="https://rancher.com/docs/rke/latest/en/config-options/audit-log/">More info</a> (string)</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>      * `enabled` (`pulumi.Input[bool]`) - Enable the authorized cluster endpoint. Default `true` (bool)
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>       * `enabled` (`pulumi.Input[bool]`) - Enable scheduled cluster scan. Default: `false` (bool)
 
-    * `eventRateLimit` (`pulumi.Input[dict]`) - K8s event rate limit configuration. (list maxitem: 1)
-      * `configuration` (`pulumi.Input[dict]`) - Event rate limit configuration. (map)
-      * `enabled` (`pulumi.Input[bool]`) - Enable the authorized cluster endpoint. Default `true` (bool)
+     * `eventRateLimit` (`pulumi.Input[dict]`) - K8s event rate limit configuration. (list maxitems: 1)
+       * `configuration` (`pulumi.Input[dict]`) - Event rate limit configuration. (map)
+       * `enabled` (`pulumi.Input[bool]`) - Enable scheduled cluster scan. Default: `false` (bool)
 
-    * `extraArgs` (`pulumi.Input[dict]`) - Extra arguments for scheduler service (map)
-    * `extraBinds` (`pulumi.Input[list]`) - Extra binds for scheduler service (list)
-    * `extraEnvs` (`pulumi.Input[list]`) - Extra environment for scheduler service (list)
-    * `image` (`pulumi.Input[str]`) - Docker image for scheduler service (string)
-    * `podSecurityPolicy` (`pulumi.Input[bool]`) - Pod Security Policy option for kube API service. Default `false` (bool)
-    * `secretsEncryptionConfig` (`pulumi.Input[dict]`) - [Encrypt k8s secret data configration](https://rancher.com/docs/rke/latest/en/config-options/secrets-encryption/). (list maxitem: 1)
-      * `customConfig` (`pulumi.Input[dict]`) - Secrets encryption configuration. (map)
-      * `enabled` (`pulumi.Input[bool]`) - Enable the authorized cluster endpoint. Default `true` (bool)
+     * `extraArgs` (`pulumi.Input[dict]`) - Extra arguments for scheduler service (map)
+     * `extraBinds` (`pulumi.Input[list]`) - Extra binds for scheduler service (list)
+     * `extraEnvs` (`pulumi.Input[list]`) - Extra environment for scheduler service (list)
+     * `image` (`pulumi.Input[str]`) - Docker image for scheduler service (string)
+     * `podSecurityPolicy` (`pulumi.Input[bool]`) - Pod Security Policy option for kube API service. Default `false` (bool)
+     * `secretsEncryptionConfig` (`pulumi.Input[dict]`) - [Encrypt k8s secret data configration](https://rancher.com/docs/rke/latest/en/config-options/secrets-encryption/). (list maxitem: 1)
+       * `customConfig` (`pulumi.Input[dict]`) - Secrets encryption configuration. (map)
+       * `enabled` (`pulumi.Input[bool]`) - Enable scheduled cluster scan. Default: `false` (bool)
 
-    * `serviceClusterIpRange` (`pulumi.Input[str]`) - Service Cluster ip Range option for kube controller service (string)
-    * `serviceNodePortRange` (`pulumi.Input[str]`) - Service Node Port Range option for kube API service (string)
+     * `serviceClusterIpRange` (`pulumi.Input[str]`) - Service Cluster ip Range option for kube controller service (string)
+     * `serviceNodePortRange` (`pulumi.Input[str]`) - Service Node Port Range option for kube API service (string)
 
-  * `kubeController` (`pulumi.Input[dict]`) - Kube Controller options for RKE services (list maxitems:1)
-    * `clusterCidr` (`pulumi.Input[str]`) - Cluster CIDR option for kube controller service (string)
-    * `extraArgs` (`pulumi.Input[dict]`) - Extra arguments for scheduler service (map)
-    * `extraBinds` (`pulumi.Input[list]`) - Extra binds for scheduler service (list)
-    * `extraEnvs` (`pulumi.Input[list]`) - Extra environment for scheduler service (list)
-    * `image` (`pulumi.Input[str]`) - Docker image for scheduler service (string)
-    * `serviceClusterIpRange` (`pulumi.Input[str]`) - Service Cluster ip Range option for kube controller service (string)
+   * `kubeController` (`pulumi.Input[dict]`) - Kube Controller options for RKE services (list maxitems:1)
+     * `clusterCidr` (`pulumi.Input[str]`) - Cluster CIDR option for kube controller service (string)
+     * `extraArgs` (`pulumi.Input[dict]`) - Extra arguments for scheduler service (map)
+     * `extraBinds` (`pulumi.Input[list]`) - Extra binds for scheduler service (list)
+     * `extraEnvs` (`pulumi.Input[list]`) - Extra environment for scheduler service (list)
+     * `image` (`pulumi.Input[str]`) - Docker image for scheduler service (string)
+     * `serviceClusterIpRange` (`pulumi.Input[str]`) - Service Cluster ip Range option for kube controller service (string)
 
-  * `kubelet` (`pulumi.Input[dict]`) - Kubelet options for RKE services (list maxitems:1)
-    * `clusterDnsServer` (`pulumi.Input[str]`) - Cluster DNS Server option for kubelet service (string)
-    * `clusterDomain` (`pulumi.Input[str]`) - Cluster Domain option for kubelet service (string)
-    * `extraArgs` (`pulumi.Input[dict]`) - Extra arguments for scheduler service (map)
-    * `extraBinds` (`pulumi.Input[list]`) - Extra binds for scheduler service (list)
-    * `extraEnvs` (`pulumi.Input[list]`) - Extra environment for scheduler service (list)
-    * `failSwapOn` (`pulumi.Input[bool]`) - Enable or disable failing when swap on is not supported (bool)
-      * `generate_serving_certificate` [Generate a certificate signed by the kube-ca](https://rancher.com/docs/rke/latest/en/config-options/services/#kubelet-serving-certificate-requirements). Default `false` (bool)
-    * `generateServingCertificate` (`pulumi.Input[bool]`)
-    * `image` (`pulumi.Input[str]`) - Docker image for scheduler service (string)
-    * `infraContainerImage` (`pulumi.Input[str]`) - Infra container image for kubelet service (string)
+   * `kubelet` (`pulumi.Input[dict]`) - Kubelet options for RKE services (list maxitems:1)
+     * `clusterDnsServer` (`pulumi.Input[str]`) - Cluster DNS Server option for kubelet service (string)
+     * `clusterDomain` (`pulumi.Input[str]`) - Cluster Domain option for kubelet service (string)
+     * `extraArgs` (`pulumi.Input[dict]`) - Extra arguments for scheduler service (map)
+     * `extraBinds` (`pulumi.Input[list]`) - Extra binds for scheduler service (list)
+     * `extraEnvs` (`pulumi.Input[list]`) - Extra environment for scheduler service (list)
+     * `failSwapOn` (`pulumi.Input[bool]`) - Enable or disable failing when swap on is not supported (bool)
+       * `generate_serving_certificate` [Generate a certificate signed by the kube-ca](https://rancher.com/docs/rke/latest/en/config-options/services/#kubelet-serving-certificate-requirements). Default `false` (bool)
+     * `generateServingCertificate` (`pulumi.Input[bool]`)
+     * `image` (`pulumi.Input[str]`) - Docker image for scheduler service (string)
+     * `infraContainerImage` (`pulumi.Input[str]`) - Infra container image for kubelet service (string)
 
-  * `kubeproxy` (`pulumi.Input[dict]`) - Kubeproxy options for RKE services (list maxitems:1)
-    * `extraArgs` (`pulumi.Input[dict]`) - Extra arguments for scheduler service (map)
-    * `extraBinds` (`pulumi.Input[list]`) - Extra binds for scheduler service (list)
-    * `extraEnvs` (`pulumi.Input[list]`) - Extra environment for scheduler service (list)
-    * `image` (`pulumi.Input[str]`) - Docker image for scheduler service (string)
+   * `kubeproxy` (`pulumi.Input[dict]`) - Kubeproxy options for RKE services (list maxitems:1)
+     * `extraArgs` (`pulumi.Input[dict]`) - Extra arguments for scheduler service (map)
+     * `extraBinds` (`pulumi.Input[list]`) - Extra binds for scheduler service (list)
+     * `extraEnvs` (`pulumi.Input[list]`) - Extra environment for scheduler service (list)
+     * `image` (`pulumi.Input[str]`) - Docker image for scheduler service (string)
 
-  * `scheduler` (`pulumi.Input[dict]`) - Scheduler options for RKE services (list maxitems:1)
-    * `extraArgs` (`pulumi.Input[dict]`) - Extra arguments for scheduler service (map)
-    * `extraBinds` (`pulumi.Input[list]`) - Extra binds for scheduler service (list)
-    * `extraEnvs` (`pulumi.Input[list]`) - Extra environment for scheduler service (list)
-    * `image` (`pulumi.Input[str]`) - Docker image for scheduler service (string)
+   * `scheduler` (`pulumi.Input[dict]`) - Scheduler options for RKE services (list maxitems:1)
+     * `extraArgs` (`pulumi.Input[dict]`) - Extra arguments for scheduler service (map)
+     * `extraBinds` (`pulumi.Input[list]`) - Extra binds for scheduler service (list)
+     * `extraEnvs` (`pulumi.Input[list]`) - Extra environment for scheduler service (list)
+     * `image` (`pulumi.Input[str]`) - Docker image for scheduler service (string)
 
-* `sshAgentAuth` (`pulumi.Input[bool]`) - Use ssh agent auth. Default `false` (bool)
-* `sshCertPath` (`pulumi.Input[str]`) - Cluster level SSH certificate path (string)
-* `sshKeyPath` (`pulumi.Input[str]`) - Node SSH private key path (string)
+ * `sshAgentAuth` (`pulumi.Input[bool]`) - Use ssh agent auth. Default `false` (bool)
+ * `sshCertPath` (`pulumi.Input[str]`) - Cluster level SSH certificate path (string)
+ * `sshKeyPath` (`pulumi.Input[str]`) - Node SSH private key path (string)
+ * `upgrade_strategy` (`pulumi.Input[dict]`) - K3S upgrade strategy (List maxitems: 1)
+   * `drain` (`pulumi.Input[bool]`) - RKE drain nodes. Default: `false` (bool)
+   * `drainInput` (`pulumi.Input[dict]`) - RKE drain node input (list Maxitems: 1)
+     * `deleteLocalData` (`pulumi.Input[bool]`) - Delete RKE node local data. Default: `false` (bool)
+     * `force` (`pulumi.Input[bool]`) - Force RKE node drain. Default: `false` (bool)
+     * `gracePeriod` (`pulumi.Input[float]`) - RKE node drain grace period. Default: `-1` (int)
+     * `ignoreDaemonSets` (`pulumi.Input[bool]`) - Ignore RKE daemon sets. Default: `true` (bool)
+     * `timeout` (`pulumi.Input[float]`) - RKE node drain timeout. Default: `60` (int)
+
+   * `maxUnavailableControlplane` (`pulumi.Input[str]`) - RKE max unavailable controlplane nodes. Default: `1` (string)
+   * `maxUnavailableWorker` (`pulumi.Input[str]`) - RKE max unavailable worker nodes. Default: `10%` (string)
+
+
+The **scheduled_cluster_scan** object supports the following:
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `enabled` (`pulumi.Input[bool]`) - Enable scheduled cluster scan. Default: `false` (bool)
+* `scanConfig` (`pulumi.Input[dict]`) - Cluster scan config (List maxitems:1)
+  * `cisScanConfig` (`pulumi.Input[dict]`) - Cluster Cis Scan config (List maxitems:1)
+    * `debugMaster` (`pulumi.Input[bool]`) - Debug master. Default: `false` (bool)
+    * `debugWorker` (`pulumi.Input[bool]`) - Debug worker. Default: `false` (bool)
+    * `overrideBenchmarkVersion` (`pulumi.Input[str]`) - Override benchmark version (string)
+    * `overrideSkips` (`pulumi.Input[list]`) - Override skip (string)
+    * `profile` (`pulumi.Input[str]`) - Cis scan profile. Allowed values: `&quot;permissive&quot; (default) || &quot;hardened&quot;` (string)
+
+* `scheduleConfig` (`pulumi.Input[dict]`) - Cluster scan schedule config (list maxitems:1)
+  * `cronSchedule` (`pulumi.Input[str]`) - Crontab schedule. It should contains 5 fields `&quot;&lt;min&gt; &lt;hour&gt; &lt;month_day&gt; &lt;month&gt; &lt;week_day&gt;&quot;` (string)
+  * `retention` (`pulumi.Input[float]`) - Retention for etcd backup. Default `6` (int)
 </pre></div>
 </div>
 </li>
@@ -3563,7 +3615,7 @@ resources:</p>
 <dl class="attribute">
 <dt id="pulumi_rancher2.Cluster.aks_config">
 <code class="sig-name descname">aks_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.Cluster.aks_config" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Azure AKS configuration for <code class="docutils literal notranslate"><span class="pre">aks</span></code> Clusters. Conflicts with <code class="docutils literal notranslate"><span class="pre">eks_config</span></code>, <code class="docutils literal notranslate"><span class="pre">gke_config</span></code> and <code class="docutils literal notranslate"><span class="pre">rke_config</span></code> (list maxitems:1)</p>
+<dd><p>The Azure AKS configuration for <code class="docutils literal notranslate"><span class="pre">aks</span></code> Clusters. Conflicts with <code class="docutils literal notranslate"><span class="pre">eks_config</span></code>, <code class="docutils literal notranslate"><span class="pre">gke_config</span></code>, <code class="docutils literal notranslate"><span class="pre">k3s_config</span></code> and <code class="docutils literal notranslate"><span class="pre">rke_config</span></code> (list maxitems:1)</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">aadServerAppSecret</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The secret of an Azure Active Directory server application (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">aadTenantId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of an Azure Active Directory tenant (string)</p></li>
@@ -3617,7 +3669,7 @@ resources:</p>
 <dd><p>Enabling the <a class="reference external" href="https://rancher.com/docs/rancher/v2.x/en/cluster-provisioning/rke-clusters/options/#local-cluster-auth-endpoint">local cluster authorized endpoint</a> allows direct communication with the cluster, bypassing the Rancher API proxy. (list maxitems:1)</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">ca_certs</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - CA certs for the authorized cluster endpoint (string)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enable the authorized cluster endpoint. Default <code class="docutils literal notranslate"><span class="pre">true</span></code> (bool)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enable scheduled cluster scan. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">fqdn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - FQDN for the authorized cluster endpoint (string)</p></li>
 </ul>
 </dd></dl>
@@ -3626,11 +3678,9 @@ resources:</p>
 <dt id="pulumi_rancher2.Cluster.cluster_monitoring_input">
 <code class="sig-name descname">cluster_monitoring_input</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.Cluster.cluster_monitoring_input" title="Permalink to this definition">¶</a></dt>
 <dd><p>Cluster monitoring config. Any parameter defined in <a class="reference external" href="https://github.com/rancher/system-charts/tree/dev/charts/rancher-monitoring">rancher-monitoring charts</a> could be configured  (list maxitems:1)</p>
-<blockquote>
-<div><ul class="simple">
+<ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">answers</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Key/value answers for monitor input (map)</p></li>
 </ul>
-</div></blockquote>
 </dd></dl>
 
 <dl class="attribute">
@@ -3673,28 +3723,11 @@ resources:</p>
 <dt id="pulumi_rancher2.Cluster.cluster_template_questions">
 <code class="sig-name descname">cluster_template_questions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.Cluster.cluster_template_questions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Cluster template questions. Just for Rancher v2.3.x and above (list)</p>
-<ul>
+<ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">default</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Default variable value (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">required</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Required variable. Default <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Variable type. <code class="docutils literal notranslate"><span class="pre">boolean</span></code>, <code class="docutils literal notranslate"><span class="pre">int</span></code> and <code class="docutils literal notranslate"><span class="pre">string</span></code> are allowed. Default <code class="docutils literal notranslate"><span class="pre">string</span></code> (string)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">variable</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Variable name (string)
-..</p>
-<blockquote>
-<div><blockquote>
-<div><blockquote>
-<div><blockquote>
-<div><blockquote>
-<div><blockquote>
-<div><blockquote>
-<div><p>&gt; c6a2cbc… Feat: added .ClusterTemplate datasource and resource. For rancher V2.3.x. Doc files</p>
-</div></blockquote>
-</div></blockquote>
-</div></blockquote>
-</div></blockquote>
-</div></blockquote>
-</div></blockquote>
-</div></blockquote>
-</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">variable</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Variable name (string)</p></li>
 </ul>
 </dd></dl>
 
@@ -3749,7 +3782,7 @@ resources:</p>
 <dl class="attribute">
 <dt id="pulumi_rancher2.Cluster.eks_config">
 <code class="sig-name descname">eks_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.Cluster.eks_config" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Amazon EKS configuration for <code class="docutils literal notranslate"><span class="pre">eks</span></code> Clusters. Conflicts with <code class="docutils literal notranslate"><span class="pre">aks_config</span></code>, <code class="docutils literal notranslate"><span class="pre">gke_config</span></code> and <code class="docutils literal notranslate"><span class="pre">rke_config</span></code> (list maxitems:1)</p>
+<dd><p>The Amazon EKS configuration for <code class="docutils literal notranslate"><span class="pre">eks</span></code> Clusters. Conflicts with <code class="docutils literal notranslate"><span class="pre">aks_config</span></code>, <code class="docutils literal notranslate"><span class="pre">gke_config</span></code>, <code class="docutils literal notranslate"><span class="pre">k3s_config</span></code> and <code class="docutils literal notranslate"><span class="pre">rke_config</span></code> (list maxitems:1)</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">access_key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The AWS Client ID to use (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ami</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - AMI ID to use for the worker nodes instead of the default (string)</p></li>
@@ -3794,12 +3827,15 @@ resources:</p>
 <dt id="pulumi_rancher2.Cluster.enable_network_policy">
 <code class="sig-name descname">enable_network_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.Cluster.enable_network_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable project network isolation. Default <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">scheduled_cluster_scan</span></code>- (Optional) Cluster scheduled cis scan. For Rancher v2.4.0 or above (List maxitems:1)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_rancher2.Cluster.gke_config">
 <code class="sig-name descname">gke_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.Cluster.gke_config" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Google GKE configuration for <code class="docutils literal notranslate"><span class="pre">gke</span></code> Clusters. Conflicts with <code class="docutils literal notranslate"><span class="pre">aks_config</span></code>, <code class="docutils literal notranslate"><span class="pre">eks_config</span></code> and <code class="docutils literal notranslate"><span class="pre">rke_config</span></code> (list maxitems:1)</p>
+<dd><p>The Google GKE configuration for <code class="docutils literal notranslate"><span class="pre">gke</span></code> Clusters. Conflicts with <code class="docutils literal notranslate"><span class="pre">aks_config</span></code>, <code class="docutils literal notranslate"><span class="pre">eks_config</span></code>, <code class="docutils literal notranslate"><span class="pre">k3s_config</span></code> and <code class="docutils literal notranslate"><span class="pre">rke_config</span></code> (list maxitems:1)</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">clusterIpv4Cidr</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The IP address range of the container pods (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">credential</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The contents of the GC credential file (string)</p></li>
@@ -3857,6 +3893,23 @@ resources:</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_rancher2.Cluster.k3s_config">
+<code class="sig-name descname">k3s_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.Cluster.k3s_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>The K3S configuration for <code class="docutils literal notranslate"><span class="pre">k3s</span></code> imported Clusters. Conflicts with <code class="docutils literal notranslate"><span class="pre">aks_config</span></code>, <code class="docutils literal notranslate"><span class="pre">eks_config</span></code>, <code class="docutils literal notranslate"><span class="pre">gke_config</span></code> and <code class="docutils literal notranslate"><span class="pre">rke_config</span></code> (list maxitems:1)</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">upgrade_strategy</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - K3S upgrade strategy (List maxitems: 1)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">drainServerNodes</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Drain server nodes. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">drainWorkerNodes</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Drain worker nodes. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serverConcurrency</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Server concurrency. Default: <code class="docutils literal notranslate"><span class="pre">1</span></code> (int)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">workerConcurrency</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Worker concurrency. Default: <code class="docutils literal notranslate"><span class="pre">1</span></code> (int)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - K3S kubernetes version (string)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_rancher2.Cluster.kube_config">
 <code class="sig-name descname">kube_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.Cluster.kube_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Computed/Sensitive) Kube Config generated for the cluster (string)</p>
@@ -3877,7 +3930,7 @@ resources:</p>
 <dl class="attribute">
 <dt id="pulumi_rancher2.Cluster.rke_config">
 <code class="sig-name descname">rke_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.Cluster.rke_config" title="Permalink to this definition">¶</a></dt>
-<dd><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>The RKE configuration for `rke` Clusters. Conflicts with `aks_config`, `eks_config` and `gke_config` (list maxitems:1)
+<dd><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>The RKE configuration for `rke` Clusters. Conflicts with `aks_config`, `eks_config`, `gke_config` and `k3s_config` (list maxitems:1)
 
   * `addonJobTimeout` (`float`) - Duration in seconds of addon job (int)
   * `addons` (`str`) - Addons descripton to deploy on RKE cluster.
@@ -4079,7 +4132,7 @@ resources:</p>
   * `services` (`dict`) - Kubernetes cluster services (list maxitems:1)
     * `etcd` (`dict`) - Etcd options for RKE services (list maxitems:1)
       * `backup_config` (`dict`) - Backup options for etcd service. Just for Rancher v2.2.x (list maxitems:1)
-        * `enabled` (`bool`) - Enable the authorized cluster endpoint. Default `true` (bool)
+        * `enabled` (`bool`) - Enable scheduled cluster scan. Default: `false` (bool)
         * `intervalHours` (`float`) - Interval hours for etcd backup. Default `12` (int)
         * `retention` (`float`) - Retention for etcd backup. Default `6` (int)
         * `s3BackupConfig` (`dict`) - S3 config options for etcd backup (list maxitems:1)
@@ -4111,7 +4164,7 @@ resources:</p>
     * `kubeApi` (`dict`) - Kube API options for RKE services (list maxitems:1)
       * `admissionConfiguration` (`dict`) - Admission configuration (map)
       * `alwaysPullImages` (`bool`) - Enable [AlwaysPullImages](https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/#alwayspullimages) Admission controller plugin. [Rancher docs](https://rancher.com/docs/rke/latest/en/config-options/services/#kubernetes-api-server-options) Default: `false` (bool)
-      * `auditLog` (`dict`) - K8s audit log configuration. (list maxitem: 1)
+      * `auditLog` (`dict`) - K8s audit log configuration. (list maxitems: 1)
         * `configuration` (`dict`) - Event rate limit configuration. (map)
           * `format` (`str`) - Audit log format. Default: &#39;json&#39; (string)
           * `maxAge` (`float`) - Audit log max age. Default: `30` (int)
@@ -4132,11 +4185,11 @@ resources:</p>
 <ul>
 <li><p>pods
 “` <a class="reference external" href="https://rancher.com/docs/rke/latest/en/config-options/audit-log/">More info</a> (string)</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  * `enabled` (`bool`) - Enable the authorized cluster endpoint. Default `true` (bool)
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  * `enabled` (`bool`) - Enable scheduled cluster scan. Default: `false` (bool)
 
-* `eventRateLimit` (`dict`) - K8s event rate limit configuration. (list maxitem: 1)
+* `eventRateLimit` (`dict`) - K8s event rate limit configuration. (list maxitems: 1)
   * `configuration` (`dict`) - Event rate limit configuration. (map)
-  * `enabled` (`bool`) - Enable the authorized cluster endpoint. Default `true` (bool)
+  * `enabled` (`bool`) - Enable scheduled cluster scan. Default: `false` (bool)
 
 * `extraArgs` (`dict`) - Extra arguments for scheduler service (map)
 * `extraBinds` (`list`) - Extra binds for scheduler service (list)
@@ -4145,7 +4198,7 @@ resources:</p>
 * `podSecurityPolicy` (`bool`) - Pod Security Policy option for kube API service. Default `false` (bool)
 * `secretsEncryptionConfig` (`dict`) - [Encrypt k8s secret data configration](https://rancher.com/docs/rke/latest/en/config-options/secrets-encryption/). (list maxitem: 1)
   * `customConfig` (`dict`) - Secrets encryption configuration. (map)
-  * `enabled` (`bool`) - Enable the authorized cluster endpoint. Default `true` (bool)
+  * `enabled` (`bool`) - Enable scheduled cluster scan. Default: `false` (bool)
 
 * `serviceClusterIpRange` (`str`) - Service Cluster ip Range option for kube controller service (string)
 * `serviceNodePortRange` (`str`) - Service Node Port Range option for kube API service (string)
@@ -4198,10 +4251,54 @@ resources:</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">sshAgentAuth</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Use ssh agent auth. Default <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sshCertPath</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Cluster level SSH certificate path (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sshKeyPath</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Node SSH private key path (string)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">upgrade_strategy</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - K3S upgrade strategy (List maxitems: 1)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">drain</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - RKE drain nodes. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">drainInput</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - RKE drain node input (list Maxitems: 1)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteLocalData</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Delete RKE node local data. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">force</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Force RKE node drain. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gracePeriod</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - RKE node drain grace period. Default: <code class="docutils literal notranslate"><span class="pre">-1</span></code> (int)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ignoreDaemonSets</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Ignore RKE daemon sets. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code> (bool)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - RKE node drain timeout. Default: <code class="docutils literal notranslate"><span class="pre">60</span></code> (int)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxUnavailableControlplane</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - RKE max unavailable controlplane nodes. Default: <code class="docutils literal notranslate"><span class="pre">1</span></code> (string)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxUnavailableWorker</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - RKE max unavailable worker nodes. Default: <code class="docutils literal notranslate"><span class="pre">10%</span></code> (string)</p></li>
 </ul>
 </li>
 </ul>
 </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_rancher2.Cluster.scheduled_cluster_scan">
+<code class="sig-name descname">scheduled_cluster_scan</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.Cluster.scheduled_cluster_scan" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cluster scheduled scan</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enable scheduled cluster scan. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scanConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Cluster scan config (List maxitems:1)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">cisScanConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Cluster Cis Scan config (List maxitems:1)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">debugMaster</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Debug master. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">debugWorker</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Debug worker. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">overrideBenchmarkVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Override benchmark version (string)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">overrideSkips</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Override skip (string)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">profile</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Cis scan profile. Allowed values: <code class="docutils literal notranslate"><span class="pre">&quot;permissive&quot;</span> <span class="pre">(default)</span> <span class="pre">||</span> <span class="pre">&quot;hardened&quot;</span></code> (string)</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scheduleConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Cluster scan schedule config (list maxitems:1)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">cronSchedule</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Crontab schedule. It should contains 5 fields <code class="docutils literal notranslate"><span class="pre">&quot;&lt;min&gt;</span> <span class="pre">&lt;hour&gt;</span> <span class="pre">&lt;month_day&gt;</span> <span class="pre">&lt;month&gt;</span> <span class="pre">&lt;week_day&gt;&quot;</span></code> (string)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">retention</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Retention for etcd backup. Default <code class="docutils literal notranslate"><span class="pre">6</span></code> (int)</p></li>
 </ul>
 </li>
 </ul>
@@ -4221,14 +4318,14 @@ resources:</p>
 
 <dl class="method">
 <dt id="pulumi_rancher2.Cluster.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">aks_config=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_auth_endpoint=None</em>, <em class="sig-param">cluster_monitoring_input=None</em>, <em class="sig-param">cluster_registration_token=None</em>, <em class="sig-param">cluster_template_answers=None</em>, <em class="sig-param">cluster_template_id=None</em>, <em class="sig-param">cluster_template_questions=None</em>, <em class="sig-param">cluster_template_revision_id=None</em>, <em class="sig-param">default_pod_security_policy_template_id=None</em>, <em class="sig-param">default_project_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">desired_agent_image=None</em>, <em class="sig-param">desired_auth_image=None</em>, <em class="sig-param">docker_root_dir=None</em>, <em class="sig-param">driver=None</em>, <em class="sig-param">eks_config=None</em>, <em class="sig-param">enable_cluster_alerting=None</em>, <em class="sig-param">enable_cluster_istio=None</em>, <em class="sig-param">enable_cluster_monitoring=None</em>, <em class="sig-param">enable_network_policy=None</em>, <em class="sig-param">gke_config=None</em>, <em class="sig-param">kube_config=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">rke_config=None</em>, <em class="sig-param">system_project_id=None</em>, <em class="sig-param">windows_prefered_cluster=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.Cluster.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">aks_config=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_auth_endpoint=None</em>, <em class="sig-param">cluster_monitoring_input=None</em>, <em class="sig-param">cluster_registration_token=None</em>, <em class="sig-param">cluster_template_answers=None</em>, <em class="sig-param">cluster_template_id=None</em>, <em class="sig-param">cluster_template_questions=None</em>, <em class="sig-param">cluster_template_revision_id=None</em>, <em class="sig-param">default_pod_security_policy_template_id=None</em>, <em class="sig-param">default_project_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">desired_agent_image=None</em>, <em class="sig-param">desired_auth_image=None</em>, <em class="sig-param">docker_root_dir=None</em>, <em class="sig-param">driver=None</em>, <em class="sig-param">eks_config=None</em>, <em class="sig-param">enable_cluster_alerting=None</em>, <em class="sig-param">enable_cluster_istio=None</em>, <em class="sig-param">enable_cluster_monitoring=None</em>, <em class="sig-param">enable_network_policy=None</em>, <em class="sig-param">gke_config=None</em>, <em class="sig-param">k3s_config=None</em>, <em class="sig-param">kube_config=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">rke_config=None</em>, <em class="sig-param">scheduled_cluster_scan=None</em>, <em class="sig-param">system_project_id=None</em>, <em class="sig-param">windows_prefered_cluster=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.Cluster.get" title="Permalink to this definition">¶</a></dt>
 <dd><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Get an existing Cluster resource&#39;s state with the given name, id, and optional extra
 properties used to qualify the lookup.
 
 :param str resource_name: The unique name of the resulting resource.
 :param str id: The unique provider ID of the resource to lookup.
 :param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[dict] aks_config: The Azure AKS configuration for `aks` Clusters. Conflicts with `eks_config`, `gke_config` and `rke_config` (list maxitems:1)
+:param pulumi.Input[dict] aks_config: The Azure AKS configuration for `aks` Clusters. Conflicts with `eks_config`, `gke_config`, `k3s_config` and `rke_config` (list maxitems:1)
 :param pulumi.Input[dict] annotations: Annotations for cluster registration token object (map)
 :param pulumi.Input[dict] cluster_auth_endpoint: Enabling the [local cluster authorized endpoint](https://rancher.com/docs/rancher/v2.x/en/cluster-provisioning/rke-clusters/options/#local-cluster-auth-endpoint) allows direct communication with the cluster, bypassing the Rancher API proxy. (list maxitems:1)
 :param pulumi.Input[dict] cluster_monitoring_input: Cluster monitoring config. Any parameter defined in [rancher-monitoring charts](https://github.com/rancher/system-charts/tree/dev/charts/rancher-monitoring) could be configured  (list maxitems:1)
@@ -4244,16 +4341,19 @@ properties used to qualify the lookup.
 :param pulumi.Input[str] desired_auth_image: Desired auth image. Just for Rancher v2.3.x and above (string)
 :param pulumi.Input[str] docker_root_dir: Desired auth image. Just for Rancher v2.3.x and above (string)
 :param pulumi.Input[str] driver: (Computed) The driver used for the Cluster. `imported`, `azurekubernetesservice`, `amazonelasticcontainerservice`, `googlekubernetesengine` and `rancherKubernetesEngine` are supported (string)
-:param pulumi.Input[dict] eks_config: The Amazon EKS configuration for `eks` Clusters. Conflicts with `aks_config`, `gke_config` and `rke_config` (list maxitems:1)
+:param pulumi.Input[dict] eks_config: The Amazon EKS configuration for `eks` Clusters. Conflicts with `aks_config`, `gke_config`, `k3s_config` and `rke_config` (list maxitems:1)
 :param pulumi.Input[bool] enable_cluster_alerting: Enable built-in cluster alerting. Default `false` (bool)
 :param pulumi.Input[bool] enable_cluster_istio: Enable built-in cluster istio. Default `false`. Just for Rancher v2.3.x and above (bool)
 :param pulumi.Input[bool] enable_cluster_monitoring: Enable built-in cluster monitoring. Default `false` (bool)
 :param pulumi.Input[bool] enable_network_policy: Enable project network isolation. Default `false` (bool)
-:param pulumi.Input[dict] gke_config: The Google GKE configuration for `gke` Clusters. Conflicts with `aks_config`, `eks_config` and `rke_config` (list maxitems:1)
+       * `scheduled_cluster_scan`- (Optional) Cluster scheduled cis scan. For Rancher v2.4.0 or above (List maxitems:1)
+:param pulumi.Input[dict] gke_config: The Google GKE configuration for `gke` Clusters. Conflicts with `aks_config`, `eks_config`, `k3s_config` and `rke_config` (list maxitems:1)
+:param pulumi.Input[dict] k3s_config: The K3S configuration for `k3s` imported Clusters. Conflicts with `aks_config`, `eks_config`, `gke_config` and `rke_config` (list maxitems:1)
 :param pulumi.Input[str] kube_config: (Computed/Sensitive) Kube Config generated for the cluster (string)
 :param pulumi.Input[dict] labels: Labels for cluster registration token object (map)
 :param pulumi.Input[str] name: Name of cluster registration token (string)
-:param pulumi.Input[dict] rke_config: The RKE configuration for `rke` Clusters. Conflicts with `aks_config`, `eks_config` and `gke_config` (list maxitems:1)
+:param pulumi.Input[dict] rke_config: The RKE configuration for `rke` Clusters. Conflicts with `aks_config`, `eks_config`, `gke_config` and `k3s_config` (list maxitems:1)
+:param pulumi.Input[dict] scheduled_cluster_scan: Cluster scheduled scan
 :param pulumi.Input[str] system_project_id: (Computed) System project ID for the cluster (string)
 :param pulumi.Input[bool] windows_prefered_cluster: Windows preferred cluster. Default: `false` (bool)
 
@@ -4300,13 +4400,12 @@ The **aks_config** object supports the following:
 The **cluster_auth_endpoint** object supports the following:
 
   * `ca_certs` (`pulumi.Input[str]`) - CA certs for the authorized cluster endpoint (string)
-  * `enabled` (`pulumi.Input[bool]`) - Enable the authorized cluster endpoint. Default `true` (bool)
+  * `enabled` (`pulumi.Input[bool]`) - Enable scheduled cluster scan. Default: `false` (bool)
   * `fqdn` (`pulumi.Input[str]`) - FQDN for the authorized cluster endpoint (string)
 
 The **cluster_monitoring_input** object supports the following:
 
   * `answers` (`pulumi.Input[dict]`) - Key/value answers for monitor input (map)
-    =======
 
 The **cluster_registration_token** object supports the following:
 
@@ -4334,7 +4433,6 @@ The **cluster_template_questions** object supports the following:
   * `required` (`pulumi.Input[bool]`) - Required variable. Default `false` (bool)
   * `type` (`pulumi.Input[str]`) - Variable type. `boolean`, `int` and `string` are allowed. Default `string` (string)
   * `variable` (`pulumi.Input[str]`) - Variable name (string)
-    &gt;&gt;&gt;&gt;&gt;&gt;&gt; c6a2cbc... Feat: added .ClusterTemplate datasource and resource. For rancher V2.3.x. Doc files
 
 The **eks_config** object supports the following:
 
@@ -4411,6 +4509,16 @@ The **gke_config** object supports the following:
   * `taints` (`pulumi.Input[list]`) - List of Kubernetes taints to be applied to each node (list)
   * `useIpAliases` (`pulumi.Input[bool]`) - Whether alias IPs will be used for pod IPs in the cluster. Default `false` (bool)
   * `zone` (`pulumi.Input[str]`) - Zone GKE cluster (string)
+
+The **k3s_config** object supports the following:
+
+  * `upgrade_strategy` (`pulumi.Input[dict]`) - K3S upgrade strategy (List maxitems: 1)
+    * `drainServerNodes` (`pulumi.Input[bool]`) - Drain server nodes. Default: `false` (bool)
+    * `drainWorkerNodes` (`pulumi.Input[bool]`) - Drain worker nodes. Default: `false` (bool)
+    * `serverConcurrency` (`pulumi.Input[float]`) - Server concurrency. Default: `1` (int)
+    * `workerConcurrency` (`pulumi.Input[float]`) - Worker concurrency. Default: `1` (int)
+
+  * `version` (`pulumi.Input[str]`) - K3S kubernetes version (string)
 
 The **rke_config** object supports the following:
 
@@ -4614,7 +4722,7 @@ The **rke_config** object supports the following:
   * `services` (`pulumi.Input[dict]`) - Kubernetes cluster services (list maxitems:1)
     * `etcd` (`pulumi.Input[dict]`) - Etcd options for RKE services (list maxitems:1)
       * `backup_config` (`pulumi.Input[dict]`) - Backup options for etcd service. Just for Rancher v2.2.x (list maxitems:1)
-        * `enabled` (`pulumi.Input[bool]`) - Enable the authorized cluster endpoint. Default `true` (bool)
+        * `enabled` (`pulumi.Input[bool]`) - Enable scheduled cluster scan. Default: `false` (bool)
         * `intervalHours` (`pulumi.Input[float]`) - Interval hours for etcd backup. Default `12` (int)
         * `retention` (`pulumi.Input[float]`) - Retention for etcd backup. Default `6` (int)
         * `s3BackupConfig` (`pulumi.Input[dict]`) - S3 config options for etcd backup (list maxitems:1)
@@ -4646,7 +4754,7 @@ The **rke_config** object supports the following:
     * `kubeApi` (`pulumi.Input[dict]`) - Kube API options for RKE services (list maxitems:1)
       * `admissionConfiguration` (`pulumi.Input[dict]`) - Admission configuration (map)
       * `alwaysPullImages` (`pulumi.Input[bool]`) - Enable [AlwaysPullImages](https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/#alwayspullimages) Admission controller plugin. [Rancher docs](https://rancher.com/docs/rke/latest/en/config-options/services/#kubernetes-api-server-options) Default: `false` (bool)
-      * `auditLog` (`pulumi.Input[dict]`) - K8s audit log configuration. (list maxitem: 1)
+      * `auditLog` (`pulumi.Input[dict]`) - K8s audit log configuration. (list maxitems: 1)
         * `configuration` (`pulumi.Input[dict]`) - Event rate limit configuration. (map)
           * `format` (`pulumi.Input[str]`) - Audit log format. Default: &#39;json&#39; (string)
           * `maxAge` (`pulumi.Input[float]`) - Audit log max age. Default: `30` (int)
@@ -4667,59 +4775,87 @@ resources:</p>
 <ul>
 <li><p>pods
 “` <a class="reference external" href="https://rancher.com/docs/rke/latest/en/config-options/audit-log/">More info</a> (string)</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>      * `enabled` (`pulumi.Input[bool]`) - Enable the authorized cluster endpoint. Default `true` (bool)
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>       * `enabled` (`pulumi.Input[bool]`) - Enable scheduled cluster scan. Default: `false` (bool)
 
-    * `eventRateLimit` (`pulumi.Input[dict]`) - K8s event rate limit configuration. (list maxitem: 1)
-      * `configuration` (`pulumi.Input[dict]`) - Event rate limit configuration. (map)
-      * `enabled` (`pulumi.Input[bool]`) - Enable the authorized cluster endpoint. Default `true` (bool)
+     * `eventRateLimit` (`pulumi.Input[dict]`) - K8s event rate limit configuration. (list maxitems: 1)
+       * `configuration` (`pulumi.Input[dict]`) - Event rate limit configuration. (map)
+       * `enabled` (`pulumi.Input[bool]`) - Enable scheduled cluster scan. Default: `false` (bool)
 
-    * `extraArgs` (`pulumi.Input[dict]`) - Extra arguments for scheduler service (map)
-    * `extraBinds` (`pulumi.Input[list]`) - Extra binds for scheduler service (list)
-    * `extraEnvs` (`pulumi.Input[list]`) - Extra environment for scheduler service (list)
-    * `image` (`pulumi.Input[str]`) - Docker image for scheduler service (string)
-    * `podSecurityPolicy` (`pulumi.Input[bool]`) - Pod Security Policy option for kube API service. Default `false` (bool)
-    * `secretsEncryptionConfig` (`pulumi.Input[dict]`) - [Encrypt k8s secret data configration](https://rancher.com/docs/rke/latest/en/config-options/secrets-encryption/). (list maxitem: 1)
-      * `customConfig` (`pulumi.Input[dict]`) - Secrets encryption configuration. (map)
-      * `enabled` (`pulumi.Input[bool]`) - Enable the authorized cluster endpoint. Default `true` (bool)
+     * `extraArgs` (`pulumi.Input[dict]`) - Extra arguments for scheduler service (map)
+     * `extraBinds` (`pulumi.Input[list]`) - Extra binds for scheduler service (list)
+     * `extraEnvs` (`pulumi.Input[list]`) - Extra environment for scheduler service (list)
+     * `image` (`pulumi.Input[str]`) - Docker image for scheduler service (string)
+     * `podSecurityPolicy` (`pulumi.Input[bool]`) - Pod Security Policy option for kube API service. Default `false` (bool)
+     * `secretsEncryptionConfig` (`pulumi.Input[dict]`) - [Encrypt k8s secret data configration](https://rancher.com/docs/rke/latest/en/config-options/secrets-encryption/). (list maxitem: 1)
+       * `customConfig` (`pulumi.Input[dict]`) - Secrets encryption configuration. (map)
+       * `enabled` (`pulumi.Input[bool]`) - Enable scheduled cluster scan. Default: `false` (bool)
 
-    * `serviceClusterIpRange` (`pulumi.Input[str]`) - Service Cluster ip Range option for kube controller service (string)
-    * `serviceNodePortRange` (`pulumi.Input[str]`) - Service Node Port Range option for kube API service (string)
+     * `serviceClusterIpRange` (`pulumi.Input[str]`) - Service Cluster ip Range option for kube controller service (string)
+     * `serviceNodePortRange` (`pulumi.Input[str]`) - Service Node Port Range option for kube API service (string)
 
-  * `kubeController` (`pulumi.Input[dict]`) - Kube Controller options for RKE services (list maxitems:1)
-    * `clusterCidr` (`pulumi.Input[str]`) - Cluster CIDR option for kube controller service (string)
-    * `extraArgs` (`pulumi.Input[dict]`) - Extra arguments for scheduler service (map)
-    * `extraBinds` (`pulumi.Input[list]`) - Extra binds for scheduler service (list)
-    * `extraEnvs` (`pulumi.Input[list]`) - Extra environment for scheduler service (list)
-    * `image` (`pulumi.Input[str]`) - Docker image for scheduler service (string)
-    * `serviceClusterIpRange` (`pulumi.Input[str]`) - Service Cluster ip Range option for kube controller service (string)
+   * `kubeController` (`pulumi.Input[dict]`) - Kube Controller options for RKE services (list maxitems:1)
+     * `clusterCidr` (`pulumi.Input[str]`) - Cluster CIDR option for kube controller service (string)
+     * `extraArgs` (`pulumi.Input[dict]`) - Extra arguments for scheduler service (map)
+     * `extraBinds` (`pulumi.Input[list]`) - Extra binds for scheduler service (list)
+     * `extraEnvs` (`pulumi.Input[list]`) - Extra environment for scheduler service (list)
+     * `image` (`pulumi.Input[str]`) - Docker image for scheduler service (string)
+     * `serviceClusterIpRange` (`pulumi.Input[str]`) - Service Cluster ip Range option for kube controller service (string)
 
-  * `kubelet` (`pulumi.Input[dict]`) - Kubelet options for RKE services (list maxitems:1)
-    * `clusterDnsServer` (`pulumi.Input[str]`) - Cluster DNS Server option for kubelet service (string)
-    * `clusterDomain` (`pulumi.Input[str]`) - Cluster Domain option for kubelet service (string)
-    * `extraArgs` (`pulumi.Input[dict]`) - Extra arguments for scheduler service (map)
-    * `extraBinds` (`pulumi.Input[list]`) - Extra binds for scheduler service (list)
-    * `extraEnvs` (`pulumi.Input[list]`) - Extra environment for scheduler service (list)
-    * `failSwapOn` (`pulumi.Input[bool]`) - Enable or disable failing when swap on is not supported (bool)
-      * `generate_serving_certificate` [Generate a certificate signed by the kube-ca](https://rancher.com/docs/rke/latest/en/config-options/services/#kubelet-serving-certificate-requirements). Default `false` (bool)
-    * `generateServingCertificate` (`pulumi.Input[bool]`)
-    * `image` (`pulumi.Input[str]`) - Docker image for scheduler service (string)
-    * `infraContainerImage` (`pulumi.Input[str]`) - Infra container image for kubelet service (string)
+   * `kubelet` (`pulumi.Input[dict]`) - Kubelet options for RKE services (list maxitems:1)
+     * `clusterDnsServer` (`pulumi.Input[str]`) - Cluster DNS Server option for kubelet service (string)
+     * `clusterDomain` (`pulumi.Input[str]`) - Cluster Domain option for kubelet service (string)
+     * `extraArgs` (`pulumi.Input[dict]`) - Extra arguments for scheduler service (map)
+     * `extraBinds` (`pulumi.Input[list]`) - Extra binds for scheduler service (list)
+     * `extraEnvs` (`pulumi.Input[list]`) - Extra environment for scheduler service (list)
+     * `failSwapOn` (`pulumi.Input[bool]`) - Enable or disable failing when swap on is not supported (bool)
+       * `generate_serving_certificate` [Generate a certificate signed by the kube-ca](https://rancher.com/docs/rke/latest/en/config-options/services/#kubelet-serving-certificate-requirements). Default `false` (bool)
+     * `generateServingCertificate` (`pulumi.Input[bool]`)
+     * `image` (`pulumi.Input[str]`) - Docker image for scheduler service (string)
+     * `infraContainerImage` (`pulumi.Input[str]`) - Infra container image for kubelet service (string)
 
-  * `kubeproxy` (`pulumi.Input[dict]`) - Kubeproxy options for RKE services (list maxitems:1)
-    * `extraArgs` (`pulumi.Input[dict]`) - Extra arguments for scheduler service (map)
-    * `extraBinds` (`pulumi.Input[list]`) - Extra binds for scheduler service (list)
-    * `extraEnvs` (`pulumi.Input[list]`) - Extra environment for scheduler service (list)
-    * `image` (`pulumi.Input[str]`) - Docker image for scheduler service (string)
+   * `kubeproxy` (`pulumi.Input[dict]`) - Kubeproxy options for RKE services (list maxitems:1)
+     * `extraArgs` (`pulumi.Input[dict]`) - Extra arguments for scheduler service (map)
+     * `extraBinds` (`pulumi.Input[list]`) - Extra binds for scheduler service (list)
+     * `extraEnvs` (`pulumi.Input[list]`) - Extra environment for scheduler service (list)
+     * `image` (`pulumi.Input[str]`) - Docker image for scheduler service (string)
 
-  * `scheduler` (`pulumi.Input[dict]`) - Scheduler options for RKE services (list maxitems:1)
-    * `extraArgs` (`pulumi.Input[dict]`) - Extra arguments for scheduler service (map)
-    * `extraBinds` (`pulumi.Input[list]`) - Extra binds for scheduler service (list)
-    * `extraEnvs` (`pulumi.Input[list]`) - Extra environment for scheduler service (list)
-    * `image` (`pulumi.Input[str]`) - Docker image for scheduler service (string)
+   * `scheduler` (`pulumi.Input[dict]`) - Scheduler options for RKE services (list maxitems:1)
+     * `extraArgs` (`pulumi.Input[dict]`) - Extra arguments for scheduler service (map)
+     * `extraBinds` (`pulumi.Input[list]`) - Extra binds for scheduler service (list)
+     * `extraEnvs` (`pulumi.Input[list]`) - Extra environment for scheduler service (list)
+     * `image` (`pulumi.Input[str]`) - Docker image for scheduler service (string)
 
-* `sshAgentAuth` (`pulumi.Input[bool]`) - Use ssh agent auth. Default `false` (bool)
-* `sshCertPath` (`pulumi.Input[str]`) - Cluster level SSH certificate path (string)
-* `sshKeyPath` (`pulumi.Input[str]`) - Node SSH private key path (string)
+ * `sshAgentAuth` (`pulumi.Input[bool]`) - Use ssh agent auth. Default `false` (bool)
+ * `sshCertPath` (`pulumi.Input[str]`) - Cluster level SSH certificate path (string)
+ * `sshKeyPath` (`pulumi.Input[str]`) - Node SSH private key path (string)
+ * `upgrade_strategy` (`pulumi.Input[dict]`) - K3S upgrade strategy (List maxitems: 1)
+   * `drain` (`pulumi.Input[bool]`) - RKE drain nodes. Default: `false` (bool)
+   * `drainInput` (`pulumi.Input[dict]`) - RKE drain node input (list Maxitems: 1)
+     * `deleteLocalData` (`pulumi.Input[bool]`) - Delete RKE node local data. Default: `false` (bool)
+     * `force` (`pulumi.Input[bool]`) - Force RKE node drain. Default: `false` (bool)
+     * `gracePeriod` (`pulumi.Input[float]`) - RKE node drain grace period. Default: `-1` (int)
+     * `ignoreDaemonSets` (`pulumi.Input[bool]`) - Ignore RKE daemon sets. Default: `true` (bool)
+     * `timeout` (`pulumi.Input[float]`) - RKE node drain timeout. Default: `60` (int)
+
+   * `maxUnavailableControlplane` (`pulumi.Input[str]`) - RKE max unavailable controlplane nodes. Default: `1` (string)
+   * `maxUnavailableWorker` (`pulumi.Input[str]`) - RKE max unavailable worker nodes. Default: `10%` (string)
+
+
+The **scheduled_cluster_scan** object supports the following:
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `enabled` (`pulumi.Input[bool]`) - Enable scheduled cluster scan. Default: `false` (bool)
+* `scanConfig` (`pulumi.Input[dict]`) - Cluster scan config (List maxitems:1)
+  * `cisScanConfig` (`pulumi.Input[dict]`) - Cluster Cis Scan config (List maxitems:1)
+    * `debugMaster` (`pulumi.Input[bool]`) - Debug master. Default: `false` (bool)
+    * `debugWorker` (`pulumi.Input[bool]`) - Debug worker. Default: `false` (bool)
+    * `overrideBenchmarkVersion` (`pulumi.Input[str]`) - Override benchmark version (string)
+    * `overrideSkips` (`pulumi.Input[list]`) - Override skip (string)
+    * `profile` (`pulumi.Input[str]`) - Cis scan profile. Allowed values: `&quot;permissive&quot; (default) || &quot;hardened&quot;` (string)
+
+* `scheduleConfig` (`pulumi.Input[dict]`) - Cluster scan schedule config (list maxitems:1)
+  * `cronSchedule` (`pulumi.Input[str]`) - Crontab schedule. It should contains 5 fields `&quot;&lt;min&gt; &lt;hour&gt; &lt;month_day&gt; &lt;month&gt; &lt;week_day&gt;&quot;` (string)
+  * `retention` (`pulumi.Input[float]`) - Retention for etcd backup. Default `6` (int)
 </pre></div>
 </div>
 </li>
@@ -4794,6 +4930,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <p>The <strong>recipients</strong> object supports the following:</p>
 <ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultRecipient</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Use notifier default recipient, overriding <code class="docutils literal notranslate"><span class="pre">recipient</span></code> argument if set.  Default: <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">notifierId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Recipient notifier ID (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">notifierType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Recipient notifier ID. Supported values : <code class="docutils literal notranslate"><span class="pre">&quot;pagerduty&quot;</span> <span class="pre">|</span> <span class="pre">&quot;slack&quot;</span> <span class="pre">|</span> <span class="pre">&quot;email&quot;</span> <span class="pre">|</span> <span class="pre">&quot;webhook&quot;</span> <span class="pre">|</span> <span class="pre">&quot;wechat&quot;</span></code> (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">recipient</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Recipient (string)</p></li>
@@ -4845,6 +4982,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">recipients</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.ClusterAlterGroup.recipients" title="Permalink to this definition">¶</a></dt>
 <dd><p>The cluster alert group recipients (list)</p>
 <ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultRecipient</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Use notifier default recipient, overriding <code class="docutils literal notranslate"><span class="pre">recipient</span></code> argument if set.  Default: <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">notifierId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Recipient notifier ID (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">notifierType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Recipient notifier ID. Supported values : <code class="docutils literal notranslate"><span class="pre">&quot;pagerduty&quot;</span> <span class="pre">|</span> <span class="pre">&quot;slack&quot;</span> <span class="pre">|</span> <span class="pre">&quot;email&quot;</span> <span class="pre">|</span> <span class="pre">&quot;webhook&quot;</span> <span class="pre">|</span> <span class="pre">&quot;wechat&quot;</span></code> (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">recipient</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Recipient (string)</p></li>
@@ -4882,6 +5020,7 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>recipients</strong> object supports the following:</p>
 <ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultRecipient</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Use notifier default recipient, overriding <code class="docutils literal notranslate"><span class="pre">recipient</span></code> argument if set.  Default: <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">notifierId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Recipient notifier ID (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">notifierType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Recipient notifier ID. Supported values : <code class="docutils literal notranslate"><span class="pre">&quot;pagerduty&quot;</span> <span class="pre">|</span> <span class="pre">&quot;slack&quot;</span> <span class="pre">|</span> <span class="pre">&quot;email&quot;</span> <span class="pre">|</span> <span class="pre">&quot;webhook&quot;</span> <span class="pre">|</span> <span class="pre">&quot;wechat&quot;</span></code> (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">recipient</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Recipient (string)</p></li>
@@ -5329,7 +5468,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_rancher2.ClusterLogging">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">ClusterLogging</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">custom_target_config=None</em>, <em class="sig-param">elasticsearch_config=None</em>, <em class="sig-param">fluentd_config=None</em>, <em class="sig-param">kafka_config=None</em>, <em class="sig-param">kind=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_id=None</em>, <em class="sig-param">output_flush_interval=None</em>, <em class="sig-param">output_tags=None</em>, <em class="sig-param">splunk_config=None</em>, <em class="sig-param">syslog_config=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.ClusterLogging" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">ClusterLogging</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">custom_target_config=None</em>, <em class="sig-param">elasticsearch_config=None</em>, <em class="sig-param">enable_json_parsing=None</em>, <em class="sig-param">fluentd_config=None</em>, <em class="sig-param">kafka_config=None</em>, <em class="sig-param">kind=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_id=None</em>, <em class="sig-param">output_flush_interval=None</em>, <em class="sig-param">output_tags=None</em>, <em class="sig-param">splunk_config=None</em>, <em class="sig-param">syslog_config=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.ClusterLogging" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Cluster Logging resource. This can be used to configure Cluster Logging for Rancher v2 environments and retrieve their information.</p>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/clusterLogging.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/clusterLogging.html.markdown</a>.</p>
@@ -5343,6 +5482,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster id to configure logging (string)</p></li>
 <li><p><strong>custom_target_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The custom target config for Cluster Logging. For <code class="docutils literal notranslate"><span class="pre">kind</span> <span class="pre">=</span> <span class="pre">custom</span></code>. Conflicts with <code class="docutils literal notranslate"><span class="pre">elasticsearch_config</span></code>, <code class="docutils literal notranslate"><span class="pre">fluentd_config</span></code>, <code class="docutils literal notranslate"><span class="pre">kafka_config</span></code>, <code class="docutils literal notranslate"><span class="pre">splunk_config</span></code> and <code class="docutils literal notranslate"><span class="pre">syslog_config</span></code> (list maxitems:1)</p></li>
 <li><p><strong>elasticsearch_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The elasticsearch config for Cluster Logging. For <code class="docutils literal notranslate"><span class="pre">kind</span> <span class="pre">=</span> <span class="pre">elasticsearch</span></code>. Conflicts with <code class="docutils literal notranslate"><span class="pre">custom_target_config</span></code>, <code class="docutils literal notranslate"><span class="pre">fluentd_config</span></code>, <code class="docutils literal notranslate"><span class="pre">kafka_config</span></code>, <code class="docutils literal notranslate"><span class="pre">splunk_config</span></code> and <code class="docutils literal notranslate"><span class="pre">syslog_config</span></code> (list maxitems:1)</p></li>
+<li><p><strong>enable_json_parsing</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable json log parsing. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
 <li><p><strong>fluentd_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The fluentd config for Cluster Logging. For <code class="docutils literal notranslate"><span class="pre">kind</span> <span class="pre">=</span> <span class="pre">fluentd</span></code>. Conflicts with <code class="docutils literal notranslate"><span class="pre">custom_target_config</span></code>, <code class="docutils literal notranslate"><span class="pre">elasticsearch_config</span></code>, <code class="docutils literal notranslate"><span class="pre">kafka_config</span></code>, <code class="docutils literal notranslate"><span class="pre">splunk_config</span></code> and <code class="docutils literal notranslate"><span class="pre">syslog_config</span></code> (list maxitems:1)</p></li>
 <li><p><strong>kafka_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The kafka config for Cluster Logging. For <code class="docutils literal notranslate"><span class="pre">kind</span> <span class="pre">=</span> <span class="pre">kafka</span></code>. Conflicts with <code class="docutils literal notranslate"><span class="pre">custom_target_config</span></code>, <code class="docutils literal notranslate"><span class="pre">elasticsearch_config</span></code>, <code class="docutils literal notranslate"><span class="pre">fluentd_config</span></code>, <code class="docutils literal notranslate"><span class="pre">splunk_config</span></code> and <code class="docutils literal notranslate"><span class="pre">syslog_config</span></code> (list maxitems:1)</p></li>
 <li><p><strong>kind</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The kind of the Cluster Logging. <code class="docutils literal notranslate"><span class="pre">elasticsearch</span></code>, <code class="docutils literal notranslate"><span class="pre">fluentd</span></code>, <code class="docutils literal notranslate"><span class="pre">kafka</span></code>, <code class="docutils literal notranslate"><span class="pre">splunk</span></code> and <code class="docutils literal notranslate"><span class="pre">syslog</span></code> are supported (string)</p></li>
@@ -5471,6 +5611,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_rancher2.ClusterLogging.enable_json_parsing">
+<code class="sig-name descname">enable_json_parsing</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.ClusterLogging.enable_json_parsing" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable json log parsing. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_rancher2.ClusterLogging.fluentd_config">
 <code class="sig-name descname">fluentd_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.ClusterLogging.fluentd_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>The fluentd config for Cluster Logging. For <code class="docutils literal notranslate"><span class="pre">kind</span> <span class="pre">=</span> <span class="pre">fluentd</span></code>. Conflicts with <code class="docutils literal notranslate"><span class="pre">custom_target_config</span></code>, <code class="docutils literal notranslate"><span class="pre">elasticsearch_config</span></code>, <code class="docutils literal notranslate"><span class="pre">kafka_config</span></code>, <code class="docutils literal notranslate"><span class="pre">splunk_config</span></code> and <code class="docutils literal notranslate"><span class="pre">syslog_config</span></code> (list maxitems:1)</p>
@@ -5578,7 +5724,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_rancher2.ClusterLogging.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">custom_target_config=None</em>, <em class="sig-param">elasticsearch_config=None</em>, <em class="sig-param">fluentd_config=None</em>, <em class="sig-param">kafka_config=None</em>, <em class="sig-param">kind=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_id=None</em>, <em class="sig-param">output_flush_interval=None</em>, <em class="sig-param">output_tags=None</em>, <em class="sig-param">splunk_config=None</em>, <em class="sig-param">syslog_config=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.ClusterLogging.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">custom_target_config=None</em>, <em class="sig-param">elasticsearch_config=None</em>, <em class="sig-param">enable_json_parsing=None</em>, <em class="sig-param">fluentd_config=None</em>, <em class="sig-param">kafka_config=None</em>, <em class="sig-param">kind=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_id=None</em>, <em class="sig-param">output_flush_interval=None</em>, <em class="sig-param">output_tags=None</em>, <em class="sig-param">splunk_config=None</em>, <em class="sig-param">syslog_config=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.ClusterLogging.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ClusterLogging resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -5591,6 +5737,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster id to configure logging (string)</p></li>
 <li><p><strong>custom_target_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The custom target config for Cluster Logging. For <code class="docutils literal notranslate"><span class="pre">kind</span> <span class="pre">=</span> <span class="pre">custom</span></code>. Conflicts with <code class="docutils literal notranslate"><span class="pre">elasticsearch_config</span></code>, <code class="docutils literal notranslate"><span class="pre">fluentd_config</span></code>, <code class="docutils literal notranslate"><span class="pre">kafka_config</span></code>, <code class="docutils literal notranslate"><span class="pre">splunk_config</span></code> and <code class="docutils literal notranslate"><span class="pre">syslog_config</span></code> (list maxitems:1)</p></li>
 <li><p><strong>elasticsearch_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The elasticsearch config for Cluster Logging. For <code class="docutils literal notranslate"><span class="pre">kind</span> <span class="pre">=</span> <span class="pre">elasticsearch</span></code>. Conflicts with <code class="docutils literal notranslate"><span class="pre">custom_target_config</span></code>, <code class="docutils literal notranslate"><span class="pre">fluentd_config</span></code>, <code class="docutils literal notranslate"><span class="pre">kafka_config</span></code>, <code class="docutils literal notranslate"><span class="pre">splunk_config</span></code> and <code class="docutils literal notranslate"><span class="pre">syslog_config</span></code> (list maxitems:1)</p></li>
+<li><p><strong>enable_json_parsing</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable json log parsing. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
 <li><p><strong>fluentd_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The fluentd config for Cluster Logging. For <code class="docutils literal notranslate"><span class="pre">kind</span> <span class="pre">=</span> <span class="pre">fluentd</span></code>. Conflicts with <code class="docutils literal notranslate"><span class="pre">custom_target_config</span></code>, <code class="docutils literal notranslate"><span class="pre">elasticsearch_config</span></code>, <code class="docutils literal notranslate"><span class="pre">kafka_config</span></code>, <code class="docutils literal notranslate"><span class="pre">splunk_config</span></code> and <code class="docutils literal notranslate"><span class="pre">syslog_config</span></code> (list maxitems:1)</p></li>
 <li><p><strong>kafka_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The kafka config for Cluster Logging. For <code class="docutils literal notranslate"><span class="pre">kind</span> <span class="pre">=</span> <span class="pre">kafka</span></code>. Conflicts with <code class="docutils literal notranslate"><span class="pre">custom_target_config</span></code>, <code class="docutils literal notranslate"><span class="pre">elasticsearch_config</span></code>, <code class="docutils literal notranslate"><span class="pre">fluentd_config</span></code>, <code class="docutils literal notranslate"><span class="pre">splunk_config</span></code> and <code class="docutils literal notranslate"><span class="pre">syslog_config</span></code> (list maxitems:1)</p></li>
 <li><p><strong>kind</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The kind of the Cluster Logging. <code class="docutils literal notranslate"><span class="pre">elasticsearch</span></code>, <code class="docutils literal notranslate"><span class="pre">fluentd</span></code>, <code class="docutils literal notranslate"><span class="pre">kafka</span></code>, <code class="docutils literal notranslate"><span class="pre">splunk</span></code> and <code class="docutils literal notranslate"><span class="pre">syslog</span></code> are supported (string)</p></li>
@@ -5858,12 +6005,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_rancher2.ClusterSync">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">ClusterSync</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">node_pool_ids=None</em>, <em class="sig-param">synced=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.ClusterSync" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">ClusterSync</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">node_pool_ids=None</em>, <em class="sig-param">synced=None</em>, <em class="sig-param">wait_monitoring=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.ClusterSync" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a ClusterSync resource with the given unique name, props, and options.
 :param str resource_name: The name of the resource.
 :param pulumi.ResourceOptions opts: Options for the resource.
 :param pulumi.Input[str] cluster_id: The cluster ID that is syncing (string)
-:param pulumi.Input[list] node_pool_ids: The node pool IDs used by the cluster id (list)</p>
+:param pulumi.Input[list] node_pool_ids: The node pool IDs used by the cluster id (list)
+:param pulumi.Input[bool] wait_monitoring: Wait until monitoring is up and running. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p>
 <dl class="attribute">
 <dt id="pulumi_rancher2.ClusterSync.cluster_id">
 <code class="sig-name descname">cluster_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.ClusterSync.cluster_id" title="Permalink to this definition">¶</a></dt>
@@ -5879,7 +6027,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_rancher2.ClusterSync.kube_config">
 <code class="sig-name descname">kube_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.ClusterSync.kube_config" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Computed) Kube Config generated for the cluster sync (string)</p>
+<dd><p>(Computed/Sensitive) Kube Config generated for the cluster sync (string)</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -5894,9 +6042,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>(Computed) System project ID for the cluster sync (string)</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_rancher2.ClusterSync.wait_monitoring">
+<code class="sig-name descname">wait_monitoring</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.ClusterSync.wait_monitoring" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wait until monitoring is up and running. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_rancher2.ClusterSync.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">default_project_id=None</em>, <em class="sig-param">kube_config=None</em>, <em class="sig-param">node_pool_ids=None</em>, <em class="sig-param">synced=None</em>, <em class="sig-param">system_project_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.ClusterSync.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">default_project_id=None</em>, <em class="sig-param">kube_config=None</em>, <em class="sig-param">node_pool_ids=None</em>, <em class="sig-param">synced=None</em>, <em class="sig-param">system_project_id=None</em>, <em class="sig-param">wait_monitoring=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.ClusterSync.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ClusterSync resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -5907,9 +6061,10 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster ID that is syncing (string)</p></li>
 <li><p><strong>default_project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Computed) Default project ID for the cluster sync (string)</p></li>
-<li><p><strong>kube_config</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Computed) Kube Config generated for the cluster sync (string)</p></li>
+<li><p><strong>kube_config</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Computed/Sensitive) Kube Config generated for the cluster sync (string)</p></li>
 <li><p><strong>node_pool_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The node pool IDs used by the cluster id (list)</p></li>
 <li><p><strong>system_project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Computed) System project ID for the cluster sync (string)</p></li>
+<li><p><strong>wait_monitoring</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Wait until monitoring is up and running. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
 </ul>
 </dd>
 </dl>
@@ -6003,6 +6158,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">enable_network_policy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enable project network isolation. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">rke_config</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Rancher Kubernetes Engine Config (list maxitems: 1)</p>
 <ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">scheduled_cluster_scan</span></code>- (Optional) Cluster scheduled cis scan. For Rancher v2.4.0 or above (List MaxItem:1)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">addonJobTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">addons</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">addonsIncludes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
@@ -6388,6 +6544,46 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">sshAgentAuth</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sshCertPath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sshKeyPath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">upgrade_strategy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">drain</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">drainInput</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteLocalData</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">force</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gracePeriod</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ignoreDaemonSets</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxUnavailableControlplane</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxUnavailableWorker</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scheduled_cluster_scan</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enable cluster template revision. Default <code class="docutils literal notranslate"><span class="pre">true</span></code> (bool)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scanConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">cisScanConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">debugMaster</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">debugWorker</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">overrideBenchmarkVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">overrideSkips</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">profile</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scheduleConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">cronSchedule</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">retention</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">windows_prefered_cluster</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Windows prefered cluster. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
@@ -6474,6 +6670,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">enable_network_policy</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enable project network isolation. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">rke_config</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Rancher Kubernetes Engine Config (list maxitems: 1)</p>
 <ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">scheduled_cluster_scan</span></code>- (Optional) Cluster scheduled cis scan. For Rancher v2.4.0 or above (List MaxItem:1)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">addonJobTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">addons</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">addonsIncludes</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
@@ -6859,6 +7056,46 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">sshAgentAuth</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sshCertPath</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sshKeyPath</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">upgrade_strategy</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">drain</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">drainInput</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteLocalData</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">force</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gracePeriod</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ignoreDaemonSets</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxUnavailableControlplane</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxUnavailableWorker</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scheduled_cluster_scan</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enable cluster template revision. Default <code class="docutils literal notranslate"><span class="pre">true</span></code> (bool)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scanConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">cisScanConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">debugMaster</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">debugWorker</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">overrideBenchmarkVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">overrideSkips</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">profile</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scheduleConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">cronSchedule</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">retention</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">windows_prefered_cluster</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Windows prefered cluster. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
@@ -6930,6 +7167,7 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">enable_network_policy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enable project network isolation. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">rke_config</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Rancher Kubernetes Engine Config (list maxitems: 1)</p>
 <ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">scheduled_cluster_scan</span></code>- (Optional) Cluster scheduled cis scan. For Rancher v2.4.0 or above (List MaxItem:1)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">addonJobTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">addons</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">addonsIncludes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
@@ -7315,6 +7553,46 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">sshAgentAuth</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sshCertPath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sshKeyPath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">upgrade_strategy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">drain</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">drainInput</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteLocalData</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">force</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gracePeriod</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ignoreDaemonSets</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxUnavailableControlplane</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxUnavailableWorker</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scheduled_cluster_scan</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enable cluster template revision. Default <code class="docutils literal notranslate"><span class="pre">true</span></code> (bool)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scanConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">cisScanConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">debugMaster</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">debugWorker</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">overrideBenchmarkVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">overrideSkips</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">profile</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scheduleConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">cronSchedule</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">retention</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">windows_prefered_cluster</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Windows prefered cluster. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
@@ -7626,7 +7904,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_rancher2.GetCatalogResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetCatalogResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">branch=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">kind=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">scope=None</em>, <em class="sig-param">url=None</em>, <em class="sig-param">username=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetCatalogResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetCatalogResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">branch=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">kind=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">scope=None</em>, <em class="sig-param">url=None</em>, <em class="sig-param">username=None</em>, <em class="sig-param">version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetCatalogResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getCatalog.</p>
 <dl class="attribute">
 <dt id="pulumi_rancher2.GetCatalogResult.annotations">
@@ -7692,6 +7970,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.GetCatalogResult.username">
 <code class="sig-name descname">username</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetCatalogResult.username" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Computed/Sensitive) The username to access the catalog if needed (string)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_rancher2.GetCatalogResult.version">
+<code class="sig-name descname">version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetCatalogResult.version" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Computed) Helm version for the catalog (string)</p>
 </dd></dl>
 
 </dd></dl>
@@ -7956,7 +8240,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_rancher2.GetClusterLoggingResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetClusterLoggingResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">elasticsearch_config=None</em>, <em class="sig-param">fluentd_config=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">kafka_config=None</em>, <em class="sig-param">kind=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_id=None</em>, <em class="sig-param">output_flush_interval=None</em>, <em class="sig-param">output_tags=None</em>, <em class="sig-param">splunk_config=None</em>, <em class="sig-param">syslog_config=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetClusterLoggingResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetClusterLoggingResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">custom_target_config=None</em>, <em class="sig-param">elasticsearch_config=None</em>, <em class="sig-param">enable_json_parsing=None</em>, <em class="sig-param">fluentd_config=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">kafka_config=None</em>, <em class="sig-param">kind=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_id=None</em>, <em class="sig-param">output_flush_interval=None</em>, <em class="sig-param">output_tags=None</em>, <em class="sig-param">splunk_config=None</em>, <em class="sig-param">syslog_config=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetClusterLoggingResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getClusterLogging.</p>
 <dl class="attribute">
 <dt id="pulumi_rancher2.GetClusterLoggingResult.annotations">
@@ -8040,7 +8324,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_rancher2.GetClusterResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetClusterResult</code><span class="sig-paren">(</span><em class="sig-param">aks_config=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_auth_endpoint=None</em>, <em class="sig-param">cluster_monitoring_input=None</em>, <em class="sig-param">cluster_registration_token=None</em>, <em class="sig-param">cluster_template_answers=None</em>, <em class="sig-param">cluster_template_id=None</em>, <em class="sig-param">cluster_template_questions=None</em>, <em class="sig-param">cluster_template_revision_id=None</em>, <em class="sig-param">default_pod_security_policy_template_id=None</em>, <em class="sig-param">default_project_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">driver=None</em>, <em class="sig-param">eks_config=None</em>, <em class="sig-param">enable_cluster_alerting=None</em>, <em class="sig-param">enable_cluster_monitoring=None</em>, <em class="sig-param">enable_network_policy=None</em>, <em class="sig-param">gke_config=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">kube_config=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">rke_config=None</em>, <em class="sig-param">system_project_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetClusterResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetClusterResult</code><span class="sig-paren">(</span><em class="sig-param">aks_config=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_auth_endpoint=None</em>, <em class="sig-param">cluster_monitoring_input=None</em>, <em class="sig-param">cluster_registration_token=None</em>, <em class="sig-param">cluster_template_answers=None</em>, <em class="sig-param">cluster_template_id=None</em>, <em class="sig-param">cluster_template_questions=None</em>, <em class="sig-param">cluster_template_revision_id=None</em>, <em class="sig-param">default_pod_security_policy_template_id=None</em>, <em class="sig-param">default_project_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">driver=None</em>, <em class="sig-param">eks_config=None</em>, <em class="sig-param">enable_cluster_alerting=None</em>, <em class="sig-param">enable_cluster_monitoring=None</em>, <em class="sig-param">enable_network_policy=None</em>, <em class="sig-param">gke_config=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">k3s_config=None</em>, <em class="sig-param">kube_config=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">rke_config=None</em>, <em class="sig-param">scheduled_cluster_scans=None</em>, <em class="sig-param">system_project_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetClusterResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getCluster.</p>
 <dl class="attribute">
 <dt id="pulumi_rancher2.GetClusterResult.aks_config">
@@ -8151,6 +8435,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_rancher2.GetClusterResult.k3s_config">
+<code class="sig-name descname">k3s_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetClusterResult.k3s_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Computed) The K3S configuration for <code class="docutils literal notranslate"><span class="pre">k3s</span></code> imported Clusters. Conflicts with <code class="docutils literal notranslate"><span class="pre">aks_config</span></code>, <code class="docutils literal notranslate"><span class="pre">eks_config</span></code>, <code class="docutils literal notranslate"><span class="pre">gke_config</span></code> and <code class="docutils literal notranslate"><span class="pre">rke_config</span></code> (list maxitems:1)</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_rancher2.GetClusterResult.kube_config">
 <code class="sig-name descname">kube_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetClusterResult.kube_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Computed) Kube Config generated for the cluster (string)</p>
@@ -8220,6 +8510,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.GetClusterRoleTemplateBindingResult.user_principal_id">
 <code class="sig-name descname">user_principal_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetClusterRoleTemplateBindingResult.user_principal_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Computed) The user_principal ID to assign cluster role template binding (string)</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_rancher2.GetClusterScanResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetClusterScanResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">run_type=None</em>, <em class="sig-param">scan_config=None</em>, <em class="sig-param">scan_type=None</em>, <em class="sig-param">status=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetClusterScanResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getClusterScan.</p>
+<dl class="attribute">
+<dt id="pulumi_rancher2.GetClusterScanResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetClusterScanResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -8316,12 +8618,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_rancher2.GetGlobalRoleBindingResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetGlobalRoleBindingResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">global_role_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">user_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetGlobalRoleBindingResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetGlobalRoleBindingResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">global_role_id=None</em>, <em class="sig-param">group_principal_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">user_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetGlobalRoleBindingResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getGlobalRoleBinding.</p>
 <dl class="attribute">
 <dt id="pulumi_rancher2.GetGlobalRoleBindingResult.annotations">
 <code class="sig-name descname">annotations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetGlobalRoleBindingResult.annotations" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Computed) Annotations of the resource (map)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_rancher2.GetGlobalRoleBindingResult.group_principal_id">
+<code class="sig-name descname">group_principal_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetGlobalRoleBindingResult.group_principal_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Computed) The group principal ID to assign global role binding. Rancher v2.4.0 or higher is required (string)</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -8904,7 +9212,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_rancher2.GetProjectLoggingResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetProjectLoggingResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">elasticsearch_config=None</em>, <em class="sig-param">fluentd_config=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">kafka_config=None</em>, <em class="sig-param">kind=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_id=None</em>, <em class="sig-param">output_flush_interval=None</em>, <em class="sig-param">output_tags=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">splunk_config=None</em>, <em class="sig-param">syslog_config=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetProjectLoggingResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetProjectLoggingResult</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">custom_target_config=None</em>, <em class="sig-param">elasticsearch_config=None</em>, <em class="sig-param">enable_json_parsing=None</em>, <em class="sig-param">fluentd_config=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">kafka_config=None</em>, <em class="sig-param">kind=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_id=None</em>, <em class="sig-param">output_flush_interval=None</em>, <em class="sig-param">output_tags=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">splunk_config=None</em>, <em class="sig-param">syslog_config=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetProjectLoggingResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getProjectLogging.</p>
 <dl class="attribute">
 <dt id="pulumi_rancher2.GetProjectLoggingResult.annotations">
@@ -9306,7 +9614,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_rancher2.GlobalRoleBinding">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GlobalRoleBinding</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">global_role_id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">user_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GlobalRoleBinding" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GlobalRoleBinding</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">global_role_id=None</em>, <em class="sig-param">group_principal_id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">user_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GlobalRoleBinding" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Global Role Binding resource. This can be used to create Global Role Bindings for Rancher v2 environments and retrieve their information.</p>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/globalRole.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/globalRole.html.markdown</a>.</p>
@@ -9318,6 +9626,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>annotations</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Annotations for global role binding (map)</p></li>
 <li><p><strong>global_role_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role id from create global role binding (string)</p></li>
+<li><p><strong>group_principal_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The group principal ID to assign global role binding (only works with external auth providers that support groups). Rancher v2.4.0 or higher is required (string)</p></li>
 <li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Labels for global role binding (map)</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the global role binding (string)</p></li>
 <li><p><strong>user_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The user ID to assign global role binding (string)</p></li>
@@ -9334,6 +9643,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.GlobalRoleBinding.global_role_id">
 <code class="sig-name descname">global_role_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GlobalRoleBinding.global_role_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The role id from create global role binding (string)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_rancher2.GlobalRoleBinding.group_principal_id">
+<code class="sig-name descname">group_principal_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GlobalRoleBinding.group_principal_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The group principal ID to assign global role binding (only works with external auth providers that support groups). Rancher v2.4.0 or higher is required (string)</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -9356,7 +9671,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_rancher2.GlobalRoleBinding.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">global_role_id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">user_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GlobalRoleBinding.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">global_role_id=None</em>, <em class="sig-param">group_principal_id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">user_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GlobalRoleBinding.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing GlobalRoleBinding resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -9367,6 +9682,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>annotations</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Annotations for global role binding (map)</p></li>
 <li><p><strong>global_role_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role id from create global role binding (string)</p></li>
+<li><p><strong>group_principal_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The group principal ID to assign global role binding (only works with external auth providers that support groups). Rancher v2.4.0 or higher is required (string)</p></li>
 <li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Labels for global role binding (map)</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the global role binding (string)</p></li>
 <li><p><strong>user_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The user ID to assign global role binding (string)</p></li>
@@ -12129,6 +12445,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <p>The <strong>recipients</strong> object supports the following:</p>
 <ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultRecipient</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">notifierId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Recipient notifier ID (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">notifierType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Recipient notifier ID. Supported values : <code class="docutils literal notranslate"><span class="pre">&quot;pagerduty&quot;</span> <span class="pre">|</span> <span class="pre">&quot;slack&quot;</span> <span class="pre">|</span> <span class="pre">&quot;email&quot;</span> <span class="pre">|</span> <span class="pre">&quot;webhook&quot;</span> <span class="pre">|</span> <span class="pre">&quot;wechat&quot;</span></code> (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">recipient</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Recipient (string)</p></li>
@@ -12180,6 +12497,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">recipients</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.ProjectAlertGroup.recipients" title="Permalink to this definition">¶</a></dt>
 <dd><p>The project alert group recipients (list)</p>
 <ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultRecipient</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">notifierId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Recipient notifier ID (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">notifierType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Recipient notifier ID. Supported values : <code class="docutils literal notranslate"><span class="pre">&quot;pagerduty&quot;</span> <span class="pre">|</span> <span class="pre">&quot;slack&quot;</span> <span class="pre">|</span> <span class="pre">&quot;email&quot;</span> <span class="pre">|</span> <span class="pre">&quot;webhook&quot;</span> <span class="pre">|</span> <span class="pre">&quot;wechat&quot;</span></code> (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">recipient</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Recipient (string)</p></li>
@@ -12217,6 +12535,7 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>recipients</strong> object supports the following:</p>
 <ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultRecipient</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">notifierId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Recipient notifier ID (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">notifierType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Recipient notifier ID. Supported values : <code class="docutils literal notranslate"><span class="pre">&quot;pagerduty&quot;</span> <span class="pre">|</span> <span class="pre">&quot;slack&quot;</span> <span class="pre">|</span> <span class="pre">&quot;email&quot;</span> <span class="pre">|</span> <span class="pre">&quot;webhook&quot;</span> <span class="pre">|</span> <span class="pre">&quot;wechat&quot;</span></code> (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">recipient</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Recipient (string)</p></li>
@@ -12496,7 +12815,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_rancher2.ProjectLogging">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">ProjectLogging</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">custom_target_config=None</em>, <em class="sig-param">elasticsearch_config=None</em>, <em class="sig-param">fluentd_config=None</em>, <em class="sig-param">kafka_config=None</em>, <em class="sig-param">kind=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_id=None</em>, <em class="sig-param">output_flush_interval=None</em>, <em class="sig-param">output_tags=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">splunk_config=None</em>, <em class="sig-param">syslog_config=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.ProjectLogging" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">ProjectLogging</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">custom_target_config=None</em>, <em class="sig-param">elasticsearch_config=None</em>, <em class="sig-param">enable_json_parsing=None</em>, <em class="sig-param">fluentd_config=None</em>, <em class="sig-param">kafka_config=None</em>, <em class="sig-param">kind=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_id=None</em>, <em class="sig-param">output_flush_interval=None</em>, <em class="sig-param">output_tags=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">splunk_config=None</em>, <em class="sig-param">syslog_config=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.ProjectLogging" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Project Logging resource. This can be used to create Project Logging for Rancher v2 environments and retrieve their information.</p>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/projectLogging.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/projectLogging.html.markdown</a>.</p>
@@ -12509,6 +12828,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>annotations</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Annotations for Project Logging object (map)</p></li>
 <li><p><strong>custom_target_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The custom target config for Cluster Logging. For <code class="docutils literal notranslate"><span class="pre">kind</span> <span class="pre">=</span> <span class="pre">custom</span></code>. Conflicts with <code class="docutils literal notranslate"><span class="pre">elasticsearch_config</span></code>, <code class="docutils literal notranslate"><span class="pre">fluentd_config</span></code>, <code class="docutils literal notranslate"><span class="pre">kafka_config</span></code>, <code class="docutils literal notranslate"><span class="pre">splunk_config</span></code> and <code class="docutils literal notranslate"><span class="pre">syslog_config</span></code> (list maxitems:1)</p></li>
 <li><p><strong>elasticsearch_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The elasticsearch config for Project Logging. For <code class="docutils literal notranslate"><span class="pre">kind</span> <span class="pre">=</span> <span class="pre">elasticsearch</span></code>. Conflicts with <code class="docutils literal notranslate"><span class="pre">custom_target_config</span></code>, <code class="docutils literal notranslate"><span class="pre">fluentd_config</span></code>, <code class="docutils literal notranslate"><span class="pre">kafka_config</span></code>, <code class="docutils literal notranslate"><span class="pre">splunk_config</span></code> and <code class="docutils literal notranslate"><span class="pre">syslog_config</span></code> (list maxitems:1)</p></li>
+<li><p><strong>enable_json_parsing</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable json log parsing. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
 <li><p><strong>fluentd_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The fluentd config for Project Logging. For <code class="docutils literal notranslate"><span class="pre">kind</span> <span class="pre">=</span> <span class="pre">fluentd</span></code>. Conflicts with <code class="docutils literal notranslate"><span class="pre">custom_target_config</span></code>, <code class="docutils literal notranslate"><span class="pre">elasticsearch_config</span></code>, <code class="docutils literal notranslate"><span class="pre">kafka_config</span></code>, <code class="docutils literal notranslate"><span class="pre">splunk_config</span></code> and <code class="docutils literal notranslate"><span class="pre">syslog_config</span></code> (list maxitems:1)</p></li>
 <li><p><strong>kafka_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The kafka config for Project Logging. For <code class="docutils literal notranslate"><span class="pre">kind</span> <span class="pre">=</span> <span class="pre">kafka</span></code>. Conflicts with <code class="docutils literal notranslate"><span class="pre">custom_target_config</span></code>, <code class="docutils literal notranslate"><span class="pre">elasticsearch_config</span></code>, <code class="docutils literal notranslate"><span class="pre">fluentd_config</span></code>, <code class="docutils literal notranslate"><span class="pre">splunk_config</span></code> and <code class="docutils literal notranslate"><span class="pre">syslog_config</span></code> (list maxitems:1)</p></li>
 <li><p><strong>kind</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The kind of the Project Logging. <code class="docutils literal notranslate"><span class="pre">elasticsearch</span></code>, <code class="docutils literal notranslate"><span class="pre">fluentd</span></code>, <code class="docutils literal notranslate"><span class="pre">kafka</span></code>, <code class="docutils literal notranslate"><span class="pre">splunk</span></code> and <code class="docutils literal notranslate"><span class="pre">syslog</span></code> are supported (string)</p></li>
@@ -12632,6 +12952,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_rancher2.ProjectLogging.enable_json_parsing">
+<code class="sig-name descname">enable_json_parsing</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.ProjectLogging.enable_json_parsing" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable json log parsing. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_rancher2.ProjectLogging.fluentd_config">
 <code class="sig-name descname">fluentd_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.ProjectLogging.fluentd_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>The fluentd config for Project Logging. For <code class="docutils literal notranslate"><span class="pre">kind</span> <span class="pre">=</span> <span class="pre">fluentd</span></code>. Conflicts with <code class="docutils literal notranslate"><span class="pre">custom_target_config</span></code>, <code class="docutils literal notranslate"><span class="pre">elasticsearch_config</span></code>, <code class="docutils literal notranslate"><span class="pre">kafka_config</span></code>, <code class="docutils literal notranslate"><span class="pre">splunk_config</span></code> and <code class="docutils literal notranslate"><span class="pre">syslog_config</span></code> (list maxitems:1)</p>
@@ -12745,7 +13071,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_rancher2.ProjectLogging.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">custom_target_config=None</em>, <em class="sig-param">elasticsearch_config=None</em>, <em class="sig-param">fluentd_config=None</em>, <em class="sig-param">kafka_config=None</em>, <em class="sig-param">kind=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_id=None</em>, <em class="sig-param">output_flush_interval=None</em>, <em class="sig-param">output_tags=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">splunk_config=None</em>, <em class="sig-param">syslog_config=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.ProjectLogging.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">custom_target_config=None</em>, <em class="sig-param">elasticsearch_config=None</em>, <em class="sig-param">enable_json_parsing=None</em>, <em class="sig-param">fluentd_config=None</em>, <em class="sig-param">kafka_config=None</em>, <em class="sig-param">kind=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_id=None</em>, <em class="sig-param">output_flush_interval=None</em>, <em class="sig-param">output_tags=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">splunk_config=None</em>, <em class="sig-param">syslog_config=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.ProjectLogging.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ProjectLogging resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -12757,6 +13083,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>annotations</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Annotations for Project Logging object (map)</p></li>
 <li><p><strong>custom_target_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The custom target config for Cluster Logging. For <code class="docutils literal notranslate"><span class="pre">kind</span> <span class="pre">=</span> <span class="pre">custom</span></code>. Conflicts with <code class="docutils literal notranslate"><span class="pre">elasticsearch_config</span></code>, <code class="docutils literal notranslate"><span class="pre">fluentd_config</span></code>, <code class="docutils literal notranslate"><span class="pre">kafka_config</span></code>, <code class="docutils literal notranslate"><span class="pre">splunk_config</span></code> and <code class="docutils literal notranslate"><span class="pre">syslog_config</span></code> (list maxitems:1)</p></li>
 <li><p><strong>elasticsearch_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The elasticsearch config for Project Logging. For <code class="docutils literal notranslate"><span class="pre">kind</span> <span class="pre">=</span> <span class="pre">elasticsearch</span></code>. Conflicts with <code class="docutils literal notranslate"><span class="pre">custom_target_config</span></code>, <code class="docutils literal notranslate"><span class="pre">fluentd_config</span></code>, <code class="docutils literal notranslate"><span class="pre">kafka_config</span></code>, <code class="docutils literal notranslate"><span class="pre">splunk_config</span></code> and <code class="docutils literal notranslate"><span class="pre">syslog_config</span></code> (list maxitems:1)</p></li>
+<li><p><strong>enable_json_parsing</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable json log parsing. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
 <li><p><strong>fluentd_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The fluentd config for Project Logging. For <code class="docutils literal notranslate"><span class="pre">kind</span> <span class="pre">=</span> <span class="pre">fluentd</span></code>. Conflicts with <code class="docutils literal notranslate"><span class="pre">custom_target_config</span></code>, <code class="docutils literal notranslate"><span class="pre">elasticsearch_config</span></code>, <code class="docutils literal notranslate"><span class="pre">kafka_config</span></code>, <code class="docutils literal notranslate"><span class="pre">splunk_config</span></code> and <code class="docutils literal notranslate"><span class="pre">syslog_config</span></code> (list maxitems:1)</p></li>
 <li><p><strong>kafka_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The kafka config for Project Logging. For <code class="docutils literal notranslate"><span class="pre">kind</span> <span class="pre">=</span> <span class="pre">kafka</span></code>. Conflicts with <code class="docutils literal notranslate"><span class="pre">custom_target_config</span></code>, <code class="docutils literal notranslate"><span class="pre">elasticsearch_config</span></code>, <code class="docutils literal notranslate"><span class="pre">fluentd_config</span></code>, <code class="docutils literal notranslate"><span class="pre">splunk_config</span></code> and <code class="docutils literal notranslate"><span class="pre">syslog_config</span></code> (list maxitems:1)</p></li>
 <li><p><strong>kind</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The kind of the Project Logging. <code class="docutils literal notranslate"><span class="pre">elasticsearch</span></code>, <code class="docutils literal notranslate"><span class="pre">fluentd</span></code>, <code class="docutils literal notranslate"><span class="pre">kafka</span></code>, <code class="docutils literal notranslate"><span class="pre">splunk</span></code> and <code class="docutils literal notranslate"><span class="pre">syslog</span></code> are supported (string)</p></li>
@@ -13025,7 +13352,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_rancher2.Provider">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">Provider</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_key=None</em>, <em class="sig-param">api_url=None</em>, <em class="sig-param">bootstrap=None</em>, <em class="sig-param">ca_certs=None</em>, <em class="sig-param">insecure=None</em>, <em class="sig-param">secret_key=None</em>, <em class="sig-param">token_key=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.Provider" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">Provider</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_key=None</em>, <em class="sig-param">api_url=None</em>, <em class="sig-param">bootstrap=None</em>, <em class="sig-param">ca_certs=None</em>, <em class="sig-param">insecure=None</em>, <em class="sig-param">retries=None</em>, <em class="sig-param">secret_key=None</em>, <em class="sig-param">token_key=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.Provider" title="Permalink to this definition">¶</a></dt>
 <dd><p>The provider type for the rancher2 package. By default, resources use package-wide configuration
 settings, however an explicit <code class="docutils literal notranslate"><span class="pre">Provider</span></code> instance may be created and passed during resource
 construction to achieve fine-grained programmatic control over provider settings. See the
@@ -13043,6 +13370,7 @@ construction to achieve fine-grained programmatic control over provider settings
 <li><p><strong>bootstrap</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Bootstrap rancher server</p></li>
 <li><p><strong>ca_certs</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – CA certificates used to sign rancher server tls certificates. Mandatory if self signed tls and insecure option false</p></li>
 <li><p><strong>insecure</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allow insecure connections to Rancher. Mandatory if self signed tls and not ca_certs provided</p></li>
+<li><p><strong>retries</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Rancher connection retries</p></li>
 <li><p><strong>secret_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – API secret used to authenticate with the rancher server</p></li>
 <li><p><strong>token_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – API token used to authenticate with the rancher server</p></li>
 </ul>
@@ -14118,6 +14446,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_rancher2.get_cluster_scan">
+<code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_cluster_scan</code><span class="sig-paren">(</span><em class="sig-param">cluster_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_cluster_scan" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing resource.</p>
 </dd></dl>
 
 <dl class="function">
