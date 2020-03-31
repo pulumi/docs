@@ -6,11 +6,13 @@ no_on_this_page: true
 
 ## Migrating to 2.0
 
-Upgrading to 2.0 is simple. First, you will download the 2.0 CLI, which is required to use the 2.0 SDK. Then, update each of your Pulumi programs to utilize the new SDK. If you're using Javascript or Typescript, you'll also need to ensure you're using invokes asynchronously. We provide detailed instructions on each of these steps below.
+Upgrading to 2.0 is simple. First, you will download the 2.0 CLI, which is required to use the 2.0 SDK. Then, update each of your Pulumi programs to utilize the new SDK. If you're using JavaScript or TypeScript, you'll also need to ensure you're using invokes asynchronously. We provide detailed instructions on each of these steps below.
 
 ## Install Pulumi 2.0 CLI
 
 If you are upgrading to a beta release, obtain the latest binaries from the [versions]({{< relref "versions" >}}) page. Then, follow the [manual installation]({{< relref "./#manual-installation" >}}) steps for your operating system.
+
+> Note: once the final 2.0.0 release is published, you'll also be able to install via all currently supported installation methods, including Homebrew and Chocolatey.
 
 ## Update CLI Scripts
 
@@ -38,13 +40,14 @@ npm install @pulumi/pulumi@^2.0.0
 Pulumi 2.0 no longer supports synchronous invokes. As a result, the return value of all `getSomething` operations are now `Promise<Something>` values, instead of `Something` values, and should be processed using `.then`, `async/await` or by passing the results to `pulumi.output()`. Similarly, the the `StackReference` operations `getOutputSync` and `requireOutputSync` are no longer supported and you should move to using the `Output`-based versions of `getOutput` and `requireOutput`.
 
 ```javascript
-const engineVersion = gcp.container.getEngineVersions().latestMasterVersion;
-```
+//Before:
+const version: string = gcp.container.getEngineVersions().latestMasterVersion;
 
-becomes
+//After w/ Promise:
+const version: Promise<string> = gcp.container.getEngineVersions().then(v => v.latestMasterVersion);
 
-```javascript
-const engineVersion = gcp.container.getEngineVersions().then(v => v.latestMasterVersion);
+//After w/ Output:
+const version: Output<string> = pulumi.output(gcp.container.getEngineVersions()).latestMasterVersion;
 ```
 
 {{% /choosable %}}
@@ -53,10 +56,11 @@ const engineVersion = gcp.container.getEngineVersions().then(v => v.latestMaster
 
 ### Update Dependencies
 
-Modify your `requirements.txt` file:
+Modify your `requirements.txt` file to update the Pulumi SDK and related providers as below:
 
 ```
 pulumi>=2.0.0
+pulumi-aws>=2.0.0
 ```
 
 Then run `pip install`:
