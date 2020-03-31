@@ -69,7 +69,7 @@ pulumi.export('bucket_name',  bucket.url)
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/go/gcp/storage"
+	"github.com/pulumi/pulumi-gcp/sdk/v2/go/gcp/storage"
 	"github.com/pulumi/pulumi/sdk/go/pulumi"
 )
 
@@ -122,15 +122,6 @@ This Pulumi program creates a storage bucket and exports the bucket URL.
 {{% choosable language python %}}
 
 {{< python-venv >}}
-
-{{% /choosable %}}
-
-{{% choosable language go %}}
-For Go, before we can deploy the stack, you will need to initialize your project's dependencies. Pulumi templates currently use `dep`:
-
-```bash
-$ dep ensure
-```
 
 {{% /choosable %}}
 

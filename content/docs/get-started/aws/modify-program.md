@@ -186,15 +186,6 @@ class Program
 
 Our program now creates a KMS key and enables server-side encryption on the S3 bucket using the KMS key.
 
-{{% choosable language go %}}
-We'll need to run `dep ensure` to pick up the new dependencies:
-
-```bash
-$ dep ensure
-```
-
-{{% /choosable %}}
-
 Next, we'll deploy the changes.
 
 {{< get-started-stepper >}}
