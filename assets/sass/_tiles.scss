@@ -1,5 +1,5 @@
 .tiles {
-    @apply items-center justify-center;
+    @apply items-center;
 
     @screen md {
         @apply flex;
@@ -7,7 +7,7 @@
 
     .tile {
         @include transition;
-        @apply flex-1 p-8 block rounded shadow border border-gray-300 cursor-pointer;
+        @apply block rounded shadow border border-gray-300 cursor-pointer;
 
         &:hover {
             @apply shadow-md;

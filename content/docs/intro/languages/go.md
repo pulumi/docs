@@ -19,15 +19,15 @@ Pulumi supports writing your infrastructure as code using the Go language.
 
 The fastest way to get up and running is to choose from one of the following Getting Started guides:
 
-<div class="flex md:flex-row flex-col my-6">
-    <a class="block flex-1 btn bg-transparent border border-solid border-gray-300 hover:bg-gray-200 p-4 mb-4 mr-0 md:mb-0 md:mr-4 flex justify-center" href="{{< relref "../../get-started/aws" >}}">
-        <img class="h-5" src="/logos/tech/aws.svg" alt="AWS">
+<div class="tiles my-4">
+    <a class="tile flex-1 p-4" href="{{< relref "/docs/get-started/aws" >}}">
+        <img class="h-8 mx-auto" src="/logos/tech/aws.svg" alt="AWS">
     </a>
-    <a class="block flex-1 btn bg-transparent border border-solid border-gray-300 hover:bg-gray-200 p-4 mb-4 mr-0 md:mb-0 md:mr-4 flex justify-center" href="{{< relref "../../get-started/azure" >}}">
-        <img class="h-5" src="/logos/tech/azure.svg" alt="Azure">
+    <a class="tile md:mx-4 flex-1 p-4" href="{{< relref "/docs/get-started/azure" >}}">
+        <img class="h-8 mx-auto" src="/logos/tech/azure.svg" alt="Azure">
     </a>
-    <a class="block flex-1 btn bg-transparent border border-solid border-gray-300 hover:bg-gray-200 p-4 flex justify-center" href="{{< relref "../../get-started/gcp" >}}">
-        <img class="h-5" src="/logos/tech/gcp.svg" alt="Google Cloud">
+    <a class="tile flex-1 p-4" href="{{< relref "/docs/get-started/gcp" >}}">
+        <img class="h-8 mx-auto" src="/logos/tech/gcp.svg" alt="Google Cloud">
     </a>
 </div>
 
