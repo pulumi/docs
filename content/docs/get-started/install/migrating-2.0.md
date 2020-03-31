@@ -32,7 +32,7 @@ Previously, the Pulumi CLI would assume `--yes` when used in non-interactive mod
 ### Update Dependencies
 
 ```bash
-npm install @pulumi/pulumi@^2.0.0
+npm install @pulumi/pulumi@^2.0.0-beta.1
 ```
 
 ### Remove synchronous invokes
@@ -59,8 +59,8 @@ const version: Output<string> = pulumi.output(gcp.container.getEngineVersions())
 Modify your `requirements.txt` file to update the Pulumi SDK and related providers as below:
 
 ```
-pulumi>=2.0.0
-pulumi-aws>=2.0.0
+pulumi>=2.0.0-beta.1
+pulumi-aws>=2.0.0-beta.1
 ```
 
 Then run `pip install`:
