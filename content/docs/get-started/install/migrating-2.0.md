@@ -76,7 +76,7 @@ Pulumi 2.0 now supports Go modules. In `go.mod`, you can depend on the Pulumi SD
 
 ```
 require (
-	github.com/pulumi/pulumi/sdk/v2 v2.0.0-beta.1
+    github.com/pulumi/pulumi/sdk/v2 v2.0.0-beta.1
     github.com/pulumi/pulumi-aws/sdk/v2/go/aws v2.0.0-beta.1
 )
 ```
