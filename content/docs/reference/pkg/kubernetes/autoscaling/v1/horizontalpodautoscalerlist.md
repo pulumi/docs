@@ -451,11 +451,11 @@ The following output properties are available:
 
 <h4>Cross<wbr>Version<wbr>Object<wbr>Reference</h4>
 {{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#CrossVersionObjectReference">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#CrossVersionObjectReference">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#CrossVersionObjectReference">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/autoscaling/v1?tab=doc#CrossVersionObjectReferenceOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/autoscaling/v1?tab=doc#CrossVersionObjectReferenceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/autoscaling/v1?tab=doc#CrossVersionObjectReferenceOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -590,11 +590,11 @@ The following output properties are available:
 
 <h4>Horizontal<wbr>Pod<wbr>Autoscaler</h4>
 {{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#HorizontalPodAutoscaler">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#HorizontalPodAutoscaler">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#HorizontalPodAutoscaler">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/autoscaling/v1?tab=doc#HorizontalPodAutoscalerTypeOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/autoscaling/v1?tab=doc#HorizontalPodAutoscalerTypeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/autoscaling/v1?tab=doc#HorizontalPodAutoscalerTypeOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -793,11 +793,11 @@ The following output properties are available:
 
 <h4>Horizontal<wbr>Pod<wbr>Autoscaler<wbr>Spec</h4>
 {{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#HorizontalPodAutoscalerSpec">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#HorizontalPodAutoscalerSpec">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#HorizontalPodAutoscalerSpec">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/autoscaling/v1?tab=doc#HorizontalPodAutoscalerSpecOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/autoscaling/v1?tab=doc#HorizontalPodAutoscalerSpecArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/autoscaling/v1?tab=doc#HorizontalPodAutoscalerSpecOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -964,11 +964,11 @@ The following output properties are available:
 
 <h4>Horizontal<wbr>Pod<wbr>Autoscaler<wbr>Status</h4>
 {{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#HorizontalPodAutoscalerStatus">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#HorizontalPodAutoscalerStatus">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#HorizontalPodAutoscalerStatus">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/autoscaling/v1?tab=doc#HorizontalPodAutoscalerStatusOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/autoscaling/v1?tab=doc#HorizontalPodAutoscalerStatusArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/autoscaling/v1?tab=doc#HorizontalPodAutoscalerStatusOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1346,11 +1346,11 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
 <h4>Managed<wbr>Fields<wbr>Entry</h4>
 {{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ManagedFieldsEntry">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ManagedFieldsEntry">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ManagedFieldsEntry">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/meta/v1?tab=doc#ManagedFieldsEntryOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/meta/v1?tab=doc#ManagedFieldsEntryArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/meta/v1?tab=doc#ManagedFieldsEntryOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1581,11 +1581,11 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
 <h4>Object<wbr>Meta</h4>
 {{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ObjectMeta">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/meta/v1?tab=doc#ObjectMetaOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/meta/v1?tab=doc#ObjectMetaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/meta/v1?tab=doc#ObjectMetaOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2200,11 +2200,11 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 <h4>Owner<wbr>Reference</h4>
 {{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#OwnerReference">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#OwnerReference">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#OwnerReference">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/meta/v1?tab=doc#OwnerReferenceOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/meta/v1?tab=doc#OwnerReferenceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/meta/v1?tab=doc#OwnerReferenceOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 

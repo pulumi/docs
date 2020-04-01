@@ -483,11 +483,11 @@ The following output properties are available:
 
 <h4>Custom<wbr>Resource<wbr>Column<wbr>Definition</h4>
 {{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#CustomResourceColumnDefinition">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#CustomResourceColumnDefinition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#CustomResourceColumnDefinition">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/apiextensions/v1beta1?tab=doc#CustomResourceColumnDefinitionOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/apiextensions/v1beta1?tab=doc#CustomResourceColumnDefinitionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/apiextensions/v1beta1?tab=doc#CustomResourceColumnDefinitionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -718,11 +718,11 @@ The following output properties are available:
 
 <h4>Custom<wbr>Resource<wbr>Conversion</h4>
 {{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#CustomResourceConversion">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#CustomResourceConversion">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#CustomResourceConversion">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/apiextensions/v1beta1?tab=doc#CustomResourceConversionOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/apiextensions/v1beta1?tab=doc#CustomResourceConversionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/apiextensions/v1beta1?tab=doc#CustomResourceConversionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1064,11 +1064,11 @@ The following output properties are available:
 
 <h4>Custom<wbr>Resource<wbr>Definition<wbr>Names</h4>
 {{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#CustomResourceDefinitionNames">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#CustomResourceDefinitionNames">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#CustomResourceDefinitionNames">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/apiextensions/v1beta1?tab=doc#CustomResourceDefinitionNamesOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/apiextensions/v1beta1?tab=doc#CustomResourceDefinitionNamesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/apiextensions/v1beta1?tab=doc#CustomResourceDefinitionNamesOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1801,11 +1801,11 @@ The following output properties are available:
 
 <h4>Custom<wbr>Resource<wbr>Definition<wbr>Version</h4>
 {{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#CustomResourceDefinitionVersion">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#CustomResourceDefinitionVersion">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#CustomResourceDefinitionVersion">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/apiextensions/v1beta1?tab=doc#CustomResourceDefinitionVersionOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/apiextensions/v1beta1?tab=doc#CustomResourceDefinitionVersionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/apiextensions/v1beta1?tab=doc#CustomResourceDefinitionVersionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2036,11 +2036,11 @@ The following output properties are available:
 
 <h4>Custom<wbr>Resource<wbr>Subresource<wbr>Scale</h4>
 {{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#CustomResourceSubresourceScale">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#CustomResourceSubresourceScale">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#CustomResourceSubresourceScale">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/apiextensions/v1beta1?tab=doc#CustomResourceSubresourceScaleOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/apiextensions/v1beta1?tab=doc#CustomResourceSubresourceScaleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/apiextensions/v1beta1?tab=doc#CustomResourceSubresourceScaleOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2175,11 +2175,11 @@ The following output properties are available:
 
 <h4>Custom<wbr>Resource<wbr>Subresources</h4>
 {{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#CustomResourceSubresources">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#CustomResourceSubresources">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#CustomResourceSubresources">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/apiextensions/v1beta1?tab=doc#CustomResourceSubresourcesOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/apiextensions/v1beta1?tab=doc#CustomResourceSubresourcesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/apiextensions/v1beta1?tab=doc#CustomResourceSubresourcesOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2282,11 +2282,11 @@ The following output properties are available:
 
 <h4>Custom<wbr>Resource<wbr>Validation</h4>
 {{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#CustomResourceValidation">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#CustomResourceValidation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#CustomResourceValidation">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/apiextensions/v1beta1?tab=doc#CustomResourceValidationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/apiextensions/v1beta1?tab=doc#CustomResourceValidationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/apiextensions/v1beta1?tab=doc#CustomResourceValidationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2357,11 +2357,11 @@ The following output properties are available:
 
 <h4>External<wbr>Documentation</h4>
 {{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ExternalDocumentation">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ExternalDocumentation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ExternalDocumentation">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/apiextensions/v1beta1?tab=doc#ExternalDocumentationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/apiextensions/v1beta1?tab=doc#ExternalDocumentationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/apiextensions/v1beta1?tab=doc#ExternalDocumentationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2464,11 +2464,11 @@ The following output properties are available:
 
 <h4>JSONSchema<wbr>Props</h4>
 {{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#JSONSchemaProps">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#JSONSchemaProps">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#JSONSchemaProps">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/apiextensions/v1beta1?tab=doc#JSONSchemaPropsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/apiextensions/v1beta1?tab=doc#JSONSchemaPropsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/apiextensions/v1beta1?tab=doc#JSONSchemaPropsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4023,11 +4023,11 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
 <h4>Managed<wbr>Fields<wbr>Entry</h4>
 {{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ManagedFieldsEntry">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ManagedFieldsEntry">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ManagedFieldsEntry">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/meta/v1?tab=doc#ManagedFieldsEntryOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/meta/v1?tab=doc#ManagedFieldsEntryArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/meta/v1?tab=doc#ManagedFieldsEntryOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4877,11 +4877,11 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 <h4>Owner<wbr>Reference</h4>
 {{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#OwnerReference">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#OwnerReference">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#OwnerReference">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/meta/v1?tab=doc#OwnerReferenceOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/meta/v1?tab=doc#OwnerReferenceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/meta/v1?tab=doc#OwnerReferenceOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -5112,11 +5112,11 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 <h4>Service<wbr>Reference</h4>
 {{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ServiceReference">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ServiceReference">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ServiceReference">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/apiextensions/v1beta1?tab=doc#ServiceReferenceOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/apiextensions/v1beta1?tab=doc#ServiceReferenceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/apiextensions/v1beta1?tab=doc#ServiceReferenceOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -5283,11 +5283,11 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 <h4>Webhook<wbr>Client<wbr>Config</h4>
 {{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#WebhookClientConfig">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#WebhookClientConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#WebhookClientConfig">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/apiextensions/v1beta1?tab=doc#WebhookClientConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/apiextensions/v1beta1?tab=doc#WebhookClientConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/apiextensions/v1beta1?tab=doc#WebhookClientConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
