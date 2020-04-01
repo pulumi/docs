@@ -147,45 +147,41 @@ func main() {
 {{% choosable language csharp %}}
 
 ```csharp
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using Pulumi;
 using Gcp = Pulumi.Gcp;
 
-class Program
+class MyStack : Stack
 {
-    static Task Main()
+    public MyStack()
     {
-        return Deployment.RunAsync(() =>
+        // Let's create a customer managed key and use that for encryption
+        // instead of the default Google-managed key.
+        var keyRing = new Gcp.Kms.KeyRing("my-keyring", new Gcp.Kms.KeyRingArgs
         {
-            // Let's create a customer managed key and use that for encryption
-            // instead of the default Google-managed key.
-            var keyRing = new Gcp.Kms.KeyRing("my-keyring", new Gcp.Kms.KeyRingArgs
-            {
-                Location = "global",
-            });
-
-            var cryptoKey = new Gcp.Kms.CryptoKey("my-cryptokey", new Gcp.Kms.CryptoKeyArgs
-            {
-                KeyRing = keyRing.SelfLink,
-                RotationPeriod = "100000s",
-            });
-
-            // Create a GCP resource (Storage Bucket)
-            var bucket = new Gcp.Storage.Bucket("my-bucket", new Gcp.Storage.BucketArgs
-            {
-                Encryption = new Gcp.Storage.Inputs.BucketEncryptionArgs
-                {
-                    DefaultKmsKeyName = cryptoKey.SelfLink,
-                },
-            });
-
-            // Export the DNS name of the bucket
-            return new Dictionary<string, object> {
-                { "bucketName", bucket.Url },
-            };
+            Location = "global",
         });
+
+        var cryptoKey = new Gcp.Kms.CryptoKey("my-cryptokey", new Gcp.Kms.CryptoKeyArgs
+        {
+            KeyRing = keyRing.SelfLink,
+            RotationPeriod = "100000s",
+        });
+
+        // Create a GCP resource (Storage Bucket)
+        var bucket = new Gcp.Storage.Bucket("my-bucket", new Gcp.Storage.BucketArgs
+        {
+            Encryption = new Gcp.Storage.Inputs.BucketEncryptionArgs
+            {
+                DefaultKmsKeyName = cryptoKey.SelfLink,
+            },
+        });
+
+        // Export the DNS name of the bucket
+        this.BucketName = bucket.Url;
     }
+
+    [Output]
+    public Output<string> BucketName { get; set; }
 }
 ```
 

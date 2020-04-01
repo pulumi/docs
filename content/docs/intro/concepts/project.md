@@ -49,7 +49,7 @@ When using JavaScript, the working directory for the project should contain a `p
 
 When your Pulumi program references resources in the local filesystem, they are always relative to the working directory. The following example code references a subfolder `app` of the working directory, which would contain a `Dockerfile` and application code:
 
-{{< chooser language "javascript,typescript,python" >}}
+{{< chooser language "javascript,typescript,python,csharp" >}}
 
 {{% choosable language javascript %}}
 
@@ -80,6 +80,17 @@ myTask = Task('myTask',
         ...
     }
 )
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+```csharp
+var myTask = new Task("myTask", new TaskArgs
+{
+    Build = "./app", // subfolder of working directory
+    ...
+});
 ```
 
 {{% /choosable %}}
