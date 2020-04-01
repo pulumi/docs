@@ -778,8 +778,8 @@ db, err := NewDatabase(ctx, "db", &DatabaseArgs{ /*...*/ },
 
 ```csharp
 var db = new Database("db", new DatabaseArgs(),
-    new CustomResourceOptions { 
-        CustomTimeouts = new CustomTimeouts { Create = TimeSpan.FromMinutes(30) } 
+    new CustomResourceOptions {
+        CustomTimeouts = new CustomTimeouts { Create = TimeSpan.FromMinutes(30) }
     });
 ```
 
@@ -1205,7 +1205,7 @@ db, _ := NewDatabase(ctx, "db", &DatabaseArgs{}, pulumi.Protect(true));
 {{% choosable language csharp %}}
 
 ```csharp
-var db = new Database("db", new DatabaseArgs(), 
+var db = new Database("db", new DatabaseArgs(),
     new CustomResourceOptions { Protect = true });
 ```
 
@@ -1386,6 +1386,7 @@ public class MyStack : Stack
     }
 }
 ```
+
 {{% /choosable %}}
 
 ##### Resource Getter Functions {#resource-get}
