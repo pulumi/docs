@@ -27,7 +27,14 @@ export const configureStore = () => {
     // Serialize to localStorage.
     store.subscribe(() => {
         const state = store.getState();
-        localStorage.setItem("pulumi_state", JSON.stringify(state));
+
+        // localStorage.setItem can fail when the user's settings prevent it or when the
+        // the browser's storage limit has been exceeded.
+        try {
+            localStorage.setItem("pulumi_state", JSON.stringify(state));
+        } catch (e) {
+            console.error("Failed to save pulumi_state:", e);
+        }
     });
 
     return store;
