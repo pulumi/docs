@@ -125,17 +125,8 @@ fmt.Println("Password: "+c.Require("dbPassword"))
 {{% choosable language csharp %}}
 
 ```csharp
-using System.Threading.Tasks;
-using Pulumi;
-
-class Program
-{
-    static Task Main() =>
-        Deployment.Run(() => {
-            var config = new Pulumi.Config();
-            Console.WriteLine($"Password: {config.Require("dbPassword")}");
-        });
-}
+var config = new Pulumi.Config();
+Console.WriteLine($"Password: {config.Require("dbPassword")}");
 ```
 
 {{% /choosable %}}
@@ -220,15 +211,15 @@ dbPassword := c.Require("dbPassword")
 using System.Threading.Tasks;
 using Pulumi;
 
-class Program
+class MyStack : Stack
 {
-    static Task Main() =>
-        Deployment.Run(() => {
-            var config = new Pulumi.Config();
+    public MyStack()
+    {
+        var config = new Config();
 
-            var name = config.Require("name");
-            var dbPassword = config.RequireSecret("dbPassword");
-        });
+        var name = config.Require("name");
+        var dbPassword = config.RequireSecret("dbPassword");
+    }
 }
 ```
 
