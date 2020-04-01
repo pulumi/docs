@@ -160,7 +160,7 @@ using Pulumi.Kubernetes.Types.Inputs.Meta.V1;
 class MyStack : Stack
 {
     public MyStack()
-    {        
+    {
         var config = new Pulumi.Config();
         var isMinikube = config.GetBoolean("isMinikube") ?? false;
 

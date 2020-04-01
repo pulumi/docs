@@ -63,7 +63,7 @@ class Program
 
 public MyStack : Stack
 {
-    public MyStack()    
+    public MyStack()
     {
         // Create an Azure Resource Group
         var resourceGroup = new ResourceGroup("resourceGroup");

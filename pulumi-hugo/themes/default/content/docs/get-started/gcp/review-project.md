@@ -16,11 +16,13 @@ Let's review some of the generated project files:
 
 - `Pulumi.yaml` defines the [project]({{< relref "/docs/intro/concepts/project" >}}).
 - `Pulumi.dev.yaml` contains [configuration]({{< relref "/docs/intro/concepts/config" >}}) values for the [stack]({{< relref "/docs/intro/concepts/stack" >}}) we initialized.
+
 {{% choosable language csharp %}}
 
 - `Program.cs` with a simple entry point.
 
 {{% /choosable %}}
+
 - {{< langfile >}} is the Pulumi program that defines our stack resources. Let's examine it.
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
