@@ -51,8 +51,8 @@ creates a new container.</p></li>
 </dl>
 <p>The <strong>versioning</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">location</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">location</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Container in which versions will be stored.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Versioning type which can be <code class="docutils literal notranslate"><span class="pre">versions</span></code> or <code class="docutils literal notranslate"><span class="pre">history</span></code> according to <a class="reference external" href="https://docs.openstack.org/swift/latest/overview_object_versioning.html">Openstack documentation</a>.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_openstack.objectstorage.Container.container_read">
@@ -124,8 +124,8 @@ creates a new container.</p>
 <code class="sig-name descname">versioning</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.objectstorage.Container.versioning" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable object versioning. The structure is described below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">location</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">location</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Container in which versions will be stored.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Versioning type which can be <code class="docutils literal notranslate"><span class="pre">versions</span></code> or <code class="docutils literal notranslate"><span class="pre">history</span></code> according to <a class="reference external" href="https://docs.openstack.org/swift/latest/overview_object_versioning.html">Openstack documentation</a>.</p></li>
 </ul>
 </dd></dl>
 
@@ -166,8 +166,8 @@ creates a new container.</p></li>
 </dl>
 <p>The <strong>versioning</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">location</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">location</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Container in which versions will be stored.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Versioning type which can be <code class="docutils literal notranslate"><span class="pre">versions</span></code> or <code class="docutils literal notranslate"><span class="pre">history</span></code> according to <a class="reference external" href="https://docs.openstack.org/swift/latest/overview_object_versioning.html">Openstack documentation</a>.</p></li>
 </ul>
 </dd></dl>
 
