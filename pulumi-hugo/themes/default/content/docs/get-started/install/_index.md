@@ -167,6 +167,10 @@ or visit https://pulumi.com/docs/install/ for manual instructions and release no
 
 {{< skip-version-check >}}
 
+## Upgrading Pulumi
+
+If you are upgrading to Pulumi 2.0, please see our [migration guide]({{< relref "migrating-2.0" >}}).
+
 ## Uninstall Pulumi
 
 To uninstall Pulumi, remove the `.pulumi` folder from your home directory. If you installed Pulumi manually, you should
