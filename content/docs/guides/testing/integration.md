@@ -1,7 +1,7 @@
 ---
 title: Integration Testing
 meta_desc: "Guide to integration testing of Pulumi programs with ephemeral environments."
-weight: 2
+weight: 3
 
 menu:
   userguides:
@@ -151,6 +151,6 @@ unlock new automation capabilities that improve your team's productivity and con
 
 ## Full Examples
 
-A minimal example of using Pulumi's Go integration test framework is available in the examples repository: [Integration Testing in Go](https://github.com/pulumi/examples/blob/master/testing-integration).
+A minimal example of using Pulumi's Go integration test framework is available in the examples repository: [Integration Testing in Go](https://github.com/pulumi/examples/tree/31056c3480cc445e5d4d3a8a0a86977adce2bc5e/testing-integration).
 
-Our own [integration test suite](https://github.com/pulumi/examples/blob/master/misc/test/examples_test.go) can be a source of further inspiration.
+Our own [integration test suite](https://github.com/pulumi/examples/blob/31056c3480cc445e5d4d3a8a0a86977adce2bc5e/misc/test/examples_test.go) can be a source of further inspiration.

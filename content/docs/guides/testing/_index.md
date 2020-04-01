@@ -1,6 +1,6 @@
 ---
 title: Testing
-meta_desc: "Guide to automated testing of Pulumi programs: unit testing, integration testing, Policy as Code."
+meta_desc: "Guide to automated testing of Pulumi programs: unit testing, property testing, integration testing."
 menu:
     userguides:
         identifier: testing
@@ -14,12 +14,12 @@ The software industry has come up with multiple styles of automated testing. Uni
 Pulumi provides a similar choice of testing options for cloud programs. Currently, we identify three types of tests:
 
 - **Unit Tests** are fast in-memory tests that mock all external calls.
-- **Tests based on Policy as Code** run resource-level assertions *while* infrastructure is being deployed.
+- **Property Tests** run resource-level assertions *while* infrastructure is being deployed.
 - **Integration Tests** deploy ephemeral infrastructure and run external tests against it.
 
 The following table summarizes the differences between the three approaches:
 
-|                                | Unit Tests    | Policy as Code  | Integration Tests  |
+|                                | Unit Tests    | Property Tests  | Integration Tests  |
 |--------------------------------|---------------|---------|----------|
 | Provision real infrastructure  | No            | Yes     | Yes      |
 | Require the Pulumi CLI         | No            | Yes     | Yes      |
@@ -27,7 +27,7 @@ The following table summarizes the differences between the three approaches:
 | Language                       | Same as Pulumi program  | Node.js or Python  | Any language  |
 | Validation target              | Resource inputs  | Resource inputs and outputs | External endpoints |
 
-We encourage you to try all three styles of testing and use the ones that are most suitable for your quality targets, development practices, and application style. For many teams, a combination of these approaches may make sense: unit tests that can run quickly and validate program logic, policy tests to validate key correctness invariants, and integration tests to test end-to-end interaction of infrastructure components.
+We encourage you to try all three styles of testing and use the ones that are most suitable for your quality targets, development practices, and application style. For many teams, a combination of these approaches may make sense: unit tests that can run quickly and validate program logic, property tests to validate key correctness invariants, and integration tests to test end-to-end interaction of infrastructure components.
 
 ## Unit Testing
 
@@ -40,6 +40,16 @@ You author the unit tests in the same language as the Pulumi program under test.
 Because there are no real cloud resources created, you can't write a test that would evaluate the behavior of infrastructure. For example, you can't make HTTP requests to endpoints: there's no webserver to serve them.
 
 [Learn more and get started with Unit Testing]({{< relref "./unit" >}}).
+
+## Property Testing
+
+Property tests are based on [Policy as Code]({{< relref "../crossguard" >}}) (also known as "CrossGuard"), Pulumi's offering to set guardrails and enforce compliance for cloud resources. In addition to authoring company-wide policies, CrossGuard enables another type of infrastructure testing. Each policy becomes a property, an invariant, that a test evaluates and asserts.
+
+Property tests run inside the Pulumi CLI before and after infrastructure provisioning. In contrast to "black-box" integration testing, policy rules have access to all input and output values of all cloud resources in the stack. As opposed to unit testing, property tests can evaluate real values returned from the cloud provider instead of the mocked ones.
+
+Property tests can run against any cloud environment: it can be a persistent "acceptance" stack, an ephemeral cloud environment created for each pull request, or a combination of those.
+
+[Learn more and get started with Property Testing]({{< relref "./property-testing" >}}).
 
 ## Integration Testing
 
@@ -58,16 +68,6 @@ Depending on the type of resources and frequency of testing, even short-lived ep
 
 [Learn more and get started with Integration Testing]({{< relref "./integration" >}}).
 
-## Testing with Policy as Code
-
-[Policy as Code]({{< relref "../crossguard" >}}) (also known as "CrossGuard") is Pulumi's offering to set guardrails and enforce compliance for cloud resources. In addition to authoring company-wide policies, CrossGuard enables another type of infrastructure testing.
-
-Policy-based tests run inside the Pulumi CLI before and after infrastructure provisioning. In contrast to "black-box" integration testing, policy rules have access to all input and output values of all cloud resources in the stack. As opposed to unit testing, policy rules can evaluate real values returned from the cloud provider instead of the mocked ones.
-
-Policy-based tests run against an ephemeral cloud environment, so the considerations of speed and cost still apply.
-
-[Learn more and get started with Policy as Code testing]({{< relref "./policy-as-code" >}}).
-
 ## Examples
 
 Several complete and runnable tests are available in the [examples repository](https://github.com/pulumi/examples#testing):
@@ -78,5 +78,5 @@ Example		| Description |
 [Unit Tests in Python](https://github.com/pulumi/examples/tree/master/testing-unit-py)  | Mock-based unit tests in Python.
 [Unit Tests in Go](https://github.com/pulumi/examples/tree/master/testing-unit-go)      | Mock-based unit tests in Go.
 [Unit Tests in C#](https://github.com/pulumi/examples/tree/master/testing-unit-cs)      | Mock-based unit tests in C#.
-[Policy Testing in TypeScript](https://github.com/pulumi/examples/tree/master/testing-pac-ts)       | Tests based on Policy-as-Code in TypeScript.
-[Integration Testing in Go](https://github.com/pulumi/examples/tree/master/testing-integration)  | Deploy-check-destroy tests in Go.
+[Property Testing in TypeScript](https://github.com/pulumi/examples/tree/31056c3480cc445e5d4d3a8a0a86977adce2bc5e/testing-pac-ts)       | Tests based on Policy-as-Code in TypeScript.
+[Integration Testing in Go](https://github.com/pulumi/examples/tree/31056c3480cc445e5d4d3a8a0a86977adce2bc5e/testing-integration)  | Deploy-check-destroy tests in Go.
