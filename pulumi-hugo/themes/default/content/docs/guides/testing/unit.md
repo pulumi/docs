@@ -663,19 +663,10 @@ That's it&mdash;now let's run the tests.
 
 {{% choosable language "typescript" %}}
 
-When running Mocha tests, we have to pass three additional pieces of information:
-
-- Your project name, which can be supplied with the `PULUMI_NODEJS_PROJECT` environment variable.
-- Your stack name, which can be supplied with the `PULUMI_NODEJS_STACK` environment variable.
-- Switch the engine to the test mode by setting `PULUMI_TEST_MODE` to `true`.
-
 The command line to run your Mocha tests would therefore be:
 
 ```bash
-$ PULUMI_TEST_MODE=true  \
-  PULUMI_NODEJS_STACK="my-ws" \
-  PULUMI_NODEJS_PROJECT="dev" \
-  mocha -r ts-node/register ec2tests.ts
+$ mocha -r ts-node/register ec2tests.ts
 ```
 
 {{% /choosable %}}
