@@ -4,9 +4,9 @@ title: "Pulumi Up(date)"
 meta_desc: "Join Pulumi CEO, Joe Duffy, and the Pulumi team for a walk-through of all the improvements and modern infrastructure capabilities of Pulumi."
 
 aliases:
-    - "/webinars/pulumi-v2-virtual-launch"
-    - "/events/launch-v2-seattle-2020-04-15"
-    - "/webinars/pulumi-update-2020-04-22"
+    - /webinars/pulumi-v2-virtual-launch
+    - /events/launch-v2-seattle-2020-04-15
+    - /webinars/pulumi-update-2020-04-22
 
 # If the video is pre-recorded or live.
 pre_recorded: false
