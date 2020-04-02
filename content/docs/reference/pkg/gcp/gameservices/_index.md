@@ -15,3 +15,11 @@ block_external_search_index: true
     <li><a href="realm"><span class="symbol resource"></span>Realm</a></li>
 </ul>
 
+<h3>Package Details</h3>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd>https://github.com/pulumi/pulumi-gcp</dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd>
+</dl>
+

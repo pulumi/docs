@@ -42,6 +42,7 @@ A Pulumi package for creating and managing Google Cloud Platform resources.
     <li><a href="dns/"><span class="symbol module"></span>dns</a></li>
     <li><a href="endpoints/"><span class="symbol module"></span>endpoints</a></li>
     <li><a href="filestore/"><span class="symbol module"></span>filestore</a></li>
+    <li><a href="firebase/"><span class="symbol module"></span>firebase</a></li>
     <li><a href="firestore/"><span class="symbol module"></span>firestore</a></li>
     <li><a href="folder/"><span class="symbol module"></span>folder</a></li>
     <li><a href="gameservices/"><span class="symbol module"></span>gameservices</a></li>
@@ -63,6 +64,7 @@ A Pulumi package for creating and managing Google Cloud Platform resources.
     <li><a href="securitycenter/"><span class="symbol module"></span>securitycenter</a></li>
     <li><a href="serviceAccount/"><span class="symbol module"></span>serviceAccount</a></li>
     <li><a href="servicenetworking/"><span class="symbol module"></span>servicenetworking</a></li>
+    <li><a href="serviceusage/"><span class="symbol module"></span>serviceusage</a></li>
     <li><a href="sourcerepo/"><span class="symbol module"></span>sourcerepo</a></li>
     <li><a href="spanner/"><span class="symbol module"></span>spanner</a></li>
     <li><a href="sql/"><span class="symbol module"></span>sql</a></li>
@@ -75,4 +77,12 @@ A Pulumi package for creating and managing Google Cloud Platform resources.
 <ul class="api">
     <li><a href="provider"><span class="symbol resource"></span>Provider</a></li>
 </ul>
+
+<h3>Package Details</h3>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd>https://github.com/pulumi/pulumi-gcp</dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd>
+</dl>
 

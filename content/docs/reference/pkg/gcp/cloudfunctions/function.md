@@ -36,7 +36,7 @@ for Cloud Functions.
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Cloudfunctions.Function.html">Function</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudFunctions.Inputs.FunctionArgs.html">FunctionArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Cloudfunctions.Function.html">Function</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudFunctions.FunctionArgs.html">FunctionArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -168,7 +168,7 @@ for Cloud Functions.
             title="Optional">
         <span>Event<wbr>Trigger</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functioneventtrigger">Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Functions.<wbr>Inputs.<wbr>Function<wbr>Event<wbr>Trigger<wbr>Args?</a></span>
+        <span class="property-type"><a href="#functioneventtrigger">Function<wbr>Event<wbr>Trigger<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A source that fires events in response to a condition in another service. Structure is documented below. Cannot be used with `trigger_http`.
 {{% /md %}}</dd>
@@ -268,7 +268,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`.
             title="Optional">
         <span>Source<wbr>Repository</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionsourcerepository">Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Functions.<wbr>Inputs.<wbr>Function<wbr>Source<wbr>Repository<wbr>Args?</a></span>
+        <span class="property-type"><a href="#functionsourcerepository">Function<wbr>Source<wbr>Repository<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Represents parameters related to source repository where a function is hosted.
 Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Structure is documented below.
@@ -900,7 +900,7 @@ The following output properties are available:
             title="">
         <span>Event<wbr>Trigger</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functioneventtrigger">Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Functions.<wbr>Outputs.<wbr>Function<wbr>Event<wbr>Trigger</a></span>
+        <span class="property-type"><a href="#functioneventtrigger">Function<wbr>Event<wbr>Trigger</a></span>
     </dt>
     <dd>{{% md %}}A source that fires events in response to a condition in another service. Structure is documented below. Cannot be used with `trigger_http`.
 {{% /md %}}</dd>
@@ -1000,7 +1000,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`.
             title="">
         <span>Source<wbr>Repository</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionsourcerepository">Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Functions.<wbr>Outputs.<wbr>Function<wbr>Source<wbr>Repository?</a></span>
+        <span class="property-type"><a href="#functionsourcerepository">Function<wbr>Source<wbr>Repository?</a></span>
     </dt>
     <dd>{{% md %}}Represents parameters related to source repository where a function is hosted.
 Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Structure is documented below.
@@ -1590,7 +1590,7 @@ Get an existing Function resource's state with the given name, ID, and optional 
 {{< chooser language "javascript,typescript,python,go,csharp  " / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">pulumi.Input&lt;pulumi.ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudfunctions/#FunctionState">FunctionState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudfunctions/#Function">Function</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudfunctions/#FunctionState">FunctionState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudfunctions/#Function">Function</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1598,11 +1598,11 @@ Get an existing Function resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFunction<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">pulumi.IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/cloudfunctions?tab=doc#FunctionState">FunctionState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/cloudfunctions?tab=doc#Function">Function</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFunction<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/cloudfunctions?tab=doc#FunctionState">FunctionState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/cloudfunctions?tab=doc#Function">Function</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Cloudfunctions.Function.html">Function</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Pulumi.Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Cloudfunctions.FunctionState.html">FunctionState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Cloudfunctions.Function.html">Function</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Cloudfunctions.FunctionState.html">FunctionState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1748,7 +1748,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Event<wbr>Trigger</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functioneventtrigger">Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Functions.<wbr>Inputs.<wbr>Function<wbr>Event<wbr>Trigger<wbr>Args?</a></span>
+        <span class="property-type"><a href="#functioneventtrigger">Function<wbr>Event<wbr>Trigger<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A source that fires events in response to a condition in another service. Structure is documented below. Cannot be used with `trigger_http`.
 {{% /md %}}</dd>
@@ -1848,7 +1848,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`.
             title="Optional">
         <span>Source<wbr>Repository</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionsourcerepository">Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Functions.<wbr>Inputs.<wbr>Function<wbr>Source<wbr>Repository<wbr>Args?</a></span>
+        <span class="property-type"><a href="#functionsourcerepository">Function<wbr>Source<wbr>Repository<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Represents parameters related to source repository where a function is hosted.
 Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Structure is documented below.
@@ -2465,7 +2465,7 @@ full reference of accepted triggers.
             title="Optional">
         <span>Failure<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functioneventtriggerfailurepolicy">Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Functions.<wbr>Inputs.<wbr>Function<wbr>Event<wbr>Trigger<wbr>Failure<wbr>Policy<wbr>Args?</a></span>
+        <span class="property-type"><a href="#functioneventtriggerfailurepolicy">Function<wbr>Event<wbr>Trigger<wbr>Failure<wbr>Policy<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Specifies policy for failed executions. Structure is documented below.
 {{% /md %}}</dd>
@@ -2790,3 +2790,10 @@ which to observe events. For example, `"myBucket"` or `"projects/my-project/topi
 
 
 
+
+<h3>Package Details</h3>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd></dl>

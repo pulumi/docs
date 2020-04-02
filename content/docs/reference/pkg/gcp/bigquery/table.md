@@ -29,7 +29,7 @@ Creates a table resource in a dataset for Google BigQuery. For more information 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Bigquery.Table.html">Table</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Inputs.TableArgs.html">TableArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Bigquery.Table.html">Table</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.TableArgs.html">TableArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -155,7 +155,7 @@ Changing this forces a new resource to be created.
             title="Optional">
         <span>Encryption<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableencryptionconfiguration">Pulumi.<wbr>Gcp.<wbr>Big<wbr>Query.<wbr>Inputs.<wbr>Table<wbr>Encryption<wbr>Configuration<wbr>Args?</a></span>
+        <span class="property-type"><a href="#tableencryptionconfiguration">Table<wbr>Encryption<wbr>Configuration<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Specifies how the table should be encrypted.
 If left blank, the table will be encrypted with a Google-managed key; that process
@@ -178,7 +178,7 @@ reclaimed.
             title="Optional">
         <span>External<wbr>Data<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableexternaldataconfiguration">Pulumi.<wbr>Gcp.<wbr>Big<wbr>Query.<wbr>Inputs.<wbr>Table<wbr>External<wbr>Data<wbr>Configuration<wbr>Args?</a></span>
+        <span class="property-type"><a href="#tableexternaldataconfiguration">Table<wbr>External<wbr>Data<wbr>Configuration<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Describes the data format,
 location, and other properties of a table stored outside of BigQuery.
@@ -218,7 +218,7 @@ is not provided, the provider project is used.
             title="Optional">
         <span>Range<wbr>Partitioning</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablerangepartitioning">Pulumi.<wbr>Gcp.<wbr>Big<wbr>Query.<wbr>Inputs.<wbr>Table<wbr>Range<wbr>Partitioning<wbr>Args?</a></span>
+        <span class="property-type"><a href="#tablerangepartitioning">Table<wbr>Range<wbr>Partitioning<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}If specified, configures range-based
 partitioning for this table. Structure is documented below.
@@ -257,7 +257,7 @@ Changing this forces a new resource to be created.
             title="Optional">
         <span>Time<wbr>Partitioning</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tabletimepartitioning">Pulumi.<wbr>Gcp.<wbr>Big<wbr>Query.<wbr>Inputs.<wbr>Table<wbr>Time<wbr>Partitioning<wbr>Args?</a></span>
+        <span class="property-type"><a href="#tabletimepartitioning">Table<wbr>Time<wbr>Partitioning<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}If specified, configures time-based
 partitioning for this table. Structure is documented below.
@@ -267,7 +267,7 @@ partitioning for this table. Structure is documented below.
             title="Optional">
         <span>View</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableview">Pulumi.<wbr>Gcp.<wbr>Big<wbr>Query.<wbr>Inputs.<wbr>Table<wbr>View<wbr>Args?</a></span>
+        <span class="property-type"><a href="#tableview">Table<wbr>View<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}If specified, configures this table as a view.
 Structure is documented below.
@@ -812,7 +812,7 @@ Changing this forces a new resource to be created.
             title="">
         <span>Encryption<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableencryptionconfiguration">Pulumi.<wbr>Gcp.<wbr>Big<wbr>Query.<wbr>Outputs.<wbr>Table<wbr>Encryption<wbr>Configuration?</a></span>
+        <span class="property-type"><a href="#tableencryptionconfiguration">Table<wbr>Encryption<wbr>Configuration?</a></span>
     </dt>
     <dd>{{% md %}}Specifies how the table should be encrypted.
 If left blank, the table will be encrypted with a Google-managed key; that process
@@ -844,7 +844,7 @@ reclaimed.
             title="">
         <span>External<wbr>Data<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableexternaldataconfiguration">Pulumi.<wbr>Gcp.<wbr>Big<wbr>Query.<wbr>Outputs.<wbr>Table<wbr>External<wbr>Data<wbr>Configuration?</a></span>
+        <span class="property-type"><a href="#tableexternaldataconfiguration">Table<wbr>External<wbr>Data<wbr>Configuration?</a></span>
     </dt>
     <dd>{{% md %}}Describes the data format,
 location, and other properties of a table stored outside of BigQuery.
@@ -929,7 +929,7 @@ is not provided, the provider project is used.
             title="">
         <span>Range<wbr>Partitioning</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablerangepartitioning">Pulumi.<wbr>Gcp.<wbr>Big<wbr>Query.<wbr>Outputs.<wbr>Table<wbr>Range<wbr>Partitioning?</a></span>
+        <span class="property-type"><a href="#tablerangepartitioning">Table<wbr>Range<wbr>Partitioning?</a></span>
     </dt>
     <dd>{{% md %}}If specified, configures range-based
 partitioning for this table. Structure is documented below.
@@ -977,7 +977,7 @@ Changing this forces a new resource to be created.
             title="">
         <span>Time<wbr>Partitioning</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tabletimepartitioning">Pulumi.<wbr>Gcp.<wbr>Big<wbr>Query.<wbr>Outputs.<wbr>Table<wbr>Time<wbr>Partitioning?</a></span>
+        <span class="property-type"><a href="#tabletimepartitioning">Table<wbr>Time<wbr>Partitioning?</a></span>
     </dt>
     <dd>{{% md %}}If specified, configures time-based
 partitioning for this table. Structure is documented below.
@@ -997,7 +997,7 @@ one partition per day based on data loading time.
             title="">
         <span>View</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableview">Pulumi.<wbr>Gcp.<wbr>Big<wbr>Query.<wbr>Outputs.<wbr>Table<wbr>View?</a></span>
+        <span class="property-type"><a href="#tableview">Table<wbr>View?</a></span>
     </dt>
     <dd>{{% md %}}If specified, configures this table as a view.
 Structure is documented below.
@@ -1743,7 +1743,7 @@ Get an existing Table resource's state with the given name, ID, and optional ext
 {{< chooser language "javascript,typescript,python,go,csharp  " / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">pulumi.Input&lt;pulumi.ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/bigquery/#TableState">TableState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/bigquery/#Table">Table</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/bigquery/#TableState">TableState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/bigquery/#Table">Table</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1751,11 +1751,11 @@ Get an existing Table resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTable<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">pulumi.IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/bigquery?tab=doc#TableState">TableState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/bigquery?tab=doc#Table">Table</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTable<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/bigquery?tab=doc#TableState">TableState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/bigquery?tab=doc#Table">Table</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Bigquery.Table.html">Table</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Pulumi.Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Bigquery.TableState.html">TableState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Bigquery.Table.html">Table</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Bigquery.TableState.html">TableState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1904,7 +1904,7 @@ Changing this forces a new resource to be created.
             title="Optional">
         <span>Encryption<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableencryptionconfiguration">Pulumi.<wbr>Gcp.<wbr>Big<wbr>Query.<wbr>Inputs.<wbr>Table<wbr>Encryption<wbr>Configuration<wbr>Args?</a></span>
+        <span class="property-type"><a href="#tableencryptionconfiguration">Table<wbr>Encryption<wbr>Configuration<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Specifies how the table should be encrypted.
 If left blank, the table will be encrypted with a Google-managed key; that process
@@ -1936,7 +1936,7 @@ reclaimed.
             title="Optional">
         <span>External<wbr>Data<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableexternaldataconfiguration">Pulumi.<wbr>Gcp.<wbr>Big<wbr>Query.<wbr>Inputs.<wbr>Table<wbr>External<wbr>Data<wbr>Configuration<wbr>Args?</a></span>
+        <span class="property-type"><a href="#tableexternaldataconfiguration">Table<wbr>External<wbr>Data<wbr>Configuration<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Describes the data format,
 location, and other properties of a table stored outside of BigQuery.
@@ -2021,7 +2021,7 @@ is not provided, the provider project is used.
             title="Optional">
         <span>Range<wbr>Partitioning</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablerangepartitioning">Pulumi.<wbr>Gcp.<wbr>Big<wbr>Query.<wbr>Inputs.<wbr>Table<wbr>Range<wbr>Partitioning<wbr>Args?</a></span>
+        <span class="property-type"><a href="#tablerangepartitioning">Table<wbr>Range<wbr>Partitioning<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}If specified, configures range-based
 partitioning for this table. Structure is documented below.
@@ -2069,7 +2069,7 @@ Changing this forces a new resource to be created.
             title="Optional">
         <span>Time<wbr>Partitioning</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tabletimepartitioning">Pulumi.<wbr>Gcp.<wbr>Big<wbr>Query.<wbr>Inputs.<wbr>Table<wbr>Time<wbr>Partitioning<wbr>Args?</a></span>
+        <span class="property-type"><a href="#tabletimepartitioning">Table<wbr>Time<wbr>Partitioning<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}If specified, configures time-based
 partitioning for this table. Structure is documented below.
@@ -2089,7 +2089,7 @@ one partition per day based on data loading time.
             title="Optional">
         <span>View</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableview">Pulumi.<wbr>Gcp.<wbr>Big<wbr>Query.<wbr>Inputs.<wbr>Table<wbr>View<wbr>Args?</a></span>
+        <span class="property-type"><a href="#tableview">Table<wbr>View<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}If specified, configures this table as a view.
 Structure is documented below.
@@ -2966,7 +2966,7 @@ Valid values are "NONE" or "GZIP".
             title="Optional">
         <span>Csv<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableexternaldataconfigurationcsvoptions">Pulumi.<wbr>Gcp.<wbr>Big<wbr>Query.<wbr>Inputs.<wbr>Table<wbr>External<wbr>Data<wbr>Configuration<wbr>Csv<wbr>Options<wbr>Args?</a></span>
+        <span class="property-type"><a href="#tableexternaldataconfigurationcsvoptions">Table<wbr>External<wbr>Data<wbr>Configuration<wbr>Csv<wbr>Options<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Additional properties to set if
 `source_format` is set to "CSV". Structure is documented below.
@@ -2976,7 +2976,7 @@ Valid values are "NONE" or "GZIP".
             title="Optional">
         <span>Google<wbr>Sheets<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableexternaldataconfigurationgooglesheetsoptions">Pulumi.<wbr>Gcp.<wbr>Big<wbr>Query.<wbr>Inputs.<wbr>Table<wbr>External<wbr>Data<wbr>Configuration<wbr>Google<wbr>Sheets<wbr>Options<wbr>Args?</a></span>
+        <span class="property-type"><a href="#tableexternaldataconfigurationgooglesheetsoptions">Table<wbr>External<wbr>Data<wbr>Configuration<wbr>Google<wbr>Sheets<wbr>Options<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Additional options if
 `source_format` is set to "GOOGLE_SHEETS". Structure is
@@ -3383,7 +3383,14 @@ values are UTF-8 or ISO-8859-1.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value that is used to quote data sections in a
+CSV file. If your data does not contain quoted sections, set the
+property value to an empty string. If your data contains quoted newline
+characters, you must also set the `allow_quoted_newlines` property to true.
+The API-side default is `"`, specified in the provider escaped as `\"`. Due to
+limitations with default values, this value is required to be
+explicitly set.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3449,7 +3456,14 @@ values are UTF-8 or ISO-8859-1.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value that is used to quote data sections in a
+CSV file. If your data does not contain quoted sections, set the
+property value to an empty string. If your data contains quoted newline
+characters, you must also set the `allow_quoted_newlines` property to true.
+The API-side default is `"`, specified in the provider escaped as `\"`. Due to
+limitations with default values, this value is required to be
+explicitly set.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3515,7 +3529,14 @@ values are UTF-8 or ISO-8859-1.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value that is used to quote data sections in a
+CSV file. If your data does not contain quoted sections, set the
+property value to an empty string. If your data contains quoted newline
+characters, you must also set the `allow_quoted_newlines` property to true.
+The API-side default is `"`, specified in the provider escaped as `\"`. Due to
+limitations with default values, this value is required to be
+explicitly set.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3581,7 +3602,14 @@ values are UTF-8 or ISO-8859-1.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value that is used to quote data sections in a
+CSV file. If your data does not contain quoted sections, set the
+property value to an empty string. If your data contains quoted newline
+characters, you must also set the `allow_quoted_newlines` property to true.
+The API-side default is `"`, specified in the provider escaped as `\"`. Due to
+limitations with default values, this value is required to be
+explicitly set.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3757,7 +3785,7 @@ partition.
             title="Required">
         <span>Range</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablerangepartitioningrange">Pulumi.<wbr>Gcp.<wbr>Big<wbr>Query.<wbr>Inputs.<wbr>Table<wbr>Range<wbr>Partitioning<wbr>Range<wbr>Args</a></span>
+        <span class="property-type"><a href="#tablerangepartitioningrange">Table<wbr>Range<wbr>Partitioning<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information required to partition based on ranges.
 Structure is documented below.
@@ -4330,3 +4358,10 @@ The default value is true. If set to false, the view will use BigQuery's standar
 
 
 
+
+<h3>Package Details</h3>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd></dl>

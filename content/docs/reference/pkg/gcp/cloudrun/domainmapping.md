@@ -34,7 +34,7 @@ To get more information about DomainMapping, see:
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Cloudrun.DomainMapping.html">DomainMapping</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Inputs.DomainMappingArgs.html">DomainMappingArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Cloudrun.DomainMapping.html">DomainMapping</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.DomainMappingArgs.html">DomainMappingArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -139,7 +139,7 @@ To get more information about DomainMapping, see:
             title="Required">
         <span>Metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainmappingmetadata">Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Run.<wbr>Inputs.<wbr>Domain<wbr>Mapping<wbr>Metadata<wbr>Args</a></span>
+        <span class="property-type"><a href="#domainmappingmetadata">Domain<wbr>Mapping<wbr>Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Metadata associated with this DomainMapping.
 {{% /md %}}</dd>
@@ -167,7 +167,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Spec</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainmappingspec">Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Run.<wbr>Inputs.<wbr>Domain<wbr>Mapping<wbr>Spec<wbr>Args</a></span>
+        <span class="property-type"><a href="#domainmappingspec">Domain<wbr>Mapping<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The spec for this DomainMapping.
 {{% /md %}}</dd>
@@ -363,7 +363,7 @@ The following output properties are available:
             title="">
         <span>Metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainmappingmetadata">Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Run.<wbr>Outputs.<wbr>Domain<wbr>Mapping<wbr>Metadata</a></span>
+        <span class="property-type"><a href="#domainmappingmetadata">Domain<wbr>Mapping<wbr>Metadata</a></span>
     </dt>
     <dd>{{% md %}}Metadata associated with this DomainMapping.
 {{% /md %}}</dd>
@@ -391,7 +391,7 @@ If it is not provided, the provider project is used.
             title="">
         <span>Spec</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainmappingspec">Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Run.<wbr>Outputs.<wbr>Domain<wbr>Mapping<wbr>Spec</a></span>
+        <span class="property-type"><a href="#domainmappingspec">Domain<wbr>Mapping<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The spec for this DomainMapping.
 {{% /md %}}</dd>
@@ -400,7 +400,7 @@ If it is not provided, the provider project is used.
             title="">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainmappingstatus">Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Run.<wbr>Outputs.<wbr>Domain<wbr>Mapping<wbr>Status</a></span>
+        <span class="property-type"><a href="#domainmappingstatus">Domain<wbr>Mapping<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The current status of the DomainMapping.
 {{% /md %}}</dd>
@@ -608,7 +608,7 @@ Get an existing DomainMapping resource's state with the given name, ID, and opti
 {{< chooser language "javascript,typescript,python,go,csharp  " / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">pulumi.Input&lt;pulumi.ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudrun/#DomainMappingState">DomainMappingState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudrun/#DomainMapping">DomainMapping</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudrun/#DomainMappingState">DomainMappingState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudrun/#DomainMapping">DomainMapping</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -616,11 +616,11 @@ Get an existing DomainMapping resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDomainMapping<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">pulumi.IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/cloudrun?tab=doc#DomainMappingState">DomainMappingState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/cloudrun?tab=doc#DomainMapping">DomainMapping</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDomainMapping<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/cloudrun?tab=doc#DomainMappingState">DomainMappingState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/cloudrun?tab=doc#DomainMapping">DomainMapping</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Cloudrun.DomainMapping.html">DomainMapping</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Pulumi.Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Cloudrun.DomainMappingState.html">DomainMappingState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Cloudrun.DomainMapping.html">DomainMapping</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Cloudrun.DomainMappingState.html">DomainMappingState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -739,7 +739,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainmappingmetadata">Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Run.<wbr>Inputs.<wbr>Domain<wbr>Mapping<wbr>Metadata<wbr>Args?</a></span>
+        <span class="property-type"><a href="#domainmappingmetadata">Domain<wbr>Mapping<wbr>Metadata<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Metadata associated with this DomainMapping.
 {{% /md %}}</dd>
@@ -767,7 +767,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Spec</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainmappingspec">Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Run.<wbr>Inputs.<wbr>Domain<wbr>Mapping<wbr>Spec<wbr>Args?</a></span>
+        <span class="property-type"><a href="#domainmappingspec">Domain<wbr>Mapping<wbr>Spec<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}The spec for this DomainMapping.
 {{% /md %}}</dd>
@@ -776,7 +776,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainmappingstatus">Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Run.<wbr>Inputs.<wbr>Domain<wbr>Mapping<wbr>Status<wbr>Args?</a></span>
+        <span class="property-type"><a href="#domainmappingstatus">Domain<wbr>Mapping<wbr>Status<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}The current status of the DomainMapping.
 {{% /md %}}</dd>
@@ -1406,7 +1406,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Conditions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainmappingstatuscondition">List&lt;Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Run.<wbr>Inputs.<wbr>Domain<wbr>Mapping<wbr>Status<wbr>Condition<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#domainmappingstatuscondition">List&lt;Domain<wbr>Mapping<wbr>Status<wbr>Condition<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1430,7 +1430,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Resource<wbr>Records</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainmappingstatusresourcerecord">List&lt;Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Run.<wbr>Inputs.<wbr>Domain<wbr>Mapping<wbr>Status<wbr>Resource<wbr>Record<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#domainmappingstatusresourcerecord">List&lt;Domain<wbr>Mapping<wbr>Status<wbr>Resource<wbr>Record<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1870,3 +1870,10 @@ If it is not provided, the provider project is used.
 
 
 
+
+<h3>Package Details</h3>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd></dl>

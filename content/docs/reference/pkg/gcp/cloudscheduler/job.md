@@ -18,48 +18,6 @@ To get more information about Job, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/scheduler/)
 
-## Example Usage - Scheduler Job Http
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const job = new gcp.cloudscheduler.Job("job", {
-    attemptDeadline: "320s",
-    description: "test http job",
-    httpTarget: {
-        httpMethod: "POST",
-        uri: "https://example.com/ping",
-    },
-    schedule: "*/8 * * * *",
-    timeZone: "America/New_York",
-});
-```
-## Example Usage - Scheduler Job App Engine
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const job = new gcp.cloudscheduler.Job("job", {
-    appEngineHttpTarget: {
-        appEngineRouting: {
-            instance: "my-instance-001",
-            service: "web",
-            version: "prod",
-        },
-        httpMethod: "POST",
-        relativeUri: "/ping",
-    },
-    attemptDeadline: "320s",
-    description: "test app engine job",
-    schedule: "*/4 * * * *",
-    timeZone: "Europe/London",
-});
-```
-
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloud_scheduler_job.html.markdown.
 
 
@@ -81,7 +39,7 @@ const job = new gcp.cloudscheduler.Job("job", {
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Cloudscheduler.Job.html">Job</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudScheduler.Inputs.JobArgs.html">JobArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Cloudscheduler.Job.html">Job</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudScheduler.JobArgs.html">JobArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -177,7 +135,7 @@ const job = new gcp.cloudscheduler.Job("job", {
             title="Optional">
         <span>App<wbr>Engine<wbr>Http<wbr>Target</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobappenginehttptarget">Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Scheduler.<wbr>Inputs.<wbr>Job<wbr>App<wbr>Engine<wbr>Http<wbr>Target<wbr>Args?</a></span>
+        <span class="property-type"><a href="#jobappenginehttptarget">Job<wbr>App<wbr>Engine<wbr>Http<wbr>Target<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}App Engine HTTP target. If the job providers a App Engine HTTP target the cron will send a request to the service
 instance
@@ -209,7 +167,7 @@ in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
             title="Optional">
         <span>Http<wbr>Target</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobhttptarget">Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Scheduler.<wbr>Inputs.<wbr>Job<wbr>Http<wbr>Target<wbr>Args?</a></span>
+        <span class="property-type"><a href="#jobhttptarget">Job<wbr>Http<wbr>Target<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}HTTP target. If the job providers a http_target the cron will send a request to the targeted url
 {{% /md %}}</dd>
@@ -237,7 +195,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Pubsub<wbr>Target</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobpubsubtarget">Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Scheduler.<wbr>Inputs.<wbr>Job<wbr>Pubsub<wbr>Target<wbr>Args?</a></span>
+        <span class="property-type"><a href="#jobpubsubtarget">Job<wbr>Pubsub<wbr>Target<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Pub/Sub target If the job providers a Pub/Sub target the cron will publish a message to the provided topic
 {{% /md %}}</dd>
@@ -255,7 +213,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Retry<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobretryconfig">Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Scheduler.<wbr>Inputs.<wbr>Job<wbr>Retry<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#jobretryconfig">Job<wbr>Retry<wbr>Config<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}By default, if a job does not complete successfully, meaning that an acknowledgement is not received from the handler,
 then it will be retried with exponential backoff according to the settings
@@ -645,7 +603,7 @@ The following output properties are available:
             title="">
         <span>App<wbr>Engine<wbr>Http<wbr>Target</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobappenginehttptarget">Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Scheduler.<wbr>Outputs.<wbr>Job<wbr>App<wbr>Engine<wbr>Http<wbr>Target?</a></span>
+        <span class="property-type"><a href="#jobappenginehttptarget">Job<wbr>App<wbr>Engine<wbr>Http<wbr>Target?</a></span>
     </dt>
     <dd>{{% md %}}App Engine HTTP target. If the job providers a App Engine HTTP target the cron will send a request to the service
 instance
@@ -677,7 +635,7 @@ in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
             title="">
         <span>Http<wbr>Target</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobhttptarget">Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Scheduler.<wbr>Outputs.<wbr>Job<wbr>Http<wbr>Target?</a></span>
+        <span class="property-type"><a href="#jobhttptarget">Job<wbr>Http<wbr>Target?</a></span>
     </dt>
     <dd>{{% md %}}HTTP target. If the job providers a http_target the cron will send a request to the targeted url
 {{% /md %}}</dd>
@@ -705,7 +663,7 @@ If it is not provided, the provider project is used.
             title="">
         <span>Pubsub<wbr>Target</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobpubsubtarget">Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Scheduler.<wbr>Outputs.<wbr>Job<wbr>Pubsub<wbr>Target?</a></span>
+        <span class="property-type"><a href="#jobpubsubtarget">Job<wbr>Pubsub<wbr>Target?</a></span>
     </dt>
     <dd>{{% md %}}Pub/Sub target If the job providers a Pub/Sub target the cron will publish a message to the provided topic
 {{% /md %}}</dd>
@@ -723,7 +681,7 @@ If it is not provided, the provider project is used.
             title="">
         <span>Retry<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobretryconfig">Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Scheduler.<wbr>Outputs.<wbr>Job<wbr>Retry<wbr>Config?</a></span>
+        <span class="property-type"><a href="#jobretryconfig">Job<wbr>Retry<wbr>Config?</a></span>
     </dt>
     <dd>{{% md %}}By default, if a job does not complete successfully, meaning that an acknowledgement is not received from the handler,
 then it will be retried with exponential backoff according to the settings
@@ -1107,7 +1065,7 @@ Get an existing Job resource's state with the given name, ID, and optional extra
 {{< chooser language "javascript,typescript,python,go,csharp  " / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">pulumi.Input&lt;pulumi.ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudscheduler/#JobState">JobState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudscheduler/#Job">Job</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudscheduler/#JobState">JobState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudscheduler/#Job">Job</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1115,11 +1073,11 @@ Get an existing Job resource's state with the given name, ID, and optional extra
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetJob<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">pulumi.IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/cloudscheduler?tab=doc#JobState">JobState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/cloudscheduler?tab=doc#Job">Job</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetJob<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/cloudscheduler?tab=doc#JobState">JobState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/cloudscheduler?tab=doc#Job">Job</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Cloudscheduler.Job.html">Job</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Pulumi.Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Cloudscheduler.JobState.html">JobState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Cloudscheduler.Job.html">Job</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Cloudscheduler.JobState.html">JobState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1229,7 +1187,7 @@ The following state arguments are supported:
             title="Optional">
         <span>App<wbr>Engine<wbr>Http<wbr>Target</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobappenginehttptarget">Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Scheduler.<wbr>Inputs.<wbr>Job<wbr>App<wbr>Engine<wbr>Http<wbr>Target<wbr>Args?</a></span>
+        <span class="property-type"><a href="#jobappenginehttptarget">Job<wbr>App<wbr>Engine<wbr>Http<wbr>Target<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}App Engine HTTP target. If the job providers a App Engine HTTP target the cron will send a request to the service
 instance
@@ -1261,7 +1219,7 @@ in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
             title="Optional">
         <span>Http<wbr>Target</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobhttptarget">Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Scheduler.<wbr>Inputs.<wbr>Job<wbr>Http<wbr>Target<wbr>Args?</a></span>
+        <span class="property-type"><a href="#jobhttptarget">Job<wbr>Http<wbr>Target<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}HTTP target. If the job providers a http_target the cron will send a request to the targeted url
 {{% /md %}}</dd>
@@ -1289,7 +1247,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Pubsub<wbr>Target</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobpubsubtarget">Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Scheduler.<wbr>Inputs.<wbr>Job<wbr>Pubsub<wbr>Target<wbr>Args?</a></span>
+        <span class="property-type"><a href="#jobpubsubtarget">Job<wbr>Pubsub<wbr>Target<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Pub/Sub target If the job providers a Pub/Sub target the cron will publish a message to the provided topic
 {{% /md %}}</dd>
@@ -1307,7 +1265,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Retry<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobretryconfig">Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Scheduler.<wbr>Inputs.<wbr>Job<wbr>Retry<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#jobretryconfig">Job<wbr>Retry<wbr>Config<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}By default, if a job does not complete successfully, meaning that an acknowledgement is not received from the handler,
 then it will be retried with exponential backoff according to the settings
@@ -1707,7 +1665,7 @@ tz database.
             title="Optional">
         <span>App<wbr>Engine<wbr>Routing</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobappenginehttptargetappenginerouting">Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Scheduler.<wbr>Inputs.<wbr>Job<wbr>App<wbr>Engine<wbr>Http<wbr>Target<wbr>App<wbr>Engine<wbr>Routing<wbr>Args?</a></span>
+        <span class="property-type"><a href="#jobappenginehttptargetappenginerouting">Job<wbr>App<wbr>Engine<wbr>Http<wbr>Target<wbr>App<wbr>Engine<wbr>Routing<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2073,7 +2031,7 @@ tz database.
             title="Optional">
         <span>Oauth<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobhttptargetoauthtoken">Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Scheduler.<wbr>Inputs.<wbr>Job<wbr>Http<wbr>Target<wbr>Oauth<wbr>Token<wbr>Args?</a></span>
+        <span class="property-type"><a href="#jobhttptargetoauthtoken">Job<wbr>Http<wbr>Target<wbr>Oauth<wbr>Token<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2081,7 +2039,7 @@ tz database.
             title="Optional">
         <span>Oidc<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobhttptargetoidctoken">Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Scheduler.<wbr>Inputs.<wbr>Job<wbr>Http<wbr>Target<wbr>Oidc<wbr>Token<wbr>Args?</a></span>
+        <span class="property-type"><a href="#jobhttptargetoidctoken">Job<wbr>Http<wbr>Target<wbr>Oidc<wbr>Token<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2823,3 +2781,10 @@ tz database.
 
 
 
+
+<h3>Package Details</h3>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd></dl>

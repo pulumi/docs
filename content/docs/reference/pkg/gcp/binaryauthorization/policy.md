@@ -34,7 +34,7 @@ To get more information about Policy, see:
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Binaryauthorization.Policy.html">Policy</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BinaryAuthorization.Inputs.PolicyArgs.html">PolicyArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Binaryauthorization.Policy.html">Policy</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BinaryAuthorization.PolicyArgs.html">PolicyArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -130,7 +130,7 @@ To get more information about Policy, see:
             title="Optional">
         <span>Admission<wbr>Whitelist<wbr>Patterns</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyadmissionwhitelistpattern">List&lt;Pulumi.<wbr>Gcp.<wbr>Binary<wbr>Authorization.<wbr>Inputs.<wbr>Policy<wbr>Admission<wbr>Whitelist<wbr>Pattern<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#policyadmissionwhitelistpattern">List&lt;Policy<wbr>Admission<wbr>Whitelist<wbr>Pattern<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}A whitelist of image patterns to exclude from admission rules. If an image's name matches a whitelist pattern, the
 image's admission requests will always be permitted regardless of your admission rules.
@@ -140,7 +140,7 @@ image's admission requests will always be permitted regardless of your admission
             title="Optional">
         <span>Cluster<wbr>Admission<wbr>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyclusteradmissionrule">List&lt;Pulumi.<wbr>Gcp.<wbr>Binary<wbr>Authorization.<wbr>Inputs.<wbr>Policy<wbr>Cluster<wbr>Admission<wbr>Rule<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#policyclusteradmissionrule">List&lt;Policy<wbr>Cluster<wbr>Admission<wbr>Rule<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}Per-cluster admission rules. An admission rule specifies either that all container images used in a pod creation request
 must be attested to by one or more attestors, that all pod creations will be allowed, or that all pod creations will be
@@ -152,7 +152,7 @@ location is either a compute zone (e.g. 'us-central1-a') or a region (e.g. 'us-c
             title="Required">
         <span>Default<wbr>Admission<wbr>Rule</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policydefaultadmissionrule">Pulumi.<wbr>Gcp.<wbr>Binary<wbr>Authorization.<wbr>Inputs.<wbr>Policy<wbr>Default<wbr>Admission<wbr>Rule<wbr>Args</a></span>
+        <span class="property-type"><a href="#policydefaultadmissionrule">Policy<wbr>Default<wbr>Admission<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Default admission rule for a cluster without a per-cluster admission rule.
 {{% /md %}}</dd>
@@ -410,7 +410,7 @@ The following output properties are available:
             title="">
         <span>Admission<wbr>Whitelist<wbr>Patterns</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyadmissionwhitelistpattern">List&lt;Pulumi.<wbr>Gcp.<wbr>Binary<wbr>Authorization.<wbr>Outputs.<wbr>Policy<wbr>Admission<wbr>Whitelist<wbr>Pattern&gt;?</a></span>
+        <span class="property-type"><a href="#policyadmissionwhitelistpattern">List&lt;Policy<wbr>Admission<wbr>Whitelist<wbr>Pattern&gt;?</a></span>
     </dt>
     <dd>{{% md %}}A whitelist of image patterns to exclude from admission rules. If an image's name matches a whitelist pattern, the
 image's admission requests will always be permitted regardless of your admission rules.
@@ -420,7 +420,7 @@ image's admission requests will always be permitted regardless of your admission
             title="">
         <span>Cluster<wbr>Admission<wbr>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyclusteradmissionrule">List&lt;Pulumi.<wbr>Gcp.<wbr>Binary<wbr>Authorization.<wbr>Outputs.<wbr>Policy<wbr>Cluster<wbr>Admission<wbr>Rule&gt;?</a></span>
+        <span class="property-type"><a href="#policyclusteradmissionrule">List&lt;Policy<wbr>Cluster<wbr>Admission<wbr>Rule&gt;?</a></span>
     </dt>
     <dd>{{% md %}}Per-cluster admission rules. An admission rule specifies either that all container images used in a pod creation request
 must be attested to by one or more attestors, that all pod creations will be allowed, or that all pod creations will be
@@ -432,7 +432,7 @@ location is either a compute zone (e.g. 'us-central1-a') or a region (e.g. 'us-c
             title="">
         <span>Default<wbr>Admission<wbr>Rule</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policydefaultadmissionrule">Pulumi.<wbr>Gcp.<wbr>Binary<wbr>Authorization.<wbr>Outputs.<wbr>Policy<wbr>Default<wbr>Admission<wbr>Rule</a></span>
+        <span class="property-type"><a href="#policydefaultadmissionrule">Policy<wbr>Default<wbr>Admission<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}Default admission rule for a cluster without a per-cluster admission rule.
 {{% /md %}}</dd>
@@ -684,7 +684,7 @@ Get an existing Policy resource's state with the given name, ID, and optional ex
 {{< chooser language "javascript,typescript,python,go,csharp  " / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">pulumi.Input&lt;pulumi.ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/binaryauthorization/#PolicyState">PolicyState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/binaryauthorization/#Policy">Policy</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/binaryauthorization/#PolicyState">PolicyState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/binaryauthorization/#Policy">Policy</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -692,11 +692,11 @@ Get an existing Policy resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPolicy<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">pulumi.IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/binaryauthorization?tab=doc#PolicyState">PolicyState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/binaryauthorization?tab=doc#Policy">Policy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPolicy<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/binaryauthorization?tab=doc#PolicyState">PolicyState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/binaryauthorization?tab=doc#Policy">Policy</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Binaryauthorization.Policy.html">Policy</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Pulumi.Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Binaryauthorization.PolicyState.html">PolicyState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Binaryauthorization.Policy.html">Policy</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Binaryauthorization.PolicyState.html">PolicyState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -806,7 +806,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Admission<wbr>Whitelist<wbr>Patterns</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyadmissionwhitelistpattern">List&lt;Pulumi.<wbr>Gcp.<wbr>Binary<wbr>Authorization.<wbr>Inputs.<wbr>Policy<wbr>Admission<wbr>Whitelist<wbr>Pattern<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#policyadmissionwhitelistpattern">List&lt;Policy<wbr>Admission<wbr>Whitelist<wbr>Pattern<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}A whitelist of image patterns to exclude from admission rules. If an image's name matches a whitelist pattern, the
 image's admission requests will always be permitted regardless of your admission rules.
@@ -816,7 +816,7 @@ image's admission requests will always be permitted regardless of your admission
             title="Optional">
         <span>Cluster<wbr>Admission<wbr>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyclusteradmissionrule">List&lt;Pulumi.<wbr>Gcp.<wbr>Binary<wbr>Authorization.<wbr>Inputs.<wbr>Policy<wbr>Cluster<wbr>Admission<wbr>Rule<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#policyclusteradmissionrule">List&lt;Policy<wbr>Cluster<wbr>Admission<wbr>Rule<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}Per-cluster admission rules. An admission rule specifies either that all container images used in a pod creation request
 must be attested to by one or more attestors, that all pod creations will be allowed, or that all pod creations will be
@@ -828,7 +828,7 @@ location is either a compute zone (e.g. 'us-central1-a') or a region (e.g. 'us-c
             title="Optional">
         <span>Default<wbr>Admission<wbr>Rule</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policydefaultadmissionrule">Pulumi.<wbr>Gcp.<wbr>Binary<wbr>Authorization.<wbr>Inputs.<wbr>Policy<wbr>Default<wbr>Admission<wbr>Rule<wbr>Args?</a></span>
+        <span class="property-type"><a href="#policydefaultadmissionrule">Policy<wbr>Default<wbr>Admission<wbr>Rule<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Default admission rule for a cluster without a per-cluster admission rule.
 {{% /md %}}</dd>
@@ -1468,3 +1468,10 @@ If it is not provided, the provider project is used.
 
 
 
+
+<h3>Package Details</h3>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd></dl>
