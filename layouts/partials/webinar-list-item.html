@@ -1,6 +1,9 @@
-<li class="w-full m-0 p-2">
+<li class="w-full m-0 p-2{{ cond (eq .Params.featured true) " order-first" "" }}">
+    {{ if eq .Params.featured true }}
+        <p class="text-2xl font-bold">FEATURED</p>
+    {{ end }}
     <article class="rounded shadow-md bg-white border border-gray-200 mb-10 flex mx-auto">
-        <div class="w-3/12">
+        <div class="{{ cond (eq .Params.featured true) "w-6/12" "w-3/12" }}">
             {{ if .Params.external }}
             <a href="{{ .Params.url_slug }}">
             {{ else }}
@@ -9,7 +12,7 @@
                 <img src="{{ .Params.preview_image }}" />
             </a>
         </div>
-        <div class="w-9/12 h-32 p-3 ml-3">
+        <div class="{{ cond (eq .Params.featured true) "w-6/12" "w-9/12" }} p-3 ml-3">
             <div class="">
                 {{ if .Params.external }}
                     <a class="text-2xl font-bold" target="_blank" rel="noopener noreferrer" href="{{ .Params.url_slug }}">
@@ -21,13 +24,15 @@
                         {{ .Params.title }}
                     </a>
                 {{ end }}
-                <p class="">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                    laboris nisi ut aliquip ex ea commodo consequat.
+                <p class="{{ cond (eq .Params.featured true) "h-60" "h-12" }}">
+                    {{ if eq .Params.featured true }}
+                        {{ .Params.main.description }}
+                    {{ else }}
+                        {{ .Params.meta_desc }}
+                    {{ end }}
                 </p>
                 <p class="my-0 text-lg">
-                    <i class="fas fa-clock text-purple-700"></i>
+                    <i class="fas fa-clock"></i>
                     {{ .Params.main.datetime }}
                 </p>
             </div>

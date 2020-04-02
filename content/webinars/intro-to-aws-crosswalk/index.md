@@ -3,6 +3,9 @@
 title: "Introduction to Crosswalk for AWS"
 meta_desc: "Meet the team behind Pulumi Crosswalk for AWS, see some of what it can do across AWS ECS, EKS, Lambda, and other AWS workloads."
 
+# A featured webinar will display first in the list.
+featured: false
+
 # If the video is pre-recorded or live.
 pre_recorded: true
 

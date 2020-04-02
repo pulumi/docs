@@ -4,6 +4,9 @@ title: "Managing Any Cloud with .NET"
 meta_desc: "Learn how you can use C#, F#, and VB.NET to define the infrastructure for Azure, AWS, or even on-prem Kubernetes clusters."
 meta_image: "/images/webinar/manage-any-cloud-dotnet-2020-04-02.png"
 
+# A featured webinar will display first in the list.
+featured: false
+
 # If the video is pre-recorded or live.
 pre_recorded: false
 

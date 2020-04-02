@@ -3,6 +3,9 @@
 title: "Name of the Webinar"
 meta_desc: "Search Description"
 
+# A featured webinar will display first in the list.
+featured: false
+
 # If the video is pre-recorded or live.
 pre_recorded: false
 

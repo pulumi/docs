@@ -3,6 +3,9 @@
 title: "Pulumi in IoT: AWS, Mapbox and Pulumi"
 meta_desc: "Join us in the webinar to see how Pulumi supercharges Mapbox’s IoT asset tracking architecture on AWS, from API Gateway, Amazon Kinesis, to DynamoDB and S3."
 
+# A featured webinar will display first in the list.
+featured: false
+
 # If the video is pre-recorded or live.
 pre_recorded: true
 

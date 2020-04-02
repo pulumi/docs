@@ -3,6 +3,9 @@
 title: "Ephemeral Kubernetes"
 meta_desc: "Pulumi engineer, Mike Metral, walks through workflows around around ephemeral Kubernetes."
 
+# A featured webinar will display first in the list.
+featured: false
+
 # If the video is pre-recorded or live.
 pre_recorded: true
 

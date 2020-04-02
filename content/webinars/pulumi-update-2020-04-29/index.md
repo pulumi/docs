@@ -3,6 +3,9 @@
 title: "Pulumi Up(date)"
 meta_desc: "Join Pulumi CEO, Joe Duffy, and the Pulumi team for a walk-through of all the improvements and modern infrastructure capabilities of Pulumi."
 
+# A featured webinar will display first in the list.
+featured: true
+
 aliases:
     - /webinars/pulumi-v2-virtual-launch
     - /events/launch-v2-seattle-2020-04-15

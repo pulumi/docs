@@ -3,6 +3,9 @@
 title: "Getting Started with Policy as Code for Any Cloud"
 meta_desc: "Erin Krengel and Cameron Stokes will demonstrate practical examples for defining and enforcing policies on AWS, Azure and GCP."
 
+# A featured webinar will display first in the list.
+featured: false
+
 # If the video is pre-recorded or live.
 pre_recorded: false
 

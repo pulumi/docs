@@ -3,6 +3,9 @@
 title: "Deploy and Scale a Load-Balanced Kubernetes Service"
 meta_desc: "Deploy and scale a load-balanced Kubernetes service using Pulumi, including building, publishing, and running a private container image."
 
+# A featured webinar will display first in the list.
+featured: false
+
 # If the video is pre-recorded or live.
 pre_recorded: true
 

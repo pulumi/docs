@@ -3,6 +3,9 @@
 title: "Modern Cloud Infrastructure in Go"
 meta_desc: "Join us Wed, Apr 1, 2020, 6:30 PM where Evan Boyle will go over modern cloud progamming techniques using Pulumi and Go."
 
+# A featured webinar will display first in the list.
+featured: false
+
 # If the video is pre-recorded or live.
 pre_recorded: false
 
