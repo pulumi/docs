@@ -12,9 +12,9 @@ Use this data source to get information about an Elasticsearch Domain
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const myDomain = aws.elasticsearch.getDomain({
+const myDomain = pulumi.output(aws.elasticsearch.getDomain({
     domainName: "my-domain-name",
-});
+}, { async: true }));
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elasticsearch_domain.html.markdown.
@@ -29,7 +29,7 @@ const myDomain = aws.elasticsearch.getDomain({
 
 
 {{% choosable language typescript %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDomain<span class="p">(</span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elasticsearch/#GetDomainArgs">GetDomainArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">pulumi.InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elasticsearch/#GetDomainResult">GetDomainResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDomain<span class="p">(</span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elasticsearch/#GetDomainArgs">GetDomainArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elasticsearch/#GetDomainResult">GetDomainResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -39,13 +39,13 @@ const myDomain = aws.elasticsearch.getDomain({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDomain<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/elasticsearch?tab=doc#LookupDomainArgs">LookupDomainArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/elasticsearch?tab=doc#LookupDomainResult">LookupDomainResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDomain<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/elasticsearch?tab=doc#LookupDomainArgs">LookupDomainArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/elasticsearch?tab=doc#LookupDomainResult">LookupDomainResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetDomain </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elasticsearch.GetDomainResult.html">GetDomainResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticSearch.Inputs.GetDomainArgs.html">GetDomainArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">Pulumi.InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elasticsearch.GetDomainResult.html">GetDomainResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticSearch.GetDomainArgs.html">GetDomainArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -202,7 +202,7 @@ The following output properties are available:
             title="">
         <span>Cluster<wbr>Configs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdomainclusterconfig">List&lt;Pulumi.<wbr>Aws.<wbr>Elastic<wbr>Search.<wbr>Outputs.<wbr>Get<wbr>Domain<wbr>Cluster<wbr>Config&gt;</a></span>
+        <span class="property-type"><a href="#getdomainclusterconfig">List&lt;Get<wbr>Domain<wbr>Cluster<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}Cluster configuration of the domain.
 {{% /md %}}</dd>
@@ -211,7 +211,7 @@ The following output properties are available:
             title="">
         <span>Cognito<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdomaincognitooption">List&lt;Pulumi.<wbr>Aws.<wbr>Elastic<wbr>Search.<wbr>Outputs.<wbr>Get<wbr>Domain<wbr>Cognito<wbr>Option&gt;</a></span>
+        <span class="property-type"><a href="#getdomaincognitooption">List&lt;Get<wbr>Domain<wbr>Cognito<wbr>Option&gt;</a></span>
     </dt>
     <dd>{{% md %}}Domain Amazon Cognito Authentication options for Kibana.
 {{% /md %}}</dd>
@@ -255,7 +255,7 @@ The following output properties are available:
             title="">
         <span>Ebs<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdomainebsoption">List&lt;Pulumi.<wbr>Aws.<wbr>Elastic<wbr>Search.<wbr>Outputs.<wbr>Get<wbr>Domain<wbr>Ebs<wbr>Option&gt;</a></span>
+        <span class="property-type"><a href="#getdomainebsoption">List&lt;Get<wbr>Domain<wbr>Ebs<wbr>Option&gt;</a></span>
     </dt>
     <dd>{{% md %}}EBS Options for the instances in the domain.
 {{% /md %}}</dd>
@@ -273,7 +273,7 @@ The following output properties are available:
             title="">
         <span>Encryption<wbr>At<wbr>Rests</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdomainencryptionatrest">List&lt;Pulumi.<wbr>Aws.<wbr>Elastic<wbr>Search.<wbr>Outputs.<wbr>Get<wbr>Domain<wbr>Encryption<wbr>At<wbr>Rest&gt;</a></span>
+        <span class="property-type"><a href="#getdomainencryptionatrest">List&lt;Get<wbr>Domain<wbr>Encryption<wbr>At<wbr>Rest&gt;</a></span>
     </dt>
     <dd>{{% md %}}Domain encryption at rest related options.
 {{% /md %}}</dd>
@@ -309,7 +309,7 @@ The following output properties are available:
             title="">
         <span>Log<wbr>Publishing<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdomainlogpublishingoption">List&lt;Pulumi.<wbr>Aws.<wbr>Elastic<wbr>Search.<wbr>Outputs.<wbr>Get<wbr>Domain<wbr>Log<wbr>Publishing<wbr>Option&gt;</a></span>
+        <span class="property-type"><a href="#getdomainlogpublishingoption">List&lt;Get<wbr>Domain<wbr>Log<wbr>Publishing<wbr>Option&gt;</a></span>
     </dt>
     <dd>{{% md %}}Domain log publishing related options.
 {{% /md %}}</dd>
@@ -318,7 +318,7 @@ The following output properties are available:
             title="">
         <span>Node<wbr>To<wbr>Node<wbr>Encryptions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdomainnodetonodeencryption">List&lt;Pulumi.<wbr>Aws.<wbr>Elastic<wbr>Search.<wbr>Outputs.<wbr>Get<wbr>Domain<wbr>Node<wbr>To<wbr>Node<wbr>Encryption&gt;</a></span>
+        <span class="property-type"><a href="#getdomainnodetonodeencryption">List&lt;Get<wbr>Domain<wbr>Node<wbr>To<wbr>Node<wbr>Encryption&gt;</a></span>
     </dt>
     <dd>{{% md %}}Domain in transit encryption related options.
 {{% /md %}}</dd>
@@ -337,7 +337,7 @@ The following output properties are available:
             title="">
         <span>Snapshot<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdomainsnapshotoption">List&lt;Pulumi.<wbr>Aws.<wbr>Elastic<wbr>Search.<wbr>Outputs.<wbr>Get<wbr>Domain<wbr>Snapshot<wbr>Option&gt;</a></span>
+        <span class="property-type"><a href="#getdomainsnapshotoption">List&lt;Get<wbr>Domain<wbr>Snapshot<wbr>Option&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -354,7 +354,7 @@ The following output properties are available:
             title="">
         <span>Vpc<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdomainvpcoption">List&lt;Pulumi.<wbr>Aws.<wbr>Elastic<wbr>Search.<wbr>Outputs.<wbr>Get<wbr>Domain<wbr>Vpc<wbr>Option&gt;</a></span>
+        <span class="property-type"><a href="#getdomainvpcoption">List&lt;Get<wbr>Domain<wbr>Vpc<wbr>Option&gt;</a></span>
     </dt>
     <dd>{{% md %}}VPC Options for private Elasticsearch domains.
 {{% /md %}}</dd>
@@ -1020,7 +1020,7 @@ The following output properties are available:
             title="Required">
         <span>Zone<wbr>Awareness<wbr>Configs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdomainclusterconfigzoneawarenessconfig">List&lt;Pulumi.<wbr>Aws.<wbr>Elastic<wbr>Search.<wbr>Inputs.<wbr>Get<wbr>Domain<wbr>Cluster<wbr>Config<wbr>Zone<wbr>Awareness<wbr>Config<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getdomainclusterconfigzoneawarenessconfig">List&lt;Get<wbr>Domain<wbr>Cluster<wbr>Config<wbr>Zone<wbr>Awareness<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing zone awareness settings.
 {{% /md %}}</dd>

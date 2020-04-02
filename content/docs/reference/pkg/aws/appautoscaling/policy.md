@@ -77,7 +77,7 @@ const ecsService = new aws.ecs.Service("ecs_service", {
     cluster: "clusterName",
     desiredCount: 2,
     taskDefinition: "taskDefinitionFamily:1",
-}, {ignoreChanges: ["desiredCount"]});
+}, { ignoreChanges: ["desiredCount"] });
 ```
 
 ### Aurora Read Replica Autoscaling
@@ -154,7 +154,7 @@ const replicasPolicy = new aws.appautoscaling.Policy("replicas", {
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Appautoscaling.Policy.html">Policy</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppAutoScaling.Inputs.PolicyArgs.html">PolicyArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Appautoscaling.Policy.html">Policy</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppAutoScaling.PolicyArgs.html">PolicyArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -295,7 +295,7 @@ const replicasPolicy = new aws.appautoscaling.Policy("replicas", {
             title="Optional">
         <span>Step<wbr>Scaling<wbr>Policy<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policystepscalingpolicyconfiguration">Pulumi.<wbr>Aws.<wbr>App<wbr>Auto<wbr>Scaling.<wbr>Inputs.<wbr>Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Args?</a></span>
+        <span class="property-type"><a href="#policystepscalingpolicyconfiguration">Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Step scaling policy configuration, requires `policy_type = "StepScaling"` (default). See supported fields below.
 {{% /md %}}</dd>
@@ -304,7 +304,7 @@ const replicasPolicy = new aws.appautoscaling.Policy("replicas", {
             title="Optional">
         <span>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfiguration">Pulumi.<wbr>Aws.<wbr>App<wbr>Auto<wbr>Scaling.<wbr>Inputs.<wbr>Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Args?</a></span>
+        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfiguration">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A target tracking policy, requires `policy_type = "TargetTrackingScaling"`. See supported fields below.
 {{% /md %}}</dd>
@@ -596,7 +596,7 @@ The following output properties are available:
             title="">
         <span>Step<wbr>Scaling<wbr>Policy<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policystepscalingpolicyconfiguration">Pulumi.<wbr>Aws.<wbr>App<wbr>Auto<wbr>Scaling.<wbr>Outputs.<wbr>Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration?</a></span>
+        <span class="property-type"><a href="#policystepscalingpolicyconfiguration">Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration?</a></span>
     </dt>
     <dd>{{% md %}}Step scaling policy configuration, requires `policy_type = "StepScaling"` (default). See supported fields below.
 {{% /md %}}</dd>
@@ -605,7 +605,7 @@ The following output properties are available:
             title="">
         <span>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfiguration">Pulumi.<wbr>Aws.<wbr>App<wbr>Auto<wbr>Scaling.<wbr>Outputs.<wbr>Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration?</a></span>
+        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfiguration">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration?</a></span>
     </dt>
     <dd>{{% md %}}A target tracking policy, requires `policy_type = "TargetTrackingScaling"`. See supported fields below.
 {{% /md %}}</dd>
@@ -864,7 +864,7 @@ Get an existing Policy resource's state with the given name, ID, and optional ex
 {{< chooser language "javascript,typescript,python,go,csharp  " / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">pulumi.Input&lt;pulumi.ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appautoscaling/#PolicyState">PolicyState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appautoscaling/#Policy">Policy</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appautoscaling/#PolicyState">PolicyState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appautoscaling/#Policy">Policy</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -872,11 +872,11 @@ Get an existing Policy resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPolicy<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">pulumi.IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appautoscaling?tab=doc#PolicyState">PolicyState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appautoscaling?tab=doc#Policy">Policy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPolicy<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appautoscaling?tab=doc#PolicyState">PolicyState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appautoscaling?tab=doc#Policy">Policy</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Appautoscaling.Policy.html">Policy</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Pulumi.Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Appautoscaling.PolicyState.html">PolicyState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Appautoscaling.Policy.html">Policy</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Appautoscaling.PolicyState.html">PolicyState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1040,7 +1040,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Step<wbr>Scaling<wbr>Policy<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policystepscalingpolicyconfiguration">Pulumi.<wbr>Aws.<wbr>App<wbr>Auto<wbr>Scaling.<wbr>Inputs.<wbr>Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Args?</a></span>
+        <span class="property-type"><a href="#policystepscalingpolicyconfiguration">Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Step scaling policy configuration, requires `policy_type = "StepScaling"` (default). See supported fields below.
 {{% /md %}}</dd>
@@ -1049,7 +1049,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfiguration">Pulumi.<wbr>Aws.<wbr>App<wbr>Auto<wbr>Scaling.<wbr>Inputs.<wbr>Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Args?</a></span>
+        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfiguration">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A target tracking policy, requires `policy_type = "TargetTrackingScaling"`. See supported fields below.
 {{% /md %}}</dd>
@@ -1356,7 +1356,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Step<wbr>Adjustments</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policystepscalingpolicyconfigurationstepadjustment">List&lt;Pulumi.<wbr>Aws.<wbr>App<wbr>Auto<wbr>Scaling.<wbr>Inputs.<wbr>Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Step<wbr>Adjustment<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#policystepscalingpolicyconfigurationstepadjustment">List&lt;Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Step<wbr>Adjustment<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1666,7 +1666,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Customized<wbr>Metric<wbr>Specification</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfigurationcustomizedmetricspecification">Pulumi.<wbr>Aws.<wbr>App<wbr>Auto<wbr>Scaling.<wbr>Inputs.<wbr>Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Args?</a></span>
+        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfigurationcustomizedmetricspecification">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1682,7 +1682,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Predefined<wbr>Metric<wbr>Specification</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfigurationpredefinedmetricspecification">Pulumi.<wbr>Aws.<wbr>App<wbr>Auto<wbr>Scaling.<wbr>Inputs.<wbr>Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Predefined<wbr>Metric<wbr>Specification<wbr>Args?</a></span>
+        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfigurationpredefinedmetricspecification">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Predefined<wbr>Metric<wbr>Specification<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1901,7 +1901,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Dimensions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfigurationcustomizedmetricspecificationdimension">List&lt;Pulumi.<wbr>Aws.<wbr>App<wbr>Auto<wbr>Scaling.<wbr>Inputs.<wbr>Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Dimension<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfigurationcustomizedmetricspecificationdimension">List&lt;Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Dimension<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2305,3 +2305,10 @@ The following state arguments are supported:
 
 
 
+
+<h3>Package Details</h3>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd></dl>

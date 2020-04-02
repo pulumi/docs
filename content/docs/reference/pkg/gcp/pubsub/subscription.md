@@ -35,7 +35,7 @@ To get more information about Subscription, see:
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Pubsub.Subscription.html">Subscription</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.PubSub.Inputs.SubscriptionArgs.html">SubscriptionArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Pubsub.Subscription.html">Subscription</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.PubSub.SubscriptionArgs.html">SubscriptionArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -148,7 +148,7 @@ message.
             title="Optional">
         <span>Expiration<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionexpirationpolicy">Pulumi.<wbr>Gcp.<wbr>Pub<wbr>Sub.<wbr>Inputs.<wbr>Subscription<wbr>Expiration<wbr>Policy<wbr>Args?</a></span>
+        <span class="property-type"><a href="#subscriptionexpirationpolicy">Subscription<wbr>Expiration<wbr>Policy<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A policy that specifies the conditions for this subscription's expiration. A subscription is considered active as long
 as any connected subscriber is successfully consuming messages from the subscription or is issuing operations on the
@@ -201,7 +201,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Push<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionpushconfig">Pulumi.<wbr>Gcp.<wbr>Pub<wbr>Sub.<wbr>Inputs.<wbr>Subscription<wbr>Push<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#subscriptionpushconfig">Subscription<wbr>Push<wbr>Config<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}If push delivery is used with this subscription, this field is used to configure it. An empty pushConfig signifies that
 the subscriber will pull and ack messages using API methods.
@@ -584,7 +584,7 @@ message.
             title="">
         <span>Expiration<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionexpirationpolicy">Pulumi.<wbr>Gcp.<wbr>Pub<wbr>Sub.<wbr>Outputs.<wbr>Subscription<wbr>Expiration<wbr>Policy</a></span>
+        <span class="property-type"><a href="#subscriptionexpirationpolicy">Subscription<wbr>Expiration<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A policy that specifies the conditions for this subscription's expiration. A subscription is considered active as long
 as any connected subscriber is successfully consuming messages from the subscription or is issuing operations on the
@@ -645,7 +645,7 @@ If it is not provided, the provider project is used.
             title="">
         <span>Push<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionpushconfig">Pulumi.<wbr>Gcp.<wbr>Pub<wbr>Sub.<wbr>Outputs.<wbr>Subscription<wbr>Push<wbr>Config?</a></span>
+        <span class="property-type"><a href="#subscriptionpushconfig">Subscription<wbr>Push<wbr>Config?</a></span>
     </dt>
     <dd>{{% md %}}If push delivery is used with this subscription, this field is used to configure it. An empty pushConfig signifies that
 the subscriber will pull and ack messages using API methods.
@@ -1029,7 +1029,7 @@ Get an existing Subscription resource's state with the given name, ID, and optio
 {{< chooser language "javascript,typescript,python,go,csharp  " / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">pulumi.Input&lt;pulumi.ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/pubsub/#SubscriptionState">SubscriptionState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/pubsub/#Subscription">Subscription</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/pubsub/#SubscriptionState">SubscriptionState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/pubsub/#Subscription">Subscription</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1037,11 +1037,11 @@ Get an existing Subscription resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSubscription<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">pulumi.IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/pubsub?tab=doc#SubscriptionState">SubscriptionState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/pubsub?tab=doc#Subscription">Subscription</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSubscription<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/pubsub?tab=doc#SubscriptionState">SubscriptionState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/pubsub?tab=doc#Subscription">Subscription</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Pubsub.Subscription.html">Subscription</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Pulumi.Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Pubsub.SubscriptionState.html">SubscriptionState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Pubsub.Subscription.html">Subscription</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Pubsub.SubscriptionState.html">SubscriptionState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1168,7 +1168,7 @@ message.
             title="Optional">
         <span>Expiration<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionexpirationpolicy">Pulumi.<wbr>Gcp.<wbr>Pub<wbr>Sub.<wbr>Inputs.<wbr>Subscription<wbr>Expiration<wbr>Policy<wbr>Args?</a></span>
+        <span class="property-type"><a href="#subscriptionexpirationpolicy">Subscription<wbr>Expiration<wbr>Policy<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A policy that specifies the conditions for this subscription's expiration. A subscription is considered active as long
 as any connected subscriber is successfully consuming messages from the subscription or is issuing operations on the
@@ -1229,7 +1229,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Push<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionpushconfig">Pulumi.<wbr>Gcp.<wbr>Pub<wbr>Sub.<wbr>Inputs.<wbr>Subscription<wbr>Push<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#subscriptionpushconfig">Subscription<wbr>Push<wbr>Config<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}If push delivery is used with this subscription, this field is used to configure it. An empty pushConfig signifies that
 the subscriber will pull and ack messages using API methods.
@@ -1712,7 +1712,7 @@ backlog, even if they are acknowledged, until they fall out of the messageRetent
             title="Optional">
         <span>Oidc<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionpushconfigoidctoken">Pulumi.<wbr>Gcp.<wbr>Pub<wbr>Sub.<wbr>Inputs.<wbr>Subscription<wbr>Push<wbr>Config<wbr>Oidc<wbr>Token<wbr>Args?</a></span>
+        <span class="property-type"><a href="#subscriptionpushconfigoidctoken">Subscription<wbr>Push<wbr>Config<wbr>Oidc<wbr>Token<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1933,3 +1933,10 @@ backlog, even if they are acknowledged, until they fall out of the messageRetent
 
 
 
+
+<h3>Package Details</h3>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd></dl>

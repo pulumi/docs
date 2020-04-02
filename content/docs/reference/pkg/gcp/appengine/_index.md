@@ -13,6 +13,15 @@ block_external_search_index: true
     <li><a href="domainmapping"><span class="symbol resource"></span>DomainMapping</a></li>
     <li><a href="enginesplittraffic"><span class="symbol resource"></span>EngineSplitTraffic</a></li>
     <li><a href="firewallrule"><span class="symbol resource"></span>FirewallRule</a></li>
+    <li><a href="flexibleappversion"><span class="symbol resource"></span>FlexibleAppVersion</a></li>
     <li><a href="standardappversion"><span class="symbol resource"></span>StandardAppVersion</a></li>
 </ul>
+
+<h3>Package Details</h3>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd>https://github.com/pulumi/pulumi-gcp</dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd>
+</dl>
 

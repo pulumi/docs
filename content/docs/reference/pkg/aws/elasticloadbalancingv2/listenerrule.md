@@ -134,7 +134,7 @@ const admin = new aws.lb.ListenerRule("admin", {
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elasticloadbalancingv2.ListenerRule.html">ListenerRule</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancingV2.Inputs.ListenerRuleArgs.html">ListenerRuleArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elasticloadbalancingv2.ListenerRule.html">ListenerRule</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancingV2.ListenerRuleArgs.html">ListenerRuleArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -230,7 +230,7 @@ const admin = new aws.lb.ListenerRule("admin", {
             title="Required">
         <span>Actions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerruleaction">List&lt;Pulumi.<wbr>Aws.<wbr>Elastic<wbr>Load<wbr>Balancing<wbr>V2.<wbr>Inputs.<wbr>Listener<wbr>Rule<wbr>Action<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#listenerruleaction">List&lt;Listener<wbr>Rule<wbr>Action<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An Action block. Action blocks are documented below.
 {{% /md %}}</dd>
@@ -239,7 +239,7 @@ const admin = new aws.lb.ListenerRule("admin", {
             title="Required">
         <span>Conditions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerrulecondition">List&lt;Pulumi.<wbr>Aws.<wbr>Elastic<wbr>Load<wbr>Balancing<wbr>V2.<wbr>Inputs.<wbr>Listener<wbr>Rule<wbr>Condition<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#listenerrulecondition">List&lt;Listener<wbr>Rule<wbr>Condition<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A Condition block. Multiple condition blocks of different types can be set and all must be satisfied for the rule to match. Condition blocks are documented below.
 {{% /md %}}</dd>
@@ -414,7 +414,7 @@ The following output properties are available:
             title="">
         <span>Actions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerruleaction">List&lt;Pulumi.<wbr>Aws.<wbr>Elastic<wbr>Load<wbr>Balancing<wbr>V2.<wbr>Outputs.<wbr>Listener<wbr>Rule<wbr>Action&gt;</a></span>
+        <span class="property-type"><a href="#listenerruleaction">List&lt;Listener<wbr>Rule<wbr>Action&gt;</a></span>
     </dt>
     <dd>{{% md %}}An Action block. Action blocks are documented below.
 {{% /md %}}</dd>
@@ -432,7 +432,7 @@ The following output properties are available:
             title="">
         <span>Conditions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerrulecondition">List&lt;Pulumi.<wbr>Aws.<wbr>Elastic<wbr>Load<wbr>Balancing<wbr>V2.<wbr>Outputs.<wbr>Listener<wbr>Rule<wbr>Condition&gt;</a></span>
+        <span class="property-type"><a href="#listenerrulecondition">List&lt;Listener<wbr>Rule<wbr>Condition&gt;</a></span>
     </dt>
     <dd>{{% md %}}A Condition block. Multiple condition blocks of different types can be set and all must be satisfied for the rule to match. Condition blocks are documented below.
 {{% /md %}}</dd>
@@ -628,7 +628,7 @@ Get an existing ListenerRule resource's state with the given name, ID, and optio
 {{< chooser language "javascript,typescript,python,go,csharp  " / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">pulumi.Input&lt;pulumi.ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elasticloadbalancingv2/#ListenerRuleState">ListenerRuleState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elasticloadbalancingv2/#ListenerRule">ListenerRule</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elasticloadbalancingv2/#ListenerRuleState">ListenerRuleState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elasticloadbalancingv2/#ListenerRule">ListenerRule</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -636,11 +636,11 @@ Get an existing ListenerRule resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetListenerRule<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">pulumi.IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleState">ListenerRuleState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/elasticloadbalancingv2?tab=doc#ListenerRule">ListenerRule</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetListenerRule<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleState">ListenerRuleState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/elasticloadbalancingv2?tab=doc#ListenerRule">ListenerRule</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elasticloadbalancingv2.ListenerRule.html">ListenerRule</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Pulumi.Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elasticloadbalancingv2.ListenerRuleState.html">ListenerRuleState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elasticloadbalancingv2.ListenerRule.html">ListenerRule</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elasticloadbalancingv2.ListenerRuleState.html">ListenerRuleState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -750,7 +750,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Actions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerruleaction">List&lt;Pulumi.<wbr>Aws.<wbr>Elastic<wbr>Load<wbr>Balancing<wbr>V2.<wbr>Inputs.<wbr>Listener<wbr>Rule<wbr>Action<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#listenerruleaction">List&lt;Listener<wbr>Rule<wbr>Action<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}An Action block. Action blocks are documented below.
 {{% /md %}}</dd>
@@ -768,7 +768,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Conditions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerrulecondition">List&lt;Pulumi.<wbr>Aws.<wbr>Elastic<wbr>Load<wbr>Balancing<wbr>V2.<wbr>Inputs.<wbr>Listener<wbr>Rule<wbr>Condition<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#listenerrulecondition">List&lt;Listener<wbr>Rule<wbr>Condition<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}A Condition block. Multiple condition blocks of different types can be set and all must be satisfied for the rule to match. Condition blocks are documented below.
 {{% /md %}}</dd>
@@ -980,7 +980,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Authenticate<wbr>Cognito</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerruleactionauthenticatecognito">Pulumi.<wbr>Aws.<wbr>Elastic<wbr>Load<wbr>Balancing<wbr>V2.<wbr>Inputs.<wbr>Listener<wbr>Rule<wbr>Action<wbr>Authenticate<wbr>Cognito<wbr>Args?</a></span>
+        <span class="property-type"><a href="#listenerruleactionauthenticatecognito">Listener<wbr>Rule<wbr>Action<wbr>Authenticate<wbr>Cognito<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Information for creating an authenticate action using Cognito. Required if `type` is `authenticate-cognito`.
 {{% /md %}}</dd>
@@ -989,7 +989,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Authenticate<wbr>Oidc</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerruleactionauthenticateoidc">Pulumi.<wbr>Aws.<wbr>Elastic<wbr>Load<wbr>Balancing<wbr>V2.<wbr>Inputs.<wbr>Listener<wbr>Rule<wbr>Action<wbr>Authenticate<wbr>Oidc<wbr>Args?</a></span>
+        <span class="property-type"><a href="#listenerruleactionauthenticateoidc">Listener<wbr>Rule<wbr>Action<wbr>Authenticate<wbr>Oidc<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Information for creating an authenticate action using OIDC. Required if `type` is `authenticate-oidc`.
 {{% /md %}}</dd>
@@ -998,7 +998,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Fixed<wbr>Response</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerruleactionfixedresponse">Pulumi.<wbr>Aws.<wbr>Elastic<wbr>Load<wbr>Balancing<wbr>V2.<wbr>Inputs.<wbr>Listener<wbr>Rule<wbr>Action<wbr>Fixed<wbr>Response<wbr>Args?</a></span>
+        <span class="property-type"><a href="#listenerruleactionfixedresponse">Listener<wbr>Rule<wbr>Action<wbr>Fixed<wbr>Response<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Information for creating an action that returns a custom HTTP response. Required if `type` is `fixed-response`.
 {{% /md %}}</dd>
@@ -1015,7 +1015,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Redirect</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerruleactionredirect">Pulumi.<wbr>Aws.<wbr>Elastic<wbr>Load<wbr>Balancing<wbr>V2.<wbr>Inputs.<wbr>Listener<wbr>Rule<wbr>Action<wbr>Redirect<wbr>Args?</a></span>
+        <span class="property-type"><a href="#listenerruleactionredirect">Listener<wbr>Rule<wbr>Action<wbr>Redirect<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Information for creating a redirect action. Required if `type` is `redirect`.
 {{% /md %}}</dd>
@@ -2460,7 +2460,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Host<wbr>Header</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerruleconditionhostheader">Pulumi.<wbr>Aws.<wbr>Elastic<wbr>Load<wbr>Balancing<wbr>V2.<wbr>Inputs.<wbr>Listener<wbr>Rule<wbr>Condition<wbr>Host<wbr>Header<wbr>Args?</a></span>
+        <span class="property-type"><a href="#listenerruleconditionhostheader">Listener<wbr>Rule<wbr>Condition<wbr>Host<wbr>Header<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Contains a single `values` item which is a list of host header patterns to match. The maximum size of each pattern is 128 characters. Comparison is case insensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). Only one pattern needs to match for the condition to be satisfied.
 {{% /md %}}</dd>
@@ -2469,7 +2469,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Http<wbr>Header</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerruleconditionhttpheader">Pulumi.<wbr>Aws.<wbr>Elastic<wbr>Load<wbr>Balancing<wbr>V2.<wbr>Inputs.<wbr>Listener<wbr>Rule<wbr>Condition<wbr>Http<wbr>Header<wbr>Args?</a></span>
+        <span class="property-type"><a href="#listenerruleconditionhttpheader">Listener<wbr>Rule<wbr>Condition<wbr>Http<wbr>Header<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}HTTP headers to match. HTTP Header block fields documented below.
 {{% /md %}}</dd>
@@ -2478,7 +2478,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Http<wbr>Request<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerruleconditionhttprequestmethod">Pulumi.<wbr>Aws.<wbr>Elastic<wbr>Load<wbr>Balancing<wbr>V2.<wbr>Inputs.<wbr>Listener<wbr>Rule<wbr>Condition<wbr>Http<wbr>Request<wbr>Method<wbr>Args?</a></span>
+        <span class="property-type"><a href="#listenerruleconditionhttprequestmethod">Listener<wbr>Rule<wbr>Condition<wbr>Http<wbr>Request<wbr>Method<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Contains a single `values` item which is a list of HTTP request methods or verbs to match. Maximum size is 40 characters. Only allowed characters are A-Z, hyphen (-) and underscore (\_). Comparison is case sensitive. Wildcards are not supported. Only one needs to match for the condition to be satisfied. AWS recommends that GET and HEAD requests are routed in the same way because the response to a HEAD request may be cached.
 {{% /md %}}</dd>
@@ -2487,7 +2487,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Path<wbr>Pattern</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerruleconditionpathpattern">Pulumi.<wbr>Aws.<wbr>Elastic<wbr>Load<wbr>Balancing<wbr>V2.<wbr>Inputs.<wbr>Listener<wbr>Rule<wbr>Condition<wbr>Path<wbr>Pattern<wbr>Args?</a></span>
+        <span class="property-type"><a href="#listenerruleconditionpathpattern">Listener<wbr>Rule<wbr>Condition<wbr>Path<wbr>Pattern<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Contains a single `values` item which is a list of path patterns to match against the request URL. Maximum size of each pattern is 128 characters. Comparison is case sensitive. Wildcard charaters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). Only one pattern needs to match for the condition to be satisfied. Path pattern is compared only to the path of the URL, not to its query string. To compare against the query string, use a `query-string` condition.
 {{% /md %}}</dd>
@@ -2496,7 +2496,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Query<wbr>Strings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerruleconditionquerystring">List&lt;Pulumi.<wbr>Aws.<wbr>Elastic<wbr>Load<wbr>Balancing<wbr>V2.<wbr>Inputs.<wbr>Listener<wbr>Rule<wbr>Condition<wbr>Query<wbr>String<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#listenerruleconditionquerystring">List&lt;Listener<wbr>Rule<wbr>Condition<wbr>Query<wbr>String<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}Query strings to match. Query String block fields documented below.
 {{% /md %}}</dd>
@@ -2505,7 +2505,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Source<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerruleconditionsourceip">Pulumi.<wbr>Aws.<wbr>Elastic<wbr>Load<wbr>Balancing<wbr>V2.<wbr>Inputs.<wbr>Listener<wbr>Rule<wbr>Condition<wbr>Source<wbr>Ip<wbr>Args?</a></span>
+        <span class="property-type"><a href="#listenerruleconditionsourceip">Listener<wbr>Rule<wbr>Condition<wbr>Source<wbr>Ip<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Contains a single `values` item which is a list of source IP CIDR notations to match. You can use both IPv4 and IPv6 addresses. Wildcards are not supported. Condition is satisfied if the source IP address of the request matches one of the CIDR blocks. Condition is not satisfied by the addresses in the `X-Forwarded-For` header, use `http-header` condition instead.
 {{% /md %}}</dd>
@@ -3311,3 +3311,10 @@ The following state arguments are supported:
 
 
 
+
+<h3>Package Details</h3>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd></dl>

@@ -14,6 +14,8 @@ block_external_search_index: true
     <li><a href="appengineversioniambinding"><span class="symbol resource"></span>AppEngineVersionIamBinding</a></li>
     <li><a href="appengineversioniammember"><span class="symbol resource"></span>AppEngineVersionIamMember</a></li>
     <li><a href="appengineversioniampolicy"><span class="symbol resource"></span>AppEngineVersionIamPolicy</a></li>
+    <li><a href="brand"><span class="symbol resource"></span>Brand</a></li>
+    <li><a href="client"><span class="symbol resource"></span>Client</a></li>
     <li><a href="tunnelinstanceiambinding"><span class="symbol resource"></span>TunnelInstanceIAMBinding</a></li>
     <li><a href="tunnelinstanceiammember"><span class="symbol resource"></span>TunnelInstanceIAMMember</a></li>
     <li><a href="tunnelinstanceiampolicy"><span class="symbol resource"></span>TunnelInstanceIAMPolicy</a></li>
@@ -30,4 +32,12 @@ block_external_search_index: true
     <li><a href="webtypecomputeiammember"><span class="symbol resource"></span>WebTypeComputeIamMember</a></li>
     <li><a href="webtypecomputeiampolicy"><span class="symbol resource"></span>WebTypeComputeIamPolicy</a></li>
 </ul>
+
+<h3>Package Details</h3>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd>https://github.com/pulumi/pulumi-gcp</dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd>
+</dl>
 

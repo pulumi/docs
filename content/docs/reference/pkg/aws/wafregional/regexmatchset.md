@@ -51,7 +51,7 @@ const exampleRegexMatchSet = new aws.wafregional.RegexMatchSet("example", {
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Wafregional.RegexMatchSet.html">RegexMatchSet</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafRegional.Inputs.RegexMatchSetArgs.html">RegexMatchSetArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Wafregional.RegexMatchSet.html">RegexMatchSet</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafRegional.RegexMatchSetArgs.html">RegexMatchSetArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -156,7 +156,7 @@ const exampleRegexMatchSet = new aws.wafregional.RegexMatchSet("example", {
             title="Optional">
         <span>Regex<wbr>Match<wbr>Tuples</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regexmatchsetregexmatchtuple">List&lt;Pulumi.<wbr>Aws.<wbr>Waf<wbr>Regional.<wbr>Inputs.<wbr>Regex<wbr>Match<wbr>Set<wbr>Regex<wbr>Match<wbr>Tuple<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#regexmatchsetregexmatchtuple">List&lt;Regex<wbr>Match<wbr>Set<wbr>Regex<wbr>Match<wbr>Tuple<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}The regular expression pattern that you want AWS WAF to search for in web requests,
 the location in requests that you want AWS WAF to search, and other settings. See below.
@@ -272,7 +272,7 @@ The following output properties are available:
             title="">
         <span>Regex<wbr>Match<wbr>Tuples</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regexmatchsetregexmatchtuple">List&lt;Pulumi.<wbr>Aws.<wbr>Waf<wbr>Regional.<wbr>Outputs.<wbr>Regex<wbr>Match<wbr>Set<wbr>Regex<wbr>Match<wbr>Tuple&gt;?</a></span>
+        <span class="property-type"><a href="#regexmatchsetregexmatchtuple">List&lt;Regex<wbr>Match<wbr>Set<wbr>Regex<wbr>Match<wbr>Tuple&gt;?</a></span>
     </dt>
     <dd>{{% md %}}The regular expression pattern that you want AWS WAF to search for in web requests,
 the location in requests that you want AWS WAF to search, and other settings. See below.
@@ -373,7 +373,7 @@ Get an existing RegexMatchSet resource's state with the given name, ID, and opti
 {{< chooser language "javascript,typescript,python,go,csharp  " / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">pulumi.Input&lt;pulumi.ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/wafregional/#RegexMatchSetState">RegexMatchSetState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/wafregional/#RegexMatchSet">RegexMatchSet</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/wafregional/#RegexMatchSetState">RegexMatchSetState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/wafregional/#RegexMatchSet">RegexMatchSet</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -381,11 +381,11 @@ Get an existing RegexMatchSet resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRegexMatchSet<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">pulumi.IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/wafregional?tab=doc#RegexMatchSetState">RegexMatchSetState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/wafregional?tab=doc#RegexMatchSet">RegexMatchSet</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRegexMatchSet<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/wafregional?tab=doc#RegexMatchSetState">RegexMatchSetState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/wafregional?tab=doc#RegexMatchSet">RegexMatchSet</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Wafregional.RegexMatchSet.html">RegexMatchSet</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Pulumi.Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Wafregional.RegexMatchSetState.html">RegexMatchSetState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Wafregional.RegexMatchSet.html">RegexMatchSet</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Wafregional.RegexMatchSetState.html">RegexMatchSetState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -504,7 +504,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Regex<wbr>Match<wbr>Tuples</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regexmatchsetregexmatchtuple">List&lt;Pulumi.<wbr>Aws.<wbr>Waf<wbr>Regional.<wbr>Inputs.<wbr>Regex<wbr>Match<wbr>Set<wbr>Regex<wbr>Match<wbr>Tuple<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#regexmatchsetregexmatchtuple">List&lt;Regex<wbr>Match<wbr>Set<wbr>Regex<wbr>Match<wbr>Tuple<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}The regular expression pattern that you want AWS WAF to search for in web requests,
 the location in requests that you want AWS WAF to search, and other settings. See below.
@@ -621,7 +621,7 @@ the location in requests that you want AWS WAF to search, and other settings. Se
             title="Required">
         <span>Field<wbr>To<wbr>Match</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regexmatchsetregexmatchtuplefieldtomatch">Pulumi.<wbr>Aws.<wbr>Waf<wbr>Regional.<wbr>Inputs.<wbr>Regex<wbr>Match<wbr>Set<wbr>Regex<wbr>Match<wbr>Tuple<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
+        <span class="property-type"><a href="#regexmatchsetregexmatchtuplefieldtomatch">Regex<wbr>Match<wbr>Set<wbr>Regex<wbr>Match<wbr>Tuple<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want to search, such as a specified header or a query string.
 {{% /md %}}</dd>
@@ -898,3 +898,10 @@ for all supported values.
 
 
 
+
+<h3>Package Details</h3>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd></dl>

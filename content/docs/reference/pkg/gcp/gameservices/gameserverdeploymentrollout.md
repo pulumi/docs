@@ -34,7 +34,7 @@ To get more information about GameServerDeploymentRollout, see:
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Gameservices.GameServerDeploymentRollout.html">GameServerDeploymentRollout</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.GameServices.Inputs.GameServerDeploymentRolloutArgs.html">GameServerDeploymentRolloutArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Gameservices.GameServerDeploymentRollout.html">GameServerDeploymentRollout</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.GameServices.GameServerDeploymentRolloutArgs.html">GameServerDeploymentRolloutArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -149,7 +149,7 @@ To get more information about GameServerDeploymentRollout, see:
             title="Optional">
         <span>Game<wbr>Server<wbr>Config<wbr>Overrides</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverdeploymentrolloutgameserverconfigoverride">List&lt;Pulumi.<wbr>Gcp.<wbr>Game<wbr>Services.<wbr>Inputs.<wbr>Game<wbr>Server<wbr>Deployment<wbr>Rollout<wbr>Game<wbr>Server<wbr>Config<wbr>Override<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#gameserverdeploymentrolloutgameserverconfigoverride">List&lt;Game<wbr>Server<wbr>Deployment<wbr>Rollout<wbr>Game<wbr>Server<wbr>Config<wbr>Override<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}The game_server_config_overrides contains the per game server config overrides. The overrides are processed in the order
 they are listed. As soon as a match is found for a cluster, the rest of the list is not processed.
@@ -345,7 +345,7 @@ The following output properties are available:
             title="">
         <span>Game<wbr>Server<wbr>Config<wbr>Overrides</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverdeploymentrolloutgameserverconfigoverride">List&lt;Pulumi.<wbr>Gcp.<wbr>Game<wbr>Services.<wbr>Outputs.<wbr>Game<wbr>Server<wbr>Deployment<wbr>Rollout<wbr>Game<wbr>Server<wbr>Config<wbr>Override&gt;?</a></span>
+        <span class="property-type"><a href="#gameserverdeploymentrolloutgameserverconfigoverride">List&lt;Game<wbr>Server<wbr>Deployment<wbr>Rollout<wbr>Game<wbr>Server<wbr>Config<wbr>Override&gt;?</a></span>
     </dt>
     <dd>{{% md %}}The game_server_config_overrides contains the per game server config overrides. The overrides are processed in the order
 they are listed. As soon as a match is found for a cluster, the rest of the list is not processed.
@@ -556,7 +556,7 @@ Get an existing GameServerDeploymentRollout resource's state with the given name
 {{< chooser language "javascript,typescript,python,go,csharp  " / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">pulumi.Input&lt;pulumi.ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/gameservices/#GameServerDeploymentRolloutState">GameServerDeploymentRolloutState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/gameservices/#GameServerDeploymentRollout">GameServerDeploymentRollout</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/gameservices/#GameServerDeploymentRolloutState">GameServerDeploymentRolloutState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/gameservices/#GameServerDeploymentRollout">GameServerDeploymentRollout</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -564,11 +564,11 @@ Get an existing GameServerDeploymentRollout resource's state with the given name
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGameServerDeploymentRollout<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">pulumi.IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/gameservices?tab=doc#GameServerDeploymentRolloutState">GameServerDeploymentRolloutState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/gameservices?tab=doc#GameServerDeploymentRollout">GameServerDeploymentRollout</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGameServerDeploymentRollout<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/gameservices?tab=doc#GameServerDeploymentRolloutState">GameServerDeploymentRolloutState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/gameservices?tab=doc#GameServerDeploymentRollout">GameServerDeploymentRollout</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Gameservices.GameServerDeploymentRollout.html">GameServerDeploymentRollout</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Pulumi.Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Gameservices.GameServerDeploymentRolloutState.html">GameServerDeploymentRolloutState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Gameservices.GameServerDeploymentRollout.html">GameServerDeploymentRollout</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Gameservices.GameServerDeploymentRolloutState.html">GameServerDeploymentRolloutState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -697,7 +697,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Game<wbr>Server<wbr>Config<wbr>Overrides</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverdeploymentrolloutgameserverconfigoverride">List&lt;Pulumi.<wbr>Gcp.<wbr>Game<wbr>Services.<wbr>Inputs.<wbr>Game<wbr>Server<wbr>Deployment<wbr>Rollout<wbr>Game<wbr>Server<wbr>Config<wbr>Override<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#gameserverdeploymentrolloutgameserverconfigoverride">List&lt;Game<wbr>Server<wbr>Deployment<wbr>Rollout<wbr>Game<wbr>Server<wbr>Config<wbr>Override<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}The game_server_config_overrides contains the per game server config overrides. The overrides are processed in the order
 they are listed. As soon as a match is found for a cluster, the rest of the list is not processed.
@@ -932,7 +932,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Realms<wbr>Selector</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverdeploymentrolloutgameserverconfigoverriderealmsselector">Pulumi.<wbr>Gcp.<wbr>Game<wbr>Services.<wbr>Inputs.<wbr>Game<wbr>Server<wbr>Deployment<wbr>Rollout<wbr>Game<wbr>Server<wbr>Config<wbr>Override<wbr>Realms<wbr>Selector<wbr>Args?</a></span>
+        <span class="property-type"><a href="#gameserverdeploymentrolloutgameserverconfigoverriderealmsselector">Game<wbr>Server<wbr>Deployment<wbr>Rollout<wbr>Game<wbr>Server<wbr>Config<wbr>Override<wbr>Realms<wbr>Selector<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1089,3 +1089,10 @@ If it is not provided, the provider project is used.
 
 
 
+
+<h3>Package Details</h3>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd></dl>

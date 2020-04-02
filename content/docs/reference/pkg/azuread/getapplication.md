@@ -8,19 +8,6 @@ Use this data source to access information about an existing Application within 
 
 > **NOTE:** If you're authenticating using a Service Principal then it must have permissions to both `Read and write all (or owned by) applications` and `Sign in and read user profile` within the `Windows Azure Active Directory` API.
 
-## Example Usage
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azuread from "@pulumi/azuread";
-
-const example = azuread.getApplication({
-    name: "My First AzureAD Application",
-});
-
-export const azureAdObjectId = example.id;
-```
-
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/d/application.html.markdown.
 
 
@@ -33,7 +20,7 @@ export const azureAdObjectId = example.id;
 
 
 {{% choosable language typescript %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getApplication<span class="p">(</span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azuread/#GetApplicationArgs">GetApplicationArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">pulumi.InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azuread/#GetApplicationResult">GetApplicationResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getApplication<span class="p">(</span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azuread/#GetApplicationArgs">GetApplicationArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azuread/#GetApplicationResult">GetApplicationResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -43,13 +30,13 @@ export const azureAdObjectId = example.id;
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupApplication<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/go/azuread/?tab=doc#GetApplicationArgs">GetApplicationArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/go/azuread/?tab=doc#LookupApplicationResult">LookupApplicationResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupApplication<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/go/azuread/?tab=doc#GetApplicationArgs">GetApplicationArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/go/azuread/?tab=doc#LookupApplicationResult">LookupApplicationResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetApplication </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azuread/Pulumi.Azuread.GetApplicationResult.html">GetApplicationResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azuread/Pulumi.Azuread.Inputs.GetApplicationArgs.html">GetApplicationArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">Pulumi.InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azuread/Pulumi.Azuread.GetApplicationResult.html">GetApplicationResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azuread/Pulumi.Azuread.GetApplicationArgs.html">GetApplicationArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -75,7 +62,7 @@ The following arguments are supported:
             title="Optional">
         <span>Oauth2Permissions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getapplicationoauth2permission">List&lt;Pulumi.<wbr>Azuread.<wbr>Inputs.<wbr>Get<wbr>Application<wbr>Oauth2Permission<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#getapplicationoauth2permission">List&lt;Get<wbr>Application<wbr>Oauth2Permission<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}A collection of OAuth 2.0 permission scopes that the web API (resource) app exposes to client apps. Each permission is covered by a `oauth2_permission` block as documented below.
 {{% /md %}}</dd>
@@ -215,7 +202,7 @@ The following output properties are available:
             title="">
         <span>App<wbr>Roles</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getapplicationapprole">List&lt;Pulumi.<wbr>Azuread.<wbr>Outputs.<wbr>Get<wbr>Application<wbr>App<wbr>Role&gt;</a></span>
+        <span class="property-type"><a href="#getapplicationapprole">List&lt;Get<wbr>Application<wbr>App<wbr>Role&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of `app_role` blocks as documented below. For more information https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/app-roles
 {{% /md %}}</dd>
@@ -303,7 +290,7 @@ The following output properties are available:
             title="">
         <span>Oauth2Permissions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getapplicationoauth2permission">List&lt;Pulumi.<wbr>Azuread.<wbr>Outputs.<wbr>Get<wbr>Application<wbr>Oauth2Permission&gt;</a></span>
+        <span class="property-type"><a href="#getapplicationoauth2permission">List&lt;Get<wbr>Application<wbr>Oauth2Permission&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of OAuth 2.0 permission scopes that the web API (resource) app exposes to client apps. Each permission is covered by a `oauth2_permission` block as documented below.
 {{% /md %}}</dd>
@@ -339,7 +326,7 @@ The following output properties are available:
             title="">
         <span>Required<wbr>Resource<wbr>Accesses</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getapplicationrequiredresourceaccess">List&lt;Pulumi.<wbr>Azuread.<wbr>Outputs.<wbr>Get<wbr>Application<wbr>Required<wbr>Resource<wbr>Access&gt;</a></span>
+        <span class="property-type"><a href="#getapplicationrequiredresourceaccess">List&lt;Get<wbr>Application<wbr>Required<wbr>Resource<wbr>Access&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of `required_resource_access` blocks as documented below.
 {{% /md %}}</dd>
@@ -1421,7 +1408,7 @@ The following output properties are available:
             title="Required">
         <span>Resource<wbr>Accesses</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getapplicationrequiredresourceaccessresourceaccess">List&lt;Pulumi.<wbr>Azuread.<wbr>Inputs.<wbr>Get<wbr>Application<wbr>Required<wbr>Resource<wbr>Access<wbr>Resource<wbr>Access<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getapplicationrequiredresourceaccessresourceaccess">List&lt;Get<wbr>Application<wbr>Required<wbr>Resource<wbr>Access<wbr>Resource<wbr>Access<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of `resource_access` blocks as documented below
 {{% /md %}}</dd>

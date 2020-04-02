@@ -223,7 +223,7 @@ const s3Distribution = new aws.cloudfront.Distribution("s3_distribution", {
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cloudfront.Distribution.html">Distribution</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Inputs.DistributionArgs.html">DistributionArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cloudfront.Distribution.html">Distribution</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.DistributionArgs.html">DistributionArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -339,7 +339,7 @@ distribution.
             title="Optional">
         <span>Custom<wbr>Error<wbr>Responses</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributioncustomerrorresponse">List&lt;Pulumi.<wbr>Aws.<wbr>Cloud<wbr>Front.<wbr>Inputs.<wbr>Distribution<wbr>Custom<wbr>Error<wbr>Response<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#distributioncustomerrorresponse">List&lt;Distribution<wbr>Custom<wbr>Error<wbr>Response<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}One or more custom error response elements (multiples allowed).
 {{% /md %}}</dd>
@@ -348,7 +348,7 @@ distribution.
             title="Required">
         <span>Default<wbr>Cache<wbr>Behavior</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiondefaultcachebehavior">Pulumi.<wbr>Aws.<wbr>Cloud<wbr>Front.<wbr>Inputs.<wbr>Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Args</a></span>
+        <span class="property-type"><a href="#distributiondefaultcachebehavior">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default cache behavior for this distribution (maximum
 one).
@@ -398,7 +398,7 @@ distribution. Allowed values are `http1.1` and `http2`. The default is
             title="Optional">
         <span>Logging<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionloggingconfig">Pulumi.<wbr>Aws.<wbr>Cloud<wbr>Front.<wbr>Inputs.<wbr>Distribution<wbr>Logging<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#distributionloggingconfig">Distribution<wbr>Logging<wbr>Config<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}The logging
 configuration that controls how logs are written
@@ -409,7 +409,7 @@ to your distribution (maximum one).
             title="Optional">
         <span>Ordered<wbr>Cache<wbr>Behaviors</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorderedcachebehavior">List&lt;Pulumi.<wbr>Aws.<wbr>Cloud<wbr>Front.<wbr>Inputs.<wbr>Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#distributionorderedcachebehavior">List&lt;Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}An ordered list of cache behaviors
 resource for this distribution. List from top to bottom
@@ -420,7 +420,7 @@ in order of precedence. The topmost cache behavior will have precedence 0.
             title="Optional">
         <span>Origin<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigingroup">List&lt;Pulumi.<wbr>Aws.<wbr>Cloud<wbr>Front.<wbr>Inputs.<wbr>Distribution<wbr>Origin<wbr>Group<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#distributionorigingroup">List&lt;Distribution<wbr>Origin<wbr>Group<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}One or more origin_group for this
 distribution (multiples allowed).
@@ -430,7 +430,7 @@ distribution (multiples allowed).
             title="Required">
         <span>Origins</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigin">List&lt;Pulumi.<wbr>Aws.<wbr>Cloud<wbr>Front.<wbr>Inputs.<wbr>Distribution<wbr>Origin<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#distributionorigin">List&lt;Distribution<wbr>Origin<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more origins for this
 distribution (multiples allowed).
@@ -450,7 +450,7 @@ distribution (multiples allowed).
             title="Required">
         <span>Restrictions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionrestrictions">Pulumi.<wbr>Aws.<wbr>Cloud<wbr>Front.<wbr>Inputs.<wbr>Distribution<wbr>Restrictions<wbr>Args</a></span>
+        <span class="property-type"><a href="#distributionrestrictions">Distribution<wbr>Restrictions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The restriction
 configuration for this distribution (maximum one).
@@ -480,7 +480,7 @@ the distribution needs to be deleted manually afterwards. Default: `false`.
             title="Required">
         <span>Viewer<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionviewercertificate">Pulumi.<wbr>Aws.<wbr>Cloud<wbr>Front.<wbr>Inputs.<wbr>Distribution<wbr>Viewer<wbr>Certificate<wbr>Args</a></span>
+        <span class="property-type"><a href="#distributionviewercertificate">Distribution<wbr>Viewer<wbr>Certificate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SSL
 configuration for this distribution (maximum
@@ -1193,7 +1193,7 @@ distribution.
             title="">
         <span>Custom<wbr>Error<wbr>Responses</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributioncustomerrorresponse">List&lt;Pulumi.<wbr>Aws.<wbr>Cloud<wbr>Front.<wbr>Outputs.<wbr>Distribution<wbr>Custom<wbr>Error<wbr>Response&gt;?</a></span>
+        <span class="property-type"><a href="#distributioncustomerrorresponse">List&lt;Distribution<wbr>Custom<wbr>Error<wbr>Response&gt;?</a></span>
     </dt>
     <dd>{{% md %}}One or more custom error response elements (multiples allowed).
 {{% /md %}}</dd>
@@ -1202,7 +1202,7 @@ distribution.
             title="">
         <span>Default<wbr>Cache<wbr>Behavior</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiondefaultcachebehavior">Pulumi.<wbr>Aws.<wbr>Cloud<wbr>Front.<wbr>Outputs.<wbr>Distribution<wbr>Default<wbr>Cache<wbr>Behavior</a></span>
+        <span class="property-type"><a href="#distributiondefaultcachebehavior">Distribution<wbr>Default<wbr>Cache<wbr>Behavior</a></span>
     </dt>
     <dd>{{% md %}}The default cache behavior for this distribution (maximum
 one).
@@ -1302,7 +1302,7 @@ currently in progress.
             title="">
         <span>Logging<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionloggingconfig">Pulumi.<wbr>Aws.<wbr>Cloud<wbr>Front.<wbr>Outputs.<wbr>Distribution<wbr>Logging<wbr>Config?</a></span>
+        <span class="property-type"><a href="#distributionloggingconfig">Distribution<wbr>Logging<wbr>Config?</a></span>
     </dt>
     <dd>{{% md %}}The logging
 configuration that controls how logs are written
@@ -1313,7 +1313,7 @@ to your distribution (maximum one).
             title="">
         <span>Ordered<wbr>Cache<wbr>Behaviors</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorderedcachebehavior">List&lt;Pulumi.<wbr>Aws.<wbr>Cloud<wbr>Front.<wbr>Outputs.<wbr>Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior&gt;?</a></span>
+        <span class="property-type"><a href="#distributionorderedcachebehavior">List&lt;Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior&gt;?</a></span>
     </dt>
     <dd>{{% md %}}An ordered list of cache behaviors
 resource for this distribution. List from top to bottom
@@ -1324,7 +1324,7 @@ in order of precedence. The topmost cache behavior will have precedence 0.
             title="">
         <span>Origin<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigingroup">List&lt;Pulumi.<wbr>Aws.<wbr>Cloud<wbr>Front.<wbr>Outputs.<wbr>Distribution<wbr>Origin<wbr>Group&gt;?</a></span>
+        <span class="property-type"><a href="#distributionorigingroup">List&lt;Distribution<wbr>Origin<wbr>Group&gt;?</a></span>
     </dt>
     <dd>{{% md %}}One or more origin_group for this
 distribution (multiples allowed).
@@ -1334,7 +1334,7 @@ distribution (multiples allowed).
             title="">
         <span>Origins</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigin">List&lt;Pulumi.<wbr>Aws.<wbr>Cloud<wbr>Front.<wbr>Outputs.<wbr>Distribution<wbr>Origin&gt;</a></span>
+        <span class="property-type"><a href="#distributionorigin">List&lt;Distribution<wbr>Origin&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more origins for this
 distribution (multiples allowed).
@@ -1354,7 +1354,7 @@ distribution (multiples allowed).
             title="">
         <span>Restrictions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionrestrictions">Pulumi.<wbr>Aws.<wbr>Cloud<wbr>Front.<wbr>Outputs.<wbr>Distribution<wbr>Restrictions</a></span>
+        <span class="property-type"><a href="#distributionrestrictions">Distribution<wbr>Restrictions</a></span>
     </dt>
     <dd>{{% md %}}The restriction
 configuration for this distribution (maximum one).
@@ -1395,7 +1395,7 @@ CloudFront system.
             title="">
         <span>Viewer<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionviewercertificate">Pulumi.<wbr>Aws.<wbr>Cloud<wbr>Front.<wbr>Outputs.<wbr>Distribution<wbr>Viewer<wbr>Certificate</a></span>
+        <span class="property-type"><a href="#distributionviewercertificate">Distribution<wbr>Viewer<wbr>Certificate</a></span>
     </dt>
     <dd>{{% md %}}The SSL
 configuration for this distribution (maximum
@@ -2325,7 +2325,7 @@ Get an existing Distribution resource's state with the given name, ID, and optio
 {{< chooser language "javascript,typescript,python,go,csharp  " / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">pulumi.Input&lt;pulumi.ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cloudfront/#DistributionState">DistributionState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cloudfront/#Distribution">Distribution</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cloudfront/#DistributionState">DistributionState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cloudfront/#Distribution">Distribution</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2333,11 +2333,11 @@ Get an existing Distribution resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDistribution<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">pulumi.IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudfront?tab=doc#DistributionState">DistributionState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudfront?tab=doc#Distribution">Distribution</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDistribution<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudfront?tab=doc#DistributionState">DistributionState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudfront?tab=doc#Distribution">Distribution</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cloudfront.Distribution.html">Distribution</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Pulumi.Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cloudfront.DistributionState.html">DistributionState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cloudfront.Distribution.html">Distribution</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cloudfront.DistributionState.html">DistributionState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2497,7 +2497,7 @@ distribution.
             title="Optional">
         <span>Custom<wbr>Error<wbr>Responses</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributioncustomerrorresponse">List&lt;Pulumi.<wbr>Aws.<wbr>Cloud<wbr>Front.<wbr>Inputs.<wbr>Distribution<wbr>Custom<wbr>Error<wbr>Response<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#distributioncustomerrorresponse">List&lt;Distribution<wbr>Custom<wbr>Error<wbr>Response<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}One or more custom error response elements (multiples allowed).
 {{% /md %}}</dd>
@@ -2506,7 +2506,7 @@ distribution.
             title="Optional">
         <span>Default<wbr>Cache<wbr>Behavior</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiondefaultcachebehavior">Pulumi.<wbr>Aws.<wbr>Cloud<wbr>Front.<wbr>Inputs.<wbr>Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Args?</a></span>
+        <span class="property-type"><a href="#distributiondefaultcachebehavior">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}The default cache behavior for this distribution (maximum
 one).
@@ -2606,7 +2606,7 @@ currently in progress.
             title="Optional">
         <span>Logging<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionloggingconfig">Pulumi.<wbr>Aws.<wbr>Cloud<wbr>Front.<wbr>Inputs.<wbr>Distribution<wbr>Logging<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#distributionloggingconfig">Distribution<wbr>Logging<wbr>Config<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}The logging
 configuration that controls how logs are written
@@ -2617,7 +2617,7 @@ to your distribution (maximum one).
             title="Optional">
         <span>Ordered<wbr>Cache<wbr>Behaviors</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorderedcachebehavior">List&lt;Pulumi.<wbr>Aws.<wbr>Cloud<wbr>Front.<wbr>Inputs.<wbr>Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#distributionorderedcachebehavior">List&lt;Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}An ordered list of cache behaviors
 resource for this distribution. List from top to bottom
@@ -2628,7 +2628,7 @@ in order of precedence. The topmost cache behavior will have precedence 0.
             title="Optional">
         <span>Origin<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigingroup">List&lt;Pulumi.<wbr>Aws.<wbr>Cloud<wbr>Front.<wbr>Inputs.<wbr>Distribution<wbr>Origin<wbr>Group<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#distributionorigingroup">List&lt;Distribution<wbr>Origin<wbr>Group<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}One or more origin_group for this
 distribution (multiples allowed).
@@ -2638,7 +2638,7 @@ distribution (multiples allowed).
             title="Optional">
         <span>Origins</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigin">List&lt;Pulumi.<wbr>Aws.<wbr>Cloud<wbr>Front.<wbr>Inputs.<wbr>Distribution<wbr>Origin<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#distributionorigin">List&lt;Distribution<wbr>Origin<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}One or more origins for this
 distribution (multiples allowed).
@@ -2658,7 +2658,7 @@ distribution (multiples allowed).
             title="Optional">
         <span>Restrictions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionrestrictions">Pulumi.<wbr>Aws.<wbr>Cloud<wbr>Front.<wbr>Inputs.<wbr>Distribution<wbr>Restrictions<wbr>Args?</a></span>
+        <span class="property-type"><a href="#distributionrestrictions">Distribution<wbr>Restrictions<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}The restriction
 configuration for this distribution (maximum one).
@@ -2699,7 +2699,7 @@ CloudFront system.
             title="Optional">
         <span>Viewer<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionviewercertificate">Pulumi.<wbr>Aws.<wbr>Cloud<wbr>Front.<wbr>Inputs.<wbr>Distribution<wbr>Viewer<wbr>Certificate<wbr>Args?</a></span>
+        <span class="property-type"><a href="#distributionviewercertificate">Distribution<wbr>Viewer<wbr>Certificate<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}The SSL
 configuration for this distribution (maximum
@@ -3904,7 +3904,7 @@ in the absence of an `Cache-Control max-age` or `Expires` header. Defaults to
             title="Required">
         <span>Forwarded<wbr>Values</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiondefaultcachebehaviorforwardedvalues">Pulumi.<wbr>Aws.<wbr>Cloud<wbr>Front.<wbr>Inputs.<wbr>Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Args</a></span>
+        <span class="property-type"><a href="#distributiondefaultcachebehaviorforwardedvalues">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The forwarded values configuration that specifies how CloudFront
 handles query strings, cookies and headers (maximum one).
@@ -3914,7 +3914,7 @@ handles query strings, cookies and headers (maximum one).
             title="Optional">
         <span>Lambda<wbr>Function<wbr>Associations</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiondefaultcachebehaviorlambdafunctionassociation">List&lt;Pulumi.<wbr>Aws.<wbr>Cloud<wbr>Front.<wbr>Inputs.<wbr>Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Lambda<wbr>Function<wbr>Association<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#distributiondefaultcachebehaviorlambdafunctionassociation">List&lt;Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Lambda<wbr>Function<wbr>Association<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}A config block that triggers a lambda function with
 specific actions. Defined below, maximum 4.
@@ -4455,7 +4455,7 @@ of `allow-all`, `https-only`, or `redirect-to-https`.
             title="Required">
         <span>Cookies</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiondefaultcachebehaviorforwardedvaluescookies">Pulumi.<wbr>Aws.<wbr>Cloud<wbr>Front.<wbr>Inputs.<wbr>Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Cookies<wbr>Args</a></span>
+        <span class="property-type"><a href="#distributiondefaultcachebehaviorforwardedvaluescookies">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Cookies<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The forwarded values cookies
 that specifies how CloudFront handles cookies (maximum one).
@@ -5179,7 +5179,7 @@ in the absence of an `Cache-Control max-age` or `Expires` header. Defaults to
             title="Required">
         <span>Forwarded<wbr>Values</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorderedcachebehaviorforwardedvalues">Pulumi.<wbr>Aws.<wbr>Cloud<wbr>Front.<wbr>Inputs.<wbr>Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Args</a></span>
+        <span class="property-type"><a href="#distributionorderedcachebehaviorforwardedvalues">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The forwarded values configuration that specifies how CloudFront
 handles query strings, cookies and headers (maximum one).
@@ -5189,7 +5189,7 @@ handles query strings, cookies and headers (maximum one).
             title="Optional">
         <span>Lambda<wbr>Function<wbr>Associations</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorderedcachebehaviorlambdafunctionassociation">List&lt;Pulumi.<wbr>Aws.<wbr>Cloud<wbr>Front.<wbr>Inputs.<wbr>Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Lambda<wbr>Function<wbr>Association<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#distributionorderedcachebehaviorlambdafunctionassociation">List&lt;Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Lambda<wbr>Function<wbr>Association<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}A config block that triggers a lambda function with
 specific actions. Defined below, maximum 4.
@@ -5770,7 +5770,7 @@ of `allow-all`, `https-only`, or `redirect-to-https`.
             title="Required">
         <span>Cookies</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorderedcachebehaviorforwardedvaluescookies">Pulumi.<wbr>Aws.<wbr>Cloud<wbr>Front.<wbr>Inputs.<wbr>Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Cookies<wbr>Args</a></span>
+        <span class="property-type"><a href="#distributionorderedcachebehaviorforwardedvaluescookies">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Cookies<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The forwarded values cookies
 that specifies how CloudFront handles cookies (maximum one).
@@ -6279,7 +6279,7 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
             title="Optional">
         <span>Custom<wbr>Headers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigincustomheader">List&lt;Pulumi.<wbr>Aws.<wbr>Cloud<wbr>Front.<wbr>Inputs.<wbr>Distribution<wbr>Origin<wbr>Custom<wbr>Header<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#distributionorigincustomheader">List&lt;Distribution<wbr>Origin<wbr>Custom<wbr>Header<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}One or more sub-resources with `name` and
 `value` parameters that specify header data that will be sent to the origin
@@ -6290,7 +6290,7 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
             title="Optional">
         <span>Custom<wbr>Origin<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigincustomoriginconfig">Pulumi.<wbr>Aws.<wbr>Cloud<wbr>Front.<wbr>Inputs.<wbr>Distribution<wbr>Origin<wbr>Custom<wbr>Origin<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#distributionorigincustomoriginconfig">Distribution<wbr>Origin<wbr>Custom<wbr>Origin<wbr>Config<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}The CloudFront custom
 origin configuration information. If an S3
@@ -6331,7 +6331,7 @@ custom origin.
             title="Optional">
         <span>S3Origin<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigins3originconfig">Pulumi.<wbr>Aws.<wbr>Cloud<wbr>Front.<wbr>Inputs.<wbr>Distribution<wbr>Origin<wbr>S3Origin<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#distributionorigins3originconfig">Distribution<wbr>Origin<wbr>S3Origin<wbr>Config<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}The CloudFront S3 origin
 configuration information. If a custom origin is required, use
@@ -6952,7 +6952,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
             title="Required">
         <span>Failover<wbr>Criteria</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigingroupfailovercriteria">Pulumi.<wbr>Aws.<wbr>Cloud<wbr>Front.<wbr>Inputs.<wbr>Distribution<wbr>Origin<wbr>Group<wbr>Failover<wbr>Criteria<wbr>Args</a></span>
+        <span class="property-type"><a href="#distributionorigingroupfailovercriteria">Distribution<wbr>Origin<wbr>Group<wbr>Failover<wbr>Criteria<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The failover criteria for when to failover to the secondary origin
 {{% /md %}}</dd>
@@ -6961,7 +6961,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
             title="Required">
         <span>Members</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigingroupmember">List&lt;Pulumi.<wbr>Aws.<wbr>Cloud<wbr>Front.<wbr>Inputs.<wbr>Distribution<wbr>Origin<wbr>Group<wbr>Member<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#distributionorigingroupmember">List&lt;Distribution<wbr>Origin<wbr>Group<wbr>Member<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Ordered member configuration blocks assigned to the origin group, where the first member is the primary origin. You must specify two members.
 {{% /md %}}</dd>
@@ -7344,7 +7344,7 @@ identity][5] to associate with the origin.
             title="Required">
         <span>Geo<wbr>Restriction</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionrestrictionsgeorestriction">Pulumi.<wbr>Aws.<wbr>Cloud<wbr>Front.<wbr>Inputs.<wbr>Distribution<wbr>Restrictions<wbr>Geo<wbr>Restriction<wbr>Args</a></span>
+        <span class="property-type"><a href="#distributionrestrictionsgeorestriction">Distribution<wbr>Restrictions<wbr>Geo<wbr>Restriction<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7816,3 +7816,10 @@ must be specified.
 
 
 
+
+<h3>Package Details</h3>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd></dl>

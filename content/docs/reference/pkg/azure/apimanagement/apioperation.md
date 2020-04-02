@@ -27,7 +27,7 @@ Manages an API Operation within an API Management Service.
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Apimanagement.ApiOperation.html">ApiOperation</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ApiManagement.Inputs.ApiOperationArgs.html">ApiOperationArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Apimanagement.ApiOperation.html">ApiOperation</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ApiManagement.ApiOperationArgs.html">ApiOperationArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -177,7 +177,7 @@ Manages an API Operation within an API Management Service.
             title="Optional">
         <span>Request</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationrequest">Pulumi.<wbr>Azure.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Api<wbr>Operation<wbr>Request<wbr>Args?</a></span>
+        <span class="property-type"><a href="#apioperationrequest">Api<wbr>Operation<wbr>Request<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `request` block as defined below.
 {{% /md %}}</dd>
@@ -195,7 +195,7 @@ Manages an API Operation within an API Management Service.
             title="Optional">
         <span>Responses</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationresponse">List&lt;Pulumi.<wbr>Azure.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Api<wbr>Operation<wbr>Response<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#apioperationresponse">List&lt;Api<wbr>Operation<wbr>Response<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}One or more `response` blocks as defined below.
 {{% /md %}}</dd>
@@ -204,7 +204,7 @@ Manages an API Operation within an API Management Service.
             title="Optional">
         <span>Template<wbr>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationtemplateparameter">List&lt;Pulumi.<wbr>Azure.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Api<wbr>Operation<wbr>Template<wbr>Parameter<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#apioperationtemplateparameter">List&lt;Api<wbr>Operation<wbr>Template<wbr>Parameter<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}One or more `template_parameter` blocks as defined below.
 {{% /md %}}</dd>
@@ -613,7 +613,7 @@ The following output properties are available:
             title="">
         <span>Request</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationrequest">Pulumi.<wbr>Azure.<wbr>Api<wbr>Management.<wbr>Outputs.<wbr>Api<wbr>Operation<wbr>Request</a></span>
+        <span class="property-type"><a href="#apioperationrequest">Api<wbr>Operation<wbr>Request</a></span>
     </dt>
     <dd>{{% md %}}A `request` block as defined below.
 {{% /md %}}</dd>
@@ -631,7 +631,7 @@ The following output properties are available:
             title="">
         <span>Responses</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationresponse">List&lt;Pulumi.<wbr>Azure.<wbr>Api<wbr>Management.<wbr>Outputs.<wbr>Api<wbr>Operation<wbr>Response&gt;?</a></span>
+        <span class="property-type"><a href="#apioperationresponse">List&lt;Api<wbr>Operation<wbr>Response&gt;?</a></span>
     </dt>
     <dd>{{% md %}}One or more `response` blocks as defined below.
 {{% /md %}}</dd>
@@ -640,7 +640,7 @@ The following output properties are available:
             title="">
         <span>Template<wbr>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationtemplateparameter">List&lt;Pulumi.<wbr>Azure.<wbr>Api<wbr>Management.<wbr>Outputs.<wbr>Api<wbr>Operation<wbr>Template<wbr>Parameter&gt;?</a></span>
+        <span class="property-type"><a href="#apioperationtemplateparameter">List&lt;Api<wbr>Operation<wbr>Template<wbr>Parameter&gt;?</a></span>
     </dt>
     <dd>{{% md %}}One or more `template_parameter` blocks as defined below.
 {{% /md %}}</dd>
@@ -989,7 +989,7 @@ Get an existing ApiOperation resource's state with the given name, ID, and optio
 {{< chooser language "javascript,typescript,python,go,csharp  " / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">pulumi.Input&lt;pulumi.ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/apimanagement/#ApiOperationState">ApiOperationState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/apimanagement/#ApiOperation">ApiOperation</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/apimanagement/#ApiOperationState">ApiOperationState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/apimanagement/#ApiOperation">ApiOperation</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -997,11 +997,11 @@ Get an existing ApiOperation resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetApiOperation<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">pulumi.IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#ApiOperationState">ApiOperationState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#ApiOperation">ApiOperation</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetApiOperation<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#ApiOperationState">ApiOperationState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#ApiOperation">ApiOperation</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Apimanagement.ApiOperation.html">ApiOperation</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Pulumi.Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Apimanagement.ApiOperationState.html">ApiOperationState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Apimanagement.ApiOperation.html">ApiOperation</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Apimanagement.ApiOperationState.html">ApiOperationState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1165,7 +1165,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Request</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationrequest">Pulumi.<wbr>Azure.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Api<wbr>Operation<wbr>Request<wbr>Args?</a></span>
+        <span class="property-type"><a href="#apioperationrequest">Api<wbr>Operation<wbr>Request<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `request` block as defined below.
 {{% /md %}}</dd>
@@ -1183,7 +1183,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Responses</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationresponse">List&lt;Pulumi.<wbr>Azure.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Api<wbr>Operation<wbr>Response<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#apioperationresponse">List&lt;Api<wbr>Operation<wbr>Response<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}One or more `response` blocks as defined below.
 {{% /md %}}</dd>
@@ -1192,7 +1192,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Template<wbr>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationtemplateparameter">List&lt;Pulumi.<wbr>Azure.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Api<wbr>Operation<wbr>Template<wbr>Parameter<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#apioperationtemplateparameter">List&lt;Api<wbr>Operation<wbr>Template<wbr>Parameter<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}One or more `template_parameter` blocks as defined below.
 {{% /md %}}</dd>
@@ -1566,7 +1566,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Headers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationrequestheader">List&lt;Pulumi.<wbr>Azure.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Api<wbr>Operation<wbr>Request<wbr>Header<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#apioperationrequestheader">List&lt;Api<wbr>Operation<wbr>Request<wbr>Header<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}One or more `header` blocks as defined above.
 {{% /md %}}</dd>
@@ -1575,7 +1575,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Query<wbr>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationrequestqueryparameter">List&lt;Pulumi.<wbr>Azure.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Api<wbr>Operation<wbr>Request<wbr>Query<wbr>Parameter<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#apioperationrequestqueryparameter">List&lt;Api<wbr>Operation<wbr>Request<wbr>Query<wbr>Parameter<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}One or more `query_parameter` blocks as defined above.
 {{% /md %}}</dd>
@@ -1584,7 +1584,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Representations</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationrequestrepresentation">List&lt;Pulumi.<wbr>Azure.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Api<wbr>Operation<wbr>Request<wbr>Representation<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#apioperationrequestrepresentation">List&lt;Api<wbr>Operation<wbr>Request<wbr>Representation<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}One or more `representation` blocks as defined below.
 {{% /md %}}</dd>
@@ -2271,7 +2271,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Form<wbr>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationrequestrepresentationformparameter">List&lt;Pulumi.<wbr>Azure.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Api<wbr>Operation<wbr>Request<wbr>Representation<wbr>Form<wbr>Parameter<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#apioperationrequestrepresentationformparameter">List&lt;Api<wbr>Operation<wbr>Request<wbr>Representation<wbr>Form<wbr>Parameter<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}One or more `form_parameter` block as defined above.
 {{% /md %}}</dd>
@@ -2753,7 +2753,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Headers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationresponseheader">List&lt;Pulumi.<wbr>Azure.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Api<wbr>Operation<wbr>Response<wbr>Header<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#apioperationresponseheader">List&lt;Api<wbr>Operation<wbr>Response<wbr>Header<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}One or more `header` blocks as defined above.
 {{% /md %}}</dd>
@@ -2762,7 +2762,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Representations</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationresponserepresentation">List&lt;Pulumi.<wbr>Azure.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Api<wbr>Operation<wbr>Response<wbr>Representation<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#apioperationresponserepresentation">List&lt;Api<wbr>Operation<wbr>Response<wbr>Representation<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}One or more `representation` blocks as defined below.
 {{% /md %}}</dd>
@@ -3199,7 +3199,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Form<wbr>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationresponserepresentationformparameter">List&lt;Pulumi.<wbr>Azure.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Api<wbr>Operation<wbr>Response<wbr>Representation<wbr>Form<wbr>Parameter<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#apioperationresponserepresentationformparameter">List&lt;Api<wbr>Operation<wbr>Response<wbr>Representation<wbr>Form<wbr>Parameter<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}One or more `form_parameter` block as defined above.
 {{% /md %}}</dd>
@@ -3914,3 +3914,10 @@ The following state arguments are supported:
 
 
 
+
+<h3>Package Details</h3>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd></dl>

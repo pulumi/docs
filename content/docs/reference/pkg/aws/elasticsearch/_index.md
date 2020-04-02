@@ -17,3 +17,11 @@ block_external_search_index: true
     <li><a href="getdomain"><span class="symbol datasource"></span>GetDomain</a></li>
 </ul>
 
+<h3>Package Details</h3>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd>https://github.com/pulumi/pulumi-aws</dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd>
+</dl>
+

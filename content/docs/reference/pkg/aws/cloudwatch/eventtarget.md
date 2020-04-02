@@ -52,7 +52,7 @@ const yada = new aws.cloudwatch.EventTarget("yada", {
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const ssmLifecycleTrust = aws.iam.getPolicyDocument({
+const ssmLifecycleTrust = pulumi.output(aws.iam.getPolicyDocument({
     statements: [{
         actions: ["sts:AssumeRole"],
         principals: [{
@@ -60,7 +60,7 @@ const ssmLifecycleTrust = aws.iam.getPolicyDocument({
             type: "Service",
         }],
     }],
-});
+}, { async: true }));
 const stopInstance = new aws.ssm.Document("stop_instance", {
     content: `  {
     "schemaVersion": "1.2",
@@ -100,7 +100,7 @@ const ssmLifecyclePolicyDocument = stopInstance.arn.apply(arn => aws.iam.getPoli
             resources: [arn],
         },
     ],
-}));
+}, { async: true }));
 const ssmLifecycleRole = new aws.iam.Role("ssm_lifecycle", {
     assumeRolePolicy: ssmLifecycleTrust.json,
 });
@@ -226,7 +226,7 @@ const ecsScheduledTask = new aws.cloudwatch.EventTarget("ecs_scheduled_task", {
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cloudwatch.EventTarget.html">EventTarget</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudWatch.Inputs.EventTargetArgs.html">EventTargetArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cloudwatch.EventTarget.html">EventTarget</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudWatch.EventTargetArgs.html">EventTargetArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -331,7 +331,7 @@ const ecsScheduledTask = new aws.cloudwatch.EventTarget("ecs_scheduled_task", {
             title="Optional">
         <span>Batch<wbr>Target</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventtargetbatchtarget">Pulumi.<wbr>Aws.<wbr>Cloud<wbr>Watch.<wbr>Inputs.<wbr>Event<wbr>Target<wbr>Batch<wbr>Target<wbr>Args?</a></span>
+        <span class="property-type"><a href="#eventtargetbatchtarget">Event<wbr>Target<wbr>Batch<wbr>Target<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon Batch Job. Documented below. A maximum of 1 are allowed.
 {{% /md %}}</dd>
@@ -340,7 +340,7 @@ const ecsScheduledTask = new aws.cloudwatch.EventTarget("ecs_scheduled_task", {
             title="Optional">
         <span>Ecs<wbr>Target</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventtargetecstarget">Pulumi.<wbr>Aws.<wbr>Cloud<wbr>Watch.<wbr>Inputs.<wbr>Event<wbr>Target<wbr>Ecs<wbr>Target<wbr>Args?</a></span>
+        <span class="property-type"><a href="#eventtargetecstarget">Event<wbr>Target<wbr>Ecs<wbr>Target<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke Amazon ECS Task. Documented below. A maximum of 1 are allowed.
 {{% /md %}}</dd>
@@ -368,7 +368,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>Input<wbr>Transformer</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventtargetinputtransformer">Pulumi.<wbr>Aws.<wbr>Cloud<wbr>Watch.<wbr>Inputs.<wbr>Event<wbr>Target<wbr>Input<wbr>Transformer<wbr>Args?</a></span>
+        <span class="property-type"><a href="#eventtargetinputtransformer">Event<wbr>Target<wbr>Input<wbr>Transformer<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are providing a custom input to a target based on certain event data.
 {{% /md %}}</dd>
@@ -377,7 +377,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>Kinesis<wbr>Target</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventtargetkinesistarget">Pulumi.<wbr>Aws.<wbr>Cloud<wbr>Watch.<wbr>Inputs.<wbr>Event<wbr>Target<wbr>Kinesis<wbr>Target<wbr>Args?</a></span>
+        <span class="property-type"><a href="#eventtargetkinesistarget">Event<wbr>Target<wbr>Kinesis<wbr>Target<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon Kinesis Stream. Documented below. A maximum of 1 are allowed.
 {{% /md %}}</dd>
@@ -404,7 +404,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>Run<wbr>Command<wbr>Targets</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventtargetruncommandtarget">List&lt;Pulumi.<wbr>Aws.<wbr>Cloud<wbr>Watch.<wbr>Inputs.<wbr>Event<wbr>Target<wbr>Run<wbr>Command<wbr>Target<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#eventtargetruncommandtarget">List&lt;Event<wbr>Target<wbr>Run<wbr>Command<wbr>Target<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke Amazon EC2 Run Command. Documented below. A maximum of 5 are allowed.
 {{% /md %}}</dd>
@@ -413,7 +413,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>Sqs<wbr>Target</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventtargetsqstarget">Pulumi.<wbr>Aws.<wbr>Cloud<wbr>Watch.<wbr>Inputs.<wbr>Event<wbr>Target<wbr>Sqs<wbr>Target<wbr>Args?</a></span>
+        <span class="property-type"><a href="#eventtargetsqstarget">Event<wbr>Target<wbr>Sqs<wbr>Target<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon SQS Queue. Documented below. A maximum of 1 are allowed.
 {{% /md %}}</dd>
@@ -807,7 +807,7 @@ The following output properties are available:
             title="">
         <span>Batch<wbr>Target</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventtargetbatchtarget">Pulumi.<wbr>Aws.<wbr>Cloud<wbr>Watch.<wbr>Outputs.<wbr>Event<wbr>Target<wbr>Batch<wbr>Target?</a></span>
+        <span class="property-type"><a href="#eventtargetbatchtarget">Event<wbr>Target<wbr>Batch<wbr>Target?</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon Batch Job. Documented below. A maximum of 1 are allowed.
 {{% /md %}}</dd>
@@ -816,7 +816,7 @@ The following output properties are available:
             title="">
         <span>Ecs<wbr>Target</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventtargetecstarget">Pulumi.<wbr>Aws.<wbr>Cloud<wbr>Watch.<wbr>Outputs.<wbr>Event<wbr>Target<wbr>Ecs<wbr>Target?</a></span>
+        <span class="property-type"><a href="#eventtargetecstarget">Event<wbr>Target<wbr>Ecs<wbr>Target?</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke Amazon ECS Task. Documented below. A maximum of 1 are allowed.
 {{% /md %}}</dd>
@@ -844,7 +844,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="">
         <span>Input<wbr>Transformer</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventtargetinputtransformer">Pulumi.<wbr>Aws.<wbr>Cloud<wbr>Watch.<wbr>Outputs.<wbr>Event<wbr>Target<wbr>Input<wbr>Transformer?</a></span>
+        <span class="property-type"><a href="#eventtargetinputtransformer">Event<wbr>Target<wbr>Input<wbr>Transformer?</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are providing a custom input to a target based on certain event data.
 {{% /md %}}</dd>
@@ -853,7 +853,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="">
         <span>Kinesis<wbr>Target</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventtargetkinesistarget">Pulumi.<wbr>Aws.<wbr>Cloud<wbr>Watch.<wbr>Outputs.<wbr>Event<wbr>Target<wbr>Kinesis<wbr>Target?</a></span>
+        <span class="property-type"><a href="#eventtargetkinesistarget">Event<wbr>Target<wbr>Kinesis<wbr>Target?</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon Kinesis Stream. Documented below. A maximum of 1 are allowed.
 {{% /md %}}</dd>
@@ -880,7 +880,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="">
         <span>Run<wbr>Command<wbr>Targets</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventtargetruncommandtarget">List&lt;Pulumi.<wbr>Aws.<wbr>Cloud<wbr>Watch.<wbr>Outputs.<wbr>Event<wbr>Target<wbr>Run<wbr>Command<wbr>Target&gt;?</a></span>
+        <span class="property-type"><a href="#eventtargetruncommandtarget">List&lt;Event<wbr>Target<wbr>Run<wbr>Command<wbr>Target&gt;?</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke Amazon EC2 Run Command. Documented below. A maximum of 5 are allowed.
 {{% /md %}}</dd>
@@ -889,7 +889,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="">
         <span>Sqs<wbr>Target</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventtargetsqstarget">Pulumi.<wbr>Aws.<wbr>Cloud<wbr>Watch.<wbr>Outputs.<wbr>Event<wbr>Target<wbr>Sqs<wbr>Target?</a></span>
+        <span class="property-type"><a href="#eventtargetsqstarget">Event<wbr>Target<wbr>Sqs<wbr>Target?</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon SQS Queue. Documented below. A maximum of 1 are allowed.
 {{% /md %}}</dd>
@@ -1268,7 +1268,7 @@ Get an existing EventTarget resource's state with the given name, ID, and option
 {{< chooser language "javascript,typescript,python,go,csharp  " / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">pulumi.Input&lt;pulumi.ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cloudwatch/#EventTargetState">EventTargetState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cloudwatch/#EventTarget">EventTarget</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cloudwatch/#EventTargetState">EventTargetState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cloudwatch/#EventTarget">EventTarget</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1276,11 +1276,11 @@ Get an existing EventTarget resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEventTarget<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">pulumi.IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudwatch?tab=doc#EventTargetState">EventTargetState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudwatch?tab=doc#EventTarget">EventTarget</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEventTarget<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudwatch?tab=doc#EventTargetState">EventTargetState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudwatch?tab=doc#EventTarget">EventTarget</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cloudwatch.EventTarget.html">EventTarget</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Pulumi.Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cloudwatch.EventTargetState.html">EventTargetState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cloudwatch.EventTarget.html">EventTarget</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cloudwatch.EventTargetState.html">EventTargetState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1399,7 +1399,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Batch<wbr>Target</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventtargetbatchtarget">Pulumi.<wbr>Aws.<wbr>Cloud<wbr>Watch.<wbr>Inputs.<wbr>Event<wbr>Target<wbr>Batch<wbr>Target<wbr>Args?</a></span>
+        <span class="property-type"><a href="#eventtargetbatchtarget">Event<wbr>Target<wbr>Batch<wbr>Target<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon Batch Job. Documented below. A maximum of 1 are allowed.
 {{% /md %}}</dd>
@@ -1408,7 +1408,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ecs<wbr>Target</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventtargetecstarget">Pulumi.<wbr>Aws.<wbr>Cloud<wbr>Watch.<wbr>Inputs.<wbr>Event<wbr>Target<wbr>Ecs<wbr>Target<wbr>Args?</a></span>
+        <span class="property-type"><a href="#eventtargetecstarget">Event<wbr>Target<wbr>Ecs<wbr>Target<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke Amazon ECS Task. Documented below. A maximum of 1 are allowed.
 {{% /md %}}</dd>
@@ -1436,7 +1436,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>Input<wbr>Transformer</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventtargetinputtransformer">Pulumi.<wbr>Aws.<wbr>Cloud<wbr>Watch.<wbr>Inputs.<wbr>Event<wbr>Target<wbr>Input<wbr>Transformer<wbr>Args?</a></span>
+        <span class="property-type"><a href="#eventtargetinputtransformer">Event<wbr>Target<wbr>Input<wbr>Transformer<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are providing a custom input to a target based on certain event data.
 {{% /md %}}</dd>
@@ -1445,7 +1445,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>Kinesis<wbr>Target</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventtargetkinesistarget">Pulumi.<wbr>Aws.<wbr>Cloud<wbr>Watch.<wbr>Inputs.<wbr>Event<wbr>Target<wbr>Kinesis<wbr>Target<wbr>Args?</a></span>
+        <span class="property-type"><a href="#eventtargetkinesistarget">Event<wbr>Target<wbr>Kinesis<wbr>Target<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon Kinesis Stream. Documented below. A maximum of 1 are allowed.
 {{% /md %}}</dd>
@@ -1472,7 +1472,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>Run<wbr>Command<wbr>Targets</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventtargetruncommandtarget">List&lt;Pulumi.<wbr>Aws.<wbr>Cloud<wbr>Watch.<wbr>Inputs.<wbr>Event<wbr>Target<wbr>Run<wbr>Command<wbr>Target<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#eventtargetruncommandtarget">List&lt;Event<wbr>Target<wbr>Run<wbr>Command<wbr>Target<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke Amazon EC2 Run Command. Documented below. A maximum of 5 are allowed.
 {{% /md %}}</dd>
@@ -1481,7 +1481,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>Sqs<wbr>Target</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventtargetsqstarget">Pulumi.<wbr>Aws.<wbr>Cloud<wbr>Watch.<wbr>Inputs.<wbr>Event<wbr>Target<wbr>Sqs<wbr>Target<wbr>Args?</a></span>
+        <span class="property-type"><a href="#eventtargetsqstarget">Event<wbr>Target<wbr>Sqs<wbr>Target<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon SQS Queue. Documented below. A maximum of 1 are allowed.
 {{% /md %}}</dd>
@@ -2081,7 +2081,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>Network<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventtargetecstargetnetworkconfiguration">Pulumi.<wbr>Aws.<wbr>Cloud<wbr>Watch.<wbr>Inputs.<wbr>Event<wbr>Target<wbr>Ecs<wbr>Target<wbr>Network<wbr>Configuration<wbr>Args?</a></span>
+        <span class="property-type"><a href="#eventtargetecstargetnetworkconfiguration">Event<wbr>Target<wbr>Ecs<wbr>Target<wbr>Network<wbr>Configuration<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Use this if the ECS task uses the awsvpc network mode. This specifies the VPC subnets and security groups associated with the task, and whether a public IP address is to be used. Required if launch_type is FARGATE because the awsvpc mode is required for Fargate tasks.
 {{% /md %}}</dd>
@@ -2844,3 +2844,10 @@ that is used for extracting part of the matched event when passing it to the tar
 
 
 
+
+<h3>Package Details</h3>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd></dl>

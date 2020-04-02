@@ -34,7 +34,7 @@ Below are some of the key scenarios that Azure Front Door Service addresses:
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Frontdoor.Frontdoor.html">Frontdoor</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.FrontDoor.Inputs.FrontdoorArgs.html">FrontdoorArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Frontdoor.Frontdoor.html">Frontdoor</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.FrontDoor.FrontdoorArgs.html">FrontdoorArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -130,7 +130,7 @@ Below are some of the key scenarios that Azure Front Door Service addresses:
             title="Required">
         <span>Backend<wbr>Pool<wbr>Health<wbr>Probes</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorbackendpoolhealthprobe">List&lt;Pulumi.<wbr>Azure.<wbr>Front<wbr>Door.<wbr>Inputs.<wbr>Frontdoor<wbr>Backend<wbr>Pool<wbr>Health<wbr>Probe<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#frontdoorbackendpoolhealthprobe">List&lt;Frontdoor<wbr>Backend<wbr>Pool<wbr>Health<wbr>Probe<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `backend_pool_health_probe` block as defined below.
 {{% /md %}}</dd>
@@ -139,7 +139,7 @@ Below are some of the key scenarios that Azure Front Door Service addresses:
             title="Required">
         <span>Backend<wbr>Pool<wbr>Load<wbr>Balancings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorbackendpoolloadbalancing">List&lt;Pulumi.<wbr>Azure.<wbr>Front<wbr>Door.<wbr>Inputs.<wbr>Frontdoor<wbr>Backend<wbr>Pool<wbr>Load<wbr>Balancing<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#frontdoorbackendpoolloadbalancing">List&lt;Frontdoor<wbr>Backend<wbr>Pool<wbr>Load<wbr>Balancing<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `backend_pool_load_balancing` block as defined below.
 {{% /md %}}</dd>
@@ -148,7 +148,7 @@ Below are some of the key scenarios that Azure Front Door Service addresses:
             title="Required">
         <span>Backend<wbr>Pools</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorbackendpool">List&lt;Pulumi.<wbr>Azure.<wbr>Front<wbr>Door.<wbr>Inputs.<wbr>Frontdoor<wbr>Backend<wbr>Pool<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#frontdoorbackendpool">List&lt;Frontdoor<wbr>Backend<wbr>Pool<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `backend_pool` block as defined below.
 {{% /md %}}</dd>
@@ -175,7 +175,7 @@ Below are some of the key scenarios that Azure Front Door Service addresses:
             title="Required">
         <span>Frontend<wbr>Endpoints</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorfrontendendpoint">List&lt;Pulumi.<wbr>Azure.<wbr>Front<wbr>Door.<wbr>Inputs.<wbr>Frontdoor<wbr>Frontend<wbr>Endpoint<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#frontdoorfrontendendpoint">List&lt;Frontdoor<wbr>Frontend<wbr>Endpoint<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `frontend_endpoint` block as defined below.
 {{% /md %}}</dd>
@@ -219,7 +219,7 @@ Below are some of the key scenarios that Azure Front Door Service addresses:
             title="Required">
         <span>Routing<wbr>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorroutingrule">List&lt;Pulumi.<wbr>Azure.<wbr>Front<wbr>Door.<wbr>Inputs.<wbr>Frontdoor<wbr>Routing<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#frontdoorroutingrule">List&lt;Frontdoor<wbr>Routing<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `routing_rule` block as defined below.
 {{% /md %}}</dd>
@@ -598,7 +598,7 @@ The following output properties are available:
             title="">
         <span>Backend<wbr>Pool<wbr>Health<wbr>Probes</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorbackendpoolhealthprobe">List&lt;Pulumi.<wbr>Azure.<wbr>Front<wbr>Door.<wbr>Outputs.<wbr>Frontdoor<wbr>Backend<wbr>Pool<wbr>Health<wbr>Probe&gt;</a></span>
+        <span class="property-type"><a href="#frontdoorbackendpoolhealthprobe">List&lt;Frontdoor<wbr>Backend<wbr>Pool<wbr>Health<wbr>Probe&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `backend_pool_health_probe` block as defined below.
 {{% /md %}}</dd>
@@ -607,7 +607,7 @@ The following output properties are available:
             title="">
         <span>Backend<wbr>Pool<wbr>Load<wbr>Balancings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorbackendpoolloadbalancing">List&lt;Pulumi.<wbr>Azure.<wbr>Front<wbr>Door.<wbr>Outputs.<wbr>Frontdoor<wbr>Backend<wbr>Pool<wbr>Load<wbr>Balancing&gt;</a></span>
+        <span class="property-type"><a href="#frontdoorbackendpoolloadbalancing">List&lt;Frontdoor<wbr>Backend<wbr>Pool<wbr>Load<wbr>Balancing&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `backend_pool_load_balancing` block as defined below.
 {{% /md %}}</dd>
@@ -616,7 +616,7 @@ The following output properties are available:
             title="">
         <span>Backend<wbr>Pools</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorbackendpool">List&lt;Pulumi.<wbr>Azure.<wbr>Front<wbr>Door.<wbr>Outputs.<wbr>Frontdoor<wbr>Backend<wbr>Pool&gt;</a></span>
+        <span class="property-type"><a href="#frontdoorbackendpool">List&lt;Frontdoor<wbr>Backend<wbr>Pool&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `backend_pool` block as defined below.
 {{% /md %}}</dd>
@@ -652,7 +652,7 @@ The following output properties are available:
             title="">
         <span>Frontend<wbr>Endpoints</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorfrontendendpoint">List&lt;Pulumi.<wbr>Azure.<wbr>Front<wbr>Door.<wbr>Outputs.<wbr>Frontdoor<wbr>Frontend<wbr>Endpoint&gt;</a></span>
+        <span class="property-type"><a href="#frontdoorfrontendendpoint">List&lt;Frontdoor<wbr>Frontend<wbr>Endpoint&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `frontend_endpoint` block as defined below.
 {{% /md %}}</dd>
@@ -696,7 +696,7 @@ The following output properties are available:
             title="">
         <span>Routing<wbr>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorroutingrule">List&lt;Pulumi.<wbr>Azure.<wbr>Front<wbr>Door.<wbr>Outputs.<wbr>Frontdoor<wbr>Routing<wbr>Rule&gt;</a></span>
+        <span class="property-type"><a href="#frontdoorroutingrule">List&lt;Frontdoor<wbr>Routing<wbr>Rule&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `routing_rule` block as defined below.
 {{% /md %}}</dd>
@@ -1096,7 +1096,7 @@ Get an existing Frontdoor resource's state with the given name, ID, and optional
 {{< chooser language "javascript,typescript,python,go,csharp  " / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">pulumi.Input&lt;pulumi.ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/frontdoor/#FrontdoorState">FrontdoorState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/frontdoor/#Frontdoor">Frontdoor</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/frontdoor/#FrontdoorState">FrontdoorState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/frontdoor/#Frontdoor">Frontdoor</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1104,11 +1104,11 @@ Get an existing Frontdoor resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFrontdoor<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">pulumi.IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/frontdoor?tab=doc#FrontdoorState">FrontdoorState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/frontdoor?tab=doc#Frontdoor">Frontdoor</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFrontdoor<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/frontdoor?tab=doc#FrontdoorState">FrontdoorState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/frontdoor?tab=doc#Frontdoor">Frontdoor</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Frontdoor.Frontdoor.html">Frontdoor</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Pulumi.Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Frontdoor.FrontdoorState.html">FrontdoorState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Frontdoor.Frontdoor.html">Frontdoor</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Frontdoor.FrontdoorState.html">FrontdoorState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1218,7 +1218,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Backend<wbr>Pool<wbr>Health<wbr>Probes</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorbackendpoolhealthprobe">List&lt;Pulumi.<wbr>Azure.<wbr>Front<wbr>Door.<wbr>Inputs.<wbr>Frontdoor<wbr>Backend<wbr>Pool<wbr>Health<wbr>Probe<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#frontdoorbackendpoolhealthprobe">List&lt;Frontdoor<wbr>Backend<wbr>Pool<wbr>Health<wbr>Probe<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}A `backend_pool_health_probe` block as defined below.
 {{% /md %}}</dd>
@@ -1227,7 +1227,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Backend<wbr>Pool<wbr>Load<wbr>Balancings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorbackendpoolloadbalancing">List&lt;Pulumi.<wbr>Azure.<wbr>Front<wbr>Door.<wbr>Inputs.<wbr>Frontdoor<wbr>Backend<wbr>Pool<wbr>Load<wbr>Balancing<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#frontdoorbackendpoolloadbalancing">List&lt;Frontdoor<wbr>Backend<wbr>Pool<wbr>Load<wbr>Balancing<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}A `backend_pool_load_balancing` block as defined below.
 {{% /md %}}</dd>
@@ -1236,7 +1236,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Backend<wbr>Pools</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorbackendpool">List&lt;Pulumi.<wbr>Azure.<wbr>Front<wbr>Door.<wbr>Inputs.<wbr>Frontdoor<wbr>Backend<wbr>Pool<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#frontdoorbackendpool">List&lt;Frontdoor<wbr>Backend<wbr>Pool<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}A `backend_pool` block as defined below.
 {{% /md %}}</dd>
@@ -1272,7 +1272,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Frontend<wbr>Endpoints</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorfrontendendpoint">List&lt;Pulumi.<wbr>Azure.<wbr>Front<wbr>Door.<wbr>Inputs.<wbr>Frontdoor<wbr>Frontend<wbr>Endpoint<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#frontdoorfrontendendpoint">List&lt;Frontdoor<wbr>Frontend<wbr>Endpoint<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}A `frontend_endpoint` block as defined below.
 {{% /md %}}</dd>
@@ -1316,7 +1316,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Routing<wbr>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorroutingrule">List&lt;Pulumi.<wbr>Azure.<wbr>Front<wbr>Door.<wbr>Inputs.<wbr>Frontdoor<wbr>Routing<wbr>Rule<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#frontdoorroutingrule">List&lt;Frontdoor<wbr>Routing<wbr>Rule<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}A `routing_rule` block as defined below.
 {{% /md %}}</dd>
@@ -1732,7 +1732,7 @@ The following state arguments are supported:
             title="Required">
         <span>Backends</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorbackendpoolbackend">List&lt;Pulumi.<wbr>Azure.<wbr>Front<wbr>Door.<wbr>Inputs.<wbr>Frontdoor<wbr>Backend<wbr>Pool<wbr>Backend<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#frontdoorbackendpoolbackend">List&lt;Frontdoor<wbr>Backend<wbr>Pool<wbr>Backend<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `backend` block as defined below.
 {{% /md %}}</dd>
@@ -2768,7 +2768,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Custom<wbr>Https<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorfrontendendpointcustomhttpsconfiguration">Pulumi.<wbr>Azure.<wbr>Front<wbr>Door.<wbr>Inputs.<wbr>Frontdoor<wbr>Frontend<wbr>Endpoint<wbr>Custom<wbr>Https<wbr>Configuration<wbr>Args?</a></span>
+        <span class="property-type"><a href="#frontdoorfrontendendpointcustomhttpsconfiguration">Frontdoor<wbr>Frontend<wbr>Endpoint<wbr>Custom<wbr>Https<wbr>Configuration<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `custom_https_configuration` block as defined below.
 {{% /md %}}</dd>
@@ -3412,7 +3412,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Forwarding<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorroutingruleforwardingconfiguration">Pulumi.<wbr>Azure.<wbr>Front<wbr>Door.<wbr>Inputs.<wbr>Frontdoor<wbr>Routing<wbr>Rule<wbr>Forwarding<wbr>Configuration<wbr>Args?</a></span>
+        <span class="property-type"><a href="#frontdoorroutingruleforwardingconfiguration">Frontdoor<wbr>Routing<wbr>Rule<wbr>Forwarding<wbr>Configuration<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `forwarding_configuration` block as defined below.
 {{% /md %}}</dd>
@@ -3457,7 +3457,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Redirect<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorroutingruleredirectconfiguration">Pulumi.<wbr>Azure.<wbr>Front<wbr>Door.<wbr>Inputs.<wbr>Frontdoor<wbr>Routing<wbr>Rule<wbr>Redirect<wbr>Configuration<wbr>Args?</a></span>
+        <span class="property-type"><a href="#frontdoorroutingruleredirectconfiguration">Frontdoor<wbr>Routing<wbr>Rule<wbr>Redirect<wbr>Configuration<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `redirect_configuration` block as defined below.
 {{% /md %}}</dd>
@@ -4226,3 +4226,10 @@ The following state arguments are supported:
 
 
 
+
+<h3>Package Details</h3>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd></dl>

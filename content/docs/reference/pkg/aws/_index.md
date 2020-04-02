@@ -154,3 +154,11 @@ A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resou
     <li><a href="getregion"><span class="symbol datasource"></span>GetRegion</a></li>
 </ul>
 
+<h3>Package Details</h3>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd>https://github.com/pulumi/pulumi-aws</dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd>
+</dl>
+

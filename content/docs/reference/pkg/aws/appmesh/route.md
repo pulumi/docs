@@ -115,7 +115,7 @@ const serviceb = new aws.appmesh.Route("serviceb", {
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Appmesh.Route.html">Route</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.RouteArgs.html">RouteArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Appmesh.Route.html">Route</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.RouteArgs.html">RouteArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -229,7 +229,7 @@ const serviceb = new aws.appmesh.Route("serviceb", {
             title="Required">
         <span>Spec</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespec">Pulumi.<wbr>Aws.<wbr>App<wbr>Mesh.<wbr>Inputs.<wbr>Route<wbr>Spec<wbr>Args</a></span>
+        <span class="property-type"><a href="#routespec">Route<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The route specification to apply.
 {{% /md %}}</dd>
@@ -476,7 +476,7 @@ The following output properties are available:
             title="">
         <span>Spec</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespec">Pulumi.<wbr>Aws.<wbr>App<wbr>Mesh.<wbr>Outputs.<wbr>Route<wbr>Spec</a></span>
+        <span class="property-type"><a href="#routespec">Route<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The route specification to apply.
 {{% /md %}}</dd>
@@ -753,7 +753,7 @@ Get an existing Route resource's state with the given name, ID, and optional ext
 {{< chooser language "javascript,typescript,python,go,csharp  " / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">pulumi.Input&lt;pulumi.ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appmesh/#RouteState">RouteState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appmesh/#Route">Route</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appmesh/#RouteState">RouteState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appmesh/#Route">Route</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -761,11 +761,11 @@ Get an existing Route resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRoute<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">pulumi.IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appmesh?tab=doc#RouteState">RouteState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appmesh?tab=doc#Route">Route</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRoute<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appmesh?tab=doc#RouteState">RouteState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appmesh?tab=doc#Route">Route</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Appmesh.Route.html">Route</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Pulumi.Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Appmesh.RouteState.html">RouteState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Appmesh.Route.html">Route</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Appmesh.RouteState.html">RouteState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -920,7 +920,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Spec</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespec">Pulumi.<wbr>Aws.<wbr>App<wbr>Mesh.<wbr>Inputs.<wbr>Route<wbr>Spec<wbr>Args?</a></span>
+        <span class="property-type"><a href="#routespec">Route<wbr>Spec<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}The route specification to apply.
 {{% /md %}}</dd>
@@ -1213,7 +1213,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Http<wbr>Route</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttproute">Pulumi.<wbr>Aws.<wbr>App<wbr>Mesh.<wbr>Inputs.<wbr>Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Args?</a></span>
+        <span class="property-type"><a href="#routespechttproute">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}The HTTP routing information for the route.
 {{% /md %}}</dd>
@@ -1232,7 +1232,7 @@ Routes are matched based on the specified value, where `0` is the highest priori
             title="Optional">
         <span>Tcp<wbr>Route</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespectcproute">Pulumi.<wbr>Aws.<wbr>App<wbr>Mesh.<wbr>Inputs.<wbr>Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Args?</a></span>
+        <span class="property-type"><a href="#routespectcproute">Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}The TCP routing information for the route.
 {{% /md %}}</dd>
@@ -1368,7 +1368,7 @@ Routes are matched based on the specified value, where `0` is the highest priori
             title="Required">
         <span>Action</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttprouteaction">Pulumi.<wbr>Aws.<wbr>App<wbr>Mesh.<wbr>Inputs.<wbr>Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#routespechttprouteaction">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The action to take if a match is determined.
 {{% /md %}}</dd>
@@ -1377,7 +1377,7 @@ Routes are matched based on the specified value, where `0` is the highest priori
             title="Required">
         <span>Match</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttproutematch">Pulumi.<wbr>Aws.<wbr>App<wbr>Mesh.<wbr>Inputs.<wbr>Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Args</a></span>
+        <span class="property-type"><a href="#routespechttproutematch">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The criteria for determining an HTTP request match.
 {{% /md %}}</dd>
@@ -1483,7 +1483,7 @@ Routes are matched based on the specified value, where `0` is the highest priori
             title="Required">
         <span>Weighted<wbr>Targets</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttprouteactionweightedtarget">List&lt;Pulumi.<wbr>Aws.<wbr>App<wbr>Mesh.<wbr>Inputs.<wbr>Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Action<wbr>Weighted<wbr>Target<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#routespechttprouteactionweightedtarget">List&lt;Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Action<wbr>Weighted<wbr>Target<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The targets that traffic is routed to when a request matches the route.
 You can specify one or more targets and their relative weights with which to distribute traffic.
@@ -1681,7 +1681,7 @@ You can specify one or more targets and their relative weights with which to dis
             title="Optional">
         <span>Headers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttproutematchheader">List&lt;Pulumi.<wbr>Aws.<wbr>App<wbr>Mesh.<wbr>Inputs.<wbr>Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#routespechttproutematchheader">List&lt;Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}The client request headers to match on.
 {{% /md %}}</dd>
@@ -1885,7 +1885,7 @@ This parameter must always start with /, which by itself matches all requests to
             title="Optional">
         <span>Match</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttproutematchheadermatch">Pulumi.<wbr>Aws.<wbr>App<wbr>Mesh.<wbr>Inputs.<wbr>Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Match<wbr>Args?</a></span>
+        <span class="property-type"><a href="#routespechttproutematchheadermatch">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Match<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}The method and value to match the header value sent with a request. Specify one match method.
 {{% /md %}}</dd>
@@ -2047,7 +2047,7 @@ This parameter must always start with /, which by itself matches all requests to
             title="Optional">
         <span>Range</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttproutematchheadermatchrange">Pulumi.<wbr>Aws.<wbr>App<wbr>Mesh.<wbr>Inputs.<wbr>Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Match<wbr>Range<wbr>Args?</a></span>
+        <span class="property-type"><a href="#routespechttproutematchheadermatchrange">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Match<wbr>Range<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2369,7 +2369,7 @@ This parameter must always start with /, which by itself matches all requests to
             title="Required">
         <span>Action</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespectcprouteaction">Pulumi.<wbr>Aws.<wbr>App<wbr>Mesh.<wbr>Inputs.<wbr>Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#routespectcprouteaction">Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The action to take if a match is determined.
 {{% /md %}}</dd>
@@ -2448,7 +2448,7 @@ This parameter must always start with /, which by itself matches all requests to
             title="Required">
         <span>Weighted<wbr>Targets</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespectcprouteactionweightedtarget">List&lt;Pulumi.<wbr>Aws.<wbr>App<wbr>Mesh.<wbr>Inputs.<wbr>Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Action<wbr>Weighted<wbr>Target<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#routespectcprouteactionweightedtarget">List&lt;Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Action<wbr>Weighted<wbr>Target<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The targets that traffic is routed to when a request matches the route.
 You can specify one or more targets and their relative weights with which to distribute traffic.
@@ -2629,3 +2629,10 @@ You can specify one or more targets and their relative weights with which to dis
 
 
 
+
+<h3>Package Details</h3>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd></dl>

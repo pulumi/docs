@@ -30,7 +30,7 @@ construction to achieve fine-grained programmatic control over provider settings
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure..Provider.html">Provider</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Pulumi.Inputs.AzureArgs.html">ProviderArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure..Provider.html">Provider</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Pulumi.AzureArgs.html">ProviderArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -200,7 +200,7 @@ public.
             title="Optional">
         <span>Features</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerfeatures">Pulumi.<wbr>Azure.<wbr>Inputs.<wbr>Provider<wbr>Features<wbr>Args?</a></span>
+        <span class="property-type"><a href="#providerfeatures">Provider<wbr>Features<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -804,7 +804,7 @@ registered?
             title="Optional">
         <span>Key<wbr>Vault</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerfeatureskeyvault">Pulumi.<wbr>Azure.<wbr>Inputs.<wbr>Provider<wbr>Features<wbr>Key<wbr>Vault<wbr>Args?</a></span>
+        <span class="property-type"><a href="#providerfeatureskeyvault">Provider<wbr>Features<wbr>Key<wbr>Vault<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -812,7 +812,7 @@ registered?
             title="Optional">
         <span>Virtual<wbr>Machine</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerfeaturesvirtualmachine">Pulumi.<wbr>Azure.<wbr>Inputs.<wbr>Provider<wbr>Features<wbr>Virtual<wbr>Machine<wbr>Args?</a></span>
+        <span class="property-type"><a href="#providerfeaturesvirtualmachine">Provider<wbr>Features<wbr>Virtual<wbr>Machine<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -820,7 +820,7 @@ registered?
             title="Optional">
         <span>Virtual<wbr>Machine<wbr>Scale<wbr>Set</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerfeaturesvirtualmachinescaleset">Pulumi.<wbr>Azure.<wbr>Inputs.<wbr>Provider<wbr>Features<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Args?</a></span>
+        <span class="property-type"><a href="#providerfeaturesvirtualmachinescaleset">Provider<wbr>Features<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1183,3 +1183,10 @@ registered?
 
 
 
+
+<h3>Package Details</h3>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd></dl>

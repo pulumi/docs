@@ -14,7 +14,7 @@ import * as aws from "@pulumi/aws";
 
 const example = aws_directory_service_directory_main.id.apply(id => aws.directoryservice.getDirectory({
     directoryId: id,
-}));
+}, { async: true }));
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/directory_service_directory.html.markdown.
@@ -29,7 +29,7 @@ const example = aws_directory_service_directory_main.id.apply(id => aws.director
 
 
 {{% choosable language typescript %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDirectory<span class="p">(</span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/directoryservice/#GetDirectoryArgs">GetDirectoryArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">pulumi.InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/directoryservice/#GetDirectoryResult">GetDirectoryResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDirectory<span class="p">(</span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/directoryservice/#GetDirectoryArgs">GetDirectoryArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/directoryservice/#GetDirectoryResult">GetDirectoryResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -39,13 +39,13 @@ const example = aws_directory_service_directory_main.id.apply(id => aws.director
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDirectory<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/directoryservice?tab=doc#LookupDirectoryArgs">LookupDirectoryArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/directoryservice?tab=doc#LookupDirectoryResult">LookupDirectoryResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDirectory<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/directoryservice?tab=doc#LookupDirectoryArgs">LookupDirectoryArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/directoryservice?tab=doc#LookupDirectoryResult">LookupDirectoryResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetDirectory </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Directoryservice.GetDirectoryResult.html">GetDirectoryResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DirectoryService.Inputs.GetDirectoryArgs.html">GetDirectoryArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">Pulumi.InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Directoryservice.GetDirectoryResult.html">GetDirectoryResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DirectoryService.GetDirectoryArgs.html">GetDirectoryArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -193,7 +193,7 @@ The following output properties are available:
             title="">
         <span>Connect<wbr>Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdirectoryconnectsetting">List&lt;Pulumi.<wbr>Aws.<wbr>Directory<wbr>Service.<wbr>Outputs.<wbr>Get<wbr>Directory<wbr>Connect<wbr>Setting&gt;</a></span>
+        <span class="property-type"><a href="#getdirectoryconnectsetting">List&lt;Get<wbr>Directory<wbr>Connect<wbr>Setting&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -308,7 +308,7 @@ The following output properties are available:
             title="">
         <span>Vpc<wbr>Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdirectoryvpcsetting">List&lt;Pulumi.<wbr>Aws.<wbr>Directory<wbr>Service.<wbr>Outputs.<wbr>Get<wbr>Directory<wbr>Vpc<wbr>Setting&gt;</a></span>
+        <span class="property-type"><a href="#getdirectoryvpcsetting">List&lt;Get<wbr>Directory<wbr>Vpc<wbr>Setting&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

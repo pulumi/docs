@@ -12,9 +12,9 @@ Provides information about a DynamoDB table.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const tableName = aws.dynamodb.getTable({
+const tableName = pulumi.output(aws.dynamodb.getTable({
     name: "tableName",
-});
+}, { async: true }));
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/dynamodb_table.html.markdown.
@@ -29,7 +29,7 @@ const tableName = aws.dynamodb.getTable({
 
 
 {{% choosable language typescript %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getTable<span class="p">(</span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/dynamodb/#GetTableArgs">GetTableArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">pulumi.InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/dynamodb/#GetTableResult">GetTableResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getTable<span class="p">(</span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/dynamodb/#GetTableArgs">GetTableArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/dynamodb/#GetTableResult">GetTableResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -39,13 +39,13 @@ const tableName = aws.dynamodb.getTable({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupTable<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/dynamodb?tab=doc#LookupTableArgs">LookupTableArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/dynamodb?tab=doc#LookupTableResult">LookupTableResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupTable<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/dynamodb?tab=doc#LookupTableArgs">LookupTableArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/dynamodb?tab=doc#LookupTableResult">LookupTableResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetTable </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Dynamodb.GetTableResult.html">GetTableResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DynamoDB.Inputs.GetTableArgs.html">GetTableArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">Pulumi.InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Dynamodb.GetTableResult.html">GetTableResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DynamoDB.GetTableArgs.html">GetTableArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -71,7 +71,7 @@ The following arguments are supported:
             title="Optional">
         <span>Server<wbr>Side<wbr>Encryption</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gettableserversideencryption">Pulumi.<wbr>Aws.<wbr>Dynamo<wbr>DB.<wbr>Inputs.<wbr>Get<wbr>Table<wbr>Server<wbr>Side<wbr>Encryption<wbr>Args?</a></span>
+        <span class="property-type"><a href="#gettableserversideencryption">Get<wbr>Table<wbr>Server<wbr>Side<wbr>Encryption<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -211,7 +211,7 @@ The following output properties are available:
             title="">
         <span>Attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gettableattribute">List&lt;Pulumi.<wbr>Aws.<wbr>Dynamo<wbr>DB.<wbr>Outputs.<wbr>Get<wbr>Table<wbr>Attribute&gt;</a></span>
+        <span class="property-type"><a href="#gettableattribute">List&lt;Get<wbr>Table<wbr>Attribute&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -227,7 +227,7 @@ The following output properties are available:
             title="">
         <span>Global<wbr>Secondary<wbr>Indexes</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gettableglobalsecondaryindex">List&lt;Pulumi.<wbr>Aws.<wbr>Dynamo<wbr>DB.<wbr>Outputs.<wbr>Get<wbr>Table<wbr>Global<wbr>Secondary<wbr>Index&gt;</a></span>
+        <span class="property-type"><a href="#gettableglobalsecondaryindex">List&lt;Get<wbr>Table<wbr>Global<wbr>Secondary<wbr>Index&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -252,7 +252,7 @@ The following output properties are available:
             title="">
         <span>Local<wbr>Secondary<wbr>Indexes</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gettablelocalsecondaryindex">List&lt;Pulumi.<wbr>Aws.<wbr>Dynamo<wbr>DB.<wbr>Outputs.<wbr>Get<wbr>Table<wbr>Local<wbr>Secondary<wbr>Index&gt;</a></span>
+        <span class="property-type"><a href="#gettablelocalsecondaryindex">List&lt;Get<wbr>Table<wbr>Local<wbr>Secondary<wbr>Index&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -268,7 +268,7 @@ The following output properties are available:
             title="">
         <span>Point<wbr>In<wbr>Time<wbr>Recovery</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gettablepointintimerecovery">Pulumi.<wbr>Aws.<wbr>Dynamo<wbr>DB.<wbr>Outputs.<wbr>Get<wbr>Table<wbr>Point<wbr>In<wbr>Time<wbr>Recovery</a></span>
+        <span class="property-type"><a href="#gettablepointintimerecovery">Get<wbr>Table<wbr>Point<wbr>In<wbr>Time<wbr>Recovery</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -292,7 +292,7 @@ The following output properties are available:
             title="">
         <span>Server<wbr>Side<wbr>Encryption</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gettableserversideencryption">Pulumi.<wbr>Aws.<wbr>Dynamo<wbr>DB.<wbr>Outputs.<wbr>Get<wbr>Table<wbr>Server<wbr>Side<wbr>Encryption</a></span>
+        <span class="property-type"><a href="#gettableserversideencryption">Get<wbr>Table<wbr>Server<wbr>Side<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -340,7 +340,7 @@ The following output properties are available:
             title="">
         <span>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gettablettl">Pulumi.<wbr>Aws.<wbr>Dynamo<wbr>DB.<wbr>Outputs.<wbr>Get<wbr>Table<wbr>Ttl</a></span>
+        <span class="property-type"><a href="#gettablettl">Get<wbr>Table<wbr>Ttl</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

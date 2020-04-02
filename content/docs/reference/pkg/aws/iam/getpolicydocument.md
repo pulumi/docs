@@ -14,7 +14,7 @@ such as the `aws.iam.Policy` resource.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const examplePolicyDocument = aws.iam.getPolicyDocument({
+const examplePolicyDocument = pulumi.output(aws.iam.getPolicyDocument({
     statements: [
         {
             actions: [
@@ -45,7 +45,7 @@ const examplePolicyDocument = aws.iam.getPolicyDocument({
             ],
         },
     ],
-});
+}, { async: true }));
 const examplePolicy = new aws.iam.Policy("example", {
     path: "/",
     policy: examplePolicyDocument.json,
@@ -82,7 +82,7 @@ Showing how you can use this as an assume role policy as well as showing how you
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const eventStreamBucketRoleAssumeRolePolicy = aws.iam.getPolicyDocument({
+const eventStreamBucketRoleAssumeRolePolicy = pulumi.output(aws.iam.getPolicyDocument({
     statements: [{
         actions: ["sts:AssumeRole"],
         principals: [
@@ -96,7 +96,7 @@ const eventStreamBucketRoleAssumeRolePolicy = aws.iam.getPolicyDocument({
             },
         ],
     }],
-});
+}, { async: true }));
 ```
 
 ## Example with Source and Override
@@ -107,7 +107,7 @@ Showing how you can use `source_json` and `override_json`
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const source = aws.iam.getPolicyDocument({
+const source = pulumi.output(aws.iam.getPolicyDocument({
     statements: [
         {
             actions: ["ec2:*"],
@@ -119,8 +119,8 @@ const source = aws.iam.getPolicyDocument({
             sid: "SidToOverwrite",
         },
     ],
-});
-const sourceJsonExample = aws.iam.getPolicyDocument({
+}, { async: true }));
+const sourceJsonExample = source.apply(source => aws.iam.getPolicyDocument({
     sourceJson: source.json,
     statements: [{
         actions: ["s3:*"],
@@ -130,15 +130,15 @@ const sourceJsonExample = aws.iam.getPolicyDocument({
         ],
         sid: "SidToOverwrite",
     }],
-});
-const override = aws.iam.getPolicyDocument({
+}, { async: true }));
+const override = pulumi.output(aws.iam.getPolicyDocument({
     statements: [{
         actions: ["s3:*"],
         resources: ["*"],
         sid: "SidToOverwrite",
     }],
-});
-const overrideJsonExample = aws.iam.getPolicyDocument({
+}, { async: true }));
+const overrideJsonExample = override.apply(override => aws.iam.getPolicyDocument({
     overrideJson: override.json,
     statements: [
         {
@@ -154,7 +154,7 @@ const overrideJsonExample = aws.iam.getPolicyDocument({
             sid: "SidToOverwrite",
         },
     ],
-});
+}, { async: true }));
 ```
 
 `data.aws_iam_policy_document.source_json_example.json` will evaluate to:
@@ -179,24 +179,24 @@ Use without a `statement`:
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const source = aws.iam.getPolicyDocument({
+const source = pulumi.output(aws.iam.getPolicyDocument({
     statements: [{
         actions: ["ec2:DescribeAccountAttributes"],
         resources: ["*"],
         sid: "OverridePlaceholder",
     }],
-});
-const override = aws.iam.getPolicyDocument({
+}, { async: true }));
+const override = pulumi.output(aws.iam.getPolicyDocument({
     statements: [{
         actions: ["s3:GetObject"],
         resources: ["*"],
         sid: "OverridePlaceholder",
     }],
-});
-const politik = aws.iam.getPolicyDocument({
+}, { async: true }));
+const politik = pulumi.all([override, source]).apply(([override, source]) => aws.iam.getPolicyDocument({
     overrideJson: override.json,
     sourceJson: source.json,
-});
+}, { async: true }));
 ```
 
 `data.aws_iam_policy_document.politik.json` will evaluate to:
@@ -217,7 +217,7 @@ import * as pulumi from "@pulumi/pulumi";
 
 
 {{% choosable language typescript %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPolicyDocument<span class="p">(</span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/iam/#GetPolicyDocumentArgs">GetPolicyDocumentArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">pulumi.InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/iam/#GetPolicyDocumentResult">GetPolicyDocumentResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPolicyDocument<span class="p">(</span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/iam/#GetPolicyDocumentArgs">GetPolicyDocumentArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/iam/#GetPolicyDocumentResult">GetPolicyDocumentResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -227,13 +227,13 @@ import * as pulumi from "@pulumi/pulumi";
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPolicyDocument<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/iam?tab=doc#LookupPolicyDocumentArgs">LookupPolicyDocumentArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/iam?tab=doc#LookupPolicyDocumentResult">LookupPolicyDocumentResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPolicyDocument<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/iam?tab=doc#LookupPolicyDocumentArgs">LookupPolicyDocumentArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/iam?tab=doc#LookupPolicyDocumentResult">LookupPolicyDocumentResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetPolicyDocument </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iam.GetPolicyDocumentResult.html">GetPolicyDocumentResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iam.Inputs.GetPolicyDocumentArgs.html">GetPolicyDocumentArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">Pulumi.InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iam.GetPolicyDocumentResult.html">GetPolicyDocumentResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iam.GetPolicyDocumentArgs.html">GetPolicyDocumentArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 

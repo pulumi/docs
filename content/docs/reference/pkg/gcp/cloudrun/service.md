@@ -25,92 +25,6 @@ To get more information about Service, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/run/docs/)
 
-## Example Usage - Cloud Run Service Basic
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const defaultService = new gcp.cloudrun.Service("default", {
-    location: "us-central1",
-    template: {
-        spec: {
-            containers: [{
-                image: "gcr.io/cloudrun/hello",
-            }],
-        },
-    },
-    traffics: [{
-        latestRevision: true,
-        percent: 100,
-    }],
-});
-```
-## Example Usage - Cloud Run Service Sql
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const instance = new gcp.sql.DatabaseInstance("instance", {
-    region: "us-east1",
-    settings: {
-        tier: "db-f1-micro",
-    },
-});
-const defaultService = new gcp.cloudrun.Service("default", {
-    location: "us-central1",
-    template: {
-        metadata: {
-            annotations: {
-                "autoscaling.knative.dev/maxScale": "1000",
-                "run.googleapis.com/client-name": "cloud-console",
-                "run.googleapis.com/cloudsql-instances": pulumi.interpolate`my-project-name:us-central1:${instance.name}`,
-            },
-        },
-        spec: {
-            containers: [{
-                image: "gcr.io/cloudrun/hello",
-            }],
-        },
-    },
-});
-```
-## Example Usage - Cloud Run Service Multiple Environment Variables
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const defaultService = new gcp.cloudrun.Service("default", {
-    location: "us-central1",
-    template: {
-        spec: {
-            containers: [{
-                envs: [
-                    {
-                        name: "SOURCE",
-                        value: "remote",
-                    },
-                    {
-                        name: "TARGET",
-                        value: "home",
-                    },
-                ],
-                image: "gcr.io/cloudrun/hello",
-            }],
-        },
-    },
-    traffics: [{
-        latestRevision: true,
-        percent: 100,
-    }],
-});
-```
-
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloud_run_service.html.markdown.
 
 
@@ -132,7 +46,7 @@ const defaultService = new gcp.cloudrun.Service("default", {
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Cloudrun.Service.html">Service</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Inputs.ServiceArgs.html">ServiceArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Cloudrun.Service.html">Service</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.ServiceArgs.html">ServiceArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -237,7 +151,7 @@ const defaultService = new gcp.cloudrun.Service("default", {
             title="Optional">
         <span>Metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemetadata">Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Run.<wbr>Inputs.<wbr>Service<wbr>Metadata<wbr>Args?</a></span>
+        <span class="property-type"><a href="#servicemetadata">Service<wbr>Metadata<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Metadata associated with this Service, including name, namespace, labels, and annotations.
 {{% /md %}}</dd>
@@ -267,7 +181,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Template</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplate">Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Run.<wbr>Inputs.<wbr>Service<wbr>Template<wbr>Args?</a></span>
+        <span class="property-type"><a href="#servicetemplate">Service<wbr>Template<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}template holds the latest specification for the Revision to be stamped out. The template references the container image,
 and may also include labels and annotations that should be attached to the Revision. To correlate a Revision, and/or to
@@ -282,7 +196,7 @@ source.
             title="Optional">
         <span>Traffics</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetraffic">List&lt;Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Run.<wbr>Inputs.<wbr>Service<wbr>Traffic<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#servicetraffic">List&lt;Service<wbr>Traffic<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}Traffic specifies how to distribute traffic over a collection of Knative Revisions and Configurations
 {{% /md %}}</dd>
@@ -529,7 +443,7 @@ The following output properties are available:
             title="">
         <span>Metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemetadata">Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Run.<wbr>Outputs.<wbr>Service<wbr>Metadata</a></span>
+        <span class="property-type"><a href="#servicemetadata">Service<wbr>Metadata</a></span>
     </dt>
     <dd>{{% md %}}Metadata associated with this Service, including name, namespace, labels, and annotations.
 {{% /md %}}</dd>
@@ -559,7 +473,7 @@ If it is not provided, the provider project is used.
             title="">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicestatus">Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Run.<wbr>Outputs.<wbr>Service<wbr>Status</a></span>
+        <span class="property-type"><a href="#servicestatus">Service<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The current status of the Service.
 {{% /md %}}</dd>
@@ -568,7 +482,7 @@ If it is not provided, the provider project is used.
             title="">
         <span>Template</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplate">Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Run.<wbr>Outputs.<wbr>Service<wbr>Template?</a></span>
+        <span class="property-type"><a href="#servicetemplate">Service<wbr>Template?</a></span>
     </dt>
     <dd>{{% md %}}template holds the latest specification for the Revision to be stamped out. The template references the container image,
 and may also include labels and annotations that should be attached to the Revision. To correlate a Revision, and/or to
@@ -583,7 +497,7 @@ source.
             title="">
         <span>Traffics</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetraffic">List&lt;Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Run.<wbr>Outputs.<wbr>Service<wbr>Traffic&gt;</a></span>
+        <span class="property-type"><a href="#servicetraffic">List&lt;Service<wbr>Traffic&gt;</a></span>
     </dt>
     <dd>{{% md %}}Traffic specifies how to distribute traffic over a collection of Knative Revisions and Configurations
 {{% /md %}}</dd>
@@ -842,7 +756,7 @@ Get an existing Service resource's state with the given name, ID, and optional e
 {{< chooser language "javascript,typescript,python,go,csharp  " / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">pulumi.Input&lt;pulumi.ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudrun/#ServiceState">ServiceState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudrun/#Service">Service</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudrun/#ServiceState">ServiceState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudrun/#Service">Service</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -850,11 +764,11 @@ Get an existing Service resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetService<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">pulumi.IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/cloudrun?tab=doc#ServiceState">ServiceState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/cloudrun?tab=doc#Service">Service</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetService<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/cloudrun?tab=doc#ServiceState">ServiceState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/cloudrun?tab=doc#Service">Service</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Cloudrun.Service.html">Service</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Pulumi.Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Cloudrun.ServiceState.html">ServiceState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Cloudrun.Service.html">Service</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Cloudrun.ServiceState.html">ServiceState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -973,7 +887,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemetadata">Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Run.<wbr>Inputs.<wbr>Service<wbr>Metadata<wbr>Args?</a></span>
+        <span class="property-type"><a href="#servicemetadata">Service<wbr>Metadata<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Metadata associated with this Service, including name, namespace, labels, and annotations.
 {{% /md %}}</dd>
@@ -1003,7 +917,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicestatus">Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Run.<wbr>Inputs.<wbr>Service<wbr>Status<wbr>Args?</a></span>
+        <span class="property-type"><a href="#servicestatus">Service<wbr>Status<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}The current status of the Service.
 {{% /md %}}</dd>
@@ -1012,7 +926,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Template</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplate">Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Run.<wbr>Inputs.<wbr>Service<wbr>Template<wbr>Args?</a></span>
+        <span class="property-type"><a href="#servicetemplate">Service<wbr>Template<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}template holds the latest specification for the Revision to be stamped out. The template references the container image,
 and may also include labels and annotations that should be attached to the Revision. To correlate a Revision, and/or to
@@ -1027,7 +941,7 @@ source.
             title="Optional">
         <span>Traffics</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetraffic">List&lt;Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Run.<wbr>Inputs.<wbr>Service<wbr>Traffic<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#servicetraffic">List&lt;Service<wbr>Traffic<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}Traffic specifies how to distribute traffic over a collection of Knative Revisions and Configurations
 {{% /md %}}</dd>
@@ -1569,7 +1483,7 @@ source.
             title="Optional">
         <span>Conditions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicestatuscondition">List&lt;Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Run.<wbr>Inputs.<wbr>Service<wbr>Status<wbr>Condition<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#servicestatuscondition">List&lt;Service<wbr>Status<wbr>Condition<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1943,7 +1857,7 @@ source.
             title="Optional">
         <span>Metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatemetadata">Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Run.<wbr>Inputs.<wbr>Service<wbr>Template<wbr>Metadata<wbr>Args?</a></span>
+        <span class="property-type"><a href="#servicetemplatemetadata">Service<wbr>Template<wbr>Metadata<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1951,7 +1865,7 @@ source.
             title="Optional">
         <span>Spec</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespec">Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Run.<wbr>Inputs.<wbr>Service<wbr>Template<wbr>Spec<wbr>Args?</a></span>
+        <span class="property-type"><a href="#servicetemplatespec">Service<wbr>Template<wbr>Spec<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2357,7 +2271,7 @@ source.
             title="Optional">
         <span>Containers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainer">List&lt;Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Run.<wbr>Inputs.<wbr>Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainer">List&lt;Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2536,7 +2450,7 @@ source.
             title="Optional, Deprecated">
         <span>Env<wbr>Froms</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenvfrom">List&lt;Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Run.<wbr>Inputs.<wbr>Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvfrom">List&lt;Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Not supported by Cloud Run fully managed{{% /md %}}</p></dd>
 
@@ -2544,7 +2458,7 @@ source.
             title="Optional">
         <span>Envs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenv">List&lt;Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Run.<wbr>Inputs.<wbr>Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenv">List&lt;Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2560,7 +2474,7 @@ source.
             title="Optional">
         <span>Resources</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerresources">Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Run.<wbr>Inputs.<wbr>Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Resources<wbr>Args?</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerresources">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Resources<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2894,7 +2808,7 @@ source.
             title="Optional">
         <span>Config<wbr>Map<wbr>Ref</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromconfigmapref">Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Run.<wbr>Inputs.<wbr>Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Config<wbr>Map<wbr>Ref<wbr>Args?</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromconfigmapref">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Config<wbr>Map<wbr>Ref<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2910,7 +2824,7 @@ source.
             title="Optional">
         <span>Secret<wbr>Ref</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromsecretref">Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Run.<wbr>Inputs.<wbr>Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Secret<wbr>Ref<wbr>Args?</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromsecretref">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Secret<wbr>Ref<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3033,7 +2947,7 @@ source.
             title="Optional">
         <span>Local<wbr>Object<wbr>Reference</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromconfigmapreflocalobjectreference">Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Run.<wbr>Inputs.<wbr>Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Config<wbr>Map<wbr>Ref<wbr>Local<wbr>Object<wbr>Reference<wbr>Args?</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromconfigmapreflocalobjectreference">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Config<wbr>Map<wbr>Ref<wbr>Local<wbr>Object<wbr>Reference<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3215,7 +3129,7 @@ source.
             title="Optional">
         <span>Local<wbr>Object<wbr>Reference</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromsecretreflocalobjectreference">Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Run.<wbr>Inputs.<wbr>Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Secret<wbr>Ref<wbr>Local<wbr>Object<wbr>Reference<wbr>Args?</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromsecretreflocalobjectreference">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Secret<wbr>Ref<wbr>Local<wbr>Object<wbr>Reference<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3626,3 +3540,10 @@ source.
 
 
 
+
+<h3>Package Details</h3>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd></dl>

@@ -11,6 +11,7 @@ block_external_search_index: true
     <li><a href="address"><span class="symbol resource"></span>Address</a></li>
     <li><a href="attacheddisk"><span class="symbol resource"></span>AttachedDisk</a></li>
     <li><a href="autoscalar"><span class="symbol resource"></span>Autoscalar</a></li>
+    <li><a href="autoscaler"><span class="symbol resource"></span>Autoscaler</a></li>
     <li><a href="backendbucket"><span class="symbol resource"></span>BackendBucket</a></li>
     <li><a href="backendbucketsignedurlkey"><span class="symbol resource"></span>BackendBucketSignedUrlKey</a></li>
     <li><a href="backendservice"><span class="symbol resource"></span>BackendService</a></li>
@@ -31,6 +32,7 @@ block_external_search_index: true
     <li><a href="instancefromtemplate"><span class="symbol resource"></span>InstanceFromTemplate</a></li>
     <li><a href="instancegroup"><span class="symbol resource"></span>InstanceGroup</a></li>
     <li><a href="instancegroupmanager"><span class="symbol resource"></span>InstanceGroupManager</a></li>
+    <li><a href="instancegroupnamedport"><span class="symbol resource"></span>InstanceGroupNamedPort</a></li>
     <li><a href="instanceiambinding"><span class="symbol resource"></span>InstanceIAMBinding</a></li>
     <li><a href="instanceiammember"><span class="symbol resource"></span>InstanceIAMMember</a></li>
     <li><a href="instanceiampolicy"><span class="symbol resource"></span>InstanceIAMPolicy</a></li>
@@ -115,4 +117,12 @@ block_external_search_index: true
     <li><a href="getvpngateway"><span class="symbol datasource"></span>GetVPNGateway</a></li>
     <li><a href="getzones"><span class="symbol datasource"></span>GetZones</a></li>
 </ul>
+
+<h3>Package Details</h3>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd>https://github.com/pulumi/pulumi-gcp</dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd>
+</dl>
 

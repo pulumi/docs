@@ -29,7 +29,7 @@ Manages an App Service (within an App Service Plan).
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Appservice.AppService.html">AppService</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppService.Inputs.AppServiceArgs.html">AppServiceArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Appservice.AppService.html">AppService</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppService.AppServiceArgs.html">AppServiceArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -143,7 +143,7 @@ Manages an App Service (within an App Service Plan).
             title="Optional">
         <span>Auth<wbr>Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appserviceauthsettings">Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>App<wbr>Service<wbr>Auth<wbr>Settings<wbr>Args?</a></span>
+        <span class="property-type"><a href="#appserviceauthsettings">App<wbr>Service<wbr>Auth<wbr>Settings<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `auth_settings` block as defined below.
 {{% /md %}}</dd>
@@ -152,7 +152,7 @@ Manages an App Service (within an App Service Plan).
             title="Optional">
         <span>Backup</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicebackup">Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>App<wbr>Service<wbr>Backup<wbr>Args?</a></span>
+        <span class="property-type"><a href="#appservicebackup">App<wbr>Service<wbr>Backup<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `backup` block as defined below.
 {{% /md %}}</dd>
@@ -179,7 +179,7 @@ Manages an App Service (within an App Service Plan).
             title="Optional">
         <span>Connection<wbr>Strings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appserviceconnectionstring">List&lt;Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>App<wbr>Service<wbr>Connection<wbr>String<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#appserviceconnectionstring">List&lt;App<wbr>Service<wbr>Connection<wbr>String<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}One or more `connection_string` blocks as defined below.
 {{% /md %}}</dd>
@@ -206,7 +206,7 @@ Manages an App Service (within an App Service Plan).
             title="Optional">
         <span>Identity</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appserviceidentity">Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>App<wbr>Service<wbr>Identity<wbr>Args?</a></span>
+        <span class="property-type"><a href="#appserviceidentity">App<wbr>Service<wbr>Identity<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A Managed Service Identity block as defined below.
 {{% /md %}}</dd>
@@ -224,7 +224,7 @@ Manages an App Service (within an App Service Plan).
             title="Optional">
         <span>Logs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicelogs">Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>App<wbr>Service<wbr>Logs<wbr>Args?</a></span>
+        <span class="property-type"><a href="#appservicelogs">App<wbr>Service<wbr>Logs<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `logs` block as defined below.
 {{% /md %}}</dd>
@@ -251,7 +251,7 @@ Manages an App Service (within an App Service Plan).
             title="Optional">
         <span>Site<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicesiteconfig">Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>App<wbr>Service<wbr>Site<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#appservicesiteconfig">App<wbr>Service<wbr>Site<wbr>Config<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `site_config` block as defined below.
 {{% /md %}}</dd>
@@ -260,7 +260,7 @@ Manages an App Service (within an App Service Plan).
             title="Optional">
         <span>Storage<wbr>Accounts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicestorageaccount">List&lt;Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>App<wbr>Service<wbr>Storage<wbr>Account<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#appservicestorageaccount">List&lt;App<wbr>Service<wbr>Storage<wbr>Account<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}One or more `storage_account` blocks as defined below.
 {{% /md %}}</dd>
@@ -795,7 +795,7 @@ The following output properties are available:
             title="">
         <span>Auth<wbr>Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appserviceauthsettings">Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Outputs.<wbr>App<wbr>Service<wbr>Auth<wbr>Settings</a></span>
+        <span class="property-type"><a href="#appserviceauthsettings">App<wbr>Service<wbr>Auth<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}A `auth_settings` block as defined below.
 {{% /md %}}</dd>
@@ -804,7 +804,7 @@ The following output properties are available:
             title="">
         <span>Backup</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicebackup">Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Outputs.<wbr>App<wbr>Service<wbr>Backup?</a></span>
+        <span class="property-type"><a href="#appservicebackup">App<wbr>Service<wbr>Backup?</a></span>
     </dt>
     <dd>{{% md %}}A `backup` block as defined below.
 {{% /md %}}</dd>
@@ -831,7 +831,7 @@ The following output properties are available:
             title="">
         <span>Connection<wbr>Strings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appserviceconnectionstring">List&lt;Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Outputs.<wbr>App<wbr>Service<wbr>Connection<wbr>String&gt;</a></span>
+        <span class="property-type"><a href="#appserviceconnectionstring">List&lt;App<wbr>Service<wbr>Connection<wbr>String&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `connection_string` blocks as defined below.
 {{% /md %}}</dd>
@@ -867,7 +867,7 @@ The following output properties are available:
             title="">
         <span>Identity</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appserviceidentity">Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Outputs.<wbr>App<wbr>Service<wbr>Identity</a></span>
+        <span class="property-type"><a href="#appserviceidentity">App<wbr>Service<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}A Managed Service Identity block as defined below.
 {{% /md %}}</dd>
@@ -885,7 +885,7 @@ The following output properties are available:
             title="">
         <span>Logs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicelogs">Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Outputs.<wbr>App<wbr>Service<wbr>Logs</a></span>
+        <span class="property-type"><a href="#appservicelogs">App<wbr>Service<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}A `logs` block as defined below.
 {{% /md %}}</dd>
@@ -930,7 +930,7 @@ The following output properties are available:
             title="">
         <span>Site<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicesiteconfig">Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Outputs.<wbr>App<wbr>Service<wbr>Site<wbr>Config</a></span>
+        <span class="property-type"><a href="#appservicesiteconfig">App<wbr>Service<wbr>Site<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}A `site_config` block as defined below.
 {{% /md %}}</dd>
@@ -939,7 +939,7 @@ The following output properties are available:
             title="">
         <span>Site<wbr>Credentials</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicesitecredential">List&lt;Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Outputs.<wbr>App<wbr>Service<wbr>Site<wbr>Credential&gt;</a></span>
+        <span class="property-type"><a href="#appservicesitecredential">List&lt;App<wbr>Service<wbr>Site<wbr>Credential&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `site_credential` block as defined below, which contains the site-level credentials used to publish to this App Service.
 {{% /md %}}</dd>
@@ -948,7 +948,7 @@ The following output properties are available:
             title="">
         <span>Source<wbr>Controls</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicesourcecontrol">List&lt;Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Outputs.<wbr>App<wbr>Service<wbr>Source<wbr>Control&gt;</a></span>
+        <span class="property-type"><a href="#appservicesourcecontrol">List&lt;App<wbr>Service<wbr>Source<wbr>Control&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `source_control` block as defined below, which contains the Source Control information when `scm_type` is set to `LocalGit`.
 {{% /md %}}</dd>
@@ -957,7 +957,7 @@ The following output properties are available:
             title="">
         <span>Storage<wbr>Accounts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicestorageaccount">List&lt;Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Outputs.<wbr>App<wbr>Service<wbr>Storage<wbr>Account&gt;</a></span>
+        <span class="property-type"><a href="#appservicestorageaccount">List&lt;App<wbr>Service<wbr>Storage<wbr>Account&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `storage_account` blocks as defined below.
 {{% /md %}}</dd>
@@ -1603,7 +1603,7 @@ Get an existing AppService resource's state with the given name, ID, and optiona
 {{< chooser language "javascript,typescript,python,go,csharp  " / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">pulumi.Input&lt;pulumi.ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/appservice/#AppServiceState">AppServiceState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/appservice/#AppService">AppService</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/appservice/#AppServiceState">AppServiceState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/appservice/#AppService">AppService</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1611,11 +1611,11 @@ Get an existing AppService resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAppService<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">pulumi.IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/appservice?tab=doc#AppServiceState">AppServiceState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/appservice?tab=doc#AppService">AppService</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAppService<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/appservice?tab=doc#AppServiceState">AppServiceState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/appservice?tab=doc#AppService">AppService</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Appservice.AppService.html">AppService</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Pulumi.Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Appservice.AppServiceState.html">AppServiceState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Appservice.AppService.html">AppService</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Appservice.AppServiceState.html">AppServiceState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1743,7 +1743,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Auth<wbr>Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appserviceauthsettings">Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>App<wbr>Service<wbr>Auth<wbr>Settings<wbr>Args?</a></span>
+        <span class="property-type"><a href="#appserviceauthsettings">App<wbr>Service<wbr>Auth<wbr>Settings<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `auth_settings` block as defined below.
 {{% /md %}}</dd>
@@ -1752,7 +1752,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Backup</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicebackup">Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>App<wbr>Service<wbr>Backup<wbr>Args?</a></span>
+        <span class="property-type"><a href="#appservicebackup">App<wbr>Service<wbr>Backup<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `backup` block as defined below.
 {{% /md %}}</dd>
@@ -1779,7 +1779,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Connection<wbr>Strings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appserviceconnectionstring">List&lt;Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>App<wbr>Service<wbr>Connection<wbr>String<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#appserviceconnectionstring">List&lt;App<wbr>Service<wbr>Connection<wbr>String<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}One or more `connection_string` blocks as defined below.
 {{% /md %}}</dd>
@@ -1815,7 +1815,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Identity</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appserviceidentity">Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>App<wbr>Service<wbr>Identity<wbr>Args?</a></span>
+        <span class="property-type"><a href="#appserviceidentity">App<wbr>Service<wbr>Identity<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A Managed Service Identity block as defined below.
 {{% /md %}}</dd>
@@ -1833,7 +1833,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Logs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicelogs">Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>App<wbr>Service<wbr>Logs<wbr>Args?</a></span>
+        <span class="property-type"><a href="#appservicelogs">App<wbr>Service<wbr>Logs<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `logs` block as defined below.
 {{% /md %}}</dd>
@@ -1878,7 +1878,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Site<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicesiteconfig">Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>App<wbr>Service<wbr>Site<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#appservicesiteconfig">App<wbr>Service<wbr>Site<wbr>Config<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `site_config` block as defined below.
 {{% /md %}}</dd>
@@ -1887,7 +1887,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Site<wbr>Credentials</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicesitecredential">List&lt;Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>App<wbr>Service<wbr>Site<wbr>Credential<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#appservicesitecredential">List&lt;App<wbr>Service<wbr>Site<wbr>Credential<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}A `site_credential` block as defined below, which contains the site-level credentials used to publish to this App Service.
 {{% /md %}}</dd>
@@ -1896,7 +1896,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Source<wbr>Controls</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicesourcecontrol">List&lt;Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>App<wbr>Service<wbr>Source<wbr>Control<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#appservicesourcecontrol">List&lt;App<wbr>Service<wbr>Source<wbr>Control<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}A `source_control` block as defined below, which contains the Source Control information when `scm_type` is set to `LocalGit`.
 {{% /md %}}</dd>
@@ -1905,7 +1905,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Storage<wbr>Accounts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicestorageaccount">List&lt;Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>App<wbr>Service<wbr>Storage<wbr>Account<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#appservicestorageaccount">List&lt;App<wbr>Service<wbr>Storage<wbr>Account<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}One or more `storage_account` blocks as defined below.
 {{% /md %}}</dd>
@@ -2567,7 +2567,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Active<wbr>Directory</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appserviceauthsettingsactivedirectory">Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>App<wbr>Service<wbr>Auth<wbr>Settings<wbr>Active<wbr>Directory<wbr>Args?</a></span>
+        <span class="property-type"><a href="#appserviceauthsettingsactivedirectory">App<wbr>Service<wbr>Auth<wbr>Settings<wbr>Active<wbr>Directory<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `active_directory` block as defined below.
 {{% /md %}}</dd>
@@ -2612,7 +2612,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Facebook</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appserviceauthsettingsfacebook">Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>App<wbr>Service<wbr>Auth<wbr>Settings<wbr>Facebook<wbr>Args?</a></span>
+        <span class="property-type"><a href="#appserviceauthsettingsfacebook">App<wbr>Service<wbr>Auth<wbr>Settings<wbr>Facebook<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `facebook` block as defined below.
 {{% /md %}}</dd>
@@ -2621,7 +2621,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Google</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appserviceauthsettingsgoogle">Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>App<wbr>Service<wbr>Auth<wbr>Settings<wbr>Google<wbr>Args?</a></span>
+        <span class="property-type"><a href="#appserviceauthsettingsgoogle">App<wbr>Service<wbr>Auth<wbr>Settings<wbr>Google<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `google` block as defined below.
 {{% /md %}}</dd>
@@ -2639,7 +2639,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Microsoft</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appserviceauthsettingsmicrosoft">Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>App<wbr>Service<wbr>Auth<wbr>Settings<wbr>Microsoft<wbr>Args?</a></span>
+        <span class="property-type"><a href="#appserviceauthsettingsmicrosoft">App<wbr>Service<wbr>Auth<wbr>Settings<wbr>Microsoft<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `microsoft` block as defined below.
 {{% /md %}}</dd>
@@ -2675,7 +2675,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Twitter</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appserviceauthsettingstwitter">Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>App<wbr>Service<wbr>Auth<wbr>Settings<wbr>Twitter<wbr>Args?</a></span>
+        <span class="property-type"><a href="#appserviceauthsettingstwitter">App<wbr>Service<wbr>Auth<wbr>Settings<wbr>Twitter<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `twitter` block as defined below.
 {{% /md %}}</dd>
@@ -3843,7 +3843,7 @@ The following state arguments are supported:
             title="Required">
         <span>Schedule</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicebackupschedule">Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>App<wbr>Service<wbr>Backup<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#appservicebackupschedule">App<wbr>Service<wbr>Backup<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `schedule` block as defined below.
 {{% /md %}}</dd>
@@ -4573,7 +4573,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Application<wbr>Logs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicelogsapplicationlogs">Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>App<wbr>Service<wbr>Logs<wbr>Application<wbr>Logs<wbr>Args?</a></span>
+        <span class="property-type"><a href="#appservicelogsapplicationlogs">App<wbr>Service<wbr>Logs<wbr>Application<wbr>Logs<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}An `application_logs` block as defined below.
 {{% /md %}}</dd>
@@ -4582,7 +4582,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Http<wbr>Logs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicelogshttplogs">Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>App<wbr>Service<wbr>Logs<wbr>Http<wbr>Logs<wbr>Args?</a></span>
+        <span class="property-type"><a href="#appservicelogshttplogs">App<wbr>Service<wbr>Logs<wbr>Http<wbr>Logs<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}An `http_logs` block as defined below.
 {{% /md %}}</dd>
@@ -4688,7 +4688,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Azure<wbr>Blob<wbr>Storage</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicelogsapplicationlogsazureblobstorage">Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>App<wbr>Service<wbr>Logs<wbr>Application<wbr>Logs<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Args?</a></span>
+        <span class="property-type"><a href="#appservicelogsapplicationlogsazureblobstorage">App<wbr>Service<wbr>Logs<wbr>Application<wbr>Logs<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}An `azure_blob_storage` block as defined below.
 {{% /md %}}</dd>
@@ -4918,7 +4918,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Azure<wbr>Blob<wbr>Storage</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicelogshttplogsazureblobstorage">Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>App<wbr>Service<wbr>Logs<wbr>Http<wbr>Logs<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Args?</a></span>
+        <span class="property-type"><a href="#appservicelogshttplogsazureblobstorage">App<wbr>Service<wbr>Logs<wbr>Http<wbr>Logs<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}An `azure_blob_storage` block as defined below.
 {{% /md %}}</dd>
@@ -4927,7 +4927,7 @@ The following state arguments are supported:
             title="Optional">
         <span>File<wbr>System</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicelogshttplogsfilesystem">Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>App<wbr>Service<wbr>Logs<wbr>Http<wbr>Logs<wbr>File<wbr>System<wbr>Args?</a></span>
+        <span class="property-type"><a href="#appservicelogshttplogsfilesystem">App<wbr>Service<wbr>Logs<wbr>Http<wbr>Logs<wbr>File<wbr>System<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `file_system` block as defined below.
 {{% /md %}}</dd>
@@ -5289,7 +5289,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cors</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicesiteconfigcors">Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>App<wbr>Service<wbr>Site<wbr>Config<wbr>Cors<wbr>Args?</a></span>
+        <span class="property-type"><a href="#appservicesiteconfigcors">App<wbr>Service<wbr>Site<wbr>Config<wbr>Cors<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `cors` block as defined below.
 {{% /md %}}</dd>
@@ -5334,7 +5334,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ip<wbr>Restrictions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicesiteconfigiprestriction">List&lt;Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>App<wbr>Service<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#appservicesiteconfigiprestriction">List&lt;App<wbr>Service<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}A list of objects representing ip restrictions as defined below.
 {{% /md %}}</dd>
@@ -6868,3 +6868,10 @@ The following state arguments are supported:
 
 
 
+
+<h3>Package Details</h3>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd></dl>

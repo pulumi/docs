@@ -13,26 +13,6 @@ To get more information about Trigger, see:
 * How-to Guides
     * [Automating builds using build triggers](https://cloud.google.com/cloud-build/docs/running-builds/automate-builds)
 
-## Example Usage - Cloudbuild Trigger Filename
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const filename_trigger = new gcp.cloudbuild.Trigger("filename-trigger", {
-    filename: "cloudbuild.yaml",
-    substitutions: {
-        _BAZ: "qux",
-        _FOO: "bar",
-    },
-    triggerTemplate: {
-        branchName: "master",
-        repoName: "my-repo",
-    },
-});
-```
-
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloudbuild_trigger.html.markdown.
 
 
@@ -54,7 +34,7 @@ const filename_trigger = new gcp.cloudbuild.Trigger("filename-trigger", {
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Cloudbuild.Trigger.html">Trigger</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.Inputs.TriggerArgs.html">TriggerArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Cloudbuild.Trigger.html">Trigger</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.TriggerArgs.html">TriggerArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -150,7 +130,7 @@ const filename_trigger = new gcp.cloudbuild.Trigger("filename-trigger", {
             title="Optional">
         <span>Build</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuild">Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Build.<wbr>Inputs.<wbr>Trigger<wbr>Build<wbr>Args?</a></span>
+        <span class="property-type"><a href="#triggerbuild">Trigger<wbr>Build<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Contents of the build template. Either a filename or build template must be provided.
 {{% /md %}}</dd>
@@ -187,7 +167,7 @@ be provided.
             title="Optional">
         <span>Github</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggergithub">Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Build.<wbr>Inputs.<wbr>Trigger<wbr>Github<wbr>Args?</a></span>
+        <span class="property-type"><a href="#triggergithub">Trigger<wbr>Github<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Describes the configuration of a trigger that creates a build whenever a GitHub event is received. One of
 'trigger_template' or 'github' must be provided.
@@ -250,7 +230,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Trigger<wbr>Template</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggertriggertemplate">Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Build.<wbr>Inputs.<wbr>Trigger<wbr>Trigger<wbr>Template<wbr>Args?</a></span>
+        <span class="property-type"><a href="#triggertriggertemplate">Trigger<wbr>Trigger<wbr>Template<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Template describing the types of source changes to trigger a build. Branch and tag names in trigger templates are
 interpreted as regular expressions. Any branch or tag change that matches that regular expression will trigger a build.
@@ -634,7 +614,7 @@ The following output properties are available:
             title="">
         <span>Build</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuild">Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Build.<wbr>Outputs.<wbr>Trigger<wbr>Build?</a></span>
+        <span class="property-type"><a href="#triggerbuild">Trigger<wbr>Build?</a></span>
     </dt>
     <dd>{{% md %}}Contents of the build template. Either a filename or build template must be provided.
 {{% /md %}}</dd>
@@ -680,7 +660,7 @@ be provided.
             title="">
         <span>Github</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggergithub">Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Build.<wbr>Outputs.<wbr>Trigger<wbr>Github?</a></span>
+        <span class="property-type"><a href="#triggergithub">Trigger<wbr>Github?</a></span>
     </dt>
     <dd>{{% md %}}Describes the configuration of a trigger that creates a build whenever a GitHub event is received. One of
 'trigger_template' or 'github' must be provided.
@@ -752,7 +732,7 @@ If it is not provided, the provider project is used.
             title="">
         <span>Trigger<wbr>Template</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggertriggertemplate">Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Build.<wbr>Outputs.<wbr>Trigger<wbr>Trigger<wbr>Template?</a></span>
+        <span class="property-type"><a href="#triggertriggertemplate">Trigger<wbr>Trigger<wbr>Template?</a></span>
     </dt>
     <dd>{{% md %}}Template describing the types of source changes to trigger a build. Branch and tag names in trigger templates are
 interpreted as regular expressions. Any branch or tag change that matches that regular expression will trigger a build.
@@ -1184,7 +1164,7 @@ Get an existing Trigger resource's state with the given name, ID, and optional e
 {{< chooser language "javascript,typescript,python,go,csharp  " / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">pulumi.Input&lt;pulumi.ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudbuild/#TriggerState">TriggerState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudbuild/#Trigger">Trigger</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudbuild/#TriggerState">TriggerState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudbuild/#Trigger">Trigger</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1192,11 +1172,11 @@ Get an existing Trigger resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTrigger<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">pulumi.IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/cloudbuild?tab=doc#TriggerState">TriggerState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/cloudbuild?tab=doc#Trigger">Trigger</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTrigger<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/cloudbuild?tab=doc#TriggerState">TriggerState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/cloudbuild?tab=doc#Trigger">Trigger</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Cloudbuild.Trigger.html">Trigger</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Pulumi.Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Cloudbuild.TriggerState.html">TriggerState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Cloudbuild.Trigger.html">Trigger</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Cloudbuild.TriggerState.html">TriggerState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1306,7 +1286,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Build</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuild">Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Build.<wbr>Inputs.<wbr>Trigger<wbr>Build<wbr>Args?</a></span>
+        <span class="property-type"><a href="#triggerbuild">Trigger<wbr>Build<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Contents of the build template. Either a filename or build template must be provided.
 {{% /md %}}</dd>
@@ -1352,7 +1332,7 @@ be provided.
             title="Optional">
         <span>Github</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggergithub">Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Build.<wbr>Inputs.<wbr>Trigger<wbr>Github<wbr>Args?</a></span>
+        <span class="property-type"><a href="#triggergithub">Trigger<wbr>Github<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Describes the configuration of a trigger that creates a build whenever a GitHub event is received. One of
 'trigger_template' or 'github' must be provided.
@@ -1424,7 +1404,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Trigger<wbr>Template</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggertriggertemplate">Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Build.<wbr>Inputs.<wbr>Trigger<wbr>Trigger<wbr>Template<wbr>Args?</a></span>
+        <span class="property-type"><a href="#triggertriggertemplate">Trigger<wbr>Trigger<wbr>Template<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Template describing the types of source changes to trigger a build. Branch and tag names in trigger templates are
 interpreted as regular expressions. Any branch or tag change that matches that regular expression will trigger a build.
@@ -1880,7 +1860,7 @@ One of 'trigger_template' or 'github' must be provided.
             title="Required">
         <span>Steps</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuildstep">List&lt;Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Build.<wbr>Inputs.<wbr>Trigger<wbr>Build<wbr>Step<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#triggerbuildstep">List&lt;Trigger<wbr>Build<wbr>Step<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2116,7 +2096,7 @@ One of 'trigger_template' or 'github' must be provided.
             title="Optional">
         <span>Volumes</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuildstepvolume">List&lt;Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Build.<wbr>Inputs.<wbr>Trigger<wbr>Build<wbr>Step<wbr>Volume<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#triggerbuildstepvolume">List&lt;Trigger<wbr>Build<wbr>Step<wbr>Volume<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2565,7 +2545,7 @@ One of 'trigger_template' or 'github' must be provided.
             title="Optional">
         <span>Pull<wbr>Request</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggergithubpullrequest">Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Build.<wbr>Inputs.<wbr>Trigger<wbr>Github<wbr>Pull<wbr>Request<wbr>Args?</a></span>
+        <span class="property-type"><a href="#triggergithubpullrequest">Trigger<wbr>Github<wbr>Pull<wbr>Request<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2573,7 +2553,7 @@ One of 'trigger_template' or 'github' must be provided.
             title="Optional">
         <span>Push</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggergithubpush">Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Build.<wbr>Inputs.<wbr>Trigger<wbr>Github<wbr>Push<wbr>Args?</a></span>
+        <span class="property-type"><a href="#triggergithubpush">Trigger<wbr>Github<wbr>Push<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3152,3 +3132,10 @@ One of 'trigger_template' or 'github' must be provided.
 
 
 
+
+<h3>Package Details</h3>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd></dl>

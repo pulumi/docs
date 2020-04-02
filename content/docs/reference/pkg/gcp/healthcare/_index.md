@@ -26,3 +26,11 @@ block_external_search_index: true
     <li><a href="hl7storeiampolicy"><span class="symbol resource"></span>Hl7StoreIamPolicy</a></li>
 </ul>
 
+<h3>Package Details</h3>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd>https://github.com/pulumi/pulumi-gcp</dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd>
+</dl>
+

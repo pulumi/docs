@@ -54,9 +54,9 @@ const bar = new aws.autoscaling.Group("bar", {
         aws_subnet_example1.id,
         aws_subnet_example2.id,
     ],
-}, {timeouts: {
+}, { timeouts: {
     delete: "15m",
-}});
+} });
 ```
 
 ### With Latest Version Of Launch Template
@@ -233,7 +233,7 @@ for more information.
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Autoscaling.Group.html">Group</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Inputs.GroupArgs.html">GroupArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Autoscaling.Group.html">Group</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.GroupArgs.html">GroupArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -403,7 +403,7 @@ behavior and potentially leaves resources dangling.
             title="Optional">
         <span>Initial<wbr>Lifecycle<wbr>Hooks</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupinitiallifecyclehook">List&lt;Pulumi.<wbr>Aws.<wbr>Auto<wbr>Scaling.<wbr>Inputs.<wbr>Group<wbr>Initial<wbr>Lifecycle<wbr>Hook<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#groupinitiallifecyclehook">List&lt;Group<wbr>Initial<wbr>Lifecycle<wbr>Hook<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}One or more
 [Lifecycle Hooks](http://docs.aws.amazon.com/autoscaling/latest/userguide/lifecycle-hooks.html)
@@ -427,7 +427,7 @@ a new autoscaling group. For all other use-cases, please use `aws.autoscaling.Li
             title="Optional">
         <span>Launch<wbr>Template</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grouplaunchtemplate">Pulumi.<wbr>Aws.<wbr>Auto<wbr>Scaling.<wbr>Inputs.<wbr>Group<wbr>Launch<wbr>Template<wbr>Args?</a></span>
+        <span class="property-type"><a href="#grouplaunchtemplate">Group<wbr>Launch<wbr>Template<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing launch template settings along with the overrides to specify multiple instance types and weights. Defined below.
 {{% /md %}}</dd>
@@ -495,7 +495,7 @@ ELB only on creation. Updates will not wait on ELB instance number changes.
             title="Optional">
         <span>Mixed<wbr>Instances<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupmixedinstancespolicy">Pulumi.<wbr>Aws.<wbr>Auto<wbr>Scaling.<wbr>Inputs.<wbr>Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Args?</a></span>
+        <span class="property-type"><a href="#groupmixedinstancespolicy">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing settings to define launch targets for Auto Scaling groups. Defined below.
 {{% /md %}}</dd>
@@ -562,7 +562,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grouptag">List&lt;Pulumi.<wbr>Aws.<wbr>Auto<wbr>Scaling.<wbr>Inputs.<wbr>Group<wbr>Tag<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#grouptag">List&lt;Group<wbr>Tag<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}A list of tag blocks. Tags documented below.
 {{% /md %}}</dd>
@@ -1648,7 +1648,7 @@ behavior and potentially leaves resources dangling.
             title="">
         <span>Initial<wbr>Lifecycle<wbr>Hooks</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupinitiallifecyclehook">List&lt;Pulumi.<wbr>Aws.<wbr>Auto<wbr>Scaling.<wbr>Outputs.<wbr>Group<wbr>Initial<wbr>Lifecycle<wbr>Hook&gt;?</a></span>
+        <span class="property-type"><a href="#groupinitiallifecyclehook">List&lt;Group<wbr>Initial<wbr>Lifecycle<wbr>Hook&gt;?</a></span>
     </dt>
     <dd>{{% md %}}One or more
 [Lifecycle Hooks](http://docs.aws.amazon.com/autoscaling/latest/userguide/lifecycle-hooks.html)
@@ -1672,7 +1672,7 @@ a new autoscaling group. For all other use-cases, please use `aws.autoscaling.Li
             title="">
         <span>Launch<wbr>Template</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grouplaunchtemplate">Pulumi.<wbr>Aws.<wbr>Auto<wbr>Scaling.<wbr>Outputs.<wbr>Group<wbr>Launch<wbr>Template?</a></span>
+        <span class="property-type"><a href="#grouplaunchtemplate">Group<wbr>Launch<wbr>Template?</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing launch template settings along with the overrides to specify multiple instance types and weights. Defined below.
 {{% /md %}}</dd>
@@ -1740,7 +1740,7 @@ ELB only on creation. Updates will not wait on ELB instance number changes.
             title="">
         <span>Mixed<wbr>Instances<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupmixedinstancespolicy">Pulumi.<wbr>Aws.<wbr>Auto<wbr>Scaling.<wbr>Outputs.<wbr>Group<wbr>Mixed<wbr>Instances<wbr>Policy?</a></span>
+        <span class="property-type"><a href="#groupmixedinstancespolicy">Group<wbr>Mixed<wbr>Instances<wbr>Policy?</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing settings to define launch targets for Auto Scaling groups. Defined below.
 {{% /md %}}</dd>
@@ -1807,7 +1807,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
             title="">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grouptag">List&lt;Pulumi.<wbr>Aws.<wbr>Auto<wbr>Scaling.<wbr>Outputs.<wbr>Group<wbr>Tag&gt;?</a></span>
+        <span class="property-type"><a href="#grouptag">List&lt;Group<wbr>Tag&gt;?</a></span>
     </dt>
     <dd>{{% md %}}A list of tag blocks. Tags documented below.
 {{% /md %}}</dd>
@@ -2831,7 +2831,7 @@ Get an existing Group resource's state with the given name, ID, and optional ext
 {{< chooser language "javascript,typescript,python,go,csharp  " / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">pulumi.Input&lt;pulumi.ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/autoscaling/#GroupState">GroupState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/autoscaling/#Group">Group</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/autoscaling/#GroupState">GroupState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/autoscaling/#Group">Group</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2839,11 +2839,11 @@ Get an existing Group resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGroup<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">pulumi.IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/autoscaling?tab=doc#GroupState">GroupState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/autoscaling?tab=doc#Group">Group</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGroup<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/autoscaling?tab=doc#GroupState">GroupState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/autoscaling?tab=doc#Group">Group</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Autoscaling.Group.html">Group</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Pulumi.Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Autoscaling.GroupState.html">GroupState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Autoscaling.Group.html">Group</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Autoscaling.GroupState.html">GroupState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3036,7 +3036,7 @@ behavior and potentially leaves resources dangling.
             title="Optional">
         <span>Initial<wbr>Lifecycle<wbr>Hooks</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupinitiallifecyclehook">List&lt;Pulumi.<wbr>Aws.<wbr>Auto<wbr>Scaling.<wbr>Inputs.<wbr>Group<wbr>Initial<wbr>Lifecycle<wbr>Hook<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#groupinitiallifecyclehook">List&lt;Group<wbr>Initial<wbr>Lifecycle<wbr>Hook<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}One or more
 [Lifecycle Hooks](http://docs.aws.amazon.com/autoscaling/latest/userguide/lifecycle-hooks.html)
@@ -3060,7 +3060,7 @@ a new autoscaling group. For all other use-cases, please use `aws.autoscaling.Li
             title="Optional">
         <span>Launch<wbr>Template</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grouplaunchtemplate">Pulumi.<wbr>Aws.<wbr>Auto<wbr>Scaling.<wbr>Inputs.<wbr>Group<wbr>Launch<wbr>Template<wbr>Args?</a></span>
+        <span class="property-type"><a href="#grouplaunchtemplate">Group<wbr>Launch<wbr>Template<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing launch template settings along with the overrides to specify multiple instance types and weights. Defined below.
 {{% /md %}}</dd>
@@ -3128,7 +3128,7 @@ ELB only on creation. Updates will not wait on ELB instance number changes.
             title="Optional">
         <span>Mixed<wbr>Instances<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupmixedinstancespolicy">Pulumi.<wbr>Aws.<wbr>Auto<wbr>Scaling.<wbr>Inputs.<wbr>Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Args?</a></span>
+        <span class="property-type"><a href="#groupmixedinstancespolicy">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing settings to define launch targets for Auto Scaling groups. Defined below.
 {{% /md %}}</dd>
@@ -3195,7 +3195,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grouptag">List&lt;Pulumi.<wbr>Aws.<wbr>Auto<wbr>Scaling.<wbr>Inputs.<wbr>Group<wbr>Tag<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#grouptag">List&lt;Group<wbr>Tag<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}A list of tag blocks. Tags documented below.
 {{% /md %}}</dd>
@@ -4657,7 +4657,7 @@ precedence over `min_elb_capacity` behavior.)
             title="Optional">
         <span>Instances<wbr>Distribution</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupmixedinstancespolicyinstancesdistribution">Pulumi.<wbr>Aws.<wbr>Auto<wbr>Scaling.<wbr>Inputs.<wbr>Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Instances<wbr>Distribution<wbr>Args?</a></span>
+        <span class="property-type"><a href="#groupmixedinstancespolicyinstancesdistribution">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Instances<wbr>Distribution<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing settings on how to mix on-demand and Spot instances in the Auto Scaling group. Defined below.
 {{% /md %}}</dd>
@@ -4666,7 +4666,7 @@ precedence over `min_elb_capacity` behavior.)
             title="Required">
         <span>Launch<wbr>Template</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupmixedinstancespolicylaunchtemplate">Pulumi.<wbr>Aws.<wbr>Auto<wbr>Scaling.<wbr>Inputs.<wbr>Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Args</a></span>
+        <span class="property-type"><a href="#groupmixedinstancespolicylaunchtemplate">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing launch template settings along with the overrides to specify multiple instance types and weights. Defined below.
 {{% /md %}}</dd>
@@ -5031,7 +5031,7 @@ precedence over `min_elb_capacity` behavior.)
             title="Required">
         <span>Launch<wbr>Template<wbr>Specification</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupmixedinstancespolicylaunchtemplatelaunchtemplatespecification">Pulumi.<wbr>Aws.<wbr>Auto<wbr>Scaling.<wbr>Inputs.<wbr>Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Launch<wbr>Template<wbr>Specification<wbr>Args</a></span>
+        <span class="property-type"><a href="#groupmixedinstancespolicylaunchtemplatelaunchtemplatespecification">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Launch<wbr>Template<wbr>Specification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument defines the Launch Template. Defined below.
 {{% /md %}}</dd>
@@ -5040,7 +5040,7 @@ precedence over `min_elb_capacity` behavior.)
             title="Optional">
         <span>Overrides</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupmixedinstancespolicylaunchtemplateoverride">List&lt;Pulumi.<wbr>Aws.<wbr>Auto<wbr>Scaling.<wbr>Inputs.<wbr>Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Override<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#groupmixedinstancespolicylaunchtemplateoverride">List&lt;Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Override<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}List of nested arguments provides the ability to specify multiple instance types. This will override the same parameter in the launch template. For on-demand instances, Auto Scaling considers the order of preference of instance types to launch based on the order specified in the overrides list. Defined below.
 {{% /md %}}</dd>
@@ -5550,3 +5550,10 @@ Amazon EC2 instances launched via this ASG
 
 
 
+
+<h3>Package Details</h3>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd></dl>

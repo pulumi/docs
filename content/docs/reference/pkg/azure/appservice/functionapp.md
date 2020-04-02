@@ -27,7 +27,7 @@ Manages a Function App.
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Appservice.FunctionApp.html">FunctionApp</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppService.Inputs.FunctionAppArgs.html">FunctionAppArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Appservice.FunctionApp.html">FunctionApp</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppService.FunctionAppArgs.html">FunctionAppArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -141,7 +141,7 @@ Manages a Function App.
             title="Optional">
         <span>Auth<wbr>Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappauthsettings">Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>Function<wbr>App<wbr>Auth<wbr>Settings<wbr>Args?</a></span>
+        <span class="property-type"><a href="#functionappauthsettings">Function<wbr>App<wbr>Auth<wbr>Settings<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `auth_settings` block as defined below.
 {{% /md %}}</dd>
@@ -159,7 +159,7 @@ Manages a Function App.
             title="Optional">
         <span>Connection<wbr>Strings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappconnectionstring">List&lt;Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>Function<wbr>App<wbr>Connection<wbr>String<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#functionappconnectionstring">List&lt;Function<wbr>App<wbr>Connection<wbr>String<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}An `connection_string` block as defined below.
 {{% /md %}}</dd>
@@ -204,7 +204,7 @@ Manages a Function App.
             title="Optional">
         <span>Identity</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappidentity">Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>Function<wbr>App<wbr>Identity<wbr>Args?</a></span>
+        <span class="property-type"><a href="#functionappidentity">Function<wbr>App<wbr>Identity<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd>
@@ -249,7 +249,7 @@ Manages a Function App.
             title="Optional">
         <span>Site<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappsiteconfig">Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>Function<wbr>App<wbr>Site<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#functionappsiteconfig">Function<wbr>App<wbr>Site<wbr>Config<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `site_config` object as defined below.
 {{% /md %}}</dd>
@@ -829,7 +829,7 @@ The following output properties are available:
             title="">
         <span>Auth<wbr>Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappauthsettings">Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Outputs.<wbr>Function<wbr>App<wbr>Auth<wbr>Settings</a></span>
+        <span class="property-type"><a href="#functionappauthsettings">Function<wbr>App<wbr>Auth<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}A `auth_settings` block as defined below.
 {{% /md %}}</dd>
@@ -847,7 +847,7 @@ The following output properties are available:
             title="">
         <span>Connection<wbr>Strings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappconnectionstring">List&lt;Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Outputs.<wbr>Function<wbr>App<wbr>Connection<wbr>String&gt;</a></span>
+        <span class="property-type"><a href="#functionappconnectionstring">List&lt;Function<wbr>App<wbr>Connection<wbr>String&gt;</a></span>
     </dt>
     <dd>{{% md %}}An `connection_string` block as defined below.
 {{% /md %}}</dd>
@@ -901,7 +901,7 @@ The following output properties are available:
             title="">
         <span>Identity</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappidentity">Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Outputs.<wbr>Function<wbr>App<wbr>Identity</a></span>
+        <span class="property-type"><a href="#functionappidentity">Function<wbr>App<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd>
@@ -973,7 +973,7 @@ The following output properties are available:
             title="">
         <span>Site<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappsiteconfig">Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Outputs.<wbr>Function<wbr>App<wbr>Site<wbr>Config</a></span>
+        <span class="property-type"><a href="#functionappsiteconfig">Function<wbr>App<wbr>Site<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}A `site_config` object as defined below.
 {{% /md %}}</dd>
@@ -982,7 +982,7 @@ The following output properties are available:
             title="">
         <span>Site<wbr>Credentials</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappsitecredential">List&lt;Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Outputs.<wbr>Function<wbr>App<wbr>Site<wbr>Credential&gt;</a></span>
+        <span class="property-type"><a href="#functionappsitecredential">List&lt;Function<wbr>App<wbr>Site<wbr>Credential&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `site_credential` block as defined below, which contains the site-level credentials used to publish to this App Service.
 {{% /md %}}</dd>
@@ -1673,7 +1673,7 @@ Get an existing FunctionApp resource's state with the given name, ID, and option
 {{< chooser language "javascript,typescript,python,go,csharp  " / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">pulumi.Input&lt;pulumi.ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/appservice/#FunctionAppState">FunctionAppState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/appservice/#FunctionApp">FunctionApp</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/appservice/#FunctionAppState">FunctionAppState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/appservice/#FunctionApp">FunctionApp</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1681,11 +1681,11 @@ Get an existing FunctionApp resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFunctionApp<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">pulumi.IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/appservice?tab=doc#FunctionAppState">FunctionAppState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/appservice?tab=doc#FunctionApp">FunctionApp</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFunctionApp<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/appservice?tab=doc#FunctionAppState">FunctionAppState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/appservice?tab=doc#FunctionApp">FunctionApp</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Appservice.FunctionApp.html">FunctionApp</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Pulumi.Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Appservice.FunctionAppState.html">FunctionAppState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Appservice.FunctionApp.html">FunctionApp</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Appservice.FunctionAppState.html">FunctionAppState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1813,7 +1813,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Auth<wbr>Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappauthsettings">Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>Function<wbr>App<wbr>Auth<wbr>Settings<wbr>Args?</a></span>
+        <span class="property-type"><a href="#functionappauthsettings">Function<wbr>App<wbr>Auth<wbr>Settings<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `auth_settings` block as defined below.
 {{% /md %}}</dd>
@@ -1831,7 +1831,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Connection<wbr>Strings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappconnectionstring">List&lt;Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>Function<wbr>App<wbr>Connection<wbr>String<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#functionappconnectionstring">List&lt;Function<wbr>App<wbr>Connection<wbr>String<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}An `connection_string` block as defined below.
 {{% /md %}}</dd>
@@ -1885,7 +1885,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Identity</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappidentity">Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>Function<wbr>App<wbr>Identity<wbr>Args?</a></span>
+        <span class="property-type"><a href="#functionappidentity">Function<wbr>App<wbr>Identity<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd>
@@ -1957,7 +1957,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Site<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappsiteconfig">Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>Function<wbr>App<wbr>Site<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#functionappsiteconfig">Function<wbr>App<wbr>Site<wbr>Config<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `site_config` object as defined below.
 {{% /md %}}</dd>
@@ -1966,7 +1966,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Site<wbr>Credentials</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappsitecredential">List&lt;Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>Function<wbr>App<wbr>Site<wbr>Credential<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#functionappsitecredential">List&lt;Function<wbr>App<wbr>Site<wbr>Credential<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}A `site_credential` block as defined below, which contains the site-level credentials used to publish to this App Service.
 {{% /md %}}</dd>
@@ -2673,7 +2673,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Active<wbr>Directory</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappauthsettingsactivedirectory">Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>Function<wbr>App<wbr>Auth<wbr>Settings<wbr>Active<wbr>Directory<wbr>Args?</a></span>
+        <span class="property-type"><a href="#functionappauthsettingsactivedirectory">Function<wbr>App<wbr>Auth<wbr>Settings<wbr>Active<wbr>Directory<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `active_directory` block as defined below.
 {{% /md %}}</dd>
@@ -2718,7 +2718,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Facebook</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappauthsettingsfacebook">Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>Function<wbr>App<wbr>Auth<wbr>Settings<wbr>Facebook<wbr>Args?</a></span>
+        <span class="property-type"><a href="#functionappauthsettingsfacebook">Function<wbr>App<wbr>Auth<wbr>Settings<wbr>Facebook<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `facebook` block as defined below.
 {{% /md %}}</dd>
@@ -2727,7 +2727,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Google</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappauthsettingsgoogle">Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>Function<wbr>App<wbr>Auth<wbr>Settings<wbr>Google<wbr>Args?</a></span>
+        <span class="property-type"><a href="#functionappauthsettingsgoogle">Function<wbr>App<wbr>Auth<wbr>Settings<wbr>Google<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `google` block as defined below.
 {{% /md %}}</dd>
@@ -2745,7 +2745,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Microsoft</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappauthsettingsmicrosoft">Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>Function<wbr>App<wbr>Auth<wbr>Settings<wbr>Microsoft<wbr>Args?</a></span>
+        <span class="property-type"><a href="#functionappauthsettingsmicrosoft">Function<wbr>App<wbr>Auth<wbr>Settings<wbr>Microsoft<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `microsoft` block as defined below.
 {{% /md %}}</dd>
@@ -2781,7 +2781,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Twitter</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappauthsettingstwitter">Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>Function<wbr>App<wbr>Auth<wbr>Settings<wbr>Twitter<wbr>Args?</a></span>
+        <span class="property-type"><a href="#functionappauthsettingstwitter">Function<wbr>App<wbr>Auth<wbr>Settings<wbr>Twitter<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `twitter` block as defined below.
 {{% /md %}}</dd>
@@ -4278,7 +4278,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cors</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappsiteconfigcors">Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>Function<wbr>App<wbr>Site<wbr>Config<wbr>Cors<wbr>Args?</a></span>
+        <span class="property-type"><a href="#functionappsiteconfigcors">Function<wbr>App<wbr>Site<wbr>Config<wbr>Cors<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `cors` block as defined below.
 {{% /md %}}</dd>
@@ -4305,7 +4305,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ip<wbr>Restrictions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappsiteconfigiprestriction">List&lt;Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>Function<wbr>App<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#functionappsiteconfigiprestriction">List&lt;Function<wbr>App<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}A list of objects representing ip restrictions as defined below.
 {{% /md %}}</dd>
@@ -4964,3 +4964,10 @@ The following state arguments are supported:
 
 
 
+
+<h3>Package Details</h3>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd></dl>

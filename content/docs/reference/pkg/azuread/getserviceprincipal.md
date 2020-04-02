@@ -8,39 +8,6 @@ Gets information about an existing Service Principal associated with an Applicat
 
 > **NOTE:** If you're authenticating using a Service Principal then it must have permissions to both `Read and write all applications` and `Sign in and read user profile` within the `Windows Azure Active Directory` API.
 
-## Example Usage (by Application Display Name)
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azuread from "@pulumi/azuread";
-
-const example = azuread.getServicePrincipal({
-    displayName: "my-awesome-application",
-});
-```
-
-## Example Usage (by Application ID)
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azuread from "@pulumi/azuread";
-
-const example = azuread.getServicePrincipal({
-    applicationId: "00000000-0000-0000-0000-000000000000",
-});
-```
-
-## Example Usage (by Object ID)
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azuread from "@pulumi/azuread";
-
-const example = azuread.getServicePrincipal({
-    objectId: "00000000-0000-0000-0000-000000000000",
-});
-```
-
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/d/service_principal.html.markdown.
 
 
@@ -53,7 +20,7 @@ const example = azuread.getServicePrincipal({
 
 
 {{% choosable language typescript %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getServicePrincipal<span class="p">(</span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azuread/#GetServicePrincipalArgs">GetServicePrincipalArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">pulumi.InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azuread/#GetServicePrincipalResult">GetServicePrincipalResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getServicePrincipal<span class="p">(</span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azuread/#GetServicePrincipalArgs">GetServicePrincipalArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azuread/#GetServicePrincipalResult">GetServicePrincipalResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -63,13 +30,13 @@ const example = azuread.getServicePrincipal({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupServicePrincipal<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/go/azuread/?tab=doc#GetServicePrincipalArgs">GetServicePrincipalArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/go/azuread/?tab=doc#LookupServicePrincipalResult">LookupServicePrincipalResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupServicePrincipal<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/go/azuread/?tab=doc#GetServicePrincipalArgs">GetServicePrincipalArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/go/azuread/?tab=doc#LookupServicePrincipalResult">LookupServicePrincipalResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetServicePrincipal </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azuread/Pulumi.Azuread.GetServicePrincipalResult.html">GetServicePrincipalResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azuread/Pulumi.Azuread.Inputs.GetServicePrincipalArgs.html">GetServicePrincipalArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">Pulumi.InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azuread/Pulumi.Azuread.GetServicePrincipalResult.html">GetServicePrincipalResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azuread/Pulumi.Azuread.GetServicePrincipalArgs.html">GetServicePrincipalArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -104,7 +71,7 @@ The following arguments are supported:
             title="Optional">
         <span>Oauth2Permissions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceprincipaloauth2permission">List&lt;Pulumi.<wbr>Azuread.<wbr>Inputs.<wbr>Get<wbr>Service<wbr>Principal<wbr>Oauth2Permission<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#getserviceprincipaloauth2permission">List&lt;Get<wbr>Service<wbr>Principal<wbr>Oauth2Permission<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}A collection of OAuth 2.0 permissions exposed by the associated application. Each permission is covered by a `oauth2_permission` block as documented below.
 {{% /md %}}</dd>
@@ -271,7 +238,7 @@ The following output properties are available:
             title="">
         <span>App<wbr>Roles</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceprincipalapprole">List&lt;Pulumi.<wbr>Azuread.<wbr>Outputs.<wbr>Get<wbr>Service<wbr>Principal<wbr>App<wbr>Role&gt;</a></span>
+        <span class="property-type"><a href="#getserviceprincipalapprole">List&lt;Get<wbr>Service<wbr>Principal<wbr>App<wbr>Role&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -305,7 +272,7 @@ The following output properties are available:
             title="">
         <span>Oauth2Permissions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceprincipaloauth2permission">List&lt;Pulumi.<wbr>Azuread.<wbr>Outputs.<wbr>Get<wbr>Service<wbr>Principal<wbr>Oauth2Permission&gt;</a></span>
+        <span class="property-type"><a href="#getserviceprincipaloauth2permission">List&lt;Get<wbr>Service<wbr>Principal<wbr>Oauth2Permission&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

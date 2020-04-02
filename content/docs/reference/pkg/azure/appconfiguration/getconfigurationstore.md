@@ -18,7 +18,7 @@ Use this data source to access information about an existing App Configuration.
 
 
 {{% choosable language typescript %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getConfigurationStore<span class="p">(</span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/appconfiguration/#GetConfigurationStoreArgs">GetConfigurationStoreArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">pulumi.InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/appconfiguration/#GetConfigurationStoreResult">GetConfigurationStoreResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getConfigurationStore<span class="p">(</span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/appconfiguration/#GetConfigurationStoreArgs">GetConfigurationStoreArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/appconfiguration/#GetConfigurationStoreResult">GetConfigurationStoreResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -28,13 +28,13 @@ Use this data source to access information about an existing App Configuration.
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupConfigurationStore<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/appconfiguration?tab=doc#LookupConfigurationStoreArgs">LookupConfigurationStoreArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/appconfiguration?tab=doc#LookupConfigurationStoreResult">LookupConfigurationStoreResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupConfigurationStore<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/appconfiguration?tab=doc#LookupConfigurationStoreArgs">LookupConfigurationStoreArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/appconfiguration?tab=doc#LookupConfigurationStoreResult">LookupConfigurationStoreResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetConfigurationStore </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Appconfiguration.GetConfigurationStoreResult.html">GetConfigurationStoreResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppConfiguration.Inputs.GetConfigurationStoreArgs.html">GetConfigurationStoreArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">Pulumi.InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Appconfiguration.GetConfigurationStoreResult.html">GetConfigurationStoreResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppConfiguration.GetConfigurationStoreArgs.html">GetConfigurationStoreArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -199,7 +199,7 @@ The following output properties are available:
             title="">
         <span>Primary<wbr>Read<wbr>Keys</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getconfigurationstoreprimaryreadkey">List&lt;Pulumi.<wbr>Azure.<wbr>App<wbr>Configuration.<wbr>Outputs.<wbr>Get<wbr>Configuration<wbr>Store<wbr>Primary<wbr>Read<wbr>Key&gt;</a></span>
+        <span class="property-type"><a href="#getconfigurationstoreprimaryreadkey">List&lt;Get<wbr>Configuration<wbr>Store<wbr>Primary<wbr>Read<wbr>Key&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `primary_read_key` block as defined below containing the primary read access key.
 {{% /md %}}</dd>
@@ -208,7 +208,7 @@ The following output properties are available:
             title="">
         <span>Primary<wbr>Write<wbr>Keys</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getconfigurationstoreprimarywritekey">List&lt;Pulumi.<wbr>Azure.<wbr>App<wbr>Configuration.<wbr>Outputs.<wbr>Get<wbr>Configuration<wbr>Store<wbr>Primary<wbr>Write<wbr>Key&gt;</a></span>
+        <span class="property-type"><a href="#getconfigurationstoreprimarywritekey">List&lt;Get<wbr>Configuration<wbr>Store<wbr>Primary<wbr>Write<wbr>Key&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `primary_write_key` block as defined below containing the primary write access key.
 {{% /md %}}</dd>
@@ -225,7 +225,7 @@ The following output properties are available:
             title="">
         <span>Secondary<wbr>Read<wbr>Keys</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getconfigurationstoresecondaryreadkey">List&lt;Pulumi.<wbr>Azure.<wbr>App<wbr>Configuration.<wbr>Outputs.<wbr>Get<wbr>Configuration<wbr>Store<wbr>Secondary<wbr>Read<wbr>Key&gt;</a></span>
+        <span class="property-type"><a href="#getconfigurationstoresecondaryreadkey">List&lt;Get<wbr>Configuration<wbr>Store<wbr>Secondary<wbr>Read<wbr>Key&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `secondary_read_key` block as defined below containing the secondary read access key.
 {{% /md %}}</dd>
@@ -234,7 +234,7 @@ The following output properties are available:
             title="">
         <span>Secondary<wbr>Write<wbr>Keys</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getconfigurationstoresecondarywritekey">List&lt;Pulumi.<wbr>Azure.<wbr>App<wbr>Configuration.<wbr>Outputs.<wbr>Get<wbr>Configuration<wbr>Store<wbr>Secondary<wbr>Write<wbr>Key&gt;</a></span>
+        <span class="property-type"><a href="#getconfigurationstoresecondarywritekey">List&lt;Get<wbr>Configuration<wbr>Store<wbr>Secondary<wbr>Write<wbr>Key&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `secondary_write_key` block as defined below containing the secondary write access key.
 {{% /md %}}</dd>

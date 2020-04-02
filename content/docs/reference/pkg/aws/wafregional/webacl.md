@@ -113,7 +113,7 @@ const example = new aws.wafregional.WebAcl("example", {
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Wafregional.WebAcl.html">WebAcl</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafRegional.Inputs.WebAclArgs.html">WebAclArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Wafregional.WebAcl.html">WebAcl</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafRegional.WebAclArgs.html">WebAclArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -209,7 +209,7 @@ const example = new aws.wafregional.WebAcl("example", {
             title="Required">
         <span>Default<wbr>Action</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webacldefaultaction">Pulumi.<wbr>Aws.<wbr>Waf<wbr>Regional.<wbr>Inputs.<wbr>Web<wbr>Acl<wbr>Default<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#webacldefaultaction">Web<wbr>Acl<wbr>Default<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The action that you want AWS WAF Regional to take when a request doesn't match the criteria in any of the rules that are associated with the web ACL.
 {{% /md %}}</dd>
@@ -218,7 +218,7 @@ const example = new aws.wafregional.WebAcl("example", {
             title="Optional">
         <span>Logging<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webaclloggingconfiguration">Pulumi.<wbr>Aws.<wbr>Waf<wbr>Regional.<wbr>Inputs.<wbr>Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Args?</a></span>
+        <span class="property-type"><a href="#webaclloggingconfiguration">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to enable WAF logging. Detailed below.
 {{% /md %}}</dd>
@@ -245,7 +245,7 @@ const example = new aws.wafregional.WebAcl("example", {
             title="Optional">
         <span>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webaclrule">List&lt;Pulumi.<wbr>Aws.<wbr>Waf<wbr>Regional.<wbr>Inputs.<wbr>Web<wbr>Acl<wbr>Rule<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#webaclrule">List&lt;Web<wbr>Acl<wbr>Rule<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing rules for the web ACL. Detailed below.
 {{% /md %}}</dd>
@@ -474,7 +474,7 @@ The following output properties are available:
             title="">
         <span>Default<wbr>Action</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webacldefaultaction">Pulumi.<wbr>Aws.<wbr>Waf<wbr>Regional.<wbr>Outputs.<wbr>Web<wbr>Acl<wbr>Default<wbr>Action</a></span>
+        <span class="property-type"><a href="#webacldefaultaction">Web<wbr>Acl<wbr>Default<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}The action that you want AWS WAF Regional to take when a request doesn't match the criteria in any of the rules that are associated with the web ACL.
 {{% /md %}}</dd>
@@ -483,7 +483,7 @@ The following output properties are available:
             title="">
         <span>Logging<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webaclloggingconfiguration">Pulumi.<wbr>Aws.<wbr>Waf<wbr>Regional.<wbr>Outputs.<wbr>Web<wbr>Acl<wbr>Logging<wbr>Configuration?</a></span>
+        <span class="property-type"><a href="#webaclloggingconfiguration">Web<wbr>Acl<wbr>Logging<wbr>Configuration?</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to enable WAF logging. Detailed below.
 {{% /md %}}</dd>
@@ -510,7 +510,7 @@ The following output properties are available:
             title="">
         <span>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webaclrule">List&lt;Pulumi.<wbr>Aws.<wbr>Waf<wbr>Regional.<wbr>Outputs.<wbr>Web<wbr>Acl<wbr>Rule&gt;?</a></span>
+        <span class="property-type"><a href="#webaclrule">List&lt;Web<wbr>Acl<wbr>Rule&gt;?</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing rules for the web ACL. Detailed below.
 {{% /md %}}</dd>
@@ -751,7 +751,7 @@ Get an existing WebAcl resource's state with the given name, ID, and optional ex
 {{< chooser language "javascript,typescript,python,go,csharp  " / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">pulumi.Input&lt;pulumi.ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/wafregional/#WebAclState">WebAclState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/wafregional/#WebAcl">WebAcl</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/wafregional/#WebAclState">WebAclState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/wafregional/#WebAcl">WebAcl</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -759,11 +759,11 @@ Get an existing WebAcl resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetWebAcl<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">pulumi.IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/wafregional?tab=doc#WebAclState">WebAclState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/wafregional?tab=doc#WebAcl">WebAcl</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetWebAcl<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/wafregional?tab=doc#WebAclState">WebAclState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/wafregional?tab=doc#WebAcl">WebAcl</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Wafregional.WebAcl.html">WebAcl</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Pulumi.Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Wafregional.WebAclState.html">WebAclState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Wafregional.WebAcl.html">WebAcl</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Wafregional.WebAclState.html">WebAclState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -882,7 +882,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Default<wbr>Action</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webacldefaultaction">Pulumi.<wbr>Aws.<wbr>Waf<wbr>Regional.<wbr>Inputs.<wbr>Web<wbr>Acl<wbr>Default<wbr>Action<wbr>Args?</a></span>
+        <span class="property-type"><a href="#webacldefaultaction">Web<wbr>Acl<wbr>Default<wbr>Action<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}The action that you want AWS WAF Regional to take when a request doesn't match the criteria in any of the rules that are associated with the web ACL.
 {{% /md %}}</dd>
@@ -891,7 +891,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Logging<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webaclloggingconfiguration">Pulumi.<wbr>Aws.<wbr>Waf<wbr>Regional.<wbr>Inputs.<wbr>Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Args?</a></span>
+        <span class="property-type"><a href="#webaclloggingconfiguration">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to enable WAF logging. Detailed below.
 {{% /md %}}</dd>
@@ -918,7 +918,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webaclrule">List&lt;Pulumi.<wbr>Aws.<wbr>Waf<wbr>Regional.<wbr>Inputs.<wbr>Web<wbr>Acl<wbr>Rule<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#webaclrule">List&lt;Web<wbr>Acl<wbr>Rule<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing rules for the web ACL. Detailed below.
 {{% /md %}}</dd>
@@ -1263,7 +1263,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Redacted<wbr>Fields</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webaclloggingconfigurationredactedfields">Pulumi.<wbr>Aws.<wbr>Waf<wbr>Regional.<wbr>Inputs.<wbr>Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Fields<wbr>Args?</a></span>
+        <span class="property-type"><a href="#webaclloggingconfigurationredactedfields">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Fields<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing parts of the request that you want redacted from the logs. Detailed below.
 {{% /md %}}</dd>
@@ -1369,7 +1369,7 @@ The following state arguments are supported:
             title="Required">
         <span>Field<wbr>To<wbr>Matches</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webaclloggingconfigurationredactedfieldsfieldtomatch">List&lt;Pulumi.<wbr>Aws.<wbr>Waf<wbr>Regional.<wbr>Inputs.<wbr>Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Fields<wbr>Field<wbr>To<wbr>Match<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#webaclloggingconfigurationredactedfieldsfieldtomatch">List&lt;Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Fields<wbr>Field<wbr>To<wbr>Match<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks for fields to redact. Detailed below.
 {{% /md %}}</dd>
@@ -1563,7 +1563,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Action</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webaclruleaction">Pulumi.<wbr>Aws.<wbr>Waf<wbr>Regional.<wbr>Inputs.<wbr>Web<wbr>Acl<wbr>Rule<wbr>Action<wbr>Args?</a></span>
+        <span class="property-type"><a href="#webaclruleaction">Web<wbr>Acl<wbr>Rule<wbr>Action<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of the action that CloudFront or AWS WAF takes when a web request matches the conditions in the rule.  Not used if `type` is `GROUP`. Detailed below.
 {{% /md %}}</dd>
@@ -1572,7 +1572,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Override<wbr>Action</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webaclruleoverrideaction">Pulumi.<wbr>Aws.<wbr>Waf<wbr>Regional.<wbr>Inputs.<wbr>Web<wbr>Acl<wbr>Rule<wbr>Override<wbr>Action<wbr>Args?</a></span>
+        <span class="property-type"><a href="#webaclruleoverrideaction">Web<wbr>Acl<wbr>Rule<wbr>Override<wbr>Action<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of the override the action that a group requests CloudFront or AWS WAF takes when a web request matches the conditions in the rule.  Only used if `type` is `GROUP`. Detailed below.
 {{% /md %}}</dd>
@@ -1931,3 +1931,10 @@ Rules with a lower value are evaluated before rules with a higher value.
 
 
 
+
+<h3>Package Details</h3>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd></dl>

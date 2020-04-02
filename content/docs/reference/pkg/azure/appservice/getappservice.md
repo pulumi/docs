@@ -18,7 +18,7 @@ Use this data source to access information about an existing App Service.
 
 
 {{% choosable language typescript %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getAppService<span class="p">(</span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/appservice/#GetAppServiceArgs">GetAppServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">pulumi.InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/appservice/#GetAppServiceResult">GetAppServiceResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getAppService<span class="p">(</span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/appservice/#GetAppServiceArgs">GetAppServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/appservice/#GetAppServiceResult">GetAppServiceResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -28,13 +28,13 @@ Use this data source to access information about an existing App Service.
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupAppService<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/appservice?tab=doc#LookupAppServiceArgs">LookupAppServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/appservice?tab=doc#LookupAppServiceResult">LookupAppServiceResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupAppService<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/appservice?tab=doc#LookupAppServiceArgs">LookupAppServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/appservice?tab=doc#LookupAppServiceResult">LookupAppServiceResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetAppService </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Appservice.GetAppServiceResult.html">GetAppServiceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppService.Inputs.GetAppServiceArgs.html">GetAppServiceArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">Pulumi.InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Appservice.GetAppServiceResult.html">GetAppServiceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppService.GetAppServiceArgs.html">GetAppServiceArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -200,7 +200,7 @@ The following output properties are available:
             title="">
         <span>Connection<wbr>Strings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappserviceconnectionstring">List&lt;Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Outputs.<wbr>Get<wbr>App<wbr>Service<wbr>Connection<wbr>String&gt;</a></span>
+        <span class="property-type"><a href="#getappserviceconnectionstring">List&lt;Get<wbr>App<wbr>Service<wbr>Connection<wbr>String&gt;</a></span>
     </dt>
     <dd>{{% md %}}An `connection_string` block as defined below.
 {{% /md %}}</dd>
@@ -289,7 +289,7 @@ The following output properties are available:
             title="">
         <span>Site<wbr>Configs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappservicesiteconfig">List&lt;Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Outputs.<wbr>Get<wbr>App<wbr>Service<wbr>Site<wbr>Config&gt;</a></span>
+        <span class="property-type"><a href="#getappservicesiteconfig">List&lt;Get<wbr>App<wbr>Service<wbr>Site<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `site_config` block as defined below.
 {{% /md %}}</dd>
@@ -298,7 +298,7 @@ The following output properties are available:
             title="">
         <span>Site<wbr>Credentials</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappservicesitecredential">List&lt;Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Outputs.<wbr>Get<wbr>App<wbr>Service<wbr>Site<wbr>Credential&gt;</a></span>
+        <span class="property-type"><a href="#getappservicesitecredential">List&lt;Get<wbr>App<wbr>Service<wbr>Site<wbr>Credential&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -306,7 +306,7 @@ The following output properties are available:
             title="">
         <span>Source<wbr>Controls</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappservicesourcecontrol">List&lt;Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Outputs.<wbr>Get<wbr>App<wbr>Service<wbr>Source<wbr>Control&gt;</a></span>
+        <span class="property-type"><a href="#getappservicesourcecontrol">List&lt;Get<wbr>App<wbr>Service<wbr>Source<wbr>Control&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1017,7 +1017,7 @@ The following output properties are available:
             title="Required">
         <span>Cors</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappservicesiteconfigcor">List&lt;Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Service<wbr>Site<wbr>Config<wbr>Cor<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getappservicesiteconfigcor">List&lt;Get<wbr>App<wbr>Service<wbr>Site<wbr>Config<wbr>Cor<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `cors` block as defined above.
 {{% /md %}}</dd>
@@ -1062,7 +1062,7 @@ The following output properties are available:
             title="Required">
         <span>Ip<wbr>Restrictions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappservicesiteconfigiprestriction">List&lt;Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Service<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getappservicesiteconfigiprestriction">List&lt;Get<wbr>App<wbr>Service<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `ip_restriction` blocks as defined above.
 {{% /md %}}</dd>

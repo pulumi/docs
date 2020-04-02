@@ -176,7 +176,7 @@ const serviceb1 = new aws.appmesh.VirtualNode("serviceb1", {
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Appmesh.VirtualNode.html">VirtualNode</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeArgs.html">VirtualNodeArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Appmesh.VirtualNode.html">VirtualNode</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.VirtualNodeArgs.html">VirtualNodeArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -290,7 +290,7 @@ const serviceb1 = new aws.appmesh.VirtualNode("serviceb1", {
             title="Required">
         <span>Spec</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespec">Pulumi.<wbr>Aws.<wbr>App<wbr>Mesh.<wbr>Inputs.<wbr>Virtual<wbr>Node<wbr>Spec<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespec">Virtual<wbr>Node<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtual node specification to apply.
 {{% /md %}}</dd>
@@ -501,7 +501,7 @@ The following output properties are available:
             title="">
         <span>Spec</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespec">Pulumi.<wbr>Aws.<wbr>App<wbr>Mesh.<wbr>Outputs.<wbr>Virtual<wbr>Node<wbr>Spec</a></span>
+        <span class="property-type"><a href="#virtualnodespec">Virtual<wbr>Node<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The virtual node specification to apply.
 {{% /md %}}</dd>
@@ -742,7 +742,7 @@ Get an existing VirtualNode resource's state with the given name, ID, and option
 {{< chooser language "javascript,typescript,python,go,csharp  " / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">pulumi.Input&lt;pulumi.ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appmesh/#VirtualNodeState">VirtualNodeState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appmesh/#VirtualNode">VirtualNode</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appmesh/#VirtualNodeState">VirtualNodeState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appmesh/#VirtualNode">VirtualNode</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -750,11 +750,11 @@ Get an existing VirtualNode resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVirtualNode<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">pulumi.IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appmesh?tab=doc#VirtualNodeState">VirtualNodeState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appmesh?tab=doc#VirtualNode">VirtualNode</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVirtualNode<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appmesh?tab=doc#VirtualNodeState">VirtualNodeState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appmesh?tab=doc#VirtualNode">VirtualNode</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Appmesh.VirtualNode.html">VirtualNode</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Pulumi.Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Appmesh.VirtualNodeState.html">VirtualNodeState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Appmesh.VirtualNode.html">VirtualNode</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Appmesh.VirtualNodeState.html">VirtualNodeState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -909,7 +909,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Spec</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespec">Pulumi.<wbr>Aws.<wbr>App<wbr>Mesh.<wbr>Inputs.<wbr>Virtual<wbr>Node<wbr>Spec<wbr>Args?</a></span>
+        <span class="property-type"><a href="#virtualnodespec">Virtual<wbr>Node<wbr>Spec<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}The virtual node specification to apply.
 {{% /md %}}</dd>
@@ -1166,7 +1166,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Backends</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackend">List&lt;Pulumi.<wbr>Aws.<wbr>App<wbr>Mesh.<wbr>Inputs.<wbr>Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackend">List&lt;Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}The backends to which the virtual node is expected to send outbound traffic.
 {{% /md %}}</dd>
@@ -1175,7 +1175,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Listener</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistener">Pulumi.<wbr>Aws.<wbr>App<wbr>Mesh.<wbr>Inputs.<wbr>Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Args?</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistener">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}The listeners from which the virtual node is expected to receive inbound traffic.
 {{% /md %}}</dd>
@@ -1184,7 +1184,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Logging</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclogging">Pulumi.<wbr>Aws.<wbr>App<wbr>Mesh.<wbr>Inputs.<wbr>Virtual<wbr>Node<wbr>Spec<wbr>Logging<wbr>Args?</a></span>
+        <span class="property-type"><a href="#virtualnodespeclogging">Virtual<wbr>Node<wbr>Spec<wbr>Logging<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}The inbound and outbound access logging information for the virtual node.
 {{% /md %}}</dd>
@@ -1193,7 +1193,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Service<wbr>Discovery</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecservicediscovery">Pulumi.<wbr>Aws.<wbr>App<wbr>Mesh.<wbr>Inputs.<wbr>Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery<wbr>Args?</a></span>
+        <span class="property-type"><a href="#virtualnodespecservicediscovery">Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}The service discovery information for the virtual node.
 {{% /md %}}</dd>
@@ -1353,7 +1353,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Virtual<wbr>Service</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackendvirtualservice">Pulumi.<wbr>Aws.<wbr>App<wbr>Mesh.<wbr>Inputs.<wbr>Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Args?</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualservice">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Specifies a virtual service to use as a backend for a virtual node.
 {{% /md %}}</dd>
@@ -1511,7 +1511,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Health<wbr>Check</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenerhealthcheck">Pulumi.<wbr>Aws.<wbr>App<wbr>Mesh.<wbr>Inputs.<wbr>Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Health<wbr>Check<wbr>Args?</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenerhealthcheck">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Health<wbr>Check<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}The health check information for the listener.
 {{% /md %}}</dd>
@@ -1520,7 +1520,7 @@ The following state arguments are supported:
             title="Required">
         <span>Port<wbr>Mapping</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenerportmapping">Pulumi.<wbr>Aws.<wbr>App<wbr>Mesh.<wbr>Inputs.<wbr>Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Port<wbr>Mapping<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenerportmapping">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Port<wbr>Mapping<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The port mapping information for the listener.
 {{% /md %}}</dd>
@@ -2036,7 +2036,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Access<wbr>Log</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecloggingaccesslog">Pulumi.<wbr>Aws.<wbr>App<wbr>Mesh.<wbr>Inputs.<wbr>Virtual<wbr>Node<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log<wbr>Args?</a></span>
+        <span class="property-type"><a href="#virtualnodespecloggingaccesslog">Virtual<wbr>Node<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}The access log configuration for a virtual node.
 {{% /md %}}</dd>
@@ -2115,7 +2115,7 @@ The following state arguments are supported:
             title="Optional">
         <span>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecloggingaccesslogfile">Pulumi.<wbr>Aws.<wbr>App<wbr>Mesh.<wbr>Inputs.<wbr>Virtual<wbr>Node<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log<wbr>File<wbr>Args?</a></span>
+        <span class="property-type"><a href="#virtualnodespecloggingaccesslogfile">Virtual<wbr>Node<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log<wbr>File<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}The file object to send virtual node access logs to.
 {{% /md %}}</dd>
@@ -2273,7 +2273,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Aws<wbr>Cloud<wbr>Map</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecservicediscoveryawscloudmap">Pulumi.<wbr>Aws.<wbr>App<wbr>Mesh.<wbr>Inputs.<wbr>Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery<wbr>Aws<wbr>Cloud<wbr>Map<wbr>Args?</a></span>
+        <span class="property-type"><a href="#virtualnodespecservicediscoveryawscloudmap">Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery<wbr>Aws<wbr>Cloud<wbr>Map<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Specifies any AWS Cloud Map information for the virtual node.
 {{% /md %}}</dd>
@@ -2282,7 +2282,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Dns</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecservicediscoverydns">Pulumi.<wbr>Aws.<wbr>App<wbr>Mesh.<wbr>Inputs.<wbr>Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery<wbr>Dns<wbr>Args?</a></span>
+        <span class="property-type"><a href="#virtualnodespecservicediscoverydns">Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery<wbr>Dns<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Specifies the DNS service name for the virtual node.
 {{% /md %}}</dd>
@@ -2605,3 +2605,10 @@ Use the [`aws.servicediscovery.HttpNamespace`](https://www.terraform.io/docs/pro
 
 
 
+
+<h3>Package Details</h3>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd></dl>

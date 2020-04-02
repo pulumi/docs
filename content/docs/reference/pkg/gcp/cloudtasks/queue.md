@@ -6,20 +6,6 @@ block_external_search_index: true
 
 A named resource to which messages are sent by publishers.
 
-
-
-## Example Usage - Queue Basic
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const defaultQueue = new gcp.cloudtasks.Queue("default", {
-    location: "us-central1",
-});
-```
-
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloud_tasks_queue.html.markdown.
 
 
@@ -41,7 +27,7 @@ const defaultQueue = new gcp.cloudtasks.Queue("default", {
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Cloudtasks.Queue.html">Queue</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudTasks.Inputs.QueueArgs.html">QueueArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Cloudtasks.Queue.html">Queue</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudTasks.QueueArgs.html">QueueArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -137,7 +123,7 @@ const defaultQueue = new gcp.cloudtasks.Queue("default", {
             title="Optional">
         <span>App<wbr>Engine<wbr>Routing<wbr>Override</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queueappengineroutingoverride">Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Tasks.<wbr>Inputs.<wbr>Queue<wbr>App<wbr>Engine<wbr>Routing<wbr>Override<wbr>Args?</a></span>
+        <span class="property-type"><a href="#queueappengineroutingoverride">Queue<wbr>App<wbr>Engine<wbr>Routing<wbr>Override<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Overrides for task-level appEngineRouting. These settings apply only to App Engine tasks in this queue
 {{% /md %}}</dd>
@@ -174,7 +160,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Rate<wbr>Limits</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queueratelimits">Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Tasks.<wbr>Inputs.<wbr>Queue<wbr>Rate<wbr>Limits<wbr>Args?</a></span>
+        <span class="property-type"><a href="#queueratelimits">Queue<wbr>Rate<wbr>Limits<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Rate limits for task dispatches. The queue's actual dispatch rate is the result of: * Number of tasks in the queue *
 User-specified throttling: rateLimits, retryConfig, and the queue's state. * System throttling due to 429 (Too Many
@@ -186,7 +172,7 @@ spikes.
             title="Optional">
         <span>Retry<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queueretryconfig">Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Tasks.<wbr>Inputs.<wbr>Queue<wbr>Retry<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#queueretryconfig">Queue<wbr>Retry<wbr>Config<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Settings that determine the retry behavior.
 {{% /md %}}</dd>
@@ -409,7 +395,7 @@ The following output properties are available:
             title="">
         <span>App<wbr>Engine<wbr>Routing<wbr>Override</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queueappengineroutingoverride">Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Tasks.<wbr>Outputs.<wbr>Queue<wbr>App<wbr>Engine<wbr>Routing<wbr>Override?</a></span>
+        <span class="property-type"><a href="#queueappengineroutingoverride">Queue<wbr>App<wbr>Engine<wbr>Routing<wbr>Override?</a></span>
     </dt>
     <dd>{{% md %}}Overrides for task-level appEngineRouting. These settings apply only to App Engine tasks in this queue
 {{% /md %}}</dd>
@@ -446,7 +432,7 @@ If it is not provided, the provider project is used.
             title="">
         <span>Rate<wbr>Limits</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queueratelimits">Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Tasks.<wbr>Outputs.<wbr>Queue<wbr>Rate<wbr>Limits</a></span>
+        <span class="property-type"><a href="#queueratelimits">Queue<wbr>Rate<wbr>Limits</a></span>
     </dt>
     <dd>{{% md %}}Rate limits for task dispatches. The queue's actual dispatch rate is the result of: * Number of tasks in the queue *
 User-specified throttling: rateLimits, retryConfig, and the queue's state. * System throttling due to 429 (Too Many
@@ -458,7 +444,7 @@ spikes.
             title="">
         <span>Retry<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queueretryconfig">Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Tasks.<wbr>Outputs.<wbr>Queue<wbr>Retry<wbr>Config</a></span>
+        <span class="property-type"><a href="#queueretryconfig">Queue<wbr>Retry<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Settings that determine the retry behavior.
 {{% /md %}}</dd>
@@ -675,7 +661,7 @@ Get an existing Queue resource's state with the given name, ID, and optional ext
 {{< chooser language "javascript,typescript,python,go,csharp  " / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">pulumi.Input&lt;pulumi.ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudtasks/#QueueState">QueueState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudtasks/#Queue">Queue</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudtasks/#QueueState">QueueState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudtasks/#Queue">Queue</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -683,11 +669,11 @@ Get an existing Queue resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetQueue<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">pulumi.IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/cloudtasks?tab=doc#QueueState">QueueState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/cloudtasks?tab=doc#Queue">Queue</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetQueue<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/cloudtasks?tab=doc#QueueState">QueueState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/cloudtasks?tab=doc#Queue">Queue</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Cloudtasks.Queue.html">Queue</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Pulumi.Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Cloudtasks.QueueState.html">QueueState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Cloudtasks.Queue.html">Queue</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Cloudtasks.QueueState.html">QueueState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -797,7 +783,7 @@ The following state arguments are supported:
             title="Optional">
         <span>App<wbr>Engine<wbr>Routing<wbr>Override</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queueappengineroutingoverride">Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Tasks.<wbr>Inputs.<wbr>Queue<wbr>App<wbr>Engine<wbr>Routing<wbr>Override<wbr>Args?</a></span>
+        <span class="property-type"><a href="#queueappengineroutingoverride">Queue<wbr>App<wbr>Engine<wbr>Routing<wbr>Override<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Overrides for task-level appEngineRouting. These settings apply only to App Engine tasks in this queue
 {{% /md %}}</dd>
@@ -834,7 +820,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Rate<wbr>Limits</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queueratelimits">Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Tasks.<wbr>Inputs.<wbr>Queue<wbr>Rate<wbr>Limits<wbr>Args?</a></span>
+        <span class="property-type"><a href="#queueratelimits">Queue<wbr>Rate<wbr>Limits<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Rate limits for task dispatches. The queue's actual dispatch rate is the result of: * Number of tasks in the queue *
 User-specified throttling: rateLimits, retryConfig, and the queue's state. * System throttling due to 429 (Too Many
@@ -846,7 +832,7 @@ spikes.
             title="Optional">
         <span>Retry<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queueretryconfig">Pulumi.<wbr>Gcp.<wbr>Cloud<wbr>Tasks.<wbr>Inputs.<wbr>Queue<wbr>Retry<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#queueretryconfig">Queue<wbr>Retry<wbr>Config<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Settings that determine the retry behavior.
 {{% /md %}}</dd>
@@ -1575,3 +1561,10 @@ spikes.
 
 
 
+
+<h3>Package Details</h3>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd></dl>

@@ -40,3 +40,11 @@ A Pulumi package for creating and managing azuread cloud resources.
     <li><a href="getusers"><span class="symbol datasource"></span>GetUsers</a></li>
 </ul>
 
+<h3>Package Details</h3>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd>https://github.com/pulumi/pulumi-azuread</dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd>
+</dl>
+

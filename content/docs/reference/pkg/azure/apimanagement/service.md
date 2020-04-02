@@ -27,7 +27,7 @@ Manages an API Management Service.
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Apimanagement.Service.html">Service</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ApiManagement.Inputs.ServiceArgs.html">ServiceArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Apimanagement.Service.html">Service</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ApiManagement.ServiceArgs.html">ServiceArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -123,7 +123,7 @@ Manages an API Management Service.
             title="Optional">
         <span>Additional<wbr>Locations</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceadditionallocation">List&lt;Pulumi.<wbr>Azure.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Service<wbr>Additional<wbr>Location<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#serviceadditionallocation">List&lt;Service<wbr>Additional<wbr>Location<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}One or more `additional_location` blocks as defined below.
 {{% /md %}}</dd>
@@ -132,7 +132,7 @@ Manages an API Management Service.
             title="Optional">
         <span>Certificates</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecertificate">List&lt;Pulumi.<wbr>Azure.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Service<wbr>Certificate<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#servicecertificate">List&lt;Service<wbr>Certificate<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}One or more (up to 10) `certificate` blocks as defined below.
 {{% /md %}}</dd>
@@ -141,7 +141,7 @@ Manages an API Management Service.
             title="Optional">
         <span>Hostname<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehostnameconfiguration">Pulumi.<wbr>Azure.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Service<wbr>Hostname<wbr>Configuration<wbr>Args?</a></span>
+        <span class="property-type"><a href="#servicehostnameconfiguration">Service<wbr>Hostname<wbr>Configuration<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `hostname_configuration` block as defined below.
 {{% /md %}}</dd>
@@ -150,7 +150,7 @@ Manages an API Management Service.
             title="Optional">
         <span>Identity</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceidentity">Pulumi.<wbr>Azure.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Service<wbr>Identity<wbr>Args?</a></span>
+        <span class="property-type"><a href="#serviceidentity">Service<wbr>Identity<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block is documented below.
 {{% /md %}}</dd>
@@ -186,7 +186,7 @@ Manages an API Management Service.
             title="Optional">
         <span>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicepolicy">Pulumi.<wbr>Azure.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Service<wbr>Policy<wbr>Args?</a></span>
+        <span class="property-type"><a href="#servicepolicy">Service<wbr>Policy<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `policy` block as defined below.
 {{% /md %}}</dd>
@@ -195,7 +195,7 @@ Manages an API Management Service.
             title="Optional">
         <span>Protocols</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceprotocols">Pulumi.<wbr>Azure.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Service<wbr>Protocols<wbr>Args?</a></span>
+        <span class="property-type"><a href="#serviceprotocols">Service<wbr>Protocols<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `protocols` block as defined below.
 {{% /md %}}</dd>
@@ -231,7 +231,7 @@ Manages an API Management Service.
             title="Optional">
         <span>Security</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesecurity">Pulumi.<wbr>Azure.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Service<wbr>Security<wbr>Args?</a></span>
+        <span class="property-type"><a href="#servicesecurity">Service<wbr>Security<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `security` block as defined below.
 {{% /md %}}</dd>
@@ -240,7 +240,7 @@ Manages an API Management Service.
             title="Optional">
         <span>Sign<wbr>In</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesignin">Pulumi.<wbr>Azure.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Service<wbr>Sign<wbr>In<wbr>Args?</a></span>
+        <span class="property-type"><a href="#servicesignin">Service<wbr>Sign<wbr>In<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `sign_in` block as defined below.
 {{% /md %}}</dd>
@@ -249,7 +249,7 @@ Manages an API Management Service.
             title="Optional">
         <span>Sign<wbr>Up</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesignup">Pulumi.<wbr>Azure.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Service<wbr>Sign<wbr>Up<wbr>Args?</a></span>
+        <span class="property-type"><a href="#servicesignup">Service<wbr>Sign<wbr>Up<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `sign_up` block as defined below.
 {{% /md %}}</dd>
@@ -775,7 +775,7 @@ The following output properties are available:
             title="">
         <span>Additional<wbr>Locations</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceadditionallocation">List&lt;Pulumi.<wbr>Azure.<wbr>Api<wbr>Management.<wbr>Outputs.<wbr>Service<wbr>Additional<wbr>Location&gt;?</a></span>
+        <span class="property-type"><a href="#serviceadditionallocation">List&lt;Service<wbr>Additional<wbr>Location&gt;?</a></span>
     </dt>
     <dd>{{% md %}}One or more `additional_location` blocks as defined below.
 {{% /md %}}</dd>
@@ -784,7 +784,7 @@ The following output properties are available:
             title="">
         <span>Certificates</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecertificate">List&lt;Pulumi.<wbr>Azure.<wbr>Api<wbr>Management.<wbr>Outputs.<wbr>Service<wbr>Certificate&gt;?</a></span>
+        <span class="property-type"><a href="#servicecertificate">List&lt;Service<wbr>Certificate&gt;?</a></span>
     </dt>
     <dd>{{% md %}}One or more (up to 10) `certificate` blocks as defined below.
 {{% /md %}}</dd>
@@ -811,7 +811,7 @@ The following output properties are available:
             title="">
         <span>Hostname<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehostnameconfiguration">Pulumi.<wbr>Azure.<wbr>Api<wbr>Management.<wbr>Outputs.<wbr>Service<wbr>Hostname<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#servicehostnameconfiguration">Service<wbr>Hostname<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `hostname_configuration` block as defined below.
 {{% /md %}}</dd>
@@ -820,7 +820,7 @@ The following output properties are available:
             title="">
         <span>Identity</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceidentity">Pulumi.<wbr>Azure.<wbr>Api<wbr>Management.<wbr>Outputs.<wbr>Service<wbr>Identity?</a></span>
+        <span class="property-type"><a href="#serviceidentity">Service<wbr>Identity?</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block is documented below.
 {{% /md %}}</dd>
@@ -865,7 +865,7 @@ The following output properties are available:
             title="">
         <span>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicepolicy">Pulumi.<wbr>Azure.<wbr>Api<wbr>Management.<wbr>Outputs.<wbr>Service<wbr>Policy</a></span>
+        <span class="property-type"><a href="#servicepolicy">Service<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `policy` block as defined below.
 {{% /md %}}</dd>
@@ -883,7 +883,7 @@ The following output properties are available:
             title="">
         <span>Protocols</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceprotocols">Pulumi.<wbr>Azure.<wbr>Api<wbr>Management.<wbr>Outputs.<wbr>Service<wbr>Protocols</a></span>
+        <span class="property-type"><a href="#serviceprotocols">Service<wbr>Protocols</a></span>
     </dt>
     <dd>{{% md %}}A `protocols` block as defined below.
 {{% /md %}}</dd>
@@ -937,7 +937,7 @@ The following output properties are available:
             title="">
         <span>Security</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesecurity">Pulumi.<wbr>Azure.<wbr>Api<wbr>Management.<wbr>Outputs.<wbr>Service<wbr>Security</a></span>
+        <span class="property-type"><a href="#servicesecurity">Service<wbr>Security</a></span>
     </dt>
     <dd>{{% md %}}A `security` block as defined below.
 {{% /md %}}</dd>
@@ -946,7 +946,7 @@ The following output properties are available:
             title="">
         <span>Sign<wbr>In</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesignin">Pulumi.<wbr>Azure.<wbr>Api<wbr>Management.<wbr>Outputs.<wbr>Service<wbr>Sign<wbr>In</a></span>
+        <span class="property-type"><a href="#servicesignin">Service<wbr>Sign<wbr>In</a></span>
     </dt>
     <dd>{{% md %}}A `sign_in` block as defined below.
 {{% /md %}}</dd>
@@ -955,7 +955,7 @@ The following output properties are available:
             title="">
         <span>Sign<wbr>Up</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesignup">Pulumi.<wbr>Azure.<wbr>Api<wbr>Management.<wbr>Outputs.<wbr>Service<wbr>Sign<wbr>Up</a></span>
+        <span class="property-type"><a href="#servicesignup">Service<wbr>Sign<wbr>Up</a></span>
     </dt>
     <dd>{{% md %}}A `sign_up` block as defined below.
 {{% /md %}}</dd>
@@ -1637,7 +1637,7 @@ Get an existing Service resource's state with the given name, ID, and optional e
 {{< chooser language "javascript,typescript,python,go,csharp  " / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">pulumi.Input&lt;pulumi.ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/apimanagement/#ServiceState">ServiceState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/apimanagement/#Service">Service</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/apimanagement/#ServiceState">ServiceState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/apimanagement/#Service">Service</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1645,11 +1645,11 @@ Get an existing Service resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetService<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">pulumi.IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#ServiceState">ServiceState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#Service">Service</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetService<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#ServiceState">ServiceState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#Service">Service</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Apimanagement.Service.html">Service</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Pulumi.Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Apimanagement.ServiceState.html">ServiceState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Apimanagement.Service.html">Service</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Apimanagement.ServiceState.html">ServiceState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1759,7 +1759,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Additional<wbr>Locations</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceadditionallocation">List&lt;Pulumi.<wbr>Azure.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Service<wbr>Additional<wbr>Location<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#serviceadditionallocation">List&lt;Service<wbr>Additional<wbr>Location<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}One or more `additional_location` blocks as defined below.
 {{% /md %}}</dd>
@@ -1768,7 +1768,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Certificates</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecertificate">List&lt;Pulumi.<wbr>Azure.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Service<wbr>Certificate<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#servicecertificate">List&lt;Service<wbr>Certificate<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}One or more (up to 10) `certificate` blocks as defined below.
 {{% /md %}}</dd>
@@ -1795,7 +1795,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Hostname<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehostnameconfiguration">Pulumi.<wbr>Azure.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Service<wbr>Hostname<wbr>Configuration<wbr>Args?</a></span>
+        <span class="property-type"><a href="#servicehostnameconfiguration">Service<wbr>Hostname<wbr>Configuration<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `hostname_configuration` block as defined below.
 {{% /md %}}</dd>
@@ -1804,7 +1804,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Identity</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceidentity">Pulumi.<wbr>Azure.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Service<wbr>Identity<wbr>Args?</a></span>
+        <span class="property-type"><a href="#serviceidentity">Service<wbr>Identity<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block is documented below.
 {{% /md %}}</dd>
@@ -1849,7 +1849,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicepolicy">Pulumi.<wbr>Azure.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Service<wbr>Policy<wbr>Args?</a></span>
+        <span class="property-type"><a href="#servicepolicy">Service<wbr>Policy<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `policy` block as defined below.
 {{% /md %}}</dd>
@@ -1867,7 +1867,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Protocols</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceprotocols">Pulumi.<wbr>Azure.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Service<wbr>Protocols<wbr>Args?</a></span>
+        <span class="property-type"><a href="#serviceprotocols">Service<wbr>Protocols<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `protocols` block as defined below.
 {{% /md %}}</dd>
@@ -1921,7 +1921,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Security</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesecurity">Pulumi.<wbr>Azure.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Service<wbr>Security<wbr>Args?</a></span>
+        <span class="property-type"><a href="#servicesecurity">Service<wbr>Security<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `security` block as defined below.
 {{% /md %}}</dd>
@@ -1930,7 +1930,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sign<wbr>In</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesignin">Pulumi.<wbr>Azure.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Service<wbr>Sign<wbr>In<wbr>Args?</a></span>
+        <span class="property-type"><a href="#servicesignin">Service<wbr>Sign<wbr>In<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `sign_in` block as defined below.
 {{% /md %}}</dd>
@@ -1939,7 +1939,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sign<wbr>Up</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesignup">Pulumi.<wbr>Azure.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Service<wbr>Sign<wbr>Up<wbr>Args?</a></span>
+        <span class="property-type"><a href="#servicesignup">Service<wbr>Sign<wbr>Up<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `sign_up` block as defined below.
 {{% /md %}}</dd>
@@ -2939,7 +2939,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Managements</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehostnameconfigurationmanagement">List&lt;Pulumi.<wbr>Azure.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Service<wbr>Hostname<wbr>Configuration<wbr>Management<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#servicehostnameconfigurationmanagement">List&lt;Service<wbr>Hostname<wbr>Configuration<wbr>Management<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}One or more `management` blocks as documented below.
 {{% /md %}}</dd>
@@ -2948,7 +2948,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Portals</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehostnameconfigurationportal">List&lt;Pulumi.<wbr>Azure.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Service<wbr>Hostname<wbr>Configuration<wbr>Portal<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#servicehostnameconfigurationportal">List&lt;Service<wbr>Hostname<wbr>Configuration<wbr>Portal<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}One or more `portal` blocks as documented below.
 {{% /md %}}</dd>
@@ -2957,7 +2957,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Proxies</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehostnameconfigurationproxy">List&lt;Pulumi.<wbr>Azure.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Service<wbr>Hostname<wbr>Configuration<wbr>Proxy<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#servicehostnameconfigurationproxy">List&lt;Service<wbr>Hostname<wbr>Configuration<wbr>Proxy<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}One or more `proxy` blocks as documented below.
 {{% /md %}}</dd>
@@ -2966,7 +2966,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Scms</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehostnameconfigurationscm">List&lt;Pulumi.<wbr>Azure.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Service<wbr>Hostname<wbr>Configuration<wbr>Scm<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#servicehostnameconfigurationscm">List&lt;Service<wbr>Hostname<wbr>Configuration<wbr>Scm<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}One or more `scm` blocks as documented below.
 {{% /md %}}</dd>
@@ -4782,7 +4782,7 @@ The following state arguments are supported:
             title="Required">
         <span>Terms<wbr>Of<wbr>Service</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesignuptermsofservice">Pulumi.<wbr>Azure.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Service<wbr>Sign<wbr>Up<wbr>Terms<wbr>Of<wbr>Service<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicesignuptermsofservice">Service<wbr>Sign<wbr>Up<wbr>Terms<wbr>Of<wbr>Service<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `terms_of_service` block as defined below.
 {{% /md %}}</dd>
@@ -5022,3 +5022,10 @@ The following state arguments are supported:
 
 
 
+
+<h3>Package Details</h3>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd></dl>

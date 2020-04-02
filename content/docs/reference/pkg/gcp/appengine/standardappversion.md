@@ -13,7 +13,7 @@ To get more information about StandardAppVersion, see:
 
 * [API documentation](https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1/apps.services.versions)
 * How-to Guides
-    * [Official Documentation](https://cloud.google.com/appengine/docs/admin-api/deploying-overview)
+    * [Official Documentation](https://cloud.google.com/appengine/docs/standard)
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/app_engine_standard_app_version.html.markdown.
 
@@ -36,7 +36,7 @@ To get more information about StandardAppVersion, see:
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Appengine.StandardAppVersion.html">StandardAppVersion</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.StandardAppVersionArgs.html">StandardAppVersionArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Appengine.StandardAppVersion.html">StandardAppVersion</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.StandardAppVersionArgs.html">StandardAppVersionArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -141,7 +141,7 @@ To get more information about StandardAppVersion, see:
             title="Optional">
         <span>Deployment</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversiondeployment">Pulumi.<wbr>Gcp.<wbr>App<wbr>Engine.<wbr>Inputs.<wbr>Standard<wbr>App<wbr>Version<wbr>Deployment<wbr>Args?</a></span>
+        <span class="property-type"><a href="#standardappversiondeployment">Standard<wbr>App<wbr>Version<wbr>Deployment<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Code and application artifacts that make up this version.
 {{% /md %}}</dd>
@@ -150,7 +150,7 @@ To get more information about StandardAppVersion, see:
             title="Optional">
         <span>Entrypoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionentrypoint">Pulumi.<wbr>Gcp.<wbr>App<wbr>Engine.<wbr>Inputs.<wbr>Standard<wbr>App<wbr>Version<wbr>Entrypoint<wbr>Args?</a></span>
+        <span class="property-type"><a href="#standardappversionentrypoint">Standard<wbr>App<wbr>Version<wbr>Entrypoint<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}The entrypoint for the application.
 {{% /md %}}</dd>
@@ -168,7 +168,7 @@ To get more information about StandardAppVersion, see:
             title="Optional">
         <span>Handlers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionhandler">List&lt;Pulumi.<wbr>Gcp.<wbr>App<wbr>Engine.<wbr>Inputs.<wbr>Standard<wbr>App<wbr>Version<wbr>Handler<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#standardappversionhandler">List&lt;Standard<wbr>App<wbr>Version<wbr>Handler<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}An ordered list of URL-matching patterns that should be applied to incoming requests. The first matching URL handles the
 request and other request handlers are not attempted.
@@ -188,7 +188,7 @@ AutomaticScaling is supported at the moment)
             title="Optional">
         <span>Libraries</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionlibrary">List&lt;Pulumi.<wbr>Gcp.<wbr>App<wbr>Engine.<wbr>Inputs.<wbr>Standard<wbr>App<wbr>Version<wbr>Library<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#standardappversionlibrary">List&lt;Standard<wbr>App<wbr>Version<wbr>Library<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}Configuration for third-party Python runtime libraries that are required by the application.
 {{% /md %}}</dd>
@@ -705,7 +705,7 @@ The following output properties are available:
             title="">
         <span>Deployment</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversiondeployment">Pulumi.<wbr>Gcp.<wbr>App<wbr>Engine.<wbr>Outputs.<wbr>Standard<wbr>App<wbr>Version<wbr>Deployment?</a></span>
+        <span class="property-type"><a href="#standardappversiondeployment">Standard<wbr>App<wbr>Version<wbr>Deployment?</a></span>
     </dt>
     <dd>{{% md %}}Code and application artifacts that make up this version.
 {{% /md %}}</dd>
@@ -714,7 +714,7 @@ The following output properties are available:
             title="">
         <span>Entrypoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionentrypoint">Pulumi.<wbr>Gcp.<wbr>App<wbr>Engine.<wbr>Outputs.<wbr>Standard<wbr>App<wbr>Version<wbr>Entrypoint?</a></span>
+        <span class="property-type"><a href="#standardappversionentrypoint">Standard<wbr>App<wbr>Version<wbr>Entrypoint?</a></span>
     </dt>
     <dd>{{% md %}}The entrypoint for the application.
 {{% /md %}}</dd>
@@ -732,7 +732,7 @@ The following output properties are available:
             title="">
         <span>Handlers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionhandler">List&lt;Pulumi.<wbr>Gcp.<wbr>App<wbr>Engine.<wbr>Outputs.<wbr>Standard<wbr>App<wbr>Version<wbr>Handler&gt;?</a></span>
+        <span class="property-type"><a href="#standardappversionhandler">List&lt;Standard<wbr>App<wbr>Version<wbr>Handler&gt;?</a></span>
     </dt>
     <dd>{{% md %}}An ordered list of URL-matching patterns that should be applied to incoming requests. The first matching URL handles the
 request and other request handlers are not attempted.
@@ -752,7 +752,7 @@ AutomaticScaling is supported at the moment)
             title="">
         <span>Libraries</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionlibrary">List&lt;Pulumi.<wbr>Gcp.<wbr>App<wbr>Engine.<wbr>Outputs.<wbr>Standard<wbr>App<wbr>Version<wbr>Library&gt;?</a></span>
+        <span class="property-type"><a href="#standardappversionlibrary">List&lt;Standard<wbr>App<wbr>Version<wbr>Library&gt;?</a></span>
     </dt>
     <dd>{{% md %}}Configuration for third-party Python runtime libraries that are required by the application.
 {{% /md %}}</dd>
@@ -1290,7 +1290,7 @@ Get an existing StandardAppVersion resource's state with the given name, ID, and
 {{< chooser language "javascript,typescript,python,go,csharp  " / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">pulumi.Input&lt;pulumi.ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/appengine/#StandardAppVersionState">StandardAppVersionState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/appengine/#StandardAppVersion">StandardAppVersion</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/appengine/#StandardAppVersionState">StandardAppVersionState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/appengine/#StandardAppVersion">StandardAppVersion</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1298,11 +1298,11 @@ Get an existing StandardAppVersion resource's state with the given name, ID, and
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetStandardAppVersion<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">pulumi.IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/appengine?tab=doc#StandardAppVersionState">StandardAppVersionState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/appengine?tab=doc#StandardAppVersion">StandardAppVersion</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetStandardAppVersion<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/appengine?tab=doc#StandardAppVersionState">StandardAppVersionState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/appengine?tab=doc#StandardAppVersion">StandardAppVersion</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Appengine.StandardAppVersion.html">StandardAppVersion</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Pulumi.Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Appengine.StandardAppVersionState.html">StandardAppVersionState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Appengine.StandardAppVersion.html">StandardAppVersion</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Appengine.StandardAppVersionState.html">StandardAppVersionState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1421,7 +1421,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Deployment</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversiondeployment">Pulumi.<wbr>Gcp.<wbr>App<wbr>Engine.<wbr>Inputs.<wbr>Standard<wbr>App<wbr>Version<wbr>Deployment<wbr>Args?</a></span>
+        <span class="property-type"><a href="#standardappversiondeployment">Standard<wbr>App<wbr>Version<wbr>Deployment<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Code and application artifacts that make up this version.
 {{% /md %}}</dd>
@@ -1430,7 +1430,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Entrypoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionentrypoint">Pulumi.<wbr>Gcp.<wbr>App<wbr>Engine.<wbr>Inputs.<wbr>Standard<wbr>App<wbr>Version<wbr>Entrypoint<wbr>Args?</a></span>
+        <span class="property-type"><a href="#standardappversionentrypoint">Standard<wbr>App<wbr>Version<wbr>Entrypoint<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}The entrypoint for the application.
 {{% /md %}}</dd>
@@ -1448,7 +1448,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Handlers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionhandler">List&lt;Pulumi.<wbr>Gcp.<wbr>App<wbr>Engine.<wbr>Inputs.<wbr>Standard<wbr>App<wbr>Version<wbr>Handler<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#standardappversionhandler">List&lt;Standard<wbr>App<wbr>Version<wbr>Handler<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}An ordered list of URL-matching patterns that should be applied to incoming requests. The first matching URL handles the
 request and other request handlers are not attempted.
@@ -1468,7 +1468,7 @@ AutomaticScaling is supported at the moment)
             title="Optional">
         <span>Libraries</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionlibrary">List&lt;Pulumi.<wbr>Gcp.<wbr>App<wbr>Engine.<wbr>Inputs.<wbr>Standard<wbr>App<wbr>Version<wbr>Library<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#standardappversionlibrary">List&lt;Standard<wbr>App<wbr>Version<wbr>Library<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}Configuration for third-party Python runtime libraries that are required by the application.
 {{% /md %}}</dd>
@@ -2022,7 +2022,7 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
             title="Optional">
         <span>Files</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversiondeploymentfile">List&lt;Pulumi.<wbr>Gcp.<wbr>App<wbr>Engine.<wbr>Inputs.<wbr>Standard<wbr>App<wbr>Version<wbr>Deployment<wbr>File<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#standardappversiondeploymentfile">List&lt;Standard<wbr>App<wbr>Version<wbr>Deployment<wbr>File<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2030,7 +2030,7 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
             title="Optional">
         <span>Zip</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversiondeploymentzip">Pulumi.<wbr>Gcp.<wbr>App<wbr>Engine.<wbr>Inputs.<wbr>Standard<wbr>App<wbr>Version<wbr>Deployment<wbr>Zip<wbr>Args?</a></span>
+        <span class="property-type"><a href="#standardappversiondeploymentzip">Standard<wbr>App<wbr>Version<wbr>Deployment<wbr>Zip<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2478,7 +2478,7 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
             title="Optional">
         <span>Script</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionhandlerscript">Pulumi.<wbr>Gcp.<wbr>App<wbr>Engine.<wbr>Inputs.<wbr>Standard<wbr>App<wbr>Version<wbr>Handler<wbr>Script<wbr>Args?</a></span>
+        <span class="property-type"><a href="#standardappversionhandlerscript">Standard<wbr>App<wbr>Version<wbr>Handler<wbr>Script<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2494,7 +2494,7 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
             title="Optional">
         <span>Static<wbr>Files</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionhandlerstaticfiles">Pulumi.<wbr>Gcp.<wbr>App<wbr>Engine.<wbr>Inputs.<wbr>Standard<wbr>App<wbr>Version<wbr>Handler<wbr>Static<wbr>Files<wbr>Args?</a></span>
+        <span class="property-type"><a href="#standardappversionhandlerstaticfiles">Standard<wbr>App<wbr>Version<wbr>Handler<wbr>Static<wbr>Files<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3157,3 +3157,10 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
 
 
 
+
+<h3>Package Details</h3>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd></dl>
