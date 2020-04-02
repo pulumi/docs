@@ -24,7 +24,18 @@ popd
 
 generate_docs() {
     provider=$1
-    ./scripts/update_repos.sh "pulumi-${provider}"
+
+    # Checkout the latest branch of the provider repo, rather than
+    # using the update_repos script. This is only temporary until
+    # 2.0 is GA.
+    # ./scripts/update_repos.sh "pulumi-${provider}"
+
+    echo -e "\033[0;95m--- Updating repo pulumi/pulumi-${provider} ---\033[0m"
+    pushd "../pulumi-${provider}"
+    echo -e "\033[0;93mPulling changes\033[0m"
+    git checkout master >/dev/null
+    git pull origin master >/dev/null
+    popd
 
     echo "Removing the ${PACKDIR}/${provider} dir..."
     rm -rf "${PACKDIR}/${provider}"
