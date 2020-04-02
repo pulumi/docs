@@ -3,10 +3,10 @@
 title: "Pulumi Up(date)"
 meta_desc: "Join Pulumi CEO, Joe Duffy, and the Pulumi team for a walk-through of all the improvements and modern infrastructure capabilities of Pulumi."
 
-aliases: [
-    "/webinars/pulumi-v2-virtual-launch",
-    "/events/launch-v2-seattle-2020-04-15"
-]
+aliases:
+    - /webinars/pulumi-v2-virtual-launch
+    - /events/launch-v2-seattle-2020-04-15
+    - /webinars/pulumi-update-2020-04-22
 
 # If the video is pre-recorded or live.
 pre_recorded: false
@@ -15,7 +15,7 @@ pre_recorded: false
 pulumi_tv: false
 
 # The preview image will be shown on the list page.
-preview_image: "/images/webinar/pulumi-up(date)-2020-04-22.png"
+preview_image: "/images/webinar/pulumi-up(date)-2020-04-29.png"
 
 # Webinars with unlisted as true will not be shown on the webinar list
 unlisted: false
@@ -33,7 +33,7 @@ external: false
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: "pulumi-update-2020-04-22"
+url_slug: "pulumi-update-2020-04-29"
 
 # The content of the hero section.
 hero:
@@ -47,9 +47,9 @@ main:
     # Webinar title.
     title: "Pulumi Up(date)"
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2020-04-22 11:00:00 -07:00
+    sortable_date: 2020-04-29 11:00:00 -07:00
     # Datetime of the webinar.
-    datetime: "WED APR 22, 2020 AT 11:00AM TO 12:00PM PDT"
+    datetime: "WED APR 29, 2020 AT 11:00AM TO 12:00PM PDT"
     # Description of the webinar.
     description: |
         Pulumi 2.0 makes it easier than ever to master any cloud using your favorite languages.  Learn about new capabilities to help your team plan, build, validate, deploy and secure your cloud resources. With Pulumi’s new capabilities, you’ll spend less time fretting about complex configurations and more time delivering new infrastructure, apps, and services for your customers and stakeholders. Our improved documentation and first-class support for Python, .NET and Go means that more teams can start building, collaborating on and re-using infrastructure code.
