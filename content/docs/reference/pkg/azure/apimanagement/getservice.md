@@ -18,7 +18,7 @@ Use this data source to access information about an existing API Management Serv
 
 
 {{% choosable language typescript %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getService<span class="p">(</span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/apimanagement/#GetServiceArgs">GetServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">pulumi.InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/apimanagement/#GetServiceResult">GetServiceResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getService<span class="p">(</span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/apimanagement/#GetServiceArgs">GetServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/apimanagement/#GetServiceResult">GetServiceResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -28,13 +28,13 @@ Use this data source to access information about an existing API Management Serv
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupService<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#LookupServiceArgs">LookupServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#LookupServiceResult">LookupServiceResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupService<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#LookupServiceArgs">LookupServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#LookupServiceResult">LookupServiceResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetService </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Apimanagement.GetServiceResult.html">GetServiceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ApiManagement.Inputs.GetServiceArgs.html">GetServiceArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">Pulumi.InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Apimanagement.GetServiceResult.html">GetServiceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ApiManagement.GetServiceArgs.html">GetServiceArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -164,7 +164,7 @@ The following output properties are available:
             title="">
         <span>Additional<wbr>Locations</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceadditionallocation">List&lt;Pulumi.<wbr>Azure.<wbr>Api<wbr>Management.<wbr>Outputs.<wbr>Get<wbr>Service<wbr>Additional<wbr>Location&gt;</a></span>
+        <span class="property-type"><a href="#getserviceadditionallocation">List&lt;Get<wbr>Service<wbr>Additional<wbr>Location&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `additional_location` blocks as defined below
 {{% /md %}}</dd>
@@ -191,7 +191,7 @@ The following output properties are available:
             title="">
         <span>Hostname<wbr>Configurations</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicehostnameconfiguration">List&lt;Pulumi.<wbr>Azure.<wbr>Api<wbr>Management.<wbr>Outputs.<wbr>Get<wbr>Service<wbr>Hostname<wbr>Configuration&gt;</a></span>
+        <span class="property-type"><a href="#getservicehostnameconfiguration">List&lt;Get<wbr>Service<wbr>Hostname<wbr>Configuration&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `hostname_configuration` block as defined below.
 {{% /md %}}</dd>
@@ -967,7 +967,7 @@ The following output properties are available:
             title="Required">
         <span>Managements</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicehostnameconfigurationmanagement">List&lt;Pulumi.<wbr>Azure.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Get<wbr>Service<wbr>Hostname<wbr>Configuration<wbr>Management<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getservicehostnameconfigurationmanagement">List&lt;Get<wbr>Service<wbr>Hostname<wbr>Configuration<wbr>Management<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `management` blocks as documented below.
 {{% /md %}}</dd>
@@ -976,7 +976,7 @@ The following output properties are available:
             title="Required">
         <span>Portals</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicehostnameconfigurationportal">List&lt;Pulumi.<wbr>Azure.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Get<wbr>Service<wbr>Hostname<wbr>Configuration<wbr>Portal<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getservicehostnameconfigurationportal">List&lt;Get<wbr>Service<wbr>Hostname<wbr>Configuration<wbr>Portal<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `portal` blocks as documented below.
 {{% /md %}}</dd>
@@ -985,7 +985,7 @@ The following output properties are available:
             title="Required">
         <span>Proxies</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicehostnameconfigurationproxy">List&lt;Pulumi.<wbr>Azure.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Get<wbr>Service<wbr>Hostname<wbr>Configuration<wbr>Proxy<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getservicehostnameconfigurationproxy">List&lt;Get<wbr>Service<wbr>Hostname<wbr>Configuration<wbr>Proxy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `proxy` blocks as documented below.
 {{% /md %}}</dd>
@@ -994,7 +994,7 @@ The following output properties are available:
             title="Required">
         <span>Scms</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicehostnameconfigurationscm">List&lt;Pulumi.<wbr>Azure.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Get<wbr>Service<wbr>Hostname<wbr>Configuration<wbr>Scm<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getservicehostnameconfigurationscm">List&lt;Get<wbr>Service<wbr>Hostname<wbr>Configuration<wbr>Scm<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `scm` blocks as documented below.
 {{% /md %}}</dd>

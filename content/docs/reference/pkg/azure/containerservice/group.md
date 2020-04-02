@@ -27,7 +27,7 @@ Manages as an Azure Container Group instance.
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Containerservice.Group.html">Group</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ContainerService.Inputs.GroupArgs.html">GroupArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Containerservice.Group.html">Group</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ContainerService.GroupArgs.html">GroupArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -123,7 +123,7 @@ Manages as an Azure Container Group instance.
             title="Required">
         <span>Containers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontainer">List&lt;Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Group<wbr>Container<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#groupcontainer">List&lt;Group<wbr>Container<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The definition of a container that is part of the group as documented in the `container` block below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -132,7 +132,7 @@ Manages as an Azure Container Group instance.
             title="Optional">
         <span>Diagnostics</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupdiagnostics">Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Group<wbr>Diagnostics<wbr>Args?</a></span>
+        <span class="property-type"><a href="#groupdiagnostics">Group<wbr>Diagnostics<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `diagnostics` block as documented below.
 {{% /md %}}</dd>
@@ -150,7 +150,7 @@ Manages as an Azure Container Group instance.
             title="Optional">
         <span>Identity</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupidentity">Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Group<wbr>Identity<wbr>Args?</a></span>
+        <span class="property-type"><a href="#groupidentity">Group<wbr>Identity<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd>
@@ -159,7 +159,7 @@ Manages as an Azure Container Group instance.
             title="Optional">
         <span>Image<wbr>Registry<wbr>Credentials</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupimageregistrycredential">List&lt;Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Group<wbr>Image<wbr>Registry<wbr>Credential<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#groupimageregistrycredential">List&lt;Group<wbr>Image<wbr>Registry<wbr>Credential<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}A `image_registry_credential` block as documented below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -631,7 +631,7 @@ The following output properties are available:
             title="">
         <span>Containers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontainer">List&lt;Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Group<wbr>Container&gt;</a></span>
+        <span class="property-type"><a href="#groupcontainer">List&lt;Group<wbr>Container&gt;</a></span>
     </dt>
     <dd>{{% md %}}The definition of a container that is part of the group as documented in the `container` block below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -640,7 +640,7 @@ The following output properties are available:
             title="">
         <span>Diagnostics</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupdiagnostics">Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Group<wbr>Diagnostics?</a></span>
+        <span class="property-type"><a href="#groupdiagnostics">Group<wbr>Diagnostics?</a></span>
     </dt>
     <dd>{{% md %}}A `diagnostics` block as documented below.
 {{% /md %}}</dd>
@@ -667,7 +667,7 @@ The following output properties are available:
             title="">
         <span>Identity</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupidentity">Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Group<wbr>Identity</a></span>
+        <span class="property-type"><a href="#groupidentity">Group<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd>
@@ -676,7 +676,7 @@ The following output properties are available:
             title="">
         <span>Image<wbr>Registry<wbr>Credentials</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupimageregistrycredential">List&lt;Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Group<wbr>Image<wbr>Registry<wbr>Credential&gt;?</a></span>
+        <span class="property-type"><a href="#groupimageregistrycredential">List&lt;Group<wbr>Image<wbr>Registry<wbr>Credential&gt;?</a></span>
     </dt>
     <dd>{{% md %}}A `image_registry_credential` block as documented below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1205,7 +1205,7 @@ Get an existing Group resource's state with the given name, ID, and optional ext
 {{< chooser language "javascript,typescript,python,go,csharp  " / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">pulumi.Input&lt;pulumi.ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/containerservice/#GroupState">GroupState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/containerservice/#Group">Group</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/containerservice/#GroupState">GroupState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/containerservice/#Group">Group</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1213,11 +1213,11 @@ Get an existing Group resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGroup<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">pulumi.IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/containerservice?tab=doc#GroupState">GroupState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/containerservice?tab=doc#Group">Group</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGroup<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/containerservice?tab=doc#GroupState">GroupState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/containerservice?tab=doc#Group">Group</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Containerservice.Group.html">Group</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Pulumi.Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Containerservice.GroupState.html">GroupState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Containerservice.Group.html">Group</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Containerservice.GroupState.html">GroupState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1327,7 +1327,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Containers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontainer">List&lt;Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Group<wbr>Container<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#groupcontainer">List&lt;Group<wbr>Container<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}The definition of a container that is part of the group as documented in the `container` block below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1336,7 +1336,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Diagnostics</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupdiagnostics">Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Group<wbr>Diagnostics<wbr>Args?</a></span>
+        <span class="property-type"><a href="#groupdiagnostics">Group<wbr>Diagnostics<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `diagnostics` block as documented below.
 {{% /md %}}</dd>
@@ -1363,7 +1363,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Identity</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupidentity">Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Group<wbr>Identity<wbr>Args?</a></span>
+        <span class="property-type"><a href="#groupidentity">Group<wbr>Identity<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd>
@@ -1372,7 +1372,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Image<wbr>Registry<wbr>Credentials</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupimageregistrycredential">List&lt;Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Group<wbr>Image<wbr>Registry<wbr>Credential<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#groupimageregistrycredential">List&lt;Group<wbr>Image<wbr>Registry<wbr>Credential<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}A `image_registry_credential` block as documented below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1944,7 +1944,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Gpu</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontainergpu">Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Group<wbr>Container<wbr>Gpu<wbr>Args?</a></span>
+        <span class="property-type"><a href="#groupcontainergpu">Group<wbr>Container<wbr>Gpu<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `gpu` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1962,7 +1962,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Liveness<wbr>Probe</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontainerlivenessprobe">Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Group<wbr>Container<wbr>Liveness<wbr>Probe<wbr>Args?</a></span>
+        <span class="property-type"><a href="#groupcontainerlivenessprobe">Group<wbr>Container<wbr>Liveness<wbr>Probe<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}The definition of a readiness probe for this container as documented in the `liveness_probe` block below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1989,7 +1989,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ports</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontainerport">List&lt;Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Group<wbr>Container<wbr>Port<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#groupcontainerport">List&lt;Group<wbr>Container<wbr>Port<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}A set of public ports for the container. Changing this forces a new resource to be created. Set as documented in the `ports` block below.
 {{% /md %}}</dd>
@@ -1998,7 +1998,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Readiness<wbr>Probe</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontainerreadinessprobe">Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Group<wbr>Container<wbr>Readiness<wbr>Probe<wbr>Args?</a></span>
+        <span class="property-type"><a href="#groupcontainerreadinessprobe">Group<wbr>Container<wbr>Readiness<wbr>Probe<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}The definition of a readiness probe for this container as documented in the `readiness_probe` block below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -2016,7 +2016,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Volumes</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontainervolume">List&lt;Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Group<wbr>Container<wbr>Volume<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#groupcontainervolume">List&lt;Group<wbr>Container<wbr>Volume<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}The definition of a volume mount for this container as documented in the `volume` block below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -2525,7 +2525,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Http<wbr>Gets</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontainerlivenessprobehttpget">List&lt;Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Group<wbr>Container<wbr>Liveness<wbr>Probe<wbr>Http<wbr>Get<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#groupcontainerlivenessprobehttpget">List&lt;Group<wbr>Container<wbr>Liveness<wbr>Probe<wbr>Http<wbr>Get<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}The definition of the httpget for this container as documented in the `httpget` block below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -3086,7 +3086,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Http<wbr>Gets</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontainerreadinessprobehttpget">List&lt;Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Group<wbr>Container<wbr>Readiness<wbr>Probe<wbr>Http<wbr>Get<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#groupcontainerreadinessprobehttpget">List&lt;Group<wbr>Container<wbr>Readiness<wbr>Probe<wbr>Http<wbr>Get<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}The definition of the httpget for this container as documented in the `httpget` block below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -3773,7 +3773,7 @@ The following state arguments are supported:
             title="Required">
         <span>Log<wbr>Analytics</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupdiagnosticsloganalytics">Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Group<wbr>Diagnostics<wbr>Log<wbr>Analytics<wbr>Args</a></span>
+        <span class="property-type"><a href="#groupdiagnosticsloganalytics">Group<wbr>Diagnostics<wbr>Log<wbr>Analytics<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `log_analytics` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -4320,3 +4320,10 @@ The following state arguments are supported:
 
 
 
+
+<h3>Package Details</h3>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd></dl>

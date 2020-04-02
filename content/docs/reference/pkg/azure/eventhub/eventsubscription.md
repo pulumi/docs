@@ -27,7 +27,7 @@ Manages an EventGrid Event Subscription
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Eventhub.EventSubscription.html">EventSubscription</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventHub.Inputs.EventSubscriptionArgs.html">EventSubscriptionArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Eventhub.EventSubscription.html">EventSubscription</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventHub.EventSubscriptionArgs.html">EventSubscriptionArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -132,7 +132,7 @@ Manages an EventGrid Event Subscription
             title="Optional">
         <span>Eventhub<wbr>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptioneventhubendpoint">Pulumi.<wbr>Azure.<wbr>Event<wbr>Hub.<wbr>Inputs.<wbr>Event<wbr>Subscription<wbr>Eventhub<wbr>Endpoint<wbr>Args?</a></span>
+        <span class="property-type"><a href="#eventsubscriptioneventhubendpoint">Event<wbr>Subscription<wbr>Eventhub<wbr>Endpoint<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `eventhub_endpoint` block as defined below.
 {{% /md %}}</dd>
@@ -141,7 +141,7 @@ Manages an EventGrid Event Subscription
             title="Optional">
         <span>Hybrid<wbr>Connection<wbr>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionhybridconnectionendpoint">Pulumi.<wbr>Azure.<wbr>Event<wbr>Hub.<wbr>Inputs.<wbr>Event<wbr>Subscription<wbr>Hybrid<wbr>Connection<wbr>Endpoint<wbr>Args?</a></span>
+        <span class="property-type"><a href="#eventsubscriptionhybridconnectionendpoint">Event<wbr>Subscription<wbr>Hybrid<wbr>Connection<wbr>Endpoint<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `hybrid_connection_endpoint` block as defined below.
 {{% /md %}}</dd>
@@ -177,7 +177,7 @@ Manages an EventGrid Event Subscription
             title="Optional">
         <span>Retry<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionretrypolicy">Pulumi.<wbr>Azure.<wbr>Event<wbr>Hub.<wbr>Inputs.<wbr>Event<wbr>Subscription<wbr>Retry<wbr>Policy<wbr>Args?</a></span>
+        <span class="property-type"><a href="#eventsubscriptionretrypolicy">Event<wbr>Subscription<wbr>Retry<wbr>Policy<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `retry_policy` block as defined below.
 {{% /md %}}</dd>
@@ -195,7 +195,7 @@ Manages an EventGrid Event Subscription
             title="Optional">
         <span>Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionstorageblobdeadletterdestination">Pulumi.<wbr>Azure.<wbr>Event<wbr>Hub.<wbr>Inputs.<wbr>Event<wbr>Subscription<wbr>Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination<wbr>Args?</a></span>
+        <span class="property-type"><a href="#eventsubscriptionstorageblobdeadletterdestination">Event<wbr>Subscription<wbr>Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `storage_blob_dead_letter_destination` block as defined below.
 {{% /md %}}</dd>
@@ -204,7 +204,7 @@ Manages an EventGrid Event Subscription
             title="Optional">
         <span>Storage<wbr>Queue<wbr>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionstoragequeueendpoint">Pulumi.<wbr>Azure.<wbr>Event<wbr>Hub.<wbr>Inputs.<wbr>Event<wbr>Subscription<wbr>Storage<wbr>Queue<wbr>Endpoint<wbr>Args?</a></span>
+        <span class="property-type"><a href="#eventsubscriptionstoragequeueendpoint">Event<wbr>Subscription<wbr>Storage<wbr>Queue<wbr>Endpoint<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `storage_queue_endpoint` block as defined below.
 {{% /md %}}</dd>
@@ -213,7 +213,7 @@ Manages an EventGrid Event Subscription
             title="Optional">
         <span>Subject<wbr>Filter</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionsubjectfilter">Pulumi.<wbr>Azure.<wbr>Event<wbr>Hub.<wbr>Inputs.<wbr>Event<wbr>Subscription<wbr>Subject<wbr>Filter<wbr>Args?</a></span>
+        <span class="property-type"><a href="#eventsubscriptionsubjectfilter">Event<wbr>Subscription<wbr>Subject<wbr>Filter<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `subject_filter` block as defined below.
 {{% /md %}}</dd>
@@ -231,7 +231,7 @@ Manages an EventGrid Event Subscription
             title="Optional">
         <span>Webhook<wbr>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionwebhookendpoint">Pulumi.<wbr>Azure.<wbr>Event<wbr>Hub.<wbr>Inputs.<wbr>Event<wbr>Subscription<wbr>Webhook<wbr>Endpoint<wbr>Args?</a></span>
+        <span class="property-type"><a href="#eventsubscriptionwebhookendpoint">Event<wbr>Subscription<wbr>Webhook<wbr>Endpoint<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `webhook_endpoint` block as defined below.
 {{% /md %}}</dd>
@@ -640,7 +640,7 @@ The following output properties are available:
             title="">
         <span>Eventhub<wbr>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptioneventhubendpoint">Pulumi.<wbr>Azure.<wbr>Event<wbr>Hub.<wbr>Outputs.<wbr>Event<wbr>Subscription<wbr>Eventhub<wbr>Endpoint?</a></span>
+        <span class="property-type"><a href="#eventsubscriptioneventhubendpoint">Event<wbr>Subscription<wbr>Eventhub<wbr>Endpoint?</a></span>
     </dt>
     <dd>{{% md %}}A `eventhub_endpoint` block as defined below.
 {{% /md %}}</dd>
@@ -649,7 +649,7 @@ The following output properties are available:
             title="">
         <span>Hybrid<wbr>Connection<wbr>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionhybridconnectionendpoint">Pulumi.<wbr>Azure.<wbr>Event<wbr>Hub.<wbr>Outputs.<wbr>Event<wbr>Subscription<wbr>Hybrid<wbr>Connection<wbr>Endpoint?</a></span>
+        <span class="property-type"><a href="#eventsubscriptionhybridconnectionendpoint">Event<wbr>Subscription<wbr>Hybrid<wbr>Connection<wbr>Endpoint?</a></span>
     </dt>
     <dd>{{% md %}}A `hybrid_connection_endpoint` block as defined below.
 {{% /md %}}</dd>
@@ -685,7 +685,7 @@ The following output properties are available:
             title="">
         <span>Retry<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionretrypolicy">Pulumi.<wbr>Azure.<wbr>Event<wbr>Hub.<wbr>Outputs.<wbr>Event<wbr>Subscription<wbr>Retry<wbr>Policy</a></span>
+        <span class="property-type"><a href="#eventsubscriptionretrypolicy">Event<wbr>Subscription<wbr>Retry<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `retry_policy` block as defined below.
 {{% /md %}}</dd>
@@ -703,7 +703,7 @@ The following output properties are available:
             title="">
         <span>Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionstorageblobdeadletterdestination">Pulumi.<wbr>Azure.<wbr>Event<wbr>Hub.<wbr>Outputs.<wbr>Event<wbr>Subscription<wbr>Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination?</a></span>
+        <span class="property-type"><a href="#eventsubscriptionstorageblobdeadletterdestination">Event<wbr>Subscription<wbr>Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination?</a></span>
     </dt>
     <dd>{{% md %}}A `storage_blob_dead_letter_destination` block as defined below.
 {{% /md %}}</dd>
@@ -712,7 +712,7 @@ The following output properties are available:
             title="">
         <span>Storage<wbr>Queue<wbr>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionstoragequeueendpoint">Pulumi.<wbr>Azure.<wbr>Event<wbr>Hub.<wbr>Outputs.<wbr>Event<wbr>Subscription<wbr>Storage<wbr>Queue<wbr>Endpoint?</a></span>
+        <span class="property-type"><a href="#eventsubscriptionstoragequeueendpoint">Event<wbr>Subscription<wbr>Storage<wbr>Queue<wbr>Endpoint?</a></span>
     </dt>
     <dd>{{% md %}}A `storage_queue_endpoint` block as defined below.
 {{% /md %}}</dd>
@@ -721,7 +721,7 @@ The following output properties are available:
             title="">
         <span>Subject<wbr>Filter</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionsubjectfilter">Pulumi.<wbr>Azure.<wbr>Event<wbr>Hub.<wbr>Outputs.<wbr>Event<wbr>Subscription<wbr>Subject<wbr>Filter?</a></span>
+        <span class="property-type"><a href="#eventsubscriptionsubjectfilter">Event<wbr>Subscription<wbr>Subject<wbr>Filter?</a></span>
     </dt>
     <dd>{{% md %}}A `subject_filter` block as defined below.
 {{% /md %}}</dd>
@@ -739,7 +739,7 @@ The following output properties are available:
             title="">
         <span>Webhook<wbr>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionwebhookendpoint">Pulumi.<wbr>Azure.<wbr>Event<wbr>Hub.<wbr>Outputs.<wbr>Event<wbr>Subscription<wbr>Webhook<wbr>Endpoint?</a></span>
+        <span class="property-type"><a href="#eventsubscriptionwebhookendpoint">Event<wbr>Subscription<wbr>Webhook<wbr>Endpoint?</a></span>
     </dt>
     <dd>{{% md %}}A `webhook_endpoint` block as defined below.
 {{% /md %}}</dd>
@@ -1133,7 +1133,7 @@ Get an existing EventSubscription resource's state with the given name, ID, and 
 {{< chooser language "javascript,typescript,python,go,csharp  " / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">pulumi.Input&lt;pulumi.ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/eventhub/#EventSubscriptionState">EventSubscriptionState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/eventhub/#EventSubscription">EventSubscription</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/eventhub/#EventSubscriptionState">EventSubscriptionState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/eventhub/#EventSubscription">EventSubscription</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1141,11 +1141,11 @@ Get an existing EventSubscription resource's state with the given name, ID, and 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEventSubscription<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">pulumi.IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/eventhub?tab=doc#EventSubscriptionState">EventSubscriptionState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/eventhub?tab=doc#EventSubscription">EventSubscription</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEventSubscription<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/eventhub?tab=doc#EventSubscriptionState">EventSubscriptionState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/eventhub?tab=doc#EventSubscription">EventSubscription</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Eventhub.EventSubscription.html">EventSubscription</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Pulumi.Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Eventhub.EventSubscriptionState.html">EventSubscriptionState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Eventhub.EventSubscription.html">EventSubscription</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Eventhub.EventSubscriptionState.html">EventSubscriptionState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1264,7 +1264,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Eventhub<wbr>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptioneventhubendpoint">Pulumi.<wbr>Azure.<wbr>Event<wbr>Hub.<wbr>Inputs.<wbr>Event<wbr>Subscription<wbr>Eventhub<wbr>Endpoint<wbr>Args?</a></span>
+        <span class="property-type"><a href="#eventsubscriptioneventhubendpoint">Event<wbr>Subscription<wbr>Eventhub<wbr>Endpoint<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `eventhub_endpoint` block as defined below.
 {{% /md %}}</dd>
@@ -1273,7 +1273,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Hybrid<wbr>Connection<wbr>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionhybridconnectionendpoint">Pulumi.<wbr>Azure.<wbr>Event<wbr>Hub.<wbr>Inputs.<wbr>Event<wbr>Subscription<wbr>Hybrid<wbr>Connection<wbr>Endpoint<wbr>Args?</a></span>
+        <span class="property-type"><a href="#eventsubscriptionhybridconnectionendpoint">Event<wbr>Subscription<wbr>Hybrid<wbr>Connection<wbr>Endpoint<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `hybrid_connection_endpoint` block as defined below.
 {{% /md %}}</dd>
@@ -1309,7 +1309,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Retry<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionretrypolicy">Pulumi.<wbr>Azure.<wbr>Event<wbr>Hub.<wbr>Inputs.<wbr>Event<wbr>Subscription<wbr>Retry<wbr>Policy<wbr>Args?</a></span>
+        <span class="property-type"><a href="#eventsubscriptionretrypolicy">Event<wbr>Subscription<wbr>Retry<wbr>Policy<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `retry_policy` block as defined below.
 {{% /md %}}</dd>
@@ -1327,7 +1327,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionstorageblobdeadletterdestination">Pulumi.<wbr>Azure.<wbr>Event<wbr>Hub.<wbr>Inputs.<wbr>Event<wbr>Subscription<wbr>Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination<wbr>Args?</a></span>
+        <span class="property-type"><a href="#eventsubscriptionstorageblobdeadletterdestination">Event<wbr>Subscription<wbr>Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `storage_blob_dead_letter_destination` block as defined below.
 {{% /md %}}</dd>
@@ -1336,7 +1336,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Storage<wbr>Queue<wbr>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionstoragequeueendpoint">Pulumi.<wbr>Azure.<wbr>Event<wbr>Hub.<wbr>Inputs.<wbr>Event<wbr>Subscription<wbr>Storage<wbr>Queue<wbr>Endpoint<wbr>Args?</a></span>
+        <span class="property-type"><a href="#eventsubscriptionstoragequeueendpoint">Event<wbr>Subscription<wbr>Storage<wbr>Queue<wbr>Endpoint<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `storage_queue_endpoint` block as defined below.
 {{% /md %}}</dd>
@@ -1345,7 +1345,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Subject<wbr>Filter</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionsubjectfilter">Pulumi.<wbr>Azure.<wbr>Event<wbr>Hub.<wbr>Inputs.<wbr>Event<wbr>Subscription<wbr>Subject<wbr>Filter<wbr>Args?</a></span>
+        <span class="property-type"><a href="#eventsubscriptionsubjectfilter">Event<wbr>Subscription<wbr>Subject<wbr>Filter<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `subject_filter` block as defined below.
 {{% /md %}}</dd>
@@ -1363,7 +1363,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Webhook<wbr>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionwebhookendpoint">Pulumi.<wbr>Azure.<wbr>Event<wbr>Hub.<wbr>Inputs.<wbr>Event<wbr>Subscription<wbr>Webhook<wbr>Endpoint<wbr>Args?</a></span>
+        <span class="property-type"><a href="#eventsubscriptionwebhookendpoint">Event<wbr>Subscription<wbr>Webhook<wbr>Endpoint<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `webhook_endpoint` block as defined below.
 {{% /md %}}</dd>
@@ -2489,3 +2489,10 @@ The following state arguments are supported:
 
 
 
+
+<h3>Package Details</h3>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd></dl>

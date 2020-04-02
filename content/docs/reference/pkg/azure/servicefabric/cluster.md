@@ -27,7 +27,7 @@ Manages a Service Fabric Cluster.
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Servicefabric.Cluster.html">Cluster</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ServiceFabric.Inputs.ClusterArgs.html">ClusterArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Servicefabric.Cluster.html">Cluster</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ServiceFabric.ClusterArgs.html">ClusterArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -132,7 +132,7 @@ Manages a Service Fabric Cluster.
             title="Optional">
         <span>Azure<wbr>Active<wbr>Directory</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterazureactivedirectory">Pulumi.<wbr>Azure.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Cluster<wbr>Azure<wbr>Active<wbr>Directory<wbr>Args?</a></span>
+        <span class="property-type"><a href="#clusterazureactivedirectory">Cluster<wbr>Azure<wbr>Active<wbr>Directory<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}An `azure_active_directory` block as defined below.
 {{% /md %}}</dd>
@@ -141,7 +141,7 @@ Manages a Service Fabric Cluster.
             title="Optional">
         <span>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercertificate">Pulumi.<wbr>Azure.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Cluster<wbr>Certificate<wbr>Args?</a></span>
+        <span class="property-type"><a href="#clustercertificate">Cluster<wbr>Certificate<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `certificate` block as defined below. Conflicts with `certificate_common_names`.
 {{% /md %}}</dd>
@@ -150,7 +150,7 @@ Manages a Service Fabric Cluster.
             title="Optional">
         <span>Certificate<wbr>Common<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercertificatecommonnames">Pulumi.<wbr>Azure.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Cluster<wbr>Certificate<wbr>Common<wbr>Names<wbr>Args?</a></span>
+        <span class="property-type"><a href="#clustercertificatecommonnames">Cluster<wbr>Certificate<wbr>Common<wbr>Names<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `certificate_common_names` block as defined below. Conflicts with `certificate`.
 {{% /md %}}</dd>
@@ -159,7 +159,7 @@ Manages a Service Fabric Cluster.
             title="Optional">
         <span>Client<wbr>Certificate<wbr>Common<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclientcertificatecommonname">List&lt;Pulumi.<wbr>Azure.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Cluster<wbr>Client<wbr>Certificate<wbr>Common<wbr>Name<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#clusterclientcertificatecommonname">List&lt;Cluster<wbr>Client<wbr>Certificate<wbr>Common<wbr>Name<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}A `client_certificate_common_name` block as defined below. 
 {{% /md %}}</dd>
@@ -168,7 +168,7 @@ Manages a Service Fabric Cluster.
             title="Optional">
         <span>Client<wbr>Certificate<wbr>Thumbprints</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclientcertificatethumbprint">List&lt;Pulumi.<wbr>Azure.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Cluster<wbr>Client<wbr>Certificate<wbr>Thumbprint<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#clusterclientcertificatethumbprint">List&lt;Cluster<wbr>Client<wbr>Certificate<wbr>Thumbprint<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}One or two `client_certificate_thumbprint` blocks as defined below. 
 {{% /md %}}</dd>
@@ -186,7 +186,7 @@ Manages a Service Fabric Cluster.
             title="Optional">
         <span>Diagnostics<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterdiagnosticsconfig">Pulumi.<wbr>Azure.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Cluster<wbr>Diagnostics<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#clusterdiagnosticsconfig">Cluster<wbr>Diagnostics<wbr>Config<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `diagnostics_config` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -195,7 +195,7 @@ Manages a Service Fabric Cluster.
             title="Optional">
         <span>Fabric<wbr>Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterfabricsetting">List&lt;Pulumi.<wbr>Azure.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Cluster<wbr>Fabric<wbr>Setting<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#clusterfabricsetting">List&lt;Cluster<wbr>Fabric<wbr>Setting<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}One or more `fabric_settings` blocks as defined below.
 {{% /md %}}</dd>
@@ -231,7 +231,7 @@ Manages a Service Fabric Cluster.
             title="Required">
         <span>Node<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodetype">List&lt;Pulumi.<wbr>Azure.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Cluster<wbr>Node<wbr>Type<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#clusternodetype">List&lt;Cluster<wbr>Node<wbr>Type<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `node_type` blocks as defined below.
 {{% /md %}}</dd>
@@ -258,7 +258,7 @@ Manages a Service Fabric Cluster.
             title="Optional">
         <span>Reverse<wbr>Proxy<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterreverseproxycertificate">Pulumi.<wbr>Azure.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Cluster<wbr>Reverse<wbr>Proxy<wbr>Certificate<wbr>Args?</a></span>
+        <span class="property-type"><a href="#clusterreverseproxycertificate">Cluster<wbr>Reverse<wbr>Proxy<wbr>Certificate<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `reverse_proxy_certificate` block as defined below.
 {{% /md %}}</dd>
@@ -856,7 +856,7 @@ The following output properties are available:
             title="">
         <span>Azure<wbr>Active<wbr>Directory</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterazureactivedirectory">Pulumi.<wbr>Azure.<wbr>Service<wbr>Fabric.<wbr>Outputs.<wbr>Cluster<wbr>Azure<wbr>Active<wbr>Directory?</a></span>
+        <span class="property-type"><a href="#clusterazureactivedirectory">Cluster<wbr>Azure<wbr>Active<wbr>Directory?</a></span>
     </dt>
     <dd>{{% md %}}An `azure_active_directory` block as defined below.
 {{% /md %}}</dd>
@@ -865,7 +865,7 @@ The following output properties are available:
             title="">
         <span>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercertificate">Pulumi.<wbr>Azure.<wbr>Service<wbr>Fabric.<wbr>Outputs.<wbr>Cluster<wbr>Certificate?</a></span>
+        <span class="property-type"><a href="#clustercertificate">Cluster<wbr>Certificate?</a></span>
     </dt>
     <dd>{{% md %}}A `certificate` block as defined below. Conflicts with `certificate_common_names`.
 {{% /md %}}</dd>
@@ -874,7 +874,7 @@ The following output properties are available:
             title="">
         <span>Certificate<wbr>Common<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercertificatecommonnames">Pulumi.<wbr>Azure.<wbr>Service<wbr>Fabric.<wbr>Outputs.<wbr>Cluster<wbr>Certificate<wbr>Common<wbr>Names?</a></span>
+        <span class="property-type"><a href="#clustercertificatecommonnames">Cluster<wbr>Certificate<wbr>Common<wbr>Names?</a></span>
     </dt>
     <dd>{{% md %}}A `certificate_common_names` block as defined below. Conflicts with `certificate`.
 {{% /md %}}</dd>
@@ -883,7 +883,7 @@ The following output properties are available:
             title="">
         <span>Client<wbr>Certificate<wbr>Common<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclientcertificatecommonname">List&lt;Pulumi.<wbr>Azure.<wbr>Service<wbr>Fabric.<wbr>Outputs.<wbr>Cluster<wbr>Client<wbr>Certificate<wbr>Common<wbr>Name&gt;?</a></span>
+        <span class="property-type"><a href="#clusterclientcertificatecommonname">List&lt;Cluster<wbr>Client<wbr>Certificate<wbr>Common<wbr>Name&gt;?</a></span>
     </dt>
     <dd>{{% md %}}A `client_certificate_common_name` block as defined below. 
 {{% /md %}}</dd>
@@ -892,7 +892,7 @@ The following output properties are available:
             title="">
         <span>Client<wbr>Certificate<wbr>Thumbprints</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclientcertificatethumbprint">List&lt;Pulumi.<wbr>Azure.<wbr>Service<wbr>Fabric.<wbr>Outputs.<wbr>Cluster<wbr>Client<wbr>Certificate<wbr>Thumbprint&gt;?</a></span>
+        <span class="property-type"><a href="#clusterclientcertificatethumbprint">List&lt;Cluster<wbr>Client<wbr>Certificate<wbr>Thumbprint&gt;?</a></span>
     </dt>
     <dd>{{% md %}}One or two `client_certificate_thumbprint` blocks as defined below. 
 {{% /md %}}</dd>
@@ -919,7 +919,7 @@ The following output properties are available:
             title="">
         <span>Diagnostics<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterdiagnosticsconfig">Pulumi.<wbr>Azure.<wbr>Service<wbr>Fabric.<wbr>Outputs.<wbr>Cluster<wbr>Diagnostics<wbr>Config?</a></span>
+        <span class="property-type"><a href="#clusterdiagnosticsconfig">Cluster<wbr>Diagnostics<wbr>Config?</a></span>
     </dt>
     <dd>{{% md %}}A `diagnostics_config` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -928,7 +928,7 @@ The following output properties are available:
             title="">
         <span>Fabric<wbr>Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterfabricsetting">List&lt;Pulumi.<wbr>Azure.<wbr>Service<wbr>Fabric.<wbr>Outputs.<wbr>Cluster<wbr>Fabric<wbr>Setting&gt;?</a></span>
+        <span class="property-type"><a href="#clusterfabricsetting">List&lt;Cluster<wbr>Fabric<wbr>Setting&gt;?</a></span>
     </dt>
     <dd>{{% md %}}One or more `fabric_settings` blocks as defined below.
 {{% /md %}}</dd>
@@ -964,7 +964,7 @@ The following output properties are available:
             title="">
         <span>Node<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodetype">List&lt;Pulumi.<wbr>Azure.<wbr>Service<wbr>Fabric.<wbr>Outputs.<wbr>Cluster<wbr>Node<wbr>Type&gt;</a></span>
+        <span class="property-type"><a href="#clusternodetype">List&lt;Cluster<wbr>Node<wbr>Type&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `node_type` blocks as defined below.
 {{% /md %}}</dd>
@@ -991,7 +991,7 @@ The following output properties are available:
             title="">
         <span>Reverse<wbr>Proxy<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterreverseproxycertificate">Pulumi.<wbr>Azure.<wbr>Service<wbr>Fabric.<wbr>Outputs.<wbr>Cluster<wbr>Reverse<wbr>Proxy<wbr>Certificate?</a></span>
+        <span class="property-type"><a href="#clusterreverseproxycertificate">Cluster<wbr>Reverse<wbr>Proxy<wbr>Certificate?</a></span>
     </dt>
     <dd>{{% md %}}A `reverse_proxy_certificate` block as defined below.
 {{% /md %}}</dd>
@@ -1601,7 +1601,7 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 {{< chooser language "javascript,typescript,python,go,csharp  " / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">pulumi.Input&lt;pulumi.ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/servicefabric/#ClusterState">ClusterState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/servicefabric/#Cluster">Cluster</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/servicefabric/#ClusterState">ClusterState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/servicefabric/#Cluster">Cluster</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1609,11 +1609,11 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCluster<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">pulumi.IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/servicefabric?tab=doc#ClusterState">ClusterState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/servicefabric?tab=doc#Cluster">Cluster</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCluster<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/servicefabric?tab=doc#ClusterState">ClusterState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/servicefabric?tab=doc#Cluster">Cluster</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Servicefabric.Cluster.html">Cluster</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Pulumi.Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Servicefabric.ClusterState.html">ClusterState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Servicefabric.Cluster.html">Cluster</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Servicefabric.ClusterState.html">ClusterState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1732,7 +1732,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Azure<wbr>Active<wbr>Directory</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterazureactivedirectory">Pulumi.<wbr>Azure.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Cluster<wbr>Azure<wbr>Active<wbr>Directory<wbr>Args?</a></span>
+        <span class="property-type"><a href="#clusterazureactivedirectory">Cluster<wbr>Azure<wbr>Active<wbr>Directory<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}An `azure_active_directory` block as defined below.
 {{% /md %}}</dd>
@@ -1741,7 +1741,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercertificate">Pulumi.<wbr>Azure.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Cluster<wbr>Certificate<wbr>Args?</a></span>
+        <span class="property-type"><a href="#clustercertificate">Cluster<wbr>Certificate<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `certificate` block as defined below. Conflicts with `certificate_common_names`.
 {{% /md %}}</dd>
@@ -1750,7 +1750,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Certificate<wbr>Common<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercertificatecommonnames">Pulumi.<wbr>Azure.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Cluster<wbr>Certificate<wbr>Common<wbr>Names<wbr>Args?</a></span>
+        <span class="property-type"><a href="#clustercertificatecommonnames">Cluster<wbr>Certificate<wbr>Common<wbr>Names<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `certificate_common_names` block as defined below. Conflicts with `certificate`.
 {{% /md %}}</dd>
@@ -1759,7 +1759,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Client<wbr>Certificate<wbr>Common<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclientcertificatecommonname">List&lt;Pulumi.<wbr>Azure.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Cluster<wbr>Client<wbr>Certificate<wbr>Common<wbr>Name<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#clusterclientcertificatecommonname">List&lt;Cluster<wbr>Client<wbr>Certificate<wbr>Common<wbr>Name<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}A `client_certificate_common_name` block as defined below. 
 {{% /md %}}</dd>
@@ -1768,7 +1768,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Client<wbr>Certificate<wbr>Thumbprints</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclientcertificatethumbprint">List&lt;Pulumi.<wbr>Azure.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Cluster<wbr>Client<wbr>Certificate<wbr>Thumbprint<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#clusterclientcertificatethumbprint">List&lt;Cluster<wbr>Client<wbr>Certificate<wbr>Thumbprint<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}One or two `client_certificate_thumbprint` blocks as defined below. 
 {{% /md %}}</dd>
@@ -1795,7 +1795,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Diagnostics<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterdiagnosticsconfig">Pulumi.<wbr>Azure.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Cluster<wbr>Diagnostics<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#clusterdiagnosticsconfig">Cluster<wbr>Diagnostics<wbr>Config<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `diagnostics_config` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1804,7 +1804,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Fabric<wbr>Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterfabricsetting">List&lt;Pulumi.<wbr>Azure.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Cluster<wbr>Fabric<wbr>Setting<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#clusterfabricsetting">List&lt;Cluster<wbr>Fabric<wbr>Setting<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}One or more `fabric_settings` blocks as defined below.
 {{% /md %}}</dd>
@@ -1840,7 +1840,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Node<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodetype">List&lt;Pulumi.<wbr>Azure.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Cluster<wbr>Node<wbr>Type<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#clusternodetype">List&lt;Cluster<wbr>Node<wbr>Type<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}One or more `node_type` blocks as defined below.
 {{% /md %}}</dd>
@@ -1867,7 +1867,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Reverse<wbr>Proxy<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterreverseproxycertificate">Pulumi.<wbr>Azure.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Cluster<wbr>Reverse<wbr>Proxy<wbr>Certificate<wbr>Args?</a></span>
+        <span class="property-type"><a href="#clusterreverseproxycertificate">Cluster<wbr>Reverse<wbr>Proxy<wbr>Certificate<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `reverse_proxy_certificate` block as defined below.
 {{% /md %}}</dd>
@@ -2795,7 +2795,7 @@ The following state arguments are supported:
             title="Required">
         <span>Common<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercertificatecommonnamescommonname">List&lt;Pulumi.<wbr>Azure.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Cluster<wbr>Certificate<wbr>Common<wbr>Names<wbr>Common<wbr>Name<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#clustercertificatecommonnamescommonname">List&lt;Cluster<wbr>Certificate<wbr>Common<wbr>Names<wbr>Common<wbr>Name<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `common_names` block as defined below.
 {{% /md %}}</dd>
@@ -3621,7 +3621,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Application<wbr>Ports</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodetypeapplicationports">Pulumi.<wbr>Azure.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Cluster<wbr>Node<wbr>Type<wbr>Application<wbr>Ports<wbr>Args?</a></span>
+        <span class="property-type"><a href="#clusternodetypeapplicationports">Cluster<wbr>Node<wbr>Type<wbr>Application<wbr>Ports<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `application_ports` block as defined below.
 {{% /md %}}</dd>
@@ -3657,7 +3657,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ephemeral<wbr>Ports</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodetypeephemeralports">Pulumi.<wbr>Azure.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Cluster<wbr>Node<wbr>Type<wbr>Ephemeral<wbr>Ports<wbr>Args?</a></span>
+        <span class="property-type"><a href="#clusternodetypeephemeralports">Cluster<wbr>Node<wbr>Type<wbr>Ephemeral<wbr>Ports<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `ephemeral_ports` block as defined below.
 {{% /md %}}</dd>
@@ -4424,3 +4424,10 @@ The following state arguments are supported:
 
 
 
+
+<h3>Package Details</h3>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd></dl>

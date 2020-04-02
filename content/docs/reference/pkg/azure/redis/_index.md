@@ -17,3 +17,11 @@ block_external_search_index: true
     <li><a href="getcache"><span class="symbol datasource"></span>GetCache</a></li>
 </ul>
 
+<h3>Package Details</h3>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd>https://github.com/pulumi/pulumi-azure</dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd>
+</dl>
+

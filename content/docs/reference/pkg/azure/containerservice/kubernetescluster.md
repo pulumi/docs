@@ -27,7 +27,7 @@ Manages a Managed Kubernetes Cluster (also known as AKS / Azure Kubernetes Servi
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Containerservice.KubernetesCluster.html">KubernetesCluster</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ContainerService.Inputs.KubernetesClusterArgs.html">KubernetesClusterArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Containerservice.KubernetesCluster.html">KubernetesCluster</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ContainerService.KubernetesClusterArgs.html">KubernetesClusterArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -123,7 +123,7 @@ Manages a Managed Kubernetes Cluster (also known as AKS / Azure Kubernetes Servi
             title="Optional">
         <span>Addon<wbr>Profile</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusteraddonprofile">Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Args?</a></span>
+        <span class="property-type"><a href="#kubernetesclusteraddonprofile">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `addon_profile` block as defined below.
 {{% /md %}}</dd>
@@ -141,7 +141,7 @@ Manages a Managed Kubernetes Cluster (also known as AKS / Azure Kubernetes Servi
             title="Required">
         <span>Default<wbr>Node<wbr>Pool</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterdefaultnodepool">Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Kubernetes<wbr>Cluster<wbr>Default<wbr>Node<wbr>Pool<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubernetesclusterdefaultnodepool">Kubernetes<wbr>Cluster<wbr>Default<wbr>Node<wbr>Pool<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `default_node_pool` block as defined below.
 {{% /md %}}</dd>
@@ -168,7 +168,7 @@ Manages a Managed Kubernetes Cluster (also known as AKS / Azure Kubernetes Servi
             title="Optional">
         <span>Identity</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusteridentity">Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Kubernetes<wbr>Cluster<wbr>Identity<wbr>Args?</a></span>
+        <span class="property-type"><a href="#kubernetesclusteridentity">Kubernetes<wbr>Cluster<wbr>Identity<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -186,7 +186,7 @@ Manages a Managed Kubernetes Cluster (also known as AKS / Azure Kubernetes Servi
             title="Optional">
         <span>Linux<wbr>Profile</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterlinuxprofile">Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile<wbr>Args?</a></span>
+        <span class="property-type"><a href="#kubernetesclusterlinuxprofile">Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `linux_profile` block as defined below.
 {{% /md %}}</dd>
@@ -213,7 +213,7 @@ Manages a Managed Kubernetes Cluster (also known as AKS / Azure Kubernetes Servi
             title="Optional">
         <span>Network<wbr>Profile</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusternetworkprofile">Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Kubernetes<wbr>Cluster<wbr>Network<wbr>Profile<wbr>Args?</a></span>
+        <span class="property-type"><a href="#kubernetesclusternetworkprofile">Kubernetes<wbr>Cluster<wbr>Network<wbr>Profile<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `network_profile` block as defined below.
 {{% /md %}}</dd>
@@ -248,7 +248,7 @@ Manages a Managed Kubernetes Cluster (also known as AKS / Azure Kubernetes Servi
             title="Optional">
         <span>Role<wbr>Based<wbr>Access<wbr>Control</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterrolebasedaccesscontrol">Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control<wbr>Args?</a></span>
+        <span class="property-type"><a href="#kubernetesclusterrolebasedaccesscontrol">Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `role_based_access_control` block.
 {{% /md %}}</dd>
@@ -257,7 +257,7 @@ Manages a Managed Kubernetes Cluster (also known as AKS / Azure Kubernetes Servi
             title="Required">
         <span>Service<wbr>Principal</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterserviceprincipal">Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Kubernetes<wbr>Cluster<wbr>Service<wbr>Principal<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubernetesclusterserviceprincipal">Kubernetes<wbr>Cluster<wbr>Service<wbr>Principal<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `service_principal` block as documented below.
 {{% /md %}}</dd>
@@ -275,7 +275,7 @@ Manages a Managed Kubernetes Cluster (also known as AKS / Azure Kubernetes Servi
             title="Optional">
         <span>Windows<wbr>Profile</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterwindowsprofile">Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Kubernetes<wbr>Cluster<wbr>Windows<wbr>Profile<wbr>Args?</a></span>
+        <span class="property-type"><a href="#kubernetesclusterwindowsprofile">Kubernetes<wbr>Cluster<wbr>Windows<wbr>Profile<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `windows_profile` block as defined below.
 {{% /md %}}</dd>
@@ -807,7 +807,7 @@ The following output properties are available:
             title="">
         <span>Addon<wbr>Profile</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusteraddonprofile">Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile</a></span>
+        <span class="property-type"><a href="#kubernetesclusteraddonprofile">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}A `addon_profile` block as defined below.
 {{% /md %}}</dd>
@@ -825,7 +825,7 @@ The following output properties are available:
             title="">
         <span>Default<wbr>Node<wbr>Pool</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterdefaultnodepool">Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Kubernetes<wbr>Cluster<wbr>Default<wbr>Node<wbr>Pool</a></span>
+        <span class="property-type"><a href="#kubernetesclusterdefaultnodepool">Kubernetes<wbr>Cluster<wbr>Default<wbr>Node<wbr>Pool</a></span>
     </dt>
     <dd>{{% md %}}A `default_node_pool` block as defined below.
 {{% /md %}}</dd>
@@ -861,7 +861,7 @@ The following output properties are available:
             title="">
         <span>Identity</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusteridentity">Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Kubernetes<wbr>Cluster<wbr>Identity?</a></span>
+        <span class="property-type"><a href="#kubernetesclusteridentity">Kubernetes<wbr>Cluster<wbr>Identity?</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -879,7 +879,7 @@ The following output properties are available:
             title="">
         <span>Kube<wbr>Admin<wbr>Configs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterkubeadminconfig">List&lt;Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Kubernetes<wbr>Cluster<wbr>Kube<wbr>Admin<wbr>Config&gt;</a></span>
+        <span class="property-type"><a href="#kubernetesclusterkubeadminconfig">List&lt;Kubernetes<wbr>Cluster<wbr>Kube<wbr>Admin<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `kube_admin_config` block as defined below. This is only available when Role Based Access Control with Azure Active Directory is enabled.
 {{% /md %}}</dd>
@@ -897,7 +897,7 @@ The following output properties are available:
             title="">
         <span>Kube<wbr>Configs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterkubeconfig">List&lt;Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Kubernetes<wbr>Cluster<wbr>Kube<wbr>Config&gt;</a></span>
+        <span class="property-type"><a href="#kubernetesclusterkubeconfig">List&lt;Kubernetes<wbr>Cluster<wbr>Kube<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `kube_config` block as defined below.
 {{% /md %}}</dd>
@@ -915,7 +915,7 @@ The following output properties are available:
             title="">
         <span>Linux<wbr>Profile</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterlinuxprofile">Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile?</a></span>
+        <span class="property-type"><a href="#kubernetesclusterlinuxprofile">Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile?</a></span>
     </dt>
     <dd>{{% md %}}A `linux_profile` block as defined below.
 {{% /md %}}</dd>
@@ -942,7 +942,7 @@ The following output properties are available:
             title="">
         <span>Network<wbr>Profile</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusternetworkprofile">Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Kubernetes<wbr>Cluster<wbr>Network<wbr>Profile</a></span>
+        <span class="property-type"><a href="#kubernetesclusternetworkprofile">Kubernetes<wbr>Cluster<wbr>Network<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}A `network_profile` block as defined below.
 {{% /md %}}</dd>
@@ -986,7 +986,7 @@ The following output properties are available:
             title="">
         <span>Role<wbr>Based<wbr>Access<wbr>Control</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterrolebasedaccesscontrol">Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control</a></span>
+        <span class="property-type"><a href="#kubernetesclusterrolebasedaccesscontrol">Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control</a></span>
     </dt>
     <dd>{{% md %}}A `role_based_access_control` block.
 {{% /md %}}</dd>
@@ -995,7 +995,7 @@ The following output properties are available:
             title="">
         <span>Service<wbr>Principal</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterserviceprincipal">Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Kubernetes<wbr>Cluster<wbr>Service<wbr>Principal</a></span>
+        <span class="property-type"><a href="#kubernetesclusterserviceprincipal">Kubernetes<wbr>Cluster<wbr>Service<wbr>Principal</a></span>
     </dt>
     <dd>{{% md %}}A `service_principal` block as documented below.
 {{% /md %}}</dd>
@@ -1013,7 +1013,7 @@ The following output properties are available:
             title="">
         <span>Windows<wbr>Profile</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterwindowsprofile">Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Kubernetes<wbr>Cluster<wbr>Windows<wbr>Profile?</a></span>
+        <span class="property-type"><a href="#kubernetesclusterwindowsprofile">Kubernetes<wbr>Cluster<wbr>Windows<wbr>Profile?</a></span>
     </dt>
     <dd>{{% md %}}A `windows_profile` block as defined below.
 {{% /md %}}</dd>
@@ -1701,7 +1701,7 @@ Get an existing KubernetesCluster resource's state with the given name, ID, and 
 {{< chooser language "javascript,typescript,python,go,csharp  " / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">pulumi.Input&lt;pulumi.ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/containerservice/#KubernetesClusterState">KubernetesClusterState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/containerservice/#KubernetesCluster">KubernetesCluster</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/containerservice/#KubernetesClusterState">KubernetesClusterState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/containerservice/#KubernetesCluster">KubernetesCluster</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1709,11 +1709,11 @@ Get an existing KubernetesCluster resource's state with the given name, ID, and 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetKubernetesCluster<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">pulumi.IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/containerservice?tab=doc#KubernetesClusterState">KubernetesClusterState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/containerservice?tab=doc#KubernetesCluster">KubernetesCluster</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetKubernetesCluster<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/containerservice?tab=doc#KubernetesClusterState">KubernetesClusterState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/containerservice?tab=doc#KubernetesCluster">KubernetesCluster</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Containerservice.KubernetesCluster.html">KubernetesCluster</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Pulumi.Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Containerservice.KubernetesClusterState.html">KubernetesClusterState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Containerservice.KubernetesCluster.html">KubernetesCluster</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Containerservice.KubernetesClusterState.html">KubernetesClusterState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1823,7 +1823,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Addon<wbr>Profile</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusteraddonprofile">Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Args?</a></span>
+        <span class="property-type"><a href="#kubernetesclusteraddonprofile">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `addon_profile` block as defined below.
 {{% /md %}}</dd>
@@ -1841,7 +1841,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Default<wbr>Node<wbr>Pool</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterdefaultnodepool">Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Kubernetes<wbr>Cluster<wbr>Default<wbr>Node<wbr>Pool<wbr>Args?</a></span>
+        <span class="property-type"><a href="#kubernetesclusterdefaultnodepool">Kubernetes<wbr>Cluster<wbr>Default<wbr>Node<wbr>Pool<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `default_node_pool` block as defined below.
 {{% /md %}}</dd>
@@ -1877,7 +1877,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Identity</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusteridentity">Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Kubernetes<wbr>Cluster<wbr>Identity<wbr>Args?</a></span>
+        <span class="property-type"><a href="#kubernetesclusteridentity">Kubernetes<wbr>Cluster<wbr>Identity<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1895,7 +1895,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Kube<wbr>Admin<wbr>Configs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterkubeadminconfig">List&lt;Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Kubernetes<wbr>Cluster<wbr>Kube<wbr>Admin<wbr>Config<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#kubernetesclusterkubeadminconfig">List&lt;Kubernetes<wbr>Cluster<wbr>Kube<wbr>Admin<wbr>Config<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}A `kube_admin_config` block as defined below. This is only available when Role Based Access Control with Azure Active Directory is enabled.
 {{% /md %}}</dd>
@@ -1913,7 +1913,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Kube<wbr>Configs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterkubeconfig">List&lt;Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Kubernetes<wbr>Cluster<wbr>Kube<wbr>Config<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#kubernetesclusterkubeconfig">List&lt;Kubernetes<wbr>Cluster<wbr>Kube<wbr>Config<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}A `kube_config` block as defined below.
 {{% /md %}}</dd>
@@ -1931,7 +1931,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Linux<wbr>Profile</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterlinuxprofile">Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile<wbr>Args?</a></span>
+        <span class="property-type"><a href="#kubernetesclusterlinuxprofile">Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `linux_profile` block as defined below.
 {{% /md %}}</dd>
@@ -1958,7 +1958,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Network<wbr>Profile</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusternetworkprofile">Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Kubernetes<wbr>Cluster<wbr>Network<wbr>Profile<wbr>Args?</a></span>
+        <span class="property-type"><a href="#kubernetesclusternetworkprofile">Kubernetes<wbr>Cluster<wbr>Network<wbr>Profile<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `network_profile` block as defined below.
 {{% /md %}}</dd>
@@ -2002,7 +2002,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Role<wbr>Based<wbr>Access<wbr>Control</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterrolebasedaccesscontrol">Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control<wbr>Args?</a></span>
+        <span class="property-type"><a href="#kubernetesclusterrolebasedaccesscontrol">Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `role_based_access_control` block.
 {{% /md %}}</dd>
@@ -2011,7 +2011,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Service<wbr>Principal</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterserviceprincipal">Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Kubernetes<wbr>Cluster<wbr>Service<wbr>Principal<wbr>Args?</a></span>
+        <span class="property-type"><a href="#kubernetesclusterserviceprincipal">Kubernetes<wbr>Cluster<wbr>Service<wbr>Principal<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `service_principal` block as documented below.
 {{% /md %}}</dd>
@@ -2029,7 +2029,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Windows<wbr>Profile</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterwindowsprofile">Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Kubernetes<wbr>Cluster<wbr>Windows<wbr>Profile<wbr>Args?</a></span>
+        <span class="property-type"><a href="#kubernetesclusterwindowsprofile">Kubernetes<wbr>Cluster<wbr>Windows<wbr>Profile<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `windows_profile` block as defined below.
 {{% /md %}}</dd>
@@ -2733,7 +2733,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Aci<wbr>Connector<wbr>Linux</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusteraddonprofileaciconnectorlinux">Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Aci<wbr>Connector<wbr>Linux<wbr>Args?</a></span>
+        <span class="property-type"><a href="#kubernetesclusteraddonprofileaciconnectorlinux">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Aci<wbr>Connector<wbr>Linux<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `aci_connector_linux` block. For more details, please visit [Create and configure an AKS cluster to use virtual nodes](https://docs.microsoft.com/en-us/azure/aks/virtual-nodes-portal).
 {{% /md %}}</dd>
@@ -2742,7 +2742,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Azure<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusteraddonprofileazurepolicy">Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Azure<wbr>Policy<wbr>Args?</a></span>
+        <span class="property-type"><a href="#kubernetesclusteraddonprofileazurepolicy">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Azure<wbr>Policy<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `azure_policy` block as defined below. For more details please visit [Understand Azure Policy for Azure Kubernetes Service](https://docs.microsoft.com/en-ie/azure/governance/policy/concepts/rego-for-aks)
 {{% /md %}}</dd>
@@ -2751,7 +2751,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Http<wbr>Application<wbr>Routing</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusteraddonprofilehttpapplicationrouting">Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Http<wbr>Application<wbr>Routing<wbr>Args?</a></span>
+        <span class="property-type"><a href="#kubernetesclusteraddonprofilehttpapplicationrouting">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Http<wbr>Application<wbr>Routing<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `http_application_routing` block as defined below.
 {{% /md %}}</dd>
@@ -2760,7 +2760,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Kube<wbr>Dashboard</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusteraddonprofilekubedashboard">Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Kube<wbr>Dashboard<wbr>Args?</a></span>
+        <span class="property-type"><a href="#kubernetesclusteraddonprofilekubedashboard">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Kube<wbr>Dashboard<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `kube_dashboard` block as defined below.
 {{% /md %}}</dd>
@@ -2769,7 +2769,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Oms<wbr>Agent</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusteraddonprofileomsagent">Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent<wbr>Args?</a></span>
+        <span class="property-type"><a href="#kubernetesclusteraddonprofileomsagent">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `oms_agent` block as defined below. For more details, please visit [How to onboard Azure Monitor for containers](https://docs.microsoft.com/en-us/azure/monitoring/monitoring-container-insights-onboard).
 {{% /md %}}</dd>
@@ -4720,7 +4720,7 @@ The following state arguments are supported:
             title="Required">
         <span>Ssh<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterlinuxprofilesshkey">Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile<wbr>Ssh<wbr>Key<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubernetesclusterlinuxprofilesshkey">Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile<wbr>Ssh<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `ssh_key` block. Only one is currently allowed. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -4923,7 +4923,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Load<wbr>Balancer<wbr>Profile</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusternetworkprofileloadbalancerprofile">Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Kubernetes<wbr>Cluster<wbr>Network<wbr>Profile<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Args?</a></span>
+        <span class="property-type"><a href="#kubernetesclusternetworkprofileloadbalancerprofile">Kubernetes<wbr>Cluster<wbr>Network<wbr>Profile<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `load_balancer_profile` block. This can only be specified when `load_balancer_sku` is set to `Standard`.
 {{% /md %}}</dd>
@@ -5423,7 +5423,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Azure<wbr>Active<wbr>Directory</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterrolebasedaccesscontrolazureactivedirectory">Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control<wbr>Azure<wbr>Active<wbr>Directory<wbr>Args?</a></span>
+        <span class="property-type"><a href="#kubernetesclusterrolebasedaccesscontrolazureactivedirectory">Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control<wbr>Azure<wbr>Active<wbr>Directory<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}An `azure_active_directory` block.
 {{% /md %}}</dd>
@@ -5938,3 +5938,10 @@ The following state arguments are supported:
 
 
 
+
+<h3>Package Details</h3>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd></dl>

@@ -27,7 +27,7 @@ Manages a Key Vault Certificate.
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Keyvault.Certificate.html">Certificate</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.KeyVault.Inputs.CertificateArgs.html">CertificateArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Keyvault.Certificate.html">Certificate</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.KeyVault.CertificateArgs.html">CertificateArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -123,7 +123,7 @@ Manages a Key Vault Certificate.
             title="Optional">
         <span>Key<wbr>Vault<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificate">Pulumi.<wbr>Azure.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>Certificate<wbr>Certificate<wbr>Args?</a></span>
+        <span class="property-type"><a href="#certificatecertificate">Certificate<wbr>Certificate<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `certificate` block as defined below, used to Import an existing certificate.
 {{% /md %}}</dd>
@@ -132,7 +132,7 @@ Manages a Key Vault Certificate.
             title="Required">
         <span>Certificate<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatepolicy">Pulumi.<wbr>Azure.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatepolicy">Certificate<wbr>Certificate<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `certificate_policy` block as defined below.
 {{% /md %}}</dd>
@@ -343,7 +343,7 @@ The following output properties are available:
             title="">
         <span>Key<wbr>Vault<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificate">Pulumi.<wbr>Azure.<wbr>Key<wbr>Vault.<wbr>Outputs.<wbr>Certificate<wbr>Certificate?</a></span>
+        <span class="property-type"><a href="#certificatecertificate">Certificate<wbr>Certificate?</a></span>
     </dt>
     <dd>{{% md %}}A `certificate` block as defined below, used to Import an existing certificate.
 {{% /md %}}</dd>
@@ -361,7 +361,7 @@ The following output properties are available:
             title="">
         <span>Certificate<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatepolicy">Pulumi.<wbr>Azure.<wbr>Key<wbr>Vault.<wbr>Outputs.<wbr>Certificate<wbr>Certificate<wbr>Policy</a></span>
+        <span class="property-type"><a href="#certificatecertificatepolicy">Certificate<wbr>Certificate<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `certificate_policy` block as defined below.
 {{% /md %}}</dd>
@@ -701,7 +701,7 @@ Get an existing Certificate resource's state with the given name, ID, and option
 {{< chooser language "javascript,typescript,python,go,csharp  " / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">pulumi.Input&lt;pulumi.ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/keyvault/#CertificateState">CertificateState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/keyvault/#Certificate">Certificate</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/keyvault/#CertificateState">CertificateState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/keyvault/#Certificate">Certificate</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -709,11 +709,11 @@ Get an existing Certificate resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCertificate<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">pulumi.IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/keyvault?tab=doc#CertificateState">CertificateState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/keyvault?tab=doc#Certificate">Certificate</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCertificate<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/keyvault?tab=doc#CertificateState">CertificateState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/keyvault?tab=doc#Certificate">Certificate</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Keyvault.Certificate.html">Certificate</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Pulumi.Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Keyvault.CertificateState.html">CertificateState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Keyvault.Certificate.html">Certificate</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Keyvault.CertificateState.html">CertificateState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -823,7 +823,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Key<wbr>Vault<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificate">Pulumi.<wbr>Azure.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>Certificate<wbr>Certificate<wbr>Args?</a></span>
+        <span class="property-type"><a href="#certificatecertificate">Certificate<wbr>Certificate<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `certificate` block as defined below, used to Import an existing certificate.
 {{% /md %}}</dd>
@@ -841,7 +841,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Certificate<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatepolicy">Pulumi.<wbr>Azure.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Args?</a></span>
+        <span class="property-type"><a href="#certificatecertificatepolicy">Certificate<wbr>Certificate<wbr>Policy<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `certificate_policy` block as defined below.
 {{% /md %}}</dd>
@@ -1312,7 +1312,7 @@ The following state arguments are supported:
             title="Required">
         <span>Issuer<wbr>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatepolicyissuerparameters">Pulumi.<wbr>Azure.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Issuer<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatepolicyissuerparameters">Certificate<wbr>Certificate<wbr>Policy<wbr>Issuer<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `issuer_parameters` block as defined below.
 {{% /md %}}</dd>
@@ -1321,7 +1321,7 @@ The following state arguments are supported:
             title="Required">
         <span>Key<wbr>Properties</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatepolicykeyproperties">Pulumi.<wbr>Azure.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Key<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatepolicykeyproperties">Certificate<wbr>Certificate<wbr>Policy<wbr>Key<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `key_properties` block as defined below.
 {{% /md %}}</dd>
@@ -1330,7 +1330,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Lifetime<wbr>Actions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatepolicylifetimeaction">List&lt;Pulumi.<wbr>Azure.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#certificatecertificatepolicylifetimeaction">List&lt;Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}A `lifetime_action` block as defined below.
 {{% /md %}}</dd>
@@ -1339,7 +1339,7 @@ The following state arguments are supported:
             title="Required">
         <span>Secret<wbr>Properties</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatepolicysecretproperties">Pulumi.<wbr>Azure.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Secret<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatepolicysecretproperties">Certificate<wbr>Certificate<wbr>Policy<wbr>Secret<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `secret_properties` block as defined below.
 {{% /md %}}</dd>
@@ -1348,7 +1348,7 @@ The following state arguments are supported:
             title="Optional">
         <span>X509Certificate<wbr>Properties</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatepolicyx509certificateproperties">Pulumi.<wbr>Azure.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Properties<wbr>Args?</a></span>
+        <span class="property-type"><a href="#certificatecertificatepolicyx509certificateproperties">Certificate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Properties<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `x509_certificate_properties` block as defined below.
 {{% /md %}}</dd>
@@ -1801,7 +1801,7 @@ The following state arguments are supported:
             title="Required">
         <span>Action</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatepolicylifetimeactionaction">Pulumi.<wbr>Azure.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatepolicylifetimeactionaction">Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `action` block as defined below.
 {{% /md %}}</dd>
@@ -1810,7 +1810,7 @@ The following state arguments are supported:
             title="Required">
         <span>Trigger</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatepolicylifetimeactiontrigger">Pulumi.<wbr>Azure.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Trigger<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatepolicylifetimeactiontrigger">Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Trigger<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `trigger` block as defined below.
 {{% /md %}}</dd>
@@ -2216,7 +2216,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Subject<wbr>Alternative<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatepolicyx509certificatepropertiessubjectalternativenames">Pulumi.<wbr>Azure.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Properties<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Args?</a></span>
+        <span class="property-type"><a href="#certificatecertificatepolicyx509certificatepropertiessubjectalternativenames">Certificate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Properties<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `subject_alternative_names` block as defined below.
 {{% /md %}}</dd>
@@ -2546,3 +2546,10 @@ The following state arguments are supported:
 
 
 
+
+<h3>Package Details</h3>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd></dl>

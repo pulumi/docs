@@ -27,7 +27,7 @@ Manages an Azure App Configuration.
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Appconfiguration.ConfigurationStore.html">ConfigurationStore</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppConfiguration.Inputs.ConfigurationStoreArgs.html">ConfigurationStoreArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Appconfiguration.ConfigurationStore.html">ConfigurationStore</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppConfiguration.ConfigurationStoreArgs.html">ConfigurationStoreArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -370,7 +370,7 @@ The following output properties are available:
             title="">
         <span>Primary<wbr>Read<wbr>Keys</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationstoreprimaryreadkey">List&lt;Pulumi.<wbr>Azure.<wbr>App<wbr>Configuration.<wbr>Outputs.<wbr>Configuration<wbr>Store<wbr>Primary<wbr>Read<wbr>Key&gt;</a></span>
+        <span class="property-type"><a href="#configurationstoreprimaryreadkey">List&lt;Configuration<wbr>Store<wbr>Primary<wbr>Read<wbr>Key&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `primary_read_key` block as defined below containing the primary read access key.
 {{% /md %}}</dd>
@@ -379,7 +379,7 @@ The following output properties are available:
             title="">
         <span>Primary<wbr>Write<wbr>Keys</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationstoreprimarywritekey">List&lt;Pulumi.<wbr>Azure.<wbr>App<wbr>Configuration.<wbr>Outputs.<wbr>Configuration<wbr>Store<wbr>Primary<wbr>Write<wbr>Key&gt;</a></span>
+        <span class="property-type"><a href="#configurationstoreprimarywritekey">List&lt;Configuration<wbr>Store<wbr>Primary<wbr>Write<wbr>Key&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `primary_write_key` block as defined below containing the primary write access key.
 {{% /md %}}</dd>
@@ -397,7 +397,7 @@ The following output properties are available:
             title="">
         <span>Secondary<wbr>Read<wbr>Keys</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationstoresecondaryreadkey">List&lt;Pulumi.<wbr>Azure.<wbr>App<wbr>Configuration.<wbr>Outputs.<wbr>Configuration<wbr>Store<wbr>Secondary<wbr>Read<wbr>Key&gt;</a></span>
+        <span class="property-type"><a href="#configurationstoresecondaryreadkey">List&lt;Configuration<wbr>Store<wbr>Secondary<wbr>Read<wbr>Key&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `secondary_read_key` block as defined below containing the secondary read access key.
 {{% /md %}}</dd>
@@ -406,7 +406,7 @@ The following output properties are available:
             title="">
         <span>Secondary<wbr>Write<wbr>Keys</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationstoresecondarywritekey">List&lt;Pulumi.<wbr>Azure.<wbr>App<wbr>Configuration.<wbr>Outputs.<wbr>Configuration<wbr>Store<wbr>Secondary<wbr>Write<wbr>Key&gt;</a></span>
+        <span class="property-type"><a href="#configurationstoresecondarywritekey">List&lt;Configuration<wbr>Store<wbr>Secondary<wbr>Write<wbr>Key&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `secondary_write_key` block as defined below containing the secondary write access key.
 {{% /md %}}</dd>
@@ -737,7 +737,7 @@ Get an existing ConfigurationStore resource's state with the given name, ID, and
 {{< chooser language "javascript,typescript,python,go,csharp  " / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">pulumi.Input&lt;pulumi.ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/appconfiguration/#ConfigurationStoreState">ConfigurationStoreState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/appconfiguration/#ConfigurationStore">ConfigurationStore</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/appconfiguration/#ConfigurationStoreState">ConfigurationStoreState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/appconfiguration/#ConfigurationStore">ConfigurationStore</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -745,11 +745,11 @@ Get an existing ConfigurationStore resource's state with the given name, ID, and
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetConfigurationStore<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">pulumi.IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/appconfiguration?tab=doc#ConfigurationStoreState">ConfigurationStoreState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/appconfiguration?tab=doc#ConfigurationStore">ConfigurationStore</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetConfigurationStore<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/appconfiguration?tab=doc#ConfigurationStoreState">ConfigurationStoreState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/appconfiguration?tab=doc#ConfigurationStore">ConfigurationStore</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Appconfiguration.ConfigurationStore.html">ConfigurationStore</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Pulumi.Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Appconfiguration.ConfigurationStoreState.html">ConfigurationStoreState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Appconfiguration.ConfigurationStore.html">ConfigurationStore</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Appconfiguration.ConfigurationStoreState.html">ConfigurationStoreState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -886,7 +886,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Primary<wbr>Read<wbr>Keys</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationstoreprimaryreadkey">List&lt;Pulumi.<wbr>Azure.<wbr>App<wbr>Configuration.<wbr>Inputs.<wbr>Configuration<wbr>Store<wbr>Primary<wbr>Read<wbr>Key<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#configurationstoreprimaryreadkey">List&lt;Configuration<wbr>Store<wbr>Primary<wbr>Read<wbr>Key<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}A `primary_read_key` block as defined below containing the primary read access key.
 {{% /md %}}</dd>
@@ -895,7 +895,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Primary<wbr>Write<wbr>Keys</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationstoreprimarywritekey">List&lt;Pulumi.<wbr>Azure.<wbr>App<wbr>Configuration.<wbr>Inputs.<wbr>Configuration<wbr>Store<wbr>Primary<wbr>Write<wbr>Key<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#configurationstoreprimarywritekey">List&lt;Configuration<wbr>Store<wbr>Primary<wbr>Write<wbr>Key<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}A `primary_write_key` block as defined below containing the primary write access key.
 {{% /md %}}</dd>
@@ -913,7 +913,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Secondary<wbr>Read<wbr>Keys</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationstoresecondaryreadkey">List&lt;Pulumi.<wbr>Azure.<wbr>App<wbr>Configuration.<wbr>Inputs.<wbr>Configuration<wbr>Store<wbr>Secondary<wbr>Read<wbr>Key<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#configurationstoresecondaryreadkey">List&lt;Configuration<wbr>Store<wbr>Secondary<wbr>Read<wbr>Key<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}A `secondary_read_key` block as defined below containing the secondary read access key.
 {{% /md %}}</dd>
@@ -922,7 +922,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Secondary<wbr>Write<wbr>Keys</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationstoresecondarywritekey">List&lt;Pulumi.<wbr>Azure.<wbr>App<wbr>Configuration.<wbr>Inputs.<wbr>Configuration<wbr>Store<wbr>Secondary<wbr>Write<wbr>Key<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#configurationstoresecondarywritekey">List&lt;Configuration<wbr>Store<wbr>Secondary<wbr>Write<wbr>Key<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}A `secondary_write_key` block as defined below containing the secondary write access key.
 {{% /md %}}</dd>
@@ -1856,3 +1856,10 @@ The following state arguments are supported:
 
 
 
+
+<h3>Package Details</h3>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd></dl>

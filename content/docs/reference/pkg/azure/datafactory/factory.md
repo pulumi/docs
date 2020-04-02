@@ -27,7 +27,7 @@ Manages an Azure Data Factory (Version 2).
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Datafactory.Factory.html">Factory</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.DataFactory.Inputs.FactoryArgs.html">FactoryArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Datafactory.Factory.html">Factory</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.DataFactory.FactoryArgs.html">FactoryArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -123,7 +123,7 @@ Manages an Azure Data Factory (Version 2).
             title="Optional">
         <span>Github<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#factorygithubconfiguration">Pulumi.<wbr>Azure.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Factory<wbr>Github<wbr>Configuration<wbr>Args?</a></span>
+        <span class="property-type"><a href="#factorygithubconfiguration">Factory<wbr>Github<wbr>Configuration<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `github_configuration` block as defined below.
 {{% /md %}}</dd>
@@ -132,7 +132,7 @@ Manages an Azure Data Factory (Version 2).
             title="Optional">
         <span>Identity</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#factoryidentity">Pulumi.<wbr>Azure.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Factory<wbr>Identity<wbr>Args?</a></span>
+        <span class="property-type"><a href="#factoryidentity">Factory<wbr>Identity<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd>
@@ -177,7 +177,7 @@ Manages an Azure Data Factory (Version 2).
             title="Optional">
         <span>Vsts<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#factoryvstsconfiguration">Pulumi.<wbr>Azure.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Factory<wbr>Vsts<wbr>Configuration<wbr>Args?</a></span>
+        <span class="property-type"><a href="#factoryvstsconfiguration">Factory<wbr>Vsts<wbr>Configuration<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `vsts_configuration` block as defined below.
 {{% /md %}}</dd>
@@ -415,7 +415,7 @@ The following output properties are available:
             title="">
         <span>Github<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#factorygithubconfiguration">Pulumi.<wbr>Azure.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Factory<wbr>Github<wbr>Configuration?</a></span>
+        <span class="property-type"><a href="#factorygithubconfiguration">Factory<wbr>Github<wbr>Configuration?</a></span>
     </dt>
     <dd>{{% md %}}A `github_configuration` block as defined below.
 {{% /md %}}</dd>
@@ -424,7 +424,7 @@ The following output properties are available:
             title="">
         <span>Identity</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#factoryidentity">Pulumi.<wbr>Azure.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Factory<wbr>Identity</a></span>
+        <span class="property-type"><a href="#factoryidentity">Factory<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd>
@@ -469,7 +469,7 @@ The following output properties are available:
             title="">
         <span>Vsts<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#factoryvstsconfiguration">Pulumi.<wbr>Azure.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Factory<wbr>Vsts<wbr>Configuration?</a></span>
+        <span class="property-type"><a href="#factoryvstsconfiguration">Factory<wbr>Vsts<wbr>Configuration?</a></span>
     </dt>
     <dd>{{% md %}}A `vsts_configuration` block as defined below.
 {{% /md %}}</dd>
@@ -701,7 +701,7 @@ Get an existing Factory resource's state with the given name, ID, and optional e
 {{< chooser language "javascript,typescript,python,go,csharp  " / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">pulumi.Input&lt;pulumi.ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/datafactory/#FactoryState">FactoryState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/datafactory/#Factory">Factory</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/datafactory/#FactoryState">FactoryState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/datafactory/#Factory">Factory</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -709,11 +709,11 @@ Get an existing Factory resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFactory<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">pulumi.IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/datafactory?tab=doc#FactoryState">FactoryState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/datafactory?tab=doc#Factory">Factory</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFactory<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/datafactory?tab=doc#FactoryState">FactoryState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/datafactory?tab=doc#Factory">Factory</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Datafactory.Factory.html">Factory</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Pulumi.Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Datafactory.FactoryState.html">FactoryState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Datafactory.Factory.html">Factory</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Datafactory.FactoryState.html">FactoryState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -823,7 +823,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Github<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#factorygithubconfiguration">Pulumi.<wbr>Azure.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Factory<wbr>Github<wbr>Configuration<wbr>Args?</a></span>
+        <span class="property-type"><a href="#factorygithubconfiguration">Factory<wbr>Github<wbr>Configuration<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `github_configuration` block as defined below.
 {{% /md %}}</dd>
@@ -832,7 +832,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Identity</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#factoryidentity">Pulumi.<wbr>Azure.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Factory<wbr>Identity<wbr>Args?</a></span>
+        <span class="property-type"><a href="#factoryidentity">Factory<wbr>Identity<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd>
@@ -877,7 +877,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Vsts<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#factoryvstsconfiguration">Pulumi.<wbr>Azure.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Factory<wbr>Vsts<wbr>Configuration<wbr>Args?</a></span>
+        <span class="property-type"><a href="#factoryvstsconfiguration">Factory<wbr>Vsts<wbr>Configuration<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `vsts_configuration` block as defined below.
 {{% /md %}}</dd>
@@ -1741,3 +1741,10 @@ The following state arguments are supported:
 
 
 
+
+<h3>Package Details</h3>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd></dl>

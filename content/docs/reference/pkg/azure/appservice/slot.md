@@ -29,7 +29,7 @@ Manages an App Service Slot (within an App Service).
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Appservice.Slot.html">Slot</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppService.Inputs.SlotArgs.html">SlotArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Appservice.Slot.html">Slot</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppService.SlotArgs.html">SlotArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -152,7 +152,7 @@ Manages an App Service Slot (within an App Service).
             title="Optional">
         <span>Auth<wbr>Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotauthsettings">Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>Slot<wbr>Auth<wbr>Settings<wbr>Args?</a></span>
+        <span class="property-type"><a href="#slotauthsettings">Slot<wbr>Auth<wbr>Settings<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `auth_settings` block as defined below.
 {{% /md %}}</dd>
@@ -170,7 +170,7 @@ Manages an App Service Slot (within an App Service).
             title="Optional">
         <span>Connection<wbr>Strings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotconnectionstring">List&lt;Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>Slot<wbr>Connection<wbr>String<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#slotconnectionstring">List&lt;Slot<wbr>Connection<wbr>String<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}An `connection_string` block as defined below.
 {{% /md %}}</dd>
@@ -197,7 +197,7 @@ Manages an App Service Slot (within an App Service).
             title="Optional">
         <span>Identity</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotidentity">Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>Slot<wbr>Identity<wbr>Args?</a></span>
+        <span class="property-type"><a href="#slotidentity">Slot<wbr>Identity<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A Managed Service Identity block as defined below.
 {{% /md %}}</dd>
@@ -215,7 +215,7 @@ Manages an App Service Slot (within an App Service).
             title="Optional">
         <span>Logs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotlogs">Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>Slot<wbr>Logs<wbr>Args?</a></span>
+        <span class="property-type"><a href="#slotlogs">Slot<wbr>Logs<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -241,7 +241,7 @@ Manages an App Service Slot (within an App Service).
             title="Optional">
         <span>Site<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotsiteconfig">Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>Slot<wbr>Site<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#slotsiteconfig">Slot<wbr>Site<wbr>Config<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `site_config` object as defined below.
 {{% /md %}}</dd>
@@ -728,7 +728,7 @@ The following output properties are available:
             title="">
         <span>Auth<wbr>Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotauthsettings">Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Outputs.<wbr>Slot<wbr>Auth<wbr>Settings</a></span>
+        <span class="property-type"><a href="#slotauthsettings">Slot<wbr>Auth<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}A `auth_settings` block as defined below.
 {{% /md %}}</dd>
@@ -746,7 +746,7 @@ The following output properties are available:
             title="">
         <span>Connection<wbr>Strings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotconnectionstring">List&lt;Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Outputs.<wbr>Slot<wbr>Connection<wbr>String&gt;</a></span>
+        <span class="property-type"><a href="#slotconnectionstring">List&lt;Slot<wbr>Connection<wbr>String&gt;</a></span>
     </dt>
     <dd>{{% md %}}An `connection_string` block as defined below.
 {{% /md %}}</dd>
@@ -782,7 +782,7 @@ The following output properties are available:
             title="">
         <span>Identity</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotidentity">Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Outputs.<wbr>Slot<wbr>Identity</a></span>
+        <span class="property-type"><a href="#slotidentity">Slot<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}A Managed Service Identity block as defined below.
 {{% /md %}}</dd>
@@ -800,7 +800,7 @@ The following output properties are available:
             title="">
         <span>Logs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotlogs">Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Outputs.<wbr>Slot<wbr>Logs</a></span>
+        <span class="property-type"><a href="#slotlogs">Slot<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -826,7 +826,7 @@ The following output properties are available:
             title="">
         <span>Site<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotsiteconfig">Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Outputs.<wbr>Slot<wbr>Site<wbr>Config</a></span>
+        <span class="property-type"><a href="#slotsiteconfig">Slot<wbr>Site<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}A `site_config` object as defined below.
 {{% /md %}}</dd>
@@ -835,7 +835,7 @@ The following output properties are available:
             title="">
         <span>Site<wbr>Credentials</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotsitecredential">List&lt;Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Outputs.<wbr>Slot<wbr>Site<wbr>Credential&gt;</a></span>
+        <span class="property-type"><a href="#slotsitecredential">List&lt;Slot<wbr>Site<wbr>Credential&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `site_credential` block as defined below, which contains the site-level credentials used to publish to this App Service.
 {{% /md %}}</dd>
@@ -1343,7 +1343,7 @@ Get an existing Slot resource's state with the given name, ID, and optional extr
 {{< chooser language "javascript,typescript,python,go,csharp  " / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">pulumi.Input&lt;pulumi.ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/appservice/#SlotState">SlotState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/appservice/#Slot">Slot</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/appservice/#SlotState">SlotState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/appservice/#Slot">Slot</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1351,11 +1351,11 @@ Get an existing Slot resource's state with the given name, ID, and optional extr
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSlot<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">pulumi.IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/appservice?tab=doc#SlotState">SlotState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/appservice?tab=doc#Slot">Slot</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSlot<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/appservice?tab=doc#SlotState">SlotState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/appservice?tab=doc#Slot">Slot</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Appservice.Slot.html">Slot</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Pulumi.Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Appservice.SlotState.html">SlotState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Appservice.Slot.html">Slot</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Appservice.SlotState.html">SlotState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1492,7 +1492,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Auth<wbr>Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotauthsettings">Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>Slot<wbr>Auth<wbr>Settings<wbr>Args?</a></span>
+        <span class="property-type"><a href="#slotauthsettings">Slot<wbr>Auth<wbr>Settings<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `auth_settings` block as defined below.
 {{% /md %}}</dd>
@@ -1510,7 +1510,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Connection<wbr>Strings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotconnectionstring">List&lt;Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>Slot<wbr>Connection<wbr>String<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#slotconnectionstring">List&lt;Slot<wbr>Connection<wbr>String<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}An `connection_string` block as defined below.
 {{% /md %}}</dd>
@@ -1546,7 +1546,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Identity</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotidentity">Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>Slot<wbr>Identity<wbr>Args?</a></span>
+        <span class="property-type"><a href="#slotidentity">Slot<wbr>Identity<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A Managed Service Identity block as defined below.
 {{% /md %}}</dd>
@@ -1564,7 +1564,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Logs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotlogs">Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>Slot<wbr>Logs<wbr>Args?</a></span>
+        <span class="property-type"><a href="#slotlogs">Slot<wbr>Logs<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1590,7 +1590,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Site<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotsiteconfig">Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>Slot<wbr>Site<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#slotsiteconfig">Slot<wbr>Site<wbr>Config<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `site_config` object as defined below.
 {{% /md %}}</dd>
@@ -1599,7 +1599,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Site<wbr>Credentials</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotsitecredential">List&lt;Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>Slot<wbr>Site<wbr>Credential<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#slotsitecredential">List&lt;Slot<wbr>Site<wbr>Credential<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}A `site_credential` block as defined below, which contains the site-level credentials used to publish to this App Service.
 {{% /md %}}</dd>
@@ -2123,7 +2123,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Active<wbr>Directory</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotauthsettingsactivedirectory">Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>Slot<wbr>Auth<wbr>Settings<wbr>Active<wbr>Directory<wbr>Args?</a></span>
+        <span class="property-type"><a href="#slotauthsettingsactivedirectory">Slot<wbr>Auth<wbr>Settings<wbr>Active<wbr>Directory<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `active_directory` block as defined below.
 {{% /md %}}</dd>
@@ -2168,7 +2168,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Facebook</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotauthsettingsfacebook">Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>Slot<wbr>Auth<wbr>Settings<wbr>Facebook<wbr>Args?</a></span>
+        <span class="property-type"><a href="#slotauthsettingsfacebook">Slot<wbr>Auth<wbr>Settings<wbr>Facebook<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `facebook` block as defined below.
 {{% /md %}}</dd>
@@ -2177,7 +2177,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Google</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotauthsettingsgoogle">Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>Slot<wbr>Auth<wbr>Settings<wbr>Google<wbr>Args?</a></span>
+        <span class="property-type"><a href="#slotauthsettingsgoogle">Slot<wbr>Auth<wbr>Settings<wbr>Google<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `google` block as defined below.
 {{% /md %}}</dd>
@@ -2195,7 +2195,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Microsoft</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotauthsettingsmicrosoft">Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>Slot<wbr>Auth<wbr>Settings<wbr>Microsoft<wbr>Args?</a></span>
+        <span class="property-type"><a href="#slotauthsettingsmicrosoft">Slot<wbr>Auth<wbr>Settings<wbr>Microsoft<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `microsoft` block as defined below.
 {{% /md %}}</dd>
@@ -2231,7 +2231,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Twitter</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotauthsettingstwitter">Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>Slot<wbr>Auth<wbr>Settings<wbr>Twitter<wbr>Args?</a></span>
+        <span class="property-type"><a href="#slotauthsettingstwitter">Slot<wbr>Auth<wbr>Settings<wbr>Twitter<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `twitter` block as defined below.
 {{% /md %}}</dd>
@@ -3711,7 +3711,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Application<wbr>Logs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotlogsapplicationlogs">Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>Slot<wbr>Logs<wbr>Application<wbr>Logs<wbr>Args?</a></span>
+        <span class="property-type"><a href="#slotlogsapplicationlogs">Slot<wbr>Logs<wbr>Application<wbr>Logs<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}An `application_logs` block as defined below.
 {{% /md %}}</dd>
@@ -3720,7 +3720,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Http<wbr>Logs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotlogshttplogs">Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>Slot<wbr>Logs<wbr>Http<wbr>Logs<wbr>Args?</a></span>
+        <span class="property-type"><a href="#slotlogshttplogs">Slot<wbr>Logs<wbr>Http<wbr>Logs<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}An `http_logs` block as defined below.
 {{% /md %}}</dd>
@@ -3826,7 +3826,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Azure<wbr>Blob<wbr>Storage</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotlogsapplicationlogsazureblobstorage">Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>Slot<wbr>Logs<wbr>Application<wbr>Logs<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Args?</a></span>
+        <span class="property-type"><a href="#slotlogsapplicationlogsazureblobstorage">Slot<wbr>Logs<wbr>Application<wbr>Logs<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}An `azure_blob_storage` block as defined below.
 {{% /md %}}</dd>
@@ -4056,7 +4056,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Azure<wbr>Blob<wbr>Storage</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotlogshttplogsazureblobstorage">Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>Slot<wbr>Logs<wbr>Http<wbr>Logs<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Args?</a></span>
+        <span class="property-type"><a href="#slotlogshttplogsazureblobstorage">Slot<wbr>Logs<wbr>Http<wbr>Logs<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}An `azure_blob_storage` block as defined below.
 {{% /md %}}</dd>
@@ -4065,7 +4065,7 @@ The following state arguments are supported:
             title="Optional">
         <span>File<wbr>System</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotlogshttplogsfilesystem">Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>Slot<wbr>Logs<wbr>Http<wbr>Logs<wbr>File<wbr>System<wbr>Args?</a></span>
+        <span class="property-type"><a href="#slotlogshttplogsfilesystem">Slot<wbr>Logs<wbr>Http<wbr>Logs<wbr>File<wbr>System<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `file_system` block as defined below.
 {{% /md %}}</dd>
@@ -4428,7 +4428,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cors</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotsiteconfigcors">Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>Slot<wbr>Site<wbr>Config<wbr>Cors<wbr>Args?</a></span>
+        <span class="property-type"><a href="#slotsiteconfigcors">Slot<wbr>Site<wbr>Config<wbr>Cors<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `cors` block as defined below.
 {{% /md %}}</dd>
@@ -4472,7 +4472,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ip<wbr>Restrictions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotsiteconfigiprestriction">List&lt;Pulumi.<wbr>Azure.<wbr>App<wbr>Service.<wbr>Inputs.<wbr>Slot<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#slotsiteconfigiprestriction">List&lt;Slot<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}A list of objects representing ip restrictions as defined below.
 {{% /md %}}</dd>
@@ -5624,3 +5624,10 @@ The following state arguments are supported:
 
 
 
+
+<h3>Package Details</h3>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd></dl>

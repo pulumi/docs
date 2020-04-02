@@ -12,10 +12,10 @@ Use this data source to access information about an existing Managed Kubernetes 
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const example = azure.containerservice.getKubernetesCluster({
+const example = pulumi.output(azure.containerservice.getKubernetesCluster({
     name: "myakscluster",
     resourceGroupName: "my-example-resource-group",
-});
+}, { async: true }));
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/kubernetes_cluster.html.markdown.
@@ -30,7 +30,7 @@ const example = azure.containerservice.getKubernetesCluster({
 
 
 {{% choosable language typescript %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getKubernetesCluster<span class="p">(</span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/containerservice/#GetKubernetesClusterArgs">GetKubernetesClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">pulumi.InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/containerservice/#GetKubernetesClusterResult">GetKubernetesClusterResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getKubernetesCluster<span class="p">(</span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/containerservice/#GetKubernetesClusterArgs">GetKubernetesClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/containerservice/#GetKubernetesClusterResult">GetKubernetesClusterResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -40,13 +40,13 @@ const example = azure.containerservice.getKubernetesCluster({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupKubernetesCluster<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/containerservice?tab=doc#LookupKubernetesClusterArgs">LookupKubernetesClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/containerservice?tab=doc#LookupKubernetesClusterResult">LookupKubernetesClusterResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupKubernetesCluster<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/containerservice?tab=doc#LookupKubernetesClusterArgs">LookupKubernetesClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/containerservice?tab=doc#LookupKubernetesClusterResult">LookupKubernetesClusterResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetKubernetesCluster </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Containerservice.GetKubernetesClusterResult.html">GetKubernetesClusterResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ContainerService.Inputs.GetKubernetesClusterArgs.html">GetKubernetesClusterArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">Pulumi.InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Containerservice.GetKubernetesClusterResult.html">GetKubernetesClusterResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ContainerService.GetKubernetesClusterArgs.html">GetKubernetesClusterArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -176,7 +176,7 @@ The following output properties are available:
             title="">
         <span>Addon<wbr>Profiles</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusteraddonprofile">List&lt;Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile&gt;</a></span>
+        <span class="property-type"><a href="#getkubernetesclusteraddonprofile">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `addon_profile` block as documented below.
 {{% /md %}}</dd>
@@ -185,7 +185,7 @@ The following output properties are available:
             title="">
         <span>Agent<wbr>Pool<wbr>Profiles</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusteragentpoolprofile">List&lt;Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Get<wbr>Kubernetes<wbr>Cluster<wbr>Agent<wbr>Pool<wbr>Profile&gt;</a></span>
+        <span class="property-type"><a href="#getkubernetesclusteragentpoolprofile">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Agent<wbr>Pool<wbr>Profile&gt;</a></span>
     </dt>
     <dd>{{% md %}}An `agent_pool_profile` block as documented below.
 {{% /md %}}</dd>
@@ -239,7 +239,7 @@ The following output properties are available:
             title="">
         <span>Kube<wbr>Admin<wbr>Configs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusterkubeadminconfig">List&lt;Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Get<wbr>Kubernetes<wbr>Cluster<wbr>Kube<wbr>Admin<wbr>Config&gt;</a></span>
+        <span class="property-type"><a href="#getkubernetesclusterkubeadminconfig">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Kube<wbr>Admin<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `kube_admin_config` block as defined below. This is only available when Role Based Access Control with Azure Active Directory is enabled.
 {{% /md %}}</dd>
@@ -257,7 +257,7 @@ The following output properties are available:
             title="">
         <span>Kube<wbr>Configs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusterkubeconfig">List&lt;Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Get<wbr>Kubernetes<wbr>Cluster<wbr>Kube<wbr>Config&gt;</a></span>
+        <span class="property-type"><a href="#getkubernetesclusterkubeconfig">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Kube<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `kube_config` block as defined below.
 {{% /md %}}</dd>
@@ -275,7 +275,7 @@ The following output properties are available:
             title="">
         <span>Linux<wbr>Profiles</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusterlinuxprofile">List&lt;Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Get<wbr>Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile&gt;</a></span>
+        <span class="property-type"><a href="#getkubernetesclusterlinuxprofile">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `linux_profile` block as documented below.
 {{% /md %}}</dd>
@@ -302,7 +302,7 @@ The following output properties are available:
             title="">
         <span>Network<wbr>Profiles</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusternetworkprofile">List&lt;Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Get<wbr>Kubernetes<wbr>Cluster<wbr>Network<wbr>Profile&gt;</a></span>
+        <span class="property-type"><a href="#getkubernetesclusternetworkprofile">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Network<wbr>Profile&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `network_profile` block as documented below.
 {{% /md %}}</dd>
@@ -346,7 +346,7 @@ The following output properties are available:
             title="">
         <span>Role<wbr>Based<wbr>Access<wbr>Controls</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusterrolebasedaccesscontrol">List&lt;Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Get<wbr>Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control&gt;</a></span>
+        <span class="property-type"><a href="#getkubernetesclusterrolebasedaccesscontrol">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `role_based_access_control` block as documented below.
 {{% /md %}}</dd>
@@ -355,7 +355,7 @@ The following output properties are available:
             title="">
         <span>Service<wbr>Principals</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusterserviceprincipal">List&lt;Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Get<wbr>Kubernetes<wbr>Cluster<wbr>Service<wbr>Principal&gt;</a></span>
+        <span class="property-type"><a href="#getkubernetesclusterserviceprincipal">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Service<wbr>Principal&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `service_principal` block as documented below.
 {{% /md %}}</dd>
@@ -373,7 +373,7 @@ The following output properties are available:
             title="">
         <span>Windows<wbr>Profiles</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusterwindowsprofile">List&lt;Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Get<wbr>Kubernetes<wbr>Cluster<wbr>Windows<wbr>Profile&gt;</a></span>
+        <span class="property-type"><a href="#getkubernetesclusterwindowsprofile">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Windows<wbr>Profile&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `windows_profile` block as documented below.
 {{% /md %}}</dd>
@@ -1048,7 +1048,7 @@ The following output properties are available:
             title="Required">
         <span>Azure<wbr>Policies</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusteraddonprofileazurepolicy">List&lt;Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Azure<wbr>Policy<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getkubernetesclusteraddonprofileazurepolicy">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Azure<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `azure_policy` block.
 {{% /md %}}</dd>
@@ -1057,7 +1057,7 @@ The following output properties are available:
             title="Required">
         <span>Http<wbr>Application<wbr>Routings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusteraddonprofilehttpapplicationrouting">List&lt;Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Http<wbr>Application<wbr>Routing<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getkubernetesclusteraddonprofilehttpapplicationrouting">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Http<wbr>Application<wbr>Routing<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `http_application_routing` block.
 {{% /md %}}</dd>
@@ -1066,7 +1066,7 @@ The following output properties are available:
             title="Required">
         <span>Kube<wbr>Dashboards</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusteraddonprofilekubedashboard">List&lt;Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Kube<wbr>Dashboard<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getkubernetesclusteraddonprofilekubedashboard">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Kube<wbr>Dashboard<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `kube_dashboard` block.
 {{% /md %}}</dd>
@@ -1075,7 +1075,7 @@ The following output properties are available:
             title="Required">
         <span>Oms<wbr>Agents</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusteraddonprofileomsagent">List&lt;Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getkubernetesclusteraddonprofileomsagent">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `oms_agent` block.
 {{% /md %}}</dd>
@@ -2761,7 +2761,7 @@ The following output properties are available:
             title="Required">
         <span>Ssh<wbr>Keys</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusterlinuxprofilesshkey">List&lt;Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Get<wbr>Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile<wbr>Ssh<wbr>Key<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getkubernetesclusterlinuxprofilesshkey">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile<wbr>Ssh<wbr>Key<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An `ssh_key` block as defined below.
 {{% /md %}}</dd>
@@ -3237,7 +3237,7 @@ The following output properties are available:
             title="Required">
         <span>Azure<wbr>Active<wbr>Directories</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusterrolebasedaccesscontrolazureactivedirectory">List&lt;Pulumi.<wbr>Azure.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Get<wbr>Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control<wbr>Azure<wbr>Active<wbr>Directory<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getkubernetesclusterrolebasedaccesscontrolazureactivedirectory">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control<wbr>Azure<wbr>Active<wbr>Directory<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `azure_active_directory` block as documented above.
 {{% /md %}}</dd>

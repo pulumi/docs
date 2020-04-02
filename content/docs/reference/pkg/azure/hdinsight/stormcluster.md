@@ -27,7 +27,7 @@ Manages a HDInsight Storm Cluster.
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Hdinsight.StormCluster.html">StormCluster</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Inputs.StormClusterArgs.html">StormClusterArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Hdinsight.StormCluster.html">StormCluster</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.StormClusterArgs.html">StormClusterArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -132,7 +132,7 @@ Manages a HDInsight Storm Cluster.
             title="Required">
         <span>Component<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stormclustercomponentversion">Pulumi.<wbr>Azure.<wbr>HDInsight.<wbr>Inputs.<wbr>Storm<wbr>Cluster<wbr>Component<wbr>Version<wbr>Args</a></span>
+        <span class="property-type"><a href="#stormclustercomponentversion">Storm<wbr>Cluster<wbr>Component<wbr>Version<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `component_version` block as defined below.
 {{% /md %}}</dd>
@@ -141,7 +141,7 @@ Manages a HDInsight Storm Cluster.
             title="Required">
         <span>Gateway</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stormclustergateway">Pulumi.<wbr>Azure.<wbr>HDInsight.<wbr>Inputs.<wbr>Storm<wbr>Cluster<wbr>Gateway<wbr>Args</a></span>
+        <span class="property-type"><a href="#stormclustergateway">Storm<wbr>Cluster<wbr>Gateway<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `gateway` block as defined below.
 {{% /md %}}</dd>
@@ -177,7 +177,7 @@ Manages a HDInsight Storm Cluster.
             title="Required">
         <span>Roles</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stormclusterroles">Pulumi.<wbr>Azure.<wbr>HDInsight.<wbr>Inputs.<wbr>Storm<wbr>Cluster<wbr>Roles<wbr>Args</a></span>
+        <span class="property-type"><a href="#stormclusterroles">Storm<wbr>Cluster<wbr>Roles<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `roles` block as defined below.
 {{% /md %}}</dd>
@@ -186,7 +186,7 @@ Manages a HDInsight Storm Cluster.
             title="Optional">
         <span>Storage<wbr>Accounts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stormclusterstorageaccount">List&lt;Pulumi.<wbr>Azure.<wbr>HDInsight.<wbr>Inputs.<wbr>Storm<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#stormclusterstorageaccount">List&lt;Storm<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}One or more `storage_account` block as defined below.
 {{% /md %}}</dd>
@@ -532,7 +532,7 @@ The following output properties are available:
             title="">
         <span>Component<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stormclustercomponentversion">Pulumi.<wbr>Azure.<wbr>HDInsight.<wbr>Outputs.<wbr>Storm<wbr>Cluster<wbr>Component<wbr>Version</a></span>
+        <span class="property-type"><a href="#stormclustercomponentversion">Storm<wbr>Cluster<wbr>Component<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}A `component_version` block as defined below.
 {{% /md %}}</dd>
@@ -541,7 +541,7 @@ The following output properties are available:
             title="">
         <span>Gateway</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stormclustergateway">Pulumi.<wbr>Azure.<wbr>HDInsight.<wbr>Outputs.<wbr>Storm<wbr>Cluster<wbr>Gateway</a></span>
+        <span class="property-type"><a href="#stormclustergateway">Storm<wbr>Cluster<wbr>Gateway</a></span>
     </dt>
     <dd>{{% md %}}A `gateway` block as defined below.
 {{% /md %}}</dd>
@@ -586,7 +586,7 @@ The following output properties are available:
             title="">
         <span>Roles</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stormclusterroles">Pulumi.<wbr>Azure.<wbr>HDInsight.<wbr>Outputs.<wbr>Storm<wbr>Cluster<wbr>Roles</a></span>
+        <span class="property-type"><a href="#stormclusterroles">Storm<wbr>Cluster<wbr>Roles</a></span>
     </dt>
     <dd>{{% md %}}A `roles` block as defined below.
 {{% /md %}}</dd>
@@ -604,7 +604,7 @@ The following output properties are available:
             title="">
         <span>Storage<wbr>Accounts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stormclusterstorageaccount">List&lt;Pulumi.<wbr>Azure.<wbr>HDInsight.<wbr>Outputs.<wbr>Storm<wbr>Cluster<wbr>Storage<wbr>Account&gt;?</a></span>
+        <span class="property-type"><a href="#stormclusterstorageaccount">List&lt;Storm<wbr>Cluster<wbr>Storage<wbr>Account&gt;?</a></span>
     </dt>
     <dd>{{% md %}}One or more `storage_account` block as defined below.
 {{% /md %}}</dd>
@@ -989,7 +989,7 @@ Get an existing StormCluster resource's state with the given name, ID, and optio
 {{< chooser language "javascript,typescript,python,go,csharp  " / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">pulumi.Input&lt;pulumi.ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/hdinsight/#StormClusterState">StormClusterState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/hdinsight/#StormCluster">StormCluster</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/hdinsight/#StormClusterState">StormClusterState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/hdinsight/#StormCluster">StormCluster</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -997,11 +997,11 @@ Get an existing StormCluster resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetStormCluster<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">pulumi.IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/hdinsight?tab=doc#StormClusterState">StormClusterState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/hdinsight?tab=doc#StormCluster">StormCluster</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetStormCluster<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/hdinsight?tab=doc#StormClusterState">StormClusterState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/hdinsight?tab=doc#StormCluster">StormCluster</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Hdinsight.StormCluster.html">StormCluster</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Pulumi.Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Hdinsight.StormClusterState.html">StormClusterState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Hdinsight.StormCluster.html">StormCluster</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Hdinsight.StormClusterState.html">StormClusterState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1120,7 +1120,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Component<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stormclustercomponentversion">Pulumi.<wbr>Azure.<wbr>HDInsight.<wbr>Inputs.<wbr>Storm<wbr>Cluster<wbr>Component<wbr>Version<wbr>Args?</a></span>
+        <span class="property-type"><a href="#stormclustercomponentversion">Storm<wbr>Cluster<wbr>Component<wbr>Version<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `component_version` block as defined below.
 {{% /md %}}</dd>
@@ -1129,7 +1129,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Gateway</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stormclustergateway">Pulumi.<wbr>Azure.<wbr>HDInsight.<wbr>Inputs.<wbr>Storm<wbr>Cluster<wbr>Gateway<wbr>Args?</a></span>
+        <span class="property-type"><a href="#stormclustergateway">Storm<wbr>Cluster<wbr>Gateway<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `gateway` block as defined below.
 {{% /md %}}</dd>
@@ -1174,7 +1174,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Roles</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stormclusterroles">Pulumi.<wbr>Azure.<wbr>HDInsight.<wbr>Inputs.<wbr>Storm<wbr>Cluster<wbr>Roles<wbr>Args?</a></span>
+        <span class="property-type"><a href="#stormclusterroles">Storm<wbr>Cluster<wbr>Roles<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A `roles` block as defined below.
 {{% /md %}}</dd>
@@ -1192,7 +1192,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Storage<wbr>Accounts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stormclusterstorageaccount">List&lt;Pulumi.<wbr>Azure.<wbr>HDInsight.<wbr>Inputs.<wbr>Storm<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#stormclusterstorageaccount">List&lt;Storm<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}One or more `storage_account` block as defined below.
 {{% /md %}}</dd>
@@ -1823,7 +1823,7 @@ The following state arguments are supported:
             title="Required">
         <span>Head<wbr>Node</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stormclusterrolesheadnode">Pulumi.<wbr>Azure.<wbr>HDInsight.<wbr>Inputs.<wbr>Storm<wbr>Cluster<wbr>Roles<wbr>Head<wbr>Node<wbr>Args</a></span>
+        <span class="property-type"><a href="#stormclusterrolesheadnode">Storm<wbr>Cluster<wbr>Roles<wbr>Head<wbr>Node<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `head_node` block as defined above.
 {{% /md %}}</dd>
@@ -1832,7 +1832,7 @@ The following state arguments are supported:
             title="Required">
         <span>Worker<wbr>Node</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stormclusterrolesworkernode">Pulumi.<wbr>Azure.<wbr>HDInsight.<wbr>Inputs.<wbr>Storm<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node<wbr>Args</a></span>
+        <span class="property-type"><a href="#stormclusterrolesworkernode">Storm<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `worker_node` block as defined below.
 {{% /md %}}</dd>
@@ -1841,7 +1841,7 @@ The following state arguments are supported:
             title="Required">
         <span>Zookeeper<wbr>Node</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stormclusterroleszookeepernode">Pulumi.<wbr>Azure.<wbr>HDInsight.<wbr>Inputs.<wbr>Storm<wbr>Cluster<wbr>Roles<wbr>Zookeeper<wbr>Node<wbr>Args</a></span>
+        <span class="property-type"><a href="#stormclusterroleszookeepernode">Storm<wbr>Cluster<wbr>Roles<wbr>Zookeeper<wbr>Node<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `zookeeper_node` block as defined below.
 {{% /md %}}</dd>
@@ -2957,3 +2957,10 @@ The following state arguments are supported:
 
 
 
+
+<h3>Package Details</h3>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd></dl>
