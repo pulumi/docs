@@ -25,16 +25,14 @@
                     </a>
                 {{ end }}
                 <p class="{{ cond (eq .Params.featured true) "h-60" "h-12" }}">
-                    {{ if eq .Params.featured true }}
-                        {{ .Params.main.description }}
-                    {{ else }}
-                        {{ .Params.meta_desc }}
-                    {{ end }}
+                    {{ .Params.meta_desc }}
                 </p>
-                <p class="webinar-datetime my-0 text-lg">
-                    <i class="fas fa-calendar"></i>
-                    <span data-datetime="{{ .Params.main.sortable_date }}">{{ .Params.main.datetime }}</span>
-                </p>
+                {{ if eq .Params.pre_recorded false}}
+                    <p class="webinar-datetime my-0 text-lg">
+                        <i class="fas fa-calendar"></i>
+                        <span data-datetime="{{ .Params.main.sortable_date }}">{{ .Params.main.datetime }}</span>
+                    </p>
+                {{ end }}
                 <p class="my-0 text-lg">
                     <i class="fas fa-clock"></i>
                     {{ .Params.main.duration }}
