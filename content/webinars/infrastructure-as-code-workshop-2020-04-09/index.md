@@ -48,8 +48,10 @@ main:
     title: "Infrastructure as Code Workshop | Kubernetes"
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2020-04-09 17:30:00 -07:00
+    # Duration of the webinar.
+    duration: "3 hours"
     # Datetime of the webinar.
-    datetime: "THU APR 09, 2020 AT 5:30PM TO 8:30PM PDT"
+    datetime: "THU APR 09, 2020 AT 5:30PM PDT"
     # Description of the webinar.
     description: |
         The hardest part of Kubernetes is setting up the infrastructure: clusters, DNS, firewalls, load balancers, IAM, storage, logging, and performance monitoring, often spanning private, public, and hybrid cloud architectures.

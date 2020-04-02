@@ -48,6 +48,8 @@ main:
     youtube_url: ""
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2019-02-05 10:00:00 -07:00
+    # Duration of the webinar.
+    duration: "2 hours"
     # Datetime of the webinar.
     datetime: ""
     # Description of the webinar.

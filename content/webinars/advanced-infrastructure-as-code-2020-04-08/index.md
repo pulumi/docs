@@ -46,8 +46,10 @@ main:
     title: "Advanced Infrastructure as Code"
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2020-04-08 11:30:00 +01:00
+    # Duration of the webinar.
+    duration: "2 hours"
     # Datetime of the webinar.
-    datetime: "WED APR 08, 2020 AT 11:30AM to 1:30PM CET"
+    datetime: "WED APR 08, 2020 AT 11:30AM CET"
     # Description of the webinar.
     description: |
         Paul Stack and Mikhail Shilkov from Pulumi will show you how to get started mastering your preferred cloud using your favorite languages.

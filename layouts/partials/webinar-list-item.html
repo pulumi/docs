@@ -31,9 +31,13 @@
                         {{ .Params.meta_desc }}
                     {{ end }}
                 </p>
-                <p class="my-0 text-lg">
-                    <i class="fas fa-clock"></i>
+                <p class="webinar-datetime my-0 text-lg" data-datetime="{{ .Params.main.sortable_date }}">
+                    <i class="fas fa-calendar"></i>
                     {{ .Params.main.datetime }}
+                </p>
+                <p class="webinar-datetime my-0 text-lg">
+                    <i class="fas fa-clock"></i>
+                    {{ .Params.main.duration }}
                 </p>
             </div>
         </div>

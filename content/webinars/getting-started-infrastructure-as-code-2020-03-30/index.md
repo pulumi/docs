@@ -48,8 +48,10 @@ main:
     title: "Getting Started with Infrastructure as Code"
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2020-03-30 11:30:00 +01:00
+    # Duration of the webinar.
+    duration: "2 hours"
     # Datetime of the webinar.
-    datetime: "MON MAR 30, 2020 AT 11:30AM TO 1:30PM CET"
+    datetime: "MON MAR 30, 2020 AT 11:30AM CET"
     # Description of the webinar.
     description: |
         In this hands-on workshop, the Pulumi team will show you how to stand up basic services using Infrastructure as Code (IaC) through a series of hands-on labs. The techniques work for any cloud --- Azure, AWS, and GCP. You’ll be able to leverage your favorite languages including Python, Go, JavaScript, TypeScript, and C# instead of YAML or domain-specific languages.
