@@ -313,6 +313,8 @@ public static class Testing
 
 {{% /choosable %}}
 
+The definition of the mocks interface is available at the [runtime API reference page](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/pulumi/runtime/#Mocks).
+
 ## Write the Tests
 
 {{% choosable language "typescript" %}}
@@ -951,14 +953,22 @@ All the tests passed!
 ## Full Example
 
 {{% choosable language "typescript" %}}
-The full code for this guide is available in the examples repository: [Unit Tests in TypeScript](https://github.com/pulumi/examples/tree/master/testing-unit-ts).
+The full code for this guide is available in the examples repository: [Unit Tests in TypeScript](https://github.com/pulumi/examples/tree/74db62a03d013c2854d2cf933c074ea0a3bbf69d/testing-unit-ts).
+
+&nbsp;
 {{% /choosable %}}
 {{% choosable language "python" %}}
-The full code for this guide is available in the examples repository: [Unit Tests in Python](https://github.com/pulumi/examples/tree/master/testing-unit-py).
+The full code for this guide is available in the examples repository: [Unit Tests in Python](https://github.com/pulumi/examples/tree/74db62a03d013c2854d2cf933c074ea0a3bbf69d/testing-unit-py).
+
+&nbsp;
 {{% /choosable %}}
 {{% choosable language "go" %}}
-The full code for this guide is available in the examples repository: [Unit Tests in Go](https://github.com/pulumi/examples/tree/master/testing-unit-go).
+The full code for this guide is available in the examples repository: [Unit Tests in Go](https://github.com/pulumi/examples/tree/74db62a03d013c2854d2cf933c074ea0a3bbf69d/testing-unit-go).
+
+&nbsp;
 {{% /choosable %}}
 {{% choosable language "csharp" %}}
-The full code for this guide is available in the examples repository: [Unit Tests in C#](https://github.com/pulumi/examples/tree/master/testing-unit-cs).
+The full code for this guide is available in the examples repository: [Unit Tests in C#](https://github.com/pulumi/examples/tree/74db62a03d013c2854d2cf933c074ea0a3bbf69d/testing-unit-cs).
+
+&nbsp;
 {{% /choosable %}}

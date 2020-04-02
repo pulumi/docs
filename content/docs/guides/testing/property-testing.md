@@ -23,7 +23,7 @@ Our setup consists of two directories. The parent folder contains a typical Pulu
 
 The sub-directory `tests` contains a policy pack with our future property tests and is created with `pulumi policy new aws-typescript` (notice the `policy` argument).
 
-You can see the full layout in [the examples repository](https://github.com/pulumi/examples/tree/31056c3480cc445e5d4d3a8a0a86977adce2bc5e/testing-pac-ts).
+You can see the full layout in the [examples repository](https://github.com/pulumi/examples/tree/74db62a03d013c2854d2cf933c074ea0a3bbf69d/testing-pac-ts).
 
 Now it's time to write the code!
 
@@ -43,12 +43,13 @@ const stackPolicy: policy.StackValidationPolicy = {
     description: "EKS integration tests.",
     enforcementLevel: "mandatory",
     validateStack: async (args, reportViolation) => {
-        const clusterResource = args.resources.find(r => r.isType(aws.eks.Cluster));
-        const cluster = clusterResource && clusterResource.asType(aws.eks.Cluster);
-        if (!cluster) {
-            reportViolation("EKS Cluster not found");
+        const clusterResources = args.resources.filter(r => r.isType(aws.eks.Cluster));
+        if (clusterResources.length !== 1) {
+            reportViolation(`Expected one EKS Cluster but found ${clusterResources.length}`);
             return;
         }
+
+        const cluster = clusterResources[0].asType(aws.eks.Cluster)!;
 
         // TODO 1: validate the cluster version
 
@@ -63,7 +64,7 @@ const tests = new policy.PolicyPack("tests-pack", {
 
 This code does a few things worth describing. First, it imports all the packages that we're going to use. Notably, this includes the Policy SDK package for testing, and the AWS and Pulumi SDK packages. Note that it does **not** import the Pulumi program with the EKS cluster definition. The tests are going to run against any program that satisfies its invariants.
 
-Then, the code creates a single [stack policy](https://pulumi.com/docs/guides/crossguard/core-concepts/#stack-validation-policy) to describe the properties of the EKS cluster. The first implicit property is the fact that there is an EKS cluster in the stack at all. If the cluster is not found, the test reports a violation (failure).
+Then, the code creates a single [stack policy](https://pulumi.com/docs/guides/crossguard/core-concepts/#stack-validation-policy) to describe the properties of the EKS cluster. The first implicit property is the fact that there is an EKS cluster in the stack at all. If the cluster is not found, or several clusters are found, the test reports a violation (failure).
 
 Now, we can add the tests for our two properties. Add the following code in place of the first TODO item:
 
@@ -81,6 +82,9 @@ The VPC test is slightly more involved:
 ```typescript
 const vpcId = cluster.vpcConfig.vpcId;
 if (!vpcId) {
+    // 'isDryRun==true' means the test are running in preview.
+    // If so, the VPC might not exist yet even though it's defined in the program.
+    // We shouldn't fail the test then to avoid false negatives.
     if (!pulumi.runtime.isDryRun()) {
         reportViolation(`EKS Cluster '${cluster.name}' has unknown VPC`);
     }
@@ -100,7 +104,7 @@ if (defaultVpc.VpcId === vpcId) {
 }
 ```
 
-The first part asserts that there is a non-empty VPC identifier assigned to the cluster. Then, the test uses the AWS SDK to retrieve the default VPC. Finally, it compares the two IDs to make sure they are equal.
+The first part asserts that there is a non-empty VPC identifier assigned to the cluster. Then, the test uses the AWS SDK to retrieve the default VPC. Finally, it compares the two IDs to see if they are equal and report a violation if so.
 
 ## Our Base (Failing) Program
 
@@ -230,4 +234,4 @@ Voila! A successfully stood up EKS cluster, with built-in TDD security safeguard
 
 ## Full Example
 
-A complete runnable example of property tests is available in the examples repository: [Property Testing with TypeScript](https://github.com/pulumi/examples/tree/31056c3480cc445e5d4d3a8a0a86977adce2bc5e/testing-pac-ts).
+A complete runnable example of property tests is available in the examples repository: [Property Testing with TypeScript](https://github.com/pulumi/examples/tree/74db62a03d013c2854d2cf933c074ea0a3bbf69d/testing-pac-ts).
