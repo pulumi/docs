@@ -41,7 +41,7 @@
         </div>
         <div class="justify-between pb-10 md:pb-24 px-5 md:px-20">
             <div id="liveWebinarsList" class="w-full">
-                <ul class="list-none mx-auto md:flex md:flex-wrap pl-0">
+                <ul class="list-none mx-auto flex flex-col lg:flex-row lg:flex-wrap pl-0">
                     {{ $live_webinars := (where $non_pulumi_tv_webinars ".Params.pre_recorded" false)}}
                     {{ range (sort $live_webinars ".Params.main.sortable_date") }}
                         {{ partial "webinar-list-item" . }}
@@ -49,7 +49,7 @@
                 </ul>
             </div>
             <div id="pulumiTVWebinarsList" class="w-full hidden">
-                <ul class="list-none md:flex md:flex-wrap pl-0">
+                <ul class="list-none flex flex-col lg:flex-row lg:flex-wrap pl-0">
                     {{ $pulumi_tv_webinars := (where $listed_webinars ".Params.pulumi_tv" true)}}
                     {{ range (sort $pulumi_tv_webinars ".Params.main.sortable_date" "desc") }}
                         {{ partial "webinar-list-item" . }}
@@ -57,7 +57,7 @@
                 </ul>
             </div>
             <div id="onDemandWebinarsList" class="w-full hidden">
-                <ul class="list-none md:flex md:flex-wrap pl-0">
+                <ul class="list-none flex flex-col lg:flex-row lg:flex-wrap pl-0">
                     {{ $recorded_webinars := (where $non_pulumi_tv_webinars ".Params.pre_recorded" true)}}
                     {{ range (sort $recorded_webinars ".Params.main.sortable_date" "desc") }}
                         {{ partial "webinar-list-item" . }}
