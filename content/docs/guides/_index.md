@@ -70,7 +70,7 @@ Pulumi’s approach to infrastructure as code is great for continuous delivery, 
 </div>
 <div class="md:flex flex-row mt-6 mb-6">
     <div class="w-1/2 border-solid border-t-2 border-gray-200">
-        <h3 class="no-anchor pt-4"><i class="fas fa-shield-alt pr-2"><a href="{{< relref "crossguard" >}}"></i>CrossGuard <span class="badge badge-preview">PREVIEW</span></a></h3>
+        <h3 class="no-anchor pt-4"><i class="fas fa-shield-alt pr-2"><a href="{{< relref "crossguard" >}}"></i>CrossGuard</a></h3>
         <p>
             Use Pulumi's CrossGuard to to enable cloud resource compliance using code.
         </p>
