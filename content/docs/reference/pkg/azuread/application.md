@@ -8,59 +8,6 @@ Manages an Application within Azure Active Directory.
 
 > **NOTE:** If you're authenticating using a Service Principal then it must have permissions to both `Read and write owned by applications` and `Sign in and read user profile` within the `Windows Azure Active Directory` API.
 
-## Example Usage
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azuread from "@pulumi/azuread";
-
-const example = new azuread.Application("example", {
-    appRoles: [{
-        allowedMemberTypes: [
-            "User",
-            "Application",
-        ],
-        description: "Admins can manage roles and perform all task actions",
-        displayName: "Admin",
-        isEnabled: true,
-        value: "Admin",
-    }],
-    availableToOtherTenants: false,
-    homepage: "https://homepage",
-    identifierUris: ["https://uri"],
-    oauth2AllowImplicitFlow: true,
-    owners: ["00000004-0000-0000-c000-000000000000"],
-    replyUrls: ["https://replyurl"],
-    requiredResourceAccesses: [
-        {
-            resourceAccesses: [
-                {
-                    id: "...",
-                    type: "Role",
-                },
-                {
-                    id: "...",
-                    type: "Scope",
-                },
-                {
-                    id: "...",
-                    type: "Scope",
-                },
-            ],
-            resourceAppId: "00000003-0000-0000-c000-000000000000",
-        },
-        {
-            resourceAccesses: [{
-                id: "...",
-                type: "Scope",
-            }],
-            resourceAppId: "00000002-0000-0000-c000-000000000000",
-        },
-    ],
-    type: "webapp/api",
-});
-```
-
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/r/application.html.markdown.
 
 
@@ -82,7 +29,7 @@ const example = new azuread.Application("example", {
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azuread/Pulumi.Azuread..Application.html">Application</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azuread/Pulumi.Azuread.Inputs.ApplicationArgs.html">ApplicationArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azuread/Pulumi.Azuread..Application.html">Application</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azuread/Pulumi.Azuread.ApplicationArgs.html">ApplicationArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -178,7 +125,7 @@ const example = new azuread.Application("example", {
             title="Optional">
         <span>App<wbr>Roles</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapprole">List&lt;Pulumi.<wbr>Azuread.<wbr>Inputs.<wbr>Application<wbr>App<wbr>Role<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#applicationapprole">List&lt;Application<wbr>App<wbr>Role<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}A collection of `app_role` blocks as documented below. For more information https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/app-roles
 {{% /md %}}</dd>
@@ -250,7 +197,7 @@ const example = new azuread.Application("example", {
             title="Optional">
         <span>Oauth2Permissions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationoauth2permission">List&lt;Pulumi.<wbr>Azuread.<wbr>Inputs.<wbr>Application<wbr>Oauth2Permission<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#applicationoauth2permission">List&lt;Application<wbr>Oauth2Permission<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}A collection of OAuth 2.0 permission scopes that the web API (resource) app exposes to client apps. Each permission is covered by a `oauth2_permission` block as documented below.
 {{% /md %}}</dd>
@@ -286,7 +233,7 @@ const example = new azuread.Application("example", {
             title="Optional">
         <span>Required<wbr>Resource<wbr>Accesses</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationrequiredresourceaccess">List&lt;Pulumi.<wbr>Azuread.<wbr>Inputs.<wbr>Application<wbr>Required<wbr>Resource<wbr>Access<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#applicationrequiredresourceaccess">List&lt;Application<wbr>Required<wbr>Resource<wbr>Access<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}A collection of `required_resource_access` blocks as documented below.
 {{% /md %}}</dd>
@@ -722,7 +669,7 @@ The following output properties are available:
             title="">
         <span>App<wbr>Roles</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapprole">List&lt;Pulumi.<wbr>Azuread.<wbr>Outputs.<wbr>Application<wbr>App<wbr>Role&gt;?</a></span>
+        <span class="property-type"><a href="#applicationapprole">List&lt;Application<wbr>App<wbr>Role&gt;?</a></span>
     </dt>
     <dd>{{% md %}}A collection of `app_role` blocks as documented below. For more information https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/app-roles
 {{% /md %}}</dd>
@@ -803,7 +750,7 @@ The following output properties are available:
             title="">
         <span>Oauth2Permissions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationoauth2permission">List&lt;Pulumi.<wbr>Azuread.<wbr>Outputs.<wbr>Application<wbr>Oauth2Permission&gt;</a></span>
+        <span class="property-type"><a href="#applicationoauth2permission">List&lt;Application<wbr>Oauth2Permission&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of OAuth 2.0 permission scopes that the web API (resource) app exposes to client apps. Each permission is covered by a `oauth2_permission` block as documented below.
 {{% /md %}}</dd>
@@ -848,7 +795,7 @@ The following output properties are available:
             title="">
         <span>Required<wbr>Resource<wbr>Accesses</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationrequiredresourceaccess">List&lt;Pulumi.<wbr>Azuread.<wbr>Outputs.<wbr>Application<wbr>Required<wbr>Resource<wbr>Access&gt;?</a></span>
+        <span class="property-type"><a href="#applicationrequiredresourceaccess">List&lt;Application<wbr>Required<wbr>Resource<wbr>Access&gt;?</a></span>
     </dt>
     <dd>{{% md %}}A collection of `required_resource_access` blocks as documented below.
 {{% /md %}}</dd>
@@ -1332,7 +1279,7 @@ Get an existing Application resource's state with the given name, ID, and option
 {{< chooser language "javascript,typescript,python,go,csharp  " / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">pulumi.Input&lt;pulumi.ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azuread/#ApplicationState">ApplicationState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azuread/#Application">Application</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azuread/#ApplicationState">ApplicationState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azuread/#Application">Application</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1340,11 +1287,11 @@ Get an existing Application resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetApplication<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">pulumi.IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/go/azuread/?tab=doc#ApplicationState">ApplicationState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/go/azuread/?tab=doc#Application">Application</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetApplication<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/go/azuread/?tab=doc#ApplicationState">ApplicationState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/go/azuread/?tab=doc#Application">Application</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azuread/Pulumi.Azuread..Application.html">Application</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Pulumi.Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azuread/Pulumi.Azuread..ApplicationState.html">ApplicationState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azuread/Pulumi.Azuread..Application.html">Application</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azuread/Pulumi.Azuread..ApplicationState.html">ApplicationState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1454,7 +1401,7 @@ The following state arguments are supported:
             title="Optional">
         <span>App<wbr>Roles</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapprole">List&lt;Pulumi.<wbr>Azuread.<wbr>Inputs.<wbr>Application<wbr>App<wbr>Role<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#applicationapprole">List&lt;Application<wbr>App<wbr>Role<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}A collection of `app_role` blocks as documented below. For more information https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/app-roles
 {{% /md %}}</dd>
@@ -1535,7 +1482,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Oauth2Permissions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationoauth2permission">List&lt;Pulumi.<wbr>Azuread.<wbr>Inputs.<wbr>Application<wbr>Oauth2Permission<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#applicationoauth2permission">List&lt;Application<wbr>Oauth2Permission<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}A collection of OAuth 2.0 permission scopes that the web API (resource) app exposes to client apps. Each permission is covered by a `oauth2_permission` block as documented below.
 {{% /md %}}</dd>
@@ -1580,7 +1527,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Required<wbr>Resource<wbr>Accesses</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationrequiredresourceaccess">List&lt;Pulumi.<wbr>Azuread.<wbr>Inputs.<wbr>Application<wbr>Required<wbr>Resource<wbr>Access<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#applicationrequiredresourceaccess">List&lt;Application<wbr>Required<wbr>Resource<wbr>Access<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}A collection of `required_resource_access` blocks as documented below.
 {{% /md %}}</dd>
@@ -2670,7 +2617,7 @@ The following state arguments are supported:
             title="Required">
         <span>Resource<wbr>Accesses</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationrequiredresourceaccessresourceaccess">List&lt;Pulumi.<wbr>Azuread.<wbr>Inputs.<wbr>Application<wbr>Required<wbr>Resource<wbr>Access<wbr>Resource<wbr>Access<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationrequiredresourceaccessresourceaccess">List&lt;Application<wbr>Required<wbr>Resource<wbr>Access<wbr>Resource<wbr>Access<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of `resource_access` blocks as documented below.
 {{% /md %}}</dd>
@@ -2883,3 +2830,10 @@ The following state arguments are supported:
 
 
 
+
+<h3>Package Details</h3>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-azuread">https://github.com/pulumi/pulumi-azuread</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd></dl>
