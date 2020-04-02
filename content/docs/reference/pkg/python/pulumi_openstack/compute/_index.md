@@ -669,7 +669,8 @@ pair must already be created and associated with the tenant’s account.
 Changing this creates a new server.</p></li>
 <li><p><strong>metadata</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Metadata key/value pairs to make available from
 within the instance. Changing this updates the existing server metadata.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique name for the resource.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The human-readable
+name of the network. Changing this creates a new server.</p></li>
 <li><p><strong>networks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An array of one or more networks to attach to the
 instance. The network object structure is documented below. Changing this
 creates a new server.</p></li>
@@ -704,45 +705,78 @@ Supported options are described below.</p></li>
 </dl>
 <p>The <strong>block_devices</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">bootIndex</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">deleteOnTermination</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">destinationType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">deviceType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">diskBus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bootIndex</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The boot index of the volume. It defaults to 0.
+Changing this creates a new server.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteOnTermination</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Delete the volume / block device upon
+termination of the instance. Defaults to false. Changing this creates a
+new server.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">destinationType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type that gets created. Possible values
+are “volume” and “local”. Changing this creates a new server.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deviceType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The low-level device type that will be used. Most
+common thing is to leave this empty. Changing this creates a new server.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">diskBus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The low-level disk bus that will be used. Most common
+thing is to leave this empty. Changing this creates a new server.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">guestFormat</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sourceType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">uuid</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">volumeSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">volume_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The source type of the device. Must be one of
+“blank”, “image”, “volume”, or “snapshot”. Changing this creates a new
+server.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uuid</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The UUID of
+the image, volume, or snapshot. Changing this creates a new server.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volumeSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the volume to create (in gigabytes). Required
+in the following combinations: source=image and destination=volume,
+source=blank and destination=local, and source=blank and destination=volume.
+Changing this creates a new server.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volume_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The volume type that will be used, for example SSD
+or HDD storage. The available options depend on how your specific OpenStack
+cloud is configured and what classes of storage are provided. Changing this
+creates a new server.</p></li>
 </ul>
 <p>The <strong>networks</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">accessNetwork</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">fixedIpV4</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">accessNetwork</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies if this network should be used for
+provisioning access. Accepts true or false. Defaults to false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fixedIpV4</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies a fixed IPv4 address to be used on this
+network. Changing this creates a new server.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">fixedIpV6</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">mac</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A unique name for the resource.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">uuid</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The human-readable
+name of the network. Changing this creates a new server.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The port UUID of a
+network to attach to the server. Changing this creates a new server.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uuid</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The UUID of
+the image, volume, or snapshot. Changing this creates a new server.</p></li>
 </ul>
 <p>The <strong>personalities</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">content</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">file</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">content</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The contents of the file. Limited to 255 bytes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">file</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The absolute path of the destination file.</p></li>
 </ul>
 <p>The <strong>scheduler_hints</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">additionalProperties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">buildNearHostIp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">differentHosts</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">group</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">queries</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sameHosts</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">targetCell</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">additionalProperties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Arbitrary key/value pairs of additional
+properties to pass to the scheduler.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">buildNearHostIp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An IP Address in CIDR form. The instance
+will be placed on a compute node that is in the same subnet.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">differentHosts</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of instance UUIDs. The instance will
+be scheduled on a different host than all other instances.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">group</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A UUID of a Server Group. The instance will be placed
+into that group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">queries</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A conditional query that a compute node must pass in
+order to host an instance. The query must use the <code class="docutils literal notranslate"><span class="pre">JsonFilter</span></code> syntax
+which is described
+<a class="reference external" href="https://docs.openstack.org/nova/latest/admin/configuration/schedulers.html#jsonfilter">here</a>.
+At this time, only simple queries are supported. Compound queries using
+<code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code>, or <code class="docutils literal notranslate"><span class="pre">not</span></code> are not supported. An example of a simple query is:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sameHosts</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of instance UUIDs. The instance will be
+scheduled on the same host of those specified.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">targetCell</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of a cell to host the instance.</p></li>
 </ul>
 <p>The <strong>vendor_options</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">ignoreResizeConfirmation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ignoreResizeConfirmation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Boolean to control whether
+to ignore manual confirmation of the instance resizing. This can be helpful
+to work with some OpenStack clouds which automatically confirm resizing of
+instances after some timeout.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_openstack.compute.Instance.access_ip_v4">
@@ -787,16 +821,31 @@ multiple disks. This configuration is very flexible, so please see the
 following <a class="reference external" href="https://docs.openstack.org/nova/latest/user/block-device-mapping.html">reference</a>
 for more information.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">bootIndex</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">deleteOnTermination</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">destinationType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">deviceType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">diskBus</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bootIndex</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The boot index of the volume. It defaults to 0.
+Changing this creates a new server.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteOnTermination</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Delete the volume / block device upon
+termination of the instance. Defaults to false. Changing this creates a
+new server.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">destinationType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type that gets created. Possible values
+are “volume” and “local”. Changing this creates a new server.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deviceType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The low-level device type that will be used. Most
+common thing is to leave this empty. Changing this creates a new server.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">diskBus</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The low-level disk bus that will be used. Most common
+thing is to leave this empty. Changing this creates a new server.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">guestFormat</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sourceType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">uuid</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">volumeSize</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">volume_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The source type of the device. Must be one of
+“blank”, “image”, “volume”, or “snapshot”. Changing this creates a new
+server.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uuid</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The UUID of
+the image, volume, or snapshot. Changing this creates a new server.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volumeSize</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The size of the volume to create (in gigabytes). Required
+in the following combinations: source=image and destination=volume,
+source=blank and destination=local, and source=blank and destination=volume.
+Changing this creates a new server.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volume_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The volume type that will be used, for example SSD
+or HDD storage. The available options depend on how your specific OpenStack
+cloud is configured and what classes of storage are provided. Changing this
+creates a new server.</p></li>
 </ul>
 </dd></dl>
 
@@ -863,7 +912,8 @@ within the instance. Changing this updates the existing server metadata.</p>
 <dl class="attribute">
 <dt id="pulumi_openstack.compute.Instance.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.compute.Instance.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>A unique name for the resource.</p>
+<dd><p>The human-readable
+name of the network. Changing this creates a new server.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -873,13 +923,18 @@ within the instance. Changing this updates the existing server metadata.</p>
 instance. The network object structure is documented below. Changing this
 creates a new server.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">accessNetwork</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">fixedIpV4</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">accessNetwork</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Specifies if this network should be used for
+provisioning access. Accepts true or false. Defaults to false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fixedIpV4</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies a fixed IPv4 address to be used on this
+network. Changing this creates a new server.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">fixedIpV6</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">mac</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A unique name for the resource.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">uuid</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The human-readable
+name of the network. Changing this creates a new server.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The port UUID of a
+network to attach to the server. Changing this creates a new server.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uuid</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The UUID of
+the image, volume, or snapshot. Changing this creates a new server.</p></li>
 </ul>
 </dd></dl>
 
@@ -890,8 +945,8 @@ creates a new server.</p>
 defining one or more files and their contents. The personality structure
 is described below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">content</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">file</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">content</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The contents of the file. Limited to 255 bytes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">file</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The absolute path of the destination file.</p></li>
 </ul>
 </dd></dl>
 
@@ -918,13 +973,23 @@ creates a new server.</p>
 <dd><p>Provide the Nova scheduler with hints on how
 the instance should be launched. The available hints are described below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">additionalProperties</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">buildNearHostIp</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">differentHosts</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">group</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">queries</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sameHosts</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">targetCell</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">additionalProperties</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Arbitrary key/value pairs of additional
+properties to pass to the scheduler.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">buildNearHostIp</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - An IP Address in CIDR form. The instance
+will be placed on a compute node that is in the same subnet.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">differentHosts</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of instance UUIDs. The instance will
+be scheduled on a different host than all other instances.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">group</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A UUID of a Server Group. The instance will be placed
+into that group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">queries</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A conditional query that a compute node must pass in
+order to host an instance. The query must use the <code class="docutils literal notranslate"><span class="pre">JsonFilter</span></code> syntax
+which is described
+<a class="reference external" href="https://docs.openstack.org/nova/latest/admin/configuration/schedulers.html#jsonfilter">here</a>.
+At this time, only simple queries are supported. Compound queries using
+<code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code>, or <code class="docutils literal notranslate"><span class="pre">not</span></code> are not supported. An example of a simple query is:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sameHosts</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of instance UUIDs. The instance will be
+scheduled on the same host of those specified.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">targetCell</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of a cell to host the instance.</p></li>
 </ul>
 </dd></dl>
 
@@ -966,7 +1031,10 @@ Changing this creates a new server.</p>
 <dd><p>Map of additional vendor-specific options.
 Supported options are described below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">ignoreResizeConfirmation</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ignoreResizeConfirmation</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Boolean to control whether
+to ignore manual confirmation of the instance resizing. This can be helpful
+to work with some OpenStack clouds which automatically confirm resizing of
+instances after some timeout.</p></li>
 </ul>
 </dd></dl>
 
@@ -1016,7 +1084,8 @@ pair must already be created and associated with the tenant’s account.
 Changing this creates a new server.</p></li>
 <li><p><strong>metadata</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Metadata key/value pairs to make available from
 within the instance. Changing this updates the existing server metadata.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique name for the resource.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The human-readable
+name of the network. Changing this creates a new server.</p></li>
 <li><p><strong>networks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An array of one or more networks to attach to the
 instance. The network object structure is documented below. Changing this
 creates a new server.</p></li>
@@ -1051,45 +1120,78 @@ Supported options are described below.</p></li>
 </dl>
 <p>The <strong>block_devices</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">bootIndex</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">deleteOnTermination</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">destinationType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">deviceType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">diskBus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bootIndex</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The boot index of the volume. It defaults to 0.
+Changing this creates a new server.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteOnTermination</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Delete the volume / block device upon
+termination of the instance. Defaults to false. Changing this creates a
+new server.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">destinationType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type that gets created. Possible values
+are “volume” and “local”. Changing this creates a new server.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deviceType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The low-level device type that will be used. Most
+common thing is to leave this empty. Changing this creates a new server.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">diskBus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The low-level disk bus that will be used. Most common
+thing is to leave this empty. Changing this creates a new server.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">guestFormat</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sourceType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">uuid</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">volumeSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">volume_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The source type of the device. Must be one of
+“blank”, “image”, “volume”, or “snapshot”. Changing this creates a new
+server.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uuid</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The UUID of
+the image, volume, or snapshot. Changing this creates a new server.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volumeSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the volume to create (in gigabytes). Required
+in the following combinations: source=image and destination=volume,
+source=blank and destination=local, and source=blank and destination=volume.
+Changing this creates a new server.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volume_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The volume type that will be used, for example SSD
+or HDD storage. The available options depend on how your specific OpenStack
+cloud is configured and what classes of storage are provided. Changing this
+creates a new server.</p></li>
 </ul>
 <p>The <strong>networks</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">accessNetwork</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">fixedIpV4</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">accessNetwork</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies if this network should be used for
+provisioning access. Accepts true or false. Defaults to false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fixedIpV4</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies a fixed IPv4 address to be used on this
+network. Changing this creates a new server.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">fixedIpV6</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">mac</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A unique name for the resource.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">uuid</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The human-readable
+name of the network. Changing this creates a new server.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The port UUID of a
+network to attach to the server. Changing this creates a new server.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uuid</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The UUID of
+the image, volume, or snapshot. Changing this creates a new server.</p></li>
 </ul>
 <p>The <strong>personalities</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">content</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">file</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">content</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The contents of the file. Limited to 255 bytes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">file</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The absolute path of the destination file.</p></li>
 </ul>
 <p>The <strong>scheduler_hints</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">additionalProperties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">buildNearHostIp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">differentHosts</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">group</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">queries</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sameHosts</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">targetCell</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">additionalProperties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Arbitrary key/value pairs of additional
+properties to pass to the scheduler.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">buildNearHostIp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An IP Address in CIDR form. The instance
+will be placed on a compute node that is in the same subnet.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">differentHosts</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of instance UUIDs. The instance will
+be scheduled on a different host than all other instances.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">group</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A UUID of a Server Group. The instance will be placed
+into that group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">queries</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A conditional query that a compute node must pass in
+order to host an instance. The query must use the <code class="docutils literal notranslate"><span class="pre">JsonFilter</span></code> syntax
+which is described
+<a class="reference external" href="https://docs.openstack.org/nova/latest/admin/configuration/schedulers.html#jsonfilter">here</a>.
+At this time, only simple queries are supported. Compound queries using
+<code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code>, or <code class="docutils literal notranslate"><span class="pre">not</span></code> are not supported. An example of a simple query is:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sameHosts</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of instance UUIDs. The instance will be
+scheduled on the same host of those specified.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">targetCell</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of a cell to host the instance.</p></li>
 </ul>
 <p>The <strong>vendor_options</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">ignoreResizeConfirmation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ignoreResizeConfirmation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Boolean to control whether
+to ignore manual confirmation of the instance resizing. This can be helpful
+to work with some OpenStack clouds which automatically confirm resizing of
+instances after some timeout.</p></li>
 </ul>
 </dd></dl>
 
@@ -1681,13 +1783,23 @@ may be used.</p></li>
 </dl>
 <p>The <strong>rules</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">cidr</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">fromGroupId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">fromPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cidr</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Required if <code class="docutils literal notranslate"><span class="pre">from_group_id</span></code> or <code class="docutils literal notranslate"><span class="pre">self</span></code> is empty. The IP range
+that will be the source of network traffic to the security group. Use 0.0.0.0/0
+to allow all IP addresses. Changing this creates a new security group rule. Cannot
+be combined with <code class="docutils literal notranslate"><span class="pre">from_group_id</span></code> or <code class="docutils literal notranslate"><span class="pre">self</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fromGroupId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Required if <code class="docutils literal notranslate"><span class="pre">cidr</span></code> or <code class="docutils literal notranslate"><span class="pre">self</span></code> is empty. The ID of a
+group from which to forward traffic to the parent group. Changing this creates a
+new security group rule. Cannot be combined with <code class="docutils literal notranslate"><span class="pre">cidr</span></code> or <code class="docutils literal notranslate"><span class="pre">self</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fromPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - An integer representing the lower bound of the port
+range to open. Changing this creates a new security group rule.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ipProtocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">self</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">toPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipProtocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The protocol type that will be allowed. Changing
+this creates a new security group rule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">self</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Required if <code class="docutils literal notranslate"><span class="pre">cidr</span></code> and <code class="docutils literal notranslate"><span class="pre">from_group_id</span></code> is empty. If true,
+the security group itself will be added as a source to this ingress rule. Cannot
+be combined with <code class="docutils literal notranslate"><span class="pre">cidr</span></code> or <code class="docutils literal notranslate"><span class="pre">from_group_id</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">toPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - An integer representing the upper bound of the port
+range to open. Changing this creates a new security group rule.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_openstack.compute.SecGroup.description">
@@ -1720,13 +1832,23 @@ rule object structure is documented below. Changing this updates the
 security group rules. As shown in the example above, multiple rule blocks
 may be used.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">cidr</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">fromGroupId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">fromPort</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cidr</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Required if <code class="docutils literal notranslate"><span class="pre">from_group_id</span></code> or <code class="docutils literal notranslate"><span class="pre">self</span></code> is empty. The IP range
+that will be the source of network traffic to the security group. Use 0.0.0.0/0
+to allow all IP addresses. Changing this creates a new security group rule. Cannot
+be combined with <code class="docutils literal notranslate"><span class="pre">from_group_id</span></code> or <code class="docutils literal notranslate"><span class="pre">self</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fromGroupId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Required if <code class="docutils literal notranslate"><span class="pre">cidr</span></code> or <code class="docutils literal notranslate"><span class="pre">self</span></code> is empty. The ID of a
+group from which to forward traffic to the parent group. Changing this creates a
+new security group rule. Cannot be combined with <code class="docutils literal notranslate"><span class="pre">cidr</span></code> or <code class="docutils literal notranslate"><span class="pre">self</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fromPort</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - An integer representing the lower bound of the port
+range to open. Changing this creates a new security group rule.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ipProtocol</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">self</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">toPort</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipProtocol</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The protocol type that will be allowed. Changing
+this creates a new security group rule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">self</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Required if <code class="docutils literal notranslate"><span class="pre">cidr</span></code> and <code class="docutils literal notranslate"><span class="pre">from_group_id</span></code> is empty. If true,
+the security group itself will be added as a source to this ingress rule. Cannot
+be combined with <code class="docutils literal notranslate"><span class="pre">cidr</span></code> or <code class="docutils literal notranslate"><span class="pre">from_group_id</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">toPort</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - An integer representing the upper bound of the port
+range to open. Changing this creates a new security group rule.</p></li>
 </ul>
 </dd></dl>
 
@@ -1758,13 +1880,23 @@ may be used.</p></li>
 </dl>
 <p>The <strong>rules</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">cidr</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">fromGroupId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">fromPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cidr</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Required if <code class="docutils literal notranslate"><span class="pre">from_group_id</span></code> or <code class="docutils literal notranslate"><span class="pre">self</span></code> is empty. The IP range
+that will be the source of network traffic to the security group. Use 0.0.0.0/0
+to allow all IP addresses. Changing this creates a new security group rule. Cannot
+be combined with <code class="docutils literal notranslate"><span class="pre">from_group_id</span></code> or <code class="docutils literal notranslate"><span class="pre">self</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fromGroupId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Required if <code class="docutils literal notranslate"><span class="pre">cidr</span></code> or <code class="docutils literal notranslate"><span class="pre">self</span></code> is empty. The ID of a
+group from which to forward traffic to the parent group. Changing this creates a
+new security group rule. Cannot be combined with <code class="docutils literal notranslate"><span class="pre">cidr</span></code> or <code class="docutils literal notranslate"><span class="pre">self</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fromPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - An integer representing the lower bound of the port
+range to open. Changing this creates a new security group rule.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ipProtocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">self</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">toPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipProtocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The protocol type that will be allowed. Changing
+this creates a new security group rule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">self</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Required if <code class="docutils literal notranslate"><span class="pre">cidr</span></code> and <code class="docutils literal notranslate"><span class="pre">from_group_id</span></code> is empty. If true,
+the security group itself will be added as a source to this ingress rule. Cannot
+be combined with <code class="docutils literal notranslate"><span class="pre">cidr</span></code> or <code class="docutils literal notranslate"><span class="pre">from_group_id</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">toPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - An integer representing the upper bound of the port
+range to open. Changing this creates a new security group rule.</p></li>
 </ul>
 </dd></dl>
 

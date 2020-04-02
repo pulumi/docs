@@ -62,10 +62,20 @@ credentials or trusts. Changing this creates a new application credential.</p></
 </dl>
 <p>The <strong>access_rules</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">method</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">service</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the existing access rule. The access rule ID of
+another application credential can be provided.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">method</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The request method that the application credential is
+permitted to use for a given API endpoint. Allowed values: <code class="docutils literal notranslate"><span class="pre">POST</span></code>, <code class="docutils literal notranslate"><span class="pre">GET</span></code>,
+<code class="docutils literal notranslate"><span class="pre">HEAD</span></code>, <code class="docutils literal notranslate"><span class="pre">PATCH</span></code>, <code class="docutils literal notranslate"><span class="pre">PUT</span></code> and <code class="docutils literal notranslate"><span class="pre">DELETE</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The API path that the application credential is permitted
+to access. May use named wildcards such as <strong>{tag}</strong> or the unnamed wildcard
+<strong>*</strong> to match against any string in the path up to a <strong>/</strong>, or the recursive
+wildcard <strong>**</strong> to include <strong>/</strong> in the matched path.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">service</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The service type identifier for the service that the
+application credential is granted to access. Must be a service type that is
+listed in the service catalog and not a code name for a service. E.g.
+<strong>identity</strong>, <strong>compute</strong>, <strong>volumev3</strong>, <strong>image</strong>, <strong>network</strong>,
+<strong>object-store</strong>, <strong>sharev2</strong>, <strong>dns</strong>, <strong>key-manager</strong>, <strong>monitoring</strong>, etc.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_openstack.identity.ApplicationCredential.access_rules">
@@ -74,10 +84,20 @@ credentials or trusts. Changing this creates a new application credential.</p></
 this application credential allows to follow. The structure is described
 below. Changing this creates a new application credential.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">method</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">service</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the existing access rule. The access rule ID of
+another application credential can be provided.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">method</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The request method that the application credential is
+permitted to use for a given API endpoint. Allowed values: <code class="docutils literal notranslate"><span class="pre">POST</span></code>, <code class="docutils literal notranslate"><span class="pre">GET</span></code>,
+<code class="docutils literal notranslate"><span class="pre">HEAD</span></code>, <code class="docutils literal notranslate"><span class="pre">PATCH</span></code>, <code class="docutils literal notranslate"><span class="pre">PUT</span></code> and <code class="docutils literal notranslate"><span class="pre">DELETE</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The API path that the application credential is permitted
+to access. May use named wildcards such as <strong>{tag}</strong> or the unnamed wildcard
+<strong>*</strong> to match against any string in the path up to a <strong>/</strong>, or the recursive
+wildcard <strong>**</strong> to include <strong>/</strong> in the matched path.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">service</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The service type identifier for the service that the
+application credential is granted to access. Must be a service type that is
+listed in the service catalog and not a code name for a service. E.g.
+<strong>identity</strong>, <strong>compute</strong>, <strong>volumev3</strong>, <strong>image</strong>, <strong>network</strong>,
+<strong>object-store</strong>, <strong>sharev2</strong>, <strong>dns</strong>, <strong>key-manager</strong>, <strong>monitoring</strong>, etc.</p></li>
 </ul>
 </dd></dl>
 
@@ -190,10 +210,20 @@ credentials or trusts. Changing this creates a new application credential.</p></
 </dl>
 <p>The <strong>access_rules</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">method</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">service</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the existing access rule. The access rule ID of
+another application credential can be provided.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">method</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The request method that the application credential is
+permitted to use for a given API endpoint. Allowed values: <code class="docutils literal notranslate"><span class="pre">POST</span></code>, <code class="docutils literal notranslate"><span class="pre">GET</span></code>,
+<code class="docutils literal notranslate"><span class="pre">HEAD</span></code>, <code class="docutils literal notranslate"><span class="pre">PATCH</span></code>, <code class="docutils literal notranslate"><span class="pre">PUT</span></code> and <code class="docutils literal notranslate"><span class="pre">DELETE</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The API path that the application credential is permitted
+to access. May use named wildcards such as <strong>{tag}</strong> or the unnamed wildcard
+<strong>*</strong> to match against any string in the path up to a <strong>/</strong>, or the recursive
+wildcard <strong>**</strong> to include <strong>/</strong> in the matched path.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">service</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The service type identifier for the service that the
+application credential is granted to access. Must be a service type that is
+listed in the service catalog and not a code name for a service. E.g.
+<strong>identity</strong>, <strong>compute</strong>, <strong>volumev3</strong>, <strong>image</strong>, <strong>network</strong>,
+<strong>object-store</strong>, <strong>sharev2</strong>, <strong>dns</strong>, <strong>key-manager</strong>, <strong>monitoring</strong>, etc.</p></li>
 </ul>
 </dd></dl>
 
@@ -1289,7 +1319,8 @@ creates a new User.</p></li>
 </dl>
 <p>The <strong>multi_factor_auth_rules</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">rules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of authentication plugins that the user must
+authenticate with.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_openstack.identity.User.default_project_id">
@@ -1358,7 +1389,8 @@ The structure is documented below. Please see the
 <a class="reference external" href="https://docs.openstack.org/releasenotes/keystone/ocata.html">Ocata release notes</a>
 for more information on how to use mulit-factor rules.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">rules</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rules</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of authentication plugins that the user must
+authenticate with.</p></li>
 </ul>
 </dd></dl>
 
@@ -1422,7 +1454,8 @@ creates a new User.</p></li>
 </dl>
 <p>The <strong>multi_factor_auth_rules</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">rules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of authentication plugins that the user must
+authenticate with.</p></li>
 </ul>
 </dd></dl>
 
@@ -1549,6 +1582,7 @@ values are <code class="docutils literal notranslate"><span class="pre">true</sp
 are <code class="docutils literal notranslate"><span class="pre">true</span></code> and <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>name</strong> (<em>str</em>) – The name of the project.</p></li>
 <li><p><strong>parent_id</strong> (<em>str</em>) – The parent of this project.</p></li>
+<li><p><strong>region</strong> (<em>str</em>) – The region the project is located in.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1611,6 +1645,7 @@ values are <code class="docutils literal notranslate"><span class="pre">true</sp
 <li><p><strong>name</strong> (<em>str</em>) – The name of the user.</p></li>
 <li><p><strong>password_expires_at</strong> (<em>str</em>) – Query for expired passwords. See the <a class="reference external" href="https://developer.openstack.org/api-ref/identity/v3/#list-users">OpenStack API docs</a> for more information on the query format.</p></li>
 <li><p><strong>protocol_id</strong> (<em>str</em>) – The protocol ID of the user.</p></li>
+<li><p><strong>region</strong> (<em>str</em>) – The region the user is located in.</p></li>
 <li><p><strong>unique_id</strong> (<em>str</em>) – The unique ID of the user.</p></li>
 </ul>
 </dd>
