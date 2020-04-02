@@ -11,8 +11,6 @@ aliases: ["/docs/get-started/policy-as-code/authoring-a-policy-pack/"]
 ---
 <!-- markdownlint-disable emphasis ul -->
 
-{{% crossguard-preview %}}
-
 1. Install prerequisites.
 
    - [Install Pulumi]({{< relref "/docs/get-started/install" >}})

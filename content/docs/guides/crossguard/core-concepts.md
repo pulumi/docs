@@ -9,7 +9,6 @@ menu:
   userguides:
     parent: crossguard
 ---
-{{% crossguard-preview %}}
 
 ## Policy
 
