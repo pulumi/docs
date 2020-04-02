@@ -24,23 +24,23 @@
             <ul class="flex">
                 <li class="-mb-px mr-1 list-none">
                     <h2>
-                        <a class="bg-white inline-block border-r py-2 px-4 text-blue-700 font-semibold" href="#">Live</a>
+                        <a id="liveWebinarTab" class="bg-white inline-block border-r py-2 px-4 text-blue-700 font-semibold" href="#">Live</a>
                     </h2>
                 </li>
                 <li class="mr-1 list-none">
                     <h2>
-                        <a class="bg-white inline-block border-r py-2 px-4 text-gray-500 hover:text-blue-800 font-semibold" href="#">On-demand</a>
+                        <a id="onDemandWebinarTab" class="bg-white inline-block border-r py-2 px-4 text-gray-500 hover:text-blue-800 font-semibold" href="#">On-demand</a>
                     </h2>
                 </li>
                 <li class="mr-1 list-none">
                     <h2>
-                        <a class="bg-white inline-block py-2 px-4 text-gray-500 hover:text-blue-800 font-semibold" href="#">PulumiTV</a>
+                        <a id="pulumiTVWebinarTab" class="bg-white inline-block py-2 px-4 text-gray-500 hover:text-blue-800 font-semibold" href="#">PulumiTV</a>
                     </h2>
                 </li>
             </ul>
         </div>
         <div class="justify-between pb-10 md:pb-24 px-5 md:px-20">
-            <div class="w-full">
+            <div id="liveWebinarsList" class="w-full">
                 <ul class="list-none mx-auto md:flex md:flex-wrap pl-0">
                     {{ $live_webinars := (where $non_pulumi_tv_webinars ".Params.pre_recorded" false)}}
                     {{ range (sort $live_webinars ".Params.main.sortable_date") }}
@@ -48,7 +48,7 @@
                     {{ end }}
                 </ul>
             </div>
-            <div class="w-full hidden">
+            <div id="pulumiTVWebinarsList" class="w-full hidden">
                 <ul class="list-none md:flex md:flex-wrap pl-0">
                     {{ $pulumi_tv_webinars := (where $listed_webinars ".Params.pulumi_tv" true)}}
                     {{ range (sort $pulumi_tv_webinars ".Params.main.sortable_date" "desc") }}
@@ -56,7 +56,7 @@
                     {{ end }}
                 </ul>
             </div>
-            <div class="w-full hidden">
+            <div id="onDemandWebinarsList" class="w-full hidden">
                 <ul class="list-none md:flex md:flex-wrap pl-0">
                     {{ $recorded_webinars := (where $non_pulumi_tv_webinars ".Params.pre_recorded" true)}}
                     {{ range (sort $recorded_webinars ".Params.main.sortable_date" "desc") }}

@@ -20,4 +20,27 @@ $(function() {
             date.innerText = localizeDateTime(date);
         }
     }
+
+    if (webinarListings) {
+        var tabs = [ "liveWebinarTab", "onDemandWebinarTab", "pulumiTVWebinarTab" ];
+        tabs.forEach(function(tab) {
+            var tabMap = {
+                "liveWebinarTab": "liveWebinarsList",
+                "onDemandWebinarTab": "onDemandWebinarsList",
+                "pulumiTVWebinarTab": "pulumiTVWebinarsList"
+            };
+
+            $("#" + tab).on("click", function(e) {
+                e.preventDefault();
+                var listIds = Object.keys(tabMap);
+                for (var i = 0; i < listIds.length; i++) {
+                    var idKey = listIds[i];
+                    $("#" + tabMap[idKey]).addClass("hidden");
+                }
+
+                var listId = tabMap[tab];
+                $("#" + listId).removeClass("hidden");
+            });
+        });
+    }
 });
