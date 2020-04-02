@@ -9,18 +9,19 @@ tags:
     - documentation
 ---
 
-We know that resource documentation is one of the most important areas of the Pulumi docs site for most Pulumi users, and we've heard the feedback that there is room to improve on these resource docs! Yesterday, we took a major step in rolling out a brand new approach to resource docs for Pulumi.
+Documentation in any product is super important, and an area where folks have shared a lot of feedback! We've heard you, and this week we took a major step in rolling out a brand new approach to resource documentation.  We hope you like it as much as we do.
 
 <!--more-->
 
 ## A New Format
 
-These new docs are resource-oriented instead of API-oriented and are presented as a single page per resource for easier reading, discovery, and navigation.  They also support switching on different Pulumi languages inline.  API docs for each language are still available and are deep-linked into from these resource docs.  But in general, we expect to lead with these resource-oriented docs throughout our content as canonical, language-agnostic reference for each Pulumi resource.
+In short, our docs are now resource-oriented.  Each resource is presented on a single page for better viewing, discovery, and navigation. All content now supports switching between different languages, so that Pythonistas, Gophers, and .NET aficionados can now easily find code examples in their favorite language.
 
-We've rolled out these new docs so far for AWS, Azure, and GCP, with the rest of the providers on their way soon.  We continue to work on many more improvements in addition to these new docs, so expect to continue to see improvements over the coming days and weeks.  (Before you ask - Kubernetes docs are coming next!)
+{{< figure src="DocsSite_small.gif" caption="Pick your favorite language!" >}}
 
-{{< figure src="DocsSite_small.gif" caption="Now Python, GO and C# users can (easily) see what all the fuss is about." >}}
+API docs for each language are still available and are deep-linked. In general, we will lead with this resource-oriented format throughout our content as a canonical, language-agnostic reference for all Pulumi resources.
 
+We've rolled this out these for AWS, Azure, and GCP, and other providers, including Kubernetes, will appear soon. 
 
 We'd love your feedback on the new docs either in #docs, in GitHub, or via the <i class="fas fa-thumbs-up"></i> / <i class="fas fa-thumbs-down"></i> buttons on the site.
 
