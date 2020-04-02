@@ -10,7 +10,27 @@ Upgrading to 2.0 is simple. First, you will download the 2.0 CLI, which is requi
 
 ## Install Pulumi 2.0 CLI
 
-If you are upgrading to a beta release, obtain the latest binaries from the [versions]({{< relref "versions" >}}) page. Then, follow the [manual installation]({{< relref "./#manual-installation" >}}) steps for your operating system.
+{{< chooser os "macos,linux,windows" >}}
+
+{{% choosable os "macos,linux" %}}
+
+```bash
+curl -sSL https://get.pulumi.com | bash -s -- --version 2.0.0-beta.2
+```
+
+{{% /choosable %}}
+
+{{% choosable os "windows" %}}
+
+```bat
+@"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; $version = '2.0.0-beta.2' | ConvertFrom-JSON | select -First 1 -ExpandProperty dev); iex ((New-Object System.Net.WebClient).DownloadString('https://get.pulumi.com/install.ps1')).Replace('${latestVersion}', $version)" && SET "PATH=%PATH%;%USERPROFILE%\.pulumi\bin"
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+Alternatively, you can obtain the latest binaries from the [versions]({{< relref "versions" >}}) page. Then, follow the [manual installation]({{< relref "./#manual-installation" >}}) steps for your operating system.
 
 > Note: once the final 2.0.0 release is published, you'll also be able to install via all currently supported installation methods, including Homebrew and Chocolatey.
 
