@@ -1,6 +1,6 @@
 dl {
 
-    &.resources-properties {
+    &.resources-properties, &.package-details {
         @apply mb-8 mt-4 p-1 flex flex-col items-start items-stretch bg-gray-100 border rounded border-gray-300 text-sm text-gray-700;
 
         @screen lg {
@@ -94,4 +94,5 @@ dl {
             }
         }
     }
+
 }
