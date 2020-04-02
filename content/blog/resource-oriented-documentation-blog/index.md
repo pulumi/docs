@@ -19,7 +19,7 @@ These new docs are resource-oriented instead of API-oriented and are presented a
 
 We've rolled out these new docs so far for AWS, Azure, and GCP, with the rest of the providers on their way soon.  We continue to work on many more improvements in addition to these new docs, so expect to continue to see improvements over the coming days and weeks.  (Before you ask - Kubernetes docs are coming next!)
 
-{{< figure src="image.png" caption="Now Python, GO and C# users can (easily) see what all the fuss is about." >}}
+{{< figure src="DocsSite_small.gif" caption="Now Python, GO and C# users can (easily) see what all the fuss is about." >}}
 
 
 We'd love your feedback on the new docs either in #docs, in GitHub, or via the <i class="fas fa-thumbs-up"></i> / <i class="fas fa-thumbs-down"></i> buttons on the site.
